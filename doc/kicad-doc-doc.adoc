@@ -1,0 +1,466 @@
+KiCad Documentation Status Report
+=================================
+
+Introduction
+------------
+
+Initially this was meant as an email then it grew out of control...
+
+Greetings
+---------
+
+Hello everybody!
+
+I am writing now to testify that the documentation effort is not dormant
+nor over. I am investigating all the doc format in use to document
+programs out there. There are plenty, everyone with pros and cons. The
+effort is taughter than I could imagine but I do not dispair and so you
+should not! You have to forgive me because I have been paintfully slow in
+the search and test of these tools: almost all the tools were new to me.
+Doing this search I have learned much and discovered a very interesting
+world that was new to me and I have to thank the KiCad team for this.
+
+Status
+------
+
+This is the current status of my efforts:
+
+1) I have successfully converted Cvpcb manual from odt to asciidoc, rest
+and markdown (markdown with some limitations). The converted versions
+have a nice automatically generated TOC. In the while I have discovered
+that old odt files, presumably once converted from staroffice files,
+could contains "strange" image format like "StarView MetaFile".
+Presumably other doc file have the same images inside. No problem: they
+are easily converted into png, though through a manual procedure.
+
+2) I have successfully created the nationalized .po files from the source
+docs.
+
+3) I have successfully created outputs from merging the translation with
+the reference documents.
+
+Thus so far we have just to decide which lightweight markup format to
+choose which best fits our documentation needs. This is a great start to
+compare them all:
+
+http://en.wikipedia.org/wiki/Lightweight_markup_language
+
+in particular:
+
+http://en.wikipedia.org/wiki/Lightweight_markup_language#Comparison_of_language_features
+
+Let's start the comparison (easier to read first):
+
+|=========================================================================================
+| markup   | easy to read | footnotes | tables | indexes | translation | books generation
+| asciidoc |   best       |    yes    |   yes  |   yes   |  using po4a | using docbook(direct)
+| markdown |   good       |  no/yes   | no/yes | no(yes) |  using po4a | using docbook
+| rest     |   worst      |    yes    |   yes  |   yes   |   native    | using docbook
+|=========================================================================================
+
+My choice
+---------
+
+Bear in mind that probably these are _very_ personal considerations. I am aware of it.
+
+The format I prefer: asciidoc
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+"AsciiDoc is a human-readable document format, semantically equivalent to
+DocBook XML, but using plain-text mark-up conventions." from
+http://en.wikipedia.org/wiki/AsciiDoc[wikipedia]
+
+Pros:
+
+* one of the cleaner if not *the cleanest* format
+* sufficient powerful: it supports table/index/references
+* plenty of tools available: pandoc(haskel), asciidoc(python), asciidoctor(ruby)
+* support on websites like github: just write a README.adoc and other
+supports are planned (like https://www.gitbook.io/[gitbook]
+* actively developed tools
+* in the future there will probably be a direct pdf conversion tool _without_ the need of the docbook burden
+
+Cons:
+
+* there are some formats to or from asciidoc direct conversion tool
+missing. I have converted, for an example, ODT into rest and then rest to
+asciidoc. Since rest is almost equipotential and have a univoc sintax
+(since rest _is_ a real standard) the rest to asciidoc conversion (trough
+wonderful pandoc) is flawless.
+
+This is an (incomplete) list:
+
+* odt -> asciidoc:
+ ** odt (odt2rest)-> rest
+ ** rest (pandoc)-> asciidoc
+* asciidoc -> rest:
+ ** asciidoc -> html
+ ** html(pandoc)->rest
+
+Second choice: rest
+~~~~~~~~~~~~~~~~~~~
+
+Pros:
+
+* complete at the same level with docbook: it supports table/index/reference/etc.
+* plenty of tools available: pandoc(haskel), sphinx(python), docutils(python)
+* actively developed tools (all)
+* widely used: it is the standard for python documentation, CMake, etc.
+* you can (trough pandoc) convert almost anything to rest (apart
+asciidoc) and rest into anything (with pandoc, sphinx or docutils)
+* many web (python) platforms use rest as an internal format for texts.
+See Zope/Plone, Trac, etc.
+* nice gui editor, http://sourceforge.net/projects/retext/[Retext], with
+realtime preview
+
+Cons:
+
+* not (arguably) immediate (but still easy) syntax. See the links or the
+comments and such.
+
+What I suggest to avoid (and why)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+==== http://daringfireball.net/projects/markdown/[markdown]
+
+pros:
+
+* much used today, probably due to its simplicity
+
+cons:
+
+* despite its popularity I do not think that could be a good choice for
+these reasons:
+** it is not a standard: just as an example pandoc supports some 5
+incompatible markdown "flavours":
+*** markdown: its pandoc own markdown superset format
+*** markdown_github: github supeset format
+*** markdown_mmd: multimarkdown superset format
+*** markdown_phpextra: php superset format
+*** markdown_strict: the *least common multiple* format
+** markdown common subset is too poor to be used at anything apart from
+html pages. This is its aim and there finishes its use.
+See http://en.wikipedia.org/wiki/Markdown#Standardization. Markdown
+original converter is defined _abandonware_. Its development cycle
+lasted 1 year 9 years ago.
+** its syntax is easier than rest but somehow arguably not easier than
+asciidoc: see link, images and tables for some examples
+
+==== http://txt2tags.org/[txt2tags]
+
+Wonderful small and powerful piece of software.
+
+pros:
+
+* exportable in many formats thanks to
+http://johnmacfarlane.net/pandoc/[pandoc]
+* completness: the format should have all the necessary characteristics
+for the needs of a considerable complex and complete documentation task
+
+cons:
+
+ * future: the format must stand the test of time. If the format is
+the result of a one people effort, as in this case, I am afraid it is
+doomed to extinction.
+ * diffusion: a single implementation is too little to make it a
+"standard".
+ * freshness: its develop seems stopped to 2010
+
+==== http://redcloth.org/textile[textile]
+
+Very interesting project with a standard, easy and powerful markup
+reference. It is very diffused and embedded in many web platforms. It has
+many implementations in various languages and it is a pity I haven't
+found any way to make it internationalized. It is an alternative to
+markdown as some tools/libraries support both.
+
+pros: 
+
+* diffused in many web libraries and web apps
+* exportable in many formats thanks to  http://johnmacfarlane.net/pandoc/[pandoc]
+
+cons:
+
+* somewhat less used then other more popular and substantially equivalent tools
+* not easy to handle i18n
+
+==== http://www.sisudoc.org/[sisu]
+
+Another interesting and powerful software project with a comprehensile
+format specification.
+
+pros:
+
+* complete as docbook or more
+* translatable with the aid of po4a
+
+cons:
+
+* no tools to convert automatically document from other formats. No
+support from pandoc.
+
+*TO COMPLETE*
+
+To summarize
+------------
+
+* the only documentation standard in full sense is docbook. Almost every
+new format or conversion tool, in a way or another, do refer to docbook.
+This is logical since docbook-xml is derived directly from SGML that is a
+reference and was the reference for many years in the publishing field.
+The problem is that docbook is easy to produce by means of some automatic
+tool but it is not easy to write by humans, even with and intelligent
+editor like emacs or eclipse.
+
+* odt is easy to write, using Libre/OpenOffice but not to mantain and
+translate.
+
+* so we have to switch from odt to some other documentation tool that we
+should choose from among similar tools that have some minimal
+characteristics we need such as:
+** easier than docbook
+** complete i.e. with many features like tables, indexes, toc, etc.
+** standard
+** more than one implementation (i.e. tools) of the standard
+** easily translatable (i.e. automatic strings extractions and merge)
+** tools actively developed
+
+* I am getting aquainted with asciidoc. This document is infact, full
+asciidoc compliant; try by yourself: copy and past the  exact copy of
+this mail text and type these commands:
+
+ asciidoc this-text.adoc    #convert into html
+ a2x -f pdf this-text.adoc  #convert into pdf
+ a2x -f epub this-text.adoc #convert into epub
+
+
+Creating the outputs
+--------------------
+
+Common conversion
+~~~~~~~~~~~~~~~~~
+
+To test my experiments I've started converting the easies KiCad document:
+cvpcb. To do this, the easiest way I found was to use odt2sphinx, and odt
+to rest converter (that was useful for the rest tests too) found
+https://pypi.python.org/pypi/odt2sphinx/[here].
+
+Done simply this:
+
+ odt2sphinx cvpcb_EN.odt
+
+Obtained the file _index.rst_ and the images into _images_ folder and
+renamed index.rst into cvpcb_EN.rst. Some of these images were in an
+obscure obsolete Star View Metafile format. Unoconv does _not_ work well
+because convert the entire A4 page with the image inside so I converted
+the images in png format manually in this way:
+
+1) loaded with LibreOffice
+2) copy & pasted into GIMP
+3) exported into PNG
+4) search and replace of all references of .svm files into .png in the
+rest file
+
+The rest files obtained are full of small errors. The script adds spaces
+randomly, adds unwanted image parameters and do not recognize the
+headings but ... the results are very easily corrected manually and with
+some sed scripting.
+
+Probably this process could be improved exporting the odt to html first
+and then separate the embedded images to external png images via some
+script.
+
+Anyway, once obtained a correct rest file with external images it is easy
+to convert this file into asciidoc or markdown with wonderful pandoc:
+
+ pandoc -f rst -t asciidoc cvpcb_EN.rst -o cvpcb_EN.adoc
+
+ pandoc -f rst -t markdown cvpcb_EN.rst -o cvpcb_EN.md
+
+Asciidoc output
+~~~~~~~~~~~~~~~
+
+As I seen above, to create the output files I have to simply do this:
+
+ asciidoc cvpcb_EN.adoc    #convert into html
+ a2x -f pdf cvpcb_EN.adoc  #convert into pdf
+ a2x -f epub cvpcb_EN.adoc #convert into epub
+
+Rest output
+~~~~~~~~~~~
+
+To create output from rest files the best tool to use is
+http://sphinx-doc.org/[sphinx]. Included in bundle with the sphinx
+distribution there is a nice autoconfiguration tool called 
+sphinx-quickstart. Just exec this utility to create a configuration file
+conf.py and a Makefile to automate the document output generation.
+One done to create html simply type:
+
+ make -e html
+
+or
+
+ make -e SPHINXOPTS="-D html_logo=images/10000201000003200000022675E94B31.png" html
+
+To include the KiCad logo.
+
+Similarily to create the other outputs:
+
+ make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D latex_paper_size=a4" latexpdf
+ make -e SPHINXOPTS="-D epub_cover=\('images/10000201000003200000022675E94B31.png', ''\)" epub
+
+Internationalization
+--------------------
+
+This one of the most useful things that this document format conversion
+will bring: easy internationalization of all documentation. Different
+tools bring different approaches.
+
+asciidoc and markdown
+~~~~~~~~~~~~~~~~~~~~~
+
+The tools that use these formats are not able to handle
+internationalization directly but there is a beautiful little utility by
+Debian: http://po4a.alioth.debian.org/[po4a]
+
+These are the source format supported:
+
+ po4a-gettextize --help-format
+
+ List of valid formats:
+  - asciidoc: AsciiDoc format.
+  - dia: uncompressed Dia diagrams.
+  - docbook: DocBook XML.
+  - guide: Gentoo Linux's XML documentation format.
+  - ini: INI format.
+  - kernelhelp: Help messages of each kernel compilation option.
+  - latex: LaTeX format.
+  - man: Good old manual page format.
+  - pod: Perl Online Documentation format.
+  - sgml: either DebianDoc or DocBook DTD.
+  - texinfo: The info page format.
+  - tex: generic TeX documents (see also latex).
+  - text: simple text document.
+  - wml: WML documents.
+  - xhtml: XHTML documents.
+  - xml: generic XML documents (see also docbook).
+
+Markdown is not listed but _is_ supported. See
+http://po4a.alioth.debian.org/man/man3/Locale::Po4a::Text.3pm.php
+
+Usually working directories are specified in the po4a.cfg (see man po4a)
+but in the examples that follow I have done without for clarity.
+
+The process of internationalization is done in different steps.
+
+==== Step 1: string template extraction
+
+For asciidoc
+
+ po4a-gettextize -f asciidoc -M utf-8 -m cvpcb_EN.adoc -p po/cvpcb.pot
+
+or
+
+ po4a-gettextize -f text -o markdown -M utf-8 -m cvpcb_EN.adoc -p po/cvpcb.pot
+
+for markdown.
+
+==== Step 2: translation
+
+Copy the template into our nationalized version:
+
+ cp po/cvpcb.pot po/it.po
+
+and use the gettext editor you like:
+
+ emacs it.po
+ poedit it.po
+
+keep in mind that snapshots images should be nationalized. I suggest to
+create a internationalized image dirs such as:
+
+ images
+ images-es
+ images-fr
+ images-it
+
+in this way untranslated images fallback to english images. po4a
+correctly translate image reference to enable the fallback.
+
+==== Step 3: produce internationalized master documents
+
+ po4a-translate -f asciidoc -M utf-8 -m cvpcb_EN.adoc -p po/it.po -k 0 -l cvpcb_it.adoc
+
+==== Step 4: produce all kind of internationalized output formats
+
+ asciidoc cvpcb_it.adoc    #convert into html
+ a2x -f pdf cvpcb_it.adoc  #convert into pdf
+ a2x -f epub cvpcb_it.adoc #convert into epub
+
+==== Step 5: update translations
+
+With the following commad the .po file will be updated automatically.
+
+ po4a-updatepo -f asciidoc -m cvpcb_EN.adoc -p po/it.po
+
+==== Step 6: loop
+
+repeat from step 2
+
+rest (sphinx)
+~~~~~~~~~~~~~
+
+The sphinx software suite contains all the tools to handle i18n needs.
+Below a step-to-step guide to obtain a nationalized document with sphinx.
+
+==== Step 1: string template extraction
+
+Extraction of the template constituent of the messages to be translated. Create build/locale/docname.pot
+
+ sphinx-build -b gettext -d build/doctrees source source/catalog
+
+==== Step 2: adding the languages to the configuration file
+
+Add the following variable assignment to conf.py:
+ 
+ locale_dirs = ['locale/'] # path is example but recommended
+
+Because (perhaps a bug?) I have not found a working way to assign the
+variable directly in the sphinx-intl command string.
+
+==== Step 3: creation/update of the localized strings
+
+ sphinx-intl -c source/conf.py update -p source/catalog -d source/locale -l it.
+
+==== Step 4: translate with the preferred .po files editor
+
+ poedit source/locale/it/LC_MESSAGES/pvpcb_EN.po
+ emacs source/locale/it/LC_MESSAGES/pvpcb_EN.po
+
+==== Step 5: stats about localized strings
+
+ sphinx-intl -c source/conf.py stat -d source/locale -l it.
+
+==== Step 6: compilation of the translated strings files (.mo)
+
+sphinx-intl -c source/conf.py build -d source/locale
+
+==== Step 7: Build nationalized documents
+
+ sphinx-build -a -b html -d build/doctrees -D language='it' -D locale_dirs=['./locale'] -D html_logo=images/100002
+ sphinx-build -a -b latexpdf -d build/doctrees -D language='it' -D locale_dirs=['./locale'] -D html_logo=images/100002
+ sphinx-build -a -b epub -d build/doctrees -D language='it' -D locale_dirs=['./locale'] -D html_logo=images/100002
+
+Notes
+-----
+
+* I found cover images are a little tricky. For example, using sphinx you
+have to specify the same image for the cover with every output format
+(epub, html, pdf) in a different way. This is not a big problem but it is
+annoying. This is due to the fact that some formats like pdf or epub are
+usually produced via docbook. There is one promising project,
+asciidoctor-pdf, that hopefully will be able to produce pdf directly but
+is experimental and unfortunately it is not able to include images yet.
+With asciidoc I have not found a way to put an image in the cover in pdf
+and epub files without fiddling with docbook xls templates (that I do not
+want and I am not able to do now).
