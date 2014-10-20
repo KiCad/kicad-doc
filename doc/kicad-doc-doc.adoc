@@ -184,6 +184,8 @@ cons:
 * somewhat less used then other more popular and substantially equivalent tools
 * not easy to handle i18n
 
+*TODO*
+
 ==== http://www.sisudoc.org/[sisu]
 
 Another interesting and powerful software project with a comprehensile
@@ -199,7 +201,7 @@ cons:
 * no tools to convert automatically document from other formats. No
 support from pandoc.
 
-*TO COMPLETE*
+*TODO*
 
 To summarize
 ------------
@@ -407,6 +409,7 @@ With the following commad the .po file will be updated automatically.
 
 repeat from step 2
 
+
 rest (sphinx)
 ~~~~~~~~~~~~~
 
@@ -454,13 +457,23 @@ sphinx-intl -c source/conf.py build -d source/locale
 Notes
 -----
 
-* I found cover images are a little tricky. For example, using sphinx you
+1. I found cover images are a little tricky. For example, using sphinx you
 have to specify the same image for the cover with every output format
 (epub, html, pdf) in a different way. This is not a big problem but it is
 annoying. This is due to the fact that some formats like pdf or epub are
-usually produced via docbook. There is one promising project,
-asciidoctor-pdf, that hopefully will be able to produce pdf directly but
-is experimental and unfortunately it is not able to include images yet.
-With asciidoc I have not found a way to put an image in the cover in pdf
-and epub files without fiddling with docbook xls templates (that I do not
-want and I am not able to do now).
+usually produced via docbook. There are some exceptions:
+
+ a. for asciidoc there is one promising project, asciidoctor-pdf, that
+hopefully will be able to produce pdf directly but is experimental and
+unfortunately it is not able to include images yet. With asciidoc I have
+not found a way to put an image in the cover in pdf and epub files
+without fiddling with docbook xls templates (that I do not want and I am
+not able to do now). Here there is a guide with a solution using *TODO*: *TODO*
+
+ b. for rest, as a pdf direct converter I have recently discovered
+ http://code.google.com/p/rst2pdf/[rst2pdf] but its development seems to
+ be at a standstill since 2012. 
+
+////
+ and does it need docbook?
+////
