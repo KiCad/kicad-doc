@@ -14,8 +14,8 @@ Hello everybody!
 I am writing now to testify that the documentation effort is not dormant
 nor over. I am investigating all the doc format in use to document
 programs out there. There are plenty, everyone with pros and cons. The
-effort is taughter than I could imagine but I do not dispair and so you
-should not! You have to forgive me because I have been paintfully slow in
+effort is taugher than I could imagine but I do not despair and so you
+should not! You have to forgive me because I have been painfully slow in
 the search and test of these tools: almost all the tools were new to me.
 Doing this search I have learned much and discovered a very interesting
 world that was new to me and I have to thank the KiCad team for this.
@@ -84,7 +84,7 @@ Cons:
 
 * there are some formats to or from asciidoc direct conversion tool
 missing. I have converted, for an example, ODT into rest and then rest to
-asciidoc. Since rest is almost equipotential and have a univoc sintax
+asciidoc. Since rest is almost equipotential and have a unambiguous syntax
 (since rest _is_ a real standard) the rest to asciidoc conversion (trough
 wonderful pandoc) is flawless.
 
@@ -158,13 +158,13 @@ pros:
 
 * exportable in many formats thanks to
 http://johnmacfarlane.net/pandoc/[pandoc]
-* completness: the format should have all the necessary characteristics
+* completeness: the format should have all the necessary characteristics
 for the needs of a considerable complex and complete documentation task
 * diffusion. There are essentially two implementation:
  ** txt2tags: its native executable whose development seems stopped by
  the year 2010. This is not always a bad thing since if the format is
  fairy complete, its obsolescence is a guarantee of stability;
- ** pandoc: its powerful capability gratily enhance txt2tags output
+ ** pandoc: its powerful capability greatly enhance txt2tags output
  formats
 
 cons:
@@ -196,7 +196,7 @@ cons:
 
 ==== http://www.sisudoc.org/[sisu]
 
-Another interesting and powerful software project with a comprehensile
+Another interesting and powerful software project with a comprehensive
 format specification.
 
 pros:
@@ -224,7 +224,7 @@ The problem is that docbook is easy to produce by means of some automatic
 tool but it is not easy to write by humans, even with and intelligent
 editor like emacs or eclipse.
 
-* odt is easy to write, using Libre/OpenOffice but not to mantain and
+* odt is easy to write, using Libre/OpenOffice but not to maintain and
 translate.
 
 * so we have to switch from odt to some other documentation tool that we
@@ -237,7 +237,7 @@ characteristics we need such as:
 ** easily translatable (i.e. automatic strings extractions and merge)
 ** tools actively developed
 
-* I am getting aquainted with asciidoc. This document is infact, full
+* I am getting acquainted with asciidoc. This document is in fact, full
 asciidoc compliant; try by yourself: copy and past the  exact copy of
 this mail text and type these commands:
 
@@ -252,7 +252,7 @@ Creating the outputs
 Common conversion
 ~~~~~~~~~~~~~~~~~
 
-To test my experiments I've started converting the easies KiCad document:
+To test my experiments I've started converting the easier KiCad document:
 cvpcb. To do this, the easiest way I found was to use odt2sphinx, and odt
 to rest converter (that was useful for the rest tests too) found
 https://pypi.python.org/pypi/odt2sphinx/[here].
@@ -303,7 +303,7 @@ Rest output
 
 To create output from rest files the best tool to use is
 http://sphinx-doc.org/[sphinx]. Included in bundle with the sphinx
-distribution there is a nice autoconfiguration tool called 
+distribution there is a nice auto-configuration tool called 
 sphinx-quickstart. Just exec this utility to create a configuration file
 conf.py and a Makefile to automate the document output generation.
 One done to create html simply type:
@@ -316,7 +316,7 @@ or
 
 To include the KiCad logo.
 
-Similarily to create the other outputs:
+Similarly to create the other outputs:
 
  make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D latex_paper_size=a4" latexpdf
  make -e SPHINXOPTS="-D epub_cover=\('images/10000201000003200000022675E94B31.png', ''\)" epub
@@ -396,7 +396,7 @@ create a internationalized image dirs such as:
  images-fr
  images-it
 
-in this way untranslated images fallback to english images. po4a
+in this way untranslated images fallback to English images. po4a
 correctly translate image reference to enable the fallback.
 
 ==== Step 3: produce internationalized master documents
@@ -411,7 +411,7 @@ correctly translate image reference to enable the fallback.
 
 ==== Step 5: update translations
 
-With the following commad the .po file will be updated automatically.
+With the following command the .po file will be updated automatically.
 
  po4a-updatepo -f asciidoc -m cvpcb_EN.adoc -p po/it.po
 
