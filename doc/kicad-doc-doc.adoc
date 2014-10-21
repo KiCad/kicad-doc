@@ -192,7 +192,7 @@ cons:
 * somewhat less used then other more popular and substantially equivalent tools
 * not easy to handle i18n
 
-*TODO*
+*TO COMPLETE*
 
 ==== http://www.sisudoc.org/[sisu]
 
@@ -209,7 +209,7 @@ cons:
 * no tools to convert automatically document from other formats. No
 support from pandoc.
 
-*TODO*
+*TO COMPLETE*
 
 To summarize
 ------------
@@ -433,7 +433,7 @@ Extraction of the template constituent of the messages to be translated. Create 
 ==== Step 2: adding the languages to the configuration file
 
 Add the following variable assignment to conf.py:
- 
+
  locale_dirs = ['locale/'] # path is example but recommended
 
 Because (perhaps a bug?) I have not found a working way to assign the
@@ -458,9 +458,20 @@ sphinx-intl -c source/conf.py build -d source/locale
 
 ==== Step 7: Build nationalized documents
 
- sphinx-build -a -b html -d build/doctrees -D language='it' -D locale_dirs=['./locale'] -D html_logo=images/100002
- sphinx-build -a -b latexpdf -d build/doctrees -D language='it' -D locale_dirs=['./locale'] -D html_logo=images/100002
- sphinx-build -a -b epub -d build/doctrees -D language='it' -D locale_dirs=['./locale'] -D html_logo=images/100002
+for html:
+
+ sphinx-build -a -b html -d build/doctrees source build/html
+ sphinx-build -a -b html -d build/doctrees -D language=it source build/html-it
+ sphinx-build -a -b html -d build/doctrees -D language=fr source build/html-fr
+
+for pdf:
+
+ sphinx-build -a -b latex -d build/doctrees -D language='it' source build/latex-it
+ make -C built/latex-it pdf-all
+
+for epub:
+
+ sphinx-build -a -b epub -d build/doctrees -D language='it' source build/epub-it
 
 Notes
 -----
@@ -483,5 +494,6 @@ not able to do now). Here there is a guide with a solution using *TODO*: *TODO*
  be at a standstill since 2012. 
 
 ////
- and does it need docbook?
+ and does it needs docbook?
 ////
+
