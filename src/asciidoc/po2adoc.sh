@@ -7,4 +7,10 @@
 
 cd cvpcb
 
-po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/it.po -k 0 -l internat/cvpcb_it.adoc
+#po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/it.po -k 0 -l internat/cvpcb_it.adoc
+
+for i in `cat po/LINGUAS`
+do
+  echo "executing: po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/$i.po -k 0 -l cvpcb_$i.adoc"
+  po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/$i.po -k 0 -l cvpcb_$i.adoc
+done

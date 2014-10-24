@@ -1,7 +1,14 @@
 #!/bin/bash
 
+./adoc2docbook.sh
+
+
 cd cvpcb
 
-asciidoc  -a 'newline=\n' -b docbook  --section-numbers  cvpcb.adoc
-#asciidoctor  -a 'newline=\n' -b docbook  --section-numbers  cvpcb.adoc
-pandoc -f docbook -t odt -o cvpcb.odt cvpcb.xml
+#pandoc -f docbook -t odt -o cvpcb.odt cvpcb.xml
+
+for i in *.xml
+do
+  echo "Executing: pandoc -f docbook -t odt -o cvpcb.odt $i"
+  pandoc -f docbook -t odt -o cvpcb.odt $i
+done
