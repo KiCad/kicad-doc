@@ -8,4 +8,5 @@
 
 cd cvpcb
 
+echo "Executing: po4a-gettextize -f asciidoc -M utf-8 -m cvpcb.adoc -p po/cvpcb.pot"
 po4a-gettextize -f asciidoc -M utf-8 -m cvpcb.adoc -p po/cvpcb.pot
