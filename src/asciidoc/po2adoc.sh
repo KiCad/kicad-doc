@@ -11,6 +11,6 @@ cd cvpcb
 
 for i in `cat po/LINGUAS`
 do
-  echo "executing: po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/$i.po -k 0 -l cvpcb_$i.adoc"
+  echo "Executing: po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/$i.po -k 0 -l cvpcb_$i.adoc"
   po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/$i.po -k 0 -l cvpcb_$i.adoc
 done
