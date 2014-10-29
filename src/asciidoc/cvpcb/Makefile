@@ -32,7 +32,7 @@ pdf: adoc
 
 odt: docbook
 	for i in *.xml ; do \
-	  pandoc -f docbook -t odt -o $(DOCNAME).odt $$i ; \
+	  pandoc -f docbook -t odt -o $$i.odt $$i ; \
 	done
 
 
