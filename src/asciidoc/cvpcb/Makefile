@@ -5,7 +5,7 @@ pot: po/$(DOCNAME).pot
 po/$(DOCNAME).pot: $(DOCNAME).adoc
 	po4a-gettextize -f asciidoc -M utf-8 -m $^ -p $@
 
-po:
+po: pot
 	for i in `cat po/LINGUAS` ; do \
 	  po4a-updatepo -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p po/$$i.po ; \
 	done
@@ -22,7 +22,7 @@ html: adoc
 
 docbook: adoc
 	for i in *.adoc ; do \
-	  asciidoc  -a 'newline=\\\n' -b docbook  --section-numbers $$i ; \
+	  asciidoc -a 'newline=\\\n' -b docbook --section-numbers $$i ; \
 	done
 
 pdf: adoc
@@ -32,7 +32,7 @@ pdf: adoc
 
 odt: docbook
 	for i in *.xml ; do \
-	  pandoc -f docbook -t odt -o $(DOCNAME).adoc $$i \
+	  pandoc -f docbook -t odt -o $(DOCNAME).odt $$i ; \
 	done
 
 
@@ -44,3 +44,4 @@ clean:
 	rm -f cvpcb.html
 	rm -f cvpcb.xml
 	rm -f cvpcb.epub
+	rm -f cvpcb.odt
