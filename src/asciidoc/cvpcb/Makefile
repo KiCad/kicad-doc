@@ -1,3 +1,4 @@
+.PHONY: pot po adoc html docbook pdf clean
 DOCNAME:=cvpcb
 
 pot: po/$(DOCNAME).pot
@@ -36,8 +37,6 @@ odt: docbook
 	  pandoc -f docbook -t odt -o $$y.odt $$i ; \
 	done
 
-
-.PHONY: clean
 clean:
 	rm -f *_*.*
 	rm -f po/cvpcb.pot
