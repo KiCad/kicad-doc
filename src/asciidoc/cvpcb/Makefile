@@ -22,7 +22,7 @@ html: adoc
 
 docbook: adoc
 	for i in *.adoc ; do \
-	  asciidoc -a 'newline=\\\n' -b docbook --section-numbers $$i ; \
+	  asciidoc -a 'newline=\n' -b docbook --section-numbers $$i ; \
 	done
 
 pdf: adoc
@@ -32,7 +32,8 @@ pdf: adoc
 
 odt: docbook
 	for i in *.xml ; do \
-	  pandoc -f docbook -t odt -o $$i.odt $$i ; \
+	  y=`basename $$i .xml` ; \
+	  pandoc -f docbook -t odt -o $$y.odt $$i ; \
 	done
 
 
