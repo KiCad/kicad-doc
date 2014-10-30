@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
 #Note: created source/_static to eliminate a warning message.
+#mkdir source/_static
 
 #To create html
 #make -e html
