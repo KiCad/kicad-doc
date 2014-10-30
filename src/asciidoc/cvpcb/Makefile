@@ -43,6 +43,7 @@ odt: docbook
 clean:
 	rm -f *_*.*
 	rm -f po/cvpcb.pot
+	rm -f po/*.po\~
 	rm -f cvpcb.pdf
 	rm -f cvpcb.html
 	rm -f cvpcb.xml
