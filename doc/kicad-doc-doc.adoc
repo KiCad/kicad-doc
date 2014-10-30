@@ -83,19 +83,17 @@ supports are planned (like https://www.gitbook.io/[gitbook]
 Cons:
 
 * there are some formats to or from asciidoc direct conversion tool
-missing. I have converted, for an example, ODT into rest and then rest to
-asciidoc. Since rest is almost equipotential and have a unambiguous syntax
-(since rest _is_ a real standard) the rest to asciidoc conversion (trough
-wonderful pandoc) is flawless.
-
-This is an (incomplete) list:
-
-* odt -> asciidoc:
- ** odt (odt2rest)-> rest
- ** rest (pandoc)-> asciidoc
-* asciidoc -> rest:
- ** asciidoc -> html
- ** html(pandoc)->rest
+  missing. I have converted, for an example, ODT into rest and then rest to
+  asciidoc. Since rest is almost equipotential and have a unambiguous syntax
+  (since rest _is_ a real standard) the rest to asciidoc conversion (trough
+  wonderful pandoc) is flawless.
+  This is an (incomplete) list:
+  ** odt -> asciidoc:
+   *** odt (odt2rest)-> rest
+   *** rest (pandoc)-> asciidoc
+  ** asciidoc -> rest:
+   *** asciidoc -> html
+   *** html(pandoc)->rest
 
 Second choice: rest
 ~~~~~~~~~~~~~~~~~~~
@@ -125,7 +123,8 @@ version.
 What I suggest to avoid (and why)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-==== http://daringfireball.net/projects/markdown/[markdown]
+http://daringfireball.net/projects/markdown/[markdown]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 pros:
 
@@ -150,7 +149,8 @@ lasted 1 year 9 years ago.
 ** its syntax is easier than rest but somehow arguably not easier than
 asciidoc: see link, images and tables for some examples
 
-==== http://txt2tags.org/[txt2tags]
+http://txt2tags.org/[txt2tags]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Wonderful small and powerful piece of software.
 
@@ -174,7 +174,8 @@ the result of a one people effort, as in this case, I am afraid it is
 doomed to extinction. On the other hand, as said previously, this is also
 a good thing; depends on which side you see it.
 
-==== http://redcloth.org/textile[textile]
+http://redcloth.org/textile[textile]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Very interesting project with a standard, easy and powerful markup
 reference. It is very diffused and embedded in many web platforms. It has
@@ -194,7 +195,8 @@ cons:
 
 *TO COMPLETE*
 
-==== http://www.sisudoc.org/[sisu]
+http://www.sisudoc.org/[sisu]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Another interesting and powerful software project with a comprehensive
 format specification.
@@ -365,7 +367,8 @@ but in the examples that follow I have done without for clarity.
 
 The process of internationalization is done in different steps.
 
-==== Step 1: string template extraction
+Step 1: string template extraction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For asciidoc
 
@@ -377,7 +380,8 @@ or
 
 for markdown.
 
-==== Step 2: translation
+Step 2: translation
+^^^^^^^^^^^^^^^^^^^
 
 Copy the template into our nationalized version:
 
@@ -399,23 +403,27 @@ create a internationalized image dirs such as:
 in this way untranslated images fallback to English images. po4a
 correctly translate image reference to enable the fallback.
 
-==== Step 3: produce internationalized master documents
+Step 3: produce internationalized master documents
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  po4a-translate -f asciidoc -M utf-8 -m cvpcb_EN.adoc -p po/it.po -k 0 -l cvpcb_it.adoc
 
-==== Step 4: produce all kind of internationalized output formats
+Step 4: produce all kind of internationalized output formats
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- asciidoc cvpcb_it.adoc    #convert into html
- a2x -f pdf cvpcb_it.adoc  #convert into pdf
- a2x -f epub cvpcb_it.adoc #convert into epub
+ asciidoc -a lang=it cvpcb_it.adoc    #convert into html
+ a2x -a lang=it -f pdf cvpcb_it.adoc  #convert into pdf
+ a2x -a lang=it -f epub cvpcb_it.adoc #convert into epub
 
-==== Step 5: update translations
+Step 5: update translations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 With the following command the .po file will be updated automatically.
 
  po4a-updatepo -f asciidoc -m cvpcb_EN.adoc -p po/it.po
 
-==== Step 6: loop
+Step 6: loop
+^^^^^^^^^^^^
 
 repeat from step 2
 
@@ -426,13 +434,15 @@ rest (sphinx)
 The sphinx software suite contains all the tools to handle i18n needs.
 Below a step-to-step guide to obtain a nationalized document with sphinx.
 
-==== Step 1: string template extraction
+Step 1: string template extraction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Extraction of the template constituent of the messages to be translated. Create build/locale/docname.pot
 
  sphinx-build -b gettext -d build/doctrees source source/catalog
 
-==== Step 2: adding the languages to the configuration file
+Step 2: adding the languages to the configuration file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Add the following variable assignment to conf.py:
 
@@ -441,24 +451,29 @@ Add the following variable assignment to conf.py:
 Because (perhaps a bug?) I have not found a working way to assign the
 variable directly in the sphinx-intl command string.
 
-==== Step 3: creation/update of the localized strings
+Step 3: creation/update of the localized strings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  sphinx-intl -c source/conf.py update -p source/catalog -d source/locale -l it.
 
-==== Step 4: translate with the preferred .po files editor
+Step 4: translate with the preferred .po files editor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  poedit source/locale/it/LC_MESSAGES/pvpcb_EN.po
  emacs source/locale/it/LC_MESSAGES/pvpcb_EN.po
 
-==== Step 5: stats about localized strings
+Step 5: stats about localized strings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  sphinx-intl -c source/conf.py stat -d source/locale -l it.
 
-==== Step 6: compilation of the translated strings files (.mo)
+Step 6: compilation of the translated strings files (.mo)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 sphinx-intl -c source/conf.py build -d source/locale
 
-==== Step 7: Build nationalized documents
+Step 7: Build nationalized documents
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 for html:
 
