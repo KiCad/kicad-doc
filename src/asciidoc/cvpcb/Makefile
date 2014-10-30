@@ -17,18 +17,21 @@ adoc: po
 	done
 
 html: adoc
-	for i in *.adoc ; do \
-	  asciidoc --section-numbers $$i ; \
+	asciidoc --section-numbers $(DOCNAME).adoc ; \
+	for i in `cat po/LINGUAS` ; do \
+	  asciidoc -a lang=$$i --section-numbers $(DOCNAME)_$$i.adoc ; \
 	done
 
 docbook: adoc
-	for i in *.adoc ; do \
-	  asciidoc -a 'newline=\n' -b docbook --section-numbers $$i ; \
+	asciidoc -a 'newline=\n' -b docbook --section-numbers $(DOCNAME).adoc ; \
+	for i in `cat po/LINGUAS` ; do \
+	  asciidoc -a 'newline=\n' -a lang=$$i -b docbook --section-numbers $(DOCNAME)_$$i.adoc ; \
 	done
 
 pdf: adoc
-	for i in *.adoc ; do \
-	  a2x -fpdf -v $$i ; \
+	a2x -fpdf -v $(DOCNAME).adoc --dblatex-opts "-P latex.output.revhistory=0" ; \
+	for i in `cat po/LINGUAS` ; do \
+	  a2x -a lang=$$i -fpdf -v $(DOCNAME)_$$i.adoc --dblatex-opts "-P latex.output.revhistory=0" ; \
 	done
 
 odt: docbook
