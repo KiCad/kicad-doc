@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2014-10-31 00:42+0100\n"
-"PO-Revision-Date: 2014-10-31 00:44+0100\n"
+"POT-Creation-Date: 2014-10-31 12:37+0100\n"
+"PO-Revision-Date: 2014-10-31 12:35+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -48,7 +48,7 @@ msgid ""
 "Attribution License (http://creativecommons.org/licenses/by/3.0/[http://"
 "creativecommons.org/licenses/by/3.0/]), version 3.0 or later."
 msgstr ""
-"Questo documento è coperto da Copyright © 2010–2013 dei suoi autori come "
+"Questo documento è coperto dal Copyright © 2010–2013 dei suoi autori come "
 "elencati in seguito. È possibile distribuirlo e/o modificarlo nei termini "
 "sia della GNU General Public License (http://www.gnu.org/licenses/gpl."
 "html[http://www.gnu.org/licenses/gpl.html]), versione 3 o successive, che "
@@ -161,6 +161,15 @@ msgid ""
 "component model viewing to help ensure the correct footprint is associated "
 "with each component."
 msgstr ""
+"Normalmente il file della netlist generato da Eeschema non specifica quale "
+"impronta di circuito stampato è associata ad ogni componente nello schema. "
+"Ciònonostante sia comunque possibile associare componenti a impronte durante "
+"la stesura dello schema elettrico impostando il campo impronta nel "
+"componente. CvPcb fornisce un metodo più semplice per associare le impronte "
+"ai componenti. Esso fornisce: un elenco filtrabile di impronte, la "
+"visualizzazione delle impronte e la visualizzazione 3D del modello del "
+"componente. Tutto questo per aiutare la verifica della corretta associazione "
+"della giusta impronta ad ogni componente."
 
 #. type: Plain text
 #: cvpcb.adoc:78
@@ -207,17 +216,16 @@ msgstr "Associazione manuale o automatica"
 
 #. type: Plain text
 #: cvpcb.adoc:95
-#, fuzzy
 msgid ""
 "CvPcb allows for interactive assignment (manual) as well as automatic "
 "assignment via equivalence files. It is also possible to generate back-"
 "annotation files which are useful for automatically associating the "
 "footprints selected by CvPcb schematic captured by Eeschema."
 msgstr ""
-"CvPcb allows for interactive assignment (manual) as well as automatic "
-"assignment via equivalence files. It is also possible to generate back-"
-"annotation files which are useful for automatically associating the "
-"footprints selected by CvPcb schematic captured by Eeschema."
+"CvPcb permette l'assegnamento interattivo (manuale) e automatico attraverso "
+"file di equivalenza. È inoltre possibile generare file di back-annotation "
+"utili per l'associazione automatica delle impronte selezionate da CvPcb per "
+"reinserirle nello schema modificato da Eeschema."
 
 #. type: Title ~
 #: cvpcb.adoc:97
@@ -247,7 +255,7 @@ msgstr ""
 #: cvpcb.adoc:105
 #, no-wrap
 msgid "Output Files"
-msgstr "File risultanti"
+msgstr "File in uscita"
 
 #. type: Plain text
 #: cvpcb.adoc:108
@@ -272,7 +280,6 @@ msgstr "Invocazione di CvPcb"
 
 #. type: Plain text
 #: cvpcb.adoc:130
-#, fuzzy
 msgid ""
 "CvPcb is typically invoked from the schematic capture program Eeschema.  "
 "Eeschema automatically passes the correct net list file name to CvPcb.  "
@@ -289,20 +296,22 @@ msgid ""
 "opened manually by selecting the ``Open'' entry in the ``File'' menu or "
 "clicking the ``Open'' file button on the tool bar."
 msgstr ""
-"CvPcb is typically invoked from the schematic capture program Eeschema.  "
-"Eeschema automatically passes the correct net list file name to CvPcb.  "
-"Before running CvPcb for the first time for each project, you must first "
-"save the initial net list by selecting the ``Generate Netlist'' entry in to "
-"``Tools'' menu or click on the generate net list button on the top tool bar "
-"in Eeschema. By default the net list file has the same name as the project "
-"with a ``net'' file extension. If the net list file for the project already "
-"exists, all footprint associations will be preserved.  After the initial net "
-"list file is created by Eeschema, CvPcb can be invoked directly from the "
-"KiCad project manager. CvPcb can also be invoked as a stand alone program "
-"rather than being launch from the KiCad project manager or the schematic "
-"editor. If CvPcb is run as a stand alone program, the net list file must be "
-"opened manually by selecting the ``Open'' entry in the ``File'' menu or "
-"clicking the ``Open'' file button on the tool bar."
+"CvPcb viene normalmente eseguito dal programma di disegno dello schema "
+"elettrico Eeschema.  Eeschema passa automaticamente il nome file netlist "
+"corretto a CvPcb.  Prima di eseguire CvPcb per la prima volta per ogni "
+"progetto, bisogna salvare la netlist iniziale selezionando la voce ``Genera "
+"netlist'' nel menu ``Strumenti'' o facendo clic sul pulsante di generazione "
+"della netlist sulla barra strumenti presente in alto in Eeschema. Come "
+"impostazione predefinita il file di net list ha lo stesso nome del progetto "
+"ma con un'estensione file ``net''. Se il file della net list per il progetto "
+"esiste già, tutte le associazioni delle impronte saranno preservate.  Dopo "
+"la creazione del file di netlist iniziale da parte di Eeschema, CvPcb può "
+"essere invocato direttamente dal manager dei progetti di KiCad. CvPcb, oltre "
+"che dal manager del progetto o dall'editor degli schemi elettrici, può anche "
+"essere eseguito autonomamente. Se CvPcb viene eseguito autonomamente, il "
+"file della netlist deve essere aperto manualmente selezionando la voce "
+"``Apri'' presente nel menu ``File'' o facendo clic sul pulsante ``Apri'' "
+"file sulla barra degli strumenti."
 
 #. type: Title -
 #: cvpcb.adoc:132
@@ -319,15 +328,16 @@ msgstr "Schermo principale"
 #. type: Plain text
 #: cvpcb.adoc:138
 msgid "The image below shows the main window of CvPcb."
-msgstr "L'immagine sottostante mostra la finestra principale di Cvcb."
+msgstr "L'immagine sottostante mostra la finestra principale di CvPcb."
 
 #. type: Plain text
 #: cvpcb.adoc:140
 msgid "image:images/1000000000000324000001ED7EE8E1AB.png[]"
-msgstr ""
+msgstr "image:images/1000000000000324000001ED7EE8E1AB.png[]"
 
 #. type: Plain text
 #: cvpcb.adoc:148
+#, fuzzy
 msgid ""
 "The left pane contains the list of available footprint library file names "
 "associated with the project. The center pane contains the list of components "
@@ -336,17 +346,23 @@ msgid ""
 "will be empty if no netlist file has been loaded and the footprint pane can "
 "be also empty if no footprint libraries are found."
 msgstr ""
+"The left pane contains the list of available footprint library file names "
+"associated with the project. The center pane contains the list of components "
+"loaded from the net list file. The right pane contains the list of available "
+"footprints loaded from the project footprint libraries.  The component pane "
+"will be empty if no netlist file has been loaded and the footprint pane can "
+"be also empty if no footprint libraries are found."
 
 #. type: Title ~
 #: cvpcb.adoc:150
 #, no-wrap
 msgid "Main Window Toolbar"
-msgstr "La barra degli strumenti della finestra principale"
+msgstr "La barra strumenti della finestra principale"
 
 #. type: Plain text
 #: cvpcb.adoc:153
 msgid "image:images/20000009000032560000045885ACF0D6.png[]"
-msgstr ""
+msgstr "image:images/20000009000032560000045885ACF0D6.png[]"
 
 #. type: Plain text
 #: cvpcb.adoc:155
@@ -360,6 +376,8 @@ msgid ""
 "|image:images/100002010000001A0000001AE37403FB.png[]\n"
 "|Select the net list file to be processed.\n"
 msgstr ""
+"|image:images/100002010000001A0000001AE37403FB.png[]\n"
+"|Seleziona il file netlist da elaborare.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:164
@@ -369,6 +387,8 @@ msgid ""
 "|Save the footprint association file (.cmp) and the updated net list\n"
 "(.net) file.\n"
 msgstr ""
+"|image:images/100002010000001A0000001AF4CF46A1.png[]\n"
+"|Salva il file di associazione impronte (.cmp) e il file netlist (.net) aggiornato.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:167
@@ -377,6 +397,8 @@ msgid ""
 "|image:images/100002010000001A0000001A99631808.png[]\n"
 "|Invoke the CvPcb configuration menu.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A99631808.png[]\n"
+"|Invoca il menu di configurazione di CvPcb.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:171
@@ -386,6 +408,8 @@ msgid ""
 "|Display the footprint of the component selected in the footprint\n"
 "window.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A3EE5F221.png[]\n"
+"|Mostra l'impronta del componente selezionato nella finestra impronte.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:175
@@ -395,6 +419,8 @@ msgid ""
 "|Automatically associate footprints with components starting using an\n"
 "equivalence file.\n"
 msgstr ""
+"|image:images/100002010000001A0000001AFDF35759.png[]\n"
+"|Associa automaticamente impronte con componenti cominciando con l'usare un file di equivalenze.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:179
@@ -404,100 +430,125 @@ msgid ""
 "|Automatically select the previous component in the list without a\n"
 "footprint association.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A3EEC8BF8.png[]\n"
+"|Seleziona automaticamente nell'elenco il componente precedente senza un'associazione impronta.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:183
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|image:images/100002010000001A0000001A35181776.png[]\n"
 "|Automatically select the next component in the list without a footprint\n"
 "association.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A35181776.png[]\n"
+"|Seleziona automaticamente nell'elenco il componente successivo senza un'associazione impronta.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:186
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|image:images/1000000000000022000000208578FA09.png[]\n"
 "|Delete all footprint assignments.\n"
 msgstr ""
+"|image:images/1000000000000022000000208578FA09.png[]\n"
+"|Delete all footprint assignments.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:190
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|image:images/100002010000001A0000001A79DFC9CB.png[]\n"
 "|Open the selected footprint documentation pdf file using the default\n"
 "pdf viewer.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A79DFC9CB.png[]\n"
+"|Open the selected footprint documentation pdf file using the default\n"
+"pdf viewer.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:194
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|image:images/100002010000001A0000001A2030B04B.png[]\n"
 "|Enable or disable the filtering to limit the list of footprints to the\n"
 "footprint filters of the selected component.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A2030B04B.png[]\n"
+"|Enable or disable the filtering to limit the list of footprints to the\n"
+"footprint filters of the selected component.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:198
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|image:images/100002010000001A0000001A98870FF1.png[]\n"
 "|Enable or d isable the filtering to limit the list of footprints using\n"
 "the pin count of t he selected component.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A98870FF1.png[]\n"
+"|Enable or d isable the filtering to limit the list of footprints using\n"
+"the pin count of t he selected component.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:202
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|image:images/100002010000001A0000001A7D355C45.png[]\n"
 "|Enable or disable filtering to limit the list of footprints using the\n"
 "selected library.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A7D355C45.png[]\n"
+"|Enable or disable filtering to limit the list of footprints using the\n"
+"selected library.\n"
 
 #. type: Title ~
 #: cvpcb.adoc:205
 #, no-wrap
 msgid "Main Window Keyboard Commands"
-msgstr ""
+msgstr "Comandi da tastiera della finestra principale"
 
 #. type: Plain text
 #: cvpcb.adoc:208
 msgid "The following table lists the keyboard commands for the main window:"
 msgstr ""
+"La seguente tabella elenca il comandi da tastiera per la finestra principale:"
 
 #. type: delimited block |
 #: cvpcb.adoc:214
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|[multiblock cell omitted] |Activate the next pane to the right of the\n"
 "currently activated pane. Wrap around to the first pane if the last pane\n"
 "is currently activated.\n"
 msgstr ""
+"|[multiblock cell omitted] |Activate the next pane to the right of the\n"
+"currently activated pane. Wrap around to the first pane if the last pane\n"
+"is currently activated.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:218
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "|Left Arrow |Activate the next pane to the left of the currently\n"
 "activated pane. Wrap around to the last pane if the first pane is\n"
 "currently activated.\n"
 msgstr ""
+"|Left Arrow |Activate the next pane to the left of the currently\n"
+"activated pane. Wrap around to the last pane if the first pane is\n"
+"currently activated.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:220
 #, no-wrap
 msgid "|Up Arrow |Select the previous item of the currently selected list.\n"
-msgstr ""
+msgstr "|Freccia su |Seleziona la voce precedente dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:222
 #, no-wrap
 msgid "|Down Arrow |Select the next item of the currently selected list.\n"
-msgstr ""
+msgstr "|Freccia giù |Seleziona la voce successiva dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:225
@@ -505,7 +556,7 @@ msgstr ""
 msgid ""
 "|Page Up |Select the item up one full page of the currently selected\n"
 "list.\n"
-msgstr ""
+msgstr "|Pagina Su |Seleziona l'elemento di una pagina precedente dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:228
@@ -513,30 +564,30 @@ msgstr ""
 msgid ""
 "|Page Down |Select the item down one full page of the currently selected\n"
 "list.\n"
-msgstr ""
+msgstr "|Pagina Giù |Seleziona l'elemento di una pagina successiva dell'elenco attualmente selezionato."
 
 #. type: delimited block |
 #: cvpcb.adoc:230
 #, no-wrap
 msgid "|Home |Select the first item of the currently selected list.\n"
-msgstr ""
+msgstr "|Home |Seleziona il primo elemento dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:232
 #, no-wrap
 msgid "|End |Select the last item of the currently selected list.\n"
-msgstr ""
+msgstr "|Fine |Seleziona l'ultimo elemento dell'elenco attualmente selezionato.\n"
 
 #. type: Title ~
 #: cvpcb.adoc:235
 #, no-wrap
 msgid "CvPcb Configuration"
-msgstr ""
+msgstr "Configurazione CvPcb"
 
 #. type: Plain text
 #: cvpcb.adoc:238
 msgid "image:images/10000000000000D3000000C24C09C33B.png[]"
-msgstr ""
+msgstr "image:images/10000000000000D3000000C24C09C33B.png[]"
 
 #. type: Plain text
 #: cvpcb.adoc:241
@@ -544,24 +595,32 @@ msgid ""
 "CvPcb can be automatically closed after saving the footprint association "
 "file, or not."
 msgstr ""
+"CvPcb, dopo il salvataggio del file di associazione impronte, può essere "
+"chiuso automaticamente oppure no."
 
 #. type: Plain text
 #: cvpcb.adoc:244
+#, fuzzy
 msgid ""
 "Invoking the ``Libraries'' entry in the ``Preferences'' menu displays the "
 "library configuration dialog."
 msgstr ""
+"Invoking the ``Libraries'' entry in the ``Preferences'' menu displays the "
+"library configuration dialog."
 
 #. type: Plain text
 #: cvpcb.adoc:247
 msgid ""
 "Depending of the CvPcb version, there are 2 different libraries management:"
 msgstr ""
+"A seconda della versione di CvPcb, ci sono due diverse gestioni delle "
+"librerie:"
 
 #. type: Plain text
 #: cvpcb.adoc:249
+#, fuzzy
 msgid "The legacy management, using *.mod files, and a library list of files"
-msgstr ""
+msgstr "The legacy management, using *.mod files, and a library list of files"
 
 #. type: Plain text
 #: cvpcb.adoc:253
@@ -576,7 +635,7 @@ msgstr ""
 #: cvpcb.adoc:255
 #, no-wrap
 msgid "Footprint Libraries Management"
-msgstr ""
+msgstr "Gestione librerie impronte"
 
 #. type: Title ~
 #: cvpcb.adoc:258
@@ -714,27 +773,29 @@ msgstr ""
 #. type: Plain text
 #: cvpcb.adoc:321
 msgid "The default Linux library paths will be as follows:"
-msgstr ""
+msgstr "I percorsi di libreria predefiniti per Linux sono i seguenti:"
 
 #. type: Plain text
 #: cvpcb.adoc:323
 #, no-wrap
 msgid "*root/share/kicad/modules*\n"
-msgstr ""
+msgstr "*root/share/kicad/modules*\n"
 
 #. type: Plain text
 #: cvpcb.adoc:325
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "*root/share/kicad/modules/packages3d* (for 3D shapes files \n"
 "format *VRML* created par Wings3D).\n"
 msgstr ""
+"*root/share/kicad/modules/packages3d* (for 3D shapes files \n"
+"format *VRML* created par Wings3D).\n"
 
 #. type: Plain text
 #: cvpcb.adoc:326
 #, no-wrap
 msgid "*root/share/template*\n"
-msgstr ""
+msgstr "*root/share/template*\n"
 
 #. type: Plain text
 #: cvpcb.adoc:330
@@ -748,22 +809,29 @@ msgstr ""
 #: cvpcb.adoc:332
 #, no-wrap
 msgid "New Management: Footprint Libraries tables"
-msgstr ""
+msgstr "Nuova gestione: tabelle librerie impronte"
 
 #. type: Plain text
 #: cvpcb.adoc:338
+#, fuzzy
 msgid ""
 "Since December 2013, CvPcb no longer uses the library management tool "
 "described in #5.1.Legacy%20management:%20selecting%20Footprint%20Libraries|"
 "outline[section 5.1]."
 msgstr ""
+"Since December 2013, CvPcb no longer uses the library management tool "
+"described in #5.1.Legacy%20management:%20selecting%20Footprint%20Libraries|"
+"outline[section 5.1]."
 
 #. type: Plain text
 #: cvpcb.adoc:341
+#, fuzzy
 msgid ""
 "The new footprint library table implementation is how footprint libraries "
 "are now managed."
 msgstr ""
+"The new footprint library table implementation is how footprint libraries "
+"are now managed."
 
 #. type: Plain text
 #: cvpcb.adoc:345
@@ -815,7 +883,7 @@ msgstr ""
 #: cvpcb.adoc:375
 msgid ""
 "The project specific footprint library table contains the list of libraries "
-"that are available specifically for the currently load ed project file. The "
+"that are available specifically for the currently loaded project file. The "
 "project specific footprint library table can only be edited when it is "
 "loaded along with the project netlist file. If no project file is loaded or "
 "there is no footprint library table file in the project path, an empty table "
@@ -1058,7 +1126,7 @@ msgstr ""
 msgid ""
 "The table below shows a footprint library table entry with the COW option "
 "given. Note the use of the environment variable $\\{HOME} as an example "
-"only. The github.pretty directory is locat ed in $\\{HOME}/pretty/ path.  "
+"only. The github.pretty directory is located in $\\{HOME}/pretty/ path.  "
 "Anytime you use the option *allow_pretty_writing_to_this_dir*, you will need "
 "to create that directory manually in advance and it must end with the "
 "extension *.pretty*."
@@ -1594,7 +1662,7 @@ msgstr ""
 #. type: Plain text
 #: cvpcb.adoc:796
 msgid ""
-"F ilter ed by list of footprint filters assigned to the selected component . "
+"Filtered by list of footprint filters assigned to the selected component. "
 "The component filters are listed on the center pane of the status bar at the "
 "bottom of the main window."
 msgstr ""
@@ -1727,159 +1795,101 @@ msgstr ""
 #. type: Plain text
 #: cvpcb.adoc:856
 msgid "Any line starting with *#* is a comment."
-msgstr ""
+msgstr "Ogni riga che comincia con *#* è un commento."
 
 #. type: Plain text
 #: cvpcb.adoc:858
 msgid "Here is an example equivalence file:"
-msgstr ""
+msgstr "Ecco un esempio di file di equivalenze:"
 
-#. type: Plain text
-#: cvpcb.adoc:860
-msgid "#integrated circuits (smd):"
+#. type: delimited block -
+#: cvpcb.adoc:883
+#, no-wrap
+msgid ""
+"#integrated circuits (smd):\n"
+"'74LV14' 'SO14E'\n"
+"'74HCT541M' 'SO20L'\n"
+"'EL7242C' 'SO8E'\n"
+"'DS1302N' 'SO8E'\n"
+"'XRC3064' 'VQFP44'\n"
+"'LM324N' 'S014E'\n"
+"'LT3430' 'SSOP17'\n"
+"'LM358' 'SO8E'\n"
+"'LTC1878' 'MSOP8'\n"
+"'24LC512I/SM' 'SO8E'\n"
+"'LM2903M' 'SO8E'\n"
+"'LT1129_SO8' 'SO8E'\n"
+"'LT1129CS8-3.3' 'SO8E'\n"
+"'LT1129CS8' 'SO8E'\n"
+"'LM358M' 'SO8E'\n"
+"'TL7702BID' 'SO8E'\n"
+"'TL7702BCD' 'SO8E'\n"
+"'U2270B' 'SO16E'\n"
+"#Xilinx\n"
+"'XC3S400PQ208' 'PQFP208'\n"
+"'XCR3128-VQ100' 'VQFP100'\n"
+"'XCF08P' 'BGA48'\n"
 msgstr ""
+"#circuiti integrati (smd):\n"
+"'74LV14' 'SO14E'\n"
+"'74HCT541M' 'SO20L'\n"
+"'EL7242C' 'SO8E'\n"
+"'DS1302N' 'SO8E'\n"
+"'XRC3064' 'VQFP44'\n"
+"'LM324N' 'S014E'\n"
+"'LT3430' 'SSOP17'\n"
+"'LM358' 'SO8E'\n"
+"'LTC1878' 'MSOP8'\n"
+"'24LC512I/SM' 'SO8E'\n"
+"'LM2903M' 'SO8E'\n"
+"'LT1129_SO8' 'SO8E'\n"
+"'LT1129CS8-3.3' 'SO8E'\n"
+"'LT1129CS8' 'SO8E'\n"
+"'LM358M' 'SO8E'\n"
+"'TL7702BID' 'SO8E'\n"
+"'TL7702BCD' 'SO8E'\n"
+"'U2270B' 'SO16E'\n"
+"#Xilinx\n"
+"'XC3S400PQ208' 'PQFP208'\n"
+"'XCR3128-VQ100' 'VQFP100'\n"
+"'XCF08P' 'BGA48'\n"
 
-#. type: Plain text
-#: cvpcb.adoc:862
-msgid "`74LV14' `SO14E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:864
-msgid "`74HCT541M' `SO20L'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:866
-msgid "`EL7242C' `SO8E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:868
-msgid "`DS1302N' `SO8E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:870
-msgid "`XRC3064' `VQFP44'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:872
-msgid "`LM324N' `S014E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:874
-msgid "`LT3430' `SSOP17'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:876
-msgid "`LM358' `SO8E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:878
-msgid "`LTC1878' `MSOP8'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:880
-msgid "`24LC512I/SM' `SO8E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:882
-msgid "`LM2903M' `SO8E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:884
-msgid "`LT1129_SO8' `SO8E'"
-msgstr ""
-
-#. type: Plain text
+#. type: delimited block -
 #: cvpcb.adoc:886
-msgid "`LT1129CS8-3.3' `SO8E'"
+#, no-wrap
+msgid ""
+"#upro\n"
+"'MCF5213-LQFP100' 'VQFP100'\n"
 msgstr ""
+"#upro\n"
+"'MCF5213-LQFP100' 'VQFP100'\n"
 
-#. type: Plain text
-#: cvpcb.adoc:888
-msgid "`LT1129CS8' `SO8E'"
+#. type: delimited block -
+#: cvpcb.adoc:889
+#, no-wrap
+msgid ""
+"#regulators\n"
+"'LP2985LV' 'SOT23-5'\n"
 msgstr ""
+"#regolatori\n"
+"'LP2985LV' 'SOT23-5'\n"
 
-#. type: Plain text
-#: cvpcb.adoc:890
-msgid "`LM358M' `SO8E'"
-msgstr ""
-
-#. type: Plain text
+#. type: Title ~
 #: cvpcb.adoc:892
-msgid "`TL7702BID' `SO8E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:894
-msgid "`TL7702BCD' `SO8E'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:896
-msgid "`U2270B' `SO16E'"
-msgstr ""
+#, no-wrap
+msgid "Automatically Associating Footprints to Components"
+msgstr "Associazione automatica di impronte a componenti"
 
 #. type: Plain text
 #: cvpcb.adoc:898
-msgid "#Xilinx"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:900
-msgid "`XC3S400PQ208' `PQFP208'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:902
-msgid "`XCR3128-VQ100' `VQFP100'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:904
-msgid "`XCF08P' `BGA48'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:906
-msgid "#upro"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:908
-msgid "`MCF5213-LQFP100' `VQFP100'"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:910
-msgid "#regulators"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:912
-msgid "`LP2985LV' `SOT23-5'"
-msgstr ""
-
-#. type: Title ~
-#: cvpcb.adoc:914
-#, no-wrap
-msgid "Automatically Associating Footprints to Components"
-msgstr ""
-
-#. type: Plain text
-#: cvpcb.adoc:920
+#, fuzzy
 msgid ""
 "Click on the automatic footprint association button on the top toolbar to "
 "process an equivalence file. All components found by their value in the "
 "selected equivalence (*.equ) file will have their footprint automatically "
 "assigned."
 msgstr ""
+"Click on the automatic footprint association button on the top toolbar to "
+"process an equivalence file. All components found by their value in the "
+"selected equivalence (*.equ) file will have their footprint automatically "
+"assigned."
