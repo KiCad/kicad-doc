@@ -10,8 +10,6 @@ image:images/kicad_logo.png[]
 
 _Reference manual_
 
-// :toc-placement!:
-
 [[copyright]]
 *Copyright*
 
@@ -48,8 +46,6 @@ Published on February 4, 2013.
 *Note for Mac users*
 
 The KiCad support for the Apple OS X operating system is experimental.
-
-// :toc-title: Table of Content
 
 toc::[]
 
@@ -151,7 +147,7 @@ image:images/20000009000032560000045885ACF0D6.png[]
 
 The top toolbar allows for easy access to the following commands:
 
-[width="90%",cols="10%,90%",]
+[width="80%",cols="10%,90%",]
 |=======================================================================
 |image:images/100002010000001A0000001AE37403FB.png[]
 |Select the net list file to be processed.
@@ -204,7 +200,7 @@ Main Window Keyboard Commands
 
 The following table lists the keyboard commands for the main window:
 
-[width="100%",cols="17%,83%",]
+[width="80%",cols="15%,85%",]
 |=======================================================================
 v|Right Arrow
 Tab|Activate the next pane to the right of the
@@ -244,8 +240,8 @@ the library configuration dialog.
 Depending of the CvPcb version, there are 2 different libraries
 management:
 
-* The legacy management, using *.mod files, and a library list of files
-* The new ``Pretty'' format, using one file by footprint. It uses a
+- The legacy management, using *.mod files, and a library list of files
+- The new ``Pretty'' format, using one file by footprint. It uses a
 folder list. Each folder (*.pretty folder name) is a library. When
 using the new management, You also can use native libraries coming from
 GEDA/GPCB or Eagle xml format files .
@@ -267,12 +263,12 @@ note that changing these libraries will also effect Pcbnew.
 
 image:images/2000000900003A6600000EC90C50E7EF.png[]
 
-* *Remove:* Removes the selected footprint library from the list.
-* *Add:* Adds a new footprint library to the end of the list.
-* *Insert:* Inserts a new footprint library to the list before the
-currently selected library.
-* *Up:* Move the currently select library up the list.
-* *Down:* Move the currently selected library down the list.
+- *Remove:* Removes the selected footprint library from the list.
+- *Add:* Adds a new footprint library to the end of the list.
+- *Insert:* Inserts a new footprint library to the list before the
+  currently selected library.
+- *Up:* Move the currently select library up the list.
+- *Down:* Move the currently selected library down the list.
 
 Changing the Footprint Documentation File.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -318,10 +314,10 @@ Linux and OSX.
 
 The default Linux library paths will be as follows:
 
-* *root/share/kicad/modules*
-* *root/share/kicad/modules/packages3d* (for 3D shapes files 
-format *VRML* created par Wings3D).
-* *root/share/template*
+- *root/share/kicad/modules*
+- *root/share/kicad/modules/packages3d* (for 3D shapes files 
+  format *VRML* created par Wings3D).
+- *root/share/template*
 
 Where the root path is relative to the binary path where KiCad is
 installed. Typically on Linux Kicad is installed in the /usr/bin path.
@@ -331,9 +327,8 @@ New Management: Footprint Libraries tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Since December 2013, CvPcb no longer uses the library management tool
-described in
-#5.1.Legacy%20management:%20selecting%20Footprint%20Libraries|outline[section
-5.1].
+described in <<_legacy_management_selecting_footprint_libraries,Legacy
+management: selecting Footprint Libraries>>.
 
 The new footprint library table implementation is how footprint
 libraries are now managed.
@@ -411,10 +406,10 @@ There is also a description field to add a description of the library
 entry. The option field is not used at this time so adding options will
 have no effect when loading libraries.
 
-* Please note that you cannot have duplicate library nicknames in the
+- Please note that you cannot have duplicate library nicknames in the
 same table. However, you can have duplicate library nicknames in both
 the global and project specific footprint library table.
-* The project specific table entry will take precedence over the global
+- The project specific table entry will take precedence over the global
 table entry when duplicated names occur. When entries are defined in the
 project specific table, an fp-lib-table file containing the entries will
 be written into the folder of the currently open net list.
@@ -422,7 +417,7 @@ be written into the folder of the currently open net list.
 Environment Variable Substitution
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-One of the most powerful feature s of the footprint library table is
+One of the most powerful features of the footprint library table is
 environment variable substitution. This allows you to define custom
 paths to where your libraries are stored in environment variables.
 Environment variable substitution is supported by using the syntax
@@ -445,7 +440,7 @@ Using the GitHub Plugin
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 The GitHub is a special plugin that provides an interface for read only
-access to a remote G it H ub repo sitory consisting of pretty (Pretty is
+access to a remote Git Hub repository consisting of pretty (Pretty is
 name of the KiCad footprint file format) footprints and optionally
 provides ``Copy On Write'' (COW) support for editing footprints read from
 the GitHub repo and saving them locally. Therefore the ``Git Hub'' plugin
@@ -603,7 +598,7 @@ contents of each pane in the status bar.
 Keyboard Commands
 ^^^^^^^^^^^^^^^^^
 
-[width="100%",cols="20%,80%",]
+[width="80%",cols="20%,80%",]
 |==================================================================
 |F1 |Zoom In
 |F2 |Zoom Out
@@ -620,7 +615,7 @@ Keyboard Commands
 Mouse Commands
 ^^^^^^^^^^^^^^
 
-[width="100%",cols="32%,68%",]
+[width="80%",cols="32%,68%",]
 |============================================================
 |Scroll Wheel |Zoom in and out at the current cursor position
 |Ctrl + Scroll Wheel |Pan right and left
@@ -635,16 +630,16 @@ image:images/2000000900000C4E00001A91ED722582.png[]
 
 Displayed by right-clicking the mouse:
 
-[width="100%",cols="44%,56%",options="header",]
+[width="80%",cols="44%,56%",]
 |====================================================================
-|Zoom Selection (Select Zoom) |Direct selection of the display zoom .
+|Zoom Selection (Select Zoom) |Direct selection of the display zoom.
 |Grid Selection (Grid Select) |Direct selection of the grid.
 |====================================================================
 
 Horizontal Toolbar
 ^^^^^^^^^^^^^^^^^^
 
-[width="90%",cols="10%,90%",options="header",]
+[width="90%",cols="10%,90%",]
 |=======================================================================
 |image:images/100002010000001A0000001AFFE7B356.png[]
 |Show display options dialog
@@ -702,7 +697,7 @@ image:images/10000000000002C7000002264738B528.png[]
 Mouse Commands
 ^^^^^^^^^^^^^^
 
-[width="100%",cols="32%,68%",]
+[width="90%",cols="32%,68%",]
 |============================================================
 |Scroll Wheel |Zoom in and out at the current cursor position
 |Ctrl + Scroll Wheel |Pan right and left
@@ -712,7 +707,7 @@ Mouse Commands
 Horizontal Toolbar
 ^^^^^^^^^^^^^^^^^^
 
-[width="90%",cols="10%,90%",options="header",]
+[width="90%",cols="10%,90%",]
 |=======================================================================
 |image:images/100002010000001A0000001A106F8A4B.png[]
 |Reload the 3D model
@@ -909,9 +904,9 @@ Index
 Indices and tables
 ==================
 
-* genindex
-* modindex
-* search
+- genindex
+- modindex
+- search
 
 ////
 
