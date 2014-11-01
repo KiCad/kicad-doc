@@ -17,9 +17,9 @@ adoc: po
 	done
 
 html: adoc
-	asciidoc --section-numbers $(DOCNAME).adoc ; \
+	asciidoc -a 'newline=\n' --section-numbers $(DOCNAME).adoc ; \
 	for i in `cat po/LINGUAS` ; do \
-	  asciidoc -a lang=$$i --section-numbers $(DOCNAME)_$$i.adoc ; \
+	  asciidoc -a 'newline=\n' -a lang=$$i --section-numbers $(DOCNAME)_$$i.adoc ; \
 	done
 
 docbook: adoc
@@ -29,9 +29,9 @@ docbook: adoc
 	done
 
 pdf: adoc
-	a2x -fpdf -v $(DOCNAME).adoc --dblatex-opts "-P latex.output.revhistory=0" ; \
+	a2x -a 'newline=\n' -fpdf -v $(DOCNAME).adoc --dblatex-opts "-P latex.output.revhistory=0" ; \
 	for i in `cat po/LINGUAS` ; do \
-	  a2x -a lang=$$i -fpdf -v $(DOCNAME)_$$i.adoc --dblatex-opts "-P latex.output.revhistory=0" ; \
+	  a2x  -a 'newline=\n' -a lang=$$i -fpdf -v $(DOCNAME)_$$i.adoc --dblatex-opts "-P latex.output.revhistory=0" ; \
 	done
 
 odt: docbook
