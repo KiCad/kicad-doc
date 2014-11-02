@@ -309,7 +309,7 @@ By default CvPcb internally uses a set of predefined paths used to search
 for footprint libraries. These paths are operating system dependent. It
 is generally preferable to use relative paths rather than absolute paths
 whenever possible to prevent platform dependency problems. In other
-words: “c:\Program Files\kicad\share” has no meaning and will fail on
+words: “c:Program Fileskicadshare” has no meaning and will fail on
 Linux and OSX.
 
 The default Linux library paths will be as follows:
@@ -421,7 +421,7 @@ One of the most powerful features of the footprint library table is
 environment variable substitution. This allows you to define custom
 paths to where your libraries are stored in environment variables.
 Environment variable substitution is supported by using the syntax
-$\{ENV_VAR_NAME} in the footprint library path.
+${ENV_VAR_NAME} in the footprint library path.
 
 By default, at run time CvPcb define s the *KISYSMOD* environment
 variable. This points to where the default footprint libraries that were
@@ -481,7 +481,7 @@ remote read only portion.
 The table below shows a footprint library table entry without the option
 *allow_pretty_writing_to_this_dir*:
 
-[width="99%",cols="9%,62%,8%,6%,15%",]
+[width="99%",cols="9%,62%,8%,6%,15%",options="header",]
 |=======================================================================
 |Nickname |Library Path |Plugin Type |Options |Description
 
@@ -491,19 +491,19 @@ The table below shows a footprint library table entry without the option
 |=======================================================================
 
 The table below shows a footprint library table entry with the COW option
-given. Note the use of the environment variable $\{HOME} as an example
-only. The github.pretty directory is located in $\{HOME}/pretty/ path.
+given. Note the use of the environment variable ${HOME} as an example
+only. The github.pretty directory is located in ${HOME}/pretty/ path.
 Anytime you use the option *allow_pretty_writing_to_this_dir*, you will
 need to create that directory manually in advance and it must end with
 the extension *.pretty*.
 
-[width="100%",cols="7%,47%,6%,29%,11%",]
+[width="100%",cols="7%,47%,6%,29%,11%",options="header",]
 |=======================================================================
 |Nickname |Library Path |Plugin Type |Options |Description
 
 |github
 |https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]
-|Github |allow_pretty_writing_to_this_dir=$\{HOME}/pretty/github.pretty
+|Github |allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty
 |Liftoff’s GH footprints
 |=======================================================================
 
@@ -521,7 +521,7 @@ Also, do not use the same COW (*.pretty) directory in a footprint library
 table entry. This would likely create a mess.
 
 The value of the option *allow_pretty_writing_to_this_dir* will expand
-any environment variable using the $\{} notation to create the path in
+any environment variable using the ${} notation to create the path in
 the same way as the ``Library Path'' setting.
 
 What’s the point of COW? It is to turbo-charge the sharing of footprints.
@@ -539,7 +539,7 @@ the shared master copies at https://github.com/[https://github.com].
 Usage Patterns
 ^^^^^^^^^^^^^^
 
-F ootprint libraries can be defined either globally or specifically to
+Footprint libraries can be defined either globally or specifically to
 the currently loaded project. Footprint libraries defined in the user’s
 global table are always available and are stored in the fp-lib-table
 file in the user’s home folder.
@@ -547,9 +547,7 @@ file in the user’s home folder.
 Global footprint libraries can always be accessed even when there is no
 project net list file opened.
 
-The project specific footprint table is active only
-
-for the currently open net list file .
+The project specific footprint table is active only for the currently open net list file.
 
 The project specific footprint library table is saved in the file
 fp-lib-table in the path of the currently open net list . You are free
@@ -571,7 +569,7 @@ footprint libraries both globally and project specific ally.
 
 One usage pattern would be to define your most commonly used libraries
 globally and the library only require for the project in the project
-specific librar y table . There is no restriction on how you define your
+specific library table. There is no restriction on how you define your
 libraries.
 
 Viewing the Current Footprint
@@ -823,7 +821,7 @@ Equivalence files
 
 Equivalence files allow for automatic assignment of footprints to
 components. They list the name of the corresponding footprint according
-to the name ( _value field_ ) of the component. These files typically
+to the name (_value field_) of the component. These files typically
 have the .equ file extension. The are plain text files and may be edited
 by any plain text editor. Refer to the section ``Selecting the
 equivalence files'' for more information.
