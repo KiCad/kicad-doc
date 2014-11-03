@@ -1,29 +1,26 @@
 #!/bin/bash
 
 #Note: created source/_static to eliminate a warning message.
-#mkdir source/_static
+if [ ! -d "source/_static" ]; then
+  mkdir source/_static
+fi
 
 #To create html
-#make -e html
-#make -e SPHINXOPTS="-D html_logo=images/10000201000003200000022675E94B31.png" html
-#make --dry-run -e SPHINXOPTS="-D html_logo=images/10000201000003200000022675E94B31.png" html
+make -e SPHINXOPTS="-D html_logo=images/kicad_logo.png" html
 
 #To create pdf
-#make latexpdf
-make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D latex_paper_size=a4" latexpdf
-make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D language=it -D latex_paper_size=a4" BUILDDIR="build-it" latexpdf
-make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D language=fr -D latex_paper_size=a4" BUILDDIR="build-fr" latexpdf
-# ... equivalent to
-#sphinx-build -b latex -d build/doctrees -D latex_paper_size=a4 -D latex_logo=images/10000201000003200000022675E94B31.png source build/latex
-#make -C build/latex all-pdf
+make -e SPHINXOPTS="-D latex_logo=images/kicad_logo.png -D latex_paper_size=a4" latexpdf
 
 #To create epub
 #make epub
 #make -e SPHINXOPTS="epub_cover = ('_static/cover.png', '') epub
-#make -e SPHINXOPTS="-D epub_cover=\('images/10000201000003200000022675E94B31.png', ''\)" epub
+#make -e SPHINXOPTS="-D epub_cover=\('images/kicad_logo.png', ''\)" epub
 
 #To create CHM
 #make htmlhelp
+
+#Clean build cache
+rm -R build/doctrees
 
 #####################
 # i18n
@@ -47,16 +44,15 @@ make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D
 #Build .mo files: always update compiled .po gettext files
 sphinx-intl -c source/conf.py build -d source/locale
 
-#export SPHINXINTL_LANGUAGE=it
 #Build nationalized html
-make -e SPHINXOPTS="-D html_logo=images/10000201000003200000022675E94B31.png" html
-make -e SPHINXOPTS="-D language='it' -D html_logo=images/10000201000003200000022675E94B31.png" BUILDDIR="build-it" html
-make -e SPHINXOPTS="-D language='fr' -D html_logo=images/10000201000003200000022675E94B31.png" BUILDDIR="build-fr" html
-##
-#sphinx-build -a -b html -d build/doctrees -D language=it -D locale_dirs=['./locale'] -D html_logo=images/10000201000003200000022675E94B31.png source build/html
-#sphinx-build -a -b html -d build/doctrees                -D html_logo=images/10000201000003200000022675E94B31.png source build/html
-#sphinx-build -a -b html -d build/doctrees -D language=it -D html_logo=images/10000201000003200000022675E94B31.png source build/html-it
-#sphinx-build -a -b html -d build/doctrees -D language=fr -D html_logo=images/10000201000003200000022675E94B31.png source build/html-fr
+for i in `cat source/LINGUAS` ; do
+  make -e SPHINXOPTS="-D language='$i' -D html_logo=images/kicad_logo.png" BUILDDIR="build-$i" html
+done
+
+#Build nationalized pdf
+for i in `cat source/LINGUAS` ; do
+  make -e SPHINXOPTS="-D latex_logo=images/kicad_logo.png -D language=$i -D latex_paper_size=a4" BUILDDIR="build-$i" latexpdf
+done
 
 #Then
 #cd build/locale/
@@ -70,4 +66,7 @@ make -e SPHINXOPTS="-D language='fr' -D html_logo=images/10000201000003200000022
 
 #install it.mo "source/locale/it/LC_MESSAGES/it.mo"
 
-rm -R build/doctrees
+#Clean nationalized build cache
+for i in `cat source/LINGUAS` ; do
+  rm -R build-$i/doctrees
+done
