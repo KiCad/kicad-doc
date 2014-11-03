@@ -10,8 +10,9 @@
 
 #To create pdf
 #make latexpdf
-#make -e PAPER=a4 latexpdf
-#make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D latex_paper_size=a4" latexpdf
+make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D latex_paper_size=a4" latexpdf
+make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D language=it -D latex_paper_size=a4" BUILDDIR="build-it" latexpdf
+make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D language=fr -D latex_paper_size=a4" BUILDDIR="build-fr" latexpdf
 # ... equivalent to
 #sphinx-build -b latex -d build/doctrees -D latex_paper_size=a4 -D latex_logo=images/10000201000003200000022675E94B31.png source build/latex
 #make -C build/latex all-pdf
@@ -48,11 +49,14 @@ sphinx-intl -c source/conf.py build -d source/locale
 
 #export SPHINXINTL_LANGUAGE=it
 #Build nationalized html
-#make -e SPHINXOPTS="-D language='it' -D locale_dirs='source/locale' -D html_logo=images/10000201000003200000022675E94B31.png" html
+make -e SPHINXOPTS="-D html_logo=images/10000201000003200000022675E94B31.png" html
+make -e SPHINXOPTS="-D language='it' -D html_logo=images/10000201000003200000022675E94B31.png" BUILDDIR="build-it" html
+make -e SPHINXOPTS="-D language='fr' -D html_logo=images/10000201000003200000022675E94B31.png" BUILDDIR="build-fr" html
+##
 #sphinx-build -a -b html -d build/doctrees -D language=it -D locale_dirs=['./locale'] -D html_logo=images/10000201000003200000022675E94B31.png source build/html
-sphinx-build -a -b html -d build/doctrees -D html_logo=images/10000201000003200000022675E94B31.png source build/html
-sphinx-build -a -b html -d build/doctrees -D language=it -D html_logo=images/10000201000003200000022675E94B31.png source build/html-it
-sphinx-build -a -b html -d build/doctrees -D language=fr -D html_logo=images/10000201000003200000022675E94B31.png source build/html-fr
+#sphinx-build -a -b html -d build/doctrees                -D html_logo=images/10000201000003200000022675E94B31.png source build/html
+#sphinx-build -a -b html -d build/doctrees -D language=it -D html_logo=images/10000201000003200000022675E94B31.png source build/html-it
+#sphinx-build -a -b html -d build/doctrees -D language=fr -D html_logo=images/10000201000003200000022675E94B31.png source build/html-fr
 
 #Then
 #cd build/locale/
