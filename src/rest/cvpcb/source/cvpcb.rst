@@ -2,18 +2,22 @@
     Added to the latex_logo directive...
     |10000201000003200000022675E94B31_png|
 
+
 CvPcb
 =====
 
 *Reference manual*
 
 Copyright
+=========
 
-This document is Copyright © 2010–2013 by it's contributors as listed below. You may distribute it and/or modify it under the terms of either the GNU General Public License (
-`http://www.gnu.org/licenses/gpl.html <http://www.gnu.org/licenses/gpl.html>`_
-), version 3 or later, or the Creative Commons Attribution License (
-`http://creativecommons.org/licenses/by/3.0/ <http://creativecommons.org/licenses/by/3.0/>`_
-), version 3.0 or later.
+This document is Copyright © 2010–2013 by it's contributors as listed
+below. You may distribute it and/or modify it under the terms of either
+the GNU General Public License (`http://www.gnu.org/licenses/gpl.html
+<http://www.gnu.org/licenses/gpl.html>`_), version 3 or later, or the
+Creative Commons Attribution License
+(`http://creativecommons.org/licenses/by/3.0/
+<http://creativecommons.org/licenses/by/3.0/>`_), version 3.0 or later.
 
 All trademarks within this guide belong to their legitimate owners.
 
@@ -34,6 +38,7 @@ Acknowledgments
 None
 
 Publication date and software version
+=====================================
 
 Published on February 4, 2013.
 
@@ -212,37 +217,23 @@ The following table lists the keyboard commands for the main window:
 
 
 +-------------+------------------------------------------------------------------------+
-| Right Arrow | Activate the                                                           |
-|             | next                                                                   |
-| Tab         | pane                                                                   |
-|             | to the right of the currently activated pane.                          |
-|             | Wrap around to the first pane if the last pane is currently activated. |
-|             |                                                                        |
+| Right Arrow | Activate the next pane to the right of the currently activated pane.   |
+| Tab         | Wrap around to the first pane if the last pane is currently activated. |
 +-------------+------------------------------------------------------------------------+
-| Left Arrow  | Activate the                                                           |
-|             | next                                                                   |
-|             | pane                                                                   |
-|             | to the left of the currently activated pane.                           |
+| Left Arrow  | Activate the next pane to the left of the currently activated pane.    |
 |             | Wrap around to the last pane if the first pane is currently activated. |
-|             |                                                                        |
 +-------------+------------------------------------------------------------------------+
 | Up Arrow    | Select the previous item of the currently selected list.               |
-|             |                                                                        |
 +-------------+------------------------------------------------------------------------+
 | Down Arrow  | Select the next item of the currently selected list.                   |
-|             |                                                                        |
 +-------------+------------------------------------------------------------------------+
 | Page Up     | Select the item up one full page of the currently selected list.       |
-|             |                                                                        |
 +-------------+------------------------------------------------------------------------+
 | Page Down   | Select the item down one full page of the currently selected list.     |
-|             |                                                                        |
 +-------------+------------------------------------------------------------------------+
 | Home        | Select the first item of the currently selected list.                  |
-|             |                                                                        |
 +-------------+------------------------------------------------------------------------+
 | End         | Select the last item of the currently selected list.                   |
-|             |                                                                        |
 +-------------+------------------------------------------------------------------------+
 
 CvPcb Configuration
@@ -510,13 +501,13 @@ of both the local read/write portion and the remote read only portion.
 The table below shows a f ootprint library table entry without the
 option **allow_pretty_writing_to_this_dir**:
 
-+----------+------------------------------------------------------------------------------------------------------+-------------+---------+-------------------------+
-| Nickname | Library Path                                                                                         | Plugin Type | Options | Description             |
-|          |                                                                                                      |             |         |                         |
-+----------+------------------------------------------------------------------------------------------------------+-------------+---------+-------------------------+
-| github   | `https://github.com/liftoff-sr/pretty_footprints <https://github.com/liftoff-sr/pretty_footprints>`_ | Github      |         | Liftoff's GH footprints |
-|          |                                                                                                      |             |         |                         |
-+----------+------------------------------------------------------------------------------------------------------+-------------+---------+-------------------------+
++----------+-----------------------------------------------------+-------------+---------+-------------------------+
+| Nickname | Library Path                                        | Plugin Type | Options | Description             |
+|          |                                                     |             |         |                         |
++==========+=====================================================+=============+=========+=========================+
+| github   | `https://github.com/liftoff-sr/pretty_footprints    | Github      |         | Liftoff's GH footprints |
+|          | <https://github.com/liftoff-sr/pretty_footprints>`_ |             |         |                         |
++----------+-----------------------------------------------------+-------------+---------+-------------------------+
 
 
 The table below s hows a f ootprint library table entry with the COW
@@ -526,13 +517,13 @@ path. Anytime you use the option **allow_pretty_writing_to_this_dir** ,
 you will need to create that directory manually in advance and it must
 end with the extension **.pretty**.
 
-+----------+------------------------------------------------------------------------------------------------------+-------------+---------------------------------------------------------------+-------------------------+
-| Nickname | Library Path                                                                                         | Plugin Type | Options                                                       | Description             |
-|          |                                                                                                      |             |                                                               |                         |
-+----------+------------------------------------------------------------------------------------------------------+-------------+---------------------------------------------------------------+-------------------------+
-| github   | `https://github.com/liftoff-sr/pretty_footprints <https://github.com/liftoff-sr/pretty_footprints>`_ | Github      | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty | Liftoff's GH footprints |
-|          |                                                                                                      |             |                                                               |                         |
-+----------+------------------------------------------------------------------------------------------------------+-------------+---------------------------------------------------------------+-------------------------+
++----------+-----------------------------------------------------+-------------+-----------------------------------+-------------------------+
+| Nickname | Library Path                                        | Plugin Type | Options                           | Description             |
+|          |                                                     |             |                                   |                         |
++==========+=====================================================+=============+===================================+=========================+
+| github   | `https://github.com/liftoff-sr/pretty_footprints    | Github      | allow_pretty_writing_to_this_dir= | Liftoff's GH footprints |
+|          | <https://github.com/liftoff-sr/pretty_footprints>`_ |             | ${HOME}/pretty/github.pretty      |                         |
++----------+-----------------------------------------------------+-------------+-----------------------------------+-------------------------+
 
 
 Footprint loads will always give precedence to the local footprints found
@@ -916,63 +907,38 @@ Any line starting with **#** is a comment.
 
 Here is an example equivalence file:
 
+::
 
-#integrated circuits (smd):
+ #integrated circuits (smd):
+ '74LV14' 'SO14E'
+ '74HCT541M' 'SO20L'
+ 'EL7242C' 'SO8E'
+ 'DS1302N' 'SO8E'
+ 'XRC3064' 'VQFP44'
+ 'LM324N' 'S014E'
+ 'LT3430' 'SSOP17'
+ 'LM358' 'SO8E'
+ 'LTC1878' 'MSOP8'
+ '24LC512I/SM' 'SO8E'
+ 'LM2903M' 'SO8E'
+ 'LT1129_SO8' 'SO8E'
+ 'LT1129CS8-3.3' 'SO8E'
+ 'LT1129CS8' 'SO8E'
+ 'LM358M' 'SO8E'
+ 'TL7702BID' 'SO8E'
+ 'TL7702BCD' 'SO8E'
+ 'U2270B' 'SO16E'
+ #Xilinx
+ 'XC3S400PQ208' 'PQFP208'
+ 'XCR3128-VQ100' 'VQFP100'
+ 'XCF08P' 'BGA48'
 
-'74LV14' 'SO14E'
+ #upro
+ 'MCF5213-LQFP100' 'VQFP100'
 
-'74HCT541M' 'SO20L'
-
-'EL7242C' 'SO8E'
-
-'DS1302N' 'SO8E'
-
-'XRC3064' 'VQFP44'
-
-'LM324N' 'S014E'
-
-'LT3430' 'SSOP17'
-
-'LM358' 'SO8E'
-
-'LTC1878' 'MSOP8'
-
-'24LC512I/SM' 'SO8E'
-
-'LM2903M' 'SO8E'
-
-'LT1129_SO8' 'SO8E'
-
-'LT1129CS8-3.3' 'SO8E'
-
-'LT1129CS8' 'SO8E'
-
-'LM358M' 'SO8E'
-
-'TL7702BID' 'SO8E'
-
-'TL7702BCD' 'SO8E'
-
-'U2270B' 'SO16E'
-
-#Xilinx
-
-'XC3S400PQ208' 'PQFP208'
-
-'XCR3128-VQ100' 'VQFP100'
-
-'XCF08P' 'BGA48'
-
-
-#upro
-
-'MCF5213-LQFP100' 'VQFP100'
-
-
-#regulators
-
-'LP2985LV'
-'SOT23-5'
+ #regulators
+ 'LP2985LV'
+ 'SOT23-5'
 
 
 Automatically Associating Footprints to Components
