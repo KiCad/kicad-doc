@@ -6,9 +6,10 @@ CvPcb
 :toc:
 :toc-placement: preamble
 
+_Reference manual_
+
 image:images/kicad_logo.png[]
 
-_Reference manual_
 
 [[copyright]]
 *Copyright*
@@ -421,17 +422,17 @@ One of the most powerful features of the footprint library table is
 environment variable substitution. This allows you to define custom
 paths to where your libraries are stored in environment variables.
 Environment variable substitution is supported by using the syntax
-${ENV_VAR_NAME} in the footprint library path.
+$\{ENV_VAR_NAME\} in the footprint library path.
 
-By default, at run time CvPcb define s the *KISYSMOD* environment
+By default, at run time CvPcb defines the *+KISYSMOD+* environment
 variable. This points to where the default footprint libraries that were
 installed with KiCad are located.
 
-You can override KISYSMOD by defining it yourself which allows you to
+You can override +KISYSMOD+ by defining it yourself which allows you to
 substitute your own libraries in place of the default KiCad footprint
 libraries.
 
-When a project netlist file is loaded, CvPcb also defines the *KIPRJMOD*
+When a project netlist file is loaded, CvPcb also defines the *+KIPRJMOD+*
 using the file path. This allows you to create libraries in the project
 path without having to define the absolute path to the library in the
 project specific footprint library table.
@@ -481,7 +482,7 @@ remote read only portion.
 The table below shows a footprint library table entry without the option
 *allow_pretty_writing_to_this_dir*:
 
-[width="99%",cols="9%,62%,8%,6%,15%",options="header",]
+[width="100%",cols="9%,42%,7%,31%,11%",options="header",]
 |=======================================================================
 |Nickname |Library Path |Plugin Type |Options |Description
 
@@ -497,13 +498,13 @@ Anytime you use the option *allow_pretty_writing_to_this_dir*, you will
 need to create that directory manually in advance and it must end with
 the extension *.pretty*.
 
-[width="100%",cols="7%,47%,6%,29%,11%",options="header",]
+[width="100%",cols="9%,42%,7%,31%,11%",options="header",]
 |=======================================================================
 |Nickname |Library Path |Plugin Type |Options |Description
 
 |github
 |https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]
-|Github |allow_pretty_writing_to_this_dir=$\{HOME\}/pretty/github.pretty
+|Github |allow_pretty_writing_to_this_dir= $\{HOME\}/pretty/github.pretty
 |Liftoff’s GH footprints
 |=======================================================================
 
