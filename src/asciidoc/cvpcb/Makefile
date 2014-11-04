@@ -1,4 +1,6 @@
 DOCNAME:=cvpcb
+LINGUAS=po/LINGUAS
+LANGUAGES:= $(shell cat ${LINGUAS})
 DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0"
 
 .PHONY: help
@@ -22,13 +24,13 @@ po/$(DOCNAME).pot: $(DOCNAME).adoc
 
 .PHONY: po-all
 po-all: pot
-	for i in `cat po/LINGUAS` ; do \
+	for i in $(LANGUAGES) ; do \
 	  po4a-updatepo -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p po/$$i.po ; \
 	done
 
 .PHONY: adoc-all
 adoc-all: po
-	for i in `cat po/LINGUAS` ; do \
+	for i in $(LANGUAGES) ; do \
 	  po4a-translate -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p po/$$i.po -k 0 -l $(DOCNAME)_$$i.adoc ; \
 	done
 
@@ -40,7 +42,7 @@ html:
 #Internationalized html
 .PHONY: html-all 
 html-all: adoc-all html
-	for i in `cat po/LINGUAS` ; do \
+	for i in $(LANGUAGES) ; do \
 	  asciidoc -a 'newline=\n' -a lang=$$i --section-numbers $(DOCNAME)_$$i.adoc ; \
 	done
 
@@ -50,7 +52,7 @@ docbook:
 
 .PHONY: docbook-all
 docbook-all: adoc-all docbook
-	for i in `cat po/LINGUAS` ; do \
+	for i in $(LANGUAGES) ; do \
 	  asciidoc -a 'newline=\n' -a lang=$$i -b docbook --section-numbers $(DOCNAME)_$$i.adoc ; \
 	done
 
@@ -60,7 +62,7 @@ pdf:
 
 .PHONY: pdf-all
 pdf-all: adoc-all pdf
-	for i in `cat po/LINGUAS` ; do \
+	for i in $(LANGUAGES) ; do \
 	  a2x  -a 'newline=\n' -a lang=$$i -fpdf -v $(DOCNAME)_$$i.adoc --dblatex-opts $(DBLATEXOPTS) ; \
 	done
 
@@ -70,7 +72,7 @@ odt: docbook
 
 .PHONY: odt-all
 odt-all: docbook-all odt
-	for i in `cat po/LINGUAS` ; do \
+	for i in $(LANGUAGES) ; do \
 	  pandoc -f docbook -t odt -o $(DOCNAME)_$$i.odt $(DOCNAME)_$$i.xml ; \
 	done
 
