@@ -1,4 +1,5 @@
 DOCNAME:=cvpcb
+DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0"
 
 .PHONY: help
 help:
@@ -55,12 +56,12 @@ docbook-all: adoc-all docbook
 
 .PHONY: pdf
 pdf:
-	a2x -a 'newline=\n' -fpdf -v $(DOCNAME).adoc --dblatex-opts "-P latex.output.revhistory=0"
+	a2x -a 'newline=\n' -fpdf -v $(DOCNAME).adoc --dblatex-opts $(DBLATEXOPTS)
 
 .PHONY: pdf-all
 pdf-all: adoc-all pdf
 	for i in `cat po/LINGUAS` ; do \
-	  a2x  -a 'newline=\n' -a lang=$$i -fpdf -v $(DOCNAME)_$$i.adoc --dblatex-opts "-P latex.output.revhistory=0" ; \
+	  a2x  -a 'newline=\n' -a lang=$$i -fpdf -v $(DOCNAME)_$$i.adoc --dblatex-opts $(DBLATEXOPTS) ; \
 	done
 
 .PHONY: odt
