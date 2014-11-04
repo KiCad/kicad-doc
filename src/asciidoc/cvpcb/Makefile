@@ -4,9 +4,9 @@ DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0"
 .PHONY: help
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  pot        to built/update the english strings catalog .pot file"
-	@echo "  po-all     to built/update the i18n strings .po files"
-	@echo "  adoc-all   to built/update the i18n asciidoc files"
+	@echo "  pot        to build the english strings catalog .pot file"
+	@echo "  po-all     to build/update the i18n strings .po files"
+	@echo "  adoc-all   to build/update the i18n asciidoc files"
 	@echo "  html       to make a standard (english) HTML file"
 	@echo "  html-all   to make internationalized HTML files"
 	@echo "  pdf        to make a standard (english) pdf file"
