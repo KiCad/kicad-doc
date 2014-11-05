@@ -1,5 +1,7 @@
 #!/bin/bash
 
+LANGUAGES=$(ls -1 -x source/locale/)
+
 #Note: created source/_static to eliminate a warning message.
 if [ ! -d "source/_static" ]; then
   mkdir source/_static
@@ -35,22 +37,26 @@ rm -R build/doctrees
 #locale_dirs = ['locale/'] # path is example but recommended
 #or added manually to the sphinx-intl command:
 
-#Create
-#sphinx-intl -c source/conf.py update -p source/catalog -d source/locale -l it 
+#Create/Update
+for i in $LANGUAGES ; do
+  sphinx-intl -c source/conf.py update -p source/catalog -d source/locale -l $i
+done
 
 #Check
-#sphinx-intl -c source/conf.py stat -d source/locale -l it 
+for i in $LANGUAGES ; do
+  sphinx-intl -c source/conf.py stat -d source/locale -l $i
+done
 
 #Build .mo files: always update compiled .po gettext files
 sphinx-intl -c source/conf.py build -d source/locale
 
 #Build nationalized html
-for i in `cat source/LINGUAS` ; do
+for i in $LANGUAGES ; do
   make -e SPHINXOPTS="-D language='$i' -D html_logo=images/kicad_logo.png" BUILDDIR="build-$i" html
 done
 
 #Build nationalized pdf
-for i in `cat source/LINGUAS` ; do
+for i in $LANGUAGES ; do
   make -e SPHINXOPTS="-D latex_logo=images/kicad_logo.png -D language=$i -D latex_paper_size=a4" BUILDDIR="build-$i" latexpdf
 done
 
@@ -67,6 +73,6 @@ done
 #install it.mo "source/locale/it/LC_MESSAGES/it.mo"
 
 #Clean nationalized build cache
-for i in `cat source/LINGUAS` ; do
+for i in $LANGUAGES ; do
   rm -R build-$i/doctrees
 done
