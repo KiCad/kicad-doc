@@ -1,5 +1,6 @@
 #!/bin/bash
 
+DOCNAME=`grep master_doc source/conf.py|tr -d \\n\\'\\ |sed -e 's/master_doc=//'` ; #echo \"$DOCNAME\" ; exit #Debug
 LANGUAGES=$(ls -1 -x source/locale/)
 
 #Note: created source/_static to eliminate a warning message.
@@ -28,27 +29,27 @@ rm -R build/doctrees
 # i18n
 #####################
 
-#To extract messages to translate. Create build/locale/docname.pot
-#make --dry-run gettext
 #To extract messages to translate. Create source/catalog/docname.pot
+make gettext
+#that does simply a:
 #sphinx-build -b gettext -d build/doctrees source source/catalog
 
 #Added to conf.py
 #locale_dirs = ['locale/'] # path is example but recommended
-#or added manually to the sphinx-intl command:
 
 #Create/Update
 for i in $LANGUAGES ; do
-  sphinx-intl -c source/conf.py update -p source/catalog -d source/locale -l $i
+  msgmerge -U source/locale/$i/LC_MESSAGES/$DOCNAME.po source/catalog/$DOCNAME.pot #To create fuzzy msgs
+#  sphinx-intl -c source/conf.py update -p source/catalog -d source/locale -l $i #Does not support fuzzy msgs yet
 done
 
 #Check
-for i in $LANGUAGES ; do
-  sphinx-intl -c source/conf.py stat -d source/locale -l $i
-done
+#for i in $LANGUAGES ; do
+#  sphinx-intl -c source/conf.py stat -d source/locale -l $i
+#done
 
 #Build .mo files: always update compiled .po gettext files
-sphinx-intl -c source/conf.py build -d source/locale
+#sphinx-intl -c source/conf.py build -d source/locale
 
 #Build nationalized html
 for i in $LANGUAGES ; do
@@ -61,8 +62,7 @@ for i in $LANGUAGES ; do
 done
 
 #Then
-#cd build/locale/
-#cp cvpcb.po it.po
+#install build/locale/$DOCNAME.pot source/it/LC_MESSAGES/$DOCNAME.po
 #...translate...then:
 
 #To create translated messages catalogs
