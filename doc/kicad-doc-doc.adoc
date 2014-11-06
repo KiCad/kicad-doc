@@ -102,25 +102,26 @@ Second choice: rest
 
 Pros:
 
-* complete at the same level with docbook: it supports table/index/reference/etc.
-* plenty of tools available: pandoc(haskel), sphinx(python), docutils(python)
-* actively developed tools (all)
-* widely used: it is the standard for python documentation, CMake, etc.
-* you can (trough pandoc) convert almost anything to rest (apart
-asciidoc) and rest into anything (with pandoc, sphinx or docutils)
-* many web (python) platforms use rest as an internal format for texts.
-See Zope/Plone, Trac, etc.
-* nice gui editor, http://sourceforge.net/projects/retext/[Retext], with
-realtime preview
+- complete at the same level with docbook: it supports table/index/reference/etc.
+- plenty of tools available: pandoc(haskel), sphinx(python), docutils(python)
+- actively developed tools (all)
+- widely used: it is the standard for python documentation, CMake, etc.
+- you can (trough pandoc) convert almost anything to rest (apart
+  asciidoc) and rest into anything (with pandoc, sphinx or docutils)
+- many web (python) platforms use rest as an internal format for texts.
+  See Zope/Plone, Trac, etc.
+- nice gui editor, http://sourceforge.net/projects/retext/[Retext], with
+  realtime preview
 
 Cons:
 
-* not (arguably) immediate (but still easy) syntax. See the links or the
-comments and such.
-* support for i18n is native but more complex to handle than po4a
-* support for i18n in sphinx is a work-in-progress state and actually
-have some quirks that, hopefully, will be resolved with the next sphinx
-version.
+- not (arguably) immediate (but still easy) syntax. See the links or the
+  comments and such.
+- support for i18n is native but more complex to handle than po4a
+- support for i18n in sphinx is a work-in-progress state and actually
+  have some quirks that, hopefully, will be resolved with the next sphinx
+  version (wrong position of files, fuzzy strings not handled, update too 
+  greedy, and so on)
 
 What I suggest to avoid (and why)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -263,10 +264,10 @@ https://pypi.python.org/pypi/odt2sphinx/[here].
 
 Done simply this:
 
- odt2sphinx cvpcb_EN.odt
+ odt2sphinx cvpcb.odt
 
 Obtained the file _index.rst_ and the images into _images_ folder and
-renamed index.rst into cvpcb_EN.rst. Some of these images were in an
+renamed index.rst into cvpcb.rst. Some of these images were in an
 obscure obsolete Star View Metafile format. Unoconv does _not_ work well
 because convert the entire A4 page with the image inside so I converted
 the images in png format manually in this way:
@@ -289,18 +290,18 @@ script.
 Anyway, once obtained a correct rest file with external images it is easy
 to convert this file into asciidoc or markdown with wonderful pandoc:
 
- pandoc -f rst -t asciidoc cvpcb_EN.rst -o cvpcb_EN.adoc
+ pandoc -f rst -t asciidoc cvpcb.rst -o cvpcb.adoc
 
- pandoc -f rst -t markdown cvpcb_EN.rst -o cvpcb_EN.md
+ pandoc -f rst -t markdown cvpcb.rst -o cvpcb.md
 
 Asciidoc output
 ~~~~~~~~~~~~~~~
 
 As I seen above, to create the output files I have to simply do this:
 
- asciidoc cvpcb_EN.adoc    #convert into html
- a2x -f pdf cvpcb_EN.adoc  #convert into pdf
- a2x -f epub cvpcb_EN.adoc #convert into epub
+ asciidoc cvpcb.adoc    #convert into html
+ a2x -f pdf cvpcb.adoc  #convert into pdf
+ a2x -f epub cvpcb.adoc #convert into epub
 
 Rest output
 ~~~~~~~~~~~
@@ -374,11 +375,11 @@ Step 1: string template extraction
 
 For asciidoc
 
- po4a-gettextize -f asciidoc -M utf-8 -m cvpcb_EN.adoc -p po/cvpcb.pot
+ po4a-gettextize -f asciidoc -M utf-8 -m cvpcb.adoc -p po/cvpcb.pot
 
 or
 
- po4a-gettextize -f text -o markdown -M utf-8 -m cvpcb_EN.adoc -p po/cvpcb.pot
+ po4a-gettextize -f text -o markdown -M utf-8 -m cvpcb.adoc -p po/cvpcb.pot
 
 for markdown.
 
@@ -408,7 +409,7 @@ correctly translate image reference to enable the fallback.
 Step 3: produce internationalized master documents
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- po4a-translate -f asciidoc -M utf-8 -m cvpcb_EN.adoc -p po/it.po -k 0 -l cvpcb_it.adoc
+ po4a-translate -f asciidoc -M utf-8 -m cvpcb.adoc -p po/it.po -k 0 -l cvpcb_it.adoc
 
 Step 4: produce all kind of internationalized output formats
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -422,7 +423,7 @@ Step 5: update translations
 
 With the following command the .po file will be updated automatically.
 
- po4a-updatepo -f asciidoc -m cvpcb_EN.adoc -p po/it.po
+ po4a-updatepo -f asciidoc -m cvpcb.adoc -p po/it.po
 
 Step 6: loop
 ^^^^^^^^^^^^
@@ -458,11 +459,16 @@ Step 3: creation/update of the localized strings
 
  sphinx-intl -c source/conf.py update -p source/catalog -d source/locale -l it.
 
+NOTE: due to a unresolved bug, fuzzy strings are not yet handled. It is
+suggested to manage fuzzy strings with this command:
+
+ msgmerge -U source/locale/it/LC_MESSAGES/cvpcb.po source/catalog/$DOCNAME.pot 
+
 Step 4: translate with the preferred .po files editor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
- poedit source/locale/it/LC_MESSAGES/pvpcb_EN.po
- emacs source/locale/it/LC_MESSAGES/pvpcb_EN.po
+ poedit source/locale/it/LC_MESSAGES/cvpcb.po
+ emacs source/locale/it/LC_MESSAGES/cvpcb.po
 
 Step 5: stats about localized strings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
