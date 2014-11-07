@@ -1,88 +1,150 @@
 DOCNAME:=cvpcb
-LINGUAS=po/LINGUAS
-LANGUAGES:= $(shell cat ${LINGUAS})
+PODIR:=po
+#Get list of languages from the list of .po files
+LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
 DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0"
+.SUFFIXES: #Disabe implicit rules
+
 
 .PHONY: help
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  pot        to build the english strings catalog .pot file"
-	@echo "  po-all     to build/update the i18n strings .po files"
-	@echo "  adoc-all   to build/update the i18n asciidoc files"
+#	@echo "  pot        to build the english strings catalog .pot file"
+	@echo "  $(PODIR)/NN.po   to build/update the single language NN i18n strings .po file"
+#	@echo "  po-NN      to build/update the single language NN i18n strings .po file"
+	@echo "  po-all     to update all languages i18n strings .po files"
+	@echo "  adoc-all   to build all the i18n asciidoc files"
 	@echo "  html       to make a standard (english) HTML file"
-	@echo "  html-all   to make internationalized HTML files"
+#	@echo "  html-NN    to make the single language NN i18n html file"
+	@echo "  html-all   to make all i18n HTML files"
 	@echo "  pdf        to make a standard (english) pdf file"
+#	@echo "  pdf-NN     to make the single language NN i18n pdf file"
 	@echo "  pdf-all    to make internationalized pdf files"
 	@echo "  odt        to make a standard (english) odt file"
+#	@echo "  odt-NN     to make the single language NN i18n odt file"
 	@echo "  odt-all    to make internationalized odt files"
+	@echo "  epub       to make a standard (english) epub file"
+#	@echo "  epub-NN    to make the single language NN i18n epub file"
+	@echo "  epub-all   to make internationalized epub files"
 
-.PHONY: pot
-pot: po/$(DOCNAME).pot
+#.PHONY: pot
+#pot: $(PODIR)/$(DOCNAME).pot
 
-po/$(DOCNAME).pot: $(DOCNAME).adoc
-	po4a-gettextize -f asciidoc -M utf-8 -m $^ -p $@
+#$(PODIR)/$(DOCNAME).pot: $(DOCNAME).adoc
+#	po4a-gettextize -f asciidoc -M utf-8 -m $^ -p $@
+
+#Build/update the single language NN i18n strings .po file
+$(PODIR)/%.po: $(DOCNAME).adoc
+	@po4a-updatepo -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p $@
 
 .PHONY: po-all
-po-all: pot
-	for i in $(LANGUAGES) ; do \
-	  po4a-updatepo -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p po/$$i.po ; \
-	done
+po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
+
+#.PHONY: $(foreach i,$(LANGUAGES),po-$(i))
+#.PHONY: it.po
+#po-%: $(PODIR)/%.po
+#po-it: $(PODIR)/it.po
+
+#$(foreach i,$(LANGUAGES),po-$(i): $(PODIR)/$(i).po)
+
+################ I18N ASCIIDOC
+
+#Make the single language NN i18n file
+$(DOCNAME)-%.adoc: $(PODIR)/%.po
+	po4a-translate -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@
 
 .PHONY: adoc-all
-adoc-all: po
-	for i in $(LANGUAGES) ; do \
-	  po4a-translate -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p po/$$i.po -k 0 -l $(DOCNAME)_$$i.adoc ; \
-	done
+adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
+
+################ HTML
 
 #English html
+$(DOCNAME).html:
+	asciidoc -a 'newline=\n' --section-numbers $(DOCNAME).adoc ;
+
+#I18n html
+$(DOCNAME)-%.html: $(DOCNAME)-%.adoc
+	asciidoc -a 'newline=\n' -a lang=$* --section-numbers $(DOCNAME)-$*.adoc ;
+
 .PHONY: html
-html:
-	asciidoc -a 'newline=\n' --section-numbers $(DOCNAME).adoc
+html: $(DOCNAME).html
 
-#Internationalized html
-.PHONY: html-all 
-html-all: adoc-all html
-	for i in $(LANGUAGES) ; do \
-	  asciidoc -a 'newline=\n' -a lang=$$i --section-numbers $(DOCNAME)_$$i.adoc ; \
-	done
+.PHONY: html-all
+html-all: html $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).html)
 
-.PHONY: docbook
-docbook:
+################ DOCBOOK
+
+#English docbook
+$(DOCNAME).xml: $(DOCNAME).adoc
 	asciidoc -a 'newline=\n' -b docbook --section-numbers $(DOCNAME).adoc
 
+#I18n docbook
+$(DOCNAME)-%.xml: $(DOCNAME)-%.adoc
+	asciidoc -a 'newline=\n' -a lang=$* -b docbook --section-numbers $(DOCNAME)-$*.adoc
+
+.PHONY: docbook
+docbook: $(DOCNAME).xml
+
 .PHONY: docbook-all
-docbook-all: adoc-all docbook
-	for i in $(LANGUAGES) ; do \
-	  asciidoc -a 'newline=\n' -a lang=$$i -b docbook --section-numbers $(DOCNAME)_$$i.adoc ; \
-	done
+docbook-all: docbook $(DOCNAME).xml $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).xml)
+
+################ PDF
+
+#English pdf
+$(DOCNAME).pdf: $(DOCNAME).adoc
+	a2x -fpdf $(DOCNAME).adoc --dblatex-opts $(DBLATEXOPTS)
+
+#I18n pdf
+$(DOCNAME)-%.pdf: $(DOCNAME)-%.adoc
+	a2x -a lang=$* -fpdf --dblatex-opts $(DBLATEXOPTS) $(DOCNAME)-$*.adoc
 
 .PHONY: pdf
-pdf:
-	a2x -a 'newline=\n' -fpdf -v $(DOCNAME).adoc --dblatex-opts $(DBLATEXOPTS)
+pdf: $(DOCNAME).pdf
 
 .PHONY: pdf-all
-pdf-all: adoc-all pdf
-	for i in $(LANGUAGES) ; do \
-	  a2x  -a 'newline=\n' -a lang=$$i -fpdf -v $(DOCNAME)_$$i.adoc --dblatex-opts $(DBLATEXOPTS) ; \
-	done
+pdf-all: pdf $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).pdf)
 
-.PHONY: odt
-odt: docbook
+################ EPUB
+
+#English epub
+$(DOCNAME).epub: $(DOCNAME).adoc
+	a2x -fepub $(DOCNAME).adoc
+
+#I18n pdf
+$(DOCNAME)-%.epub: $(DOCNAME)-%.adoc
+	a2x -a lang=$* -fepub $(DOCNAME)-$*.adoc
+
+.PHONY: epub
+epub: $(DOCNAME).epub
+
+.PHONY: epub-all
+epub-all: epub $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).epub)
+
+################ ODT
+
+#English odt
+$(DOCNAME).odt: $(DOCNAME).xml
 	pandoc -f docbook -t odt -o $(DOCNAME).odt $(DOCNAME).xml
 
+#I18n odt
+$(DOCNAME)-%.odt: $(DOCNAME)-%.xml
+	pandoc -f docbook -t odt -o $(DOCNAME)-$*.odt $(DOCNAME)-$*.xml ; \
+
+.PHONY: odt
+odt: $(DOCNAME).odt
+
 .PHONY: odt-all
-odt-all: docbook-all odt
-	for i in $(LANGUAGES) ; do \
-	  pandoc -f docbook -t odt -o $(DOCNAME)_$$i.odt $(DOCNAME)_$$i.xml ; \
-	done
+odt-all: odt $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).odt)
+
+################
 
 .PHONY: clean
 clean:
-	rm -f *_*.*
-	rm -f po/cvpcb.pot
-	rm -f po/*.po\~
-	rm -f cvpcb.pdf
-	rm -f cvpcb.html
-	rm -f cvpcb.xml
-	rm -f cvpcb.epub
-	rm -f cvpcb.odt
+	rm -f $(DOCNAME)-*.*
+#	rm -f $(PODIR)/cvpcb.pot
+	rm -f $(PODIR)/*.po\~
+	rm -f $(DOCNAME).pdf
+	rm -f $(DOCNAME).html
+	rm -f $(DOCNAME).xml
+	rm -f $(DOCNAME).epub
+	rm -f $(DOCNAME).odt
