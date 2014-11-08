@@ -1,6 +1,6 @@
 ..
     Added to the latex_logo directive...
-    |10000201000003200000022675E94B31_png|
+    |kicad_logo_png|
 
 
 CvPcb
@@ -218,7 +218,7 @@ The following table lists the keyboard commands for the main window:
 
 +-------------+------------------------------------------------------------------------+
 | Right Arrow | Activate the next pane to the right of the currently activated pane.   |
-| Tab         | Wrap around to the first pane if the last pane is currently activated. |
+| / Tab       | Wrap around to the first pane if the last pane is currently activated. |
 +-------------+------------------------------------------------------------------------+
 | Left Arrow  | Activate the next pane to the left of the currently activated pane.    |
 |             | Wrap around to the last pane if the first pane is currently activated. |
@@ -300,7 +300,7 @@ Changing Footprint Library Search Paths
 
 CvPcb uses two types of paths: the default paths automatically set by
 KiCad when a new project is created and paths added by the user. These
-paths are used to find the footprints library files ( .mod), equivalence
+paths are used to find the footprints library files (.mod), equivalence
 files (.equ), and 3D model files (.wrl) used by CvPcb. The default paths
 cannot be edited. Only new user defined paths can be added to the search
 path list.
@@ -468,7 +468,7 @@ provides "Copy On Write" (COW) support f or edit ing footprints read from
 the GitHub repo and saving them locally. Therefore the "GitHub" plugin is
 for **read only for accessing remote pretty footprint libraries at 
 `https://github.com <https://github.com/>`_.** To add a GitHub entry to
-the footprint library table t he "Library Path" in the footprint library
+the footprint library table the "Library Path" in the footprint library
 table row for a must be set to a valid GitHub URL.
 
 For example:
