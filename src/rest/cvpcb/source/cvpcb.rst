@@ -477,7 +477,7 @@ For example:
 
 or
 
-`https://github.com/ <https://github.com/liftoff-sr/pretty_footprints>`_
+`https://github.com/KiCad <https://github.com/KiCad>`_
 
 KiCad Typicality GitHub URLs take the form:
 
