@@ -37,7 +37,7 @@ help:
 
 #Build/update the single language NN i18n strings .po file
 $(PODIR)/%.po: $(DOCNAME).adoc
-	@po4a-updatepo -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p $@
+	@po4a-updatepo -f asciidoc -v -M utf-8 -m $(DOCNAME).adoc -p $@
 
 .PHONY: po-all
 po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
@@ -52,7 +52,7 @@ po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
 ################ I18N ASCIIDOC
 
 #Make the single language NN i18n file
-$(DOCNAME)-%.adoc: $(PODIR)/%.po
+$(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc
 	po4a-translate -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@
 
 .PHONY: adoc-all
@@ -61,7 +61,7 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 ################ HTML
 
 #English html
-$(DOCNAME).html:
+$(DOCNAME).html: $(DOCNAME).adoc
 	asciidoc -a 'newline=\n' --section-numbers $(DOCNAME).adoc ;
 
 #I18n html
