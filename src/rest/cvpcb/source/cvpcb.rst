@@ -1,15 +1,9 @@
-..
-    Added to the latex_logo directive...
-    |kicad_logo_png|
-
-
 CvPcb
 =====
 
 *Reference manual*
 
-Copyright
-=========
+**Copyright**
 
 This document is Copyright © 2010–2013 by it's contributors as listed
 below. You may distribute it and/or modify it under the terms of either
@@ -21,29 +15,25 @@ Creative Commons Attribution License
 
 All trademarks within this guide belong to their legitimate owners.
 
-Contributors
-============
+**Contributors**
 
 Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh.
 
-Feedback
-========
+**Feedback**
 
-Please direct any comments or suggestions about this document to the KiCad mailing list:
+Please direct any comments or suggestions about this document to the
+KiCad mailing list:
 *https://launchpad.net/~kicad-developers*
 
-Acknowledgments
-===============
+**Acknowledgments**
 
 None
 
-Publication date and software version
-=====================================
+**Publication date and software version**
 
 Published on February 4, 2013.
 
-Note for Mac users
-==================
+**Note for Mac users**
 
 The KiCad support for the Apple OS X operating system is experimental.
 
@@ -442,19 +432,19 @@ Environment Variable Substitution
 One of the most powerful features of the footprint library table is
 environment variable substitution. This allows you to define custom paths
 to where your libraries are stored in environment variables. Environment
-variable substitution is supported by using the syntax ${ENV_VAR_NAME} in
-the footprint library path.
+variable substitution is supported by using the syntax ``${ENV_VAR_NAME}``
+in the footprint library path.
 
-By default, at run time CvPcb defines the **KISYSMOD** environment
+By default, at run time CvPcb defines the ``KISYSMOD`` environment
 variable. This points to where the default footprint libraries that were
 installed with KiCad are located.
 
-You can override KISYSMOD by defining it yourself which allows you to
+You can override ``KISYSMOD`` by defining it yourself which allows you to
 substitute your own libraries in place of the default KiCad footprint
 libraries.
 
 When a project netlist file is loaded, CvPcb also defines the
-**KIPRJMOD** using the file path. This allows you to create libraries in
+``KIPRJMOD`` using the file path. This allows you to create libraries in
 the project path without having to define the absolute path to the
 library in the project specific footprint library table.
 
