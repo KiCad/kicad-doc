@@ -141,7 +141,7 @@ odt-all: odt $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).odt)
 ################ ALL
 
 .PHONY: all
-all: adoc-all html pdf odt epub 
+all: html pdf odt epub 
 
 .PHONY: all-all
 all-all: adoc-all html-all pdf-all odt-all epub-all
