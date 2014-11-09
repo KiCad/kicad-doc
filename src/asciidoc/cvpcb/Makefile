@@ -26,6 +26,8 @@ help:
 	@echo "  epub       to make a standard (english) epub file"
 #	@echo "  epub-NN    to make the single language NN i18n epub file"
 	@echo "  epub-all   to make internationalized epub files"
+	@echo "  all        to make all of the above (english)"
+	@echo "  all-all    to make all of the above"
 
 #.PHONY: pot
 #pot: $(PODIR)/$(DOCNAME).pot
@@ -135,6 +137,14 @@ odt: $(DOCNAME).odt
 
 .PHONY: odt-all
 odt-all: odt $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).odt)
+
+################ ALL
+
+.PHONY: all
+all: adoc-all html pdf odt epub 
+
+.PHONY: all-all
+all-all: adoc-all html-all pdf-all odt-all epub-all
 
 ################
 
