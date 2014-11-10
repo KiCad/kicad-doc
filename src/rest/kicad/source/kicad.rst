@@ -230,19 +230,19 @@ following commands (from left to right):
 Project tree view
 ^^^^^^^^^^^^^^^^^
 
-+----------------------------------------+-----------------------------------------------------------------------+
-| |10000000000000C60000009255B0301C_png| | Double-clicking on the Eeschema icons runs the schematic editor which |
-|                                        | in this case will open the file pic_programmer.sch.                   |
-|                                        |                                                                       |
-|                                        |                                                                       |
-|                                        | Double-clicking on the Pcbnew icon runs the layout editor, in this    |
-|                                        | case opening the file pic_programmer.kicad_pcb                        |
-|                                        |                                                                       |
-|                                        |                                                                       |
-|                                        | Right clicking on any of the files in the project tree allows generic |
-|                                        | files manipulation.                                                   |
-|                                        |                                                                       |
-+----------------------------------------+-----------------------------------------------------------------------+
++----------------------------------------+------------------------------------------------------------+
+| |10000000000000C60000009255B0301C_png| | Double-clicking on the Eeschema icons runs the schematic   |
+|                                        | editor which in this case will open the file               |
+|                                        | pic_programmer.sch.                                        |
+|                                        |                                                            |
+|                                        | Double-clicking on the Pcbnew icon runs the layout editor, |
+|                                        | in this case opening the file pic_programmer.kicad_pcb     |
+|                                        |                                                            |
+|                                        |                                                            |
+|                                        | Right clicking on any of the files in the project tree     |
+|                                        | allows generic files manipulation.                         |
+|                                        |                                                            |
++----------------------------------------+------------------------------------------------------------+
 
 Top toolbar
 ^^^^^^^^^^^
@@ -255,7 +255,7 @@ right).
 +----------------------------------------+-----------------------------------------------------------------------------------------------------------------------+
 | |100000000000002C00000027822C5914_png| | Create a project file. If the template kicad.pro is found in kicad/template, it is copied into the working directory. |
 |                                        |                                                                                                                       |
-+========================================+=======================================================================================================================+
++----------------------------------------+-----------------------------------------------------------------------------------------------------------------------+
 | |100000000000002500000029C403AB20_png| | Create a project from a template.                                                                                     |
 |                                        |                                                                                                                       |
 +----------------------------------------+-----------------------------------------------------------------------------------------------------------------------+
