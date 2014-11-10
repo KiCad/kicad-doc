@@ -108,9 +108,8 @@ Initialization of the default configuration
 A default configuration file named *kicad.pro* is supplied in
 kicad/template. It serves as a template for any new project.
 
-**The default file **
-*kicad.pro*
-** can be freely modified if necessary, mainly to set the list of libraries files loaded by Eeschema or Pcbnew.**
+**The default file kicad.pro can be freely modified if necessary,
+mainly to set the list of libraries files loaded by Eeschema or Pcbnew.**
 
 Some other parameters (default text size, default line thickness, mainly
 for Pcbnew) are stored.
@@ -231,20 +230,19 @@ following commands (from left to right):
 Project tree view
 ^^^^^^^^^^^^^^^^^
 
-+----------------------------------------+-------------------------------------------------------------------------------------------------------+
-| |10000000000000C60000009255B0301C_png| | Double-clicking on the Eeschema icons runs the schematic editor which in this case will open the file |
-|                                        | pic_programmer                                                                                        |
-|                                        | .sch.                                                                                                 |
-|                                        |                                                                                                       |
-|                                        | Double-clicking on the Pcbnew icon runs the layout editor, in this case opening the file              |
-|                                        | pic_programmer                                                                                        |
-|                                        | .                                                                                                     |
-|                                        | kicad_pcb                                                                                             |
-|                                        |                                                                                                       |
-|                                        | Right                                                                                                 |
-|                                        | clicking on any of the files in the project tree allows generic files manipulation.                   |
-|                                        |                                                                                                       |
-+----------------------------------------+-------------------------------------------------------------------------------------------------------+
++----------------------------------------+-----------------------------------------------------------------------+
+| |10000000000000C60000009255B0301C_png| | Double-clicking on the Eeschema icons runs the schematic editor which |
+|                                        | in this case will open the file pic_programmer.sch.                   |
+|                                        |                                                                       |
+|                                        |                                                                       |
+|                                        | Double-clicking on the Pcbnew icon runs the layout editor, in this    |
+|                                        | case opening the file pic_programmer.kicad_pcb                        |
+|                                        |                                                                       |
+|                                        |                                                                       |
+|                                        | Right clicking on any of the files in the project tree allows generic |
+|                                        | files manipulation.                                                   |
+|                                        |                                                                       |
++----------------------------------------+-----------------------------------------------------------------------+
 
 Top toolbar
 ^^^^^^^^^^^
@@ -382,21 +380,20 @@ The KiCad File menu New shows 2 option:
 
 |1000000000000185000000F2ADA0CF8E_png|
 
-*   **Blank **
-    **Project**
+-   **Blank Project**
+
     Create a blank project by just copying template/kicad.pro to the current folder.
 
+-   **Project from Template**
 
-
-*   **Project**
-    ** from Template**
-    Open the template selection dialog.
-    The template selection dialog has a list of icons, and a display window.
-    A single click on a template's icon on the left will load that templates info.html metadata file and display it in the display window.
-    A click on the OK button starts the new project creation.
-    The template will be copied to the new project location ( excluding METADIR as mentioned earlier ) and any files that match the string replacement rules will be renamed to reflect the new project's name.
-
-
+    Open the template selection dialog. The template selection dialog has
+    a list of icons, and a display window. A single click on a template's
+    icon on the left will load that templates info.html metadata file and
+    display it in the display window. A click on the OK button starts the
+    new project creation. The template will be copied to the new project
+    location (excluding METADIR as mentioned earlier) and any files that
+    match the string replacement rules will be renamed to reflect the new
+    project's name.
 
 
 |100000000000027E000001DCE9DD870D_png|
@@ -411,19 +408,19 @@ Templates Location:
 
 The list of available templates are gathered from the following sources:
 
-*   For sytem templates: <kicad bin dir>/../share/template/
+*   For sytem templates:
+       <kicad bin dir>/../share/template/
 
-*   For user templates
+*   For user templates:
 
-    On Unix: 
+    On Unix:
         ~/kicad/templates/
 
     On Windows:
-        ``C:\Documents and Settings\username\My Documents\kicad\templates\``
+        C:\\Documents and Settings\\username\\My Documents\\kicad\\templates\\
 
     On Mac:
         ~/Documents/kicad/templates/
-
 
 *   When the environment variable KICAD_PTEMPLATES
     is defined, there is a third page: Portable Templates, 
@@ -481,17 +478,13 @@ The list of available templates are gathered from the following sources:
     :height: 0.951cm
 
 
-.. |kicad_logo_png| image:: images/kicad_logo.png
-    :width: 12.7cm
-    :height: 8.56cm
-
-
 .. |10000000000000230000002995442CF9_png| image:: images/10000000000000230000002995442CF9.png
     :width: 0.981cm
     :height: 1.03cm
 
 
 .. |10000000000000C60000009255B0301C_png| image:: images/10000000000000C60000009255B0301C.png
+..
     :width: 5.241cm
     :height: 3.859cm
 
