@@ -1,0 +1,860 @@
+# KiCad Reference Manual Italian Traslation.
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# Marco Ciampa <ciampix@libero.it>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"POT-Creation-Date: 2014-11-10 08:39+0100\n"
+"PO-Revision-Date: 2014-11-10 08:41+0100\n"
+"Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title ~
+#: kicad.adoc:2 kicad.adoc:57
+#, no-wrap
+msgid "KiCad"
+msgstr "KiCad"
+
+#. type: Plain text
+#: kicad.adoc:11
+msgid "image:images/kicad_logo.png[]"
+msgstr "image:images/kicad_logo.png[]"
+
+#. type: Plain text
+#: kicad.adoc:13
+msgid "_Reference manual_"
+msgstr "_Manuale di riferimento_"
+
+#. type: Plain text
+#: kicad.adoc:16
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "*Copyright*\n"
+
+#. type: Plain text
+#: kicad.adoc:24
+msgid ""
+"This document is Copyright © 2010–201 4 by its contributors as listed below. "
+"You may distribute it and/or modify it under the terms of either the GNU "
+"General Public License (http://www.gnu.org/licenses/gpl.html[http://www.gnu."
+"org/licenses/gpl.html]), version 3 or later, or the Creative Commons "
+"Attribution License (http://creativecommons.org/licenses/by/3.0/[http://"
+"creativecommons.org/licenses/by/3.0/]), version 3.0 or later."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:26
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:29
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:31
+msgid "Jean-Pierre Charras, Fabrizio Tappero."
+msgstr "Jean-Pierre Charras, Fabrizio Tappero."
+
+#. type: Plain text
+#: kicad.adoc:34
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "*Feedback*\n"
+
+#. type: Plain text
+#: kicad.adoc:37
+msgid ""
+"Please direct any comments or suggestions about this document to the kicad "
+"mailing list: _https://launchpad.net/~kicad-developers_"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:40
+#, no-wrap
+msgid "*Acknowledgments*\n"
+msgstr "*Riconoscimenti*\n"
+
+#. type: Plain text
+#: kicad.adoc:42
+msgid "None"
+msgstr "Nessuno"
+
+#. type: Plain text
+#: kicad.adoc:45
+#, no-wrap
+msgid "*Version*\n"
+msgstr "*Versione*\n"
+
+#. type: Plain text
+#: kicad.adoc:47
+msgid "2014, march 17."
+msgstr "17 marzo 2014."
+
+#. type: Plain text
+#: kicad.adoc:50
+#, no-wrap
+msgid "*Note for Mac users*\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:52
+msgid "The KiCad support for the Apple OS X operating system is experimental."
+msgstr ""
+
+#. type: Title -
+#: kicad.adoc:54
+#, no-wrap
+msgid "Introduction"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:63
+msgid ""
+"KiCad is an open-source software tool for the creation of electronic "
+"schematic diagrams and PCB artwork. Beneath its singular surface, kicad "
+"incorporates an elegant ensemble of the following stand-alone software tools:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:65
+#, no-wrap
+msgid "*Kicad* : project manager\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:66
+#, no-wrap
+msgid "*Eeschema* : schematic editor\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:67
+#, no-wrap
+msgid "*CvPcb* : footprint selector\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:68
+#, no-wrap
+msgid "*Pcbnew* : circuit board layout editor\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:69
+#, no-wrap
+msgid "*GerbView* : Gerber viewer\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:71
+msgid "3 utilities are included"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:74
+#, no-wrap
+msgid ""
+"*Bitmap2Component*: component maker for logos (Creates a schematic\n"
+"component or a footprint from a bitmap picture).\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:77
+#, no-wrap
+msgid ""
+"*PcbCalculator*: A calculator that is helpfull to calculate\n"
+"components for regulators, track witdth versus current, transmission\n"
+"lines...\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:78
+#, no-wrap
+msgid "*PlEditor*: Page Layout Editor.\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:81
+msgid ""
+"At the time of writing, KiCad is considered mature and can be used for the "
+"successful development and maintenance of complex electronic boards."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:84
+msgid ""
+"Kicad does not present any board-size limitation and it can easily handle up "
+"to 16 copper layers and up to 12 technical layers."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:86
+msgid "Kicad can create all the files necessary for building printed boards:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:88
+msgid "Gerber files for photo-plotters"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:89
+msgid "drilling files"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:90
+msgid "component location files"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:91
+msgid "and a lot more."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:95
+msgid ""
+"Being open source (GPL licensed), kicad represents the ideal tool for "
+"projects oriented towards the creation of electronic hardware with an open-"
+"source flavour."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:97
+msgid "Kicad is available for Linux, Windows and Apple OS X (experimental)."
+msgstr ""
+
+#. type: Title -
+#: kicad.adoc:99
+#, no-wrap
+msgid "Installation and configuration"
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:102
+#, no-wrap
+msgid "Display options"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:105
+msgid "Pcbnew needs the support of OpenGL v2.1 or more."
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:107
+#, no-wrap
+msgid "Initialization of the default configuration"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:111
+msgid ""
+"A default configuration file named _kicad.pro_ is supplied in kicad/"
+"template. It serves as a template for any new project."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:115
+#, no-wrap
+msgid ""
+"*The default file _kicad.pro_ can be freely modified if necessary,\n"
+"mainly to set the list of libraries files loaded by Eeschema or\n"
+"Pcbnew.*\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:118
+msgid ""
+"Some other parameters (default text size, default line thickness, mainly for "
+"Pcbnew) are stored."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:120
+msgid "Verify you have a write acces to kicad/template/kicad.pro"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:122
+msgid "Run kicad and load _kicad.pro_ project."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:126
+msgid ""
+"Run Eeschema via kicad. Modify and update the Eeschema configuration, and "
+"mainly the list of libraries you want to use each time you create new "
+"projects."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:128
+msgid "Run Pcbnew via kicad. Modify and update the Pcbnew configuration"
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:130
+#, no-wrap
+msgid "Kicad: principles of use"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:136
+msgid ""
+"In order to manage a Kicad project: schematic files, printed circuit board "
+"files, supplementary libraries, manufacturing files for photo-tracing, "
+"drilling and automatic component placement files, it is recommended to "
+"create a project as follows:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:139
+msgid ""
+"Create a working directory for the project (using KiCad or by other means)."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:141
+msgid ""
+"In this directory, use Kicad to create a project file (file with extension ."
+"pro) via the “Start a new project” icon."
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:145
+#, no-wrap
+msgid ""
+"| It is strongly recommended to use the same name for both project file\n"
+"and its directory.\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:154
+msgid ""
+"Kicad creates a file with a .pro extension that maintains a number of "
+"parameters for project management (such as the filename of the principal "
+"schematic, list of libraries used in the schematics and PCBs). Default names "
+"of both principal schematic and printed circuit board files are derived from "
+"the name of the project. Thus, if a project called _example.pro_ was created "
+"in a directory called _example_ , the default files will be created:"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:164
+#, no-wrap
+msgid ""
+"|example.pro |project management file.\n"
+"|example.sch |main schematic file.\n"
+"|example. kicad_pcb |printed circuit board file.\n"
+"|example.net |netlist file.\n"
+"|example.xxx |various files created by the other utility programs.\n"
+"|example.cache.lib a|\n"
+"cache file of libraries used in the schematic\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:166
+#, no-wrap
+msgid "(backup of the components used)\n"
+msgstr ""
+
+#. type: Title -
+#: kicad.adoc:170
+#, no-wrap
+msgid "Use Kicad"
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:173
+#, no-wrap
+msgid "Main window"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:176
+msgid "image:images/10000000000002B5000001AB64B9B213.png[]"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:181
+msgid ""
+"The main KiCad window is composed of a project tree view, a launch pane "
+"containing buttons used to run the various software tools, and a message "
+"window. The menu and the toolbar can be used to create, read and save "
+"project files."
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:183
+#, no-wrap
+msgid "Utility launch pane"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:187
+msgid ""
+"Kicad allows you to run all stand alone software tools that come with it."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:190
+msgid ""
+"The launch pane is made of the above 7 buttons that correspond to the "
+"following commands (from left to right):"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:192
+msgid "image:images/10000000000001EC0000004F07F2B654.png[]"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:196
+#, no-wrap
+msgid "|1 |2 |3 |4 |5 |6 |7\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:201
+#, no-wrap
+msgid "|1 |*Eeschema* |The schematic editor\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:204
+#, no-wrap
+msgid ""
+"|2 |*Cvpcb* |A tool to create the association between components and the\n"
+"corresponding footprints\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:206
+#, no-wrap
+msgid "|3 |*Pcbnew* |The board layout editor\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:208
+#, no-wrap
+msgid "|4 |*Gerbview* |A GERBER file viewer. Its also can show drill files.\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:211
+#, no-wrap
+msgid ""
+"|5 |*Bitmap2component* |A tool to build a footprint or a component from\n"
+"a B&W bitmap image to create logos\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:214
+#, no-wrap
+msgid ""
+"|6 |*Pcb Calculator* |A tool to calculate track widths, any many other\n"
+"things\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:217
+#, no-wrap
+msgid ""
+"|7 |*Pl Editor* |The Page Layout editor, to create/customize frame\n"
+"references.\n"
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:220
+#, no-wrap
+msgid "Project tree view"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:228
+#, no-wrap
+msgid ""
+"|image:images/10000000000000C60000009255B0301C.png[10000000000000C60000009255B0301C_png]\n"
+"a|\n"
+"Double-clicking on the Eeschema icons runs the schematic editor which in\n"
+"this case will open the file pic_programmer .sch.\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:231
+#, no-wrap
+msgid ""
+"Double-clicking on the Pcbnew icon runs the layout editor, in this case\n"
+"opening the file pic_programmer . kicad_pcb\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:234
+#, no-wrap
+msgid ""
+"Right clicking on any of the files in the project tree allows generic\n"
+"files manipulation.\n"
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:238
+#, no-wrap
+msgid "Top toolbar"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:241
+msgid ""
+"image:images/10000000000000E900000027B0999D75."
+"png[10000000000000E900000027B0999D75_png]"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:244
+msgid ""
+"Kicad top toolbar allows for some basic files operation (from left to right)."
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:252
+#, no-wrap
+msgid ""
+"|image:images/100000000000002C00000027822C5914.png[100000000000002C00000027822C5914_png]\n"
+"|Create a project file. If the template kicad.pro is found in\n"
+"kicad/template, it is copied into the working directory.\n"
+"|image:images/100000000000002500000029C403AB20.png[100000000000002500000029C403AB20_png]\n"
+"|Create a project from a template.\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:255
+#, no-wrap
+msgid ""
+"|image:images/10000000000000230000002995442CF9.png[10000000000000230000002995442CF9_png]\n"
+"|Open an existing project.\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:258
+#, no-wrap
+msgid ""
+"|image:images/100000000000002700000029A7BBB537.png[100000000000002700000029A7BBB537_png]\n"
+"|Update and save the current project tree.\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:262
+#, no-wrap
+msgid ""
+"|image:images/10000000000000260000002421A88B39.png[10000000000000260000002421A88B39_png]\n"
+"|Create a zip archive of the whole project. This includes schematic\n"
+"files, libraries, pcb, etc.\n"
+msgstr ""
+
+#. type: delimited block |
+#: kicad.adoc:265
+#, no-wrap
+msgid ""
+"|image:images/1000000000000024000000248581A3AE.png[1000000000000024000000248581A3AE_png]\n"
+"|Redraw the tree list, useful after a tree change.\n"
+msgstr ""
+
+#. type: Title -
+#: kicad.adoc:268
+#, no-wrap
+msgid "Using templates"
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:271
+#, no-wrap
+msgid "Definitions"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:275
+msgid ""
+"A template is a directory of files, which includes a directory of metadata."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:279
+msgid ""
+"The template system name (SYSNAME) is the directory name under which the "
+"template files are stored. The metadata directory (METADIR) contains pre-"
+"defined files which provide information about the template."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:282
+msgid ""
+"All files and directories in a template are copied to the new project path "
+"when a project is created using a template, except METADIR."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:285
+msgid ""
+"All files and directories which start with SYSNAME will have SYSNAME "
+"replaced by the new project file name, excluding the file extension."
+msgstr ""
+
+#. type: Title ~
+#: kicad.adoc:287
+#, no-wrap
+msgid "Templates"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:292
+msgid ""
+"They facilitate the easy setup of projects which have common attributes such "
+"as pre-defined board outlines, connector positions, schematic elements, "
+"design rules, etc."
+msgstr ""
+
+#. type: Title ^
+#: kicad.adoc:294
+#, no-wrap
+msgid "Metadata"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:298
+msgid ""
+"A template's METADIR must contain the required files, and might optionally "
+"contain any of the optional files"
+msgstr ""
+
+#. type: Title ^
+#: kicad.adoc:300
+#, no-wrap
+msgid "Required Files:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:303
+#, no-wrap
+msgid "*meta/info.html*\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:308
+msgid ""
+"Contains html formatted information about the template which is used by the "
+"user to determine if the template is what they are after. The <title> tag "
+"determines the actual name of the template that is exposed to the user for "
+"template selection."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:311
+msgid ""
+"Using html to format this document means that images can be in-lined without "
+"having to invent a new scheme."
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:313
+msgid "Only a basic HTML language can be used to format this document."
+msgstr ""
+
+#. type: Title ^
+#: kicad.adoc:315
+#, no-wrap
+msgid "Optional Files:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:318
+#, no-wrap
+msgid "*meta/icon.png*\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:321
+msgid ""
+"A 64 x 64 pixels PNG icon file which is used as a clickable icon in the "
+"template selection dialog."
+msgstr ""
+
+#. type: Title ^
+#: kicad.adoc:323
+#, no-wrap
+msgid "Example:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:326
+msgid "Here is a template for a raspberrypi-gpio board:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:328
+msgid ""
+"image:images/10000000000001BA0000006F670E0EA3."
+"png[10000000000001BA0000006F670E0EA3_png]"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:330
+msgid "And the meta data info:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:332
+msgid ""
+"image:images/1000000000000163000000735475F846."
+"png[1000000000000163000000735475F846_png]"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:334
+msgid "brd.png is an optional file"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:336
+msgid "Here is an info.html file sample:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:362
+#, no-wrap
+msgid ""
+" <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n"
+" <HTML>\n"
+" <HEAD>\n"
+" <META HTTP-EQUIV=\"CONTENT-TYPE\" CONTENT=\"text/html;\n"
+" charset=windows-1252\">\n"
+" <TITLE>Raspberry Pi - Expansion Board</TITLE>\n"
+" <META NAME=\"GENERATOR\" CONTENT=\"LibreOffice 3.6 (Windows)\">\n"
+" <META NAME=\"CREATED\" CONTENT=\"0;0\">\n"
+" <META NAME=\"CHANGED\" CONTENT=\"20121015;19015295\">\n"
+" </HEAD>\n"
+" <BODY LANG=\"fr-FR\" DIR=\"LTR\">\n"
+" <P>This project template is the basis of an expansion board for the\n"
+" <A HREF=\"http://www.raspberrypi.org/\" TARGET=\"blank\">Raspberry Pi $25\n"
+" ARM board.</A> <BR><BR>This base project includes a PCB edge defined\n"
+" as the same size as the Raspberry-Pi PCB with the connectors placed\n"
+" correctly to align the two boards. All IO present on the Raspberry-Pi\n"
+" board is connected to the project through the 0.1&quot; expansion\n"
+" headers. <BR><BR>The board outline looks like the following:\n"
+" </P>\n"
+" <P><IMG SRC=\"brd.png\" NAME=\"brd\" ALIGN=BOTTOM WIDTH=680 HEIGHT=378\n"
+" BORDER=0><BR><BR><BR><BR>\n"
+" </P>\n"
+" <P>(c)2012 Brian Sidebotham<BR>(c)2012 Kicad Developers</P>\n"
+" </BODY>\n"
+" </HTML>\n"
+msgstr ""
+
+#. type: Title ^
+#: kicad.adoc:364
+#, no-wrap
+msgid "Operation"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:367
+msgid "The KiCad File menu New shows 2 option:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:369
+msgid ""
+"image:images/1000000000000185000000F2ADA0CF8E."
+"png[1000000000000185000000F2ADA0CF8E_png]"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:372
+#, no-wrap
+msgid ""
+"*Blank* *Project* Create a blank project by just copying\n"
+"template/kicad.pro to the current folder.\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:380
+#, no-wrap
+msgid ""
+"*Project* __* from Template__* Open the template selection dialog. The\n"
+"template selection dialog has a list of icons, and a display window. A\n"
+"single click on a template's icon on the left will load that templates\n"
+"info.html metadata file and display it in the display window. A click on\n"
+"the OK button starts the new project creation. The template will be\n"
+"copied to the new project location ( excluding METADIR as mentioned\n"
+"earlier ) and any files that match the string replacement rules will be\n"
+"renamed to reflect the new project's name.\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:382
+msgid ""
+"image:images/100000000000027E000001DCE9DD870D."
+"png[100000000000027E000001DCE9DD870D_png]"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:384
+msgid "After selection of a template:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:386
+msgid ""
+"image:images/100000000000028C000002A7A0200039."
+"png[100000000000028C000002A7A0200039_png]"
+msgstr ""
+
+#. type: Title ^
+#: kicad.adoc:388
+#, no-wrap
+msgid "Templates Location:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:391
+msgid ""
+"The list of available templates are gathered from the following sources:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:394
+msgid "For sytem templates: <kicad bin dir>/../share/template/"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:397
+msgid "For user templates ** On Unix: ~/kicad/templates/ ** On Windows:"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:398
+msgid "C:\\Documents and Settings\\username\\My Documents\\kicad\\templates"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:399
+#, no-wrap
+msgid "** On Mac: ~/Documents/kicad/templates/\n"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:403
+msgid ""
+"When the environment variable KICAD_PTEMPLATES is defined, there is a third "
+"page: Portable Templates, which lists templates found in KICAD_PTEMPLATES "
+"path."
+msgstr ""
