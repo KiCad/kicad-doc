@@ -1,4 +1,4 @@
-Kicad
+KiCad
 =====
 
 :author: The KiCad Team
@@ -18,36 +18,43 @@ This document is Copyright © 2010–201 4 by its contributors as listed
 below. You may distribute it and/or modify it under the terms of either
 the GNU General Public License 
 (http://www.gnu.org/licenses/gpl.html[http://www.gnu.org/licenses/gpl.html]),
-version 3 or later, or the Creative Commons Attribution License (
-http://creativecommons.org/licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]
-), version 3.0 or later.
+version 3 or later, or the Creative Commons Attribution License 
+(http://creativecommons.org/licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]),
+version 3.0 or later.
 
 All trademarks within this guide belong to their legitimate owners.
 
-Contributors
+[[Contributors]]
+*Contributors*
 
 Jean-Pierre Charras, Fabrizio Tappero.
 
-Feedback
+[[Feedback]]
+*Feedback*
 
 Please direct any comments or suggestions about this document to the
 kicad mailing list: _https://launchpad.net/~kicad-developers_
 
-Acknowledgments
+[[Acknowledgments]]
+*Acknowledgments*
 
 None
 
-V ersion
+[[Version]]
+*Version*
 
-2014, march 17 .
+2014, march 17.
 
-Note for Mac users
+[[Note_for_Mac_users]]
+*Note for Mac users*
 
 The KiCad support for the Apple OS X operating system is experimental.
 
 Introduction
+------------
 
 KiCad
+~~~~~
 
 KiCad is an open-source software tool for the creation of electronic
 schematic diagrams and PCB artwork. Beneath its singular surface, kicad
@@ -62,12 +69,12 @@ tools:
 
 3 utilities are included
 
-* *Bitmap2Component* : component maker for logos (Creates a schematic
-component or a footprint from a bitmap picture).
-* *PcbCalculator* : A calculator that is helpfull to calculate
-components for regulators, track witdth versus current, transmission
-lines...
-* *PlEditor* : Page Layout Editor.
+* *Bitmap2Component*: component maker for logos (Creates a schematic
+  component or a footprint from a bitmap picture).
+* *PcbCalculator*: A calculator that is helpfull to calculate
+  components for regulators, track witdth versus current, transmission
+  lines...
+* *PlEditor*: Page Layout Editor.
 
 At the time of writing, KiCad is considered mature and can be used for
 the successful development and maintenance of complex electronic boards.
@@ -89,19 +96,22 @@ open-source flavour.
 Kicad is available for Linux, Windows and Apple OS X (experimental).
 
 Installation and configuration
+------------------------------
 
 Display options
+~~~~~~~~~~~~~~~
 
-Pcbnew needs the support of OpenGL v2.1 or more .
+Pcbnew needs the support of OpenGL v2.1 or more.
 
 Initialization of the default configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A default configuration file named _kicad.pro_ is supplied in
 kicad/template. It serves as a template for any new project.
 
-*The default file* _kicad.pro_ __* can be freely modified if necessary,
+*The default file _kicad.pro_ can be freely modified if necessary,
 mainly to set the list of libraries files loaded by Eeschema or
-Pcbnew.__*
+Pcbnew.*
 
 Some other parameters (default text size, default line thickness, mainly
 for Pcbnew) are stored.
@@ -110,13 +120,14 @@ Verify you have a write acces to kicad/template/kicad.pro
 
 Run kicad and load _kicad.pro_ project.
 
-Run * * Eeschema via kicad. Modify and update the Eeschema
+Run Eeschema via kicad. Modify and update the Eeschema
 configuration, and mainly the list of libraries you want to use each
 time you create new projects.
 
-Run * Pcbnew* via kicad. Modify and update the Pcbnew configuration
+Run Pcbnew via kicad. Modify and update the Pcbnew configuration
 
 Kicad: principles of use
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to manage a Kicad project: schematic files, printed circuit
 board files, supplementary libraries, manufacturing files for
@@ -124,12 +135,14 @@ photo-tracing, drilling and automatic component placement files, it is
 recommended to create a project as follows:
 
 * Create a working directory for the project (using KiCad or by other
-means).
+  means).
 * In this directory, use Kicad to create a project file (file with
-extension .pro) via the “Start a new project” icon.
-
-It is strongly recommended to use the same name for both project file
+  extension .pro) via the “Start a new project” icon.
+[cols="^"]
+|=============
+| It is strongly recommended to use the same name for both project file
 and its directory.
+|=============
 
 Kicad creates a file with a .pro extension that maintains a number of
 parameters for project management (such as the filename of the principal
@@ -154,10 +167,12 @@ cache file of libraries used in the schematic
 |=================================================================
 
 Use Kicad
+---------
 
 Main window
+~~~~~~~~~~~
 
-image:images/10000000000002B5000001AB64B9B213.png[10000000000002B5000001AB64B9B213_png]
+image:images/10000000000002B5000001AB64B9B213.png[]
 
 The main KiCad window is composed of a project tree view, a launch pane
 containing buttons used to run the various software tools, and a message
@@ -165,6 +180,7 @@ window. The menu and the toolbar can be used to create, read and save
 project files.
 
 Utility launch pane
+~~~~~~~~~~~~~~~~~~~
 
 Kicad allows you to run all stand alone software tools that come with
 it.
@@ -172,7 +188,7 @@ it.
 The launch pane is made of the above 7 buttons that correspond to the
 following commands (from left to right):
 
-image:images/10000000000001EC0000004F07F2B654.png[10000000000001EC0000004F07F2B654_png]
+image:images/10000000000001EC0000004F07F2B654.png[]
 
 [width="38%",cols="16%,14%,14%,14%,14%,14%,14%",]
 |===================
@@ -201,6 +217,7 @@ references.
 |=======================================================================
 
 Project tree view
+~~~~~~~~~~~~~~~~~
 
 [width="100%",cols="29%,71%",]
 |=======================================================================
@@ -218,6 +235,7 @@ files manipulation.
 |=======================================================================
 
 Top toolbar
+~~~~~~~~~~~
 
 image:images/10000000000000E900000027B0999D75.png[10000000000000E900000027B0999D75_png]
 
@@ -246,9 +264,11 @@ files, libraries, pcb, etc.
 |Redraw the tree list, useful after a tree change.
 |=======================================================================
 
-Using templates:
+Using templates
+---------------
 
 Definitions
+~~~~~~~~~~~
 
 A template is a directory of files, which includes a directory of
 metadata.
@@ -263,18 +283,21 @@ path when a project is created using a template, except METADIR.
 All files and directories which start with SYSNAME will have SYSNAME
 replaced by the new project file name, excluding the file extension.
 
-Templates:
+Templates
+~~~~~~~~~
 
 They facilitate the easy setup of projects which have common attributes
 such as pre-defined board outlines, connector positions, schematic
 elements, design rules, etc.
 
-_Metadata_
+Metadata
+^^^^^^^^
 
 A template's METADIR must contain the required files, and might
 optionally contain any of the optional files
 
-_Required Files:_
+Required Files:
+^^^^^^^^^^^^^^^
 
 *meta/info.html*
 
@@ -288,14 +311,16 @@ without having to invent a new scheme.
 
 Only a basic HTML language can be used to format this document.
 
-_Optional Files:_
+Optional Files:
+^^^^^^^^^^^^^^^
 
 *meta/icon.png*
 
 A 64 x 64 pixels PNG icon file which is used as a clickable icon in the
 template selection dialog.
 
-_Example:_
+Example:
+^^^^^^^^
 
 Here is a template for a raspberrypi-gpio board:
 
@@ -309,70 +334,49 @@ brd.png is an optional file
 
 Here is an info.html file sample:
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+ <HTML>
+ <HEAD>
+ <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html;
+ charset=windows-1252">
+ <TITLE>Raspberry Pi - Expansion Board</TITLE>
+ <META NAME="GENERATOR" CONTENT="LibreOffice 3.6 (Windows)">
+ <META NAME="CREATED" CONTENT="0;0">
+ <META NAME="CHANGED" CONTENT="20121015;19015295">
+ </HEAD>
+ <BODY LANG="fr-FR" DIR="LTR">
+ <P>This project template is the basis of an expansion board for the
+ <A HREF="http://www.raspberrypi.org/" TARGET="blank">Raspberry Pi $25
+ ARM board.</A> <BR><BR>This base project includes a PCB edge defined
+ as the same size as the Raspberry-Pi PCB with the connectors placed
+ correctly to align the two boards. All IO present on the Raspberry-Pi
+ board is connected to the project through the 0.1&quot; expansion
+ headers. <BR><BR>The board outline looks like the following:
+ </P>
+ <P><IMG SRC="brd.png" NAME="brd" ALIGN=BOTTOM WIDTH=680 HEIGHT=378
+ BORDER=0><BR><BR><BR><BR>
+ </P>
+ <P>(c)2012 Brian Sidebotham<BR>(c)2012 Kicad Developers</P>
+ </BODY>
+ </HTML>
 
-<HTML>
-
-<HEAD>
-
-<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html;
-charset=windows-1252">
-
-<TITLE>Raspberry Pi - Expansion Board</TITLE>
-
-<META NAME="GENERATOR" CONTENT="LibreOffice 3.6 (Windows)">
-
-<META NAME="CREATED" CONTENT="0;0">
-
-<META NAME="CHANGED" CONTENT="20121015;19015295">
-
-</HEAD>
-
-<BODY LANG="fr-FR" DIR="LTR">
-
-<P>This project template is the basis of an expansion board for the
-
-<A HREF="http://www.raspberrypi.org/" TARGET="blank">Raspberry Pi $25
-
-ARM board.</A> <BR><BR>This base project includes a PCB edge defined
-
-as the same size as the Raspberry-Pi PCB with the connectors placed
-
-correctly to align the two boards. All IO present on the Raspberry-Pi
-
-board is connected to the project through the 0.1&quot; expansion
-
-headers. <BR><BR>The board outline looks like the following:
-
-</P>
-
-<P><IMG SRC="brd.png" NAME="brd" ALIGN=BOTTOM WIDTH=680 HEIGHT=378
-BORDER=0><BR><BR><BR><BR>
-
-</P>
-
-<P>(c)2012 Brian Sidebotham<BR>(c)2012 Kicad Developers</P>
-
-</BODY>
-
-</HTML>
-
-_Operation_
+Operation
+^^^^^^^^^
 
 The KiCad File menu New shows 2 option:
 
 image:images/1000000000000185000000F2ADA0CF8E.png[1000000000000185000000F2ADA0CF8E_png]
 
-* *Blank* *Project* Create a blank project by just copying
-template/kicad.pro to the current folder.
-* *Project* __* from Template__* Open the template selection dialog. The
-template selection dialog has a list of icons, and a display window. A
-single click on a template's icon on the left will load that templates
-info.html metadata file and display it in the display window. A click on
-the OK button starts the new project creation. The template will be
-copied to the new project location ( excluding METADIR as mentioned
-earlier ) and any files that match the string replacement rules will be
-renamed to reflect the new project's name.
+- *Blank* *Project* Create a blank project by just copying
+  template/kicad.pro to the current folder.
+- *Project* __* from Template__* Open the template selection dialog. The
+  template selection dialog has a list of icons, and a display window. A
+  single click on a template's icon on the left will load that templates
+  info.html metadata file and display it in the display window. A click on
+  the OK button starts the new project creation. The template will be
+  copied to the new project location ( excluding METADIR as mentioned
+  earlier ) and any files that match the string replacement rules will be
+  renamed to reflect the new project's name.
 
 image:images/100000000000027E000001DCE9DD870D.png[100000000000027E000001DCE9DD870D_png]
 
@@ -380,17 +384,20 @@ After selection of a template:
 
 image:images/100000000000028C000002A7A0200039.png[100000000000028C000002A7A0200039_png]
 
-_Templates Location:_
+Templates Location:
+^^^^^^^^^^^^^^^^^^^
 
 The list of available templates are gathered from the following sources:
 
-* For sytem templates: <kicad bin dir>/../share/template/
-* For user templates On Unix: ~/ kicad/templates/ On Windows:
-`C:\Documents and Settings\username\My Documents`
-kicad
-templates
- On Mac: ~/Documents /kicad/templates/
-* When the environment variable KICAD_PTEMPLATES is defined, there is a
-third page: Portable Templates, which lists templates found in
-KICAD_PTEMPLATES path.
+- For sytem templates:
+  <kicad bin dir>/../share/template/
+- For user templates
+  ** On Unix: ~/kicad/templates/
+  ** On Windows:
+     C:\Documents and Settings\username\My Documents\kicad\templates
+  ** On Mac: ~/Documents/kicad/templates/
+
+- When the environment variable KICAD_PTEMPLATES is defined, there is a
+  third page: Portable Templates, which lists templates found in
+  KICAD_PTEMPLATES path.
 
