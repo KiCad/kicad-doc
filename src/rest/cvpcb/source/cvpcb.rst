@@ -7,11 +7,10 @@ CvPcb
 
 This document is Copyright © 2010–2013 by it's contributors as listed
 below. You may distribute it and/or modify it under the terms of either
-the GNU General Public License (`http://www.gnu.org/licenses/gpl.html
-<http://www.gnu.org/licenses/gpl.html>`_), version 3 or later, or the
+the GNU General Public License
+(`<http://www.gnu.org/licenses/gpl.html>`_), version 3 or later, or the
 Creative Commons Attribution License
-(`http://creativecommons.org/licenses/by/3.0/
-<http://creativecommons.org/licenses/by/3.0/>`_), version 3.0 or later.
+(`<http://creativecommons.org/licenses/by/3.0/>`_), version 3.0 or later.
 
 All trademarks within this guide belong to their legitimate owners.
 
@@ -22,8 +21,7 @@ Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh.
 **Feedback**
 
 Please direct any comments or suggestions about this document to the
-KiCad mailing list:
-*https://launchpad.net/~kicad-developers*
+KiCad mailing list: `<https://launchpad.net/~kicad-developers>`_
 
 **Acknowledgments**
 
@@ -37,10 +35,7 @@ Published on February 4, 2013.
 
 The KiCad support for the Apple OS X operating system is experimental.
 
-.. Contents:
-
 .. toctree::
-   :maxdepth: 2
 
 ..
     Indices and tables
