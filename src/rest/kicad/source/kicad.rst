@@ -37,7 +37,6 @@ None
 The KiCad support for the Apple OS X operating system is experimental.
 
 .. toctree::
-   :maxdepth: 2
 
 Introduction
 ------------
@@ -191,16 +190,10 @@ Utility launch pane
 Kicad allows you to run all stand alone software tools that come with it.
 
 The launch pane is made of the above 7 buttons that correspond to the
-following commands (from left to right):
+following commands (1 to 7, from left to right):
 
 
 |10000000000001EC0000004F07F2B654_png|
-
-+---+---+---+---+---+---+---+
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 |
-|   |   |   |   |   |   |   |
-+---+---+---+---+---+---+---+
-
 
 
 +---+----------------------+--------------------------------------------------------------------------------------+
@@ -230,19 +223,16 @@ following commands (from left to right):
 Project tree view
 ^^^^^^^^^^^^^^^^^
 
-+----------------------------------------+------------------------------------------------------------+
-| |10000000000000C60000009255B0301C_png| | Double-clicking on the Eeschema icons runs the schematic   |
-|                                        | editor which in this case will open the file               |
-|                                        | pic_programmer.sch.                                        |
-|                                        |                                                            |
-|                                        | Double-clicking on the Pcbnew icon runs the layout editor, |
-|                                        | in this case opening the file pic_programmer.kicad_pcb     |
-|                                        |                                                            |
-|                                        |                                                            |
-|                                        | Right clicking on any of the files in the project tree     |
-|                                        | allows generic files manipulation.                         |
-|                                        |                                                            |
-+----------------------------------------+------------------------------------------------------------+
+|10000000000000C60000009255B0301C_png|
+
+-   Double-clicking on the Eeschema icons runs the schematic editor
+    which in this case will open the file pic_programmer.sch.
+
+-   Double-clicking on the Pcbnew icon runs the layout editor, in this
+    case opening the file pic_programmer.kicad_pcb
+
+-   Right clicking on any of the files in the project tree allows 
+    generic files manipulation.
 
 Top toolbar
 ^^^^^^^^^^^
