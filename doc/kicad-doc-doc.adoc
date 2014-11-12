@@ -74,7 +74,7 @@ http://en.wikipedia.org/wiki/AsciiDoc[wikipedia]
 Pros:
 
 * one of the cleaner format
-* sufficient powerful: it supports table/index/references
+* sufficient powerful: it supports table/table formatting/index/references
 * plenty of tools available: pandoc(haskel), asciidoc(python), asciidoctor(ruby)
 * support on websites like github: just write a README.adoc and other
   supports are planned (like https://www.gitbook.io/[gitbook])
@@ -102,7 +102,7 @@ Second choice: rest
 
 Pros:
 
-- complete at the same level with docbook: it supports table/index/reference/etc.
+- almost complete: it supports table/index/reference/etc.
 - plenty of tools available: pandoc(haskel), sphinx(python), docutils(python)
 - actively developed tools (all)
 - widely used: it is the standard for python documentation, CMake, etc.
@@ -115,13 +115,17 @@ Pros:
 
 Cons:
 
+- some formatting options are missing:
+  ** table formatting: table dimensions, column dimensions, cell justification, etc.
+  ** you cannot have text bold _and_ italics
+  ** you cannot decide where to put toc and other things
 - not (arguably) immediate (but still easy) syntax. See the links or the
   comments and such.
 - support for i18n is native but more complex to handle than po4a
 - support for i18n in sphinx is a work-in-progress state and actually
   have some quirks that, hopefully, will be resolved with the next sphinx
-  version (wrong position of files, fuzzy strings not handled, update too 
-  greedy, and so on)
+  version (wrong position of intermediate (.mo) files, fuzzy strings not 
+  handled, Makefile do not have any option about i18n, and so on)
 
 What I suggest to avoid (and why)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -136,21 +140,21 @@ pros:
 cons:
 
 * despite its popularity I do not think that could be a good choice for
-these reasons:
-** it is not a standard: just as an example pandoc supports some 5
-incompatible markdown "flavours":
-*** markdown: its pandoc own markdown superset format
-*** markdown_github: github supeset format
-*** markdown_mmd: multimarkdown superset format
-*** markdown_phpextra: php superset format
-*** markdown_strict: the *least common multiple* format
-** markdown common subset is too poor to be used at anything apart from
-html pages. This is its aim and there finishes its use.
-See http://en.wikipedia.org/wiki/Markdown#Standardization. Markdown
-original converter is defined _abandonware_. Its development cycle
-lasted 1 year 9 years ago.
-** its syntax is easier than rest but somehow arguably not easier than
-asciidoc: see link, images and tables for some examples
+  these reasons:
+  ** it is not a standard: just as an example pandoc supports some 5
+     incompatible markdown "flavours":
+     *** markdown: its pandoc own markdown superset format
+     *** markdown_github: github supeset format
+     *** markdown_mmd: multimarkdown superset format
+     *** markdown_phpextra: php superset format
+     *** markdown_strict: the *least common multiple* format
+  ** markdown common subset is too poor to be used at anything apart from
+     html pages. This is its aim and there finishes its use.
+     See http://en.wikipedia.org/wiki/Markdown#Standardization. Markdown
+     original converter is defined _abandonware_. Its development cycle
+     lasted 1 year 9 years ago.
+  ** its syntax is easier than rest but somehow arguably not easier than
+     asciidoc: see link, images and tables for some examples
 
 http://txt2tags.org/[txt2tags]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -160,22 +164,22 @@ Wonderful small and powerful piece of software.
 pros:
 
 * exportable in many formats thanks to
-http://johnmacfarlane.net/pandoc/[pandoc]
+  http://johnmacfarlane.net/pandoc/[pandoc]
 * completeness: the format should have all the necessary characteristics
-for the needs of a considerable complex and complete documentation task
+  for the needs of a considerable complex and complete documentation task
 * diffusion. There are essentially two implementation:
- ** txt2tags: its native executable whose development seems stopped by
- the year 2010. This is not always a bad thing since if the format is
- fairy complete, its obsolescence is a guarantee of stability;
- ** pandoc: its powerful capability greatly enhance txt2tags output
- formats
+  ** txt2tags: its native executable whose development seems stopped by
+     the year 2010. This is not always a bad thing since if the format is
+     fairy complete, its obsolescence is a guarantee of stability;
+  ** pandoc: its powerful capability greatly enhance txt2tags output
+     formats
 
 cons:
 
 * future: the format must stand the test of time. If the format is
-the result of a one people effort, as in this case, I am afraid it is
-doomed to extinction. On the other hand, as said previously, this is also
-a good thing; depends on which side you see it.
+  the result of a one people effort, as in this case, I am afraid it is
+  doomed to extinction. On the other hand, as said previously, this is also
+  a good thing; depends on which side you see it.
 
 http://redcloth.org/textile[textile]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -212,39 +216,38 @@ pros:
 cons:
 
 * no tools to convert automatically document from other formats. No
-support from pandoc.
+  support from pandoc.
 
 *TO COMPLETE*
-
 
 
 To sum up
 ---------
 
 * the only documentation standard in full sense is docbook. Almost every
-new format or conversion tool, in a way or another, do refer to docbook.
-This is logical since docbook-xml is derived directly from SGML that is a
-reference and was the reference for many years in the publishing field.
-The problem is that docbook is easy to produce by means of some automatic
-tool but it is not easy to write by humans, even with and intelligent
-editor like emacs or eclipse.
+  new format or conversion tool, in a way or another, do refer to docbook.
+  This is logical since docbook-xml is derived directly from SGML that is a
+  reference and was the reference for many years in the publishing field.
+  The problem is that docbook is easy to produce by means of some automatic
+  tool but it is not easy to write by humans, even with and intelligent
+  editor like emacs or eclipse.
 
 * odt is easy to write, using Libre/OpenOffice but not to maintain and
-translate.
+  translate.
 
 * so we have to switch from odt to some other documentation tool that we
-should choose from among similar tools that have some minimal
-characteristics we need such as:
-** easier than docbook
-** complete i.e. with many features like tables, indexes, toc, etc.
-** standard
-** more than one implementation (i.e. tools) of the standard
-** easily translatable (i.e. automatic strings extractions and merge)
-** tools actively developed
+  should choose from among similar tools that have some minimal
+  characteristics we need such as:
+  ** easier than docbook
+  ** complete i.e. with many features like tables, indexes, toc, etc.
+  ** standard
+  ** more than one implementation (i.e. tools) of the standard
+  ** easily translatable (i.e. automatic strings extractions and merge)
+  ** tools actively developed
 
 * I am getting acquainted with asciidoc. This document is in fact, full
-asciidoc compliant; try by yourself: copy and past the  exact copy of
-this mail text and type these commands:
+  asciidoc compliant; try by yourself: copy and past the  exact copy of
+  this mail text and type these commands:
 
  asciidoc this-text.adoc    #convert into html
  a2x -f pdf this-text.adoc  #convert into pdf
@@ -317,14 +320,14 @@ One done to create html simply type:
 
 or
 
- make -e SPHINXOPTS="-D html_logo=images/10000201000003200000022675E94B31.png" html
+ make -e SPHINXOPTS="-D html_logo=images/kicad_logo.png" html
 
 To include the KiCad logo.
 
 Similarly to create the other outputs:
 
- make -e SPHINXOPTS="-D latex_logo=images/10000201000003200000022675E94B31.png -D latex_paper_size=a4" latexpdf
- make -e SPHINXOPTS="-D epub_cover=\('images/10000201000003200000022675E94B31.png', ''\)" epub
+ make -e SPHINXOPTS="-D latex_logo=images/kicad_logo.png -D latex_paper_size=a4" latexpdf
+ make -e SPHINXOPTS="-D epub_cover=\('images/kicad_logo.png', ''\)" epub
 
 Internationalization
 --------------------
