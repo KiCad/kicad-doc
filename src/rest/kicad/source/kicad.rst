@@ -1,17 +1,18 @@
 KiCad
 =====
 
+**KiCad**
+
 *Reference manual*
 
 **Copyright**
 
 This document is Copyright © 2010–2014 by its contributors as listed
 below. You may distribute it and/or modify it under the terms of either
-the GNU General Public License (`http://www.gnu.org/licenses/gpl.html
-<http://www.gnu.org/licenses/gpl.html>`_), version 3 or later, or the
+the GNU General Public License
+(`<http://www.gnu.org/licenses/gpl.html>`_), version 3 or later, or the
 Creative Commons Attribution License
-(`http://creativecommons.org/licenses/by/3.0/
-<http://creativecommons.org/licenses/by/3.0/>`_), version 3.0 or later.
+(`<http://creativecommons.org/licenses/by/3.0/>`_), version 3.0 or later.
 
 All trademarks within this guide belong to their legitimate owners.
 
@@ -22,7 +23,7 @@ Jean-Pierre Charras, Fabrizio Tappero.
 **Feedback**
 
 Please direct any comments or suggestions about this document to the kicad mailing list:
-*https://launchpad.net/~kicad-developers*
+`<https://launchpad.net/~kicad-developers>`_
 
 **Acknowledgments**
 

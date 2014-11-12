@@ -1,6 +1,8 @@
 CvPcb
 =====
 
+**CvPcb**
+
 *Reference manual*
 
 **Copyright**
@@ -21,7 +23,9 @@ Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh.
 **Feedback**
 
 Please direct any comments or suggestions about this document to the
-KiCad mailing list: `<https://launchpad.net/~kicad-developers>`_
+KiCad mailing list:
+
+`<https://launchpad.net/~kicad-developers>`_
 
 **Acknowledgments**
 
@@ -658,9 +662,9 @@ Displayed by right-clicking the mouse:
 
 
 +------------------------------+----------------------------------------+
-| Zoom Selection (Select Zoom) | Direct selection of the display zoom . |
+| Zoom Selection (Select Zoom) | Direct selection of the display zoom.  |
 |                              |                                        |
-+==============================+========================================+
++------------------------------+----------------------------------------+
 | Grid Selection (Grid Select) | Direct selection of the grid.          |
 |                              |                                        |
 +------------------------------+----------------------------------------+
@@ -671,7 +675,7 @@ Horizontal Toolbar
 +----------------------------------------+-----------------------------+
 | |100002010000001A0000001AFFE7B356_png| | Show display options dialog |
 |                                        |                             |
-+========================================+=============================+
++----------------------------------------+-----------------------------+
 | |100002010000001A0000001A987F0D04_png| | Zoom in                     |
 |                                        |                             |
 +----------------------------------------+-----------------------------+
@@ -742,7 +746,7 @@ Horizontal Toolbar
 +----------------------------------------+------------------------------------------------+
 | |100002010000001A0000001A106F8A4B_png| | Reload the 3D model                            |
 |                                        |                                                |
-+========================================+================================================+
++----------------------------------------+------------------------------------------------+
 | |100002010000001A0000001A9A14D17F_png| | Copy 3D image to clipboard                     |
 |                                        |                                                |
 +----------------------------------------+------------------------------------------------+
