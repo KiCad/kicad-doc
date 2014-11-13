@@ -9,18 +9,18 @@ KiCad
 
 image:images/kicad_logo.png[]
 
+*KiCad*
+
 _Reference manual_
 
 [[Copyright]]
 *Copyright*
 
-This document is Copyright © 2010–201 4 by its contributors as listed
+This document is Copyright © 2010–2014 by its contributors as listed
 below. You may distribute it and/or modify it under the terms of either
-the GNU General Public License 
-(http://www.gnu.org/licenses/gpl.html[http://www.gnu.org/licenses/gpl.html]),
+the GNU General Public License  (http://www.gnu.org/licenses/gpl.html),
 version 3 or later, or the Creative Commons Attribution License 
-(http://creativecommons.org/licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]),
-version 3.0 or later.
+(http://creativecommons.org/licenses/by/3.0/), version 3.0 or later.
 
 All trademarks within this guide belong to their legitimate owners.
 
@@ -140,7 +140,7 @@ recommended to create a project as follows:
   extension .pro) via the “Start a new project” icon.
 
 [WARNING]
-It is strongly recommended to use the same name for both project file
+It is _strongly_ recommended to use the same name for both project file
 and its directory.
 
 Kicad creates a file with a .pro extension that maintains a number of
@@ -229,30 +229,30 @@ image:images/10000000000000C60000009255B0301C.png[]
 Top toolbar
 ~~~~~~~~~~~
 
-image:images/10000000000000E900000027B0999D75.png[10000000000000E900000027B0999D75_png]
+image:images/10000000000000E900000027B0999D75.png[]
 
 Kicad top toolbar allows for some basic files operation (from left to
 right).
 
 [width="100%",cols="26%,74%",options="header",]
 |=======================================================================
-|image:images/100000000000002C00000027822C5914.png[100000000000002C00000027822C5914_png]
+|image:images/100000000000002C00000027822C5914.png[]
 |Create a project file. If the template kicad.pro is found in
 kicad/template, it is copied into the working directory.
-|image:images/100000000000002500000029C403AB20.png[100000000000002500000029C403AB20_png]
+|image:images/100000000000002500000029C403AB20.png[]
 |Create a project from a template.
 
-|image:images/10000000000000230000002995442CF9.png[10000000000000230000002995442CF9_png]
+|image:images/10000000000000230000002995442CF9.png[]
 |Open an existing project.
 
-|image:images/100000000000002700000029A7BBB537.png[100000000000002700000029A7BBB537_png]
+|image:images/100000000000002700000029A7BBB537.png[]
 |Update and save the current project tree.
 
-|image:images/10000000000000260000002421A88B39.png[10000000000000260000002421A88B39_png]
+|image:images/10000000000000260000002421A88B39.png[]
 |Create a zip archive of the whole project. This includes schematic
 files, libraries, pcb, etc.
 
-|image:images/1000000000000024000000248581A3AE.png[1000000000000024000000248581A3AE_png]
+|image:images/1000000000000024000000248581A3AE.png[]
 |Redraw the tree list, useful after a tree change.
 |=======================================================================
 
@@ -316,11 +316,11 @@ Example:
 
 Here is a template for a raspberrypi-gpio board:
 
-image:images/10000000000001BA0000006F670E0EA3.png[10000000000001BA0000006F670E0EA3_png]
+image:images/10000000000001BA0000006F670E0EA3.png[]
 
 And the meta data info:
 
-image:images/1000000000000163000000735475F846.png[1000000000000163000000735475F846_png]
+image:images/1000000000000163000000735475F846.png[]
 
 brd.png is an optional file
 
@@ -360,7 +360,7 @@ Operation
 
 The KiCad File menu New shows 2 option:
 
-image:images/1000000000000185000000F2ADA0CF8E.png[1000000000000185000000F2ADA0CF8E_png]
+image:images/1000000000000185000000F2ADA0CF8E.png[]
 
 - *Blank* *Project* Create a blank project by just copying
   template/kicad.pro to the current folder.
@@ -373,11 +373,11 @@ image:images/1000000000000185000000F2ADA0CF8E.png[1000000000000185000000F2ADA0CF
   earlier ) and any files that match the string replacement rules will be
   renamed to reflect the new project's name.
 
-image:images/100000000000027E000001DCE9DD870D.png[100000000000027E000001DCE9DD870D_png]
+image:images/100000000000027E000001DCE9DD870D.png[]
 
 After selection of a template:
 
-image:images/100000000000028C000002A7A0200039.png[100000000000028C000002A7A0200039_png]
+image:images/100000000000028C000002A7A0200039.png[]
 
 Templates Location:
 ^^^^^^^^^^^^^^^^^^^
@@ -386,11 +386,17 @@ The list of available templates are gathered from the following sources:
 
 - For sytem templates:
   <kicad bin dir>/../share/template/
-- For user templates
-  ** On Unix: ~/kicad/templates/
-  ** On Windows:
+
+- For user templates:
+
+  ** on Unix:
+     ~/kicad/templates/
+
+  ** on Windows: 
      C:\Documents and Settings\username\My Documents\kicad\templates
-  ** On Mac: ~/Documents/kicad/templates/
+
+  ** on Mac:
+     ~/Documents/kicad/templates/
 
 - When the environment variable KICAD_PTEMPLATES is defined, there is a
   third page: Portable Templates, which lists templates found in
