@@ -1,6 +1,8 @@
 Eeschema
 ========
 
+**Eeschema**
+
 *Reference manual*
 
 **Copyright**
@@ -37,9 +39,20 @@ The kicad support for the Apple OS X operating system is experimental.
 
 .. toctree::
 
-.. include:: eeschema_chapter1.rst
-.. include:: eeschema_chapter2.rst
-.. include:: eeschema_chapter3.rst
-.. include:: eeschema_chapter4.rst
-
 .. include:: eeschema_imagerefs.rst
+
+.. include:: eeschema_chapter01.rst
+.. include:: eeschema_chapter02.rst
+.. include:: eeschema_chapter03.rst
+.. include:: eeschema_chapter04.rst
+.. include:: eeschema_chapter05.rst
+.. include:: eeschema_chapter06.rst
+.. include:: eeschema_chapter07.rst
+.. include:: eeschema_chapter08.rst
+.. include:: eeschema_chapter09.rst
+.. include:: eeschema_chapter10.rst
+.. include:: eeschema_chapter11.rst
+.. include:: eeschema_chapter12.rst
+.. include:: eeschema_chapter13.rst
+.. include:: eeschema_chapter14.rst
+

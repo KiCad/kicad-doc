@@ -296,10 +296,6 @@
     :height: 9.23cm
 
 
-.. |100000000000017F000001484EF563F9_png| image:: images/100000000000017F000001484EF563F9.png
-    :width: 10.13cm
-    :height: 8.68cm
-
 .. Chapter 4 images
 
 
@@ -323,11 +319,6 @@
     :height: 15.319cm
 
 
-.. |1000000000000025000000230D237A08_png| image:: images/1000000000000025000000230D237A08.png
-    :width: 0.981cm
-    :height: 0.93cm
-
-
 .. |1000000000000194000001B85AC8A901_png| image:: images/1000000000000194000001B85AC8A901.png
     :width: 10.689cm
     :height: 11.642cm
@@ -343,16 +334,6 @@
     :height: 14.84cm
 
 
-.. |100000000000002400000025B5886D2F_png| image:: images/100000000000002400000025B5886D2F.png
-    :width: 0.951cm
-    :height: 0.981cm
-
-
-.. |10000000000000220000002353233D17_png| image:: images/10000000000000220000002353233D17.png
-    :width: 0.9cm
-    :height: 0.93cm
-
-
 .. |1000020100000202000001D3432F631D_png| image:: images/1000020100000202000001D3432F631D.png
     :width: 13.6cm
     :height: 12.36cm
@@ -363,27 +344,7 @@
     :height: 7.17cm
 
 
-.. |1000000000000022000000221C8530A2_png| image:: images/1000000000000022000000221C8530A2.png
-    :width: 0.9cm
-    :height: 0.9cm
-
-
 .. |100000000000017D000000EDC469394A_png| image:: images/100000000000017D000000EDC469394A.png
     :width: 10.081cm
     :height: 6.271cm
-
-
-.. |100000000000002400000023EA45FB2C_png| image:: images/100000000000002400000023EA45FB2C.png
-    :width: 0.951cm
-    :height: 0.93cm
-
-
-.. |100000000000002700000023737FA05C_png| image:: images/100000000000002700000023737FA05C.png
-    :width: 1.03cm
-    :height: 0.93cm
-
-
-.. |1000000000000024000000255522ABD1_png| image:: images/1000000000000024000000255522ABD1.png
-    :width: 0.951cm
-    :height: 0.981cm
 
