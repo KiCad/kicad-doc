@@ -1596,7 +1596,7 @@ components, a BOM can be extracted from it. Here is the plug-in setup
 window (on Linux) to create a customized Bill Of Materials (BOM) file:
 
 
-|bom-netlist-tab_jpg|
+|bom-netlist-tab_png|
 The path to the style sheet bom2csv.xsl is system dependent. The
 currently best XSLT style-sheet for BOM generation at this time is called
 *bom2csv.xsl*.
@@ -2323,7 +2323,7 @@ W3C XSLT page:
     :height: 2.6602in
 
 
-.. |bom-netlist-tab_jpg| image:: images/bom-netlist-tab.jpg
+.. |bom-netlist-tab_png| image:: images/bom-netlist-tab.png
     :width: 6.6925in
     :height: 3.5756in
 
