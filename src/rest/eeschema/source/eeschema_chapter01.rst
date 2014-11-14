@@ -1,8 +1,8 @@
 Introduction to Eeschema
-========================
+------------------------
 
 Description
------------
+~~~~~~~~~~~
 
 Eeschema is powerful schematic capture software distributed as part of
 KiCad and available under the following operating systems:
@@ -54,7 +54,7 @@ needed for modern schematic capture software:
 *   Netlist generation for PCB layout or for simulation.
 
 Technical overview
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Eeschema is limited only by the available memory. There is thus no real
 limitation to the component count, number of component pins, connections,
