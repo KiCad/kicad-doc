@@ -205,7 +205,7 @@ In PSPICE format, the netlist is as follows.
 
 .model Q2N2222 npn (bf=200)
 
-.AC 10 1Meg *1.2
+.AC 10 1Meg \*1.2
 
 .DC V1 10 12 0.5
 
@@ -373,7 +373,7 @@ The setup will require:
 
 When the netlist is generated:
 
-#.  Eeschema creates an intermediate file *.tmp, for instance test.tmp.
+#.  Eeschema creates an intermediate file \*.tmp, for instance test.tmp.
 
 
 
@@ -399,7 +399,7 @@ With:
 | f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl | File name converter (a sheet style, xsl format).                       |
 |                                                |                                                                        |
 +------------------------------------------------+------------------------------------------------------------------------+
-| %I                                             | Will be replaced by the intermediate file created by Eeschema (*.tmp). |
+| %I                                             | Will be replaced by the intermediate file created by Eeschema (\*.tmp).|
 |                                                |                                                                        |
 +------------------------------------------------+------------------------------------------------------------------------+
 

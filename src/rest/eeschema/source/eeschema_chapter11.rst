@@ -796,510 +796,191 @@ be created using the properties above and will appear in the editor as shown bel
 
 |100000000000030A00000205F0A88B4F_png|
 
-*Create a *
-C
-*omponent from *
-A
-*nother *
-C
-*omponent*
+*Create a Component from Another Component*
 
-Often, the component that you want to make is similar to one
-already
-in
-a
-
-component
-library. In this case it is
-easy
-to load and modify an already existing component.
+Often, the component that you want to make is similar to one already in a
+component library. In this case it is easy to load and modify an already
+existing component.
 
 
 *   Load the component which will be used as a starting point.
 
+*   Click on the `duplicate component button <#duplicate_component>`_ or
+    modify its name by right click on the value field and edit ing the
+    text. If you chose to duplicate the current component, y ou will be
+    prompted for a new component name.
 
+*   If the model component has aliases, you will be prompted to remove
+    aliases from the new component which conflict with the current
+    library. If the answer is no the new component creation will be
+    aborted. Component libraries cannot have any duplicate names or
+    aliases.
 
-*   Click on the
-    `duplicate component button <#duplicate_component>`_
-    or modify its name
-    by
-    right click on the
-    value field
-    and edit
-    ing
-    the text.
-    If you chose to duplicate the current component, y
-    ou will be prompted for a new component name.
+*   Edit the new component as required.
 
+*   Update the new component in the current library by clicking the
+    `update changes to library in memory button <#save_to_memory>`_ or
+    save to a new library by clicking the `save in new library button
+    <#new_library>`_ or if you want to save this new component in an
+    other existing library select the other library by clicking on the
+    `select library button <#select_library>`_ and save the new
+    component.
 
-
-*   If the model component has aliases, you will be prompted to remove aliases from the new component which conflict with the
-    current library
-    .
-    If the answer is no the new component creation will be aborted.
-    Component libraries cannot have any duplicate names or aliases.
-
-
-
-*   Edit the new component as
-    required
-    .
+*   Save the current library file to disk by clicking the `save the
+    current library button <#save_library>`_.
 
 
 
-*   Update
-    the new component
-    in the current library by clicking the
-    `update changes to library in memory button <#save_to_memory>`_
-    or save to a new library
-    by clicking the
-    `save in new library button <#new_library>`_
-    or if you want to save this new component in an other existing library select the other library
-    by clicking on the
-    `select library button <#select_library>`_
-    and save the new
-    component
-    .
+*Component Properties*
 
-
-
-*   Save the
-    current
-    library file to disk
-    by clicking the
-    `save the current library button <#save_library>`_
-    .
-
-
-
-C
-*omponent *
-Properties
-
-Component
-
-propertie
-s should be carefully
-set
-during the component creation or alternatively they
-are inherited from copied
-component.
-To change the component properties, click on the
-`open the component properties <#component_properties>`_
-to show the dialog below
-.
+Component properties should be carefully set during the component
+creation or alternatively they are inherited from copied component. To
+change the component properties, click on the `open the component
+properties <#component_properties>`_ to show the dialog below.
 
 
 |10000000000001B2000001509F311F99_png|
 
-It is very important
-to correct set
-the n
-umber of units
-
-per package and
-
-if
-the component has a
-n
-
-alternate symbolic
-representation
-pa
-rameters correctly because when pins are edited or created the corresponding pins
-for each
-
-unit
-will created.
-If you
-change
-the number of
-units per package
-after pin creation
-and
-editing, there will be additional work introduced
-add the new unit pins and symbols
-.
-Nevertheless, it is possible to modify these p
-roperies
-at any time.
+It is very important to correct set the n umber of units per package and
+if the component has an alternate symbolic representation pa rameters
+correctly because when pins are edited or created the corresponding pins
+for each unit will created. If you change the number of units per package
+after pin creation and editing, there will be additional work introduced
+add the new unit pins and symbols. Nevertheless, it is possible to modify
+these p roperies at any time.
 
 
-The g
-raphic options
-“S
-how
-pin number” and “
-Show
-pin name”
-define the visibility of the pin number and pin name text.
-This text will be visible if the corresponding options are
-checked
-.
-The option “
-Place p
-in
-names i
-nside” defines the pin name position
-relative to the pin body.
-T
-his text will be displayed inside the component outline if the option is
-checked
-. In this case the “Pin
-Name Position Offset”
-pr
-operty
-defines the shift of the text
-away from the body end of the pin
-.
+The graphic options “Show pin number” and “ Show pin name” define the
+visibility of the pin number and pin name text. This text will be visible
+if the corresponding options are checked. The option “Place pin names
+inside” defines the pin name position relative to the pin body. T his
+text will be displayed inside the component outline if the option is
+checked. In this case the “Pin Name Position Offset” pr operty defines
+the shift of the text away from the body end of the pin.
 A value from 30 to 40 (in 1/1000 inch) is reasonable.
 
 
-The example below shows
-a
-component with the “
-Place p
-in
-name i
-nside” option unchecked.
-Notice the position of the names and pin numbers.
+The example below shows a component with the “Place pin name inside”
+option unchecked. Notice the position of the names and pin numbers.
 
 
 |2000000800003D8000002550D6E11DAF_png|
 
-C
-omponents
-with Alternate Symbols
+Components with Alternate Symbols
 
-If
-the component
-has more than one symbolic repersentation
-, you will have to select the different
-symbols
-of th
-e
-component
-in order to edit them
-.
-To edit the normal symbol, click the
-`normal body style button <#normal_body_style>`_
-.
+If the component has more than one symbolic repersentation, you will have
+to select the different symbols of th e component in order to edit them.
+To edit the normal symbol, click the `normal body style button
+<#normal_body_style>`_.
 
-To edit the alternate symbol click on
-the
-`alternate body style button <#alternate_body_style>`_
-.
-Use the
-`unit selection drop down control <#unit_select_control>`_
-show below to select the unit you wish to edit
-.
+To edit the alternate symbol click on the `alternate body style button
+<#alternate_body_style>`_. Use the `unit selection drop down control
+<#unit_select_control>`_ show below to select the unit you wish to edit.
 
 
 |1000000000000456000002680D968591_png|
 
-Graphical
+Graphical Elements
 
-Elements
-
-Graphical elements create the symbolic repersentation of a component and contain no electrical connection information.
-Their design is possible using the following tools:
-
-
-*   Lines and polygons
-    defined by start and end points
-    .
+Graphical elements create the symbolic repersentation of a component and
+contain no electrical connection information. Their design is possible
+using the following tools:
 
 
+*   Lines and polygons defined by start and end points.
 
-*   Rectangles defined by
-    two
-    diagonal
-    corners
-    .
-
-
+*   Rectangles defined by two diagonal corners.
 
 *   Circles defined by the center and radius.
 
-
-
-*   Arcs defined by the starting and ending point of the arc and its center. An arc goes from 0
-    °
-    to 180
-    °
-    .
+*   Arcs defined by the starting and ending point of the arc and its
+    center. An arc goes from 0° to 180°.
 
 
 
-The vertical toolbar on the right hand
-side of the main window
-allows you to place all
-of the graphical
-elements
-required to design
-a component
-'s symbolic representation
-.
+The vertical toolbar on the right hand side of the main window allows you
+to place all of the graphical elements required to design a component's
+symbolic representation.
 
-*Graphic*
-al
-* *
-E
-*lement *
-M
-*embership*
+*Graphical Element Membership*
 
-Each graphic element
-(line, arc, circle, etc.)
-can be defined as
-common to all units and/or body styles
-or specific
-to a given unit and/or body style
-.
-Element
-options
-can be quickly
-
-a
-ccess
-ed
-by the right click
-ing
-on the element
-to display the context menu for the selected element
-.
-Below
-
-is the context menu
-
-for
-a line
-element
-.
+Each graphic element (line, arc, circle, etc.) can be defined as common
+to all units and/or body styles or specific to a given unit and/or body
+style. Element options can be quickly access ed by the right click ing on
+the element to display the context menu for the selected element. Below
+is the context menu for a line element.
 
 
 |20000009000056D200003432E4789F12_png|
 
-You can
-a
-lso
-double
-left
-click on
-an
-element
-to modify it's properties
-.
+You can a lso double left click on an element to modify it's properties.
 Below is the properties dialog for a polygon element.
-
 
 |100000000000012100000146E8D1DDCE_png|
 
-The
-propertie
-s of a graphic element are:
+The properties of a graphic element are:
 
 
-*   Line width which defines the width of the element's line in the current drawing units.
-
-
+*   Line width which defines the width of the element's line in the
+    current drawing units.
 
 *   The “Common
+    to all units in component” setting defines if the graphical element
+    is drawn for each unit in component with more than one unit per
+    package or if the graphical element is only drawn for the current
+    unit.
 
-    to
-    all
-    units
-    in component”
-    setting defines if the graphical element is drawn for each unit in component with more than one unit per package or if the graphical element is only drawn for the current unit.
+*   The “Common by all body styles (DeMorgan)” setting defines if the
+    graphical element is drawn for each symbolic representation in
+    components with an alternate body style or if the graphical element
+    is only drawn for the current body style.
 
-
-
-*   The “Common
-    by all body styles (DeMorgan)”
-    setting defines if the graphical element is drawn for each symbolic representation in components with an alternate body style or if the graphical element is only drawn for the current body style
-    .
-
-
-
-*   The fill style setting determines if the symbol defined by the graphical element is to be drawn unfilled,
-    background
-    filled,
-
-    o
-    r foreground
-    filled
-    .
+*   The fill style setting determines if the symbol defined by the
+    graphical element is to be drawn unfilled, background filled, o r
+    foreground filled.
 
 
 
-*Graphical *
-Text E
-*lements*
+*Graphical Text Elements*
 
-The
-`graphical text tool <#text_tool>`_
-allows for the creation of
-graphical
-text.
-Graphical
-text is always readable, even
-when
-the component is mirrored.
-Please note that graphical text items are not fields.
+The `graphical text tool <#text_tool>`_ allows for the creation of
+graphical text. Graphical text is always readable, even when the
+component is mirrored. Please note that graphical text items are not
+fields.
 
-Multiple
-Unit
-s per
-C
-omponent and
-Alternate Body Styles
-
-Components can have two symbolic representations ( a standard symbol and an alternate symbol often referred to as
-“DeMorgan”
-)
-
-and/or have more than one unit
-
-per package
-(
-logic gates for example
-).
-Some components
-
-can have more than one unit per package each with different symbols and pin configurations
-.
+Multiple Units per Component and Alternate Body Styles Components can
+have two symbolic representations (a standard symbol and an alternate
+symbol often referred to as “DeMorgan”) and/or have more than one unit
+per package (logic gates for example). Some components can have more than
+one unit per package each with different symbols and pin configurations.
 
 
-Consider for instance a relay
-
-with two switches which can be designed as a component with three
-diff
-e
-rent
-units: a coil, switch 1, and switch 2.
-Designing component with multiple units per package
-
-and/or alternate
-
-body styles
-
-is
-
-very flexible
-.
-A
-pin
-or a body symbol item can be
-
-c
-omm
-o
-n
-to all
-
-units
-o
-r
-sp
-ecific to a given
-
-unit or they can be
-
-c
-omm
-o
-n
-to both
-
-symbolic
-repr
-e
-sentation
-s
-o
-r
-sp
-e
-cifi
-c
-
-to a given
-
-symbol
-repr
-e
-sentation.
+Consider for instance a relay with two switches which can be designed as
+a component with three diff e rent units: a coil, switch 1, and switch 2.
+Designing component with multiple units per package and/or alternate body
+styles is very flexible. A pin or a body symbol item can be common to all
+units or specific to a given unit or they can be common to both symbolic
+representation so r specific to a given symbol repr e sentation.
 
 
-By default
-, pins
-are
-sp
-e
-cifi
-c
+By default, pins are specific to each symbolic repr e sentation of each
+unit, because the pin number is specific to a unit, and the shape depends
+on the symbolic repr e sentation. When a pin is comm on to each unit or
+each symbolic representation, you need to create it only once for all
+units and all symbolic representations (this is usually the case for
+power pins). This is also the case for the body style graphic shapes and
+text, which may be common to each unit (but typically are specific to
+each symbolic representation).
 
-to each
+Example of a Component Having Multiple Units with Different Symbols:
 
-symbolic
-repr
-e
-sentation
-of each
-
-uni
-t,
-because
-
-the pin number
-
-is specific to a
-
-unit
-,
-and the shape depends on the
-
-symbolic
-repr
-e
-sentation.
-When a
-pin
-is
-comm
-on to each unit or each symbolic representation,
-
-you need to create it only once for all units and all symbolic representations
-(
-this is usually the case for power
-pins).
-This is also the case for the body style graphic shapes and text, which may be common to each unit
-. (
-but typically are specific to each symbolic r
-epr
-e
-sentation).
-
-Example
-* *
-of a Component Having Multiple Units with Different Symbols:
-
-This is an example of a relay defined with three units
-per package
-, switch
-1, switch 2,
-and
-the
-coil:
+This is an example of a relay defined with three units per package,
+switch 1, switch 2, and the coil:
 
 
 +----------------------------------------+----------------------------------------------------------------------------------------------------------+
-| |2000000900003094000008CA41334F3B_png| | Option: pins                                                                                             |
-|                                        | are not linked                                                                                           |
-|                                        | .                                                                                                        |
-|                                        |                                                                                                          |
-|                                        | One can add or edit                                                                                      |
-|                                        | pins                                                                                                     |
+| |2000000900003094000008CA41334F3B_png| | Option: pins are not linked.                                                                             |
+|                                        | One can add or edit pins                                                                                 |
 |                                        | for each unit without any coupling with pins of other units                                              |
 |                                        | .                                                                                                        |
 |                                        |                                                                                                          |
@@ -1309,600 +990,278 @@ coil:
 |                                        | .                                                                                                        |
 |                                        |                                                                                                          |
 +----------------------------------------+----------------------------------------------------------------------------------------------------------+
-| |10000000000000FF000000A989993852_png| | Unit                                                                                                     |
-|                                        | 1                                                                                                        |
-|                                        |                                                                                                          |
+| |10000000000000FF000000A989993852_png| | Unit 1                                                                                                   |
 +----------------------------------------+----------------------------------------------------------------------------------------------------------+
-| |1000000000000114000000B804ED21E4_png| | Unit                                                                                                     |
-|                                        | 2                                                                                                        |
-|                                        |                                                                                                          |
+| |1000000000000114000000B804ED21E4_png| | Unit 2                                                                                                   |
 +----------------------------------------+----------------------------------------------------------------------------------------------------------+
 | |100000000000010C000000B26BA7AD80_png| | Unit 3                                                                                                   |
 |                                        |                                                                                                          |
-|                                        |                                                                                                          |
 |                                        | It does not have the same symbol and pin layout and therefore is not interchangeable with units 1 and 2. |
-|                                        |                                                                                                          |
 +----------------------------------------+----------------------------------------------------------------------------------------------------------+
 
-G
-raphi
-cal Symbolic Elements
+Graphical Symbolic Elements
 
-Shown below are
-
-properties
-
-for a
-graphi
-c body element.
-From the relay example above, the three units have different symbolic representations.
-Therefore, each unit was created separately and the graphical body elements must have the “Common to all units in component” disabled.
+Shown below are properties for a graphic body element. From the relay
+example above, the three units have different symbolic representations.
+Therefore, each unit was created separately and the graphical body
+elements must have the “Common to all units in component” disabled.
 
 
 |2000000900003855000027B1F162801F_png|
 
-Pin
-C
-reation and
-E
-diting
+Pin Creation and Editing
 
-You can click on the
-`pin tool button <#pin_tool>`_
-to create and insert a pin
-.
-The editing of all pin
-properties
-is done by double-clicking on the pin
-or
-right-click
-ing on the pin
-to open the
-pin context
-menu.
-Pins must be created carefully, because any error will have consequences on the PCB design.
-Any pin already placed can be edited,
-delet
-ed,
-and/
-or moved.
+You can click on the `pin tool button <#pin_tool>`_ to create and insert
+a pin. The editing of all pin properties is done by double-clicking on
+the pin or right-click ing on the pin to open the pin context menu. Pins
+must be created carefully, because any error will have consequences on
+the PCB design. Any pin already placed can be edited, delet ed, and/ or
+moved.
 
-*Pin *
-O
-*verview*
+*Pin Overview*
 
-A pin is defined by it
-'
-s
-graphical representation
-, it
-'
-s name and it
-'
-s “number”.
-T
-he
-pin's
-“number” is defined by a set of 4 letters
-and/
-or numbers.
-For the
-electronic rules check (ERC)
-tool to
-be useful
-, the
-pin's
-“electric
-al
-” type (input, output,
-tri-
-state…) must also be defined
-correctly
-.
-If this type is not defined
-properly
-,
-the schematic
-ERC check
-results may be invalid
-.
+A pin is defined by it ' s graphical representation, it ' s name and it '
+s “number”. T he pin's “number” is defined by a set of 4 letters and/ or
+numbers. For the electronic rules check (ERC) tool to be useful , the
+pin's “electric al ” type (input, output, tri- state…) must also be
+defined correctly. If this type is not defined properly, the schematic
+ERC check results may be invalid.
 
 
-Important
-n
-ote
-s:
+Important notes:
 
 
-*   Do not
+*   Do not use spaces in pin names and numbers.
 
-    use
-    spaces in pin names and numbers.
+*   To define a pin name with an inverted signal (overline) use the tilde
+    “~” character. The next “~” character will turn off the overline. For
+    example ~FO~O would display FO O.
 
-
-
-*   To define a
-    pin name with an inverted signal
-    (overline) use
-
-    the tilde
-    “~”
-    character
-    .
-    The next “~” character will turn off the overline.
-    For example ~FO~O would display
-    FO
-    O.
-
-
-
-*   If the pin name is reduced to
-    a
-    single symbol, the pin is regarded as unnamed.
-
-
+*   If the pin name is reduced to a single symbol, the pin is regarded as
+    unnamed.
 
 *   Pin names starting with “#”, are reserved for power port symbols.
 
+*   A pin “number” consists of 1 to 4 letters and/ or numbers. 1,2,..9999
+    are valid numbers. A1, B3, Anod, Gnd, Wi r e, etc. are also valid.
 
-
-*   A pin
-    “number” consists of 1 to 4 letters
-    and/
-    or numbers.
-    1,2,..9999 are valid numbers.
-    A1, B3, Anod, Gnd, Wi
-    r
-    e, etc.
-    are also valid.
+*   Duplicate pin “numbers” cannot exist in a component.
 
 
 
-*   D
-    uplicate pin “numbers” cannot exist in a component.
-
-
-
-*Pin *
-Properties
+*Pin Properties*
 
 |100000000000031000000198EA7FCC88_png|
 
-The pin properties
-dialog
-allows you to edit all
-of the
-characteristics of a pin.
-This
-dialog
-pops up automatically
-when
-you create a pin or
-when
-double-click
-ing
-on an existing pin.
-T
-his
-dialog allows
-you modify:
+The pin properties dialog allows you to edit all of the characteristics
+of a pin. This dialog pops up automatically when you create a pin or when
+double-click ing on an existing pin. T his dialog allows you modify:
 
 
-*   N
-    ame and name
-    's text
-    size.
+*   Name and name's text size.
+
+*   Number and number's text size.
+
+*   Length.
+
+*   Electrical and graphical types.
+
+*   Unit and alternate representation membership.
+
+*   Visibility.
 
 
+*Pins Graphical Styles*
 
-*   N
-    umber and number
-    's text size
-    .
-
-
-
-*   L
-    ength.
-
-
-
-*   E
-    lectrical
-    and graphical
-    type
-    s
-    .
-
-
-
-*   Unit and alternate representation
-    membership.
-
-
-
-*   Visibility
-    .
-
-
-
-*Pins *
-Graphical Style
-*s*
-
-You can see on the figure below
-the
-different pin
-graphical styles
-.
-The choice of
-graphic styles
-does not have any influence on the
-pin's electrical type
-.
+You can see on the figure below the different pin graphical styles. The
+choice of graphic styles does not have any influence on the pin's
+electrical type.
 
 
 |10000000000003100000019800B8A351_png|
 
-*Pin *
-E
-*lectric*
-al
-* *
-T
-*ypes*
+*Pin Electrical Types*
 
-Choosing the correct electrical type
-is important for the
-schematic ERC
-tool.
-The
-electrical types defined are:
+Choosing the correct electrical type is important for the schematic ERC
+tool. The electrical types defined are:
 
 
-*   B
-    idirectional
+*   Bidirectional which indicates bidirectional pins commutable between
+    input and output (microprocessor data bus for example).
 
-    which
-    indicates bidirectional pins commutable between input and output (microprocessor data bus for example).
+
+*   Tri-state is the usual 3 states output.
+
+*   Passive is used for passive component pins, resistors, connectors,
+    etc.
 
 
 
-*   Tri-state is t
-    he usual 3 states output.
+*   Unspecified can be used when the ERC check doesn't matter.
 
 
 
-*   P
-    assive is used for passive component pins, resistors, connectors, etc.
+*   Power input is used for the component ' s power pins. Power pins are
+    automatically connected to the other power input pins with the same
+    name.
 
 
 
-*   U
-    nspec
-    ified
-
-    c
-    an be used when
-    the
-    ERC check doesn't matter.
+*   Power out put is used for regulator outputs.
 
 
 
-*   P
-    ower in
-    put
-
-    is
-    used for the component
-    '
-    s power pins.
-    Power pins are
-    automatically connected to the other
-    power input
-    pins
-    with
-    the same name.
+*   Open emitter and open collector types can be used for logic outputs
+    defined as such.
 
 
 
-*   Power out
-    put
-    is
-    used
-    for regulator outputs.
+*   Not connected is used when a component has a pin that has no internal
+    connection.
 
 
 
-*   O
-    pen emitter and open collector
-    types can be used for logic outputs defined as such
-    .
+*Pin Global Properties*
 
-
-
-*   Not connected is used when a component has a pin that has no internal connection.
-
-
-
-*Pin *
-G
-*lobal *
-Properties
-
-You can modify the length
-or
-text size
-of the
-name
-and/or
-number of all the pins using the Global command
-entry
-of the
-pin context
-menu.
-Click on the parameter you want to modify and type the new value which will then
-be
-appl
-ied
-to all
-of the current
-component
-'s
-pins.
+You can modify the length or text size of the name and/or number of all
+the pins using the Global command entry of the pin context menu. Click on
+the parameter you want to modify and type the new value which will then
+be appl ied to all of the current component 's pins.
 
 
 |100000000000018D000001023AE0F5CF_png|
 
-Defining Pins for Multiple Units
-and
-Alternate Symbolic
+Defining Pins for Multiple Units and Alternate Symbolic Representations
 
-R
-epresentations
+Components with multiple units and/or graphical representations are
+particularly problematic when creating and editing pins. The majority of
+pins are specific to each unit (because their pin number is specific to
+each unit) and to each symbolic representation (because their form and
+position is specific to each symbolic representation). The creation and
+the editing of pins can be problematic for components with multiple units
+per package and alternate symbolic representations. The component library
+editor allows the simultaneous creation of pins. By default, changes made
+to a pin are made for all units of a multiple unit component and both
+representations for components with an alternate representation.
 
-Components with multiple units and/or graphical representations are particularly problematic when creating and editing pins. The majority of pins are specific to each unit (because their pin number is specific to each unit) and to each symbolic representation (because their form and position is specific to each symbolic representation).
-The creation and the editing of pins can be problematic for components with multiple units per package and alternate symbolic representations.
-The component library editor allows the simultaneous creation of pins.
-By default, changes made to a pin are made for all units of a multiple unit component and both representations for components with an alternate representation.
-
-The only exception to this is the pin's graphical type and name.
-This dependency was established to allow for easier pin creation and editing in most of the cases.
-This dependency can be disabled by toggling the
-`independent pin edit button <#indepenent_pin_edit>`_
-on the main tool bar.
-This will allow you to create pins for each unit and representation completely independently.
-
-
-A component
-can have two
-symbolic
-representations (representation known as “DeMorgan”
-)
-and can
-be made up of more than one unit as in the case of components with logic gates
-.
-For certain
-component
-s, you may want several different graphic elements and pins.
-Like the relay sample shown in section 11.7.1,
-a relay can be represented
-three distinct units: a co
-il,
-s
-witch contact 1,
-and s
-witch contact 2.
+The only exception to this is the pin's graphical type and name. This
+dependency was established to allow for easier pin creation and editing
+in most of the cases. This dependency can be disabled by toggling the
+`independent pin edit button <#indepenent_pin_edit>`_ on the main tool
+bar. This will allow you to create pins for each unit and representation
+completely independently.
 
 
-The management of the
-components
-
-with multiple units
-and components with
-alternate symbolic
-representation
-s
-is flexible.
-A
-pin can be
-c
-ommon or specific to different
-unit
-s.
-A pin can also be c
-ommon to both
-symbolic
-representation
-s
-or specific to each
-symbolic
-representation.
+A component can have two symbolic representations (representation known
+as “DeMorgan” ) and can be made up of more than one unit as in the case
+of components with logic gates. For certain components, you may want
+several different graphic elements and pins. Like the relay sample shown
+in section 11.7.1, a relay can be represented three distinct units: a co
+il, s witch contact 1, and s witch contact 2.
 
 
-By default, pins are specific to each representation of each
-uni
-t, because their number differs for each
-unit
-, and their design is different for each
-symbolic
-representation.
-When a pin is common
-to all units, it
-
-only
-ha
-s
-to draw
-n
-once
-such as in the case
-of power pins.
+The management of the components with multiple units and components with
+alternate symbolic representations is flexible. A pin can be common or
+specific to different units. A pin can also be common to both symbolic
+representations or specific to each symbolic representation.
 
 
-An example is
-the
-o
-utput pin 7400
-quad dual input NAND gate
-.
-Since there are four units and two symbolic representations, there are eight separate output pins defined in the component definition.
-When creating a new 7400 component, unit A of the normal symbolic representation will be shown
-in the library editor
-.
-To edit the pin style in alternate symbolic representation, it must first be enabled by clicking the
-`show alternate body sytle <#alternate_body_style>`_
-button on the tool bar.
-To edit the pin number for each unit, select the appropriate unit using the
-`unit selection <#unit_select_control>`_
-drop down control.
+By default, pins are specific to each representation of each unit,
+because their number differs for each unit, and their design is different
+for each symbolic representation. When a pin is common to all units, it
+only has to draw n once such as in the case of power pins.
 
-Component
-Field
-s
 
-All library components are defined with four default fields.
-The reference designator, value, footprint assignment, and documentation file link fields are created whenever a component is created or copied.
-Only the reference designator and value fields are required.
-For existing fields, you can use the
-context menu
-commands
-by
-right click
-ing on the pin
-.
-Components defined in libraries typically are defined with these four default fields.
-Additional fields such as vendor, part number, unit cost, etc. can be added to library components but generally this is done in the schematic editor so the additional fields can be applied to all of the components in the schematic.
+An example is the o utput pin 7400 quad dual input NAND gate. Since there
+are four units and two symbolic representations, there are eight separate
+output pins defined in the component definition. When creating a new 7400
+component, unit A of the normal symbolic representation will be shown in
+the library editor. To edit the pin style in alternate symbolic
+representation, it must first be enabled by clicking the `show alternate
+body sytle <#alternate_body_style>`_ button on the tool bar. To edit the
+pin number for each unit, select the appropriate unit using the `unit
+selection <#unit_select_control>`_ drop down control.
+
+Component Fields
+
+All library components are defined with four default fields. The
+reference designator, value, footprint assignment, and documentation file
+link fields are created whenever a component is created or copied. Only
+the reference designator and value fields are required. For existing
+fields, you can use the context menu commands by right click ing on the
+pin. Components defined in libraries typically are defined with these
+four default fields. Additional fields such as vendor, part number, unit
+cost, etc. can be added to library components but generally this is done
+in the schematic editor so the additional fields can be applied to all of
+the components in the schematic.
 
 Editing Component Fields
 
-To edit an existing component field, right click on the field text to show the field context menu shown below.
+To edit an existing component field, right click on the field text to
+show the field context menu shown below.
 
 
 |200000090000154B000027E6496104E3_png|
 
 To edit undefined fields, add new fields, or delete optional fields
-`click the open field properties dialog button <#edit_fields>`_
-on the main tool bar to open the field properties dialog shown below
-.
+`click the open field properties dialog button <#edit_fields>`_ on the
+main tool bar to open the field properties dialog shown below.
 
 
 |1000000000000208000002211F585317_png|
 
-Fields are text sections associated
-with
-the component.
-Do
-not confused
-them
-with the text belonging to the graphic representation of this component.
+Fields are text sections associated with the component. Do not confused
+them with the text belonging to the graphic representation of this
+component.
 
 
-Important
-notes:
+Important notes:
 
 
-*   Modifying value field
-    effectively
-    create
-    s
-    a new component
-    us
-    ing
-    using the current component
-
-    as the starting point for the new component
-    .
-    T
-    his new component has the name contained in the value field when you save it
-    to
-    the
-    currently selected
-    library.
+*   Modifying value field effectively creates a new component us ing
+    using the current component as the starting point for the new
+    component. This new component has the name contained in the value
+    field when you save it to the currently selected library.
 
 
 
-*   The field edit dialog above must be used t
-    o edit a
-    field that is
-    empty
-    or has the i
-    nvisible attribute
-    enable
-    .
+*   The field edit dialog above must be used to edit a field that is
+    empty or has the i nvisible attribute enable.
 
 
 
-*   The footprint
-    is
-    defined as an absolute footprint using the LIBNAME:FPNAME format where LIBNAME is the name of the footprint library defined in the footprint library table (see the “Footprint Library Table” section in the Pcbnew “Reference Manaul”) and FPNAME is the name of the footprint in the library
-    LIBNAME
-    .
+*   The footprint is defined as an absolute footprint using the
+    LIBNAME:FPNAME format where LIBNAME is the name of the footprint
+    library defined in the footprint library table (see the “Footprint
+    Library Table” section in the Pcbnew “Reference Manaul”) and FPNAME
+    is the name of the footprint in the library LIBNAME.
 
 
 
-P
-ower
-S
-ymbols
+Power Symbols
 
-P
-ower symbols are created
-the same way as
-
-normal
-components.
-It may be useful to
-place
-them in a
-dedicated library such as
-p
-ower.lib.
-Power symbols
-consist of a graphical symbol
-a
-nd a pin of the type “Power Invisible”.
-Power port symbols
-
-are
-handled like any other component
-by
-the schematic capture software.
-Some precautions are essential.
-Below is an example of
-a power + 5V symbol.
+Power symbols are created the same way as normal components. It may be
+useful to place them in a dedicated library such as power.lib. Power
+symbols consist of a graphical symbol a nd a pin of the type “Power
+Invisible”. Power port symbols are handled like any other component by
+the schematic capture software. Some precautions are essential. Below is
+an example of a power +5V symbol.
 
 
 |1000000000000438000002C20F7CD114_png|
 
-To create a power
-symbol,
-use the following
-steps:
+To create a power symbol, use the following steps:
 
 
-*   A
-    dd a
-    pin
-    of type
-    “Power
-    input
-    ” named + 5V (important because this name will establish connection to the net + 5V),
-    with a
-    pin number
-    of
-    1 (number of no importance), a length
-    of 0, and a “Line” “Graphic Style”
-    .
+*   Add a pin of type “Power input ” named + 5V (important because this
+    name will establish connection to the net + 5V), with a pin number of
+    1 (number of no importance), a length of 0, and a “Line” “Graphic
+    Style”.
 
 
 
-*   Place a
-    small circle and a segment from the pin to the circle
-    as
-
-    shown
-    .
+*   Place a small circle and a segment from the pin to the circle as
+    shown.
 
 
 
@@ -1910,75 +1269,32 @@ steps:
 
 
 
-*   The
-    component
-    value is +5V.
+*   The component value is +5V.
 
 
 
-*   The
-    component
-    reference is #+5V. The reference text
-    i
-    s no importance except the first character which must be “
-    #”
-    to indicate that the component is a power symbol
-    .
-    By convention, every component
-    in
-    which
-    the
-    reference
-    field
-    starts with
-    a '#'
-    will
-    not
-    appear in the component list or in the netlist
-    and
-    the reference is declared
-    as
+*   The component reference is #+5V. The reference text i s no importance
+    except the first character which must be “ #” to indicate that the
+    component is a power symbol. By convention, every component in which
+    the reference field starts with a '#' will not appear in the
+    component list or in the netlist and the reference is declared as
     invisible.
 
 
 
 
-An easier method to
-creat
-e
-of a new power
-port symbol is
-to
-use another symbol as model.
+An easier method to creat e of a new power port symbol is to use another
+symbol as model.
 
 You just need to:
 
 
-*   Load
-    an existing power symbol
-    .
+*   Load an existing power symbol.
 
+*   Ed it the pin name w ith name of the new power symbol.
 
-
-*   Ed
-    it the pin name w
-    ith
-    name of
-    the
-    new power
-    symbol
-    .
-
-
-
-*   Edit the
-    v
-    alue
-    field to the
-    sa
-    me name as the pin, if you want to display the power port value.
-
-
+*   Edit the v alue field to the sa me name as the pin, if you want to
+    display the power port value.
 
 *   Save the new component.
 

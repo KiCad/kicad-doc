@@ -1,8 +1,9 @@
 General Top Toolbar
-
+-------------------
 
 
 Sheet Management
+~~~~~~~~~~~~~~~~
 
 With the icon |1000000000000022000000221C8530A2_png| you have access to
 the sheet settings. Here, you can define the sheet size and various text
@@ -15,15 +16,18 @@ number are automatically updated.
 
 
 Options of the schematic editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*General options*
+General options
+^^^^^^^^^^^^^^^
 
 These options are relative to the drawings
 
 |1000000000000194000001B85AC8A901_png|
 
 
-*Template fields names*
+Template fields names
+^^^^^^^^^^^^^^^^^^^^^
 
 You can define custom fields that will always existing in each component
 (even if the fields are left empty in a given component).
@@ -32,6 +36,7 @@ You can define custom fields that will always existing in each component
 
 
 Search tool
+~~~~~~~~~~~
 
 the following icon |1000000000000024000000255522ABD1_png| can be used to
 access the search tool.
@@ -43,6 +48,7 @@ sheet or in the whole hierarchy. Once found, the cursor will be
 positioned on the found element, in the relative sub-sheet.
 
 Netlist tool
+~~~~~~~~~~~~
 
 The icon |10000000000000220000002353233D17_png| gives access to the
 netlist tool used to generate a netlist file.
@@ -97,6 +103,7 @@ External plugins can be launch to extend the netlist formats list (a
 PadsPcb Plugin was added here)
 
 Annotation tool
+~~~~~~~~~~~~~~~
 
 The icon |100000000000002400000023EA45FB2C_png| gives access to the
 annotation tool. This tool performs an automatic naming for all used
@@ -132,6 +139,7 @@ duplicated references).
 Sorting option to set the annotation numbers to components
 
 Electrical Rules Check tool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The icon |100000000000002700000023737FA05C_png| gives access to the
 electrical rules check (ERC) tool.
@@ -143,7 +151,8 @@ Once you have run ERC, Eeschema places markers on the pins or labels able
 to highlight a problem. The diagnosis can then be given by left clicking
 on the marker. An errors file can also be generated.
 
-*Main ERC dialog*
+Main ERC dialog
+^^^^^^^^^^^^^^^
 
 |1000000000000280000002432F17A751_png|
 
@@ -175,7 +184,8 @@ Note:
 
 
 
-*ERC options dialog*
+ERC options dialog
+^^^^^^^^^^^^^^^^^^
 
 |100000000000018D00000161B6099430_png|
 
@@ -192,6 +202,7 @@ between pins; you can choose between 3 options for each case:
 Each square of the matrix can be modified by clicking on it.
 
 Bill of Material tool
+~~~~~~~~~~~~~~~~~~~~~
 
 The icon |1000000000000025000000230D237A08_png| gives access to the bill
 of material (BOM). This menu allows the generation of a file listing of
@@ -217,31 +228,32 @@ And multi-part components can be detailed. Global labels can be sorted by :
 
 Different kinds of sorting can be used simultaneously. Options are:
 
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Components by               | Bill of Material sorted by Reference.                                                                                          |
-| Reference                   |                                                                                                                                |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Component by                | Bill of Material sorted by Value.                                                                                              |
-| Value                       |                                                                                                                                |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Sub components              | The BOM shows every device of multi-part components (ex U2A, U2B…).                                                            |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Hierarchy Pins by name      | Hierarchical connections sorted alphabetically.                                                                                |
-|                             |                                                                                                                                |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Hierarchy Pins by           | Hierarchical connections sorted by sheet number.                                                                               |
-| Sheet                       |                                                                                                                                |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| List                        | Creates a plain text                                                                                                           |
-|                             | file ready to print                                                                                                            |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Text for spreadsheet import | Creates an ASCII file which can be easily imported in a                                                                        |
-|                             | **spreadsheet**                                                                                                                |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Single Part per line        | Creates a csv file combining components with the same Value into a single line, listing reference designators comma separated. |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Launch list browser         | Run the text editor to load and display the BOM list file after creating.                                                      |
-+-----------------------------+--------------------------------------------------------------------------------------------------------------------------------+
++------------------------+--------------------------------------------------------------------------+
+| Components by          | Bill of Material sorted by Reference.                                    |
+| Reference              |                                                                          |
++------------------------+--------------------------------------------------------------------------+
+| Component by           | Bill of Material sorted by Value.                                        |
+| Value                  |                                                                          |
++------------------------+--------------------------------------------------------------------------+
+| Sub components         | The BOM shows every device of multi-part components (ex U2A, U2B...).    |
++------------------------+--------------------------------------------------------------------------+
+| Hierarchy Pins by name | Hierarchical connections sorted alphabetically.                          |
+|                        |                                                                          |
++------------------------+--------------------------------------------------------------------------+
+| Hierarchy Pins by      | Hierarchical connections sorted by sheet number.                         |
+| Sheet                  |                                                                          |
++------------------------+--------------------------------------------------------------------------+
+| List                   | Creates a plain text                                                     |
+|                        | file ready to print                                                      |
++------------------------+--------------------------------------------------------------------------+
+| Text for spreadsheet   | Creates an ASCII file which can be easily imported in a                  |
+| import                 | **spreadsheet**                                                          |
++------------------------+--------------------------------------------------------------------------+
+| Single Part per line   | Creates a csv file combining components with the same Value into         |
+|                        | a single line, listing reference designators comma separated.            |
++------------------------+--------------------------------------------------------------------------+
+| Launch list browser    | Run the text editor to load and display the BOM list file after creating.|
++------------------------+--------------------------------------------------------------------------+
 
 
 A useful set of component properties to use for a BOM are:
@@ -276,8 +288,10 @@ cost numbers (or optionally even Field4) may be added to derive a board
 cost and assist with parts procurement.
 
 Import tool for footprint assignment:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Access:
+^^^^^^^
 
 The icon |100000000000002400000025B5886D2F_png| gives access to the
 back-annotate tool.
@@ -299,7 +313,8 @@ and makes the .cmp file redundant.
 The footprint assignments will appear in any future netlist export from
 Eeschema. This is useful when using some netlist formats.
 
-*Note for Pcbnew*
+Note for Pcbnew
+^^^^^^^^^^^^^^^
 
 Using the .cmp file or the netlist only to assign a footprint to a
 component is a choice in side Pcbnew.

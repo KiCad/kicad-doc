@@ -1,5 +1,4 @@
-Plot and
-Print
+Plot and Print
 
 
 
@@ -9,28 +8,25 @@ You can access both print and plot commands via the file menu.
 
 |100000000000017E000001109CDAC612_png|
 
-The suported output formats are POSTSCRIPT, HPGL, SVG and DXF. You can as well directly print to your printer.
+The suported output formats are POSTSCRIPT, HPGL, SVG and DXF. You can as
+well directly print to your printer.
 
 Common printing commands
 
-“Plot All” allows you to plot the whole hierarchy (one print file is generated for each sheet).
+“Plot All” allows you to plot the whole hierarchy (one print file is
+generated for each sheet).
 
-:Plot Current: prints
-one file for the current sheet only.
+:Plot Current: prints one file for the current sheet only.
 
 Plot in HPGL
 
-This command allows you to create an HPGL file. This option is available via the icon
-|10000000000000220000001E69EFEAC6_png|
-. In this format you can define.
+This command allows you to create an HPGL file. This option is available
+via the icon |10000000000000220000001E69EFEAC6_png|. In this format you
+can define.
 
 *   Pen number
 
-
-
 *   Pen thickness (in 0,001 inch).
-
-
 
 *   Drawing speed (in cm/S).
 

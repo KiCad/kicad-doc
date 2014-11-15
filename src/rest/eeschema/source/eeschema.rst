@@ -39,6 +39,8 @@ The kicad support for the Apple OS X operating system is experimental.
 
 .. toctree::
 
+
+
 .. include:: eeschema_imagerefs.rst
 
 .. include:: eeschema_chapter01.rst

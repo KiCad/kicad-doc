@@ -1,8 +1,9 @@
 Main top menu
-=============
+-------------
 
 
 File menu
+~~~~~~~~~
 
 Here you can see what the “File” menu looks like.
 
@@ -31,8 +32,10 @@ Here you can see what the “File” menu looks like.
 
 
 Preferences menu
+~~~~~~~~~~~~~~~~
 
-*Preferences*
+Preferences
+^^^^^^^^^^^
 
 |100000000000017F000001484EF563F9_png|
 
@@ -57,7 +60,8 @@ Preferences menu
 | Hotkeys          | Access to the hot keys menu                 |
 +------------------+---------------------------------------------+
 
-*Hot-keys sub menu*
+Hot-keys sub menu
+^^^^^^^^^^^^^^^^^
 
 +-----------------------+----------------------------------------------------+
 | List Current Keys     | Shows the current hotkeys, Same as the hotkey “?”  |
@@ -70,7 +74,8 @@ Preferences menu
 +-----------------------+----------------------------------------------------+
 
 
-*Preferences menu / Libs and Dir*
+Preferences menu / Libs and Dir
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |100000000000021400000283EC98FC85_png|
 
@@ -95,69 +100,74 @@ Eeschema seeks and uses by decreasing priorities:
     configuration.
 
 
-*Preferences menu and colors*
+Preferences menu and colors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 |100000000000026200000204DD16B393_png|
 
 Various drawing elements, colur selection and background colur (black or
 white only).
 
-*Preferences and Options*
+Preferences and Options
+^^^^^^^^^^^^^^^^^^^^^^^
 
 |10000000000001A1000002084BBFB77A_png|
 
 
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Measurement units:                          | Select the display and the cursor coordinate units (Inches or Millimeters).                          |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Grid Size:                                  | Grid size selection.                                                                                 |
-|                                             |                                                                                                      |
-|                                             | **One must work with normal grid (0,050 inches or 1,27 mm)**.                                        |
-|                                             | *Smaller grids are used for component building*.                                                     |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Default line width:                         | Pen size used to draw objects that do not have a specified pen size.                                 |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Default text size:                          | Value used when creating new texts or labels                                                         |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Repeat draw item horizontal displacement    | shift value on X axis during element duplication (usual value 0)                                     |
-|                                             |                                                                                                      |
-|                                             | (after placing an item like a component, label or wire, a duplication is made by the                 |
-|                                             | *Inser* key)                                                                                         |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Repeat draw item horizontal displacement    | shift value on Y axis during element duplication (usual value is 0,100 inches or 2,54 mm)            |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Repeat label increment:                     | Increment during duplication of texts ending in a number, such as bus members (usual value 1 or -1). |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Show Grid:                                  | If checked: display grid.                                                                            |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Show hidden pins:                           | Display invisible (or *hidden*) pins.                                                                |
-|                                             | If checked, allows the display of power pins.                                                        |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Enable                                      | When enabled, when the middle mouse button                                                           |
-| middle mouse button                         | is pressed, the entire sheet is moved,                                                               |
-| panning                                     | following the cursor.                                                                                |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Middle mouse button                         | When enabled, the middle mouse button cannot move the sheet area “outside” the displayed area.       |
-| panning                                     |                                                                                                      |
-| limited                                     |                                                                                                      |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Enable automatic panning                    | If checked, automatically shifts the window if the cursor                                            |
-|                                             | leaves the window, during wire drawing, or element moving.                                           |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Allow buses and wires to                    | If checked buses and wires can be only vertical or horizontal.                                       |
-| be placed in H or V orientation only        |                                                                                                      |
-|                                             | Else                                                                                                 |
-|                                             | buses and wires can be placed in any direction.                                                      |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
-| Show page limit                             | If checked, shows the page limits on screen.                                                         |
-+---------------------------------------------+------------------------------------------------------------------------------------------------------+
++---------------------------------------------+---------------------------------------------------------------------+
+| Measurement units:                          | Select the display and the cursor                                   |
+|                                             | coordinate units (Inches or Millimeters).                           |
++---------------------------------------------+---------------------------------------------------------------------+
+| Grid Size:                                  | Grid size selection.                                                |
+|                                             |                                                                     |
+|                                             | **One must work with normal grid (0,050 inches or 1,27 mm)**.       |
+|                                             | *Smaller grids are used for component building*.                    |
++---------------------------------------------+---------------------------------------------------------------------+
+| Default line width:                         | Pen size used to draw objects that do not have a specified pen size.|
++---------------------------------------------+---------------------------------------------------------------------+
+| Default text size:                          | Value used when creating new texts or labels                        |
++---------------------------------------------+---------------------------------------------------------------------+
+| Repeat draw item horizontal displacement    | shift value on X axis during element duplication (usual value 0)    |
+|                                             |                                                                     |
+|                                             | (after placing an item like a component, label or wire,             |
+|                                             |  a duplication is made by the *Inser* key)                          |
++---------------------------------------------+---------------------------------------------------------------------+
+| Repeat draw item horizontal displacement    | shift value on Y axis during element duplication                    |
+|                                             | (usual value is 0,100 inches or 2,54 mm)                            |
++---------------------------------------------+---------------------------------------------------------------------+
+| Repeat label increment:                     | Increment during duplication of texts ending in a                   |
+|                                             | number, such as bus members (usual value 1 or -1).                  |
++---------------------------------------------+---------------------------------------------------------------------+
+| Show Grid:                                  | If checked: display grid.                                           |
++---------------------------------------------+---------------------------------------------------------------------+
+| Show hidden pins:                           | Display invisible (or *hidden*) pins.                               |
+|                                             | If checked, allows the display of power pins.                       |
++---------------------------------------------+---------------------------------------------------------------------+
+| Enable                                      | When enabled, when the middle mouse button                          |
+| middle mouse button                         | is pressed, the entire sheet is moved,                              |
+| panning                                     | following the cursor.                                               |
++---------------------------------------------+---------------------------------------------------------------------+
+| Middle mouse button                         | When enabled, the middle mouse button cannot move                   |
+| panning limited                             | the sheet area “outside” the displayed area.                        |
++---------------------------------------------+---------------------------------------------------------------------+
+| Enable automatic panning                    | If checked, automatically shifts the window if the cursor           |
+|                                             | leaves the window, during wire drawing, or element moving.          |
++---------------------------------------------+---------------------------------------------------------------------+
+| Allow buses and wires to                    | If checked buses and wires can be only vertical or horizontal.      |
+| be placed in H or V orientation only        |                                                                     |
+|                                             | Else buses and wires can be placed in any direction.                |
++---------------------------------------------+---------------------------------------------------------------------+
+| Show page limit                             | If checked, shows the page limits on screen.                        |
++---------------------------------------------+---------------------------------------------------------------------+
 
-*Preferences and Language*
+Preferences and Language
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use default mode. Other languages are available mainly for maintenance
 purpose.
 
 Help menu
+~~~~~~~~~
 
 Access to on-line help (this document) for an extensive tutorial about
 KiCad and also for checking the current version of Eeschema (Eeschema

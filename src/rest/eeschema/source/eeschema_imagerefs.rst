@@ -348,3 +348,83 @@
     :width: 10.081cm
     :height: 6.271cm
 
+.. Chapter 5 images
+
+
+.. |200000080000445200002B6A548B0D21_png| image:: images/200000080000445200002B6A548B0D21.png
+    :width: 17.491cm
+    :height: 11.113cm
+
+
+.. |2000000800001EB3000014FC09557A9D_png| image:: images/2000000800001EB3000014FC09557A9D.png
+    :width: 7.856cm
+    :height: 5.373cm
+
+
+.. |100000000000001700000017D11B5EC4_png| image:: images/100000000000001700000017D11B5EC4.png
+    :width: 0.609cm
+    :height: 0.609cm
+
+
+.. |20000008000037320000158046776F9F_png| image:: images/20000008000037320000158046776F9F.png
+    :width: 14.131cm
+    :height: 5.502cm
+
+
+.. |20000008000002470000022DA00BC8FE_png| image:: images/20000008000002470000022DA00BC8FE.png
+    :width: 0.584cm
+    :height: 0.556cm
+
+
+.. |20000008000042E000001988C01B06F6_png| image:: images/20000008000042E000001988C01B06F6.png
+    :width: 17.119cm
+    :height: 6.533cm
+
+
+.. |10000000000002C100000230033A432A_png| image:: images/10000000000002C100000230033A432A.png
+    :width: 15.3cm
+    :height: 10.361cm
+
+
+.. |100000000000034000000217A12FAF81_png| image:: images/100000000000034000000217A12FAF81.png
+    :width: 16.544cm
+    :height: 11.591cm
+
+
+.. |10000000000000170000001630B9A1C8_png| image:: images/10000000000000170000001630B9A1C8.png
+    :width: 0.609cm
+    :height: 0.579cm
+
+
+.. |1000000000000018000000159092E6A1_png| image:: images/1000000000000018000000159092E6A1.png
+    :width: 0.633cm
+    :height: 0.556cm
+
+
+.. |Object_1_png| image:: images/Object_1.png
+
+
+.. |2000000800003B6F00001BCE333A0A82_png| image:: images/2000000800003B6F00001BCE333A0A82.png
+    :width: 15.214cm
+    :height: 7.116cm
+
+
+.. |1000000000000447000001493681DC5A_png| image:: images/1000000000000447000001493681DC5A.png
+    :width: 14.55cm
+    :height: 4.66cm
+
+
+.. |1000000000000179000000BC25F2E37F_png| image:: images/1000000000000179000000BC25F2E37F.png
+    :width: 9.97cm
+    :height: 4.971cm
+
+
+.. |10000000000002F300000252E8478EBF_png| image:: images/10000000000002F300000252E8478EBF.png
+    :width: 19.001cm
+    :height: 15.72cm
+
+
+.. |100000000000001500000015ACE0A40B_png| image:: images/100000000000001500000015ACE0A40B.png
+    :width: 0.557cm
+    :height: 0.557cm
+
