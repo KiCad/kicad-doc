@@ -401,7 +401,7 @@
     :height: 0.556cm
 
 
-.. |Object_1_png| image:: images/Object_1.png
+.. |dev-chain_png| image:: images/dev-chain.png
 
 
 .. |2000000800003B6F00001BCE333A0A82_png| image:: images/2000000800003B6F00001BCE333A0A82.png
@@ -427,4 +427,128 @@
 .. |100000000000001500000015ACE0A40B_png| image:: images/100000000000001500000015ACE0A40B.png
     :width: 0.557cm
     :height: 0.557cm
+
+.. Chapter 6 images
+
+
+.. |10000000000001C6000001CAAC972C0B_png| image:: images/10000000000001C6000001CAAC972C0B.png
+    :width: 12.012cm
+    :height: 12.118cm
+
+
+.. |10000000000000210000001F09B8170C_png| image:: images/10000000000000210000001F09B8170C.png
+    :width: 0.87cm
+    :height: 0.82cm
+
+
+.. |100000000000009B00000079AC689E05_png| image:: images/100000000000009B00000079AC689E05.png
+    :width: 4.101cm
+    :height: 3.201cm
+
+
+.. |100000000000002100000021C98460F6_png| image:: images/100000000000002100000021C98460F6.png
+    :width: 0.87cm
+    :height: 0.87cm
+
+
+.. |1000000000000021000000239C3EC480_png| image:: images/1000000000000021000000239C3EC480.png
+    :width: 0.87cm
+    :height: 0.93cm
+
+
+.. |1000000000000021000000209B84B124_png| image:: images/1000000000000021000000209B84B124.png
+    :width: 0.87cm
+    :height: 0.85cm
+
+
+.. |100000000000002200000025C0F59654_png| image:: images/100000000000002200000025C0F59654.png
+    :width: 0.9cm
+    :height: 0.981cm
+
+
+.. |100000000000002100000020F9992133_png| image:: images/100000000000002100000020F9992133.png
+    :width: 0.87cm
+    :height: 0.85cm
+
+
+.. |100000000000010C00000104307CA6BA_png| image:: images/100000000000010C00000104307CA6BA.png
+    :width: 7.091cm
+    :height: 6.879cm
+
+
+.. |10000000000000210000001D13F7B559_png| image:: images/10000000000000210000001D13F7B559.png
+    :width: 0.87cm
+    :height: 0.771cm
+
+
+.. |10000000000002C800000134F8E86C51_png| image:: images/10000000000002C800000134F8E86C51.png
+    :width: 17.697cm
+    :height: 7.655cm
+
+
+.. |20000008000024130000119315BBAF66_png| image:: images/20000008000024130000119315BBAF66.png
+    :width: 9.239cm
+    :height: 4.5cm
+
+
+.. |100000000000020B000001B70A60DECC_png| image:: images/100000000000020B000001B70A60DECC.png
+    :width: 13.838cm
+    :height: 11.615cm
+
+
+.. |20000008000041D700001D9077DCC816_png| image:: images/20000008000041D700001D9077DCC816.png
+    :width: 16.856cm
+    :height: 7.569cm
+
+
+.. |1000000000000160000000CD797712D0_png| image:: images/1000000000000160000000CD797712D0.png
+    :width: 9.31cm
+    :height: 5.42cm
+
+
+.. |1000000000000272000001C015CA854E_png| image:: images/1000000000000272000001C015CA854E.png
+    :width: 16.563cm
+    :height: 11.853cm
+
+.. Chapter 7 images
+
+
+.. |100000000000014300000137E6B02665_png| image:: images/100000000000014300000137E6B02665.png
+    :width: 8.546cm
+    :height: 8.229cm
+
+
+.. |1000000000000155000001705431457D_png| image:: images/1000000000000155000001705431457D.png
+    :width: 9.021cm
+    :height: 9.74cm
+
+
+.. |100000000000023D000000BC05569580_png| image:: images/100000000000023D000000BC05569580.png
+    :width: 15.161cm
+    :height: 4.971cm
+
+
+.. |100000000000022C000000B9BA2E1A94_png| image:: images/100000000000022C000000B9BA2E1A94.png
+    :width: 14.711cm
+    :height: 4.89cm
+
+
+.. |1000000000000117000001359D8B03B1_png| image:: images/1000000000000117000001359D8B03B1.png
+    :width: 7.382cm
+    :height: 8.176cm
+
+
+.. |1000000000000138000001495A2E0270_png| image:: images/1000000000000138000001495A2E0270.png
+    :width: 8.255cm
+    :height: 8.705cm
+
+
+.. |2000000800003E6E0000154B2A71537E_png| image:: images/2000000800003E6E0000154B2A71537E.png
+    :width: 15.983cm
+    :height: 5.449cm
+
+
+.. |100000000000002400000023EA45FB2C_png| image:: images/100000000000002400000023EA45FB2C.png
+    :width: 0.951cm
+    :height: 0.93cm
 

@@ -3,8 +3,6 @@ Schematic Creation and Editing
 
 
 
-
-
 Introduction
 ~~~~~~~~~~~~
 
@@ -33,12 +31,9 @@ a development chain which allows for:
 *   The control of the electrical rules (ERC) that allows the detection
     of errors or omissions in the schematic.
 
-
 *   The automatic generation of the bill of material (BOM).
 
-
 *   The netlist generation for simulation software such as Pspice.
-
 
 *   The netlist generation for the generation of a printed circuits board
     design using PcbNew. The consistency check between the schematic and the
@@ -58,7 +53,7 @@ draw frames.
 The development chain
 ~~~~~~~~~~~~~~~~~~~~~
 
-|Object_1_png|
+|dev-chain_png|
 
 The schematic software uses component libraries. In addition to the
 schematic design file, the netlist file is particularly important because
