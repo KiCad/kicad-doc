@@ -108,59 +108,19 @@ causing it to cycle through the choices : normal, warning, error.
 ERC report file
 ~~~~~~~~~~~~~~~
 
-An ERC report file can be generated and saved by checking the option Write ERC report
-. The file extension for ERC report files is .erc. Here is an example of ERC report file.
+An ERC report file can be generated and saved by checking the option
+Write ERC report. The file extension for ERC report files is .erc. Here
+is an example of ERC report file.
 
+::
 
-ERC control (4/1/1997-14:16:4)
+    ERC control (4/1/1997-14:16:4)
 
+    ***** Sheet 1 (INTERFACE UNIVERSAL)
+    ERC: Warning Pin input Unconnected @ 8.450, 2.350
+    ERC: Warning passive Pin Unconnected @ 8.450, 1.950
+    ERC: Warning: BiDir Pin connected to power Pin (Net 6) @ 10.100, 3.300
+    ERC: Warning: Power Pin connected to BiDir Pin (Net 6) @ 4.950, 1.400
 
-***** Sheet 1 (INTERFACE UNIVERSAL)
-
-ERC: Warning Pin input Unconnected @ 8.450, 2.350
-
-ERC: Warning passive Pin Unconnected @ 8.450, 1.950
-
-ERC: Warning: BiDir Pin connected to power Pin (Net 6) @ 10.100, 3.300
-
-ERC: Warning: Power Pin connected to BiDir Pin (Net 6) @ 4.950, 1.400
-
-
->> Errors ERC: 4
-
-
-
-.. |20000008000030E4000026DDFDF3D5E2_png| image:: images/20000008000030E4000026DDFDF3D5E2.png
-    :width: 12.517cm
-    :height: 9.947cm
-
-
-.. |1000000000000280000002432F17A751_png| image:: images/1000000000000280000002432F17A751.png
-    :width: 16.93cm
-    :height: 15.319cm
-
-
-.. |10000000000001E2000001657B58863B_png| image:: images/10000000000001E2000001657B58863B.png
-    :width: 12.749cm
-    :height: 9.449cm
-
-
-.. |2000000800002F7100001D264B30E596_png| image:: images/2000000800002F7100001D264B30E596.png
-    :width: 12.143cm
-    :height: 7.459cm
-
-
-.. |1000000000000250000000D72B1E53C2_png| image:: images/1000000000000250000000D72B1E53C2.png
-    :width: 15.66cm
-    :height: 5.69cm
-
-
-.. |10000000000002810000024A2E8220E0_png| image:: images/10000000000002810000024A2E8220E0.png
-    :width: 16.96cm
-    :height: 15.499cm
-
-
-.. |100000000000002700000023737FA05C_png| image:: images/100000000000002700000023737FA05C.png
-    :width: 1.03cm
-    :height: 0.93cm
+    >> Errors ERC: 4
 

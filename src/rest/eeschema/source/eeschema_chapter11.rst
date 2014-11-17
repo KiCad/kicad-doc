@@ -1,263 +1,133 @@
-Component
-Lib
-rary
-Edit
-or
+Component Library Editor
+------------------------
 
 
+General Information About Component Libraries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+A component is a schematic element which contains a graphical
+representation, electrical connections, and fields defining the
+component. Components used in a schematic are stored in component
+libraries. Eeschema provides a component library editing tool that allows
+you to create libraries, add, delete or transfer components between
+libraries, export components to files, and import components from files.
+The library editing tool provides a simple way to manage component
+library files.
 
-General
-I
-nformation
-A
-bout
-Component L
-ibraries
+Component Library Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A component is a schematic element which contains a graphical representation, electrical connections, and fields defining the component.
-C
-omponents used in a schematic are stored in component libraries.
-Eeschema provides a component library editing tool that
-allows you to create libraries, add, delete or transfer components
-between libraries, export components to files, and import components from files
-.
-The library editing tool provides
-a simple way to manage component library files.
-
-Component
-Library
-
-O
-verview
-
-A component library is composed of one or more components.
-Generally the components are logically grouped by function, type, and/or manufacturer.
-
+A component library is composed of one or more components. Generally the
+components are logically grouped by function, type, and/or manufacturer.
 
 A component is composed of:
 
 
-*   G
-    raphical
-    items
-    (lines, circles,
-    arcs,
-    text,
-    etc
-    )
-    that provide the symbolic definition
-    .
+*   Graphical items (lines, circles, arcs, text, etc ) that provide the
+    symbolic definition.
 
-
-
-*   Pins which
-    have
-
-    both graphic properties
-    (
-    line
-    , clock, inverted, low level active,
-    etc
-    )
-    and
-    electrical properties
-    (input, output, bidirectional, etc.)
-    used by the E
-    lectrical
-    R
-    ules
-    C
-    heck (ERC)
+*   Pins which have both graphic properties (line, clock, inverted, low
+    level active, etc ) and electrical properties (input, output,
+    bidirectional, etc.) used by the E lectrical R ules C heck (ERC)
     tool.
 
+*   Fields such as references, values, corresponding footprint names for
+    PCB design, etc.
+
+*   Aliases used to associate a common component such as a 7400 with all
+    of it's derivatives such as 74LS00, 74HC00, and 7437. All of these
+    aliases share the same library component.
 
 
-*   F
-    ields such as references, values, corresponding
-    footprint
-    names for PCB design, etc.
+Proper component designing requires:
 
 
+*   Defining if the component is made up of one or more units.
 
-*   Aliases used to associate a common component such as
-    a 7400
-    with all of it's derivatives such as
-    74LS00, 74HC00,
-    and
-    7437.
-    A
-    ll
-    of
-    these
-    aliases
+*   Defining if the component has an alternate body style also known as a
+    De Morgan representation.
 
-    share
+*   Designing it 's symbolic representation using lines, rectangles,
+    circles, polygons and text.
 
-    the same library component.
+*   Adding pins by c arefully defining each pin's graphical elements,
+    name, number, and electrical properties (input, output, tri-state,
+    power port, etc.).
 
+*   Adding an alias if other components have the same symbol and pin out
+    or removing one if the component has been created from an other
+    component.
 
+*   Adding optional fields such the name of the footprint used by the PCB
+    design software and/or defining their visibility.
 
+*   Documenting the component by adding a description string and links to
+    data sheets, etc.
 
-Proper component d
-esigning
-require
-s:
-
-
-*   Defin
-    ing if the component is made up of one or more units.
+*   Saving it in the desired library.
 
 
+Component Library Editor Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*   Defining if the component
-
-    has an alternate body style also
-    known as
-    a De
-    Morgan r
-    ep
-    resentation.
-
-
-
-*   Design
-    ing
-    it
-    's symbolic representation
-    using lines, rectangles, circles, polygons and text.
-
-
-
-*   Add
-    ing
-    pins
-    by c
-    arefully defining
-    each pin's
-    graphical elements, name, number, and electrical properties (input, output,
-    tri-
-    state, power port, etc.).
-
-
-
-*   Adding an alias if other components have the same
-    symbol
-    and pin out or removing one if the component has been created from an other component.
-
-
-
-*   Adding
-    optional
-    fields
-    such
-    the name of the
-    footprint
-    used by the PCB design software and/or defining their visibility.
-
-
-
-*   Documenting the component
-    by adding a description string
-    and links to data sheets, etc.
-
-
-
-*   Saving
-    it
-    in the desired library.
-
-
-
-C
-omponent
-Library Editor Overview
-
-The component library editor
-main window
-i
-s shown below.
-It consists three tool bars for quick access to common features and a component viewing/editing area.
-Not all commands are available on the tool bars but can be accessed using the menus.
-
+The component library editor main window is shown below. It consists
+three tool bars for quick access to common features and a component
+viewing/editing area. Not all commands are available on the tool bars but
+can be accessed using the menus.
 
 |100000000000049F000002C20FF41347_png|
 
-*Ma*
-i
-*n Toolbar*
+Main Toolbar
+^^^^^^^^^^^^
 
-The main tool bar typically located at the top of main window shown below consists of the library management tools, undo/redo commands, zoom commands, and component properties dialogs.
-
+The main tool bar typically located at the top of main window shown below
+consists of the library management tools, undo/redo commands, zoom
+commands, and component properties dialogs.
 
 |100000000000040000000027C376CA0E_png|
 
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AC05D217E_png| | S                                                                                                                               |
-|                                        | ave                                                                                                                             |
-|                                        | the                                                                                                                             |
-|                                        | current                                                                                                                         |
-|                                        | ly select                                                                                                                       |
-|                                        | library                                                                                                                         |
-|                                        | .                                                                                                                               |
-|                                        |                                                                                                                                 |
-|                                        | The button will be disabled if no library is currently selected or no changes to the currently selected library have been made. |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001ACED60702_png| | S                                                                                                                               |
-|                                        | elect                                                                                                                           |
-|                                        | the library to edit.                                                                                                            |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AB1BB0D48_png| | D                                                                                                                               |
-|                                        | elete a component                                                                                                               |
-|                                        | from                                                                                                                            |
-|                                        | the currently selected library or any library defined by the project if no library is currently selected                        |
-|                                        | .                                                                                                                               |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AE10E5B9A_png| | Open the component library browser to select the library and component to edit.                                                 |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AAE4A6891_png| | C                                                                                                                               |
-|                                        | reate a new component.                                                                                                          |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AE03E3808_png| | L                                                                                                                               |
-|                                        | oad component from                                                                                                              |
-|                                        | current                                                                                                                         |
-|                                        | ly selected                                                                                                                     |
-|                                        | library                                                                                                                         |
-|                                        | for editing.                                                                                                                    |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001A2D043F72_png| | Create a new component from the current                                                                                         |
-|                                        | ly                                                                                                                              |
-|                                        | loaded component.                                                                                                               |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001A7C9F9F5F_png| | Save the current component                                                                                                      |
-|                                        | changes in memory                                                                                                               |
-|                                        | .                                                                                                                               |
-|                                        | The library file is not changed.                                                                                                |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001A34D5E878_png| | Import one component                                                                                                            |
-|                                        | from a file                                                                                                                     |
-|                                        | .                                                                                                                               |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001A4F9201B5_png| | Export the current component                                                                                                    |
-|                                        | to a file                                                                                                                       |
-|                                        | .                                                                                                                               |
-|                                        |                                                                                                                                 |
-+----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AA50256B5_png| | Create a new library file                                                                                                       |
-|                                        | containing                                                                                                                      |
-|                                        | the current component.                                                                                                          |
-|                                        |                                                                                                                                 |
-|                                        | Note: new libraries are not automatically added to the project.                                                                 |
-|                                        |                                                                                                                                 |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001AC05D217E_png| | Save the currently select library.   |
+|                                        |                                      |
+|                                        | The button will be disabled if no    |
+|                                        | library is currently selected or     |
+|                                        | no changes to the currently selected |
+|                                        | library have been made.              |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001ACED60702_png| | Select the library to edit.          |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001AB1BB0D48_png| | Delete a component from the          |
+|                                        | currently selected library or        |
+|                                        | any library defined by the           |
+|                                        | project if no library is             |
+|                                        | currently selected.                  |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001AE10E5B9A_png| | Open the component library           |
+|                                        | browser to select the library        |
+|                                        | and component to edit.               |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001AAE4A6891_png| | Create a new component.              |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001AE03E3808_png| | Load component from currently        |
+|                                        | selected library for editing.        |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001A2D043F72_png| | Create a new component from the      |
+|                                        | currently loaded component.          |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001A7C9F9F5F_png| | Save the current component changes   |
+|                                        | in memory.                           |
+|                                        | The library file is not changed.     |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001A34D5E878_png| | Import one component from a  file.   |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001A4F9201B5_png| | Export the current component to a    |
+|                                        | file.                                |
++----------------------------------------+--------------------------------------+
+| |100002010000001A0000001AA50256B5_png| | Create a new library file containing |
+|                                        | the current component.               |
+|                                        |                                      |
+|                                        | Note: new libraries are not          |
+|                                        | automatically added to the project.  |
 +----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 | |100002010000001A0000001AB26950B9_png| | Undo                                                                                                                            |
 |                                        | last edit.                                                                                                                      |
