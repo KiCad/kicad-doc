@@ -164,8 +164,7 @@ There are two ways to do this:
 *   Place the different pins before drawing the sub-sheet (manual placement).
 
 *   Place the different pins after drawing the sub-sheet, and the global
-labels (semi-automatic placement).
-
+    labels (semi-automatic placement).
 
 
 The second solution is quite preferable.

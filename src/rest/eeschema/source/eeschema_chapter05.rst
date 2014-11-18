@@ -80,13 +80,13 @@ name of the module to load.
 
 The dialog box displays the last two elements loaded.
 
-If you type *, or if you select the button “list all”, Eeschema will
+If you type \*, or if you select the button “list all”, Eeschema will
 display the libraries list, and then the available components.
 
 If you type the symbol “=“ followed by key words, EESchema will then
 display a list of components according to all the key words.
 
-You can also list a selection. For example if you enter LM2 *, all the
+You can also list a selection. For example if you enter LM2 \*, all the
 component's names starting with LM2 will be listed
 
 The selected component will appear on the screen, in placement mode.
@@ -191,7 +191,7 @@ These elements are:
 
 *   **Global labels:** for connections between sheets.
 
-*   **Texts: ** for commenting.
+*   **Texts:** for commenting.
 
 *   **“No Connection” symbols:** to end a pin that does not need any connection.
 
