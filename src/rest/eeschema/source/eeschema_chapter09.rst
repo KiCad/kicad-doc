@@ -243,10 +243,10 @@ converters are automatically launched by Ee schema. Chapter 14 gives some
 explanations and examples of converters.
 
 A converter is a text file (xsl format) but one can use other languages
-like Python. When using the xsl format, a tool ( xsltproc.exe or xsltproc
-) read the intermediate file created by Eeschema, and the converter file
-to create the output file. In this case, the converter file (a sheet
-style) is very small and very easy to write.
+like Python. When using the xsl format, a tool (xsltproc.exe or xsltproc)
+read the intermediate file created by Eeschema, and the converter file to
+create the output file. In this case, the converter file (a sheet style)
+is very small and very easy to write.
 
 Init the dialog window
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -284,18 +284,18 @@ a file netlist_form_pads-pcb.xsl as converter sheet style:
 
 With:
 
-+------------------------------------------------+----------------------------------------+
-| f:/kicad/bin/xsltproc.exe                      | A tool to read and convert xsl file    |
-+------------------------------------------------+----------------------------------------+
-| -o %O.net                                      | Output file: %O will                   |
-|                                                | define the output file.                |
-+------------------------------------------------+----------------------------------------+
-| f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl | File name converter (a sheet           |
-|                                                | style, xsl format).                    |
-+------------------------------------------------+----------------------------------------+
-| %I                                             | Will be replaced by the intermediate   |
-|                                                | file created by Eeschema (\*.tmp).     |
-+------------------------------------------------+----------------------------------------+
++----------------------------------------------------+--------------------------------------+
+| f:/kicad/bin/xsltproc.exe                          | A tool to read and convert xsl file  |
++----------------------------------------------------+--------------------------------------+
+| -o %O.net                                          | Output file: %O will                 |
+|                                                    | define the output file.              |
++----------------------------------------------------+--------------------------------------+
+| f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl     | File name converter (a sheet         |
+|                                                    | style, xsl format).                  |
++----------------------------------------------------+--------------------------------------+
+| %I                                                 | Will be replaced by the intermediate |
+|                                                    | file created by Eeschema (\*.tmp).   |
++----------------------------------------------------+--------------------------------------+
 
 For a schematic named test.sch, the actual command line is:
 

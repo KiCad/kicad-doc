@@ -38,8 +38,7 @@ Published on November 11, 2014.
 The kicad support for the Apple OS X operating system is experimental.
 
 .. toctree::
-
-
+    :maxdepth: 4
 
 .. include:: eeschema_imagerefs.rst
 
