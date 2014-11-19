@@ -148,7 +148,7 @@ the footprint pane can be also empty if no footprint libraries are found.
 Main Window Toolbar
 -------------------
 
-|20000009000032560000045885ACF0D6_png|
+|main_toolbar_png|
 
 The top toolbar allows for easy access to the following commands:
 
@@ -177,7 +177,7 @@ The top toolbar allows for easy access to the following commands:
 | |1000000000000022000000208578FA09_png| | Delete all footprint assignments.                                                        |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |100002010000001A0000001A79DFC9CB_png| | Open the selected footprint documentation pdf file using the default pdf viewer.         |
+| |icon_pdf_png|                         | Open the selected footprint documentation pdf file using the default pdf viewer.         |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
 | |100002010000001A0000001A2030B04B_png| | Enable                                                                                   |
@@ -1029,7 +1029,7 @@ assigned.
     :height: 0.688cm
 
 
-.. |100002010000001A0000001A79DFC9CB_png| image:: images/100002010000001A0000001A79DFC9CB.png
+.. |icon_pdf_png| image:: images/icon_pdf.png
     :width: 0.688cm
     :height: 0.688cm
 
@@ -1069,7 +1069,7 @@ assigned.
     :height: 10.372cm
 
 
-.. |20000009000032560000045885ACF0D6_png| image:: images/20000009000032560000045885ACF0D6.png
+.. |main_toolbar_png| image:: images/main_toolbar.png
     :width: 13.711cm
     :height: 1.06cm
 
