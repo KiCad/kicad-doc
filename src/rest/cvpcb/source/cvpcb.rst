@@ -162,7 +162,7 @@ The top toolbar allows for easy access to the following commands:
 | |100002010000001A0000001A99631808_png| | Invoke the CvPcb configuration menu.                                                     |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |100002010000001A0000001A3EE5F221_png| | Display the footprint of the component selected in the footprint window.                 |
+| |icon_view_footprint_png|              | Display the footprint of the component selected in the footprint window.                 |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
 | |100002010000001A0000001AFDF35759_png| | Automatically associate footprints with components starting using an equivalence file.   |
@@ -1019,7 +1019,7 @@ assigned.
     :height: 9.347cm
 
 
-.. |100002010000001A0000001A3EE5F221_png| image:: images/100002010000001A0000001A3EE5F221.png
+.. |icon_view_footprint_png| image:: images/icon_view_footprint.png
     :width: 0.688cm
     :height: 0.688cm
 
@@ -1097,11 +1097,6 @@ assigned.
 .. |100002010000001A0000001AF4CF46A1_png| image:: images/100002010000001A0000001AF4CF46A1.png
     :width: 0.688cm
     :height: 0.688cm
-
-
-.. |10000201000003200000022675E94B31_png| image:: images/10000201000003200000022675E94B31.png
-    :width: 15.566cm
-    :height: 10.702cm
 
 
 .. |10000000000001AE0000013893C2B4F6_png| image:: images/10000000000001AE0000013893C2B4F6.png
