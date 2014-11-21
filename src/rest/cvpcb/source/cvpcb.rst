@@ -153,16 +153,16 @@ Main Window Toolbar
 The top toolbar allows for easy access to the following commands:
 
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AE37403FB_png| | Select the net list file to be processed.                                                |
+| |icon_open_document_png|               | Select the net list file to be processed.                                                |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |100002010000001A0000001AF4CF46A1_png| | Save the footprint association file (.cmp) and the updated net list (.net) file.         |
+| |icon_save_png|                        | Save the footprint association file (.cmp) and the updated net list (.net) file.         |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |100002010000001A0000001A99631808_png| | Invoke the CvPcb configuration menu.                                                     |
+| |icon_config_png|                      | Invoke the CvPcb configuration menu.                                                     |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |icon_view_footprint_png|              | Display the footprint of the component selected in the footprint window.                 |
+| |icon_show_footprint_png|              | Display the footprint of the component selected in the footprint window.                 |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
 | |100002010000001A0000001AFDF35759_png| | Automatically associate footprints with components starting using an equivalence file.   |
@@ -174,10 +174,10 @@ The top toolbar allows for easy access to the following commands:
 | |100002010000001A0000001A35181776_png| | Automatically select the next component in the list without a footprint association.     |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |1000000000000022000000208578FA09_png| | Delete all footprint assignments.                                                        |
+| |icon_deleteassociation_png|           | Delete all footprint assignments.                                                        |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |icon_pdf_png|                         | Open the selected footprint documentation pdf file using the default pdf viewer.         |
+| |icon_datasheet_png|                   | Open the selected footprint documentation pdf file using the default pdf viewer.         |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
 | |100002010000001A0000001A2030B04B_png| | Enable                                                                                   |
@@ -984,7 +984,7 @@ assigned.
     :height: 0.688cm
 
 
-.. |1000000000000022000000208578FA09_png| image:: images/1000000000000022000000208578FA09.png
+.. |icon_delete_association_png| image:: images/icon_delete_association.png
     :width: 0.699cm
     :height: 0.575cm
 
@@ -1019,7 +1019,7 @@ assigned.
     :height: 9.347cm
 
 
-.. |icon_view_footprint_png| image:: images/icon_view_footprint.png
+.. |icon_show_footprint_png| image:: images/icon_show_footprint.png
     :width: 0.688cm
     :height: 0.688cm
 
@@ -1029,7 +1029,7 @@ assigned.
     :height: 0.688cm
 
 
-.. |icon_pdf_png| image:: images/icon_pdf.png
+.. |icon_datasheet_png| image:: images/icon_datasheet.png
     :width: 0.688cm
     :height: 0.688cm
 
@@ -1094,7 +1094,7 @@ assigned.
     :height: 9.957cm
 
 
-.. |100002010000001A0000001AF4CF46A1_png| image:: images/100002010000001A0000001AF4CF46A1.png
+.. |icon_save_png| image:: images/icon_save.png
     :width: 0.688cm
     :height: 0.688cm
 
@@ -1149,7 +1149,7 @@ assigned.
     :height: 2.99cm
 
 
-.. |100002010000001A0000001A99631808_png| image:: images/100002010000001A0000001A99631808.png
+.. |icon_config_png| image:: images/icon_config.png
     :width: 0.688cm
     :height: 0.688cm
 
@@ -1204,7 +1204,7 @@ assigned.
     :height: 0.688cm
 
 
-.. |100002010000001A0000001AE37403FB_png| image:: images/100002010000001A0000001AE37403FB.png
+.. |icon_open_document_png| image:: images/icon_open_document.png
     :width: 0.688cm
     :height: 0.688cm
 
