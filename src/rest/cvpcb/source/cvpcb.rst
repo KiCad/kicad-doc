@@ -174,7 +174,7 @@ The top toolbar allows for easy access to the following commands:
 | |100002010000001A0000001A35181776_png| | Automatically select the next component in the list without a footprint association.     |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
-| |icon_deleteassociation_png|           | Delete all footprint assignments.                                                        |
+| |icon_delete_association_png|          | Delete all footprint assignments.                                                        |
 |                                        |                                                                                          |
 +----------------------------------------+------------------------------------------------------------------------------------------+
 | |icon_datasheet_png|                   | Open the selected footprint documentation pdf file using the default pdf viewer.         |
