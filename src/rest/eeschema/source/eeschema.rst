@@ -5168,7 +5168,10 @@ More Information about xsltproc
 libxml web page: `http://www.xmlsoft.org/ <http://www.xmlsoft.org/>`_
 
 W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
+
+
 .. Chapter 2 images
+
 
 .. |10000000000000210000001F09B8170C_png| image:: images/10000000000000210000001F09B8170C.png
     :width: 0.87cm
@@ -5444,7 +5447,9 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
     :width: 0.87cm
     :height: 0.87cm
 
+
 .. Chapter 3 images
+
 
 .. |100000000000026200000204DD16B393_png| image:: images/100000000000026200000204DD16B393.png
     :width: 16.14cm
@@ -5517,6 +5522,7 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
 .. |100000000000017D000000EDC469394A_png| image:: images/100000000000017D000000EDC469394A.png
     :width: 10.081cm
     :height: 6.271cm
+
 
 .. Chapter 5 images
 
@@ -5598,6 +5604,7 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
     :width: 0.557cm
     :height: 0.557cm
 
+
 .. Chapter 6 images
 
 
@@ -5645,6 +5652,7 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
     :width: 16.563cm
     :height: 11.853cm
 
+
 .. Chapter 7 images
 
 
@@ -5684,7 +5692,6 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
 
 
 .. Chapter 8 images
-
 
 
 .. |20000008000030E4000026DDFDF3D5E2_png| image:: images/20000008000030E4000026DDFDF3D5E2.png
@@ -5791,6 +5798,7 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
 .. |10000000000000220000001E69EFEAC6_png| image:: images/10000000000000220000001E69EFEAC6.png
     :width: 0.9cm
     :height: 0.79cm
+
 
 .. Chapter 11 images
 
@@ -6084,6 +6092,7 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
     :width: 0.2709in
     :height: 0.2709in
 
+
 .. Chapter 12 images
 
 
@@ -6145,6 +6154,7 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
 .. |100000000000002300000023B57C73D3_png| image:: images/100000000000002300000023B57C73D3.png
     :width: 0.762cm
     :height: 0.762cm
+
 
 .. Chapter 13 images
 
@@ -6217,6 +6227,7 @@ W3C XSLT page: `http://www.w3.org/TR/xslt <http://www.w3.org/TR/xslt>`_
 .. |100000000000016D000000E7007BA5B8_png| image:: images/100000000000016D000000E7007BA5B8.png
     :width: 9.208cm
     :height: 5.581cm
+
 
 .. Chapter 14 images
 
