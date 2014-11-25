@@ -116,6 +116,8 @@ Eeschema can use multi-sheet diagrams of this type:
 
 The maximum size of the drawings is always adjustable from A4 format to
 A0 or from A to E format.
+
+
 Generic Eeschema commands
 -------------------------
 
