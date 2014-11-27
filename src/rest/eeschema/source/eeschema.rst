@@ -3961,8 +3961,8 @@ XML as input.
 XSLT itself is a an XML language very suitable for XML transformations.
 There is a free program called *xsltproc* that you can download and
 install. The xsltproc program can be used to read the Intermediate XML
-netlist input file, appl y a style-sheet to transform the input, and save
-the results in an output file. Use of x sltproc requires a style-sheet
+netlist input file, apply a style-sheet to transform the input, and save
+the results in an output file. Use of xsltproc requires a style-sheet
 file using XSLT conventions. The full conversion process is handle d by
 Eeschema, after it is configured once to run xsltproc in a specific way.
 
@@ -5014,13 +5014,15 @@ output using the -o option.
 Synopsis
 ^^^^^^^^
 
-xsltproc [[-V] | [-v] | [-o *file* ] | [--timing] | [--repeat] |
-[--debug] | [--novalid] | [--noout] | [--maxdepth *val* ] | [--html] |
-[--param *name* *value* ] | [--stringparam *name* *value* ] | [--nonet] |
-[--path *paths* ] | [--load-trace] | [--catalogs] | [--xinclude] |
-[--profile] | [--dumpextensions] | [--nowrite] | [--nomkdir] |
-[--writesubtree] | [--nodtdattr]] [ *stylesheet* ] [ *file1* ] [ *file2*
-] [ *....* ]
+::
+
+  xsltproc [[-V] | [-v] | [-o *file* ] | [--timing] | [--repeat] |
+  [--debug] | [--novalid] | [--noout] | [--maxdepth *val* ] | [--html] |
+  [--param *name* *value* ] | [--stringparam *name* *value* ] | [--nonet] |
+  [--path *paths* ] | [--load-trace] | [--catalogs] | [--xinclude] |
+  [--profile] | [--dumpextensions] | [--nowrite] | [--nomkdir] |
+  [--writesubtree] | [--nodtdattr]] [ *stylesheet* ] [ *file1* ] [ *file2* ] 
+  [ *....* ]
 
 Command line options
 ^^^^^^^^^^^^^^^^^^^^
