@@ -449,33 +449,29 @@ The table below shows a f ootprint library table entry without the
 option **allow\_pretty\_writing\_to\_this\_dir**:
 
   -------------------------------------------------------------------------
-  Nickna Library Path                      Plugin   Option Description
-  me                                       Type     s      
-  ------ --------------------------------- -------- ------ ----------------
-  github [<https://github.com/liftoff-sr/p Github          Liftoff's GH
-         retty_footprints>](https://github                 footprints
-         .com/liftoff-sr/pretty_footprints
-         )
+
+Nickname | Library Path                                    | Plugin Type | Option | Description
+-------- | ----------------------------------------------- | ----------- | ------ | -----------------------
+github   | https://github.com/liftoff-sr/pretty_footprints | Github      |        | Liftoff's GH footprints
+
   -------------------------------------------------------------------------
 
-The table below s hows a f ootprint library table entry with the COW
+The table below shows a footprint library table entry with the COW
 option given. Note the use of the environment variable \${HOME} as an
-example only. The github.pretty directory is located in \${HOME}/pretty/
+example only. The github .pretty directory is located in \${HOME}/pretty/
 path. Anytime you use the option
-**allow\_pretty\_writing\_to\_this\_dir** , you will need to create that
+**allow\_pretty\_writing\_to\_this\_dir**, you will need to create that
 directory manually in advance and it must end with the extension
 **.pretty**.
 
   --------------------------------------------------------------------------
-  Nickn Library Path                Plugin  Options            Description
-  ame                               Type
-  ----- --------------------------- ------- ------------------ -------------
-  githu [<https://github.com/liftof Github  allow\_pretty\_wri Liftoff's GH
-  b     f-sr/pretty_footprints>](ht         ting\_to\_this\_di footprints
-        tps://github.com/liftoff-sr         r=
-        /pretty_footprints)                 \${HOME}/pretty/gi
-                                            thub.pretty
+
+Nickname | Library Path                                    | Plugin Type | Options                                                       | Description
+-------- | ----------------------------------------------- | ----------- | ------------------------------------------------------------- | -----------------------
+github   | https://github.com/liftoff-sr/pretty_footprints | Github      | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty | Liftoff's GH footprints
+
   --------------------------------------------------------------------------
+
 
 Footprint loads will always give precedence to the local footprints
 found in the path given by the option
@@ -487,7 +483,7 @@ footprint with the same name as one for which you've saved locally.
 Always keep a separate local \*.pretty directory for each GitHub
 library, never combine them by referring to the same directory more than
 once. Also, do not use the same COW (\*.pretty) directory in a footprint
-lib rary table entry. This would likely create a mess.
+library table entry. This would likely create a mess.
 
 The value of the option **allow\_pretty\_writing\_to\_this\_dir** will
 expand any environment variable using the \${} notation to create the
@@ -553,7 +549,7 @@ the *footprint* window. A 3D model of the component can be shown if it
 has been created and assigned to the footprint. Below is the footprint
 viewer window.
 
-![100000000000034500000244D8B45F5A\_png](images/100000000000034500000244D8B45F5A.png)
+![](images/100000000000034500000244D8B45F5A.png)
 
 ### Status Bar Information
 
