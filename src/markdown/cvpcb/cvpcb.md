@@ -455,8 +455,8 @@ github   | https://github.com/liftoff-sr/pretty_footprints | Github      |      
 
 
 The table below shows a footprint library table entry with the COW
-option given. Note the use of the environment variable \${HOME} as an
-example only. The github .pretty directory is located in \${HOME}/pretty/
+option given. Note the use of the environment variable ${HOME} as an
+example only. The github .pretty directory is located in ${HOME}/pretty/
 path. Anytime you use the option
 **allow\_pretty\_writing\_to\_this\_dir**, you will need to create that
 directory manually in advance and it must end with the extension
@@ -465,7 +465,7 @@ directory manually in advance and it must end with the extension
 
 Nickname | Library Path                                    | Plugin Type | Options                                                        | Description
 -------- | ----------------------------------------------- | ----------- | -------------------------------------------------------------- | -----------------------
-github   | https://github.com/liftoff-sr/pretty_footprints | Github      | allow_pretty_writing_to_this_dir=\${HOME}/pretty/github.pretty | Liftoff's GH footprints
+github   | https://github.com/liftoff-sr/pretty_footprints | Github      | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty | Liftoff's GH footprints
 
 
 Footprint loads will always give precedence to the local footprints
@@ -481,7 +481,7 @@ once. Also, do not use the same COW (\*.pretty) directory in a footprint
 library table entry. This would likely create a mess.
 
 The value of the option **allow\_pretty\_writing\_to\_this\_dir** will
-expand any environment variable using the \${} notation to create the
+expand any environment variable using the ${} notation to create the
 path in the same way as the “Library Path” setting.
 
 What's the point of COW? It is to turbo-charge the sharing of
