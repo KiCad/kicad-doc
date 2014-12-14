@@ -419,15 +419,15 @@ footprint library table row for a must be set to a valid GitHub URL.
 
 For example:
 
-[<https://github.com/liftoff-sr/pretty_footprints>](https://github.com/liftoff-sr/pretty_footprints)
+https://github.com/liftoff-sr/pretty_footprints
 
 or
 
-[<https://github.com/KiCad>](https://github.com/KiCad)
+https://github.com/KiCad
 
 KiCad Typicality GitHub URLs take the form:
 
-[<https://github.com/user_name/repo_name>](https://github.com/user_name/repo_name)
+https://github.com/user_name/repo_name
 
 The "Plugin Type" must be set to "Github". To enable the "Copy On Write"
 feature the option **allow\_pretty\_writing\_to\_this\_dir** must be
@@ -448,13 +448,11 @@ the remote read only portion.
 The table below shows a f ootprint library table entry without the
 option **allow\_pretty\_writing\_to\_this\_dir**:
 
-  -------------------------------------------------------------------------
 
 Nickname | Library Path                                    | Plugin Type | Option | Description
 -------- | ----------------------------------------------- | ----------- | ------ | -----------------------
 github   | https://github.com/liftoff-sr/pretty_footprints | Github      |        | Liftoff's GH footprints
 
-  -------------------------------------------------------------------------
 
 The table below shows a footprint library table entry with the COW
 option given. Note the use of the environment variable \${HOME} as an
@@ -464,13 +462,10 @@ path. Anytime you use the option
 directory manually in advance and it must end with the extension
 **.pretty**.
 
-  --------------------------------------------------------------------------
 
-Nickname | Library Path                                    | Plugin Type | Options                                                       | Description
--------- | ----------------------------------------------- | ----------- | ------------------------------------------------------------- | -----------------------
-github   | https://github.com/liftoff-sr/pretty_footprints | Github      | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty | Liftoff's GH footprints
-
-  --------------------------------------------------------------------------
+Nickname | Library Path                                    | Plugin Type | Options                                                        | Description
+-------- | ----------------------------------------------- | ----------- | -------------------------------------------------------------- | -----------------------
+github   | https://github.com/liftoff-sr/pretty_footprints | Github      | allow_pretty_writing_to_this_dir=\${HOME}/pretty/github.pretty | Liftoff's GH footprints
 
 
 Footprint loads will always give precedence to the local footprints
