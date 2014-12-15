@@ -73,7 +73,7 @@ html: $(DOCNAME).html
 
 #I18n html
 $(DOCNAME)-%.html: $(DOCNAME)-%.md
-	pandoc -V lang=$* --section-numbers $(DOCNAME)-$*.md ;
+	pandoc -s --toc -f markdown -t html -V lang=$* $(DOCNAME)-$*.md -o $(DOCNAME)-$*.html
 
 .PHONY: html-all
 html-all: html $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).html)
@@ -106,7 +106,7 @@ $(DOCNAME).pdf: $(DOCNAME).md
 
 #I18n pdf
 $(DOCNAME)-%.pdf: $(DOCNAME)-%.md
-	test "$*" = "it" && pandoc -s --toc -V lang=italian -f markdown -t latex $(DOCNAME)-$*.md -o $(DOCNAME)-$*.pdf
+	pandoc -s --toc -V lang=italian -f markdown -t latex $(DOCNAME)-$*.md -o $(DOCNAME)-$*.pdf
 
 .PHONY: pdf-all
 pdf-all: pdf $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).pdf)
@@ -119,7 +119,7 @@ $(DOCNAME).epub: $(DOCNAME).md
 
 #I18n epub
 $(DOCNAME)-%.epub: $(DOCNAME)-%.md
-	test "$*" = "it" && pandoc -s --toc -V lang=italian -f markdown -t epub $(DOCNAME)-$*.md 
+	pandoc -s --toc -V lang=italian -f markdown -t epub $(DOCNAME)-$*.md -o $(DOCNAME)-$*.epub
 
 .PHONY: epub
 epub: $(DOCNAME).epub
@@ -138,7 +138,7 @@ $(DOCNAME).odt: $(DOCNAME).md
 
 #I18n odt
 $(DOCNAME)-%.odt: $(DOCNAME)-%.md
-	test "$*" = "it" && pandoc  -V lang=italian -s --toc -f markdown -t odt -o $(DOCNAME)-$*.odt $(DOCNAME)-$*.md
+	pandoc  -V lang=italian -s --toc -f markdown -t odt -o $(DOCNAME)-$*.odt $(DOCNAME)-$*.md
 
 .PHONY: odt-all
 odt-all: odt $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).odt)
