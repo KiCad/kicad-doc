@@ -343,7 +343,7 @@ The tools that use these formats are not able to handle
 internationalization directly but there is a beautiful little utility by
 Debian: http://po4a.alioth.debian.org/[po4a]
 
-These are the source format supported:
+These are the source format supported with the actual 0.45 po4a version:
 
  po4a-gettextize --help-format
 
@@ -368,8 +368,14 @@ These are the source format supported:
 Markdown is not listed but _is_ supported. See
 http://po4a.alioth.debian.org/man/man3/Locale::Po4a::Text.3pm.php
 
+Please note that if you want to use po4a with Asciidoc you should use
+po4a at least version 0.45 or specify the "text" format, as for the
+markdown format. For version 0.45, the "text" filter asciidoc option is
+deprecated.
+
 Usually working directories are specified in the po4a.cfg (see man po4a)
-but in the examples that follow I have done without for clarity.
+config file but in the examples that follow I have done without it for
+clarity.
 
 The process of internationalization is done in different steps.
 
