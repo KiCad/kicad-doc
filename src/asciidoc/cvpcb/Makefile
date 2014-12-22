@@ -28,6 +28,9 @@ help:
 	@echo "  epub-all   to make internationalized epub files"
 	@echo "  all        to make all of the above (english)"
 	@echo "  all-all    to make all of the above"
+	@echo ""
+	@echo "To create html side toc, just prepend: export TOC2='-a toc2' ; make html"
+
 
 #.PHONY: pot
 #pot: $(PODIR)/$(DOCNAME).pot
@@ -62,11 +65,11 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 
 #English html
 $(DOCNAME).html: $(DOCNAME).adoc
-	asciidoc -a 'newline=\n' --section-numbers $(DOCNAME).adoc ;
+	asciidoc $(TOC2) -a 'newline=\n' --section-numbers $(DOCNAME).adoc ;
 
 #I18n html
 $(DOCNAME)-%.html: $(DOCNAME)-%.adoc
-	asciidoc -a 'newline=\n' -a lang=$* --section-numbers $(DOCNAME)-$*.adoc ;
+	asciidoc $(TOC2) -a 'newline=\n' -a lang=$* --section-numbers $(DOCNAME)-$*.adoc ;
 
 .PHONY: html
 html: $(DOCNAME).html
