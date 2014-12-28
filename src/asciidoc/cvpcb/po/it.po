@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2014-12-28 12:57+0100\n"
-"PO-Revision-Date: 2014-12-23 17:00+0100\n"
+"POT-Creation-Date: 2014-12-28 14:53+0100\n"
+"PO-Revision-Date: 2014-12-28 15:24+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -1153,6 +1153,15 @@ msgid ""
 "the ``Library Path'' in the footprint library table row for a must be set to "
 "a valid GitHub URL."
 msgstr ""
+"Il GitHub è un plugin speciale che fornisce un'interfaccia per l'accesso in "
+"sola lettura ad un repository remoto GitHub consistente in impronte pretty "
+"(pretty è il nome del formato di impronte KiCad) e opzionalmente fornisce "
+"supporto ``Copy on Write'' (COW) per modificare impronte lette dal repo "
+"GitHub e salvate localmente. Perciò il plugin ``Git Hub'' è per *accedere "
+"remotamente in sola lettura alle librerie di impronte su* https://github.com/"
+"[https://github.com]. Per aggiungere una voce GitHub alla tabella librerie "
+"di impronte il ``percorso libreria'' la riga della tabella librerie di "
+"impronte deve essere impostata ad un URL GitHub valido."
 
 #. type: Plain text
 #: cvpcb.adoc:460
@@ -1200,8 +1209,8 @@ msgid ""
 "to the ``Options'' setting of the footprint library table entry.  This "
 "option is the ``Library Path'' for local storage of modified copies of "
 "footprints read from the GitHub repo. The footprints saved to this path are "
-"com bined with the read only part of the Git Hub repository to create the "
-"footprint library. If th is option is missing, then the Git Hub library is "
+"combined with the read only part of the Git Hub repository to create the "
+"footprint library. If this option is missing, then the Git Hub library is "
 "read only. If the option is present for a Git Hub library, then any writes "
 "to this hybrid library will go to the local *.pretty directory. Note that "
 "the github.com resident portion of this hybrid COW library is always read "
@@ -1209,7 +1218,7 @@ msgid ""
 "specified Git Hub repository directly. The aggregate library type remains "
 "``Github'' in all further discussions, but it consists of both the local "
 "read/write portion and the remote read only portion."
-msgstr ""
+msgstr "Il ``Tipo plugin'' deve essere impostato a ``Github''. Per abilitare la caratteristica ``Copy On Write'' l'opzione *allow_pretty_writing_to_this_dir* deve essere aggiunta alle impostazioni ``Opzioni'' della voce della tabella librerie di impronte.  Questa opzione è il ``Percorso libreria'' per la memorizzazione locale delle copie modificate delle impronte lette dal repo GitHub. Le impronte salvate su questo percorso sono combinate con la parte in sola lettura del repository Git Hub per formare la libreria di impronte. Se questa ozione manca, allora la libreria Git Hub sarà in sola lettura. Se l'opzione è presente per una libreria Git Hub, allora tutte le scrittura a questa libreria ibrida andranno nella cartella locale *.pretty. Si noti che la porzione residente su github.com di questa libreria ibrida COW è sempre in sola lettura; ciò significa che direttamente non è possibile cancellare niente o modificare nessuna impronta nel repository Git Hub specificato. Il tipo della libreria aggregata rimane ``Github'' in tutte le successive discussioni, ma in effetti consiste sia della porzione in lettura/scrittura che della parte remota in sola lettura."
 
 #. type: Plain text
 #: cvpcb.adoc:490
@@ -1247,7 +1256,7 @@ msgid ""
 "Anytime you use the option *allow_pretty_writing_to_this_dir*, you will need "
 "to create that directory manually in advance and it must end with the "
 "extension *.pretty*."
-msgstr ""
+msgstr "La tabella sottostante mostra una voce di tabella librerie impronte con l'opzione COW. Si noti l'uso della variabile ambiente $\\{HOME\\} solo come esempio. La cartella github.pretty è posizionata nel percorso $\\{HOME\\}/pretty/ .  Ogniqualvolta si usi l'opzione *allow_pretty_writing_to_this_dir*, è necessario prima creare manualmente questa cartella e questa deve terminare con l'estensione *.pretty*."
 
 #. type: delimited block |
 #: cvpcb.adoc:515
@@ -1271,7 +1280,7 @@ msgid ""
 "have saved a footprint to the COW library’s local directory by doing a "
 "footprint save in the footprint editor, no Git Hub updates will be seen when "
 "loading a footprint with the same name as one for which you’ve saved locally."
-msgstr ""
+msgstr "Il caricamento delle impronte darà sempre precedenza alle impronte locali trovate nel percorso dato dall'opzione *allow_pretty_writing_to_this_dir*. Una volta salvata una impronta nella cartella locale della libreria COW facendo un salvataggio impronta footprint nell'editor delle impronte, nessun aggiornamento Git Hub  verrà visto durante il caricamento di un'impronta con lo stesso nome di quella salvata localmente."
 
 #. type: Plain text
 #: cvpcb.adoc:526
@@ -1298,13 +1307,13 @@ msgid ""
 "The value of the option *allow_pretty_writing_to_this_dir* will expand any "
 "environment variable using the $\\{\\} notation to create the path in the "
 "same way as the ``Library Path'' setting."
-msgstr ""
+msgstr "Il valore dell'opzione *allow_pretty_writing_to_this_dir* espanderà qualsiasi variabile ambiente usando la notazione $\\{\\} per creare il percorso, analogamente alle impostazioni del ``percorso libreria''."
 
 #. type: Plain text
 #: cvpcb.adoc:535
 msgid ""
 "What’s the point of COW? It is to turbo-charge the sharing of footprints."
-msgstr ""
+msgstr "Qual'è il punto del COW? Rende \"turbo\" la condivisone di impronte."
 
 #. type: Plain text
 #: cvpcb.adoc:545
