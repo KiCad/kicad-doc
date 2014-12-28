@@ -342,7 +342,7 @@ The new footprint library table implementation is how footprint libraries
 are now managed.
 
 The image below shows the footprint library table editing dialog which
-can be opened by invoking the “Library Tables” entry from the
+can be opened by invoking the "Library Tables" entry from the
 "Preferences" menu.
 
 |10000000000003E40000028C68557401_png|
