@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2014-12-28 14:53+0100\n"
-"PO-Revision-Date: 2014-12-28 15:24+0100\n"
+"POT-Creation-Date: 2014-12-29 01:27+0100\n"
+"PO-Revision-Date: 2014-12-29 01:36+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -1218,7 +1218,23 @@ msgid ""
 "specified Git Hub repository directly. The aggregate library type remains "
 "``Github'' in all further discussions, but it consists of both the local "
 "read/write portion and the remote read only portion."
-msgstr "Il ``Tipo plugin'' deve essere impostato a ``Github''. Per abilitare la caratteristica ``Copy On Write'' l'opzione *allow_pretty_writing_to_this_dir* deve essere aggiunta alle impostazioni ``Opzioni'' della voce della tabella librerie di impronte.  Questa opzione è il ``Percorso libreria'' per la memorizzazione locale delle copie modificate delle impronte lette dal repo GitHub. Le impronte salvate su questo percorso sono combinate con la parte in sola lettura del repository Git Hub per formare la libreria di impronte. Se questa ozione manca, allora la libreria Git Hub sarà in sola lettura. Se l'opzione è presente per una libreria Git Hub, allora tutte le scrittura a questa libreria ibrida andranno nella cartella locale *.pretty. Si noti che la porzione residente su github.com di questa libreria ibrida COW è sempre in sola lettura; ciò significa che direttamente non è possibile cancellare niente o modificare nessuna impronta nel repository Git Hub specificato. Il tipo della libreria aggregata rimane ``Github'' in tutte le successive discussioni, ma in effetti consiste sia della porzione in lettura/scrittura che della parte remota in sola lettura."
+msgstr ""
+"Il ``Tipo plugin'' deve essere impostato a ``Github''. Per abilitare la "
+"caratteristica ``Copy On Write'' l'opzione "
+"*allow_pretty_writing_to_this_dir* deve essere aggiunta alle impostazioni "
+"``Opzioni'' della voce della tabella librerie di impronte.  Questa opzione è "
+"il ``Percorso libreria'' per la memorizzazione locale delle copie modificate "
+"delle impronte lette dal repo GitHub. Le impronte salvate su questo percorso "
+"sono combinate con la parte in sola lettura del repository Git Hub per "
+"formare la libreria di impronte. Se questa ozione manca, allora la libreria "
+"Git Hub sarà in sola lettura. Se l'opzione è presente per una libreria Git "
+"Hub, allora tutte le scrittura a questa libreria ibrida andranno nella "
+"cartella locale *.pretty. Si noti che la porzione residente su github.com di "
+"questa libreria ibrida COW è sempre in sola lettura; ciò significa che "
+"direttamente non è possibile cancellare niente o modificare nessuna impronta "
+"nel repository Git Hub specificato. Il tipo della libreria aggregata rimane "
+"``Github'' in tutte le successive discussioni, ma in effetti consiste sia "
+"della porzione in lettura/scrittura che della parte remota in sola lettura."
 
 #. type: Plain text
 #: cvpcb.adoc:490
@@ -1256,7 +1272,13 @@ msgid ""
 "Anytime you use the option *allow_pretty_writing_to_this_dir*, you will need "
 "to create that directory manually in advance and it must end with the "
 "extension *.pretty*."
-msgstr "La tabella sottostante mostra una voce di tabella librerie impronte con l'opzione COW. Si noti l'uso della variabile ambiente $\\{HOME\\} solo come esempio. La cartella github.pretty è posizionata nel percorso $\\{HOME\\}/pretty/ .  Ogniqualvolta si usi l'opzione *allow_pretty_writing_to_this_dir*, è necessario prima creare manualmente questa cartella e questa deve terminare con l'estensione *.pretty*."
+msgstr ""
+"La tabella sottostante mostra una voce di tabella librerie impronte con "
+"l'opzione COW. Si noti l'uso della variabile ambiente $\\{HOME\\} solo come "
+"esempio. La cartella github.pretty è posizionata nel percorso $\\{HOME\\}/"
+"pretty/ .  Ogniqualvolta si usi l'opzione "
+"*allow_pretty_writing_to_this_dir*, è necessario prima creare manualmente "
+"questa cartella e questa deve terminare con l'estensione *.pretty*."
 
 #. type: delimited block |
 #: cvpcb.adoc:515
@@ -1280,7 +1302,13 @@ msgid ""
 "have saved a footprint to the COW library’s local directory by doing a "
 "footprint save in the footprint editor, no Git Hub updates will be seen when "
 "loading a footprint with the same name as one for which you’ve saved locally."
-msgstr "Il caricamento delle impronte darà sempre precedenza alle impronte locali trovate nel percorso dato dall'opzione *allow_pretty_writing_to_this_dir*. Una volta salvata una impronta nella cartella locale della libreria COW facendo un salvataggio impronta footprint nell'editor delle impronte, nessun aggiornamento Git Hub  verrà visto durante il caricamento di un'impronta con lo stesso nome di quella salvata localmente."
+msgstr ""
+"Il caricamento delle impronte darà sempre precedenza alle impronte locali "
+"trovate nel percorso dato dall'opzione *allow_pretty_writing_to_this_dir*. "
+"Una volta salvata una impronta nella cartella locale della libreria COW "
+"facendo un salvataggio impronta footprint nell'editor delle impronte, nessun "
+"aggiornamento Git Hub  verrà visto durante il caricamento di un'impronta con "
+"lo stesso nome di quella salvata localmente."
 
 #. type: Plain text
 #: cvpcb.adoc:526
@@ -1307,7 +1335,10 @@ msgid ""
 "The value of the option *allow_pretty_writing_to_this_dir* will expand any "
 "environment variable using the $\\{\\} notation to create the path in the "
 "same way as the ``Library Path'' setting."
-msgstr "Il valore dell'opzione *allow_pretty_writing_to_this_dir* espanderà qualsiasi variabile ambiente usando la notazione $\\{\\} per creare il percorso, analogamente alle impostazioni del ``percorso libreria''."
+msgstr ""
+"Il valore dell'opzione *allow_pretty_writing_to_this_dir* espanderà "
+"qualsiasi variabile ambiente usando la notazione $\\{\\} per creare il "
+"percorso, analogamente alle impostazioni del ``percorso libreria''."
 
 #. type: Plain text
 #: cvpcb.adoc:535
@@ -1318,8 +1349,8 @@ msgstr "Qual'è il punto del COW? Rende \"turbo\" la condivisone di impronte."
 #. type: Plain text
 #: cvpcb.adoc:545
 msgid ""
-"If you periodically email your COW pretty footprint modifications to the Git "
-"Hubrepo sitory maintainer, you can help update the Git Hub copy.  Simply "
+"If you periodically email your COW pretty footprint modifications to the "
+"GitHub repository maintainer, you can help update the Git Hub copy.  Simply "
 "email the individual *.kicad_mod files you find in your COW directories to "
 "the maintainer of the GitHub repository. After you’ve received confirmation "
 "that your changes have been committed, you can safely delete your COW "
@@ -1328,6 +1359,16 @@ msgid ""
 "possible by contributing frequently to the shared master copies at https://"
 "github.com/[https://github.com]."
 msgstr ""
+"Se periodicamente si spediscono via email le proprie modifiche COW alle "
+"impronte al manutentore del repository Git Hub, si può aiutare ad aggiornare "
+"la copia Git Hub.  Basta semplicemente spedire via email i file *.kicad_mod "
+"che si possono trovare nelle proprie cartelle COW al manutentore del "
+"repository GitHub. Dopo aver ricevuto conferma del fatto che i propri "
+"cambiamenti siano stati integrati, si può tranquillamente cancellare i "
+"propri file COW e l'impronta aggiornata fluirà dalla libreria Git Hub nella "
+"parte in sola lettura. Il proprio obiettivo dovrebbe essere di mantenere i "
+"file COW il più piccoli possibile contribuendo frequentemente alle copie "
+"mastro condivise su https://github.com/[https://github.com]."
 
 #. type: Title ^
 #: cvpcb.adoc:547
@@ -1353,14 +1394,14 @@ msgstr ""
 msgid ""
 "Global footprint libraries can always be accessed even when there is no "
 "project net list file opened."
-msgstr ""
+msgstr "Alle librerie di impronte globali si può sempre accedere anche se non c'è file di netlist di progetto aperta."
 
 #. type: Plain text
 #: cvpcb.adoc:558
 msgid ""
 "The project specific footprint table is active only for the currently open "
 "net list file."
-msgstr ""
+msgstr "La tabella impronte specifica del progetto è attiva solo per il file di netlist aperto correntemente."
 
 #. type: Plain text
 #: cvpcb.adoc:562
@@ -1368,7 +1409,7 @@ msgid ""
 "The project specific footprint library table is saved in the file fp-lib-"
 "table in the path of the currently open net list . You are free to define "
 "libraries in either table."
-msgstr ""
+msgstr "La tabella librerie di impronte specifica del progetto viene salvata nel file fp-lib-table nel percorso della netlist aperta correntemente. Si è liberi di definire librerie in entrambe le tabelle."
 
 #. type: Plain text
 #: cvpcb.adoc:569
@@ -1378,7 +1419,7 @@ msgid ""
 "when you need them. The disadvantage of this is that you may have to search "
 "through a lot of libraries to find the footprint you are looking for. You "
 "can define all your libraries on a project specific basis."
-msgstr ""
+msgstr "Ci sono vantaggi e svantaggi in entrambi i metodi. È possibile definire tutte le proprie librerie nella tabella globale che significa che saranno sempre disponibili quando servono. Lo svantaggio di questa soluzione è che è necessario cercare in mezzo a molte librerie per trovare l'impronta che si sta cercando. È possibile definire tutte le proprie librerie sulla base di un progetto specifico."
 
 #. type: Plain text
 #: cvpcb.adoc:572
