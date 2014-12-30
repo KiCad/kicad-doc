@@ -44,12 +44,12 @@ for i in $LANGUAGES ; do
 done
 
 #Check
-#for i in $LANGUAGES ; do
-#  sphinx-intl -c source/conf.py stat -d source/locale -l $i
-#done
+for i in $LANGUAGES ; do
+  sphinx-intl -c source/conf.py stat -d source/locale -l $i
+done
 
 #Build .mo files: always update compiled .po gettext files
-#sphinx-intl -c source/conf.py build -d source/locale
+sphinx-intl -c source/conf.py build -d source/locale
 
 #Build nationalized html
 for i in $LANGUAGES ; do
