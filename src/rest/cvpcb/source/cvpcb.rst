@@ -115,17 +115,17 @@ Invoking CvPcb
 CvPcb is typically invoked from the schematic capture program Eeschema.
 Eeschema automatically passes the correct net list file name to CvPcb.
 Before running CvPcb for the first time for each project, you must first
-save the initial net list by selecting the “Generate Netlist” entry in to
-“Tools” menu or click on the generate net list button on the top tool bar
+save the initial net list by selecting the "Generate Netlist" entry in to
+"Tools" menu or click on the generate net list button on the top tool bar
 in Eeschema. By default the net list file has the same name as the
-project with a “net” file extension. If the net list file for the project
+project with a "net" file extension. If the net list file for the project
 already exists, all footprint associations will be preserved. After the
 initial net list file is created by Eeschema, CvPcb can be invoked
 directly from the KiCad project manager. CvPcb can also be invoked as a
 stand alone program rather than being launch from the KiCad project
 manager or the schematic editor. If CvPcb is run as a stand alone
 program, the net list file must be opened manually by selecting the
-“Open” entry in the “File” menu or clicking the “Open” file button on the
+"Open" entry in the "File" menu or clicking the "Open" file button on the
 tool bar.
 
 CvPcb Commands
