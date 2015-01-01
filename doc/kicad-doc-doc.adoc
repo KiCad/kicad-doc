@@ -1,5 +1,7 @@
 KiCad Documentation Status Report
 =================================
+Marco Ciampa
+
 
 Introduction
 ------------
@@ -136,6 +138,11 @@ http://daringfireball.net/projects/markdown/[markdown]
 pros:
 
 * much used today, probably due to its simplicity
+* easier to integrate with documentation tools that already produce
+  markdown as output as doxygen does
+* the git flavoured format is simple and powerful enough to handle easily
+  all documentation needs as tables (with cell justification), implicit 
+  links, and such.
 
 cons:
 
@@ -154,7 +161,7 @@ cons:
      original converter is defined _abandonware_. Its development cycle
      lasted 1 year 9 years ago.
   ** its syntax is easier than rest but somehow arguably not easier than
-     asciidoc: see link, images and tables for some examples
+     asciidoc: see links, images and tables for some examples
 
 http://txt2tags.org/[txt2tags]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -163,10 +170,11 @@ Wonderful small and powerful piece of software.
 
 pros:
 
-* exportable in many formats thanks to
-  http://johnmacfarlane.net/pandoc/[pandoc]
+* one sigle portable python executable;
+* exportable in many formats, and thanks to
+  http://johnmacfarlane.net/pandoc/[pandoc] even more;
 * completeness: the format should have all the necessary characteristics
-  for the needs of a considerable complex and complete documentation task
+  for the needs of a considerable complex and complete documentation task;
 * diffusion. There are essentially two implementation:
   ** txt2tags: its native executable whose development seems stopped by
      the year 2010. This is not always a bad thing since if the format is
@@ -193,7 +201,7 @@ markdown as some tools/libraries support both.
 pros:
 
 * diffused in many web libraries and web apps
-* exportable in many formats thanks to  http://johnmacfarlane.net/pandoc/[pandoc]
+* exportable in many formats thanks to http://johnmacfarlane.net/pandoc/[pandoc]
 
 cons:
 
@@ -225,15 +233,15 @@ To sum up
 ---------
 
 * the only documentation standard in full sense is docbook. Almost every
-  new format or conversion tool, in a way or another, do refer to docbook.
-  This is logical since docbook-xml is derived directly from SGML that is a
-  reference and was the reference for many years in the publishing field.
-  The problem is that docbook is easy to produce by means of some automatic
-  tool but it is not easy to write by humans, even with and intelligent
-  editor like emacs or eclipse.
+  new format or conversion tool, in a way or another, do refer to
+  docbook. This is logical since docbook-xml is derived directly from
+  SGML that is a reference and was the reference for many years in the
+  publishing field. The problem is that docbook is easy to produce by
+  means of some automatic tool but it is not easy to write by humans,
+  even with the aid of intelligent editors like emacs or eclipse;
 
 * odt is easy to write, using Libre/OpenOffice but not to maintain and
-  translate.
+  translate;
 
 * so we have to switch from odt to some other documentation tool that we
   should choose from among similar tools that have some minimal
