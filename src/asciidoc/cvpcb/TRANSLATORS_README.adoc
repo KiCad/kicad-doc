@@ -1,0 +1,49 @@
+README for translators
+======================
+
+To start translating this document in a new language, follow these steps:
+
+1) read the README.adoc for the preliminary requirements
+
+2) create your language addendum. Do a:
+
+ cp po/addendum.template po/addendum.NN
+
+where NN is the i18n language code. For example, for german do:
+
+ cp po/addendum.template po/addendum.de
+
+Edit, translate and add your name to the nationalized addendum for your
+credit as a translator.
+
+3) do a
+
+ make po/NN.po
+
+where, again, NN is your i18n language code.
+
+Edit the resulting po/NN.po file, starting from the headers, using a
+specialized po editor of your choice like poedit, gtranslator, virtaal,
+lokalize, emacs, vi, or others.
+
+4) try your translation with a:
+
+ make NAME_OF_THE_PROJECT-NN.html
+
+For example:
+
+ make cvpcb-it.html
+
+And see the results with a browser:
+
+firefox cvpcb-it.html
+
+5) when you reach 100% of the translation, create a patch with:
+
+ git add po/addendum.NN po/NN.po
+ git commit -m "Added translation for LANGUAGE"
+ git format-patch HEAD^
+
+and send it to the devels.
+
+Happy translation!
