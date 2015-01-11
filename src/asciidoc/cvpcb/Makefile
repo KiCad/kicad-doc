@@ -55,8 +55,8 @@ po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
 ################ I18N ASCIIDOC
 
 #Make the single language NN i18n file
-$(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc
-	po4a-translate -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@
+$(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc $(PODIR)/addendum.%
+	po4a-translate -f asciidoc -a $(PODIR)/addendum.$* -A utf-8 -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@
 
 .PHONY: adoc-all
 adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
