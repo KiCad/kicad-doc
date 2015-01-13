@@ -1,4 +1,4 @@
-DOCNAME:=cvpcb
+DOCNAME:= $(shell cat PRJNAME)
 PODIR:=po
 #Get list of languages from the list of .po files
 LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')

@@ -1,4 +1,4 @@
-DOCNAME:=kicad
+DOCNAME:= $(shell cat PRJNAME)
 PODIR:=po
 #Get list of languages from the list of .po files
 LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
@@ -28,6 +28,9 @@ help:
 	@echo "  epub-all   to make internationalized epub files"
 	@echo "  all        to make all of the above (english)"
 	@echo "  all-all    to make all of the above"
+	@echo ""
+	@echo "To create html side toc, just prepend: export TOC2='-a toc2' ; make html"
+
 
 #.PHONY: pot
 #pot: $(PODIR)/$(DOCNAME).pot
@@ -52,8 +55,8 @@ po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
 ################ I18N ASCIIDOC
 
 #Make the single language NN i18n file
-$(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc
-	po4a-translate -f asciidoc -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@
+$(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc $(PODIR)/addendum.%
+	po4a-translate -f asciidoc -a $(PODIR)/addendum.$* -A utf-8 -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@
 
 .PHONY: adoc-all
 adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
@@ -62,11 +65,11 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 
 #English html
 $(DOCNAME).html: $(DOCNAME).adoc
-	asciidoc -a 'newline=\n' --section-numbers $(DOCNAME).adoc ;
+	asciidoc $(TOC2) -a 'newline=\n' --section-numbers $(DOCNAME).adoc ;
 
 #I18n html
 $(DOCNAME)-%.html: $(DOCNAME)-%.adoc
-	asciidoc -a 'newline=\n' -a lang=$* --section-numbers $(DOCNAME)-$*.adoc ;
+	asciidoc $(TOC2) -a 'newline=\n' -a lang=$* --section-numbers $(DOCNAME)-$*.adoc ;
 
 .PHONY: html
 html: $(DOCNAME).html
