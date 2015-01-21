@@ -2,7 +2,7 @@ DOCNAME:= $(shell cat PRJNAME)
 PODIR:=po
 #Get list of languages from the list of .po files
 LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
-DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0"
+DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s asciidoc-dblatex-custom.sty -v"
 .SUFFIXES: #Disabe implicit rules
 
 
@@ -113,11 +113,11 @@ pdf-all: pdf $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).pdf)
 
 #English epub
 $(DOCNAME).epub: $(DOCNAME).adoc
-	a2x -fepub $(DOCNAME).adoc
+	a2x -fepub -a docinfo $(DOCNAME).adoc
 
 #I18n pdf
 $(DOCNAME)-%.epub: $(DOCNAME)-%.adoc
-	a2x -a lang=$* -fepub $(DOCNAME)-$*.adoc
+	a2x -a lang=$* -fepub -a docinfo $(DOCNAME)-$*.adoc
 
 .PHONY: epub
 epub: $(DOCNAME).epub
@@ -144,7 +144,7 @@ odt-all: odt $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).odt)
 ################ ALL
 
 .PHONY: all
-all: html pdf odt epub 
+all: html pdf odt epub
 
 .PHONY: all-all
 all-all: adoc-all html-all pdf-all odt-all epub-all
