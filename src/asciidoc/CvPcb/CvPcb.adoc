@@ -1,19 +1,20 @@
-CvPcb
-=====
 :author: The KiCad Team
-:version: 0.1
 :doctype: article
 :toc:
-:toc-placement: preamble
 
-image::images/kicad_logo.png[Kicad logo]
+CvPcb
+=====
 
+ifdef::basebackend-html[]
+//Added to the dblatex cover custom style and epub docinfo
+image::images/logo.png[Logo]
+endif::basebackend-html[]
 
 *CvPcb*
 
 _Reference manual_
 
-<<<
+[dedication]
 
 [[copyright]]
 *Copyright*
@@ -52,9 +53,10 @@ Published on February 4, 2013.
 
 The KiCad support for the Apple OS X operating system is experimental.
 
-<<<
-
-toc::[]
+//Since docbook "article" is more compact, I have to separate this page
+ifdef::doctype-article[]
+<<<<
+endif::doctype-article[]
 
 Introduction to CvPcb
 ---------------------
@@ -209,14 +211,12 @@ The following table lists the keyboard commands for the main window:
 
 [width="80%",cols="15%,85%",]
 |=======================================================================
-v|Right Arrow
-Tab|Activate the next pane to the right of the
-currently activated pane. Wrap around to the first pane if the last pane
-is currently activated.
+|Right Arrow
+Tab|Activate the next pane to the right of the currently activated pane.
+Wrap around to the first pane if the last pane is currently activated.
 
-|Left Arrow |Activate the next pane to the left of the currently
-activated pane. Wrap around to the last pane if the first pane is
-currently activated.
+|Left Arrow |Activate the next pane to the left of the currently activated 
+pane. Wrap around to the last pane if the first pane is currently activated.
 
 |Up Arrow |Select the previous item of the currently selected list.
 
