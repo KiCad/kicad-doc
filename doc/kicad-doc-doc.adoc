@@ -530,27 +530,37 @@ asciidoc
  sudo apt-get/yumm dblatex texlive-lang-Your_Language_Here
 
 * asciidoc
+
  sudo apt-get/yumm install asciidoc
  sudo apt-get/yumm install source-highlight
++
 See: http://www.methods.co.nz/asciidoc/INSTALL.html
 
 * asciidoctor
+
  sudo apt-get/yumm install asciidoctor
++
 or better (i.e. to get a more updated version):
+
  sudo gem install gem install asciidoctor
++
 See: https://rubygems.org/gems/asciidoctor
 
 rest
 ~~~~
 
 * docutils
+
  sudo apt-get/yumm install docutils
 
 * sphinx
- sudo apt-get/yumm install python-sphinx
-or better (i.e. to get a more updated version)
- sudo easy_install install
 
+ sudo apt-get/yumm install python-sphinx
++
+or better (i.e. to get a more updated version)
+
+ sudo easy_install install
++
 and then:
 
  sudo easy_install sphinx-intl
@@ -572,10 +582,7 @@ With asciidoc I have found a hack (thanks to John Beard) for generating
 nice cover with images as logos for pdf and epub outputs: +
 - for pdf: +
 +
-[source,shell]
-----
-a2x -f pdf --dblatex-opts "-P latex.output.revhistory=0 -P doc.publisher.show=0 -s pdf-cover-dblatex.sty" document.adoc
-----
+ a2x -f pdf --dblatex-opts "-P latex.output.revhistory=0 -P doc.publisher.show=0 -s pdf-cover-dblatex.sty" document.adoc
 +
 where the content of pdf-cover-dblatex.sty is: +
 +
@@ -606,10 +613,7 @@ where the content of pdf-cover-dblatex.sty is: +
 ----
 - and for epub: +
 +
-[source,shell]
-----
-a2x -f epub -a docinfo document.adoc
-----
+ a2x -f epub -a docinfo document.adoc
 +
 where the content of document-docinfo.xml is: +
 +
@@ -627,10 +631,7 @@ where the content of document-docinfo.xml is: +
 +
 DOCTITLE should and could be substituted with a simple sed script like this: +
 +
-[source,shell]
-----
-sed -e 's/DOCTITLE/Real title/' document-docinfo.xml
-----
+ sed -e 's/DOCTITLE/Real title/' document-docinfo.xml
 
  b. for rest, as a pdf direct converter I have recently discovered
  http://code.google.com/p/rst2pdf/[rst2pdf] but its development seems to
