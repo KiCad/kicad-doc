@@ -521,6 +521,14 @@ Tools install
 asciidoc
 ~~~~~~~~
 
+* po4a (for asciidoc and markdown i18n)
+
+ sudo apt-get/yumm po4a libunicode-linebreak-perl
+
+* latex (for pdf generation)
+
+ sudo apt-get/yumm dblatex texlive-lang-Your_Language_Here
+
 * asciidoc
  sudo apt-get/yumm install asciidoc
  sudo apt-get/yumm install source-highlight
@@ -559,10 +567,70 @@ usually produced via docbook. There are some exceptions:
 
  a. for asciidoc there is one promising project, asciidoctor-pdf, that
 hopefully will be able to produce pdf directly but is experimental and
-unfortunately it is not able to include images yet. With asciidoc I have
-not found a way to put an image in the cover in pdf and epub files
-without fiddling with docbook xls templates (that I do not want and I am
-not able to do now). Here there is a guide with a solution using *TODO*: *TODO*
+unfortunately it is not able to include images yet.
+With asciidoc I have found a hack (thanks to John Beard) for generating
+nice cover with images as logos for pdf and epub outputs: +
+- for pdf: +
++
+[source,shell]
+----
+a2x -f pdf --dblatex-opts "-P latex.output.revhistory=0 -P doc.publisher.show=0 -s pdf-cover-dblatex.sty" document.adoc
+----
++
+where the content of pdf-cover-dblatex.sty is: +
++
+[source,latex]
+----
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{asciidoc-dblatex}[2012/10/24 AsciiDoc DocBook Style]
+
+%% Just use the original package and pass the options.
+\RequirePackageWithOptions{docbook}
+
+% custom cover page
+\def\DBKcover{
+  \thispagestyle{empty}
+  \begin{center}
+  \includegraphics[width=1\textwidth]{images/logo.png} \\
+  \vspace*{1in}
+  \bfseries
+  \sffamily
+  {\Huge \DBKtitle \\[1ex]\large ~~~ \\}
+  \vspace*{2.1in}
+  {\color{blue} \Huge ~~~ \\ \huge ~~~ \\}
+  \vspace*{2.1in}
+  {\Large\DBKdate \\}
+  \end{center}
+  \vfill
+}
+----
+- and for epub: +
++
+[source,shell]
+----
+a2x -f epub -a docinfo document.adoc
+----
++
+where the content of document-docinfo.xml is: +
++
+[source,xml]
+----
+<mediaobject role="cover">
+  <imageobject>
+   <imagedata fileref="images/logo.png" format="PNG"/>
+  </imageobject>
+  <textobject>
+    <phrase>DOCTITLE</phrase>
+  </textobject>
+</mediaobject>
+----
++
+DOCTITLE should and could be substituted with a simple sed script like this: +
++
+[source,shell]
+----
+sed -e 's/DOCTITLE/Real title/' document-docinfo.xml
+----
 
  b. for rest, as a pdf direct converter I have recently discovered
  http://code.google.com/p/rst2pdf/[rst2pdf] but its development seems to
