@@ -197,7 +197,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('idf_exporter', 'IDF_Exporter.tex', u'IDF Exporter ',
+  ('idf_exporter', 'IDF_Exporter.tex', u'IDF Exporter',
    u'The KiCad Team', 'manual'),
 ]
 
@@ -228,7 +228,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('idf_exporter', 'idf_exporter', u'IDF_Exporter Reference Manual',
+    ('idf_exporter', 'idf_exporter', u'IDF Exporter Reference Manual',
      [u'The KiCad Team'], 1)
 ]
 
@@ -242,7 +242,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('idf_exporter', 'IDF_Exporter', u'IDF_Exporter Reference Manual',
+  ('idf_exporter', 'IDF_Exporter', u'IDF Exporter Reference Manual',
    u'The KiCad Team', 'IDF_Exporter', 'IDF Exporter Tool',
    'Part of the KiCad suite'),
 ]

@@ -1,0 +1,582 @@
+# IDF Exporter User Manual Italian Translation
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the KiCad package.
+# Marco Ciampa <ciampix@libero.it>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-27 09:57+0100\n"
+"PO-Revision-Date: 2015-01-27 10:42+0100\n"
+"Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# 0837f9ae11e542baac3f79d79f620f8c
+#: ../../source/idf_exporter.rst:2
+msgid "IDF Exporter"
+msgstr "IDF Exporter"
+
+# 6245d045ed964adc98240bb908f38d04
+#: ../../source/idf_exporter.rst:4
+msgid "**IDF Exporter**"
+msgstr "**IDF Exporter**"
+
+#: ../../source/idf_exporter.rst:7
+msgid "*Reference manual*"
+msgstr "*Manuale di riferimento*"
+
+#: ../../source/idf_exporter.rst:10
+msgid "**Copyright**"
+msgstr "**Copyright**"
+
+#: ../../source/idf_exporter.rst:12
+msgid ""
+"This document is Copyright © 2014-2015 by it's contributors as listed below. "
+"You may distribute it and/or modify it under the terms of either the GNU "
+"General Public License (http://www.gnu.org/licenses/gpl.html), version 3 or "
+"later, or the Creative Commons Attribution License (http://creativecommons."
+"org/licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"Questo documento è coperto dal Copyright © 2014-2015 dei suoi autori come "
+"elencati in seguito. È possibile distribuirlo e/o modificarlo nei termini "
+"sia della GNU General Public License (`<http://www.gnu.org/licenses/gpl."
+"html>`_), versione 3 o successive, che della Creative Commons Attribution "
+"License (`<http://creativecommons.org/licenses/by/3.0/>`_), versione 3.0 o "
+"successive."
+
+#: ../../source/idf_exporter.rst:18
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr ""
+"Tutti i marchi registrati all'interno di questa guida appartengono ai loro "
+"legittimi proprietari."
+
+#: ../../source/idf_exporter.rst:20
+msgid "**Contributors**"
+msgstr "**Contributors**"
+
+# 08402880699744fb99c43e10c487c28f
+#: ../../source/idf_exporter.rst:22
+msgid "Cirilo Bernardo"
+msgstr ""
+
+#: ../../source/idf_exporter.rst:24
+msgid "**Feedback**"
+msgstr "**Feedback**"
+
+#: ../../source/idf_exporter.rst:26
+msgid ""
+"Please direct any comments or suggestions to the author "
+"(cirilo_bernardo@yahoo.com)."
+msgstr "Inviare qualsiasi commento o suggerimento concernente questo documento all'autore (cirilo_bernardo@yahoo.com)."
+
+#: ../../source/idf_exporter.rst:28
+msgid "**Acknowledgments**"
+msgstr "**Acknowledgments**"
+
+#: ../../source/idf_exporter.rst:30
+msgid "None"
+msgstr "Nessuno"
+
+#: ../../source/idf_exporter.rst:32
+msgid "**Publication date and software version**"
+msgstr "**Data di pubblicazione e versione del software**"
+
+#: ../../source/idf_exporter.rst:34
+msgid "Published on January 26, 2014."
+msgstr "Pubblicato il 26 gennaio, 2014."
+
+#: ../../source/idf_exporter.rst:41
+msgid "Introduction to the IDFv3 exporter"
+msgstr "Introduzione all'esportatore di IDFv3"
+
+# b212be3440454a0ba6e2002584805014
+#: ../../source/idf_exporter.rst:43
+msgid ""
+"The IDF exporter exports an IDFv3 [#f1]_ compliant board (\\*.emn) and "
+"library (\\*.emp) file for communicating mechanical dimensions to a "
+"mechanical CAD package. The exporter currently exports the board outline and "
+"cutouts, all pad and mounting thru-holes including slotted holes, and "
+"component outlines; this is the most basic set of mechanical data required "
+"for interaction with mechanical designers. All other entities described in "
+"the IDFv3 specification are currently not implemented."
+msgstr ""
+
+# f0adb12311e5474aa64bffb5f29a6001
+#: ../../source/idf_exporter.rst:53
+msgid "Specifying component models for use by the exporter"
+msgstr ""
+
+# e4313798f01741b5b37f9f50a97e71e0
+#: ../../source/idf_exporter.rst:55
+msgid ""
+"The IDF exporter makes use of the 3D model file attribute which was "
+"originally used by the 3D viewer. Since the 3D viewer, IDF, and possible "
+"future mechanical CAD exporters are generally interested in different types "
+"of file format, it is possible to use the 3D model file attribute to specify "
+"models for multiple exporters."
+msgstr ""
+
+# 80174f6b406349fdb1334ecf079dfcd2
+#: ../../source/idf_exporter.rst:62
+msgid ""
+"From within the module editor or pcbnew, edit the footprint parameters and "
+"click on the 3D settings tab (see figure: :ref:`figure-1`), click on Add 3D "
+"Shape, and select the filter “IDFv3 component files (\\*.idf)” (see figure: :"
+"ref:`figure-2`). Select the desired outline file and enter any necessary "
+"values for the offset and rotation. Note that only the offset values and the "
+"Z rotation value are used by the IDF exporter; all other values are ignored. "
+"The offsets must be specified using the IDF board output units (mm or thou) "
+"and in the IDF coordinate system, that is a right-hand coordinate system "
+"with +Z moving towards the viewer, +X is to the viewer's right, and +Y is "
+"up. The rotation must be in degrees and a positive rotation is a counter-"
+"clockwise rotation as described in the IDFv3 specification. Multiple "
+"outlines may be combined with appropriate offsets to represent simple "
+"assemblies such as a DIP package in a socket."
+msgstr ""
+
+# d339d05cf7cc4107bb29372c48741d00
+#: ../../source/idf_exporter.rst:77
+msgid ""
+"Once models have been specified for all desired components, from within "
+"pcbnew, select the **File** menu, then **Export** , and finally **IDFv3 "
+"Export**. A dialog box will pop up (see figure: :ref:`figure-3`) which "
+"allows the output filename and IDF output units (mm or mils) to be set. The "
+"exported IDF files can be viewed in the free mechanical CAD software "
+"`FreeCAD <http://www.freecadweb.org/>`_ or converted to VRML using the "
+"idf2vrml tool and viewed with any suitable VRML viewer."
+msgstr ""
+
+# e5bae1cbc9d345eca526becd3c02448e
+#: ../../source/idf_exporter.rst:91
+msgid "Module properties, 3D settings"
+msgstr ""
+
+# 2b19645868bb4793bf155d6d03008bba
+#: ../../source/idf_exporter.rst:98
+msgid "IDF component outline selection"
+msgstr ""
+
+# ac66fa23ae984e0794062835f5f4d631
+#: ../../source/idf_exporter.rst:105
+msgid "IDF output settings"
+msgstr ""
+
+# d7eabab370ca430a839d661e1af66ede
+#: ../../source/idf_exporter.rst:110
+msgid "Creating a component outline file"
+msgstr ""
+
+# 4673581b05634278b6dfd61c97d49b7b
+#: ../../source/idf_exporter.rst:113
+msgid ""
+"The component outline file (\\*.idf) consists of a single .ELECTRICAL or ."
+"MECHANICAL section as described in the specification document. The section "
+"may be preceded by any number of comment lines; the comment lines are copied "
+"by the exporter into the library file and can be used to track metadata such "
+"as references to the documents used to determine the component's outline and "
+"dimensions."
+msgstr ""
+
+# 1f94347ab1294cdab366531eaa459985
+#: ../../source/idf_exporter.rst:121
+msgid ""
+"The component outline section contains fields which are strings, integers, "
+"or floating point numbers. A string is a combination of characters which may "
+"include spaces; if a string contains spaces then it must be quoted. "
+"Quotation marks must not appear within a string. Floating point numbers may "
+"be represented using decimal or exponential notations but decimal notation "
+"is preferred for human readability. The decimal point must be a dot and not "
+"a comma. The IDF file must consist only of 7-bit ASCII characters; use of 8-"
+"bit characters will result in undefined behavior."
+msgstr ""
+
+# feccd28c7a3e40329b96ca36f6795263
+#: ../../source/idf_exporter.rst:132
+msgid ""
+"An IDF file consists of SECTIONS which consist of RECORDS which consist of "
+"FIELDS. For the IDF outline files only one type of section may exist and "
+"must be one of .ELECTRICAL or .MECHANICAL. A record is a single line of text "
+"and may contain one or more fields. Fields are sequences of characters "
+"separated by one or more spaces which do not appear between quotation marks. "
+"All fields of a record must appear on a single line; records may not span "
+"lines."
+msgstr ""
+
+# 2bfa01833cef484d8ed3614f94c8e517
+#: ../../source/idf_exporter.rst:141
+msgid ""
+"The section heading (.ELECTRICAL or .MECHANICAL) is considered the first "
+"record (Record 1) of the section. Record 1 must be followed by Record 2 "
+"which has four fields:"
+msgstr ""
+
+# 90c2975acb364a6c86b562789a8e51d1
+#: ../../source/idf_exporter.rst:145
+msgid ""
+"Geometry Name: a string which in combination with the Part Number must form "
+"a unique identifier for the component outline. For standardized packages, "
+"the package name is a good value for the geometry name, for example "
+"“SOT-23”. For unique packages the manufacturer's part number is a good "
+"choice for the geometry name."
+msgstr ""
+
+# eaf559c7bab5494b9af2a4b76c3d37bb
+#: ../../source/idf_exporter.rst:151
+msgid ""
+"Part Number: although obviously intended for the part number, for example "
+"BS107, it is better to use this string to help describe the package. For "
+"example if the geometry name is “TO-92”, the part number entry may be used "
+"to describe the layout of the pads or the orientation of this particular "
+"TO-92 outline file."
+msgstr ""
+
+# 348b02f8952b4be9817dddac2b4e5b5d
+#: ../../source/idf_exporter.rst:157
+msgid ""
+"IDF Unit: this must be one of MM or THOU and it applies only to the units "
+"describing this single component outline."
+msgstr ""
+
+# 76f887670a594881a036edac1f11baf6
+#: ../../source/idf_exporter.rst:161
+msgid ""
+"Height: this is a floating point number representing the nominal height of "
+"the component using units specified in Field 3."
+msgstr ""
+
+# 096c1fc59701468a9f3fac013cf39f3a
+#: ../../source/idf_exporter.rst:164
+msgid ""
+"Record 2 must be followed by a number of Record 3 entries which specify the "
+"outline of the component. Record 3 consists of four fields:"
+msgstr ""
+
+# 88114c2a465d45babb0f03248647e56a
+#: ../../source/idf_exporter.rst:167
+msgid ""
+"Loop Index: 0 (outline points are specified in counter-clockwise order) or 1 "
+"(outline points are specified in clockwise order)"
+msgstr ""
+
+# 3f526484f4cf45a5808a0079496b7904
+#: ../../source/idf_exporter.rst:170
+msgid "X coordinate: a floating point number"
+msgstr ""
+
+# 64d50a6c993a48e39e9af45022edeaa9
+#: ../../source/idf_exporter.rst:172
+msgid "Y coordinate: a floating point number"
+msgstr ""
+
+# 94520376102346b4983ea54f52e76495
+#: ../../source/idf_exporter.rst:174
+msgid ""
+"Included Angle: a floating point number. If the value is 0 then a straight "
+"line segment is drawn from the previous point to this point. If the value is "
+"360 then the previous point specifies the center of a circle and this point "
+"specifies a point on the circle; never specify a circle using a value of "
+"-360 as at least one major mechanical CAD package does not behave well in "
+"that situation. If the value is negative then a clockwise arc is drawn from "
+"the previous point to this point and if the value is positive then a counter-"
+"clockwise arc is drawn."
+msgstr ""
+
+# 9ddc956853e049f9a1fb1f4479bedc84
+#: ../../source/idf_exporter.rst:186
+msgid ""
+"Only one closed loop is permitted and it is not possible to specify a "
+"cutout. The last point specified must be the same as the first point unless "
+"the outline is a circle."
+msgstr ""
+
+# c64c2320a76f475a8639460b94dcbf61
+#: ../../source/idf_exporter.rst:191
+msgid "Example IDF File 1:"
+msgstr ""
+
+# c3c442650d0e4b869f49a06873f7bd9e
+#: ../../source/idf_exporter.rst:203
+msgid "Example IDF File 2:"
+msgstr ""
+
+# aa57448770264e9da92a6eb8f7576b5d
+#: ../../source/idf_exporter.rst:225
+msgid "Guidelines for creating outlines"
+msgstr ""
+
+# e60ab24b1a7a4b97b463d09c4412e03d
+#: ../../source/idf_exporter.rst:227
+msgid ""
+"When creating outlines, and especially when sharing the work with others, "
+"consistency in the design and naming of files helps people locate files "
+"quicker and place the components with minimal hassles."
+msgstr ""
+
+# b1703770b7d8401db518108785b02be2
+#: ../../source/idf_exporter.rst:233
+msgid "Package naming"
+msgstr ""
+
+# a1e5e50676a447c7bddd8dd1f2e57fc2
+#: ../../source/idf_exporter.rst:235
+msgid ""
+"Try to make some information about the outline available in the filename to "
+"give the user a general idea of what the outline is. For example axial "
+"leaded cylindrical packages may represent some types of capacitors as well "
+"as some types of resistors, so it makes sense to identify an outline as a "
+"horizontal or vertical axial leaded device and to add some extra information "
+"on the relevant dimensions: diameter, length, and pitch are the most "
+"important. If a device has a unique outline, the manufacturer's part number "
+"and a prefix to indicate the class of device are adequate."
+msgstr ""
+
+# 1c4d22d0326a4c4b98500f75a5fa4874
+#: ../../source/idf_exporter.rst:246
+msgid "Comments"
+msgstr ""
+
+# 89d4bacb609a4f50a4452722d0ac7740
+#: ../../source/idf_exporter.rst:248
+msgid ""
+"Use comments in the IDF file to give users more information about the "
+"outline, for example a reference to the source used for dimensional "
+"information."
+msgstr ""
+
+# a873eb36960b47918305238dd7539df2
+#: ../../source/idf_exporter.rst:254
+msgid "Geometry and Part Number entries"
+msgstr ""
+
+# 40bdb019c8d34de887f8b5baed23669a
+#: ../../source/idf_exporter.rst:256
+msgid ""
+"Think carefully about the values to give to the Geometry and Part Number "
+"entries. Taken together. These strings act as a unique identifier for the "
+"MCAD system. The values of the strings will ideally have some meaning to a "
+"user, but this is not necessary: the values are primarily intended for the "
+"MCAD system to use as a unique ID. Ideally the values chosen will be unique "
+"within any large collection of outlines; choosing values well will result in "
+"fewer clashes especially in complex boards."
+msgstr ""
+
+# 9e32eaa3ec3f44ecad25cb25a6b5e7ef
+#: ../../source/idf_exporter.rst:266
+msgid "Pin orientation and positioning"
+msgstr ""
+
+# 629b6b78a7054f06a4272d18e6a4c405
+#: ../../source/idf_exporter.rst:268
+msgid ""
+"For through-hole components there are no widely accepted schemes for "
+"determining the pin orientation and component center in 3D models. For "
+"consistency, if there are only 2 pins they must be in a horizontal "
+"arrangement (see figure: :ref:`figure-4`) along the X axis and for 3 pins "
+"try to keep 2 in a horizontal arrangement on the X axis. Polarized devices "
+"such as electrolytic or tantalum capacitors must have the positive lead on "
+"Pin 1 and diodes must have the cathode on Pin 1; this is to maintain "
+"compatibility of the schematic symbols with the orientation defined for SMT "
+"devices; however, note that many existing KiCad schematics and footprints "
+"place the anode at Pin 1."
+msgstr ""
+
+# b0890af167fb44be8afb9cc6b95ea6bc
+#: ../../source/idf_exporter.rst:280
+msgid ""
+"For DIP devices the center of the outline must be at the center of the "
+"rectangle described by the pin locations and Pin 1 is preferably at the top "
+"left corner; this will maintain some consistency with the standardized "
+"orientation of SMT components; however, such a model will be rotated -90 "
+"degrees relative to most existing KiCad component footprints and VRML "
+"models. For items such as a horizontal radial leaded capacitor or a "
+"horizontal TO-220 package, prefer to place the leads in a row on the X axis "
+"and with the body of the device extending upwards (see figure: :ref:"
+"`figure-4`). Non-polarized vertical axial leaded components must have the "
+"wire on the right hand side; polarized vertical axial leaded components may "
+"have the wire on either side, depending on whether Pin 1 is on the lower end "
+"(wire on right) or on the upper end (wire on left)."
+msgstr ""
+
+# 35e42784c78845dbbc56d02c79535ee8
+#: ../../source/idf_exporter.rst:294
+msgid ""
+"For SMT components the orientation, package center, and outline are defined "
+"by various standards. Use the standard appropriate to your work. Also keep "
+"in mind that many devices do not conform to any standard; in such cases the "
+"offending device is probably best identified by using the manufacturer's "
+"part number in the outline file name. In general, an SMT outline is a "
+"rectangle encompassing the component package and including the leads; the "
+"package is oriented such that Pin 1 is as close as possible to the top left "
+"corner and the top left corner is usually chamfered for visual reference."
+msgstr ""
+
+# ca288e9a98fb4755abe1c44fa3fd2d0e
+#: ../../source/idf_exporter.rst:308
+msgid "Sample outlines"
+msgstr ""
+
+# 555f94d309d8472c90586c5788b57eb3
+#: ../../source/idf_exporter.rst:310
+msgid ""
+"Generated by the programs idfcyl and idfrect and rendered by SolidWorks."
+msgstr ""
+
+# aa639f9445cb477290ad4e93b2f8e246
+#: ../../source/idf_exporter.rst:313
+msgid ""
+"From left to right are (a) vertical radial leaded cylinder, (b) vertical "
+"axial leaded cylinder with wire on left, (c) vertical axial leaded cylinder "
+"with wire on right, (d) horizontal axial leaded cylinder, (e) horizontal "
+"radial leaded cylinder, (f) square outline, plain, (g) square outline with "
+"chamfer, (h) square outline with axial lead on right. The top outlines were "
+"specified in units of millimeters while the bottom outlines were specified "
+"in units of inches."
+msgstr ""
+
+# c91961edd74c47f0bb34db0b110dd7c4
+#: ../../source/idf_exporter.rst:323
+msgid "Tips on dimensions"
+msgstr ""
+
+# 4c66be6769394177b41364d2b4f14eb1
+#: ../../source/idf_exporter.rst:325
+msgid ""
+"The purpose served by the extruded outlines is to give the mechanical "
+"designer some idea of the location and physical space occupied by each "
+"component. In a typical scenario the mechanical designer will replace some "
+"of the crude outlines with more detailed mechanical models, for example when "
+"checking to ensure that a right-angle mounted LED will fit into a hole on a "
+"panel. In most situations the accuracy of an outline doesn't matter, but it "
+"is good practice to create outlines which convey the best mechanical "
+"information possible. In a few instances a user may wish to fit the "
+"component into a case with very little excess space, for example in a "
+"portable music player. In such a situation, if most extruded outlines are a "
+"good enough representation of components then the mechanical designer may "
+"only have to replace very few models while designing the case. If the "
+"outlines are not a reliable reflection of reality then the mechanical "
+"designer will waste a lot of time replacing models to ensure a good fit. "
+"After all, if you put garbage in you can expect garbage to come out. If you "
+"put in good information, you can be confident of good results."
+msgstr ""
+
+# 2a7c15e5a96246b9a044865eff62bb94
+#: ../../source/idf_exporter.rst:345
+msgid "IDF Component Outline Tools"
+msgstr ""
+
+# 46a2917bd0c4449eb7393da0daef237e
+#: ../../source/idf_exporter.rst:347
+msgid ""
+"A number of command-line tools are available to help generate IDF component "
+"outlines. The tools are:"
+msgstr ""
+
+# 8eb329f95050414eafc3ef99aa6147b1
+#: ../../source/idf_exporter.rst:350
+msgid ""
+"**idfcyl:** creates an outline of a cylinder in vertical or horizontal "
+"orientation and with axial or radial leads"
+msgstr ""
+
+# 4a392caa989441de92218a4852a5c82a
+#: ../../source/idf_exporter.rst:353
+msgid ""
+"**idfrect:** creates an outline of a rectangle which may have either an "
+"axial lead or a chamfer in the top left corner"
+msgstr ""
+
+# 58ae5f3b688a4579b2dcd5761f07e544
+#: ../../source/idf_exporter.rst:357
+msgid ""
+"**dxf2idf:** converts a drawing in DXF format into an IDF component outline"
+msgstr ""
+
+# e7751a63884c463f93806a2edf8738ca
+#: ../../source/idf_exporter.rst:363
+msgid "idfcyl"
+msgstr ""
+
+# 7aaae549678e42efae8e93909352460c
+#: ../../source/idf_exporter.rst:365
+msgid ""
+"When **idfcyl** is invoked with no arguments it prints out a usage note and "
+"a summary of its inputs:"
+msgstr ""
+
+# 8c4b70a954d54e888bb27a24ea0d3edd
+#: ../../source/idf_exporter.rst:398
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a single "
+"axial leaded outline with the lead on the right hand side:"
+msgstr ""
+
+# e6a427c062654e1db827999a75000023
+#: ../../source/idf_exporter.rst:423
+msgid "idfrect"
+msgstr ""
+
+# 7c3d8707044844e6abe22ec4d4d418eb
+#: ../../source/idf_exporter.rst:425
+msgid ""
+"When **idfrect** is invoked with no arguments it prints out a usage note and "
+"a summary of its inputs:"
+msgstr ""
+
+# 735158c3719d4e638db51c86c986f234
+#: ../../source/idf_exporter.rst:451
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a "
+"chamfered rectangle and an axial leaded outline:"
+msgstr ""
+
+# 580e8d46d15049bc868c9aea971d9cac
+#: ../../source/idf_exporter.rst:485
+msgid "dxf2idf"
+msgstr ""
+
+# 37f5c3189a234e3baf2630e9573e171f
+#: ../../source/idf_exporter.rst:487
+msgid ""
+"The DXF file used to specify the component outline can be prepared with the "
+"free software `LibreCAD <http://librecad.org/>`_ for best compatibility. "
+"When **dxf2idf** is invoked with no arguments it prints out a usage note and "
+"a summary of its inputs:"
+msgstr ""
+
+# fa6388c388cd44088aea21a60874bc36
+#: ../../source/idf_exporter.rst:508
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a 5mm high "
+"outline from a DXF file 'test.dxf':"
+msgstr ""
+
+# dc5e3c02f916467585d1c4ebd2856986
+#: ../../source/idf_exporter.rst:529
+msgid "idf2vrml"
+msgstr ""
+
+# 24675dbcf7ee4bd1b0124503c6bcc77e
+#: ../../source/idf_exporter.rst:531
+msgid ""
+"The idf2vrml tool reads a set of one IDF Board (*.emn) and one IDF Component "
+"file (*.emp) and produces a VRML file which can be viewed with a VRML "
+"viewer. This feature is useful for visualization of the board assembly in "
+"cases where the user does not have access to MCAD software. Invoking "
+"idf2vrml without any arguments will result in the display of a usage message:"
+msgstr ""
+
+# e71b5c7b151f4428abe0f1aa15881f31
+#: ../../source/idf_exporter.rst:551
+msgid "http://www.simplifiedsolutionsinc.com/images/idf_v30_spec.pdf"
+msgstr ""

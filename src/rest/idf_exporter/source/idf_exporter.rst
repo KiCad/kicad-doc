@@ -9,7 +9,7 @@ IDF Exporter
 
 **Copyright**
 
-This document is Copyright © 2014 by it's contributors as listed below.
+This document is Copyright © 2014-2015 by it's contributors as listed below.
 You may distribute it and/or modify it under the terms of either the GNU
 General Public License (http://www.gnu.org/licenses/gpl.html),
 version 3 or later, or the Creative Commons Attribution License
