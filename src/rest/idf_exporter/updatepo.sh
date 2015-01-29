@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCNAME=`grep master_doc source/conf.py|tr -d \\n\\'\\ |sed -e 's/master_doc=//'` ; #echo \"$DOCNAME\" ; exit #Debug
+DOCNAME=`grep master_doc source/conf.py|tr -d \\'\\'\\ |sed -e 's/master_doc=//'` ; #echo \"$DOCNAME\" ; exit #Debug
 LANGUAGES=$(ls -1 -x source/locale/)
 
 #####################
