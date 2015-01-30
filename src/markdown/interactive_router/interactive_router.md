@@ -123,11 +123,32 @@ Options* from the context menu. It opens a window like the one below:
 
 The options are:
 
-- **Mode** - select how the router handles DRC violation (shoving, walking around, etc.)
-- **Shove vias** - when disabled, vias are treated as un-movable objects and hugged instead of shoved.
-- **Jump over obstacles** - when enabled, the router tries to move colliding traces behind solid obstacles (e.g. pads) instead of "reflecting" back the collision
-- **Remove redundant tracks** - removes loops while routing (e.g. if the new track ensures same connectivity as an already existing one, the old track is removed). Loop removal works locally (only between the start and end of the currently routed trace).
-- **Automatic neckdown** - when enabled, the router tries to break out pads/vias in a clean way, avoiding acute angles and jagged breakout traces.
-- **Smooth dragged segments** - when enabled, the router attempts to merge several jagged segments into a single straight one (dragging mode).
-- **Allow DRC violations** (*Highlight collisions* mode only) - allows to establish a track even if is violating the DRC rules.
-- **Optimizer effort** - defines how much time the router shall spend optimizing the routed/shoved traces. More effort means cleaner routing (but slower), less effort means faster routing but somewhat jagged traces.
+- **Mode** - select how the router handles DRC violation (shoving,
+walking around, etc.)
+
+- **Shove vias** - when disabled, vias are treated as un-movable objects
+and hugged instead of shoved.
+
+- **Jump over obstacles** - when enabled, the router tries to move
+colliding traces behind solid obstacles (e.g. pads) instead of
+"reflecting" back the collision
+
+- **Remove redundant tracks** - removes loops while routing (e.g. if the
+new track ensures same connectivity as an already existing one, the old
+track is removed). Loop removal works locally (only between the start and
+end of the currently routed trace).
+
+- **Automatic neckdown** - when enabled, the router tries to break out
+pads/vias in a clean way, avoiding acute angles and jagged breakout
+traces.
+
+- **Smooth dragged segments** - when enabled, the router attempts to
+merge several jagged segments into a single straight one (dragging mode).
+
+- **Allow DRC violations** (*Highlight collisions* mode only) - allows to
+establish a track even if is violating the DRC rules.
+
+- **Optimizer effort** - defines how much time the router shall spend
+optimizing the routed/shoved traces. More effort means cleaner routing
+(but slower), less effort means faster routing but somewhat jagged
+traces.
