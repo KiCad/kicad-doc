@@ -202,11 +202,7 @@ using KiCad.
     project file will automatically take the extension .pro.
 
 #.  Let's begin by creating a schematic. Start the schematic editor
-    *EESchema*,
-
-    |eeschema_png|
-
-    It is the first button from the left. If
+    *EESchema*, |eeschema_png|. It is the first button from the left. If
     an error dialogue appears telling you that a project file was not
     found, ignore it and click OK.
 
@@ -328,6 +324,7 @@ using KiCad.
     connector. You can jump to the section titled *Make a Schematic
     Component in KiCad* to learn how to make this component from scratch
     and then return to this section to continue with the board.
+
     -> *jump to the section: Make a Schematic Component in KiCad*
 
 #.  You can now place the freshly made component. Press the a key and
@@ -1219,30 +1216,17 @@ directory:
 ::
 
  foxy_board/
-
- ├── foxy_board.pro
-
- ├── foxy_board.sch
-
- ├── foxy_board.brd
-
- ├── foxy_board.net
-
- ├── lib
-
- │
-
- ├── foxy_board.lib
-
- │
-
- └── foxy_board.mod
-
- ├── gerber
-
- ├── ...
-
- └── ...
+ |-- foxy_board.pro
+ |-- foxy_board.sch
+ |-- foxy_board.brd
+ |-- foxy_board.net
+ |-- lib/
+ |   |-- foxy_board.lib
+ |   \-- foxy_board.mod
+ |
+ \-- gerber/
+     |-- ...
+     \-- ...
 
 
 
