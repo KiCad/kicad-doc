@@ -18,3 +18,4 @@ makeAll KiCad
 makeAll Eeschema
 makeAll IDF_Exporter
 makeAll CvPcb
+makeAll Getting_Started_in_KiCad
