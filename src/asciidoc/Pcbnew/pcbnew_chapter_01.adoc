@@ -1,0 +1,113 @@
+
+Introduction to Pcbnew
+----------------------
+
+Description
+~~~~~~~~~~~
+
+Pcbnew is a powerful printed circuit board software tool available
+for the Linux, Microsoft Windows and Apple OS X operating systems.
+
+Pcbnew is used in association with the schematic capture software
+program Eeschema, which provides the Netlist file - this describes
+the electrical connections of the PCB  to design.
+
+A second program CvPcb is used to assign each component in the
+Netlist produced by Eeschema, to a module that is used by Pcbnew.
+This can be done either interactively or automatically using
+equivalence files.
+
+Pcbnew manages libraries of modules. Each module is a drawing of the
+physical component including its footprint - the layout of pads
+providing connections to the component. The required modules are
+automatically loaded during the reading of the Netlist produced by
+CvPcb.
+
+Pcbnew integrates, automatically and immediately, any circuit
+modification, by removal of any erroneous tracks, addition of the
+new components, or by modifying any value (and under certain
+conditions any reference) of the old or new modules, according to
+the electrical connections appearing in the scheme.
+
+Pcbnew provides a rats nest display, a hairline connecting the pads
+of modules which are connected on the schematic. These connections
+move dynamically as track and module movements are made.
+
+Pcbnew has an active Design Rules Check (DRC) which automatically
+indicates any error of track layout in real time.
+
+Pcbnew can automatically generate a copper plane, with or without
+thermal breaks on the pads.
+
+Pcbnew has a simple but effective autorouter to assist in the
+production of the circuit. An Export/Import in SPECCTRA dsn format
+allows to use more advanced auto-routers.
+
+Pcbnew provides options specifically for the production of ultra
+high frequency circuits (such as pads of trapezoidal and complex
+form, automatic layout of coils on the printed circuit, etc).
+
+Pcbnew displays the elements (tracks, pads, texts, drawings and
+more) as actual size and according to personal preferences:
+
+* Display in full or outline.
+* Display of the track/pad clearance.
+
+Principal design features
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Pcbnew has an internal resolution of 1/10000 inch.
+
+Pcbnew works on 16 layers of copper, plus 12 technical layers (silk
+screen, solder mask, component adhesive, solder paste, drawings and
+comments...) and manages in real time the hairline indication (rats
+nest) of missing tracks.
+
+The display of the PCB elements (tracks, pads, text, drawings...)
+can be customizable:
+
+* In full or outline.
+* With or without track clearance.
+* By hiding certain elements (copper layers, technical layers, zones of
+copper, modules...), which is useful for high-density multi-layer
+circuits.
+
+For the complex circuits, the display of layers, zones, components
+can be removed in a selective way for a better legibility of the
+screen.
+
+Modules can be rotated to any angle, with a step of 0.1 degree.
+
+Pads can be round, rectangular, oval or trapezoidal (the latter is
+necessary for the production of ultra high frequency circuits). In
+addition several basic pads can be grouped.
+
+Both the size of each pad, and the layers where they appear, can be
+adjusted. The drilling of holes can be offset.
+
+Pcbnew can automatically generate copper planes, with automatic
+generation of thermal breaks around the pads concerned.
+
+The Module Editor can be accessed from the Pcbnew toolbar. The
+Editor allows creation or modification of a module from the PCB or a
+library and then saved to either. A module saved to the PCB can be
+subsequently saved to a library. In addition all modules on the PCB
+can be saved to a library by creating a footprint archive.
+
+Pcbnew generates in an extremely simple way all the documents
+necessary:
+
+* Fabrication outputs:
+** Files for Photoplotters in GERBER RS274X format.
+** Files for drilling in EXCELLON format.
+* Plot files in HPGL, SVG and DXF format.
+* Plot and drilling maps in POSTSCRIPT format.
+* Local Printout.
+
+General remarks
+~~~~~~~~~~~~~~~
+
+Pcbnew requires a 3 button mouse. The 3rd button is mandatory.
+
+Finally it should be noted that the diagrammatic tool Eeschema and
+CvPcb are needed to create the required netlists.
