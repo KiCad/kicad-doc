@@ -1,0 +1,12 @@
+This is a Docker image builder that produces an environment capable of building
+the KiCad documentation.
+
+.Method
+* Clone the docs
+** `git clone https://github.com/ciampix/kicad-doc`
+* Build the Docker image (you only need to do this once, or if you change the Dockerfile
+  or files that go into the image:
+** `docker build -t kicad-docs .`
+* Run the build script within docker:
+** `docker run -v /your/src/dir/:/mnt/src/kicad-docs kicad-docs /opt/make.docker.sh`
+
