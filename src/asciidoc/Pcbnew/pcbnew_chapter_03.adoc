@@ -212,7 +212,7 @@ The top menu bar provides access to the files (loading and saving), configuratio
 image:images/Pcbnew_top_menu_bar.png[]
 
 The File menu
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 image:images/Pcbnew_file_menu.png[]
 
@@ -220,7 +220,7 @@ image:images/Pcbnew_file_menu.png[]
 The File menu allows the loading and saving of printed circuits files, as well as printing and plotting the circuit board. It enables the export (with the format GenCAD 1.4) of the circuit for use with automatic testers.
 
 Edit menu
-~~~~~~~~~
+^^^^^^^^^
 
 Allows some global edit actions:
 
@@ -228,28 +228,28 @@ image:images/Pcbnew_edit_menu.png[]
 
 
 View menu
-~~~~~~~~~
+^^^^^^^^^
 
 image:images/Pcbnew_view_menu.png[]
 
 Zoom functions and 3D board display.
 
 Sub menu View/3D display
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Opens the 3D board viewer. Here is a sample:
 
 image:images/Sample_3D_board.png[]
 
 Place menu
-~~~~~~~~~~
+^^^^^^^^^^
 
 Same function as the right-hand toolbar.
 
 image:images/Pcbnew place menu.png[]
 
 The Preferences menu
-~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^
 
 image:images/Pcbnew_preferences_menu.png[]
 
@@ -262,7 +262,7 @@ Allows:
 * Creation, edition (and re-read) of the hot keys file.
 
 Dimensions menu
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 An important menu.
 image:images/Pcbnew_dimensions_menu.png[]
@@ -275,12 +275,12 @@ Allows adjustment of:
 * Setting the global values for solder mask and solder paste layers
 
 Tools menu
-~~~~~~~~~~
+^^^^^^^^^^
 
 image:images/Pcbnew_place_menu.png[]
 
 The Design Rules menu
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 image:images/Pcbnew_design_rules_menu.png[]
 
@@ -290,7 +290,7 @@ Setting the Design rules (tracks and vias sizes, clerances).
 
 
 The Display 3D Model menu
-~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Brings up the 3D viewer used to display the circuit board in 3
 dimensions.
@@ -298,6 +298,269 @@ dimensions.
 image:images/Pcbnew_display_model_menu.png[]
 
 The Help menu
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
-Provides access to the user manuals and to the version information menu (Pcbnew About).
+Provides access to the user manuals and to the version information
+menu (Pcbnew About).
+
+Using icons on the top toolbar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This toolbar gives access to the principal functions of Pcbnew.
+
+image:images/Pcbnew_top_toolbar.png[]
+
+[cols="2,10"]
+|====
+| image:../common/icons/new.png[]
+    | Creation of a new printed circuit.
+| image:../common/icons/open_brd_file.png[]
+    | Opening of an old printed circuit.
+| image:../common/icons/save.png[]
+    | Save printed circuit.
+| image:../common/icons/sheetset.png[]
+    | Selection of the page size and modification of the file properties.
+| image:../common/icons/module_editor.png[]
+    | Opens module editor (Modedit) to display/edit library or pcb modules.
+| image:../common/icons/undo.png[] image:../common/icons/redo.png[]
+    | Undo/Redo last commands (10 levels)
+| image:../common/icons/print_button.png[]
+    | Display print menu.
+| image:../common/icons/plot.png[]
+    | Display plot menu.
+| image:../common/icons/zoom_in.png[] image:../common/icons/zoom_out.png[]
+    | Zoom in and Zoom out (relative to the centre of screen).
+| image:../common/icons/zoom_redraw.png[]
+    | Redraw the screen
+| image:../common/icons/zoom_fit_in_page.png[]
+    | Fit to page
+| image:../common/icons/find.png[]
+    | Find module or text.
+| image:../common/icons/netlist.png[]
+    | Netlist operations (selection, reading, testing and compiling).
+| image:../common/icons/drc.png[]
+    | DRC (Design Rule Check): Automatic check of the tracks.
+| image:images/Pcbnew_toolbar_layer_select_dropdown.png[]
+    | Selection of the working layer.
+| image:images/Pcbnew_layer_pair_indicator.png[]
+    | Selection of layer pair (for vias)
+| image:../common/icons/mode_module.png[]
+    | Footprint mode: when active this enables module options in the
+    pop-up window.
+| image:../common/icons/mode_track.png[]
+    | Routing mode: when active this enables routing options in the
+    pop-up window
+| image:../common/icons/web_support.png[]
+    | Direct access to the web router FreeRoute
+|====
+
+Auxiliary toolbar
+^^^^^^^^^^^^^^^^^
+
+[cols="2,10"]
+|====
+| image:images/Pcbnew_track_thickness_dropdown.png[]
+    | Selection of thickness of track already in use.
+| image:images/Pcbnew_via_size_dropdown.png[]
+    | Selection of a dimension of via already in use.
+| image:../common/icons/auto_track_width.png[]
+    | Automatic track width: if enabled when creating a new track,
+    when starting on an existing track, the width of the new track
+    is set to the width of the existing track.
+| image:images/Pcbnew_grid_size_dropdown.png[]
+    | Selection of the grid size.
+| image:images/Pcbnew_zoom_factor_dropdown.png[]
+    | Selection of the zoom.
+|====
+
+Right-hand side toolbar
+~~~~~~~~~~~~~~~~~~~~~~~
+
+image:images/Pcbnew_right_toolbar.png[float="right"]
+
+This toolbar gives access to the editing tool to change the PCB
+shown in Pcbnew:
+
+    * Placement of modules, tracks, zones of copper, texts, etc.
+    * Net Highlighting.
+    * Creating notes, graphic elements, etc.
+    * Deleting elements.
+
+[cols="2,10",width="90%"]
+|====
+| image:../common/icons/cursor.png[]
+    | Select the standard mouse mode.
+| image:../common/icons/net_highlight.png[]
+    | Highlight net selected by clicking on a track or pad.
+| image:../common/icons/tool_ratsnest.png[]
+    | Display local ratsnest (Pad or Module).
+| image:../common/icons/module.png[]
+    | Add a module from a library.
+| image:../common/icons/add_tracks.png[]
+    | Placement of tracks and vias.
+| image:../common/icons/add_zone.png[]
+    | Placement of zones (copper planes).
+| image:../common/icons/add_keepout_area.png[]
+    | Placement of keepout areas ( on copper layers ).
+| image:../common/icons/auto_track_width.png[]
+    | Keepout are areas with no tracks, or/and vias or/and copper areas
+| image:../common/icons/add_line.png[]
+    | Draw Lines on technical layers (i.e. not a copper layer).
+| image:../common/icons/add_circle.png[]
+    | Draw Circles on technical layers (i.e. not a copper layer).
+| image:../common/icons/add_arc.png[]
+    | Draw Arcs on technical layers (i.e. not a copper layer).
+| image:../common/icons/add_text.png[]
+    | Placement of text.
+| image:../common/icons/add_dimension.png[]
+    | Draw Dimensions on technical layers (i.e. not the copper layer).
+| image:../common/icons/add_mires.png[]
+    | Draw Alignment Marks (appearing on all layers).
+| image:../common/icons/delete.png[]
+    | Delete element pointed to by the cursor
+
+    *Note:*
+    When Deleting if several superimposed elements are
+    pointed to priority is given to the smallest (in the decreasing
+    set of priorities tracks, text, module). The function “Undelete”
+    of the upper toolbar allows the cancellation of the last item
+    deleted.
+| image:../common/icons/pcb_offset.png[]
+    | Offset adjust for drilling and place files.
+| image:../common/icons/grid_select_axis.png[]
+    | Grid origin. (grid offset). Useful mainly for edition and
+    placement of footprints. Can also be set in Dimensions/Grid menu.
+|====
+
+
+Left-hand side toolbar
+~~~~~~~~~~~~~~~~~~~~~~
+
+image:images/Pcbnew_left_toolbar.png[float="right"]
+
+The left hand-side toolbar provides display and control options that
+affect Pcbnew's interface.
+
+[cols="2,10",width="90%"]
+|====
+| image:../common/icons/drc_off.png[]
+    | Turns DRC (Design Rule Checking) on/off. *Caution:* when DRC
+    is off incorrect connections can be made.
+| image:../common/icons/grid.png[]
+    | Turn grid display on/off *Note:* a small grid may not be displayed
+    unless zoomed in far enough
+| image:../common/icons/polar_coord.png[]
+    | Polar display of the relative co-ordinates on the status bar on/off.
+| image:../common/icons/unit_inch.png[] image:../common/icons/unit_mm.png[]
+    | Display/entry of coordinates or dimensions in inches or millimeters.
+| image:../common/icons/cursor_shape.png[]
+    | Change cursor display shape.
+| image:../common/icons/general_ratsnest.png[]
+    | Display general rats nest (incomplete connections between modules).
+| image:../common/icons/local_ratsnest.png[]
+    | Display module rats nest dynamically as it is moved.
+| image:../common/icons/auto_delete_track.png[]
+    | Enable/Disable automatic deletion of a track when it is redrawn.
+| image:../common/icons/show_zone.png[]
+    | Show filled areas in zones
+| image:../common/icons/show_zone_disable.png[]
+    | Do not show filled areas in zones
+| image:../common/icons/show_zone_outline_only.png[]
+    | Show only outlines of filled areas in zones
+| image:../common/icons/pad_sketch.png[]
+    | Display of pads in sketch mode on/off.
+| image:../common/icons/via_sketch.png[]
+    | Display mode for vias (Filled/Sketch)
+| image:../common/icons/showtrack.png[]
+    | Display of tracks in sketch mode on/off.
+| image:../common/icons/contrast_mode.png[]
+    | High contrast display mode on/off. In this mode the active
+    layer is displayed normally, all the other layers are displayed
+    in gray. Useful for working on multi-layer circuits.
+| image:../common/icons/layers_manager.png[]
+    | Hide/Show the Layers manager
+| image:../common/icons/mw_toolbar.png[]
+    | Access to microwaves tools. Under development
+|====
+
+Pop-up windows and fast editing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A right click of the mouse open a pop-up window. Its contents
+depends on the element pointed at by the cursor.
+
+This gives immediate access to:
+
+* Changing the display (centre display on cursor, zoom in or out or
+selecting the zoom).
+* Setting the grid size.
+* Additionally a right click on an element enables editing of the most
+usually modified element parameters.
+
+The screenshot below shows what the pop-up window looks like.
+
+Available modes
+~~~~~~~~~~~~~~~
+
+There are 3 modes when using pop up menus. In the pop-up menus,
+these modes add or remove some specific commands.
+
+[cols="2,5"]
+|====
+| image:../common/icons/mode_module.png[] and
+  image:../common/icons/mode_track.png[] disabled
+    | Normal mode
+| image:../common/icons/mode_track.png[] enabled
+    | Footprint mode
+| image:../common/icons/mode_track.png[] enabled
+    | Tracks mode
+|====
+
+Normal mode
+^^^^^^^^^^^
+
+* Pop-up menu with no selection:
+
+image:images/Pcbnew_popup_normal_mode.png[]
+
+* Pop-up menu with track selected:
+
+image:images/Pcbnew_popup_normal_mode_track.png[]
+
+* Pop-up menu with footprint selected:
+
+image:images/Pcbnew_popup_normal_mode_footprint.png[]
+
+Footprint mode
+^^^^^^^^^^^^^^
+
+Same cases in Footprint Mode (image:../common/icons/mode_module.png[] enabled)
+
+* Pop-up menu with no selection:
+
+image:images/Pcbnew_popup_footprint_mode.png[]
+
+* Pop-up menu with track selected:
+
+image:images/Pcbnew_popup_footprint_mode_track.png[]
+
+* Pop-up menu with footprint selected:
+
+image:images/Pcbnew_popup_footprint_mode_footprint.png[]
+
+Tracks mode
+^^^^^^^^^^^
+
+Same cases in Track Mode (image:../common/icons/mode_track.png[] enabled)
+
+* Pop-up menu with no selection:
+
+image:images/Pcbnew_popup_track_mode.png[]
+
+* Pop-up menu with track selected:
+
+image:images/Pcbnew_popup_track_mode_track.png[]
+
+* Pop-up menu with footprint selected:
+
+image:images/Pcbnew_popup_track_mode_footprint.png[]
