@@ -5,6 +5,8 @@ DOCNAME:= $(shell basename `pwd`)
 
 DOCTITLE:= $(shell echo $(DOCNAME)|sed -e 's/_/ /')
 
+DOCCHAPTERS:=$(wildcard $(DOCNAME)_chapter_??.adoc)
+
 #I like HTML in Unix style text
 ASCIIDOCVAR:= -a 'newline=\n' -v
 
@@ -57,7 +59,8 @@ help:
 
 #Build/update the single language NN i18n strings .po file
 $(PODIR)/%.po: $(DOCNAME).adoc
-	@po4a-updatepo -f asciidoc -v -M utf-8 -m $(DOCNAME).adoc -p $@
+	@po4a-updatepo -f asciidoc -v -M utf-8 -m $(DOCNAME).adoc $(foreach l,$(DOCCHAPTERS),-m $(l)) -p $@
+#	@po4a-updatepo -f asciidoc -v -M utf-8 $(foreach l,$(shell ls -1 $(DOCNAME)*.adoc), -m $(l)) -p $@
 
 .PHONY: po-all
 po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
@@ -73,7 +76,13 @@ po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
 
 #Make the single language NN i18n file
 $(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc $(PODIR)/addendum.%
-	po4a-translate -f asciidoc -a $(PODIR)/addendum.$* -A utf-8 -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@
+	po4a-translate -f asciidoc -a $(PODIR)/addendum.$* -A utf-8 -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@ ; #translate master doc
+	sed -i -e 's/include::$(DOCNAME)_chapter_\(..\)\.adoc/include::$(DOCNAME)_chapter_\1-$*.adoc/' $(DOCNAME)-$*.adoc      #fix translated include files
+	$(foreach l, $(DOCCHAPTERS) , po4a-translate -f asciidoc -A utf-8 -M utf-8 -m $(l) -p $(PODIR)/$*.po -k 0 -l $(shell basename -s .adoc $(l))-$*.adoc ; ) #translate chapter files
+
+#	if [ -e $(DOCNAME)_chapter_01.adoc]; then \
+#	    $(foreach l, $(DOCCHAPTERS) , po4a-translate -f asciidoc -A utf-8 -M utf-8 -m $(l) -p $(PODIR)/$*.po -k 0 -l $(shell basename -s .adoc $(l))_$*.adoc ; )  \
+#	fi
 
 .PHONY: adoc-all
 adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
@@ -185,4 +194,5 @@ clean:
 	rm -f $(DOCNAME).epub
 	rm -f $(DOCNAME).odt
 	rm -f $(DOCNAME)-*.*
+	rm -f $(DOCNAME)_chapter_*-*.*
 	rm -f docinfo.xml
