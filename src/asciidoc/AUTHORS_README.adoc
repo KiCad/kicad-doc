@@ -1,0 +1,40 @@
+README for doc authors
+======================
+
+To start writing a new document, follow these steps:
+
+1) read the README.adoc for the preliminary requirements
+
+2) create a directory with the very same name of the doc 
+title (use the same upper/lover case combination) with
+underscore for space. This was choosen to semplify the
+Makefile
+
+3) copy a master document from other docs to semplify 
+coherency and change whatever needs to be changed
+
+4) follow the convention to call the name of the 
+document with the same name of the doc project dir
+
+5) if the document is big and you want to break it into
+separate chapters, follow the convention of calling the
+chapter files as:
+
+ docname_chapter_NN.adoc
+
+where NN is the chapter number. This will guarantee automatic inclusion
+of the chapters into the final output formats.
+
+6) when you reach a worth point on your document,
+create a patch with:
+
+ git add docname
+ git commit -m "Added manual docname, first draft"
+ git format-patch HEAD^
+
+and send it to the devels.
+
+Please, before committing any file, check for functionality, to avoid
+breaking automatic compilation of docs.
+
+Happy writing!
