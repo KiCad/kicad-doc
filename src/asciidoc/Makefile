@@ -90,7 +90,7 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 ################ HTML
 
 #English html
-$(DOCNAME).html: $(DOCNAME).adoc
+$(DOCNAME).html: $(DOCNAME).adoc $(DOCCHAPTERS)
 	asciidoc $(TOC2) $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc ;
 
 #I18n html
@@ -106,7 +106,7 @@ html-all: html $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).html)
 ################ DOCBOOK
 
 #English docbook
-$(DOCNAME).xml: $(DOCNAME).adoc
+$(DOCNAME).xml: $(DOCNAME).adoc $(DOCCHAPTERS)
 	asciidoc -b docbook $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc
 
 #I18n docbook
@@ -122,7 +122,7 @@ docbook-all: docbook $(DOCNAME).xml $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).xml
 ################ PDF
 
 #English pdf
-$(DOCNAME).pdf: $(DOCNAME).adoc
+$(DOCNAME).pdf: $(DOCNAME).adoc $(DOCCHAPTERS)
 	a2x -f pdf $(ASCIIDOCVAR) --dblatex-opts $(DBLATEXOPTS) $(DOCNAME).adoc
 
 #I18n pdf
@@ -146,7 +146,7 @@ $(DOCNAME)-%-docinfo.xml:
 	$(shell sed -e 's/DOCTITLE/$(DOCTITLE)/' ../epub-cover-docinfo-template.xml > $(DOCNAME)-$*-docinfo.xml)
 
 #English epub
-$(DOCNAME).epub: $(DOCNAME).adoc $(DOCNAME)-docinfo.xml
+$(DOCNAME).epub: $(DOCNAME).adoc $(DOCCHAPTERS) $(DOCNAME)-docinfo.xml
 	a2x -f epub -a docinfo $(DOCNAME).adoc
 
 #I18n epub
