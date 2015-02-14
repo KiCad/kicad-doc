@@ -1,6 +1,7 @@
-[[getting-started-in-kicad]]
+:author: The KiCad Team
+
 Getting Started in Kicad
-------------------------
+========================
 
 _Essential and concise guide to mastering KiCad for the successful
 development of sophisticated electronic printed circuit boards._
@@ -10,11 +11,9 @@ development of sophisticated electronic printed circuit boards._
 
 This document is Copyright © 2010–2011 by its contributors as listed
 below. You may distribute it and/or modify it under the terms of either
-the GNU General Public License (
-http://www.gnu.org/licenses/gpl.html[http://www.gnu.org/licenses/gpl.html]
-), version 3 or later, or the Creative Commons Attribution License (
-http://creativecommons.org/licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]
-), version 3.0 or later.
+the GNU General Public License (http://www.gnu.org/licenses/gpl.html),
+version 3 or later, or the Creative Commons Attribution License
+(http://creativecommons.org/licenses/by/3.0/), version 3.0 or later.
 
 All trademarks within this guide belong to their legitimate owners.
 
@@ -183,7 +182,7 @@ Draw electronic schematics
 In this section we are going to learn how to draw an electronic
 schematic using KiCad.
 
-1.  Under Windows run kicad.exe. Under Linux type kicad in your
+1. Under Windows run kicad.exe. Under Linux type kicad in your
 Terminal. You are now in the main window of the KiCad project manager.
 From here you have access to five stand-alone software tools:
 __EESchema__, __Cvpcb__, __PCBnew__, _GerbView_ and
@@ -191,23 +190,27 @@ __Bitmap2Component__. Refer to the work-flow chart for an idea of what
 all these tools are used for.
 +
 image:images/kicad_main_window.png[kicad_main_window_png]
-2.  Create a new project: *File* -> **New**. Click on the 'New Folder'
+
+2. Create a new project: *File* -> **New**. Click on the 'New Folder'
 button, and give your new folder the same name as your project: 'tute1'.
 Open the new folder by double clicking on it. All your project files
 will be saved here. Name the project file 'tute1'. The project file will
 automatically take the extension .pro.
-3.  Let's begin by creating a schematic. Start the schematic editor
+
+3. Let's begin by creating a schematic. Start the schematic editor
 __EESchema__, image:images/eeschema.png[eeschema_png]. It is the first
 button from the left. If an error dialogue appears telling you that a
 project file was not found, ignore it and click OK.
-4.  First thing, save the whole schematic project: *File* -> **Save
+
+4. First thing, save the whole schematic project: *File* -> **Save
 Whole Schematic Project**. Click on the 'Page Settings' icon
 image:images/sheetset.png[sheetset_png] on the top toolbar. Set the Page
 Size as 'A4' and enter the Title as 'Tute 1'. You will see that more
 information can be entered here if necessary. Click OK. This information
 will populate the schematic sheet at the bottom right corner. Use the
 mouse wheel to zoom in.
-5.  We will now place our first component. Click on the 'Add components'
+
+5. We will now place our first component. Click on the 'Add components'
 icon
 image:images/100002010000001A0000001ACFBFFF00.png[100002010000001A0000001ACFBFFF00_png]
 in the right toolbar. The same functionality is achieved by pressing the
@@ -218,20 +221,25 @@ NOTE: You can see a list of all available shortcut keys by pressing the
 component. The Component Selection window will appear. Click on the
 'List All' button. The Select Library window will appear. Here you have
 a list of all available libraries.
-6.  Select the 'device' library by double clicking on it. The Select
+
+6. Select the 'device' library by double clicking on it. The Select
 Component window will appear. Here you have a list of components
 belonging to the 'device' library, which is a quite generic and useful
 library.
-7.  Scroll down and double click on the resistor 'R'. This will close
+
+7. Scroll down and double click on the resistor 'R'. This will close
 the 'Select Component' window and take you back to your schematic sheet.
-8.  Place the component in the schematic sheet by clicking where you
+
+8. Place the component in the schematic sheet by clicking where you
 want it to be. Click on the magnifier to zoom in on the component.
 Alternatively, use the mouse wheel to zoom in and zoom out.
 Unfortunately, the panning option has not yet been implemented.
-9.  Hover the mouse over the component 'R' and press the r key. Notice
+
+9. Hover the mouse over the component 'R' and press the r key. Notice
 how the component rotates.
 +
 NOTE: You do not need to actually click on the component to rotate it.
+
 10. Right click in the middle of the component and select *Edit
 Component* -> **Value**. You can achieve the same result by hovering
 over the component and pressing the v key. Alternatively, the e key will
@@ -239,6 +247,7 @@ take you to the more general Edit window. Notice how the right-click
 window below shows all possible shortcut keys for all available actions.
 +
 image:images/100000000000026B000001BD635CBA2F.png[100000000000026B000001BD635CBA2F_png]
+
 11. The Component value window will appear. Replace the current value
 'R' with '1k'. Click OK.
 +
@@ -247,12 +256,15 @@ automatically later on. The value inside the resistor should now be
 '1k'.
 +
 image:images/10000000000000B0000000463CCB103A.png[10000000000000B0000000463CCB103A_png]
+
 12. To place another resistor, simply click where you want the resistor
 to appear. The Component Selection window will appear again.
+
 13. The resistor you previously chose is now in your history list,
 appearing as 'R'. Click OK and place the component.
 +
 image:images/100000000000016C000000E147EEA45E.png[100000000000016C000000E147EEA45E_png]
+
 14. In case you make a mistake and want to delete a component, right
 click on the component and click 'Delete Component'. This will remove
 the component from the schematic. Alternatively, you can hover over the
@@ -261,9 +273,11 @@ component you want to delete and press the del key.
 NOTE: You can rename any default shortcut key by going to *Preferences*
 -> **Hotkeys**. Do not forget to save the new keys with *Preferences* ->
 **Save preferences**.
+
 15. You can also duplicate a component already on your schematic sheet
 by hovering over it and pressing the c key. Click where you want to
 place the new duplicated component.
+
 16. Right click on the second resistor. Select 'Drag Component'.
 Reposition the component and left click to drop. The same functionality
 can be achieved by hovering over the component and by pressing the g
@@ -274,35 +288,44 @@ NOTE: *Right-Click* -> *Move component* (equivalent to the m key option)
 is also a valuable option for moving anything around, but it is better
 to use this only for component labels and components yet to be
 connected. We will see later on why this is the case.
+
 17. Edit the second resistor by hovering over it and pressing the v key.
 Replace 'R' with '100'. You can undo any of your editing actions with
 the ctrl+z key.
+
 18. Change the grid size. You have probably noticed that on the
 schematic sheet all components are snapped onto a large pitch grid. You
 can easily change the size of the grid by *Right-Click* -> **Grid
 select**. __In general, it is recommendable to use a grid of 25.0 mils
 for the schematic sheet__.
+
 19. Repeat the add-component steps, however this time select the
 'microcontrollers' library instead of the 'device' library and pick the
 'PIC12C508A' component instead of the 'R' component from it.
+
 20. Hover the mouse over the microcontroller component. Press the y key
 or the x key on the keyboard. Notice how the component is flipped over
 its x axis or its y axis. Press the key again to return it to its
 original orientation.
+
 21. Repeat the add-component steps, this time choosing the 'device'
 library and picking the 'LED' component from it.
+
 22. Organise all components on your schematic sheet as shown below.
 +
 image:images/1000000000000279000001D2A3715F27.png[1000000000000279000001D2A3715F27_png]
+
 23. We now need to create the schematic component 'MYCONN3' for our
 3-pin connector. You can jump to the section titled _Make a Schematic
 Component in KiCad_ to learn how to make this component from scratch and
 then return to this section to continue with the board.
 +
 -> _jump to the section: Make a Schematic Component in KiCad_
+
 24. You can now place the freshly made component. Press the a key and
 select 'List All'. Choose the library 'myLib' and pick the component
 'MYCONN3'.
+
 25. The component identifier 'J?' will appear under the 'MYCONN3' label.
 If you want to change its position, right click on 'J?' and click on
 'Move Field' (equivalent to the m key option). It might be helpful to
@@ -310,23 +333,27 @@ zoom in before/while doing this. Reposition 'J?' under the component as
 shown below. Labels can be moved around as many times as you please.
 +
 image:images/10000000000000950000007B843ADE6A.png[10000000000000950000007B843ADE6A_png]
+
 26. It is time to place the power and ground symbols. Click on the
 'Place a power port' button image:images/add_power.png[add_power_png] on
 the right toolbar. Alternatively, press the a key and choose the 'power'
 library. In the component selection window, click on the 'List All'
 button. Scroll down and select 'VCC' from the Select Component window.
 Click OK.
+
 27. Click above the pin of the 1k resistor to place the VCC part. Click
 on the area above the microcontroller 'VDD'. In the 'Component Selection
 history' section select 'VCC' and place it next to the VDD pin. Repeat
 the add process again and place a VCC part above the VCC pin of
 'MYCONN3'.
+
 28. Repeat the add-pin steps but this time select the GND part. Place a
 GND part under the GND pin of 'MYCONN3'. Place another GND symbol on the
 right of the VSS pin of the microcontroller. Your schematic should now
 look something like this:
 +
 image:images/1000000000000303000002A0130916D9.png[1000000000000303000002A0130916D9_png]
+
 29. Next, we will wire all our components. Click on the 'Place a wire'
 icon
 image:images/100002010000001A0000001A10CC204F.png[100002010000001A0000001A10CC204F_png]
@@ -334,6 +361,7 @@ on the right toolbar. **NOTE**: Be careful not to pick 'Place a bus',
 which appears directly beneath this button but has thicker lines. The
 section _Bus Connections in KiCad_ will explain how to use a bus
 section.
+
 30. Click on the little circle at the end of pin 7 of the
 microcontroller and then click on the little circle on pin 2 of the LED.
 You can zoom in while you are placing the connection.
@@ -344,18 +372,22 @@ option will keep the wires connected. Review step 24 in case you have
 forgotten how to move a component.
 +
 image:images/1000000000000134000000D9A9B4ED54.png[1000000000000134000000D9A9B4ED54_png]
+
 31. Repeat this process and wire up all the other components as shown
 below. To terminate a wire just double-click. When wiring up the VCC and
 GND symbols, the wire should touch the bottom of the VCC symbol and the
 middle top of the GND symbol. See the screenshot below.
 +
 image:images/100000000000033200000294961F4BAD.png[100000000000033200000294961F4BAD_png]
+
 32. We will now consider an alternative way of making a connection using
 labels. Pick a net labelling tool by clicking on the 'Place net name'
 icon image:images/label.png[label_png] on the right toolbar. You can
 also use the l key.
+
 33. Click in the middle of the wire connected to pin 6 of the
 microcontroller. Name this label 'INPUT'.
+
 34. Follow the same procedure and place another label on line on the
 right of the 100 ohm resistor. Also name it 'INPUT'. The two labels,
 having the same name, create an invisible connection between pin 6 of
@@ -363,32 +395,39 @@ the PIC and the 100 ohm resistor. This is a useful technique when
 connecting wires in a complex design where drawing the lines would make
 the whole schematic messier. To place a label you do not necessarily
 need a wire, you can simply attach the label to a pin.
+
 35. Labels can also be used to simply label wires for informative
 purposes. Place a label on pin 7 of the PIC. Enter the name 'uCtoLED'.
 Name the wire between the resistor and the LED as 'LEDtoR'. Name the
 wire between 'MYCONN3' and the resistor as 'INPUTtoR'.
+
 36. You do not have to label the VCC and GND lines because the labels
 are implied from the power objects they are connected to.
+
 37. Below you can see what the final result should look like.
 +
 image:images/1000000000000340000002A2DDE0F6DA.png[1000000000000340000002A2DDE0F6DA_png]
+
 38. Let's now deal with unconnected wires. Any pin or wire that is not
 connected will generate a warning when checked by KiCad. To avoid these
 warnings you can either instruct the program that the unconnected wires
 are deliberate or manually flag each unconnected wire or pin as
 unconnected.
+
 39. Click on the 'Place no connect flag' icon
 image:images/noconn.png[noconn_png] on the right toolbar. Click on pins
 2, 3, 4 and 5. An X will appear to signify that the lack of a wire
 connection is intentional.
 +
 image:images/10000000000001C8000000FEEDCB5FB8.png[10000000000001C8000000FEEDCB5FB8_png]
+
 40. Some components have power pins that are invisible. You can make
 them visible by clicking on the 'Show hidden pins' icon
 image:images/hidden_pin.png[hidden_pin_png] on the left toolbar. Hidden
 power pins get automatically connected if VCC and GNS naming is
 respected. Generally speaking, you should try not to make hidden power
 pins.
+
 41. It is now necessary to add a 'Power Flag' to indicate to KiCad that
 power comes in from somewhere. Press the a key, select 'List All',
 double click on the 'power' library and search for 'PWR_FLAG'. Place two
@@ -398,18 +437,22 @@ image:images/100000000000010700000125A4376EBB.png[100000000000010700000125A4376E
 +
 NOTE: This will avoid the classic schematic checking warning: Warning
 Pin power_in not driven (Net xx)
+
 42. Sometimes it is good to write comments here and there. To add
 comments on the schematic use the 'Place graphic text (comment)' icon
 image:images/add_text.png[add_text_png] on the right toolbar.
+
 43. All components now need to have unique identifiers. In fact, many of
 our components are still named 'R?' or 'J?'. Identifier assignation can
 be done automatically by clicking on the 'Annotate schematic' icon
 image:images/annotate.png[annotate_png].
+
 44. In the Annotate Schematic window, select 'Use the entire schematic'
 and click on the 'Annotation' button. Click OK in the confirmation
 message and then click 'Close'. Notice how all the '?' have been
 replaced with numbers. Each identifier is now unique. In our example,
 they have been named 'R1', 'R2', 'U1', 'D1' and 'J1'.
+
 45. We will now check our schematic for errors. Click on the 'Perform
 Electric Rules Check' icon image:images/erc.png[erc_png]. Click on the
 'Test ERC' button. A report informing you of any errors or warnings such
@@ -418,27 +461,33 @@ Warnings. In case of errors or warnings, a small green arrow will appear
 on the schematic in the position where the error or the warning is
 located. Check 'Write ERC report' and press the 'Test ERC' button again
 to receive more information about the errors.
+
 46. The schematic is now finished. We can now create a Netlist file to
 which we will add the footprint of each component. Click on the 'Netlist
 generation' icon image:images/netlist.png[netlist_png] on the top
 toolbar. Click on 'Netlist' then click on 'save'. Save under the default
 file name.
+
 47. You can now quit the schematic editor. From KiCad, click on the 'Run
 Cvpcb' icon image:images/icon_cvpcb_small.png[icon_cvpcb_small_png] on
 the top toolbar. If a missing file error window pops up, just ignore it
 and click OK.
+
 48. _Cvpcb_ allows you to link all the components in your schematic with
 footprints in the KiCad library. The pane on the left shows all the
 components used in your schematic. Here select 'D1'. In the pane on the
 right you have all the available footprints, here scroll down to 'LEDV'
 and double click on it. image:images/cvpcb.png[cvpcb_png]
+
 49. It is possible that the pane on the right shows only a selected
 subgroup of available footprints. This is because KiCad is trying to
 suggest to you a subset of suitable footprints. Click on the icon
 image:images/module_full_list.png[module_full_list_png] to deselect this
 filter.
+
 50. For 'J1' select the '3PIN_6mm' footprint. For 'R1' and 'R2' select
 the 'R1' footprint. Select 'DIP-8_300' for 'U1'.
+
 51. If you are interested in knowing what the footprint you are choosing
 looks like, you have two options. You can click on the 'View selected
 footprint' icon image:images/show_footprint.png[show_footprint_png] for
@@ -447,6 +496,7 @@ footprint list documentation' icon
 image:images/datasheet.png[datasheet_png] and you will get a multi-page
 PDF document with all available footprints. You can print it out and
 check your components to make sure that the dimensions match.
+
 52. You are done. You can now update your netlist file with all the
 associated footprints. Click on *File* -> **Save As**. The default name
 'tute1.net' is fine, click save. Otherwise you can use the icon
@@ -455,19 +505,24 @@ Your netlist file has now been updated with all the footprints. Note
 that if you are missing the footprint of any device, you will need to
 make your own footprints. This will be explained in a later section of
 this document.
+
 53. You can close _Cvpcb_ and go back to the _EESchema_ schematic
 editor. Save the project by clicking on *File* -> **Save Whole Schematic
 Project**. Close the schematic editor.
+
 54. Switch to the KiCad project manager.
+
 55. The netlist file describes all components and their respective pin
 connections. The netlist file is actually a text file that you can
 easily inspect, edit or script.
 +
 NOTE: Library files (__*.lib__) are text files too and they are also
 easily editable or scriptable.
+
 56. To create a bill of materials, go to the _EESchema_ schematic editor
 and click on the 'Bill of materials' icon image:images/bom.png[bom_png]
 on the top toolbar.
+
 57. Click OK and then 'Save'. You can inspect the bill of materials with
 any text editor.
 
@@ -489,9 +544,11 @@ connect together pin to pin. Use the label option (press the l key) to
 label pin 4 of the P4 part. Name this label 'a1'. Now let's press the
 Ins key to have the same action automatically performed on the pin below
 pin 4 (PIN 3). Notice how the label is automatically renamed 'a2'.
+
 2.  Press the Ins Key two more times. The Ins key corresponds to the
 action 'Repeat last action' and it is an infinitely useful command that
 can make your life a lot easier.
+
 3.  Repeat the same labelling action on the two other connectors CONN_2
 and CONN_3 and you are done. If you proceed and make a PCB you will see
 that the three connectors are connected to each other. Figure 2 shows
@@ -502,26 +559,33 @@ and bus line using the icon
 image:images/100000000000001C0000001C232C9272.png[100000000000001C0000001C232C9272_png],
 as shown in Figure 3. Mind, however, that there will be no effect on the
 PCB.
+
 4.  It should be pointed out that the short wire attached to the pins in
 Figure 2 is not strictly necessary. In fact, the labels could have been
 applied directly to the pins.
+
 5.  Let's take it one step further and suppose that you have a fourth
 connector named CONN_4 and, for whatever reason, its labelling happens
 to be a little different (b1, b2, b3, b4). Now we want to connect _Bus
 a_ with _Bus b_ in a pin to pin manner. We want to do that without using
 pin labelling (which is also possible) but by instead using labelling on
 the bus line, with one label per bus.
+
 6.  Connect and label CONN_4 using the labelling method explained
 before. Name the pins b1, b2, b3 and b4. Connect the pin to a series of
 'Wire to bus entry' using the icon
 image:images/add_line2bus.png[add_line2bus_png] and to a bus line using
 the icon image:images/add_bus.png[add_bus_png]. See Figure 4.
+
 7.  Put a label (press the l key option) on the bus of CONN_4 and name
 it 'b[1..4]'.
+
 8.  Put a label (press the l key option) on the previous a bus and name
 it 'a[1..4]'.
+
 9.  What we can now do is connect bus a[1..4] with bus b[1..4] using a
 bus line with the button image:images/add_bus.png[add_bus_png].
+
 10. By connecting the two buses together, pin a1 will be automatically
 connected to pin b1, a2 will be connected to b2 and so on. Figure 4
 shows what the final result looks like. NOTE: The 'Repeat last action'
@@ -529,6 +593,7 @@ option accessible via the Ins key can be successfully used to repeat
 period actions. For instance, the short wires connected to all pins in
 Figure 2, Figure 3 and Figure 4 have been placed with this option. Learn
 how to use it because it will make using KiCad easier.
+
 11. The 'Repeat last action' option accessible via the Ins key has also
 been extensively used to place the many series of 'Wire to bus entry'
 using the icon image:images/add_line2bus.png[add_line2bus_png].
@@ -545,9 +610,11 @@ This is done with the _PCBnew_ tool.
 image:images/pcbnew.png[pcbnew_png]. The 'PCBNew' window will open. If
 you get an error message saying that a _.brg_ file does not exist just
 ignore it and click OK.
+
 2.  Begin by entering some schematic information. Click on the 'Page
 settings' icon image:images/sheetset.png[sheetset_png] on the top
 toolbar. Set 'paper size' as 'A4' and 'title' as 'Tute 1'.
+
 3.  It is a good idea to start by setting the *clearance* and the
 *minimum track width* to those required by your PCB manufacturer. In
 general you can set the clearance to 0.015' and the minimum track width
@@ -557,25 +624,31 @@ not show already, click on the 'Net Classes Editor' tab. Change the
 Width' field to '0.01' as shown below. Measurements here are in inches.
 +
 image:images/10000000000001600000004C7BBE79B9.png[10000000000001600000004C7BBE79B9_png]
+
 4.  Click on the 'Global Design Rules' tab and set 'Min track width' to
 0.01'. Click the OK button to commit your changes and close the Design
 Rules Editor window.
+
 5.  Now we will import the netlist file. Click on the 'Read Netlist'
 icon image:images/netlist.png[netlist_png] on the top toolbar. Click on
 the 'Browse Netlist Files' button, select 'tute1.net' in the File
 selection dialogue, and click on 'Read Current Netlist'. Then click the
 'Close' button.
+
 6.  All components should now be visible in the top left hand corner
 just above the page. Scroll up if you cannot see them.
+
 7.  Select all components with the mouse and move them to the middle of
 the board. If necessary you can zoom in and out while you move the
 components.
+
 8.  All components are connected via a thin group of wires called
 __ratsnest__. Make sure that the 'Hide board ratsnest' button
 image:images/general_ratsnest.png[general_ratsnest_png] is pressed. In
 this way you can see the ratsnest linking all components. NOTE: The
 tool-tip is backwards; pressing this button actually displays the
 ratsnest.
+
 9.  You can move each component by hovering over it and pressing the g
 key. Click where you want to place them. Move all components around
 until you minimise the number of wire crossovers. NOTE: If instead of
@@ -584,29 +657,35 @@ m key you will later note that you lose the track connection (the same
 occurs in the schematic editor). Bottom line, always use the g key
 option.
 image:images/10000000000001FD000001B15F2BA74A.png[10000000000001FD000001B15F2BA74A_png]
+
 10. If the ratsnest disappears or the screen gets messy, right click and
 click 'Redraw view'. Note how one pin of the 100 ohm resistor is
 connected to pin 6 of the PIC component. This is the result of the
 labelling method used to connect pins. Labels are often preferred to
 actual wires because they make the schematic much less messy.
+
 11. Now we will define the edge of the PCB. Select 'PCB Edges' from the
 drop down menu in the top toolbar. Click on the 'Add graphic line or
 polygon' icon image:images/add_dashed_line.png[add_dashed_line_png] on
 the right toolbar. Trace around the edge of the board, clicking at each
 corner, and remember to leave a small gap between the edge of the green
 and the edge of the PCB.
+
 12. Next, connect up all the wires except GND. In fact, we will connect
 all GND connections in one go using a ground plane placed on the bottom
 copper (called __Back__) of the board.
+
 13. Now we must choose which copper layer we want to work on. Select
 'Front' in the drag down menu on the top toolbar. This is the top copper
 layer.
 image:images/10000000000000D30000010D5271F1F8.png[10000000000000D30000010D5271F1F8_png]
+
 14. If you decide, for instance, to do a 4 layer PCB instead, go to
 *Design Rules* -> *Layers Setup* and change 'Copper Layers' to 4. In the
 'Layers' table you can name layers and decide what they can be used for.
 Notice that there are very useful presets that can be selected via the
 'Preset Layers Groupings' menu.
+
 15. Click on the 'Add Tracks and vias' icon
 image:images/add_tracks.png[add_tracks_png] on the right toolbar. Click
 on pin 1 of 'J1' and run a track to pad 'R2'. Double-click to set the
@@ -614,63 +693,77 @@ point where the track will end. The width of this track will be the
 default 0.203 mm. You can change the track width from the drop-down menu
 in the top toolbar. Mind that by default you have only one track width
 available. image:images/pcbnew_1.png[pcbnew_1_png]
+
 16. If you would like to add more track widths g o to: *Design Rules* ->
 *Design Rules* -> *Global Design Rules* tab and at the bottom right of
 this window add any other width you would like to have available. You
 can then choose the widths of the track from the drop-down menu while
 you lay out your board. See the example below.
 image:images/1000000000000169000001178613965A.png[1000000000000169000001178613965A_png]
+
 17. Alternatively, you can add a Net Class in which you specify a set of
 options. Go to *Design Rules* -> *Design Rules* -> *Net Classes Editor*
 and add a new class called 'power'. Change the track width from 8 mil
 (indicated as 0.0080) to 24 mil (indicated as 0.0240). Next, add
 everything but ground to the ‘power’ class (select 'default' at left and
 'power' at right and use the arrows).
+
 18. If you want to change the grid size, *Right click* -> **Grid
 Select**. Be sure to select the appropriate grid size before or after
 laying down the components and connecting them together with tracks.
+
 19. Considering, for instance, that a 0.8mm BGA component has a pin to
 pin distance of about 30 mil (0.8mm), **it is generally commendable to
 set a grid size of 5 mil when you route**.
+
 20. Repeat this process until all wires, except pin 3 of J1, are
 connected. Your board should look like the example below.
 image:images/10000000000001F8000001B32F1802F1.png[10000000000001F8000001B32F1802F1_png]
+
 21. Let's now run a track on the other copper side of the PCB. Select
 'Back' in the drag down menu on the top toolbar. Click on the 'Add
 tracks and vias' icon image:images/add_tracks.png[add_tracks_png]. Draw
 a track between pin 3 of J1 and pin 8 of U1. This is actually not
 necessary since we could do this with the ground plane. Notice how the
 colour of the track has changed.
+
 22. **Go from pin A to pin B by changing layer**. It is possible to
 change the copper plane while you are running a track by placing a via.
 While you are running a track on the upper copper plane, right click and
 select 'Place Via' or simply press the v key. This will take you to the
 bottom layer where you can complete your track.
 image:images/100000000000026E000002155D41D893.png[100000000000026E000002155D41D893_png]
+
 23. When you want to inspect a particular connection you can click on
 the 'Net highlight' icon
 image:images/net_highlight.png[net_highlight_png] on the right toolbar.
 Click on pin 3 of J1. The track itself and all pads connected to it
 should become highlighted.
+
 24. Now we will make a ground plane that will be connected to all GND
 pins. Click on the 'Add Zones' icon
 image:images/add_zone.png[add_zone_png] on the right toolbar. We are
 going to trace a rectangle around the board, so click where you want one
 of the corners to be. In the dialogue that appears, set 'Pad in Zone' to
 'Thermal relief' and 'Zone edges orient' to 'H,V' and click OK.
+
 25. Trace around the outline of the board by clicking each corner in
 rotation. Double-click to finish your rectangle. Right click inside the
 area you have just traced. Click on 'Fill or Refill All Zones'. The
 board should fill in with green and look something like this:
 image:images/10000000000001830000015C1D559586.png[10000000000001830000015C1D559586_png]
+
 26. Run the design rules checker by clicking on the 'Perform Design
 Rules Check' icon image:images/erc.png[erc_png] on the top toolbar.
 Click on 'Start DRC'. There should be no errors. Click on 'List
 Unconnected'. There should be no unconnected track. Click OK to close
 the DRC Control dialogue.
+
 27. Save your file by clicking on *File* -> **Save**. To admire your
 board in 3D, click on *View* -> **3D Display**.
+
 28. You can drag your mouse around to rotate the PCB.
+
 29. Your board is complete. To send it off to a manufacturer you will
 need to generate all Gerber files.
 
@@ -685,8 +778,10 @@ board for you.
 1.  From KiCad, open the _PCBNew_ software tool and load your board file
 by clicking on the icon
 image:images/open_document.png[open_document_png].
+
 2.  Click on *File* -> **Plot**. Select 'Gerber' as the 'Plot Format'
 and select the folder in which to put all Gerber files.
+
 3.  These are the layers you need to select for making a typical 2-layer
 PCB:
 
@@ -708,8 +803,10 @@ file* or click on the icon
 image:images/gerber_file.png[gerber_file_png]. Load all generated Gerber
 files one at a time. Note how they all get displayed one on top of the
 other.
+
 2.  Use the menu on the right to select/deselect which layer to show.
 Carefully inspect each layer before sending them for production.
+
 3.  To generate the drill file, from _PCBNew_ go again for the *File* ->
 *Plot* option. Default settings should be fine.
 
@@ -731,11 +828,13 @@ Java Web Start' button. Give it some seconds (you will need to be
 connected to the Internet) and the FreeRouter main window will open.
 Click on the 'Open Your Own Design' button, browse for the _dsn_ file
 and load it.
+
 2.  FreeRouter has some features that KiCad does not currently have,
 both for manual routing and for automatic routing. FreeRouter operates
 in two main steps: first, routing the board and then optimising it. Full
 optimisation can take a long time, however you can stop it at any time
 need be.
+
 3.  You can start the automatic routing by clicking on the 'Autorouter'
 button on the top bar. The bottom bar gives you information about the
 on-going routing process. If the 'Pass' count gets above 30, your board
@@ -743,13 +842,16 @@ probably can not be autorouted with this router. Spread your components
 out more or rotate them better and try again. The goal in rotation and
 position of parts is to lower the number of crossed airlines in the
 ratsnest.
+
 4.  Making a left-click on the mouse can stop the automatic routing and
 automatically start the optimisation process. Another left-click will
 stop the optimisation process. Unless you really need to stop, it is
 better to let FreeRouter finish its job.
+
 5.  Click on the *File* -> *Export Specctra Session File* menu and save
 the board file with the _.ses_ extension. You do not really need to save
 the FreeRouter rules file.
+
 6.  Back to __PCBnew__. You can import your freshly routed board by
 clicking on the link *Tools* -> *FreeRoute* and then on the icon 'Back
 Import the Spectra Session (__.ses) File' and selecting your__.ses*
@@ -781,6 +883,7 @@ to a library file you can just use the cut and paste commands.
 make new components. In our project folder 'demo1' let's create a folder
 named 'library'. Inside we will put our new library file _myLib.lib_ as
 soon as we have created our new component.
+
 2.  Now we can start creating our new component. From KiCad, start
 __EESchema__, click on the 'Library Editor' icon
 image:images/libedit.png[libedit_png] and then click on the 'New
@@ -794,36 +897,45 @@ At this point the component is only made of its labels. Let's add some
 pins. Click on the 'Add Pins' icon image:images/pin.png[pin_png] on the
 right toolbar. To place the pin, left click in the centre of the part
 editor sheet just below the 'MYCONN3' label.
+
 3.  In the Pin Properties window that appears, set the pin name to
 'VCC', set the pin number to '1', and the 'Electrical type' to 'Power
 output' then click OK.
 image:images/10000000000001F0000001553F56DF17.png[10000000000001F0000001553F56DF17_png]
+
 4.  Place the pin by clicking on the location you would like it to go,
 right below the 'MYCONN3' label.
+
 5.  Repeat the place-pin steps, this time 'Pin name' should be 'INPUT',
 'Pin number' should be '2', and 'Electrical Type' should be 'Power
 input'.
+
 6.  Repeat the place-pin steps, this time 'Pin name' should be 'GND',
 'Pin number' should be '3', and 'Electrical Type' should be 'Power
 output'. Arrange the pins one on top of the other. The component label
 'MYCONN3' should be in the centre of the page (where the blue lines
 cross).
+
 7.  Next, draw the contour of the component. Click on the 'Add
 rectangle' icon image:images/add_rectangle.png[add_rectangle_png]. We
 want to draw a rectangle next to the pins, as shown below. To do this,
 click where you want the top left corner of the rectangle to be. Click
 again where you want the bottom right corner of the rectangle to be.
 image:images/10000000000000DD000000946E66C399.png[10000000000000DD000000946E66C399_png]
+
 8.  Save the component in your library __myLib.lib__. Click on the 'New
 Library' icon image:images/new_library.png[new_library_png], navigate
 into _demo1/library/_ folder and save the new library file with the name
 __myLib.lib__.
+
 9.  Go to *Preferences* -> *Library* and add both _demo1/library/_ in
 'User defined search path' and _myLib.lib in_ 'Component library files'.
+
 10. Click on the 'Select working library' icon
 image:images/library.png[library_png]. In the Select Library window
 click on _myLib_ and click OK. Notice how the heading of the window
 indicates the library currently in use, which now should be __myLib__.
+
 11. Click on the 'Update current component in current library' icon
 image:images/save_part_in_mem.png[save_part_in_mem_png] in the top
 toolbar. Save all changes by clicking on the 'Save current loaded
@@ -831,9 +943,11 @@ library on disk' icon image:images/save_library.png[save_library_png] in
 the top toolbar. Click 'Yes' in any confirmation messages that appear.
 The new schematic component is now done and available in the library
 indicated in the window title bar.
+
 12. You can now close the Component library editor window. You will
 return to the schematic editor window. Your new component will now be
 available to you from the library __myLib__.
+
 13. You can make any library _file.lib_ file available to you by adding
 it to the library path. From __EESchema__, go to *Preferences* ->
 *Library* and add both the path to it in 'User defined search path' and
@@ -854,22 +968,28 @@ library' icon image:images/library.png[library_png] and choose the
 library 'device'. Click on 'Load component to edit from the current lib'
 icon image:images/import_cmp_from_lib.png[import_cmp_from_lib_png] and
 import the 'RELAY_2RT'.
+
 2.  Click on the 'Export component' icon
 image:images/export.png[export_png], navigate into the _library/_ folder
 and save the new library file with the name _myOwnLib.lib._
+
 3.  You can make this component and the whole library _myOwnLib.lib_
 available to you by adding it to the library path. From __EESchema__, go
 to *Preferences* -> *Library* and add both _library/_ in 'User defined
 search path' and _myOwnLib.lib_ in the 'Component library files'.
+
 4.  Click on the 'Select working library' icon
 image:images/library.png[library_png]. In the Select Library window
 click on _myOwnLib_ and click OK. Notice how the heading of the window
 indicates the library currently in use, it should be __myOwnLib__.
+
 5.  Click on the 'Load component to edit from the current lib' icon
 image:images/import_cmp_from_lib.png[import_cmp_from_lib_png] and import
 the 'RELAY_2RT'.
+
 6.  You can now modify the component as you like. Hover over the label
 'RELAY_2RT', press the e key and rename it 'MY_RELAY_2RT'.
+
 7.  Click on 'Update current component in current library' icon
 image:images/save_part_in_mem.png[save_part_in_mem_png] in the top
 toolbar. Save all changes by clicking on the 'Save current loaded
@@ -886,19 +1006,24 @@ __quicklib__.
 
 1.  Head to the _quicklib_ we bpage:
 http://kicad.rohrbacher.net/quicklib.php
+
 2.  Fill out the page with the following information: Component name:
 MYCONN3 Reference Prefix: J Pin Layout Style: SIL Pin Count, N: 5
+
 3.  Click on the 'Assign Pins' icon. Fill out the page with the
 following information: Pin 1: VCC Pin 2: input Pin 3: GND
+
 4.  Click on the icon 'Preview it' and, if you are satisfied, click on
 the 'Build Library Component'. Download the file and rename it
 __demo1/library/myLib.lib.__. You are done!
+
 5.  Have a look at it using KiCad. From the KiCad project manager, start
 __EESchema__, click on the 'Library Editor' icon
 image:images/libedit.png[libedit_png], click on the 'Import Component'
 icon image:images/import.png[import_png], navigate to _demo1/library/_
 and select _myLib.lib._
 image:images/10000000000002EE00000177A7337383.png[10000000000002EE00000177A7337383_png]
+
 6.  You can make this component and the whole library _myLib.lib_
 available to you by adding it to the KiCad library path. From
 __EESchema__, go to *Preferences* -> *Library* and add both _library_ in
@@ -923,10 +1048,12 @@ this is not a very complicated task.
 with 50 pins. It is common practise to draw it using multiple low
 pin-count drawings, for example two drawings with 25 pins each. This
 component representation allows for easy pin connection.
+
 2.  The best way to create our component is to use _quicklib_ to
 generate two 25-pin components separately, re-number their pins using a
 Python script and finally merge the two by using copy and paste to make
 them into one single DEF and ENDDEF component.
+
 3.  You will find an example of a simple Python script below that can be
 used in conjunction with an _in.txt_ file and an _out.txt_ file to
 re-number the line: 'X PIN1 1 -750 600 300 R 50 50 1 1 I' into 'X PIN26
@@ -1023,11 +1150,13 @@ Here are the steps for creating a new PCB footprint in KiCad:
 1.  From the KiCad project manager start the _PCBnew_ tool. Click on the
 'Open Module Editor' icon image:images/edit_module.png[edit_module_png]
 on the top toolbar. This will open the 'Module Editor'.
+
 2.  We are going to save the new footprint in the footprint library
 'connect'. Click on the 'Select working library' icon
 image:images/library.png[library_png] on the top toolbar. Select the
 'connect' library, though you can choose a different location if you
 want.
+
 3.  Click on the 'New Module' icon
 image:images/new_footprint.png[new_footprint_png] on the top toolbar.
 Type 'MYCONN3' as the 'module reference'. In the middle of the screen
@@ -1035,31 +1164,39 @@ the 'MYCONN3' label will appear. Under the label you can can see the
 'VAL*__' label. Right click on 'MYCONN3' and move it above 'VAL'. Right
 click on 'VAL__*', select 'Edit Text Mod' and rename it to 'SMD'. Set
 the 'Display' value to 'Invisible'.
+
 4.  Select the 'Add Pads' icon image:images/pad.png[pad_png] on the
 right toolbar. Click on the working sheet to place the pad. Right click
 on the new pad and click 'Edit Pad'. You can otherwise use the e key
 shortcut.
 image:images/10000000000003320000023622705DB3.png[10000000000003320000023622705DB3_png]
+
 5.  Set the 'Pad Num' to '1', 'Pad Shape' to 'Rect', 'Pad Type' to
 'SMD', 'Shape Size X' to '0.4', and 'Shape Size Y' to '0.8'. Click OK.
 Click on 'Add Pads' again and place two more pads.
+
 6.  If you want to change the grid size, *Right click* -> **Grid
 Select**. Be sure to select the appropriate grid size before laying down
 the components.
+
 7.  Considering, for instance, that a 0.8mm BGA component has a pin to
 pin distance of about 30 mil (0.8mm), **it is generally commendable to
 set a grid size of 5 mil when you route**.
+
 8.  Move the 'MYCONN3' label and the 'SMD' label out of the way so that
 it looks like the image shown above.
+
 9.  When placing pads it is often necessary to measure relative
 distances. Place the cursor where you want the relative coordinate point
 _(0,0)_ to be and press the space bar. While moving the cursor around,
 you will see a relative indication of the position of the cursor at the
 bottom of the page. Press the space bar at any time to set the new
 origin.
+
 10. Now add a footprint contour. Click on the 'Add graphic line or
 polygon' button image:images/add_polygon.png[add_polygon_png] in the
 right toolbar. Draw an outline of the connector around the component.
+
 11. Click on the 'Save Module in working directory' icon
 image:images/save_library.png[save_library_png] on the top toolbar,
 using the default name MYCONN3.
@@ -1136,33 +1273,43 @@ you do it:
 
 1.  Let's suppose that you want to replace a hypothetical connector CON1
 with CON2.
+
 2.  You already have a completed schematic and a fully routed PCB.
+
 3.  From KiCad, start __EESchema__, make your modifications by deleting
 CON1 and adding CON2. Save your schematic project with the icon
 image:images/100002010000001A0000001AF4CF46A1.png[100002010000001A0000001AF4CF46A1_png]
 and c lick on the 'Netlist generation' icon
 image:images/netlist.png[netlist_png] on the top toolbar.
+
 4.  Click on 'Netlist' then on 'save'. Save to the default file name.
 You have to rewrite the old one.
+
 5.  Now assign a footprint to CON2. Click on the 'Run Cvpcb' icon
 image:images/icon_cvpcb_small.png[icon_cvpcb_small_png] on the top
 toolbar. Assign the footprint to the new device CON2. The rest of the
 components still have the previous footprints assigned to them. Close
 __Cvpcb__.
+
 6.  Back in the schematic editor, save the project by clicking on 'File'
 -> 'Save Whole Schematic Project'. Close the schematic editor.
+
 7.  From the KiCad project manager, click on the 'PCBNew' icon. The
 'PCBNew' window will open.
+
 8.  The old, already routed, board should automatically open. Let's
 import the new netlist file. Click on the 'Read Netlist' icon
 image:images/netlist.png[netlist_png] on the top toolbar.
+
 9.  Click on the 'Browse Netlist Files' button, select the netlist file
 in the file selection dialogue, and click on 'Read Current Netlist'.
 Then click the 'Close' button.
+
 10. At this point you should be able to see a layout with all previous
 components already routed. On the top left corner you should see all
 unrouted components, in our case the CON2. Select CON2 with the mouse.
 Move the component to the middle of the board.
+
 11. Place CON2 and route it. Once done, save and proceed with the Gerber
 file generation as usual.
 
