@@ -1,4 +1,4 @@
-DOCNAME:=kicad-doc-doc
+DOCNAME:=README
 DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0"
 .SUFFIXES: #Disabe implicit rules
 
