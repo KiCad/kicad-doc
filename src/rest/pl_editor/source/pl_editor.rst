@@ -1,0 +1,943 @@
+Pl_Editor
+=========
+
+**Pl_Editor**
+
+*Reference manual*
+
+**Copyright**
+
+This document is Copyright © 2013 by it's contributors as listed below.
+You may distribute it and/or modify it under the terms of either the GNU
+General Public License (`http://www.gnu.org/licenses/gpl.html
+<http://www.gnu.org/licenses/gpl.html>`_), version 3 or later, or the
+Creative Commons Attribution License
+(`http://creativecommons.org/licenses/by/3.0/
+<http://creativecommons.org/licenses/by/3.0/>`_), version 3.0 or later.
+
+**Contributors**
+
+Jean-Pierre Charras.
+
+**Feedback**
+
+Please direct any comments or suggestions about this document to the KiCad mailing list:
+
+*https://launchpad.net/~kicad-developers*
+
+**Publication version**
+
+October 19, 2013.
+
+
+Introduction to Pl_Editor
+=========================
+
+Pl_Editor is a page layout editor tool to create custom title blocks, and
+frame references.
+
+The title block, associated to frame references, and other graphic items
+(logos) is called here a page layout
+
+Basic page layout items are:
+
+*   Lines
+
+*   Rectangles
+
+*   Texts (with format symbols, with will be replaced by the actual text,
+    like the date, page number...) in Eeschema or Pcbnew.
+
+*   Poly-polygons ( mainly to place logos and special graphic shapes)
+
+*   Bitmaps. Warning: Bitmaps can be plotted only by few plotters (PDF and PS only)
+    Therefore, for other plotters, only a bounding box will be plotted.
+
+*   Items can be repeated, and texts and poly_polygons can be rotated.
+
+
+
+Pl_Editor files
+===============
+
+Input file and default title block
+----------------------------------
+
+Pl_Editor reads or writes page layout description files *.kicad_wks
+(kicad worksheet).
+
+An internal default page layout description to display the default Kicad
+title block is used until a file is read
+
+Output file
+-----------
+
+The current page layout description can be written in a *.kicad_wks file,
+using the S expression format, which is widely used in Kicad.
+
+This file can be used to show the custom page layout in Eeschema and/or
+Pcbnew.
+
+Theory of operations
+====================
+
+Basic page layout items properties:
+-----------------------------------
+
+Basic page layout items are:
+
+*   **Lines**
+
+*   **Rectangles**
+
+*   **Texts**
+    (with format symbols, with will be replaced by the actual text, like
+    the date, page number...) in Eeschema or Pcbnew.
+
+*   **Poly-polygons**
+    (mainly to place logos and special graphic shapes) These poly
+    polygons are created by **Bitmap2component**, and cannot be built
+    inside pl_editor, because it is not possible to create such shapes by
+    hand.
+
+*   **Bitmaps**
+    to place logos (Warning: Bitmaps can be plotted only by few plotters:
+    PDF and PS only).
+
+Therefore
+
+*   **Texts, poly-polygons** and **bitmaps**
+    are defined by a position, and can be rotated.
+
+*   **Lines** (in fact segments) and **rectangles**
+    are defined by two points: a start point and a end point.
+    They cannot be rotated (this is useless for segments)
+
+
+These basic items can be repeated.
+
+Texts which are repeated accept also an increment value for labels (has
+meaning only if the text is one letter or one digit)
+
+Coordinates definition
+----------------------
+
+Each position, start point and end point of items is always relative to a
+page corner.
+
+**This feature ensure you can define a page layout which is not dependent
+on the paper size**.
+
+Reference corners and coordinates:
+----------------------------------
+
+|Object_1_png|
+
+
+*   When the page size is changed, the position of the item, relative to
+    its reference corner does not change.
+
+*   Usually, title blocks are attached to the right bottom corner, and
+    therefore this corner is the default corner, when creating an item.
+
+
+For rectangles and segments, which have two defined points, each point has its
+reference corner.
+
+Rotation
+--------
+
+Items which are a position defined by one point (texts and poly-polygons)
+can be rotated:
+
+
++----------------------------+----------------------------------------+
+| |289F00001AAB8B9CAB6A_png| | Normal: Rotation = 0                   |
++----------------------------+----------------------------------------+
+| |26DD000020DF53BA89AF_png| | Rotated: Rotation = 20 and 10 degrees. |
++----------------------------+----------------------------------------+
+
+Repeat option
+-------------
+
+Items can be repeated:
+
+This is useful to create grid and grid labels.
+
+|Object_2_png|
+
+Texts and formats
+=================
+
+Format symbols:
+---------------
+
+Texts can be simple strings or can include format symbols.
+
+Format symbols are replaced by the actual values in
+Eeschema or Pcbnew.
+
+They are like format symbols in printf function.
+
+A format symbol is **%** followed by 1 letter.
+
+The **%C** format has one digit (comment identifier)
+
+Formats symbols are:
+
+**%% = replaced by %**
+
+**%K = Kicad version**
+
+**%Z = paper format name (A4, USLetter ...)**
+
+**%Y = company name**
+
+**%D = date**
+
+**%R = revision**
+
+**%S = sheet number**
+
+**%N = number of sheets**
+
+**%Cx = comment (x = 0 to 9 to identify the comment)**
+
+**%F = filename**
+
+**%P = sheet path (sheet full name, for Eeschema)**
+
+**%T = title**
+
+
+Example:
+
+"Size: %Z\" displays "Size A4" or Size USLetter"
+
+
++---------------------------+------------------------------------------------------+
+| |204000000B615B3B830_png| | User display mode:                                   |
+|                           |                                                      |
+|                           | |026000000247DACC8C8_png|                            |
+|                           | activated.                                           |
+|                           |                                                      |
+|                           | Title block displayed like in Eeschema and Pcbnew    |
+|                           |                                                      |
++---------------------------+------------------------------------------------------+
+| |20D000000BF8AE6E45B_png| | “Native” display mode:                               |
+|                           |                                                      |
+|                           | |023000000247D2AF312_png|                            |
+|                           | activated.                                           |
+|                           |                                                      |
+|                           | The native texts entered in Pl_Editor, with their    |
+|                           | format symbols.                                      |
++---------------------------+------------------------------------------------------+
+
+Multi-line texts:
+-----------------
+
+Texts can be multi-line.
+
+There are 2 ways to insert a new line in texts:
+
+#.  Insert the “\n” 2 chars sequence (mainly in Page setup dialog in Kicad)
+
+#.  Insert a new line in Pl_Editor Design window.
+
+Here is an example
+
++---------------------------+---------------------------+
+| |2170000015C98B9D826_png| | |0F300000102C5881F3E_png| |
+|                           |                           |
+|                           | Setup                     |
+|                           |                           |
++---------------------------+---------------------------+
+
+Multi-line texts in Page Setup dialog:
+--------------------------------------
+
+In the page setup dialog, text controls do not accept a multi-line text.
+
+The “\n” 2 chars sequence should be inserted to force a new line inside a
+text
+
+
+Here is a two lines text, in *comment 2* field:
+
+|1BC0000003F9A68F44F_png|
+
+Here is the actual text:
+
+|108000000796A6637BF_png|
+
+However, if you really want the **“\n”** inside the text, enter **“**
+**\** **\n”**.
+
+|1A50000004681684C4B_png|
+
+And the displayed text:
+
+|2480000008572F151BE_png|
+
+Constraints
+===========
+
+Page 1 constraint
+-----------------
+
+When using Eeschema, the full schematic often uses more than one page.
+
+Usually layout items are displayed on all pages.
+
+But if a user want some items to be displayed only on page 1, or not on
+page 1, the “page 1 option” this is possible by setting this option:
+
++---------------------------+---------------------------------------------------------------------+
+| |0FE0000008C8F0A84EF_png| | Page 1 option:                                                      |
+|                           |                                                                     |
+|                           | *   None: no constraint.                                            |
+|                           |                                                                     |
+|                           | *   Page 1 only: the items is visible only on page 1.               |
+|                           |                                                                     |
+|                           | *   Not on page 1: the items is visible on all pages but the page 1.|
++---------------------------+---------------------------------------------------------------------+
+
+
+Text full size constraint
+-------------------------
+
+
+|0F7000000CADB177AE6_png|
+
+Only for texts, one can set 2 parameters :
+
+*   the max size X
+
+*   the max size Y
+
+which define a bounding box
+
+When these parameters are not 0, when displaying the text, the actual
+text height and the actual text width are dynamically modified if the
+full text size is bigger than the max size X and/or the max size Y, to
+fit the full text size with this bounding box.
+
+
+When the actual full text size is smaller than the max size X and/or the
+max size Y, the text height and/or the text width is not modified.
+
+
++---------------------------+--------------------------------+
+| |1D000000049146898BA_png| | The text with no bounding box. |
+|                           |                                |
+|                           | Max size X = 0                 |
+|                           |                                |
+|                           | Max size Y = 0                 |
+|                           |                                |
++---------------------------+--------------------------------+
+| |1B400000043E88BE4C8_png| | The **same** text with         |
+|                           |  constraint.                   |
+|                           |                                |
+|                           | Max size X = 40                |
+|                           |                                |
+|                           | Max size Y = 0                 |
+|                           |                                |
++---------------------------+--------------------------------+
+
+
+A multi line text, constrained:
+
+
++---------------------------+---------------------------+
+| |114000000A59A49C107_png| | |0F4000000FFCF38FDB1_png| |
+|                           |                           |
+|                           | Setup                     |
+|                           |                           |
++---------------------------+---------------------------+
+
+
+Invoking Pl_Editor
+==================
+
+Pl_Editor is typically invoked from a command line, or from the Kicad
+manager.
+
+From a command line, the syntax is pl_editor <*.kicad_wks file to open>.
+
+
+Pl_Editor Commands
+==================
+
+Main Screen
+-----------
+
+The image below shows the main window of Pl_Editor.
+
+
+|280000002003BB28D10_png|
+
+The left pane contains the list of basic items.
+
+The right pane is the item settings editor.
+
+Main Window Toolbar
+-------------------
+
+|3180000002933A1DAFF_png|
+
+The top toolbar allows for easy access to the following commands:
+
++---------------------------+-------------------------------------------------------------------------+
+| |025000000236092322C_png| | Select the net list file to be processed.                               |
++---------------------------+-------------------------------------------------------------------------+
+| |02100000023DA2FC874_png| | Load a page layout description file.                                    |
++---------------------------+-------------------------------------------------------------------------+
+| |02600000023B6DEDD23_png| | Save the current page layout description in a .kicad_wks file.          |
++---------------------------+-------------------------------------------------------------------------+
+| |02400000022F65327A8_png| | Display the page size selector and the title block user data editor.    |
++---------------------------+-------------------------------------------------------------------------+
+| |02500000022D0648B63_png| | Prints the current page.                                                |
++---------------------------+-------------------------------------------------------------------------+
+| |029000000225511CDE8_png| | Delete the currently selected item.                                     |
++---------------------------+-------------------------------------------------------------------------+
+| |048000000223C9FAADD_png| | Undo/redo tools.                                                        |
++---------------------------+-------------------------------------------------------------------------+
+| |08D000000226C3BBC45_png| | Delete all footprint assignments.                                       |
++---------------------------+-------------------------------------------------------------------------+
+| |026000000247DACC8C8_png| | Show the page layout in user mode: texts are shown like in Eeschema     |
+|                           | or Pcbnew: text format symbols are replaced by the user texts.          |
++---------------------------+-------------------------------------------------------------------------+
+| |023000000247D2AF312_png| | Show the page layout in native mode: texts are displayed “as is”,       |
+|                           | with the contained formats, without any replacement.                    |
++---------------------------+-------------------------------------------------------------------------+
+| |09D0000002290AC88FC_png| | Reference corner selection, for coordinates displayed to the status bar.|
++---------------------------+-------------------------------------------------------------------------+
+| |060000000223178ABCE_png| | Selection of the page number (page & or other pages).                   |
+|                           |                                                                         |
+|                           | This selection has meaning only if some items have a page option, are   |
+|                           | are not shown on all pages (in a schematic for instance, which          |
+|                           | contains more than one page)                                            |
++---------------------------+-------------------------------------------------------------------------+
+
+Commands in drawing area (draw panel)
+-------------------------------------
+
+Keyboard Commands
+^^^^^^^^^^^^^^^^^
+
++-------------+---------------------------------------------------------+
+| F1          | Zoom In                                                 |
++-------------+---------------------------------------------------------+
+| F2          | Zoom Out                                                |
++-------------+---------------------------------------------------------+
+| F3          | Refresh Display                                         |
++-------------+---------------------------------------------------------+
+| F4          | Move cursor to center of display window                 |
++-------------+---------------------------------------------------------+
+| Home        | Fit footprint into display window                       |
++-------------+---------------------------------------------------------+
+| Space Bar   | Set relative coordinates to the current cursor position |
++-------------+---------------------------------------------------------+
+| Right Arrow | Move cursor right one grid position                     |
++-------------+---------------------------------------------------------+
+| Left Arrow  | Move cursor left one grid position                      |
++-------------+---------------------------------------------------------+
+| Up Arrow    | Move cursor up one grid position                        |
++-------------+---------------------------------------------------------+
+| Down Arrow  | Move cursor down one grid position                      |
++-------------+---------------------------------------------------------+
+
+Mouse Commands
+^^^^^^^^^^^^^^
+
++----------------------+------------------------------------------------+
+| Scroll Wheel         | Zoom in and out at the current cursor position |
++----------------------+------------------------------------------------+
+| Ctrl + Scroll Wheel  | Pan right and left                             |
++----------------------+------------------------------------------------+
+| Shift + Scroll Wheel | Pan up and down                                |
++----------------------+------------------------------------------------+
+| Right Button Click   | Open context menu                              |
++----------------------+------------------------------------------------+
+
+Context Menu
+^^^^^^^^^^^^
+
+Displayed by right-clicking the mouse:
+
+* Add Line
+
+* Add Rectangle
+
+* Add Text
+
+* Append Page Layout Descr File
+
+Are commands to add a basic layout item to the current page layout
+description.
+
+* Zoom selection: direct selection of the display zoom.
+
+* Grid selection: direct selection of the grid.
+
+**Note:**
+
+_Append Page Layout Descr File_ is intended to add poly polygons to make
+logos.
+
+Because usually a logo it needs hundred of vertices, you cannot create a
+polygon by hand. But you can append a description file, created by
+Bitmap2Component.
+
+
+Status Bar Information
+----------------------
+
+The status bar is located a the bottom of the Pl_Editor and provides
+useful information to the user.
+
+|31A0000002140AB1BF6_png|
+
+Coordinates are **always relative to the corner** selected as
+**reference**.
+
+Left window
+===========
+
+The left windows shows the list of layout items.
+
+One can select a given item (left clicking on the line), of when right
+clicking on the line, display a pop up menu
+
+This menu allows basic operations: add a new item, or delete the selected
+item.
+
+**-> A selected item is also drawn in a different color on draw panel**.
+
+
++---------------------------+---------------------------------------+
+| |14300000235CFE8BB81_png| | Design tree: the item 19 is selected, |
+|                           | and shown in Yellow                   |
+|                           | on the draw panel.                    |
+|                           |                                       |
++---------------------------+---------------------------------------+
+
+Right window
+============
+
++---------------------------+---------------------------+------------------------------------------------------------+
+| |0FF000002FE9E9A0182_png| | |10000000151380C57AA_png| | The right window                                           |
+|                           |                           | is the edit window.                                        |
+|                           |                           |                                                            |
+|                           |                           | On can set                                                 |
+|                           |                           |                                                            |
+|                           |                           | properties of the page and properties of the current item. |
+|                           |                           |                                                            |
++---------------------------+---------------------------+------------------------------------------------------------+
+
+Displayed settings depend on the selected item:
+
++---------------------------+---------------------------+---------------------------+
+| |0FD000001DD98658CC7_png| | |0FD00000261FA2A9A82_png| | |0FA00000198A5084F51_png| |
++---------------------------+---------------------------+---------------------------+
+| Settings for lines and    | Settings for texts        | Settings for poly-polygons|
+| rectangles                |                           |                           |
++---------------------------+---------------------------+---------------------------+
+| |108000001B1E318405A_png| |                           |                           |
++---------------------------+---------------------------+---------------------------+
+| Setting for bitmaps       |                           |                           |
++---------------------------+---------------------------+---------------------------+
+
+
+Interactive edition
+===================
+
+Item selection
+--------------
+
+An item can be selected:
+
+*   From the Design tree.
+
+*   By Left clicking on it.
+
+*   By Right clicking on it (and a pop up menu will be displayed).
+
+When selected, this item is drawn in yellow.
+
++---------------------------+---------------------------+
+| |0D70000009E6F0E0711_png| | The starting point (      |
+|                           | |022000000264392FC54_png| |
+|                           | ) and the ending point (  |
+|                           | |01C00000020671586A1_png| |
+|                           | ) are highlighted.        |
+|                           |                           |
++---------------------------+---------------------------+
+
+When right clicking on the item, a pop-up menu is displayed.
+
+The pop menu options slightly depend on the selection:
+
++---------------------------+---------------------------+---------------------------+
+| |0E20000009E089146DE_png| | |0CE000000C7FC23C3DC_png| | |0DD000000ADFCFBDAE0_png| |
++---------------------------+---------------------------+---------------------------+
+
+If more than one item is found, a menu clarification will be shown, to
+select the item:
+
+|16F000000DA893C678D_png|
+
++---------------------------+-----------------------------------------------------+
+| |0D5000000C7E7BD47D2_png| | Once selected, the item, or one of its end points,  |
+|                           | can be moved by moving the mouse and placed (right  |
+|                           | clicking on the mouse).                             |
++---------------------------+-----------------------------------------------------+
+
+Item creation
+-------------
+
+To add a new item, right click the mouse button, when the cursor is on
+the left window, or the draw area.
+
+A popup menu is displayed:
+
++---------------------------+---------------------------+
+| |102000000C470B86D38_png| | |0F2000001A2CB4F77A7_png| |
++---------------------------+---------------------------+
+| Pop up menu in left window| Pop up menu in draw area. |
++---------------------------+---------------------------+
+
+
+Lines, rectangles and texts are added just by clicking on the
+corresponding menu item.
+
+Logos must first be created by Bitmap2component, which creates a page
+layout description file.
+
+The Append Page Layout Descr File option append this file, to insert the
+logo (a poly polygon)
+
+Adding lines, rectangles and texts
+----------------------------------
+
+When clicking on the option, a dialog is opened:
+
++---------------------------+---------------------------+
+| |141000001505F9E07DF_png| | |13F0000014FEDD597EE_png| |
++---------------------------+---------------------------+
+| Adding line or rectangle  | Adding text               |
++---------------------------+---------------------------+
+
+Position of end points, and corner reference can be defined here.
+
+However they can be defined later, from the right window, or by moving
+the item, or one of its end points.
+
+Most of time the corner reference is the same for both points.
+
+If this is not the case, define the corner reference at creation is
+better, because if a corner reference is changed later, the geometry of
+the item will be a bit strange.
+
+When an item is created, if is put in move mode, and you can refine its
+position (this is very useful for texts and small lines or rectangles)
+
+Adding logos
+------------
+
+To add a logo, a poly polygon (the vectored image of the logo) must be
+first created using Bitmap2component.
+
+Bitmap2component creates a page layout description file which is append
+to the current design, using the **Append Page Layout Descr File**
+option.
+
+Bitmap2component creates a page layout description file which contains
+only one item: a poly polygon.
+
+*However, this command can be used to append any page layout description
+file, which is merged with the current design*.
+
+Once a poly polygon is inserted, it can be moved and its parameters edited.
+
+Adding image bitmaps
+--------------------
+
+You can add an image bitmap using most of bitmap formats (PGN, JPEG, BMP
+...)
+
+*   When a bitmap is imported, its PPI (pixel per inch) definition is set
+    to 300PPI
+
+*   This value can be modified in panel Properties (right panel).
+
+*   The actual size depend on this parameter.
+
+*   Be aware using hight definition can create large files, and have a
+    noticeable draw or plot time.
+
+A bitmap can be repeated, but not rotated.
+
+
+
+
+.. |0FD000001DD98658CC7_png| image:: images/0FD000001DD98658CC7.png
+    :width: 6.14cm
+    :height: 12.621cm
+
+
+.. |13F0000014FEDD597EE_png| image:: images/13F0000014FEDD597EE.png
+    :width: 8.44cm
+    :height: 8.864cm
+
+
+.. |0F4000000FFCF38FDB1_png| image:: images/0F4000000FFCF38FDB1.png
+    :width: 6.459cm
+    :height: 6.75cm
+
+
+.. |0F300000102C5881F3E_png| image:: images/0F300000102C5881F3E.png
+    :width: 6.429cm
+    :height: 6.83cm
+
+
+.. |280000002003BB28D10_png| image:: images/280000002003BB28D10.png
+    :width: 16.93cm
+    :height: 13.55cm
+
+
+.. |02500000022D0648B63_png| image:: images/02500000022D0648B63.png
+    :width: 0.688cm
+    :height: 0.688cm
+
+
+.. |02600000023B6DEDD23_png| image:: images/02600000023B6DEDD23.png
+    :width: 1.011cm
+    :height: 0.93cm
+
+
+.. |02400000022F65327A8_png| image:: images/02400000022F65327A8.png
+    :width: 0.951cm
+    :height: 0.9cm
+
+
+.. |Object_2_png| image:: images/Object_2.png
+
+
+.. |Object_1_png| image:: images/Object_1.png
+
+
+.. |31A0000002140AB1BF6_png| image:: images/31A0000002140AB1BF6.png
+    :width: 19.001cm
+    :height: 0.788cm
+
+
+.. |0FD00000261FA2A9A82_png| image:: images/0FD00000261FA2A9A82.png
+    :width: 6.14cm
+    :height: 16.11cm
+
+
+.. |1D000000049146898BA_png| image:: images/1D000000049146898BA.png
+    :width: 12.28cm
+    :height: 1.93cm
+
+
+.. |0FF000002FE9E9A0182_png| image:: images/0FF000002FE9E9A0182.png
+    :width: 6.549cm
+    :height: 20.271cm
+
+
+.. |0FA00000198A5084F51_png| image:: images/0FA00000198A5084F51.png
+    :width: 6.14cm
+    :height: 10.8cm
+
+
+.. |20D000000BF8AE6E45B_png| image:: images/20D000000BF8AE6E45B.png
+    :width: 13.891cm
+    :height: 5.05cm
+
+
+.. |09D0000002290AC88FC_png| image:: images/09D0000002290AC88FC.png
+    :width: 3.769cm
+    :height: 0.9cm
+
+
+.. |0CE000000C7FC23C3DC_png| image:: images/0CE000000C7FC23C3DC.png
+    :width: 5.45cm
+    :height: 5.271cm
+
+
+.. |0E20000009E089146DE_png| image:: images/0E20000009E089146DE.png
+    :width: 5.98cm
+    :height: 4.18cm
+
+
+.. |08D000000226C3BBC45_png| image:: images/08D000000226C3BBC45.png
+    :width: 3.731cm
+    :height: 0.9cm
+
+
+.. |141000001505F9E07DF_png| image:: images/141000001505F9E07DF.png
+    :width: 8.493cm
+    :height: 8.89cm
+
+
+.. |0F7000000CADB177AE6_png| image:: images/0F7000000CADB177AE6.png
+    :width: 6.535cm
+    :height: 5.345cm
+
+
+.. |289F00001AAB8B9CAB6A_png| image:: images/289F00001AAB8B9CAB6A.png
+    :width: 9.299cm
+    :height: 6.83cm
+
+
+.. |16F000000DA893C678D_png| image:: images/16F000000DA893C678D.png
+    :width: 9.71cm
+    :height: 5.768cm
+
+
+.. |01C00000020671586A1_png| image:: images/01C00000020671586A1.png
+    :width: 0.741cm
+    :height: 0.847cm
+
+
+.. |102000000C470B86D38_png| image:: images/102000000C470B86D38.png
+    :width: 6.83cm
+    :height: 5.189cm
+
+
+.. |0D70000009E6F0E0711_png| image:: images/0D70000009E6F0E0711.png
+    :width: 5.689cm
+    :height: 4.18cm
+
+
+.. |10000000151380C57AA_png| image:: images/10000000151380C57AA.png
+    :width: 6.77cm
+    :height: 8.92cm
+
+
+.. |14300000235CFE8BB81_png| image:: images/14300000235CFE8BB81.png
+    :width: 8.546cm
+    :height: 14.949cm
+
+
+.. |0FE0000008C8F0A84EF_png| image:: images/0FE0000008C8F0A84EF.png
+    :width: 6.72cm
+    :height: 3.704cm
+
+
+.. |023000000247D2AF312_png| image:: images/023000000247D2AF312.png
+    :width: 0.93cm
+    :height: 0.951cm
+
+
+.. |26DD000020DF53BA89AF_png| image:: images/26DD000020DF53BA89AF.png
+    :width: 9.299cm
+    :height: 8.421cm
+
+
+.. |kicad_logo_png| image:: images/kicad_logo.png
+    :width: 15.566cm
+    :height: 10.702cm
+
+
+.. |2480000008572F151BE_png| image:: images/2480000008572F151BE.png
+    :width: 15.45cm
+    :height: 3.521cm
+
+
+.. |0F2000001A2CB4F77A7_png| image:: images/0F2000001A2CB4F77A7.png
+    :width: 6.399cm
+    :height: 11.06cm
+
+
+.. |060000000223178ABCE_png| image:: images/060000000223178ABCE.png
+    :width: 2.54cm
+    :height: 0.9cm
+
+
+.. |204000000B615B3B830_png| image:: images/204000000B615B3B830.png
+    :width: 13.651cm
+    :height: 4.821cm
+
+
+.. |0D5000000C7E7BD47D2_png| image:: images/0D5000000C7E7BD47D2.png
+    :width: 5.636cm
+    :height: 5.265cm
+
+
+.. |022000000264392FC54_png| image:: images/022000000264392FC54.png
+    :width: 0.9cm
+    :height: 1.005cm
+
+
+.. |108000001B1E318405A_png| image:: images/108000001B1E318405A.png
+    :width: 6.985cm
+    :height: 11.456cm
+
+
+.. |1A50000004681684C4B_png| image:: images/1A50000004681684C4B.png
+    :width: 11.141cm
+    :height: 1.85cm
+
+
+.. |048000000223C9FAADD_png| image:: images/048000000223C9FAADD.png
+    :width: 1.91cm
+    :height: 0.9cm
+
+
+.. |02100000023DA2FC874_png| image:: images/02100000023DA2FC874.png
+    :width: 0.87cm
+    :height: 0.93cm
+
+
+.. |1BC0000003F9A68F44F_png| image:: images/1BC0000003F9A68F44F.png
+    :width: 11.748cm
+    :height: 1.667cm
+
+
+.. |114000000A59A49C107_png| image:: images/114000000A59A49C107.png
+    :width: 7.301cm
+    :height: 4.369cm
+
+
+.. |2170000015C98B9D826_png| image:: images/2170000015C98B9D826.png
+    :width: 10.322cm
+    :height: 5.849cm
+
+
+.. |3180000002933A1DAFF_png| image:: images/3180000002933A1DAFF.png
+    :width: 19.001cm
+    :height: 1.08cm
+
+
+.. |108000000796A6637BF_png| image:: images/108000000796A6637BF.png
+    :width: 6.985cm
+    :height: 3.201cm
+
+
+.. |025000000236092322C_png| image:: images/025000000236092322C.png
+    :width: 0.981cm
+    :height: 0.93cm
+
+
+.. |029000000225511CDE8_png| image:: images/029000000225511CDE8.png
+    :width: 1.08cm
+    :height: 0.9cm
+
+
+.. |1B400000043E88BE4C8_png| image:: images/1B400000043E88BE4C8.png
+    :width: 11.539cm
+    :height: 1.769cm
+
+
+.. |0DD000000ADFCFBDAE0_png| image:: images/0DD000000ADFCFBDAE0.png
+    :width: 5.851cm
+    :height: 4.581cm
+
+
+.. |026000000247DACC8C8_png| image:: images/026000000247DACC8C8.png
+    :width: 1.011cm
+    :height: 0.951cm
+
