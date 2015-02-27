@@ -1,0 +1,1512 @@
+# Pl_Editor User Manual Italian Translation
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# This file is distributed under the same license as the KiCad package.
+# Marco Ciampa <ciampix@libero.it>, 2014, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"POT-Creation-Date: 2015-02-27 17:57+0100\n"
+"PO-Revision-Date: 2015-02-27 18:05+0100\n"
+"Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Title -
+#: Pl_Editor.adoc:3
+#, no-wrap
+msgid "Pl_Editor"
+msgstr "Pl_Editor"
+
+#. type: Plain text
+#: Pl_Editor.adoc:6
+#, no-wrap
+msgid "*Pl_Editor*\n"
+msgstr "*Pl_Editor*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:8
+msgid "_Reference manual_"
+msgstr "_Manuale di riferimento_"
+
+#. type: Plain text
+#: Pl_Editor.adoc:11
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "*Copyright*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:19
+msgid ""
+"This document is Copyright © 2013 by it's contributors as listed below.  You "
+"may distribute it and/or modify it under the terms of either the GNU General "
+"Public License (http://www.gnu.org/licenses/gpl.html[http://www.gnu.org/"
+"licenses/gpl.html]), version 3 or later, or the Creative Commons Attribution "
+"License (http://creativecommons.org/licenses/by/3.0/[http://creativecommons."
+"org/licenses/by/3.0/]), version 3.0 or later."
+msgstr ""
+"Questo documento è coperto dal Copyright © 2013 dei suoi autori come "
+"elencati in seguito. È possibile distribuirlo e/o modificarlo nei termini "
+"sia della GNU General Public License (http://www.gnu.org/licenses/gpl."
+"html[http://www.gnu.org/licenses/gpl.html]), versione 3 o successive, che "
+"della Creative Commons Attribution License (http://creativecommons.org/"
+"licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]), versione 3.0 "
+"o successive."
+
+#. type: Plain text
+#: Pl_Editor.adoc:22
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "*Collaboratori*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:24
+msgid "Jean-Pierre Charras."
+msgstr "Jean-Pierre Charras."
+
+#. type: Plain text
+#: Pl_Editor.adoc:27
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "*Feedback*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:30
+msgid ""
+"Please direct any comments or suggestions about this document to the KiCad "
+"mailing list:"
+msgstr ""
+"Inviare qualsiasi commento o suggerimento concernente questo documento alla "
+"mailing list di KiCad:"
+
+#. type: Plain text
+#: Pl_Editor.adoc:32
+msgid "_https://launchpad.net/~kicad-developers_"
+msgstr "_https://launchpad.net/~kicad-developers_"
+
+#. type: Plain text
+#: Pl_Editor.adoc:35
+#, no-wrap
+msgid "*Acknowledgments*\n"
+msgstr "*Riconoscimenti*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:38
+#, no-wrap
+msgid "*Publication date and software version*\n"
+msgstr "*Data di pubblicazione e versione del software*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:40
+msgid "October 19, 2013."
+msgstr "19 ottobre, 2013."
+
+#. type: Title -
+#: Pl_Editor.adoc:43
+#, no-wrap
+msgid "Introduction to Pl_Editor"
+msgstr "Introduzione a Pl_Editor"
+
+#. type: Plain text
+#: Pl_Editor.adoc:47
+msgid ""
+"Pl_Editor is a page layout editor tool to create custom title blocks, and "
+"frame references."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:50
+msgid ""
+"The title block, associated to frame references, and other graphic items "
+"(logos) is called here a page layout"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:52 Pl_Editor.adoc:96
+msgid "Basic page layout items are:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:54
+msgid "Lines"
+msgstr "Linee"
+
+#. type: Plain text
+#: Pl_Editor.adoc:55
+msgid "Rectangles"
+msgstr "Rettangoli"
+
+#. type: Plain text
+#: Pl_Editor.adoc:57
+msgid ""
+"Texts (with format symbols, with will be replaced by the actual text, like "
+"the date, page number...) in Eeschema or Pcbnew."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:58
+msgid "Poly-polygons (mainly to place logos and special graphic shapes)"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:61
+msgid ""
+"Bitmaps. Warning: Bitmaps can be plotted only by few plotters (PDF and PS "
+"only) Therefore, for other plotters, only a bounding box will be plotted."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:62
+msgid "Items can be repeated, and texts and poly_polygons can be rotated."
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:65
+#, no-wrap
+msgid "Pl_Editor files"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:69
+#, no-wrap
+msgid "Input file and default title block"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:73
+msgid ""
+"Pl_Editor reads or writes page layout description files *.kicad_wks (kicad "
+"worksheet)."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:76
+msgid ""
+"An internal default page layout description to display the default Kicad "
+"title block is used until a file is read"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:79
+#, no-wrap
+msgid "Output file"
+msgstr "File in uscita"
+
+#. type: Plain text
+#: Pl_Editor.adoc:83
+msgid ""
+"The current page layout description can be written in a *.kicad_wks file, "
+"using the S expression format, which is widely used in Kicad."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:86
+msgid ""
+"This file can be used to show the custom page layout in Eeschema and/or "
+"Pcbnew."
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:89
+#, no-wrap
+msgid "Theory of operations"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:93
+#, no-wrap
+msgid "Basic page layout items properties:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:98
+#, no-wrap
+msgid "*Lines*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:99
+#, no-wrap
+msgid "*Rectangles*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:101
+#, no-wrap
+msgid ""
+"*Texts* (with format symbols, with will be replaced by the actual\n"
+"text, like the date, page number...) in Eeschema or Pcbnew.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:105
+#, no-wrap
+msgid ""
+"*Poly-polygons* (mainly to place logos and special graphic shapes)\n"
+"These poly polygons are created by **Bitmap2component**, and cannot be\n"
+"built inside pl_editor, because it is not possible to create such shapes\n"
+"by hand.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:107
+#, no-wrap
+msgid ""
+"*Bitmaps* to place logos (Warning: Bitmaps can be plotted only by few\n"
+"plotters: PDF and PS only).\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:109
+msgid "Therefore"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:112
+#, no-wrap
+msgid ""
+"*Texts, poly-polygons* and *bitmaps* are defined by a position, and\n"
+"can be rotated.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:115
+#, no-wrap
+msgid ""
+"*Lines* (in fact segments) and *rectangles* are defined by two points:\n"
+"a start point and a end point. They cannot be rotated (this is useless\n"
+"for segments)\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:117
+msgid "These basic items can be repeated."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:120
+msgid ""
+"Texts which are repeated accept also an increment value for labels (has "
+"meaning only if the text is one letter or one digit)"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:123
+#, no-wrap
+msgid "Coordinates definition"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:127
+msgid ""
+"Each position, start point and end point of items is always relative to a "
+"page corner."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:130
+#, no-wrap
+msgid ""
+"**This feature ensure you can define a page layout which is not\n"
+"dependent on the paper size**.\n"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:133
+#, no-wrap
+msgid "Reference corners and coordinates:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:136
+msgid "image:images/Object_1.png[Object_1_png]"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:139
+msgid ""
+"When the page size is changed, the position of the item, relative to its "
+"reference corner does not change."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:141
+msgid ""
+"Usually, title blocks are attached to the right bottom corner, and therefore "
+"this corner is the default corner, when creating an item."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:144
+msgid ""
+"For rectangles and segments, which have two defined points, each point has "
+"its reference corner."
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:147
+#, no-wrap
+msgid "Rotation"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:151
+msgid ""
+"Items which are a position defined by one point (texts and poly-polygons) "
+"can be rotated:"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:156
+#, no-wrap
+msgid ""
+"|image:images/289F00001AAB8B9CAB6A.png[289F00001AAB8B9CAB6A_png]\n"
+"|Normal: Rotation = 0\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:159
+#, no-wrap
+msgid ""
+"|image:images/26DD000020DF53BA89AF.png[26DD000020DF53BA89AF_png]\n"
+"|Rotated: Rotation = 20 and 10 degrees.\n"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:163
+#, no-wrap
+msgid "Repeat option"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:166
+msgid "Items can be repeated:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:168
+msgid "This is useful to create grid and grid labels."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:170
+msgid "image:images/Object_2.png[Object_2_png]"
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:173
+#, no-wrap
+msgid "Texts and formats"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:177
+#, no-wrap
+msgid "Format symbols:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:180
+msgid "Texts can be simple strings or can include format symbols."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:182
+msgid "Format symbols are replaced by the actual values in Eeschema or Pcbnew."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:184
+msgid "They are like format symbols in printf function."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:186
+msgid "A format symbol is *%* followed by 1 letter."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:188
+msgid "The *%C* format has one digit (comment identifier)"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:190
+msgid "Formats symbols are:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:192
+#, no-wrap
+msgid "*%% = replaced by %*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:194
+#, no-wrap
+msgid "*%K = Kicad version*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:196
+#, no-wrap
+msgid "*%Z = paper format name (A4, USLetter ...)*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:198
+#, no-wrap
+msgid "*%Y = company name*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:200
+#, no-wrap
+msgid "*%D = date*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:202
+#, no-wrap
+msgid "*%R = revision*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:204
+#, no-wrap
+msgid "*%S = sheet number*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:206
+#, no-wrap
+msgid "*%N = number of sheets*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:208
+#, no-wrap
+msgid "*%Cx = comment (x = 0 to 9 to identify the comment)*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:210
+#, no-wrap
+msgid "*%F = filename*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:212
+#, no-wrap
+msgid "*%P = sheet path (sheet full name, for Eeschema)*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:214
+#, no-wrap
+msgid "*%T = title*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:216
+msgid "Example:"
+msgstr "Esempio:"
+
+#. type: Plain text
+#: Pl_Editor.adoc:218
+msgid "\"Size: %Z\" displays \"Size A4\" or Size USLetter\""
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:223
+#, no-wrap
+msgid ""
+"|image:images/204000000B615B3B830.png[204000000B615B3B830_png] a|\n"
+"User display mode:\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:225
+#, no-wrap
+msgid "image:images/026000000247DACC8C8.png[026000000247DACC8C8_png] activated.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:227
+#, no-wrap
+msgid "Title block displayed like in Eeschema and Pcbnew\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:230
+#, no-wrap
+msgid ""
+"|image:images/20D000000BF8AE6E45B.png[20D000000BF8AE6E45B_png] a|\n"
+"“Native” display mode:\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:232
+#, no-wrap
+msgid "image:images/023000000247D2AF312.png[023000000247D2AF312_png] activated.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:234
+#, no-wrap
+msgid "The native texts entered in Pl_Editor, with their format symbols.\n"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:239
+#, no-wrap
+msgid "Multi-line texts:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:242
+msgid "Texts can be multi-line."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:244
+msgid "There are 2 ways to insert a new line in texts:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:247
+msgid "Insert the “n” 2 chars sequence (mainly in Page setup dialog in Kicad)"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:248
+msgid "Insert a new line in Pl_Editor Design window."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:250
+msgid "Here is an example"
+msgstr "Ecco un esempio"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:255
+#, no-wrap
+msgid ""
+"|image:images/2170000015C98B9D826.png[2170000015C98B9D826_png] a|\n"
+"image:images/0F300000102C5881F3E.png[0F300000102C5881F3E_png]\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:257 Pl_Editor.adoc:360
+#, no-wrap
+msgid "Setup\n"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:262
+#, no-wrap
+msgid "Multi-line texts in Page Setup dialog:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:265
+msgid ""
+"In the page setup dialog, text controls do not accept a multi-line text."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:268
+msgid ""
+"The “n” 2 chars sequence should be inserted to force a new line inside a text"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:270
+msgid "Here is a two lines text, in _comment 2_ field:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:272
+msgid "image:images/1BC0000003F9A68F44F.png[1BC0000003F9A68F44F_png]"
+msgstr "image:images/1BC0000003F9A68F44F.png[1BC0000003F9A68F44F_png]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:274
+msgid "Here is the actual text:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:276
+msgid "image:images/108000000796A6637BF.png[108000000796A6637BF_png]"
+msgstr "image:images/108000000796A6637BF.png[108000000796A6637BF_png]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:279
+msgid ""
+"However, if you really want the *“n”* inside the text, enter *“* ******n”**."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:281
+msgid "image:images/1A50000004681684C4B.png[1A50000004681684C4B_png]"
+msgstr "image:images/1A50000004681684C4B.png[1A50000004681684C4B_png]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:283
+msgid "And the displayed text:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:285
+msgid "image:images/2480000008572F151BE.png[2480000008572F151BE_png]"
+msgstr "image:images/2480000008572F151BE.png[2480000008572F151BE_png]"
+
+#. type: Title -
+#: Pl_Editor.adoc:288
+#, no-wrap
+msgid "Constraints"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:292
+#, no-wrap
+msgid "Page 1 constraint"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:295
+msgid "When using Eeschema, the full schematic often uses more than one page."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:297
+msgid "Usually layout items are displayed on all pages."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:300
+msgid ""
+"But if a user want some items to be displayed only on page 1, or not on page "
+"1, the “page 1 option” this is possible by setting this option:"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:305
+#, no-wrap
+msgid ""
+"|image:images/0FE0000008C8F0A84EF.png[0FE0000008C8F0A84EF_png] a|\n"
+"Page 1 option:\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:309
+#, no-wrap
+msgid ""
+"* None: no constraint.\n"
+"* Page 1 only: the items is visible only on page 1.\n"
+"* Not on page 1: the items is visible on all pages but the page 1.\n"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:314
+#, no-wrap
+msgid "Text full size constraint"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:317
+msgid "image:images/0F7000000CADB177AE6.png[0F7000000CADB177AE6_png]"
+msgstr "image:images/0F7000000CADB177AE6.png[0F7000000CADB177AE6_png]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:319
+msgid "Only for texts, one can set 2 parameters :"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:321
+msgid "the max size X"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:322
+msgid "the max size Y"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:324
+msgid "which define a bounding box"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:329
+msgid ""
+"When these parameters are not 0, when displaying the text, the actual text "
+"height and the actual text width are dynamically modified if the full text "
+"size is bigger than the max size X and/or the max size Y, to fit the full "
+"text size with this bounding box."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:332
+msgid ""
+"When the actual full text size is smaller than the max size X and/or the max "
+"size Y, the text height and/or the text width is not modified."
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:337
+#, no-wrap
+msgid ""
+"|image:images/1D000000049146898BA.png[1D000000049146898BA_png] a|\n"
+"The text with no bounding box.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:339
+#, no-wrap
+msgid "Max size X = 0\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:341 Pl_Editor.adoc:349
+#, no-wrap
+msgid "Max size Y = 0\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:345
+#, no-wrap
+msgid ""
+"|image:images/1B400000043E88BE4C8.png[1B400000043E88BE4C8_png] a|\n"
+"The *same* text with::\n"
+"  constraint.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:347
+#, no-wrap
+msgid "Max size X = 40\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:353
+msgid "A multi line text, constrained:"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:358
+#, no-wrap
+msgid ""
+"|image:images/114000000A59A49C107.png[114000000A59A49C107_png] a|\n"
+"image:images/0F4000000FFCF38FDB1.png[0F4000000FFCF38FDB1_png]\n"
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:365
+#, no-wrap
+msgid "Invoking Pl_Editor"
+msgstr "Invocazione di Pl_Editor"
+
+#. type: Plain text
+#: Pl_Editor.adoc:369
+msgid ""
+"Pl_Editor is typically invoked from a command line, or from the Kicad "
+"manager."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:371
+msgid ""
+"From a command line, the syntax is pl_editor <*.kicad_wks file to open>."
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:374
+#, no-wrap
+msgid "Pl_Editor Commands"
+msgstr "Comandi di Pl_Editor"
+
+#. type: Title ~
+#: Pl_Editor.adoc:378
+#, no-wrap
+msgid "Main Screen"
+msgstr "Schermo principale"
+
+#. type: Plain text
+#: Pl_Editor.adoc:381
+msgid "The image below shows the main window of Pl_Editor."
+msgstr "L'immagine sottostante mostra la finestra principale di Pl_Editor."
+
+#. type: Plain text
+#: Pl_Editor.adoc:383
+msgid "image:images/280000002003BB28D10.png[280000002003BB28D10_png]"
+msgstr "image:images/280000002003BB28D10.png[280000002003BB28D10_png]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:385
+msgid "The left pane contains the list of basic items."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:387
+msgid "The right pane is the item settings editor."
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:390
+#, no-wrap
+msgid "Main Window Toolbar"
+msgstr "La barra strumenti della finestra principale"
+
+#. type: Plain text
+#: Pl_Editor.adoc:393
+msgid "image:images/3180000002933A1DAFF.png[3180000002933A1DAFF_png]"
+msgstr "image:images/3180000002933A1DAFF.png[3180000002933A1DAFF_png]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:395
+msgid "The top toolbar allows for easy access to the following commands:"
+msgstr "La barra strumenti superiore permette un facile accesso ai seguenti comandi:"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:400
+#, no-wrap
+msgid ""
+"|image:images/025000000236092322C.png[025000000236092322C_png] |Select\n"
+"the net list file to be processed.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:403
+#, no-wrap
+msgid ""
+"|image:images/02100000023DA2FC874.png[02100000023DA2FC874_png] |Load a\n"
+"page layout description file.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:406
+#, no-wrap
+msgid ""
+"|image:images/02600000023B6DEDD23.png[02600000023B6DEDD23_png] |Save the\n"
+"current page layout description in a .kicad_wks file.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:409
+#, no-wrap
+msgid ""
+"|image:images/02400000022F65327A8.png[02400000022F65327A8_png] |Display\n"
+"the page size selector and the title block user data editor.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:412
+#, no-wrap
+msgid ""
+"|image:images/02500000022D0648B63.png[02500000022D0648B63_png] |Prints\n"
+"the current page.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:415
+#, no-wrap
+msgid ""
+"|image:images/029000000225511CDE8.png[029000000225511CDE8_png] |Delete\n"
+"the currently selected item.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:418
+#, no-wrap
+msgid ""
+"|image:images/048000000223C9FAADD.png[048000000223C9FAADD_png]\n"
+"|Undo/redo tools.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:421
+#, no-wrap
+msgid ""
+"|image:images/08D000000226C3BBC45.png[08D000000226C3BBC45_png] |Delete\n"
+"all footprint assignments.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:425
+#, no-wrap
+msgid ""
+"|image:images/026000000247DACC8C8.png[026000000247DACC8C8_png] |Show the\n"
+"page layout in user mode: texts are shown like in Eeschema or Pcbnew:\n"
+"text format symbols are replaced by the user texts.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:429
+#, no-wrap
+msgid ""
+"|image:images/023000000247D2AF312.png[023000000247D2AF312_png] |Show the\n"
+"page layout in native mode: texts are displayed “as is”, with the\n"
+"contained formats, without any replacement.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:433
+#, no-wrap
+msgid ""
+"|image:images/09D0000002290AC88FC.png[09D0000002290AC88FC_png]\n"
+"|Reference corner selection, for coordinates displayed to the status\n"
+"bar.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:436
+#, no-wrap
+msgid ""
+"|image:images/060000000223178ABCE.png[060000000223178ABCE_png] a|\n"
+"Selection of the page number (page & or other pages).\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:440
+#, no-wrap
+msgid ""
+"This selection has meaning only if some items have a page option, are\n"
+"are not shown on all pages (in a schematic for instance, which contains\n"
+"more than one page)\n"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:445
+#, no-wrap
+msgid "Commands in drawing area (draw panel)"
+msgstr ""
+
+#. type: Title ^
+#: Pl_Editor.adoc:449
+#, no-wrap
+msgid "Keyboard Commands"
+msgstr "Comandi da tastiera"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:463
+#, no-wrap
+msgid ""
+"|F1 |Zoom In\n"
+"|F2 |Zoom Out\n"
+"|F3 |Refresh Display\n"
+"|F4 |Move cursor to center of display window\n"
+"|Home |Fit footprint into display window\n"
+"|Space Bar |Set relative coordinates to the current cursor position\n"
+"|Right Arrow |Move cursor right one grid position\n"
+"|Left Arrow |Move cursor left one grid position\n"
+"|Up Arrow |Move cursor up one grid position\n"
+"|Down Arrow |Move cursor down one grid position\n"
+msgstr ""
+"|F1 |Zoom In\n"
+"|F2 |Zoom Out\n"
+"|F3 |Ridisegna lo schermo\n"
+"|F4 |Sposta il cursore al centro della finestra\n"
+"|Home |Imposta la visualizzazione dell'impronta esattamente nella finestra \n"
+"|Barra spazio |Imposta le coordinate relative alla posizione corrente del cursore\n"
+"|Freccia a destra |Sposta il cursore a destra di una posizione della griglia\n"
+"|Freccia a sinistra |Sposta il cursore a sinistra di una posizione nella griglia\n"
+"|Freccia su |Sposta il cursore in alto di una posizione nella griglia\n"
+"|Freccia giù |Sposta il cursore in basso di una posizione nella griglia\n"
+
+#. type: Title ^
+#: Pl_Editor.adoc:467
+#, no-wrap
+msgid "Mouse Commands"
+msgstr "Comandi con il mouse"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:475
+#, no-wrap
+msgid ""
+"|Scroll Wheel |Zoom in and out at the current cursor position\n"
+"|Ctrl + Scroll Wheel |Pan right and left\n"
+"|Shift + Scroll Wheel |Pan up and down\n"
+"|Right Button Click |Open context menu\n"
+msgstr ""
+"|Rotellina |Zoom in e out alla posizione corrente del cursore\n"
+"|Ctrl + Rotellina |Pan a destra e a sinistra\n"
+"|Maiusc + Rotellina |Pan su e giù\n"
+"|Clic tasto destro |Apre il menu contestuale\n"
+
+#. type: Title ^
+#: Pl_Editor.adoc:479
+#, no-wrap
+msgid "Context Menu"
+msgstr "Menu contestuale"
+
+#. type: Plain text
+#: Pl_Editor.adoc:482
+msgid "Displayed by right-clicking the mouse:"
+msgstr "Mostrato dal clic destro del mouse:"
+
+#. type: Plain text
+#: Pl_Editor.adoc:484
+msgid "Add Line"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:485
+msgid "Add Rectangle"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:486
+msgid "Add Text"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:487
+msgid "Append Page Layout Descr File"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:490
+msgid ""
+"Are commands to add a basic layout item to the current page layout "
+"description."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:492
+msgid "Zoom selection: direct selection of the display zoom."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:493
+msgid "Grid selection: direct selection of the grid."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:495
+#, no-wrap
+msgid "*Note:*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:498
+msgid ""
+"_Append Page Layout Descr File_ is intended to add poly polygons to make "
+"logos."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:502
+msgid ""
+"Because usually a logo it needs hundred of vertices, you cannot create a "
+"polygon by hand. But you can append a description file, created by "
+"Bitmap2Component."
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:505
+#, no-wrap
+msgid "Status Bar Information"
+msgstr "Informazioni sulla barra di stato"
+
+#. type: Plain text
+#: Pl_Editor.adoc:509
+msgid ""
+"The status bar is located a the bottom of the Pl_Editor and provides useful "
+"information to the user."
+msgstr "La barra di stato è dislocata in fondo a Pl_Editor e fornisce utili informazioni all'utente."
+
+#. type: Plain text
+#: Pl_Editor.adoc:511
+msgid "image:images/31A0000002140AB1BF6.png[31A0000002140AB1BF6_png]"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:514
+msgid ""
+"Coordinates are *always relative to the corner* selected as **reference**."
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:517
+#, no-wrap
+msgid "Left window"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:520
+msgid "The left windows shows the list of layout items."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:523
+msgid ""
+"One can select a given item (left clicking on the line), of when right "
+"clicking on the line, display a pop up menu"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:526
+msgid ""
+"This menu allows basic operations: add a new item, or delete the selected "
+"item."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:528
+#, no-wrap
+msgid "**-> A selected item is also drawn in a different color on draw panel**.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:533
+#, no-wrap
+msgid ""
+"|image:images/14300000235CFE8BB81.png[14300000235CFE8BB81_png] |Design\n"
+"tree: the item 19 is selected, and shown in Yellow on the draw panel.\n"
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:537
+#, no-wrap
+msgid "Right window"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:544
+#, no-wrap
+msgid ""
+"|image:images/0FF000002FE9E9A0182.png[0FF000002FE9E9A0182_png]\n"
+"|image:images/10000000151380C57AA.png[10000000151380C57AA_png] a|\n"
+"The right window is the edit window.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:546
+#, no-wrap
+msgid "On can set\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:548
+#, no-wrap
+msgid "properties of the page and properties of the current item.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:552
+msgid "Displayed settings depend on the selected item:"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:558
+#, no-wrap
+msgid ""
+"|image:images/0FD000001DD98658CC7.png[0FD000001DD98658CC7_png]\n"
+"|image:images/0FD00000261FA2A9A82.png[0FD00000261FA2A9A82_png]\n"
+"|image:images/0FA00000198A5084F51.png[0FA00000198A5084F51_png]\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:561
+#, no-wrap
+msgid ""
+"|Settings for lines and rectangles |Settings for texts |Settings for\n"
+"poly-polygons\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:563
+#, no-wrap
+msgid "|image:images/108000001B1E318405A.png[108000001B1E318405A_png] | |\n"
+msgstr "|image:images/108000001B1E318405A.png[108000001B1E318405A_png] | |\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:565
+#, no-wrap
+msgid "|Setting for bitmaps | |\n"
+msgstr ""
+
+#. type: Title -
+#: Pl_Editor.adoc:569
+#, no-wrap
+msgid "Interactive edition"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:573
+#, no-wrap
+msgid "Item selection"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:576
+msgid "An item can be selected:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:578
+msgid "From the Design tree."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:579
+msgid "By Left clicking on it."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:580
+msgid "By Right clicking on it (and a pop up menu will be displayed)."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:582
+msgid "When selected, this item is drawn in yellow."
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:591
+#, no-wrap
+msgid ""
+"|image:images/0D70000009E6F0E0711.png[0D70000009E6F0E0711_png] |The\n"
+"starting point (\n"
+"image:images/022000000264392FC54.png[022000000264392FC54_png] ) and the\n"
+"ending point (\n"
+"image:images/01C00000020671586A1.png[01C00000020671586A1_png] ) are\n"
+"highlighted.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:594
+msgid "When right clicking on the item, a pop-up menu is displayed."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:596
+msgid "The pop menu options slightly depend on the selection:"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:602
+#, no-wrap
+msgid ""
+"|image:images/0E20000009E089146DE.png[0E20000009E089146DE_png]\n"
+"|image:images/0CE000000C7FC23C3DC.png[0CE000000C7FC23C3DC_png]\n"
+"|image:images/0DD000000ADFCFBDAE0.png[0DD000000ADFCFBDAE0_png]\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:606
+msgid ""
+"If more than one item is found, a menu clarification will be shown, to "
+"select the item:"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:608
+msgid "image:images/16F000000DA893C678D.png[16F000000DA893C678D_png]"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:614
+#, no-wrap
+msgid ""
+"|image:images/0D5000000C7E7BD47D2.png[0D5000000C7E7BD47D2_png] |Once\n"
+"selected, the item, or one of its end points, can be moved by moving the\n"
+"mouse and placed (right clicking on the mouse).\n"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:618
+#, no-wrap
+msgid "Item creation"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:622
+msgid ""
+"To add a new item, right click the mouse button, when the cursor is on the "
+"left window, or the draw area."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:624
+msgid "A popup menu is displayed:"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:629
+#, no-wrap
+msgid ""
+"|image:images/102000000C470B86D38.png[102000000C470B86D38_png]\n"
+"|image:images/0F2000001A2CB4F77A7.png[0F2000001A2CB4F77A7_png]\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:631
+#, no-wrap
+msgid "|Pop up menu in left window |Pop up menu in draw area.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:635
+msgid ""
+"Lines, rectangles and texts are added just by clicking on the corresponding "
+"menu item."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:638
+msgid ""
+"Logos must first be created by Bitmap2component, which creates a page layout "
+"description file."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:641
+msgid ""
+"The Append Page Layout Descr File option append this file, to insert the "
+"logo (a poly polygon)"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:644
+#, no-wrap
+msgid "Adding lines, rectangles and texts"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:647
+msgid "When clicking on the option, a dialog is opened:"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:652
+#, no-wrap
+msgid ""
+"|image:images/141000001505F9E07DF.png[141000001505F9E07DF_png]\n"
+"|image:images/13F0000014FEDD597EE.png[13F0000014FEDD597EE_png]\n"
+msgstr ""
+
+#. type: delimited block |
+#: Pl_Editor.adoc:654
+#, no-wrap
+msgid "|Adding line or rectangle |Adding text\n"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:657
+msgid "Position of end points, and corner reference can be defined here."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:660
+msgid ""
+"However they can be defined later, from the right window, or by moving the "
+"item, or one of its end points."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:662
+msgid "Most of time the corner reference is the same for both points."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:666
+msgid ""
+"If this is not the case, define the corner reference at creation is better, "
+"because if a corner reference is changed later, the geometry of the item "
+"will be a bit strange."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:669
+msgid ""
+"When an item is created, if is put in move mode, and you can refine its "
+"position (this is very useful for texts and small lines or rectangles)"
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:672
+#, no-wrap
+msgid "Adding logos"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:676
+msgid ""
+"To add a logo, a poly polygon (the vectored image of the logo) must be first "
+"created using Bitmap2component."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:679
+msgid ""
+"Bitmap2component creates a page layout description file which is append to "
+"the current design, using the *Append Page Layout Descr File* option."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:682
+msgid ""
+"Bitmap2component creates a page layout description file which contains only "
+"one item: a poly polygon."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:685
+msgid ""
+"__However, this command can be used to append any page layout description "
+"file, which is merged with the current design__."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:688
+msgid ""
+"Once a poly polygon is inserted, it can be moved and its parameters edited."
+msgstr ""
+
+#. type: Title ~
+#: Pl_Editor.adoc:691
+#, no-wrap
+msgid "Adding image bitmaps"
+msgstr "Aggiunta immagini bitmap"
+
+#. type: Plain text
+#: Pl_Editor.adoc:695
+msgid ""
+"You can add an image bitmap using most of bitmap formats (PGN, JPEG, BMP ...)"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:698
+msgid ""
+"When a bitmap is imported, its PPI (pixel per inch) definition is set to "
+"300PPI"
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:699
+msgid "This value can be modified in panel Properties (right panel)."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:700
+msgid "The actual size depend on this parameter."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:702
+msgid ""
+"Be aware using hight definition can create large files, and have a "
+"noticeable draw or plot time."
+msgstr ""
+
+#. type: Plain text
+#: Pl_Editor.adoc:703
+msgid "A bitmap can be repeated, but not rotated."
+msgstr "Una immagine bitmap può essere ripetuta, ma non ruotata."
