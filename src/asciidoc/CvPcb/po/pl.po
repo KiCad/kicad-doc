@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-02-14 21:55+0100\n"
-"PO-Revision-Date: 2015-02-28 13:43+0100\n"
+"PO-Revision-Date: 2015-02-28 19:38+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -277,7 +277,6 @@ msgstr "Uruchamianie CvPcb"
 
 #. type: Plain text
 #: CvPcb.adoc:124
-#, fuzzy
 msgid ""
 "CvPcb is typically invoked from the schematic capture program Eeschema.  "
 "Eeschema automatically passes the correct net list file name to CvPcb.  "
@@ -302,7 +301,12 @@ msgstr ""
 "lub klikając na ikonę programu na pasku narzędzi programu Eeschema. "
 "Domyślnie nazwa pliku posiada taką samą nazwę jak projekt z rozszerzeniem `."
 "net`. Gdy lista sieci już istnieje wszyskie zapisane tam przypisania zostaną "
-"zachowane."
+"zachowane. Gdy pierwotna lista sieci jest już utworzona przez Eeschema, "
+"CvPcb może zostać wywołany bezpośrednio z menadżera projektu. Można też "
+"CvPcb wywołać jako samodzielny program. Jeśli CvPcb jest uruchomiony jako "
+"samodzielny program, lista sieci musi być otwarta ręcznie za pomocą "
+"polecenia ``Otwórz'' w menu ``Plik'' lub za pomocą ikony na pasku "
+"narzędziowym."
 
 #. type: Title -
 #: CvPcb.adoc:126
@@ -465,6 +469,9 @@ msgid ""
 "|Enable or disable the filtering to limit the list of footprints to the\n"
 "footprint filters of the selected component.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A2030B04B.png[]\n"
+"|Włącza lub wyłącza filtrowanie za pomocą filtrów footprintów zapisanych \n"
+"we właściwościach wybraneego komponentu.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:192
@@ -474,6 +481,9 @@ msgid ""
 "|Enable or disable the filtering to limit the list of footprints using\n"
 "the pin count of the selected component.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A98870FF1.png[]\n"
+"|Włącza lub wyłącza filtrowanie za pomocą filtra używającego klucza \n"
+"w postaci ilości wyprowadzeń wybraneego komponentu.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:196
@@ -483,6 +493,9 @@ msgid ""
 "|Enable or disable filtering to limit the list of footprints using the\n"
 "selected library.\n"
 msgstr ""
+"|image:images/100002010000001A0000001A7D355C45.png[]\n"
+"|Włącza lub wyłącza filtrowanie za pomocą filtra używającego klucza \n"
+"w postaci wybranej biblioteki.\n"
 
 #. type: Title ~
 #: CvPcb.adoc:199
@@ -505,6 +518,9 @@ msgid ""
 "Tab|Activate the next pane to the right of the currently activated pane.\n"
 "Wrap around to the first pane if the last pane is currently activated.\n"
 msgstr ""
+"|Strzałka w prawo\n"
+"Tab|Aktywuje kolejny panel znajdujący się na prawo od aktualnie aktywnego panelu.\n"
+"Wraca do pierwszego panelu gdy aktywnym panelem jest ostatni panel.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:211
@@ -513,18 +529,20 @@ msgid ""
 "|Left Arrow |Activate the next pane to the left of the currently activated \n"
 "pane. Wrap around to the last pane if the first pane is currently activated.\n"
 msgstr ""
+"|Strzałka w lewo |Aktywuje poprzedni panel znajdujący się na lewo od aktualnie aktywnego panelu.\n"
+"Wraca do ostatniego panelu gdy aktywnym panelem jest pierwszy panel.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:213
 #, no-wrap
 msgid "|Up Arrow |Select the previous item of the currently selected list.\n"
-msgstr ""
+msgstr "|Strzałka w górę |Wybiera poprzedni element na obecnie wybranej liście.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:215
 #, no-wrap
 msgid "|Down Arrow |Select the next item of the currently selected list.\n"
-msgstr ""
+msgstr "|Strzałka w dół |Wybiera następny element na obecnie wybranej liście.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:218
@@ -532,7 +550,7 @@ msgstr ""
 msgid ""
 "|Page Up |Select the item up one full page of the currently selected\n"
 "list.\n"
-msgstr ""
+msgstr "|Page Up |Wybiera pierwszy element na górze widocznej części listy.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:221
@@ -540,19 +558,19 @@ msgstr ""
 msgid ""
 "|Page Down |Select the item down one full page of the currently selected\n"
 "list.\n"
-msgstr ""
+msgstr "|Page Down |Wybiera ostatni element na dole widocznej części listy.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:223
 #, no-wrap
 msgid "|Home |Select the first item of the currently selected list.\n"
-msgstr ""
+msgstr "|Home |Wybiera pierwszy element z bieżąco wybranej listy.\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:225
 #, no-wrap
 msgid "|End |Select the last item of the currently selected list.\n"
-msgstr ""
+msgstr "|End |Wybiera ostatni element z bieżąco wybranej listy.\n"
 
 #. type: Title ~
 #: CvPcb.adoc:228
@@ -571,6 +589,8 @@ msgid ""
 "CvPcb can be automatically closed after saving the footprint association "
 "file, or not."
 msgstr ""
+"CvPcb może być automatycznie zamknięty po zapisaniu pliku z przypsaniami lub "
+"nie."
 
 #. type: Plain text
 #: CvPcb.adoc:237
@@ -578,17 +598,23 @@ msgid ""
 "Invoking the ``Libraries'' entry in the ``Preferences'' menu displays the "
 "library configuration dialog."
 msgstr ""
+"Uruchomienie menu konfiguracji bibliotek powoduje otwarcie następującego "
+"okna dialogowego."
 
 #. type: Plain text
 #: CvPcb.adoc:240
 msgid ""
 "Depending of the CvPcb version, there are 2 different libraries management:"
 msgstr ""
+"W zależności od wersji programu CvPcb, są dwa różne modele zarządzania "
+"bibliotekami:"
 
 #. type: Plain text
 #: CvPcb.adoc:242
 msgid "The legacy management, using *.mod files, and a library list of files"
 msgstr ""
+"Zarządzanie bibliotekami starszego typu, używa plików `.mod` oraz list "
+"plików bibliotek"
 
 #. type: Plain text
 #: CvPcb.adoc:246
@@ -598,6 +624,11 @@ msgid ""
 "management, You also can use native libraries coming from GEDA/GPCB or Eagle "
 "xml format files ."
 msgstr ""
+"Nowy format ``Pretty'' używa jednego pliku dla każdego footprintu. Używana "
+"jest zatem lista folderów. Każdy folder (o nazwie zakończonej przez `."
+"pretty`) to osobna biblioteka. Gdy używany jest nowy model zarządzania, "
+"można użyć również natywnych plików bibliotek z programu gEDA/gPCB oraz "
+"EAGLE XML (wersje 6.x lub późniejsze)."
 
 #. type: Title -
 #: CvPcb.adoc:248
@@ -609,7 +640,7 @@ msgstr "Zarządzanie bibliotekami footprintów"
 #: CvPcb.adoc:251
 #, no-wrap
 msgid "Legacy management: selecting Footprint Libraries"
-msgstr ""
+msgstr "Zarządzanie bibliotekami starszego typu (Legacy)"
 
 #. type: Plain text
 #: CvPcb.adoc:261
@@ -623,6 +654,15 @@ msgid ""
 "will be fixed in a future version of KiCad. Please note that changing these "
 "libraries will also effect Pcbnew."
 msgstr ""
+"Ta część okna dialogowego konfiguracji bibliotek footprintów służy do "
+"dodawania, usuwania i zmiany kolejności wyszukiwania bibliotek footprintów "
+"dla bieżącego projektu. Kolejność bibliotek jest krytyczny, gdy wyszukiwane "
+"są footprinty o takich samych nazwach w wielu bibliotekach. CvPcb użyje "
+"pierwszego wystąpienia nazwy footprintu jeśli zostanie on odnaleziony. Jeśli "
+"utworzono nowy foorptin to dobrze jest nadać mu unikalną nazwę aby uniknąć "
+"konfliktu nazw. Ten problem jest znany i zostanie rozwiązany w przyszłych "
+"wersjach KiCad-a. Należy pamiętać, że zmiana tych bibliotek będzie również "
+"dotyczyć Pcbnew."
 
 #. type: Plain text
 #: CvPcb.adoc:263
@@ -633,37 +673,37 @@ msgstr "image:images/2000000900003A6600000EC90C50E7EF.png[]"
 #: CvPcb.adoc:265
 #, no-wrap
 msgid "*Remove:* Removes the selected footprint library from the list.\n"
-msgstr ""
+msgstr "*Usuń* - usuwa wskazaną bibliotekę z listy.\n"
 
 #. type: Plain text
 #: CvPcb.adoc:266
 #, no-wrap
 msgid "*Add:* Adds a new footprint library to the end of the list.\n"
-msgstr ""
+msgstr "*Dodaj* - dodaje nową bibliotekę do listy na końcu listy.\n"
 
 #. type: Plain text
 #: CvPcb.adoc:267
 #, no-wrap
 msgid "*Insert:* Inserts a new footprint library to the list before the currently selected library.\n"
-msgstr ""
+msgstr "*Wstaw* - dodaje nową bibliotekę do listy przed aktualnie wybranym elementem.\n"
 
 #. type: Plain text
 #: CvPcb.adoc:268
 #, no-wrap
 msgid "*Up:* Move the currently select library up the list.\n"
-msgstr ""
+msgstr "*Góra* - przesuwa wybraną bibliotekę wyżej na liście (zwiększa priorytet).\n"
 
 #. type: Plain text
 #: CvPcb.adoc:269
 #, no-wrap
 msgid "*Down:* Move the currently selected library down the list.\n"
-msgstr ""
+msgstr "*Dół* - przesuwa wybrany bibliotekę niżej na liście (zmniejsza priorytet).\n"
 
 #. type: Title ^
 #: CvPcb.adoc:272
 #, no-wrap
 msgid "Changing the Footprint Documentation File."
-msgstr ""
+msgstr "Zmiana pliku dokumenacji footprintów."
 
 #. type: Plain text
 #: CvPcb.adoc:275
@@ -676,12 +716,14 @@ msgid ""
 "Select the ``Browse'' button to select a new footprint documentation file "
 "with the display file select dialog."
 msgstr ""
+"Należy użyć przycisku ``Przeglądaj'' by wybrać nowy plik dokumentacji "
+"footprintów z wyświetlonego okienka dialogowego."
 
 #. type: Title ^
 #: CvPcb.adoc:280
 #, no-wrap
 msgid "Changing Footprint Library Search Paths."
-msgstr ""
+msgstr "Zmiana ścieżek przeszukiwań bibliotek footprintów."
 
 #. type: Plain text
 #: CvPcb.adoc:288
@@ -692,6 +734,13 @@ msgid ""
 "and 3D model files (.wrl) used by CvPcb. The default paths cannot be edited. "
 "Only new user defined paths can be added to the search path list."
 msgstr ""
+"CvPcb wykorzystuje dwa rodzaje ścieżek: domyślne ścieżki ustawione "
+"automatycznie przez KiCad, gdy tworzony jest nowy projekt i ścieżki dodane "
+"przez użytkownika. Ścieżki te są używane przez CvPcb w celu wyszukiwania "
+"plików bibliotek footprintów (`.mod`), plików skryptów przypisań (`.equ`) "
+"oraz plików modeli 3D (`.wrl`). Ścieżki domyślne nie mogą być edytowane. "
+"Tylko nowe ścieżki zdefiniowane przez użytkownika mogą być dodane do listy "
+"ścieżek."
 
 #. type: Plain text
 #: CvPcb.adoc:290
@@ -713,6 +762,11 @@ msgid ""
 "remove the selected user defined search path. Clicking the ``Remove'' button "
 "will have no effect if a default search path is selected."
 msgstr ""
+"Kliknąc w przycisk ``Dodaj'' by dodać nową ścieżkę po wybranym elemecie na "
+"liście przeszukiwanych ścieżek. Kliknąć ``Wstaw'' by wstawić nową ścieżkę "
+"przed wybranym elementem na liście przeszukiwanych ścieżek. Kliknąć ``Usuń'' "
+"by usunąć wskazywany element z listy przeszukiwanych ścieżek. Przycisk ten "
+"nie działa jeśli wybranym elementem jest domyślna ścieżka przeszukiwań."
 
 #. type: Plain text
 #: CvPcb.adoc:302
@@ -735,11 +789,17 @@ msgid ""
 "“c:\\Program Files\\kicad\\share” has no meaning and will fail on Linux and "
 "OSX."
 msgstr ""
+"Domyślnie CvPcb wewnętrznie używa zestawu predefiniowanych ścieżek używanych "
+"do wyszukiwania bibliotek footprintów. Te ścieżki są zależne od systemu "
+"operacyjnego. Jest ogólnie zalecane by używać ścieżek względnych niżeli "
+"ścieżek bezwzględnych gdzie to możliwe, tak by nie były one zależne od "
+"systemu. Inaczej mówiąc: “c:\\Program Files\\kicad\\share” nie jest znaną "
+"ścieżką i systemy Linux oraz OSX będą z nią mieć problem."
 
 #. type: Plain text
 #: CvPcb.adoc:314
 msgid "The default Linux library paths will be as follows:"
-msgstr ""
+msgstr "Domyślna ścieżka do bibliotek w systemie Linux będzie następująca:"
 
 #. type: Plain text
 #: CvPcb.adoc:316
@@ -754,6 +814,8 @@ msgid ""
 "*root/share/kicad/modules/packages3d* (for 3D shapes files \n"
 "format *VRML* created par Wings3D).\n"
 msgstr ""
+"*root/share/kicad/modules/packages3d* (dla obiektów 3D \n"
+"w formacie VRML stworzonych przez Wings3D).\n"
 
 #. type: Plain text
 #: CvPcb.adoc:319
@@ -768,6 +830,9 @@ msgid ""
 "Typically on Linux Kicad is installed in the /usr/bin path.  Therefore the "
 "root path would be /usr."
 msgstr ""
+"Gdzie ścieżka główna jest względna do ścieżki plików wykonywalnych, tam "
+"gdzie KiCad jest zainstalowany. Typowo w systemie Linux program KiCad jest "
+"istalowany w `/usr/bin`. Jednakże ścieżką główną byłoby `/usr`."
 
 #. type: Title ~
 #: CvPcb.adoc:325
@@ -1438,6 +1503,9 @@ msgid ""
 "provides useful information to the user. The following table defined the "
 "contents of each pane in the status bar."
 msgstr ""
+"Pasek statusu jest umieszczony na dole głónego okna CvPcb i dostarcza "
+"użytecznych informacji dla użytkownika. Poniższa tabela opisuje zawartość "
+"każdego panelu na pasku statusu. "
 
 #. type: Title ^
 #: CvPcb.adoc:595
@@ -1460,6 +1528,16 @@ msgid ""
 "|Up Arrow |Move cursor up one grid position\n"
 "|Down Arrow |Move cursor down one grid position\n"
 msgstr ""
+"|F1 |Przybliżanie\n"
+"|F2 |Oddalanie\n"
+"|F3 |Przerysowanie widoku\n"
+"|F4 |Przesunięcie kursora do środka okna\n"
+"|Home |Dopasowanie powiększenia by pokazać cały footprint w oknie\n"
+"|Spacja |Ustawienie punktu bazowego dla współrzędnych relatywnych w miejscu kursora\n"
+"|Strzałka w prawo |Przesunięcie kursora o jedną pozycję siatki w prawo\n"
+"|Strzałka w lewo |Przesunięcie kursora o jedną pozycję siatki w lewo\n"
+"|Strzałka w górę |Przesunięcie kursora o jedną pozycję siatki w górę\n"
+"|Strzałka w dół |Przesunięcie kursora o jedną pozycję siatki w dół\n"
 
 #. type: Title ^
 #: CvPcb.adoc:612 CvPcb.adoc:694
@@ -1476,6 +1554,10 @@ msgid ""
 "|Shift + Scroll Wheel |Pan up and down\n"
 "|Right Button Click |Open context menu\n"
 msgstr ""
+"|Kółko myszy |Przybliżanie lub oddalanie widoku wokół bieżącej pozycji kursora\n"
+"|Ctrl + Kółko myszy |Przesuwanie widoku w prawo lub w lewo\n"
+"|Shift + Kółko myszy |Przesuwanie widoku w dół lub w górę\n"
+"|Kliknięcie prawym przyciskiem |Otwarcie menu kontekstowego\n"
 
 #. type: Title ^
 #: CvPcb.adoc:623
@@ -1491,7 +1573,7 @@ msgstr "image:images/2000000900000C4E00001A91ED722582.png[]"
 #. type: Plain text
 #: CvPcb.adoc:628
 msgid "Displayed by right-clicking the mouse:"
-msgstr ""
+msgstr "Wyświetlane jest poprzez kliknięcie prawym klawiszem myszy:"
 
 #. type: delimited block |
 #: CvPcb.adoc:633
@@ -1500,12 +1582,14 @@ msgid ""
 "|Zoom Selection (Select Zoom) |Direct selection of the display zoom.\n"
 "|Grid Selection (Grid Select) |Direct selection of the grid.\n"
 msgstr ""
+"|Wybór powiększenia |Bezpośredni wybór powiększenia obrazu.\n"
+"|Wybór siatki |Bezpośredni wybór wyświetlanej siatki.\n"
 
 #. type: Title ^
 #: CvPcb.adoc:636 CvPcb.adoc:704
 #, no-wrap
 msgid "Horizontal Toolbar"
-msgstr ""
+msgstr "Górny pasek narzędziowy"
 
 #. type: delimited block |
 #: CvPcb.adoc:644
@@ -1516,6 +1600,10 @@ msgid ""
 "|image:images/100002010000001A0000001A987F0D04.png[]\n"
 "|Zoom in\n"
 msgstr ""
+"|image:images/100002010000001A0000001AFFE7B356.png[]\n"
+"|Pokazuje okno z ustawieniami wyświetlania\n"
+"|image:images/100002010000001A0000001A987F0D04.png[]\n"
+"|Przybliżanie\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:647 CvPcb.adoc:718
@@ -1524,6 +1612,8 @@ msgid ""
 "|image:images/100002010000001A0000001A66ABF68B.png[]\n"
 "|Zoom out\n"
 msgstr ""
+"|image:images/100002010000001A0000001A66ABF68B.png[]\n"
+"|Oddalanie\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:650 CvPcb.adoc:721
@@ -1532,6 +1622,8 @@ msgid ""
 "|image:images/100002010000001A0000001A798AA253.png[]\n"
 "|Redraw\n"
 msgstr ""
+"|image:images/100002010000001A0000001A798AA253.png[]\n"
+"|Przerysowanie widoku\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:653 CvPcb.adoc:724
@@ -1540,6 +1632,8 @@ msgid ""
 "|image:images/100002010000001A0000001A0D57E008.png[]\n"
 "|Fit drawing in display area\n"
 msgstr ""
+"|image:images/100002010000001A0000001A0D57E008.png[]\n"
+"|Ustawienie powiększenia by całość zmieściła się na ekranie\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:656
@@ -1548,12 +1642,14 @@ msgid ""
 "|image:images/100002010000001A0000001A2C2F6349.png[]\n"
 "|Open 3D model viewer\n"
 msgstr ""
+"|image:images/100002010000001A0000001A2C2F6349.png[]\n"
+"|Otwiera przeglądarkę modeli 3D\n"
 
 #. type: Title ^
 #: CvPcb.adoc:659
 #, no-wrap
 msgid "Vertical Toolbar"
-msgstr ""
+msgstr "Lewy pasek narzędziowy"
 
 #. type: delimited block |
 #: CvPcb.adoc:665
@@ -1562,6 +1658,8 @@ msgid ""
 "|image:images/100002010000001A0000001A1103DCA9.png[]\n"
 "|Show or hide the grid\n"
 msgstr ""
+"|image:images/100002010000001A0000001A1103DCA9.png[]\n"
+"|Pokazuje lub ukrywa siatkę\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:668
@@ -1570,6 +1668,8 @@ msgid ""
 "|image:images/100002010000001A0000001A3CD4BE9F.png[]\n"
 "|Show coordinates in polar or rectangular notation\n"
 msgstr ""
+"|image:images/100002010000001A0000001A3CD4BE9F.png[]\n"
+"|Pokazuje koordynaty jako polarne lub kartezjańskie\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:671
@@ -1578,6 +1678,8 @@ msgid ""
 "|image:images/100002010000001A0000001A59E37A09.png[]\n"
 "|Display coordinates in inches\n"
 msgstr ""
+"|image:images/100002010000001A0000001A59E37A09.png[]\n"
+"|Pokazuje koordynaty w calach\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:674
@@ -1586,6 +1688,8 @@ msgid ""
 "|image:images/100002010000001A0000001AD542C4CF.png[]\n"
 "|Display coordinates in millimeters\n"
 msgstr ""
+"|image:images/100002010000001A0000001AD542C4CF.png[]\n"
+"|Pokazuje koordynaty w milimetrach\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:677
@@ -1594,6 +1698,8 @@ msgid ""
 "|image:images/100002010000001A0000001A4A78FB18.png[]\n"
 "|Toggle cursor style\n"
 msgstr ""
+"|image:images/100002010000001A0000001A4A78FB18.png[]\n"
+"|Przełącza styl kursora\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:680
@@ -1602,6 +1708,8 @@ msgid ""
 "|image:images/100002010000001A0000001A68CAF66E.png[]\n"
 "|Toggle between drawing pads in sketch or normal mode\n"
 msgstr ""
+"|image:images/100002010000001A0000001A68CAF66E.png[]\n"
+"|Przełącza pomiędzy wyświetlaniem pól lutowniczych w trybie pełnym lub tylko zarys\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:683
@@ -1610,6 +1718,8 @@ msgid ""
 "|image:images/100002010000001A0000001A406F2807.png[]\n"
 "|Toggle between drawing text in sketch or normal mode\n"
 msgstr ""
+"|image:images/100002010000001A0000001A406F2807.png[]\n"
+"|Przełącza pomiędzy wyświetlaniem tekstu w trybie pełnym lub tylko zarys\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:686
@@ -1618,6 +1728,8 @@ msgid ""
 "|image:images/100002010000001A0000001A09E18AFA.png[]\n"
 "|Toggle between drawing edges in sketch or normal mode\n"
 msgstr ""
+"|image:images/100002010000001A0000001A09E18AFA.png[]\n"
+"|Przełącza pomiędzy wyświetlaniem krawędzi w trybie pełnym lub tylko zarys\n"
 
 #. type: Title ~
 #: CvPcb.adoc:689
@@ -1651,6 +1763,10 @@ msgid ""
 "|image:images/100002010000001A0000001A9A14D17F.png[]\n"
 "|Copy 3D image to clipboard\n"
 msgstr ""
+"|image:images/100002010000001A0000001A106F8A4B.png[]\n"
+"|Przeładowywuje model 3D\n"
+"|image:images/100002010000001A0000001A9A14D17F.png[]\n"
+"|Kopiuje obraz 3D do schowka\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:715
@@ -1659,6 +1775,8 @@ msgid ""
 "|image:images/100002010000001A0000001A987F0D04.png[]\n"
 "|Zoom in\n"
 msgstr ""
+"|image:images/100002010000001A0000001A987F0D04.png[]\n"
+"|Przybliżenie\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:727
@@ -1667,6 +1785,8 @@ msgid ""
 "|image:images/100002010000001A0000001A1DC691C6.png[]\n"
 "|Rotate backward along the X axis\n"
 msgstr ""
+"|image:images/100002010000001A0000001A1DC691C6.png[]\n"
+"|Obraca w lewo wokół osi X\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:730
@@ -1675,6 +1795,8 @@ msgid ""
 "|image:images/100002010000001A0000001A36E79F92.png[]\n"
 "|Rotate forward along the X axis\n"
 msgstr ""
+"|image:images/100002010000001A0000001A36E79F92.png[]\n"
+"|Obraca w prawo wokół osi X\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:733
@@ -1683,6 +1805,8 @@ msgid ""
 "|image:images/100002010000001A0000001A1C53FE12.png[]\n"
 "|Rotate backward along the Y axis\n"
 msgstr ""
+"|image:images/100002010000001A0000001A1C53FE12.png[]\n"
+"|Obraca w lewo wokół osi Y\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:736
@@ -1691,6 +1815,8 @@ msgid ""
 "|image:images/100002010000001A0000001A94DDCA95.png[]\n"
 "|Rotate forward along the Y axis\n"
 msgstr ""
+"|image:images/100002010000001A0000001A94DDCA95.png[]\n"
+"|Obraca w prawo wokół osi Y\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:739
@@ -1699,6 +1825,8 @@ msgid ""
 "|image:images/100002010000001A0000001A9C45D193.png[]\n"
 "|Rotate backward along the Z axis\n"
 msgstr ""
+"|image:images/100002010000001A0000001A9C45D193.png[]\n"
+"|Obraca w lewo wokół osi Z\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:742
@@ -1707,6 +1835,8 @@ msgid ""
 "|image:images/100002010000001A0000001AF4723C21.png[]\n"
 "|Rotate forward along the Z axis\n"
 msgstr ""
+"|image:images/100002010000001A0000001AF4723C21.png[]\n"
+"|Obraca w prawo wokół osi Z\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:745
@@ -1715,6 +1845,8 @@ msgid ""
 "|image:images/100002010000001A0000001A3EEC8BF8.png[]\n"
 "|Pan left\n"
 msgstr ""
+"|image:images/100002010000001A0000001A3EEC8BF8.png[]\n"
+"|Przesuwa widok w lewo\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:748
@@ -1723,6 +1855,8 @@ msgid ""
 "|image:images/100002010000001A0000001A35181776.png[]\n"
 "|Pan right\n"
 msgstr ""
+"|image:images/100002010000001A0000001A35181776.png[]\n"
+"|Przesuwa widok w prawo\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:751
@@ -1731,6 +1865,8 @@ msgid ""
 "|image:images/100002010000001A0000001AB8AAD9D8.png[]\n"
 "|Pan up\n"
 msgstr ""
+"|image:images/100002010000001A0000001AB8AAD9D8.png[]\n"
+"|Przesuwa widok w górę\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:754
@@ -1739,6 +1875,8 @@ msgid ""
 "|image:images/100002010000001A0000001A38DC77BD.png[]\n"
 "|Pan down\n"
 msgstr ""
+"|image:images/100002010000001A0000001A38DC77BD.png[]\n"
+"|Przesuwa widok w dół\n"
 
 #. type: delimited block |
 #: CvPcb.adoc:757
@@ -1747,18 +1885,20 @@ msgid ""
 "|image:images/100002010000001A0000001AAC4BB5EB.png[]\n"
 "|Toggle orthographic projection mode on and off\n"
 msgstr ""
+"|image:images/100002010000001A0000001AAC4BB5EB.png[]\n"
+"|Włącza lub wyłącza tryb projekcji ortagonalnej.\n"
 
 #. type: Title -
 #: CvPcb.adoc:760
 #, no-wrap
 msgid "Using CvPcb to Associate Components with Footprints"
-msgstr ""
+msgstr "Użycie CvPcb do przypisywania footprintów komponentom"
 
 #. type: Title ~
 #: CvPcb.adoc:763
 #, no-wrap
 msgid "Manually Associating Footprints with Components"
-msgstr ""
+msgstr "Ręczne przypisywanie footprintów do komponentów"
 
 #. type: Plain text
 #: CvPcb.adoc:771
@@ -1769,6 +1909,11 @@ msgid ""
 "The unassigned next component in the list is automatically selected. "
 "Changing the component footprint is performed in the same manner."
 msgstr ""
+"By manualnie przypisać footprint do komponentu należy najpierw wybrać "
+"komponent z panelu komponentów. Następnie wybrać footprint w panelu "
+"footprintów i kliknąć dwukrotnie na nazwie wybranego footprintu. Następny "
+"komponent nieposiadający przypsania zostanie wybrany automatycznie. Zmiana "
+"przypisania jest wykonywana w ten sam sposób."
 
 #. type: Title ~
 #: CvPcb.adoc:773
@@ -1783,6 +1928,9 @@ msgid ""
 "of the filtering option is enabled, the displayed footprint list in CvPcb is "
 "filtered accordingly."
 msgstr ""
+"Jeśli wybrany komponent lub biblioteka jest podświetlona gdy jedna lub "
+"więcej opcji filtrowania jest włączona, lista footprintów w programie CvPcb "
+"jest odpowiednio filtrowana."
 
 #. type: Plain text
 #: CvPcb.adoc:780
@@ -1801,6 +1949,9 @@ msgid ""
 "The component filters are listed on the center pane of the status bar at the "
 "bottom of the main window."
 msgstr ""
+"Filtrowanie za pomocą listy filtrów przypisanej do wybranego komponentu. "
+"Filtry te są wyświetlane na centralnym panelu pasku statusu na dole głównego "
+"okna programu."
 
 #. type: Plain text
 #: CvPcb.adoc:788
@@ -1814,6 +1965,9 @@ msgid ""
 "using the entries in the footprint filter tab of the component properties "
 "dialog as shown below."
 msgstr ""
+"W edytorze bibliotek komponentó w programie Eeschema, lista footprintów "
+"została ustawiona za pomocą wpisów w zakładce filtrowania footprintów w "
+"oknie dialogowym właściwości komponentów, jak pokazano niżej."
 
 #. type: Plain text
 #: CvPcb.adoc:794
@@ -1824,6 +1978,7 @@ msgstr "image:images/10000000000001AE0000013893C2B4F6.png[]"
 #: CvPcb.adoc:796
 msgid "Filtered by the pin count of the selected component."
 msgstr ""
+"Odfiltrowane poprzez liczbę wyprowadzeń jaką posiada wybrany komponent."
 
 #. type: Plain text
 #: CvPcb.adoc:798
@@ -1833,7 +1988,7 @@ msgstr "image:images/10000000000003240000021766744A5C.png[]"
 #. type: Plain text
 #: CvPcb.adoc:800
 msgid "Filtered by the selected library."
-msgstr ""
+msgstr "Odfiltrowane poprzez aktualnie wybraną bibliotekę."
 
 #. type: Plain text
 #: CvPcb.adoc:802
@@ -1848,11 +2003,17 @@ msgid ""
 "footprint list is shown. The filtering can be combined to form more complex "
 "filtering to help reduce the number of footprints in the footprint pane."
 msgstr ""
+"Ikony image:images/10000000000000400000001FB5B88EB2.png[] włączają lub "
+"wyłączaja poszczególne filtry. Gdy filtracja nie jest włączona, wyświetlana "
+"jest pełna lista footprintów. Kolejne klucze filtrowania mogą być włączane "
+"niezależnie by tworzyć zaawansowane filtry pozwalające zredukować ilość "
+"footprintów do wyboru w panelu footprintów."
 
 #. type: Plain text
 #: CvPcb.adoc:811
 msgid "Filtered by the selected component pin count and the selected library."
 msgstr ""
+"Odfiltrowane poprzez liczbę wyprowadzeń komponentu oraz wybraną bibliotekę"
 
 #. type: Plain text
 #: CvPcb.adoc:813
