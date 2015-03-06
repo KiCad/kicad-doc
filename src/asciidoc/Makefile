@@ -58,9 +58,10 @@ help:
 #	po4a-gettextize -f asciidoc -M utf-8 -m $^ -p $@
 
 #Build/update the single language NN i18n strings .po file
-$(PODIR)/%.po: $(DOCNAME).adoc
+#$(PODIR)/%.po: $(DOCNAME).adoc #Single file dependency
+$(PODIR)/%.po: $(DOCNAME).adoc $(foreach l,$(DOCCHAPTERS), $(l))
 	@po4a-updatepo -f asciidoc -v -M utf-8 -m $(DOCNAME).adoc $(foreach l,$(DOCCHAPTERS),-m $(l)) -p $@
-#	@po4a-updatepo -f asciidoc -v -M utf-8 $(foreach l,$(shell ls -1 $(DOCNAME)*.adoc), -m $(l)) -p $@
+	touch $@
 
 .PHONY: po-all
 po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
