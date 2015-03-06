@@ -4,6 +4,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{asciidoc-dblatex}[2012/10/24 AsciiDoc DocBook Style]
 
+%% This hack is necessary due to a conflict between the amssymb and Polish babel package.
+\let\lll\undefined
+
 %% Just use the original package and pass the options.
 \RequirePackageWithOptions{docbook}
 
