@@ -1,0 +1,150 @@
+#!/bin/sh
+#
+# po4aman-display-po permits to see how a manpage translated with po4a
+# will be displayed, without needing to uncompress the original manpage
+# and call po4a-translate.
+#
+
+OPTIONS=""
+
+usage() {
+  echo "Usage: $0 -p PO_FILE [-m MASTER_FILE] [-o PO4A_OPT]"
+  return 0
+}
+
+error () {
+  echo "Error: $1" 1>&2
+  exit 1
+}
+
+while getopts m:p:ho: option
+do
+  case $option in
+    m)
+      MASTER="$OPTARG"
+      ;;
+    p)
+      PO="$OPTARG"
+      ;;
+    o)
+      OPTIONS="$OPTIONS $OPTARG"
+      ;;
+    h)
+      usage
+      exit 0
+      ;;
+    [?])
+      usage 1>&2
+      exit 1
+      ;;
+  esac
+done
+
+if [ -z "$PO" ]
+then
+  usage 1>&2
+  exit 1
+fi
+
+if [ ! -f "$PO" ]
+then
+  error "could not find PO file: $PO"
+fi
+
+if [ -z "$MASTER" ]
+then
+  echo "No manpage specified."
+  echo "Trying to find the manpage according to a line reference in the PO."
+  MASTER=$(grep -m 1 "^#:" $PO | sed -e 's/^.* \(.*\):.*$/\1/')
+fi
+
+find_man()
+{
+  section="$1"
+  man="$2"
+  echo -n "Looking for manpage $file"
+  [ -n "$section" ] && echo " in section $section" || echo ""
+  MAN_NUMBER=`man --all --where --locale=C $section "$man" 2> /dev/null | wc -l`
+
+  if [ "$MAN_NUMBER" = "0" ]
+  then
+    return 1
+  elif [ "$MAN_NUMBER" != "1" ]; then
+    MAN_NUMBER=`man --all --where --locale=C $section "$man" 2> /dev/null | \
+                grep "\/$man\.$section\(.gz\)\?$" | wc -l`
+    if [ "$MAN_NUMBER" = "1" ]
+    then
+      MASTER=`man --where --locale=C "$section" "$man" | grep "\/$man\.$section\(.gz\)\?$"`
+      echo "Multiple manpages in section $section: $(man -aw -L C $section "$man"), only one exactly matches the section."
+    else
+      error "Too many possible manpages: $(man -aw -L C $section "$man"), you must specify the manpage or the section"
+    fi
+  else
+    MASTER=`man --where --locale=C "$section" "$man"`
+  fi
+
+  return 0
+}
+
+if [ ! -f "$MASTER" ]
+then
+  echo "Can't find the master man page $MASTER"
+  file=$(basename "$MASTER")
+  MASTER=""
+  section=""
+  if ! find_man "" "$file"
+  then
+    # Maybe $file contains a section
+    # (in the form of file.section.extension)
+    section=$(echo "$file" | sed -ne 's/^.*\.\([1-9].*\)$/\1/; s/\..*//; p')
+    file=$(echo "$file" | sed -e 's/\.[1-9].*//')
+    if ! find_man "$section" "$file"
+    then
+      # Maybe there is an extension at the end of the manpage (e.g. .man)
+      file=$(echo "$file" | sed -e 's/\..*//')
+      if ! find_man "$section" "$file"
+      then
+        echo "No manpage found"
+        echo "You must provide the manpage with the -m option"
+        MASTER=""
+      fi
+    fi
+  fi
+  if [ -n "$MASTER" ]
+  then
+    echo "Using: $MASTER as the original manpage"
+  fi
+fi
+
+# checking mandatory options
+if [ -z "$MASTER" ]
+then
+  usage 1>&2
+  exit 1
+fi
+
+# checking files
+if [ ! -e "$MASTER" ]
+then
+  error "could not find master file: $MASTER"
+fi
+
+
+if [ "${MASTER%.gz}" = "$MASTER" ]
+then
+  MAINNAME="$MASTER"
+else
+  MAINNAME=`mktemp`
+  trap "rm \"$MAINNAME\"" EXIT INT
+  gunzip -c "$MASTER" > "$MAINNAME"
+fi
+
+CHARSET_MASTER=`file -i "$MAINNAME" | cut -d "=" -f 2`
+CHARSET_PO=`file -i "$PO" | cut -d "=" -f 2`
+
+po4a-translate -f man -k 0 -m "$MAINNAME" -M "$CHARSET_MASTER" \
+  -p "$PO" $OPTIONS| iconv -f "$CHARSET_PO" -t // | man -l -
+
+# TODO: man may need some options (e.g. -L)
+#       as we cannot detect what options are needed, they will have to be
+#       specified on the po4aman-display-po command line.

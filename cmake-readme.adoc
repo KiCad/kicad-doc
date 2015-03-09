@@ -1,0 +1,19 @@
+== Building kicad-doc with CMake
+
+Obviously, CMake is required. V2.8 or later is required.
+
+== PO4A
+
+PO4A is required. This is a perl program and is a pain to use on Windows. Because of the pain on Windows where no install candidate is required a suitable version of PO4A is included in the kicad-doc source. However, perl is required and should be able to be run from the command line. If you use http://www.activestate.com/activeperl/downloads[ActiveState perl] all you need to install is the Unicode::GcString package.
+
+To install a perl package, start a command line and type:
+
+    cpan Unicode::GcString
+
+After some whirring it'll be ready to use and the included PO4A can be used.
+
+== ASCIIDOC
+
+http://sourceforge.net/projects/asciidoc/[Asciidoc] is also required for building the documentation. If asciidoc can be run from your command line, it will be used. As again, asciidoc requires modified installation steps for windows, a copy of asciidoc is included in the documentation.
+
+In order to run asciidoc you'll need python installed and that's not included in the CMakeSupport directory! So you'll need to make sure python can be run from your command line.

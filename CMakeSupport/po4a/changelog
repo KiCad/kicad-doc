@@ -1,0 +1,4251 @@
+2013-08-21  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* t/data-20/test2.sgml: Remove spurious line, it causes
+	test failures with recent Docbook DTD.  Thanks to
+	Didier Spaier.
+
+2013-08-15  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm: Fix again DST in
+	POT-Creation-Date, by Jakub Wilk.
+
+2013-08-15  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Xml.pm: Improve error reporting, by
+	Martin Quinson.
+
+2013-08-15  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* Po4aBuilder.pm: Fix generation with newer
+	Module::Build.
+
+2013-08-15  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/LaTeX.pm: The newtheorem command
+	accepts two optional parameters, by Federico Poloni.
+
+2013-05-16  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a po4a-updatepo lib/Locale/Po4a/{Po,Wml}.pm: Fix
+	usage of File::Temp::tempfile, by Richard W.M. Jones.
+
+2013-05-16  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm: Fix DST in POT-Creation-Date.
+	Thanks to Ineiev for the report and patch.
+
+2013-01-05  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Ini.pm: Add key parameter as an
+	automatic comment.  This allows using po4a-gettextize
+	on ini files.  Thanks to Didier Raboud.
+
+2012-10-31  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a po4a-updatepo lib/Locale/Po4a/{Po,Sgml,Wml}.pm:
+	Use $ENV{TMPDIR} instead of /tmp if it is defined.
+
+2012-10-28  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Asciidoc.pm: make <beginpage> inline.
+	Thanks to Petter Reinholdtsen for the report and patch.
+
+2012-10-27  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a: Allowing specifying the name of master files in
+	splitted mode.  Thanks to Yann Dirson for the report and
+	patch.  A slightly different version of his patch is
+	implemented, syntax is
+	  master:file=<file-name>
+
+2012-10-26  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Asciidoc.pm: Many improvements.
+
+2012-10-22  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Asciidoc.pm: Promote AsciiDoc to its
+	own format, and deprecate -o asciidoc in Text format.
+
+2012-10-09  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Text.pm: According to documentation,
+	minimum width for two-line title is two and not four.
+
+2012-09-26  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Text.pm: Support more AsciiDoc styles.
+
+2012-09-18  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm po4a: Add another possible
+	value to --porefs option: counter.
+
+2012-09-14  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Text.pm: Rewrite the parse() method
+	to improve its readability.
+
+2012-09-10  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Text.pm: Do not wrap tables in Asciidoc.
+	Report and patch by Anders Nawroth.
+
+2012-09-09  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm po4a: Add a wrap/nowrap modifier
+	to --porefs option, and make po4a recognize this option.
+	* lib/Locale/Po4a/Man.pm: Declare .UR/.UE macros as being
+	inline.
+
+2012-09-08  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Man.pm: Add missing macros used by several
+	NetBSD manual pages.  Thanks to Kiwamu Okabe for the patch.
+
+2012-02-23  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm: Preserve obsolete entries (prefixed
+	by #~) in read()+write() cycle.
+
+2012-02-23  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a: Allow adding command-line options after config file.
+
+2011-07-24  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Add support for control files.
+
+2010-11-22  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a: Fix parsing to allow empty commands in
+	configuration files.
+	* po4a: Expand variables when reading @-prefixed
+	addenda files.
+
+2010-11-20  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* Makefile: File removed, all building stuff is
+	performed within Build.PL; otherwise we would have
+	to let Makefile support options passed to Build.PL,
+	this may get tricky.
+
+2010-11-03  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Xml.pm: Fix handling of CDATA text.
+	Fixes bug#312773 on the Alioth tracker.
+	* po4a: Fix the --srcdir option, master file was not found.
+
+2010-10-11  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Make sure input is always passing
+	through either sub t{} or sub r{}. Convert back non breaking
+	spaces in sub r{}. This fixes the handling of mdoc(7).
+
+2010-10-02  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Texinfo.pm: Fix handling of
+	@defcodeindex and @defindex.
+
+2010-09-23  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Text.pm: Remove trailing newline
+	in titles from PO files.
+	* lib/Locale/Po4a/TransTractor.pm: Remove trailing
+	carriage returns when reading input files.
+	* lib/Locale/Po4a/Po.pm, po4a: Do no more generate
+	backups for PO files.  The --no-backups and
+	--rm-backups flags are kept for now, but do nothing.
+
+2010-09-21  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Xml.pm: Under rare circumstances,
+	tag definitions passed as options could be applied
+	to other files listed in the configuration file.
+
+2010-09-01  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a-updatepo: This script did no more call
+	msgmerge with --previous flag since the last change
+	in 2009-12-30.
+
+2010-08-24  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* CVS -> SVN: Migrate from CVS to SVN.
+	All CVS history has been converted. See
+	  http://svn.debian.org/viewsvn/po4a/
+	The standard SVN layout is used (with top-level
+	/trunk, /branches and /tags directories), and
+	the files to generate the website (html/,
+	po/html.cfg and po/www) are moved into a new
+	/web top-level directory.
+
+2010-08-20  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* share/doc/po4a*.xml: Add xml:lang="en" attribute
+	to the root node of XML documents, this attribute
+	will be translated by po4a and xsltproc will then
+	provide translated section titles.
+
+2010-08-14  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Man.pm: Do not remove the last
+	newline if it follows an escaped space character,
+	otherwise paragraphs are merged.
+
+2010-08-13  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/TransTractor.pm: Slightly change
+	previous commit to be more conservative.
+	* lib/Locale/Po4a/Man.pm: Fix handling of escaped
+	spaces in post_trans.
+
+2010-08-03  David Prévot <taffit-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/TransTractor.pm: Do not wrap all
+	trailing spaces: keep one in order to keep non
+	breaking space at the end of lines for manual pages.
+
+2010-07-31  David Prévot <taffit-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/*.pm:  Stylistic changes in
+	runtime messages, make them more coherent with
+	documentation.
+
+2010-07-28  David Prévot <taffit-guest@alioth.debian.org>
+
+	* doc/*.pod lib/Locale/Po4a/*.pm:  Style update in
+	documentation.
+
+2010-07-30  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm: Change header entry to be
+	consistent with xgettext when creating POT files:
+	replace Content-Transfer-Encoding: ENCODING" by
+	"Content-Transfer-Encoding: 8bit\n" and add a
+	Language field.
+
+2010-07-28  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* MANIFEST: Add po/pod/ru.po, Russian translation
+	was not included in tarball.
+
+2010-07-26  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm: Let read() handle previous
+	strings, which are flagged by '#|'.  They were
+	previously managed like translator's comments, and
+	calling write() after read()ing a PO file containing
+	such comments generated an invalid PO file.
+	This happened only with msgsearch or msguntypot, and
+	not po4a* tools.
+	* scripts/msguntypot: Call msgmerge with the
+	--previous option; add a --no-previous option to
+	disable this new behavior.
+
+2010-07-20  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Po.pm: When gettextize() fails,
+	recode $trans into current charset before printing
+	it on stderr.
+
+2010-07-19  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* lib/Locale/Po4a/Man.pm: Support font modifiers in
+	the form \f(XX and \f[FONT-NAME].
+	* lib/Locale/Po4a/Man.pm: Add support for .TQ macro.
+	Patch by James Vega.
+	* lib/Locale/Po4a/{Text,Sgml}.pm: Handle gracefully
+	the case when input file is empty.
+	* po4a: New EXAMPLE section in documentation,
+	contributed by Helge Kreutzmann.
+
+2010-04-17  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a: New '--translate-only <file>' option.
+	* lib/Locale/Po4a/Man.pm: Add new macros: Brq, %Q, Ms, Ud.
+
+2010-03-29  TATEISHI Katsuyuki  <kt@wheel.jp>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Fix failures: "Unknown option:
+	copyright-holder".
+
+2010-03-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TeX.pm: Die with a more sensible error if a file
+	cannot be found with kpsewhich.
+
+2010-02-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Next version will be
+	0.39.
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2010-01-21  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a, po4a-translate: New syntax for addenda, path may be
+	preceded by modifiers.
+
+2010-01-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Add table of content.
+	* po4a: Stress that po4a(1) is meant to ease the use of the po4a-*
+	commands.
+	* po4a: Fix the location of the explanation when --force is not
+	specified.
+	* po4a: Added notes in the [po4a_langs] and [po4a_paths] sections
+	to indicate that [po_directory] is recommended.
+	* po4a: Split long example lines.
+
+2010-01-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a, lib/Locale/Po4a/TeX.pm, lib/Locale/Po4a/Text.pm: Fixed
+	typos.
+
+2010-01-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* TODO: Updated TODO list (new TODO items for po4a-build).
+
+2010-01-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Document the $lang expansion in --msgmerge-opt
+	* po4a: Improve the $lang expansion outside of --msgmerge-opt
+	(e.g. to avoid expansion of $language)
+
+2010-01-14  Denis Barbier <barbier-guest@alioth.debian.org>
+
+	* po4a: Expand $lang in --msgmerge-opt option.
+
+2010-01-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Check earlier if master files exist.
+
+2010-01-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: Remove outdated information. Xhtml is
+	ready for production.
+
+2010-01-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/fr.po: Updated to 1323t3f133u.
+
+2009-12-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Next version will be
+	0.38.
+	* po/bin/Makevars: xgettext needed some options. At least -L Perl
+	This seems to be OK for shell script also. This is not complete,
+	but fixes the generation of POT.
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2009-12-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po4a, po4a-updatepo: --previous is activated by default.
+	* NEWS, po4a, po4a-updatepo: Use --no-previous to support versions
+	of gettext earlier than 0.16.
+
+2009-12-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Add a lang attribute, based on the PO
+	file basename.
+	* NEWS, lib/Locale/Po4a/Xml.pm: Add option addlang to force po4a
+	to add a lang attribute to some tags.
+
+2009-12-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* share/doc/po4a-build.xml, share/doc/po4aman-display-po.xml,
+	share/doc/po4apod-display-po.xml: Use more content related tags.
+	* po/pod/ca.po, po/pod/es.po, po/pod/fr.po, po/pod/it.po,
+	po/pod/ja.po, po/pod/pl.po, po/pod/po4a-pod.pot: Updated.
+	* po/pod/es.po, po/pod/pl.po: Unfuzzied (1455t).
+	* po/pod/fr.po: Updated to 1303t8f144u.
+
+2009-12-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm: Fixed typo (nobullet -> nobullets)
+	* lib/Locale/Po4a/Text.pm: Fail when unknown options are provided.
+
+2009-12-27  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TransTractor.pm: Reset the detection of
+	non-ascii files between two process() calls (i.e. when po4a
+	process a new file).
+
+2009-12-27  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Pod.pm: Detect the encoding based on the
+	input's =encoding line.
+
+2009-12-27  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a, po4a-gettextize, po4a-normalize, po4a-translate,
+	po4a-updatepo, lib/Locale/Po4a/Xml.pm, lib/Locale/Po4a/Xhtml.pm,
+	lib/Locale/Po4a/Wml.pm, lib/Locale/Po4a/TransTractor.pm,
+	lib/Locale/Po4a/Text.pm, lib/Locale/Po4a/Texinfo.pm,
+	lib/Locale/Po4a/TeX.pm, lib/Locale/Po4a/Sgml.pm,
+	lib/Locale/Po4a/Pod.pm, lib/Locale/Po4a/Po.pm,
+	lib/Locale/Po4a/NewsDebian.pm, lib/Locale/Po4a/Man.pm,
+	lib/Locale/Po4a/LaTeX.pm, lib/Locale/Po4a/KernelHelp.pm,
+	lib/Locale/Po4a/Ini.pm, lib/Locale/Po4a/Html.pm,
+	lib/Locale/Po4a/Halibut.pm, lib/Locale/Po4a/Guide.pm,
+	lib/Locale/Po4a/Docbook.pm, lib/Locale/Po4a/Dia.pm,
+	lib/Locale/Po4a/Debconf.pm, lib/Locale/Po4a/Common.pm,
+	lib/Locale/Po4a/Chooser.pm, lib/Locale/Po4a/BibTeX.pm: Specify the
+	encoding of the files processed by pod2man.
+
+2009-12-27  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: Fix handling of multi-lines
+	placeholder tags.
+
+2009-11-23  Neil Williams  <linux@codehelp.co.uk>
+
+	* share/po4a-build: Set utf8 default for pod2man.
+
+2009-11-23  Neil Williams  <linux@codehelp.co.uk>
+
+	* share/po4a-build: Specify the real module name
+	when using pod2man and section 3.
+
+2009-11-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Pod.pm, lib/Locale/Po4a/TransTractor.pm:
+	Improved detection of the output charset to provide the
+	'=encoding' line in the output POD.
+	* t/data-04/text-iso8859.pod-ok, t/data-04/utf.pod-ok: Updated
+	testsuite accordingly.
+
+2009-11-21  Neil Williams  <linux@codehelp.co.uk>
+
+	* po/pod/es.po: Fix a few typos.
+	* share/po4a-build: Read the translated XML;
+	fix for typo in call to xsltproc.
+
+2009-11-13  Neil Williams  <linux@codehelp.co.uk>
+
+	* MANIFEST: Add build and runtime documentation.
+	* Makefile: Remove empty directories after install.
+	* doc/po4a-build.conf.5.pod: Documentation for the
+	po4a-build.conf file.
+	* doc/po4a-runtime.7.pod: Documentation for using example
+	files from po4a for runtime script translation.
+	* doc/po4a.7.pod: Typo.
+	* po4a-build.conf: Add section 5 and 7 POD content.
+	* share/doc/po4a-build.xml: Document section 5 support.
+	* share/po4a-build: Support section 5 for POD.
+	* share/po4a-build.conf.example: Section 5 support.
+
+2009-11-12  Neil Williams  <linux@codehelp.co.uk>
+
+	* Build.PL: OK, this is a hack but gettext really doesn't
+	like mixing shell and perl without one of the formats
+	having a file extension, so make a temporary po4a-build.sh
+	symlink which gets cleaned up later.
+	* Makefile: Clean up the temporary symlink.
+	* po/bin/Makevars: Let xgettext use the default Lang
+	now that the symlink solves the other confusion.
+	* po/bin/POTFILES.in: Get POTFILES to look at the symlink.
+	* po/bin/po4a.pot: Updated with new strings from po4a-build.
+	* share/po4a-build: Fix the string markup so that xgettext
+	finds all 14 strings.
+
+2009-11-12  Neil Williams  <linux@codehelp.co.uk>
+
+	* Build.PL: Convert to the po4a-build build system.
+	* MANIFEST: Add po4a-build support files.
+	* Makefile: Generate translated content via po4a-build.
+	* changelog: Fold share/Changelog into main changelog.
+	* po/bin/LINGUAS: po4a-build support.
+	* po/bin/Makefile: copy of the example in share/
+	* po/bin/Makevars: based on the example in share/
+	* po/bin/POTFILES.in: Scripts with translatable content.
+	* po/pod/ca.po: Updated for po4a-build strings.
+	* po/pod/es.po: Updated for po4a-build strings.
+	* po/pod/fr.po: Updated for po4a-build strings.
+	* po/pod/it.po: Updated for po4a-build strings.
+	* po/pod/ja.po: Updated for po4a-build strings.
+	* po/pod/pl.po: Updated for po4a-build strings.
+	* share/ChangeLog: Removed.
+	* share/Makefile: Add a clean target.
+	* t/.cvsignore: Ignore t/tmp.
+
+2009-11-11  Neil Williams  <linux@codehelp.co.uk>
+
+	* share/po4a-build: Properly separate man (3) from man (1) XML
+	* share/po4a-build.conf: Update with modified variables.
+	* share/po4a-build.conf.example: Update the example too.
+
+2009-11-10  Neil Williams  <linux@codehelp.co.uk>
+
+	* share/po4a-build: Add support for man (7) and include
+	changes from more testing within the po4a build.
+	* share/doc/po4aman-display-po.xml,
+	* share/doc/po4apod-display-po.xml: Add XML from doclifter
+	so that the manpages can be generated and the XML
+	translated. Add translations to doc/po/.
+	* share/po4a-build.conf: Allow use of internal po4a support.
+
+2009-11-07  Omar Campagne  <ocampagne@gmail.com>
+
+	* po/pod/es.po: Updated to 1248t.
+
+2009-11-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare next release
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2009-11-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS: Fixed NEWS entries.
+	* NEWS, lib/Locale/Po4a/Text.pm: Added options breaks and tabs.
+	* lib/Locale/Po4a/Text.pm: Do not set $self->{options} in
+	initialize().
+
+2009-11-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* MANIFEST, doc/addendum_man.es: Added addenda for groff manpages.
+
+2009-11-06  Neil Williams  <linux@codehelp.co.uk>
+
+	* share/README: trying to describe what I'm seeking here.
+	* share/doc/po4a-build.xml: Prototype manpage for po4a-build
+	* share/doc/po4a.config: po4a-build config file for it's own
+	manpage translation, in due course.
+	* share/po/.cvsignore: Ignore the POT
+	* share/po4a-build: Switch to po4a-build as the script name and
+	po4a-build.conf as the config file name. Comment out
+	"debianism" of looking for debian/changelog.
+	* share/po4a-build.conf: Internal conf file for eventual manpage
+	generation and translation.
+	* share/po4a-build.conf.example: SCRIPTS= unsupported - better done
+	using the Makefile snippets, see README.
+
+2009-11-06  Neil Williams  <linux@codehelp.co.uk>
+
+	* share/Makevars-perl.example: Example for perl packages.
+	* share/Makevars-shell.example: Example for shell packages.
+	* share/po/Makefile: Copy of po4a-build.make for our translations.
+	* share/po/Makevars: Copy of Makevars-shell.example for po4a-build
+	* share/po/POTFILES.in: po4a-build support.
+	* share/po4a-build: main script to allow translation to be a one-stop
+	process.
+	* share/po4a-build.make: Based on autotools, allows preparation of
+	POT files and updating of PO files for script output translation
+	messages.
+
+2009-11-06  Omar Campagne  <ocampagne@gmail.com>
+
+	* NEWS, po/pod/es.po: Updated to 1239t.
+	* doc/addendum.es: Added Omar Campagne to the list of Spanish
+	translators.
+
+2009-10-25  Thomas Mueller  <thomas.mueller@tmit.eu>
+
+	* po/bin/de.po: Updated to 182t.
+
+2009-10-25  Florentin Duneau  <fduneau@gmail.com>
+
+	* scripts/po4apod-display-po: Fixed bashism.
+	* po/pod/fr.po: Fixed typos in the French translation of the
+	po4apod-display-po manpage.
+
+2009-10-25  Clytie Siddall  <clytie@riverland.net.au>
+
+	* po/bin/vi.po: Added Vietnamese translation.
+
+2009-09-30  Michal Simunek  <michal.simunek@gmail.com>
+
+	* po/bin/cs.po: Updated to 182t.
+
+2009-09-10  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare next release
+
+2009-09-10  Thomas Mueller  <thomas.mueller@tmit.eu>
+
+	* po/bin/de.po: Updated to 182t.
+
+2009-09-08  António Moreira  <antoniocostamoreira@gmail.com>
+
+	* NEWS, po/bin/pt.po: Updated to 183t.
+
+2009-09-02  Luca Monducci  <luca.mo@tiscali.it>
+
+	* NEWS, lib/Locale/Po4a/Sgml.pm: Inclusion of entities may not end
+	with a space.
+
+2009-08-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare next release
+
+2009-08-29  Martin Bagge  <brother@bsnet.se>
+
+	* po/bin/sv.po: Updated to 183t.
+
+2009-08-29  Michal Simunek  <michal.simunek@gmail.com>
+
+	* po/bin/cs.po: Updated to 182t.
+
+2009-08-29  Piarres Beobide  <pi@beobide.net>
+
+	* po/bin/eu.po: Updated to 182t.
+
+2009-08-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/fr.po: Updated to 183t.
+	* po/pod/fr.po: Updated to 1239t.
+
+2009-08-29  Yuri Kozlov  <yuray@komyakino.ru>
+
+	* po/bin/ru.po: Updated to 183t.
+
+2009-08-29  Joop Eggen  <joop_eggen@yahoo.de>
+
+	* po/bin/eo.po: Updated to 183t.
+
+2009-08-21  Omar Campagne  <ocampagne@gmail.com>
+
+	* po/bin/es.po: Updated to 183t.
+
+2009-08-19  Annika  <aennok@gmail.com>
+
+	* po/bin/et.po: Updated Estonian translation. (84t18f81u)
+
+2009-08-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* po/bin/*.po, po/pod/*.po: Header cleanup. Removed invalid
+	language team addresses.
+
+2009-08-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-05/test7.err: Fix testsuite. This is probably a bug in
+	the testsuite. The stdout and stderr outputs should probably be
+	separated.
+
+2009-08-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po4a, lib/Locale/Po4a/TransTractor.pm: Added options
+	--srcdir and --destdir. They permit to strip the base directory
+	for the input and output documents (in the config file and in the
+	references generated in the PO files).
+
+2009-08-16  Omar Campagne  <ocampagne@gmail.com>
+
+	* NEWS, po/bin/es.po: Updated Spanish translation.
+
+2009-07-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po4a-updatepo: Added options --msgid-bugs-address,
+	--copyright-holder, --package-name, --package-version to control
+	the generation of the PO header.
+
+2009-07-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: prevent the plugin from
+	croaking on the options intended for Po.pm.
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare next release
+	0.36.3.
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2009-07-21  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare next release
+	0.36.2.
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* MANIFEST, Build.PL: Distribute the po4apod-display-po script.
+	* doc/addendum_man.fr: Fix encoding.
+	* po/pod.cfg: Added po4apod-display-po manpage.
+
+2009-07-21  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Wml.pm: Inherit from Xhtml instead of calling
+	Xhtml separately. This avoids having to deal with the options
+	multiple times. This should not change the Wml module behavior.
+
+2009-07-21  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: Added option customtag.
+
+2009-07-21  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/LaTeX.pm: Do not translate the colors.
+
+2009-07-21  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po4a-gettextize: Added options --msgid-bugs-address,
+	--copyright-holder, --package-name, --package-version to control
+	the generation of the PO header.
+	* lib/Locale/Po4a/TransTractor.pm: Pass the PO options to the
+	created Locale::Po4a::Po objects.
+
+2009-07-20  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* scripts/po4apod-display-po: Fix some bashisms.
+	* scripts/po4apod-display-po: Added support for additional
+	options.
+	* scripts/po4apod-display-po: Always generate the manpagesin
+	UTF-8. man will figure out what has to be done.
+
+2009-07-20  Florentin Duneau  <fduneau@gmail.com>
+
+	* NEWS, scripts/po4apod-display-po, scripts/po4apod-display-po.1,
+	scripts/po4aman-display-po: Added script to display previews of
+	POD translations.
+
+2009-07-20  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/fr.po: Fixed typo.
+
+2009-07-19  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Avoid the translation of some
+	markup: title and horizontal rules.
+
+2009-07-19  Jonas Smedegaard  <dr@jones.dk>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Improved Markdown support.
+
+2009-07-11  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Wml.pm: Copy {TT}{'file_in_encoder'}
+	together with {TT}{'file_in_charset'}. This fixes the handling of
+	non ASCII documents.
+
+2009-04-11  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/fr.po: Fix typo.
+
+2009-04-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare for the next release
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2009-04-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Do not include commented out entities.
+
+2009-03-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TeX.pm: Two escape sequences (\\ in LaTeX or @@
+	in Texinfo) do not introduce a command.
+	* lib/Locale/Po4a/TeX.pm: Escaped brackets should not be counted
+	(for the balancing of brackets).
+	* lib/Locale/Po4a/Texinfo.pm: Added support for opindex
+
+2009-03-23  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Pod.pm: Do not add an =encoding header if the
+	encoding is empty. Thanks to Joey Hess.
+
+2009-03-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TeX.pm: Fix support for inline
+	customization of separators. The [#x] modifier is optional.
+	* NEWS, lib/Locale/Po4a/LaTeX.pm: Added support for the tabularx
+	environment.
+
+2009-03-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* doc/po4a.7.pod, lib/Locale/Po4a/Xml.pm: Fix Typos.
+	* po/pod/fr.po: Updated French translation.
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2009-03-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: The tag and the po4a-id may have been
+	split on different lines in the PO file.
+
+2009-03-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/fr.po: Updated French translation.
+
+2009-03-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Do not expect external entities to be in
+	the current directory. Use the current file's path instead.
+
+2009-03-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a, po4a-gettextize, po4a-normalize, po4a-translate,
+	po4a-updatepo, scripts/msgsearch, scripts/msguntypot: DO not use
+	the hardcoded /usr/bin/perl. Just use perl from the PATH.
+
+2009-03-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* scripts/msguntypot: Do not include Locale::gettext directly. Use
+	Locale::Po4a::Common instead.
+
+2009-03-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare for the next release
+
+2009-03-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Fix the support for the nodefault
+	option.
+	* lib/Locale/Po4a/Xml.pm: Fix the detection of tags wrongly added
+	to 2 exclusive categories.
+
+2009-03-03  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Simplify handling of references from
+	@save_holders.
+
+2009-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: Added foldattributes option.
+	Useful to simplify strings and avoid typos when attributes shall
+	not be translated.
+
+2009-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Wml.pm: Issue warnings only in debug mode.
+
+2009-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Added missing initialization of
+	$self->{options}{'_default_attributes'}
+
+2009-03-01  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm, lib/Locale/Po4a/Guide.pm,
+	lib/Locale/Po4a/Xhtml.pm: Use _default_attributes instead of
+	attributes.
+	* lib/Locale/Po4a/Xml.pm: Added support for _default_attributes.
+	* lib/Locale/Po4a/Xml.pm: Do not use the default setting if the
+	tag is already assigned to the category on the command line
+	(modifiers may differ).
+
+2009-02-28  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-02/man.po, t/data-02/man.po-empty, t/data-02/man.po-ok,
+	t/data-02/pod.po, t/data-02/pod.po-empty, t/data-02/pod.po-ok,
+	t/data-04/ascii-iso8859.po-ok, t/data-04/ascii.po-ok,
+	t/data-04/iso8859.po-ok, t/data-04/trans.po, t/data-04/utf.po,
+	t/data-04/utf.po-ok, t/data-05/test0.fr.po,
+	t/data-05/test0.fr.po-empty, t/data-05/test0.pot,
+	t/data-05/test2.de.po, t/data-05/test2.de.po-empty,
+	t/data-05/test2.es.po, t/data-05/test2.es.po-empty,
+	t/data-05/test2.fr.po, t/data-05/test2.fr.po-empty,
+	t/data-05/test2.it.po, t/data-05/test2.it.po-empty,
+	t/data-05/test2.pot, t/data-11/pod1.po, t/data-11/pod2.po,
+	t/data-20/test2.pot, t/data-20/xml.po, t/data-21/extract.po-ok,
+	t/data-21/transl.po, t/data-22/html.po, t/data-22/spaces.po,
+	t/data-23/dot1.fr.po, t/data-23/dot1.pot, t/data-23/dot5.it.po,
+	t/data-23/dot5.pot, t/data-23/escapes1.it.po,
+	t/data-23/escapes1.pot, t/data-23/fonts.en.po,
+	t/data-23/fonts.pot, t/data-23/hyphens.translate.fr.po,
+	t/data-23/hyphens.translate.pot, t/data-23/hyphens.verbatim.fr.po,
+	t/data-23/hyphens.verbatim.pot, t/data-23/mdoc.fr.po,
+	t/data-23/mdoc.pot, t/data-23/mixed.fr.po, t/data-23/mixed.pot,
+	t/data-23/null.fr.po, t/data-23/null.pot,
+	t/data-23/spaces.fr_latin1.po, t/data-23/spaces.fr_utf8.po,
+	t/data-23/spaces.ja.po, t/data-23/spaces.pot,
+	t/data-24/simple.fr.po, t/data-24/simple.pot,
+	t/data-25/includessi.po, t/data-25/xhtml.po,
+	t/data-27/comments.po, t/data-27/general.po, t/data-27/options.po,
+	t/data-29/general.po, t/data-30/Attributes.po,
+	t/data-30/BlockId.po, t/data-30/BlockTitles.po,
+	t/data-30/Callouts.po, t/data-30/DelimitedBlocks.po,
+	t/data-30/Footnotes.po, t/data-30/Lists.po,
+	t/data-30/Paragraphs.po, t/data-30/Tables.po, t/data-30/Titles.po:
+	Updated testsuite according to last change for "type:" comments.
+
+2009-02-28  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Po.pm: Tag "type:" comments as extracted
+	comments (starting with '#. ') instead of translator comments.
+
+2009-02-28  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-05/test7.err: Updated testsuite. Man is much less verbose
+	in debug mode since the simplification of the splitargs() function.
+	* t/data-23/quotes, t/data-23/quotes.fr, t/data-23/quotes.fr.po,
+	t/data-23/quotes.pot: Updated testsuite. splitargs() is now 
+	* t/data-24/simple-translate.out, t/data-24/simple-updatepo.out,
+	t/data-24/simple-gettextize.out: Updated testsuite. New warning
+	for files which are not found.
+	* t/data-24/simple.fr.tex, t/data-24/simple.tex: article.cls is a
+	standard file, and is found by kpsewhich. Use article-wrong.cls
+	instead.
+	* t/data-27/general-normalized.xml: New behavior of Xml for
+	comments.
+
+2009-02-28  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TeX.pm: Warn if kpsewhich cannot find the file.
+
+2009-02-28  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Dia.pm: Since the removal of tagsonly,
+	found_string() may receive an empty (or space only) string. Just
+	return the provided string in that case.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: Remove <map> from the set of inline
+	tags. <img> are not translated so <map>/<area> should not be
+	neither.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS,lib/Locale/Po4a/TeX.pm: Use kpsewhich instead of directly
+	TEXINPUTS to find included files.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL: Fix the title (release and center titles) of the
+	English po4a.7 manpage.
+	* Build.PL: Fix the titles (release and center titles) of
+	translated manpages (they use to be doubly encoded in UTF-8).
+
+2009-02-22  Robert Luberda  <robert@debian.org>
+
+	* doc/po4a.7.pod: Fixed typo.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Dia.pm, lib/Locale/Po4a/Docbook.pm,
+	lib/Locale/Po4a/Guide.pm: Do not use tagsonly, which is not needed
+	anymore and deprecated.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Fix the handling of global options in the configuration
+	file. [options] opt:"-M UTF-8" failed.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Check that the translated and
+	untranslated lists are exclusive.
+	* lib/Locale/Po4a/Xml.pm: Check that the break, inline and
+	placeholder lists are exclusive.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Remove the translate argument from
+	translate_paragraph(). It is not used anymore.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Updated documentation.
+
+2009-02-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: The tags and tagsonly options are
+	deprecated. Use the translated/untranslated and
+	break/inline/placeholder options instead.
+
+2009-02-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: Only issue a warning when the
+	doctype does not match. Also provide more help to the users.
+
+2009-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* doc/po4a.7.pod: Harmonize the filename used in the
+	documentation, example, etc.
+	* doc/po4a.7.pod: Added section "HOWTO customize po4a".
+
+2009-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Common.pm, lib/Locale/Po4a/TransTractor.pm,
+	lib/Locale/Po4a/Text.pm: Fix warnings in the generated manpages.
+	* lib/Locale/Po4a/Text.pm: Document the asciidoc option.
+
+2009-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Man.pm: Rewrite splitargs() to handle
+	arguments having multiple spaces for formatting. This information
+	was lost when splitting the arguments string on spaces.
+
+2009-02-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: Give placeholders a type and a
+	more valid XML representation.
+
+2009-02-10  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Fail with an error if options cannot be parsed (instead of
+	infinite loop).
+
+2009-02-10  Martin Quinson  <mquinson@debian.org>
+
+	* lib/Locale/Po4a/Xml.pm: Reset @path in initialize(). This is
+	needed when po4a is used with multiple files which leave an
+	unclean path.
+
+2009-02-10  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS: Updated release date.
+	* NEWS, Build.PL: Build the manpage with the Pod::Man utf8 option.
+	This requires a recent Pod::Man (>= 5.10?)
+	* NEWS, lib/Locale/Po4a/Pod.pm: Announce the encoding in the POD
+	header.
+
+2009-02-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL: Another try to fix the installation of manpages and mo
+	files.
+	* t/30-text.t: De-activate the Tables test. Tables are not
+	supported by the asciidoc module.
+	* t/data-29/general-normalized.wml, t/data-29/general.po: Fix the
+	WML testsuite (due to a change in teh HTML module, <br /> are now
+	breaking points in paragraphs.
+	* lib/Locale/Po4a/TransTractor.pm: Updated to version 0.35.
+
+2009-01-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2009-01-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod.cfg, po/html.cfg: Use the new [po_directory] feature in
+	our po4a configuration files.
+
+2009-01-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Added support for the xml:lang
+	attribute.
+
+2009-01-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Do not duplicate the references when the
+	same string has different translations
+	* lib/Locale/Po4a/Po.pm: Fix the conflict markers when more than 2
+	alternatives exist.
+	* lib/Locale/Po4a/Po.pm: Indicate the reference of the
+	translations when a conflict occurs during a gettextization
+	(instead of "choice").
+
+2009-01-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm (get_path): accept an additional list of
+	path element to be added at the end of the path in get_path().
+	This avoids having paths starting with "outside any tag (error?)".
+	* lib/Locale/Po4a/Xml.pm (tag_type): Only call get_string_until()
+	and join_lines() once.
+	* lib/Locale/Po4a/Xml.pm: Speedup improvement: use hashes to keep
+	the tags in the various category instead of arrays.
+	* lib/Locale/Po4a/Xml.pm (get_translate_options): Add a cache to
+	store the get_translate_options() results.
+	* lib/Locale/Po4a/Xml.pm: Simplify regexp.
+	* lib/Locale/Po4a/TransTractor.pm, lib/Locale/Po4a/Xml.pm: Allow
+	arrays in input of unshiftline (instead of only 2 elements)
+	* NEWS: Document the speed improvements.
+
+2009-01-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-11/err1, t/data-23/dot2.err, t/data-23/dot3.err,
+	t/data-23/dot4.err: Updated testsuite following change from
+	2009-01-16.
+
+2009-01-27  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Fix wrong duplicates: The second
+	<acknowledgements> should have been <ackno>, the second <colophon>
+	should have been <colspec>, the second <nonterminal> should have
+	been <note>.
+	* lib/Locale/Po4a/Docbook.pm: Added v4 tags not in DocBook v5:
+	<action>, <authorblurb>, <beginpage>, <bookinfo>, <collabname>,
+	<corpauthor>, <corpcredit>, <corpname>, <graphic>, <graphicco>,
+	<highlights>, <inlinegraphic>, <interface>, <invpartnumber>,
+	<isbn>, <issn>, <lot>, <lotentry>, <medialabel>, <refsect1info>,
+	<refsect2info>, <refsect3info>, <refsectioninfo>,
+	<refsynopsisdivinfo>, <screeninfo>, <sect1info>, <sect2info>,
+	<sect3info>, <sect4info>, <sect5info>, <setinfo>, <sgmltag>,
+	<structfield>, <structname>, <tocback>, <tocchap>, <tocfront>,
+	<toclevel1>, <toclevel2>, <toclevel3>, <toclevel4>, <toclevel5>,
+	<tocpart>, <ulink>.
+	* lib/Locale/Po4a/Docbook.pm: Move <article> to its alphabetical
+	place.
+
+2009-01-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Common.pm: Remove -t STDOUT test, already
+	enclosed in a -t STDOUT test.
+
+2009-01-15  intrigeri  <intrigeri@boum.org>
+
+	* NEWS, lib/Locale/Po4a/Common.pm: Add support for a nowrapi18n
+	option in order to use Locale::Po4a programatically. 
+	* lib/Locale/Po4a/Common.pm: Do not use Text::WrapI18N if STDOUT
+	or STDERR is not opened to a tty.
+
+2008-12-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Added tags from earlier docbook
+	releases.
+
+2008-12-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-27/comments-normalized.xml, t/data-27/comments.po,
+	t/data-27/general.po, t/data-27/options.po: Updated testsuite for
+	the Xml module.
+
+2008-12-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po4a: Added [po_directory] command to the config file.
+
+2008-12-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Reworked to take into account all
+	the DocBook 5.0 tags, with the new classification.
+
+2008-12-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Guide.pm, lib/Locale/Po4a/Dia.pm: _default_tags
+	replaced by _default_translated.
+
+2008-12-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Enhance the placeholder support. This
+	should be officially supported now. Documentation is missing.
+	* lib/Locale/Po4a/Xml.pm: Add a break category. break should
+	replace the tags category. Documentation is missing.
+	* lib/Locale/Po4a/Xml.pm: End of the placeholder handling (adding
+	the placeholders' translation) moved from treat_content to
+	translate_paragraph.
+	* lib/Locale/Po4a/Xml.pm: The (placeholder) tag is added to @path
+	before calling translate_paragraph to fix the path in the PO file.
+	* lib/Locale/Po4a/Xml.pm: The tag shall not be added to the path
+	in tag_break_close, otherwise there are duplicates in the path.
+
+2008-12-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Added empty tag: spanspec.
+	* lib/Locale/Po4a/Sgml.pm: Added ignore tags: city country isbn
+	lineannotation pubsnumber volumenum.
+	* lib/Locale/Po4a/Sgml.pm: Added translate tags: see substeps
+	example seealso biblioentry biblioset chapterinfo orgdiv
+	appendixinfo collab collabname confgroup conftitle confdates
+	pagenums.
+
+2008-12-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Sgml.pm: Added support for recursive
+	inclusions.  Entities were processed one after another, and could
+	be unexpanded when present in a file included by a later entity.
+
+2008-12-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Fix for debug=entities.
+
+2008-12-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Move acronym from the translate
+	category to the ignore category: <acronym> can appear in a
+	paragraph, and should not break the current block.
+
+2008-12-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: Fix indentation in documentation.
+
+2008-11-17  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* lib/Locale/Po4a/Docbook.pm: Add <editor> to _default_inline to
+	enable translating contents of <editor> elements.
+
+2008-11-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: If no "charset" header is present, return
+	CHARSET. Thanks to intrigeri for spotting this with zzuf.
+
+2008-11-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Quotes are not relevant in CDATAs. This
+	caused po4a to search for the end of CDATA in the rest of the
+	document if an apostrophe was opened and not closed.
+
+2008-11-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: Added support for <br> tags
+	(untranslated, introduce a break).
+	* lib/Locale/Po4a/Xml.pm: Do not translate the leading blank
+	lines.
+
+2008-11-02  W. Martin Borgert  <debacle@debian.org>
+
+	* lib/Locale/Po4a/Docbook.pm: Added support for <ackno>.
+
+2008-11-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Added support for module options
+	_default_translated and _default_untranslated.
+	* lib/Locale/Po4a/Xml.pm: Simplify the handling of options.
+	* lib/Locale/Po4a/Xhtml.pm: Added support for <pre>.
+
+2008-10-24  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm, t/data-30/Paragraphs.po: Added support
+	for [icons=...] and [icon=...].
+	* t/data-30/Paragraphs.po, t/data-30/Paragraphs.out,
+	t/data-30/Paragraphs.asciidoc: Added test for [icon="..."].
+	* t/data-30/Paragraphs.po, t/data-30/Paragraphs.out,
+	t/data-30/Paragraphs.asciidoc: The bibliography support might not
+	be good. The asccidoc example does not work with the HTML
+	generation. Keep the asciidoc paragraph in the PO file.
+	* lib/Locale/Po4a/Text.pm, t/data-30/Lists.po: Added support for
+	list items followed by a backslash (item text on teh same line as
+	label).
+
+2008-10-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm, t/data-30/Lists.po: Added support for
+	List Item Continuation and List Block.
+	* lib/Locale/Po4a/Text.pm, t/data-30/Lists.po: Added support for
+	Horizontal Labeled Lists.
+	* lib/Locale/Po4a/Text.pm, t/data-30/Paragraphs.po: Added support
+	for Admonition Paragraphs.
+
+2008-10-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm: Check for verbatim == 2 before the
+	paragraph separators. This fixes the Comment Blocks support.
+	* lib/Locale/Po4a/Text.pm: Comment Blocks are delimitted by /, not \.
+	* lib/Locale/Po4a/Text.pm: Add support for the space between the
+	title mark and the actual title in the "One line titles".
+	* lib/Locale/Po4a/Text.pm: Fix the support for the trailing title
+	mark in the "One line titles".
+	* lib/Locale/Po4a/Text.pm: Add support for embedded delimiters.
+	* lib/Locale/Po4a/Text.pm: Add support for verse, quote and
+	Admonition Paragraphs.
+	* lib/Locale/Po4a/Text.pm: Add support for Question and Answer
+	Lists, and Glossary Lists.
+	* lib/Locale/Po4a/Text.pm: Fix the support of the '..' lists (they
+	were detected as block titles).
+	* lib/Locale/Po4a/Text.pm: Fix typo (missing semi-colon).
+
+2008-10-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/30-text.t, t/data-30/Attributes.asciidoc,
+	t/data-30/Attributes.out, t/data-30/Attributes.po,
+	t/data-30/BlockId.asciidoc, t/data-30/BlockId.out,
+	t/data-30/BlockId.po, t/data-30/BlockTitles.asciidoc,
+	t/data-30/BlockTitles.out, t/data-30/BlockTitles.po,
+	t/data-30/Callouts.asciidoc, t/data-30/Callouts.out,
+	t/data-30/Callouts.po, t/data-30/DelimitedBlocks.asciidoc,
+	t/data-30/DelimitedBlocks.out, t/data-30/DelimitedBlocks.po,
+	t/data-30/Footnotes.asciidoc, t/data-30/Footnotes.out,
+	t/data-30/Footnotes.po, t/data-30/Lists.asciidoc,
+	t/data-30/Lists.out, t/data-30/Lists.po,
+	t/data-30/Paragraphs.asciidoc, t/data-30/Paragraphs.out,
+	t/data-30/Paragraphs.po, t/data-30/Tables.asciidoc,
+	t/data-30/Tables.out, t/data-30/Tables.po,
+	t/data-30/Titles.asciidoc, t/data-30/Titles.out,
+	t/data-30/Titles.po: Added testsuite for the Text module (only
+	asciidoc tested. (Some tests currently fail)
+
+2008-10-11  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Added option asciidoc.
+
+2008-10-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a-normalize: Added option -b, --blank to check which parts of
+	a document are not translated.
+
+2008-10-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: Add <u> to the list of inline tags.
+
+2008-10-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Fix typos and formating in the man page.
+	Thanks to Javier Fernández-Sanguino Peña and Jens Seidel.
+
+2008-10-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Remove <glossterm> from the inline
+	tags. glossterm must be translated.
+
+2008-10-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: <acronym> moved to _default_inline.
+
+2008-09-25  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* po/pod/ja.po: Fix a typo.
+
+2008-08-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: Fix the handling of the nodefault
+	option (it canceled the behavior defined on the command line).
+	Added _default_tags and _default_inline categories (to be used
+	only by derivative modules).
+	* lib/Locale/Po4a/Xhtml.pm, lib/Locale/Po4a/Guide.pm,
+	lib/Locale/Po4a/Docbook.pm, lib/Locale/Po4a/Dia.pm: Fix the Xml
+	module derivatives accordingly.
+
+2008-08-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Docbook.pm: Move the <option> tag to the
+	inline section.
+
+2008-07-20  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare the 0.34 release.
+	* lib/Locale/Po4a/Chooser.pm: Added reference to the Halibut, TeX,
+	and Wml modules.
+	* lib/Locale/Po4a/Xml.pm: Fix POD typo. Add newline.
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* po/bin/fr.po, po/pod/fr.po: Updated French translation (171t,
+	1154t3f22u).
+
+2008-07-20  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Fix failures with big SGML documents
+	(SIGPIPE received from nsgmls -p).
+
+2008-07-20  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL: Fix build failures with old versions of Module::Build.
+	This still looks like an hack. Use install_destination when
+	reading the installation path. Use {properties}{install_sets}
+	instead of the install_sets function when new install paths need
+	to be set. If somebody knows how mo files can be distributed
+	easily with Module::Build...
+
+2008-07-14  Francois Gouget  <fgouget@codeweavers.com>
+
+	* lib/Locale/Po4a/Po.pm: Fix timezone() so it works on Solaris
+	(replace strftime("%s",@t) with Time::Local::timelocal(@t)).
+
+2008-07-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Make sure files are not mixed
+	together when gettextized at the same time.
+
+2008-07-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Remove the spaces
+	introduced by the wrapping algorithm at the end of lines.
+	* t/data-23/mdoc.fr, t/data-25/includessi_normalized.html,
+	t/data-25/xhtml_normalized.html, t/data-27/general-normalized.xml,
+	t/data-29/general-normalized.wml: Fixed test.
+	* lib/Locale/Po4a/Man.pm: When wrapped lines are merged, add a
+	space between the merged lines.
+	* lib/Locale/Po4a/Man.pm: Fix typo in a comment.
+
+2008-07-14  Jonas Smedegaard  <dr@jones.dk>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Added support for the Markdown
+	format, as used with Ikiwiki.
+
+2008-07-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TeX.pm: In Halibut, some command name have
+	digits. Use the alnum class instead of alpha.
+	* lib/Locale/Po4a/TeX.pm: Improve the handling of trailing and
+	leading spaces.
+
+2008-07-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po/pod.cfg, lib/Locale/Po4a/Halibut.pm: Added support for
+	the Halibut format, based on the Texinfo module.
+
+2008-06-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Texinfo.pm: Do not import untranslated and
+	translate_joined. They do not exist anymore in TeX.pm.
+	* lib/Locale/Po4a/Texinfo.pm: Add definition of RE_PRE_COMMENT.
+	This fix an infinite loop on gawk.texi.
+
+2008-06-01  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Chooser.pm: Add support for the tex module
+	(equivalent to TeX). Changing the first case for this format was
+	not sufficient.
+
+2008-06-01  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Add the documentation of the -o/--option option.
+	* po4a: Fix the synopsis, which only mentions the -dhvV options.
+
+2008-05-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Avoid error messages without reference.
+	When used with a configuration file, it is hard to know which
+	file caused the failure.
+
+2008-04-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html/index.php.en: Add 0.33.3 to the minor releases lists.
+	* po/www/po4a-www.pot: Regenerated.
+	* po/www/*.po: Synchronized with the POT.
+
+2008-04-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot, po/www/po4a-www.pot:
+	Regenerated to take the new options into account.
+	* po/bin/*.po, po/pod/*.po, po/www/*.po: Synchronized with the
+	POTs.
+
+2008-04-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL, html-build-upload.sh: Generate the POT with the
+	--msgid-bugs-address, --package-name, and --package-version
+	options (with po4a and xgettext).
+
+2008-04-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po4a: Add options --package-name and --package-version
+	(similar to xgettext's options).
+	* lib/Locale/Po4a/Po.pm: Add support for the --package-name and
+	--package-version options.
+
+2008-04-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS: Prepare 0.33.3.
+
+2008-04-02  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* MANIFEST: Actually ship Japanese translations.
+
+2008-04-01  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare the 0.33.2
+	release.
+
+2008-03-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html/index.php.en: Document release 0.33.2 and 0.33.1.
+	* po/www/fr.po, po/www/ja.po, po/www/pl.po, po/www/po4a-www.pot:
+	Updated for 0.33.2.
+
+2008-03-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2008-03-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* MANIFEST: Distribute the Wml module and its testsuite.
+	* html/features.php.en: Add the Wml module.
+	* lib/Locale/Po4a/Chooser.pm: Likewise.
+	* po/pod.cfg: Likewise.
+
+2008-03-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Text.pm: Added support for the fortunes format
+	in the Text module.
+
+2008-03-30  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* lib/Locale/Po4a/Wml.pm: Update description and status.  Also,
+	add me to authors.
+
+2008-03-20  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* lib/Locale/Po4a/Wml.pm: Restore $/ after reading input files,
+	before reading temporary XML files, to correct line number
+	information in the output po file.
+	* t/data-29/general.po: Update test data accordingly.
+
+2008-03-19  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL: Do not remove the html directory on cleanup.
+
+2008-03-19  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* t/29-wml.t, t/data-29/general-normalized.wml,
+	t/data-29/general.po, t/data-29/general.wml: New test and its data
+	for the Wml module.
+
+2008-03-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, Build.PL, html-build-upload.sh, po/pod.cfg: Generate the
+	manpages in UTF-8.
+	* doc/addendum.ca, doc/addendum.pl, doc/addendum_man.fr,
+	doc/addendum_man.pl: Convert to UTF-8.
+
+2008-03-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html-build-upload.sh: Added support for the Japanese web pages.
+	* html-build-upload.sh: Call po4a with the --previous option.
+
+2008-03-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL: Update the PO files with --previous.
+
+2008-03-18  Nozomu KURASAWA  <nabetaro@caldron.jp>
+
+	* po/bin/ja.po, po/pod/ja.po, po/www/ja.po, doc/addendum.ja,
+	doc/addendum_man.ja, po/pod.cfg, po/html.cfg: Added Japanese
+	translation.
+
+2008-03-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL: Really fix the installation path (I hope).
+
+2008-03-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* MANIFEST: Added Polish addendum for the groff pages.
+
+2008-03-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/ru.po: Updated to 171t. Thanks to Yuri Kozlov.
+
+2008-03-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: Do not translate the SSI comments
+	by default (<!--#...-->). Set the f_extract and f_translate to the
+	same as for regular comments.
+	* lib/Locale/Po4a/Xml.pm: Do not forget the # at the beginning of
+	SSI comments.
+	* t/25-xhtml.t, t/data-25/includessi.html, t/data-25/includessi.po,
+	t/data-25/includessi_normalized.html, MANIFEST: Added tests for the
+	includessi option.
+	* t/data-25/xhtml.po, t/data-25/xhtml_normalized.html: SSI
+	comments are no more translated.
+
+2008-03-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/TransTractor.pm: Prepare the next release.
+
+2008-03-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html/index.php.en, po/www/fr.po, po/www/po4a-www.pot: Updated
+	for the 0.33 release.
+
+2008-03-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Do not change - to \- in \(-x \Z'...'
+	\H'...' \*[...]
+	* t/23-man.t, t/data-23/hyphens.1, t/data-23/hyphens.translate.fr,
+	t/data-23/hyphens.translate.fr.po, t/data-23/hyphens.translate.pot,
+	t/data-23/hyphens.verbatim.fr, t/data-23/hyphens.verbatim.fr.po,
+	t/data-23/hyphens.verbatim.pot: Add new tests for hyphens.
+	* MANIFEST: Distribute the new tests.
+
+2008-03-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL: Fix the path of the manpages and mo files and a prefix
+	is specified on the command line.
+
+2008-03-10  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* lib/Locale/Po4a/Xml.pm: Make sure that all comments at a block
+	in input XML are separately inserted into a corresponding block in
+	output XML.  The previous behaviour was those comments are merged
+	into one comment.
+	* t/data-27/comments-normalized.xml,
+	t/data-27/general-normalized.xml: Update the test data accordingly.
+
+2008-03-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	Fix failures when the testsuite is run from the distributed
+	tarball.
+	* MANIFEST: Added missing files t/data-27/options.xml,
+	t/data-27/options.po, t/data-27/options-normalized.xml
+	* t/23-man.t, t/28-msguntypot.t: Make sure the testsuite does not
+	fail if the files are readonly.
+
+2008-03-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Added support for the inline tags
+	cmdsynopsis, synopsis, and group.
+	* lib/Locale/Po4a/Docbook.pm: replaceable is in the inline list.
+	Remove it from the tags list.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEW, lib/Locale/Po4a/TransTractor.pm: Prepare the release, set
+	the date and increase the version to 0.33.
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regenerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* MANIFEST: Add missing doc/addendum_man.fr.
+	* lib/Locale/Po4a/Xml.pm: Fix manpage generation.
+	* lib/Locale/Po4a/TransTractor.pm: Fix the whatis entry (no spaces
+	before '-').
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/27-xml.t, t/data-27/options-normalized.xml,
+	t/data-27/options.po, t/data-27/options.xml: New test for the Xml
+	module's options.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Do not translate strings which only
+	consist in spaces.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Do not remove the spaces at the end of
+	the tags (see earlier commit today), just remove the spaces (with
+	get_tag_name) when the name of tags are compared.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Remove ulink from the tags list
+	(already in the inline list).
+	* lib/Locale/Po4a/Docbook.pm: Move orgname from the tags list to
+	the inline list (can have para as parent).
+	* lib/Locale/Po4a/Docbook.pm: Move affiliation from the inline
+	list to the tags list (according to the list of parents, there is
+	no reasons to get an include tag for the <affiliation> tags.
+	* lib/Locale/Po4a/Docbook.pm: Move othercredit from the inline
+	list to the tags list (according to the list of parents, there is
+	no reasons to get an include tag for the <othercredit> tags).
+	* lib/Locale/Po4a/Docbook.pm: There is no need to have the
+	<revhistory> tag inline. Children tags are translated anyway.
+	* lib/Locale/Po4a/Docbook.pm: Added support for <affiliation>,
+	<appendixinfo>, <articleinfo>, <biblioentry>, <bibliographyinfo>,
+	<blockinfo>, <bookinfo>, <confgroup>, <confdates>, <conftitle>,
+	<confnum>, <confsponsor>, <contrib>, <chapterinfo>, <collab>,
+	<glossaryinfo>, <indexinfo>, <jobtitle>, <objectinfo>, <orgdiv>,
+	<prefaceinfo>, pubsnumber>, <refsynopsisdivinfo>, <revision>,
+	<revremark>, <sect1info>, <sect2info>, <sect3info>, <sect4info>,
+	<sect5info>, <setinfo>, <shortaffil>, <city>, <country>,
+	<imageobject>, <imagedata>, <othername>, <postcode>, <state>,
+	<street>.
+	* lib/Locale/Po4a/Docbook.pm: Added support for <address> (no
+	wrap).
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-25/xhtml_normalized.html, t/data-25/xhtml.po: Update the
+	testsuite. Inline tags are really inlined now.
+	* NEWS, debian/changelog: paragraphs which only consist in an
+	inline tag are now extracted.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm (treat_content, translate_paragraph): Do
+	not check if the content has to be translated in treat_content().
+	It is the work of translate_paragraph().
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm (tag_break_close, tag_break_alone,
+	tag_break_open): Use get_translate_options to check if a tag
+	should be inlined.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm (get_translate_options):
+	get_translate_options() indicates if the tag should be put inlined
+	in a paragraph (i).
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm (get_translate_options): Handle the
+	untranslated tags at the end. Override the translated, tags, or
+	inline lists.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm (extract_tag): Remove any pending space
+	at the end of the tags. This adds support for closing tags, with
+	the closing '>' put on the next line.
+
+2008-03-02  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Added option defaulttranslateoption.
+	Need testing.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Add <ulink> to the tags whose
+	content has to be translated. Thanks to "W. Borgert"
+	<debacle@debian.org>.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-27/comments.xml, t/data-27/comments.po,
+	t/data-27/comments-normalized.xml, t/27-xml.t: Added unit test for
+	the comments in the Xml module.
+	* MANIFEST: Distribute the new test data.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Wml.pm: Remove/translate the TODO section from
+	the Wml module.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/fr.po: Fix typo in the msguntypot manpage.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-27/general.po, t/data-27/general-normalized.xml: Updated
+	following the changes from 2008-02-14.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm (read): Warn when the read PO file
+	contains messages with more than 2 plural forms.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm (read): Register the strings as plural,
+	even if there are no plural msgstr (msgid_plural is sufficient).
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm (write): Add support for writing messages
+	with plural forms. This is not important for documentation
+	translation, but is needed by other scripts like msguntypot.
+
+2008-02-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/28-msguntypot.t: New testsuite for msguntypot.
+	* t/data-28/test1.new.po, t/data-28/test1.new.pot,
+	t/data-28/test1.old.pot, t/data-28/test1.po,
+	t/data-28/test2.new.po, t/data-28/test2.new.pot,
+	t/data-28/test2.old.pot, t/data-28/test2.po,
+	t/data-28/test3.new.po, t/data-28/test3.new.pot,
+	t/data-28/test3.old.pot, t/data-28/test3.po,
+	t/data-28/test4.new.po, t/data-28/test4.new.pot,
+	t/data-28/test4.old.pot, t/data-28/test4.po,
+	t/data-28/test5.new.po, t/data-28/test5.new.pot,
+	t/data-28/test5.old.pot, t/data-28/test5.po,
+	t/data-28/test6.new.po, t/data-28/test6.new.pot,
+	t/data-28/test6.old.pot, t/data-28/test6.po,
+	t/data-28/test7.new.po, t/data-28/test7.new.pot,
+	t/data-28/test7.old.pot, t/data-28/test7.po,
+	t/data-28/test8.new.po, t/data-28/test8.new.pot,
+	t/data-28/test8.old.pot, t/data-28/test8.po: Add data for the
+	msguntypot testsuite.
+	* MANIFEST: Distribute the new testsuite and data.
+
+2008-02-29  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* lib/Locale/Po4a/Wml.pm: Enable outputting correct reference
+	information to the po files.  Since the Wml module uses the XML
+	module for parsing, it output reference locations in the temporary
+	files previously.
+
+2008-02-28  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* lib/Locale/Po4a/Wml.pm: Enable handling input file charset
+	correctly.
+
+2008-02-28  Noritada Kobayashi <nori1@dolphin.c.u-tokyo.ac.jp>
+
+	* lib/Locale/Po4a/Wml.pm: Enable handling define-tag tags.
+
+2008-02-28  Kenshi Muto  <kmuto@debian.org>
+
+	* lib/Locale/Po4a/Wml.pm: Correct a mistake: do replacing instead
+	of matching.
+
+2008-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Avoid duplicated newlines at the end of
+	lines of multi-lines comments.  Thanks to Kaloian Doganov for
+	reporting this.
+
+2008-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: Sort the list of attributes
+	alphabetically.
+
+2008-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Do not strip non-rewrapped paragraphs.
+
+2008-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Add the translated and untranslated
+	options. They should replace the tags option and provide a more
+	configurable and understandable way to use the Xml module.
+	* lib/Locale/Po4a/Xml.pm (get_translate_options): Add support for
+	the translated and untranslated options.
+	* lib/Locale/Po4a/Xml.pm: Document the translated and untranslated
+	options.
+	* lib/Locale/Po4a/Xml.pm: Document that the tags and tagsonly
+	options are deprecated.
+	* NEWS: Document the new options.
+
+2008-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Also handle tag's attribute without
+	value with the ontagerror option. This is useful when the Xhtml is
+	used on legacy HTML files.
+
+2008-01-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Docbook.pm: Add support for the <keyword>
+	element. Thanks to W. Martin Borgert <debacle@debian.org>.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Added functions: get_translate_options
+	(merge the treatment of translation options in a single place),
+	and get_tag_from_list (should replace tag_in_list)
+	* lib/Locale/Po4a/Xml.pm (translate_paragraph): The $translate
+	parameter is no more 0 or 1, but a string describing the
+	translation options.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: Sort the inline tags alphabetically.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Po.pm: Do not unescape_text() the header
+	comment, since it is not escaped by push_raw(). Do not escape the
+	header comment of created PO files, to match the way push_raw()
+	behave when a PO file is parsed. This fix msguntypot (see Debian's
+	bug #447656).
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Describe how an author can write specify
+	that some parts are not to be translated.
+	* lib/Locale/Po4a/Man.pm: Updated Copyright dates.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Die on unrecognised '<' sequences in
+	msgstr strings. Thanks to Robert Luberda <robert@debian.org> for
+	the patch. This fix Debian's bug #450892.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Common.pm: In perl 5.10, POSIX.pm and
+	Locale::gettext export LC_CTYPE. As we do not use all of POSIX,
+	it's easier to require it and explicitly use what is required in
+	POSIX.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, po4a: Replace ${%$hashref}{key} constructs by
+	$hashref->{key}.  This fix failures with perl 5.10. Thanks to
+	Roderich Schupp <roderich.schupp@googlemail.com> for the patch.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/05-config.t, t/24-tex.t: Ignore the number of dots before
+	"done". The output of msgmerge is not reliable with gettext 0.17.
+
+2008-01-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Gettext 0.17 does not put a space on the
+	empty line which separate the top comment from the header.
+	* t/data-02/man.po, t/data-02/man.po-empty, t/data-02/pod.po,
+	t/data-02/pod.po-empty, t/data-02/pod.po-ok,
+	t/data-04/ascii-iso8859.po-ok, t/data-04/ascii.po-ok,
+	t/data-04/iso8859.po-ok, t/data-04/utf.po-ok,
+	t/data-05/test0.fr.po-empty, t/data-05/test0.pot,
+	t/data-05/test2.de.po-empty, t/data-05/test2.es.po-empty,
+	t/data-05/test2.fr.po-empty, t/data-05/test2.it.po-empty,
+	t/data-05/test2.pot, t/data-20/test2.pot, t/data-20/xml.po,
+	t/data-21/extract.po-ok, t/data-22/html.po, t/data-22/spaces.po,
+	t/data-23/dot1.pot, t/data-23/dot5.it.po, t/data-23/dot5.pot,
+	t/data-23/escapes1.pot, t/data-23/fonts.pot, t/data-23/mdoc.pot,
+	t/data-23/mixed.pot, t/data-23/null.pot, t/data-23/quotes.pot,
+	t/data-23/spaces.pot, t/data-24/simple.pot, t/data-25/xhtml.po,
+	t/data-26/test1.po, t/data-27/general.po: Fix the testsuite
+	accordingly. The testsuite may not work with gettext < 0.17
+
+2008-01-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, lib/Locale/Po4a/Xml.pm: New option "cpp" to support C
+	preprocessor directives (this avoids re-wrapping lines with
+	preprocessor directives).
+
+2007-10-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Texinfo.pm: Added @ifclear definition. Thanks to
+	Éric Reinbold for noticing.
+
+2007-09-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TeX.pm: Add a no_wrap argument to the command,
+	environment (last argument) and translate_buffer functions (second
+	argument, before the @environments).
+	Currently, when $no_wrap equals 1 the no-wrap flag is forced.
+	A value of 0 could force the removal of the no-wrap flag and undef
+	could be used to specify that the current function can decide.
+	These last 2 values are not differentiated currently.
+	* lib/Locale/Po4a/TeX.pm: Fix debugging (do not display $t1.$t2,
+	but $t1$t2).
+	* lib/Locale/Po4a/LaTeX.pm: Add the no_wrap argument to the
+	'documentclass' command function, and pass it to the
+	generic_command function.
+	* lib/Locale/Po4a/Texinfo.pm: Add a no_wrap argument to the
+	command and environment function. Call translate_buffer with the
+	additional no_wrap parameter and add a parameter to the customized
+	translate_buffer functions (for the menu and ignore environments).
+	* lib/Locale/Po4a/Texinfo.pm: (line_command): line_command does
+	not need to add the command name to the list of no_wrap
+	environment. It now uses the no_wrap argument of translate_buffer.
+
+2007-09-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Texinfo.pm: Also translate in the menu
+	environments the paragraphs which are not par of a menu entry.
+
+2007-09-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Texinfo.pm: Define specific translate_buffer
+	functions for the menu (menu, direntry, detailmenu) and ignore
+	environments.
+	* lib/Locale/Po4a/Texinfo.pm: detailmenu is no more verbatim.
+	* lib/Locale/Po4a/Texinfo.pm: menu, detailmenu and direntry do not
+	need an env_separators definition anymore.
+
+2007-09-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Texinfo.pm: The header uses the @c comment, it
+	must not be included before the definition of this @c command.
+	Include the header after the first \input or before the first @c
+	comment.
+
+2007-09-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TeX.pm (translate_buffer): Allow customization
+	of the translate_buffer function with an environment specific
+	function.
+	* lib/Locale/Po4a/TeX.pm (%translate_buffer_env): New hash to keep
+	the environment specific translate_buffer functions.
+
+2007-09-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Reindent.
+	* lib/Locale/Po4a/Po.pm: Prefer or/and to ||/&&.
+
+2007-09-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/20-sgml.t: Fix the testsuite, use option -o force when the
+	sgml module has to parse xml files.
+
+2007-09-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/fr.po: Fix a typo. Missing ';' in an addendum header
+	example.
+
+2007-09-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/11-plural.t, t/data-11/err1, t/data-11/pod1,
+	t/data-11/pod1.fr, t/data-11/pod1.po, t/data-11/pod2,
+	t/data-11/pod2.fr, t/data-11/pod2.po, t/data-11/pod3,
+	t/data-11/pod3.fr, t/data-11/pod4, t/data-11/pod4.fr: Added
+	testsuite for PO files containing plural form messages.
+	* MANIFEST: Added new files for the new testsuite: t/11-plural.t,
+	t/data-11/err1, t/data-11/pod1, t/data-11/pod1.fr,
+	t/data-11/pod1.po, t/data-11/pod2, t/data-11/pod2.fr,
+	t/data-11/pod2.po, t/data-11/pod3, t/data-11/pod3.fr,
+	t/data-11/pod4, t/data-11/pod4.fr.
+
+2007-09-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Add support for PO with plural forms.
+	Po4a does not generate such PO files, but it can receive one in
+	input. In such case, po4a cannot choose between the (singular and)
+	plural forms. It will consider that msgstr[0] is the translation
+	of msgid and msgstr[1] is the translation of msgid_plural, which
+	may be wrong. Thus, a warning will be issued if po4a is asked to
+	translate the singular or plural form of a message with plural
+	forms.
+
+2007-09-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm (read): Be stricter when parsing PO files.
+	Add $ to the regular expressions.
+	* lib/Locale/Po4a/Po.pm (read): Remove unneeded test.
+	($line =~ /^#$/) is contained in ($line =~ /^#(.*)$/).
+	* lib/Locale/Po4a/Po.pm (read): Reindent.
+	* lib/Locale/Po4a/Po.pm (read): When we parse msgid, the $buffer
+	should be empty. Do not concatenate.
+
+2007-09-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Do not try to validate the input file
+	when the force option is used. (useful for xml files handled with
+	the sgml module)
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS: Mention the major changes in the texinfo module.
+	* NEWS: Add a note to packagers: do not forget to depend on the
+	docbook DTD if you run the (SGML) testsuite.
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	Major changes in the Texinfo.pm module. Tested on the elisp
+	documentation:
+	* lib/Locale/Po4a/Texinfo.pm: Add 'tex' 'display' 'smalldisplay'
+	to the list of verbatim environments.
+	* lib/Locale/Po4a/Texinfo.pm: Remove exdent to the list of
+	verbatim environments. It is just a command.
+	* lib/Locale/Po4a/Texinfo.pm (line_command): Use
+	%translate_line_command to indicate which commands have
+	translatable arguments.
+	* lib/Locale/Po4a/Texinfo.pm (parse): Handle \input
+	* lib/Locale/Po4a/Texinfo.pm (line_command): Use translate_buffer
+	to translate the command arguments (when they are translatable).
+	Add the command to $no_wrap_environments just before and remove it
+	afterwards to force a no-wrap translation.
+	* lib/Locale/Po4a/Texinfo.pm: Add support for 'findex' 'kindex'
+	dircategory subtitle include center unnumberedsec heading
+	unnumbered unnumberedsubsec unnumberedsubsubsec appendixsec
+	appendixsubsec appendixsubsubsec majorheading chapheading
+	subheading subsubheading shorttitlepage set vskip synindex
+	syncodeindex need fonttextsize printindex headings finalout
+	defcodeindex defindex definfoenclose insertcopying page
+	shortcontents
+	* lib/Locale/Po4a/Texinfo.pm: Remove the def*x commands from the
+	list of environments. They are just commands.
+	* lib/Locale/Po4a/Texinfo.pm: Define anchor and refill as commands
+	which can be removed from the beginning or end of paragraphs.
+	* lib/Locale/Po4a/Texinfo.pm: Add a list of commands for which
+	only the argument are translated if a string only consist in this
+	command: titlefont w i r b sansserif sc slanted strong t cite
+	email footnote indicateurl emph ref xref pxref inforef kbd key
+	acronym file command dfn dmn option math code samp var
+	* lib/Locale/Po4a/Texinfo.pm: Add ".  " to the menu and detailmenu
+	environment separators.
+	* lib/Locale/Po4a/Texinfo.pm: Use the same separators for direntry
+	as for menu and detailmenu.
+	* lib/Locale/Po4a/Texinfo.pm: Use @item and @tab as the multitable
+	separators.
+	* lib/Locale/Po4a/Texinfo.pm: Update copyright informations.
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS, debian/changelog: Update old entries and mention the CVE
+	id: CVE-2007-4462.
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS: Prepare NEWS entry for 0.33.
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Document that nsgmls and the DTD of the
+	document are required.
+	* lib/Locale/Po4a/Sgml.pm: Try to detect better if nsgmls or the
+	DTD is missing. Fail in these cases.
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html/download.php.en, po/www/fr.po, po/www/po4a-www.pot: Fix
+	link to Alioth source download page.
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/cs.po, po/bin/it.po, po/bin/ru.po, po/bin/sv.po: Fix and
+	unfuzzy strings which referenced /tmp/gettextization.failed.po
+
+2007-09-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* doc/po4a.7.pod: Fix some remaining references to
+	/tmp/gettextization.failed.po
+	* po/pod/ca.po, po/pod/es.po, po/pod/fr.po, po/pod/it.po,
+	po/pod/pl.po, po/pod/po4a-pod.pot: Unfuzzy.
+
+2007-08-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html/po4a.conf, po/html.cfg, html-build-upload.sh: Move
+	html/po4a.conf to po/html.cfg.
+
+2007-08-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html/po4a.conf: Specify that the original web pages are encoded
+	in UTF-8.
+
+2007-08-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/po4a-pod.pot: Regerated. The paths are relative to the
+	package root directory (no more relative to the PO directory). The
+	strings from unreleased modules are no more translated (Debconf
+	and Wml are not tested; Text and Xhtml should be used instead of
+	NewsDebian and Html). po4aman-display-po is now translatable.
+	* po/pod/*.po: Synchronized with the POT.
+	* po/pod/fr.po: Updated.
+
+2007-08-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* Build.PL, po/pod.cfg, MANIFEST: Simplify the build process by
+	using a po4a config file. Only the distributed files will be
+	translated. This also permits to translate the scripts' manpages.
+
+2007-08-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm, lib/Locale/Po4a/Docbook.pm: Handle the
+	nodefault option in the Xml module. It was declared in the Xml
+	module, but implemented only in Docbook.
+
+2007-08-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* html/*, po/www/*, html-build-upload.sh: New website.
+	* .cvsignore: ignore html.gen.
+
+2007-08-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TransTractor.pm: Prepare the next 0.32 release.
+	* po/bin/pl.po: Rewrapped.
+	* MANIFEST: Added NEWS file.
+	* NEWS, debian/changelog: Updated 0.32 release date.
+
+2007-08-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	Fix broken links in the documentation.
+	* po/pod/pl.po: Fix po4a-translate's section (2->1).
+	* doc/po4a.7.pod: Avoid redirections for the previewKonq and
+	Debian l10n links.
+	* po/pod/po4a-pod.pot: Regerated.
+	* po/pod/*.po: Synchronized with the POT, and unfuzzied.
+
+2007-08-13  Robert Luberda  <robert@debian.org>
+
+	* lib/Locale/Po4a/Xml.pm, lib/Locale/Po4a/Xhtml.pm: Fix typo in
+	documentation.
+	* po/pod/po4a-pod.pot: Regerated.
+	* po/pod/*.po: Synchronized with the POT, and unfuzzied.
+
+2007-08-13  Robert Luberda  <robert@debian.org>
+
+	* po/pod/pl.po, po/bin/pl.po: Updated
+
+2007-08-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Wml.pm: Remove non translatable strings from the
+	documentation.
+	* po/pod/po4a-pod.pot: Regerated.
+	* po/pod/*.po: Synchronized with the POT.
+
+2007-08-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/zh_HK.po po/bin/zh_CN.po po/bin/bn.po po/bin/et.po
+	po/bin/hr.po po/bin/id.po po/bin/kn.po po/bin/ko.po po/bin/oc.po
+	po/bin/uz.po: Imported translations from Rosetta.
+	* po/bin/ca.po, po/bin/cs.po, po/bin/de.po, po/bin/eo.po,
+	po/bin/es.po, po/bin/fr.po, po/bin/it.po, po/bin/nb.po,
+	po/bin/nl.po, po/bin/pt_BR.po: Updated translations from Rosetta.
+	* MANIFEST: Distribute new translations.
+
+2007-08-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* po/bin/fr.po, po/pod/fr.po: Updated French translation.
+
+2007-08-12  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Added option ontagerror to control the
+	behavior of the module in case of error. This permits to support
+	files that the module would consider invalid otherwise.
+
+2007-08-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: includessi was always activated.
+
+2007-08-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* po/bin/fr.po, po/pod/fr.po: Updated French translation.
+
+2007-08-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Fix typo (tex -> xml).
+	* lib/Locale/Po4a/Xml.pm: Export @tag_types. Needed for the Xhtml
+	module (see below).
+	* lib/Locale/Po4a/Xhtml.pm: New option: includessi. This adds
+	support for Server Side Includes include elements like:
+	<!--#include virtual="/foo/bar.html" -->
+
+2007-08-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xhtml.pm: reindented.
+
+2007-08-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/fr.po, po/pod/fr.po: Updated French translation.
+
+2007-08-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm: Fix typo (inthe).
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2007-08-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2007-08-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Texinfo.pm: Added support for verbatim
+	environments: smallexample verbatim format smallformat exdent
+	flushleft flushright lisp smalllisp ignore.
+	* lib/Locale/Po4a/Texinfo.pm: Added command handling function:
+	environment_line_command. It provides a better support for
+	commands with arbitrary number of arguments, starting an
+	environment: defcodeindex defcv defcvx deffn deffnx defindex
+	definfoenclose defivar defivarx defmac defmacx defmethod
+	defmethodx defop defopx defopt defoptx defspec defspecx deftp
+	deftpx deftypecv deftypecvx deftypefn deftypefnx deftypefun
+	deftypefunx deftypeivar deftypeivarx deftypemethod deftypemethodx
+	deftypeop deftypeopx deftypevar deftypevarx deftypevr deftypevrx
+	defun defunx defvar defvarx defvr defvrx.
+	* lib/Locale/Po4a/Texinfo.pm: Added support for
+	commands/environments: noindent detailmenu group copying quotation
+	documentdescription display smalldisplay cartouche ifdocbook
+	ifplaintext iftex ifxml ifnotdocbook ifnothtml ifnotinfo
+	ifnotplaintext ifnottex ifnotxml
+
+2007-08-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TeX.pm: Added debug information for
+	translate_buffer.
+	* lib/Locale/Po4a/TeX.pm (is_closed): Fix function for Texinfo.
+
+2007-08-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Texinfo.pm, lib/Locale/Po4a/LaTeX.pm: The name
+	of this software is po4a, not Foobar. Fix the GPL header.
+
+2007-08-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Add support for external entities.
+	Option includeexternal added.
+
+2007-08-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Chooser.pm: Fix the list of modules in the
+	documentation.
+
+2007-08-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* MANIFEST: Distribute the Xhtml module and its test files.
+	* lib/Locale/Po4a/Chooser.pm: Activate the Xhtml module.
+
+2007-08-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Html.pm: Updated documentation and added TODO
+	for and option to specify attributes.
+	* lib/Locale/Po4a/Html.pm: Re-indented.
+
+2007-08-05  Kaloian Doganov  <kaloian@doganov.org>
+
+	* lib/Locale/Po4a/Html.pm: Translated the 'alt' attribute for the
+	area, input and applet tags (not only img). Also translate the
+	'title' attribute.
+
+2007-08-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Fix mishandling of newlines in no-wrap
+	mode.
+	* t/data-20/test2.sgml, t/data-20/test2-normalized.sgml,
+	t/data-20/test2.pot, t/20-sgml.t: Added test to detect check this.
+	* MANIFEST: Include the new test files.
+
+2007-08-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: As we won't get rid of nsgmls really
+	soon, lower the importance of the warning (only shown in verbose
+	mode now).  It seems there were no big issues found in the last
+	year anyway.
+
+2007-08-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/*/*.po*: Fix the test suite accodring to the previous change.
+	* t/data-25/xhtml_normalized.html: Fix the test suite regarding
+	change done on 2007-07-06.
+
+2007-07-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Add the same sentence as xgettext to the
+	default comment of the POT header: "This file is distributed under
+	the same license as the PACKAGE package."
+
+2007-07-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Chooser.pm: Show the generic xml and tex modules
+	in the list of supported modules (and mention respectively docbook
+	and latex).
+
+2007-07-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* doc/po4a.7.pod: Fix a typo: s/doc-XX.po/doc.XX.po/ for
+	consistency. Thanks to Helge Kreutzmann.
+
+2007-07-06  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Xml.pm: Do not forget the trailing new line at
+	the end of attributes. This fix the handling of tags with
+	attributes on multiple lines. (attributes could be concatenated
+	without spaces between them.)
+
+2007-07-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm: Document the nobullet option.
+	* lib/Locale/Po4a/Text.pm: Update status and copyright.
+	* lib/Locale/Po4a/Text.pm: Add a debianchangelog option to provide a
+	better support for NEWS.Debian files.
+
+2007-07-04  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm: Better detection of sub-bullets. (when a
+	sub-bullet is detected to be at the same indentation level as the previous
+	bullet.)
+
+2007-07-03  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/fr.po: Fix a typo (s/Les valeur /Les valeurs /).
+
+2007-07-03  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Support quoted parts inside option arguments. This fixes
+	infinite loop when a config file contains an argument with single
+	quotes (which are not surrounding quotes).
+
+2007-06-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	Merge some changes introduced in the Debian 0.31-1 package:
+	* COPYING, lib/Locale/Po4a/BibTeX.pm, lib/Locale/Po4a/Dia.pm,
+	lib/Locale/Po4a/Docbook.pm, lib/Locale/Po4a/Guide.pm,
+	lib/Locale/Po4a/LaTeX.pm, lib/Locale/Po4a/Sgml.pm, lib/Locale/Po4a/TeX.pm,
+	lib/Locale/Po4a/Texinfo.pm, lib/Locale/Po4a/Text.pm,
+	lib/Locale/Po4a/Xml.pm: Fix the FSF address.
+	* lib/Locale/Po4a/Po.pm: Fix possible symlink attacks in /tmp. Thanks to
+	Javier Fernández-Sanguino Peña.
+
+2007-05-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a-updatepo: Make sure $msgmerge_opt is initialized.
+	* NEWS: prepare the release, update the release date.
+
+2007-04-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2007-04-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a, po4a-updatepo: Do not make --previous a default option for
+	msgmerge. Add options --previous and --msgmerge-opt.
+	* NEWS: Documented.
+
+2007-04-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/fr.po, po/pod/fr.po: Updated French translation.
+
+2007-04-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2007-04-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: reset the configuration variables when
+	the module is initialized. This avoid reusing configurations
+	defined by options in previous runs (when a config file is used
+	with opt:"..." parameters.
+
+2007-04-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Do not activate the creation of .po4a-stamp files by
+	default. Some packages do not expect the creation of .po4a-stamp
+	files and this broke at least adduser. Add a --stamp option.
+
+2007-04-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Fix the sorting algorithm. This caused some changes in the
+	order of documents in the PO files.
+
+2007-04-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS: document the timestamping mechanism in the NEWS file.
+
+2007-04-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: $VERSION is not defined. Use the full
+	$Locale::Po4a::TransTractor::VERSION instead.
+
+2007-04-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TransTractor.pm: Prepare next release.
+	Update the version to 0.31.
+
+2007-04-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Make sure the file exists before 'stat'ing it.
+
+2007-04-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Fix typo in a string.
+
+2007-04-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: New option 'unknown_macros' to specify
+	the behavior when an unknown macro is found.
+
+2007-03-26  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Only re-generate translations if needed. Use a timestamp
+	when a translation cannot be generated. (deactivated with
+	--force).
+
+2007-03-24  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a, po4a-updatepo: Use msgmerge with the --previous switch.
+	This requires gettext >= 0.16
+
+2007-03-24  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: In the sort subroutine, the null document can be the first
+	or second argument.
+
+2007-03-24  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Allow quoted arguments in options. This permits to use
+	spaces in arguments to modules options.
+
+2007-03-24  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: Fix a typo in the documentation and comments.
+	* po4a, lib/Locale/Po4a/Po.pm: Add options --msgid-bugs-address
+	and --copyright-holder.  Similar to the xgettext options.
+	* po4a: Allow global options in the configuration file
+	([options] opt:"...").
+	* NEWS: Document these changes.
+
+2007-03-24  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* extension/: New directory. It will be used for a C extension to
+	speed up po4a.
+	* extension/Build.PL: Build system for the extension. For testing,
+	you should add the links Locale and t, pointing to ../lib/Locale
+	and ../t in the extension directory.
+	* extension/lib/Locale/Po4a/Po.xs: First attempt for a C
+	extension.  The extensions for canonize, unquote_text,
+	get_charset, unescape_text, escape_text are complete, tested and
+	provide a speed up.
+	The Po object extension is not complete (Po_new, Po_DESTROY,
+	Po_read, Po_push). The goal for the Po object extension is to
+	fully rely on the gettext libraries. A Po object from the
+	extension will not be binary compatible with a Po object from the
+	Perl code, but it should provide the same API.
+	* extension/lib/Locale/Po4a/Man.xs: First attempt for a C
+	extension.  It provides a good speedup. It should be fully
+	compatible with the Perl code.
+	* extension/lib/Locale/Po4a/TransTractor.xs: First attempt for a C
+	extension.  No speedup noticed. Provided as an example, but could
+	be dropped latter.
+	* extension/typemap, extension/lib/Locale/Po4a/Po.h,
+	extension/lib/Locale/Po4a/hash.h,
+	extension/lib/Locale/Po4a/message.h,
+	extension/lib/Locale/Po4a/pos.h,
+	extension/lib/Locale/Po4a/str-list.h: Header files for the Po
+	object extension.  At least on Debian, the gettext library is not
+	directly useable if we want to play with the internal structure or
+	advance internal functions.  This may be a temporary hack.
+	* lib/Locale/Po4a/Man.pm, lib/Locale/Po4a/Po.pm,
+	lib/Locale/Po4a/TransTractor.pm: Load the C extensions if they are
+	available. This does not make po4a slower if the extension is not
+	built and present on the system.
+	* NEWS: Document the new C extension. Status of this extension.
+
+2007-02-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-21/extract.po-ok, t/data-27/general-normalized.xml,
+	t/data-27/general.po: The gettextized XML files indicate an UTF-8
+	charset, it's normal that the POs' charset are set to utf-8.
+
+2007-02-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/fr.po: Unfuzzy.
+
+2007-02-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	Encode::from_to spends 40% of its time in find_encoding. As the
+	encoding of the input file, output file and po files do not change
+	a lot, it's faster to keep the encoders in the Transtractor or Po
+	objects.
+	* lib/Locale/Po4a/Transtractor.pm: Use detected_charset to change
+	the charset, even in the initialization (in process()).
+	* lib/Locale/Po4a/Transtractor.pm: Add a file_out_encoder
+	* lib/Locale/Po4a/Transtractor.pm (encode_from_to): New function
+	to replace Encode::from_to.
+	* lib/Locale/Po4a/Transtractor.pm: Replace some occurences of
+	Encode::from_to by encode_from_to, when the encoders are known.
+	* lib/Locale/Po4a/Po.pm: add an 'encoder' field to the po
+	structure. It defaults to find_encoding("ascii"), and is changed
+	every time the header's charset is changed.
+
+2007-02-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm (post_trans, parse): Cache the result
+	when we convert a non-breaking space to its representation in the
+	input and output charset.
+
+2007-02-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Fix minor typos in comments.
+	* lib/Locale/Po4a/Man.pm (translate): Try to always provide a
+	reference to do_fonts.
+	* lib/Locale/Po4a/TransTractor.pm (translate): There's no reasons
+	to check whether file_in_charset is set to CHARSET.
+	* lib/Locale/Po4a/TransTractor.pm (translate): Be case insensitive
+	to match the "ascii" encoding name.
+	* lib/Locale/Po4a/TransTractor.pm (detected_charset): Set
+	ascii_input to 0 in case of non ascii charset.
+	* lib/Locale/Po4a/TransTractor.pm (process): Likewise.
+	* lib/Locale/Po4a/TransTractor.pm (read): Do not try to guess the
+	encoding if the encoding was provided (speed up).
+
+2007-02-14  Jim Meyering  <jim@meyering.net>
+
+	Don't hang when running in background with redirected stdout.
+	* lib/Locale/Po4a/Common.pm (BEGIN): Don't try to determine output
+	terminal size when STDOUT is not a terminal.
+
+2007-01-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* lib/Locale/Po4a/Docbook.pm: Add the verbatim programlisting tag.
+
+2007-01-05  Yuri Kozlov  <kozlov.y@gmail.com>
+
+	* po/bin/ru.po: Updated to 150t.
+
+2007-01-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* MANIFEST: Distribute the xml testsuite.
+	* NEWS: document the new XML test suite.
+	* lib/Locale/Po4a/Man.pm: Fix minor typos in comments.
+	* t/data-23/escapes1.fr.1: remove unused file
+
+2006-12-31  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Fix a build failure with gettext 0.15:
+	"invalid variable interpolation". This issue is fixed in latter
+	versions of gettext, but it does not harm to fix it here.
+	* Build.PL: Rework the dependencies. There are no strong
+	dependencies, only recommended dependencies.
+	* README: Document what happens when each dependency is missing.
+	* t/01-classes.t, t/20-xml.t, t/23-man.t: Skip some tests when
+	some recommended dependencies are not present.
+	* MANIFEST, lib/Locale/Po4a/Chooser.pm: Distribute the BibTeX module.
+	* lib/Locale/Po4a/Po.pm: Po.pm do not uses TransTractor.
+	* lib/Locale/Po4a/TransTractor.pm: Prepare next release.
+	* lib/Locale/Po4a/Xml.pm: Initial support for comments in Xml.
+	* t/20-xml.t, t/20-sgml.t: Rename t/20-xml.t to t/20-sgml.t.
+	* t/26-ini.t: Fix a typo. It's the testsuite for the Ini module.
+	* t/05-config.t, t/data-05/test0.fr.po-empty,
+	t/data-05/test2.de.po-empty, t/data-05/test2.es.po-empty,
+	t/data-05/test2.fr.po-empty, t/data-05/test2.it.po-empty,
+	t/data-05/test7.err: Update the test suite. Po4a's behavior
+	changed when it has to create a new PO file: it now uses msginit.
+	* t/27-xml.t, t/data-27/general.xml, t/data-27/general.po,
+	t/data-27/general-normalized.xml: New testsuite for the XML
+	module.
+	* NEWS: Document changes in 0.30.
+
+2006-11-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a: (Splitted mode) Always add the directories (for POs and
+	POTs). They were missing when --force is used.
+	* lib/Locale/Po4a/Po.pm: Export move_po_if_needed. Other
+	subroutine are not needed. They are object's methods.
+	* po4a: Import move_po_if_needed, and use it instead of
+	Locale::Po4a::Po::move_po_if_needed().
+	* lib/Locale/Po4a/Po.pm (move_po_if_needed): Add reason for
+	failures of system calls.
+	* lib/Locale/Po4a/Po.pm (move_po_if_needed): Add a backup argument
+	to specify if we want a ~ backup file.
+	* po4a: Use the backup argument of move_po_if_needed: no backups
+	for temp files; no backups when the no-backups option is used.
+	* po4a: (Splitted mode) Always write in a temporary file, and at the
+	end, move it to the final location or use move_po_if_needed. This
+	was needed for the handling of backup files.
+	* po4a: (Splitted mode) When we create the big merged po, if an
+	header differ, the big PO's header is completely crap. So we have
+	to use msgmerge -U, and we have to create a initial PO with at
+	least a good header (with msggrep or msginit).
+	Thanks to Azamat H. Hackimov.
+
+2006-11-25  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/TransTractor.pm: Export new. This closes
+	Alioth's bug #304168. Thanks to J.
+
+2006-11-23  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/BibTeX.pm: Fix a typo in the documentation.
+	* lib/Locale/Po4a/TransTractor.pm: Likewise.
+	* lib/Locale/Po4a/Man.pm: Recode skipped text. It would be better
+	to always use UTF-8 internally. Other modules may suffer from the
+	same issue. Thanks to Thomas Huriaux for noticing the issue on a
+	man page comment.
+	* lib/Locale/Po4a/Man.pm: mdoc macros can have empty quoted
+	arguments. Thanks to Thomas Huriaux for noticing.
+	* po4a: Add a string for translation.
+	* po4a: In splitted mode, some directories may be missing. Force
+	their creation.
+	* lib/Locale/Po4a/Chooser.pm: No need to specify every modules in
+	the rewrite rules. Only indicate the modules whose name is not an
+	upper case letter followed by lower case letters.
+	* lib/Locale/Po4a/Chooser.pm: Alphabetically sort the modules in
+	the list of supported modules.
+	* lib/Locale/Po4a/Chooser.pm: Add (commented) the prospective
+	modules in the list of supported modules.
+
+2006-11-03  Azamat H. Hackimov (winterheart-guest)
+
+	* lib/Locale/Po4a/Guide.pm: Propose the lang attribute of the
+	<guide> tag for translation. This closes the Alioth's bug #304026.
+
+2006-10-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Do not use the %z format with strftime,
+	it is not portable. Compute our own numerical timezone.
+
+2006-10-30  Costin Stroie  <cstroie@bitdefender.com>
+
+	* lib/Locale/Po4a/Po.pm: Do not call date, but use strftime.
+
+2006-10-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Guide.pm: The guide's DTD also mentions <img>
+	(inline) and <subtitle> and <summary> (which can be re-wrapped).
+	Also add <sub> and <sup> to translate them if they are used alone
+	in a paragraph.
+
+2006-10-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Guide.pm: Read the guide DTD and test on the
+	whole gentoo documentation:
+	  - Translate the content of the <author>, <b>, <brite>, <c>, <e>,
+	  <i>, <path>, and <uri> tags.
+	  - Re-wrap the content of the <dd>, <dt>, <li>, <th>, <ti>, and
+	  <title> tags.
+	  - Translate the 'link' attribute of the <figure> tag.
+	  - Add <brite>, <const>, <ident>, <keyword>, <mail>, <stmt>, and
+	  <var> to the list of inline tags.
+
+2006-10-30  Nobody
+
+	* lib/Locale/Po4a/Guide.pm: Add the following tags to the 'tags'
+	category: <const>, <dd>, <dt>, <ident>, <keyword>, <mail>, <stmt>,
+	<var>, <version>.
+	The content of these tags has to be translated.
+	* lib/Locale/Po4a/Guide.pm: Re-wrap the content of the <impo>,
+	<note>, and <warn> tags.
+	* lib/Locale/Po4a/Guide.pm: Translate the 'by' parameter of the
+	<p> tag.
+	* lib/Locale/Po4a/Guide.pm: Inline the content of the <b>, <sub>
+	and <sup> tags.
+	These entries close Alioth's bug #304026.
+
+2006-10-28  Azamat H. Hackimov (winterheart-guest)
+
+	* po4a: Use msginit instead of copying the POT to the PO file.
+	This closes the Alioth's bug #304039
+
+2006-10-23  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: When an xml prologue (<?xml ...?>) is
+	detected, consider '/>' as the end of XML empty tag (not an SGML
+	'/' tag closure followed by an '>' character).
+
+2006-10-22  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Remove the tags from the default
+	categories when they are defined by the user.
+	* lib/Locale/Po4a/Sgml.pm: Do not start the line references of
+	included files at line #0, but at line #1.
+	* lib/Locale/Po4a/Sgml.pm: Avoid issues with the emacs/vim perl
+	parsers.
+	* lib/Locale/Po4a/Sgml.pm: Increment the line references even when
+	nsgmls do not indicate that the line changed: take into accound
+	the record ends (event with type 're'). This closes Alioth's bug
+	#300589 (reference for composite SGML documents not perfect).
+
+2006-10-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* MANIFEST: distribute more test units. Otherwise, the test suite
+	fails.
+
+2006-10-15  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/pod/fr.po: Updated to 1107t1u.
+
+2006-10-13  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* testsuite/check: Add the zZ and zY macro to include bash.1 in
+	the testsuite.
+
+2006-10-10  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm: When we try to detect if a paragraph
+	contains multiple bullets, quote the bullet to avoid problems with
+	parenthesis.
+
+2006-10-09  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Text.pm: The module generated additional empty
+	lines.  Better handling of empty paragraphs (empty line followed
+	by another one).
+	* lib/Locale/Po4a/Text.pm: Add support for underlined text.
+	Translate a title together with the underlining, in non wrapped
+	mode.  Underlines are lines consisting in only '=', '-' or '_'.
+	* lib/Locale/Po4a/Text.pm: Consider paragraphs with more than 3
+	consecutive spaces as non-wrapped paragraphs.
+	* lib/Locale/Po4a/Text.pm: Consider paragraphs starting by a
+	bullet ('*') or numberred paragraphs ('1)' or '2.') as non-wrapped
+	paragraphs.
+	* lib/Locale/Po4a/TransTractor.pm (translate): When the wrapcol
+	argument is negative, add the default wrapcol value.  NOTE: It
+	does not take into account the argument of the po4a-translate's
+	--width option.
+	* lib/Locale/Po4a/Text.pm: Support for bulleted paragraphs:
+	extract the bullet's text, and wrap/reindent after translation.
+	A -o nobullets option was added to revert this behavior.
+	* NEWS: Document these changes.
+	* lib/Locale/Po4a/Text.pm: Support consecutive bulleted
+	paragraphs, without empty line to separate them.
+
+2006-10-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* NEWS: document important changes in 0.29.
+	* lib/Locale/Po4a/TransTractor.pm: Prepare release 0.29.
+
+2006-10-08  Jordi Vilalta  <jvprat@gmail.com>
+
+	* po/bin/ca.po, po/bin/es.po: Updated the translations.
+
+2006-10-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+
+2006-10-08  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Add an "mdoc" option to select a
+	stricter support for mdoc (no translation of the 'NAME' section).
+
+2006-10-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po4a-normalize: Beginning of support for reading stdin.
+	More work is needed for a full support (other options, other
+	tools, module should not read the file twice, how to deal with
+	inclusion, ...).
+	* po4a-gettextize: Likewise.
+
+2006-10-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Add 'term' to the verbatim tags. This
+	is needed for the module-assistant sgml man page. Otherwise,
+	lists' items are not indented.
+
+2006-10-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Fix the issue detected in the previous
+	changes (mdoc.fr). When a line was wrapped inside a E<.xx ...>,
+	the end of line was replaced by a space instead of just being
+	deleted.
+	* t/data-23/mdoc.fr: Fix the testsuite accordingly.
+
+2006-10-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Po.pm: Fix another wrap / length calculation
+	issue, this time for the generation of the PO.
+	* t/data-23/mdoc.fr: Needed by the previous change. The mdoc code
+	needs a fix.
+
+2006-10-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-23/mdoc.fr: This is needed by the previous change.  This
+	probably means there is minor issue in the handling of E<.xx ...>.
+
+2006-09-24  Yuri Kozlov  <kozlov.y@gmail.com>
+	* lib/Locale/Po4a/Po.pm: Convert UTF-8 strings to Perl's "logical
+	character" before wrapping the text. This helps the length
+	calculation needed for wrapping lines.
+
+2006-09-18  Stephane Blondon  <stephane.blondon@laposte.net>
+
+	* po/pod/fr.po: Fix a typo.
+
+2006-09-18  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Do not reopen the input file.
+	Otherwise, it fails when the master document is stdin.
+
+2006-09-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Add \N'xxx' to the exception for the ''
+	to \*(rq transliteration. Thanks to KISE Hiroshi for pointing
+	this.
+
+2006-09-14  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Sgml.pm: Move <cmdsynopsis> from the indent to the
+	verbatim category.
+	* lib/Locale/Po4a/Sgml.pm: Move <arg> and <option> from the
+	translate to the ignore.
+	* lib/Locale/Po4a/Sgml.pm: Fix the handling of verbatim sections.
+	Better spacing (some end of line were missing).
+
+2006-09-05  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/23-man.t, t/data-23/spaces, t/data-23/spaces.fr_latin1,
+	t/data-23/spaces.fr_latin1.po, t/data-23/spaces.fr_utf8,
+	t/data-23/spaces.fr_utf8.po, t/data-23/spaces.ja,
+	t/data-23/spaces.ja.po, t/data-23/spaces.pot: New test for an
+	issue pointed by KISE Hiroshi.
+	* lib/Locale/Po4a/Man.pm: ? was considered as a non breaking
+	space. Activate the detection of failing Encode::from_to().
+	Thanks to KISE Hiroshi for pointing it.
+	* t/data-23/fonts.en, t/data-23/fonts.pot: Fix the test suite:
+	"empty commented lines" are kept.
+	* t/data-23/mdoc.fr: Fix the test suite: "spaces at the
+	end of the line for blocks of text" are removed.
+
+2006-08-30  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/BibTeX.pm: Change what appears in the 'type'
+	comment of the msgid (in the PO).
+
+2006-08-29  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/BibTeX.pm: New module: support for BibTeX
+	bibliographies.
+	* lib/Locale/Po4a/Text.pm: Fix a typo in a comment.
+
+2006-08-27  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Keep empty commented lines.
+	* lib/Locale/Po4a/Man.pm: wrap keeps spaces at the end of
+	empty lines. Remove the space at the end of the line for blocks of
+	text (it should be done in some other blocks,but at least, it seems
+	safe here).
+
+2006-08-27  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* t/data-23/mixed.cfg, t/data-23/mixed.pot, t/data-23/mixed.fr.po,
+	t/data-23/mixed1, t/data-23/mixed1.fr, t/data-23/mixed2,
+	t/data-23/mixed2.fr, t/data-23/mixed3, t/data-23/mixed3.fr,
+	t/data-23/mixed4, t/data-23/mixed.4.fr, t/23-man.t: New mixed
+	test. Avoid depending on files used by other tests.
+	* lib/Locale/Po4a/Man.pm: remove re_init() and detect the end of
+	file when there are no more lines in parse().
+
+2006-08-26  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: Reorganize the list of options: all the
+	options to specify the behaviour of new options together.
+
+2006-08-23  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* MANIFEST: Distribute the INI module.
+	* lib/Locale/Po4a/Chooser.pm: Add the 'ini' module alias.
+	* lib/Locale/Po4a/Ini.pm: Little cleanup. Remove references to
+	Pod::Parser.
+	* t/26-ini.t, t/data-26/test1.ini, t/data-26/test1.po: Add a test
+	to the testsuite for the ini module.
+	* lib/Locale/Po4a/Man.pm: Call re_init only once, in docheader.
+	When it was called in the .TH and .Dd macros, it used to remove
+	the comments at the beginning (e.g. copyright notice, preprocessor
+	indications, etc.
+
+2006-08-21  Costin Stroie <cstroie@bitdefender.com>
+
+	* lib/Locale/Po4a/Ini.pm: New module for .INI files.
+
+2006-08-20  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/Man.pm: (mdoc) Only remove the spaces at the end
+	of an mdoc macros if the space is not escaped.
+	* lib/Locale/Po4a/Man.pm: Do not always change '' to \*(rq.
+	For example, Pod::Man uses \*' and this sequence may be followed by a
+	single quote.
+
+2006-08-17  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* po/bin/po4a.pot, po/pod/po4a-pod.pot: Regerated.
+	* po/bin/*.po, po/pod/*.po: Synchronized with the POTs.
+	* po/pod/fr.po: Updated to 1088t1u.
+	* t/data-05/test7.err: Update due to the change in po4a.
+	* lib/Locale/Po4a/TransTractor.pm, debian/changelog: Prepare the
+	po4a 0.28 release.
+
+2006-08-16  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* lib/Locale/Po4a/LaTeX.pm: Add a link to the TeX module man page.
+	* lib/Locale/Po4a/TeX.pm: Register the environment provided by
+	the -o verbatim or -o no_wrap option, if the environment does not
+	already exist.
+	* lib/Locale/Po4a/TeX.pm: Document the
+	'% po4a: verbatim environment I<env>' inline command.
+	* lib/Locale/Po4a/TeX.pm: When no parameters are specified in a
+	'% po4a: environment I<env> I<parameters>', do not expect a
+	trailing space.
+	* t/data-23/mdoc.1, t/data-23/mdoc.fr, t/data-23/mdoc.pot,
+	t/data-23/mixed.fr.po, t/data-23/mixed.pot: Add a test for font
+	modifiers nested in mdoc commands.
+	* lib/Locale/Po4a/Man.pm: fix the Man module to pass the above test.
+	* t/data-23/fonts: Add a test to make sure a '<' do not prevent
+	the processing of font modifiers.
+	* t/data-23/fonts: Add a test for .I " "
+	* lib/Locale/Po4a/Man.pm, t/data-23/fonts.en, t/data-23/fonts.pot:
+	Fix the above tests.
+	* po4a: Only read a PO once. It was read for every master file of
+	the configuration file.
+	* NEWS: Add a NEWS file.
+
+2006-08-07  Nicolas François  <nicolas.francois@centraliens.net>
+
+	* scripts/po4aman-display-po: If man -aw find multiple manpages
+	(e.g. ls.1 and ls.1posix), but only one exactly matches the given
+	section, use this page. Thanks to Florentin Duneau for reporting.
+	* lib/Locale/Po4a/Man.pm: The "do not force the translators to
+	translate them if the line only consists in \&, spaces and font
+	modifiers." patch was wrong. Some strings could be untranslated if
+	a (multi-line) string contained a line with only font modifiers,
+	\& and spaces..
+	* lib/Locale/Po4a/Man.pm: Last patch fixing "Keep the \\f font
+	modifiers with the inline macros' arguments (E<...>)." was wrong.
+	Add missing $ at the end of the regex.
+	* lib/Locale/Po4a/TransTractor.pm: Update VERSION to 0.27.2.
+
+po4a (0.27.1-1)
+
+  [Nicolas François]
+  (po/pod/fr.po)
+  * Fix unterminated S<...>
+
+ -- Fri,  4 Aug 2006 23:25:25 +0200
+po4a (0.27-1)
+
+  [Nicolas François]
+  (html-build-upload.sh)
+  * Generate the manpages before the convertion to html (the line was
+    commented)
+  (Text.pm)
+  * Fix missing empty lines between paragraphs.
+  (Man.pm)
+  * Sometimes, the .B or .I macros are followed by an argument which only
+    consist in a space. As the .B or .I macro is replaced by \fB or \fI,
+    the quotes are removed, and some \& must be used to keep the space
+    (otherwise the line will be considered empty by groff.
+    Add these \&, and do not force the translators to translate them if
+    the line only consists in \&, spaces and font modifiers.
+  * Support for the ms' DA macro.
+  * Support commented lines between .ie and .el macros.
+  * Keep quotes arround mdoc macros' arguments when they contain spaces.
+  * Do not replace - by \- in the symbols used in \*(XX
+  * When we warn about using conditionnals without groff_code, also show
+    the reference of the line.
+  * gettextize the ".ie without .el" error, and add the reference of the
+    line in the manpage.
+  * add an mdoc method (translate_mdoc_no_quotes) because some mdoc macros
+    must not have their arguments quoted.
+  * In splitargs, change \&" to a groff double quote \(dq.
+    It's still not perfect, but it helps in a lot of pages.
+  * When a string is quoted, only translate the argument between the
+    quotes, and restore the quotes latter.
+  * Keep the \\f font modifiers with the inline macros' arguments (E<...>).
+  * Add \\f in the "Unsupported font in..." error. This helps understanding
+    what/where is the error.
+  * Fix typos.
+  (po4a)
+  * Print the number of translated strings, even if the translation is
+    discarded because it is less translated than the threshold.
+  (po4aman-display-po)
+  * Do not always use po4a-translate's -o options for the options passed
+    to po4aman-display-powith -o. Otherwise, we can only specify module
+    options, and not options for po4a-translate (i.e. we can't specify
+    something like -o "-L ISO-8859-1").
+  (Tex.pm)
+  * Fix typos.
+  (po/bin/fr.po)
+  * Update the translation, after review by the Debian l10n list.
+  (po/pod/fr.po)
+  * Update the translation, after review by the Debian l10n list.
+
+  [Florentin Duneau]
+  (po/pod/fr.po)
+  * Fix some typos.
+
+  [Thomas Huriaux]
+  (Man.pm)
+  * Support for empty .B or .I followed by commands, with a warning.
+
+ -- Sun,  9 Jul 2006 01:19:52 +0200
+
+po4a (0.26-1)
+
+  [Nicolas François]
+  (po4aman-display-po)
+  * When the master page is not provided, only look for the English man page.
+  * With -m, users can now just specify the name of the original manpage
+    (without the full path). Thanks to Florentin Duneau.
+  * Warn if the -m argument not sufficient to identify an unique man page
+    (the section is needed). Thanks to Florentin Duneau.
+  * Do not use the function keyword (yields a syntax error with dash).
+    Thanks to Julien Cristau.
+  * Add missing quotes
+  * Fix the trap command
+  (Man.pm)
+  * Fix failures when a configuration file is used to translate both mdoc
+    and groff man pages. The groff macros are no more erased in mdoc mode.
+  * When a TH macro is found, switch back to the groff mode (but keep the
+    mdoc macros if they were defined).
+  * Print the po4a header before the Dd macros.
+  * .SM is an inline macro. Thanks to Thomas Huriaux.
+  * Add support for \# groff comments. Thanks to Thomas Huriaux.
+  * Specify the line reference for "Unsupported font" errors.
+  * Allow some more \c escapes (still not supported everywhere)
+  * Reset some memories at the beginning of files (docheader & .TH & .Dd).
+    When multiple files were mentionned in a config file, the comments or
+    the fonts from one document could affect the next file.
+  * Fix the .IX macro.
+  * Support the \fL font modifier (needed for .IX).
+  * Do not replace - by \- in symbol name (\[XXX] or \C'XXX' \v'XXX')
+    (Also make sure there is odd number of \ in the other exceptions)
+  * Add a 'generated' option to allow using po4a on generated man pages.
+  * Only warn for .so and .mso, and do not translate the line.
+  * Fix some bugs related to quotes used in the arguments of groff macros.
+  * Do not split the arguments to the .ie, .if, .de macros. This fixes
+    some spacing and quote issues with these macros.
+  * el lines can start with a apostrophe (') instead of a period (.).
+  * .el macros can be followed by a space or an escaped curly bracket (\{).
+  * always convert back non breaking spaces to '\ ' before pushing the
+    arguments in splitargs().
+  * Do not convert non breaking spaces before calling splitargs.
+    (otherwise, the error mesages do not contain the original string)
+  (Chooser.pm)
+  * Fix a typo in the LaTeX module link and add the Xml module to the
+    SEE ALSO section.
+  (Sgml.pm)
+  * Add the docbook's edition tag to the translate category.
+    Thanks to Thomas Huriaux.
+  (Po.pm)
+  * quote: To restore the original trailing spaces, we must remove the
+  current trailing spaces with s/\s+$//s (not chomp).
+  (TeX.pm)
+  * Use the ESCAPE variable instead of \ when appropriate.
+  * Add variables for the comments regexp.
+  * Merge some strings.
+  * Allow space as an argument separator
+  (Texinfo.pm)
+  * New module.
+  (tests)
+  * Add an mdoc test.
+  * Add a mixed mdoc/roff test.
+  * Add some quote tests for the Man module.
+  (html-build-upload.sh)
+  * Update the script to build the html documentation. It now uses
+    man2html. (This was necessary for the Polish pages)
+  (po4a)
+  * Use the same order as in the configuration file when creating the POT
+    and the translated files.
+    NOTE: this may modify the order of strings in your current POTs.
+  (po4a.7.pod)
+  * Update the list of supported formats.
+  (Xml.pm)
+  * Update documentation: It is now distributed.
+  (Pod.pm)
+  * Fix a problem with non-breaking spaces, which were causing missing
+    output in the translated file.
+
+  [Yves Rütschlé]
+  (Xhtml.pm)
+  * Update for the new Xml module behaviour (no need to define all the
+    tags).
+  (tests)
+  * Add an Xhtml test suite.
+  (Xml)
+  * Include the comments starting with a #.
+    This permits to support SSI statements in the Xhtml module.
+
+  [Yuri Kozlov]
+  * Updated Russian translation (po/bin/ru.po). 150t.
+
+  [Daniel Nylander]
+  * Updated Swedish translation (po/bin/sv.po). 141t9u.
+
+ -- Thu, 13 Apr 2006 11:08:43 +0200
+
+po4a (0.25-1) unstable; urgency=low
+
+  New upstream release (no change in packaging):
+  
+  [Nicolas François]
+  (Po.pm)
+  * Missing =back in the pod part.
+  * consecutive escaped tabulations in the PO: only the first one was
+    un-escaped. Closes: #359352
+  * gettextize: do not associate the strings by their order in the POs, but by
+    their order in the documents. This permits to gettextize documents
+    which have the same structure, but where a string have
+    multiple translations, or when different strings have the same translation.
+    If multiple translations appear for a string, both strings are proposed in
+    the PO. Closes: #326670
+  (po4a)
+  * When a master document is specified twice in a configuration file:
+    - do not ignore the options specified in the first line;
+    - also warn in this case since po4a may not do what the user wants.
+  * Fix the documentation: po4a do not use the POT-Creation-Date field of the
+    POT and PO headers. It only updates the POs with msgmerge -U.
+    Closes: #360141
+  (Man.pm)
+  * Documentation: this module is no more beta.
+  * Another fix for "when a font modifier if followed by another font
+    modifier". Also add a test for this case.
+  * mdoc support.
+  * Do not put the header at the top of the file, but just before the .TH
+    macro. This will preserve the indications on how to process the page if
+    the first line contains something like: '\" t
+  (Xml.pm)
+  * Implement placeholders: this permits to specify that footnotes must not be
+    translated inside a paragraph, but are translated separately and a
+    <placeholder0> tag will be put where the footnote must be installed.
+  * In tag_extract_doctype, we can't test whether the Document Type Definition
+    contains an Internal Subset by searching the document for "]>" because
+    this is also used for closing the CDATA Sections.  This caused
+    segmentation faults.  Closes: #362169
+  * get_string_until: add a option to search a regular expression.  The
+    default is to search for a fixed string.  Also make sure get_string_until
+    works when the serach string (or regex) contains a newline (\n).
+  * When there is an Internal Subset, the Document Type Definition ends with
+    "]\s*>", not necessarily "]>".
+  * Add support for CDATA Sections.
+  (po4aman-display-po)
+  * new script to display a translated man page with a given PO.
+    Thanks to Thomas Huriaux.
+  (po4a.7.pod)
+  * Fix a typo in the detailed example for the beginboundary field.
+    Thanks to Ognyan Kulev.
+
+ -- Martin Quinson <mquinson@debian.org>  Thu, 13 Apr 2006 11:08:43 +0200
+
+po4a (0.24-1) unstable; urgency=low
+
+  [Nicolas François]
+  (Sgml.pm)
+  * Preserve more entities. It was already the case for entities ending by a
+    semi-colon, but they were expended in entities not terminated by a
+    semi-colon (e.g. id="&url-debian-volatile").
+  * Add the docbook docinfo tag, and remove duplicate refsect1 tag.
+  * Add a post-translation filter, which converts non breaking spa¢es (0xA0 in
+    latin1) to the &nbsp; entity.
+  (Po.pm)
+  * use File::Copy::move instead of rename (the POT/POs were not written when
+    /tmp and the file were not in the same device.
+    Thanks to Valéry Perrin and Thomas Huriaux. Closes: 354330
+  * make filter() less verbose
+  * delete the automatically generated apply subroutine to avoid warnings.
+  * be more restrictive on the lines ignored by diff in write_if_needed.
+  * New function move_po_if_needed to move a PO if there are some chnages.
+  (TeX.pm)
+  * Do not extract a trailing command if it is followed by an unexpected
+    parameter. This fixes an issue in list environments when the \item are
+    followed by blocks. Closes: 354955
+  * New verbatim environment category. You can now specify verbatim blocks in
+    environments other than "verbatim".
+  (po4a)
+  * The --split option is no more needed. This feature is supported by using
+    $master in the po4a_paths line.
+  * try to re-generate the POT if the config file was modified.
+  * use File::Copy instead of system("cp").
+  (general)
+  * replace some `||' by `or'. || has an higher priority and some warnings
+    were masked.
+  (Pod.pm)
+  * Overload the TransTractor's translate() in order to add pre- and
+    post-translation filters.
+  * Change the latin1 0xA0 (non-breaking spaces) to the pod S<...> equivalent.
+    This should help projects with multiple formats.
+  (Man.pm)
+  * .R is a (R), not a font modifier.
+  * Remove duplicate definition of the .P macro. The font was not reset to
+    Roman.
+  * Also handle empty font modifiers followed by .P, .PP, .LP or .TP
+  * When a font modifier if followed by another font modifier (or .P, or .SH,
+    etc.), the first font must not be ignored. Inform the font stack with
+    set_font.
+  * a .P or .TP may be followed by spaces.
+  * Remove unneded group in regex (theoretical speedup).
+  * Detect non-wrapped lines (lines starting by spaces) when the line starts
+    by a font modifier (\f).
+  (README.maintainers)
+  * Add a document to help the translators.
+    Thanks to the contributions from Denis Barbier, Thomas Huriaux and Cyril
+    Brulebois.
+  (MANIFEST)
+  * Distribute the ar, eo, eu, he, ku, nb, nl, pt, pt_BR, sl, sv and uk
+    translations since some of them have more translated strings than other
+    alredy distributed.
+
+  [Yuri Kozlov]
+  * Updated russian translation (po/bin/ru.po) (Closes: #350300)
+
+ -- Martin Quinson <mquinson@debian.org>  Sun, 12 Mar 2006 18:59:18 +0100
+
+po4a (0.23-1) unstable; urgency=low
+
+  [Thomas Huriaux]
+  (po4a)
+  * only updates the POT if a master document is more recent than the existing
+    POT. Closes: #339459
+  * New --variable option.
+  (Docbook.pm)
+  * refentrytitle can be specified inside a sentence. Move this tag to the
+    inline category.
+  (Sgml.pm)
+  * There can be spaces between the entity definition and '>'.
+  * Some fixes in the line references counting mechanism.
+  * Add a ignore-inclusion option. It permits to avoid including external
+    entities.
+  * For the conditionnal inclusions, use the <po4abeg name="..."> and
+    <po4aend> tags to fool nsgml instead of the {PO4A-beg-...} and {PO4A-end},
+    which caused extra tags to be added by nsgmls.
+  * Do not fail when the file pointed by a system entity does not exist and
+    this entity is not used.
+
+  [Nicolas François]
+  (Po.pm)
+  * If a line could not be wrapped (e.g. because of a more than xx chars
+    link), the rest of the paragraph was not rewrapped.
+    Thanks to Thomas Huriaux.
+  * Add a write_if_needed subroutine to check if an update is needed.
+    see #339459.
+  (Text.pm)
+  * A new very simple module for text documents. Closes: #243753
+  (po4a-gettextize)
+  * support for multiple master/localized files. Closes: #319208
+  (Sgml.pm)
+  * Do not re-wrap the prolog entities on one line.
+  * An external entity can be referenced as &entity; or &entity. The second
+    case is now supported. Thanks to Thomas Huriaux.
+  * Do not include the commented entities.
+  * support for the 'qref' tag.
+  * Support for the processing instructions (pi) (e.g. <?xml...?>).
+  * Fix various issues when po4a is not run in the master file directory.
+  (Xml.pm)
+  * The inline tags were not added to the tags path. It should now be possible
+    to put "<tag1><tag2>" in the 'tags' category, even if <tag1> is in the
+    'inline' category.
+  * The encoding declaration must be added before any standalone document
+    declaration. Otherwise the document is not valid. Thanks to Olivier
+    Trichet for noticing.
+  * First attempt to translate the entities.
+  (Docbook.pm)
+  * When a tag is added to the 'inline' or 'tags' category on the command
+    line, the default tags in Docbook.pm should not add this tag in the other
+    ('inline' or 'tags') category.
+  * New "nodefault" option, to avoid a specified tag to be set in the tags
+    or inline category by defaut.
+  (po4a)
+  * Add a set of options that could be useful for the maintainers:
+    --no-translations, --rm-translations, --no-backups, --rm-backups
+  * Add a --force option that force the re-generation of the POT and PO files.
+  * If the POT is updated (see Thomas change above), check that this update is
+    really needed (avoids changing only the POT-Creation-Date field).
+    see #339459.
+  * The error message when msgmerge failed was wrong. Closes: #339453
+  * Fix the --quiet option. CLoses: #342293
+    Thanks to Brendan O'Dea.
+  (translations)
+  * Update French translation, use non-breaking spaces where needed
+  * Fix a lot of typos in the French translation. Thanks to Frédéric Bothamy.
+    Closes: #341175
+  * Update the Swedish translation according to Rosetta
+    (I can't update more languages. The update process of Rosetta is ways too
+    complicated)
+
+  [Danilo Piazzalunga]
+  * Update Italian program translation.
+
+  [Robert Luberda]
+  * Program and manpages translation to Polish. Closes: #340877
+  (Build.PL)
+  * Fix of the build script for the languages that don't use latin1 for their
+    man pages.
+
+ -- Martin Quinson <mquinson@debian.org>  Fri, 09 Dec 2005 18:12:12 +0100
+
+po4a (0.22-1) unstable; urgency=low
+
+  [Nicolas François]
+
+  (Sgml module)
+  * Fix a typo in the "keyword" tag.
+    Thanks to Chris Karakas.
+  * Add the DocBook's contrib and epigraph tags
+  * Be stricter on the regex matching entities
+  * Escape more chars in CDATA. This fixes #301335 (on Alioth)
+  * Append the content of a CDATA to the current buffer because it was
+    not output at the right position
+  * Don't forget some {PO4A-beg/end} in the output document
+  * Ignore (ie, remove) <![ IGNORE [...]]> sections
+  * recognize numerical character entities (e.g. &#38;)
+    Thanks to Thomas Huriaux.
+  * Improve speed 
+  * use the nsgmls -wno-valid option to avoid some errors since we include
+    all parts conditional inclusion constructs, for example.
+  * fix the spacing of the verbatim blocks.
+    Thanks to Julien Louis (ptitlouis) for reporting.
+  * Various other little fixes and improvements
+  (Man module)
+  * Fix the .ds macro (it arguments must be translated, except the name of the
+    variable, which must be dispalyed to the translator)
+  * implement .vs, .hw .EQ and .EN macros
+  * Do not wrap the first line following a .TP
+  * translate the .ta arguments in case they contain a word
+  * better support for .B or .I macros when they don't have arguments and are
+    followed by a font macro, a .SH, a .TP, or a .IP
+  * fix the translate_exh function
+  * Fix some issues with the '-' to '\-' transliteration
+  * Add support for the .de, .ie and .if section with the groff_code option
+  * Add options to deal with new options defined with .de, or options not
+    supported by po4a (untranslated, noarg, translate_joined,
+    translate_each, no_wrap, inline)
+  (TeX & LaTeX modules)
+  * New syntax for the "% po4a:" line.
+    This alow command to mix optional and mandatory arguments.
+  * remove the old category (untranslated, translate_each, ...) This was
+    problematic when a command is follwed by a block ({...}).
+  * Update the definition of the common LaTeX commands and environments.
+    All these definitions are now in the LaTeX module.
+  * Allow 3 mode of separation for the commands at an extremity of a block
+    (separate and translate the parameters that must be translated
+    separately, separate and translate the command with its parameters, only
+    separate if the command is alone in a block).
+  * Allow to translate the \begin command with all its arguments attached.
+  * Make error messages translatable.
+  (po4a)
+  * document the support for options/aliases in the config files.
+  (translations)
+  * Update French translation
+  * Fix some issues in the French translation of the manpages.
+    Thanks to Julien Louis (ptitlouis).
+  (Docbook module)
+  * Add the 'screen' tag, which should not be re-wrapped.
+    Thanks to Thomas Huriaux.
+  (Xml module)
+  * Do not break paragraphs on comments, just remove them.
+  (Po module)
+  * Restore the trailing spaces in Po.pm:wrap().
+    This fix an issue with the lang attribute of an XML file ('en' was
+    normalized into 'en\n').
+    This needed a minor correction of Pod.pm and Sgml.pm.
+  (Debian package)
+  * bump Standards-Version to 3.6.2
+  * do not build depend on libsgmls-perl
+  * depends on ${misc:depends}, ${perl:Depends} instead of perl | perl5
+  * only recommends liblocale-gettext-perl
+
+  [François Gouget (fgouget@free.fr)]
+
+  (Xml module)
+  * Append the encoding attribute if it is not defined in the <?xml> tag.
+
+  (Sgml module) 
+  * Use a regular expression to simplify the tag kind check.
+  * Assorted spelling fixes.
+  * If relative, the path of included file must be considered to be relative
+    to the path of the master Sgml file.
+    Fixes bug #300874 on the Alioth tracker, for the Sgml module.
+  * The debug option is a space separated list of channels to print
+    information for. So we must split it to set $debug.
+  * Check the nsgmls exit code and issue an error if it is non-zero.
+    This lets us detect the case where nsgmls is missing.
+  * Add support for translating attribute values.
+  * Add a 'qualify' option to denote which attributes should get an
+    msgid 'qualified' by the attribute name.
+  * Don't qualify the lang attribute by default for consistency with Xml.pm
+  * Rename the 'attribute' option to 'attributes' for consistency with Xml.pm
+
+  (Po module)
+  * Add a porefs option controlling the file reference verbosity, and thus
+    the diff verbosity.
+
+  (Chooser)
+  * Store '\$@' in an intermediate variable so it does not get clobbered
+    before we report the plugin-load error.
+
+  (binaries)
+  * Clarify the '--option' documentation.
+  * Remove unneeded imports of TransTractor::VERSION.
+
+  (libraries)
+  * Remove unneeded imports and exports of TransTractor::VERSION.
+
+  (General)
+  * Various documentation improvements
+  * Implement wrappers for textdomain(), gettext() and dgettext() in
+    Po4a::Common to make the dependency on Locale::gettext optional.
+  * Remove unused load_config export in Po4a::Common
+  * Make the Text::WrapI18N and Term::ReadKey dependencies optional
+
+  [Jordi Vilalta]
+
+  (Docbook module)
+  * Add the missing > in <structname>
+
+  [Martin Quinson]
+
+  (po4a(1))
+  * Document the dataflow to explain that this tool cannot be used to 
+    gettextize (Closes: #313165)
+
+  (Sgml module)
+  * Allow prolog entities which are not SYSTEM ones
+  * Fix the way included files are looked for (was broken when everything is
+    in the same dir)
+
+  (Transtractor module)
+  * Allow to pass options to the po modules as to the plugins.
+
+  (Po module)
+  * Issue an useful error message when the gettextization fails because there
+    is not the same amount of entries (Closes: #325314)
+  * Tell that the gettextization documentation contain some hints to help users
+     in this painful task
+
+  (Random scripts)
+  * msguntypot: help eradicating typo in msgstr without needlessly fuzzying
+    the translations.
+
+  [Yuri Kozlov]
+  * Program translation to russian (po/bin/ru.po) (Closes: #324247)
+
+ -- Martin Quinson <mquinson@debian.org>  Tue,  1 Nov 2005 17:36:42 +0100
+
+po4a (0.21-1) unstable; urgency=low
+
+  [Nicolas François]
+  (TeX module)
+  * Fix an issue with file excluded from inclusion:
+    after a gettextization, the PO file contained two \input{x}.
+  * Add a generic way to specify separators.  For example, this permits
+    to translate each cell separately in a tabular environment.
+  * Just warn instead of dying when the documentclass cannot be found
+  (Man module)
+  * Add a verbose option, for "po4a -v".
+  * Add comments to the PO file, and fix the testsuite accordingly.
+  * Remove the with-non_breaking_spaces and with-hyphen_to_minus options
+    and document the transliterations performed in pre_trans and post_trans.
+  * Fix an encoding issue with non-breaking spaces.
+  (Po.pm)
+  * Allow multiple comment lines for a PO string.
+  (po4a)
+  * Add support for options/aliases in the config files.
+    First try ... undocumented feature.
+
+  [Jordi Vilalta]
+  (Xml module)
+  * Handle the processing instructions ( <?...?> ) simply ignoring them
+  (Docbook module)
+  * Wrap by default
+  (Po module)
+  * Handle tabs when canonizing
+
+ -- Martin Quinson <mquinson@debian.org>  Wed, 27 Apr 2005 15:03:10 +0200
+
+po4a (0.20-2) unstable; urgency=medium
+
+  Release critical bug fix.
+
+  [Martin Quinson]
+  * Catch errors of Term::ReadKey::GetTerminalSize so that we can build on the 
+    terminal-less settings that some debian automated builder love (Closes: #300395).
+
+ -- Martin Quinson <mquinson@debian.org>  Mon, 21 Mar 2005 10:04:59 +0100
+
+po4a (0.20-1) unstable; urgency=low
+
+  [Nicolas François]
+  (man module)
+  * Handle requests beginning by a single quote.
+  * More escapes for dots and single quotes at the beginning of a line.
+  * Fix some issues with the .HP macro.
+  * Fix a minor issue regarding empty lines.
+  * Do not reset the wrapping mode (when set by a '.nf' request) after the end
+    of a paragraph.
+  * Handle lines containing only spaces as empty lines.
+  * Fall back to the parser when a macro follow a '.TP'.
+  * The heading of a section (.SH) or subsection (.SS) can be provided on the
+    line after the macro.
+  * Better support for some groff escapes (\\, \.).
+  * Add a limited support for "\c".
+  * Some quotes could be converted to \", which starts a groff comment.
+  * Fix an issue with paragraphs starting by a new line.
+    (This also touch Po.pm)
+  * Honor "" in quoted macro argument, which represent a single double quote.
+  * When a macro argument is pushed in the output document, convert " to \(dq
+    if the argument has to be quoted.
+  * Handling of input line continuation (\<RET>) should not be reserved for
+    macros.
+  (TeX module)
+  * Add a generic TeX module:
+    - it tries to separate entities that can be translated on their own (i.e.
+      paragraphs, but also some commands when they are located at the
+      beginning or end of these entities);
+    - permits to build derivated parsers (e.g. for LaTeX, but texinfo is also
+      planned);
+    - allows personnalization (with '% po4a: ' lines in the tex file or a class
+      file);
+    - handles file inclusion.
+    - customization by categories of commands
+      (translated/untranslated and/or separated).
+    - break paragraphs at the beginning and end of environments blocks.
+    - it was tested with a book and the Python documentation
+  * Add a PythonDoc and a LaTex module derivated from TeX.
+    - NOTE: this module will probably be removed. Use the LaTeX module
+      instead.
+  (Po.pm)
+  * \n or \t can be preceded by an even number of backslash.
+  (translations)
+  * Update French program translation
+
+  [Martin Quinson]
+  (sgml module)
+  * Add <option>, <refname>, <refpurpose> and <holder> to the list of
+    verbatim tags to fix the second half of #280882.
+    More work needed to fix the first half.
+  (debian pkg)
+  * Build-depend on libtext-wrapi18n-perl for the new wrapping functions
+
+  [Yves Rütschlé]
+  (Build.PL)
+  * Let the 'clean' target remove po4a.log.
+  (HTML module)
+  * Preserve leading and trailing spaces in tag content.
+  * Fix the <img> tag.
+  * Translate text only if it contains some letters.
+  * Add t/22-html.t
+  (Po.pm)
+  * Files containing nothing to translate are obviously
+    completely translated (set translation state to 100%).
+
+  [Jordi Vilalta]
+  (xml module)
+  * Don't search an unquoted end for comments. Closes: #291831 in Debian
+  * Now the strip option is enabled by default, as suggested by Denis
+  (generic)
+  * Complete the catalan documentation translation.
+  * Update the spanish documentation translation with some suggestions by
+    Ruben Porras.
+  * Updated the scripts and modules to use the new wrapping functions.
+  (Common module)
+  * New module that will contain common utilities.
+  * Added message wrapping functions.
+  (po4a)
+  * Added support for language templates in config files
+  (po/bin translations)
+  * Added Afrikaans translation by Theuns Smuts
+  * Added Czech translation by Vlastimil Skacel
+  * Added German translation by Tim Fuchs, Sebastian Aust, Thorsten Tasch
+    and Laura Ohrndorf
+
+  [Danilo Piazzalunga]
+  (documentation)
+  * Fix some (mostly cosmetic) typos, without changing the meaning of
+    anything. Examples include case changes, spelling improvements, and the
+    consistent use of 'addenda' as the plural form for 'addendum'.
+  * Sorry, fellow translators, for all the new fuzzies.
+  (translations)
+  * Regenerate po/bin/po4a.pot and po/pod/po4a-pod.pot.
+  * Update the Italian program translation.
+  (testsuite)
+  * Updated the expected test output to the new wrapped output.
+  * Added some new test cases for man pages.
+  * Rewrite the @tests array construction in t/23-man.t.
+  * Specify standard column size when running some tests.
+  (debian/control)
+  * Build-depend on libterm-readkey-perl, needed by the wrapping functions.
+  (scripts)
+  * Print full help when the user asks for --help, and a terse message
+    otherwise.
+
+ -- Martin Quinson <mquinson@debian.org>  Sun,  6 Mar 2005 11:44:39 +0100
+
+po4a (0.19-1) unstable; urgency=low
+
+  [Jordi Vilalta]
+  (po4a, po4a-translate)
+  * Added the -L, --localized-charset option to convert the translated
+    document to the specified charset
+
+  [Yves Rütschlé]
+  (Locale/Po4a/Po.pm)
+  * Fix line numbers in error messages.  Closes: #278428
+
+  [Nicolas François]
+  (man module)
+  * Improved testsuite.
+  * Improve handling of nested font modifiers.  Closes: #277384
+  * Recognize some (probably incorrect, but usual) comment lines.
+  * Do not change hyphen to minus where it's forbiden (.so, .mso and \s
+    arguments).
+  * Do reset the wrapping mode when using .SH
+  * Fix splitting macro arguments.  Closes: #268904
+  * Do not quote the macro arguments when it would result in a breakage
+    (because they are already quoted, with the need to display the quotes).
+  * Add support for some macros (.R .EX .EE .cs .ss), and partial support
+    for others (.ce .ul .cu)
+  * Add splitargs and shiftline subroutines with some code from parse. This
+    permits to handle line continuations and font requests (.B, .RI, ...)
+    after a .TP.
+  * fix the testsuite (make check) to take last changes into account.
+  (po4a-normalize)
+  * Added the -M option to po4a-normalize
+  
+  [Martin Quinson]
+  (TransTractor)
+  * Allow modules to add automatic comments in the po file.
+  (sgml module)
+  * Make <title> verbatim so that man page generation works.  Closes: #274278
+    Thanks to Sylvain Cherrier for the bug report and testing the fix.
+  * Eat the comments in the prolog since they can contain some '<' and '>' 
+    preventing us to find the '>' closing the prolog. Closes: #278365
+
+  [Danilo Piazzalunga]
+  * [po/bin/it.po & po/pod/it.po] Update Italian translation, and
+    convert them to ISO-8859-1 for now so that generated manual pages
+    also have this encoding.  Closes: #273736
+  * [po/bin/it.po & po/pod/it.po] Convert PO files back to UTF-8. Thanks to
+    Jordi and everybody else for fixing the charset issues.
+
+ -- Denis Barbier <barbier@debian.org>  Wed, 10 Nov 2004 00:09:28 +0100
+
+po4a (0.18.1-1) unstable; urgency=high
+
+  * Urgency set to high to have a chance for 0.18 to enter testing.
+    This version has been much more tested than 0.17 and many bugs
+    fixed; they were not filed on the BTS because only its developers
+    are currently using po4a, but 0.18 is mature enough for a larger
+    audience.
+
+  [Jordi Vilalta]
+  - [Xml.pm] Improved attributes matching when there's no tag hierarchy in
+    front of an attribute
+  [Denis Barbier]
+  - A header comment is inserted by po4a-translate with some formats,
+    remove po4a version number from this comment so that test files do
+    not have to be updated at every release.
+
+ -- Denis Barbier <barbier@debian.org>  Fri, 27 Aug 2004 23:28:33 +0200
+
+po4a (0.18-1) unstable; urgency=low
+
+  [Jordi Vilalta]
+  - [Build.PL] Ensure we run the tests before distributing a new release
+  - Added encoding support (not complete by now)
+  - [Xml.pm] Added the generic XML support module
+  - [Dia.pm] Changed to use Xml.pm
+  - [tests] Updated most tests to work with the encoding issues
+  - [documentation] General improvements
+  - [translation] sync to en po/bin/es.po, po/bin/ca.po and po/pod/es.po
+    with small improvements suggested by Carme Cirera
+  - [Guide.pm] Added Guide XML support module
+  
+  [Martin Quinson]
+  (generic)
+  - Fix several typo in messages.
+    - po4a: inverting the meaning. Closes #264535 in Debian
+    - po4a-updatepo: was rather poor. Closes #264537 in Debian
+    - Sgml.pm: induced a perl error (not enough args for format).
+      Thanks Olivier Trichet for the last one, and Danilo for the others.
+  - Various documentation & messages improvements
+  - [translation] Update po/bin/fr.po
+  (TransTractor)
+  - Do not try (and fail miserably) to create path to output file when it's
+    in the current directory (also in Po.pm).
+  - [addendum] change a 'while (shift @toto) {}' to a 
+    'do {shift; bla} while (scalar @toto)' so that we proceed even if @toto
+    contains empty strings. (Clauses: #265383) of Debian
+  (Sgml)
+  - stop pushline()ing empty strings since it breaks TransTractor. Also
+    closes Debian's #265383. Yup, this bug is fixed twice. Slam!
+  (Man)
+  - Fix tests so that they stop make sure that the nf/fi bug of man is still
+    there. Test that it does not come back instead.
+  - Convert on the fly the groff horror \*(lqlibc5\*(rq, which stands for
+    "libc5", with the quotes. Thanks to Phillipe Batailler for bringing my
+    attention to this.
+  - Add support for the groff builtin registers and for the ms
+    "Displays and keeps" macros. This was needed to deal with the man pages
+    of shadow and dpkg.
+  - No groff nbsp (ie '\ ') on the last pos of the line, or groff adds an
+    extra space. Thanks to Nicolas Francois for the info. 
+  - Convert \- to - on the fly. The asteatic of the printed man page may
+    suffer (a hyphen is different of a minus sign in ps/pdf), but makes
+    translator's life easier. Thanks to Nicolas Francois for the expertise.
+  - Stick to groff_man(7) intead of man(7), and consider that when IP is
+    given only one argument, that's the designator (which we have to
+    translate) instead of the column indentation. Thanks Francois.
+  - Deal properly with '\ ' in macro arguments. Ie, stop changing 
+    '.BI -a\  addresses' to '.BI "-a addresses"' (but to .BI "-a " addresses)
+  - Do not eat \ at the end of the line (and put the next one on the same
+    line) when we're not on a macro definition line.
+  (po4a)
+  - Kill the code checking that the first argument contains no colon, since
+    the filename can contain colons. This triggers false positives here.
+    Thanks to Julien Louis for reporting. (Closes: #265684).
+
+  [Danilo Piazzalunga]
+  - [po/bin/it.po & po/pod/it.po] Add Italian translation
+
+  [Carme Cirera]
+  - [po/pod/ca.po] Add Catalan translation
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 25 Aug 2004 16:10:03 -0000
+
+po4a (0.17.2-1) unstable; urgency=low
+
+  [Martin Quinson]
+  - new script: msgsearch to extract some messages from a po file. That's a
+    generalization of msggrep allowing you to use OR between different
+    categories. msgselect is "reserved" by gettext author to do the same using
+    the SQL syntax in input. I use the LDAP one (with Perl RE ;).
+  - [sgml] add refentry to verbatim so that no spaces are added.
+  - [sgml] do not indent neither add superious spaces around verbatim tags
+    Those two should Closes #262739 (in Debian).
+  - [sgml] Allow entities def. to contain '>'. Closes #262735 (in Debian)
+  - [documentation] Overhaul of po4a(7)
+  - [documentation] Various pod fixup
+  - TransTractor and Po mkdir the path to where they are asked to write
+    something if it does not exist. Closes #263297 (in Debian)
+  - [addendum] Allow extra space after the semi colon separating fields in
+    headers. Closes #263299 (in Debian, provided that I understood the repport)
+  - [sgml] Allow %entities; in prolog, even if they are the evil incarned on
+    earth. Damn it, it wasn't easy. Fixes Alioth's #300710.
+  - [sgml] Detect when the included files do not exist, and spit the right
+    error message
+  - [translation] keep po/bin/fr.po in sync with the code, despite my own
+    effort to fuzzy the strings (I mean improve them, of course)
+
+  [Jordi Vilalta]
+  - [documentation] Further pod and english fixup
+  - [translation] Complete the spanish translation of the documentation
+  - Non-intrusive modifications to Po.pm and TransTractor.pm to help support
+    the encoding options in the near future
+  - [translation] sync to en po/bin/es.po and po/bin/ca.po
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Sat,  7 Aug 2004 16:18:53 -0700
+
+po4a (0.17.1-1) unstable; urgency=low
+
+  [Jordi Vilalta]
+   - sync to en po/bin/es.po and po/bin/ca.po
+   - Further improvement of the building mecanism
+   - [po/pod/es.po] Add Spanish translation
+
+  [Martin Quinson]
+   - sync to en po/bin/fr.po
+   - turn back my email address to tuxfamily instead of my professional one
+   - Cleanups of the building mecanism
+   - Rephrase some error messages here and there (sorry for keeping fuzzing
+     the translation ;)
+   - fix several brain dead errors in po4a (I swear I tested version 0.17 !)
+   - add a threshold option to po4a(1). If we cannot set it from the config
+     file, at least we can set it from the command file.
+   - Fix Man module:
+     - add support for the .na and .nh roff macro (ignored). Closes alioth's
+       #300845, and allows to tackle apt-proxy(8).
+     - .nf stops wrapping; .fi starts it again. The contrary was done.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Tue, 20 Jul 2004 18:54:11 -0700
+
+po4a (0.17-1) unstable; urgency=low
+
+  * Introduction of the po4a(1) program.
+    - have a configuration file instead of complex command line arguments
+    - updates po files and translations in one shoot
+    - allows to use the same pot file for different documents format [easily]
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Thu, 15 Jul 2004 21:14:13 -0700
+
+po4a (0.16.4-1) unstable; urgency=low
+
+  Cleaner build mecanism
+  Bugs fixes (new tags for Sgml, various glitches)
+
+  Jordi Vilalta
+  * New build mecanism based on Module::Build instead of the
+    deprecated MakeMaker
+  * [po/pod/Makefile] Allow to handle more than one language
+  * [po/bin/Makefile] Various cleanups
+  * [TransTractor.pm] Fix a by one offset in the line number reference
+  * [tests] Fix the false alarm resulting of previous change
+
+  Michael Wiedmann
+  * [Sgml.pm/docbook]
+    translate += revremark secondary tertiary editor othername
+    indent += bridgehead
+    ignore += keywordset keyword
+  * [TransTractor.pm] Fix two typos
+
+  Martin Quinson
+  * [Sgml.pm/docbook]
+    translate += synopsis
+    indent += reference shortcut
+  * Build process (lintian/linda clean again)
+    Call the scripts with "perl ../name" during build/test since
+      Module::Build fails to chmod +x @scripts.
+    Compress the translated manpage at full power to respect debian policy
+  * [debian/control]
+    Put myself as maintainer (not changing the uploaders)
+    Fix my email address for consistancy with my other packages
+    
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Thu, 15 Jul 2004 16:57:48 -0700
+
+po4a (0.16.3-1) unstable; urgency=low
+
+  Jordi Vilalta
+  * [po/bin/es.po] Various improvements 
+  * [po/bin/ca.po] New translation
+  
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Sun, 30 May 2004 15:36:33 -0700
+
+po4a (0.16.2-1) unstable; urgency=low
+
+  * Makes Pierre happy and do not distribute the debian files within the
+    regular archive, but in the diff.gz.
+  * [Sgml.pm] 
+    - Add <simpara> tag. this closes alioth's #300714.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 26 May 2004 11:48:16 -0700
+
+po4a (0.16.1-1) unstable; urgency=low
+
+  Martin Quinson
+  * Make sure --version option of all binary works
+  * [po/bin/fr.po] back to 100%
+
+  Jordi Vilalta
+  * [po/bin/es.po] back to 100%
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 26 May 2004 10:39:16 -0700
+
+po4a (0.16-1) unstable; urgency=low
+
+  SGML should work. Without source change, even for (simple) XML.
+  Addition of a Dia module by Jordi Vilalta.
+  
+  Martin Quinson
+  * [all binaries]
+    - add a -o/--option flag allowing to pass options to the format plugin
+  * [Sgml.pm] 
+    - Try to handle XML documents, with a big fat warning that this may fail,
+      and that no bug should be reported if it does not work.
+      Thanks to Jordi Vilalta for suggesting that.
+    - New options to add tags to the mechanism without modifying the code.
+    - Detect non-master files and report them properly. This was alioth's
+      #300591 and savannah's #6438.
+    - Put verbatim tags in their own msgid to avoid issues with
+      mixing wrapped and non-wrapped. This was savannah's #7155.
+    - Make a gentle error message when SGMLS.pm was not found.
+    - Issue warnings ("hello, user. This is a feature") when msgid is
+      skipped because it contains an entity alone, or because it contains
+      only tags. The translation of those is always the msgid itself. 
+      Thanks Jordi for falling into that trap ;)
+    - Detect msgid containing one entity and spaces, and skip them also.
+    - Add a 'include-all' option preventing the optimization described on
+      two previous items.
+    - Permit the translation of entity definition (not for file including
+      ones, but for the rewrite ones). Thanks Jordi for the hint.
+    - Add missing tags (articleinfo, which was savannah's #8475, and some more)
+  * Fix a bunch of typos reported by Francois Gouget (thanks). 
+    This was savannah's #7152.
+  * [t/data-02/man.po] back to 100% success on tests
+    Reformatting to match what we get. This does not impact the semantic of
+    the file, and I believe the change is due to gettext.
+  * [t/data-20/*; t/20-xml.t] New test about SGML plugin (when used in XML
+    mode since it tests both modes at once)
+  * [po/bin/fr.po] Complete translation. 
+    [po/pod/fr.po] Complete translation of binaries man page.
+    I reviewed the strings in the process and fixed some of them.
+
+  Denis Barbier
+  * Call 'xgettext -L Perl' instead of '-L c' to extract messages from
+    Perl scripts.  
+  * Remove trailing newlines from gettext messages.
+
+  Jordi Vilalta
+  * [po/bin/es.po] Add Spanish translation
+  * [Dia.pm] New module for the diagrams saved by dia program
+  * [t/21-dia.t  t/data-21] Relevant tests
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Tue, 25 May 2004 10:55:25 -0700
+
+po4a (0.15.4-2) unstable; urgency=low
+
+  * First official upload.  Closes: #176492
+  * Fix buglets in doc/po4a.7.pod
+  * Replace prefix variable by DESTDIR in debian/rules and po/bin/Makefile
+    to follow GNU usage.
+  * As told in section 3.1 of the Perl policy, man pages must be installed
+    under section 3pm, not 3perl.
+  * In debian/rules, remove the useless pods target, 'make -C po' does the
+    job.
+  * Make debian/rules much lighter by processing and running Makefile.PL
+  * Normalize po4a-normalize, replace --help-fmt command-line flag by
+    --help-format to comply with other po4a tools.
+  * In Locale::Po4a::Chooser, all available formats were loaded, the
+    requested one is now dynamically loaded.
+  * In Locale::Po4a::Pod, remove declarations of functions when they
+    are inherited from Locale::Po4a::TransTractor.
+  * Some newlines were missing with the POD format, because trailing
+    newlines were removed in Locale::Po4a::Pod, and some (but not all)
+    were added in Locale::Po4a::Po.  These changes are removed, and
+    po4a-normalize does no more lose newlines on POD files.
+
+ -- Denis Barbier <barbier@debian.org>  Wed, 24 Mar 2004 22:33:12 +0100
+
+po4a (0.15.4-1) unstable; urgency=low
+
+  * Small fixup to the Sgml.pm
+    move <command> to the ignore list to avoid sub-sentence splitup.
+    
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed,  12 Nov 2003 10:51:59 +0100
+
+po4a (0.15.3-2) unstable; urgency=low
+
+  * Fix lintian issues:
+    - Bump standard-version
+    - Versionned builddep on debhelper, add debian/compat
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Mon,  10 Nov 2003 14:03:37 +0100
+
+po4a (0.15.3-1) unstable; urgency=low
+
+  * Fix lintian issues:
+    debian/control: typo and line too long
+    doc/po4a.7.pod: add a NAME section
+  * Fix Sgml.pm:
+    - apply patch from Francois Gouget to support more docbook tags. Closes
+      Savannah's #2353. 
+      Add some more tags to parse a sgml file I used to fix the following:
+    - Fix references for composite files. Closes Savannah's #6439.
+      Do report the right file and line number for composite files.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Mon,  10 Nov 2003 13:38:38 +0100
+
+po4a (0.15.2-1) unstable; urgency=low
+
+  * Fix savannah's #5139: Bad quoting.
+    Quoting is a little nightmare, but I added the provided faulty example
+    in the tests, and it is fixed now.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Fri,  7 Nov 2003 15:59:42 +0100
+
+po4a (0.15.1-1) unstable; urgency=low
+
+  * The long awaited version.
+   
+  * Fix savannah's #4975: french man page is outdated.
+    - This revealed to be a grave bug in the tool itself, leading to the use
+      of the fuzzy strings in translation.
+    - t/10-discard-fuzzy.t is a test to make sure this bug will never come back.
+  * Fix savannah's #4976: po4a.7 outdated.
+    - Update the man page to reflect the new option names.
+  * Fix the small glitches which made the tests to fail. 
+    - Now, the testsuite is more complete, and all tests success on my box.
+    - README.tests is a bit of documentation on how to report make test
+      failure.
+ 
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Fri,  7 Nov 2003 13:43:17 +0100
+
+po4a (0.15) unstable; urgency=low
+
+  * The "Let's iritate the users by changing the option names" version.
+  
+  Major changes:
+  * Change and unify all option names for the scripts.
+  
+  Minor changes:
+  * Document a bit more the scripts.
+  * Update copyright year for scripts (FIXME: not lib).
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Tue, 11 Feb 2003 23:53:11 +0100
+
+po4a (0.14) unstable; urgency=low
+
+  * The "One step outside Debian" version.
+  
+  * A proper Perl package is now build, thanks to Makefile.PL
+    Next step: inclusion on CPAN ;)
+  * Preliminary testsuite:
+    - Every class is compilable
+    - Man.pm works (test number 4 is known to fail, because diff don't work well on po files).
+    - addendums work
+    Still to do: other modules.
+  * Fix po/pod/Makefile, to avoid tons of warnings and reflect the lib/ directory change.
+    [Denis Barbier]
+  * Updated documentation, thanks to Philippe for its review. One day,
+    addendums will be usable...
+  * Use warnings in all file
+  * Add a 'no-wrap' flag to all msgid which must not be wrapped by
+    po4a. This tag is valid for gettext and will be preserved by
+    tools. It means something else for gettext, but this other meaning seems
+    useless to me, and both uses can coexist. 
+  * Man.pm:
+    - don't split indented paragraphs on several msgids.
+    - don't pretend we handle nested font modifier when we don't
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Fri,  7 Feb 2003 08:46:23 +0100
+
+po4a (0.13.6) unstable; urgency=low
+
+  * po4a-updatepo reports the status of the file after the update
+  * Man.pm: handle UC and AT macro
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Thu, 23 Jan 2003 15:20:26 +0100
+
+po4a (0.13.5) unstable; urgency=low
+
+  * Make the placement of the addendum verbose when -v is passed to
+    po4a-translate, thanks to the crash tests from Philippe ;)
+  * More documentation improvement, thanks to the review from Philippe.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Thu, 23 Jan 2003 09:08:14 +0100
+
+po4a (0.13.4) unstable; urgency=low
+
+  * Really fix the problem I though to fix in 0.13.2
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 22 Jan 2003 10:34:38 +0100
+
+po4a (0.13.3) unstable; urgency=low
+
+  * Man.pm: explain why we refuse to process pages generated from pod or
+    sgml, document processed by db2man.xsl can be processed, since the 
+    XML module of po4a isn't done yet.
+  * gettextization: The fact that the original and the translated files
+    don't have the same number of entries isn't fatal anymore, so that
+    the user can see where there is a document structure disparity.
+  * Fix problems in po4a.7.pod, thanks to Philippe Batailler.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 22 Jan 2003 08:42:30 +0100
+
+po4a (0.13.2) unstable; urgency=low
+
+  * TransTractor.pm: don't check for the options passed to translate,
+    since I fail to make it work with the Man.pm
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Fri, 17 Jan 2003 08:39:53 +0100
+
+po4a (0.13.1) unstable; urgency=low
+
+  * Sgml.pm:
+    - don't translate the footnotes separatly, since it would imply to split
+      the sentence containing them.
+    - put all the author description (name+surname+email+...) in the same
+      msgid to ease the translator work.
+      
+  * Makefiles:
+    - implement a stats target in po/
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Sun, 12 Jan 2003 16:49:52 +0100
+ 
+po4a (0.13) unstable; urgency=low
+
+  * The "housekeeping is good when you want to invite people home" version.
+  
+  * TransTractor: Internals cleanup: 
+    - translate_wrapped() don't exist anymore, and translate() take extra
+      arguments to specify if we want to wrap.
+    - For internals data in the object, transtractor now use TT (it used to 
+      use DOC).
+    - Set the package version only in this file, and not in all.
+  * Po.pm:  Internals cleanup: 
+    - push_wrapped() and gettext_wrapped() disapeared also.
+  * All modules: Adapt to last changes in TransTractor.pm
+  * New module: Chooser.pm  
+    This is not a new format, but functions to manage all formats in the
+    same place. 
+    Before, when I added a module, I had to change all binaries to take it
+    into account.
+    Now, all binaries use this module to access format modules.
+  * Man.pm: cosmetic changes, to make it readable by others.
+  * Sgml.pm: 
+    - New dtd: docbook. 
+    - Should work even in case of conditional inclusion (string references in
+      po files will be wrong in that case).
+
+    - Generated source is better looking
+
+    - ups, added "use strict;" ;)
+    - Don't use SGMLS::Output anymore. This is an old piece of crap producing
+      tons of warnings when used under perl -w.
+    - remove debugging output
+  
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Sun, 12 Jan 2003 16:49:52 +0100
+
+po4a (0.12) unstable; urgency=low
+
+  * Rename po4a-identity to po4a-normalize, since it do normalize the
+    source document.
+  * We now have a decent documentation in po4a(7)
+  * Several small bug and glitches fix all over there.
+  * New module: SGML
+    - This is the long awaited sgml module !
+    - So far, it can handle only the debiandoc dtd but extending it to other
+      ones should be quite easy. 
+    - For now, this adds a strict dependence on libsgmls-perl and sp since
+      I didn't implement the check for existing libraries, like debconf does 
+      for curse.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Thu,  9 Jan 2003 20:53:26 +0100
+
+po4a (0.11) unstable; urgency=low
+
+  * Tons of bug fixes: 
+    - Pod.pm shouldn't fail anymore
+    - Man.pm now fail on only 3% of the pages installed on my box (because
+      they are too cleaver with roff for us)
+    see documentation and release note for more details
+  * Polishing:
+    - More argument checking to detect problems
+    - Redo some parts of the documentation
+    - Begin the translation of documentation to french
+  * New module:
+    - KernelHelp: The help messages associated with each kernel compilation 
+      option
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 25 Dec 2002 19:15:28 +0100
+
+po4a (0.10.3) unstable; urgency=low
+
+  * Move lib/ to Locale/Po4a/ so that pod translations can be builded
+    without build-depending on ourself
+  * Add a new script po4a-identity usefull to debug po4a modules (by
+    prooving they are idempotent)
+  * Fix the way the bold and italics are handeled in man pages (translator
+    are only faced to POD sequence B<blabla> and I<blibli>, but this was
+    broken and did not work in all cases).
+  * updatepo accepts non-existent po files, so that you can bootstrap a po
+    file for n documents without gettextize each one and using msgcat to
+    merge the results.
+  * Add a Copyright and License section in all man pages
+  * Fix a bug in the handling of 'pod' and 'back' commands.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 18 Dec 2002 08:08:45 +0100
+
+po4a (0.10.2) unstable; urgency=low
+
+  * Fix a bug reported by Julien Louis: Locale::Po4a::Man was not included 
+    in po4a-gettextize.
+  * Other bug reported by Julien Louis: indented paragraph in man pages
+    shouldn't be wrapped.
+  * Fix the generation of binary po files, and put the french translation.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Fri, 13 Dec 2002 07:51:00 +0100
+
+po4a (0.10.1) unstable; urgency=low
+
+  * Fix a bug reported by Julien Louis: All strings containing '\n' where
+    not translated.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Thu, 12 Dec 2002 16:25:52 +0100
+
+po4a (0.10) unstable; urgency=low
+
+  * New name, one more code reorganization. Having more than one package
+    implies to dupplicate code in the binaries. Ie, the difference between
+    pod-gettextize and man-gettextize is only the module to load.
+    I don't want to maintain the same code N times.
+  * Po.pm, TransTractor.pm:
+    - bug fixes
+  * Man.pm:
+    - first release.
+    - seems ok to me (it fails on unknown macro, and shouldn't change the
+      cat result).
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Wed, 11 Dec 2002 16:55:20 +0100
+
+po-pod (0.9) unstable; urgency=low
+
+  * Use the new Locale::Po4a::TransTractor as base of the parser/extractor.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Fri, 29 Nov 2002 14:23:04 +0100
+
+po-pod (0.8.4) unstable; urgency=low
+
+  * Depend on the newly created liblocale-po4a-perl, and do not provide
+    Po.pm anymore.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Tue, 19 Nov 2002 17:53:37 +0100
+
+po-pod (0.8.3) unstable; urgency=low
+
+  * pod-gettextize:
+    - output file defaults to standard output.
+    - document the fact that all translations found during the merge are
+      marked fuzzy, and why. 
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Tue, 19 Nov 2002 17:22:58 +0100
+
+po-pod (0.8.2) unstable; urgency=low
+
+  * Remove {read,write} to filehandle to avoid problems when running under
+    UTF8 locales.
+  * Po.pm: when calling the regular gettext, prefix it with
+    Locale::gettext::, so that we get the function we are looking for, and
+    not the one defined in this package.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Mon, 18 Nov 2002 15:08:43 +0100
+
+po-pod (0.8.1) unstable; urgency=low
+
+  * pod-translate:
+    - when a translation is discarded, remove the old generated file.
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Mon, 18 Nov 2002 09:22:55 +0100
+
+po-pod (0.8) unstable; urgency=low
+  
+  * Po.pm:
+    - New functions: gettext_stats, and gettext_stats_clear. Be careful
+      (and read the doc ;), it's not the status of the file, it's the
+      summary of its recent use through the gettext method.
+    - New function: wrapped_gettext(), wrapped_push(), which do like 
+      gettext() and push(), but assumes that whitespaces in msgid and 
+      msgstr are not significant (and modify them).
+  * pod-updatepo: INCOMPATIBLE INTERFACE CHANGE!
+    - now accepts several pod files (to put their translation in only one
+      file per language).  
+  * pod-translate:
+    - reports how much is each file translated when running verbose.
+    - New option: -k set the threshold under what the translation is
+      discarded. Defaults to 80. 
+    - New option: -w set the width to which the resulting file should be
+      wrapped. Defaults to 76.
+    - New option: -a|--add-file is implemented (see man page). It's not
+      specific to pod files, and should work for all modules, provided
+      that they keep the file to output in a @ of lines.
+  * Packaging:
+    - Perl modules are now stored under /usr/share, and not /usr/lib
+      because they are not arch-dependent.
+    - Manpages are now installed only with dh_installman, so that we don't  
+      get them twice.
+    - The comments in source also says that code is GPL'ed
+  * All binaries and modules:
+    use (regular) gettext.pm to localize the messages ;)
+
+ -- Martin Quinson <martin.quinson@tuxfamily.org>  Sun, 17 Nov 2002 02:09:06 +0100
+
+po-pod (0.7) unstable; urgency=low
+
+  * Initial release.
+
+ -- Denis Barbier <barbier@debian.org>  Fri, 22 Mar 2002 23:47:06 +0100
+

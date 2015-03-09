@@ -1,0 +1,142 @@
+= WORKLOG
+
+== TODO
+
+* cjk and/or multilingual support
+* remove pdfmarks file after optimizing
+* prawn-svg should drop layer with display: none style (issue filed, maybe fixed?)
+* add note to README that Prawn will subset any fonts provided
+* nested keep_together logic is broken (e.g., example inside example, listing inside sidebar, etc)
+* look into single_line + shrink_to_fit in listings, perhaps other places
+* refactor as Prawn view to avoid method name conflicts (also see https://github.com/prawnpdf/prawn/issues/802)
+* SVG image is getting cut off when at boundary of page
+* create proper default (Asciidoctor) theme
+* start number for conum in theme
+* implement compat lists (like in Asciidoctor EPUB3)
+* list bullet in ordered list needs to grow with length of number
+* document how the treetop parser is rebuilt
+* rewrite optimize-pdf using rghost
+* rework font so we can set actual height, calculate x_height internally (use 1em for spacings)
+* padding top and bottom on content affects height_of calculations (need to review)
+* enable fallback font (Golo guide has problem with License block)
+* don't cutoff content in partintro
+* use padding from theme around admonition block content
+* use padding from theme around block quote content
+* add admonition_label_font_color to theme
+* remove remaining uses of vertical_rhythm and horizontal_rhythm
+* implement subtitle on title page
+* treat title-logo like the front-cover-image and back-cover-image (parse image macro)
+* theme setting for code line height (currently using base_line_height)
+  - in general, allow theme_font to set line_height
+* print scratch.pdf file if verbose / trace mode is on in Asciidoctor
+* introduce setting to indent section content
+* design merge margin logic (like for admonition block)
+* use font awesome for admonition icons
+* support web fonts; use uri-cache to avoid redundant fetching
+* rename default theme to docbook theme, make default the Asciidoctor theme (should we have a base theme?)
+* add callout subs when using CodeRay and when using color themes in Pygments
+* allow relative font size for inline code to be set (perhaps a percentage or em value? there are problems with this in arranger)
+* set defaults in ThemeLoader for required theme settings like prose_margin_top/bottom so we don't need fallbacks in code
+* implement orphan sentences for paragraph
+* apply line height metrics for table content
+  - figure out how to adjust line height for monospaced cell content
+  - figure out how to layout regular cell content to adjust for line height
+* document the typeset_text methods very clearly
+* fix shading on listing that spans more than one page
+  - in general, need to deal w/ situation if content in dry run is large than one page
+  - need to deal w/ situation if content in dry run is large than one page
+* move check for node.title? inside layout_caption
+* theme idea / tester: see sandbox/ebook-learn_version_control_with_git-SAMPLE.pdf
+* make alternating page title position optional (via theme?)
+* BUG: page numbers are off in Clojure Cookbook
+* image in header / banner (need to implement a masthead)
+
+* enable pagenums attribute by default (may require changes to how we handle attributes)
+* start page numbering on first page if no title page
+
+* implement quote style from default Asciidoctor stylesheet
+* reorg Prawn extensions (see prawn-table for example)
+* rename "theme" to "style"?
+* restrict custom theme path to jail (or load from load_path)
+* add Optimizer class; wire to cli
+* implement convert_toc
+* can get orphan conum if starts on last line of page (fixed already?)
+* only create title page if doctype=book
+* disable monospace color in headings
+
+* introduce method for start_initial_page?
+* honor font defs in SVG (to get M+ 1p)
+* callout matching in listing blocks is extremely fragile and doesn't handle two in one line
+* make outline a document option (perhaps "outline" like "toc")
+* shrink / squeeze source code to avoid wrapping (see original impl in nfjsmag, also shrink_to_fit)
+* add bench/ directory for the script to test the speed of the formatted text parser
+* start page numbering on page 1 (use /PageLabels reference to make i the title page number)
+  - add this feature upstream to Prawn
+* *report image only page w/ stamps corruption issue to Prawn*
+* add /PageMode /UseOutlines
+* what does fopub do to calculate scaling images? reduces width more?
+* replace tabs with spaces in source code (Asciidoctor core change?)
+* preamble on separate page?
+* part on separate page for book doctype? (which other sections?)
+* make default image scale width a theme setting
+* cli arguments
+  - theme (pdf-style, pdf-stylesdir)
+  - enable/disable writing pdfmarks file
+  - optimize-pdf
+* section numbering
+* implement footnotes correctly
+* image border
+* table footer
+* flesh out outline more
+* flesh out title page more
+  - document subtitle (partially solved)
+* don't create title page for article doctype
+* chapter name in footer (need a proper hook for writing to the footer; perhaps also template in theme for footer text)
+* implement toc and activate if toc is set on document (need to reorder pages)
+* inline image
+* callbacks for title page, new part, new chapter, etc
+* split out render methods for chapter, part, section, etc
+* custom subs in verbatim blocks
+* captions/titles on all blocks that support them
+* make font size and character spacing scaling of inline code part of theme
+* might be able to avoid dry run for listing/literal in obvious cases
+* implement index of index terms
+* bw theme for CodeRay to match output of Pygments bw
+* inline tabs should be replaced in layout_prose (etc) when normalize is enabled
+
+* use treetop to parse and evaluate theme file
+* make source code highlighting theme configurable (should be now, but has problems with conums)
+* use or don't use pad method? check performance
+
+== Documentation
+
+* control page numbering using pagenums attribute
+* "Incorrect number of arguments in 'SCN' command" happens when you add a stamp to an imported page
+* be mindful that layout_prose adds margin to bottom of content by default (important when working in a bounding box)
+
+== Open Questions
+
+== Design
+
+* remove/reduce padding above heading at start of page?
+* Default line height?
+* Heading font family / size / color
+* Should the heading sizes be calculated according to the default font size?
+* Page margins
+* Body indentation?
+* Size of masthead / footer
+* Line separating masthead / footer?
+* Separate title page
+* Start chapter on new page?
+* Special layout for chapter page?
+
+=== Theme
+
+* keep or drop base_ prefix in theme?
+* does font_size_h* belong in headings section or base?
+* how should we define custom fonts and paths to them?
+* allow # in front of font color in theme file?
+
+== Resources
+
+* https://code.google.com/p/origami-pdf/
