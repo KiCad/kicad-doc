@@ -1,11 +1,35 @@
+#############################
+#
+# General Makefile for multiformat/multilanguage
+# automatic asciidoc documentation generation.
+# This file should be kept as general as possible.
+#
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# This file under the GNU GPL version 3 or later.
+#
+#############################
+
 #It takes the dir name as project name, and the doc title.
 #expect the asciidoc main doc being of the same name 
 #(i.e. ThisDirName.adoc)
 DOCNAME:= $(shell basename `pwd`)
 
+#Get doc title
 DOCTITLE:= $(shell echo $(DOCNAME)|sed -e 's/_/ /')
 
-DOCCHAPTERS:=$(wildcard $(DOCNAME)_*.adoc)
+#Translated files source dir
+PODIR:=po
+
+#Get list of languages from the list of .po files
+LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
+
+#Get list of generated chapters translated files
+DOCTRANSLATED:= $(foreach trans, $(LANGUAGES), $(wildcard $(DOCNAME)*-$(trans).adoc)) 
+
+#Get list of chapter files
+DOCCHAPTERS:= $(filter-out $(DOCTRANSLATED), $(wildcard $(DOCNAME)_*.adoc))
+
+#DOCCHAPTERS:=$(wildcard $(DOCNAME)_*.adoc)
 
 #I like HTML in Unix style text
 ASCIIDOCVAR:= -a 'newline=\n' -v
@@ -13,10 +37,6 @@ ASCIIDOCVAR:= -a 'newline=\n' -v
 #Uncomment this to debug pdflatex
 #DEBUGPDFLTX:= -d
 
-PODIR:=po
-
-#Get list of languages from the list of .po files
-LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
 
 #disabling some unuseful print and added custom dblatex style to generate a nice cover image
 DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
@@ -49,6 +69,13 @@ help:
 	@echo "  all-all    to make all of the above"
 	@echo ""
 	@echo "To create html side toc, just prepend: export TOC2='-a toc2' ; make html"
+#	@echo ""
+#	@echo "MAKEFILE DEBUG:"
+#	@echo ""
+#	@echo "DOCTITLE: $(DOCTITLE)"
+#	@echo "LANGUAGES: $(LANGUAGES)"
+#	@echo "DOTRANSLATED: $(DOCTRANSLATED)"
+#	@echo "DOCCHAPTERS: $(DOCCHAPTERS)"
 
 
 #.PHONY: pot
