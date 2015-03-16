@@ -5,7 +5,7 @@ DOCNAME:= $(shell basename `pwd`)
 
 DOCTITLE:= $(shell echo $(DOCNAME)|sed -e 's/_/ /')
 
-DOCCHAPTERS:=$(wildcard $(DOCNAME)_chapter_??.adoc)
+DOCCHAPTERS:=$(wildcard $(DOCNAME)_*.adoc)
 
 #I like HTML in Unix style text
 ASCIIDOCVAR:= -a 'newline=\n' -v
@@ -194,6 +194,5 @@ clean:
 	rm -f $(DOCNAME).xml
 	rm -f $(DOCNAME).epub
 	rm -f $(DOCNAME).odt
-	rm -f $(DOCNAME)-*.*
-	rm -f $(DOCNAME)_chapter_*-*.*
 	rm -f docinfo.xml
+	rm -f $(foreach i,$(LANGUAGES),$(DOCNAME)*-$(i).*)
