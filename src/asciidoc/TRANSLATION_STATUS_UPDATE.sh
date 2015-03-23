@@ -6,6 +6,8 @@ OUTPUTF=i18n_status.csv
 
 rm -f $OUTPUTF
 
+echo "Manual,LANG ID,Status">$OUTPUTF
+
 export LANG=C
 export LC_ALL=C
 
