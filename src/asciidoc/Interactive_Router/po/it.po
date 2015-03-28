@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2015-03-28 10:58+0100\n"
-"PO-Revision-Date: 2015-03-28 10:50+0100\n"
+"POT-Creation-Date: 2015-03-28 13:05+0100\n"
+"PO-Revision-Date: 2015-03-28 13:12+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -49,11 +49,9 @@ msgid ""
 msgstr ""
 "Questo documento è coperto dal Copyright © 2010–2015 dei suoi autori come "
 "elencati in seguito. È possibile distribuirlo e/o modificarlo nei termini "
-"sia della GNU General Public License (http://www.gnu.org/licenses/gpl."
-"html[http://www.gnu.org/licenses/gpl.html]), versione 3 o successive, che "
-"della Creative Commons Attribution License (http://creativecommons.org/"
-"licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]), versione 3.0 "
-"o successive."
+"sia della GNU General Public License (http://www.gnu.org/licenses/gpl.html), "
+"versione 3 o successive, che della Creative Commons Attribution License "
+"(http://creativecommons.org/licenses/by/3.0/), versione 3.0 o successive."
 
 #. type: Plain text
 #: Interactive_Router.adoc:23
@@ -142,6 +140,9 @@ msgid ""
 "shoving off or walking around items on the PCB that collide with the trace "
 "you are currently drawing."
 msgstr ""
+"Il router interattivo permette di sbrogliare in maniera veloce ed efficiente "
+"i circuiti stampati, spingendo e girando attorno agli elementi sulla scheda "
+"che potrebbero collidere con le piste che si sta disegnando."
 
 #. type: Plain text
 #: Interactive_Router.adoc:62
@@ -155,6 +156,8 @@ msgid ""
 "*Shove*, attempting to push and shove all items colliding with the\n"
 "currently routed track.\n"
 msgstr ""
+"*Spingi*, tenta di spingere e compattare tutti gli elementi che collidono\n"
+"con la pista che si sta attualmente sbrogliando.\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:68
@@ -163,6 +166,8 @@ msgid ""
 "*Walk around*, trying to avoid obstacles by hugging/walking around\n"
 "them.\n"
 msgstr ""
+"*Aggira*, tenta di evitare gli ostacoli circondandoli/girandoci\n"
+"attorno.\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:71
@@ -171,41 +176,54 @@ msgid ""
 "*Highlight collisions*, which highlights all violating objects with a\n"
 "nice, shiny green color and shows violating clearance regions.\n"
 msgstr ""
+"*Evidenzia collisioni*, che evidenzia con un colore verde brillante\n"
+"tutti gli oggetti e le regioni che violano le regole di isolamento.\n"
 
 #. type: Title -
 #: Interactive_Router.adoc:73
 #, no-wrap
 msgid "Setting up"
-msgstr ""
+msgstr "Impostazione"
 
 #. type: Plain text
-#: Interactive_Router.adoc:79
+#: Interactive_Router.adoc:76
+msgid "Before using the Interactive Router, please set up these two things:"
+msgstr "Prima di usare lo sbrogliatore interattivo, impostare queste due cose:"
+
+#. type: Plain text
+#: Interactive_Router.adoc:80
 msgid ""
-"Before using the Interactive Router, please set up these two things: - "
 "Clearance settings. To set the clearances, open the _Design Rules_ dialog "
 "and make sure at least the default clearance value looks sensible."
+msgstr "Impostazioni isolamento. Per configurare le impostazioni di isolamentio, aprire la finestra di dialogo delle _Regole di progettazione_ e assicurarsi almeno che i valori di isolamento predefiniti siano ragionevoli."
+
+#. type: Target for macro image
+#: Interactive_Router.adoc:81
+#, no-wrap
+msgid "images/en/rules_editor.png"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:82
+#: Interactive_Router.adoc:85
 msgid ""
-"Enable OpenGL mode by selecting _View->Switch canvas to OpenGL_ menu option "
+"Enable OpenGL mode, by selecting _View->Switch canvas to OpenGL_ menu option "
 "or pressing **F11**."
 msgstr ""
 
-#. type: Plain text
-#: Interactive_Router.adoc:84
-msgid "image:images/en/opengl_menu.png[Screenshot]"
+#. type: Target for macro image
+#: Interactive_Router.adoc:86
+#, no-wrap
+msgid "images/en/opengl_menu.png"
 msgstr ""
 
 #. type: Title -
-#: Interactive_Router.adoc:86
+#: Interactive_Router.adoc:89
 #, no-wrap
 msgid "Laying out tracks"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:92
+#: Interactive_Router.adoc:95
 msgid ""
 "To activate the router tool press the _Interactive Router_ button image:"
 "images/route_icon.png[Interactive Router Button] or the *X* key.  The cursor "
@@ -213,7 +231,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:97
+#: Interactive_Router.adoc:100
 msgid ""
 "To start a track, click on any item (a pad, track or a via) or press the *X* "
 "key again hovering the mouse over that item. The new track will use the net "
@@ -222,7 +240,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:103
+#: Interactive_Router.adoc:106
 msgid ""
 "Move the mouse to define shape of the track. The router will try to follow "
 "mouse trail, hugging unmovable obstacles (such as pads) and shoving "
@@ -231,21 +249,21 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:107
+#: Interactive_Router.adoc:110
 msgid ""
 "Clicking on a pad/track/via in the same net finishes routing. Clicking in "
 "empty space fixes the segments routed so far and continues routing the trace."
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:110
+#: Interactive_Router.adoc:113
 msgid ""
 "In order to stop routing and undo all changes (shoved items, etc.), simply "
 "press **Esc**."
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:115
+#: Interactive_Router.adoc:118
 msgid ""
 "Pressing *V* or selecting _Place Through Via_ from the context menu while "
 "routing a track attaches a via at the end of the trace being routed. "
@@ -254,7 +272,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:119
+#: Interactive_Router.adoc:122
 msgid ""
 "Pressing */* or selecting _Switch Track Posture_ from the context menu "
 "toggles the direction of the initial track segment between straight or "
@@ -262,7 +280,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:123
+#: Interactive_Router.adoc:126
 #, no-wrap
 msgid ""
 "**Note**: By default, the router snaps to centers/axes of the items.\n"
@@ -271,13 +289,13 @@ msgid ""
 msgstr ""
 
 #. type: Title -
-#: Interactive_Router.adoc:125
+#: Interactive_Router.adoc:128
 #, no-wrap
 msgid "Setting track widths and via sizes"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:134
+#: Interactive_Router.adoc:137
 msgid ""
 "There are several ways to pre-select a track width/via size or to change it "
 "during routing: - Use standard Kicad shortcuts. - Press *W* or select "
@@ -289,13 +307,13 @@ msgid ""
 msgstr ""
 
 #. type: Title -
-#: Interactive_Router.adoc:136
+#: Interactive_Router.adoc:139
 #, no-wrap
 msgid "Dragging"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:142
+#: Interactive_Router.adoc:145
 msgid ""
 "The router can drag track segments, corners and vias. To drag an item, click "
 "on it with *Ctrl* key pressed, hover the mouse and press *G* or select _Drag "
@@ -304,30 +322,30 @@ msgid ""
 msgstr ""
 
 #. type: Title -
-#: Interactive_Router.adoc:144
+#: Interactive_Router.adoc:147
 #, no-wrap
 msgid "Options"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:148
+#: Interactive_Router.adoc:151
 msgid ""
 "The router behavior be configured by pressing _E_ or selecting _Routing "
 "Options_ from the context menu. It opens a window like the one below:"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:150
+#: Interactive_Router.adoc:153
 msgid "image:images/en/router_options.png[Screenshot]"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:152
+#: Interactive_Router.adoc:155
 msgid "The options are:"
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:155
+#: Interactive_Router.adoc:158
 #, no-wrap
 msgid ""
 "*Mode* - select how the router handles DRC violation (shoving, walking\n"
@@ -335,7 +353,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:158
+#: Interactive_Router.adoc:161
 #, no-wrap
 msgid ""
 "*Shove vias* - when disabled, vias are treated as un-movable objects\n"
@@ -343,7 +361,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:162
+#: Interactive_Router.adoc:165
 #, no-wrap
 msgid ""
 "*Jump over obstacles* - when enabled, the router tries to move\n"
@@ -352,7 +370,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:167
+#: Interactive_Router.adoc:170
 #, no-wrap
 msgid ""
 "*Remove redundant tracks* - removes loops while routing (e.g. if the\n"
@@ -362,7 +380,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:171
+#: Interactive_Router.adoc:174
 #, no-wrap
 msgid ""
 "*Automatic neckdown* - when enabled, the router tries to break out\n"
@@ -371,7 +389,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:174
+#: Interactive_Router.adoc:177
 #, no-wrap
 msgid ""
 "*Smooth dragged segments* - when enabled, the router attempts to merge\n"
@@ -379,7 +397,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:177
+#: Interactive_Router.adoc:180
 #, no-wrap
 msgid ""
 "*Allow DRC violations* (__Highlight collisions__ mode only) - allows\n"
@@ -387,7 +405,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Interactive_Router.adoc:182
+#: Interactive_Router.adoc:185
 #, no-wrap
 msgid ""
 "*Optimizer effort* - defines how much time the router shall spend\n"
