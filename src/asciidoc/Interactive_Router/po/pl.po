@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-01-27 08:40+0100\n"
-"PO-Revision-Date: 2015-03-27 20:28+0100\n"
+"PO-Revision-Date: 2015-03-28 09:14+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -160,7 +160,7 @@ msgid ""
 "**Shove**, attempting to push and shove all items colliding with the\n"
 "currently routed track.\n"
 msgstr ""
-"**Rozpychanie**, gdzie następuje próba wypchnięcia wszystkich elementów\n"
+"**Rozsuwanie**, gdzie następuje próba wypchnięcia wszystkich elementów\n"
 "kolidujących z bieżąco trasowaną ścieżką.\n"
 
 #. type: Plain text
@@ -214,7 +214,7 @@ msgstr ""
 #. type: Plain text
 #: Interactive_Router.adoc:81
 msgid "image:images/opengl_menu.png[Screenshot]"
-msgstr "image:images/opengl_menu.png[Screenshot]"
+msgstr "image:images/pl/opengl_menu.png[Screenshot]"
 
 #. type: Title -
 #: Interactive_Router.adoc:83
@@ -256,6 +256,11 @@ msgid ""
 "colliding traces/vias, depending on the mode. Retreating mouse cursor will "
 "cause the shoved items to spring back to their former locations."
 msgstr ""
+"Przesuwanie kursora myszy definiuje kształt ścieżki. Router będzie starał "
+"się podążać szlakiem myszy, otaczając nieprzesuwne przeszkody (takie jak "
+"pola lutownicze) i w zależności od trybu rozchylać kolidujące ścieżki/"
+"przelotki. Cofnięcie kursora myszy spowoduje, że rozchylone elementy "
+"powracją z powrotem na swoje dawne pozycje."
 
 #. type: Plain text
 #: Interactive_Router.adoc:104
@@ -263,6 +268,9 @@ msgid ""
 "Clicking on a pad/track/via in the same net finishes routing. Clicking in "
 "empty space fixes the segments routed so far and continues routing the trace."
 msgstr ""
+"Klikając na polu/ścieżce/przelotce należącej do tej samej sieci kończy "
+"trasowanie. Klikając w pustym miejscu kończy poprzedni segment i rozpoczyna "
+"nowy od tego miejsca."
 
 #. type: Plain text
 #: Interactive_Router.adoc:107
@@ -270,8 +278,8 @@ msgid ""
 "In order to stop routing and undo all changes (shoved items, etc.), simply "
 "press **Esc**."
 msgstr ""
-"By zatrzymać trasowanie i anulować wszsytkie zmiany (rozepchnięte elementy, "
-"itd.), należy nacisnąć **Esc**."
+"By zatrzymać trasowanie i anulować wszsytkie zmiany (rozsunięcie ścieżek, "
+"przelotek, itd.), należy nacisnąć **Esc**."
 
 #. type: Plain text
 #: Interactive_Router.adoc:112
@@ -281,6 +289,11 @@ msgid ""
 "Pressing *V* again disables via placement. Clicking in any spot establishes "
 "the via and continues routing."
 msgstr ""
+"Naciskając *V* lub wybierając _Wstaw przelotkę na wylot_ z menu "
+"kontekstowego podczas trasowania dołącza przelotkę na końcu prowadzonej "
+"ścieżki i pozwala ją przesuwać. Naciskając ponownie *V* można pozbyć się "
+"przelotki na końcu ścieżki. Kliknięcie stawia taką przelotkę w miejscu "
+"kliknięcia, a trasowanie jest kontynuowane (ale na innej warstwie)."
 
 #. type: Plain text
 #: Interactive_Router.adoc:116
@@ -289,6 +302,10 @@ msgid ""
 "toggles the direction of the initial track segment between straight or "
 "diagonal."
 msgstr ""
+"Naciskając klawisz */* lub wybierając _Przełącz nachylenie ścieżki_ z menu "
+"kontekstowego zmienia sposób załamania dwóch sąsiadujących ze sobą segmentów "
+"gdy punkt początkowy i końcowy prowadzonej ścieżki nie leżą w tej samej "
+"linii."
 
 #. type: Plain text
 #: Interactive_Router.adoc:120
@@ -318,6 +335,15 @@ msgid ""
 "Track Width_ menu to pick the width from the start item (or the traces "
 "already connected to it)."
 msgstr ""
+"Istnieje kilka możliwości wcześniejszego wyboru rozmiaru ścieżki/przelotki "
+"lub zmiany tego rozmiaru podczas trasowania: - Użwyając domyślnych skrótów "
+"kalwiszowych. - Naciskając klawisz *W* lub za pomocą polecenia _Własny "
+"rozmiar ścieżki_ z menu kontekstowego i wpisując ten rozmiar. - Wybrać z "
+"listy wcześniej zdefiniowanych rozmiarów poleceniem _Wybierz szerokość "
+"ścieżki_ z menu kontekstowego. - Aktywując opcję _Użyj początkowej "
+"szerokości ścieżki_ z listy _Wybierz szerokość ścieżki_ w menu, by "
+"automatycznie rozpocząć nową ścieżkę o szerokości takiej samej jak połączony "
+"z nią element."
 
 #. type: Title -
 #: Interactive_Router.adoc:133
@@ -333,6 +359,11 @@ msgid ""
 "Track/Via_ from the context menu. Finish dragging by clicking again or abort "
 "by pressing __Esc__."
 msgstr ""
+"Router umożliwia przeciąganie segmentów, załamań ścieżek i przelotek. By "
+"przeciągnąć element, należy kliknąć na niego z wciśniętym klawiszem *Ctrl*, "
+"najechać na niego i nacisnąć *G* lub wybrać polcenie _Przeciągnij Ścieżkę/"
+"Przelotkę_ z menu podręcznego. Zakończyć przeciąganie można poprzez ponowne "
+"kliknięcie lub użycie klawisza _Esc_."
 
 #. type: Title -
 #: Interactive_Router.adoc:141
@@ -346,14 +377,14 @@ msgid ""
 "The router behavior be configured by pressing _E_ or selecting _Routing "
 "Options_ from the context menu. It opens a window like the one below:"
 msgstr ""
-"Zachowanie routera może być skonfigurowane przez menu kontekstowe wywoływane "
-"przez wciśnięcie kalwisza _E_ lub przez wybranie polecenia _Opcje routera_. "
-"Menu to będzie wyglądać następująco:"
+"Zachowanie routera może być skonfigurowane za pomocą menu kontekstowego "
+"wywoływanego przez wciśnięcie kalwisza _E_ lub przez wybranie polecenia "
+"_Opcje routera_. Menu to będzie wyglądać następująco:"
 
 #. type: Plain text
 #: Interactive_Router.adoc:147
 msgid "image:images/router_options.png[Screenshot]"
-msgstr "image:images/router_options.png[Screenshot]"
+msgstr "image:images/pl/router_options.png[Screenshot]"
 
 #. type: Plain text
 #: Interactive_Router.adoc:149
@@ -367,6 +398,8 @@ msgid ""
 "*Mode* - select how the router handles DRC violation (shoving, walking\n"
 "around, etc.)\n"
 msgstr ""
+"*Tryb* - Wybiera tryb w jaki sposób router ma osługiwać naruszenia DRC (rozpychać,\n"
+"omijać, itd.)\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:155
@@ -375,6 +408,8 @@ msgid ""
 "*Shove vias* - when disabled, vias are treated as un-movable objects\n"
 "and hugged instead of shoved.\n"
 msgstr ""
+"*Rozsuwaj przelotki* - gdy opcja jest wyłączona, przelotki są traktowane jako obiekty\n"
+"zablokowane i będą omijane niżeli rozsuwane.\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:159
@@ -384,6 +419,9 @@ msgid ""
 "colliding traces behind solid obstacles (e.g. pads) instead of\n"
 "\"reflecting\" back the collision\n"
 msgstr ""
+"*Przeskakuj ponad przeszkodami* - gdy opcja jest włączona, router będzie próbował przesuwać\n"
+"kolidujące ścieżki znajdujące się przed trwałymi przeszkodami (np. polami lutowniczymi), niż\n"
+"spowrotem \"odzwierciedlać\" miejsca kolizji\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:164
@@ -394,6 +432,10 @@ msgid ""
 "track is removed). Loop removal works locally (only between the start\n"
 "and end of the currently routed trace).\n"
 msgstr ""
+"*Usuwaj nadmiarowe ścieżki* - gdy opcja jest włączona, pętle podczas trasowania (np.  gdy\n"
+"nowa ścieżka wygląda na nową drogę połączenia już istniejącego, poprzednie połączenie\n"
+"zostanie usunięte). Usuwanie pętli działa tylko lokalnie (tylko pomiędzy początkiem a końcem\n"
+"bieżąco trasowanej ścieżki).\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:168
@@ -403,6 +445,9 @@ msgid ""
 "pads/vias in a clean way, avoiding acute angles and jagged breakout\n"
 "traces.\n"
 msgstr ""
+"*Automatycznie zwężaj* - gdy opcja jest włączona, router będzie się starał\n"
+"przechodzić pomiędzy polami/przelotkami w sposób nie naruszający zasad,\n"
+"unikając ostrych kątów i nierównych kącików ścieżek.\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:171
@@ -411,6 +456,8 @@ msgid ""
 "*Smooth dragged segments* - when enabled, the router attempts to merge\n"
 "several jagged segments into a single straight one (dragging mode).\n"
 msgstr ""
+"*Wygładzaj przeciągane segmenty* - gdy opcja jest włączona, router będzie próbował łączyć\n"
+"niektóre segmenty w ciągłe ścieżki by wyeliminować ich fragmentację (dla łatwego ich przeciągania).\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:174
@@ -419,6 +466,8 @@ msgid ""
 "*Allow DRC violations* (__Highlight collisions__ mode only) - allows\n"
 "to establish a track even if is violating the DRC rules.\n"
 msgstr ""
+"*Zezwól na łamanie zasad DRC* (tylko w trybie _Podświetl miejsca kolizji_) - pozwala na\n"
+"zestawienie trasowanego połączenia, nawet gdy narusza to zasady DRC.\n"
 
 #. type: Plain text
 #: Interactive_Router.adoc:179
@@ -429,3 +478,7 @@ msgid ""
 "(but slower), less effort means faster routing but somewhat jagged\n"
 "traces.\n"
 msgstr ""
+"*Głębokość optymalizacji* - określa ile czasu router może poświęcić na\n"
+"optymalizację trasowanych/rozsuwanych ścieżek. Dłuższy czas pozwala na\n"
+"lepszy routing (lecz wolniejszy), mniejszy czas daje szybsze efekty podczas\n"
+"trasowania, ale pojawiają się nierówne śegmenty.\n"
