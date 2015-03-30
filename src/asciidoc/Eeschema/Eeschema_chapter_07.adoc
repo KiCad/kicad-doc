@@ -11,18 +11,27 @@ assign a designator to components in your schematic. For multi-parts
 components, assign a multi-part suffix to minimize the number of these
 packages. The automatic classification annotation tool is accessible via
 the icon
-image:images/100000000000002400000023EA45FB2C.png[100000000000002400000023EA45FB2C_png].
+image:images/icons/annotate.png[icons_annotate_png].
 Here you find its main window.
 
-image:images/1000000000000155000001705431457D.png[1000000000000155000001705431457D_png]
+image:images/annotate-dialog.png[annotate-dialog_img]
 
 Various possibilities are available:
 
 * Annotate all the components (reset existing annotation option)
+* Annotate all the components, but do not swap any previously annotated
+multi-unit parts.
 * Annotate new components only (i.e. those whose reference finishes by?
 like IC? ) (keep existing annotation option).
 * Annotate the whole hierarchy (use the entire schematic option).
 * Annotate the current sheet only (use current page only option).
+
+The "Reset, but do not swap any annotated multi-unit parts" option keeps
+all existing associations between multi-unit parts. That is, if you have
+U2A and U2B, they may be reannotated to U1A and U1B respectively, but they will
+never be reannotated to U1A and U2A, nor to U2B and U2A. This is useful if
+you want to ensure that pin groupings are maintained, if you have already
+decided by yourself which subunits are best placed where.
 
 The annotation order choice gives the method used to set the reference
 number inside each sheet of the hierarchy.
