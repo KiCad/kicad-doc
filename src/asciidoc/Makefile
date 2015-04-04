@@ -107,12 +107,8 @@ po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
 #Make the single language NN i18n file
 $(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc $(PODIR)/addendum.%
 	po4a-translate -f asciidoc -a $(PODIR)/addendum.$* -A utf-8 -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@ ; #translate master doc
-	sed -i -e 's/include::$(DOCNAME)_chapter_\(..\)\.adoc/include::$(DOCNAME)_chapter_\1-$*.adoc/' $(DOCNAME)-$*.adoc      #fix translated include files
+	sed -i -e 's/include::$(DOCNAME)_\(.*\)\.adoc/include::$(DOCNAME)_\1-$*.adoc/' $(DOCNAME)-$*.adoc      #fix translated include files
 	$(foreach l, $(DOCCHAPTERS) , po4a-translate -f asciidoc -A utf-8 -M utf-8 -m $(l) -p $(PODIR)/$*.po -k 0 -l $(shell basename -s .adoc $(l))-$*.adoc ; ) #translate chapter files
-
-#	if [ -e $(DOCNAME)_chapter_01.adoc]; then \
-#	    $(foreach l, $(DOCCHAPTERS) , po4a-translate -f asciidoc -A utf-8 -M utf-8 -m $(l) -p $(PODIR)/$*.po -k 0 -l $(shell basename -s .adoc $(l))_$*.adoc ; )  \
-#	fi
 
 .PHONY: adoc-all
 adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
