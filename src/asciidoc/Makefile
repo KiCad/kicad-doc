@@ -37,6 +37,8 @@ ASCIIDOCVAR:= -a 'newline=\n' -v
 #Uncomment this to debug pdflatex
 #DEBUGPDFLTX:= -d
 
+#I like left side html toc
+UTOC:= $(shell if [ -z "$$TOC2" ] ; then echo -n "-a toc2" ; fi )
 
 #disabling some unuseful print and added custom dblatex style to generate a nice cover image
 DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
@@ -68,7 +70,7 @@ help:
 	@echo "  all        to make all of the above (english)"
 	@echo "  all-all    to make all of the above"
 	@echo ""
-	@echo "To create html side toc, just prepend: export TOC2='-a toc2' ; make html"
+	@echo "Default html has a side toc, to disable: export TOC2=no (or any other string) ; make html"
 #	@echo ""
 #	@echo "MAKEFILE DEBUG:"
 #	@echo ""
@@ -119,11 +121,11 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 
 #English html
 $(DOCNAME).html: $(DOCNAME).adoc $(DOCCHAPTERS)
-	asciidoc $(TOC2) $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc ;
 
 #I18n html
 $(DOCNAME)-%.html: $(DOCNAME)-%.adoc
-	asciidoc $(TOC2) $(ASCIIDOCVAR) --section-numbers -a lang=$* $(DOCNAME)-$*.adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --section-numbers -a lang=$* $(DOCNAME)-$*.adoc ;
 
 .PHONY: html
 html: $(DOCNAME).html
