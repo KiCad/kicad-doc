@@ -220,6 +220,7 @@ clean:
 	rm -f $(DOCNAME).html
 	rm -f $(DOCNAME).xml
 	rm -f $(DOCNAME).epub
+	rm -rf $(DOCNAME)*.epub.d
+	rm -f $(DOCNAME)-docinfo.xml
 	rm -f $(DOCNAME).odt
-	rm -f docinfo.xml
 	rm -f $(foreach i,$(LANGUAGES),$(DOCNAME)*-$(i).*)
