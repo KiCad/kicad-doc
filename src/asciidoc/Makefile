@@ -1,11 +1,35 @@
+#############################
+#
+# General Makefile for multiformat/multilanguage
+# automatic asciidoc documentation generation.
+# This file should be kept as general as possible.
+#
+# Copyright (C) 2014 Free Software Foundation, Inc.
+# This file under the GNU GPL version 3 or later.
+#
+#############################
+
 #It takes the dir name as project name, and the doc title.
 #expect the asciidoc main doc being of the same name 
 #(i.e. ThisDirName.adoc)
 DOCNAME:= $(shell basename `pwd`)
 
+#Get doc title
 DOCTITLE:= $(shell echo $(DOCNAME)|sed -e 's/_/ /')
 
-DOCCHAPTERS:=$(wildcard $(DOCNAME)_chapter_??.adoc)
+#Translated files source dir
+PODIR:=po
+
+#Get list of languages from the list of .po files
+LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
+
+#Get list of generated chapters translated files
+DOCTRANSLATED:= $(foreach trans, $(LANGUAGES), $(wildcard $(DOCNAME)*-$(trans).adoc)) 
+
+#Get list of chapter files
+DOCCHAPTERS:= $(filter-out $(DOCTRANSLATED), $(wildcard $(DOCNAME)_*.adoc))
+
+#DOCCHAPTERS:=$(wildcard $(DOCNAME)_*.adoc)
 
 #I like HTML in Unix style text
 ASCIIDOCVAR:= -a 'newline=\n' -v
@@ -13,10 +37,8 @@ ASCIIDOCVAR:= -a 'newline=\n' -v
 #Uncomment this to debug pdflatex
 #DEBUGPDFLTX:= -d
 
-PODIR:=po
-
-#Get list of languages from the list of .po files
-LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
+#I like left side html toc
+UTOC:= $(shell if [ -z "$$TOC2" ] ; then echo -n "-a toc2" ; fi )
 
 #disabling some unuseful print and added custom dblatex style to generate a nice cover image
 DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
@@ -48,7 +70,14 @@ help:
 	@echo "  all        to make all of the above (english)"
 	@echo "  all-all    to make all of the above"
 	@echo ""
-	@echo "To create html side toc, just prepend: export TOC2='-a toc2' ; make html"
+	@echo "Default html has a side toc, to disable: export TOC2=no (or any other string) ; make html"
+#	@echo ""
+#	@echo "MAKEFILE DEBUG:"
+#	@echo ""
+#	@echo "DOCTITLE: $(DOCTITLE)"
+#	@echo "LANGUAGES: $(LANGUAGES)"
+#	@echo "DOTRANSLATED: $(DOCTRANSLATED)"
+#	@echo "DOCCHAPTERS: $(DOCCHAPTERS)"
 
 
 #.PHONY: pot
@@ -78,12 +107,8 @@ po-all: $(foreach i,$(LANGUAGES),$(PODIR)/$(i).po)
 #Make the single language NN i18n file
 $(DOCNAME)-%.adoc: $(PODIR)/%.po $(DOCNAME).adoc $(PODIR)/addendum.%
 	po4a-translate -f asciidoc -a $(PODIR)/addendum.$* -A utf-8 -M utf-8 -m $(DOCNAME).adoc -p $(PODIR)/$*.po -k 0 -l $@ ; #translate master doc
-	sed -i -e 's/include::$(DOCNAME)_chapter_\(..\)\.adoc/include::$(DOCNAME)_chapter_\1-$*.adoc/' $(DOCNAME)-$*.adoc      #fix translated include files
+	sed -i -e 's/include::$(DOCNAME)_\(.*\)\.adoc/include::$(DOCNAME)_\1-$*.adoc/' $(DOCNAME)-$*.adoc      #fix translated include files
 	$(foreach l, $(DOCCHAPTERS) , po4a-translate -f asciidoc -A utf-8 -M utf-8 -m $(l) -p $(PODIR)/$*.po -k 0 -l $(shell basename -s .adoc $(l))-$*.adoc ; ) #translate chapter files
-
-#	if [ -e $(DOCNAME)_chapter_01.adoc]; then \
-#	    $(foreach l, $(DOCCHAPTERS) , po4a-translate -f asciidoc -A utf-8 -M utf-8 -m $(l) -p $(PODIR)/$*.po -k 0 -l $(shell basename -s .adoc $(l))_$*.adoc ; )  \
-#	fi
 
 .PHONY: adoc-all
 adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
@@ -92,11 +117,11 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 
 #English html
 $(DOCNAME).html: $(DOCNAME).adoc $(DOCCHAPTERS)
-	asciidoc $(TOC2) $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc ;
 
 #I18n html
 $(DOCNAME)-%.html: $(DOCNAME)-%.adoc
-	asciidoc $(TOC2) $(ASCIIDOCVAR) --section-numbers -a lang=$* $(DOCNAME)-$*.adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --section-numbers -a lang=$* $(DOCNAME)-$*.adoc ;
 
 .PHONY: html
 html: $(DOCNAME).html
@@ -193,7 +218,7 @@ clean:
 	rm -f $(DOCNAME).html
 	rm -f $(DOCNAME).xml
 	rm -f $(DOCNAME).epub
+	rm -rf $(DOCNAME)*.epub.d
+	rm -f $(DOCNAME)-docinfo.xml
 	rm -f $(DOCNAME).odt
-	rm -f $(DOCNAME)-*.*
-	rm -f $(DOCNAME)_chapter_*-*.*
-	rm -f docinfo.xml
+	rm -f $(foreach i,$(LANGUAGES),$(DOCNAME)*-$(i).*)
