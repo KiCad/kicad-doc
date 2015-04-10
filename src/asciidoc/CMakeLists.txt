@@ -1,3 +1,3 @@
 
 add_subdirectory( CvPcb )
-add_subdirectory( Eeschema )
+#add_subdirectory( Eeschema )
