@@ -16,6 +16,8 @@ if( NOT ASCIIDOC_COMMAND )
 
     # Attempt to execute the asciidoc utility
     set( ASCIIDOC_COMMAND "asciidoc" )
+    set( A2X_COMMAND "a2x" )
+    
     execute_process( COMMAND ${ASCIIDOC_COMMAND} --version
                      RESULT_VARIABLE _ADOC_EXE_RESULT
                      OUTPUT_VARIABLE _ADOC_EXE_OUTPUT
@@ -32,6 +34,7 @@ if( NOT ASCIIDOC_COMMAND )
         # to be run with the asciidoc command as python doesn't usually
         # register .py as an executable file type
         set( ASCIIDOC_COMMAND "asciidoc.bat" )
+        set( A2X_COMMAND "a2x.bat" )
 
         execute_process( COMMAND ${ASCIIDOC_COMMAND} --version
                 RESULT_VARIABLE _ADOC_EXE_RESULT
@@ -41,6 +44,7 @@ if( NOT ASCIIDOC_COMMAND )
         if( NOT "${_ADOC_EXE_RESULT}" STREQUAL "0" )
             # Finally, check we can use the supplied asciidoc version
             set( ASCIIDOC_COMMAND python ${PROJECT_SOURCE_DIR}/CMakeSupport/asciidoc/asciidoc.py )
+            set( A2X_COMMAND python ${PROJECT_SOURCE_DIR}/CMakeSupport/asciidoc/a2x.py )
 
             execute_process( COMMAND ${ASCIIDOC_COMMAND} --version
                     RESULT_VARIABLE _ADOC_EXE_RESULT
@@ -59,6 +63,7 @@ if( NOT ASCIIDOC_COMMAND )
         set( ASCIIDOC_FOUND TRUE )
     endif()
 else()
+    find_program( A2X_COMMAND a2x )
     set( ASCIIDOC_FOUND TRUE )
 endif()
 

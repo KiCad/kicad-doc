@@ -25,4 +25,6 @@ add_subdirectory( src )
 # Generate both .tar.gz and .zip package targets
 set( CPACK_GENERATOR "TGZ;ZIP" )
 set( CPACK_PACKAGE_VERSION "1.0.0" )
+set( CPACK_PACKAGE_FILE_NAME "KiCadDocumentation-${CPACK_PACKAGE_VERSION}" )
 include( CPack )
+
