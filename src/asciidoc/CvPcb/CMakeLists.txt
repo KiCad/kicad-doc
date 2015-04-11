@@ -5,7 +5,7 @@ set( CVPCB_ADOC_SOURCES
 add_custom_target( cvpcb ALL )
 
 set( ASCIIDOC_OPTIONS -b html5 -a toc2 -a 'newline=\\n' --section-numbers --theme flask )
-set( A2X_OPTIONS -f pdf -a 'newline=\\n' --dblatex-opts '-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ${CMAKE_CURRENT_SOURCE_DIR}/../pdf-cover-dblatex.sty' )
+set( A2X_OPTIONS_BASE -f pdf -a 'newline=\\n' --dblatex-opts '-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ${CMAKE_CURRENT_SOURCE_DIR}/../pdf-cover-dblatex.sty -o OUTFILE' )
 # -D ${CMAKE_CURRENT_BINARY_DIR}
 
 # Get a list of all po translation files so we know what languages can be built
@@ -17,10 +17,12 @@ set( LANGUAGE en )
 add_custom_target( cvpcb_html_en ALL
                    ${ASCIIDOC_COMMAND} ${ASCIIDOC_OPTIONS} -a lang=${LANGUAGE} -o ${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.html ${CMAKE_CURRENT_SOURCE_DIR}/CvPcb.adoc )
 
+string( REPLACE "OUTFILE" "${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.pdf" A2X_OPTIONS "${A2X_OPTIONS_BASE}" )
 add_custom_target( cvpcb_pdf_en ALL
                    ${A2X_COMMAND} ${A2X_OPTIONS} ${CMAKE_CURRENT_SOURCE_DIR}/CvPcb.adoc )
 
-install( FILES ${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.html DESTINATION ./CvPcb/pdf )
+install( FILES ${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.html DESTINATION ./CvPcb/html )
+install( FILES ${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.pdf DESTINATION ./CvPcb/pdf )
 
 add_dependencies( cvpcb cvpcb_html_en )
 add_dependencies( cvpcb cvpcb_pdf_en )
@@ -36,6 +38,7 @@ foreach( LANGUAGE ${TRANSLATIONS} )
                    ${ASCIIDOC_COMMAND} ${ASCIIDOC_OPTIONS} -a lang=${LANGUAGE} -o ${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.html ${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.adoc
                    DEPENDS cvpcb_translate_${LANGUAGE} )
 
+    string( REPLACE "OUTFILE" "${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.pdf" A2X_OPTIONS "${A2X_OPTIONS_BASE}" )
     add_custom_target( cvpcb_pdf_${LANGUAGE} ALL
                    ${A2X_COMMAND} ${A2X_OPTIONS} ${CMAKE_CURRENT_BINARY_DIR}/CvPcb-${LANGUAGE}.adoc
                    DEPENDS cvpcb_translate_${LANGUAGE} )
