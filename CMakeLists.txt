@@ -15,10 +15,10 @@ find_package( PO4A )
 find_package( ASCIIDOC )
 
 # Discover if the AsciiDoctor toolchain is available
-find_package( ASCIIDOCTOR )
+# find_package( ASCIIDOCTOR )
 
 # Discover if the AsciiDoctor-pdf toolchain is available
-find_package( ASCIIDOCTORPDF )
+# find_package( ASCIIDOCTORPDF )
 
 add_subdirectory( src )
 
