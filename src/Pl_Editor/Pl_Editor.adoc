@@ -105,21 +105,22 @@ Basic page layout items are:
 * *Lines*
 * *Rectangles*
 * *Texts* (with format symbols, with will be replaced by the actual
-text, like the date, page number...) in Eeschema or Pcbnew.
+  text, like the date, page number...) in Eeschema or Pcbnew.
 * *Poly-polygons* (mainly to place logos and special graphic shapes)
-These poly polygons are created by **Bitmap2component**, and cannot be
-built inside pl_editor, because it is not possible to create such shapes
-by hand.
-* *Bitmaps* to place logos (Warning: Bitmaps can be plotted only by few
-plotters: PDF and PS only).
+  These poly polygons are created by **Bitmap2component**, and cannot be
+  built inside pl_editor, because it is not possible to create such shapes
+  by hand.
+* *Bitmaps* to place logos.
+
+WARNING: Bitmaps can be plotted only by few plotters: PDF and PS only.
 
 Therefore
 
 * *Texts, poly-polygons* and *bitmaps* are defined by a position, and
-can be rotated.
+  can be rotated.
 * *Lines* (in fact segments) and *rectangles* are defined by two points:
-a start point and a end point. They cannot be rotated (this is useless
-for segments)
+  a start point and a end point. They cannot be rotated (this is useless
+  for segments)
 
 These basic items can be repeated.
 
@@ -143,9 +144,9 @@ Reference corners and coordinates:
 image:images/Object_1.png[Object_1_png]
 
 * When the page size is changed, the position of the item, relative to
-its reference corner does not change.
+  its reference corner does not change.
 * Usually, title blocks are attached to the right bottom corner, and
-therefore this corner is the default corner, when creating an item.
+  therefore this corner is the default corner, when creating an item.
 
 For rectangles and segments, which have two defined points, each point
 has its reference corner.
@@ -251,7 +252,7 @@ Texts can be multi-line.
 There are 2 ways to insert a new line in texts:
 
 1.  Insert the “n” 2 chars sequence (mainly in Page setup dialog in
-KiCad)
+    KiCad)
 2.  Insert a new line in Pl_Editor Design window.
 
 Here is an example
@@ -387,7 +388,7 @@ Main Screen
 
 The image below shows the main window of Pl_Editor.
 
-image:images/280000002003BB28D10.png[280000002003BB28D10_png]
+image:images/en/main_window.png[]
 
 The left pane contains the list of basic items.
 
@@ -397,49 +398,49 @@ The right pane is the item settings editor.
 Main Window Toolbar
 ~~~~~~~~~~~~~~~~~~~
 
-image:images/3180000002933A1DAFF.png[3180000002933A1DAFF_png]
+image:images/main_toolbar.png[]
 
 The top toolbar allows for easy access to the following commands:
 
 [width="100%",cols="28%,72%",]
 |=======================================================================
-|image:images/025000000236092322C.png[025000000236092322C_png] |Select
+|image:images/icons/page_new_layout.png[] |Select
 the net list file to be processed.
 
-|image:images/02100000023DA2FC874.png[02100000023DA2FC874_png] |Load a
+|image:images/icons/page_load_layout.png[] |Load a
 page layout description file.
 
-|image:images/02600000023B6DEDD23.png[02600000023B6DEDD23_png] |Save the
+|image:images/icons/page_save_layout.png[] |Save the
 current page layout description in a .kicad_wks file.
 
-|image:images/02400000022F65327A8.png[02400000022F65327A8_png] |Display
+|image:images/icons/page_set_size.png[] |Display
 the page size selector and the title block user data editor.
 
-|image:images/02500000022D0648B63.png[02500000022D0648B63_png] |Prints
+|image:images/icons/page_print.png[] |Prints
 the current page.
 
-|image:images/029000000225511CDE8.png[029000000225511CDE8_png] |Delete
+|image:images/icons/item_delete.png[] |Delete
 the currently selected item.
 
-|image:images/048000000223C9FAADD.png[048000000223C9FAADD_png]
+|image:images/icons/undo_redo.png[]
 |Undo/redo tools.
 
-|image:images/08D000000226C3BBC45.png[08D000000226C3BBC45_png] |Delete
-all footprint assignments.
+|image:images/icons/zoom_in_out_redraw_auto.png[] |Zoom 
+in, out, redraw and auto, respectively.
 
-|image:images/026000000247DACC8C8.png[026000000247DACC8C8_png] |Show the
+|image:images/icons/title_block_preview.png[] |Show the
 page layout in user mode: texts are shown like in Eeschema or Pcbnew:
 text format symbols are replaced by the user texts.
 
-|image:images/023000000247D2AF312.png[023000000247D2AF312_png] |Show the
+|image:images/icons/title_block_edit.png[] |Show the
 page layout in native mode: texts are displayed “as is”, with the
 contained formats, without any replacement.
 
-|image:images/09D0000002290AC88FC.png[09D0000002290AC88FC_png]
+|image:images/en/set_base_corner.png[]
 |Reference corner selection, for coordinates displayed to the status
 bar.
 
-|image:images/060000000223178ABCE.png[060000000223178ABCE_png] a|
+|image:images/en/set_current_page.png[] a|
 Selection of the page number (page & or other pages).
 
 This selection has meaning only if some items have a page option, are
@@ -499,14 +500,15 @@ description.
 * Zoom selection: direct selection of the display zoom.
 * Grid selection: direct selection of the grid.
 
-*Note:*
-
+NOTE:
+----
 _Append Page Layout Descr File_ is intended to add poly polygons to make
 logos.
 
 Because usually a logo it needs hundred of vertices, you cannot create a
 polygon by hand. But you can append a description file, created by
 Bitmap2Component.
+---
 
 [[status-bar-information]]
 Status Bar Information
@@ -515,7 +517,7 @@ Status Bar Information
 The status bar is located a the bottom of the Pl_Editor and provides
 useful information to the user.
 
-image:images/31A0000002140AB1BF6.png[31A0000002140AB1BF6_png]
+image:images/en/status_bar.png[]
 
 Coordinates are *always relative to the corner* selected as
 **reference**.
