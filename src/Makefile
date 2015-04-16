@@ -117,11 +117,11 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 
 #English html
 $(DOCNAME).html: $(DOCNAME).adoc $(DOCCHAPTERS)
-	asciidoc $(UTOC) $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --theme flask --section-numbers $(DOCNAME).adoc ;
 
 #I18n html
 $(DOCNAME)-%.html: $(DOCNAME)-%.adoc
-	asciidoc $(UTOC) $(ASCIIDOCVAR) --section-numbers -a lang=$* $(DOCNAME)-$*.adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --theme flask --section-numbers -a lang=$* $(DOCNAME)-$*.adoc ;
 
 .PHONY: html
 html: $(DOCNAME).html

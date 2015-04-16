@@ -57,12 +57,15 @@ Basic page layout items are:
 
 * Lines
 * Rectangles
-* Texts (with format symbols, with will be replaced by the actual text,
-like the date, page number...) in Eeschema or Pcbnew.
+* Texts (with format symbols, that will be replaced by the actual text,
+  like the date, page number...) in Eeschema or Pcbnew.
 * Poly-polygons (mainly to place logos and special graphic shapes)
-* Bitmaps. Warning: Bitmaps can be plotted only by few plotters (PDF and
+* Bitmaps.
+
+WARNING: Bitmaps can be plotted only by few plotters (PDF and
 PS only) Therefore, for other plotters, only a bounding box will be
 plotted.
+
 * Items can be repeated, and texts and poly_polygons can be rotated.
 
 [[pl_editor-files]]
@@ -74,9 +77,9 @@ Input file and default title block
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pl_Editor reads or writes page layout description files *.kicad_wks
-(kicad worksheet).
+(KiCad worksheet).
 
-An internal default page layout description to display the default Kicad
+An internal default page layout description to display the default KiCad
 title block is used until a file is read
 
 [[output-file]]
@@ -84,7 +87,7 @@ Output file
 ~~~~~~~~~~~
 
 The current page layout description can be written in a *.kicad_wks
-file, using the S expression format, which is widely used in Kicad.
+file, using the S expression format, which is widely used in KiCad.
 
 This file can be used to show the custom page layout in Eeschema and/or
 Pcbnew.
@@ -102,21 +105,22 @@ Basic page layout items are:
 * *Lines*
 * *Rectangles*
 * *Texts* (with format symbols, with will be replaced by the actual
-text, like the date, page number...) in Eeschema or Pcbnew.
+  text, like the date, page number...) in Eeschema or Pcbnew.
 * *Poly-polygons* (mainly to place logos and special graphic shapes)
-These poly polygons are created by **Bitmap2component**, and cannot be
-built inside pl_editor, because it is not possible to create such shapes
-by hand.
-* *Bitmaps* to place logos (Warning: Bitmaps can be plotted only by few
-plotters: PDF and PS only).
+  These poly polygons are created by **Bitmap2component**, and cannot be
+  built inside pl_editor, because it is not possible to create such shapes
+  by hand.
+* *Bitmaps* to place logos.
+
+WARNING: Bitmaps can be plotted only by few plotters: PDF and PS only.
 
 Therefore
 
 * *Texts, poly-polygons* and *bitmaps* are defined by a position, and
-can be rotated.
+  can be rotated.
 * *Lines* (in fact segments) and *rectangles* are defined by two points:
-a start point and a end point. They cannot be rotated (this is useless
-for segments)
+  a start point and a end point. They cannot be rotated (this is useless
+  for segments)
 
 These basic items can be repeated.
 
@@ -137,12 +141,12 @@ dependent on the paper size**.
 Reference corners and coordinates:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-image:images/Object_1.png[Object_1_png]
+image:images/en/page_property_1.png[]
 
 * When the page size is changed, the position of the item, relative to
-its reference corner does not change.
+  its reference corner does not change.
 * Usually, title blocks are attached to the right bottom corner, and
-therefore this corner is the default corner, when creating an item.
+  therefore this corner is the default corner, when creating an item.
 
 For rectangles and segments, which have two defined points, each point
 has its reference corner.
@@ -156,10 +160,10 @@ poly-polygons) can be rotated:
 
 [width="97%",cols="42%,58%",]
 |=======================================================================
-|image:images/289F00001AAB8B9CAB6A.png[289F00001AAB8B9CAB6A_png]
+|image:images/en/text_noriented.png[]
 |Normal: Rotation = 0
 
-|image:images/26DD000020DF53BA89AF.png[26DD000020DF53BA89AF_png]
+|image:images/en/text_rotated.png[]
 |Rotated: Rotation = 20 and 10 degrees.
 |=======================================================================
 
@@ -171,7 +175,7 @@ Items can be repeated:
 
 This is useful to create grid and grid labels.
 
-image:images/Object_2.png[Object_2_png]
+image:images/en/page_property_2.png[]
 
 [[texts-and-formats]]
 Texts and formats
@@ -195,7 +199,7 @@ Formats symbols are:
 
 *%% = replaced by %*
 
-*%K = Kicad version*
+*%K = KiCad version*
 
 *%Z = paper format name (A4, USLetter ...)*
 
@@ -219,21 +223,21 @@ Formats symbols are:
 
 Example:
 
-"Size: %Z" displays "Size A4" or Size USLetter"
+"Size: %Z" displays "Size: A4" or "Size: USLetter"
 
 [width="100%",cols="34%,66%",]
 |=======================================================================
 |image:images/204000000B615B3B830.png[204000000B615B3B830_png] a|
 User display mode:
 
-image:images/026000000247DACC8C8.png[026000000247DACC8C8_png] activated.
+image:images/icons/title_block_preview.png[] activated.
 
 Title block displayed like in Eeschema and Pcbnew
 
 |image:images/20D000000BF8AE6E45B.png[20D000000BF8AE6E45B_png] a|
 “Native” display mode:
 
-image:images/023000000247D2AF312.png[023000000247D2AF312_png] activated.
+image:images/icons/title_block_edit.png[] activated.
 
 The native texts entered in Pl_Editor, with their format symbols.
 
@@ -248,7 +252,7 @@ Texts can be multi-line.
 There are 2 ways to insert a new line in texts:
 
 1.  Insert the “n” 2 chars sequence (mainly in Page setup dialog in
-Kicad)
+    KiCad)
 2.  Insert a new line in Pl_Editor Design window.
 
 Here is an example
@@ -369,7 +373,7 @@ Setup
 Invoking Pl_Editor
 ------------------
 
-Pl_Editor is typically invoked from a command line, or from the Kicad
+Pl_Editor is typically invoked from a command line, or from the KiCad
 manager.
 
 From a command line, the syntax is pl_editor <*.kicad_wks file to open>.
@@ -384,7 +388,7 @@ Main Screen
 
 The image below shows the main window of Pl_Editor.
 
-image:images/280000002003BB28D10.png[280000002003BB28D10_png]
+image:images/en/main_window.png[]
 
 The left pane contains the list of basic items.
 
@@ -394,49 +398,49 @@ The right pane is the item settings editor.
 Main Window Toolbar
 ~~~~~~~~~~~~~~~~~~~
 
-image:images/3180000002933A1DAFF.png[3180000002933A1DAFF_png]
+image:images/main_toolbar.png[]
 
 The top toolbar allows for easy access to the following commands:
 
 [width="100%",cols="28%,72%",]
 |=======================================================================
-|image:images/025000000236092322C.png[025000000236092322C_png] |Select
+|image:images/icons/page_new_layout.png[] |Select
 the net list file to be processed.
 
-|image:images/02100000023DA2FC874.png[02100000023DA2FC874_png] |Load a
+|image:images/icons/page_load_layout.png[] |Load a
 page layout description file.
 
-|image:images/02600000023B6DEDD23.png[02600000023B6DEDD23_png] |Save the
+|image:images/icons/page_save_layout.png[] |Save the
 current page layout description in a .kicad_wks file.
 
-|image:images/02400000022F65327A8.png[02400000022F65327A8_png] |Display
+|image:images/icons/page_set_size.png[] |Display
 the page size selector and the title block user data editor.
 
-|image:images/02500000022D0648B63.png[02500000022D0648B63_png] |Prints
+|image:images/icons/page_print.png[] |Prints
 the current page.
 
-|image:images/029000000225511CDE8.png[029000000225511CDE8_png] |Delete
+|image:images/icons/item_delete.png[] |Delete
 the currently selected item.
 
-|image:images/048000000223C9FAADD.png[048000000223C9FAADD_png]
+|image:images/icons/undo_redo.png[]
 |Undo/redo tools.
 
-|image:images/08D000000226C3BBC45.png[08D000000226C3BBC45_png] |Delete
-all footprint assignments.
+|image:images/icons/zoom_in_out_redraw_auto.png[] |Zoom 
+in, out, redraw and auto, respectively.
 
-|image:images/026000000247DACC8C8.png[026000000247DACC8C8_png] |Show the
+|image:images/icons/title_block_preview.png[] |Show the
 page layout in user mode: texts are shown like in Eeschema or Pcbnew:
 text format symbols are replaced by the user texts.
 
-|image:images/023000000247D2AF312.png[023000000247D2AF312_png] |Show the
+|image:images/icons/title_block_edit.png[] |Show the
 page layout in native mode: texts are displayed “as is”, with the
 contained formats, without any replacement.
 
-|image:images/09D0000002290AC88FC.png[09D0000002290AC88FC_png]
+|image:images/en/set_base_corner.png[]
 |Reference corner selection, for coordinates displayed to the status
 bar.
 
-|image:images/060000000223178ABCE.png[060000000223178ABCE_png] a|
+|image:images/en/set_current_page.png[] a|
 Selection of the page number (page & or other pages).
 
 This selection has meaning only if some items have a page option, are
@@ -496,14 +500,16 @@ description.
 * Zoom selection: direct selection of the display zoom.
 * Grid selection: direct selection of the grid.
 
-*Note:*
-
+NOTE:
+----
 _Append Page Layout Descr File_ is intended to add poly polygons to make
 logos.
 
 Because usually a logo it needs hundred of vertices, you cannot create a
 polygon by hand. But you can append a description file, created by
 Bitmap2Component.
+----
+
 
 [[status-bar-information]]
 Status Bar Information
@@ -512,7 +518,7 @@ Status Bar Information
 The status bar is located a the bottom of the Pl_Editor and provides
 useful information to the user.
 
-image:images/31A0000002140AB1BF6.png[31A0000002140AB1BF6_png]
+image:images/en/status_bar.png[]
 
 Coordinates are *always relative to the corner* selected as
 **reference**.
@@ -523,8 +529,8 @@ Left window
 
 The left windows shows the list of layout items.
 
-One can select a given item (left clicking on the line), of when right
-clicking on the line, display a pop up menu
+One can select a given item (left clicking on the line) or, when right
+clicking on the line, display a pop up menu.
 
 This menu allows basic operations: add a new item, or delete the
 selected item.
@@ -622,8 +628,8 @@ mouse and placed (right clicking on the mouse).
 Item creation
 ~~~~~~~~~~~~~
 
-To add a new item, right click the mouse button, when the cursor is on
-the left window, or the draw area.
+To add a new item, right click the mouse button when the cursor is on
+the left window or the draw area.
 
 A popup menu is displayed:
 
@@ -695,7 +701,7 @@ edited.
 Adding image bitmaps
 ~~~~~~~~~~~~~~~~~~~~
 
-You can add an image bitmap using most of bitmap formats (PGN, JPEG, BMP
+You can add an image bitmap using most of bitmap formats (PNG, JPEG, BMP
 ...)
 
 * When a bitmap is imported, its PPI (pixel per inch) definition is set
