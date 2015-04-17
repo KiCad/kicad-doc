@@ -17,7 +17,7 @@ find_program( FOP_PROGRAM fop )
 # Found something, attempt to try and use it...
 if( FOP_PROGRAM )
     execute_process(
-        COMMAND ${FOP_COMMAND} -version
+        COMMAND ${FOP_PROGRAM} -version
         OUTPUT_VARIABLE _OUT
         ERROR_VARIABLE _ERR
         RESULT_VARIABLE _RES
