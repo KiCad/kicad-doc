@@ -12,27 +12,101 @@ This will translate and build PDF and HTML versions of the documentation.
 
 == PO4A
 
-https://po4a.alioth.debian.org/[PO4A] is required. It's used to perform the
+https://po4a.alioth.debian.org/[PO4A] 0.45+ is required. It's used to perform the
 translated documentation.
+
+
+=== PO4A on Windows
+
+PO4A is a perl script and so requires PERL to be installed. If you're using a
+POSIX emulation layer, grab a the perl package.
+
+Outside of a POSIX emulation you'll need to grab PERL, such as
+http://www.activestate.com/activeperl/downloads[ActivePerl]
+
+Install the CPAN modules which are required by PO4A. After installing perl,
+on the command line type:
+
+    cpan Unicode::GCString
+
+Grab the latest PO4A distribution from
+https://alioth.debian.org/frs/?group_id=30267[Alioth], decompress it somewhere
+on your harddrive and make sure the directory containing po4a is available in
+your PATH environment variable. CMake will be able to find PO4A on Windows so
+long as Perl is working and po4a is in your path.
+
+That's all there is to get PO4A working on Windows; It's just used in-place.
 
 == ASCIIDOC
 
-http://sourceforge.net/projects/asciidoc/[Asciidoc] is also required for
-building the documentation.
+http://asciidoc.org/[AsciiDoc] is also required for building the documentation.
 
 Asciidoc is the format of the documentation and is used to generate both PDF
 and HTML versions of the documentation.
+
+=== Windows
+
+To install asciidoc on windows, get the latest version from
+http://sourceforge.net/projects/asciidoc/[Sourceforge] and unzip somewhere on
+your drive. Make sure the asccidoc.py file is available in your path in order
+for CMake to be able to find it.
 
 === dblatex
 
 http://dblatex.sourceforge.net/[dblatex] is currently required for PDF
 documenatation. Usually it's installed as a dependency for Asciidoc on Linux
-systems. On Windows, PDF generation is currently broken for Asciidoc because
-dblatex is not included.
+systems.
+
+In order for CMake to use DBLATEX, use the following when configuring with
+CMake:
+
+    -DPDF_GENERATOR=DBLATEX
+
+dblatex is currently the default PDF generator anyway, so omitting the above
+will also work if you just want to build using the default tools (in future
+we may change to something else, like FOP for example)
+
+==== dblatex on Windows
+
+WARNING: Although dblatex support is provided for under Windows, it has only
+been unsuccessfully tested, failing due to a race condition with file
+permissions on successive xsltproc invocations. However, please do try it if
+you can because it will probably work one day!
+
+NOTE: Although CMake can find that you have dblatex installed, it's not
+possible for a2x to run dblatex on windows without supplying a dblatex
+executable. This can be done by placing the dblatex.cmd file from the
+CMakeSupport/windows directory in your path and modifying it as necessary.
+
+Make sure you have the latest version of python 2 installed.
+
+Download and install http://miktex.org/download[MikTex] which provides the
+latex backend for dblatex. It's recommended during install to set the "Install
+packages on the fly" to yes so MikTex doesn't have to ask before installing
+packages - it's a real pain when installing dblatex otherwise!! It also
+appears that if you miss that setting dblatex will fail to install because of
+some crashes of MikTex which then reports missing elements in the toolchain.
+
+Download and install ftp://ftp.zlatkovic.com/libxml/[libxml2] which is pain.
+You'll need to download and decompress all the zip files. Then, manually copy
+each of the folders into a common directory so that you end up with one bin
+directory and one lib directory, etc. You must then make sure the bin path of
+your installation directory is added to your PATH environment variable.
+
+Then get download the latest dblatex .tar.bz2 from
+https://sourceforge.net/projects/dblatex/[Sourceforge]
+
+Decompress the tar.bz2 somewhere and then install dbltatex:
+
+    cd dblatex-0.45
+    python setup.py install
+
+So long as the install works, CMake will be able to find dblatex in your
+python installation
 
 === FOP
 
-WARNING: FOP is not currently supported!
+NOTE: This is currently the only way of building PDF documents on Windows.
 
 It's possible to use https://xmlgraphics.apache.org/fop/[Apache FOP] for PDF
 generation with Asciidoc instead of dbaltex and could be added so that PDF
@@ -40,7 +114,11 @@ documentation can be generated on Windows, but that is work for the future.
 Some people will prefer the output of Apache FOP compared to dblatex. It
 brings with it a dependency on a Java runtime.
 
-=== ASCIIDOCTOR
+In order for CMake to use FOP, use the following when configuring with CMake:
+
+    -DPDF_GENERATOR=FOP
+
+== ASCIIDOCTOR
 
 WARNING: ASCIIDOCTOR is not currently supported!
 

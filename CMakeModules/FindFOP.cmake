@@ -1,53 +1,64 @@
 #
-# (c)2015 KiCad-Developers
-# (c)2015 Brian Sidebotham
+# (c)2015 KiCad Developers
+# (c)2015 Brian Sidebotham <brian.sidebotham@gmail.com>
 #
-# Part of the KiCad project
+# CMake module to find Apache FOP.
+#
+# Variables generated:
+#
+# FOP_FOUND     true when FOP_COMMAND is valid
+# FOP_COMMAND   The command to run fop
+# FOP_VERSION   The fop version that has been found
 #
 
-unset( FOP_FOUND )
-unset( _DEBUG )
-set( _DBG OFF )
+# Have a go at finding a fop executable
+find_program( FOP_PROGRAM fop )
 
-# Attempt to execute the FOP utility
-execute_process( COMMAND fop --version
-                 RESULT_VARIABLE _FOP_EXE_RESULT
-                 OUTPUT_VARIABLE _FOP_EXE_OUTPUT
-                 ERROR_VARIABLE _FOP_EXE_ERROR )
+# Found something, attempt to try and use it...
+if( FOP_PROGRAM )
+    execute_process(
+        COMMAND ${FOP_COMMAND} -version
+        OUTPUT_VARIABLE _OUT
+        ERROR_VARIABLE _ERR
+        RESULT_VARIABLE _RES
+        OUTPUT_STRIP_TRAILING_WHITESPACE )
 
-set( FOP_COMMAND "fop" )
-
-if( _DBG )
-    message( STATUS "FOP result: ${_FOP_EXE_RESULT}" )
-    message( STATUS "FOP outut: ${_FOP_EXE_OUTPUT}" )
-endif()
-
-if( NOT "${_FOP_EXE_RESULT}" STREQUAL "0" )
-    # Attempt to see if a bat file can be run which invokes FOP
-    execute_process( COMMAND fop.bat --version
-                 RESULT_VARIABLE _FOP_EXE_RESULT
-                 OUTPUT_VARIABLE _FOP_EXE_OUTPUT
-                 ERROR_VARIABLE _FOP_EXE_ERROR )
-
-    set( FOP_COMMAND "fop.bat" )
-
-    if( NOT "${_ADOC_EXE_RESULT}" STREQUAL "0" )
-        set( FOP_FOUND FALSE )
-    else()
-        set( FOP_FOUND TRUE )
+    # If it didn't work, remove the result
+    if( _RES MATCHES 0 )
+        set( FOP_COMMAND "${FOP_PROGRAM}" )
     endif()
-else()
-    set( FOP_FOUND TRUE )
 endif()
 
-if( FOP_FOUND )
-    # Get the PO4A version number...
-    string( REGEX MATCH "[0-9]+\\.[0-9]+" FOP_VERSION "${_FOP_EXE_OUTPUT}" )
-    message( STATUS "FOP Found v${FOP_VERSION}" )
-else()
-    message( STATUS "FOP NOT FOUND" )
+# If nothing could be found, test to see if we can just find the script file, that we'll then run
+# with the python interpreter
+if( NOT FOP_COMMAND )
+
+    # Try an execute the windows .cmd file...
+    find_file( FOP_COMMAND fop.cmd )
+
+    if( FOP_COMMAND )
+        execute_process(
+            COMMAND ${FOP_COMMAND} -version
+            OUTPUT_VARIABLE _OUT
+            ERROR_VARIABLE _ERR
+            RESULT_VARIABLE _RES
+            OUTPUT_STRIP_TRAILING_WHITESPACE )
+
+        # If it didn't work, remove the result
+        if( NOT _RES MATCHES 0 )
+            set( FOP_COMMAND "" )
+        endif()
+    endif()
 endif()
 
-macro( fop ARGS )
+# If we've found a command that works, check the version
+if( FOP_COMMAND )
+    string(REGEX REPLACE ".*Version[^0-9.]*\([0-9.]+\)([0-9]+\).*" "\\1\\2" FOP_VERSION "${_OUT}")
+endif()
 
-endmacro()
+# Generate the *_FOUND as necessary, etc.
+include( FindPackageHandleStandardArgs )
+find_package_handle_standard_args(
+    FOP
+    REQUIRED_VARS FOP_COMMAND
+    VERSION_VAR FOP_VERSION )
