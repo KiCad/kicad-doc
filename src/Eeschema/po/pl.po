@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-04-06 23:58+0200\n"
-"PO-Revision-Date: 2015-04-18 11:20+0200\n"
+"PO-Revision-Date: 2015-04-18 22:05+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -213,6 +213,13 @@ msgid ""
 "you want to ensure that pin groupings are maintained, if you have already "
 "decided by yourself which subunits are best placed where."
 msgstr ""
+"Opcja \"Zresetuj, ale nie zamieniaj żadnej z ponumerowanych części elementów "
+"wieloskładowych\" zachowuje wszystkie istniejące powiązania między częściami "
+"w elementach wieloczęściowych. Oznacza to, że jeśli mamy U2A i U2B, to mogą "
+"one być przemianowane na U1A i U1B, ale nigdy nie zostaną przemianowane na "
+"U1A i U2A, ani U2B i U2A. Jest to przydatne, gdy chcemy mieć pewność, że "
+"określone gupy pinów zostaną zachowane jeśli zdecydowano wcześniej, które "
+"części najlepiej pasują do danej sytuacji."
 
 #. type: Plain text
 #: Eeschema_automatic_classification_annotation.adoc:38
@@ -431,12 +438,19 @@ msgid ""
 "components to files, and import components from files. The library editing "
 "tool provides a simple way to manage component library files."
 msgstr ""
+"Komponent jest symbolem na schemacie, który zawiera jego reprezentację "
+"graficzną, połączenia elektryczne i pola go opisujące. Komponenty stosowane "
+"na schemacie są przechowywane w bibliotece symboli. Eeschema dostarcza "
+"narzędzia do edycji takich bibliotek, które pozwala na ich tworzenie, "
+"dodawanie, usuwnie lub przenoszenie pomiędzy bibliotekami, a także eksport i "
+"import do/z plików zewnętrzych. Narzędzie do edycji bibliotek pozwala "
+"również na zarządzanie plikami biblioteki symboli w dość prosty sposób."
 
 #. type: Title ~
 #: Eeschema_component_library_editor.adoc:21
 #, no-wrap
 msgid "Component Library Overview"
-msgstr ""
+msgstr "Biblioteki symboli - Przegląd"
 
 #. type: Plain text
 #: Eeschema_component_library_editor.adoc:25
@@ -444,6 +458,9 @@ msgid ""
 "A component library is composed of one or more components. Generally the "
 "components are logically grouped by function, type, and/or manufacturer."
 msgstr ""
+"Biblioteka symboli składa się z jednego bądź wielu komponentów. Generalnie, "
+"komponenty są logicznie pogrupowane biorąc pod uwagę np. ich funkcję, typ, "
+"bądź producenta."
 
 #. type: Plain text
 #: Eeschema_component_library_editor.adoc:27
@@ -568,7 +585,7 @@ msgstr "Zapisanie go do wybranej biblioteki."
 #: Eeschema_component_library_editor.adoc:60
 #, no-wrap
 msgid "Component Library Editor Overview"
-msgstr ""
+msgstr "Edytor bibliotek symboli - Przegląd"
 
 #. type: Plain text
 #: Eeschema_component_library_editor.adoc:66
@@ -578,13 +595,18 @@ msgid ""
 "editing area. Not all commands are available on the tool bars but can be "
 "accessed using the menus."
 msgstr ""
+"Widok głównego okna edytora bibliotek symboli znajduje się poniżej. Edytor "
+"składa się z trzech pasków narzędzi z szybkim dostępem do podstawowych "
+"narzędzi i obszaru podglądu/edycji komponentów. Nie wszystkie polecenia są "
+"dostępne na paskach narzędzi, ale można uzyskać do nich dostęp za pomocą "
+"menu."
 
 #. type: Plain text
 #: Eeschema_component_library_editor.adoc:68
 msgid ""
 "image:images/100000000000049F000002C20FF41347.png"
 "[100000000000049F000002C20FF41347_png]"
-msgstr ""
+msgstr "image:images/pl/libedit_main_window.png[Ogólny widok edytora]"
 
 #. type: Title ^
 #: Eeschema_component_library_editor.adoc:71
@@ -10321,7 +10343,6 @@ msgstr ""
 
 #. type: Plain text
 #: Eeschema_schematic_creation_and_editing.adoc:455
-#, fuzzy
 msgid "image:images/en/title_block.png[Title block]"
 msgstr "image:images/pl/title_block.png[Tabelka po zmianach]"
 
