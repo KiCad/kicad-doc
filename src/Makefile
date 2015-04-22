@@ -21,7 +21,7 @@ DOCTITLE:= $(shell echo $(DOCNAME)|sed -e 's/_/ /')
 PODIR:=po
 
 #Get list of languages from the list of .po files
-LANGUAGES:= $(shell cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//')
+LANGUAGES:= $(shell if [ -d "$(PODIR)" ]; then cd $(PODIR) ; ls -1 *.po|sed -e 's/\.po//'; fi)
 
 #Get list of generated chapters translated files
 DOCTRANSLATED:= $(foreach trans, $(LANGUAGES), $(wildcard $(DOCNAME)*-$(trans).adoc)) 
