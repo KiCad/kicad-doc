@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-04-22 18:15+0200\n"
-"PO-Revision-Date: 2015-04-22 18:30+0100\n"
+"PO-Revision-Date: 2015-04-24 00:36+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, Kerusey "
 "Karyu\n"
@@ -5065,7 +5065,7 @@ msgstr ""
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:891
 #, no-wrap
 msgid "Bill of Materials Generation"
-msgstr ""
+msgstr "Generowanie list materiałowych (BOM)"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:897
@@ -5074,6 +5074,10 @@ msgid ""
 "components, a BOM can be extracted from it. Here is the plug-in setup window (on "
 "Linux) to create a customized Bill Of Materials (BOM)  file:"
 msgstr ""
+"Ponieważ lista pośrednia sieci zawiera wszystkie informacje o zastosowanych "
+"komponenetach, można na jej podstawie utworzyć listę materiałową (BOM). Poniżej "
+"znajduje się okno z ustawieniami (w systemie Linux) pozwalające utworzyć własny "
+"plik BOM:"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:899
@@ -5088,22 +5092,26 @@ msgid ""
 "are free to modify it according to your needs, and if you develop something "
 "generally useful, ask that it become part of the KiCad project."
 msgstr ""
+"Ścieżka do arkusza stylu bom2csv.xsl jest zależna od systemu operacyjnego. Obecnie "
+"najlepszym arkuszem stylu XSLT do generowania plików BOM jest __bom2csv.xsl__. "
+"Można go zmodyfikować do własnych potrzeb, a jeśli będzie on użyteczny można "
+"zaproponować by stał się częścią projektu KiCad."
 
 #. type: Title ~
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:908
 #, no-wrap
 msgid "Command line format: example for python scripts"
-msgstr ""
+msgstr "Format polecenia: Przykład skryptu Python"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:911
 msgid "The command line format for python is something like:"
-msgstr ""
+msgstr "Linia poleceń dla Python-a wygląda następująco:"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:913
 msgid "python <script file name> <input filename> <output filename>"
-msgstr ""
+msgstr "python <plik_skryptu> <nazwa_pliku_wejściowego> <nazwa_pliku_wyjściowego>"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:915
@@ -5125,7 +5133,7 @@ msgstr "*python /usr/local/kicad/python/my_python_script.py “%I” “%O”*\n
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:923
 msgid "Assuming python is installed on your PC."
-msgstr ""
+msgstr "Zakładając, że Python jest zainstalowany."
 
 #. type: Title ~
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:926
@@ -5443,13 +5451,13 @@ msgstr ""
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1076
 #, no-wrap
 msgid "|*libsource* |name of the lib where this component was found.\n"
-msgstr ""
+msgstr "|*libsource* |Nazwa biblioteki gdzie można dany komponent odnaleźć.\n"
 
 #. type: delimited block |
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1078
 #, no-wrap
 msgid "|*part* |component name inside this library.\n"
-msgstr ""
+msgstr "|*part* |Nazwa komponentu wewnątrz tej biblioteki.\n"
 
 #. type: delimited block |
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1081
@@ -5458,24 +5466,26 @@ msgid ""
 "|*sheetpath* |path of the sheet inside the hierarchy: identify the sheet\n"
 "within the full schematic hierarchy.\n"
 msgstr ""
+"|*sheetpath* |Ścieżka do arkusza wewnątrz hierarchii. Identyfikuje arkusz\n"
+"w całej hierarchii.\n"
 
 #. type: delimited block |
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1083
 #, no-wrap
 msgid "|*tstamps (time stamps)* |time stamp of the schematic file.\n"
-msgstr ""
+msgstr "|*tstamps (time stamps)* |Odcisk czasowy dla pliku schematu.\n"
 
 #. type: delimited block |
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1085
 #, no-wrap
 msgid "|*tstamp (time stamp)* |time stamp of the component.\n"
-msgstr ""
+msgstr "|*tstamp (time stamp)* |Odcisk czasowy dla komponentu.\n"
 
 #. type: Title +
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1089
 #, no-wrap
 msgid "Note about time stamps for components"
-msgstr ""
+msgstr "Uwagi na temat odcisków czasowych dla komponentów"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1097
@@ -5486,6 +5496,11 @@ msgid ""
 "board. This allows the re-annotation of components in a schematic project and does "
 "not loose the link between the component and its footprint."
 msgstr ""
+"Aby zidentyfikować składnik listy sieci (a także na płytce), jest używane jego "
+"oznaczenie i jest ono unikalne dla każdego z komponentów. Jednak KiCad udostępnia "
+"pomocniczą informację by jednoznacznie zidentyfikować komponent i odpowiadający mu "
+"moduł na płytce. Pozwala to na ponowną numerację symboli na schemacie w taki "
+"sposób by nie utracić powiązań pomiędzy komponentem i jego modułem."
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1102
@@ -5494,6 +5509,10 @@ msgid ""
 "project. However, in complex hierarchies, the same sheet is used more than once, "
 "so this sheet contains components having the same time stamp."
 msgstr ""
+"Znacznik czasowy jest unikalnym identyfikatorem dla każdego składnika lub arkusza "
+"schematu w projekcie. Jednak w złożonych hierarchiach, w tym samym arkuszu "
+"składnik może być używany więcej niż raz, a zatem arkusz ten zawiera elementy o "
+"tym samym znaczniku czasowym."
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1106
@@ -5502,12 +5521,15 @@ msgid ""
 "A given component (inside a complex hierarchy) has an unique identifier: the "
 "sheetpath + its tstamp"
 msgstr ""
+"Dany arkusz (wewnątrz złożonej hierarchii) ma jednak unikalny identyfikator: jego "
+"ścieżka wewnętrzna. Dany składnik zaś (wewnątrz złożonej hierarchii) ma unikalny "
+"identyfikator: ścieżka wewnętrzna + jego odcisk czasowy."
 
 #. type: Title ^
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1109
 #, no-wrap
 msgid "The libparts section"
-msgstr ""
+msgstr "Sekcja elementów bibliotecznych"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1114
@@ -5515,21 +5537,24 @@ msgid ""
 "The libparts section has the delimiter <libparts>, and the content of this section "
 "is defined in the schematic libraries. The libparts section contains"
 msgstr ""
+"Sekcja elementów bibliotecznych znajduje się w tagu <libparts>, a dane w tej "
+"sekcji są zdefiniowane w bibliotekach schematu. Dla każdego komponentu sekcja ta "
+"zawiera dane:"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1116
 msgid "The allowed footprints names (names use jokers) delimiter <fp>."
-msgstr ""
+msgstr "Nazwy dozwolonych footprintów (nazwy używają masek), zawarte w tagu <fp>."
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1117
 msgid "The fields defined in the library delimiter <fields>."
-msgstr ""
+msgstr "Pola zdefiniowane w bibliotece, zawarte w tagu <fields>."
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1118
 msgid "The list of pins delimiter <pins>."
-msgstr ""
+msgstr "Lista pinów, zawarte w tagu <pins>."
 
 #. type: delimited block -
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1137
@@ -5577,6 +5602,8 @@ msgid ""
 "Lines like <pin num=\"1\" type=\"passive\"/> give also the electrical pin type. "
 "Possible electrical pin types are"
 msgstr ""
+"Linie jak <pin num=\"1\" type=\"passive\"/> określają również typ elektryczny "
+"pinów. Dostępne są typy:"
 
 #. type: delimited block |
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1155
@@ -5594,12 +5621,23 @@ msgid ""
 "|Open emitter |Open collector sometimes found in logic.\n"
 "|Not connected |Must be left open in schematic\n"
 msgstr ""
+"|Input | Zwykły pin wejściowy\n"
+"|Output | Zwykły pin wyjściowy\n"
+"|Bidirectional | Wejście lub wyjście\n"
+"|Tri-state | Wejście lub wyjście trójstanowe\n"
+"|Passive | Pasywny, zwykle w komponentach biernych\n"
+"|Unspecified | Nieznany\n"
+"|Power input | Wejście zasilania dla komponentu\n"
+"|Power output | Wyjście zasilania z komponentu\n"
+"|Open collector | Otwarty kolektor\n"
+"|Open emitter | Otwarty emiter\n"
+"|Not connected | Musi być pozostawiony niepodłączony\n"
 
 #. type: Title ^
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1159
 #, no-wrap
 msgid "The libraries section"
-msgstr ""
+msgstr "Sekcja bibliotek"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1163
@@ -5607,6 +5645,8 @@ msgid ""
 "The libraries section has the delimiter <libraries>. This section contains the "
 "list of schematic libraries used in the project."
 msgstr ""
+"Sekcja bibliotek znajduje się w tagu <libraries>. Dostarcza ona listę bibliotek "
+"używanych w danym projekcie schematu."
 
 #. type: delimited block -
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1173
@@ -5634,7 +5674,7 @@ msgstr ""
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1177
 #, no-wrap
 msgid "The nets section"
-msgstr ""
+msgstr "Sekcja sieci"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1181
@@ -5642,6 +5682,8 @@ msgid ""
 "The nets section has the delimiter <nets>. This section contains the "
 "“connectivity” of the schematic."
 msgstr ""
+"Sekcja sieci znajduje się w tagu <nets>. Zawiera ona listę wszystkich połączeń na "
+"schemacie."
 
 #. type: delimited block -
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1199
@@ -5684,12 +5726,12 @@ msgstr ""
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1202
 msgid "This section lists all nets in the schematic."
-msgstr ""
+msgstr "Sekcja ta zawiera wszystkie sieci na schemacie."
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1204
 msgid "A possible net is contains the following."
-msgstr ""
+msgstr "Poszczególne sieci są pogrupowane wewnątrz tagu <net>:"
 
 #. type: delimited block -
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1212
@@ -5717,6 +5759,9 @@ msgid ""
 "|name |is a name for this net\n"
 "|node |give a pin reference connected to this net\n"
 msgstr ""
+"|net code |Jest to wewnętrzny identyfikator danej sieci\n"
+"|name |Jest to nazwa danej sieci\n"
+"|node |Zawiera odnośniki do poszczególnych pinów w danej sieci\n"
 
 #. type: Title ~
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:1223
@@ -6179,7 +6224,7 @@ msgstr "Strona WEB W3C XSLT: http://www.w3.org/TR/xslt[http://www.w3.org/TR/xslt
 #: Eeschema_design_verification_with_drc.adoc:4
 #, no-wrap
 msgid "Design verification with electrical rules check"
-msgstr ""
+msgstr "Kontrola reguł projektowych - ERC"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:16
@@ -6191,6 +6236,13 @@ msgid ""
 "design errors is not yet 100% complete. Such a check is very useful, because it "
 "allows you to detect many oversights and small errors."
 msgstr ""
+"Funkcja Kontrola reguł projektowych ERC przeprowadza automatyczne sprawdzenie "
+"poprawności elektrycznej schematu. Wskazuje ona błędy na arkuszu schematu, takie "
+"jak: niepodłączone wyprowadzenia, niepodłączone wyprowadzenia w symbolach "
+"hierarchicznych, zwarcia pomiędzy wyjściami, itp. Naturalnie, sprawdzanie "
+"automatyczne nie jest bezbłędne, a oprogramowanie które mogłoby wykryć wszelkie "
+"błędy nie zostało jeszcze napisane. Aczkolwiek zwykła kontrola jest bardzo "
+"użyteczna, ponieważ pozwala na wykrycie wielu niedopatrzeń oraz małych błędów."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:21
@@ -6200,6 +6252,11 @@ msgid ""
 "declaring electrical pin properties during library creation. ERC output is "
 "reported as “errors” or “warnings”."
 msgstr ""
+"W zasadzie wszystkie wykryte błędy muszą zostać sprawdzone i poprawione przed "
+"kontynuacją dalszej pracy nad projektem. Jakość procesu sprawdzenia jest "
+"bezpośrednio zależna od staranności jaka została podjęta podczas tworzenia "
+"elementów bibliotecznych, zwłaszcza przy definiowaniu typu wyprowadzeń. Błędy "
+"raportowane przez ERC mogą mieć status “błędów” lub “ostrzeżeń”."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:23
@@ -6213,7 +6270,7 @@ msgstr "image:images/pl/erc_dialog.png[Okno kontroli ERC]"
 #: Eeschema_design_verification_with_drc.adoc:26
 #, no-wrap
 msgid "How to use ERC"
-msgstr ""
+msgstr "Używanie narzędzia testu ERC"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:30
@@ -6221,6 +6278,8 @@ msgid ""
 "ERC can be started by clicking on the icon image:"
 "images/100000000000002700000023737FA05C.png[100000000000002700000023737FA05C_png]."
 msgstr ""
+"ERC można uruchomić klikając w ikonę image:images/100000000000002700000023737FA05C."
+"png[100000000000002700000023737FA05C_png]."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:33
@@ -6228,11 +6287,13 @@ msgid ""
 "Warnings are placed on the schematic elements rising an ERC error (pins, or "
 "labels)."
 msgstr ""
+"Ostrzeżenia są umieszczane na elementach schematu, które spowodowały błąd ERC "
+"(piny lub etykiety)."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:35
 msgid "Notes:"
-msgstr ""
+msgstr "Uwagi:"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:38
@@ -6240,6 +6301,9 @@ msgid ""
 "In this dialog window, when clicking on an error message you can jump to the "
 "corresponding marker in schematic."
 msgstr ""
+"Kliknięcie w informację o błędzie w tym oknie dialogowym spowoduje, że kursor "
+"zostanie przeniesiony do miejsca w którym znajduje się znacznik tego błędu na "
+"schemacie."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:40
@@ -6247,17 +6311,19 @@ msgid ""
 "In the schematic right click on a marker to access the corresponding diagnostic "
 "message."
 msgstr ""
+"Na schemacie, kliknięcie prawym klawiszem na znacznik błędu umożliwia dostęp do "
+"informacji o powodzie błędu."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:42
 msgid "You can also delete error markers from the dialog."
-msgstr ""
+msgstr "Można także kasować znaczniki ERC z okna dialogowego."
 
 #. type: Title ~
 #: Eeschema_design_verification_with_drc.adoc:45
 #, no-wrap
 msgid "Example of ERC"
-msgstr ""
+msgstr "Przykład testu ERC"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:48
@@ -6267,17 +6333,17 @@ msgstr "image:images/erc_pointers.png[Znaczniki błędów na schemacie]"
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:50
 msgid "Here you can see four errors:"
-msgstr ""
+msgstr "Na powyższym obrazku można zobaczyć cztery błędy:"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:52
 msgid "Two outputs have been erroneously connected together (red arrow)."
-msgstr ""
+msgstr "Dwa wyjścia zostały błędnie połączone razem (czerwona strzałka)."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:53
 msgid "Two inputs have been left unconnected (green arrow)."
-msgstr ""
+msgstr "Dwa wejścia zostały niepodłączone (zielone strzałki)."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:55
@@ -6285,12 +6351,14 @@ msgid ""
 "There is an error on an invisible power port, power flag is missing (green arrow "
 "on the top)."
 msgstr ""
+"Jest też błąd na niewidocznym pinie zasilania, wskazujący na brak flagi zasilania "
+"(zielona strzałka na górze)."
 
 #. type: Title ~
 #: Eeschema_design_verification_with_drc.adoc:58
 #, no-wrap
 msgid "Displaying diagnostics"
-msgstr ""
+msgstr "Wyświetlanie informacji o znaczniku błędu"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:62
@@ -6298,6 +6366,8 @@ msgid ""
 "By right clicking on a marker the pop menu allows to access the ERC marker "
 "diagnostic window."
 msgstr ""
+"Klikając prawym klawiszem na znaczniku błędu można z menu podręcznego wywołać "
+"okienko z informacją o tym błędzie ERC."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:64
@@ -6309,6 +6379,8 @@ msgstr "image:images/pl/erc_pointers_info.png[Informacja o błędzie ERC]"
 msgid ""
 "and when clicking on Marker Error Info you can get a description of the error."
 msgstr ""
+"Wybierając polecenie Informacja o znaczniku błędu można zobaczyć dokładniejszy "
+"jego opis."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:69
@@ -6321,7 +6393,7 @@ msgstr "image:images/pl/erc_pointer_dialog.png[Okno z informacją o błędzie ER
 #: Eeschema_design_verification_with_drc.adoc:72
 #, no-wrap
 msgid "Power flags and Power flags"
-msgstr ""
+msgstr "Piny zasilania i flagi zasilania"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:78
@@ -6331,6 +6403,12 @@ msgid ""
 "provided by connectors, that are not power sources (like regulator output, which "
 "is declared as Power out)."
 msgstr ""
+"Dosyć często występuje błąd (ostrzeżenie) na wyprowadzeniach zasilania, podczas "
+"gdy na pierwszy rzut oka wszystko wydaje się poprawne (patrz przykład powyżej). To "
+"dlatego, że w większości projektów zasilanie jest dostarczane przez złączki, które "
+"nie są źródłami zasilania gdyż ich wyprowadzenia mają funkcje pasywną (nie tak jak "
+"na przykład wyjście regulatora napięcia, którego piny są zwykle zadeklarowane jako "
+"źródło zasilania)."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:81
@@ -6338,6 +6416,8 @@ msgid ""
 "The ERC thus won't detect any Power out pin to control this wire and will declare "
 "them not driven by a power source."
 msgstr ""
+"ERC wobec tego nie znajduje żadnego źródła zasilania do wysterowania takiej sieci "
+"i uzna ją za nie wysterowaną (nie połączoną ze źródłem zasilania)."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:84
@@ -6345,6 +6425,9 @@ msgid ""
 "To avoid this warning you have to place a “PWR_FLAG” on such a power port. Take a "
 "look at the following example."
 msgstr ""
+"W takich przypadkach należy do takiej sieci przypiąć specjalny element: flagę "
+"“PWR_FLAG” z biblioteki power.lib, która sygnalizuje, że ta sieć jest w istocie "
+"źródłem zasilania."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:86
@@ -6359,6 +6442,8 @@ msgstr ""
 #: Eeschema_design_verification_with_drc.adoc:88
 msgid "The error marker will then disappear."
 msgstr ""
+"Po umieszczeniu na szynach zasilania tej flagi, błędy związane z brakiem "
+"sterowania powinny zniknąć podczas ponownej kontroli ERC."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:93
@@ -6368,12 +6453,17 @@ msgid ""
 "normal attribute is power in), so grounds never appear connected to a power source "
 "without a pwr_flag."
 msgstr ""
+"W większości przypadków, PWR_FLAG musi zostać podpięta do sieci GND, ponieważ  "
+"regulatory napięć posiadają co prawda wyjścia zadeklarowane jako źródło zasilania, "
+"ale ich wyprowadzenia masy (GND) zwykle nigdy nie są źródłami zasilania (normalny "
+"atrybut to wejście zasilania). Tak więc, masy nigdy nie występują jako źródła "
+"zasilania bez podpiętej PWR_FLAG."
 
 #. type: Title ~
 #: Eeschema_design_verification_with_drc.adoc:96
 #, no-wrap
 msgid "Configuration"
-msgstr ""
+msgstr "Konfiguracja"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:100
@@ -6381,6 +6471,10 @@ msgid ""
 "_The Options_ panel allows you to configure connectivity rules to define "
 "electrical conditions for errors and warnings check."
 msgstr ""
+"_Panel opcji_ pozwala na skonfigurowanie reguł jakimi się ma kierować ERC w "
+"określonych przypadkach zestawienia połączenia, i czy w danym przypadku ma zostać "
+"wygenerowany błąd czy tylko ostrzeżenie, albo też takie zestawienie nie powinno "
+"generować błędu."
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:102
@@ -6396,12 +6490,17 @@ msgid ""
 "Rules can be changed by clicking on the desired square of the matrix, causing it "
 "to cycle through the choices : normal, warning, error."
 msgstr ""
+"Poszczególne reguły mogą zostać zmienione poprzez kliknięcie na wybranym polu na "
+"powyższej matrycy. Kolejne kliknięcia pozwalają na wybranie: brak błędu (zielony), "
+"ostrzeżenie (żółty, W) i błąd (czerwony, E). Zmiany odbywają się w zamkniętym "
+"cyklu, zatem aby wrócić do poprzedniego stanu należy ponownie kliknąć (jedno- lub "
+"dwukrotnie)."
 
 #. type: Title ~
 #: Eeschema_design_verification_with_drc.adoc:108
 #, no-wrap
 msgid "ERC report file"
-msgstr ""
+msgstr "Plik raportu ERC"
 
 #. type: Plain text
 #: Eeschema_design_verification_with_drc.adoc:113
@@ -6410,12 +6509,15 @@ msgid ""
 "report. The file extension for ERC report files is .erc. Here is an example of ERC "
 "report file."
 msgstr ""
+"Plik raportu ERC może zostać wygenerowany i zapisany poprzez zaznaczenie opcji "
+"_Utwórz plik raportu_. Pliki takie są zapisywane z rozszerzeniem .erc. Poniżej "
+"znajduje się przykład zawartości takiego pliku:"
 
 #. type: delimited block -
 #: Eeschema_design_verification_with_drc.adoc:116
 #, no-wrap
 msgid "ERC control (4/1/1997-14:16:4)\n"
-msgstr "ERC control (4/1/1997-14:16:4)\n"
+msgstr "Raport ERC (2011-09-24 08:46:02)\n"
 
 #. type: delimited block -
 #: Eeschema_design_verification_with_drc.adoc:122
@@ -6427,17 +6529,24 @@ msgid ""
 "ERC: Warning: BiDir Pin connected to power Pin (Net 6) @ 10.100, 3.300\n"
 "ERC: Warning: Power Pin connected to BiDir Pin (Net 6) @ 4.950, 1.400\n"
 msgstr ""
-"***** Sheet 1 (INTERFACE UNIVERSAL)\n"
-"ERC: Warning Pin input Unconnected @ 8.450, 2.350\n"
-"ERC: Warning passive Pin Unconnected @ 8.450, 1.950\n"
-"ERC: Warning: BiDir Pin connected to power Pin (Net 6) @ 10.100, 3.300\n"
-"ERC: Warning: Power Pin connected to BiDir Pin (Net 6) @ 4.950, 1.400\n"
+"***** Arkusz / (Root)\n"
+"ErrType(2): Pin nie jest podłączony (i nie ma przypisanego symbolu \"Niepołączone\")\n"
+"    @ (3,2500 \",3,0500 \"): Element U10, Pin 5 (input) nie jest połączony\n"
+"ErrType(3): Pin podłączony do innych pinów ale nie ma pinu sterującego\n"
+"    @ (3,6500 \",2,4000 \"): Element U10, pin 7 (power_in) nie jest sterowany (sieć 6)\n"
+"ErrType(3): Pin podłączony do innych pinów ale nie ma pinu sterującego\n"
+"    @ (3,6500 \",2,7500 \"): Element U10, pin 14 (power_in) nie jest sterowany (sieć 5)\n"
+"ErrType(5): BŁĄD: Konflikt pomiędzy pinami.\n"
+"    @ (4,4500 \",2,2000 \"): Element U10: Pin 3 (output) połączony z\n"
+"    @ (4,4500 \",2,9500 \"): Element U10: Pin 6 (output) (sieć 2)\n"
+"ErrType(2): Pin nie jest podłączony (i nie ma przypisanego symbolu \"Niepołączone\")\n"
+"    @ (3,2500 \",2,8500 \"): Element U10, Pin 4 (input) nie jest połączony\n"
 
 #. type: delimited block -
 #: Eeschema_design_verification_with_drc.adoc:124
 #, no-wrap
 msgid ">> Errors ERC: 4\n"
-msgstr ">> Errors ERC: 4\n"
+msgstr ">> Błędy ERC: 5\n"
 
 #. type: Title -
 #: Eeschema_general_top_toolbar.adoc:4
@@ -7981,7 +8090,6 @@ msgstr ""
 
 #. type: Plain text
 #: Eeschema_generic_commands.adoc:255
-#, fuzzy
 msgid ""
 "The detailed use of these tools is described in the chapter “Diagram Creation/"
 "Editing”. An outline of their use is given below."
@@ -9055,7 +9163,7 @@ msgstr ""
 #. type: Plain text
 #: Eeschema_hierarchical_schematics.adoc:330
 msgid "Here is the two pages, connected by global labels."
-msgstr ""
+msgstr "Poniżej znajdują się dwa arkusze, połączone za pomocą etykiet globalnych."
 
 #. type: Plain text
 #: Eeschema_hierarchical_schematics.adoc:332
@@ -9083,6 +9191,10 @@ msgid ""
 "png[100000000000009B00000079AC689E05_png] +-----------------------"
 "+----------------------------------------+"
 msgstr ""
+"+-----------------------+----------------------------------------+ | Widok na "
+"etykiety globalne | image:images/100000000000009B00000079AC689E05."
+"png[100000000000009B00000079AC689E05_png] +-----------------------"
+"+----------------------------------------+"
 
 #. type: Title -
 #: Eeschema_introduction.adoc:3
