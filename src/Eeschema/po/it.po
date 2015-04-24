@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2015-04-22 18:15+0200\n"
+"POT-Creation-Date: 2015-04-24 17:03+0200\n"
 "PO-Revision-Date: 2015-04-22 18:28+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -2484,10 +2484,213 @@ msgstr ""
 msgid "Also note that the equipotential GND must be named 0 (zero) for Pspice."
 msgstr ""
 
-#. type: Plain text
+#. type: Title ~
 #: Eeschema_create_a_netlist.adoc:238
-msgid "Other formats, using «plugins»"
+#, no-wrap
+msgid "Other formats, using plugins"
 msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:243
+msgid ""
+"For other netlist formats you can add netlist converters. These converters "
+"are automatically launched by Ee schema. Chapter 14 gives some explanations "
+"and examples of converters."
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:249
+msgid ""
+"A converter is a text file (xsl format) but one can use other languages like "
+"Python. When using the xsl format, a tool (xsltproc.exe or xsltproc) read "
+"the intermediate file created by Eeschema, and the converter file to create "
+"the output file. In this case, the converter file (a sheet style) is very "
+"small and very easy to write."
+msgstr ""
+
+#. type: Title ^
+#: Eeschema_create_a_netlist.adoc:252
+#, no-wrap
+msgid "Init the dialog window"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:255
+msgid "You can add a new netlist plug-in via the Add Plugin tab."
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:257
+#, fuzzy
+#| msgid ""
+#| "image:images/100000000000034B000000221D3CBEF3."
+#| "png[100000000000034B000000221D3CBEF3_png]"
+msgid ""
+"image:images/10000000000000DA000000C6E73B58D7."
+"png[10000000000000DA000000C6E73B58D7_png]"
+msgstr ""
+"image:images/100000000000034B000000221D3CBEF3."
+"png[100000000000034B000000221D3CBEF3_png]"
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:259
+msgid "Here is the plug-in PadsPcb setup window"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:261
+#, fuzzy
+#| msgid ""
+#| "image:images/100000000000034B000000221D3CBEF3."
+#| "png[100000000000034B000000221D3CBEF3_png]"
+msgid ""
+"image:images/100000000000021300000103755CDB21."
+"png[100000000000021300000103755CDB21_png]"
+msgstr ""
+"image:images/100000000000034B000000221D3CBEF3."
+"png[100000000000034B000000221D3CBEF3_png]"
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:263
+msgid "The setup will require:"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:265
+msgid "A title (for instance: the name of the netlist format)."
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:266
+msgid "The plug-in to launch."
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:268
+msgid "When the netlist is generated:"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:270
+msgid "Eeschema creates an intermediate file *.tmp, for instance test.tmp."
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:271
+msgid "Eeschema run the plug-in, which reads test.tmp and creates test.net."
+msgstr ""
+
+#. type: Title ^
+#: Eeschema_create_a_netlist.adoc:274
+#, no-wrap
+msgid "Command line format"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:278
+msgid ""
+"Here is an example, using xsltproc.exe as tool to convert .xsl files, and a "
+"file netlist_form_pads-pcb.xsl as converter sheet style:"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:281
+#, no-wrap
+msgid ""
+"*f:/kicad/bin/xsltproc.exe -o %O.net\n"
+"f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl %I*\n"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:283
+msgid "With:"
+msgstr ""
+
+#. type: delimited block |
+#: Eeschema_create_a_netlist.adoc:287
+#, no-wrap
+msgid "|f:/kicad/bin/xsltproc.exe |A tool to read and convert xsl file\n"
+msgstr ""
+
+#. type: delimited block |
+#: Eeschema_create_a_netlist.adoc:289
+#, no-wrap
+msgid "|-o %O.net |Output file: %O will define the output file.\n"
+msgstr ""
+
+#. type: delimited block |
+#: Eeschema_create_a_netlist.adoc:292
+#, no-wrap
+msgid ""
+"|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |File name converter (a\n"
+"sheet style, xsl format).\n"
+msgstr ""
+
+#. type: delimited block |
+#: Eeschema_create_a_netlist.adoc:295
+#, no-wrap
+msgid ""
+"|%I |Will be replaced by the intermediate file created by Eeschema\n"
+"(*.tmp).\n"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:298
+msgid "For a schematic named test.sch, the actual command line is:"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:301
+msgid ""
+"f:/kicad/bin/xsltproc.exe -o test.net f:/kicad/bin/plugins/netlist_form_pads-"
+"pcb.xsl test.tmp."
+msgstr ""
+
+#. type: Title ^
+#: Eeschema_create_a_netlist.adoc:304
+#, no-wrap
+msgid "Converter and sheet style (plug in)"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:310
+msgid ""
+"This is a very simple piece of software, because its purpose is only to "
+"convert an input text file (the intermediate text file) to an other text "
+"file. Moreover, from the intermediate text file, you can create a BOM list."
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:313
+msgid ""
+"When using xsltproc as converter tool only the sheet style will be generated."
+msgstr ""
+
+#. type: Title ^
+#: Eeschema_create_a_netlist.adoc:316
+#, no-wrap
+msgid "Intermediate netlist file format"
+msgstr ""
+
+#. type: Plain text
+#: Eeschema_create_a_netlist.adoc:320
+msgid ""
+"See Chapter 14 for more explanations about xslproc, the descriptions of "
+"intermediate file format, and some examples of sheet style for converters."
+msgstr ""
+
+#. type: Title -
+#: Eeschema_creating_customized_netlists_and_bom_files.adoc:4
+#, no-wrap
+msgid "Creating Customized Netlists and BOM Files"
+msgstr ""
+
+#. type: Title ~
+#: Eeschema_creating_customized_netlists_and_bom_files.adoc:8
+#, fuzzy, no-wrap
+#| msgid "Create a Netlist"
+msgid "Intermediate Netlist File"
+msgstr "Creazione di una netlist"
 
 #. type: Plain text
 #: Eeschema_creating_customized_netlists_and_bom_files.adoc:12
@@ -5898,7 +6101,6 @@ msgstr ""
 #. type: Target for macro image
 #: Eeschema_generic_commands.adoc:93
 #, no-wrap
-#| msgid "images/en/menu_path_hotkey_editor.png"
 msgid "images/en/shortcuts_editor.png"
 msgstr ""
 
