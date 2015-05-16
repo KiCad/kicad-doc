@@ -13,7 +13,7 @@ development of sophisticated electronic printed circuit boards._
 [[copyright]]
 *Copyright*
 
-This document is Copyright © 2010–2011 by its contributors as listed
+This document is Copyright © 2010–2015 by its contributors as listed
 below. You may distribute it and/or modify it under the terms of either
 the GNU General Public License (http://www.gnu.org/licenses/gpl.html),
 version 3 or later, or the Creative Commons Attribution License
@@ -24,7 +24,7 @@ All trademarks within this guide belong to their legitimate owners.
 [[contributors]]
 *Contributors*
 
-David Jahshan, Phil Hutchinson, Fabrizio Tappero, Christina Jarron.
+David Jahshan, Phil Hutchinson, Fabrizio Tappero, Christina Jarron, Melroy van den Berg.
 
 [[feedback]]
 *Feedback*
@@ -43,9 +43,9 @@ https://launchpad.net/~kicad-developers
 
 None
 
-*Publication date and software version*
+*Publication date*
 
-Published on September 27, 2011 Based on LibreOffice 3.3.2.
+2015, May 16.
 
 *Note for Mac users*
 
@@ -62,12 +62,14 @@ tools:
 
 [cols=",",]
 |===================================
-|KiCad |project manager
-|EESchema |schematic editor
-|CVpcb |footprint selector
-|PCBnew |circuit board layout editor
+|KiCad |Project manager
+|EESchema |Schematic Editor (both schematic and component)
+|CVpcb |Footprint selector
+|PCBnew |Circuit Board board Editor
 |GerbView |Gerber viewer
-|Bitmap2Component |component maker
+|Bitmap2Component |Convert bitmap images to components or footprints
+|PCB Calculator |Calculator for components, track width, Electrical Spacing, Color Codes, and more...
+|PI Editor |Worksheet layout Editor
 |===================================
 
 At the time of writing, KiCad can be considered mature enough to be used
@@ -86,17 +88,17 @@ On the Internet, the home of KiCad is:
 
 http://iut-tice.ujf-grenoble.fr/kicad/index.html
 
-http://www.gipsa-lab.inpg.fr/realise_au_lis/kicad/index.html
+The new website is:
+    
+http://www.kicad-pcb.org/
 
 [[download-and-install-kicad]]
 Download and install KiCad
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-KiCad runs on Linux, Apple OS X and Windows. You can download a copy of
-KiCad from:
-
-Installation instructions are available on the KiCad website under:
-__Infos/Install__.
+KiCad runs on GNU/Linux, Apple OS X and Windows. You can download a copy of KiCad from:
+    
+http://www.kicad-pcb.org/display/KICAD/Installing+KiCad
 
 *Whatever installation method you choose, always go for a recent version
 of KiCad.*
@@ -105,11 +107,11 @@ of KiCad.*
 Under Linux
 ~~~~~~~~~~~
 
-Under Linux, the easiest way to install KiCad is via __Aptitude__. Type
+Under Linux, the easiest way to install KiCad (daily build) is via __Aptitude__. Type
 into your Terminal:
 
 __________________________________________________
-sudo add-apt-repository ppa:paxer/ppa
+sudo add-apt-repository ppa:js-reynaud/ppa-kicad 
 
 sudo aptitude update && sudo aptitude safe-upgrade
 
@@ -117,7 +119,7 @@ sudo aptitude install kicad kicad-doc-en
 __________________________________________________
 
 At the time of writing, the standard _apt-get_ repository of Ubuntu
-offers a version of KiCad that is about one year old.
+offers a version of KiCad that is about two years old.
 
 Alternatively, you can download and install a pre-compile version of
 KiCad, or directly download the source code, compile and install KiCad.
@@ -127,10 +129,19 @@ Under Apple OS X
 ~~~~~~~~~~~~~~~~
 
 At the time of writing, the best way to install KiCad on Apple OS X is
-to download a pre-build binary from:
+to download a nightly pre-build binary from:
+    
+http://downloads.kicad-pcb.org/osx/
+
+[[under-Windows]]
+Under Windows
+~~~~~~~~~~~
+For Windows you can find the most recent build at:
+    
+http://www2.futureware.at/~nickoe/
 
 [[kicad-work-flow]]
-KiCad work-flow
+KiCad Workflow
 ---------------
 
 Despite its similarities with other PCB software tools, KiCad is
@@ -144,16 +155,21 @@ library are necessary for these two tasks. KiCad has plenty of both.
 Just in case that is not enough, KiCad also has the tools necessary to
 make new ones.
 
-image:images/10000000000004DD000002BDCE77181D.png[10000000000004DD000002BDCE77181D_png]
+In the picture below, you see a flowchart representing the KiCad work-flow. 
+The picture explains which steps you need to take, in which order. 
+When applicable, the icon is added as well for convenience.
 
-In the picture above, the greyed out blocks indicate component-drawing
-and footprint-drawing tools that are not strictly part of KiCad.
-However, since they are all very valuable options, do not forget to
-check them out. You can find some at this address:
+image:images/kicad_flowchart.png[KiCad Flowchart]
 
+
+For more information about creating a component, see section of this document titled __Make schematic components in KiCad__. And for more info about how to create a new footprint, see section of this document titled __Make component footprints__.
+
+
+On the following site:
+    
 http://kicad.rohrbacher.net/quicklib.php
 
-On this site, you will find an example of a tool that allows you to
+You will find an example of a tool that allows you to
 quickly create a KiCad library component. For more information about
 quicklib, refer to the section of this document titled __Make Schematic
 Component With quicklib__.
@@ -188,12 +204,12 @@ schematic using KiCad.
 
 1. Under Windows run kicad.exe. Under Linux type kicad in your
 Terminal. You are now in the main window of the KiCad project manager.
-From here you have access to five stand-alone software tools:
-__EESchema__, __Cvpcb__, __PCBnew__, _GerbView_ and
-__Bitmap2Component__. Refer to the work-flow chart for an idea of what
-all these tools are used for.
+From here you have access to eight stand-alone software tools:
+__EESchema__, __Schematic Library Editor__, __PCBnew__, __PCB Footprint Editor__, __GerbView__, 
+__Bitmap2Component__, __PCB Calulator__ and __PI Editor__. Refer to the work-flow chart to give you an idea
+how the main tools are used.
 +
-image:images/kicad_main_window.png[kicad_main_window_png]
+image:images/kicad_main_window.png[KiCad Main Window]
 
 2. Create a new project: *File* -> **New**. Click on the 'New Folder'
 button, and give your new folder the same name as your project: 'tute1'.
@@ -680,9 +696,9 @@ all GND connections in one go using a ground plane placed on the bottom
 copper (called __Back__) of the board.
 
 13. Now we must choose which copper layer we want to work on. Select
-'Front' in the drag down menu on the top toolbar. This is the top copper
+'F.Cu (PgUp)' in the drag down menu on the top toolbar. This is the front top copper
 layer.
-image:images/10000000000000D30000010D5271F1F8.png[10000000000000D30000010D5271F1F8_png]
+image:images/select_top_copper.png[Select the Front top copper layer]
 
 14. If you decide, for instance, to do a 4 layer PCB instead, go to
 *Design Rules* -> *Layers Setup* and change 'Copper Layers' to 4. In the
@@ -694,9 +710,10 @@ Notice that there are very useful presets that can be selected via the
 image:images/add_tracks.png[add_tracks_png] on the right toolbar. Click
 on pin 1 of 'J1' and run a track to pad 'R2'. Double-click to set the
 point where the track will end. The width of this track will be the
-default 0.203 mm. You can change the track width from the drop-down menu
+default 0.250 mm. You can change the track width from the drop-down menu
 in the top toolbar. Mind that by default you have only one track width
-available. image:images/pcbnew_1.png[pcbnew_1_png]
+available. 
+image:images/pcbnew_1.png[pcbnew_1_png]
 
 16. If you would like to add more track widths g o to: *Design Rules* ->
 *Design Rules* -> *Global Design Rules* tab and at the bottom right of
@@ -905,7 +922,7 @@ editor sheet just below the 'MYCONN3' label.
 3.  In the Pin Properties window that appears, set the pin name to
 'VCC', set the pin number to '1', and the 'Electrical type' to 'Power
 output' then click OK.
-image:images/10000000000001F0000001553F56DF17.png[10000000000001F0000001553F56DF17_png]
+image:images/pin_properties.png[Pin Properties]
 
 4.  Place the pin by clicking on the location you would like it to go,
 right below the 'MYCONN3' label.
@@ -1173,7 +1190,7 @@ the 'Display' value to 'Invisible'.
 right toolbar. Click on the working sheet to place the pad. Right click
 on the new pad and click 'Edit Pad'. You can otherwise use the e key
 shortcut.
-image:images/10000000000003320000023622705DB3.png[10000000000003320000023622705DB3_png]
+image:images/pad_properties.png[Pad Properties]
 
 5.  Set the 'Pad Num' to '1', 'Pad Shape' to 'Rect', 'Pad Type' to
 'SMD', 'Shape Size X' to '0.4', and 'Shape Size Y' to '0.8'. Click OK.
@@ -1353,3 +1370,6 @@ KiCad Frequently Asked Questions (FAQ)
 
 A very good and frequently updated source of information is the KiCad
 FAQ list available at this Internet addess:
+    
+http://www.kicad-pcb.org/display/KICAD/Frequently+Asked+Questions
+
