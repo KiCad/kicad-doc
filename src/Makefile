@@ -174,6 +174,7 @@ $(DOCNAME)-%-docinfo.xml:
 #English epub
 $(DOCNAME).epub: $(DOCNAME).adoc $(DOCCHAPTERS) $(DOCNAME)-docinfo.xml
 	a2x -f epub -a docinfo $(DOCNAME).adoc
+	rm $(DOCNAME)-docinfo.xml
 
 #I18n epub
 $(DOCNAME)-%.epub: $(DOCNAME)-%.adoc $(DOCNAME)-%-docinfo.xml
