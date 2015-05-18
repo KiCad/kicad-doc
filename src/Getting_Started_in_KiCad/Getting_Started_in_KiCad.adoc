@@ -31,12 +31,12 @@ David Jahshan, Phil Hutchinson, Fabrizio Tappero, Christina Jarron, Melroy van d
 
 Please direct any comments or suggestions about this document to:
 
-Fabrizio Tappero: fabrizio.tappero<at>gmail.com or David Jahshan:
-kicad<at>iridec.com.au
+Fabrizio Tappero: fabrizio.tappero<at>gmail.com, David Jahshan:
+kicad<at>iridec.com.au, or Melroy van den Berg: webmaster1989<at>gmail.com
 
 Alternatively, submit comments or your new version to:
 
-https://launchpad.net/~kicad-developers
+https://github.com/ciampix/kicad-doc
 
 [[acknowledgments]]
 *Acknowledgments*
@@ -78,9 +78,11 @@ subset of the files that kicad works with that is usefull for the basic
 understanding of which files are used for each KiCad unique
 application.
 
-At the time of writing, KiCad can be considered mature enough to be used
+KiCad can be considered mature enough to be used
 for the successful development and maintenance of complex electronic
-boards. KiCad does not present any board-size limitation and it can
+boards. 
+
+KiCad does not present any board-size limitation and it can
 easily handle up to 16 copper layers and up to 12 technical layers.
 KiCad can create all the files necessary for building printed boards,
 Gerber files for photo-plotters, drilling files, component location
@@ -111,10 +113,10 @@ http://www.kicad-pcb.org/display/KICAD/Installing+KiCad
 version of KiCad.*
 
 [[under-linux]]
-Under Linux
-~~~~~~~~~~~
+Under GNU/Linux
+~~~~~~~~~~~~~~~
 
-Under Linux, the easiest way to install KiCad (daily build) is via __Aptitude__. Type
+Under GNU/Linux, the easiest way to install KiCad (daily build) is via _PPA_ and __Aptitude__. Type
 into your Terminal:
 
 __________________________________________________
@@ -147,6 +149,17 @@ For Windows you can find the most recent build at:
     
 http://www2.futureware.at/~nickoe/
 
+[[support]]
+Support
+~~~~~~~
+If you got ideas, remarks or questions / you need help... Either:
+
+* Read the http://www.kicad-pcb.org/display/KICAD/Frequently+Asked+Questions[FAQ]
+* Visit the https://forum.kicad.info/[Forum]
+* Join the http://webchat.freenode.net/?channels=kicad[#kicad IRC channel] on Freenode
+* Watch http://www.kicad-pcb.org/display/KICAD/Tutorials[Tutorials]
+
+
 [[kicad-work-flow]]
 KiCad Workflow
 --------------
@@ -166,7 +179,7 @@ In the picture below, you see a flowchart representing the KiCad work-flow.
 The picture explains which steps you need to take, in which order. 
 When applicable, the icon is added as well for convenience.
 
-image:images/kicad_flowchart.png[KiCad Flowchart]
+image:images/kicad_flowchart.png["KiCad Flowchart"]
 
 
 For more information about creating a component, see section of this
@@ -242,7 +255,7 @@ mouse wheel to zoom in.
 
 5. We will now place our first component. Click on the 'Add components'
 icon
-image:images/100002010000001A0000001ACFBFFF00.png[100002010000001A0000001ACFBFFF00_png]
+image:images/add_component.png[Add component Icon]
 in the right toolbar. The same functionality is achieved by pressing the
 'Add components' shortcut a key.
 +
@@ -276,7 +289,7 @@ over the component and pressing the v key. Alternatively, the e key will
 take you to the more general Edit window. Notice how the right-click
 window below shows all possible shortcut keys for all available actions.
 +
-image:images/100000000000026B000001BD635CBA2F.png[100000000000026B000001BD635CBA2F_png]
+image:images/edit_component_dropdown.png[Edit component menu]
 
 11. The Component value window will appear. Replace the current value
 'R' with '1k'. Click OK.
@@ -285,7 +298,7 @@ NOTE: Do not change the Reference field (R?), this will be done
 automatically later on. The value inside the resistor should now be
 '1k'.
 +
-image:images/10000000000000B0000000463CCB103A.png[10000000000000B0000000463CCB103A_png]
+image:images/resistor_value.png[Resistor Value]
 
 12. To place another resistor, simply click where you want the resistor
 to appear. The Component Selection window will appear again.
@@ -293,7 +306,7 @@ to appear. The Component Selection window will appear again.
 13. The resistor you previously chose is now in your history list,
 appearing as 'R'. Click OK and place the component.
 +
-image:images/100000000000016C000000E147EEA45E.png[100000000000016C000000E147EEA45E_png]
+image:images/component_history.png[Component history]
 
 14. In case you make a mistake and want to delete a component, right
 click on the component and click 'Delete Component'. This will remove
@@ -384,9 +397,9 @@ look something like this:
 +
 image:images/1000000000000303000002A0130916D9.png[1000000000000303000002A0130916D9_png]
 
-29. Next, we will wire all our components. Click on the 'Place a wire'
+29. Next, we will wire all our components. Click on the 'Place wire'
 icon
-image:images/100002010000001A0000001A10CC204F.png[100002010000001A0000001A10CC204F_png]
+image:images/add_line.png[Place wire]
 on the right toolbar. **NOTE**: Be careful not to pick 'Place a bus',
 which appears directly beneath this button but has thicker lines. The
 section _Bus Connections in KiCad_ will explain how to use a bus
@@ -530,7 +543,7 @@ check your components to make sure that the dimensions match.
 52. You are done. You can now update your netlist file with all the
 associated footprints. Click on *File* -> **Save As**. The default name
 'tute1.net' is fine, click save. Otherwise you can use the icon
-image:images/100002010000001A0000001AF4CF46A1.png[100002010000001A0000001AF4CF46A1_png].
+image:images/save.png[Save icon].
 Your netlist file has now been updated with all the footprints. Note
 that if you are missing the footprint of any device, you will need to
 make your own footprints. This will be explained in a later section of
@@ -549,12 +562,38 @@ easily inspect, edit or script.
 NOTE: Library files (__*.lib__) are text files too and they are also
 easily editable or scriptable.
 
-56. To create a bill of materials, go to the _EESchema_ schematic editor
+56. To create a Bill Of Materials (BOM), go to the _EESchema_ schematic editor
 and click on the 'Bill of materials' icon image:images/bom.png[bom_png]
 on the top toolbar.
++
+By default there is no plugin active. You add one, by clicking on *Add Plugin* button.
+Select the *.xsl file you want to use, in this case, we select __bom2csv.xsl__.
++
+[NOTE]
+=====================================================================
+The *.xsl file is located in __plugins__ directory of the Kicad installation, which is located at: /usr/lib/kicad/plugins/.
 
-57. Click OK and then 'Save'. You can inspect the bill of materials with
-any text editor.
+Or get the file via:
+---------
+wget https://raw.githubusercontent.com/KiCad/kicad-source-mirror/master/eeschema/plugins/bom2csv.xsl
+---------
+=====================================================================
++
+.KiCad automatically generates the command, for example:
+---------
+xsltproc -o "%O" "/home/<user>/kicad/eeschema/plugins/bom2csv.xsl" "%I"
+---------
++
+.You may want to add the extension, so change this command line to:
+---------
+xsltproc -o "%O.csv" "/home/<user>/kicad/eeschema/plugins/bom2csv.xsl" "%I"
+---------
++
+Press Help button for more info.
+
+57. Now press 'Generate'. The file (same name as your project) is located in your project folder.
+
+Open the **.csv* file with LibreOffice Calc or Excel. An import window will appear, press OK.
 
 You are now ready to move to the PCB layout part, which is presented in
 the next section. However, before moving on let's take a quick look at
@@ -583,10 +622,10 @@ can make your life a lot easier.
 and CONN_3 and you are done. If you proceed and make a PCB you will see
 that the three connectors are connected to each other. Figure 2 shows
 the result of what we described. For aesthetic purposes it is also
-possible to add a series of 'Wire to bus entry' using the icon
-image:images/100000000000001C0000001CA8839A4E.png[100000000000001C0000001CA8839A4E_png]
+possible to add a series of 'Place wire to bus entry' using the icon
+image:images/add_line2bus.png[Place wire to bus entry]
 and bus line using the icon
-image:images/100000000000001C0000001C232C9272.png[100000000000001C0000001C232C9272_png],
+image:images/add_bus2bus.png[Place bus to bus entry],
 as shown in Figure 3. Mind, however, that there will be no effect on the
 PCB.
 
@@ -639,8 +678,8 @@ This is done with the _PCBnew_ tool.
 
 1.  From the KiCad project manager, click on the 'PCBNew' icon
 image:images/pcbnew.png[pcbnew_png]. The 'PCBNew' window will open. If
-you get an error message saying that a _.brg_ file does not exist just
-ignore it and click OK.
+you get an error message saying that a _*.kicad_pcb_ file does not exist just
+ignore it and click Yes.
 
 2.  Begin by entering some schematic information. Click on the 'Page
 settings' icon image:images/sheetset.png[sheetset_png] on the top
@@ -648,16 +687,16 @@ toolbar. Set 'paper size' as 'A4' and 'title' as 'Tute 1'.
 
 3.  It is a good idea to start by setting the *clearance* and the
 *minimum track width* to those required by your PCB manufacturer. In
-general you can set the clearance to 0.015' and the minimum track width
-to 0.01'. Click on the *Design Rules* -> *Design Rules* menu. If it does
+general you can set the clearance to '0.25' and the minimum track width
+to '0.25'. Click on the *Design Rules* -> *Design Rules* menu. If it does
 not show already, click on the 'Net Classes Editor' tab. Change the
-'Clearance' field at the top of the window to '0.015' and the 'Track
-Width' field to '0.01' as shown below. Measurements here are in inches.
+'Clearance' field at the top of the window to '0.25' and the 'Track
+Width' field to '0.25' as shown below. Measurements here are in mm.
 +
-image:images/10000000000001600000004C7BBE79B9.png[10000000000001600000004C7BBE79B9_png]
+image:images/design_rules.png[Design Rules Window]
 
 4.  Click on the 'Global Design Rules' tab and set 'Min track width' to
-0.01'. Click the OK button to commit your changes and close the Design
+0.25'. Click the OK button to commit your changes and close the Design
 Rules Editor window.
 
 5.  Now we will import the netlist file. Click on the 'Read Netlist'
@@ -733,7 +772,7 @@ image:images/pcbnew_1.png[pcbnew_1_png]
 *Design Rules* -> *Global Design Rules* tab and at the bottom right of
 this window add any other width you would like to have available. You
 can then choose the widths of the track from the drop-down menu while
-you lay out your board. See the example below.
+you lay out your board. See the example below (inches).
 +
 image:images/1000000000000169000001178613965A.png[1000000000000169000001178613965A_png]
 
@@ -898,7 +937,7 @@ file.
 
 If there is any routed trace that you do not like, you can delete it and
 re-route it again, using the del key and the routing tool, which is the
-'Place a wire' icon image:images/add_tracks.png[add_tracks_png] on the
+'Add tracks' icon image:images/add_tracks.png[Add Track icon] on the
 right toolbar.
 
 [[make-schematic-components-in-kicad]]
@@ -940,7 +979,7 @@ editor sheet just below the 'MYCONN3' label.
 3.  In the Pin Properties window that appears, set the pin name to
 'VCC', set the pin number to '1', and the 'Electrical type' to 'Power
 output' then click OK.
-
++
 image:images/pin_properties.png[Pin Properties]
 
 4.  Place the pin by clicking on the location you would like it to go,
@@ -1063,7 +1102,7 @@ __EESchema__, click on the 'Library Editor' icon
 image:images/libedit.png[libedit_png], click on the 'Import Component'
 icon image:images/import.png[import_png], navigate to _demo1/library/_
 and select _myLib.lib._
-
++
 image:images/10000000000002EE00000177A7337383.png[10000000000002EE00000177A7337383_png]
 
 6.  You can make this component and the whole library _myLib.lib_
@@ -1311,7 +1350,7 @@ with CON2.
 
 3.  From KiCad, start __EESchema__, make your modifications by deleting
 CON1 and adding CON2. Save your schematic project with the icon
-image:images/100002010000001A0000001AF4CF46A1.png[100002010000001A0000001AF4CF46A1_png]
+image:images/save.png[Save icon]
 and c lick on the 'Netlist generation' icon
 image:images/netlist.png[netlist_png] on the top toolbar.
 
@@ -1360,7 +1399,7 @@ More about KiCad documentation
 
 This has been a quick guide on most of the features in KiCad. For more
 detailed instructions consult the help files which you can access
-through each KiCad module. Click on *Help* -> **Contents**.
+through each KiCad module. Click on *Help* -> **Contents** or **Manual**.
 
 KiCad comes with a pretty good set of multi-language manuals for all its
 four software components.
@@ -1381,7 +1420,6 @@ KiCad Frequently Asked Questions (FAQ)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A very good and frequently updated source of information is the KiCad
-FAQ list available at this Internet addess:
-    
-http://www.kicad-pcb.org/display/KICAD/Frequently+Asked+Questions
+http://www.kicad-pcb.org/display/KICAD/Frequently+Asked+Questions[FAQ] list available.
+
 

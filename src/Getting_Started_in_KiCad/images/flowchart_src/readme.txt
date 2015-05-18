@@ -11,3 +11,5 @@ Exporting
 =========
 When you exporting the Dia file, please,
 choose: "PNG (anti-aliased)" as file format before pressing the Save button.
+
+When a pop-up appears with Export options, enter width: '1150'. Press Export.
