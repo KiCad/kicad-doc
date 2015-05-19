@@ -14,12 +14,11 @@ _Reference manual_
 [[copyright]]
 *Copyright*
 
-This document is Copyright © 2013 by it's contributors as listed below.
+This document is Copyright © 2015 by it's contributors as listed below.
 You may distribute it and/or modify it under the terms of either the GNU
-General Public License
-(http://www.gnu.org/licenses/gpl.html[http://www.gnu.org/licenses/gpl.html]),
+General Public License (http://www.gnu.org/licenses/gpl.html),
 version 3 or later, or the Creative Commons Attribution License
-(http://creativecommons.org/licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]),
+(http://creativecommons.org/licenses/by/3.0/),
 version 3.0 or later.
 
 [[contributors]]
@@ -87,7 +86,7 @@ Output file
 ~~~~~~~~~~~
 
 The current page layout description can be written in a *.kicad_wks
-file, using the S expression format, which is widely used in KiCad.
+file, using the S-expression format, which is widely used in KiCad.
 
 This file can be used to show the custom page layout in Eeschema and/or
 Pcbnew.
@@ -105,21 +104,22 @@ Basic page layout items are:
 * *Lines*
 * *Rectangles*
 * *Texts* (with format symbols, with will be replaced by the actual
-text, like the date, page number...) in Eeschema or Pcbnew.
-* *Poly-polygons* (mainly to place logos and special graphic shapes)
-These poly polygons are created by **Bitmap2component**, and cannot be
-built inside pl_editor, because it is not possible to create such shapes
-by hand.
-* *Bitmaps* to place logos (Warning: Bitmaps can be plotted only by few
-plotters: PDF and PS only).
+  text, like the date, page number...) in Eeschema or Pcbnew.
+* *Poly-polygons* (mainly to place logos and special graphic shapes).
+  These poly polygons are created by **Bitmap2component**, and cannot be
+  built inside pl_editor, because it is not possible to create such shapes
+  by hand.
+* *Bitmaps* to place logos.
 
-Therefore
+WARNING: Bitmaps can be plotted only by few plotters: PDF and PS only.
+
+Therefore:
 
 * *Texts, poly-polygons* and *bitmaps* are defined by a position, and
-can be rotated.
+  can be rotated.
 * *Lines* (in fact segments) and *rectangles* are defined by two points:
-a start point and a end point. They cannot be rotated (this is useless
-for segments)
+  a start point and a end point. They cannot be rotated (this is useless
+  for segments)
 
 These basic items can be repeated.
 
@@ -140,12 +140,12 @@ dependent on the paper size**.
 Reference corners and coordinates:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-image:images/Object_1.png[Object_1_png]
+image:images/en/page_property_1.png[]
 
 * When the page size is changed, the position of the item, relative to
-its reference corner does not change.
+  its reference corner does not change.
 * Usually, title blocks are attached to the right bottom corner, and
-therefore this corner is the default corner, when creating an item.
+  therefore this corner is the default corner, when creating an item.
 
 For rectangles and segments, which have two defined points, each point
 has its reference corner.
@@ -154,15 +154,15 @@ has its reference corner.
 Rotation
 ~~~~~~~~
 
-Items which are a position defined by one point (texts and
+Items which have a position defined by just one point (texts and
 poly-polygons) can be rotated:
 
 [width="97%",cols="42%,58%",]
 |=======================================================================
-|image:images/289F00001AAB8B9CAB6A.png[289F00001AAB8B9CAB6A_png]
+|image:images/en/text_noriented.png[]
 |Normal: Rotation = 0
 
-|image:images/26DD000020DF53BA89AF.png[26DD000020DF53BA89AF_png]
+|image:images/en/text_rotated.png[]
 |Rotated: Rotation = 20 and 10 degrees.
 |=======================================================================
 
@@ -174,7 +174,7 @@ Items can be repeated:
 
 This is useful to create grid and grid labels.
 
-image:images/Object_2.png[Object_2_png]
+image:images/en/page_property_2.png[]
 
 [[texts-and-formats]]
 Texts and formats
@@ -222,21 +222,21 @@ Formats symbols are:
 
 Example:
 
-"Size: %Z" displays "Size A4" or Size USLetter"
+"Size: %Z" displays "Size: A4" or "Size: USLetter"
 
 [width="100%",cols="34%,66%",]
 |=======================================================================
-|image:images/204000000B615B3B830.png[204000000B615B3B830_png] a|
-User display mode:
+|image:images/en/show_fields_data.png[]
+a|User display mode:
 
-image:images/026000000247DACC8C8.png[026000000247DACC8C8_png] activated.
+image:images/icons/title_block_preview.png[] activated.
 
 Title block displayed like in Eeschema and Pcbnew
 
-|image:images/20D000000BF8AE6E45B.png[20D000000BF8AE6E45B_png] a|
-“Native” display mode:
+|image:images/en/show_fields_codes.png[]
+a|“Native” display mode:
 
-image:images/023000000247D2AF312.png[023000000247D2AF312_png] activated.
+image:images/icons/title_block_edit.png[] activated.
 
 The native texts entered in Pl_Editor, with their format symbols.
 
@@ -251,15 +251,15 @@ Texts can be multi-line.
 There are 2 ways to insert a new line in texts:
 
 1.  Insert the “n” 2 chars sequence (mainly in Page setup dialog in
-KiCad)
+    KiCad)
 2.  Insert a new line in Pl_Editor Design window.
 
-Here is an example
+Here is an example:
 
 [width="77%",cols="50%,50%",]
 |================================================================
-|image:images/2170000015C98B9D826.png[2170000015C98B9D826_png] a|
-image:images/0F300000102C5881F3E.png[0F300000102C5881F3E_png]
+|image:images/en/multi_line.png[]
+a|image:images/en/options_multi_line.png[]
 
 Setup
 
@@ -271,25 +271,24 @@ Multi-line texts in Page Setup dialog:
 
 In the page setup dialog, text controls do not accept a multi-line text.
 
-The “n” 2 chars sequence should be inserted to force a new line inside a
-text
+The *“\n”* 2 chars sequence should be inserted to force a new line inside a
+text.
 
 Here is a two lines text, in _comment 2_ field:
 
-image:images/1BC0000003F9A68F44F.png[1BC0000003F9A68F44F_png]
+image:images/en/insert_newline_code.png[]
 
 Here is the actual text:
 
-image:images/108000000796A6637BF.png[108000000796A6637BF_png]
+image:images/en/multi_line_2.png[]
 
-However, if you really want the *“n”* inside the text, enter *“*
-******n”**.
+However, if you really want the *“\n”* inside the text, enter *“\\n”*.
 
-image:images/1A50000004681684C4B.png[1A50000004681684C4B_png]
+image:images/en/insert_slashnewline_code.png[]
 
 And the displayed text:
 
-image:images/2480000008572F151BE.png[2480000008572F151BE_png]
+image:images/en/multi_line_3.png[]
 
 [[constraints]]
 Constraints
@@ -308,8 +307,8 @@ page 1, the “page 1 option” this is possible by setting this option:
 
 [width="100%",cols="29%,71%",]
 |=================================================================
-|image:images/0FE0000008C8F0A84EF.png[0FE0000008C8F0A84EF_png] a|
-Page 1 option:
+|image:images/en/display_options.png[]
+a|Page 1 option:
 
 * None: no constraint.
 * Page 1 only: the items is visible only on page 1.
@@ -321,7 +320,7 @@ Page 1 option:
 Text full size constraint
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-image:images/0F7000000CADB177AE6.png[0F7000000CADB177AE6_png]
+image:images/en/constraint_options.png[]
 
 Only for texts, one can set 2 parameters :
 
@@ -340,20 +339,19 @@ max size Y, the text height and/or the text width is not modified.
 
 [width="84%",cols="46%,54%",]
 |================================================================
-|image:images/1D000000049146898BA.png[1D000000049146898BA_png] a|
-The text with no bounding box.
+|image:images/en/constraints_none.png[]
+a|The text with no bounding box.
 
-Max size X = 0
+Max size X = 0,0
 
-Max size Y = 0
+Max size Y = 0,0
 
-|image:images/1B400000043E88BE4C8.png[1B400000043E88BE4C8_png] a|
-The *same* text with::
-  constraint.
+|image:images/en/constraints_defined.png[]
+a|The *same* text with constraint.
 
-Max size X = 40
+Max size X = 40,0
 
-Max size Y = 0
+Max size Y = 0,0
 
 |================================================================
 
@@ -361,8 +359,8 @@ A multi line text, constrained:
 
 [width="77%",cols="50%,50%",]
 |================================================================
-|image:images/114000000A59A49C107.png[114000000A59A49C107_png] a|
-image:images/0F4000000FFCF38FDB1.png[0F4000000FFCF38FDB1_png]
+|image:images/en/block_constraints.png[] a|
+image:images/en/constraint_options.png[]
 
 Setup
 
@@ -387,7 +385,7 @@ Main Screen
 
 The image below shows the main window of Pl_Editor.
 
-image:images/280000002003BB28D10.png[280000002003BB28D10_png]
+image:images/en/main_window.png[]
 
 The left pane contains the list of basic items.
 
@@ -397,52 +395,52 @@ The right pane is the item settings editor.
 Main Window Toolbar
 ~~~~~~~~~~~~~~~~~~~
 
-image:images/3180000002933A1DAFF.png[3180000002933A1DAFF_png]
+image:images/en/main_toolbar.png[]
 
 The top toolbar allows for easy access to the following commands:
 
 [width="100%",cols="28%,72%",]
 |=======================================================================
-|image:images/025000000236092322C.png[025000000236092322C_png] |Select
+|image:images/icons/page_new_layout.png[] |Select
 the net list file to be processed.
 
-|image:images/02100000023DA2FC874.png[02100000023DA2FC874_png] |Load a
+|image:images/icons/page_load_layout.png[] |Load a
 page layout description file.
 
-|image:images/02600000023B6DEDD23.png[02600000023B6DEDD23_png] |Save the
+|image:images/icons/page_save_layout.png[] |Save the
 current page layout description in a .kicad_wks file.
 
-|image:images/02400000022F65327A8.png[02400000022F65327A8_png] |Display
+|image:images/icons/page_set_size.png[] |Display
 the page size selector and the title block user data editor.
 
-|image:images/02500000022D0648B63.png[02500000022D0648B63_png] |Prints
+|image:images/icons/page_print.png[] |Prints
 the current page.
 
-|image:images/029000000225511CDE8.png[029000000225511CDE8_png] |Delete
+|image:images/icons/item_delete.png[] |Delete
 the currently selected item.
 
-|image:images/048000000223C9FAADD.png[048000000223C9FAADD_png]
+|image:images/icons/undo_redo.png[]
 |Undo/redo tools.
 
-|image:images/08D000000226C3BBC45.png[08D000000226C3BBC45_png] |Delete
-all footprint assignments.
+|image:images/icons/zoom_in_out_redraw_auto.png[] |Zoom 
+in, out, redraw and auto, respectively.
 
-|image:images/026000000247DACC8C8.png[026000000247DACC8C8_png] |Show the
+|image:images/icons/title_block_preview.png[] |Show the
 page layout in user mode: texts are shown like in Eeschema or Pcbnew:
 text format symbols are replaced by the user texts.
 
-|image:images/023000000247D2AF312.png[023000000247D2AF312_png] |Show the
+|image:images/icons/title_block_edit.png[] |Show the
 page layout in native mode: texts are displayed “as is”, with the
 contained formats, without any replacement.
 
-|image:images/09D0000002290AC88FC.png[09D0000002290AC88FC_png]
+|image:images/en/set_base_corner.png[]
 |Reference corner selection, for coordinates displayed to the status
 bar.
 
-|image:images/060000000223178ABCE.png[060000000223178ABCE_png] a|
+|image:images/en/set_current_page.png[] a|
 Selection of the page number (page & or other pages).
 
-This selection has meaning only if some items have a page option, are
+This selection has meaning only if some items than have a page option,
 are not shown on all pages (in a schematic for instance, which contains
 more than one page)
 
@@ -499,14 +497,16 @@ description.
 * Zoom selection: direct selection of the display zoom.
 * Grid selection: direct selection of the grid.
 
-*Note:*
-
+[NOTE]
+====
 _Append Page Layout Descr File_ is intended to add poly polygons to make
 logos.
 
 Because usually a logo it needs hundred of vertices, you cannot create a
 polygon by hand. But you can append a description file, created by
 Bitmap2Component.
+====
+
 
 [[status-bar-information]]
 Status Bar Information
@@ -515,7 +515,7 @@ Status Bar Information
 The status bar is located a the bottom of the Pl_Editor and provides
 useful information to the user.
 
-image:images/31A0000002140AB1BF6.png[31A0000002140AB1BF6_png]
+image:images/en/status_bar.png[]
 
 Coordinates are *always relative to the corner* selected as
 **reference**.
@@ -526,8 +526,8 @@ Left window
 
 The left windows shows the list of layout items.
 
-One can select a given item (left clicking on the line), of when right
-clicking on the line, display a pop up menu
+One can select a given item (left clicking on the line) or, when right
+clicking on the line, display a pop up menu.
 
 This menu allows basic operations: add a new item, or delete the
 selected item.
@@ -536,40 +536,42 @@ selected item.
 
 [width="94%",cols="42%,58%",]
 |=======================================================================
-|image:images/14300000235CFE8BB81.png[14300000235CFE8BB81_png] |Design
-tree: the item 19 is selected, and shown in Yellow on the draw panel.
+|image:images/en/project_tree.png[]
+|Design tree: the item 19 is selected, and shown in highlighted on the
+draw panel.
 |=======================================================================
 
 [[right-window]]
 Right window
 ------------
 
-[width="100%",cols="25%,23%,52%",]
-|=======================================================================
-|image:images/0FF000002FE9E9A0182.png[0FF000002FE9E9A0182_png]
-|image:images/10000000151380C57AA.png[10000000151380C57AA_png] a|
 The right window is the edit window.
 
-On can set
-
-properties of the page and properties of the current item.
-
+[width="80%",cols="50%,50%",]
 |=======================================================================
+|image:images/en/property_none.png[]
+|image:images/en/property_main.png[]
+|=======================================================================
+
+On this dialog you can set the page property and the item property of the
+current item.
 
 Displayed settings depend on the selected item:
 
-[width="100%",cols="34%,33%,33%",]
+[width="80%",cols="50%,50%",]
 |=======================================================================
-|image:images/0FD000001DD98658CC7.png[0FD000001DD98658CC7_png]
-|image:images/0FD00000261FA2A9A82.png[0FD00000261FA2A9A82_png]
-|image:images/0FA00000198A5084F51.png[0FA00000198A5084F51_png]
+|image:images/en/property_line.png[]
+|image:images/en/property_text.png[]
 
-|Settings for lines and rectangles |Settings for texts |Settings for
-poly-polygons
+|Settings for lines and rectangles
+|Settings for texts
 
-|image:images/108000001B1E318405A.png[108000001B1E318405A_png] | |
+|image:images/en/property_polyline.png[]
+|image:images/en/property_bitmap.png[]
 
-|Setting for bitmaps | |
+|Settings for poly-polygons
+|Setting for bitmaps
+
 |=======================================================================
 
 [[interactive-edition]]
@@ -590,12 +592,10 @@ When selected, this item is drawn in yellow.
 
 [width="77%",cols="50%,50%",]
 |=======================================================================
-|image:images/0D70000009E6F0E0711.png[0D70000009E6F0E0711_png] |The
-starting point (
-image:images/022000000264392FC54.png[022000000264392FC54_png] ) and the
-ending point (
-image:images/01C00000020671586A1.png[01C00000020671586A1_png] ) are
-highlighted.
+|image:images/edit_line.png[]
+|The starting point (image:images/edit_line_start.png[])
+and the ending point (image:images/edit_line_end.png[])
+are highlighted.
 |=======================================================================
 
 When right clicking on the item, a pop-up menu is displayed.
@@ -604,19 +604,19 @@ The pop menu options slightly depend on the selection:
 
 [width="100%",cols="34%,33%,33%",]
 |=======================================================================
-|image:images/0E20000009E089146DE.png[0E20000009E089146DE_png]
-|image:images/0CE000000C7FC23C3DC.png[0CE000000C7FC23C3DC_png]
-|image:images/0DD000000ADFCFBDAE0.png[0DD000000ADFCFBDAE0_png]
+|image:images/en/context_line_move_start.png[]
+|image:images/en/context_line_move_end.png[]
+|image:images/en/context_line_move.png[]
 |=======================================================================
 
 If more than one item is found, a menu clarification will be shown, to
 select the item:
 
-image:images/16F000000DA893C678D.png[16F000000DA893C678D_png]
+image:images/en/dialog_select_element.png[]
 
 [width="100%",cols="35%,65%",]
 |=======================================================================
-|image:images/0D5000000C7E7BD47D2.png[0D5000000C7E7BD47D2_png] |Once
+|image:images/drag_element.png[] |Once
 selected, the item, or one of its end points, can be moved by moving the
 mouse and placed (right clicking on the mouse).
 |=======================================================================
@@ -625,15 +625,15 @@ mouse and placed (right clicking on the mouse).
 Item creation
 ~~~~~~~~~~~~~
 
-To add a new item, right click the mouse button, when the cursor is on
-the left window, or the draw area.
+To add a new item, right click the mouse button when the cursor is on
+the left window or the draw area.
 
 A popup menu is displayed:
 
 [width="77%",cols="50%,50%",]
 |=======================================================================
-|image:images/102000000C470B86D38.png[102000000C470B86D38_png]
-|image:images/0F2000001A2CB4F77A7.png[0F2000001A2CB4F77A7_png]
+|image:images/en/context_createnew.png[]
+|image:images/en/context_createnew2.png[]
 
 |Pop up menu in left window |Pop up menu in draw area.
 |=======================================================================
@@ -655,8 +655,8 @@ When clicking on the option, a dialog is opened:
 
 [width="77%",cols="50%,50%",]
 |=======================================================================
-|image:images/141000001505F9E07DF.png[141000001505F9E07DF_png]
-|image:images/13F0000014FEDD597EE.png[13F0000014FEDD597EE_png]
+|image:images/en/dialog_newline.png[]
+|image:images/en/dialog_newtext.png[]
 
 |Adding line or rectangle |Adding text
 |=======================================================================
@@ -698,14 +698,17 @@ edited.
 Adding image bitmaps
 ~~~~~~~~~~~~~~~~~~~~
 
-You can add an image bitmap using most of bitmap formats (PGN, JPEG, BMP
+You can add an image bitmap using most of bitmap formats (PNG, JPEG, BMP
 ...)
 
 * When a bitmap is imported, its PPI (pixel per inch) definition is set
-to 300PPI
-* This value can be modified in panel Properties (right panel).
-* The actual size depend on this parameter.
-* Be aware using hight definition can create large files, and have a
-noticeable draw or plot time.
+  to 300PPI
 
-A bitmap can be repeated, but not rotated.
+* This value can be modified in panel Properties (right panel).
+
+* The actual size depend on this parameter.
+
+* Be aware that using higher definition values brings larger output files, 
+  and can have a noticeable draw or plot time.
+
+A bitmap can be repeated, **but not rotated**.
