@@ -64,6 +64,7 @@ find_package( PO4A REQUIRED )
 find_package( ASCIIDOC REQUIRED )
 find_package( A2X REQUIRED )
 
+include( KiCadDocumentation )
 add_subdirectory( src )
 
 # Generate both .tar.gz and .zip package targets
