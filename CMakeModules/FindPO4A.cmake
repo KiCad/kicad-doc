@@ -4,15 +4,14 @@
 #
 # CMake module to find po4a (PO for anything).
 #
-# Variables generatied:
+# Variables generated:
 #
 # PO4A_FOUND     true when PO4A_COMMAND is valid
 # PO4A_COMMAND   The command to run po4a (may be a list including an interpreter)
-# PO4A_GETTEXTIZE_COMMAND   The command to run po4a-gettextize (may be a list including an interpreter)
-# PO4A_VERSION   The a2x version that has been found
+# PO4A_VERSION   The po4a version that has been found
 #
 
-# Have a go at finding a a2x executable
+# Have a go at finding a po4a executable
 find_program( PO4A_COMMAND po4a )
 
 # If nothing could be found, test to see if we can just find the script file, that we'll then run
