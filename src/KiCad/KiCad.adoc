@@ -13,10 +13,10 @@ _Reference manual_
 [[copyright]]
 *Copyright*
 
-This document is Copyright © 2010–2014 by its contributors as listed
+This document is Copyright © 2010–2015 by its contributors as listed
 below. You may distribute it and/or modify it under the terms of either
 the GNU General Public License  (http://www.gnu.org/licenses/gpl.html),
-version 3 or later, or the Creative Commons Attribution License 
+version 3 or later, or the Creative Commons Attribution License
 (http://creativecommons.org/licenses/by/3.0/), version 3.0 or later.
 
 All trademarks within this guide belong to their legitimate owners.
@@ -40,7 +40,7 @@ None
 [[publication_date_and_software_version]]
 *Publication date and software version*
 
-2014, march 17.
+2015, may 20.
 
 [[note_for_mac_users]]
 *Note for Mac users*
@@ -58,13 +58,12 @@ KiCad
 
 KiCad is an open-source software tool for the creation of electronic
 schematic diagrams and PCB artwork. Beneath its singular surface, kicad
-incorporates an elegant ensemble of the following stand-alone software
-tools:
+incorporates an elegant ensemble of the following software tools:
 
 * *Kicad* : project manager
-* *Eeschema* : schematic editor
+* *Eeschema* : schematic editor and component editor
 * *CvPcb* : footprint selector
-* *Pcbnew* : circuit board layout editor
+* *Pcbnew* : circuit board layout editor and footprint editor
 * *GerbView* : Gerber viewer
 
 3 utilities are included
@@ -76,11 +75,14 @@ tools:
   lines...
 * *PlEditor*: Page Layout Editor.
 
+These tools are usually run from the project manager, but can be also run
+as stand-alone tools.
+
 At the time of writing, KiCad is considered mature and can be used for
 the successful development and maintenance of complex electronic boards.
 
-Kicad does not present any board-size limitation and it can easily
-handle up to 16 copper layers and up to 12 technical layers.
+Kicad does not present any board-size limitation and it can
+handle up to 32 copper layers, 14 technical layers and 4 auxiliary layers.
 
 Kicad can create all the files necessary for building printed boards:
 
@@ -109,22 +111,32 @@ Initialization of the default configuration
 A default configuration file named _kicad.pro_ is supplied in
 kicad/template. It serves as a template for any new project.
 
-*The default file _kicad.pro_ can be freely modified if necessary,
-mainly to set the list of libraries files loaded by Eeschema or
-Pcbnew.*
+If an other default configuration file named _fp-lib-table_ exists,
+it will be used only once to create a footprint library list.
+(else, this list will be created from scratch)
 
-Some other parameters (default text size, default line thickness, mainly
+*The default file _kicad.pro_ can be freely modified if necessary,
+mainly to set the list of libraries files loaded by Eeschema.*
+
+A few other parameters (default text size, default line thickness, mainly
 for Pcbnew) are stored.
 
-Verify you have a write acces to kicad/template/kicad.pro
+Verify you have a write access to kicad/template/kicad.pro
 
 Run kicad and load _kicad.pro_ project.
 
-Run Eeschema via kicad. Modify and update the Eeschema
+Run Eeschema via kicad.
+Modify and update the Eeschema
 configuration, and mainly the list of libraries you want to use each
 time you create new projects.
 
-Run Pcbnew via kicad. Modify and update the Pcbnew configuration.
+Run Pcbnew via kicad.
+Modify and update the Pcbnew configuration, especially the footprint library list.
+Pcbnew will creates or update a library list file called *footprint library table*.
+There are 2 library list files (named fp-lib-table).
+The first (located in the user home directory) is global for all projects.
+The second, if exists (located in the project directory) is specific to the project.
+
 
 Kicad: principles of use
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -155,10 +167,10 @@ files will be created:
 |=================================================================
 |example.pro |project management file.
 |example.sch |main schematic file.
-|example. kicad_pcb |printed circuit board file.
+|example.kicad_pcb |printed circuit board file.
 |example.net |netlist file.
 |example.xxx |various files created by the other utility programs.
-|example.cache.lib|cache file of libraries used in the schematic 
+|example.cache.lib|cache file of libraries used in the schematic
 (backup of the components used).
 |=================================================================
 
@@ -181,8 +193,8 @@ Utility launch pane
 Kicad allows you to run all stand alone software tools that come with
 it.
 
-The launch pane is made of the above 7 buttons that correspond to the
-following commands (1 to 7, from left to right):
+The launch pane is made of the above 8 buttons that correspond to the
+following commands (1 to 8, from left to right):
 
 image:images/launch_pane.png[]
 
@@ -190,15 +202,15 @@ image:images/launch_pane.png[]
 [width="100%",cols="4%,20%,76%",]
 |=======================================================================
 |1 |*Eeschema* |The schematic editor.
-|2 |*Cvpcb* |A tool to create the association between components and the
-corresponding footprints.
+|2 |*LibEdit* |The component editor and component library manager.
 |3 |*Pcbnew* |The board layout editor.
-|4 |*Gerbview* |A GERBER file viewer. Its also can show drill files.
-|5 |*Bitmap2component* |A tool to build a footprint or a component from
+|4 |*ModEdit* |The footprint editor and footprint library manager.
+|5 |*Gerbview* |A GERBER file viewer. Its also can show drill files.
+|6 |*Bitmap2component* |A tool to build a footprint or a component from
 a B&W bitmap image to create logos.
-|6 |*Pcb Calculator* |A tool to calculate track widths, any many other
+|7 |*Pcb Calculator* |A tool to calculate track widths, any many other
 things.
-|7 |*Pl Editor* |The Page Layout editor, to create/customize frame
+|8 |*Pl Editor* |The Page Layout editor, to create/customize frame
 references.
 |=======================================================================
 
@@ -207,7 +219,7 @@ Project tree view
 
 image:images/project_tree.png[]
 
-*   Double-clicking on the Eeschema icons runs the schematic editor which in
+*   Double-clicking on the Eeschema icon runs the schematic editor which in
     this case will open the file pic_programmer.sch.
 
 *   Double-clicking on the Pcbnew icon runs the layout editor, in this case
@@ -379,7 +391,7 @@ The list of available templates are gathered from the following sources:
   ** on Unix:
      ~/kicad/templates/
 
-  ** on Windows: 
+  ** on Windows:
      C:\Documents and Settings\username\My Documents\kicad\templates
 
   ** on Mac:
