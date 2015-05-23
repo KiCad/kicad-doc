@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-05-23 17:16+0200\n"
-"PO-Revision-Date: 2015-05-23 18:23+0100\n"
+"PO-Revision-Date: 2015-05-23 20:27+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -368,6 +368,16 @@ msgid ""
 "list of footprint libraries (various formats) which are loaded\n"
 "by the board or the footprint editor or CvPcb\n"
 msgstr ""
+"|*.kicad_pcb |Plik z obwodem drukowanym (zawierającym wszsytkie informacje oprócz układu strony)\n"
+"|*.pretty |Biblioteki footprintów w postaci oddzielnych folderów. Folder sam w sobie jest taką biblioteką\n"
+"|*.kicad_mod |Plik z definicją footprintu (zawierający zawsze tylko jednen footprint)\n"
+"|*.brd |Starszy plik z obwodem drukowanym (format Legacy).\n"
+"Można go odczytywać, ale nie ma możliwości jego zapisania\n"
+"|*.mod |Starszy plik z biblioteką footprintów (format Legacy).\n"
+"Można do odczytywać, ale nie ma możliwości jego zapisania\n"
+"|fp-lib-table |Tabela bibliotek footprintów:\n"
+"Lista bibliotek footprintów (w różnych formatach), które są wczytywane przez\n"
+"edytor PCB lub edytor foorptintów, lub też CvPcb\n"
 
 #. type: Plain text
 #: KiCad.adoc:142
@@ -389,6 +399,15 @@ msgid ""
 "this file is associated to the .cmp file, for users who prefer a separate file\n"
 "for the component/footprint association.\n"
 msgstr ""
+"|*.kicad_wks |Plik z definicją układu strony, dla osób wymagających własnego\n"
+"układu obramowań arkusza.\n"
+"|*.cmp |Plik z zapisanymi przypisaniami pomiędzy komponentami na schemacie\n"
+"i ich footprintami.\n"
+"Jest tworzony przez CvPcb, ale schematy mogą same zawierać te dane,\n"
+"w zależności od przyjętego trybu postępowania przy tworzeniu projektu.\n"
+"|*.net |Plik listy sieci tworzony na podstawie schematu, i odczytywany przez edytor PCB.\n"
+"Ten plik jest łączony z plikiem .cmp, dla użytkowników, którzy wolą posiadać osobne pliki\n"
+"z przypisaniami komponent/footprint.\n"
 
 #. type: Plain text
 #: KiCad.adoc:156
@@ -417,6 +436,15 @@ msgid ""
 "|*.dxf |The plot files (dxf format), for documentation\n"
 "|*.plt |The plot files (HPGL format), for documentation\n"
 msgstr ""
+"|*.gbr |Pliki Gerber, do produkcji płytki\n"
+"|*.drl |Pliki wierceń (format Excellon), do produkcji płytki\n"
+"|*.pos |Pliki położeń (format ASCII), dla maszyn układających elementy\n"
+"|*.rpt |Pliki raportów (format ASCII), do celów dokumentacji\n"
+"|*.ps |Pliki z rysunkami (Postscript), do celów dokumentacji\n"
+"|*.pdf |Pliki z rysunkami (format PDF), do celów dokumentacji\n"
+"|*.svg |Pliki z rysunkami (format SVG), do celów dokumentacji\n"
+"|*.dxf |Pliki z rysunkami (format DXF), do celów dokumentacji\n"
+"|*.plt |Pliki z rysunkami (format HPGL), do celów dokumentacji\n"
 
 #. type: Title -
 #: KiCad.adoc:173
@@ -581,6 +609,10 @@ msgid ""
 "few environment variables are internally define by Kicad, and can be used to "
 "define path (like library paths, 3D shapes paths ...)"
 msgstr ""
+"W programie KiCad, należy zdefiniować parę ścieżek dostępu używając do tego "
+"__zmiennych systemowych__. Kilka zmiennych jest definiowanych przez program "
+"KiCad, i może być użyta do przekazania do programu odpowiednich ścieżek "
+"(takich jak ścieżki do bibliotek, ścieżki do definicji obiektów 3D, itp ...)."
 
 #. type: Plain text
 #: KiCad.adoc:237
@@ -588,16 +620,22 @@ msgid ""
 "This is usefull when absolute paths are not known or are subject to change.  "
 "This is the case for ``official'' libraries built for kicad:"
 msgstr ""
+"Jest to użyteczne w przypadku gdy ścieżki absolutne nie są znane lub "
+"zmieniają się. Ten przypadek występuje w przypadku ``oficjalnych'' bibliotek "
+"programu KiCad:"
 
 #. type: Plain text
 #: KiCad.adoc:239
 msgid "for the path of these librairies, when installed on you disk"
 msgstr ""
+"dla ścieżek dostępu do tych bibliotek, które są zainstalowane na dysku "
+"lokalnym"
 
 #. type: Plain text
 #: KiCad.adoc:240
 msgid "for the path of 3D shapes files used in footprint definitions."
 msgstr ""
+"dla ścieżek dostępu do kształtów 3D używanych w definicjach footprintów."
 
 #. type: Plain text
 #: KiCad.adoc:244
@@ -606,11 +644,14 @@ msgid ""
 "like this, when using the KISYSMOD environment variable to define the full "
 "path."
 msgstr ""
+"Przykładowo, pełna ścieżka do biblioteki footprintów _Connect.pretty_ jest "
+"zdefiniowana następująco, gdy użyta zostanie zmienna systemowa KISYSMOD "
+"przekazująca pełną ścieżkę dostępu."
 
 #. type: Plain text
 #: KiCad.adoc:246
 msgid "${KISYSMOD}/connect.pretty"
-msgstr "${KISYSMOD}/connect.pretty"
+msgstr "${KISYSMOD}/Connect.pretty"
 
 #. type: Plain text
 #: KiCad.adoc:249
@@ -618,6 +659,8 @@ msgid ""
 "Obvioulsy, one can use an usual full path definition, if this full path is "
 "well known, and never changes."
 msgstr ""
+"Oczywiście, można użyć pełnej ścieżki w definicji biblioteki gdy ta ścieżka "
+"jest w pełni znana i nie jest nigdy zmieniana."
 
 #. type: Plain text
 #: KiCad.adoc:252
@@ -625,6 +668,9 @@ msgid ""
 "This option allows you to define some paths from an environment variable, "
 "and add your own environment variables, to define personal paths, if needed."
 msgstr ""
+"Opcja ta pozwala na zdefiniowanie kilku ścieżek dostępu za pomocą zmiennych "
+"systemowych, oraz dodanie własnych zmiennych określających na przykład "
+"ścieżki użytkownika, jeśli są używane."
 
 #. type: delimited block |
 #: KiCad.adoc:261
@@ -637,6 +683,12 @@ msgid ""
 "|KISYSMOD |is the default base path of footprint library folders,\n"
 "and must be defined, if an absolute path is not used in footprint library names.\n"
 msgstr ""
+"|KIGITHUB |jest często używana w przykładach tabel bibliotek footprintów.\n"
+"Jeśli zmienna jest używana musi zostać zdefiniowanan..\n"
+"|KISYS3DMOD |jest domyślną, bazową ścieżką do plików z kształtami 3D,\n"
+"i musi zostać zdefiniowana, ponieważ ścieżka absolutna nie jest zwykle używana.\n"
+"|KISYSMOD |jest domyślną, bazową ścieżką do folderów z bibliotekami footprintów,\n"
+"i musi zostać zdefiniowana, jeśli w nazwach bibliotek nie jest używana ścieżka absolutna.\n"
 
 #. type: Plain text
 #: KiCad.adoc:264
@@ -647,7 +699,7 @@ msgstr "image:images/pl/configure_path_dlg.png[]"
 #. type: Plain text
 #: KiCad.adoc:266
 msgid "_Note also the environment variable_"
-msgstr ""
+msgstr "_Należy pamiętać też od zmiennej systemowej_"
 
 #. type: Plain text
 #: KiCad.adoc:268
@@ -661,6 +713,8 @@ msgid ""
 "is *always* internally defined by Kicad, and is the **current project "
 "absolute path**."
 msgstr ""
+"jest ona *zawsze* wewnętrznie definiowana przez program KiCad, i wskazuje na "
+"**absolutną ściezkę dostępu do bieżącego projektu**."
 
 #. type: Plain text
 #: KiCad.adoc:273
@@ -669,6 +723,9 @@ msgid ""
 "pretty_* folder (the pretty footprint library) found **_inside the current "
 "project folder_**."
 msgstr ""
+"Przykładowo, *_$\\{KIPRJMOD\\}/Connect.pretty_* jest zawsze odnośnikiem do "
+"folderu *_Connect.pretty_* (Biblioteka footprintów typu Pretty) **_wewnątrz "
+"folderu bieżącego projektu_**."
 
 #. type: Plain text
 #: KiCad.adoc:277
@@ -677,6 +734,9 @@ msgid ""
 "*If you modify the configuration of paths, please quit and rerun Kicad,\n"
 "to avoid any issue in paths handling.*\n"
 msgstr ""
+"*Jeśli zmodyfikujemy konfigurację ścieżek, należy zawsze zamknąć program KiCad,\n"
+"oraz ponownie go uruchomić, by zapobiec błędom związanym z użyciem niepoprawnych\n"
+"ścieżek dostępu.*\n"
 
 #. type: Title ~
 #: KiCad.adoc:279
@@ -691,16 +751,19 @@ msgid ""
 "Before using a text editor to browse/edit files in current project, you have "
 "to choose the text editor you want to use. The menu:"
 msgstr ""
+"Przed użyciem edytora tekstu do przeglądania lub modyfikacji plików "
+"bieżącego projektu, należy wybrać odpowiedni edytor, który będzie używany do "
+"tego celu. Menu:"
 
 #. type: Plain text
 #: KiCad.adoc:284
 msgid "_Preferences/SetText Editor_"
-msgstr "_Preferencje/Wybierz edytor tekstu_"
+msgstr "*Ustawienia* -> **Wybierz edytor tekstu**"
 
 #. type: Plain text
 #: KiCad.adoc:286
 msgid "allows you to set the text editor to use."
-msgstr ""
+msgstr "pozwala na wybranie odpowiedniego pliku wykonywalnego edytora."
 
 #. type: Title ~
 #: KiCad.adoc:288
@@ -715,6 +778,9 @@ msgid ""
 "Your can use the default PDF viewer or a PDF viewer Select _Favourite PDF "
 "Viewer_ chosen by _SetPDF Viewer_ menu."
 msgstr ""
+"Można użyć domyślnej przeglądarki plików PDF lub innej przeglądarki poprzez "
+"zaznaczenie _Preferowana przeglądarka PDF_ i wybranie pliku wykonywalnego "
+"poprzez polecenie _Wybierz przeglądarkę PDF_."
 
 #. type: Plain text
 #: KiCad.adoc:296
@@ -846,26 +912,35 @@ msgid ""
 "the other tools (editors, gerber viewer and utility tools) when creating a "
 "design."
 msgstr ""
+"KiCad Menadżer Projektu (plik _kicad_ lub _kicad.exe_) to narzędzie do "
+"zarządzania całym projektem, z którego można łatwo uruchomić pozostałe "
+"aplikacje wchodzące w skład KiCad EDA Suite (edytory, przeglądarkę Gerber i "
+"inne dodatkowe narzędzia)."
 
 #. type: Plain text
 #: KiCad.adoc:343
 msgid "Running the other tools from Kicad manager has some advantages:"
 msgstr ""
+"Uruchamianie pozostałych aplikacji z poziomu Menadżera Projektu ma swoje "
+"zalety:"
 
 #. type: Plain text
 #: KiCad.adoc:345
 msgid "cross probing between schematic editor and board editor."
 msgstr ""
+"``cross probing'' pomiędzy edutorem schematów a edytorem obwodów drukowanych."
 
 #. type: Plain text
 #: KiCad.adoc:347
 msgid "cross probing between schematic editor and footprint selector (CvPcb)."
 msgstr ""
+"``cross probing'' pomiędzy edytorem schematów a narzędziem do przypisywania "
+"footprintów (CvPcb)."
 
 #. type: Plain text
 #: KiCad.adoc:349
 msgid "But you can only edit the current project files."
-msgstr ""
+msgstr "Można jednak dokonywać edycji tylko plików danego projektu."
 
 #. type: Plain text
 #: KiCad.adoc:352
@@ -873,6 +948,9 @@ msgid ""
 "(When these tools are run in _stand alone_ mode, you can open any file in "
 "any project but cross probing between tools can give strange results)"
 msgstr ""
+"(Gdy poszczególne aplikacje są uruchamiane jako _samodzielne aplikacje_ "
+"można otworzyć dowolny plik z dowolnego projektu ale ``cross probing'' może "
+"dać zaskakujące rezultaty)."
 
 #. type: Title ~
 #: KiCad.adoc:354
@@ -1437,7 +1515,3 @@ msgstr ""
 "KICAD_PTEMPLATES, zostaje dodana trzecia zakładka Szablony Przenośne, w "
 "której znajdą się wszystkie szablony odnalezione w ścieżce do której odnosi "
 "się KICAD_PTEMPLATES."
-
-#~ msgid "Run Pcbnew via kicad. Modify and update the Pcbnew configuration."
-#~ msgstr ""
-#~ "Uruchom Pcbnew za pomocą menadżera projektu. Zmodyfikuj jego konfigurację"
