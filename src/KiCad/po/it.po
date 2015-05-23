@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-05-23 13:40+0200\n"
-"PO-Revision-Date: 2015-05-23 17:03+0200\n"
+"PO-Revision-Date: 2015-05-23 23:42+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: it\n"
@@ -322,19 +322,27 @@ msgid ""
 "|*_cache.lib |The schematic component library cache file\n"
 "(contains a copy of components used in the schematic project)\n"
 msgstr ""
+"|*.sch |I file degli schemi elettrici (non contengono i componenti)\n"
+"|*.lib |I file delle librerie di componenti elettrici\n"
+"(contengono le descrizioni dei componenti: forma grafica, pin, campi)\n"
+"|*.dcm |La documentazione dei file delle librerie di componenti\n"
+"(contengono alcuni campi relativi alle descrizioni dei componenti:\n"
+"commenti, parole chiave, riferimenti a datasheet)\n"
+"|*_cache.lib |I file della cache delle librerie di componenti\n"
+"(contengono una copia dei componenti usati nel progetto dello schema elettrico)\n"
 
 #. type: Plain text
 #: KiCad.adoc:127
 #, no-wrap
 msgid "*Board editor files and folders:*\n"
-msgstr ""
+msgstr "*File e cartelle dell'editor di circuiti stampati:*\n"
 
 #. type: delimited block |
 #: KiCad.adoc:139
 #, no-wrap
 msgid ""
 "|*.kicad_pcb |The board files (contain all info but the page layout)\n"
-"|*.pretty |The footprint *library folders*. The folder itself is the library\n"
+"|*.pretty |The footprint **library folders**. The folder itself is the library\n"
 "|*.kicad_mod |The footprint files (contain one footprint description by file)\n"
 "|*.brd |The old board files (legacy format).\n"
 "Can be read, but not written by the board editor\n"
@@ -344,6 +352,16 @@ msgid ""
 "list of footprint libraries (various formats) which are loaded\n"
 "by the board or the footprint editor or CvPcb\n"
 msgstr ""
+"|*.kicad_pcb |I file della scheda (contengono tutte le info a parte la disposizione pagina)\n"
+"|*.pretty |Le *cartelle delle librerie* di impronte. Le cartelle sono in effetti le librerie\n"
+"|*.kicad_mod |I file delle impronte (contengono una descrizione impronta per file)\n"
+"|*.brd |I file delle schede nel vecchio formato.\n"
+"Vengono letti dall'editor di circuiti stampati, ma non scritti\n"
+"|*.mod |I file delle librerie di impronte nel vecchio formato.\n"
+"Vengono letti dall'editor di impronte e di circuiti stampati, ma non scritti\n"
+"|fp-lib-table |L'elenco librerie di impronte (_tabella librerie di impronte_):\n"
+"elenco di librerie di impronte (in vari formati) che vengono caricate\n"
+"dall'editor di circuiti stampati, dall'editor delle impronte o da CvPcb\n"
 
 #. type: Plain text
 #: KiCad.adoc:142
@@ -353,7 +371,7 @@ msgstr "*File comuni:*\n"
 
 #. type: delimited block |
 #: KiCad.adoc:153
-#, no-wrap
+#, no-wrap, fuzzy
 msgid ""
 "|*.kicad_wks |The page layout description files, for guy who want a worksheet\n"
 "with a custom look.\n"
@@ -365,6 +383,15 @@ msgid ""
 "this file is associated to the .cmp file, for users who prefer a separate file\n"
 "for the component/footprint association.\n"
 msgstr ""
+"|*.kicad_wks |The page layout description files, for guy who want a worksheet\n"
+"with a custom look.\n"
+"|*.cmp |The file storing the association between components\n"
+"used in the schematic and their footprints.\n"
+"It is created by the tool CvPcb, but the schematic itself can store this info,\n"
+"depending on the work flow of users.\n"
+"|*.net |The netlist file created by the schematic, and read by the board editor.\n"
+"this file is associated to the .cmp file, for users who prefer a separate file\n"
+"for the component/footprint association.\n"
 
 #. type: Plain text
 #: KiCad.adoc:156
@@ -492,14 +519,14 @@ msgstr ""
 msgid ""
 "Run Pcbnew via kicad.  Modify and update the Pcbnew configuration, "
 "especially the footprint library list.  Pcbnew will creates or update a "
-"library list file called *footprint library table*.  There are 2 library "
+"library list file called **footprint library table**.  There are 2 library "
 "list files (named fp-lib-table).  The first (located in the user home "
 "directory) is global for all projects.  The second, if exists (located in "
 "the project directory) is specific to the project."
 msgstr ""
 "Esecuzione di Pcbnew tramite KiCad. Modifica e aggiorna la configurazione di "
 "Pcbnew, in special modo l'elenco librerie di impronte. Pcbnew creerà o "
-"aggiornerà un elenco librerie dal nome *footprint library table*. Ci sono 2 "
+"aggiornerà un elenco librerie dal nome **footprint library table**. Ci sono 2 "
 "file di elenchi di librerie (di nome fp-lib-table). Il primo (posizionato "
 "nella cartella dell'utente) è globale per tutti i progetti. Il secondo, se "
 "esiste (posizionato nella cartella del progetto) è specifico del progetto."
@@ -584,7 +611,7 @@ msgid ""
 "For instance, the full path of _connect.pretty_ footprint library is defined "
 "like this, when using the KISYSMOD environment variable to define the full "
 "path."
-msgstr ""
+msgstr "Per esempio, il percorso completo della libreria di impronte _connect.pretty_ è definito così, quando si usa la variabile ambiente KISYSMOD per definire il percorso completo."
 
 #. type: Plain text
 #: KiCad.adoc:246
@@ -596,7 +623,7 @@ msgstr "${KISYSMOD}/connect.pretty"
 msgid ""
 "Obvioulsy, one can use an usual full path definition, if this full path is "
 "well known, and never changes."
-msgstr ""
+msgstr "Ovviamente si può usare la solita definizione di percorso assuluto, se questo è ben conosciuto e non cambia mai."
 
 #. type: Plain text
 #: KiCad.adoc:252
@@ -644,7 +671,7 @@ msgstr "*KIPRJMOD*\n"
 msgid ""
 "is *always* internally defined by Kicad, and is the **current project "
 "absolute path**."
-msgstr "è *sempre* internamente definita da KiCad, ed il **percorso assoluto del progetto corrente**."
+msgstr "che è *sempre* internamente definita da KiCad, ed è il **percorso assoluto del progetto corrente**."
 
 #. type: Plain text
 #: KiCad.adoc:273
@@ -652,7 +679,7 @@ msgid ""
 "For instance, *_$\\{KIPRJMOD\\}/connect.pretty_* is always the *_connect."
 "pretty_* folder (the pretty footprint library) found **_inside the current "
 "project folder_**."
-msgstr ""
+msgstr "Per esempio, *_$\\{KIPRJMOD\\}/connect.pretty_* è sempre la cartella *_connect.pretty_* (la libreria di impronte in formato pretty) trovata **_dentro la cartella del progetto corrente_**."
 
 #. type: Plain text
 #: KiCad.adoc:277
@@ -661,6 +688,8 @@ msgid ""
 "*If you modify the configuration of paths, please quit and rerun Kicad,\n"
 "to avoid any issue in paths handling.*\n"
 msgstr ""
+"*Se si modifica la configurazione dei percorsi, uscire e riavviare KiCad,\n"
+"per evitare qualsiasi problema nella gestione dei percorsi.*\n"
 
 #. type: Title ~
 #: KiCad.adoc:279
@@ -673,17 +702,17 @@ msgstr "Inizializzazione dell'editor di testo"
 msgid ""
 "Before using a text editor to browse/edit files in current project, you have "
 "to choose the text editor you want to use. The menu:"
-msgstr ""
+msgstr "Prima di usare un editor di testi per sfogliare/modificare i file nel progetto corrente, è necessario scegliere l'editor di testo che si vuole usare. Il menu:"
 
 #. type: Plain text
 #: KiCad.adoc:284
 msgid "_Preferences/SetText Editor_"
-msgstr ""
+msgstr "_Preferenze/Imposta l'editor di testo_"
 
 #. type: Plain text
 #: KiCad.adoc:286
 msgid "allows you to set the text editor to use."
-msgstr ""
+msgstr "permette di impostare l'editor di testo da usare."
 
 #. type: Title ~
 #: KiCad.adoc:288
@@ -696,14 +725,14 @@ msgstr "Inizializzazione del visualizzatore PDF"
 msgid ""
 "Your can use the default PDF viewer or a PDF viewer Select _Favourite PDF "
 "Viewer_ chosen by _SetPDF Viewer_ menu."
-msgstr ""
+msgstr "Si può usare il visualizzatore PDF predefinito o un _Visualizzatore PDF preferito_ scelto tramite il menu __Imposta visualizzatore PDF__."
 
 #. type: Plain text
 #: KiCad.adoc:296
 msgid ""
 "On Linux, the default PDF viewer is known to be sometimes strange, so using "
 "_Favourite PDF Viewer_ after selecting a suitable PDF viewer is mandatory."
-msgstr ""
+msgstr "Su Linux, il visualizzatore PDF predefinito alle volte può comportarsi in maniera strana, perciò l'impostazione _Visualizzatore PDF preferito_ dopo la selezione di un idoneo visualizzatore PDF è tassativa. "
 
 #. type: Title ~
 #: KiCad.adoc:299
@@ -807,24 +836,24 @@ msgstr "Eseguendo gli altri strumenti dal manager di KiCad ha alcuni vantaggi:"
 #. type: Plain text
 #: KiCad.adoc:345
 msgid "cross probing between schematic editor and board editor."
-msgstr ""
+msgstr "controllo incrociato tra editor di schemi elettrici e editor di circuiti stampati."
 
 #. type: Plain text
 #: KiCad.adoc:347
 msgid "cross probing between schematic editor and footprint selector (CvPcb)."
-msgstr ""
+msgstr "controllo incrociato tra editor di schemi elettrici e selettore di impronte (CvPcb)."
 
 #. type: Plain text
 #: KiCad.adoc:349
 msgid "But you can only edit the current project files."
-msgstr ""
+msgstr "Ma è possibile modificare solamente i file del progetto corrente."
 
 #. type: Plain text
 #: KiCad.adoc:352
 msgid ""
 "(When these tools are run in _stand alone_ mode, you can open any file in "
 "any project but cross probing between tools can give strange results)"
-msgstr ""
+msgstr "(quando questi strumenti sono eseguiti in _modalità singola_, si può aprire qualsiasi file in qualsiasi progetto ma il controllo incrociato tra strumenti può dare strani risultati)"
 
 #. type: Title ~
 #: KiCad.adoc:354
