@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-05-17 13:30+0200\n"
-"PO-Revision-Date: 2015-05-24 12:51+0100\n"
+"PO-Revision-Date: 2015-05-24 18:12+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -193,7 +193,7 @@ msgstr ""
 "ten sam sposób jaki stosuje IDF, jest to reguła prawej ręki z osią Z "
 "zwiększającą się w kierunku oglądającego, osią X zwiększającą się w prawo, a "
 "Y w górę. Rotacja musi być w stopniach, a dodatnie wartości oznaczają obrót "
-"zgodnie z ruchem wskazówek zegara jak zostało to określone w specyfikacji "
+"przeciwnie do ruchu wskazówek zegara jak zostało to określone w specyfikacji "
 "IDFv3. Skomplikowane kształty mogą zostać utworzone przez połączenie "
 "odpowiednich przesunięć by tworzyć proste zespoły takie jak np. obudowa DIP "
 "umieszczona w podstawce."
@@ -317,6 +317,9 @@ msgid ""
 "record (Record 1) of the section. Record 1 must be followed by Record 2 "
 "which has four fields:"
 msgstr ""
+"Sekcja nagłówka (.ELECTRICAL lub .MECHANICAL) jest uważana za pierwszy "
+"rekord (Record 1) sekcji. Rekord 1 musi występować razem z rekordem 2, który "
+"posiada cztery pola:"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:148
@@ -337,6 +340,10 @@ msgid ""
 "to describe the layout of the pads or the orientation of this particular "
 "TO-92 outline file."
 msgstr ""
+"Numer części: choć oczywiście przeznaczony na numer części, np. “BS107”, to "
+"lepiej jest użyć tego ciągu aby pomóc opisać pakiet. Na przykład jeśli nazwa "
+"geometri to “TO-92”, pole Numer części może być użyte do opisywania układ "
+"pól lutowniczych lub orientację tego konkretnego pliku konturu obudowy TO-92."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:157
@@ -344,6 +351,9 @@ msgid ""
 "IDF Unit: this must be one of MM or THOU and it applies only to the units "
 "describing this single component outline."
 msgstr ""
+"Jednostki IDF: musi posiadać jedną z dwóch wartości MM lub THOU i ma "
+"zastosowanie wyłącznie do jednostek opisujących ten pojedynczy składnik "
+"konturu."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:160
@@ -351,6 +361,8 @@ msgid ""
 "Height: this is a floating point number representing the nominal height of "
 "the component using units specified in Field 3."
 msgstr ""
+"Wysokość: jest to liczba rzeczywista reprezentująca wysokość nominalnego "
+"składnika przy użyciu jednostek określonych w polu 3."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:163
@@ -358,6 +370,8 @@ msgid ""
 "Record 2 must be followed by a number of Record 3 entries which specify the "
 "outline of the component. Record 3 consists of four fields:"
 msgstr ""
+"Po rekordzie 2 musi wystąpić kilka rekordów 3, które określają kontur "
+"elementu. Rekord 3 składa się z czterech pól:"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:166
@@ -365,16 +379,18 @@ msgid ""
 "Loop Index: 0 (outline points are specified in counter-clockwise order) or 1 "
 "(outline points are specified in clockwise order)"
 msgstr ""
+"Indeks pętli: 0 (punkty konturu są określane przeciwnie do ruchu wskazówek "
+"zegara) lub 1 (punkty konturu są określone w kierunku ruchu wskazówek zegara)"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:168
 msgid "X coordinate: a floating point number"
-msgstr ""
+msgstr "położenie X: liczba rzeczywista zmiennoprzecinkowa"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:170
 msgid "Y coordinate: a floating point number"
-msgstr ""
+msgstr "położenie Y: liczba rzeczywista zmiennoprzecinkowa"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:180
@@ -396,6 +412,9 @@ msgid ""
 "cutout. The last point specified must be the same as the first point unless "
 "the outline is a circle."
 msgstr ""
+"Tylko jedna zamknięta pętla jest dopuszczalna i nie jest możliwe opisywanie "
+"wycięć. Ostatni punkt musi być taki sam jak pierwszy chyba, że kontur jest "
+"okrągły."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:186
@@ -538,6 +557,14 @@ msgid ""
 "within any large collection of outlines; choosing values well will result in "
 "fewer clashes especially in complex boards."
 msgstr ""
+"Należy dokładnie przemyśleć jakie wartości zostaną przekazane do wpisów "
+"Geometry oraz Part Number. Razem wzięte. Treści te działają jako unikatowe "
+"identyfikatory dla systemów MCAD. Idealnie byłoby gdyby wartości tych "
+"łańcuchów miały pewne znaczenie dla użytkownika, ale nie jest to konieczne: "
+"wartości te są przeznaczone przede wszystkim dla systemu MCAD i używane jako "
+"niepowtarzalny identyfikator. Idealnie gdyby wybrane wartości były unikatowe "
+"w każdej dużej kolekcji konturów; wybierając odpowiednie wartości "
+"spowodujemy również mniej kolizji, zwłaszcza w przypadku złożonych płytek."
 
 #. type: Title ~
 #: IDF_Exporter.adoc:254
@@ -613,6 +640,14 @@ msgid ""
 "specified in units of millimeters while the bottom outlines were specified "
 "in units of inches."
 msgstr ""
+"Od lewej do prawej: (a) pionowy cylinder z wyprowadzeniami promieniowymi, "
+"(b) pionowy cylinder z wyprowadzeniem osiowym na lewo, (c) pionowy cylinder "
+"wyprowadzeniem osiowym na prawo, (d) poziomy cylinder z wyprowadzeniami "
+"osiowymi, (e) poziomy cylinder z wyprowadzeniami promieniowymi, (f) "
+"kwadratowy zarys, zwykły, (g) kwadratowy zarys z fazowaniem, (h) kwadratowy "
+"zarys z wyprowadzeniem osiowym na prawo. Kontury na górze zostały "
+"zwymiarowane w milimetrach, podczas gdy dolne kontury zostały zwymiarowane w "
+"jednostkach calowych."
 
 #. type: Title ~
 #: IDF_Exporter.adoc:305
@@ -640,6 +675,24 @@ msgid ""
 "After all, if you put garbage in you can expect garbage to come out. If you "
 "put in good information, you can be confident of good results."
 msgstr ""
+"Celem dostarczenia przeciągniętych konturów jest danie projektantowi "
+"mechanicznemu pewne wyobrażenie o lokalizacji i fizycznej przestrzeni "
+"zajmowanej przez każdy z elementów. W typowym scenariuszu projektant "
+"mechaniczny zastąpi niektóre surowe modele za pomocą bardziej szczegółowych "
+"modeli, na przykład podczas sprawdzenia, czy zamontowane kątowe diody LED "
+"pasują do otworów w panelu. W większości sytuacji dokładność konturu nie ma "
+"znaczenia, ale do dobrej praktyki należy, stworzenie zarysów, które "
+"przeniosą możliwie najlepszą informacje mechaniczną. W kilku przypadkach "
+"użytkownik może chcieć, by dopasować komponent z bardzo niewielkim nadmiarem "
+"przestrzeni, na przykład w przypadku przenośnego odtwarzacza muzyki. W "
+"takiej sytuacji, jeżeli większość konturów posiada wystarczająco dobrą "
+"reprezentację komponentów projektant mechanicznej części będzie musiał "
+"wymienić tylko niewiele modeli podczas projektowania obudowy. Jeśli kontury "
+"nie są w pełni odbiciem rzeczywistości to projektant mechaniki będzie tylko "
+"tracić czas na zastępowanie modeli, tak by zapewnić dobre dopasowanie. Mimo "
+"wszystko, jeśli umieścimy niepoprawne modele to można tylko oczekiwać "
+"niepoprawnych rezultatów. Jeśli zaś umieścimy wiele odpowiednich informacji, "
+"można mieć pewność, że spotkamy się z dobrymi wynikami."
 
 #. type: Title -
 #: IDF_Exporter.adoc:326
