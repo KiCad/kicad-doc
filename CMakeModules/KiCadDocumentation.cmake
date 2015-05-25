@@ -20,12 +20,27 @@ macro( KiCadDocumentation DOCNAME )
 	list( APPEND DOCCHAPTERS "${CNAME}" )
     endforeach()
 
-    # Get a list of all po translation files so we know what languages can be built
-    file( GLOB TRANSLATIONS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
+    # If we're not building a specific language, glob all languages
+    if( "${SINGLE_LANGUAGE}" STREQUAL "" )
+        # Get a list of all po translation files so we know what languages can be built
+        file( GLOB TRANSLATIONS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
 
-    # Add English to the translations, but we'll have to treat it as a special case
-    # when generating a translation target
-    list( APPEND TRANSLATIONS en )
+        # Add English to the translations, but we'll have to treat it as a special case
+        # when generating a translation target
+        list( APPEND TRANSLATIONS en )
+    else()
+        # Get a list of all po translation files so we know what languages can be built
+        file( GLOB AVAILABLE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
+
+        # Only add the language target if it is available. If this document hasn't been
+        # translated into the required language, don't include it as a target
+        foreach( L ${AVAILABLE} )
+            if( "${L}" STREQUAL "${SINGLE_LANGUAGE}.po" )
+                # Only build the required language
+                list( APPEND TRANSLATIONS "${SINGLE_LANGUAGE}" )
+            endif()
+        endforeach()
+    endif()
 
     foreach( LANGUAGE ${TRANSLATIONS} )
 
