@@ -41,7 +41,7 @@ else()
 endif()
 
 if( ASCIIDOCTORPDF_FOUND )
-    # Get the PO4A version number...
+    # Get the asciidoctor-pdf version number...
     string( REGEX MATCH "[0-9]+\\.[0-9]+\\.[0-9]+" ADOC_VERSION "${_ADOC_EXE_OUTPUT}" )
     message( STATUS "ASCIIDOCTORPDF Found v${ADOC_VERSION}" )
 else()

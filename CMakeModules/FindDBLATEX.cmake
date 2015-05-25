@@ -6,7 +6,7 @@
 # executable and there's no direct binary that we can find, so we also try to find python and
 # discover the dblatex "script" from there
 #
-# Variables generatied:
+# Variables generated:
 #
 # DBLATEX_FOUND     true when DBLATEX_COMMAND and DBLATEX_VERSION have valid entries
 # DBLATEX_COMMAND   The command to run dblatex (may be a list including an interpreter)
@@ -15,7 +15,6 @@
 
 # Have a go at finding a dblatex executable (valid for POSIX systems, not for WIN systems)
 find_program( DBLATEX_COMMAND dblatex )
-message( STATUS "find_program( DBLATEX_COMMAND dblatex ): ${DBLATEX_COMMAND}" )
 
 # If nothing could be found, test to see if we can just find the file, that we'll then run with the
 # python interpreter
