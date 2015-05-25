@@ -13,17 +13,13 @@ macro( KiCadDocumentation DOCNAME )
 
     # Get a list of all the doc chapters
     file( GLOB DOCCHAPTERFILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}_*.adoc )
-    
+
     foreach( DOC ${DOCCHAPTERFILES} )
 	# Generate only the chapter name rather than the complete filename
 	string( REGEX REPLACE "${DOCNAME}_(.+)\\.adoc" "\\1" CNAME "${DOC}" )
 	list( APPEND DOCCHAPTERS "${CNAME}" )
     endforeach()
-    
-    foreach( DOC ${DOCCHAPTERS} )
-	message( STATUS "DOCCHAPTER: ${DOC}" )
-    endforeach()
-    
+
     # Get a list of all po translation files so we know what languages can be built
     file( GLOB TRANSLATIONS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
 
@@ -34,15 +30,15 @@ macro( KiCadDocumentation DOCNAME )
     foreach( LANGUAGE ${TRANSLATIONS} )
 
 	string( SUBSTRING "${LANGUAGE}" 0 2 LANGUAGE )
-	
+
 	if( "${LANGUAGE}" MATCHES "en" )
 	    # No need to translate, so just make a renamed copy of the source instead such
 	    # that we have the same source target as every other language
-	    # This is made a target so that changes are reflected on subsequent builds!
+	    # This is made a target so that changes are reflected on subsequent builds!	
 	    add_custom_target( ${DOCNAME}_translate_${LANGUAGE}
-		COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}.adoc
-		${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.adoc )
-	    
+		COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}"
+		COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/images ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images
+		COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}.adoc ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc )
 	else()
 	    # Targets to update the translation files - include individual language targets
 	    # as well as an "all" target. Do not include updating the translations in the
@@ -53,47 +49,45 @@ macro( KiCadDocumentation DOCNAME )
 	    add_dependencies( ${DOCNAME}_updatepo_all ${DOCNAME}_updatepo_${LANGUAGE} )
 	
 	    add_custom_target( ${DOCNAME}_translate_${LANGUAGE}
-		${PO4A_COMMAND}-translate -f asciidoc -a ${CMAKE_CURRENT_SOURCE_DIR}/po/addendum.${LANGUAGE} -A utf-8 -M utf-8 -m ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}.adoc -p ${CMAKE_CURRENT_SOURCE_DIR}/po/${LANGUAGE}.po -k -0 -l ${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.adoc )
+		COMMAND ${CMAKE_COMMAND} -E make_directory "${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}"
+	        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/images ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images
+		COMMAND ${PO4A_COMMAND}-translate -f asciidoc -a ${CMAKE_CURRENT_SOURCE_DIR}/po/addendum.${LANGUAGE} -A utf-8 -M utf-8 -m ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}.adoc -p ${CMAKE_CURRENT_SOURCE_DIR}/po/${LANGUAGE}.po -k -0 -l ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc )
 	endif()
 
 	# Deal with chapters for all languages...
 	foreach( CHAPTER ${DOCCHAPTERS} )
 	    add_custom_target( ${DOCNAME}_translate_${CHAPTER}_${LANGUAGE}
 		COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}_${CHAPTER}.adoc
-		${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${CHAPTER}_${LANGUAGE}.adoc )
+		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}_${CHAPTER}.adoc )
+
 	    add_dependencies( ${DOCNAME}_translate_${LANGUAGE} ${DOCNAME}_translate_${CHAPTER}_${LANGUAGE} )
 	endforeach()
-	    
+
 	# HTML Generation
 	
 	add_adoc_html_target( ${DOCNAME}_html_${LANGUAGE}
-		${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.adoc
-		${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.html
+		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc
+		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html
 		${LANGUAGE} )
 
 	add_dependencies( ${DOCNAME}_html_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
 	add_dependencies( ${DOCNAME} ${DOCNAME}_html_${LANGUAGE} )
 
-	install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.html DESTINATION ./${DOCNAME}/html )
+	install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
+	install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
 
 	# PDF Generation
 	
 	add_adoc_pdf_target( ${DOCNAME}_pdf_${LANGUAGE}
-		${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.adoc
-		${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.pdf
+		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc
+		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf
 		${LANGUAGE} )
 
 	add_dependencies( ${DOCNAME}_pdf_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
 	add_dependencies( ${DOCNAME} ${DOCNAME}_pdf_${LANGUAGE} )
 
-	install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${DOCNAME}_${LANGUAGE}.pdf DESTINATION ./${DOCNAME}/pdf )
+	install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ./${LANGUAGE}/${DOCNAME}/pdf )
 
     endforeach()
 
-    # Copy the images folder to the binary build directory such that the
-    # translation can be easily previewed after it's been built
-    file( COPY ${CMAKE_CURRENT_SOURCE_DIR}/images
-	  DESTINATION ${CMAKE_CURRENT_BINARY_DIR} )
-
-    install( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/images DESTINATION ./${DOCNAME}/html )
 endmacro()
