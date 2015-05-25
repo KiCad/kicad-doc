@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-05-17 13:30+0200\n"
-"PO-Revision-Date: 2015-05-24 18:12+0100\n"
+"PO-Revision-Date: 2015-05-25 12:41+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #. type: Title =
 #: IDF_Exporter.adoc:7
@@ -297,6 +297,15 @@ msgid ""
 "a comma. The IDF file must consist only of 7-bit ASCII characters; use of 8-"
 "bit characters will result in undefined behavior."
 msgstr ""
+"Sekcja konturu komponentu zawiera pola, które są ciągami znaków, liczbami "
+"całkowitymi lub zmiennoprzecinkowymi. Ciąg jest kombinacją znaków, które "
+"mogą zawierać spacje; jeśli ciąg zawiera spacje to musi być ujęty w "
+"cudzysłowy. Cudzysłowy nie mogą pojawiać się wewnątrz ciągu. Liczby "
+"zmiennoprzecinkowe mogą być reprezentowane za pomocą notacji dziesiętnej lub "
+"wykładniczej, ale notacja dziesiętna jest jednak bardziej czytelna. Punkt "
+"dziesiętny musi być kropką, a nie przecinkiem. Plik IDF musi składać się "
+"tylko z 7-bitowych znaków ASCII; zastosowanie 8-bitowych znaków może "
+"doprowadzić do zachowania niemożliwego do zdefiniowania."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:138
@@ -309,6 +318,13 @@ msgid ""
 "All fields of a record must appear on a single line; records may not span "
 "lines."
 msgstr ""
+"Plik IDF składa się z SEKCJI, które składają się z REKORDÓW, które składają "
+"się z PÓL. Dla plików konturów IDF może istnieć tylko jeden typ sekcji i "
+"musi być jednym z .ELECTRICAL lub .MECHANICAL. Rekord jest pojedynczą linią "
+"tekstu i może zawierać jedno lub więcej pól. Pola to sekwencje znaków "
+"rozdzielonych przez jedną lub kilka spacji, które nie pojawiają się w "
+"cudzysłowach. Wszystkie pola rekordu muszą znajdować się w jednej linii; "
+"rekordy nie mogą obejmować wielu wierszy."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:142
@@ -330,6 +346,11 @@ msgid ""
 "“SOT-23”. For unique packages the manufacturer's part number is a good "
 "choice for the geometry name."
 msgstr ""
+"Nazwa Geometrii: ciąg znaków, który rasem z numerem części musi sformułować "
+"unikalny identyfikator kształtu komponentu. Dla standardowych obudów, nazwa "
+"obudowy to dobra wartość dla nazwy geometrii, na przykład “SOT-23”. Dla "
+"unikalnych obudów numer części według producenta również jest dobrym wyborem "
+"dla nazwy geometrii."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:154
