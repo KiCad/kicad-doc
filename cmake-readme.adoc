@@ -25,6 +25,35 @@ This will translate and build PDF and HTML versions of the documentation.
 See below for more information about the pre-requisites required for building
 the documentation.
 
+== Build Options
+
+The following options are available when configuring a build with CMake:
+
+=== BUILD_FORMATS
+
+By default **BUILD_FORMATS** is set to `html;pdf` to enable building all supported
+document formats.
+
+It's possible to set **BUILD_FORMATS** in order to build only a subset of formats,
+e.g. `-DBUILD_FORMATS=html` or `-DBUILD_FORMATS=pdf`
+    
+When only one build format is enabled the package name is transformed to include
+the format.
+
+=== SINGLE_LANGUAGE
+
+By default CMake will configure to build all languages available for each document.
+
+You can build just a single language by using the **SINGLE_LANGUAGE** option when
+configuring a build with CMake, e.g. `-DSINGLE_LANGUAGE=it`, etc.
+
+Currently, the available languages are : `en`, `fr`, `nl`, and `pl` however, any
+language code can be selected. Only translated documents will be built, so for
+some languages there may only be a partial documentation output.
+
+When the **SINGLE_LANGUAGE** option is set, the package name is transformed to
+include the language.
+
 == PO4A
 
 https://po4a.alioth.debian.org/[PO4A] 0.45+ is required. It's used to translate
