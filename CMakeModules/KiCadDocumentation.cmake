@@ -20,12 +20,32 @@ macro( KiCadDocumentation DOCNAME )
 	list( APPEND DOCCHAPTERS "${CNAME}" )
     endforeach()
 
-    # Get a list of all po translation files so we know what languages can be built
-    file( GLOB TRANSLATIONS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
+    # If we're not building a specific language, glob all languages
+    if( "${SINGLE_LANGUAGE}" STREQUAL "" )
+        # Get a list of all po translation files so we know what languages can be built
+        file( GLOB TRANSLATIONS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
 
-    # Add English to the translations, but we'll have to treat it as a special case
-    # when generating a translation target
-    list( APPEND TRANSLATIONS en )
+        # Add English to the translations, but we'll have to treat it as a special case
+        # when generating a translation target
+        list( APPEND TRANSLATIONS en )
+    else()
+        # Get a list of all po translation files so we know what languages can be built
+        file( GLOB AVAILABLE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
+
+        # Only add the language target if it is available. If this document hasn't been
+        # translated into the required language, don't include it as a target. English
+        # doesn't have a .po file and is always producable, so add it without any checks
+        if( ${SINGLE_LANGUAGE} STREQUAL "en" )
+            list( APPEND TRANSLATIONS "${SINGLE_LANGUAGE}" )
+        else()
+            foreach( L ${AVAILABLE} )
+                if( "${L}" STREQUAL "${SINGLE_LANGUAGE}.po" )
+                    # Only build the required language
+                    list( APPEND TRANSLATIONS "${SINGLE_LANGUAGE}" )
+                endif()
+            endforeach()
+        endif()
+    endif()
 
     foreach( LANGUAGE ${TRANSLATIONS} )
 
@@ -64,30 +84,34 @@ macro( KiCadDocumentation DOCNAME )
 	endforeach()
 
 	# HTML Generation
+	list( FIND BUILD_FORMATS "html" HTML_BUILD )
+	if( NOT "${HTML_BUILD}" EQUAL "-1" )
+            add_adoc_html_target( ${DOCNAME}_html_${LANGUAGE}
+                    ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc
+                    ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html
+                    ${LANGUAGE} )
+
+            add_dependencies( ${DOCNAME}_html_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
+            add_dependencies( ${DOCNAME} ${DOCNAME}_html_${LANGUAGE} )
+
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
+            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
+        endif()
 	
-	add_adoc_html_target( ${DOCNAME}_html_${LANGUAGE}
-		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc
-		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html
-		${LANGUAGE} )
-
-	add_dependencies( ${DOCNAME}_html_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
-	add_dependencies( ${DOCNAME} ${DOCNAME}_html_${LANGUAGE} )
-
-	install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
-	install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
-
+	
 	# PDF Generation
-	
-	add_adoc_pdf_target( ${DOCNAME}_pdf_${LANGUAGE}
-		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc
-		${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf
-		${LANGUAGE} )
+	list( FIND BUILD_FORMATS "pdf" PDF_BUILD )
+	if( NOT "${PDF_BUILD}" EQUAL "-1" )
+            add_adoc_pdf_target( ${DOCNAME}_pdf_${LANGUAGE}
+                    ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc
+                    ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf
+                    ${LANGUAGE} )
 
-	add_dependencies( ${DOCNAME}_pdf_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
-	add_dependencies( ${DOCNAME} ${DOCNAME}_pdf_${LANGUAGE} )
+            add_dependencies( ${DOCNAME}_pdf_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
+            add_dependencies( ${DOCNAME} ${DOCNAME}_pdf_${LANGUAGE} )
 
-	install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ./${LANGUAGE}/${DOCNAME}/pdf )
-
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ./${LANGUAGE}/${DOCNAME}/pdf )
+        endif()
     endforeach()
 
 endmacro()

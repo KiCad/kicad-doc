@@ -15,6 +15,13 @@ project( KiCadDocumentation NONE )
 # Desired targets are DBLATEX,FOP and ASCIIDOCTOR-PDF
 set( PDF_GENERATOR "DBLATEX" CACHE STRING "Specify which PDF generator to use: DBLATEX|FOP" )
 
+# Provide an option for a single language build. If nothing else, this will at
+# least help developers to speed up a build they're working on
+set( SINGLE_LANGUAGE "" CACHE STRING "Specify a single language to build: en|fr|it|nl|pl" )
+
+# Provide an option to decide which documentation formats to build.
+set( BUILD_FORMATS "html;pdf" CACHE LIST "Specify which output formats to build html/pdf" )
+
 # Add our custom modules to the module path
 set( CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMakeModules" ${CMAKE_MODULE_PATH} )
 
@@ -67,10 +74,27 @@ find_package( A2X REQUIRED )
 include( KiCadDocumentation )
 add_subdirectory( src )
 
+# Set the language in the package name if the package only contains a single
+# language
+if( "${SINGLE_LANGUAGE}" STREQUAL "" )
+    set( PACKAGE_LANGUAGE "" )
+else()
+    set( PACKAGE_LANGUAGE "-${SINGLE_LANGUAGE}" )
+endif()
+
+# If there is more than one build format, do not bother transforming the
+# package name, otherwise if there's only one, add it to the package name
+list( LENGTH BUILD_FORMATS BUILD_FORMATS_LENGTH )
+if( ${BUILD_FORMATS_LENGTH} GREATER 1 )
+    set( PACKAGE_BUILD_FORMAT "" )
+else()
+    set( PACKAGE_BUILD_FORMAT "-${BUILD_FORMATS}" )
+endif()
+
 # Generate both .tar.gz and .zip package targets
 set( CPACK_GENERATOR "TGZ;ZIP" )
 set( CPACK_PACKAGE_VERSION "1.0.0" )
-set( CPACK_PACKAGE_FILE_NAME "KiCadDocumentation-${CPACK_PACKAGE_VERSION}" )
+set( CPACK_PACKAGE_FILE_NAME "kicad-doc${PACKAGE_BUILD_FORMAT}${PACKAGE_LANGUAGE}-${CPACK_PACKAGE_VERSION}" )
 include( CPack )
 
 
