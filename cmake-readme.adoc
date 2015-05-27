@@ -54,17 +54,32 @@ some languages there may only be a partial documentation output.
 When the **SINGLE_LANGUAGE** option is set, the package name is transformed to
 include the language.
 
-== PO4A
+=== PDF_GENERATOR
+
+By default CMake will use dblatex building PDFs.
+
+You can build PDFs however using either `DBLATEX` or `FOP` by using the
+**PDF_GENERATOR** option whilst configuring a CMake build.
+
+For example, use `-DPDF_GENERATOR=FOP` to use FOP to build the PDFs. If the
+**BUILD_FORMATS** option doesn't include `pdf`, the **PDF_GENERATOR** option
+will have no effect on the build.
+
+This option doesn't transform the built package name.
+
+== Dependencies
+
+=== PO4A
 
 https://po4a.alioth.debian.org/[PO4A] 0.45+ is required. It's used to translate
 the English asciidoc documentation to another language before compilation to a
 final output format.
 
-=== PO4A on Linux
+==== PO4A on Linux
 
 Use your package manager to get the PO4A tools.
 
-=== PO4A on Windows
+==== PO4A on Windows
 
 PO4A is a perl script and so requires PERL to be installed. If you're using a
 POSIX emulation layer with package management, grab the perl package.
@@ -90,19 +105,19 @@ MinGW compiler which it uses to compile perl modules. Usually it puts this at
 the start of your path so this version of the MinGW compiler becomes your
 default compiler!
 
-== ASCIIDOC
+=== ASCIIDOC
 
 http://asciidoc.org/[AsciiDoc] is also required for building the documentation.
 
 Asciidoc is the format of the documentation and is used to generate both PDF
 and HTML versions of the documentation.
 
-=== Linux
+==== Linux
 
 Grab your distribution's ASCIIDOC package which will also install asciidoc's
 pre-requisites too.
 
-=== Windows
+==== Windows
 
 To install asciidoc on windows, get the latest version from
 http://sourceforge.net/projects/asciidoc/[Sourceforge] and unzip somewhere on
@@ -116,7 +131,7 @@ ourselves.
 
 Details of how to install dblatex and FOP are included below.
 
-== dblatex on Windows
+=== dblatex on Windows
 
 WARNING: Although dblatex support is provided for under Windows, it has only
 been unsuccessfully tested, failing due to a race condition with file
@@ -167,7 +182,7 @@ CMakeSupport/windows directory in your path and modifying it as necessary.
 So long as the install works, CMake will be able to find dblatex in your
 python installation
 
-== FOP on Windows
+=== FOP on Windows
 
 NOTE: This is currently the only way of building PDF documents on Windows.
 
@@ -180,7 +195,7 @@ In order for CMake to use FOP, use the following when configuring with CMake:
 
     -DPDF_GENERATOR=FOP
 
-== ASCIIDOCTOR
+=== ASCIIDOCTOR
 
 WARNING: ASCIIDOCTOR is not currently supported!
 
