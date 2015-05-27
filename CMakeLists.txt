@@ -52,6 +52,7 @@ endif()
 
 if( ${PDF_GENERATOR} MATCHES FOP )
     add_a2x_option( --fop )
+    add_a2x_option( --xsl-file ${PROJECT_SOURCE_DIR}/xsl/kicad.xsl )
     find_package( FOP REQUIRED )
 endif()
 
