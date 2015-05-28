@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2015-05-25 17:16+0200\n"
-"PO-Revision-Date: 2015-05-26 20:49+0100\n"
+"POT-Creation-Date: 2015-05-28 18:13+0200\n"
+"PO-Revision-Date: \n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -223,9 +223,9 @@ msgid ""
 "Activate the image:images/icons/netlist.png[] icon to display the netlist "
 "dialog window:"
 msgstr ""
-"By wczytać listę sieci należy wybrać ikonę image:images/icons/netlist.png"
-"[Ikona Lista sieci] na głównym pasku narzędzi. Otworzy się następujące okno "
-"dialogowe:"
+"By wczytać listę sieci należy wybrać ikonę image:images/icons/netlist."
+"png[Ikona Lista sieci] na głównym pasku narzędzi. Otworzy się następujące "
+"okno dialogowe:"
 
 #. type: Plain text
 #: Pcbnew_create_and_modify_board.adoc:44 Pcbnew_schematics.adoc:74
@@ -954,9 +954,9 @@ msgid ""
 "png[]. The name of the new module will be requested. This will be the name "
 "by which the module will be identified in the library."
 msgstr ""
-"Narzędzie ukrywające się pod ikoną image:images/icons/new_footprint.png"
-"[Ikona Nowy footprint] pozwala na utworzenie nowego footprintu. Po wybraniu "
-"tego narzędzia, użytkownik zostanie poproszony o podanie nazwy "
+"Narzędzie ukrywające się pod ikoną image:images/icons/new_footprint."
+"png[Ikona Nowy footprint] pozwala na utworzenie nowego footprintu. Po "
+"wybraniu tego narzędzia, użytkownik zostanie poproszony o podanie nazwy "
 "identyfikującej nowy footprint w bibliotece."
 
 #. type: Plain text
@@ -1013,8 +1013,8 @@ msgstr ""
 #: Pcbnew_creating_editing_modules.adoc:201
 msgid ""
 "Load the similar module (image:images/icons/load_module_lib.png[], image:"
-"images/icons/load_module_board.png[] or image:images/icons/import_module.png"
-"[])."
+"images/icons/load_module_board.png[] or image:images/icons/import_module."
+"png[])."
 msgstr ""
 "Załadować podobny footprint (korzystając z narzędzi image:images/icons/"
 "load_module_lib.png[Ikona Załaduj footprint], image:images/icons/"
@@ -1782,8 +1782,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_editing_tools.adoc:26
 msgid ""
-"image:images/icons/duplicate_pad.png[] image:images/icons/duplicate_line.png"
-"[] image:images/icons/duplicate_text.png[] image:images/icons/"
+"image:images/icons/duplicate_pad.png[] image:images/icons/duplicate_line."
+"png[] image:images/icons/duplicate_text.png[] image:images/icons/"
 "duplicate_module.png[] image:images/icons/duplicate_target.png[] image:"
 "images/icons/duplicate_zone.png[]"
 msgstr ""
@@ -4241,8 +4241,8 @@ msgid ""
 "GitHub repository maintainer, you can help update the GitHub copy.  Simply "
 "email the individual `*.kicad_mod` files you find in your COW directories to "
 "the maintainer of the GitHub repository.  After you've received confirmation "
-"that your changes have been committed, you can safely delete your COW file"
-"(s)  and the updated footprint from the read only part of GitHub library "
+"that your changes have been committed, you can safely delete your COW "
+"file(s)  and the updated footprint from the read only part of GitHub library "
 "will flow down.  Your goal should be to keep the COW file set as small as "
 "possible by contributing frequently to the shared master copies at https://"
 "github.com."
@@ -4307,6 +4307,392 @@ msgid ""
 "specific library table.  There is no restriction on how you define your "
 "libraries."
 msgstr ""
+
+#. type: Title -
+#: Pcbnew_interactive_router.adoc:3
+#, no-wrap
+msgid "Interactive Router"
+msgstr "Router Interaktywny"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:8
+msgid ""
+"The Interactive Router lets you quickly and efficient route your PCBs by "
+"shoving off or walking around items on the PCB that collide with the trace "
+"you are currently drawing."
+msgstr ""
+"Router interaktywny pozwala na szybkie i efektywne trasowanie ścieżek na PCB "
+"poprzez rozpychanie i omijanie sąsiednich elementów na płytce, które "
+"kolidują ze ścieżką jaka aktualnie jest prowadzona."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:10
+msgid "Following modes are supported:"
+msgstr "Wspierane tryby są następujące:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:13
+#, no-wrap
+msgid ""
+"*Highlight collisions*, which highlights all violating objects with a\n"
+"nice, shiny green color and shows violating clearance regions.\n"
+msgstr ""
+"*Podświetlanie kolizji*, gdzie następuje podświetlenie wszystkich kolizyjnych obiektów\n"
+"za pomocą jasnozielonego koloru, oraz wskazanie miejsc naruszeń dozwolonego prześwitu\n"
+"pomiędzy nimi.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:16
+#, no-wrap
+msgid ""
+"*Shove*, attempting to push and shove all items colliding with the\n"
+"currently routed track.\n"
+msgstr ""
+"*Rozsuwanie*, gdzie następuje próba wypchnięcia wszystkich elementów\n"
+"kolidujących z bieżąco trasowaną ścieżką.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:19
+#, no-wrap
+msgid ""
+"*Walk around*, trying to avoid obstacles by hugging/walking around\n"
+"them.\n"
+msgstr ""
+"*Omijanie*, gdzie następuje próba ominięcia przeszkód poprzez ich\n"
+"otaczanie/omijanie.\n"
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:22
+#, no-wrap
+msgid "Setting up"
+msgstr "Konfiguracja"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:25
+msgid "Before using the Interactive Router, please set up these two things:"
+msgstr "Przed użyciem Routera Interaktywnego, należy ustawić dwie rzeczy:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:29
+#, no-wrap
+msgid ""
+"*Clearance settings* To set the clearances, open the _Design Rules_\n"
+"dialog and make sure at least the default clearance value looks\n"
+"sensible.\n"
+msgstr ""
+"*Prześwit*. By ustawić prześwit należy otworzyć okno dialogowe _Reguły Projektowe_\n"
+"i sprawdzić czy przynajmniej domyślne wartości prześwitu są poprawne.\n"
+
+#. type: Target for macro image
+#: Pcbnew_interactive_router.adoc:30
+#, no-wrap
+msgid "images/en/rules_editor.png"
+msgstr "images/pl/rules_editor.png"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:34
+#, no-wrap
+msgid ""
+"*Enable OpenGL mode* By selecting _View->Switch canvas to OpenGL_ menu\n"
+"option or pressing *F11*.\n"
+msgstr ""
+"*Włączyć tryb OpenGL* poprzez wywołanie polecenia _Przełącz na tryb OpenGL_ z menu\n"
+"_Widok_ lub przez naciśnięcie klawisza *F11*.\n"
+
+#. type: Target for macro image
+#: Pcbnew_interactive_router.adoc:35
+#, no-wrap
+msgid "images/en/opengl_menu.png"
+msgstr "images/pl/opengl_menu.png"
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:38
+#, no-wrap
+msgid "Laying out tracks"
+msgstr "Trasowanie ścieżek"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:44
+msgid ""
+"To activate the router tool press the _Interactive Router_ button image:"
+"images/route_icon.png[Interactive Router Button] or the *X* key.  The cursor "
+"will turn into a cross and the tool name, will appear in the status bar."
+msgstr ""
+"By aktywować router należy nacisnąć przycisk _Router Interaktywny_ image:"
+"images/route_icon.png[Ikona Router Interaktywny] lub kalwisz *X*. Kursor "
+"zmieni swą postać, a nazwa wybranego narzędzia pojawi się na pasku statusu."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:49
+msgid ""
+"To start a track, click on any item (a pad, track or a via) or press the *X* "
+"key again hovering the mouse over that item. The new track will use the net "
+"of the starting item. Clicking or pressing *X* on empty PCB space starts a "
+"track with no net assigned."
+msgstr ""
+"By rozpocząć ścieżkę należy kliknąć na dowolnym elemencie (polu lutowniczym, "
+"ścieżce lub przelotce) lub przez ponowne naciśnięcie klawisza *X* w czasie "
+"gdy kursor myszy znajdować się będzie nad tym elementem. Nowa ścieżka użyje "
+"nazwy sieci takiej jak początkowy element. Klikając lub wciskając *X* w "
+"pustym miejscu rozpocznie ścieżkę, ale nie będzie ona posiadać przypisanej "
+"nazwy sieci."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:55
+msgid ""
+"Move the mouse to define shape of the track. The router will try to follow "
+"mouse trail, hugging unmovable obstacles (such as pads) and shoving "
+"colliding traces/vias, depending on the mode. Retreating mouse cursor will "
+"cause the shoved items to spring back to their former locations."
+msgstr ""
+"Przesuwanie kursora myszy definiuje kształt ścieżki. Router będzie starał "
+"się podążać szlakiem myszy, otaczając nieprzesuwne przeszkody (takie jak "
+"pola lutownicze) i w zależności od trybu rozchylać kolidujące ścieżki/"
+"przelotki. Cofnięcie kursora myszy spowoduje, że rozchylone elementy "
+"powracją z powrotem na swoje dawne pozycje."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:59
+msgid ""
+"Clicking on a pad/track/via in the same net finishes routing. Clicking in "
+"empty space fixes the segments routed so far and continues routing the trace."
+msgstr ""
+"Klikając na polu/ścieżce/przelotce należącej do tej samej sieci kończy "
+"trasowanie. Klikając w pustym miejscu kończy poprzedni segment i rozpoczyna "
+"nowy od tego miejsca."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:62
+msgid ""
+"In order to stop routing and undo all changes (shoved items, etc.), simply "
+"press *Esc*."
+msgstr ""
+"By zatrzymać trasowanie i anulować wszsytkie zmiany (rozsunięcie ścieżek, "
+"przelotek, itd.), należy nacisnąć *Esc*."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:67
+msgid ""
+"Pressing *V* or selecting _Place Through Via_ from the context menu while "
+"routing a track attaches a via at the end of the trace being routed. "
+"Pressing *V* again disables via placement. Clicking in any spot establishes "
+"the via and continues routing."
+msgstr ""
+"Naciskając *V* lub wybierając _Wstaw przelotkę na wylot_ z menu "
+"kontekstowego podczas trasowania dołącza przelotkę na końcu prowadzonej "
+"ścieżki i pozwala ją przesuwać. Naciskając ponownie *V* można pozbyć się "
+"przelotki na końcu ścieżki. Kliknięcie stawia taką przelotkę w miejscu "
+"kliknięcia, a trasowanie jest kontynuowane (ale na innej warstwie)."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:71
+msgid ""
+"Pressing */* or selecting _Switch Track Posture_ from the context menu "
+"toggles the direction of the initial track segment between straight or "
+"diagonal."
+msgstr ""
+"Naciskając klawisz */* lub wybierając _Przełącz nachylenie ścieżki_ z menu "
+"kontekstowego zmienia sposób załamania dwóch sąsiadujących ze sobą segmentów "
+"gdy punkt początkowy i końcowy prowadzonej ścieżki nie leżą w tej samej "
+"linii."
+
+# Deleted Pamiętaj since asciidoc is able to handle this automatically.
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:75
+msgid ""
+"By default, the router snaps to centers/axes of the items.  Snapping can be "
+"disabled by holding *Shift* while routing or selecting items."
+msgstr ""
+"Domyślnie router przyciąga ścieżki do centralnych punktów/osi pozostałych "
+"obiektów. Przyciąganie można wyłączyć przytrzymując *Shift* podczas "
+"trasowania lub wyboru poszczególnych elementów."
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:77
+#, no-wrap
+msgid "Setting track widths and via sizes"
+msgstr "Ustawianie szerokości ścieżek i rozmiaru przelotek"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:81
+msgid ""
+"There are several ways to pre-select a track width/via size or to change it "
+"during routing:"
+msgstr ""
+"Istnieje kilka możliwości wcześniejszego wyboru rozmiaru ścieżki/przelotki "
+"lub zmiany tego rozmiaru podczas trasowania:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:83
+msgid "Use standard Kicad shortcuts."
+msgstr "Użwyając domyślnych skrótów kalwiszowych."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:86
+msgid ""
+"Press *W* or select _Custom Track Width_ from the context menu to type in a "
+"custom track width/via size."
+msgstr ""
+"Naciskając klawisz *W* lub za pomocą polecenia _Własny rozmiar ścieżki_ z "
+"menu kontekstowego i wpisując ten rozmiar."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:89
+msgid ""
+"Pick a predefined width from the _Select Track Width_ sub-menu of the "
+"context menu."
+msgstr ""
+"Wybrać z listy wcześniej zdefiniowanych rozmiarów poleceniem _Wybierz "
+"szerokość ścieżki_ z menu kontekstowego."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:93
+msgid ""
+"Select _Use the starting track width_ in the _Select Track Width_ menu to "
+"pick the width from the start item (or the traces already connected to it)."
+msgstr ""
+"Aktywując opcję _Użyj początkowej szerokości ścieżki_ z listy _Wybierz "
+"szerokość ścieżki_ w menu, by automatycznie rozpocząć nową ścieżkę o "
+"szerokości takiej samej jak połączony z nią element."
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:95
+#, no-wrap
+msgid "Dragging"
+msgstr "Przeciąganie"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:101
+msgid ""
+"The router can drag track segments, corners and vias. To drag an item, click "
+"on it with *Ctrl* key pressed, hover the mouse and press *G* or select _Drag "
+"Track/Via_ from the context menu. Finish dragging by clicking again or abort "
+"by pressing __Esc__."
+msgstr ""
+"Router umożliwia przeciąganie segmentów, załamań ścieżek i przelotek. By "
+"przeciągnąć element, należy kliknąć na niego z wciśniętym klawiszem *Ctrl*, "
+"najechać na niego i nacisnąć *G* lub wybrać polcenie _Przeciągnij Ścieżkę/"
+"Przelotkę_ z menu podręcznego. Zakończyć przeciąganie można poprzez ponowne "
+"kliknięcie lub użycie klawisza _Esc_."
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:103
+#, no-wrap
+msgid "Options"
+msgstr "Opcje"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:107
+msgid ""
+"The router behavior be configured by pressing _E_ or selecting _Routing "
+"Options_ from the context menu. It opens a window like the one below:"
+msgstr ""
+"Zachowanie routera może być skonfigurowane za pomocą menu kontekstowego "
+"wywoływanego przez wciśnięcie kalwisza _E_ lub przez wybranie polecenia "
+"_Opcje routera_. Menu to będzie wyglądać następująco:"
+
+#. type: Target for macro image
+#: Pcbnew_interactive_router.adoc:108
+#, no-wrap
+msgid "images/en/router_options.png"
+msgstr "images/pl/router_options.png"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:111
+msgid "The options are:"
+msgstr "Dostępne opcje to:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:114
+#, no-wrap
+msgid ""
+"*Mode* - select how the router handles DRC violation (shoving, walking\n"
+"around, etc.)\n"
+msgstr ""
+"*Tryb* - Wybiera tryb w jaki sposób router ma osługiwać naruszenia DRC (rozpychać,\n"
+"omijać, itd.)\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:117
+#, no-wrap
+msgid ""
+"*Shove vias* - when disabled, vias are treated as un-movable objects\n"
+"and hugged instead of shoved.\n"
+msgstr ""
+"*Rozsuwaj przelotki* - gdy opcja jest wyłączona, przelotki są traktowane jako obiekty\n"
+"zablokowane i będą omijane niżeli rozsuwane.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:121
+#, no-wrap
+msgid ""
+"*Jump over obstacles* - when enabled, the router tries to move\n"
+"colliding traces behind solid obstacles (e.g. pads) instead of\n"
+"\"reflecting\" back the collision\n"
+msgstr ""
+"*Przeskakuj ponad przeszkodami* - gdy opcja jest włączona, router będzie próbował przesuwać\n"
+"kolidujące ścieżki znajdujące się przed trwałymi przeszkodami (np. polami lutowniczymi), niż\n"
+"spowrotem \"odzwierciedlać\" miejsca kolizji\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:126
+#, no-wrap
+msgid ""
+"*Remove redundant tracks* - removes loops while routing (e.g. if the\n"
+"new track ensures same connectivity as an already existing one, the old\n"
+"track is removed). Loop removal works locally (only between the start\n"
+"and end of the currently routed trace).\n"
+msgstr ""
+"*Usuwaj nadmiarowe ścieżki* - gdy opcja jest włączona, pętle podczas trasowania (np.  gdy\n"
+"nowa ścieżka wygląda na nową drogę połączenia już istniejącego, poprzednie połączenie\n"
+"zostanie usunięte). Usuwanie pętli działa tylko lokalnie (tylko pomiędzy początkiem a końcem\n"
+"bieżąco trasowanej ścieżki).\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:130
+#, no-wrap
+msgid ""
+"*Automatic neckdown* - when enabled, the router tries to break out\n"
+"pads/vias in a clean way, avoiding acute angles and jagged breakout\n"
+"traces.\n"
+msgstr ""
+"*Automatycznie zwężaj* - gdy opcja jest włączona, router będzie się starał\n"
+"przechodzić pomiędzy polami/przelotkami w sposób nie naruszający zasad,\n"
+"unikając ostrych kątów i nierównych kącików ścieżek.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:133
+#, no-wrap
+msgid ""
+"*Smooth dragged segments* - when enabled, the router attempts to merge\n"
+"several jagged segments into a single straight one (dragging mode).\n"
+msgstr ""
+"*Wygładzaj przeciągane segmenty* - gdy opcja jest włączona, router będzie próbował łączyć\n"
+"niektóre segmenty w ciągłe ścieżki by wyeliminować ich fragmentację (dla łatwego ich przeciągania).\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:136
+#, no-wrap
+msgid ""
+"*Allow DRC violations* (_Highlight collisions_ mode only) - allows\n"
+"to establish a track even if is violating the DRC rules.\n"
+msgstr ""
+"*Zezwól na łamanie zasad DRC* (tylko w trybie _Podświetl miejsca kolizji_) - pozwala na\n"
+"zestawienie trasowanego połączenia, nawet gdy narusza to zasady DRC.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:140
+#, no-wrap
+msgid ""
+"*Optimizer effort* - defines how much time the router shall spend\n"
+"optimizing the routed/shoved traces. More effort means cleaner routing\n"
+"(but slower), less effort means faster routing but somewhat jagged\n"
+"traces.\n"
+msgstr ""
+"*Głębokość optymalizacji* - określa ile czasu router może poświęcić na\n"
+"optymalizację trasowanych/rozsuwanych ścieżek. Dłuższy czas pozwala na\n"
+"lepszy routing (lecz wolniejszy), mniejszy czas daje szybsze efekty podczas\n"
+"trasowania, ale pojawiają się nierówne śegmenty.\n"
 
 #. type: Title -
 #: Pcbnew_introduction.adoc:3
@@ -5355,10 +5741,10 @@ msgstr ""
 #: Pcbnew_managing_libs.adoc:167
 msgid ""
 "The action of saving a module (thereby modifying the file of the active "
-"library) is performed using this button image:images/icons/save_library.png"
-"[]. If a module of the same name already exists, it will be replaced. Since "
-"you will depend upon the accuracy of the library modules, it is worth double-"
-"checking the module before saving."
+"library) is performed using this button image:images/icons/save_library."
+"png[]. If a module of the same name already exists, it will be replaced. "
+"Since you will depend upon the accuracy of the library modules, it is worth "
+"double-checking the module before saving."
 msgstr ""
 
 #. type: Plain text
@@ -5389,8 +5775,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:180
 msgid ""
-"Select the destination library via the button image:images/icons/library.png"
-"[]."
+"Select the destination library via the button image:images/icons/library."
+"png[]."
 msgstr ""
 
 #. type: Plain text
