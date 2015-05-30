@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-05-29 15:44+0200\n"
-"PO-Revision-Date: 2015-05-30 07:11+0100\n"
+"PO-Revision-Date: 2015-05-30 20:36+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -639,7 +639,7 @@ msgstr "Edycja dołączonej dokumentacji (opis, słowa kluczowe)."
 #: Pcbnew_creating_editing_modules.adoc:17
 #, no-wrap
 msgid "Module elements"
-msgstr ""
+msgstr "Moduły"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:23
@@ -648,21 +648,24 @@ msgid ""
 "inserted in the PCB and it must be linked to the relative component in your "
 "schematic. Each module includes three different elements:"
 msgstr ""
+"Footprint to nie tylko fizyczna reprezentacja elementu umieszczonego później "
+"na płytce, lecz także i łącznik powiązany ze schematem. Każdy footprint "
+"zawiera zwykle trzy różne, jednakże ważne elementy:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:25 Pcbnew_managing_libs.adoc:130
 msgid "The pads."
-msgstr ""
+msgstr "Pola lutownicze"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:26
 msgid "Graphical contours and text."
-msgstr ""
+msgstr "Kontury graficzne oraz tekst swobodny"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:27
 msgid "Fields."
-msgstr ""
+msgstr "Pola tekstowe"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:31
@@ -671,22 +674,25 @@ msgid ""
 "auto-placement function will be used. The same holds for the generation of "
 "auto-insertion files."
 msgstr ""
+"Dodatkowo, w przypadku używania funkcji automatycznego rozmieszczania "
+"footprintów czy generowania plików położeń footprintów, wzrasta liczba "
+"innych parametrów, które muszą zostać poprawnie określone (np. Pick&Place)."
 
 #. type: Title ^
 #: Pcbnew_creating_editing_modules.adoc:33
 #, no-wrap
 msgid "Pads"
-msgstr ""
+msgstr "Pola lutownicze (Pady)"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:36
 msgid "Two pad properties are important:"
-msgstr ""
+msgstr "Dwa rodzaje właściwości pól lutowniczych są najważniejsze:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:38
 msgid "Geometry (shape, layers, drill holes)."
-msgstr ""
+msgstr "Geometria padu (kształt, obecność na warstwach, wiercenie)."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:43
@@ -697,12 +703,17 @@ msgid ""
 "number in the schematic, because it defines the matching pin and pad numbers "
 "that Pcbnew links pins and pads with."
 msgstr ""
+"Numer padu, który jest złożony z maksymalnie czterech znaków.  Wynika, z "
+"tego, że nie tylko następujące numery pól lutowniczych są poprawne : `1`, "
+"`9999`, lecz także `AA56` czy `ANOD`. Numer padu musi być identyczny z "
+"odpowiadającym mu numerem pinu w symbolu na schemacie, ponieważ na podstawie "
+"tej informacji Pcbnew łączy piny i pola lutownicze w module."
 
 #. type: Title ^
 #: Pcbnew_creating_editing_modules.adoc:45
 #, no-wrap
 msgid "Contours"
-msgstr ""
+msgstr "Kontury graficzne"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:51
@@ -712,12 +723,17 @@ msgid ""
 "text. Contours have no electrical significance, they are simply graphical "
 "aids."
 msgstr ""
+"Graficzna reprezentacja konturów jest używana do rysowania fizycznego rzutu "
+"jaki daje kształt realnego elementu. Do rysowania konturów dostępnych jest "
+"kilka narzędzi graficznych: linie, okręgi, łuki i tekst. Kontury nie mają "
+"jednak znaczenia elektrycznego - są po prostu pomocne w rozmieszczaniu "
+"footprintów, tak aby nie nachodziły one na siebie."
 
 #. type: Title ^
 #: Pcbnew_creating_editing_modules.adoc:53
 #, no-wrap
 msgid "Fields"
-msgstr ""
+msgstr "Pola tekstowe"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:63
@@ -730,17 +746,25 @@ msgid ""
 "the value of the corresponding part in the schematic (47K, 74LS02, etc.). "
 "Other fields can be added and these will behave like graphical text."
 msgstr ""
+"Pola tekstowe to elementy tekstowe powiązane z footprintem. Dwa z nich są "
+"obowiązkowe i zawsze są obecne: _Oznaczenie_ i _Wartość_. Te dwa pola są "
+"automatycznie odczytywane i aktualizowane przez Pcbnew gdy odczytywana jest "
+"lista sieci podczas ładowania footprintów na płytkę. Pole _Oznaczenie_ "
+"otrzymuje odpowiednie odniesienie ze schematu (`U1`, `IC3`,...). Pole "
+"_Wartość_ otrzymuje zaś odpowiednią wartość przypisaną do symbolu na "
+"schemacie (`47K`, `74LS02`,...). Mogą zostać dodane także inne pola; ale "
+"będą się zachowywać one wtedy jak tekst graficzny."
 
 #. type: Title ~
 #: Pcbnew_creating_editing_modules.adoc:65
 #, no-wrap
 msgid "Starting ModEdit and selecting a module to edit"
-msgstr ""
+msgstr "Uruchamianie ModEdit oraz wybór footprintu w celu edycji"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:68
 msgid "ModEdit can be started in two ways:"
-msgstr "Edytor footprintów jest dostępny z poziomu Pcbnew na dwa sposoby:"
+msgstr "ModEdit może zostać uruchomiony dwojako:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:72
@@ -761,6 +785,10 @@ msgid ""
 "from the board will be loaded into the editor, for modification or for "
 "saving."
 msgstr ""
+"Klikając podwójnie na module na płytce i z okna dialogowego _Właściwości "
+"footprintu_ wybierając przycisk 'Edytor footprintów'. Jeśli zostanie użyta "
+"ta możliwość, footprint z płytki zostanie załadowany do edytora ModEdit co "
+"umożliwi jego bezpośrednią modyfikację (lub też zapis do biblioteki)."
 
 #. type: Title ~
 #: Pcbnew_creating_editing_modules.adoc:78
@@ -772,7 +800,8 @@ msgstr "Paski narzędziowe"
 #: Pcbnew_creating_editing_modules.adoc:81
 msgid "Calling ModEdit will launch a new window that looks like this:"
 msgstr ""
-"Wywołanie edytora footprintów ModEdit spowoduje otwarcie następującego okna:"
+"Wywołanie edytora ModEdit spowoduje otwarcie nowego okna, którego wygląd "
+"przedstawia następujący rysunek:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:83 Pcbnew_managing_libs.adoc:56
@@ -783,37 +812,39 @@ msgstr "image:images/pl/Modedit_main_window.png[Okno programu ModEdit]"
 #: Pcbnew_creating_editing_modules.adoc:85
 #, no-wrap
 msgid "Edit toolbar (right-hand side)"
-msgstr ""
+msgstr "Prawy pasek narzędziowy - edycja elementów składowych"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:88
 msgid "This toolbar contains tools for:"
 msgstr ""
+"Ten pasek narzędzi zawiera narzędzia do tworzenia elementów składowych "
+"footprintów:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:90
 msgid "Placing pads."
-msgstr ""
+msgstr "Wstawianie pól lutowniczych."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:91
 msgid "Adding graphic elements (contours, text)."
-msgstr ""
+msgstr "Dodawanie elementów graficznych (obrysy, tekst)."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:92
 msgid "Positioning the anchor."
-msgstr ""
+msgstr "Ustawianie punktu zaczepienia footprintu."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:93 Pcbnew_general_operations.adoc:388
 msgid "Deleting elements."
-msgstr ""
+msgstr "Usuwanie elementów składowych footprintu."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:95
 msgid "The specific functions are the following:"
-msgstr ""
+msgstr "Poszczególne narzędzia służą do:"
 
 #. type: delimited block |
 #: Pcbnew_creating_editing_modules.adoc:119
@@ -841,17 +872,38 @@ msgid ""
 "and after the grid size can be set to the pad pitch.\n"
 "Placing pads is therefore very easy\n"
 msgstr ""
+"| image:images/icons/cursor.png[]\n"
+"| Wyłączenie narzędzia.\n"
+"| image:images/icons/pad.png[]\n"
+"| Dodawania pól lutowniczych.\n"
+"| image:images/icons/add_polygon.png[]\n"
+"| Rysowania linii łamanych.\n"
+"| image:images/icons/add_circle.png[]\n"
+"| Rysowania pełnych okręgów.\n"
+"| image:images/icons/add_arc.png[]\n"
+"| Rysowania wycinków okręgu.\n"
+"| image:images/icons/add_text.png[]\n"
+"| Dodawania tekstu swobodnego (pola tekstowe **nie są** zarządzane tym narzędziem).\n"
+"| image:images/icons/anchor.png[]\n"
+"| Position the module anchor.\n"
+"| image:images/icons/delete.png[]\n"
+"| Pozycjonowania punktu zaczepienia footprintu.\n"
+"| image:images/icons/grid_select_axis.png[]\n"
+"|Ustawianie punktu zerowego siatki (przesunięcie siatki). Przydatne przy umieszczaniu pól lutowniczych.\n"
+"Punkt zerowy siatki może być przesunięty na wybraną pozycję (na przykład w miejscu pierwszego pada),\n"
+"a następnie można dostosować rozmiar siatki do rozstawu pól lutowniczych. W ten sposób umieszczanie\n"
+"pól lutowniczych będzie znacznie ułatwione.\n"
 
 #. type: Title ^
 #: Pcbnew_creating_editing_modules.adoc:122
 #, no-wrap
 msgid "Display toolbar (left-hand side)"
-msgstr ""
+msgstr "Lewy pasek narzędziowy - opcje wyświetlania"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:125
 msgid "These tools manage the display options in ModEdit:"
-msgstr ""
+msgstr "Te opcje służą do zarządzania opcjami wyświetlania."
 
 #. type: delimited block |
 #: Pcbnew_creating_editing_modules.adoc:144
@@ -874,12 +926,28 @@ msgid ""
 "| image:images/icons/contrast_mode.png[]\n"
 "| Toggle high-contrast mode\n"
 msgstr ""
+"| image:images/icons/grid.png[]\n"
+"| Włącza/Wyłącza wyświetlanie siatki.\n"
+"| image:images/icons/polar_coord.png[]\n"
+"| Włącza/Wyłącza wyświetlanie współrzędnych względnych jako polarne.\n"
+"| image:images/icons/unit_mm.png[] image:images/icons/unit_inch.png[]\n"
+"| Przełącza pomiędzy używanymi jednostkami miar.\n"
+"| image:images/icons/cursor_shape.png[]\n"
+"| Przełącza rodzaj kursora (mały lub pełnoekranowy).\n"
+"| image:images/icons/pad_sketch.png[]\n"
+"| Włącza wyświetlanie pól lutowniczych jako niewypełniony zarys.\n"
+"| image:images/icons/text_sketch.png[]\n"
+"| Włącza wyświetlanie tekstów jako niewypełniony zarys.\n"
+"| image:images/icons/show_mod_edge.png[]\n"
+"| Włącza wyświetlanie konturów jako niewypełniony zarys.\n"
+"| image:images/icons/contrast_mode.png[]\n"
+"| Przełącza widok w tryb wysokiego kontrastu.\n"
 
 #. type: Title ~
 #: Pcbnew_creating_editing_modules.adoc:147
 #, no-wrap
 msgid "Context Menus"
-msgstr ""
+msgstr "Menu podręczne"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:151
@@ -887,42 +955,50 @@ msgid ""
 "The right mouse button calls up menus that depend upon the element beneath "
 "the cursor."
 msgstr ""
+"Prawy klawisz myszy wywołuje podręczne menu, którego zawartość zależna jest "
+"od aktualnie wskazywanego elementu przez kursor:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:153
 msgid "The context menu for editing module parameters:"
-msgstr ""
+msgstr "Menu podręczne z możliwością edycji parametrów footprintu."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:155
 msgid "image:images/Modedit_context_menu_module_parameters.png[]"
 msgstr ""
+"image:images/pl/Modedit_context_menu_module_parameters.png[Menu kontekstowe "
+"ModEdit]"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:157
 msgid "The context menu for editing pads:"
-msgstr ""
+msgstr "Menu podręczne z możliwością edycji pól lutowniczych."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:159
 msgid "image:images/Modedit_context_menu_pads.png[]"
 msgstr ""
+"image:images/pl/Modedit_context_menu_pads.png[Menu kontekstowe ModEdit dla "
+"padów]"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:161
 msgid "The context menu for editing graphic elements:"
-msgstr ""
+msgstr "Menu podręczne z możliwością edycji elementów graficznych."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:163
 msgid "image:images/Modedit_context_menu_graphics.png[]"
 msgstr ""
+"image:images/pl/Modedit_context_menu_graphics.png[Menu kontekstowe ModEdit "
+"dla grafiki]"
 
 #. type: Title ~
 #: Pcbnew_creating_editing_modules.adoc:166
 #, no-wrap
 msgid "Module properties dialog"
-msgstr ""
+msgstr "Okno właściwości footprintu"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:170
@@ -930,16 +1006,23 @@ msgid ""
 "This dialog can be launched when the cursor is over a module by clicking on "
 "the right mouse button and then selecting 'Edit Module'."
 msgstr ""
+"To okno dialogowe może zostać uruchomione, gdy kursor znajdzie się nad "
+"footprintem i zostanie wykorzystany prawy klawisz myszy do wywołania "
+"polecenia 'Edycja footprintu'."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:172
 msgid "image:images/Modedit_module_properties_dialog.png[]"
 msgstr ""
+"image:images/pl/Modedit_module_properties_dialog.png[Okno właściwości "
+"footprintu]"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:174
 msgid "The dialog can be used to define the main module parameters."
 msgstr ""
+"Opcje zawarte tutaj mogą zostać użyte do zdefiniowania głównych parametrów "
+"footprintu."
 
 #. type: Title ~
 #: Pcbnew_creating_editing_modules.adoc:176 Pcbnew_managing_libs.adoc:118
@@ -1638,6 +1721,8 @@ msgid ""
 "The file containing the 3D representation (created by the 3D modeler "
 "Wings3D, in vrml format, via the export to vrml command)."
 msgstr ""
+"Plik zawierający model 3D (stworzony przez narzędzie do modelowania 3D "
+"Wings3d, w formacie VRML, za pomocą polecenia eksportu do VRML)."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:431
@@ -1645,27 +1730,33 @@ msgid ""
 "The default path is kicad/modules/package3d. In the example, the file name "
 "is discret/to_220horiz.wrl, using the default path)"
 msgstr ""
+"Domyślną ścieżką dla modeli 3D jest `kicad/modules/package3d` zawartą w "
+"zmiennej systemowej `KISYS3DMOD`. W tym przykładzie, plik nazywa się "
+"`discret/to_220horiz.wrl`, używający domyślnej ścieżki początkowej)."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:432
 msgid "The x, y and z scales."
-msgstr ""
+msgstr "Skalę modelu w trzech osiach : X, Y oraz Z."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:434
 msgid ""
 "The offset with respect to the anchor point of the module (usually zero)."
 msgstr ""
+"Przesunięcie modelu względem punktu zaczepienia footprintu (zwykle wartość "
+"jest równa zero)."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:435
 msgid "The initial rotation in degrees about each axis (usually zero)."
 msgstr ""
+"Początkowy obrót modelu 3D w każdej osi (zwykle wartości jest równa zero)."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:437
 msgid "Setting scale allows:"
-msgstr ""
+msgstr "Ustawienie skali modelu pozwala na:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:440
@@ -1673,6 +1764,9 @@ msgid ""
 "To use the same 3D file for footprints which have similar shapes b ut "
 "different sizes (resistors, capacitors, SMD components...)"
 msgstr ""
+"Użycie tych samych plików z modelem 3D dla footprintów, które posiadają "
+"podobne kształty ale różnią się rozmiarem (np. Rezystory, kondensatory, "
+"elementy 3D...)"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:442
@@ -1680,6 +1774,9 @@ msgid ""
 "For small (or very large) packages, a better use of the Wings3D grid is to "
 "scale *0.1 inch in Pcbnew = 1 grid unit* in Wings3D."
 msgstr ""
+"Dla małych (lub bardzo dużych) obudów, lepszym rozwiązaniem jest użycie "
+"siatki Wings3D: Skala 1:1 to 0.1cala w Pcbnew i równa się 1 jednostce siatki "
+"w Wings3D."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:445
@@ -1687,11 +1784,15 @@ msgid ""
 "If such a file has been specified, it is possible to view the component in "
 "3D."
 msgstr ""
+"Jeśli plik(i) z modelem zostaną określone, możliwe stanie się przeglądanie "
+"komponentów w przestrzeni 3D:"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:447
 msgid "image:images/Modedit_footprint_3d_preview.png[]"
 msgstr ""
+"image:images/pl/Modedit_footprint_3d_preview.png[Pogląd footprintu w "
+"przestrzeni 3D]"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:449
@@ -1699,12 +1800,13 @@ msgid ""
 "The 3D model will automatically appear in the 3D representation of the "
 "printed circuit board."
 msgstr ""
+"Model 3D automatycznie pojawi się także podczas wizualizacji PCB w trybie 3D."
 
 #. type: Title ~
 #: Pcbnew_creating_editing_modules.adoc:451
 #, no-wrap
 msgid "Saving a module into the active library"
-msgstr ""
+msgstr "Zapis footprintu w aktywnej bibliotece"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:454
@@ -1712,6 +1814,9 @@ msgid ""
 "The save command (modification of the file of the active library) is "
 "activated by the image:images/icons/save_library.png[] button."
 msgstr ""
+"Operacja zapisu footprintu (modyfikująca plik aktywnej biblioteki) jest "
+"przeprowadzana za pomocą polecenia 'Zapisz' image:images/icons/save_library."
+"png[]."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:456
@@ -1721,6 +1826,10 @@ msgid ""
 "library modules, it is worth double-checking the module for errors before "
 "saving."
 msgstr ""
+"Jeśli footprint o tej samej nazwie już istnieje, zostanie on zastąpiony. "
+"Ponieważ tworzone obwody drukowane będą zależeć od dokładności footprintów w "
+"bibliotece, warto przed zapisaniem footprintu dwukrotnie sprawdzić nowy "
+"footprint przed jego zapisem."
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:458
@@ -1728,12 +1837,14 @@ msgid ""
 "Before saving, it is also recommended to change the reference or value of "
 "the module to be equal to the library name of the module."
 msgstr ""
+"Zalecane jest również, dokonanie edycji pól z nazwą footprintu, będących "
+"jego identyfikatorem w bibliotece."
 
 #. type: Title ~
 #: Pcbnew_creating_editing_modules.adoc:460
 #, no-wrap
 msgid "Saving a module to the board"
-msgstr ""
+msgstr "Zapis footprintu na płytce"
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:464
@@ -1742,6 +1853,10 @@ msgid ""
 "images/icons/update_module_board.png[] will update this footprint on the "
 "board."
 msgstr ""
+"Jeśli edytowany footprint pochodził z bieżącej płytki, należy go uaktualnić "
+"za pomocą polecenia 'Uaktualnij footprint' image:images/icons/"
+"update_module_board.png[Ikona Aktualizuj footprint na płytce] znajdującym "
+"się na górnym pasku narzędzi."
 
 #. type: Title -
 #: Pcbnew_editing_tools.adoc:2
@@ -2164,7 +2279,7 @@ msgstr ""
 #: Pcbnew_fabrication_files.adoc:2
 #, no-wrap
 msgid "Files for circuit fabrication"
-msgstr ""
+msgstr "Przygotowywanie plików produkcyjnych"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:5
@@ -2180,12 +2295,14 @@ msgid ""
 "the same directory that contains the file xxxxxx.brd for the printed circuit "
 "board."
 msgstr ""
+"Wszystkie wygenerowane pliki są domyślnie umieszczane w katalogu roboczym "
+"projektu, czyli tam gdzie znajduje się plik z projektem PCB."
 
 #. type: Title ~
 #: Pcbnew_fabrication_files.adoc:9
 #, no-wrap
 msgid "Final preparations"
-msgstr ""
+msgstr "Końcowe przygotowania projektu"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:12
@@ -2200,6 +2317,9 @@ msgid ""
 "Mark any layer (e.g., 'top or front' and 'bottom or back') with the project "
 "name by placing appropriate text upon each of the layers."
 msgstr ""
+"Oznaczenie warstw (np., 'top' lub 'front' i 'bottom' lub 'back') oraz nazwy "
+"projektu przez umieszczenie odpowiednich tekstów na każdej z warstw. W ten "
+"sposób zakład produkcyjny będzie wiedział z jaką kliszą ma do czynienia."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:15
@@ -2207,6 +2327,9 @@ msgid ""
 "All text on copper layers (sometimes called 'solder' or 'bottom') must be "
 "mirrored."
 msgstr ""
+"Wszystkie teksty umieszczone na dolnej warstwie miedzi (czasem zwanej "
+"'solder' lub 'bottom') muszą być w lustrzanym odbiciu, gdyż będą one "
+"normalnie widoczne po obróceniu płytki na drugą stronę."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:16
@@ -2214,6 +2337,8 @@ msgid ""
 "Create any ground planes, modifying traces as required to ensure they are "
 "contiguous."
 msgstr ""
+"Stworzenie wszystkich planów (np. 'ground plane') i wypełnień, modyfikując "
+"ścieżki jeśli trzeba by ich ciągłość była zapewniona."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:17
@@ -2221,6 +2346,9 @@ msgid ""
 "Place alignment crosshairs and possibly the dimensions of the board outline "
 "(these are usually placed on one of the general purpose layers)."
 msgstr ""
+"Umieszczenie znaczników odniesienia ('target crosshairs') oraz możliwych "
+"rozmiarów obrysu płytki (są one zwykle umieszczane na jednej z warstw "
+"dowolnego użytku)."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:19
@@ -2228,11 +2356,13 @@ msgid ""
 "Here is an example showing all these elements, except the ground planes, "
 "which have been omitted for better visibility:"
 msgstr ""
+"Poniżej można ujrzeć przykład, ukazujący wszystkie te elementy, za wyjątkiem "
+"planów, które zostały pominięte dla lepszej widoczności:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:21
 msgid "image:images/Pcbnew_final_preparation_example_board.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_final_preparation_example_board.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:24
@@ -2240,12 +2370,14 @@ msgid ""
 "A color key for the 4 copper layers has also been included: image:images/"
 "Pcbnew_layer_colour_key.png[]"
 msgstr ""
+"Dodatkowo na powyższym obrazku został umieszczony także 'klucz' dla czterech "
+"warstw: image:images/Pcbnew_layer_colour_key.png[]"
 
 #. type: Title ~
 #: Pcbnew_fabrication_files.adoc:26
 #, no-wrap
 msgid "Final DRC test"
-msgstr ""
+msgstr "Końcowy test DRC"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:30
@@ -2253,6 +2385,9 @@ msgid ""
 "Before generating the output files, a global DRC test is very strongly "
 "recommended."
 msgstr ""
+"Przed wygenerowaniem plików wyjściowych, usilnie zalecane jest "
+"przeprowadzenie pełnego testu DRC, gdyż finalne sprawdzenie płytki może "
+"ustrzec przed przykrymi niespodziankami już po wyprodukowaniu płytek."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:34
@@ -2260,16 +2395,18 @@ msgid ""
 "Zones are filled or refilled when starting a DRC. Press the button image:"
 "images/icons/drc.png[[] to launch the following DRC dialog:"
 msgstr ""
+"Przy uruchamianiu testu DRC wszystkie strefy są wypełniane lub wypełniane "
+"ponownie jeśli wcześniej zostały już wypełnione."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:36
 msgid "image:images/Pcbnew_DRC_dialog.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_DRC_dialog.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:38
 msgid "Adjust parameters accordingly and then press the \"Start DRC\" button."
-msgstr ""
+msgstr "Po ustaleniu parametrów należy nacisnąć przycisk ``Start DRC'' button."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:40
@@ -2280,7 +2417,7 @@ msgstr ""
 #: Pcbnew_fabrication_files.adoc:42
 #, no-wrap
 msgid "Setting coordinates origin"
-msgstr ""
+msgstr "Ustawienie punktu początkowego osi pomocniczej"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:48
@@ -2290,28 +2427,37 @@ msgid ""
 "icons/pcb_offset.png. Move the auxiliary axis to the chosen location by "
 "clicking for instance on this location."
 msgstr ""
+"Dla generowanych plików dla fotoplotera i dla plików wierceń wypada ustawić "
+"punkt początkowy osi pomocniczej (_auxiliary axis point_). Aby to wykonać "
+"należy użyć narzędzia ukrytego pod ikoną image:images/icons/pcb_offset.png"
+"[Ikona Wstaw pomocniczy punkt bazowy] na prawym pasku narzędzi. Następnie "
+"ustawić punkt początkowy wybierając jedno z miejsc na płytce i kliknąć. Po "
+"tej operacji zostaną dorysowane dwie dodatkowe linie przecinające się w nowo "
+"ustalonym punkcie:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:50
 msgid "image:images/Pcbnew_setting_pcb_origin.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_setting_pcb_origin.png[]"
 
 #. type: Title ~
 #: Pcbnew_fabrication_files.adoc:52
 #, no-wrap
 msgid "Generating files for photo-tracing"
-msgstr ""
+msgstr "Generowanie plików dla fotoplotera"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:56
 msgid ""
 "This is done via the Files/Plot menu option and invokes the following dialog:"
 msgstr ""
+"Generowaniem plików przeznaczonych dla fotoplotera zajmuje się narzędzie "
+"wywoływane za pomocą polecenia **Rysuj** z menu *Plik*."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:58
 msgid "image:images/Pcbnew_plot_dialog.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_plot_dialog.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:62
@@ -2320,11 +2466,15 @@ msgid ""
 "produce output in both HPGL and POSTSCRIPT formats. When Postscript format "
 "is selected, this dialog will appear."
 msgstr ""
+"W większości przypadków będą to pliki w formacie GERBER. Jednakże, program "
+"daje również możliwość generacji plików w formatach HPGL oraz POSTSCRIPT. "
+"Przy wybranej opcji Postscript dla formatu wyjściowego, okno dialogowe "
+"będzie wyglądać nieco inaczej:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:64
 msgid "image:images/Pcbnew_plot_postscript_dialog.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_plot_postscript_dialog.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:67
@@ -2332,17 +2482,19 @@ msgid ""
 "In these formats, a fine scale adjust can be used to compensate for the "
 "plotter accuracy and to have a true scale 1 for the output:"
 msgstr ""
+"W tych dwóch formatach, można dodatkowo dostrajać skalę by skompensować "
+"błędy skali plotera, tak aby wyjściowy rysunek posiadał prawidłową skalę:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:69
 msgid "image:images/Pcbnew_plot_fine_scale_setting.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_plot_fine_scale_setting.png[]"
 
 #. type: Title ^
 #: Pcbnew_fabrication_files.adoc:71
 #, no-wrap
 msgid "GERBER format"
-msgstr ""
+msgstr "Format GERBER"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:78
@@ -2352,6 +2504,11 @@ msgid ""
 "represented by 7 digits, of which 3 are before the decimal point and 4 "
 "follow it; the units are inches). The tracing is always drawn to scale 1)"
 msgstr ""
+"Dla każdej warstwy, Pcbnew generuje osobny plik zgodny ze standardem *GERBER "
+"274X*, domyślnie w formacie *3.4* (każda koordynata w pliku jest "
+"reprezentowana za pomocą 7 cyfr, z których 3 znajdują się przed przecinkiem, "
+"a 4 pozostałe po przecinku; jednostką podstawową są cale). Rysunek jest "
+"zawsze w skali 1:1."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:84
@@ -2361,6 +2518,10 @@ msgid ""
 "silkscreen (component markings) layers. All of these files can be produced "
 "in one go, by selecting the appropriate check boxes."
 msgstr ""
+"Zwykle konieczne jest utworzenie plików dla wszystkich warstw miedzi, oraz w "
+"zależności od typu obwodu, masek lutowniczych oraz warstw opisowych (z "
+"oznaczeniami elementów). Wszystkie te pliki mogą być generowane za jednym "
+"razem, zaznaczając odpowiednie pola wyboru na liście warstw."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:88
@@ -2369,51 +2530,55 @@ msgid ""
 "solder mask (for CMS components), 8 files should be generated ('xxxx' "
 "represents the name of the .brd file)."
 msgstr ""
+"Przykładowo, dla obwodu dwustronnego z maską do nakładania pasty (dla "
+"rozpływowego montażu elementów SMD), opisem oraz soldermaską, zostanie "
+"wygenerowanych 8 plików (xxxx zastępuje tutaj nazwę pliku z płytką), które "
+"domyślnie nazwane zostaną:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:90
 msgid "xxxx.copper.pho for the copper side."
-msgstr ""
+msgstr "xxxx-B_Cu.gbl dla dolnej warstwy miedzi."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:91
 msgid "xxxx.cmp.pho for the component side."
-msgstr ""
+msgstr "xxxx-F_Cu.gtl dla górnej warstwy miedzi."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:92
 msgid "xxxx.silkscmp.pho for the component-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-F_SilkS.gto dla warstwy opisowej na stronie elementów."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:93
 msgid "xxxx.silkscu.pho for the copper-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-B_SilkS.gbo dla warstwy opisowej na stronie lutowania."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:94
 msgid "xxxx.soldpcmp.pho for the component-side solder mask."
-msgstr ""
+msgstr "xxxx-F_Paste.gtp dla pasty lutowniczej górnej warstwy miedzi."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:95
 msgid "xxxx.soldpcu.pho for the copper-side solder mask."
-msgstr ""
+msgstr "xxxx-B_Paste.gbp dla pasty lutowniczej dolnej warstwy miedzi."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:96
 msgid "xxxx.maskcmp.pho for the component-side solder stop mask."
-msgstr ""
+msgstr "xxxx-F_Mask.gts dla maski lutowniczej głównej warstwy miedzi."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:97
 msgid "xxxx.maskcu.pho for the copper-side solder stop mask."
-msgstr ""
+msgstr "xxxx-B_Mask.gbs dla maski lutowniczej dolnej warstwy miedzi."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:99
 msgid "GERBER file format:"
-msgstr ""
+msgstr "Format plików GERBER:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:102
@@ -2421,15 +2586,18 @@ msgid ""
 "The format used by Pcbnew is RS274X format 3.4, Imperial, Leading zero "
 "omitted, Abs format. These are very usual settings."
 msgstr ""
+"Format GERBER używany przez *Pcbnew* to: RS274X, Format 3.4, Calowy, "
+"Pominięte zera początkowe, Format Abs. Są to najczęściej używane ustawienia."
 
 #. type: Title ^
 #: Pcbnew_fabrication_files.adoc:104
 #, no-wrap
 msgid "POSTSCRIPT format"
-msgstr ""
+msgstr "Format POSTSCRIPT"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:111
+#, fuzzy
 msgid ""
 "The standard extension for the output files is .ps in the case of postscript "
 "output. As for HPGL output, the tracing can be at user-selected scales and "
@@ -2437,42 +2605,49 @@ msgid ""
 "coordinates of the tracing table is assumed to be in the centre of the "
 "drawing."
 msgstr ""
+"W przypadku plików Postscript standardowym rozszerzeniem dla plików "
+"wyjściowych będzie `.ps`. Tak samo jak w przypadku plików w formacie HPGL, "
+"rysowanie może odbywać się w wybranej skali lub jako lustrzane odbicie. If "
+"the Org = Centre option is active, the origin for the coordinates of the "
+"tracing table is assumed to be in the centre of the drawing."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:113 Pcbnew_fabrication_files.adoc:151
 msgid "If the Print Sheet Ref option is active, the sheet cartridge is traced."
 msgstr ""
+"Jeśli zaznaczona jest opcja _Rysuj oznaczenia arkusza na wszystkich "
+"warstwach_, zostanie narysowana również ramka opisowa."
 
 #. type: Title ^
 #: Pcbnew_fabrication_files.adoc:115
 #, no-wrap
 msgid "Plot options"
-msgstr ""
+msgstr "Opcje rysowania"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:118
 msgid "Gerber format:"
-msgstr ""
+msgstr "Format Gerber"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:120
 msgid "image:images/Pcbnew_plot_options_gerber.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_plot_options_gerber.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:122
 msgid "Other formats:"
-msgstr ""
+msgstr "Formaty pozostałe"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:124
 msgid "image:images/Pcbnew_plot_options_other_formats.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_plot_options_other_formats.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:126
 msgid "GERBER format specific options:"
-msgstr ""
+msgstr "Specyficzne opcje związane z formatem GERBER:"
 
 #. type: delimited block |
 #: Pcbnew_fabrication_files.adoc:135
@@ -2490,7 +2665,7 @@ msgstr ""
 #: Pcbnew_fabrication_files.adoc:138
 #, no-wrap
 msgid "Other formats"
-msgstr ""
+msgstr "Pozostałe formaty"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:141
@@ -2506,6 +2681,8 @@ msgstr ""
 #: Pcbnew_fabrication_files.adoc:145
 msgid "The plot can be done at user-selected scales and can be mirrored."
 msgstr ""
+"Tak samo jak w przypadku plików w formacie HPGL, rysowanie może odbywać się "
+"w wybranej skali lub jako lustrzane odbicie."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:149
@@ -2514,12 +2691,16 @@ msgid ""
 "to the correct diameter or drilled with a small hole (to guide hand "
 "drilling)."
 msgstr ""
+"Opcja _Znaczniki wierceń_ oferuje możliwość wypełnienia całkowitego pól "
+"lutowniczych, pozostawienia pustego pola zgodnego z rozmiarem wiertła lub "
+"umieszczenia na nich tylko małego pustego pola naprowadzającego (dla "
+"wiercenia ręcznego)."
 
 #. type: Title ~
 #: Pcbnew_fabrication_files.adoc:153
 #, no-wrap
 msgid "Global clearance settings for the solder stop and the solder paste mask"
-msgstr ""
+msgstr "Globalne ustawienia prześwitu dla warstw maski lutowniczej i maski pasty lutowniczej"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:158
@@ -2527,73 +2708,79 @@ msgid ""
 "Masks clearances values can be set globally for the solder mask layers and "
 "the solder paste layers. These clearances can be set following these steps."
 msgstr ""
+"Wartości prześwitu masek mogą być ustawione globalnie dla warstw maski "
+"lutowniczej i warstw pasty lutowniczej. Ustawienia te mogą być stosowane :"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:160
 msgid "At pads level."
-msgstr ""
+msgstr "Na poziomie pól lutowniczych."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:161
 msgid "At footprint level."
-msgstr ""
+msgstr "Na poziomie footprintów."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:162
 msgid "Globally."
-msgstr ""
+msgstr "Globalnie."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:164
 msgid "And Pcbnew uses by priority order."
 msgstr ""
+"Pcbnew w takim przypadku korzysta z priorytetów ustawień i wartość "
+"ostateczna jest brana:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:166
 msgid "Pad values. If null:"
-msgstr ""
+msgstr "Z wartości ustalonej dla pól lutowniczych. Jeśli jest zerowa to"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:167
 msgid "Footprint values. If null:"
-msgstr ""
+msgstr "Z wartości ustalonej dla footprintu. Jeśli jest zerowa to"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:168
 msgid "Global values."
-msgstr ""
+msgstr "Z wartości ustalonej globalnie."
 
 #. type: Title ^
 #: Pcbnew_fabrication_files.adoc:170
 #, no-wrap
 msgid "Access"
-msgstr ""
+msgstr "Dostęp do opcji"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:173
 msgid "The menu option for this is available via the Dimensions menu:"
 msgstr ""
+"Odpowiednie opcje są dostępne za pomocą menu *Ustawienia* -> **Prześwit "
+"maski pól lutowniczych**:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:175
 msgid "image:images/Pcbnew_pad_mask_clearance_menu_item.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_pad_mask_clearance_menu_item.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:177
 msgid "The dialog box is the following:"
-msgstr ""
+msgstr "Po wybraniu tego polecenia wyświetlane jest okno dialogowe:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:179
 msgid "image:images/Pcbnew_pad_mask_settings_dialog.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_pad_mask_settings_dialog.png[]"
 
 #. type: Title ^
 #: Pcbnew_fabrication_files.adoc:181
 #, no-wrap
 msgid "Solder mask clearance"
-msgstr ""
+msgstr "Prześwit maski lutowniczej"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:185
@@ -2601,6 +2788,8 @@ msgid ""
 "A value near to 0.2 mm is usually good. This value is positive because the "
 "mask usually is bigger than the pad."
 msgstr ""
+"Wartość bliska 10mils zwykle jest odpowiednia. Wartość ta jest dodatnia, "
+"ponieważ maska lutownicza jest zwykle większa niż pole lutownicze."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:187
@@ -2618,7 +2807,7 @@ msgstr ""
 #: Pcbnew_fabrication_files.adoc:192
 #, no-wrap
 msgid "Solder paste clearance"
-msgstr ""
+msgstr "Prześwit maski pasty lutowniczej"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:196
@@ -2626,18 +2815,22 @@ msgid ""
 "The final clearance is the sum of the solder paste clearance and a "
 "percentage of the pad size."
 msgstr ""
+"Końcowa wartość prześwitu jest sumą prześwitu dla pasty lutowniczej oraz "
+"procentowej wielkości rozmiaru padu."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:199
 msgid ""
 "This value is negative because the mask usually is smaller than the pad."
 msgstr ""
+"Wartość ta jest ujemna ponieważ maska pasty lutowniczej jest zwykle mniejsza "
+"niż pole lutownicze."
 
 #. type: Title ~
 #: Pcbnew_fabrication_files.adoc:201
 #, no-wrap
 msgid "Generating drill files"
-msgstr ""
+msgstr "Generowanie plik(ów) wierceń"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:205
@@ -2645,12 +2838,20 @@ msgid ""
 "The creation of a drill file xxxxxx.drl following the EXCELLON standard is "
 "always necessary."
 msgstr ""
+"Przy tworzeniu plików wyjściowych zawsze jest tworzony też plik wierceń "
+"`xxxxxx.drl` w standardzie EXCELLON (xxxxxx zastępuje tutaj nazwę pliku "
+"płytki)."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:208
 msgid ""
 "One can also produce an optional drill report, and an optional drill map."
 msgstr ""
+"Można jednak również opcjonalnie wygenerować plan wierceń, który może być "
+"zapisany w formacie HPGL (`xxxxxx.plt`) lub w formacie POSTSCRIPT (`xxxxxx."
+"ps`), lub/oraz opcjonalny raport wierceń (jako zwykły plik tekstowy). Jednak "
+"jest on użyteczny tylko w niektórych przypadkach, na przykład jako materiał "
+"wyjściowy przy dodatkowym sprawdzeniu."
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:210
@@ -2680,12 +2881,14 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:217
 msgid "The Drill tools dialog box will be the following:"
-msgstr ""
+msgstr "Główne okno tego narzędzia wygląda w ten sposób:"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:219
 msgid "image:images/Pcbnew_drill_file_dialog.png[]"
 msgstr ""
+"image:images/pl/Pcbnew_drill_file_dialog.png[Okno dialogowe generowania "
+"pliku wierceń]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:221
@@ -2695,7 +2898,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:223
 msgid "image:images/Pcbnew_drill_origin_setting.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_drill_origin_setting.png[]"
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:225
