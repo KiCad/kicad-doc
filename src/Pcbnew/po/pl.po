@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-05-29 15:44+0200\n"
-"PO-Revision-Date: 2015-05-31 18:25+0100\n"
+"PO-Revision-Date: 2015-06-01 19:26+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -3929,6 +3929,46 @@ msgid ""
 "| image:images/icons/web_support.png[]\n"
 "    | Direct access to the web router FreeRoute\n"
 msgstr ""
+"| image:images/icons/new.png[]\n"
+"    | Tworzy nowy projekt obwodu drukowanego.\n"
+"| image:images/icons/open_brd_file.png[]\n"
+"    | Otwiera uprzednio zapisany projekt obwodu drukowanego.\n"
+"| image:images/icons/save.png[]\n"
+"    | Zapisuje projekt obwodu drukowanego.\n"
+"| image:images/icons/sheetset.png[]\n"
+"    | Wybiera rozmiar strony (pola roboczego) oraz pozwala na modyfikację właściwości pliku.\n"
+"| image:images/icons/module_editor.png[]\n"
+"    | Otwiera edytor footprintów (*ModEdit*) pozwalający na podgląd lub edycję bibliotek footprintów.\n"
+"| image:images/icons/undo.png[] image:images/icons/redo.png[]\n"
+"    | Cofa lub przywraca ostatnie edycje (do 10 poziomów).\n"
+"| image:images/icons/print_button.png[]\n"
+"    | Wyświetla menu z opcjami wydruku.\n"
+"| image:images/icons/plot.png[]\n"
+"    | Wyświetla menu z opcjami rysowania schematu.\n"
+"| image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
+"    | Przybliżanie i oddalanie pola roboczego (względem centralnego punktu ekranu).\n"
+"| image:images/icons/zoom_redraw.png[]\n"
+"    | Odświeża ekran.\n"
+"| image:images/icons/zoom_fit_in_page.png[]\n"
+"    | Automatycznie dopasowuje powiększenie.\n"
+"| image:images/icons/find.png[]\n"
+"    | Wyszukuje footprinty lub teksty.\n"
+"| image:images/icons/netlist.png[]\n"
+"    | Operacje związane z listą sieci (wybór, odczyt, testowanie oraz kompilacja).\n"
+"| image:images/icons/drc.png[]\n"
+"    | Sprawdzanie poprawności projektu DRC (_Design Rule Check_): Automatycznie sprawdza\n"
+"    poprawność poprowadzonych ścieżek (zgodność z listą sieci i regułami).\n"
+"| image:images/Pcbnew_toolbar_layer_select_dropdown.png[]\n"
+"    | Wybór aktywnej warstwy.\n"
+"| image:images/Pcbnew_layer_pair_indicator.png[]\n"
+"    | Wybór pary warstw (dla przelotek).\n"
+"| image:images/icons/mode_module.png[]\n"
+"    | Tryb ręcznego lub automatycznego przesuwania footprintów: jeśli ta ikona jest aktywna menu podręczne\n"
+"    przełącza się w tryb pracy z footprintami.\n"
+"| image:images/icons/mode_track.png[]\n"
+"    | Tryb ścieżek i autoroutingu: jeśli ta ikona jest aktywna menu podręczne przełącza się w tryb pracy ze ścieżkami.\n"
+"| image:images/icons/web_support.png[]\n"
+"    | Umożliwia bezpośredni dostęp do autoroutera on-line: FreeRoute.\n"
 
 #. type: Title ^
 #: Pcbnew_general_operations.adoc:358
@@ -3953,6 +3993,18 @@ msgid ""
 "| image:images/Pcbnew_zoom_factor_dropdown.png[]\n"
 "    | Selection of the zoom.\n"
 msgstr ""
+"| image:images/Pcbnew_track_thickness_dropdown.png[]\n"
+"    | Wybiera aktualnie używaną szerokość ścieżki.\n"
+"| image:images/Pcbnew_via_size_dropdown.png[]\n"
+"    | Wybiera aktualnie używany rozmiar przelotki.\n"
+"| image:images/icons/auto_track_width.png[]\n"
+"    | Automatyczna szerokość ścieżek: jeśli jest aktywna, podczas tworzenia nowej ścieżki\n"
+"    rozpoczynającej się na innej ścieżce, szerokość tej ścieżki zostanie ustawiona tak samo\n"
+"    jak ścieżka od której się zaczyna.\n"
+"| image:images/Pcbnew_grid_size_dropdown.png[]\n"
+"    | Wybór aktualnego rozmiaru siatki. \n"
+"| image:images/Pcbnew_zoom_factor_dropdown.png[]\n"
+"    | Wybór powiększenia.\n"
 
 #. type: Title ~
 #: Pcbnew_general_operations.adoc:377
@@ -5805,6 +5857,10 @@ msgid ""
 "application of adhesive to stick SMD components to the circuit board, "
 "generally before wave soldering."
 msgstr ""
+"Warstwy kleju (*Adhesives*, po stronie lutowania i elementów): ** Warstwy te "
+"są używane przy mocowaniu elementów SMD za pomocą kleju w przypadku obwodów "
+"drukowanych, których montaż odbywa się przez lutowanie na fali (wave "
+"soldering)."
 
 #. type: Plain text
 #: Pcbnew_layers.adoc:67
@@ -5814,6 +5870,13 @@ msgid ""
 "mount components, generally before reflow soldering.  In theory only surface "
 "mount pads occupy these layers."
 msgstr ""
+"Warstwy masek pasty lutowniczej (*Solder Paste*) dla elementów SMD (po "
+"stronie lutowania i elementów): ** Używane do produkcji masek pozwalających "
+"aplikować pastę lutowniczą wyłącznie  na polach lutowniczych przeznaczonych "
+"dla elementów montowanych powierzchniowo, z reguły przed lutowaniem "
+"strumieniem gorącego powietrza lub w piecach lutowniczych (reflow "
+"soldering). Teoretycznie tylko elementy montowane powierzchniowo zajmują te "
+"warstwy."
 
 #. type: Plain text
 #: Pcbnew_layers.adoc:69
@@ -5821,6 +5884,9 @@ msgid ""
 "The *Silk Screen* layers (Copper and Component): ** They are the layers "
 "where the drawings of the components appear."
 msgstr ""
+"Warstwy opisowe (*Silk Screen*, po stronie lutowania i elementów): ** "
+"Warstwy te używane są do rysowania opisów elementów (nazwy oznaczeń lub też "
+"wartości) czy obrysów elementów znajdujących się na płytkach."
 
 #. type: Plain text
 #: Pcbnew_layers.adoc:73
@@ -5829,6 +5895,12 @@ msgid ""
 "masks. Normally all the pads appear on one or the other of these layers (or "
 "both for through pads) to prevent the varnish covering the pads."
 msgstr ""
+"Warstwy masek cynowania (*Solder Mask*, po stronie lutowania i elementów): "
+"** Definiują one maski wykorzystywane przy wstępnym cynowaniu PCB. Normalnie "
+"wszystkie pola lutownicze jakie znajdują się na jednej lub drugiej z tych "
+"warstw (lub zarówno przez obie dla elementów przewlekanych) są maskowane, "
+"aby zapobiegać przykryciu ich lakierem (zwanym popularnie soldermaską) w "
+"końcowym procesie produkcyjnym."
 
 #. type: Title ^
 #: Pcbnew_layers.adoc:75
@@ -6664,13 +6736,13 @@ msgstr ""
 #: Pcbnew_module_placement.adoc:3
 #, no-wrap
 msgid "Modules placement"
-msgstr ""
+msgstr "Rozmieszczanie footprintów"
 
 #. type: Title ~
 #: Pcbnew_module_placement.adoc:6
 #, no-wrap
 msgid "Assisted placement"
-msgstr ""
+msgstr "Wspomaganie rozmieszczania footprintów"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:12
@@ -6679,12 +6751,17 @@ msgid ""
 "displayed to assist the placement. To enable this the icon image:images/"
 "icons/modratsnest.png[] of the left toolbar must be activated."
 msgstr ""
+"Podczas przesuwania footprintów, można wyświetlić tzw. _ratsnets_ (czyli "
+"linie wspomagające pokazujące połączenia), które wspomagają proces "
+"ustawiania elementów. By włączyć tą funkcję należy kliknąć i aktywować ikonę "
+"image:images/icons/modratsnest.png[Ikona Ratsnets footprintów] znajdującą "
+"się na lewym pasku narzędzi."
 
 #. type: Title ~
 #: Pcbnew_module_placement.adoc:14
 #, no-wrap
 msgid "Manual placement"
-msgstr ""
+msgstr "Rozmieszczanie manualne"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:21
@@ -6695,32 +6772,42 @@ msgid ""
 "inverted or edited. Select Cancel from the menu (or press the Esc key) to "
 "abort."
 msgstr ""
+"Footprinty można przemieszczać manualnie. Aby to zrobić, należy wybrać "
+"footprint z pomocą prawego przycisku myszy, a następnie wybrać polecenie "
+"'Przesuń' z menu podręcznego. Potem korzystając z myszy przesunąć footprint "
+"nad odpowiednią pozycję i umieścić go klikając lewym przyciskiem myszy. W "
+"razie potrzeby wybrany footprint można obracać, odwracać lub poddawać "
+"edycji. Aby przerwać operację należy wybrać z menu podręcznego polecenie "
+"'Anuluj' (lub nacisnąć klawisz *Esc*)."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:23
 msgid "Here you can see the display of the module ratsnest during a move:"
 msgstr ""
+"Na poniższym obrazku można zobaczyć footprint z aktywnymi liniami "
+"wspomagającymi podczas jego przesuwania."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:25
 msgid "image:images/Pcbnew_ratsnest_during_move.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_ratsnest_during_move.png[]"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:27
 msgid "The circuit once all the modules are placed may be as shown:"
 msgstr ""
+"Układ elementów po rozmieszczeniu footprintów może wyglądać w ten sposób:"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:29
 msgid "image:images/Pcbnew_circuit_after_placement.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_circuit_after_placement.png[]"
 
 #. type: Title ~
 #: Pcbnew_module_placement.adoc:31
 #, no-wrap
 msgid "General re-orientation of modules"
-msgstr ""
+msgstr "Reorientacja footprintów"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:35
@@ -6728,6 +6815,8 @@ msgid ""
 "Initially all modules inherit the same orientation that they had in the "
 "library (normally 0)."
 msgstr ""
+"Początkowo wszystkie footprinty dziedziczą tą samą orientację jaką posiadają "
+"jako elementy biblioteczne (normalnie 0)."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:41
@@ -6737,17 +6826,25 @@ msgid ""
 "Modules. This orientation can be selective (for example to relate only to "
 "the modules whose reference starts with \"IC\"."
 msgstr ""
+"Jeśli zachodzi potrzeba reorientacji dla poszczególnych footprintów, albo "
+"wszystkich footprintów (przykładowo wszystkie ułożone pionowo) należy użyć "
+"opcji *Globalne przesuwanie i umieszczanie* -> **Zorientuj wszystkie "
+"footprinty**. Proces reorientacji może być wykonany również tylko dla "
+"wybranej grupy elementów; na przykład tylko dla tych footprintów, których "
+"oznaczenia rozpoczynają się od `IC`."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:43
 msgid "image:images/Pcbnew_footprints_orientation_dialog.png[]"
 msgstr ""
+"image:images/pl/Pcbnew_footprints_orientation_dialog.png[Orientacja "
+"footprintu]"
 
 #. type: Title ~
 #: Pcbnew_module_placement.adoc:45
 #, no-wrap
 msgid "Automatic Module Distribution"
-msgstr ""
+msgstr "Automatyczne przesuwanie footprintów"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:51
@@ -6757,6 +6854,11 @@ msgid ""
 "right mouse button over module) whilst in Module Mode, or through the Edit "
 "Module Menu."
 msgstr ""
+"Generalnie, footprinty mogą być przesuwane tylko jeśli nie zostały "
+"*zablokowane*. Atrybut ten może zostać wyłączony lub włączony z podręcznego "
+"menu, jakie rozwija się gdy nad footprintem zostanie użyty prawy klawisz "
+"myszy, podczas trybu automatycznego przesuwania footprintów lub z pomocą "
+"'Właściwości' footprintu."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:57
@@ -6766,6 +6868,10 @@ msgid ""
 "automatic distribution of the modules to make manual selection and placement "
 "easier."
 msgstr ""
+"Jak wspomniano w poprzednim rozdziale, nowe footprinty załadowane podczas "
+"odczytywania listy sieci zostaną umieszczone w jednym miejscu na płytce. "
+"Pcbnew jednak udostępnia narzędzia do automatycznego rozmieszczenia "
+"footprintów, co ułatwi proces wyboru i ustawiania footprintów."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:60
@@ -6773,36 +6879,44 @@ msgid ""
 "Select the option “Module Mode” (Icon image:images/icons/mode_module.png on "
 "the upper toolbar)."
 msgstr ""
+"Narzędzia związane z rozmieszczaniem footprintów staną się aktywne po "
+"wybraniu trybu 'Automatycznego przesuwania footprintów' (Ikona image:images/"
+"icons/mode_module.png[] na głównym pasku narzędzi)."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:61
 msgid "The pop-up window activated by the right mouse button becomes:"
-msgstr ""
+msgstr "W tym trybie podręczne menu będzie wyglądać dwojako:"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:63
 msgid "If there is a module under the cursor:"
 msgstr ""
+"Gdy w miejscu gdzie znajduje się kursor znajduje się jakiś footprint, menu "
+"to będzie miało postać:"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:65
 msgid "image:images/Pcbnew_context_module_mode_module_under_cursor.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_context_module_mode_module_under_cursor.png[]"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:67
 msgid "If there is nothing under the cursor:"
 msgstr ""
+"Jeśli pod kursorem nie znajduje się żaden footprint, menu podręczne ulegnie "
+"skróceniu:"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:69
 msgid "image:images/Pcbnew_context_module_mode_no_module_under_cursor.png[]"
 msgstr ""
+"image:images/pl/Pcbnew_context_module_mode_no_module_under_cursor.png[]"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:71
 msgid "In both cases the following commands are available:"
-msgstr ""
+msgstr "W obu przypadkach dostępne są następujące polecenia:"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:75
@@ -6812,6 +6926,9 @@ msgid ""
 "modules not Fixed.  This is generally used after the first reading of a\n"
 "netlist.\n"
 msgstr ""
+"*Przesuń wszystkie footprinty* pozwala na automatyczne rozmieszczenie footprintów,\n"
+"które nie posiadają atrybutu 'Zablokowany'. Polecenie to jest używane głównie po pierwszym\n"
+"wczytaniu listy sieci.\n"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:79
@@ -6822,18 +6939,22 @@ msgid ""
 "command requires that an outline of the board has been drawn to\n"
 "determine which modules can be automatically distributed.\n"
 msgstr ""
+"*Przesuń nowe footprinty* pozwala na automatyczne rozmieszczenie footprintów,\n"
+"które jeszcze nie zostały umieszczone wewnątrz obrysu PCB. Polecenie to wymaga,\n"
+"by przed jego użyciem został narysowany początkowy obrys płytki, tak by było wiadomo\n"
+"jakie footprinty można automatycznie rozmieścić.\n"
 
 #. type: Title ~
 #: Pcbnew_module_placement.adoc:81
 #, no-wrap
 msgid "Automatic placement of modules"
-msgstr ""
+msgstr "Automatyczne rozmieszczanie footprintów"
 
 #. type: Title ^
 #: Pcbnew_module_placement.adoc:84
 #, no-wrap
 msgid "Characteristics of the automatic placer"
-msgstr ""
+msgstr "Charakterystyka narzędzia do automatycznego rozmieszczania footprintów"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:89
@@ -6842,6 +6963,9 @@ msgid ""
 "the 2 faces of the circuit board (however switching a module onto the copper "
 "layer is not automatic)."
 msgstr ""
+"Automatyczne rozmieszczanie footprintów umożliwia umieszczenie footprintów "
+"na 2 warstwach  płytki drukowanej (jednak przenoszenie footprintów na dolną "
+"warstwę miedzi nie jest automatyczne)."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:96
@@ -6852,12 +6976,19 @@ msgid ""
 "the larger modules with with many pads. The order of placement is optimized "
 "to initially place these larger modules with many pads."
 msgstr ""
+"Celem tego narzędzie jest również ustalenie najlepszej orientacji "
+"footprintów (obrót o 0, 90, -90, 180 stopni). Rozmieszczanie jest wykonywane "
+"zgodnie z algorytmem optymalizującym, który ma na celu zminimalizowanie "
+"długości połączeń wspomagających i dąży do stworzenia przestrzeni pomiędzy "
+"większymi footprintami posiadającymi wiele pól lutowniczych. Kolejność "
+"rozmieszczania jest zoptymalizowana tak, by początkowo rozmieszczać większe "
+"footprinty z większą ilością pól lutowniczych."
 
 #. type: Title ^
 #: Pcbnew_module_placement.adoc:98
 #, no-wrap
 msgid "Preparation"
-msgstr ""
+msgstr "Przygotowanie pola edycji"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:103
@@ -6866,11 +6997,14 @@ msgid ""
 "guide this placement, because no software can guess what the user wants to "
 "achieve."
 msgstr ""
+"Pcbnew* może rozmieścić footprinty automatycznie, jednakże wymagane jest "
+"wspomaganie  tego procesu, ponieważ żadne oprogramowanie nie jest w stanie "
+"odgadnąć co użytkownik chciałby osiągnąć."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:105
 msgid "Before an automatic placement is carried out one must:"
-msgstr ""
+msgstr "Przed wykonaniem automatycznego rozmieszczeni footprintów należy:"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:108
@@ -6878,6 +7012,8 @@ msgid ""
 "Create the outline of the board (It can be complex, but it must be closed if "
 "the form is not rectangular)."
 msgstr ""
+"Stworzyć obrys płytki (Może być nawet dość skomplikowany, byle by obrys "
+"został zamknięty)."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:110
@@ -6885,6 +7021,8 @@ msgid ""
 "Manually place the components whose positions are imposed (Connectors, clamp "
 "holes, etc)."
 msgstr ""
+"Dokonać ręcznego rozmieszczenia kluczowych footprintów bądź elementów "
+"(Złącz, otworów montażowych...)."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:113
@@ -6893,6 +7031,9 @@ msgid ""
 "example) must be on a specific side or position on the board and this must "
 "be done manually."
 msgstr ""
+"Podobnie poszczególne footprinty SMD oraz footprinty krytyczne (na przykład "
+"duże footprinty) muszą znaleźć się na odpowiedniej stronie płytki i trzeba "
+"to wykonać ręcznie."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:118
@@ -6903,6 +7044,12 @@ msgid ""
 "on the Pop-up menu. This can also be done through the Edit/Module Pop-up "
 "menu."
 msgstr ""
+"Po zakończeniu ręcznego rozmieszczenia kluczowych footprintów, footprinty te "
+"muszą zostać zablokowane by automat ich już nie przemieszczał. W trybie "
+"automatycznego przesuwania footprintów (ikona image:images/icons/mode_module."
+"png[Ikona Przesuwanie footprintów] w stanie aktywnym) należy kliknąć prawym "
+"klawiszem i wybrać z podręcznego menu polecenie 'Zablokuj footprint'. Można "
+"to również wykonać z pomocą okna dialogowego z właściwościami footprintu."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:121
@@ -6911,6 +7058,10 @@ msgid ""
 "selected, right click and select Glob(al) Move and Place – then Autoplace "
 "All Modules."
 msgstr ""
+"Po tym można już uruchomić proces automatycznego rozmieszczania. W trybie "
+"automatycznego przesuwania footprintów, kliknąć prawym klawiszem i z "
+"podręcznego menu wybrać polecenie *Globalne przesuwanie i rozmieszczanie* - "
+"a następnie *Automatyczne rozmieszczenie wszystkich footprintów*."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:125
@@ -6919,6 +7070,11 @@ msgid ""
 "of the modules. However rotation will only be attempted if this has been "
 "authorized for the module (see Edit Module Options)."
 msgstr ""
+"Podczas automatycznego rozmieszczania footprintów Pcbnew, jeśli zachodzi "
+"taka potrzeba, może dokonywać optymalizacji związanej z reorientacją "
+"footprintów. Jednakże obracanie footprintów może zostać wykonane tylko jeśli "
+"będzie ono dopuszczalne dla danego footprintu (zobacz ``Edycja właściwości "
+"footprintów'')."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:129
@@ -6927,6 +7083,9 @@ msgid ""
 "degrees rotation. Some modules (small transistors for example)  can be "
 "authorized for +/- 90 and 180 degrees rotation."
 msgstr ""
+"Zwykle, rezystory i kondensatory nie posiadające polaryzacji pozwalają na "
+"obrót o 180 stopni. Niektóre footprinty (na przykład małe tranzystory) "
+"dopuszczają obrót o +/- 90 stopni oraz  o 180 stopni."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:134
@@ -6936,6 +7095,10 @@ msgid ""
 "setting of 10 authorizes it, and an intermediate value indicates a "
 "preference for/against rotation."
 msgstr ""
+"Dla każdego footprintu jeden z suwaków dopuszcza obrót o 90 stopni, a drugi "
+"suwak dopuszcza obrót o 180. Ustawienie ich w pozycji 0 uniemożliwia obrót, "
+"zaś ustawienie 10 dopuszcza go, a pośrednia wartość wskazuje możliwość "
+"obrotu w przód/tył."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:139
@@ -6945,12 +7108,16 @@ msgid ""
 "the module in the library as these settings will then be inherited each time "
 "the module is used."
 msgstr ""
+"Zezwolenie na obrót może zostać ustanowione w trakcie edycji footprintu "
+"umieszczonego już na płytce. Jednak zalecane jest, by takie opcje były "
+"ustalane już na poziomie elementów bibliotecznych, gdyż opcje te mogą być "
+"dziedziczone za każdym razem kiedy dany footprint będzie używany."
 
 #. type: Title ^
 #: Pcbnew_module_placement.adoc:141
 #, no-wrap
 msgid "Interactive auto-placement"
-msgstr ""
+msgstr "Interaktywność automatycznego rozmieszczania footprintów"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:147
@@ -6959,6 +7126,11 @@ msgid ""
 "manually re-position a module. Using the command Autoplace Next Module will "
 "restart the autoplacement from the point at which it was stopped."
 msgstr ""
+"Podczas automatycznego rozmieszczania elementów może być konieczne "
+"przerwanie tej operacji (klawiszem *Esc*) i ręcznego przemieszczenia "
+"footprintu. Używając polecenia 'Automatyczne rozmieszczenie następnego "
+"footprintu' można wznowić proces automatycznego rozmieszczania z miejsca "
+"gdzie zostało ono przerwane."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:152
@@ -6967,6 +7139,11 @@ msgid ""
 "modules which have not been placed already within the PCB outline. It will "
 "not move those within the PCB outline even if they are not \"fixed\"."
 msgstr ""
+"Polecenie 'Automatyczne rozmieszczenie nowych footprintów' pozwalana na "
+"automatyczne rozmieszczenie footprintów, które nie zostały jeszcze "
+"umieszczone wewnątrz obrysu płytki. Polecenie to nie przesuwa już "
+"rozmieszczonych footprintów wewnątrz obrysu, niezależnie od stanu blokady "
+"tych footprintów."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:156
@@ -6974,12 +7151,15 @@ msgid ""
 "The command Autoplace Module makes it possible to re-place the module "
 "pointed to by the mouse, even if its 'fixed' attribute is active."
 msgstr ""
+"Polecenie 'Automatyczne rozmieszczenie footprintu' powala zaś na ponowne "
+"rozmieszczenie footprintu, który wskazuje kursor myszy, nawet gdy blokada "
+"footprintu jest aktywna."
 
 #. type: Title ^
 #: Pcbnew_module_placement.adoc:158
 #, no-wrap
 msgid "Additional note"
-msgstr ""
+msgstr "Uwagi końcowe"
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:163
@@ -6988,6 +7168,9 @@ msgid ""
 "modules by respecting the shape of the board outline, which is not "
 "necessarily rectangular (It can be round, or have cutouts, etc)."
 msgstr ""
+"Pcbnew automatycznie określa możliwe strefy rozmieszczenia footprintów "
+"biorąc pod uwagę również obrys płytki, który niekoniecznie musi być "
+"prostokątny (może być okrągły lub posiadać wycięcia ...)."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:168
@@ -6996,6 +7179,10 @@ msgid ""
 "can determine what is inside and what is outside the outline.  In the same "
 "way, if there are internal cutouts, their outline will have to be closed."
 msgstr ""
+"Jeśli płyta nie jest prostokątna, obrys musi być zamknięty aby Pcbnew mogło "
+"określić, co jest w środku i to, co jest poza obrysem. W ten sam sposób, "
+"jeśli na płytce występują wewnętrzne wycięcia, ich obrysy będą musiały być "
+"również zamknięte."
 
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:172
@@ -7004,56 +7191,60 @@ msgid ""
 "outline of the board, then passes each module in turn over this area in "
 "order to determine the optimum position at which to place it."
 msgstr ""
+"Pcbnew oblicza możliwe strefy umieszczenia footprintów za pomocą obrysu "
+"płytki, następnie sprawdza każdy footprint po kolei przesuwając go nad tym "
+"obszarem w celu ustalenia optymalnej pozycji na której może go umieścić."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:3 Pcbnew_routing.adoc:66
 #, no-wrap
 msgid "Setting routing parameters"
-msgstr ""
+msgstr "Ustawienia i parametry trasowania ścieżek"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:6 Pcbnew_routing.adoc:19
 #, no-wrap
 msgid "Current settings"
-msgstr ""
+msgstr "Opcje główne"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:9
 #, no-wrap
 msgid "Accessing the main dialog"
-msgstr ""
+msgstr "Dostęp do głównego okna narzędzia"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:13
 msgid ""
 "The most important parameters are accessed from the following drop-down menu:"
-msgstr ""
+msgstr "Najważniejsze ustawienia reguł projektowych są dostępne z menu:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:15
 msgid "image:images/Pcbnew_design_rules_dropdown.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_design_rules_dropdown.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:17
 msgid "and are set in the Design Rules dialog."
 msgstr ""
+"i są ustalane w oknie dialogowym wywoływanym poleceniem *Reguły projektowe*."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:22
 msgid "Current settings are displayed by the top toolbar."
-msgstr ""
+msgstr "Bieżące ustawienia są wyświetlane na pasku narzędziowym:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:24
 msgid "image:images/Pcbnew_design_rules_top_toolbar.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_design_rules_top_toolbar.png[]"
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:26
 #, no-wrap
 msgid "General options"
-msgstr ""
+msgstr "Opcje główne"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:28
@@ -7061,21 +7252,24 @@ msgid ""
 "The General options menu is available via the top toolbar link Preferences → "
 "General dialog."
 msgstr ""
+"Opcje główne można dostosować z pomocą menu *Ustawienia* -> **Główne**:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:32
 msgid "The dialog looks like the following:"
 msgstr ""
+"Wywołanie tego polecenia spowoduje wyświetlenie okna z ustawieniami, a w nim "
+"szereg opcji (Nas w tej chwili interesują te w grupie _Opcje_):"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:34
 msgid "image:images/Pcbnew_general_options_dialog.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_general_options_dialog.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:36
 msgid "For the creation of tracks the necessary parameters are:"
-msgstr ""
+msgstr "Dla ścieżek dostępne są następujące opcje:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:39
@@ -7083,7 +7277,7 @@ msgstr ""
 msgid ""
 "*Tracks 45 Only*: Directions allowed for track segments are 0, 45 or\n"
 "90 degrees.\n"
-msgstr ""
+msgstr "_Ścieżki tylko pod kątem 45 stopni_: Pozwala na prowadzenie ścieżek tylko pod kątem 0, 45 lub 90 stopni.\n"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:41
@@ -7091,7 +7285,7 @@ msgstr ""
 msgid ""
 "*Double Segm Track*: When creating tracks, 2 segments will be\n"
 "displayed.\n"
-msgstr ""
+msgstr "_Ścieżka z podwójnym segmentem_: Podczas tworzenia ścieżek, zostaną wyświetlane dwa jej segmenty (jeśli ścieżka nie jest linią prostą).\n"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:43
@@ -7099,7 +7293,7 @@ msgstr ""
 msgid ""
 "*Tracks Auto Del*: When recreating tracks, the old one will be\n"
 "automatically deleted if considered redundant.\n"
-msgstr ""
+msgstr "_Automatyczne usuwanie ścieżek_: Podczas tworzenia ścieżek, stare trasy nowo prowadzonych ścieżek zostaną automatycznie usunięte.\n"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:46
@@ -7108,13 +7302,13 @@ msgid ""
 "*Magnetic Pads*: The graphic cursor becomes a pad, centered in the\n"
 "pad area.\n"
 "*Magnetic Tracks*: The graphic cursor becomes the track axis.\n"
-msgstr ""
+msgstr "_Przyciągaj do pól lutowniczych_: Powoduje, że podczas tworzenia ścieżek kursor będzie przyciągany do pada jeśli pojawi się w jego obrębie.\n"
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:48
 #, no-wrap
 msgid "Netclasses"
-msgstr ""
+msgstr "Klasy połączeń"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:52
@@ -7122,36 +7316,41 @@ msgid ""
 "Pcbnew allows you to define different routing parameters foe each net. "
 "Parameters are defined by a group of nets."
 msgstr ""
+"Pcbnew pozwala na zdefiniowanie parametrów trasowania ścieżek dla każdej z "
+"sieci. W rzeczywistości taka funkcjonalność byłaby kłopotliwa, zatem "
+"wprowadzono system grupowania podobnych sieci."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:54
 msgid "A group of nets is called a Netclass."
-msgstr ""
+msgstr "Grupa podobnych sieci jest zwana *klasą połączeń*."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:55
 msgid "There is always a netclass called \"default\"."
-msgstr ""
+msgstr "Na liście zawsze musi się znaleźć klasa _Default_."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:56
 msgid "Users can add others Netclasses."
-msgstr ""
+msgstr "Użytkownik może zdefiniować inne klasy połączeń."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:58
 msgid "A netclass specifies:"
-msgstr ""
+msgstr "Dla pojedynczej klasy można zdefiniować:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:60
 msgid "The width of tracks, via diameters and drills."
-msgstr ""
+msgstr "Szerokość ścieżki oraz rozmiar przelotek razem z rozmiarem wierceń."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:61
 msgid "The clearance between pads and tracks (or vias)."
 msgstr ""
+"Minimalną odległość (_clearance_) jaką należy zachować pomiędzy polami "
+"lutowniczymi i ścieżkami (lub przelotkami)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:64
@@ -7159,73 +7358,86 @@ msgid ""
 "When routing, Pcbnew selects automatically the netclass corresponding to the "
 "net of the track to create or edit, and therefore the routing parameters."
 msgstr ""
+"Podczas trasowania ścieżek, Pcbnew automatycznie wybiera odpowiednią klasę "
+"połączeń na podstawie nazwy sieci i jej przynależności do klasy, i stosuje "
+"ustalone dla danej klasy parametry ścieżek oraz przelotek."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:69
 msgid "The choice is made in the menu: Design Rules → Design Rules."
 msgstr ""
+"Wybór parametrów trasowanych ścieżek jest również ustalany za pomocą reguł "
+"projektowych."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:71
 #, no-wrap
 msgid "Netclass editor"
-msgstr ""
+msgstr "Edycja klas połączeń"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:74
 msgid "The Netclass editor allows you to:"
-msgstr ""
+msgstr "Edytor klas połączeń pozwala na:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:75
 msgid "Add or delete Netclasses."
-msgstr ""
+msgstr "Dodawanie lub usuwanie klas połączeń."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:76
 msgid "Set routing parameters values: clearance, track width, via sizes."
 msgstr ""
+"Ustawiania dla poszczególnych klas szczególnych parametrów: odległość, "
+"szerokość ścieżek, rozmiar przelotek."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:77
 msgid "Group nets in netclasses."
 msgstr ""
+"Przypisywanie poszczególnych sieci do utworzonej lub domyślnej klasy "
+"połączeń."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:79
 msgid "image:images/Pcbnew_design_rules_editor_netclass_tab.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_design_rules_editor_netclass_tab.png[]"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:81
 #, no-wrap
 msgid "Global Design Rules"
-msgstr ""
+msgstr "Edycja reguł globalnych"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:84
 msgid "The global design rules are:"
 msgstr ""
+"Oprócz reguł związanych z klasami połączeń dostępne są też reguły globalne. "
+"Dotyczą one:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:85
 msgid "Via type."
-msgstr ""
+msgstr "Typów przelotek."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:86
 msgid "Enabling/disabling micro-via use."
-msgstr ""
+msgstr "Włączania/wyłączania mikroprzelotek, przelotek ślepych i zagrzebanych."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:87
 msgid "Minimum clearance (minimum distance between tracks, vias and pads)."
 msgstr ""
+"stawiania minimalnego prześwitu (minimalna odległość pomiędzy ścieżkami, "
+"przelotkami a punktami lutowniczymi)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:88
 msgid "Minimum tracks and vias sizes."
-msgstr ""
+msgstr "Ustawiania minimalnych rozmiarów ścieżek i przelotek."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:91
@@ -7233,16 +7445,21 @@ msgid ""
 "A DRC error is raised when a value smaller than the minimum value specified "
 "is encountered. The second dialog panel is:"
 msgstr ""
+"Jeśli jakaś wartość jest mniejsza niż minimalna wartość określona tutaj, DRC "
+"wygeneruje błąd. Drugi panel, w którym można określić globalne reguły "
+"projektowe wygląda następująco:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:93
 msgid "image:images/Pcbnew_design_rules_editor_global_tab.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_design_rules_editor_global_tab.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:95
 msgid "This dialog also allows to enter a \"stock\" of tracks and vias sizes."
 msgstr ""
+"Okno dialogowe pozwala także manualnie określić rozmiary ścieżek i przelotek "
+"wybranych przez użytkownika."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:98
@@ -7250,6 +7467,9 @@ msgid ""
 "When routing, one can select one of these values to create a track of via, "
 "instead of using the netclass's default value."
 msgstr ""
+"Podczas trasowania ścieżek, można wybrać jedną z tych wartości by stworzyć "
+"ścieżkę lub przelotkę o innym rozmiarze pomijając tymczasowo domyślne "
+"wartości zapisane w klasach połączeń."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:101
@@ -7257,27 +7477,30 @@ msgid ""
 "Useful in critical cases when a small track segment must have a specific "
 "size."
 msgstr ""
+"System taki jest szczególnie użyteczny, gdy na krótkim odcinku będzie "
+"wymagana inna szerokość trasowanej ścieżki (np. w przypadku przeprowadzania "
+"ścieżek pomiędzy punktami lutowniczymi)."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:103
 #, no-wrap
 msgid "Via parameters"
-msgstr ""
+msgstr "Parametry minimalne przelotek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:106
 msgid "Pcbnew handles 3 types of vias:"
-msgstr ""
+msgstr "Pcbnew obsługuje trzy typy przelotek:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:107
 msgid "The through via (usual vias)."
-msgstr ""
+msgstr "Przelotka na wylot (_through via_, zwykłe przelotki)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:108
 msgid "Blind or buried vias."
-msgstr ""
+msgstr "Przelotki ślepe (_blind_) lub zagrzebane (_buried_)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:112
@@ -7286,11 +7509,16 @@ msgid ""
 "nearest neighbor. They are intended to connect BGA pins to the nearest inner "
 "layer. Their diameter is usually very small and they are drilled by laser."
 msgstr ""
+"Mikroprzelotki, podobne do przelotek zagrzebanych ale ograniczone do "
+"zewnętrznych warstw i najbliższych im warstw sąsiednich. Są one przeznaczone "
+"do łączenia układów montowanych w technologii BGA z najbliższą warstwą "
+"wewnętrzną. Rozmiar takich przelotek jest bardzo mały, a otwory są z reguły "
+"wykonywane laserowo."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:114
 msgid "By default, all vias have the same drill value."
-msgstr ""
+msgstr "Domyślnie, wszystkie przelotki mają ten sam rozmiar odwiertu."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:118
@@ -7298,12 +7526,15 @@ msgid ""
 "This dialog specify the smallest acceptable values for vias parameters. On a "
 "board, a via smaller than specified here generates a DRC error."
 msgstr ""
+" To okno dialogowe określa najmniejsze akceptowalne wartości parametrów "
+"przelotek. Na płytce, mniejsze przelotki niż określone tutaj wygenerują błąd "
+"DRC."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:120
 #, no-wrap
 msgid "Track parameters"
-msgstr ""
+msgstr "Parametry minimalne ścieżek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:124
@@ -7311,17 +7542,19 @@ msgid ""
 "Specify the minimum acceptable track width. On a board, a track width "
 "smaller than specified here generates a DRC error."
 msgstr ""
+"Określa minimalną, akceptowalną szerokość ścieżki. Na płytce, mniejsze "
+"szerokości ścieżek niż określone tutaj wygenerują błąd DRC."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:126
 #, no-wrap
 msgid "Specific sizes"
-msgstr ""
+msgstr "Własne rozmiary ścieżek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:129
 msgid "image:images/Pcbnew_specific_size_options.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_specific_size_options.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:133
@@ -7330,24 +7563,29 @@ msgid ""
 "track, these values can be used on demand instead of the values from the "
 "current netclass values."
 msgstr ""
+"Z pomocą tego panelu można określić własne rozmiary ścieżek i przelotek. "
+"Podczas ręcznego trasowania można użyć tych parametrów zamiast tych "
+"dziedziczonych z klasy połączeń."
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:135
 #, no-wrap
 msgid "Examples and typical dimensions"
-msgstr ""
+msgstr "Przykłady i typowe rozmiary"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:138
 #, no-wrap
 msgid "Track width"
-msgstr ""
+msgstr "Szerokości ścieżek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:142
 msgid ""
 "Use the largest possible value and conform to the minimum sizes given here."
 msgstr ""
+"Użyj największej możliwej wartości, zgodnie z minimalnymi rozmiarami "
+"podanymi tutaj:"
 
 #. type: delimited block |
 #: Pcbnew_routing.adoc:148
@@ -7357,12 +7595,15 @@ msgid ""
 "| mm | 0.8 | 0.5 | 0.4 | 0.25 | 0.15\n"
 "| mils | 31 | 20 | 16 | 10 | 6\n"
 msgstr ""
+"| Units | CLASS 1 | CLASS 2 | CLASS 3 | CLASS 4 | CLASS 5\n"
+"| mm | 0.8 | 0.5 | 0.4 | 0.25 | 0.15\n"
+"| mils | 31 | 20 | 16 | 10 | 6\n"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:151
 #, no-wrap
 msgid "Insulation (clearance)"
-msgstr ""
+msgstr "Prześwit pomiędzy ścieżkami"
 
 #. type: delimited block |
 #: Pcbnew_routing.adoc:158
@@ -7372,65 +7613,70 @@ msgid ""
 "| mm | 0.7 | 0.5 | 0.35 | 0.23 | 0.15\n"
 "| mils | 27 | 20 | 14 | 9 | 6\n"
 msgstr ""
+"| Units | CLASS 1 | CLASS 2 | CLASS 3 | CLASS 4 | CLASS 5\n"
+"| mm | 0.7 | 0.5 | 0.35 | 0.23 | 0.15\n"
+"| mils | 27 | 20 | 14 | 9 | 6\n"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:162
 msgid ""
 "Usually, the minimum clearance is very similar to the minimum track width."
 msgstr ""
+"Zwykle, minimalny prześwit jest bardzo podobny do minimalnej szerokości "
+"ścieżki."
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:164
 #, no-wrap
 msgid "Examples"
-msgstr ""
+msgstr "Przykłady stosowanych reguł projektowych"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:167
 #, no-wrap
 msgid "Rustic"
-msgstr ""
+msgstr "'Prosty' - stosowanych w amatorskich PCB"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:170 Pcbnew_routing.adoc:181
 msgid "Clearance: 0.35mm (0.0138 inches)."
-msgstr ""
+msgstr "Prześwit: 0.35mm (0.0138 cali)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:171
 msgid "Track width: 0.8mm (0.0315 inches)."
-msgstr ""
+msgstr "Szerokość ścieżki: 0.8mm (0.0315 cali)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:172
 msgid "Pad diameter for ICs and vias: 1.91mm (0.0750 inches )."
-msgstr ""
+msgstr "Rozmiar padu dla układów scalonych i przelotek: 1.91mm (0.0750 cali)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:173
 msgid "Pad diameter for discrete components: 2.54mm (0.1 inches)."
-msgstr ""
+msgstr "Rozmiar padu dla elementów dyskretnych: 2.54mm (0.1 cala)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:174
 msgid "Ground track width: 2.54mm (0.1 inches)."
-msgstr ""
+msgstr "Szerokość ścieżki masy: 2.54mm (0.1 cala)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:176
 msgid "image:images/Pcbnew_dr_example_rustic.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_dr_example_rustic.png[]"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:178
 #, no-wrap
 msgid "Standard"
-msgstr ""
+msgstr "'Standard'"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:182
 msgid "Track width: 0.5mm (0.0127 inches)."
-msgstr ""
+msgstr "Szerokość ścieżki: 0.5mm (0.0127 cala)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:183
@@ -7439,22 +7685,26 @@ msgid ""
 "between IC pads and yet have the pads offer a sufficient adhesive surface "
 "(1.27 x 2.54 mm -->0.05x 0.1 inches)."
 msgstr ""
+"Szerokość pada dla układów scalonych: stosuje się wydłużanie pól "
+"lutowniczych by umożliwić prowadzenie ścieżek pomiędzy padami i dać jeszcze "
+"wystarczającą ilość miejsca na powierzchnię kleju (1.27x2.54 mm -->0.05x0.1 "
+"cala)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:184
 msgid "Vias: 1.27mm (0.0500 inches)."
-msgstr ""
+msgstr "Przelotki: 1.27mm (0.0500 cala)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:186
 msgid "image:images/Pcbnew_dr_example_standard.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_dr_example_standard.png[]"
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:188
 #, no-wrap
 msgid "Manual routing"
-msgstr ""
+msgstr "Manualne trasowanie ścieżek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:200
@@ -7469,12 +7719,24 @@ msgid ""
 "is useful for quickly routing the 'obvious' tracks, but the remaining tracks "
 "will best be routed by hand."
 msgstr ""
+"Trasowanie manualne jest zalecane, a to dlatego, że jest to jedyna metoda "
+"oferująca pełną kontrolę nad priorytetami trasowania ścieżek. Przykładowo, "
+"preferowane jest rozpoczęcie trasowania od ścieżek zasilania, tak by miały "
+"one właściwą szerokość, odpowiednio krótką długość oraz były znacząco "
+"odseparowane od ścieżek sygnałowych (dla sygnałów analogowych lub "
+"cyfrowych). A następnie należy trasować newralgiczne ścieżki. Pośród innych "
+"problemów, automatyczne trasowanie ścieżek często wymaga wielu przelotek. "
+"Jednak automatyczne trasowanie może być przydatne w pozycjonowaniu "
+"footprintów. Wraz z nabywaniem doświadczenia, prawdopodobnie dla wielu "
+"początkujących projektantów stanie się jasne, że automatyczne trasowanie "
+"jest przydatne do szybkiego trasowania ``oczywistych ścieżek'', jednak "
+"pozostałe ścieżki najlepiej jest trasować ręcznie."
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:202
 #, no-wrap
 msgid "Help when creating tracks"
-msgstr ""
+msgstr "Pomoc w trasowaniu ścieżek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:206
@@ -7482,6 +7744,10 @@ msgid ""
 "Pcbnew can display the full ratsnest, if the button image:images/icons/"
 "modratsnest.png[] is activated."
 msgstr ""
+"Pcbnew oferuje parę ułatwień przy trasowaniu manualnym. Może na przykład "
+"wyświetlać połączenia wspomagające (_ratsnest_), jeśli opcja image:images/"
+"icons/modratsnest.png[Ikona Połączenia wspomagające] na lewym panelu jest "
+"aktywna."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:210
@@ -7489,6 +7755,11 @@ msgid ""
 "The button image:images/icons/net_highlight.png[] allows to highlight a net "
 "(click to a pad or an existing track to highlight the corresponding net)."
 msgstr ""
+"Narzędzie image:images/icons/net_highlight.png[Ikona Podświetlanie sieci] "
+"pozwala zaś na podświetlanie wybranej sieci, wystarczy tylko kliknąć na "
+"ścieżkę lub na pole lutownicze należący do danej sieci by została ona w "
+"całości wyróżniona. Aby skasować podświetlenie wystarczy ponownie kliknąć, "
+"ale tym razem w puste pole na obszarze roboczym. "
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:215
@@ -7498,12 +7769,18 @@ msgid ""
 "by clicking on the button . This is however not recommended, use it only in "
 "specific cases."
 msgstr ""
+"Nad procesem trasowania ścieżek czuwa również DRC, które sprawdza ścieżki "
+"podczas ich trasowania w czasie rzeczywistym i nie dopuści do tworzenia "
+"ścieżek, które nie spełniają reguł DRC. Można również wyłączyć DRC za pomocą "
+"ikony image:images/icons/drc_off.png[Ikona Brak reguł] na lewym pasku "
+"narzędzi, ale *jest to niezalecane i w sumie niebezpieczne. Opcja ta powinna "
+"być wyłączana tylko w szczególnych przypadkach*."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:217
 #, no-wrap
 msgid "Creating tracks"
-msgstr ""
+msgstr "Trasowanie ścieżek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:223
@@ -7513,11 +7790,16 @@ msgid ""
 "because Pcbnew must know the net used for the new track (in order to match "
 "the DRC rules)."
 msgstr ""
+"Można użyć ikony image:images/icons/add_tracks.png[Ikona Rysuj ścieżkę] "
+"znajdującej się na prawym pasku narzędzi. Nowa ścieżka musi rozpoczynać od "
+"punktu lutowniczego albo na innej ścieżce, ponieważ *Pcbnew* musi wiedzieć "
+"do jakiej sieci ma należeć nowo trasowana ścieżka (oraz w celu dopasowania "
+"reguł DRC)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:225
 msgid "image:images/Pcbnew_creating_new_track.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_creating_new_track.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:229
@@ -7525,22 +7807,31 @@ msgid ""
 "When creating a new track, Pcbnew shows links to nearest not connected pads, "
 "link number set in option \"Max. Links\" in General Options."
 msgstr ""
+"Podczas prowadzenia ścieżki, Pcbnew wyświetla najbliższe połączenia "
+"wspomagające (ich ilość można określić za pomocą opcji _Maksymalna ilość "
+"łącz_ w oknie dialogowym wywoływanym przez polecenie *Ustawienia* -> "
+"**Główne**), a także automatycznie podświetla punkty lutownicze należące do "
+"tej samej sieci."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:231
 msgid "End the track by a double click, by the pop-up menu or by its hot key."
 msgstr ""
+"Aby zakończyć trasowanie ścieżki można posłużyć się menu podręcznym gdzie "
+"wybieramy polecenie *Zakończ ścieżkę*. Można również skorzystać z "
+"odpowiedniego klawisza skrótów (domyślnie *End*) albo po prostu dwukrotnie "
+"kliknąć lewym klawiszem myszy."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:233
 msgid "image:images/Pcbnew_track_in_progres_context.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_track_in_progres_context.png[]"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:235
 #, no-wrap
 msgid "Moving and dragging tracks"
-msgstr ""
+msgstr "Przesuwanie i przeciąganie ścieżek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:240
@@ -7549,32 +7840,42 @@ msgid ""
 "where the cursor is positioned can be moved with the hotkey 'm'.  If you "
 "want to drag the track you can use the hotkey 'g'."
 msgstr ""
+"Gdy aktywne jest narzędzie do trasowania ścieżek image:images/icons/"
+"add_tracks.png[Ikona Rysuj ścieżkę], ścieżkę znajdującą się w miejscu "
+"kursora można przesuwać wybierając klawisz skrótu *M*. W podobny sposób "
+"można również ścieżkę przeciągać (łącznie z najbliższymi jej segmentami) "
+"używając klawisza skrótu *G*. Pcbnew oferuje jeszcze jeden sposób na "
+"przeciąganie segmentów ścieżek, z zachowaniem nachylenia pozostałych "
+"segmentów. Opcja ta jest dostępna z menu podręcznego: 'Przeciągnij segmenty, "
+"zachowaj nachylenie'."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:242
 #, no-wrap
 msgid "Via Insertion"
-msgstr ""
+msgstr "Wstawianie przelotek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:245
 msgid "A via can be inserted only when a track is in progress:"
-msgstr ""
+msgstr "Przelotki mogą być umieszczane tylko podczas trasowania ścieżek:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:247
 msgid "By the pop-up menu."
-msgstr ""
+msgstr "Z wykorzystaniem opcji *Wstaw przelotkę* z menu podręcznego."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:248
 msgid "By the hotkey 'v'."
-msgstr ""
+msgstr "Za pomocą klawisza skrótu (domyślnie *V*)."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:249
 msgid "By switching to a new copper layer using the appropriate hotkey."
 msgstr ""
+"Automatycznie, jeśli podczas trasowania zostaje zmieniona warstwa sygnałowa "
+"za pomocą odpowiednich klawiszy skrótów."
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:251
