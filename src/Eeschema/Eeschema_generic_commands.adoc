@@ -98,14 +98,17 @@ Selecting grid size
 In Eeschema, the cursor moves over a grid, which can be displayed or
 not. The grid is always displayed in the library management menus.
 
-You can change the grid size via the pop-up menu or via the
-Preferences/Options menu. The default grid size is 50 mil (0.050") or
-1,27 millimeters.
+You can change the grid size via the pop-up menu or via the Preferences/Options menu.
 
-One can also work with the average (20 mil) or a finer grid (10 mil).
-This is however not recommended for usual work. The average or fine grid
-is especially intended to design or handle components with large numbers
-of pins like several hundreds pins.
+The default grid size is 50 mil (0.050") or 1,27 millimeters.
+
+This is the prefered grid to place components and wires in schematic,
+and to place pins when designing a symbol in the Component Editor.
+
+One can also work with a smaller grid from 25 mil to 10 mil.
+
+This is only intended to design the component body
+or place texts and comments, not to place pins and wires.
 
 Zoom selection
 ~~~~~~~~~~~~~~
@@ -155,28 +158,35 @@ Top menu bar
 The top menu bar allows the opening and saving of schematics, the
 program configuration, and it also contains the help menu.
 
-image:images/en/menu_bar.png[]
+image:images/en/menu_bar.png[menubar]
+
 
 Upper toolbar
 ~~~~~~~~~~~~~
 
 This toolbar gives access to the main functions of Eeschema.
 
-image:images/100000000000034B000000221D3CBEF3.png[100000000000034B000000221D3CBEF3_png]
+If Eeschema is run in stand alone mode, the full tool set is available:
+
+image:images/icons/sch_editor_main_toolbar.png[sch editor main toolbar]
+
+If Eeschema is run from the project manager (kicad), available tools are:
+
+image:images/icons/sch_editor_main_toolbar_on_prjmanager.png[sch editor main toolbar prj manager]
+
+( Tools to initialize a project are not available, because these tools are in the _Project Manager_  )
 
 [width="100%",cols="36%,64%",]
 |=======================================================================
-|image:images/1000000000000023000000229F43382D.png[1000000000000023000000229F43382D_png]
-|Create a new schematic.
+|image:images/icons/new-schematic.png[news chematic icon]
+|Create a new schematic (only in stand alone mode).
 
 |image:images/icons/open-schematic.png[Open schematic icon]
-|Open a schematic.
+|Open a schematic (only in stand alone mode).
 
 |image:images/100000000000002200000022A1E90214.png[100000000000002200000022A1E90214_png]
 a|
-Save complete schematic
-
-(with the whole hierarchy).
+Save complete schematic (The whole hierarchy).
 
 |image:images/1000000000000022000000221C8530A2.png[1000000000000022000000221C8530A2_png]
 |Select the sheet size and title block editing.
@@ -199,8 +209,11 @@ Save complete schematic
 |image:images/10000000000000230000002547FD4C9E.png[10000000000000230000002547FD4C9E_png]
 |Redo (up to 10 levels).
 
-|image:images/1000000000000024000000255522ABD1.png[1000000000000024000000255522ABD1_png]
-|Call the menu of components localization and texts.
+|image:images/icons/search-icon.png[search icon]
+|Call the dialog to search compoents and texts in the schematic.
+
+|image:images/icons/search-replace-icon.png[search replace icon]
+|Call the dialog to search and replace texts in the schematic.
 
 |image:images/icons/zoom-in-out.png[]
 |Zoom in and out, around the center of screen.
@@ -208,7 +221,7 @@ Save complete schematic
 |image:images/100000000000004100000025F21D3B62.png[100000000000004100000025F21D3B62_png]
 |Redraw of the screen and optimal Zoom.
 
-|image:images/100000000000002200000025C0F59654.png[100000000000002200000025C0F59654_png]
+|image:images/icons/hierarchy-navigator.png[hierarchy navigator icon]
 |Call the navigator window, to display the tree structure of the diagram
 hierarchy (if it contains sub sheets) and the immediate selection of any
 sheet of the hierarchy.
@@ -233,7 +246,7 @@ connections.
 |image:images/1000000000000025000000230D237A08.png[1000000000000025000000230D237A08_png]
 |Generate the BOM (Bill of materials) and/or hierarchical labels.
 
-|image:images/100000000000002200000023D9BC0065.png[100000000000002200000023D9BC0065_png]
+|image:images/icons/run-cvpcb.png[run cvpcb icon]
 |Call CvPvb.
 
 |image:images/1000000000000023000000254FA6011B.png[1000000000000023000000254FA6011B_png]
