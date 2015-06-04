@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-05-29 15:44+0200\n"
-"PO-Revision-Date: 2015-06-01 19:26+0100\n"
+"PO-Revision-Date: 2015-06-04 13:18+0100\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -3650,7 +3650,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:228
 msgid "image:images/Pcbnew_edit_menu.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_edit_menu.png[]"
 
 #. type: Title ^
 #: Pcbnew_general_operations.adoc:231
@@ -3661,7 +3661,7 @@ msgstr "Menu Widok"
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:234
 msgid "image:images/Pcbnew_view_menu.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_view_menu.png[]"
 
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:236
@@ -3701,7 +3701,7 @@ msgstr "Zawiera te same funkcje co prawy pasek narzędzi."
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:250
 msgid "image:images/Pcbnew place menu.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_place_menu.png[]"
 
 #. type: Title ^
 #: Pcbnew_general_operations.adoc:252
@@ -3798,7 +3798,7 @@ msgstr "Menu Narzędzia"
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:281
 msgid "image:images/Pcbnew_place_menu.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_tools_menu.png[]"
 
 #. type: Title ^
 #: Pcbnew_general_operations.adoc:283
@@ -4074,6 +4074,36 @@ msgid ""
 "| image:images/icons/delete.png[]\n"
 "    | Delete element pointed to by the cursor\n"
 msgstr ""
+"| image:images/icons/cursor.png[]\n"
+"    | Zatrzymuje pracę używanego aktualnie narzędzia.\n"
+"| image:images/icons/net_highlight.png[]\n"
+"    | Podświetlenie całej sieci do której należy wskazana ścieżka lub pole lutownicze.\n"
+"| image:images/icons/tool_ratsnest.png[]\n"
+"    | Pokazuje lokalne połączenia wspomagające (w footprintach lub padach).\n"
+"| image:images/icons/module.png[]\n"
+"    | Wstawia footprint z biblioteki na płytkę.\n"
+"| image:images/icons/add_tracks.png[]\n"
+"    | Tworzenie ścieżek i przelotek.\n"
+"| image:images/icons/add_zone.png[]\n"
+"    | Tworzenie wypełnionych stref (pola miedzi).\n"
+"| image:images/icons/add_keepout_area.png[]\n"
+"    | Tworzenie stref odciętych (anty pola miedzi).\n"
+"| image:images/icons/auto_track_width.png[]\n"
+"    | Strefy idcięte to obszary gdzie nie można prowadzić ścieżek lub stawiać przelotek, albo wypełniać stref.\n"
+"| image:images/icons/add_line.png[]\n"
+"    | Rysowanie linii na warstwach technicznych (tzn. nie będących warstwami sygnałowymi).\n"
+"| image:images/icons/add_circle.png[]\n"
+"    | Rysowanie okręgów na warstwach technicznych (tzn. nie będących warstwami sygnałowymi).\n"
+"| image:images/icons/add_arc.png[]\n"
+"    | Rysowanie łuków lub wycinków okręgu na warstwach technicznych (tzn. nie będących warstwami sygnałowymi).\n"
+"| image:images/icons/add_text.png[]\n"
+"    | Wstawianie dowolnego tekstu.\n"
+"| image:images/icons/add_dimension.png[]\n"
+"    | Rysowanie linii wymiarowych na warstwach technicznych (tzn. nie będących warstwami sygnałowymi).\n"
+"| image:images/icons/add_mires.png[]\n"
+"    | Wstawianie znaczników do składania warstw (występują one na wszystkich warstwach).\n"
+"| image:images/icons/delete.png[]\n"
+"    | Usuwanie elementów wskazywanych przez kursor.\n"
 
 #. type: delimited block |
 #: Pcbnew_general_operations.adoc:433
@@ -4091,6 +4121,17 @@ msgid ""
 "    | Grid origin. (grid offset). Useful mainly for edition and\n"
 "    placement of footprints. Can also be set in Dimensions/Grid menu.\n"
 msgstr ""
+"    *Uwaga:*\n"
+"    Gdy kasowane są elementy występujące na tej samej pozycji,\n"
+"    elementy są wskazywane zgodnie z ich priorytetem od najmniejszego\n"
+"    do największego (w odwrotnej kolejności: ścieżki, teksty, footprinty).\n"
+"    Funkcja *Cofnij* na górnym pasku narzędzi pozwala na cofnięcie operacji\n"
+"    usunięcia elementu.\n"
+"| image:images/icons/pcb_offset.png[]\n"
+"    | Ustawianie punktu przesunięcia dla plików wierceń oraz położeń elementów.\n"
+"| image:images/icons/grid_select_axis.png[]\n"
+"    | Ustawienie punktu odniesienia siatki (początek siatki). Użyteczne przy edycji\n"
+"    i ustawianiu footprintów. Można go również ustawić z menu *Wymiary* -> **Siatka**.\n"
 
 #. type: Title ~
 #: Pcbnew_general_operations.adoc:437
@@ -4153,6 +4194,44 @@ msgid ""
 "| image:images/icons/mw_toolbar.png[]\n"
 "    | Access to microwaves tools. Under development\n"
 msgstr ""
+"| image:images/icons/drc_off.png[]\n"
+"    | Wyłącza lub włącza opcję bieżącego sprawdzania *DRC* (_Design Rule Checking_).\n"
+"     *Ostrożnie: Gdy DRC jest wyłączone można tworzyć również błędne połączenia.*\n"
+"| image:images/icons/grid.png[]\n"
+"    | Włącza lub wyłącza wyświetlanie siatki (*Uwaga: Zbyt mała siatka\n"
+"    może nie być wyświetlana*).\n"
+"| image:images/icons/polar_coord.png[]\n"
+"    | Włącza lub wyłącza wyświetlanie współrzędnych polarnych dla współrzędnych względnych.\n"
+"| image:images/icons/unit_inch.png[] image:images/icons/unit_mm.png[]\n"
+"    |Przełącza pomiędzy wyświetlaniem/wprowadzaniem danych w postaci cali lub milimetrów.\n"
+"| image:images/icons/cursor_shape.png[]\n"
+"    | Zmienia kształt kursora.\n"
+"| image:images/icons/general_ratsnest.png[]\n"
+"    | Wyświetla połączenia wspomagające (nitki wskazujące niedokończone połączenia pomiędzy footprintami).\n"
+"| image:images/icons/local_ratsnest.png[]\n"
+"    | Wyświetla dynamiczne połączenia wspomagające podczas przesuwania footprintów.\n"
+"| image:images/icons/auto_delete_track.png[]\n"
+"    | Włącza lub wyłącza automatyczne kasowanie starych ścieżek.\n"
+"| image:images/icons/show_zone.png[]\n"
+"    | Przełącza tryb wyświetlania stref.\n"
+"| image:images/icons/show_zone_disable.png[]\n"
+"    | Pokazuje całość (obramowanie i wypełnienie).\n"
+"| image:images/icons/show_zone_outline_only.png[]\n"
+"    | Pokazuje tylko obramowanie (wypełnienia są ukryte).\n"
+"| image:images/icons/pad_sketch.png[]\n"
+"    | Włącza lub wyłącza wyświetlanie punktów lutowniczych w trybie uproszczonym (tyko zarys).\n"
+"| image:images/icons/via_sketch.png[]\n"
+"    | Włącza lub wyłącza wyświetlania przelotek w trybie uproszczonym (tylko zarys).\n"
+"| image:images/icons/showtrack.png[]\n"
+"    | Włącza lub wyłącza wyświetlania ścieżek w trybie uproszczonym (tylko zarys).\n"
+"| image:images/icons/contrast_mode.png[]\n"
+"    | Włącza lub wyłącza tryb wysokiego kontrastu. W trybie tym aktywna warstwa jest wyświetlana\n"
+"    własnym kolorem, natomiast reszta warstw jest wyświetlana w odcieniach szarości. Tryb taki\n"
+"    jest zwykle używany w obwodach wielowarstwowych.\n"
+"| image:images/icons/layers_manager.png[]\n"
+"    | Włącza lub wyłącza boczny panel z menedżerem warstw.\n"
+"| image:images/icons/mw_toolbar.png[]\n"
+"    | Włącza lub wyłącza dodatkowy pasek narzędzi mikrofalowych (Narzędzie to nie jest jeszcze ukończone).\n"
 
 #. type: Title ~
 #: Pcbnew_general_operations.adoc:487
@@ -5778,7 +5857,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_layers.adoc:33
 msgid "image:images/Pcbnew_layer_setup_menu_item.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_layer_setup_menu_item.png[]"
 
 #. type: Plain text
 #: Pcbnew_layers.adoc:35
@@ -6078,7 +6157,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_layers.adoc:137
 msgid "image:images/Pcbnew_via_layer_pair_popup.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_via_layer_pair_popup.png[]"
 
 #. type: Plain text
 #: Pcbnew_layers.adoc:140
@@ -6237,7 +6316,7 @@ msgstr "ModEdit - Zarządzanie bibliotekami footprintów"
 #: Pcbnew_managing_libs.adoc:6
 #, no-wrap
 msgid "Overview of ModEdit"
-msgstr ""
+msgstr "Wprowadzenie"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:13
@@ -6248,11 +6327,16 @@ msgid ""
 "library is the library selected within the Module Editor (ModEdit), the "
 "program we be now described"
 msgstr ""
+"Pcbnew jednocześnie zarządza kilkoma bibliotekami. Tak więc, gdy ładowany "
+"jest footprint, wszystkie biblioteki, które pojawiają się na liście "
+"bibliotek są przeszukiwane, aż znalezione będzie pierwsze wystąpienie "
+"footprintu. W dalszej części tekstu będziemy używać zwrotu *aktywna "
+"biblioteka* dla biblioteki wybranej w edytorze footprintów ModEdit."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:15
 msgid "ModEdit enables the creation and the editing of modules:"
-msgstr ""
+msgstr "ModEdit pozwala na tworzenie i edycję footprintów:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:19
@@ -6260,62 +6344,64 @@ msgid ""
 "Changing pad properties (shape, layer) for individual pads or globally for "
 "all pads of a module."
 msgstr ""
+"Zmianę właściwości pól lutowniczych (kształt, warstwa) dla pojedynczych pól "
+"lutowniczych lub globalnie dla wszystkich pól lutowniczych footprintu."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:20
 msgid "Editing graphic elements (lines, text)."
-msgstr ""
+msgstr "Edycja postaci graficznej (linie, tekst)."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:21
 msgid "Editing information fields (value, reference, etc.)."
-msgstr ""
+msgstr "Edycja pól informacyjnych (wartość, odniesienie, ...)."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:24
 msgid "ModEdit allows the maintenance of the active library as well by:"
-msgstr ""
+msgstr "ModEdit pozwala także na zarządzanie aktywną biblioteką:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:26
 msgid "Listing the modules in the active library."
-msgstr ""
+msgstr "Wyświetlanie listy footprintów w aktywnej bibliotece."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:27
 msgid "Deletion of a module from the active library."
-msgstr ""
+msgstr "Usuwanie footprintów z aktywnej biblioteki."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:28
 msgid "Saving a module to the active library."
-msgstr ""
+msgstr "Zapisywanie footprintu w aktywnej bibliotece."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:29
 msgid "Saving all of the modules contained by a printed circuit."
-msgstr ""
+msgstr "Zapisywanie wszystkich footprintów zawartych na obwodzie drukowanym."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:31
 msgid "It is also possible to create new libraries."
-msgstr ""
+msgstr "Z pomocą ModEdit jest również możliwe tworzenie nowych bibliotek."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:33
 msgid "The library extension is `.mod`."
-msgstr ""
+msgstr "Pliki z rozszerzeniem `.mod` stanowią poszczególne biblioteki."
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:36
 #, no-wrap
 msgid "Accessing ModEdit"
-msgstr ""
+msgstr "Edytor ModEdit"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:39
 msgid "The Module Editor can be accessed in two different ways:"
-msgstr ""
+msgstr "Edytor footprintów jest dostępny z poziomu Pcbnew na dwa sposoby:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:42
@@ -6323,6 +6409,8 @@ msgid ""
 "Directly, via the icon image:images/icons/module_editor.png[] in the main "
 "toolbar of Pcbnew."
 msgstr ""
+"Bezpośrednio, za pomocą ikony image:images/icons/module_editor.png[] na "
+"głównym pasku narzędzi Pcbnew."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:44
@@ -6330,11 +6418,14 @@ msgid ""
 "In the edit dialog for the active module (see figure below: accessed via the "
 "context menu), there is the button Module Editor."
 msgstr ""
+"W oknie dialogowym z właściwościami footprintu (jak na poniższym obrazku; "
+"dostęp poprzez menu podręczne), gdzie dostępny jest klawisz *Edytor "
+"footprintów*."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:46
 msgid "image:images/Pcbnew_module_properties.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_module_properties.png[]"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:48
@@ -6342,33 +6433,37 @@ msgid ""
 "In this case, the active module of the board will be loaded automatically in "
 "ModEdit, enabling immediate editing or archiving."
 msgstr ""
+"W takim przypadku, aktywny footprint z obwodu drukowanego będzie "
+"automatycznie załadowany w edytorze footprintów, pozwalając na jego "
+"bezpośrednią modyfikację (lub archiwizację)."
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:51
 #, no-wrap
 msgid "ModEdit user interface"
-msgstr ""
+msgstr "Interfejs użytkownika ModEdit"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:54
 msgid "By calling ModEdit the following window will appear:"
 msgstr ""
+"Wywołanie edytora footprintów ModEdit spowoduje otwarcie następującego okna:"
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:59
 #, no-wrap
 msgid "Top toolbar in Modedit"
-msgstr ""
+msgstr "Główny pasek narzędziowy"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:62
 msgid "image:images/Modedit_top_toolbar.png[]"
-msgstr ""
+msgstr "image:images/Modedit_top_toolbar.png[]"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:64
 msgid "From this toolbar, the following functions are available:"
-msgstr ""
+msgstr "Korzystając z tego paska narzędzi dostępne są następujące polecenia:"
 
 #. type: delimited block |
 #: Pcbnew_managing_libs.adoc:115
@@ -6433,16 +6528,24 @@ msgid ""
 "which will be replaced by the final reference on the printed circuit board "
 "(U1, IC3, etc.)"
 msgstr ""
+"Narzędzie ukrywające się pod ikoną image:images/icons/new_footprint.png"
+"[Ikona Nowy footprint] pozwala na utworzenie nowego footprintu. Po wybraniu "
+"tego narzędzia, użytkownik zostanie poproszony o podanie nazwy "
+"identyfikującej nowy footprint w bibliotece. Nazwa ta będzie służyć także "
+"jako oznaczenie footprintu i zostanie zastąpiona później na obwodzie "
+"drukowanym przez oznaczenie z listy sieci (`U1`, `IC3` ...)."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:127
 msgid "It will be necessary to add the following to the new module:"
 msgstr ""
+"Aby footprint był kompletny, będzie potrzebne również dodanie także "
+"następujących elementów składowych footprintu:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:129
 msgid "Outlines (and possibly text)."
-msgstr ""
+msgstr "*Obrys footprintu* (i tekst jeśli potrzeba)."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:132
@@ -6450,6 +6553,8 @@ msgid ""
 "A value (place-holding text that will subsequently be replaced by the true "
 "value)."
 msgstr ""
+"Pole tekstowe _Wartość_ (zawierające tekst, który będzie zastąpiony przez "
+"prawdziwą wartość przypisaną z listy sieci)."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:134
@@ -6457,6 +6562,9 @@ msgid ""
 "When a new module is similar to an existing module in a library or board, "
 "this alternative and often quicker method should be used:"
 msgstr ""
+"Gdy nowy footprint jest podobny do innego footprintu jaki istnieje w "
+"bibliotece albo na płytce, można użyć szybszej metody tworzenia nowego "
+"footprintu:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:139
@@ -6465,17 +6573,21 @@ msgid ""
 "png[], image:images/icons/load_module_board.png[] or image:images/icons/"
 "import_module.png[]."
 msgstr ""
+"Załadować podobny footprint (korzystając z narzędzi image:images/icons/"
+"load_module_lib.png[Ikona Załaduj footprint], image:images/icons/"
+"load_module_board.png[Ikona Pobierz footprint z płytki], lub image:images/"
+"icons/import_module.png[Ikona Import])."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:140
 msgid "Modify the reference field to the name of the new module."
-msgstr ""
+msgstr "Zmodyfikować pole z nazwą identyfikacyjną, wpisując nową nazwę."
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:143
 #, no-wrap
 msgid "Creating a new library"
-msgstr ""
+msgstr "Tworzenie nowej biblioteki"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:150
@@ -6485,6 +6597,12 @@ msgid ""
 "library directory or via the button image:images/icons/export_module.png[], "
 "in which case the file is created by default in your working directory."
 msgstr ""
+"Aby utworzyć nową bibliotekę można użyć jednego z dwóch narzędzi: *Nowa "
+"biblioteka* image:images/icons/new_library.png[Ikona Zapisz w nowej "
+"bibliotece], w przypadku którego plik biblioteki jest domyślnie tworzony w "
+"katalogu z bibliotekami; *Eksport* image:images/icons/export_module.png"
+"[Ikona Eksport], w przypadku którego plik biblioteki jest domyślnie tworzony "
+"w katalogu roboczym projektu."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:154
@@ -6493,6 +6611,9 @@ msgid ""
 "its directory to be changed. In both cases, the library will contain the "
 "module being edited."
 msgstr ""
+"Okno dialogowe z wyborem nazwy pliku pozwala na określenie nazwy biblioteki "
+"oraz zmiany katalogu. W obu przypadkach, biblioteka będzie zawierać "
+"edytowany footprint."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:157
@@ -6500,12 +6621,14 @@ msgid ""
 "If an old library of the same name exists, it will be overwritten without "
 "warning."
 msgstr ""
+"Jeśli istnieje już jakaś biblioteka z taką samą nazwą, zostanie ona "
+"nadpisana bez ostrzeżenia."
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:159
 #, no-wrap
 msgid "Saving a module in the active library"
-msgstr ""
+msgstr "Zapisanie footprintu w aktywnej bibliotece"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:167
@@ -6516,6 +6639,12 @@ msgid ""
 "you will depend upon the accuracy of the library modules, it is worth double-"
 "checking the module before saving."
 msgstr ""
+"Operacja zapisu footprintu (modyfikująca plik aktywnej biblioteki) jest "
+"przeprowadzana za pomocą polecenia *Zapisz* image:images/icons/save_library."
+"png[Ikona Zapisz footprint]. Jeśli footprint o tej samej nazwie już "
+"istnieje, zostanie on zastąpiony. Ponieważ tworzone obwody drukowane będą "
+"zależeć od dokładności footprintów w bibliotece, warto przed zapisaniem "
+"footprintu dwukrotnie sprawdzić nowy footprint przed jego zapisem."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:170
@@ -6523,57 +6652,61 @@ msgid ""
 "It is recommended to edit either the reference or value field text to the "
 "name of the module as identified in the library."
 msgstr ""
+"Zalecane jest również, dokonanie edycji pól z nazwą footprintu, będących "
+"jego identyfikatorem w bibliotece."
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:172
 #, no-wrap
 msgid "Transferring a module from one library to another"
-msgstr ""
+msgstr "Przenoszenie footprintów pomiędzy bibliotekami jest możliwe i można to wykonać w następujący sposób:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:176
 msgid ""
 "Select the source library via the button image:images/icons/library.png[]."
-msgstr ""
+msgstr "Wybrać bibliotekę źródłową image:images/icons/library.png[]."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:178
 msgid ""
 "Load the module via the button image:images/icons/load_module_lib.png[]."
-msgstr ""
+msgstr "Załadować wybrany footprint image:images/icons/load_module_lib.png[]."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:180
 msgid ""
 "Select the destination library via the button image:images/icons/library.png"
 "[]."
-msgstr ""
+msgstr "Wybrać bibliotekę docelową image:images/icons/library.png[]."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:181
 msgid "Save the module via the button image:images/icons/save_library.png[]"
-msgstr ""
+msgstr "Zapisać footprint image:images/icons/save_library.png[]"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:183
 msgid "You may also wish to delete the source module."
 msgstr ""
+"Przy przenoszeniu footprintów footprint źródłowy nie zostaje usunięty, zatem "
+"może zaistnieć potrzeba jego usunięcia. Aby to wykonać należy:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:185
 msgid "Reselect the source library with image:images/icons/library.png[]"
-msgstr ""
+msgstr "Wybrać ponownie bibliotekę źródłową image:images/icons/library.png[]"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:186
 msgid "Delete the old module via the button image:images/icons/delete.png[]"
-msgstr ""
+msgstr "Usunąć poprzednią postać footprintu image:images/icons/delete.png[]"
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:188
 #, no-wrap
 msgid "Saving all modules of your board in the active library"
-msgstr ""
+msgstr "Zapisywanie footprintów z płytek w aktywnej bibliotece"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:193
@@ -6582,6 +6715,9 @@ msgid ""
 "active library. These modules will keep their current library names. This "
 "command has two uses:"
 msgstr ""
+"Możliwe jest skopiowanie wszystkich footprintów danego projektu płytki do "
+"aktywnej biblioteki. Footprinty te zachowają swoje bieżące nazwy w "
+"bibliotece. Polecenie to ma dwa zastosowania:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:196
@@ -6589,6 +6725,8 @@ msgid ""
 "To create an archive or complete a library with the modules from a board, in "
 "the event of the loss of a library."
 msgstr ""
+"Tworzenie archiwum lub kompletnej biblioteki z footprintami dla obwodu "
+"drukowanego, w przypadku utraty biblioteki."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:198
@@ -6596,12 +6734,14 @@ msgid ""
 "More importantly, it facilitates library maintenance by enabling the "
 "production of documentation for the library, as below."
 msgstr ""
+"Ułatwia, co ważniejsze, utrzymanie biblioteki włączając w to produkcję "
+"dokumentacji bibliotek, jak wyjaśniono poniżej."
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:200
 #, no-wrap
 msgid "Documentation for library modules"
-msgstr ""
+msgstr "Dokumentacja dla bibliotek footprintów"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:204
@@ -6609,6 +6749,8 @@ msgid ""
 "It is strongly recommended to document the modules you create, in order to "
 "enable rapid and error-free searching."
 msgstr ""
+"Zaleca się dokumentować footprinty, które zostały utworzone, w celu "
+"umożliwienia szybkiego i bezbłędnego ich wyszukiwania."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:208
@@ -6617,21 +6759,24 @@ msgid ""
 "a TO92 package? The Module Properties dialog offers a simple solution to "
 "this problem."
 msgstr ""
+"Na przykład, ile osób jest w stanie zapamiętać wszystkie warianty "
+"wyprowadzeń obudowy `TO92` ...? Okno dialogowe *Właściwości footprintu* "
+"oferuje proste rozwiązanie tego problemu."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:210
 msgid "image:images/Modedit_module_properties.png[]"
-msgstr ""
+msgstr "image:images/pl/Modedit_module_properties_documentation_fields.png[]"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:212
 msgid "This dialog accepts:"
-msgstr ""
+msgstr "Pozwala ono na wprowadzenie:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:214
 msgid "A one-line comment/description."
-msgstr ""
+msgstr "Jedno-liniowego tekstu z opisem footprintu."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:218
@@ -6639,6 +6784,8 @@ msgid ""
 "The description is displayed with the component list in Cvpcb and, in "
 "Pcbnew, it is used in the module selection dialogs."
 msgstr ""
+"Opis footprintu jest wyświetlany przez CvPcb na dolnym pasku oraz w Pcbnew w "
+"oknie z wyborem footprintu na dolnym panelu."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:221
@@ -6646,6 +6793,8 @@ msgid ""
 "The keywords enable searches to be restricted to those modules corresponding "
 "to particular keywords."
 msgstr ""
+"Słowa kluczowe pozwalają na szczegółowe wyszukiwanie footprintów pasujących "
+"do określonych słów."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:227
@@ -6655,12 +6804,17 @@ msgid ""
 "Thus, entering the text `=CONN` will cause the display of the list of "
 "modules whose keyword lists contain the word `CONN`."
 msgstr ""
+"Podczas bezpośredniego wczytywania footprintów w Pcbnew (ikona image:images/"
+"icons/module.png[Ikona Wstaw footprint] na prawym pasku narzędzi) można użyć "
+"słów kluczowych w otwierającym się wtedy oknie dialogowym. Wpisując na "
+"przykład tekst `=CONN` spowoduje, że na liście pojawią się footprinty, "
+"których słowa kluczowe zawierają słowo `CONN`."
 
 #. type: Title ~
 #: Pcbnew_managing_libs.adoc:229
 #, no-wrap
 msgid "Documenting libraries – recommended practice"
-msgstr ""
+msgstr "Dokumentowanie bibliotek - zalecenia praktyczne"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:235
@@ -6670,6 +6824,10 @@ msgid ""
 "library, as follows: Create a circuit board in A4 format, in order to be "
 "able to print easily to scale (scale = 1)."
 msgstr ""
+"Zaleca się tworzenie bibliotek pośrednio, tworząc jeden lub więcej "
+"pomocniczych obwodów, które stanowić będą ``źródła'' (części) dla biblioteki "
+"w następujący sposób: Stworzyć arkusz płytki w formacie A4, w celu jej "
+"późniejszego łatwego wydruku (w skali 1:1)."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:239
@@ -6678,11 +6836,14 @@ msgid ""
 "library itself will be created with the File/Archive footprints/Create "
 "footprint archive command."
 msgstr ""
+"Stworzenie footprintów, które biblioteka będzie zawierać na tej płytce.  "
+"Sama biblioteka zostania utworzona poprzez polecenie z menu głównego Pcbnew* "
+"*Plik* -> *Archiwizuj obudowy* -> **Utwórz archiwum obudów**."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:241
 msgid "image:images/Pcbnew_archive_footprints_menu.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_archive_footprints_menu.png[]"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:246
@@ -6691,6 +6852,10 @@ msgid ""
 "and it is on this circuit that any subsequent alterations of modules will be "
 "made. Naturally, several circuit boards can be saved in the same library."
 msgstr ""
+"``Prawdziwym'' źródłem biblioteki będzie zatem dodatkowa płytka, a całość "
+"idei polega na tym, by jakiekolwiek późniejsze zmiany footprintów wykonywać "
+"na tej płytce. Oczywiście, może być też kilka obwodów zapisanych w tej samej "
+"bibliotece."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:250
@@ -6699,21 +6864,24 @@ msgid ""
 "of components (connectors, discretes,...), since Pcbnew is able to search "
 "many libraries when loading modules."
 msgstr ""
+"Generalnie dobrym pomysłem jest, aby utworzyć sobie różne biblioteki dla "
+"różnych komponentów (złącza, elementy dyskretne,...), ponieważ Pcbnew jest w "
+"stanie przeszukiwać  wiele bibliotek podczas ładowania footprintów."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:252
 msgid "Here is an example of such a library source:"
-msgstr ""
+msgstr "Tutaj znajduje się przykład takiego arkusza ``źródłowego'': "
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:254
 msgid "image:images/Pcbnew_example_library.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_example_library.png[]"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:256
 msgid "This technique has several advantages:"
-msgstr ""
+msgstr "Technika ta ma kilka zalet:"
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:259
@@ -6721,6 +6889,8 @@ msgid ""
 "The circuit can be printed to scale and serve as documentation for the "
 "library with no further effort."
 msgstr ""
+"Układ może być wydrukowany w skali 1:1 i służyć jako papierowa dokumentacja "
+"do biblioteki bez zbędnego wysiłku przy jej tworzeniu."
 
 #. type: Plain text
 #: Pcbnew_managing_libs.adoc:264
@@ -6731,6 +6901,11 @@ msgid ""
 "formats are guaranteed to remain compatible during future development, but "
 "this is not the case for the library file format."
 msgstr ""
+"Przyszłe zmiany w Pcbnew mogą wymagać ponownego utworzenia bibliotek, coś co "
+"można zrobić bardzo szybko, jeśli jako ``źródła'' były używane obwody "
+"drukowane tego typu. Jest to o tyle ważne, że format pliku z obwodem "
+"drukowanym jest gwarantowany tak by zapewnić wsteczną kompatybilność, co "
+"wcale nie musi być praktykowane w przypadku formatu pliku biblioteki."
 
 #. type: Title -
 #: Pcbnew_module_placement.adoc:3
@@ -7881,7 +8056,7 @@ msgstr ""
 #: Pcbnew_routing.adoc:251
 #, no-wrap
 msgid "Select/edit the track width and via size"
-msgstr ""
+msgstr "Wybór/Edycja szerokości ścieżek oraz rozmiaru przelotek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:254
@@ -7890,6 +8065,9 @@ msgid ""
 "corresponding Netclass, and the track size and vias dimensions from this "
 "netclass."
 msgstr ""
+"Po kliknięciu na ścieżce lub polu lutowniczym, Pcbnew automatycznie wybiera "
+"odpowiednią *klasę połączeń* i szerokość ścieżki oraz rozmiar przelotki "
+"pochodzić będzie z parametrów tej klasy."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:257
@@ -7897,11 +8075,14 @@ msgid ""
 "As previously seen, the Global Design Rules editor has a tool to insert "
 "extra tracks and vias sizes."
 msgstr ""
+"Jak wcześniej zostało zauważone, 'Edytor Reguł globalnych' posiada narzędzie "
+"do wprowadzenia dodatkowych rozmiarów ścieżek i przelotek. Aby móc ich "
+"używać podczas trasowania ścieżek można korzystać z:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:259
 msgid "The horizontal toolbar can be used to select a size."
-msgstr ""
+msgstr "List rozwijanych na górnym pasku narzędzi."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:262
@@ -7910,23 +8091,28 @@ msgid ""
 "track width can be selected from the pop-up menu (accessible as well when "
 "creating a track)."
 msgstr ""
+"Gdy przycisk image:images/icons/add_tracks.png[] jest aktywny, bieżąca "
+"szerokość ścieżki może zostać wybrana z menu podręcznego, wybierając podmenu "
+"*Wybierz szerokość ścieżki*."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:263
 msgid ""
 "The user can utilize the default Netclasses values or a specified value."
 msgstr ""
+"Dlatego użytkownik może korzystać z domyślnych wartości z klas połączeń, lub "
+"w razie potrzeby określonej wartości."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:265
 #, no-wrap
 msgid "Using the horizontal toolbar"
-msgstr ""
+msgstr "Wybór szerokości ścieżek i rozmiaru przelotek z paska narzędzi"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:268
 msgid "image:images/Pcbnew_track_toolbar.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_top_toolbar.png[]"
 
 #. type: delimited block |
 #: Pcbnew_routing.adoc:294
@@ -7956,12 +8142,36 @@ msgid ""
 "| When enabled: Automatic track width selection.\n"
 "When starting a track on an existing track, the new track has the same width as the existing track.\n"
 msgstr ""
+"| image:images/Pcbnew_track_toolbar_track_width_selection.png[]\n"
+"| Wyświetla aktualną szerokość ścieżki. Gwiazdka oznacza, że dana wartość\n"
+"jest wartością domyślną z klasy połączeń.\n"
+"| image:images/Pcbnew_track_toolbar_track_width_selection_in_use.png[]\n"
+"| Z pomocą rozwijanej listy można wybrać szerokość ścieżki.\n"
+" Pierwsza wartość na liście jest zawsze wartością ustaloną w klasie połączeń.\n"
+" Inne wartości to szerokości ścieżek wpisane w zakładce Reguły Globalne.\n"
+"| image:images/Pcbnew_track_toolbar_via_size_selection.png[]\n"
+"| Wyświetla aktualny rozmiar przelotki.\n"
+"Gwiazdka oznacza, że dana wartość jest wartością domyślną z klasy połączeń.\n"
+"| image:images/Pcbnew_track_toolbar_via_size_selection_in_use.png[]\n"
+"| Z pomocą rozwijanej listy można wybrać rozmiar przelotki.\n"
+"Pierwsza wartość na liście jest zawsze wartością ustaloną w klasie połączeń.\n"
+" Inne wartości to rozmiary przelotek wpisane w zakładce _Reguły Globalne_.\n"
+"| image:images/Pcbnew_track_toolbar_clearance_value.png[]\n"
+"| Wyświetla bieżącą wartość prześwitu.\n"
+"Jest to wartość prześwitu ustawiona dla bieżącej klasy sieci.\n"
+"| image:images/Pcbnew_track_toolbar_netclass.png[]\n"
+"| Obecnie wybrana klasa sieci.\n"
+"Gdy kliknięto na ścieżkę lub pole lutownicze, Pcbnew automatycznie wybiera odpowiednią\n"
+"klasę sieci, oraz wyświetla jej nazwę.\n"
+"| image:images/icons/auto_track_width.png[]\n"
+"| Gdy ta opcja jest włączona wybór szerokości ścieżek jest automatyczna.\n"
+"Gdy nowa ścieżka rozpoczyna się na istniejącej ścieżce, nowa ścieżka dziedziczy swoją szerokość z istniejącej ścieżki.\n"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:297
 #, no-wrap
 msgid "Using the pop-up menu"
-msgstr ""
+msgstr "Używanie menu podręcznego"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:301
@@ -7969,11 +8179,13 @@ msgid ""
 "One can select a new size for routing, or to change a previously created via "
 "or track segment:"
 msgstr ""
+"Można wybrać nowy rozmiar przed trasowaniem lub zmienić uprzednio stworzone "
+"przelotki lub segmenty ścieżek."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:303
 msgid "image:images/Pcbnew_track_context_menu.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_track_context_menu.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:307
@@ -7981,54 +8193,60 @@ msgid ""
 "If you want to change many vias (or tracks) size, the best way is to use a "
 "specific Netclass to for the net(s) that must be edited (see global changes)."
 msgstr ""
+"Jeśli chcielibyśmy zmienić wiele rozmiarów przelotek (lub ścieżek), "
+"najlepszym rozwiązaniem jest użycie specjalnej klasy połączeń dla sieci, "
+"które muszą być zmienione (Zobacz *Zmiany globalne ścieżek i przelotek*)."
 
 #. type: Title ~
 #: Pcbnew_routing.adoc:309
 #, no-wrap
 msgid "Editing and changing tracks"
-msgstr ""
+msgstr "Edycja i korekcja ścieżek"
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:312
 #, no-wrap
 msgid "Change a track"
-msgstr ""
+msgstr "Zmiana trasy ścieżki"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:315
 msgid "In many cases redrawing a track is required."
-msgstr ""
+msgstr "W wielu przypadkach zmiana prowadzenia ścieżki jest wystarczająca."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:317
 msgid "New track (in progress):"
-msgstr ""
+msgstr "Poniższy rysunek przedstawia ścieżkę w trakcie tworzenia nowej trasy:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:319
 msgid "image:images/Pcbnew_new_track_in_progress.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_new_track_in_progress.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:321
 msgid "When finished:"
-msgstr ""
+msgstr "Gdy nowa ścieżka zostanie zakończona:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:323
 msgid "image:images/Pcbnew_new_track_completed.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_new_track_completed.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:325
 msgid "Pcbnew will remove automatically the old track if it is redundant."
 msgstr ""
+"Pcbnew automatycznie usunie starą ścieżkę jeśli jest ona zbędna i tworzyła "
+"by niezamierzoną pętlę. Opcja usuwania starych ścieżek może być również "
+"wyłączona w opcjach."
 
 #. type: Title ^
 #: Pcbnew_routing.adoc:327
 #, no-wrap
 msgid "Global changes"
-msgstr ""
+msgstr "Zmiany globalne ścieżek i przelotek"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:331
@@ -8036,43 +8254,50 @@ msgid ""
 "Global tracks and via sizes dialog editor is accessible via the pop-up "
 "window by right clicking on a track:"
 msgstr ""
+"Czasami zachodzi potrzeba, by w zaprojektowanej płytce poprawić niektóre "
+"ścieżki lub przelotki. W przypadku dużej ilości zmian, modyfikacja krok po "
+"kroku byłaby czasochłonna. Pcbnew umożliwia jednak zautomatyzowanie tego "
+"procesu z pomocą polecenia 'Edycja rozmiarów wszystkich ścieżek' i przelotek "
+"dostępną z menu podręcznego:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:333
 msgid "image:images/Pcbnew_track_global_edit_context_menu.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_track_global_edit_context_menu.png[]"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:335
 msgid "The dialog editor allows global changes of tracks and/or vias for:"
 msgstr ""
+"Pojawiające się wtedy okno dialogowe pozwala na zmiany globalne ścieżek i/"
+"lub przelotek dla:"
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:337
 msgid "The current net."
-msgstr ""
+msgstr "Bieżącej sieci."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:338
 msgid "The whole board."
-msgstr ""
+msgstr "Dla całej płytki."
 
 #. type: Plain text
 #: Pcbnew_routing.adoc:339
 msgid "image:images/Pcbnew_track_global_edit_dialog.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_track_global_edit_dialog.png[]"
 
 #. type: Title -
 #: Pcbnew_schematics.adoc:3
 #, no-wrap
 msgid "Schematic Implementation"
-msgstr ""
+msgstr "Implementacja schematu na obwodzie drukowanym"
 
 #. type: Title ~
 #: Pcbnew_schematics.adoc:6
 #, no-wrap
 msgid "Linking a schematic to a printed circuit board"
-msgstr ""
+msgstr "Połączenie schematu z obwodem drukowanym"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:18
@@ -8087,6 +8312,16 @@ msgid ""
 "KiCad, CvPcb is used to create this association and a file named `*.cmp` is "
 "produced. CvPcb also updates the netlist file using this information."
 msgstr ""
+"Schemat jest łączony z Pcbnew z pomocą pliku listy sieci, która normalnie "
+"jest tworzona przez program do edycji schematów. Pcbnew akceptuje listy "
+"sieci w formatach Eeschema lub ORCAD PCB 2. Lista sieci jaka jest generowana "
+"przez program do edycji schematu jest zwykle niekompletna, gdyż nie ma w "
+"niej zawartej informacji o footprintach jakie będą posiadać poszczególne "
+"komponenty na PCB. W konsekwencji potrzebny jest plik pośredni, który "
+"zawierał będzie odpowiednie połączenia pomiędzy komponentami a ich "
+"footprintami. Do tego celu służy program CvPcb, który może generować pliki "
+"`*.cmp`. Program ten uaktualnia także listę sieci używając informacji o "
+"powiązaniach footprintów."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:25
@@ -8097,17 +8332,25 @@ msgid ""
 "copying a component will also copy the footprint assignment and set the "
 "reference designator as unassigned for later auto-incremental-annotation."
 msgstr ""
+"CvPcb może również tworzyć pliki numeracji wstecznej `*.stf`, które mogą być "
+"ponownie wczytane do schematu w celu zmodyfikowania pola _Obudowa_ w każdym "
+"z komponentów, skracając tym samym czas potrzebny na wypełnianie tego pola "
+"przy edycji schematu. W programie Eeschema podczas kopiowania komponentów, "
+"kopiowane są również informacje zawarte w tym polu, a oznaczenia zostają "
+"przywrócone do stanu sprzed numeracji dla późniejszego procesu auto-"
+"numeracji przyrostowej."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:27
 msgid "Pcbnew reads the modified netlist file `.net` and, if it exists, the"
 msgstr ""
+"Pcbnew odczytuje zmodyfikowane pliki listy sieci `*.net` oraz, jeśli istnieją"
 
 #. type: Block title
 #: Pcbnew_schematics.adoc:27
 #, no-wrap
 msgid "cmp file In the event of a module being changed directly in Pcbnew"
-msgstr ""
+msgstr "pliki `*.cmp`. W przypadku zmiany footprintów bezpośrednio w Pcbnew,"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:32
@@ -8117,22 +8360,28 @@ msgid ""
 "Kicad and how intermediate files are obtained and used by the different "
 "software tools that made Kicad."
 msgstr ""
+"plik `*.cmp` jest automatycznie uaktualniany co pozwala uniknąć ponownego "
+"uruchamiania programu CvPcb. Poniżej znajduje się tzw. _flow chart_ który "
+"schematycznie ukazuje powiązania pomiędzy generowanymi plikami, a "
+"aplikacjami KiCad EDA Suite."
 
 #. type: Title ~
 #: Pcbnew_schematics.adoc:34
 #, no-wrap
 msgid "Procedure for creating a printed circuit board"
-msgstr ""
+msgstr "Procedura tworzenia podstaw obwodu drukowanego"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:37
 msgid "After having created your schematic in Eeschema:"
 msgstr ""
+"Po stworzeniu potrzebnego schematu by rozpocząć pracę nad odwodem drukowanym "
+"należy:"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:39
 msgid "Generate the netlist using Eeschema."
-msgstr ""
+msgstr "Stworzyć listę sieci używając Eeschema."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:41
@@ -8140,6 +8389,9 @@ msgid ""
 "Assign each component in you netlist file to the corresponding module (often "
 "called footprint) used on the printed circuit using Cvpcb."
 msgstr ""
+"Przypisać z pomocą CvPcb każdemu komponentowi znajdującemu się na liście "
+"sieci wygenerowanej przez Eeschema odpowiedni footprint, który będzie go "
+"reprezentował na PCB."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:43
@@ -8147,6 +8399,8 @@ msgid ""
 "Launch Pcbnew and read the modified Netlist, this will also read the file "
 "with the module selections."
 msgstr ""
+"Uruchomić Pcbnew oraz odczytać zmodyfikowaną listę sieci (to spowoduje "
+"również odczyt danych o footprintach)."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:47
@@ -8155,12 +8409,15 @@ msgid ""
 "now be placed manually or automatically on the board and tracks can be "
 "routed."
 msgstr ""
+"Pcbnew po tych operacjach automatycznie załaduje wskazane footprinty. "
+"footprinty te będzie można porozmieszczać na obwodzie drukowanym manualnie "
+"lub automatycznie, a później wytrasować łączące je ścieżki."
 
 #. type: Title ~
 #: Pcbnew_schematics.adoc:49
 #, no-wrap
 msgid "Procedure for updating a printed circuit board"
-msgstr ""
+msgstr "Procedura aktualizacji obwodu drukowanego"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:53
@@ -8168,11 +8425,12 @@ msgid ""
 "If the schematic is modified (after a printed circuit board has been "
 "generated), the following steps must be repeated:"
 msgstr ""
+"Gdy schemat został zmieniony, należy ponownie wykonać następujące kroki:"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:55
 msgid "Generate a new netlist file using Eeschema."
-msgstr ""
+msgstr "Utworzyć nową listę sieci używając programu Eeschema."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:57
@@ -8180,6 +8438,8 @@ msgid ""
 "If the changes to the schematic involve new components, the corresponding "
 "modules must be assigned using Cvpcb."
 msgstr ""
+"Jeśli zmiany na schemacie spowodowały dodanie nowych komponentów, należy im "
+"przypisać footprinty używając programu CvPcb."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:59
@@ -8187,6 +8447,8 @@ msgid ""
 "Launch Pcbnew and re-read the modified netlist (this will also re-read the "
 "file with the module selections)."
 msgstr ""
+"Uruchomić Pcbnew i ponownie załadować zmodyfikowaną listę sieci (to "
+"spowoduje również ponowne załadowanie fragmentu pliku z wyborem footprintów)."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:64
@@ -8195,29 +8457,34 @@ msgid ""
 "and remove redundant connections. This process is called forward annotation "
 "and is a very common procedure when a PCB is made and updated."
 msgstr ""
+"Po wykonaniu tych kroków Pcbnew załaduje automatycznie wszystkie nowe "
+"footprinty, doda nowe połączenia z listy sieci oraz usunie niepotrzebne już "
+"połączenia."
 
 #. type: Title ~
 #: Pcbnew_schematics.adoc:66
 #, no-wrap
 msgid "Reading netlist file - loading footprints"
-msgstr ""
+msgstr "Odczytywanie listy sieci - Ładowanie footprintów - Opcje"
 
 #. type: Title ^
 #: Pcbnew_schematics.adoc:69
 #, no-wrap
 msgid "Dialog box"
-msgstr ""
+msgstr "Okno obsługi listy sieci"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:72
 msgid "Accessible from the icon image:images/icons/netlist.png[]"
 msgstr ""
+"Okno to jest dostępne za pomocą polecenia ukrytego pod ikoną image:images/"
+"icons/netlist.png[]"
 
 #. type: Title ^
 #: Pcbnew_schematics.adoc:76
 #, no-wrap
 msgid "Available options"
-msgstr ""
+msgstr "Dostępne opcje"
 
 #. type: delimited block |
 #: Pcbnew_schematics.adoc:93
@@ -8237,12 +8504,28 @@ msgid ""
 "|Remove footprints which are on board but not in the netlist.\n"
 "Footprint with attribute \"Locked\" will not be removed.\n"
 msgstr ""
+"| _Wybierz footprint biorąc pod uwagę_\n"
+"| Opcje przydatne podczas ponownego wczytywania zmodyfikowanej listy sieci. Można wybrać czy Pcbnew będzie się posługiwał oznaczeniami lub znacznikami czasowymi.\n"
+" Korzystając z pierwszej opcji w przypadku gdy na schemacie została zmieniona numeracja elementów to Pcbnew może ponownie załadować już istniejące footprinty jako nowe.\n"
+"Druga opcja pozwala tego uniknąć, gdyż istniejące footprinty posiadające unikalny znacznik czasowy nie zostaną załadowane ponownie i nastąpi tylko zmiana oznaczeń istniejących footprintów.\n"
+"| _Źródło footprintu_\n"
+"| Można wybrać, czy nazwy wczytywanych footprintów mają pochodzić z wybranej listy sieci, czy z pliku `.cmp` utworzonego przez CvPcb po wykonaniu przypisań footprintów.\n"
+"| _Bieżące footprinty_\n"
+"| Jeśli footprint został zmieniony na liście sieci to przy wczytywaniu listy sieci można wybrać, czy Pcbnew ma zachować poprzedni footprint lub zamienić go na nowy.\n"
+"| _Niepołączone ścieżki_\n"
+"| Pozwala wybrać, czy poprzednio wykonane ścieżki nie pasujące już do nowej listy sieci mają zostać usunięte.\n"
+"| _Dodatkowe footprinty_\n"
+"| Włącza lub wyłącza usuwanie footprintów które pozostały na płytce, lecz nie ma ich na liście sieci.\n"
+" *Uwaga!* Footprinty z atrybutem _Zablokowane_ nie zostaną usunięte.\n"
+"| _Nazwy sieci z niepołączonych pól_\n"
+"| Pozwala na usunięcie lub pozostawienie nazw sieci z pól lutowniczych, które pomimo iż istnieją na liście sieci nie są z niczym innym połączone.\n"
+"*Uwaga!* Eeschema dla każdego pinu zawsze tworzy nazwę sieci, by Pcbnew mógł lepiej wykrywać niedopasowania footprintów.\n"
 
 #. type: Title ^
 #: Pcbnew_schematics.adoc:96
 #, no-wrap
 msgid "Loading new footprints"
-msgstr ""
+msgstr "Ładowanie nowych footprintów"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:100
@@ -8250,11 +8533,13 @@ msgid ""
 "When new footprints are found in the netlist file, they will be "
 "automatically loaded and placed at coordinate (0,0)."
 msgstr ""
+"Gdy na liście sieci zostaną odnalezione nowe footprinty, zostaną one "
+"automatycznie załadowane:"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:102
 msgid "image:images/Pcbnew_stacked_footprints.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_stacked_footprints.png[]"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:104
@@ -8262,11 +8547,16 @@ msgid ""
 "New footprints can be moved and arranged one by one. A better way is to "
 "automatically move (unstack) them:"
 msgstr ""
+"Domyślnie zostaną one umieszczone na stosie na pozycji 0,0, z którego można "
+"je przesunąć w inne miejsca jeden po drugim. Jednak lepszym rozwiązaniem "
+"jest ich automatyczne przeniesienie i rozłożenie. W tym celu wymagane będą:"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:106
 msgid "Activate footprint mode (image:images/icons/mode_module.png[])"
 msgstr ""
+"Aktywacja trybu Automatycznego przesuwania footprintów (image:images/icons/"
+"mode_module.png[])"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:109
@@ -8274,37 +8564,43 @@ msgid ""
 "Move the mouse cursor to a suitable (free of component) area, and click on "
 "the right button:"
 msgstr ""
+"Przesunięcie kursora myszy w puste pole na obszarze roboczym i wywołanie "
+"podręcznego menu:"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:111
 msgid "image:images/Pcbnew_move_all_modules.png[]"
-msgstr ""
+msgstr "image:images/pl/Pcbnew_move_all_modules.png[]"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:113
 msgid "Move New Modules if there is already a board with existing footprints."
 msgstr ""
+"*Przesuń nowe footprinty* jeśli istnieje już obrys płytki ze znajdującymi "
+"się na niej footprintami."
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:114
 msgid "Move All Modules, the first time (when creating a board)."
 msgstr ""
+"*Przesuń wszystkie footprinty*, jeśli operacja rozmieszczenia footprintów "
+"uruchamiana jest po raz pierwszy (tworzymy nowy obwód drukowany)"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:116
 msgid "The following screenshot shows the results."
-msgstr ""
+msgstr "Poniżej można zobaczyć przykład działania pierwszego z tych poleceń:"
 
 #. type: Plain text
 #: Pcbnew_schematics.adoc:117
 msgid "image:images/Pcbnew_unstacked_footprints.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_unstacked_footprints.png[]"
 
 #. type: Title -
 #: Pcbnew_zones.adoc:3
 #, no-wrap
 msgid "Creating copper zones"
-msgstr ""
+msgstr "Tworzenie stref wypełnień"
 
 #. type: Plain text
 #: Pcbnew_zones.adoc:8
