@@ -126,21 +126,21 @@ image:images/en/annotate-dialog.png[annotate-dialog_img]
 
 *Scope*
 
-\1) Use the entire schematic. All the sheets are re-annotated (usual
+1. Use the entire schematic. All the sheets are re-annotated (usual
 Option).
 
-\2) Use the current page only. Only the current sheet is re-annotated
+2. Use the current page only. Only the current sheet is re-annotated
 (this option is to be used only in special cases, for example to
 evaluate the amount of resistors in the current sheet.).
 
-\3) Keep existing annotation. Conditional annotation, only the new
+3. Keep existing annotation. Conditional annotation, only the new
 components will be re-annotated (usual option).
 
-\4) Reset existing annotation. Unconditional annotation, all the
+4. Reset existing annotation. Unconditional annotation, all the
 components will be re-annotated (this option is to be used when there
 are duplicated references).
 
-\5) Reset, but do not swap any annotated multi-unit parts. This keeps
+5. Reset, but do not swap any annotated multi-unit parts. This keeps
 all groups of multiple units (e.g. U2A, U2B) together when reannotating.
 
 *Order*
@@ -158,9 +158,8 @@ gives access to the electrical rules check (ERC) tool.
 This tool performs a design verification and is particularly useful to
 detect forgotten connections, and inconsistencies.
 
-Once you have run ERC, Eeschema places markers on the pins or labels
-able to highlight a problem. The diagnosis can then be given by left
-clicking on the marker. An errors file can also be generated.
+Once you have run the ERC, Eeschema places markers to highlight problems.
+The diagnosis can then be given by left clicking on the marker. An error file can also be generated.
 
 [[main-erc-dialog]]
 Main ERC dialog
@@ -187,7 +186,7 @@ Commands:
 
 Note:
 
-* When clicking on an error message, jump to the corresponding marker in
+* Clicking on an error message jumps to the corresponding marker in the
 schematic.
 
 [[erc-options-dialog]]
@@ -316,7 +315,7 @@ Note for Pcbnew
 ^^^^^^^^^^^^^^^
 
 Using the .cmp file or the netlist only to assign a footprint to a
-component is a choice in side Pcbnew.
+component is a choice inside Pcbnew.
 
 When Pcbnew does not find a .cmp file corresponding to the .net file, it
 uses the component footprint/reference found in the .net file.
