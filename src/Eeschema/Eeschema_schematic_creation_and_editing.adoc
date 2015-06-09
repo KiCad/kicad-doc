@@ -458,3 +458,32 @@ The date and the sheet number (Sheet X/Y) are automatically updated:
 * Date: when you modify the schematic.
 * Sheet number (useful in hierarchy): by the annotation function.
 
+[[rescuing-cached-components]]
+Rescuing cached components
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, Eeschema loads component symbols out of the libraries according to the set paths.
+This can cause a problem when loading a very old project: if the symbols in the library have changed
+since they were used in the project, the ones in the project would be automatically replaced with
+the new versions. The new versions might not line up correctly or might be oriented differently,
+leading to a broken schematic.
+
+However, when a project is saved, a cache library is saved along with it. This allows the project
+to be distributed without the full libraries. If you load a project where symbols are present both
+in its cache and in the system libraries, Eeschema will scan the libraries for conflicts. Any
+conflicts found will be listed in the following dialog:
+
+image:images/rescue-conflicts.png[Rescue conflicts dialog]
+
+You can see in this example that the project originally used a diode with the cathode facing up,
+but the library now contains one with the cathode facing down. This change could ruin the project!
+Pressing OK here will cause the old symbol to be saved into a special "rescue" library, and all
+the components using that symbol will be renamed to avoid naming conflicts.
+
+If you press Cancel, no rescues will be made, so Eeschema will load all the new components by
+default. Because no changes were made, you can still go back and run the rescue function again:
+choose "Rescue Cached Components" in the Tools menu to call up the dialog again.
+
+If you would prefer not to see this dialog, you can press "Never Show Again". The default will
+be to do nothing and allow the new components to be loaded. This option can be changed back in
+the Component Libraries preferences.
