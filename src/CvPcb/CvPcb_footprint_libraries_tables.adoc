@@ -25,7 +25,7 @@ The image below shows the footprint library table editing dialog which
 can be opened by invoking the ``Library Tables'' entry from the
 ``Preferences'' menu.
 
-image:images/en/lib_table.png[]
+image:images/en/lib_table.png[ lib table dlg]
 
 
 The footprint library table is used to map a footprint library of any
@@ -276,3 +276,51 @@ One usage pattern would be to define your most commonly used libraries
 globally and the library only require for the project in the project
 specific library table. There is no restriction on how you define your
 libraries.
+
+
+Using the Footprint Library Table Wizard
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A wizard to add footprint libraries to the footprint library tables
+is available from the _footprint library table editing dialog_.
+
+Note also libraries can be any type of footprint library supported by Kicad.
+
+It can add "local" libraries or librairies from a Github repository.
+
+When librairies are on a Github repository, they can be added as remote libraries,
+or downloaded and added as local libraries.
+
+image:images/en/fplib_wizard_locallibstartpage.png[ fplib wizard locallibstartpage]
+
+Here, the local libraries option is selected.
+
+image:images/en/fplib_wizard_startpage_github.png[ fplib wizard startpage_github]
+
+Here, the remote libraries option is selected.
+
+Depending on the selected option, one of these page will be displayed,
+to select a list of libraries:
+
+image:images/en/fplib_wizard_locallibselection.png[ fplib wizard local lib selection]
+
+Here, the local libraries option was selected.
+
+image:images/en/fplib_wizard_githubselection.png[ fplib wizard github selection]
+
+Here, the remote libraries option was selected.
+
+After a set of libraries is selected, the next page validates the choice:
+
+image:images/en/fplib_wizard_validate.png[ fplib wizard validate]
+
+If some selected libraries are incorrect (not supported, not a footprint library ...)
+they will be flagged as "INVALID"
+
+The last choice is the footprint library table to populate:
+
+* the global table
+* the local table (the project specific table)
+
+image:images/en/fplib_wizard_chooseflt.png[ fplib wizard chooseflt]
+
