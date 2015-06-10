@@ -62,7 +62,7 @@ incorporates an elegant ensemble of the following software tools:
 
 * *Kicad* : project manager
 * *Eeschema* : schematic editor and component editor
-* *CvPcb* : footprint selector
+* *CvPcb* : footprint selector helper (always run from Eeschema)
 * *Pcbnew* : circuit board layout editor and footprint editor
 * *GerbView* : Gerber viewer
 
@@ -143,13 +143,22 @@ by the board or the footprint editor or CvPcb
 |=================================================================
 |*.kicad_wks |The page layout description files, for guy who want a worksheet
 with a custom look.
-|*.cmp |The file storing the association between components
-used in the schematic and their footprints.
-It is created by the tool CvPcb, but the schematic itself can store this info,
-depending on the work flow of users.
 |*.net |The netlist file created by the schematic, and read by the board editor.
 this file is associated to the .cmp file, for users who prefer a separate file
 for the component/footprint association.
+|=================================================================
+
+*Special file:*
+[width="100%",cols="20%,80%",]
+|=================================================================
+|*.cmp |The file storing the association between components
+used in the schematic and their footprints.
+
+It can be created by Pcbnew, and imported by Eeschema.
+
+The purpose is a back import from Pcbnew to Eeschema, for an user
+who changes footprints inside Pcbnew (for instance using _Exchange Footprints_ command)
+and want to import these changes in schematic.
 |=================================================================
 
 *Other files:*
