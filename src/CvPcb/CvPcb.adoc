@@ -233,104 +233,11 @@ Footprint Libraries Management
 Important remark:
 ~~~~~~~~~~~~~~~~~
 
-* Until December 2013, CvPcb uses a library management called *_Legacy management_*
-* Since December 2013, CvPcb no longer uses the Legacy management,
-but a new management using *_Footprint Libraries tables_*.
-It is a bit more complex, but is more powerful
-and allows *direct use of footprint libraries* from
-* KiCad Legacy footprint libraries
-* KiCad New _.pretty_ footprint libraries (on your local disk)
-* KiCad New _.pretty_ footprint libraries (on our Github server, or other Github server)
-* GEDA libraries
-* Eagle footprint libraries
+*_This section is relevant only for KiCad versions since December 2013_*
 
 
-[[_legacy_management_selecting_footprint_libraries]]
-Legacy management: selecting Footprint Libraries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-*_This section is relevant only for KiCad versions before December 2013_*
-
-
-This section of the footprint library configuration dialog is used to
-add, remove, and change the search order of the footprint libraries for
-the current project. The library order is critical when searching for
-footprints with duplicate names. CvPcb will use the first occurrence of
-the footprint name it finds. If you create a new footprint, it is always
-a good idea to give it a unique name to prevent naming conflicts. This
-is a known issue and will be fixed in a future version of KiCad. Please
-note that changing these libraries will also effect Pcbnew.
-
-image:images/en/footprint_select.png[]
-
-- *Remove:* Removes the selected footprint library from the list.
-- *Add:* Adds a new footprint library to the end of the list.
-- *Insert:* Inserts a new footprint library to the list before the currently selected library.
-- *Up:* Move the currently select library up the list.
-- *Down:* Move the currently selected library down the list.
-
-
-Changing the Footprint Documentation File.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Users can create a documentation file, which can be called from Cvpcb.
-
-For instance a PDF or postscript file which shows the available footprints.
-It is the responsability of users to create such a doc file.
-
-
-image:images/en/cvpcb_footprint_docfile.png[]
-
-Select the ``Browse'' button to select a new footprint documentation
-file with the display file select dialog.
-
-Changing Footprint Library Search Paths.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-CvPcb uses two types of paths: the default paths automatically set by
-KiCad when a new project is created and paths added by the user. These
-paths are used to find the footprints library files (.mod), equivalence
-files (.equ), and 3D model files (.wrl) used by CvPcb. The default paths
-cannot be edited. Only new user defined paths can be added to the search
-path list.
-
-image:images/en/path_select.png[]
-
-Changing User Define Paths.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Click the ``Add'' button to add a new path after the selected entry in
-the search path list. Click the ``Insert'' button to insert a new path
-before the selected entry in the search path list. Click the ``Remove''
-button to remove the selected user defined search path. Clicking the
-``Remove'' button will have no effect if a default search path is
-selected.
-
-image:images/en/user_path.png[]
-
-Default Library Paths
-^^^^^^^^^^^^^^^^^^^^^
-
-By default CvPcb internally uses a set of predefined paths used to search
-for footprint libraries. These paths are operating system dependent. It
-is generally preferable to use relative paths rather than absolute paths
-whenever possible to prevent platform dependency problems. In other
-words: “c:\Program Files\kicad\share” has no meaning and will fail on
-Linux and OSX.
-
-The default Linux library paths will be as follows:
-
-- *root/share/kicad/modules*
-- *root/share/kicad/modules/packages3d* (for 3D shapes files
-  format *VRML* created par Wings3D).
-- *root/share/template*
-
-Where the root path is relative to the binary path where KiCad is
-installed. Typically on Linux Kicad is installed in the /usr/bin path.
-Therefore the root path would be /usr.
-
-New Management: Footprint Libraries tables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Footprint Libraries tables
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 include::CvPcb_footprint_libraries_tables.adoc[po4a]
 

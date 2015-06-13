@@ -62,14 +62,14 @@ incorporates an elegant ensemble of the following software tools:
 
 * *Kicad* : project manager
 * *Eeschema* : schematic editor and component editor
-* *CvPcb* : footprint selector
+* *CvPcb* : footprint selector helper (always run from Eeschema)
 * *Pcbnew* : circuit board layout editor and footprint editor
 * *GerbView* : Gerber viewer
 
 3 utilities are included
 
-* *Bitmap2Component*: component maker for logos (Creates a schematic
-  component or a footprint from a bitmap picture).
+* *Bitmap2Component*: component maker for logos. It creates a schematic
+  component or a footprint from a bitmap picture.
 * *PcbCalculator*: A calculator that is helpful to calculate
   components for regulators, track width versus current, transmission
   lines...
@@ -106,50 +106,54 @@ for schematic and board edition.
 *Project manager file:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.pro |The small files which contains a few parameters for the current project
-( schematic library list and some other parameters)
+|*.pro |Small file containing a few parameters for the current project, including the schematic library list.
 |=================================================================
 
 *Schematic editor files:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.sch |The schematic files (do not contain the components themselves)
-|*.lib |The schematic component library files
-(contain the component descriptions: graphic shape, pins, fields)
-|*.dcm |The schematic component library files documentation
-(contain some fields relative to component descriptions:
-comments, keywords, reference to data sheets)
-|*_cache.lib |The schematic component library cache file
-(contains a copy of components used in the schematic project)
+|*.sch |Schematic files, which do not contain the components themselves.
+|*.lib |Schematic component library files, containing the component descriptions: graphic shape, pins, fields.
+|*.dcm |Schematic component library documentation, containing some component descriptions:
+comments, keywords, reference to data sheets.
+|*_cache.lib |Schematic component library cache file, containing a copy of components used in the schematic project.
 |=================================================================
 
 *Board editor files and folders:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.kicad_pcb |The board files (contain all info but the page layout)
-|*.pretty |The footprint **library folders**. The folder itself is the library
-|*.kicad_mod |The footprint files (contain one footprint description by file)
-|*.brd |The old board files (legacy format).
-Can be read, but not written by the board editor
-|*.mod |The old footprint library files (legacy format).
-Can be read by the footprint or the board editor, but not written
-|fp-lib-table |The footprint library list (_footprint libraries table_):
+|*.kicad_pcb |Board file containing all info but the page layout.
+|*.pretty |Footprint **library folders**. The folder itself is the library.
+|*.kicad_mod |Footprint files, containing one footprint description each.
+|*.brd |Board file in the legacy format.
+Can be read, but not written by the board editor.
+|*.mod |Footprint library in the legacy format.
+Can be read by the footprint or the board editor, but not written.
+|fp-lib-table |Footprint library list (_footprint libraries table_):
 list of footprint libraries (various formats) which are loaded
-by the board or the footprint editor or CvPcb
+by the board or the footprint editor or CvPcb.
 |=================================================================
 
 *Common files:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.kicad_wks |The page layout description files, for guy who want a worksheet
+|*.kicad_wks |The page layout description files, for people who want a worksheet
 with a custom look.
-|*.cmp |The file storing the association between components
-used in the schematic and their footprints.
-It is created by the tool CvPcb, but the schematic itself can store this info,
-depending on the work flow of users.
-|*.net |The netlist file created by the schematic, and read by the board editor.
-this file is associated to the .cmp file, for users who prefer a separate file
+|*.net |Netlist file created by the schematic, and read by the board editor.
+This file is associated to the .cmp file, for users who prefer a separate file
 for the component/footprint association.
+|=================================================================
+
+*Special file:*
+[width="100%",cols="20%,80%",]
+|=================================================================
+|*.cmp |Stores the association between components used in the schematic and their footprints.
+
+It can be created by Pcbnew, and imported by Eeschema.
+
+The purpose is a back import from Pcbnew to Eeschema, for users
+who change footprints inside Pcbnew (for instance using _Exchange Footprints_ command)
+and want to import these changes in schematic.
 |=================================================================
 
 *Other files:*
@@ -157,15 +161,15 @@ for the component/footprint association.
 They are generated by Kicad for fabrication or documentation.
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.gbr |The Gerber files, for fabrication
-|*.drl |The drill files (Excellon format), for fabrication
-|*.pos |The position files (ascii format), for automatic insertion machines
-|*.rpt |The report files (ascii format), for documentation
-|*.ps |The plot files (postscript), for documentation
-|*.pdf |The plot files (pdf format), for documentation
-|*.svg |The plot files (svg format), for documentation
-|*.dxf |The plot files (dxf format), for documentation
-|*.plt |The plot files (HPGL format), for documentation
+|*.gbr |Gerber files, for fabrication
+|*.drl |Drill files (Excellon format), for fabrication.
+|*.pos |Position files (ascii format), for automatic insertion machines.
+|*.rpt |Report files (ascii format), for documentation.
+|*.ps |Plot files (postscript), for documentation.
+|*.pdf |Plot files (pdf format), for documentation.
+|*.svg |Plot files (svg format), for documentation.
+|*.dxf |Plot files (dxf format), for documentation.
+|*.plt |Plot files (HPGL format), for documentation.
 |=================================================================
 
 
@@ -229,8 +233,8 @@ image:images/preferences_menu.png[]
 Configuration of paths
 ~~~~~~~~~~~~~~~~~~~~~~
 In Kicad, one can define some paths using an __environment variable__.
-A few environment variables are internally define by Kicad,
-and can be used to define path (like library paths, 3D shapes paths ...)
+A few environment variables are internally defined by Kicad,
+and can be used to define paths (for libraries, 3D shapes, etc).
 
 This is usefull when absolute paths are not known or are subject to change.
 This is the case for ``official'' libraries built for kicad:
@@ -240,8 +244,7 @@ This is the case for ``official'' libraries built for kicad:
 
 For instance, the full path of _connect.pretty_ footprint library is
 defined like this, when using the KISYSMOD environment variable to define
-the full path.
-
+the full path:
 ${KISYSMOD}/connect.pretty
 
 Obvioulsy, one can use an usual full path definition, if this full path is
@@ -252,11 +255,11 @@ and add your own environment variables, to define personal paths, if needed.
 
 [width="100%",cols="20%,80%",]
 |=================================================================
-|KIGITHUB |is frequently used in footprint lib tables examples.
+|KIGITHUB |frequently used in footprint lib tables examples.
 If you are using this variable, it must be defined.
-|KISYS3DMOD |is the default base path of 3D shapes files,
+|KISYS3DMOD |default base path of 3D shapes files,
 and must be defined, because an absolute path is not usually used.
-|KISYSMOD |is the default base path of footprint library folders,
+|KISYSMOD |default base path of footprint library folders,
 and must be defined, if an absolute path is not used in footprint library names.
 |=================================================================
 

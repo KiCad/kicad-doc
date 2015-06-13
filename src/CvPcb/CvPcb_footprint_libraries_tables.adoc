@@ -1,24 +1,20 @@
 
-*_This section is relevant only for KiCad versions since December 2013_*
-
-Since December 2013, Pcbnew and CvPcb no longer uses the library management tool
-described in <<_legacy_management_selecting_footprint_libraries,Legacy
-management: selecting Footprint Libraries>>.
-
-The new footprint library table implementation is how footprint
-libraries are now managed.
+Since December 2013, Pcbnew and CvPcb uses a new library management tool
+based on  *_footprint library tables_*
 
 footprint library table allows *direct use of footprint libraries* from
 
-* KiCad Legacy footprint libraries
+* KiCad Legacy footprint libraries (.mod files)
 * KiCad New _.pretty_ footprint libraries (on your local disk)
+  (folders with .pretty extension, containing .kicad_mod files)
 * KiCad New _.pretty_ footprint libraries (on our Github server, or other Github server)
-* GEDA libraries
+* GEDA libraries  (folders containing .fp files)
 * Eagle footprint libraries
 
 *Note:*
 
-* you can write only KiCad  _.pretty_ footprint libraries file on your local disk.
+* you can write only KiCad  _.pretty_ footprint libraries folders on your local disk
+ (and the .kicad_mod files inside these folders).
 * All other formats are read only.
 
 The image below shows the footprint library table editing dialog which
@@ -289,7 +285,7 @@ Note also libraries can be any type of footprint library supported by Kicad.
 It can add ``local'' libraries or libraries from a Github repository.
 
 When libraries are on a Github repository, they can be added as remote libraries,
-or downloaded and added as local libraries.
+or **downloaded and added as _local libraries_**.
 
 image:images/en/fplib_wizard_locallibstartpage.png[ fplib wizard locallibstartpage]
 
