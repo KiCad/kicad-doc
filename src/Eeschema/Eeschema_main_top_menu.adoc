@@ -7,31 +7,32 @@ Main top menu
 File menu
 ~~~~~~~~~
 
-Here you can see what the “File” menu looks like.
-
-image:images/10000000000000F30000015D6A0BDDF6.png[10000000000000F30000015D6A0BDDF6_png]
+image:images/en/file_menu.png[File menu]
 
 [width="100%",cols="31%,69%",]
 |=======================================================================
-|New |Clear current schematic and initialize a new one
+|New Schematic Project |Clear current schematic and initialize a new one
 
-|Open |Load a schematic hierarchy
+|Open Schematic Project |Load a schematic hierarchy
 
-|Open Recent |Open a list of recent opened files for loading
+|Open Recent |Open a list of recently opened files
 
-|Save Whole Schematic project |Save current sheet and all its hierarchy.
+|Append Schematic Sheet |Insert the contents of another sheet into the current one
+
+|Save Schematic Project |Save current sheet and all its hierarchy.
 
 |Save Current Sheet Only |Save current sheet, but not others in a
-hierachy.
+hierarchy.
 
-|Save Current sheet as... |Save current sheet with a new name.
+|Save Current Sheet As... |Save current sheet with a new name.
 
-|Print |Access to print menu (See also chap “Print and Plot”).
+|Page Settings |Configure page dimensions and title block.
 
-|Plot |Plot in Postscript HPGL or SVF format (See chap “Print and
-Plot”).
+|Print |Print schematic hierarchy (See also chapter <<plot-and-print,Plot and Print>>).
 
-|Quit |Quit without saving.
+|Plot |Export to PDF, PostScript, HPGL or SVG format (See chapter <<plot-and-print,Plot and Print>>).
+
+|Close |Quit without saving.
 |=======================================================================
 
 [[preferences-menu]]
@@ -42,144 +43,124 @@ Preferences menu
 Preferences
 ^^^^^^^^^^^
 
-image::images/en/menu_path_hotkey_editor.png[menu_path_hotkey_editor]
+image::images/en/menu_path_hotkey_editor.png[Preferences menu]
 
 [width="90%",cols="30%,70%",]
 |================================================
-|Library |Select libraries and the library's path
-|Colors |Select colors.
-|Options |Display options (Units, Grid size.).
-|Language a|
-Access to the current list of translations.
-
-Use default.
-
-Mainly for translators and developers
-
-a|
-Read preferences
-
-Save preferences
-
- |Read and Save configuration file.
-|Hotkeys |Access to the hot keys menu
+|Component Libraries |Select libraries and library search path.
+|Set Colors Scheme |Select colors for display, print and plot.
+|Schematic Editor Options |General options (units, grid size, field names, etc.).
+|Language |Select interface language.
+|Hotkeys |List, edit, export, and import hotkey settings.
+|Save Preferences |Save the project settings to the .pro file.
+|Load Preferences |Load the project settings from a .pro file.
 |================================================
 
-[[hot-keys-sub-menu]]
-Hot-keys sub menu
-^^^^^^^^^^^^^^^^^
-
-[width="100%",cols="32%,68%",]
-|=======================================================================
-|List Current Keys |Shows the current hotkeys, Same as the hotkey “?”
-
-|Edit Hokeys |Launch the hotkeys editor
-
-|Export Hotkeys Config |Create a hotkeys configure file.
-
-|Import Hotkeys Config |Read a previously exported hotkeys configure
-file.
-|=======================================================================
-
 [[preferences-menu-libs-and-dir]]
-Preferences menu / Libs and Dir
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Preferences menu / Component Libraries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-image:images/100000000000021400000283EC98FC85.png[100000000000021400000283EC98FC85_png]
+image:images/en/libsettings.png[Library settings]
 
-Eeschema configuration is essentially used for:
-
-* Library's path.
-* Library's list.
-
+This dialog is used to configure component libraries and search paths.
 The configuration parameters are saved in the .pro file. Different
 configuration files in different directories are also possible.
 
-Eeschema seeks and uses by decreasing priorities:
+Eeschema searches, in order:
 
-1.  The configuration file (project.pro) in the current directory.
+1.  The configuration file (projectname.pro) in the current directory.
 2.  The kicad.pro configuration file in the kicad directory. This file
 can thus be the default configuration.
 3.  Default values if no file is found. It will at least then be
 necessary to fill out the list of libraries to load, and then save the
 configuration.
 
+The 'Check for cache/library conflicts at schematic load' box is used to configure
+the library conflict rescue behavior. See <<rescuing-cached-components,Rescuing Cached Components>> for more information about that.
+
 [[preferences-menu-and-colors]]
-Preferences menu and colors
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Preferences menu / Set Color Scheme
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-image:images/100000000000026200000204DD16B393.png[100000000000026200000204DD16B393_png]
+image:images/en/color_settings.png[Color settings]
 
-Color scheme for various drawing elements, and background color selection (either black or
+Color scheme for various graphic elements, and background color selection (either black or
 white).
 
 [[preferences-and-options]]
-Preferences and Options
-^^^^^^^^^^^^^^^^^^^^^^^
+Preferences menu / Schematic Editor Options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-image:images/10000000000001A1000002084BBFB77A.png[10000000000001A1000002084BBFB77A_png]
+image:images/en/options.png[Schematic Editor Options]
 
 [width="100%",cols="40%,60%",]
 |=======================================================================
 |Measurement units: |Select the display and the cursor coordinate units
-(Inches or Millimeters).
+(inches or millimeters).
 
 |Grid Size: a|
 Grid size selection.
 
-**One must work with normal grid (0,050 inches or 1,27 mm)**. __Smaller
+**It is recommended to work with normal grid (0.050 inches or 1,27 mm)**. __Smaller
 grids are used for component building__.
+
+|Default bus width: |Pen size used to draw buses.
 
 |Default line width: |Pen size used to draw objects that do not have a
 specified pen size.
 
-|Default text size: |Value used when creating new texts or labels
+|Default text size: |Text size used when creating new text items or labels
 
 |Repeat draw item horizontal displacement a|
-shift value on X axis during element duplication (usual value 0)
+increment on X axis during element duplication (usual value 0)
 
 (after placing an item like a component, label or wire,::
-  a duplication is made by the _Inser_ key)
+  a duplication is made by the _Insert_ key)
 
-|Repeat draw item horizontal displacement |shift value on Y axis during
-element duplication (usual value is 0,100 inches or 2,54 mm)
+|Repeat draw item vertical displacement |increment on Y axis during
+element duplication (usual value is 0.100 inches or 2,54 mm)
 
-|Repeat label increment: |Increment during duplication of texts ending
+|Repeat label increment: |Increment of label value during duplication of texts ending
 in a number, such as bus members (usual value 1 or -1).
+
+|Auto save time interval: |Time in minutes between saving backups.
+
+|Part id notation: |Style of suffix that is used to denote component parts (U1A, U1.A, U1-1, etc.)
 
 |Show Grid: |If checked: display grid.
 
-|Show hidden pins: |Display invisible (or __hidden__) pins. If checked,
+|Show hidden pins: |Display invisible (or __hidden__) pins, typically power pins. If checked,
 allows the display of power pins.
 
-|Enable middle mouse button panning |When enabled, when the middle mouse
-button is pressed, the entire sheet is moved, following the cursor.
+|Do not center and warp cursor on zoom: |When zooming, keep the position and cursor where they are.
 
-|Middle mouse button panning limited |When enabled, the middle mouse
-button cannot move the sheet area “outside” the displayed area.
+|Use middle mouse button to pan |When enabled, the sheet can be dragged around using the middle mouse button.
 
-|Enable automatic panning |If checked, automatically shifts the window
-if the cursor leaves the window, during wire drawing, or element moving.
+|Limit panning to scroll size |When enabled, the middle mouse
+button cannot move the sheet area outside the displayed area.
+
+|Pan while moving object |If checked, automatically shifts the window
+if the cursor leaves the window during drawing or moving.
 
 |Allow buses and wires to be placed in H or V orientation only a|
-If checked buses and wires can be only vertical or horizontal.
+If checked, buses and wires can only be vertical or horizontal.
 
-Else buses and wires can be placed in any direction.
+Otherwise, buses and wires can be placed at any orientation.
 
-|Show page limit |If checked, shows the page limits on screen.
+|Show page limits |If checked, shows the page boundaries on screen.
 |=======================================================================
 
 [[preferences-and-language]]
 Preferences and Language
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use default mode. Other languages are available mainly for maintenance
-purpose.
+Use default mode. Other languages are available mainly for development
+purposes.
 
 [[help-menu]]
 Help menu
 ~~~~~~~~~
 
 Access to on-line help (this document) for an extensive tutorial about
-KiCad and also for checking the current version of Eeschema (Eeschema
-about).
+KiCad. Use ``Copy Version Information'' when submitting bug reports to
+identify your build and system.
