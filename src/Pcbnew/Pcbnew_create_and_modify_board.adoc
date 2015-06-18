@@ -34,6 +34,47 @@ The resulting outline might look something like this:
 
 image:images/Pcbnew_simple_board_outline.png[]
 
+Importing a DXF drawing for a board outline
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As an alternative to drawing the board outline in Pcbnew directly, a 
+board outline can also be imported from a DXF drawing. This can be used to 
+create more complex board or allows board shapes to be defined in other 
+CAD packages (e.g. to allow matching the board shape to a particular
+mechanical enclosure.
+
+To import a board shape from a DXF file:
+
+. File > Import > DXF File.
+. Select the DXF file to be imported.
+. Select which origin is used by the DXF shape.
+. Select the board layer for the import. Edge.Cuts is needed 
+  for the board outline, but DXF drawings can be imported onto other layers
+  as well.
+. Click OK
+
+image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]  
+  
+Notes on DXF imports
+^^^^^^^^^^^^^^^^^^^^
+
+There are some limitations on the DXF formats that are supported in KiCad. 
+
+For example there is currently no support for importing Ellipses. However it 
+is often possible to export the DXF from your CAD system in older DXF formats. 
+For example the DXF R12 format does not have support for Ellipses line 
+segments. As such CAD application exports Ellipses as a series of small line
+segments to 'simulate' an Ellipses. LibreCAD for example is known to do that.
+
+Then also, CAD exports of Ellipses using such line segments don't tend to 
+'close' Ellipses, If the line segments used to create the Ellipses are too
+big, this becomes visible as a gap in the board outline. 
+
+Set your CAD software if possible to produce very small line segments of 
+say 0.05mm in length. Even with the 'gap', this will make the end sufficiently
+close that the board outline can be regarded as 'closed'.
+
+
 Reading the netlist generated from the schematic
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
