@@ -58,7 +58,7 @@ currently exports the board outline and cutouts, all pad and mounting
 thru-holes including slotted holes, and component outlines; this is the
 most basic set of mechanical data required for interaction with
 mechanical designers. All other entities described in the IDFv3
-specification are currently not implemented.
+specification are currently not exported.
 
 Specifying component models for use by the exporter
 ---------------------------------------------------
@@ -82,10 +82,14 @@ the viewer's right, and +Y is up. The rotation must be in degrees and a
 positive rotation is a counter-clockwise rotation as described in the
 IDFv3 specification. Multiple outlines may be combined with appropriate
 offsets to represent simple assemblies such as a DIP package in a
-socket.
+socket. [**BUG:** in discussions it has been decided that the unit
+of the Z offset should be inches, which is consistent with the
+units of the VRML model offset. It may also be useful not to ignore the
+(X,Y) offset values. The behavior mentioned here will change at some
+point in the future.]
 
 Once models have been specified for all desired components, from within
-pcbnew, select the *File* menu, then *Export* , and finally **IDFv3
+pcbnew select the *File* menu then *Export* and finally **IDFv3
 Export**. A dialog box will pop up (see link:#figure-3[figure 3]) which
 allows the output filename and IDF output units (mm or mils) to be set.
 The exported IDF files can be viewed in the free mechanical CAD software
@@ -243,7 +247,7 @@ Geometry and Part Number entries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Think carefully about the values to give to the Geometry and Part Number
-entries. Taken together. These strings act as a unique identifier for
+entries. Taken together, these strings act as a unique identifier for
 the MCAD system. The values of the strings will ideally have some
 meaning to a user, but this is not necessary: the values are primarily
 intended for the MCAD system to use as a unique ID. Ideally the values
@@ -262,7 +266,9 @@ devices such as electrolytic or tantalum capacitors must have the
 positive lead on Pin 1 and diodes must have the cathode on Pin 1; this is
 to maintain compatibility of the schematic symbols with the orientation
 defined for SMT devices; however, note that many existing KiCad
-schematics and footprints place the anode at Pin 1.
+schematics and footprints place the anode at Pin 1 (*note:* in the
+latest revision of the KiCad footprints on github the anode is now
+Pin 2 for THT as well as SMT components).
 
 For DIP devices the center of the outline must be at the center of the
 rectangle described by the pin locations and Pin 1 is preferably at the
@@ -276,6 +282,15 @@ link:#figure-4[figure 4]). Non-polarized vertical axial leaded components must
 have the wire on the right hand side; polarized vertical axial leaded
 components may have the wire on either side, depending on whether Pin 1
 is on the lower end (wire on right) or on the upper end (wire on left).
+
+*Note:* In the current revision of the KiCad footprint modules the
+THT components are being organized with pins along the Y axis
+rather than the X axis and Pin 1 of the device is at the origin rather
+than at the center of the package. Orient and position the component outline
+to suit your specific footprints; this will avoid the need to specify a
+non-zero rotation for the IDF component outlines. Since the IDF
+exporter currently ignores the (X,Y) offset values it is vital that
+you use the correct origin in the IDF component outline.
 
 For SMT components the orientation, package center, and outline are
 defined by various standards. Use the standard appropriate to your work.
@@ -383,10 +398,10 @@ single axial leaded outline with the lead on the right hand side:
 # Generate a cylindrical IDF outline for test purposes
 # vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,
 # axial wire on right,  0.8mm wire dia., 3.5mm pitch
-./idfcyl - 1 > /dev/null <<  _EOF
+idfcyl - 1 > /dev/null <<  _EOF
 mm
 v
-1
+x
 5
 8
 3
@@ -434,7 +449,7 @@ chamfered rectangle and an axial leaded outline:
 #!/bin/bash
 # Generate various rectangular IDF outlines for test purposes
 # 10x10, 1mm chamfer, 2mm height
-./idfrect - 1 > /dev/null <<  _EOF
+idfrect - 1 > /dev/null <<  _EOF
 mm
 10
 10
@@ -443,7 +458,7 @@ mm
 rectMM_10x10x2_C0.5.idf
 _EOF
 # 10x10x12,  0.8mm lead on 6mm pitch
-./idfrect - 1 > /dev/null <<  _EOF
+idfrect - 1 > /dev/null <<  _EOF
 mm
 10
 10
@@ -489,15 +504,17 @@ or create scripts to generate outlines. The following script creates a
 ---------------------------------------------------------------
 #!/bin/bash
 # Generate an IDF outlines from a DXF file
+dxf2idf - 1 > /dev/null << _EOF
 test.dxf
 mm
-“DXF TEST GEOMETRY”
-“DXF TEST  PART”
+DXF TEST GEOMETRY
+DXF TEST PART
 5
-# This is an IDF test file produced from the outline 'test.dxf'
-# This is a second IDF comment to demonstrate multiple comments
+This is an IDF test file produced from the outline 'test.dxf'
+This is a second IDF comment to demonstrate multiple comments
 
 test_dxf2idf.idf
+_EOF
 ---------------------------------------------------------------
 
 idf2vrml
@@ -521,3 +538,11 @@ flags:
 example to produce a model for use by KiCad: idf2vrml -f input.emn -s 0.3937008 -k
 >
 ----------------------------------------------------------------------------------
+
+[**BUG:** The idf2vrml tool currently does not correctly render *OTHER_OUTLINE*
+entities in an emn file if that entity is specifies on the back layer
+of the PCB; however you will not notice this bug using files exported
+by KiCad since there is no mechanism to specify such an entity.
+Essentially this bug is only an issue in rare instances where you might
+render a third party emn file which does employ the entity on the back
+side of a board.]
