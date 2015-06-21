@@ -38,12 +38,16 @@ Importing a DXF drawing for a board outline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As an alternative to drawing the board outline in Pcbnew directly, an 
-outline can also be imported from a DXF drawing. Using this feature
-much more complex board shapes can be created. 
+outline can also be imported from a DXF drawing. Using this feature allows
+for much more complex board shapes than is possible with the Pcbnew drawing
+capabilities.
 
 For example the required board shape may be exported as a DXF drawing from a 
 mechanical CAD package and then imported into Pcbnew to define the exact 
 board shape required to fit an enclosure.
+
+For best results use the DXF R12 format for import into Pcbnew as there is 
+limited support for 'advanced' features available in more recent DXF formats.
 
 To import a board shape from a DXF file:
 
@@ -54,30 +58,34 @@ To import a board shape from a DXF file:
   for the board outline, but DXF drawings can be imported onto other layers
   as well.
 . Click OK
+  
+Notes on importing DXF files with advanced features like Ellipsis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+KiCad supports the DXF R12 format and has limited support for 'advanced' DXF 
+features like Ellipsis.
+
+If you require the use of such 'advanced' DXF drawing features, you need to
+convert your drawing to the older DXF R12 format. As the DXF R12 format does 
+not these 'advanced' drawing features, CAD software export functions 
+'approximates' those drawing elements as a series of short line 
+segments that Pcbnew can handle correctly.
+
+Most CAD software is able to export to the DXF R12 format. 
+
+If your CAD software does not have such an R12 export, you can use LibreCAD
+to perform the conversion. 
+
+In LibreCAD open the DXF file and then use 'Save As...'. In the 
+'Save Drawing As' dialog, use the 'Save as type:' selection to choose the
+export format and select 'Drawing Exchange DXF R12 (*.dxf)'. 
+
+Enter a different file name, if you like to preserve your original DXF file.
 
 Here is an example of such an DXF import with a board that has several 
-elliptical segments:
+elliptical segments approximated by a number of short line segments:
 
 image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]  
-  
-Notes on DXF imports
-^^^^^^^^^^^^^^^^^^^^
-
-There are some limitations on the DXF formats that are supported in KiCad. 
-
-For example there is currently no support for importing Ellipses. However it 
-is often possible to export the DXF from your CAD system in older DXF formats. 
-For example the DXF R12 format does not have support for Ellipses line 
-segments. As such CAD application exports Ellipses as a series of small line
-segments to 'approximate' an Ellipses. LibreCAD for example is known to do that.
-
-Then also, CAD exports of Ellipses using such line segments tend not to 
-'close' Ellipses. If the line segments lengths used to create the Ellipses are 
-too big, this becomes visible as a gap in the board outline. 
-
-Set your CAD software if possible to produce very small line segments of 
-say 0.05mm in length. Even with the 'gap', this will make the end sufficiently
-close that the board outline can be regarded as 'closed'.
 
 
 Reading the netlist generated from the schematic
