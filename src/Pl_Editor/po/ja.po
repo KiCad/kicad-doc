@@ -1,0 +1,1683 @@
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Pl_Editor-ja\n"
+"POT-Creation-Date: 2015-07-05 11:48+0900\n"
+"PO-Revision-Date: 2015-07-02 01:30+0900\n"
+"Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
+"Language-Team: kicad.jp <kicad@kicad.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. type: Title =
+#: Pl_Editor.adoc:8
+#, no-wrap
+msgid "Pl_Editor"
+msgstr "Pl_Editor"
+
+#. type: Plain text
+#: Pl_Editor.adoc:11
+#, no-wrap
+msgid "*Pl_Editor*\n"
+msgstr "*Pl_Editor*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:13
+msgid "_Reference manual_"
+msgstr "リファレンスマニュアル"
+
+#. type: Plain text
+#: Pl_Editor.adoc:16
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "著作権\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:23
+msgid ""
+"This document is Copyright © 2015 by it's contributors as listed below.  You "
+"may distribute it and/or modify it under the terms of either the GNU General "
+"Public License (http://www.gnu.org/licenses/gpl.html), version 3 or later, "
+"or the Creative Commons Attribution License (http://creativecommons.org/"
+"licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"このドキュメントは以下の貢献者により著作権所有(© 2015)されています。あなた"
+"は、GNU General Public License ( http://www.gnu.org/licenses/gpl.html ) の"
+"バージョン3以降、あるいはクリエイティブ・コモンズライセンス ( http://"
+"creativecommons.org/licenses/by/3.0/ ) のバージョン3以降のいずれかの条件の下"
+"で、配布または変更することができます 。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:26
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "貢献者\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:28
+msgid "Jean-Pierre Charras."
+msgstr "Jean-Pierre Charras."
+
+#. type: Plain text
+#: Pl_Editor.adoc:31
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "フィードバック\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:34
+msgid ""
+"Please direct any comments or suggestions about this document to the KiCad "
+"mailing list:"
+msgstr ""
+"このドキュメントに関するコメントや提案は、何でもKiCadメーリングリストへ送って"
+"ください："
+
+#. type: Plain text
+#: Pl_Editor.adoc:36
+msgid "_https://launchpad.net/~kicad-developers_"
+msgstr "_https://launchpad.net/~kicad-developers_"
+
+#. type: Plain text
+#: Pl_Editor.adoc:39
+#, no-wrap
+msgid "*Acknowledgments*\n"
+msgstr "謝辞\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:42
+#, no-wrap
+msgid "*Publication date and software version*\n"
+msgstr "発行日とバージョン\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:44
+msgid "may 23, 2015."
+msgstr "may 23, 2015."
+
+#. type: Plain text
+#: Pl_Editor.adoc:47
+msgid "Introduction to *Pl_Editor*"
+msgstr "Pl_Editorについて"
+
+#. type: delimited block -
+#: Pl_Editor.adoc:51
+#, no-wrap
+msgid ""
+"Pl_Editor is a page layout editor tool to create custom title blocks,\n"
+"and frame references.\n"
+msgstr "Pl_Editorはタイトルブロックや図枠を作成/編集するためのページレイアウトエディタです。\n"
+
+#. type: delimited block -
+#: Pl_Editor.adoc:54
+#, no-wrap
+msgid ""
+"The title block, associated to frame references, and other graphic items\n"
+"(logos) is called here a page layout\n"
+msgstr ""
+"このタイトルブロックや図形（ロゴなど）をまとめて図枠として定義しており、\n"
+"ここではこれらをまとめて”ページレイアウト”と呼びます。\n"
+
+#. type: delimited block -
+#: Pl_Editor.adoc:56
+#, no-wrap
+msgid "Basic page layout items are:\n"
+msgstr "基本的なページレイアウトの要素は次のものとなります：\n"
+
+#. type: delimited block -
+#: Pl_Editor.adoc:63
+#, no-wrap
+msgid ""
+"* *Lines*\n"
+"* *Rectangles*\n"
+"* *Texts* (with format symbols, that will be replaced by the actual text,\n"
+"  like the date, page number...) in Eeschema or Pcbnew.\n"
+"* *Poly-polygons* (mainly to place logos and special graphic shapes)\n"
+"* *Bitmaps*.\n"
+msgstr ""
+"* *直線*\n"
+"* *矩形*\n"
+"* *テキスト*（EeschemaやPcbnewの実際の図面で日付やページ番号に自動的に置換えられる書式指定文字を含む）\n"
+"* *重畳された多角形* （主にロゴや特別な図形を配置するためのもの）\n"
+"* *ビットマップ画像*\n"
+
+#. type: delimited block -
+#: Pl_Editor.adoc:67
+#, no-wrap
+msgid ""
+"WARNING: Bitmaps can be plotted only by few plotters (PDF and\n"
+"PS only) Therefore, for other plotters, only a bounding box will be\n"
+"plotted.\n"
+msgstr ""
+"注意：ビットマップ画像は一部の出力形式（PDFとPS）でのみ\n"
+"プロットできます。それ以外の出力形式では、ただの四角形として\n"
+"出力されます。\n"
+
+#. type: delimited block -
+#: Pl_Editor.adoc:69
+#, no-wrap
+msgid "* Items can be repeated, and texts and poly_polygons can be rotated.\n"
+msgstr "* これら要素は繰り返し配置が可能です。またテキストと重畳された多角形は回転させることができます。\n"
+
+#. type: delimited block -
+#: Pl_Editor.adoc:72
+#, no-wrap
+msgid ""
+"[[pl_editor-files]]\n"
+"Pl_Editor files\n"
+msgstr ""
+"[[pl_editor-files]]\n"
+"Pl_Editorのファイル\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:76
+#, no-wrap
+msgid "Input file and default title block"
+msgstr "読み込み可能なファイルと標準のタイトルブロック"
+
+#. type: Plain text
+#: Pl_Editor.adoc:80
+msgid ""
+"Pl_Editor reads or writes page layout description files *.kicad_wks (KiCad "
+"worksheet)."
+msgstr ""
+"Pl_Editorで利用できるのは、*.kicad_wks拡張子のファイルです。(kicad worksheet)"
+
+#. type: Plain text
+#: Pl_Editor.adoc:83
+msgid ""
+"An internal default page layout description to display the default KiCad "
+"title block is used until a file is read"
+msgstr ""
+"ファイルの読み込み前は、KiCad内部の標準ページレイアウトが表示されます。"
+
+#. type: Title ~
+#: Pl_Editor.adoc:86
+#, no-wrap
+msgid "Output file"
+msgstr "出力ファイル"
+
+#. type: Plain text
+#: Pl_Editor.adoc:90
+msgid ""
+"The current page layout description can be written in a **.kicad_wks* file, "
+"using the S-expression format, which is widely used in KiCad."
+msgstr ""
+"ページレイアウトファイルはKiCadで広く使用されているS式形式の *.kicad_wks拡張"
+"子のファイルとして出力されます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:93
+msgid ""
+"This file can be used to show the custom page layout in Eeschema and/or "
+"Pcbnew."
+msgstr ""
+"このファイルは、EeschemaやPcbnewで図枠テンプレートとして使用することが出来ま"
+"す。"
+
+#. type: Title -
+#: Pl_Editor.adoc:96
+#, no-wrap
+msgid "Theory of operations"
+msgstr "動作の詳細"
+
+#. type: Title ~
+#: Pl_Editor.adoc:100
+#, no-wrap
+msgid "Basic page layout items properties:"
+msgstr "基本的な要素の設定"
+
+#. type: Plain text
+#: Pl_Editor.adoc:103
+msgid "Basic page layout items are:"
+msgstr "基本的なページレイアウトの要素は、次のものとなります："
+
+#. type: Plain text
+#: Pl_Editor.adoc:105
+#, no-wrap
+msgid "*Lines*\n"
+msgstr "*直線*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:106
+#, no-wrap
+msgid "*Rectangles*\n"
+msgstr "*矩形*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:108
+#, no-wrap
+msgid ""
+"*Texts* (with format symbols, with will be replaced by the actual\n"
+"text, like the date, page number...) in Eeschema or Pcbnew.\n"
+msgstr "*テキスト*（EeschemaやPcbnewの実際の図面で日付やページ番号に自動的に置換えられる書式指定文字を含む）\n"
+
+# "* *重畳された～"を"*重畳された～"へ修正
+# 常体を敬体へ統一
+#. type: Plain text
+#: Pl_Editor.adoc:112
+#, no-wrap
+msgid ""
+"*Poly-polygons* (mainly to place logos and special graphic shapes).\n"
+"These poly polygons are created by **Bitmap2component**, and cannot be\n"
+"built inside pl_editor, because it is not possible to create such shapes\n"
+"by hand.\n"
+msgstr ""
+"*重畳された多角形* （主にロゴや特別な図形を配置するためのもの）\n"
+"これら重畳された多角形は**Bitmap2component**によって生成されます。\n"
+"pl_editorでこのような図形は作成できません。\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:113
+#, no-wrap
+msgid "*Bitmaps* to place logos.\n"
+msgstr "*ビットマップ画像*（ロゴを配置するための）\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:115
+msgid "Bitmaps can be plotted only by few plotters: PDF and PS only."
+msgstr "ビットマップ画像は一部の出力形式（PDFとPS）でのみプロットできます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:117
+msgid "Therefore:"
+msgstr "また："
+
+#. type: Plain text
+#: Pl_Editor.adoc:120
+#, no-wrap
+msgid ""
+"*Texts, poly-polygons* and *bitmaps* are defined by a position, and\n"
+"can be rotated.\n"
+msgstr "*テキスト、重畳された多角形*と*ビットマップ画像*は、位置を指定しての回転表示が可能です。\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:123
+#, no-wrap
+msgid ""
+"*Lines* (in fact segments) and *rectangles* are defined by two points:\n"
+"a start point and a end point. They cannot be rotated (this is useless\n"
+"for segments)\n"
+msgstr ""
+"*直線*（多数のセグメントから成る）と*矩形* は始点/終点の2点の指定となります。\n"
+"これらは回転できません。(セグメントに対して無効です）\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:125
+msgid "These basic items can be repeated."
+msgstr "基本的な要素は、繰り返し配置が可能です。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:128
+msgid ""
+"Texts which are repeated accept also an increment value for labels (has "
+"meaning only if the text is one letter or one digit)"
+msgstr ""
+"テキストについては内容をインクリメントしながらの繰り返し配置も可能です。（テ"
+"キストが1文字のアルファベット、または一桁の数値のみ）"
+
+#. type: Title ~
+#: Pl_Editor.adoc:131
+#, no-wrap
+msgid "Coordinates definition"
+msgstr "座標系の設定"
+
+#. type: Plain text
+#: Pl_Editor.adoc:135
+msgid ""
+"Each position, start point and end point of items is always relative to a "
+"page corner."
+msgstr ""
+"始点/終点などの座標は、常にページの指定した角を基準にした座標系で指定されま"
+"す。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:138
+#, no-wrap
+msgid ""
+"**This feature ensure you can define a page layout which is not\n"
+"dependent on the paper size**.\n"
+msgstr "**これにより、ページサイズが変わってもレイアウトを保持することが可能となります。**\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:141
+#, no-wrap
+msgid "Reference corners and coordinates:"
+msgstr "ページの角（カド）と座標系"
+
+#. type: Plain text
+#: Pl_Editor.adoc:144
+msgid "image:images/en/page_property_1.png[]"
+msgstr "image:images/ja/page_property_1.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:147
+msgid ""
+"When the page size is changed, the position of the item, relative to its "
+"reference corner does not change."
+msgstr ""
+"用紙サイズが変更された場合も、それぞれの要素は基準となるページの角との関係を"
+"保ちます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:149
+msgid ""
+"Usually, title blocks are attached to the right bottom corner, and therefore "
+"this corner is the default corner, when creating an item."
+msgstr ""
+"通常、タイトルブロックは用紙サイズに依らずにページの右下へ表示されます。これ"
+"は要素を作成した際に右下の角を原点として設定している為です。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:152
+msgid ""
+"For rectangles and segments, which have two defined points, each point has "
+"its reference corner."
+msgstr ""
+"矩形や直線は、それぞれ原点となる角を指定した2点の座標指定で指定されます。"
+
+#. type: Title ~
+#: Pl_Editor.adoc:155
+#, no-wrap
+msgid "Rotation"
+msgstr "回転"
+
+#. type: Plain text
+#: Pl_Editor.adoc:159
+msgid ""
+"Items which have a position defined by just one point (texts and poly-"
+"polygons) can be rotated:"
+msgstr ""
+"一点を基準とする要素（テキストと重畳された多角形）は回転することができます。"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:164
+#, no-wrap
+msgid ""
+"|image:images/en/text_noriented.png[]\n"
+"|Normal: Rotation = 0\n"
+msgstr ""
+"|image:images/ja/text_noriented.png[]\n"
+"|通常時：回転 = 0°\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:167
+#, no-wrap
+msgid ""
+"|image:images/en/text_rotated.png[]\n"
+"|Rotated: Rotation = 20 and 10 degrees.\n"
+msgstr ""
+"|image:images/ja/text_rotated.png[]\n"
+"|回転指定： 回転 = 20°/ 10°\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:171
+#, no-wrap
+msgid "Repeat option"
+msgstr "繰り返し設定"
+
+#. type: Plain text
+#: Pl_Editor.adoc:174
+msgid "Items can be repeated:"
+msgstr "要素は繰り返して配置を行うことが出来ます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:176
+msgid "This is useful to create grid and grid labels."
+msgstr "これはグリッド線やグリッドのラベルを作成する際に便利な機能です。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:178
+msgid "image:images/en/page_property_2.png[]"
+msgstr "image:images/ja/page_property_2.png[]"
+
+#. type: Title -
+#: Pl_Editor.adoc:181
+#, no-wrap
+msgid "Texts and formats"
+msgstr "テキストと書式指定"
+
+#. type: Title ~
+#: Pl_Editor.adoc:185
+#, no-wrap
+msgid "Format symbols:"
+msgstr "書式指定文字"
+
+#. type: Plain text
+#: Pl_Editor.adoc:188
+msgid "Texts can be simple strings or can include format symbols."
+msgstr ""
+"テキスト中には、下記に示すような単純な書式指定文字を含めることが可能です。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:190
+msgid "Format symbols are replaced by the actual values in Eeschema or Pcbnew."
+msgstr ""
+"EeschemaやPcbnewで作成された図面上では、これらの書式指定文字は実際の値に自動"
+"的に置換されます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:192
+msgid "They are like format symbols in printf function."
+msgstr "これらは(プログラム言語の)prinf関数と似ています。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:194
+msgid "A format symbol is *%* followed by 1 letter."
+msgstr "書式指定文字は、%記号＋文字で定義されています。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:196
+msgid "The *%C* format has one digit (comment identifier)"
+msgstr "*%C*形式は一つの数字を引数に持ちます（コメント識別子）"
+
+#. type: Plain text
+#: Pl_Editor.adoc:198
+msgid "Formats symbols are:"
+msgstr "書式指定文字を下記に示します："
+
+#. type: Plain text
+#: Pl_Editor.adoc:200
+#, no-wrap
+msgid "*%% = replaced by %*\n"
+msgstr "*%% = %記号1文字に置換えられます*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:202
+#, no-wrap
+msgid "*%K = KiCad version*\n"
+msgstr "*%K = KiCad のバージョン*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:204
+#, no-wrap
+msgid "*%Z = paper format name (A4, USLetter ...)*\n"
+msgstr "*%Z = 用紙サイズ名 (A4, USLetter など)*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:206
+#, no-wrap
+msgid "*%Y = company name*\n"
+msgstr "*%Y = 会社名*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:208
+#, no-wrap
+msgid "*%D = date*\n"
+msgstr "*%D = 日付*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:210
+#, no-wrap
+msgid "*%R = revision*\n"
+msgstr "*%R = リビジョン*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:212
+#, no-wrap
+msgid "*%S = sheet number*\n"
+msgstr "*%S = ページ番号*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:214
+#, no-wrap
+msgid "*%N = number of sheets*\n"
+msgstr "*%N = 全体のページ枚数*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:216
+#, no-wrap
+msgid "*%Cx = comment (x = 0 to 9 to identify the comment)*\n"
+msgstr "*%Cx = コメント (xはコメントを指定する0～9の値となります)*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:218
+#, no-wrap
+msgid "*%F = filename*\n"
+msgstr "*%F = ファイル名*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:220
+#, no-wrap
+msgid "*%P = sheet path (sheet full name, for Eeschema)*\n"
+msgstr "*%P = ページのパス (Eeschemaのシートのフルネーム)*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:222
+#, no-wrap
+msgid "*%T = title*\n"
+msgstr "*%T = タイトル*\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:224
+msgid "Example:"
+msgstr "例:"
+
+#. type: Plain text
+#: Pl_Editor.adoc:226
+msgid "\"Size: %Z\" displays \"Size: A4\" or \"Size: USLetter\""
+msgstr ""
+"\"Size: %Z\" と指定した場合、 実際の図面上では \"Size: A4\" や “Size: "
+"USLetter\" と表示されます。"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:231
+#, no-wrap
+msgid ""
+"|image:images/en/show_fields_data.png[]\n"
+"a|User display mode:\n"
+msgstr ""
+"|image:images/ja/show_fields_data.png[]\n"
+"a|ユーザー表示モード：\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:233
+#, no-wrap
+msgid "image:images/icons/title_block_preview.png[] activated.\n"
+msgstr "image:images/icons/title_block_preview.png[] ボタンが押された場合\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:235
+#, no-wrap
+msgid "Title block displayed like in Eeschema and Pcbnew\n"
+msgstr "EeschemaやPcbnewで表示されるように、置換可能な文字列が実際の値に置き換えて表示されます。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:238
+#, no-wrap
+msgid ""
+"|image:images/en/show_fields_codes.png[]\n"
+"a|“Native” display mode:\n"
+msgstr ""
+"|image:images/ja/show_fields_codes.png[]\n"
+"a|“タイトルブロック編集” 表示モード：\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:240
+#, no-wrap
+msgid "image:images/icons/title_block_edit.png[] activated.\n"
+msgstr "image:images/icons/title_block_edit.png[] ボタンが押された場合\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:242
+#, no-wrap
+msgid "The native texts entered in Pl_Editor, with their format symbols.\n"
+msgstr "Pl_Editorで指定された書式指定文字をそのまま表示します。\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:247
+#, no-wrap
+msgid "Multi-line texts:"
+msgstr "複数行のテキスト:"
+
+#. type: Plain text
+#: Pl_Editor.adoc:250
+msgid "Texts can be multi-line."
+msgstr "テキストは複数行とすることが可能です。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:252
+msgid "There are 2 ways to insert a new line in texts:"
+msgstr "ここでは、2通りの改行方法を説明します："
+
+#. type: Plain text
+#: Pl_Editor.adoc:255
+msgid "Insert the “n” 2 chars sequence (mainly in Page setup dialog in KiCad)"
+msgstr ""
+"“\n"
+"”の2文字を利用する方法（主にKiCadのページ設定ダイアログで使用します）"
+
+#. type: Plain text
+#: Pl_Editor.adoc:256
+msgid "Insert a new line in Pl_Editor Design window."
+msgstr "Pl_Editorのデザインウインドウで直接改行する方法"
+
+#. type: Plain text
+#: Pl_Editor.adoc:258
+msgid "Here is an example:"
+msgstr "下記に例を示します："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:263
+#, no-wrap
+msgid ""
+"|image:images/en/multi_line.png[]\n"
+"a|image:images/en/options_multi_line.png[]\n"
+msgstr ""
+"|image:images/ja/multi_line.png[]\n"
+"a|image:images/ja/options_multi_line.png[]\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:265 Pl_Editor.adoc:366
+#, no-wrap
+msgid "Setup\n"
+msgstr "セットアップ\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:270
+#, no-wrap
+msgid "Multi-line texts in Page Setup dialog:"
+msgstr "ページ設定ダイアログでの改行："
+
+#. type: Plain text
+#: Pl_Editor.adoc:273
+msgid ""
+"In the page setup dialog, text controls do not accept a multi-line text."
+msgstr ""
+"ページ設定ダイアログでは、複数行のテキストがそのままの形では入力できません。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:276
+msgid ""
+"The *“\\n”* 2 chars sequence should be inserted to force a new line inside a "
+"text."
+msgstr ""
+"そこで*“\\n”* の2文字を挿入することで、挿入箇所を改行させることができます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:278
+msgid "Here is a two lines text, in _comment 2_ field:"
+msgstr ""
+"例えば、”コメント2”の欄へ2行に渡るテキストを入力する例が下記となります："
+
+#. type: Plain text
+#: Pl_Editor.adoc:280
+msgid "image:images/en/insert_newline_code.png[]"
+msgstr "image:images/ja/insert_newline_code.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:282
+msgid "Here is the actual text:"
+msgstr "実際の図面上では、下記のように表示されます："
+
+#. type: Plain text
+#: Pl_Editor.adoc:284
+msgid "image:images/en/multi_line_2.png[]"
+msgstr "image:images/ja/multi_line_2.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:286
+msgid ""
+"However, if you really want the *“\\n”* inside the text, enter *“\\\\n”*."
+msgstr ""
+"もしも図面上に“\\n” の文字列を表示させたい場合は、“\\\\n”のように入力します。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:288
+msgid "image:images/en/insert_slashnewline_code.png[]"
+msgstr "image:images/ja/insert_slashnewline_code.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:290
+msgid "And the displayed text:"
+msgstr "この場合、実際の図面上では、下記のように表示されます："
+
+#. type: Plain text
+#: Pl_Editor.adoc:292
+msgid "image:images/en/multi_line_3.png[]"
+msgstr "image:images/ja/multi_line_3.png[]"
+
+#. type: Title -
+#: Pl_Editor.adoc:295
+#, no-wrap
+msgid "Constraints"
+msgstr "制限の設定"
+
+#. type: Title ~
+#: Pl_Editor.adoc:299
+#, no-wrap
+msgid "Page 1 constraint"
+msgstr "1ページ目の設定"
+
+#. type: Plain text
+#: Pl_Editor.adoc:302
+msgid "When using Eeschema, the full schematic often uses more than one page."
+msgstr "Eeschemaでは複数ページの回路図を扱うことが出来ます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:304
+msgid "Usually page layout items are displayed on all pages."
+msgstr "通常、図枠の要素は全てのページに表示されます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:307
+msgid ""
+"But if a user want some items to be displayed only on page 1, or not on page "
+"1, the “page 1 option” this is possible by setting this option:"
+msgstr ""
+"しかし、1ページ目のみに表示させたい、あるいは1ページ目以外のページにのみ表示"
+"させたい場合があります。\n"
+"これらは、プロパティ内の”１ページ目のオプション”から設定することが可能です："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:312
+#, no-wrap
+msgid ""
+"|image:images/en/display_options.png[]\n"
+"a|Page 1 option:\n"
+msgstr ""
+"|image:images/ja/display_options.png[]\n"
+"a|1ページ目のオプション：\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:316
+#, no-wrap
+msgid ""
+"* None: no constraint.\n"
+"* Page 1 only: the items is visible only on page 1.\n"
+"* Not on page 1: the items is visible on all pages but the page 1.\n"
+msgstr ""
+"* なし：ページ番号による表示制限はありません。\n"
+"* １ページ目のみ： 要素は1ページ目のみに表示されます。\n"
+"* ２ページ目以降：要素は1ページ目には表示されず、2ページ目以降の全てのページに表示されます。\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:321
+#, no-wrap
+msgid "Text full size constraint"
+msgstr "テキストサイズの制限"
+
+#. type: Plain text
+#: Pl_Editor.adoc:324
+msgid "image:images/en/constraint_options.png[]"
+msgstr "image:images/ja/constraint_options.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:326
+msgid "Only for texts, one can set 2 parameters :"
+msgstr "テキストについては、下記の2つのパラメータを設定することができます："
+
+#. type: Plain text
+#: Pl_Editor.adoc:328
+msgid "the max size X"
+msgstr "最大幅(X)"
+
+#. type: Plain text
+#: Pl_Editor.adoc:329
+msgid "the max size Y"
+msgstr "最大高さ(Y)"
+
+#. type: Plain text
+#: Pl_Editor.adoc:331
+msgid "which define a bounding box"
+msgstr "これらは外形枠（バウンディングボックス）を定義します"
+
+#. type: Plain text
+#: Pl_Editor.adoc:336
+msgid ""
+"When these parameters are not 0, when displaying the text, the actual text "
+"height and the actual text width are dynamically modified if the full text "
+"size is bigger than the max size X and/or the max size Y, to fit the full "
+"text size with this bounding box."
+msgstr ""
+"これらのパラメータが0でない場合、実際のテキストの長さと高さが入力値により制限"
+"されます。もしテキストの幅や高さが制限値を超えた場合は、入力された制限値に合"
+"うように変形されます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:339
+msgid ""
+"When the actual full text size is smaller than the max size X and/or the max "
+"size Y, the text height and/or the text width is not modified."
+msgstr ""
+"入力されたテキストが幅や高さの制限値以下の場合には、テキストは変形されずにそ"
+"のまま表示されます。"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:344
+#, no-wrap
+msgid ""
+"|image:images/en/constraints_none.png[]\n"
+"a|The text with no bounding box.\n"
+msgstr ""
+"|image:images/ja/constraints_none.png[]\n"
+"a|制限を設定しない場合\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:346
+#, no-wrap
+msgid "Max size X = 0,0\n"
+msgstr "最大幅（X） = 0,0\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:348 Pl_Editor.adoc:355
+#, no-wrap
+msgid "Max size Y = 0,0\n"
+msgstr "最大高さ（Y） = 0,0\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:351
+#, no-wrap
+msgid ""
+"|image:images/en/constraints_defined.png[]\n"
+"a|The *same* text with constraint.\n"
+msgstr ""
+"|image:images/ja/constraints_defined.png[]\n"
+"a|同じテキストについて、制限を設ける場合\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:353
+#, no-wrap
+msgid "Max size X = 40,0\n"
+msgstr "最大幅（X） = 40,0\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:359
+msgid "A multi line text, constrained:"
+msgstr "複数行のテキストも、同様に制限させることが出来ます："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:364
+#, no-wrap
+msgid ""
+"|image:images/en/block_constraints.png[] a|\n"
+"image:images/en/constraint_options.png[]\n"
+msgstr ""
+"|image:images/ja/block_constraints.png[] a|\n"
+"image:images/ja/constraint_options.png[]\n"
+
+#. type: Title -
+#: Pl_Editor.adoc:371
+#, no-wrap
+msgid "Invoking Pl_Editor"
+msgstr "Pl_Editorの起動"
+
+#. type: Plain text
+#: Pl_Editor.adoc:375
+msgid ""
+"Pl_Editor is typically invoked from a command line, or from the KiCad "
+"manager."
+msgstr ""
+"Pl_Editorはコマンドラインか、またはKiCadマネージャから起動することが出来ま"
+"す。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:377
+msgid ""
+"From a command line, the syntax is pl_editor <*.kicad_wks file to open>."
+msgstr ""
+"コマンドラインから起動する場合、 pl_editor <*.kicad_wksファイルパス>として呼"
+"び出してください。"
+
+#. type: Title -
+#: Pl_Editor.adoc:380
+#, no-wrap
+msgid "Pl_Editor Commands"
+msgstr "Pl_Editorのコマンド"
+
+#. type: Title ~
+#: Pl_Editor.adoc:384
+#, no-wrap
+msgid "Main Screen"
+msgstr "メイン画面"
+
+#. type: Plain text
+#: Pl_Editor.adoc:387
+msgid "The image below shows the main window of Pl_Editor."
+msgstr "Pl_Editorのメイン画面を下記に示します："
+
+#. type: Plain text
+#: Pl_Editor.adoc:389
+msgid "image:images/en/main_window.png[]"
+msgstr "image:images/ja/main_window.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:391
+msgid "The left pane contains the list of basic items."
+msgstr "画面左には要素の一覧が表示されています。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:393
+msgid "The right pane is the item settings editor."
+msgstr "また、画面右には要素のプロパティが表示されています。"
+
+#. type: Title ~
+#: Pl_Editor.adoc:396
+#, no-wrap
+msgid "Main Window Toolbar"
+msgstr "メインウィンドウのツールバー"
+
+#. type: Plain text
+#: Pl_Editor.adoc:399
+msgid "image:images/en/main_toolbar.png[]"
+msgstr "image:images/ja/main_toolbar.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:401
+msgid "The top toolbar allows for easy access to the following commands:"
+msgstr ""
+"画面上部に表示されているツールバーから、下記のコマンドを呼び出すことが出来ま"
+"す："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:406
+#, no-wrap
+msgid ""
+"|image:images/icons/page_new_layout.png[] |Select\n"
+"the net list file to be processed.\n"
+msgstr ""
+"|image:images/icons/page_new_layout.png[] |\n"
+"新規の空の図枠テンプレートを作成します。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:409
+#, no-wrap
+msgid ""
+"|image:images/icons/page_load_layout.png[] |Load a\n"
+"page layout description file.\n"
+msgstr ""
+"|image:images/icons/page_load_layout.png[] |\n"
+".kicad_wksファイルの図枠テンプレートをロードします。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:412
+#, no-wrap
+msgid ""
+"|image:images/icons/page_save_layout.png[] |Save the\n"
+"current page layout description in a .kicad_wks file.\n"
+msgstr "|image:images/icons/page_save_layout.png[] |.kicad_wksファイルへ図枠テンプレートを保存します。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:415
+#, no-wrap
+msgid ""
+"|image:images/icons/page_set_size.png[] |Display\n"
+"the page size selector and the title block user data editor.\n"
+msgstr ""
+"|image:images/icons/page_set_size.png[] |用紙サイズや向き、\n"
+"各種コメントを設定する、ページ設定ダイアログを表示します。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:418
+#, no-wrap
+msgid ""
+"|image:images/icons/page_print.png[] |Prints\n"
+"the current page.\n"
+msgstr "|image:images/icons/page_print.png[] |現在のページを印刷します。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:421
+#, no-wrap
+msgid ""
+"|image:images/icons/item_delete.png[] |Delete\n"
+"the currently selected item.\n"
+msgstr "|image:images/icons/item_delete.png[] |選択されている要素を削除します。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:424
+#, no-wrap
+msgid ""
+"|image:images/icons/undo_redo.png[]\n"
+"|Undo/redo tools.\n"
+msgstr "|image:images/icons/undo_redo.png[] |元に戻す/やり直しのツールです。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:427
+#, no-wrap
+msgid ""
+"|image:images/icons/zoom_in_out_redraw_auto.png[] |Zoom\n"
+"in, out, redraw and auto, respectively.\n"
+msgstr "|image:images/icons/zoom_in_out_redraw_auto.png[] |表示の拡大/縮小/再描画/画面全体を表示します。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:431
+#, no-wrap
+msgid ""
+"|image:images/icons/title_block_preview.png[] |Show the\n"
+"page layout in user mode: texts are shown like in Eeschema or Pcbnew:\n"
+"text format symbols are replaced by the user texts.\n"
+msgstr ""
+"|image:images/icons/title_block_preview.png[] |ユーザーモードで図枠テンプレートを表示します。\n"
+"テキストはEeschemaやPcbnewで表示させた時と同じように、各種書式指定文字が\n"
+"置換されて表示されます。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:435
+#, no-wrap
+msgid ""
+"|image:images/icons/title_block_edit.png[] |Show the\n"
+"page layout in native mode: texts are displayed “as is”, with the\n"
+"contained formats, without any replacement.\n"
+msgstr ""
+"|image:images/icons/title_block_edit.png[] |タイトルブロック編集モードで図枠テンプレートを表示します。\n"
+"書式指定文字はそのままの形で画面表示されます。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:439
+#, no-wrap
+msgid ""
+"|image:images/en/set_base_corner.png[]\n"
+"|Reference corner selection, for coordinates displayed to the status\n"
+"bar.\n"
+msgstr ""
+"|image:images/ja/set_base_corner.png[]\n"
+"|用紙の原点の配置を設定します。設定時のマウスカーソルの座標は、\n"
+"画面下部のステータスバーに表示されます。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:442
+#, no-wrap
+msgid ""
+"|image:images/en/set_current_page.png[] a|\n"
+"Selection of the page number (page & or other pages).\n"
+msgstr ""
+"|image:images/ja/set_current_page.png[] \n"
+"|画面表示が、1ページ目の図面/または2ページ目以降の図面で表示されます。\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:446
+#, no-wrap
+msgid ""
+"This selection has meaning only if some items than have a page option,\n"
+"are not shown on all pages (in a schematic for instance, which contains\n"
+"more than one page)\n"
+msgstr "これは、1ページ目のみ別のレイアウトを指定した際に切り替えて使用します。\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:451
+#, no-wrap
+msgid "Commands in drawing area (draw panel)"
+msgstr "描画エリアでのコマンド (draw panel)"
+
+#. type: Title ^
+#: Pl_Editor.adoc:455
+#, no-wrap
+msgid "Keyboard Commands"
+msgstr "キーボードショートカット"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:469
+#, no-wrap
+msgid ""
+"|F1 |Zoom In\n"
+"|F2 |Zoom Out\n"
+"|F3 |Refresh Display\n"
+"|F4 |Move cursor to center of display window\n"
+"|Home |Fit footprint into display window\n"
+"|Space Bar |Set relative coordinates to the current cursor position\n"
+"|Right Arrow |Move cursor right one grid position\n"
+"|Left Arrow |Move cursor left one grid position\n"
+"|Up Arrow |Move cursor up one grid position\n"
+"|Down Arrow |Move cursor down one grid position\n"
+msgstr ""
+"|F1 |拡大\n"
+"|F2 |縮小\n"
+"|F3 |画面の再描画\n"
+"|F4 |現在のカーソル位置の描画を画面中央へ移動させます\n"
+"|Home |画面全体を表示\n"
+"|Space Bar |dx/dy 表示座標をカーソル位置でゼロリセットします。\n"
+"（dx/dy座標は画面下部ステータスバーに表示されます）\n"
+"|Right Arrow |カーソルを1グリッド分左へ移動します。\n"
+"|Left Arrow |カーソルを1グリッド分右へ移動します。\n"
+"|Up Arrow |カーソルを1グリッド分上へ移動します。\n"
+"|Down Arrow |カーソルを1グリッド分下へ移動します。\n"
+
+#. type: Title ^
+#: Pl_Editor.adoc:473
+#, no-wrap
+msgid "Mouse Commands"
+msgstr "マウス操作"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:481
+#, no-wrap
+msgid ""
+"|Scroll Wheel |Zoom in and out at the current cursor position\n"
+"|Ctrl + Scroll Wheel |Pan right and left\n"
+"|Shift + Scroll Wheel |Pan up and down\n"
+"|Right Button Click |Open context menu\n"
+msgstr ""
+"|ホイール |現在のカーソル位置を中心に拡大/縮小\n"
+"|Ctrl + ホイール |左右方向へスクロール\n"
+"|Shift + ホイール |上下方向へスクロール\n"
+"|右クリック |コンテキストメニューの表示\n"
+
+#. type: Title ^
+#: Pl_Editor.adoc:485
+#, no-wrap
+msgid "Context Menu"
+msgstr "コンテキストメニュー"
+
+#. type: Plain text
+#: Pl_Editor.adoc:488
+msgid "Displayed by right-clicking the mouse:"
+msgstr "(右クリックメニュー)"
+
+#. type: Plain text
+#: Pl_Editor.adoc:490
+msgid "Add Line"
+msgstr "線の追加"
+
+#. type: Plain text
+#: Pl_Editor.adoc:491
+msgid "Add Rectangle"
+msgstr "矩形を追加"
+
+#. type: Plain text
+#: Pl_Editor.adoc:492
+msgid "Add Text"
+msgstr "テキスト入力"
+
+#. type: Plain text
+#: Pl_Editor.adoc:493
+msgid "Append Page Layout Descr File"
+msgstr "図枠テンプレートファイルを追加"
+
+#. type: Plain text
+#: Pl_Editor.adoc:496
+msgid ""
+"Are commands to add a basic layout item to the current page layout "
+"description."
+msgstr "これらは要素を追加するための基本的なコマンドです。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:498
+msgid "Zoom selection: direct selection of the display zoom."
+msgstr "画面拡大/縮小/再描画"
+
+#. type: Plain text
+#: Pl_Editor.adoc:499
+msgid "Grid selection: direct selection of the grid."
+msgstr "グリッドの設定"
+
+#. type: delimited block =
+#: Pl_Editor.adoc:504
+msgid ""
+"_Append Page Layout Descr File_ is intended to add poly polygons to make "
+"logos."
+msgstr ""
+"_“図枠テンプレートファイルを追加”_は、図面上にロゴを追加するために使用される"
+"ことを意図しています。"
+
+#. type: delimited block =
+#: Pl_Editor.adoc:508
+msgid ""
+"Because usually a logo it needs hundred of vertices, you cannot create a "
+"polygon by hand. But you can append a description file, created by "
+"Bitmap2Component."
+msgstr ""
+"通常、ロゴは大量の頂点を必要とするため手作業で作成することは困難です。しか"
+"し、Bitmap2Componentプログラムで作成したファイルを読み込むことでロゴを簡単に"
+"使用できます。"
+
+#. type: Title ~
+#: Pl_Editor.adoc:513
+#, no-wrap
+msgid "Status Bar Information"
+msgstr "ステータスバー"
+
+#. type: Plain text
+#: Pl_Editor.adoc:517
+msgid ""
+"The status bar is located a the bottom of the Pl_Editor and provides useful "
+"information to the user."
+msgstr ""
+"ステータスバーは、Pl_Editorの画面下部へ配置されており、各種情報が表示されてい"
+"ます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:519
+msgid "image:images/en/status_bar.png[]"
+msgstr "image:images/ja/status_bar.png[]"
+
+#. type: Plain text
+#: Pl_Editor.adoc:522
+msgid ""
+"Coordinates are *always relative to the corner* selected as **reference**."
+msgstr ""
+"座標系は、*常に原点として設定された角*を**基準**とした座標が表示されていま"
+"す。"
+
+#. type: Title -
+#: Pl_Editor.adoc:525
+#, no-wrap
+msgid "Left window"
+msgstr "画面左ウインドウ(デザインツリー)"
+
+#. type: Plain text
+#: Pl_Editor.adoc:528
+msgid "The left windows shows the list of layout items."
+msgstr "画面左には、要素の一覧が表示されています。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:531
+msgid ""
+"One can select a given item (left clicking on the line) or, when right "
+"clicking on the line, display a pop up menu."
+msgstr ""
+"一覧から左クリックで要素をひとつ選択する事ができ、右クリックでポップアップメ"
+"ニューを表示することが出来ます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:534
+msgid ""
+"This menu allows basic operations: add a new item, or delete the selected "
+"item."
+msgstr ""
+"右クリックのメニューでは、要素の追加/削除の基本操作を行うことが出来ます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:536
+#, no-wrap
+msgid "**-> A selected item is also drawn in a different color on draw panel**.\n"
+msgstr "**-> 左クリックで選択された要素は、画面上で色が変化します。**.\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:542
+#, no-wrap
+msgid ""
+"|image:images/en/project_tree.png[]\n"
+"|Design tree: the item 19 is selected, and shown in highlighted on the\n"
+"draw panel.\n"
+msgstr ""
+"|image:images/ja/project_tree.png[]\n"
+"|画面左のデザインツリーで text10 を選択すると、\n"
+"対応する要素が黄色で表示されます。\n"
+
+#. type: Title -
+#: Pl_Editor.adoc:546
+#, no-wrap
+msgid "Right window"
+msgstr "画面右ウインドウ"
+
+#. type: Plain text
+#: Pl_Editor.adoc:549
+msgid "The right window is the edit window."
+msgstr "(編集ウインドウ)"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:554
+#, no-wrap
+msgid ""
+"|image:images/en/property_none.png[]\n"
+"|image:images/en/property_main.png[]\n"
+msgstr ""
+"|image:images/ja/property_none.png[]\n"
+"|image:images/ja/property_main.png[]\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:558
+msgid ""
+"On this dialog you can set the page property and the item property of the "
+"current item."
+msgstr ""
+"画面右に表示されている編集ウインドウでは、選択された要素のプロパティを編集す"
+"ることが出来ます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:560
+msgid "Displayed settings depend on the selected item:"
+msgstr "編集できる設定は、選択された要素の種類によって異なります："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:565
+#, no-wrap
+msgid ""
+"|image:images/en/property_line.png[]\n"
+"|image:images/en/property_text.png[]\n"
+msgstr ""
+"|image:images/ja/property_line.png[]\n"
+"|image:images/ja/property_text.png[]\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:568
+#, no-wrap
+msgid ""
+"|Settings for lines and rectangles\n"
+"|Settings for texts\n"
+msgstr ""
+"|直線/矩形の設定\n"
+"|テキストの設定\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:571
+#, no-wrap
+msgid ""
+"|image:images/en/property_polyline.png[]\n"
+"|image:images/en/property_bitmap.png[]\n"
+msgstr ""
+"|image:images/ja/property_polyline.png[]\n"
+"|image:images/ja/property_bitmap.png[]\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:574
+#, no-wrap
+msgid ""
+"|Settings for poly-polygons\n"
+"|Setting for bitmaps\n"
+msgstr ""
+"|重畳された多角形の設定\n"
+"|ビットマップイメージの設定\n"
+
+#. type: Title -
+#: Pl_Editor.adoc:579
+#, no-wrap
+msgid "Interactive edition"
+msgstr "編集作業"
+
+#. type: Title ~
+#: Pl_Editor.adoc:583
+#, no-wrap
+msgid "Item selection"
+msgstr "要素の選択"
+
+#. type: Plain text
+#: Pl_Editor.adoc:586
+msgid "An item can be selected:"
+msgstr "要素を選択するには、下記の３通りの方法があります："
+
+#. type: Plain text
+#: Pl_Editor.adoc:588
+msgid "From the Design tree."
+msgstr "デザインツリー(画面左ウインドウ)より、対象の要素を選択する"
+
+#. type: Plain text
+#: Pl_Editor.adoc:589
+msgid "By Left clicking on it."
+msgstr "対象の要素の上で左クリックする"
+
+#. type: Plain text
+#: Pl_Editor.adoc:590
+msgid "By Right clicking on it (and a pop up menu will be displayed)."
+msgstr ""
+"対象の要素の上で右クリックする（要素が選択されると同時に、メニューが表示され"
+"ます）"
+
+#. type: Plain text
+#: Pl_Editor.adoc:592
+msgid "When selected, this item is drawn in yellow."
+msgstr "選択された要素は、黄色で描画されます。"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:599
+#, no-wrap
+msgid ""
+"|image:images/edit_line.png[]\n"
+"|The starting point (image:images/edit_line_start.png[])\n"
+"and the ending point (image:images/edit_line_end.png[])\n"
+"are highlighted.\n"
+msgstr ""
+"|image:images/edit_line.png[]\n"
+"|始点（image:images/edit_line_start.png[]）\n"
+"と終点 （image:images/edit_line_end.png[]）\n"
+"が強調表示されます。\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:602
+msgid "When right clicking on the item, a pop-up menu is displayed."
+msgstr "要素を右クリックした場合、下記のようなメニューが表示されます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:604
+msgid "The pop menu options slightly depend on the selection:"
+msgstr "メニュー内容は、クリックされた位置により変化します："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:610
+#, no-wrap
+msgid ""
+"|image:images/en/context_line_move_start.png[]\n"
+"|image:images/en/context_line_move_end.png[]\n"
+"|image:images/en/context_line_move.png[]\n"
+msgstr ""
+"|image:images/ja/context_line_move_start.png[]\n"
+"|image:images/ja/context_line_move_end.png[]\n"
+"|image:images/ja/context_line_move.png[]\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:614
+msgid ""
+"If more than one item is found, a menu clarification will be shown, to "
+"select the item:"
+msgstr ""
+"クリックした位置に複数の要素があり選択対象が不明な場合、下記のようなダイアロ"
+"グが表示されます。対象を一覧から選択し、OKをクリックしてください："
+
+#. type: Plain text
+#: Pl_Editor.adoc:616
+msgid "image:images/en/dialog_select_element.png[]"
+msgstr "image:images/ja/dialog_select_element.png[]"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:622
+#, no-wrap
+msgid ""
+"|image:images/drag_element.png[] |Once\n"
+"selected, the item, or one of its end points, can be moved by moving the\n"
+"mouse and placed (right clicking on the mouse).\n"
+msgstr ""
+"|image:images/drag_element.png[] |直線や矩形の始点/終点を右クリックし、メニューより”始点の移動”または\n"
+"”終点の移動”を選択することで、始点/終点を移動させることが出来ます。\n"
+
+#. type: Title ~
+#: Pl_Editor.adoc:626
+#, no-wrap
+msgid "Item creation"
+msgstr "要素の作成"
+
+#. type: Plain text
+#: Pl_Editor.adoc:630
+msgid ""
+"To add a new item, right click the mouse button when the cursor is on the "
+"left window or the draw area."
+msgstr ""
+"新規の要素を追加したい場合、画面左のデザインツリーまたは描画エリアで右クリッ"
+"クします。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:632
+msgid "A popup menu is displayed:"
+msgstr "ポップアップメニューが表示されます："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:637
+#, no-wrap
+msgid ""
+"|image:images/en/context_createnew.png[]\n"
+"|image:images/en/context_createnew2.png[]\n"
+msgstr ""
+"|image:images/ja/context_createnew.png[]\n"
+"|image:images/ja/context_createnew2.png[]\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:639
+#, no-wrap
+msgid "|Pop up menu in left window |Pop up menu in draw area.\n"
+msgstr "|デザインツリーでの右クリックメニュー |描画エリアでの右クリックメニュー\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:643
+msgid ""
+"Lines, rectangles and texts are added just by clicking on the corresponding "
+"menu item."
+msgstr ""
+"直線や矩形、テキストの追加は、メニューの該当するコマンドを選択することで作成"
+"できます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:646
+msgid ""
+"Logos must first be created by Bitmap2component, which creates a page layout "
+"description file."
+msgstr ""
+"ロゴについては、Bitmap2componentプログラムでファイルを作成しなければなりませ"
+"ん。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:649
+msgid ""
+"The Append Page Layout Descr File option append this file, to insert the "
+"logo (a poly polygon)"
+msgstr ""
+"ロゴ（重畳された多角形）は、”図枠テンプレートファイルを追加”コマンドより挿入"
+"します。"
+
+#. type: Title ~
+#: Pl_Editor.adoc:652
+#, no-wrap
+msgid "Adding lines, rectangles and texts"
+msgstr "直線/矩形/テキストの追加"
+
+#. type: Plain text
+#: Pl_Editor.adoc:655
+msgid "When clicking on the option, a dialog is opened:"
+msgstr ""
+"右クリックメニューより各要素を追加すると、下記のようなウインドウが表示されま"
+"す："
+
+#. type: delimited block |
+#: Pl_Editor.adoc:660
+#, no-wrap
+msgid ""
+"|image:images/en/dialog_newline.png[]\n"
+"|image:images/en/dialog_newtext.png[]\n"
+msgstr ""
+"|image:images/ja/dialog_newline.png[]\n"
+"|image:images/ja/dialog_newtext.png[]\n"
+
+#. type: delimited block |
+#: Pl_Editor.adoc:662
+#, no-wrap
+msgid "|Adding line or rectangle |Adding text\n"
+msgstr "|直線/矩形の追加 |テキストの追加\n"
+
+#. type: Plain text
+#: Pl_Editor.adoc:665
+msgid "Position of end points, and corner reference can be defined here."
+msgstr "始点/終点座標や、座標系原点の設定はこのウインドウより行います。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:668
+msgid ""
+"However they can be defined later, from the right window, or by moving the "
+"item, or one of its end points."
+msgstr ""
+"これら設定は、後から画面右側の編集ウインドウから再設定することが可能です。ま"
+"た始点/終点位置などは要素をマウス操作などで移動することによっても変更されま"
+"す。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:670
+msgid "Most of time the corner reference is the same for both points."
+msgstr "多くの場合、始点/終点の座標系原点の設定は同じになります。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:674
+msgid ""
+"If this is not the case, define the corner reference at creation is better, "
+"because if a corner reference is changed later, the geometry of the item "
+"will be a bit strange."
+msgstr ""
+"座標原点の設定が始点/終点で異なる場合、作成後にこれら設定を変更すると図形が位"
+"置や形状が大きく変形することがあります。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:677
+msgid ""
+"When an item is created, if is put in move mode, and you can refine its "
+"position (this is very useful for texts and small lines or rectangles)"
+msgstr ""
+"テキストや小さな図形などでは、要素作成後に右クリックメニューより要素を移動し"
+"位置を調整する方が便利な場合があります。"
+
+#. type: Title ~
+#: Pl_Editor.adoc:680
+#, no-wrap
+msgid "Adding logos"
+msgstr "ロゴの追加"
+
+#. type: Plain text
+#: Pl_Editor.adoc:684
+msgid ""
+"To add a logo, a poly polygon (the vectored image of the logo) must be first "
+"created using Bitmap2component."
+msgstr ""
+"重畳された多角形としてのロゴ（ベクトル線化された画像ロゴ）を挿入する場合、最"
+"初にBitmap2componentプログラムによりロゴファイルを生成しておく必要がありま"
+"す。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:687
+msgid ""
+"Bitmap2component creates a page layout description file which is append to "
+"the current design, using the *Append Page Layout Descr File* option."
+msgstr ""
+"Bitmap2componentプログラムは、図枠テンプレートファイル形式で作成され、 *”図枠"
+"テンプレートファイルを追加”*コマンドによりデザインに取り込みます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:690
+msgid ""
+"Bitmap2component creates a page layout description file which contains only "
+"one item: a poly polygon."
+msgstr ""
+"Bitmap2componentプログラムは、画像ファイルを一つの重畳された多角形へと変換"
+"し、図枠テンプレートファイル形式で出力します。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:693
+msgid ""
+"__However, this command can be used to append any page layout description "
+"file, which is merged with the current design__."
+msgstr ""
+"__このコマンドでは、全ての図枠テンプレートファイル形式のファイルを取り込み、"
+"現在のレイアウトにマージさせることが可能です。__"
+
+#. type: Plain text
+#: Pl_Editor.adoc:696
+msgid ""
+"Once a poly polygon is inserted, it can be moved and its parameters edited."
+msgstr ""
+"一度ロゴを取り込んだ後、移動や編集ウインドウによるパラメータの編集が可能で"
+"す。"
+
+#. type: Title ~
+#: Pl_Editor.adoc:699
+#, no-wrap
+msgid "Adding image bitmaps"
+msgstr "ビットマップイメージの追加"
+
+#. type: Plain text
+#: Pl_Editor.adoc:703
+msgid ""
+"You can add an image bitmap using most of bitmap formats (PNG, JPEG, BMP ...)"
+msgstr ""
+"多くの形式（PNG, JPEG, BMPなど）の画像ファイルを挿入することができます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:706
+msgid ""
+"When a bitmap is imported, its PPI (pixel per inch) definition is set to "
+"300PPI"
+msgstr "追加された画像ファイルは、300PPI(Pixel/Inch)として設定されます。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:708
+msgid "This value can be modified in panel Properties (right panel)."
+msgstr "この設定は、編集ウインドウで変更することが可能です。（画面右）"
+
+#. type: Plain text
+#: Pl_Editor.adoc:710
+msgid "The actual size depend on this parameter."
+msgstr "実際のサイズは、このパラメータに依存します。"
+
+# "高精細"を"高解像度"へ変更
+#. type: Plain text
+#: Pl_Editor.adoc:713
+msgid ""
+"Be aware that using higher definition values brings larger output files, and "
+"can have a noticeable draw or plot time."
+msgstr ""
+"高解像度の画像ファイルを使用すると、図面ファイル等のファイルサイズの肥大化、"
+"描画／プロット時間の増大を招くことにご注意ください。"
+
+#. type: Plain text
+#: Pl_Editor.adoc:714
+msgid "A bitmap can be repeated, **but not rotated**."
+msgstr "ビットマップイメージは、繰り返し設定できますが、**回転できません**。"

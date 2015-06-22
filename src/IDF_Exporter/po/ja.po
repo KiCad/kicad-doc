@@ -1,0 +1,1317 @@
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: IDF_Exporter-ja\n"
+"POT-Creation-Date: 2015-07-05 11:47+0900\n"
+"PO-Revision-Date: 2015-06-28 01:37+0900\n"
+"Last-Translator: starfort <starfort@nifty.com>\n"
+"Language-Team: kicad.jp <kicad@kicad.jp>\n"
+"Language: Japanese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. type: Title =
+#: IDF_Exporter.adoc:7
+#, no-wrap
+msgid "IDF Exporter"
+msgstr "IDF Exporter"
+
+#. image:images/kicad_logo.png[]
+#. type: Plain text
+#: IDF_Exporter.adoc:12
+#, no-wrap
+msgid "*IDF Exporter*\n"
+msgstr "*IDF Exporter*\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:14
+msgid "_Reference manual_"
+msgstr "リファレンスマニュアル"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:17
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "著作権\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:23
+msgid ""
+"This document is Copyright © 2014 by it's contributors as listed below.  You "
+"may distribute it and/or modify it under the terms of either the GNU General "
+"Public License (http://www.gnu.org/licenses/gpl.html), version 3 or later, "
+"or the Creative Commons Attribution License (http://creativecommons.org/"
+"licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"このドキュメントは以下の貢献者により著作権所有(© 2014)されています。あなた"
+"は、GNU General Public License ( http://www.gnu.org/licenses/gpl.html ) の"
+"バージョン3以降、あるいはクリエイティブ・コモンズライセンス ( http://"
+"creativecommons.org/licenses/by/3.0/ ) のバージョン3以降のいずれかの条件の下"
+"で、配布または変更することができます 。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:25
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr "このガイドの中のすべての商標は、正当な所有者に帰属します。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:28
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "貢献者\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:30
+msgid "Cirilo Bernardo"
+msgstr "Cirilo Bernardo"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:33
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "フィードバック\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:36
+msgid ""
+"Please direct any comments or suggestions to the author "
+"(cirilo_bernardo@yahoo.com)."
+msgstr ""
+"このドキュメントに関するコメントや提案は、何でも著者 (cirilo_bernardo@yahoo."
+"com)へ送ってください："
+
+#. type: Plain text
+#: IDF_Exporter.adoc:39
+#, no-wrap
+msgid "*Acknowledgments*\n"
+msgstr "謝辞\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:41
+msgid "None"
+msgstr "なし"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:44
+#, no-wrap
+msgid "*Publication date and software version*\n"
+msgstr "発行日とバージョン\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:46
+msgid "Published on January 26, 2014."
+msgstr "January 26, 2014. 発行"
+
+#. Since docbook "article" is more compact, I have to separate this page
+#. type: Plain text
+#: IDF_Exporter.adoc:49
+msgid "<<<<"
+msgstr "<<<<"
+
+#. type: Title -
+#: IDF_Exporter.adoc:51
+#, no-wrap
+msgid "Introduction to the IDFv3 exporter"
+msgstr "IDFv3 exporterについて"
+
+# "基板外形"を"基板アウトライン"へ変更
+# "部品の外形"を"コンポーネントアウトライン"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:62
+#, fuzzy
+#| msgid ""
+#| "The IDF exporter exports an IDFv3 footnote:[http://www."
+#| "simplifiedsolutionsinc.com/images/idf_v30_spec.pdf] compliant board (*."
+#| "emn) and library (*.emp) file for communicating mechanical dimensions to "
+#| "a mechanical CAD package. The exporter currently exports the board "
+#| "outline and cutouts, all pad and mounting thru-holes including slotted "
+#| "holes, and component outlines; this is the most basic set of mechanical "
+#| "data required for interaction with mechanical designers. All other "
+#| "entities described in the IDFv3 specification are currently not "
+#| "implemented."
+msgid ""
+"The IDF exporter exports an IDFv3 footnote:[http://www."
+"simplifiedsolutionsinc.com/images/idf_v30_spec.pdf] compliant board (*.emn) "
+"and library (*.emp) file for communicating mechanical dimensions to a "
+"mechanical CAD package. The exporter currently exports the board outline and "
+"cutouts, all pad and mounting thru-holes including slotted holes, and "
+"component outlines; this is the most basic set of mechanical data required "
+"for interaction with mechanical designers. All other entities described in "
+"the IDFv3 specification are currently not exported."
+msgstr ""
+"IDF exporter は、機械系CADへ寸法情報を伝えるため、IDF V3.0 付加情報:[http://"
+"www.simplifiedsolutionsinc.com/images/idf_v30_spec.pdf] に準拠した基板(*."
+"emn) とライブラリ (*.emp)のファイルを出力します。exporter は今のところ、基板"
+"アウトラインと切削部、パッドとランド（細長い穴のものを含む）、及びコンポーネ"
+"ントアウトラインに関する情報を出力します。これは、機構設計者とやりとりする必"
+"要がある機械的情報の基本部分のほとんどです。IDF V3.0 仕様に記載された他の要素"
+"は現在実装されていません。"
+
+#. type: Title -
+#: IDF_Exporter.adoc:64
+#, no-wrap
+msgid "Specifying component models for use by the exporter"
+msgstr "exporter で使用するコンポーネントモデルの指定"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:71
+msgid ""
+"The IDF exporter makes use of the 3D model file attribute which was "
+"originally used by the 3D viewer. Since the 3D viewer, IDF, and possible "
+"future mechanical CAD exporters are generally interested in different types "
+"of file format, it is possible to use the 3D model file attribute to specify "
+"models for multiple exporters."
+msgstr ""
+"IDF exporter は、元々3Dビューアで使われている3Dモデルファイルのアトリビュート"
+"を使用します。3Dビューア、IDF、将来的な機械系CADエクスポータは、別の様々な種"
+"類のファイルフォーマットにも広く関心を払っており、多くのエクスポータではモデ"
+"ルを指定することで3Dモデルファイルのアトリビュートを使用できるようにしていま"
+"す。"
+
+# "外形線"を"アウトライン"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:90
+#, fuzzy
+#| msgid ""
+#| "From within the module editor or pcbnew, edit the footprint parameters "
+#| "and click on the 3D settings tab (see link:#figure-1[figure 1]), click on "
+#| "Add 3D Shape, and select the filter “IDFv3 component files (*.idf)” (see "
+#| "link:#figure-2[figure 2]). Select the desired outline file and enter any "
+#| "necessary values for the offset and rotation. Note that only the offset "
+#| "values and the Z rotation value are used by the IDF exporter; all other "
+#| "values are ignored. The offsets must be specified using the IDF board "
+#| "output units (mm or thou) and in the IDF coordinate system, that is a "
+#| "right-hand coordinate system with +Z moving towards the viewer, +X is to "
+#| "the viewer's right, and +Y is up. The rotation must be in degrees and a "
+#| "positive rotation is a counter-clockwise rotation as described in the "
+#| "IDFv3 specification. Multiple outlines may be combined with appropriate "
+#| "offsets to represent simple assemblies such as a DIP package in a socket."
+msgid ""
+"From within the module editor or pcbnew, edit the footprint parameters and "
+"click on the 3D settings tab (see link:#figure-1[figure 1]), click on Add 3D "
+"Shape, and select the filter “IDFv3 component files (*.idf)” (see link:"
+"#figure-2[figure 2]). Select the desired outline file and enter any "
+"necessary values for the offset and rotation. Note that only the offset "
+"values and the Z rotation value are used by the IDF exporter; all other "
+"values are ignored. The offsets must be specified using the IDF board output "
+"units (mm or thou) and in the IDF coordinate system, that is a right-hand "
+"coordinate system with +Z moving towards the viewer, +X is to the viewer's "
+"right, and +Y is up. The rotation must be in degrees and a positive rotation "
+"is a counter-clockwise rotation as described in the IDFv3 specification. "
+"Multiple outlines may be combined with appropriate offsets to represent "
+"simple assemblies such as a DIP package in a socket. [**BUG:** in "
+"discussions it has been decided that the unit of the Z offset should be "
+"inches, which is consistent with the units of the VRML model offset. It may "
+"also be useful not to ignore the (X,Y) offset values. The behavior mentioned "
+"here will change at some point in the future.]"
+msgstr ""
+"モジュールエディタや pcbnew から、フットプリントのパラメータを編集し、3D設定"
+"タブ上でクリック（リンク参照:#figure-1[figure 1]）、3Dシェープ追加をクリック"
+"し、“IDFv3 component files (*.idf)” のフィルタを選択します（リンク参照:"
+"#figure-2[figure 2]）。希望するアウトラインファイルを選択し、オフセットと回転"
+"に必要な値を入力します。オフセットは IDFファイルの書き出しに使用される単位"
+"（mm または thou(=mils)）で指定しなければなりません。また IDF の座標系は右手"
+"系で、Z軸が観測者へ向かって正、X軸が観測者の右へ向かって正、Y軸が上へ向かって"
+"正です。回転角は度で表さなければならず、正の回転方向は IDF V3.0 仕様 に記載通"
+"り左回りです。複数のアウトラインは、ソケットに挿入されたDIPパッケージのような"
+"単純な組み立て品を表すために、適切なオフセットを持って結合されることがありま"
+"す。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:98
+#, fuzzy
+#| msgid ""
+#| "Once models have been specified for all desired components, from within "
+#| "pcbnew, select the *File* menu, then *Export* , and finally **IDFv3 "
+#| "Export**. A dialog box will pop up (see link:#figure-3[figure 3]) which "
+#| "allows the output filename and IDF output units (mm or mils) to be set.  "
+#| "The exported IDF files can be viewed in the free mechanical CAD software "
+#| "http://www.freecadweb.org/[FreeCAD] or converted to VRML using the "
+#| "idf2vrml tool and viewed with any suitable VRML viewer."
+msgid ""
+"Once models have been specified for all desired components, from within "
+"pcbnew select the *File* menu then *Export* and finally **IDFv3 Export**. A "
+"dialog box will pop up (see link:#figure-3[figure 3]) which allows the "
+"output filename and IDF output units (mm or mils) to be set.  The exported "
+"IDF files can be viewed in the free mechanical CAD software http://www."
+"freecadweb.org/[FreeCAD] or converted to VRML using the idf2vrml tool and "
+"viewed with any suitable VRML viewer."
+msgstr ""
+"モデルに必要な全てのコンポーネントを指定した後は、 pcbnew から*ファイル* メ"
+"ニューを選択して*エクスポート*し、最終的に**IDFv3 Export**します。IDF 出力の"
+"単位（mm または mils）と出力ファイル名を指定するダイアログボックスがポップ"
+"アップ（リンク参照:#figure-3[figure 3]）します。エクスポートされた IDF ファイ"
+"ルは無償の機械系CADソフトウェア http://www.freecadweb.org/[FreeCAD]で参照でき"
+"ます。もしくは  idf2vrml ツールで VRML 形式へ変換して適切な VRML ビューアでも"
+"参照できます。"
+
+#. type: Block title
+#: IDF_Exporter.adoc:101
+#, no-wrap
+msgid "Module properties, 3D settings"
+msgstr "モジュールプロパティ、3D設定"
+
+#. type: Target for macro image
+#: IDF_Exporter.adoc:102
+#, no-wrap
+msgid "images/module_params.png"
+msgstr "images/ja/module_params.png"
+
+#. type: Block title
+#: IDF_Exporter.adoc:106
+#, no-wrap
+msgid "IDF component outline selection"
+msgstr "IDF コンポーネントアウトラインセクション"
+
+#. type: Target for macro image
+#: IDF_Exporter.adoc:107
+#, no-wrap
+msgid "images/idf_select.png"
+msgstr "images/ja/idf_select.png"
+
+#. type: Block title
+#: IDF_Exporter.adoc:111
+#, no-wrap
+msgid "IDF output settings"
+msgstr "IDF 出力の設定"
+
+#. type: Target for macro image
+#: IDF_Exporter.adoc:112
+#, no-wrap
+msgid "images/idf_export.png"
+msgstr "images/ja/idf_export.png"
+
+#. type: Title -
+#: IDF_Exporter.adoc:116
+#, no-wrap
+msgid "Creating a component outline file"
+msgstr "コンポーネントアウトラインファイルの生成"
+
+# "～の外形"を"～アウトライン"へ変更
+# "参照符号"を"参照事項"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:124
+msgid ""
+"The component outline file (*.idf) consists of a single .ELECTRICAL or ."
+"MECHANICAL section as described in the specification document. The section "
+"may be preceded by any number of comment lines; the comment lines are copied "
+"by the exporter into the library file and can be used to track metadata such "
+"as references to the documents used to determine the component's outline and "
+"dimensions."
+msgstr ""
+"コンポーネントアウトラインファイル (*.idf) は、仕様書に記載されているように単"
+"一の .ELECTRICAL または .MECHANICAL セクションで構成されます。セクションは行"
+"数に拘らずコメント行を前に置くことができます。;コメント行は exporter によって"
+"ライブラリファイルへコピーされ、コンポーネントアウトラインと寸法の決定に使わ"
+"れたドキュメントの参照事項のようなメタデータを追跡するために使用できます。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:134
+msgid ""
+"The component outline section contains fields which are strings, integers, "
+"or floating point numbers. A string is a combination of characters which may "
+"include spaces; if a string contains spaces then it must be quoted. "
+"Quotation marks must not appear within a string.  Floating point numbers may "
+"be represented using decimal or exponential notations but decimal notation "
+"is preferred for human readability. The decimal point must be a dot and not "
+"a comma. The IDF file must consist only of 7-bit ASCII characters; use of 8-"
+"bit characters will result in undefined behavior."
+msgstr ""
+"コンポーネントアウトラインのセクションは、複数の文字列、整数、浮動小数点数の"
+"フィールドを含みます。一つの文字列は複数の文字（空白を含む）の組み合わせから"
+"成ります。;もし文字列が空白を含む場合は引用符で囲まなければなりません。引用符"
+"を文字列の中に入れることはできません。浮動小数点数は十進記数法または指数表記"
+"で表すことができますが、可読性から十進記数法を使うことが好ましいでしょう。小"
+"数点はカンマ(,)ではなく、ドット(.)でなければなりません。IDF ファイルは 7-bit "
+"アスキー文字のみで構成しなければなりません。;8-bit 文字を使用した場合の挙動は"
+"不定となります。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:142
+msgid ""
+"An IDF file consists of SECTIONS which consist of RECORDS which consist of "
+"FIELDS. For the IDF outline files only one type of section may exist and "
+"must be one of .ELECTRICAL or .MECHANICAL. A record is a single line of text "
+"and may contain one or more fields. Fields are sequences of characters "
+"separated by one or more spaces which do not appear between quotation marks. "
+"All fields of a record must appear on a single line; records may not span "
+"lines."
+msgstr ""
+"IDF ファイルは、FIELDS からなる RECORDS で構成された SECTIONS で構成されま"
+"す。IDF アウトラインファイルにはただ一つのセクションタイプだけが存在し、."
+"ELECTRICAL か .MECHANICAL. のどちらかでなければなりません。一つのレコードは単"
+"一行のテキストで、一つ以上のフィールドからなります。 フィールドは、引用符に囲"
+"まれていない一つ以上の空白で区切られた文字列が連続したものです。一つのレコー"
+"ドに含まれる全てのフィールドは単一行でなければなりません。; レコードは複数行"
+"に渡ってはいけません。"
+
+# "Record 1は"を"Record 1には"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:146
+msgid ""
+"The section heading (.ELECTRICAL or .MECHANICAL) is considered the first "
+"record (Record 1) of the section. Record 1 must be followed by Record 2 "
+"which has four fields:"
+msgstr ""
+"セクションの表題（.ELECTRICAL または .MECHANICAL）はセクションの最初の "
+"RECORD (Record 1) となるよう考慮して下さい。Record 1 には、４つのフィールドか"
+"ら成る Record 2 が続かなければなりません。"
+
+# "～の外形"を"～アウトライン"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:152
+msgid ""
+"Geometry Name: a string which in combination with the Part Number must form "
+"a unique identifier for the component outline. For standardized packages, "
+"the package name is a good value for the geometry name, for example "
+"“SOT-23”. For unique packages the manufacturer's part number is a good "
+"choice for the geometry name."
+msgstr ""
+"ジオメトリ名: 部品番号と結合した文字列はコンポーネントアウトラインを表す固有"
+"識別子となるべきです。標準化されたパッケージでは、ジオメトリ名としてパッケー"
+"ジ名が適切です。（例“SOT-23”）カスタム品のパッケージには、製造業者の品番がジ"
+"オメトリ名として良い選択となります。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:158
+msgid ""
+"Part Number: although obviously intended for the part number, for example "
+"BS107, it is better to use this string to help describe the package. For "
+"example if the geometry name is “TO-92”, the part number entry may be used "
+"to describe the layout of the pads or the orientation of this particular "
+"TO-92 outline file."
+msgstr ""
+"部品番号: 明らかに部品番号を意図したもの（例 BS107）だとしても、この文字列を"
+"パッケージを表すために使ったほうが良いでしょう。例えば、ジオメトリ名"
+"が“TO-92”なら、部品番号の記載はパッドのレイアウトや他のTO-92と異なる向きを示"
+"すために使えるかも知れません。"
+
+# "部品外形"を"コンポーネントアウトライン"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:161
+msgid ""
+"IDF Unit: this must be one of MM or THOU and it applies only to the units "
+"describing this single component outline."
+msgstr ""
+"IDF 単位: mm または thou(=mils) としなければなりません。また、これは単独のコ"
+"ンポーネントアウトラインを記述する単位としてのみ適用されます。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:164
+msgid ""
+"Height: this is a floating point number representing the nominal height of "
+"the component using units specified in Field 3."
+msgstr ""
+"高さ: Field 3 で指定された単位を用いた、コンポーネントの図面上の高さを表す浮"
+"動小数点数です。"
+
+# "外形"を"アウトライン"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:167
+msgid ""
+"Record 2 must be followed by a number of Record 3 entries which specify the "
+"outline of the component. Record 3 consists of four fields:"
+msgstr ""
+"Record 2 には、コンポーネントのアウトラインを指定する Record 3 が続かなければ"
+"なりません。Record 3 は４つのフィールドからなります。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:170
+msgid ""
+"Loop Index: 0 (outline points are specified in counter-clockwise order) or 1 "
+"(outline points are specified in clockwise order)"
+msgstr ""
+"ループインデックス: 0（外形点は左回り順で指定されます）または1（外形点は右回"
+"り順で指定されます）"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:172
+msgid "X coordinate: a floating point number"
+msgstr "X 座標: 浮動小数点数です。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:174
+msgid "Y coordinate: a floating point number"
+msgstr "Y 座標: 浮動小数点数です。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:184
+msgid ""
+"Included Angle: a floating point number. If the value is 0 then a straight "
+"line segment is drawn from the previous point to this point.  If the value "
+"is 360 then the previous point specifies the center of a circle and this "
+"point specifies a point on the circle; never specify a circle using a value "
+"of -360 as at least one major mechanical CAD package does not behave well in "
+"that situation. If the value is negative then a clockwise arc is drawn from "
+"the previous point to this point and if the value is positive then a counter-"
+"clockwise arc is drawn."
+msgstr ""
+"夾角: 浮動小数点数です。もし値が0ならば、一つ前の点からこの点へと描かれたセグ"
+"メントは直線です。もし値が360ならば、一つ前の点が円の中心を指定し、この点は円"
+"の点を指定しています。; 少なくとも一つのメジャーな機械系CADが対応していないの"
+"で、値に-360を用いて円を指定してはいけません。もし値が負ならば一つ前の点から"
+"この点へ右回りの弧が描かれ、値が正ならば左回りの弧が描かれます。"
+
+# "外形"を"アウトライン"へ変更
+#. type: Plain text
+#: IDF_Exporter.adoc:188
+msgid ""
+"Only one closed loop is permitted and it is not possible to specify a "
+"cutout. The last point specified must be the same as the first point unless "
+"the outline is a circle."
+msgstr ""
+"ただ一つの閉じたループのみが許容され、切削部を指定することはできません。アウ"
+"トラインが円である場合を除き、最後の点は最初の点と等しくなければなりません。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:190
+msgid "Example IDF File 1:"
+msgstr "例 IDF ファイル 1:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:198
+#, no-wrap
+msgid ""
+"# a simple cylinder – this could represent an electrolytic capacitor\n"
+".ELECTRICAL\n"
+"    \"cylinder\" \"5mm OD, 5mm height\" MM 5\n"
+"    0 0 0 0\n"
+"    0 2.5 0 360\n"
+".END_ELECTRICAL\n"
+msgstr ""
+"# a simple cylinder – this could represent an electrolytic capacitor\n"
+".ELECTRICAL\n"
+"    \"cylinder\" \"5mm OD, 5mm height\" MM 5\n"
+"    0 0 0 0\n"
+"    0 2.5 0 360\n"
+".END_ELECTRICAL\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:201
+msgid "Example IDF File 2:"
+msgstr "例 IDF ファイル 2:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:217
+#, no-wrap
+msgid ""
+"# an upside-down T\n"
+"# a comment added for the sake of adding comments\n"
+".ELECTRICAL\n"
+"    \"Capital T\" \"5x8x10mm, upside down\" MM 10\n"
+"    0 -0.5 8 0\n"
+"    0 -0.5 0.5 0\n"
+"    0 -2.5 0.5 0\n"
+"    0 -2.5 -0.5 180\n"
+"    0 2.5 -0.5 0\n"
+"    0 2.5 0.5 180\n"
+"    0 0.5 0.5 0\n"
+"    0 0.5 8 0\n"
+"    0 -0.5 8 180\n"
+".END_ELECTRICAL\n"
+msgstr ""
+"# an upside-down T\n"
+"# a comment added for the sake of adding comments\n"
+".ELECTRICAL\n"
+"    \"Capital T\" \"5x8x10mm, upside down\" MM 10\n"
+"    0 -0.5 8 0\n"
+"    0 -0.5 0.5 0\n"
+"    0 -2.5 0.5 0\n"
+"    0 -2.5 -0.5 180\n"
+"    0 2.5 -0.5 0\n"
+"    0 2.5 0.5 180\n"
+"    0 0.5 0.5 0\n"
+"    0 0.5 8 0\n"
+"    0 -0.5 8 180\n"
+".END_ELECTRICAL\n"
+
+#. type: Title -
+#: IDF_Exporter.adoc:220
+#, no-wrap
+msgid "Guidelines for creating outlines"
+msgstr "アウトライン作成のためのガイドライン"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:225
+msgid ""
+"When creating outlines, and especially when sharing the work with others, "
+"consistency in the design and naming of files helps people locate files "
+"quicker and place the components with minimal hassles."
+msgstr ""
+"アウトラインを作成するとき（特に複数で作業するような場合）、ファイルの名前と"
+"設計における一貫性は、素早くファイルを見つけたり、最少の努力で部品を配置する"
+"ために役立ちます。"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:227
+#, no-wrap
+msgid "Package naming"
+msgstr "パッケージの命名"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:238
+msgid ""
+"Try to make some information about the outline available in the filename to "
+"give the user a general idea of what the outline is. For example axial "
+"leaded cylindrical packages may represent some types of capacitors as well "
+"as some types of resistors, so it makes sense to identify an outline as a "
+"horizontal or vertical axial leaded device and to add some extra information "
+"on the relevant dimensions: diameter, length, and pitch are the most "
+"important. If a device has a unique outline, the manufacturer's part number "
+"and a prefix to indicate the class of device are adequate."
+msgstr ""
+"ユーザーがアウトラインの概要を把握できるよう、ファイル名にアウトラインについ"
+"ての情報を付加するように努めるべきです。例えば、円筒形のアキシャルリードパッ"
+"ケージは抵抗だけではなくコンデンサにも使われるので、アキシャルリード部品のア"
+"ウトラインが横向きなのか若しくは縦向きなのかを識別することは意味があります。"
+"また関連する寸法についていくつかの情報（: 直径、長さ、ピッチ）を付加すること"
+"は最も重要です。もし部品がカスタム品で特別なアウトラインを持つような場合、製"
+"造業者の品番や種類を表すプレフィックスを使うことが適切です。"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:240
+#, no-wrap
+msgid "Comments"
+msgstr "コメント"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:245
+msgid ""
+"Use comments in the IDF file to give users more information about the "
+"outline, for example a reference to the source used for dimensional "
+"information."
+msgstr ""
+"ユーザーにアウトラインについての関連情報（例えば、寸法情報の出典に関する参照"
+"事項）を提供するためは IDF ファイル内でコメントを使用します。"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:247
+#, no-wrap
+msgid "Geometry and Part Number entries"
+msgstr "ジオメトリと部品番号の入力"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:256
+#, fuzzy
+#| msgid ""
+#| "Think carefully about the values to give to the Geometry and Part Number "
+#| "entries. Taken together. These strings act as a unique identifier for the "
+#| "MCAD system. The values of the strings will ideally have some meaning to "
+#| "a user, but this is not necessary: the values are primarily intended for "
+#| "the MCAD system to use as a unique ID. Ideally the values chosen will be "
+#| "unique within any large collection of outlines; choosing values well will "
+#| "result in fewer clashes especially in complex boards."
+msgid ""
+"Think carefully about the values to give to the Geometry and Part Number "
+"entries. Taken together, these strings act as a unique identifier for the "
+"MCAD system. The values of the strings will ideally have some meaning to a "
+"user, but this is not necessary: the values are primarily intended for the "
+"MCAD system to use as a unique ID. Ideally the values chosen will be unique "
+"within any large collection of outlines; choosing values well will result in "
+"fewer clashes especially in complex boards."
+msgstr ""
+"ジオメトリと部品番号へ入力する値は慎重に考慮しましょう。まとめて扱うべきで"
+"す。これらの文字列は機械系CADに対して固有識別子として働きます。文字列の値は"
+"ユーザーにとって意味があることが理想的ですが、必須ではありません。: 値は主と"
+"して機械系CADで固有識別子として使用するためのものです。理想的には、選ばれた値"
+"はいかなる多くのアウトラインに対しても固有のものとなるでしょう。; 十分に選ば"
+"れた値は、特に複数の基板においても衝突を少なく抑えることにつながります。"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:258
+#, no-wrap
+msgid "Pin orientation and positioning"
+msgstr "ピンの向きと配置"
+
+# "X軸の"を"X軸に"へ訂正
+#. type: Plain text
+#: IDF_Exporter.adoc:272
+#, fuzzy
+#| msgid ""
+#| "For through-hole components there are no widely accepted schemes for "
+#| "determining the pin orientation and component center in 3D models. For "
+#| "consistency, if there are only 2 pins they must be in a horizontal "
+#| "arrangement (see link:#figure-4[figure 4]) along the X axis and for 3 "
+#| "pins try to keep 2 in a horizontal arrangement on the X axis. Polarized "
+#| "devices such as electrolytic or tantalum capacitors must have the "
+#| "positive lead on Pin 1 and diodes must have the cathode on Pin 1; this is "
+#| "to maintain compatibility of the schematic symbols with the orientation "
+#| "defined for SMT devices; however, note that many existing KiCad "
+#| "schematics and footprints place the anode at Pin 1."
+msgid ""
+"For through-hole components there are no widely accepted schemes for "
+"determining the pin orientation and component center in 3D models. For "
+"consistency, if there are only 2 pins they must be in a horizontal "
+"arrangement (see link:#figure-4[figure 4]) along the X axis and for 3 pins "
+"try to keep 2 in a horizontal arrangement on the X axis. Polarized devices "
+"such as electrolytic or tantalum capacitors must have the positive lead on "
+"Pin 1 and diodes must have the cathode on Pin 1; this is to maintain "
+"compatibility of the schematic symbols with the orientation defined for SMT "
+"devices; however, note that many existing KiCad schematics and footprints "
+"place the anode at Pin 1 (*note:* in the latest revision of the KiCad "
+"footprints on github the anode is now Pin 2 for THT as well as SMT "
+"components)."
+msgstr ""
+"スルーホールコンポーネントに対しては、3Dモデルの中心とピンの向きを決めるため"
+"に図面を使うことは一般的ではありません。一貫性のため、X軸に沿って水平に配置 "
+"(リンク参照:#figure-4[figure 4]) された２つのピンがあれば、３ピンに対してはＸ"
+"軸上に水平配置された２つのピンを保つようにします。電解コンデンサやタンタルコ"
+"ンデンサのような有極性部品は正極のリードを１ピンにする必要があります。またダ"
+"イオードは１ピンをカソードとします。; これは表面実装部品(SMTデバイス)で定義さ"
+"れた方向を持つ回路記号と互換性を保つためです。; しかしながら、多くの既存の "
+"KiCad 図面とフットプリントが１ピンをアノードとしていることに注意してくださ"
+"い。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:285
+msgid ""
+"For DIP devices the center of the outline must be at the center of the "
+"rectangle described by the pin locations and Pin 1 is preferably at the top "
+"left corner; this will maintain some consistency with the standardized "
+"orientation of SMT components; however, such a model will be rotated -90 "
+"degrees relative to most existing KiCad component footprints and VRML "
+"models. For items such as a horizontal radial leaded capacitor or a "
+"horizontal TO-220 package, prefer to place the leads in a row on the X axis "
+"and with the body of the device extending upwards (see link:#figure-4[figure "
+"4]). Non-polarized vertical axial leaded components must have the wire on "
+"the right hand side; polarized vertical axial leaded components may have the "
+"wire on either side, depending on whether Pin 1 is on the lower end (wire on "
+"right) or on the upper end (wire on left)."
+msgstr ""
+"DIP 部品に対しては、アウトラインの中心はピンの位置によって描かれる矩形の中心"
+"でなければなりません。また１ピンは左上のコーナーとすることが望ましいです。; "
+"これは表面実装部品(SMTデバイス)の標準的な向きとある程度の一貫性を保つでしょ"
+"う。; しかしながら、このようなモデルは多くの既存の KiCad コンポーネントフット"
+"プリントと VRML モデルに対して相対的に -90 度回転するでしょう。横向きのラジア"
+"ルリードコンデンサや横向きの TO-220 パッケージに対しては、デバイス本体の上向"
+"きに延長されたＸ軸上の列にリードを配置することが好ましいです(リンク参照:"
+"#figure-4[figure 4])。無極性の縦向きアキシャルリードコンポーネントは右手側に"
+"配線されなければなりません。; 有極性の縦向きアキシャルリードコンポーネントは"
+"ピン１が下端（右側へ配線）か上端（左側へ配線）かによって、どちら側へも配線さ"
+"れることがあり得ます。"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:294
+#, no-wrap
+msgid ""
+"*Note:* In the current revision of the KiCad footprint modules the\n"
+"THT components are being organized with pins along the Y axis\n"
+"rather than the X axis and Pin 1 of the device is at the origin rather\n"
+"than at the center of the package. Orient and position the component outline\n"
+"to suit your specific footprints; this will avoid the need to specify a\n"
+"non-zero rotation for the IDF component outlines. Since the IDF\n"
+"exporter currently ignores the (X,Y) offset values it is vital that\n"
+"you use the correct origin in the IDF component outline.\n"
+msgstr ""
+
+#. type: Plain text
+#: IDF_Exporter.adoc:304
+msgid ""
+"For SMT components the orientation, package center, and outline are defined "
+"by various standards. Use the standard appropriate to your work.  Also keep "
+"in mind that many devices do not conform to any standard; in such cases the "
+"offending device is probably best identified by using the manufacturer's "
+"part number in the outline file name. In general, an SMT outline is a "
+"rectangle encompassing the component package and including the leads; the "
+"package is oriented such that Pin 1 is as close as possible to the top left "
+"corner and the top left corner is usually chamfered for visual reference."
+msgstr ""
+"表面実装部品(SMTデバイス)に対しては、向き、パッケージの中心、アウトラインは"
+"様々な規格で定義されています。あなたの業務に適した規格を使用してください。ま"
+"た多くの部品がいかなる規格にも適合しないことを覚えておきましょう。; このよう"
+"な場合、規格に従わない部品はアウトラインファイルの名前に製造業者の品番を用い"
+"ることでたぶん最もよく識別されます。一般的には、 SMT アウトラインはコンポーネ"
+"ントパッケージとリードを含む部分を囲むような矩形です。; パッケージはピン１が"
+"左上のコーナーに最も近くなるような向きとなります。また左上のコーナーは通常、"
+"視覚的にはっきりさせるため面取り（角を削る）されます。"
+
+#. type: Block title
+#: IDF_Exporter.adoc:306
+#, no-wrap
+msgid "Sample outlines generated by the programs idfcyl and idfrect and rendered by SolidWorks."
+msgstr "idfcyl と idfrect ツールで生成されたアウトラインのサンプルと SolidWorks  によるレンダリング"
+
+#. type: Target for macro image
+#: IDF_Exporter.adoc:308
+#, no-wrap
+msgid "images/test_idf_blobs.jpg"
+msgstr "images/test_idf_blobs.jpg"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:316
+msgid ""
+"From left to right are (a) vertical radial leaded cylinder, (b) vertical "
+"axial leaded cylinder with wire on left, (c) vertical axial leaded cylinder "
+"with wire on right, (d) horizontal axial leaded cylinder, (e)  horizontal "
+"radial leaded cylinder, (f) square outline, plain, (g) square outline with "
+"chamfer, (h) square outline with axial lead on right. The top outlines were "
+"specified in units of millimeters while the bottom outlines were specified "
+"in units of inches."
+msgstr ""
+"左から右へ (a) 縦向きラジアルリード円筒部品, (b) 左側配線の縦向きアキシャル"
+"リード円筒部品, (c) 右側配線の縦向きアキシャルリード円筒部品, (d) 横向きアキ"
+"シャルリード円筒部品, (e)  横向きラジアルリード円筒部品, (f) 正方形アウトライ"
+"ン, 平面, (g) 面取りされた正方形アウトライン, (h) 右にアキシャルリードを持つ"
+"正方形アウトライン。上のアウトラインは mm 単位で指定、下のアウトラインは "
+"inch 単位で指定。"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:320
+#, no-wrap
+msgid "Tips on dimensions"
+msgstr "寸法についてのTips"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:339
+msgid ""
+"The purpose served by the extruded outlines is to give the mechanical "
+"designer some idea of the location and physical space occupied by each "
+"component. In a typical scenario the mechanical designer will replace some "
+"of the crude outlines with more detailed mechanical models, for example when "
+"checking to ensure that a right-angle mounted LED will fit into a hole on a "
+"panel. In most situations the accuracy of an outline doesn't matter, but it "
+"is good practice to create outlines which convey the best mechanical "
+"information possible. In a few instances a user may wish to fit the "
+"component into a case with very little excess space, for example in a "
+"portable music player. In such a situation, if most extruded outlines are a "
+"good enough representation of components then the mechanical designer may "
+"only have to replace very few models while designing the case. If the "
+"outlines are not a reliable reflection of reality then the mechanical "
+"designer will waste a lot of time replacing models to ensure a good fit. "
+"After all, if you put garbage in you can expect garbage to come out. If you "
+"put in good information, you can be confident of good results."
+msgstr ""
+"突き出たアウトラインを使う目的は、機構設計者に各部品が占有する物理的な空間と"
+"その位置を認識させることです。典型的なシナリオでは、機構設計者はより詳細な機"
+"械的モデルを持つ幾つかの加工していないアウトラインと入れ替えるでしょう。例え"
+"ば直角に実装された LED がパネルの穴に確実に合うか確認する場合です。多くの場"
+"合、アウトラインの正確さは重要ではありませんが、可能な限り正確な機械的情報を"
+"伝わるようなアウトラインを作ることは良い慣行です。少ない例ですが、例えば携帯"
+"型音楽プレーヤーのように、ユーザーが余分の空間が殆どないケースへコンポーネン"
+"トを収めることを望むこともあるでしょう。このような場合、最も突き出たアウトラ"
+"インがコンポーネントの表現として十分ならば、機構設計者はケースを設計する時に"
+"ほんの少数のモデルと入れ替えるだけで済むでしょう。もしアウトラインが実際の大"
+"きさを反映していると信頼できないなら、機構設計者は確実にケースに収めるため"
+"（機械的）モデルを置き換えることに多くの時間を取られるでしょう。結局のとこ"
+"ろ、あなたがゴミを入れたなら、出てくるものはゴミしか期待できません。もしあな"
+"たが適切な情報を与えたなら、良い結果を確信できます。"
+
+#. type: Title -
+#: IDF_Exporter.adoc:341
+#, no-wrap
+msgid "IDF Component Outline Tools"
+msgstr "IDF コンポーネントアウトラインツール"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:345
+msgid ""
+"A number of command-line tools are available to help generate IDF component "
+"outlines. The tools are:"
+msgstr ""
+"いくつかのコマンドラインツールが IDF コンポーネントアウトラインの生成を助けま"
+"す。ツールは次のものとなります："
+
+#. type: Plain text
+#: IDF_Exporter.adoc:348
+#, no-wrap
+msgid ""
+"*idfcyl:* creates an outline of a cylinder in vertical or horizontal\n"
+"orientation and with axial or radial leads\n"
+msgstr ""
+"*idfcyl:* アキシャルまたはラジアルリードを持った縦または\n"
+"横向きになった円筒のアウトラインを作成します。\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:351
+#, no-wrap
+msgid ""
+"*idfrect:* creates an outline of a rectangle which may have either\n"
+"an axial lead or a chamfer in the top left corner\n"
+msgstr ""
+"*idfrect:* アキシャルリードか面取りされた左上のコーナー\n"
+"を持つ矩形のアウトラインを作成します。\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:354
+#, no-wrap
+msgid ""
+"*dxf2idf:* converts a drawing in DXF format into an IDF component\n"
+"outline\n"
+msgstr ""
+"*dxf2idf:* DXF フォーマットの図面を IDF コンポーネントアウトラインへと\n"
+"変換します\n"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:356
+#, no-wrap
+msgid "idfcyl"
+msgstr "idfcyl"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:360
+msgid ""
+"When *idfcyl* is invoked with no arguments it prints out a usage note and a "
+"summary of its inputs:"
+msgstr ""
+"*idfcyl*は引数なしで呼び出された場合、入力の概要と使用法を表示します。:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:367
+#, no-wrap
+msgid ""
+"idfcyl: This program generates an outline for a cylindrical component.\n"
+"    The cylinder may be horizontal or vertical.\n"
+"    A horizontal cylinder may have wires at one or both ends.\n"
+"    A vertical cylinder may have at most one wire which may be\n"
+"    placed on the left or right side.\n"
+msgstr ""
+"idfcyl: このプログラムは円筒形コンポーネントのアウトラインを作成します。\n"
+"　円筒は横向き又は縦向きです。\n"
+"　横向き円筒は片側または両側に配線できます。\n"
+"　縦向き円筒は左または右側のどちらかに配線できます。\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:380
+#, no-wrap
+msgid ""
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Orientation: V (vertical)\n"
+"    Lead type: X, R (axial, radial)\n"
+"    Diameter of body\n"
+"    Length of body\n"
+"    Board offset\n"
+"    *   Wire diameter\n"
+"    *   Pitch\n"
+"    **  Wire side: L, R (left, right)\n"
+"    *** Lead length\n"
+"    File name (must end in *.idf)\n"
+msgstr ""
+"Input:\n"
+"    単位: mm, in (mm または inch)\n"
+"    向き: V (縦向き)\n"
+"    リードの種類: X, R (アキシャル, ラジアル)\n"
+"    本体の直径\n"
+"    本体の長さ\n"
+"    基板のオフセット\n"
+"    *   配線の直径\n"
+"    *   ピッチ\n"
+"    **  配線面: L, R (左, 右)\n"
+"    *** リードの長さ\n"
+"    ファイル名 (*.idf で終わらなければならない)\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:384
+#, no-wrap
+msgid ""
+"    NOTES:\n"
+"        *   only required for horizontal orientation or\n"
+"            vertical orientation with axial leads\n"
+msgstr ""
+"    NOTES:\n"
+"        *   横向き又は縦向きアキシャルリード\n"
+"            でのみ必要です\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:386
+#, no-wrap
+msgid "        **  only required for vertical orientation with axial leads\n"
+msgstr "        **  縦向きのアキシャルリードでのみ必要です\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:388
+#, no-wrap
+msgid "        *** only required for horizontal orientation with radial leads\n"
+msgstr "        *** 横向きのラジアルリードでのみ必要です\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:394
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a single "
+"axial leaded outline with the lead on the right hand side:"
+msgstr ""
+"NOTES はコマンドラインに任意の引数を入力することで非表示にできます。ユーザー"
+"はコマンドラインで情報を手入力するか、アウトラインを生成するスクリプトを作る"
+"ことができます。次のスクリプトは右手側にリードを持った単独のアキシャルリード"
+"アウトラインを作成します。:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:413
+#, fuzzy, no-wrap
+#| msgid ""
+#| "#!/bin/bash\n"
+#| "# Generate a cylindrical IDF outline for test purposes\n"
+#| "# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
+#| "# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
+#| "./idfcyl - 1 > /dev/null <<  _EOF\n"
+#| "mm\n"
+#| "v\n"
+#| "1\n"
+#| "5\n"
+#| "8\n"
+#| "3\n"
+#| "0.8\n"
+#| "3.5\n"
+#| "r\n"
+#| "cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
+#| "_EOF\n"
+msgid ""
+"#!/bin/bash\n"
+"# Generate a cylindrical IDF outline for test purposes\n"
+"# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
+"# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
+"idfcyl - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"v\n"
+"x\n"
+"5\n"
+"8\n"
+"3\n"
+"0.8\n"
+"3.5\n"
+"r\n"
+"cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
+"_EOF\n"
+msgstr ""
+"#!/bin/bash\n"
+"# Generate a cylindrical IDF outline for test purposes\n"
+"# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
+"# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
+"./idfcyl - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"v\n"
+"1\n"
+"5\n"
+"8\n"
+"3\n"
+"0.8\n"
+"3.5\n"
+"r\n"
+"cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
+"_EOF\n"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:416
+#, no-wrap
+msgid "idfrect"
+msgstr "idfrect"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:420
+msgid ""
+"When *idfrect* is invoked with no arguments it prints out a usage note and a "
+"summary of its inputs:"
+msgstr ""
+"*idfrect*は引数なしで呼び出された場合、入力の概要と使用法を表示します。:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:435
+#, no-wrap
+msgid ""
+"idfrect: This program generates an outline for a rectangular component.\n"
+"    The component may have a single lead (axial) or a chamfer on the\n"
+"    upper left corner.\n"
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Width:\n"
+"    Length:\n"
+"    Height:\n"
+"    Chamfer: length of the 45 deg. chamfer\n"
+"    *  Leaded: Y,N (lead is always to the right)\n"
+"    ** Wire diameter\n"
+"    ** Pitch\n"
+"    File name (must end in *.idf)\n"
+msgstr ""
+"idfrect: このプログラムは矩形コンポーネントのアウトラインを作成します。\n"
+"    コンポーネントは一つのリード (アキシャル) または面取りされた\n"
+"    左上のコーナーを持ちます。\n"
+"Input:\n"
+"    単位: mm, in (mm または inch)\n"
+"    幅\n"
+"    長さ\n"
+"    高さ\n"
+"    面取り: ４５度面取りの長さ\n"
+"    *  リード: Y,N (リードは常に右)\n"
+"    ** 配線の直径\n"
+"    ** ピッチ\n"
+"    ファイル名 (*.idf で終わらなければならない)\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:438
+#, no-wrap
+msgid ""
+"    NOTES:\n"
+"        *   only required if chamfer = 0\n"
+msgstr ""
+"    NOTES:\n"
+"        *   面取り = 0 の場合に必要\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:440
+#, no-wrap
+msgid "        **  only required for leaded components\n"
+msgstr "        **  リードコンポーネントでのみ必要\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:446
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a "
+"chamfered rectangle and an axial leaded outline:"
+msgstr ""
+"NOTES はコマンドラインに任意の引数を入力することで非表示にできます。ユーザー"
+"はコマンドラインで情報を手入力するか、アウトラインを生成するスクリプトを作る"
+"ことができます。次のスクリプトは面取りされた矩形とアキシャルリードのアウトラ"
+"インを作成します。:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:472
+#, fuzzy, no-wrap
+#| msgid ""
+#| "#!/bin/bash\n"
+#| "# Generate various rectangular IDF outlines for test purposes\n"
+#| "# 10x10, 1mm chamfer, 2mm height\n"
+#| "./idfrect - 1 > /dev/null <<  _EOF\n"
+#| "mm\n"
+#| "10\n"
+#| "10\n"
+#| "2\n"
+#| "1\n"
+#| "rectMM_10x10x2_C0.5.idf\n"
+#| "_EOF\n"
+#| "# 10x10x12,  0.8mm lead on 6mm pitch\n"
+#| "./idfrect - 1 > /dev/null <<  _EOF\n"
+#| "mm\n"
+#| "10\n"
+#| "10\n"
+#| "12\n"
+#| "0\n"
+#| "Y\n"
+#| "0.8\n"
+#| "6\n"
+#| "rectLMM_10x10x12_D0.8_P6.0.idf\n"
+#| "_EOF\n"
+msgid ""
+"#!/bin/bash\n"
+"# Generate various rectangular IDF outlines for test purposes\n"
+"# 10x10, 1mm chamfer, 2mm height\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"2\n"
+"1\n"
+"rectMM_10x10x2_C0.5.idf\n"
+"_EOF\n"
+"# 10x10x12,  0.8mm lead on 6mm pitch\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"12\n"
+"0\n"
+"Y\n"
+"0.8\n"
+"6\n"
+"rectLMM_10x10x12_D0.8_P6.0.idf\n"
+"_EOF\n"
+msgstr ""
+"#!/bin/bash\n"
+"# Generate various rectangular IDF outlines for test purposes\n"
+"# 10x10, 1mm chamfer, 2mm height\n"
+"./idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"2\n"
+"1\n"
+"rectMM_10x10x2_C0.5.idf\n"
+"_EOF\n"
+"# 10x10x12,  0.8mm lead on 6mm pitch\n"
+"./idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"12\n"
+"0\n"
+"Y\n"
+"0.8\n"
+"6\n"
+"rectLMM_10x10x12_D0.8_P6.0.idf\n"
+"_EOF\n"
+
+#. type: Title ~
+#: IDF_Exporter.adoc:475
+#, no-wrap
+msgid "dxf2idf"
+msgstr "dxf2idf"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:481
+msgid ""
+"The DXF file used to specify the component outline can be prepared with the "
+"free software http://librecad.org/[LibreCAD] for best compatibility.  When "
+"*dxf2idf* is invoked with no arguments it prints out a usage note and a "
+"summary of its inputs:"
+msgstr ""
+"コンポーネントのアウトラインを指定する DXF ファイルは、高い互換性を持つフリー"
+"ウェア http://librecad.org/[LibreCAD] で準備できます。*dxf2idf*は引数なしで呼"
+"び出された場合、入力の概要と使用法を表示します。:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:485
+#, no-wrap
+msgid ""
+"dxf2idf: this program takes line, arc, and circle segments\n"
+"    from a DXF file and creates an IDF component outline file.\n"
+msgstr ""
+"dxf2idf: このプログラムは DXF ファイルから線、弧、円のセグメントを取り出し、\n"
+"    IDF コンポーネントアウトラインファイルを作成します。\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:496
+#, no-wrap
+msgid ""
+"Input:\n"
+"    DXF filename: the input file, must end in '.dxf'\n"
+"    Units: mm, in (millimeters or inches)\n"
+"    Geometry Name: string, as per IDF version 3.0 specification\n"
+"    Part Name: as per IDF version 3.0 specification of Part Number\n"
+"    Height: extruded height of the outline\n"
+"    Comments: all non-empty lines are comments to be added to\n"
+"        the IDF file. An empty line signifies the end of\n"
+"        the comment block.\n"
+"    File name: output filename, must end in '.idf'\n"
+msgstr ""
+"Input:\n"
+"    DXF ファイル名: 入力ファイル, '.dxf' で終わらなければならない\n"
+"    単位: mm, in (mm または inch)\n"
+"    ジオメトリ名: 文字列, IDF version 3.0 仕様に準拠\n"
+"    パート番号: パート番号の IDF version 3.0 仕様に準拠\n"
+"    高さ: アウトラインの突き出た部分の高さ\n"
+"    コメント: 空ではない全ての行は IDF ファイルへ\n"
+"        追加されたコメントです\n"
+"        空行はコメントブロックの終わりを示します\n"
+"    ファイル名 (*.idf で終わらなければならない)\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:502
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a 5mm high "
+"outline from a DXF file 'test.dxf':"
+msgstr ""
+"NOTES はコマンドラインに任意の引数を入力することで非表示にできます。ユーザー"
+"はコマンドラインで情報を手入力するか、アウトラインを生成するスクリプトを作る"
+"ことができます。次のスクリプトは DXF ファイル 'test.dxf' から高さ５ｍｍのアウ"
+"トラインを作成します。:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:515
+#, fuzzy, no-wrap
+#| msgid ""
+#| "#!/bin/bash\n"
+#| "# Generate an IDF outlines from a DXF file\n"
+#| "test.dxf\n"
+#| "mm\n"
+#| "“DXF TEST GEOMETRY”\n"
+#| "“DXF TEST  PART”\n"
+#| "5\n"
+#| "# This is an IDF test file produced from the outline 'test.dxf'\n"
+#| "# This is a second IDF comment to demonstrate multiple comments\n"
+msgid ""
+"#!/bin/bash\n"
+"# Generate an IDF outlines from a DXF file\n"
+"dxf2idf - 1 > /dev/null << _EOF\n"
+"test.dxf\n"
+"mm\n"
+"DXF TEST GEOMETRY\n"
+"DXF TEST PART\n"
+"5\n"
+"This is an IDF test file produced from the outline 'test.dxf'\n"
+"This is a second IDF comment to demonstrate multiple comments\n"
+msgstr ""
+"#!/bin/bash\n"
+"# Generate an IDF outlines from a DXF file\n"
+"test.dxf\n"
+"mm\n"
+"“DXF TEST GEOMETRY”\n"
+"“DXF TEST  PART”\n"
+"5\n"
+"# This is an IDF test file produced from the outline 'test.dxf'\n"
+"# This is a second IDF comment to demonstrate multiple comments\n"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:518
+#, fuzzy, no-wrap
+#| msgid "test_dxf2idf.idf\n"
+msgid ""
+"test_dxf2idf.idf\n"
+"_EOF\n"
+msgstr "test_dxf2idf.idf\n"
+
+#. type: Title -
+#: IDF_Exporter.adoc:521
+#, no-wrap
+msgid "idf2vrml"
+msgstr "idf2vrml"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:529
+msgid ""
+"The idf2vrml tool reads a set of one IDF Board (__.emn) and one IDF "
+"Component file (__.emp) and produces a VRML file which can be viewed with a "
+"VRML viewer. This feature is useful for visualization of the board assembly "
+"in cases where the user does not have access to MCAD software. Invoking "
+"idf2vrml without any arguments will result in the display of a usage message:"
+msgstr ""
+"idf2vrml ツールは一つの IDF 基板ファイル (__.emn) と一つの IDF コンポーネント"
+"ファイル (__.emp) のセットを読み込み、 VRML ビューアで見ることができる VRML "
+"ファイルを作成します。この機能は、ユーザーが機械系CADソフトを使用できない場"
+"合、実装基板を可視化するのに有用です。idf2vrml  は引数なしで呼び出された場"
+"合、使用法を表示します。:"
+
+#. type: delimited block -
+#: IDF_Exporter.adoc:540
+#, no-wrap
+msgid ""
+">./idf2vrml\n"
+"Usage: idf2vrml -f input_file.emn -s scale_factor {-k} {-d} {-z} {-m}\n"
+"flags:\n"
+"   -k: produce KiCad-friendly VRML output; default is compact VRML\n"
+"   -d: suppress substitution of default outlines\n"
+"   -z: suppress rendering of zero-height outlines\n"
+"   -m: print object mapping to stdout for debugging purposes\n"
+"example to produce a model for use by KiCad: idf2vrml -f input.emn -s 0.3937008 -k\n"
+">\n"
+msgstr ""
+">./idf2vrml\n"
+"使用法: idf2vrml -f input_file.emn -s scale_factor {-k} {-d} {-z} {-m}\n"
+"フラグ:\n"
+"   -k: KiCad 向きの VRML 出力を作成する; デフォルトは compact VRML\n"
+"   -d: デフォルトアウトラインの代替を非表示にする\n"
+"   -z: 高さ０のアウトラインをレンダリングしない\n"
+"   -m: デバッグ用に stdout へマップされたオブジェクトを表示する\n"
+"KiCad で使用されるモデルを作成する例: idf2vrml -f input.emn -s 0.3937008 -k\n"
+">\n"
+
+#. type: Plain text
+#: IDF_Exporter.adoc:548
+msgid ""
+"[**BUG:** The idf2vrml tool currently does not correctly render "
+"*OTHER_OUTLINE* entities in an emn file if that entity is specifies on the "
+"back layer of the PCB; however you will not notice this bug using files "
+"exported by KiCad since there is no mechanism to specify such an entity.  "
+"Essentially this bug is only an issue in rare instances where you might "
+"render a third party emn file which does employ the entity on the back side "
+"of a board.]"
+msgstr ""
