@@ -95,13 +95,13 @@ Being open source (GPL licensed), kicad represents the ideal tool for
 projects oriented towards the creation of electronic hardware with an
 open-source flavour.
 
-Kicad is available for Linux, Windows and Apple OS X (still experimental, but now working well).
+Kicad is available for Linux, Windows and Apple OS X (still experimental, but is now working well).
 
 KiCad files and folders
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-KiCad creates and uses files with specific extension (and folders)
-for schematic and board edition.
+KiCad creates and uses files with the following specific file extensions (and folders)
+for schematic and board editing.
 
 *Project manager file:*
 [width="100%",cols="20%,80%",]
@@ -116,7 +116,7 @@ for schematic and board edition.
 |*.lib |Schematic component library files, containing the component descriptions: graphic shape, pins, fields.
 |*.dcm |Schematic component library documentation, containing some component descriptions:
 comments, keywords, reference to data sheets.
-|*_cache.lib |Schematic component library cache file, containing a copy of components used in the schematic project.
+|*_cache.lib |Schematic component library cache file, containing a copy of the components used in the schematic project.
 |=================================================================
 
 *Board editor files and folders:*
@@ -189,15 +189,15 @@ kicad/template. It serves as a template for any new project.
 
 If an other default configuration file named _fp-lib-table_ exists,
 it will be used only once to create a footprint library list.
-(else, this list will be created from scratch)
+(or else, this list will be created from scratch)
 
 *The default file _kicad.pro_ can be freely modified if necessary,
-mainly to set the list of libraries files loaded by Eeschema.*
+mainly to set the list of library files loaded by Eeschema.*
 
 A few other parameters (default text size, default line thickness, mainly
-for Pcbnew) are stored.
+for Pcbnew) are stored here.
 
-Verify you have a write access to kicad/template/kicad.pro
+Verify that you have write access to kicad/template/kicad.pro
 
 Run kicad and load _kicad.pro_ project.
 
@@ -208,10 +208,10 @@ time you create new projects.
 
 Run Pcbnew via kicad.
 Modify and update the Pcbnew configuration, especially the footprint library list.
-Pcbnew will creates or update a library list file called **footprint library table**.
+Pcbnew will create or update a library list file called **footprint library table**.
 There are 2 library list files (named fp-lib-table).
 The first (located in the user home directory) is global for all projects.
-The second, if exists (located in the project directory) is specific to the project.
+The second, if it exists (located in the project directory) is specific to the project.
 
 Initialization of some options and utilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -236,10 +236,10 @@ In Kicad, one can define some paths using an __environment variable__.
 A few environment variables are internally defined by Kicad,
 and can be used to define paths (for libraries, 3D shapes, etc).
 
-This is usefull when absolute paths are not known or are subject to change.
+This is useful when absolute paths are not known or are subject to change.
 This is the case for ``official'' libraries built for kicad:
 
-* for the path of these librairies, when installed on you disk
+* for the path of these libraries, when installed on your disk
 * for the path of 3D shapes files used in footprint definitions.
 
 For instance, the full path of _connect.pretty_ footprint library is
@@ -247,7 +247,7 @@ defined like this, when using the KISYSMOD environment variable to define
 the full path:
 ${KISYSMOD}/connect.pretty
 
-Obvioulsy, one can use an usual full path definition, if this full path is
+Obviously, one can use a usual full path definition, if this full path is
 well known, and never changes.
 
 This option allows you to define some paths from an environment variable,
@@ -276,11 +276,11 @@ folder (the pretty footprint library) found **_inside the current project folder
 
 
 * *If you modify the configuration of paths, please quit and rerun Kicad,
-to avoid any issue in paths handling.*
+to avoid any issues in path handling.*
 
 Initialization of the text editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Before using a text editor to browse/edit files in current project,
+Before using a text editor to browse/edit files in the current project,
 you have to choose the text editor you want to use. The menu:
 
 _Preferences/SetText Editor_
@@ -289,9 +289,11 @@ allows you to set the text editor to use.
 
 Initialization of the PDF viewer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Your can use the default PDF viewer or a PDF viewer
-Select _Favourite PDF Viewer_
-chosen by _SetPDF Viewer_ menu.
+You can use the default PDF viewer or choose your own PDF viewer
+
+Select _Preferences/PDF Viewer/Favourite PDF Viewer_ to choose your favourite (default) PDF Viewer.
+
+Your own (non default) viewer is chosen by using the _Preferences/PDF Viewer/SetPDF Viewer_ menu.
 
 On Linux, the default PDF viewer is known to be sometimes strange,
 so using _Favourite PDF Viewer_ after selecting a suitable PDF viewer
@@ -369,7 +371,7 @@ Utility launch pane
 Kicad allows you to run all stand alone software tools that come with
 it.
 
-The launch pane is made of the above 8 buttons that correspond to the
+The launch pane is made of the 8 buttons below that correspond to the
 following commands (1 to 8, from left to right):
 
 image:images/launch_pane.png[]
@@ -381,10 +383,10 @@ image:images/launch_pane.png[]
 |2 |*LibEdit* |The component editor and component library manager.
 |3 |*Pcbnew* |The board layout editor.
 |4 |*ModEdit* |The footprint editor and footprint library manager.
-|5 |*Gerbview* |A GERBER file viewer. Its also can show drill files.
+|5 |*Gerbview* |A GERBER file viewer. It can also show drill files.
 |6 |*Bitmap2component* |A tool to build a footprint or a component from
 a B&W bitmap image to create logos.
-|7 |*Pcb Calculator* |A tool to calculate track widths, any many other
+|7 |*Pcb Calculator* |A tool to calculate track widths, and many other
 things.
 |8 |*Pl Editor* |The Page Layout editor, to create/customize frame
 references.
@@ -402,7 +404,7 @@ image:images/project_tree.png[]
     opening the file pic_programmer.kicad_pcb.
 
 *   Right clicking on any of the files in the project tree allows generic
-    files manipulation.
+    file manipulation.
 
 
 Top toolbar
@@ -539,7 +541,7 @@ image:images/menu_file.png[]
 
 - *Blank Project* Create a blank project by just copying
   template/kicad.pro to the current folder.
-- *Project from Template* Open the template selection dialog. The
+- *Project from Template* Opens the template selection dialog. The
   template selection dialog has a list of icons, and a display window. A
   single click on a template's icon on the left will load that templates
   info.html metadata file and display it in the display window. A click on
