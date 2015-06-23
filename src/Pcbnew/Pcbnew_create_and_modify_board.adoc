@@ -37,56 +37,58 @@ image:images/Pcbnew_simple_board_outline.png[]
 Importing a DXF drawing for a board outline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As an alternative to drawing the board outline in Pcbnew directly, an 
+As an alternative to drawing the board outline in Pcbnew directly, an
 outline can also be imported from a DXF drawing. Using this feature allows
 for much more complex board shapes than is possible with the Pcbnew drawing
 capabilities.
 
-For example the required board shape may be exported as a DXF drawing from a 
-mechanical CAD package and then imported into Pcbnew to define the exact 
+For example the required board shape may be exported as a DXF drawing from a
+mechanical CAD package and then imported into Pcbnew to define the exact
 board shape required to fit an enclosure.
 
-For best results use the *DXF R12* format for import into Pcbnew as there is 
-limited support for _advanced_ features available in the more recent DXF formats.
+For best results use the *DXF R12* format for import into Pcbnew as there is
+limited support for _advanced_ features like Ellipsis as available in more
+recent versions of the DXF formats.
 
 To import a board shape from a *DXF R12* file:
 
 . File > Import > DXF File.
 . Select the DXF file to be imported.
 . Select which origin is used by the DXF shape.
-. Select the board layer for the import. Edge.Cuts is needed 
+. Select the board layer for the import. Edge.Cuts is needed
   for the board outline, but DXF drawings can be imported onto other layers
   as well.
 . Click OK
-  
+
 Notes on importing DXF files with advanced features like Ellipsis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-KiCad supports the *DXF R12* format and has limited support for _advanced_ DXF 
-features like Ellipsis.
+If you require the use of more _advanced_ DXF drawing features for your board
+outline, it is possible to do so by exporting your DXF drawing in the older
+*DXF R12* format.
 
-If you require the use of such _advanced_ DXF drawing features, you need to
-convert your drawing to the older *DXF R12* format. As the *DXF R12* format does 
-not support these advanced drawing features, CAD software DXF exports
-_approximate_ those drawing elements as a series of short line 
-segments that Pcbnew can handle correctly.
+The DXF R12 format does not have support for _advanced_ drawing features.
+As such, most CAD software converts these drawing features into a series of
+short line segments that approximate the required shape when exporting to
+DXF R12. Some CAD packages also allow you to select either the number of line
+segments or the length of the segments used for such an approximation.
+You may have to experiment with your CAD export feature for best results.
 
-Most CAD software are able to export to the *DXF R12* format. 
+LibreCAD is one of those CAD packages that is able to convert DXF files to
+the older DXF R12 format.
 
-If your CAD software does not have such an *DXF R12* format export, you can use
-LibreCAD to perform the conversion. 
+In LibreCAD:
 
-In LibreCAD open the DXF file and then use 'Save As...' . Then in the 
-'Save Drawing As' dialog, use the 'Save as type:' selection to choose the
-export format and select 'Drawing Exchange DXF R12 (*.dxf)' . 
+. Open the DXF file
+. Use 'Save As...'
+. In the 'Save Drawing As' dialog, select 'Drawing Exchange DXF R12 (*.dxf)'
+  in the 'Save as type:' selection.
+. Enter a different file name, if you like to preserve your original DXF file.
 
-Enter a different file name, if you like to preserve your original DXF file.
-
-Here is an example of such an DXF import with a board that has several 
+Here is an example of such an DXF import with a board that had several
 elliptical segments approximated by a number of short line segments:
 
-image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]  
-
+image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]
 
 Reading the netlist generated from the schematic
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -223,7 +225,7 @@ One must choose a new footprint name and use:
 
 * *Change Module* for the current footprint
 * *Change same modules* for all footprints like the current footprint.
-* *Change same module+value* for all footprints like the current 
+* *Change same module+value* for all footprints like the current
   footprint, restricted to components which have the same value.
 
 NOTE: *Change all* reloads all footprints on board.
