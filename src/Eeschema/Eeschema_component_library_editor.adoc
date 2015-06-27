@@ -41,7 +41,7 @@ Proper component designing requires:
 * Defining if the component is made up of one or more units.
 * Defining if the component has an alternate body style also known as a
 De Morgan representation.
-* Designing it 's symbolic representation using lines, rectangles,
+* Designing its symbolic representation using lines, rectangles,
 circles, polygons and text.
 * Adding pins by carefully defining each pin's graphical elements,
 name, number, and electrical property (input, output, tri-state, power
@@ -367,7 +367,7 @@ Discarding Component Changes
 When you are working on a component, the edited component is only a
 working copy of the actual component in its library. This means that as
 long as you have not saved it, you can just reload it to discard all
-changes made. If you have already updat ed it in the local memory and
+changes made. If you have already updated it in the local memory and
 you have not saved it to the library file, you can always quit and start
 again. Eeschema will undo all the changes.
 
@@ -438,12 +438,12 @@ to show the dialog below.
 
 image:images/10000000000001B2000001509F311F99.png[10000000000001B2000001509F311F99_png]
 
-It is very important to correct set the n umber of units per package and
-if the component has an alternate symbolic representation pa rameters
+It is very important to correct set the number of units per package and
+if the component has an alternate symbolic representation parameters
 correctly because when pins are edited or created the corresponding pins
 for each unit will created. If you change the number of units per
 package after pin creation and editing, there will be additional work
-introduced add the new unit pins and symbols. Nevertheless, it is
+introduced to add the new unit pins and symbols. Nevertheless, it is
 possible to modify these properies at any time.
 
 The graphic options “Show pin number” and “Show pin name” define the
@@ -465,7 +465,7 @@ Components with Alternate Symbols
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the component has more than one symbolic repersentation, you will
-have to select the different symbols of th e component in order to edit
+have to select the different symbols of the component in order to edit
 them. To edit the normal symbol, click the
 image:images/100002010000001A0000001A93F5F714.png[100002010000001A0000001A93F5F714_png].
 
@@ -481,7 +481,7 @@ image:images/1000000000000456000002680D968591.png[1000000000000456000002680D9685
 Graphical Elements
 ~~~~~~~~~~~~~~~~~~
 
-Graphical elements create the symbolic repersentation of a component and
+Graphical elements create the symbolic representation of a component and
 contain no electrical connection information. Their design is possible
 using the following tools:
 
@@ -507,7 +507,7 @@ is the context menu for a line element.
 
 image:images/20000009000056D200003432E4789F12.png[20000009000056D200003432E4789F12_png]
 
-You can a lso double left click on an element to modify it's properties.
+You can also double left click on an element to modify it's properties.
 Below is the properties dialog for a polygon element.
 
 image:images/100000000000012100000146E8D1DDCE.png[100000000000012100000146E8D1DDCE_png]
@@ -549,16 +549,15 @@ have more than one unit per package each with different symbols and pin
 configurations.
 
 Consider for instance a relay with two switches which can be designed as
-a component with three diff e rent units: a coil, switch 1, and switch
-2. Designing component with multiple units per package and/or alternate
+a component with three different units: a coil, switch 1, and switch
+2. Designing a component with multiple units per package and/or alternate
 body styles is very flexible. A pin or a body symbol item can be common
 to all units or specific to a given unit or they can be common to both
-symbolic representation so r specific to a given symbol repr e
-sentation.
+symbolic representation so are specific to a given symbol representation.
 
-By default, pins are specific to each symbolic repr e sentation of each
+By default, pins are specific to each symbolic representation of each
 unit, because the pin number is specific to a unit, and the shape
-depends on the symbolic repr e sentation. When a pin is comm on to each
+depends on the symbolic representation. When a pin is common to each
 unit or each symbolic representation, you need to create it only once
 for all units and all symbolic representations (this is usually the case
 for power pins). This is also the case for the body style graphic shapes
@@ -614,7 +613,7 @@ Pin Creation and Editing
 You can click on the 
 image:images/100002010000001A0000001AF33889E5.png[100002010000001A0000001AF33889E5_png]
 to create and insert a pin. The editing of all pin properties is done by
-double-clicking on the pin or right-click ing on the pin to open the pin
+double-clicking on the pin or right-clicking on the pin to open the pin
 context menu. Pins must be created carefully, because any error will
 have consequences on the PCB design. Any pin already placed can be
 edited, deleted, and / or moved.
@@ -683,10 +682,10 @@ input and output (microprocessor data bus for example).
 * Passive is used for passive component pins, resistors, connectors,
 etc.
 * Unspecified can be used when the ERC check doesn't matter.
-* Power input is used for the component ' s power pins. Power pins are
+* Power input is used for the component's power pins. Power pins are
 automatically connected to the other power input pins with the same
 name.
-* Power out put is used for regulator outputs.
+* Power output is used for regulator outputs.
 * Open emitter and open collector types can be used for logic outputs
 defined as such.
 * Not connected is used when a component has a pin that has no internal
@@ -741,7 +740,7 @@ representations or specific to each symbolic representation.
 By default, pins are specific to each representation of each unit,
 because their number differs for each unit, and their design is
 different for each symbolic representation. When a pin is common to all
-units, it only has to draw n once such as in the case of power pins.
+units, it only has to drawn once such as in the case of power pins.
 
 An example is the output pin 7400 quad dual input NAND gate. Since there
 are four units and two symbolic representations, there are eight
@@ -785,18 +784,18 @@ on the main tool bar to open the field properties dialog shown below.
 
 image:images/1000000000000208000002211F585317.png[1000000000000208000002211F585317_png]
 
-Fields are text sections associated with the component. Do not confused
+Fields are text sections associated with the component. Do not confuse
 them with the text belonging to the graphic representation of this
 component.
 
 Important notes:
 
-* Modifying value field effectively creates a new component us ing using
+* Modifying value fields effectively creates a new component using
 the current component as the starting point for the new component. This
 new component has the name contained in the value field when you save it
 to the currently selected library.
 * The field edit dialog above must be used to edit a field that is empty
-or has the i nvisible attribute enable.
+or has the invisible attribute enable.
 * The footprint is defined as an absolute footprint using the
 LIBNAME:FPNAME format where LIBNAME is the name of the footprint library
 defined in the footprint library table (see the “Footprint Library
@@ -809,7 +808,7 @@ Power Symbols
 
 Power symbols are created the same way as normal components. It may be
 useful to place them in a dedicated library such as power.lib. Power
-symbols consist of a graphical symbol a nd a pin of the type “Power
+symbols consist of a graphical symbol and a pin of the type “Power
 Invisible”. Power port symbols are handled like any other component by
 the schematic capture software. Some precautions are essential. Below is
 an example of a power +5V symbol.
@@ -825,13 +824,13 @@ will establish connection to the net +5V), with a pin number of 1
 shown.
 * The anchor of the symbol is on the pin.
 * The component value is +5V.
-* The component reference is #+5V. The reference text i s no importance
+* The component reference is #+5V. The reference text is no importance
 except the first character which must be “#” to indicate that the
 component is a power symbol. By convention, every component in which the
 reference field starts with a '#' will not appear in the component list
 or in the netlist and the reference is declared as invisible.
 
-An easier method to creat e of a new power port symbol is to use another
+An easier method to create of a new power port symbol is to use another
 symbol as model.
 
 You just need to:

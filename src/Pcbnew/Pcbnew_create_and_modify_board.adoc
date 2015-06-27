@@ -68,14 +68,14 @@ There are some limitations on the DXF formats that are supported in KiCad.
 For example there is currently no support for importing Ellipses. However it 
 is often possible to export the DXF from your CAD system in older DXF formats. 
 For example the DXF R12 format does not have support for Ellipses line 
-segments. As such CAD application exports Ellipses as a series of small line
-segments to 'approximate' an Ellipses. LibreCAD for example is known to do that.
+segments. As such each CAD application exports Ellipses as a series of small line
+segments to 'approximate' an Ellipse. LibreCAD for example is known to do that.
 
 Then also, CAD exports of Ellipses using such line segments tend not to 
-'close' Ellipses. If the line segments lengths used to create the Ellipses are 
+'close' Ellipses. If the line segment lengths used to create the Ellipses are 
 too big, this becomes visible as a gap in the board outline. 
 
-Set your CAD software if possible to produce very small line segments of 
+Set your CAD software, if possible, to produce very small line segments of 
 say 0.05mm in length. Even with the 'gap', this will make the end sufficiently
 close that the board outline can be regarded as 'closed'.
 
@@ -152,7 +152,7 @@ appear in the schematic.
 image:images/Pcbnew_extra_footprints_deletion_option.png[]
 
 If the "Remove Extra Footprints" option is checked, a footprint
-corresponding to a component not found in netlist will be deleted,
+corresponding to a component not found in the netlist will be deleted,
 unless they have the option "Locked" active. It is a good idea to
 activate this option for "mechanical" footprints:
 
@@ -168,7 +168,7 @@ dialog is checked:
 
 image:images/Pcbnew_exchange_module_option.png[]
 
-Changing a module (replacing a resistance with one of a different
+Changing a module (replacing a resistor with one of a different
 size, for instance) can be effected directly by editing the module.
 
 Advanced options - selection using time stamps
