@@ -4,8 +4,8 @@ Using GerbView
 Introduction to GerbView
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-GerbView is a Gerber files viewer (RS 274 X format), and also is able
-to display drill files from Pcbnew (Excellon format).
+GerbView is a Gerber file viewer (RS 274 X format), and is also able
+to display drill files from Pcbnew (in Excellon format).
 
 It accepts up to 32 files (Gerber and/or Drill files)
 
@@ -94,7 +94,7 @@ Options:
 |Mode used by Gerbview to show layers.
 
 |image:images/02100000024D9139755.png[02100000024D9139755_png]
-|Show / hide the layers manager
+|Show / hide the layer manager
 
 |=======================================================================
 
@@ -132,7 +132,7 @@ Modes to show Gerber layers:
 a|
 «Raw» mode.
 
-Each gerber file and each item is files are drawn in the order files are
+Each gerber file and each item in files are drawn in the order files are
 loaded.
 
 However the «active layer» is draw last.
@@ -151,9 +151,9 @@ Each gerber file is drawn in the order files are loaded.
 
 The « active layer » is draw last.
 
-When Gerber files have negative items (drawn in black) there is no
+When Gerber files have negative items (drawn in black) there are no
 artefacts on already drawn layers, because this mode draws each file in
-a local buffer before show it on screen. Negative items do not create
+a local buffer before it is shown on screen. Negative items do not create
 artefacts.
 
 
@@ -195,7 +195,7 @@ But be sure items are inside the printable area (select by
 image:images/02200000024BE5ADAA7.png[02200000024BE5ADAA7_png]
 a suitable page format).
 
-Do not forget photoplotters uses large plottable area, bigger than page
+Do not forget photoplotters can use a large plottable area, much bigger than the page
 sizes used by printers)
 
 Moving (by block move command) the entire layers is often needed.
@@ -203,10 +203,10 @@ Moving (by block move command) the entire layers is often needed.
 Move block command:
 ^^^^^^^^^^^^^^^^^^^
 
-You can move items by select them (drag mouse with left button down) and
-move the selected area on screen.
+You can move items by selecting them (drag the mouse with left button down) and then
+moving the selected area on screen.
 
-Click the left button to place the moving area, currently selected.
+Click the left button to finally place the area you are moving.
 
 Commands in menu bar:
 ~~~~~~~~~~~~~~~~~~~~~
@@ -242,8 +242,8 @@ Flashed items are converted to vias.
 Lines items are converted to track segments (or graphic lines for non
 copper layers)
 
-So the usability of the converted file is very dependent of the way
-Gerber files were built by the Pcb tool.
+So the usability of the converted file is very dependent upon the way
+each Gerber file was built by the original Pcb tool.
 
 Preference menu:
 ^^^^^^^^^^^^^^^^
@@ -257,8 +257,8 @@ Miscellaneous menu:
 
 image:images/07C000000A353743B55.png[07C000000A353743B55_png]
 
-* List Dcodes shows Dcodes in use and some of Dcodes parameters.
-* Show Source display the Gerber file content of the active layer in a
+* List Dcodes shows the Dcodes in use and some of Dcode parameters.
+* Show Source displays the Gerber file contents of the active layer in a
 text editor.
-* Clear Layer erase the content of the active layer.
+* Clear Layer erases the contents of the active layer.
 
