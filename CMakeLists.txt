@@ -17,7 +17,7 @@ set( PDF_GENERATOR "DBLATEX" CACHE STRING "Specify which PDF generator to use: D
 
 # Provide an option for a single language build. If nothing else, this will at
 # least help developers to speed up a build they're working on
-set( SINGLE_LANGUAGE "" CACHE STRING "Specify a single language to build: en|fr|it|nl|pl" )
+set( SINGLE_LANGUAGE "" CACHE STRING "Specify a single language to build: en|fr|it|ja|nl|pl" )
 
 # Provide an option to decide which documentation formats to build.
 set( BUILD_FORMATS "html;pdf" CACHE LIST "Specify which output formats to build html/pdf" )
