@@ -1,4 +1,3 @@
-# Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -6,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IDF_Exporter-ja\n"
 "POT-Creation-Date: 2015-07-05 11:47+0900\n"
-"PO-Revision-Date: 2015-06-28 01:37+0900\n"
+"PO-Revision-Date: 2015-07-05 23:26+0900\n"
 "Last-Translator: starfort <starfort@nifty.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: Japanese\n"
@@ -48,7 +47,7 @@ msgid ""
 "or the Creative Commons Attribution License (http://creativecommons.org/"
 "licenses/by/3.0/), version 3.0 or later."
 msgstr ""
-"このドキュメントは以下の貢献者により著作権所有(© 2014)されています。あなた"
+"このドキュメントは以下の貢献者により著作権所有 © 2014 されています。あなた"
 "は、GNU General Public License ( http://www.gnu.org/licenses/gpl.html ) の"
 "バージョン3以降、あるいはクリエイティブ・コモンズライセンス ( http://"
 "creativecommons.org/licenses/by/3.0/ ) のバージョン3以降のいずれかの条件の下"
@@ -123,7 +122,6 @@ msgstr "IDFv3 exporterについて"
 # "部品の外形"を"コンポーネントアウトライン"へ変更
 #. type: Plain text
 #: IDF_Exporter.adoc:62
-#, fuzzy
 #| msgid ""
 #| "The IDF exporter exports an IDFv3 footnote:[http://www."
 #| "simplifiedsolutionsinc.com/images/idf_v30_spec.pdf] compliant board (*."
@@ -150,7 +148,7 @@ msgstr ""
 "アウトラインと切削部、パッドとランド（細長い穴のものを含む）、及びコンポーネ"
 "ントアウトラインに関する情報を出力します。これは、機構設計者とやりとりする必"
 "要がある機械的情報の基本部分のほとんどです。IDF V3.0 仕様に記載された他の要素"
-"は現在実装されていません。"
+"は現在出力されません。"
 
 #. type: Title -
 #: IDF_Exporter.adoc:64
@@ -176,7 +174,6 @@ msgstr ""
 # "外形線"を"アウトライン"へ変更
 #. type: Plain text
 #: IDF_Exporter.adoc:90
-#, fuzzy
 #| msgid ""
 #| "From within the module editor or pcbnew, edit the footprint parameters "
 #| "and click on the 3D settings tab (see link:#figure-1[figure 1]), click on "
@@ -211,20 +208,23 @@ msgid ""
 "here will change at some point in the future.]"
 msgstr ""
 "モジュールエディタや pcbnew から、フットプリントのパラメータを編集し、3D設定"
-"タブ上でクリック（リンク参照:#figure-1[figure 1]）、3Dシェープ追加をクリック"
-"し、“IDFv3 component files (*.idf)” のフィルタを選択します（リンク参照:"
-"#figure-2[figure 2]）。希望するアウトラインファイルを選択し、オフセットと回転"
-"に必要な値を入力します。オフセットは IDFファイルの書き出しに使用される単位"
-"（mm または thou(=mils)）で指定しなければなりません。また IDF の座標系は右手"
-"系で、Z軸が観測者へ向かって正、X軸が観測者の右へ向かって正、Y軸が上へ向かって"
-"正です。回転角は度で表さなければならず、正の回転方向は IDF V3.0 仕様 に記載通"
-"り左回りです。複数のアウトラインは、ソケットに挿入されたDIPパッケージのような"
-"単純な組み立て品を表すために、適切なオフセットを持って結合されることがありま"
-"す。"
+"タブ上でクリック（リンク参照: #figure-1[figure 1] ）、3Dシェープ追加をクリッ"
+"クし、“IDFv3 component files (*.idf)” のフィルタを選択します（リンク参照: "
+"#figure-2[figure 2] ）。希望するアウトラインファイルを選択し、オフセットと回"
+"転に必要な値を入力します。オフセット値とＺ軸の回転角のみが  IDF exporter で使"
+"われることに注意して下さい。 ; 他の全ての値は無視されます。オフセットは IDF"
+"ファイルの書き出しに使用される単位（mm または thou(=mils)）で指定しなければな"
+"りません。また IDF の座標系は右手系で、Z軸が観測者へ向かって正、X軸が観測者の"
+"右へ向かって正、Y軸が上へ向かって正です。回転角は度で表さなければならず、正の"
+"回転方向は IDF V3.0 仕様 に記載通り左回りです。複数のアウトラインは、ソケット"
+"に挿入されたDIPパッケージのような単純な組み立て品を表すために、適切なオフセッ"
+"トを持って結合されることがあります。 [**バグ情報:** 議論を重ねた中で、VRMLモ"
+"デルとの整合性を保つため、Ｚオフセットはインチ単位でなければならないと決定さ"
+"れました。 また、(X,Y) のオフセット値を無視するのは実用的ではないかも知れませ"
+"ん。ここで述べた挙動は将来的に変更されるでしょう。]"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:98
-#, fuzzy
 #| msgid ""
 #| "Once models have been specified for all desired components, from within "
 #| "pcbnew, select the *File* menu, then *Export* , and finally **IDFv3 "
@@ -242,13 +242,13 @@ msgid ""
 "freecadweb.org/[FreeCAD] or converted to VRML using the idf2vrml tool and "
 "viewed with any suitable VRML viewer."
 msgstr ""
-"モデルに必要な全てのコンポーネントを指定した後は、 pcbnew から*ファイル* メ"
-"ニューを選択して*エクスポート*し、最終的に**IDFv3 Export**します。IDF 出力の"
-"単位（mm または mils）と出力ファイル名を指定するダイアログボックスがポップ"
-"アップ（リンク参照:#figure-3[figure 3]）します。エクスポートされた IDF ファイ"
-"ルは無償の機械系CADソフトウェア http://www.freecadweb.org/[FreeCAD]で参照でき"
-"ます。もしくは  idf2vrml ツールで VRML 形式へ変換して適切な VRML ビューアでも"
-"参照できます。"
+"モデルに必要な全てのコンポーネントを指定した後、 pcbnew から *ファイル* メ"
+"ニューを選択して *エクスポート* し、最終的に **IDFv3 Export** します。IDF 出"
+"力の単位（mm または mils）と出力ファイル名を指定するダイアログボックスがポッ"
+"プアップ（リンク参照: #figure-3[figure 3] ）します。エクスポートされた IDF "
+"ファイルは無償の機械系CADソフトウェア http://www.freecadweb.org/[FreeCAD] で"
+"参照できます。もしくは  idf2vrml ツールで VRML 形式へ変換して適切な VRML "
+"ビューアでも参照できます。"
 
 #. type: Block title
 #: IDF_Exporter.adoc:101
@@ -597,7 +597,6 @@ msgstr "ジオメトリと部品番号の入力"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:256
-#, fuzzy
 #| msgid ""
 #| "Think carefully about the values to give to the Geometry and Part Number "
 #| "entries. Taken together. These strings act as a unique identifier for the "
@@ -631,7 +630,6 @@ msgstr "ピンの向きと配置"
 # "X軸の"を"X軸に"へ訂正
 #. type: Plain text
 #: IDF_Exporter.adoc:272
-#, fuzzy
 #| msgid ""
 #| "For through-hole components there are no widely accepted schemes for "
 #| "determining the pin orientation and component center in 3D models. For "
@@ -659,13 +657,14 @@ msgid ""
 msgstr ""
 "スルーホールコンポーネントに対しては、3Dモデルの中心とピンの向きを決めるため"
 "に図面を使うことは一般的ではありません。一貫性のため、X軸に沿って水平に配置 "
-"(リンク参照:#figure-4[figure 4]) された２つのピンがあれば、３ピンに対してはＸ"
-"軸上に水平配置された２つのピンを保つようにします。電解コンデンサやタンタルコ"
-"ンデンサのような有極性部品は正極のリードを１ピンにする必要があります。またダ"
-"イオードは１ピンをカソードとします。; これは表面実装部品(SMTデバイス)で定義さ"
-"れた方向を持つ回路記号と互換性を保つためです。; しかしながら、多くの既存の "
+"(リンク参照: #figure-4[figure 4] ) された２つのピンがあれば、３ピンに対しては"
+"Ｘ軸上に水平配置された２つのピンを保つようにします。電解コンデンサやタンタル"
+"コンデンサのような有極性部品は正極のリードを１ピンにする必要があります。また"
+"ダイオードは１ピンをカソードとします。; これは表面実装部品(SMTデバイス)で定義"
+"された方向を持つ回路記号と互換性を保つためです。; しかしながら、多くの既存の "
 "KiCad 図面とフットプリントが１ピンをアノードとしていることに注意してくださ"
-"い。"
+"い。 ( *注意:* github 上にある最新版の KiCad フットプリントでは、スルーホール"
+"コンポーネントは表面実装部品(SMTデバイス)同様に今ではアノードが２ピンです。）"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:285
@@ -708,6 +707,14 @@ msgid ""
 "exporter currently ignores the (X,Y) offset values it is vital that\n"
 "you use the correct origin in the IDF component outline.\n"
 msgstr ""
+"*注:* 現在のバージョンの KiCad フットプリントでは、スルーホール\n"
+"コンポーネントはＸ軸よりむしろＹ軸に沿ってピンが編成されており、\n"
+"パッケージの中央よりは１ピンにデバイスの原点があります。\n"
+"配置するフットプリントに合わせてコンポーネントアウトライン\n"
+"の位置と向きを合わせてください。これで、IDF コンポーネント\n"
+" アウトラインの回転を指定する必要がなくなるでしょう。\n"
+"IDF エクスポーターは今のところ (X,Y) のオフセット値を\n"
+"無視するので、 IDF コンポーネントアウトラインの原点を正しく扱うことは大変重要です。\n"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:304
@@ -944,7 +951,7 @@ msgstr ""
 
 #. type: delimited block -
 #: IDF_Exporter.adoc:413
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "#!/bin/bash\n"
 #| "# Generate a cylindrical IDF outline for test purposes\n"
@@ -984,10 +991,10 @@ msgstr ""
 "# Generate a cylindrical IDF outline for test purposes\n"
 "# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
 "# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
-"./idfcyl - 1 > /dev/null <<  _EOF\n"
+"idfcyl - 1 > /dev/null <<  _EOF\n"
 "mm\n"
 "v\n"
-"1\n"
+"x\n"
 "5\n"
 "8\n"
 "3\n"
@@ -1074,7 +1081,7 @@ msgstr ""
 
 #. type: delimited block -
 #: IDF_Exporter.adoc:472
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "#!/bin/bash\n"
 #| "# Generate various rectangular IDF outlines for test purposes\n"
@@ -1127,7 +1134,7 @@ msgstr ""
 "#!/bin/bash\n"
 "# Generate various rectangular IDF outlines for test purposes\n"
 "# 10x10, 1mm chamfer, 2mm height\n"
-"./idfrect - 1 > /dev/null <<  _EOF\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
 "mm\n"
 "10\n"
 "10\n"
@@ -1136,7 +1143,7 @@ msgstr ""
 "rectMM_10x10x2_C0.5.idf\n"
 "_EOF\n"
 "# 10x10x12,  0.8mm lead on 6mm pitch\n"
-"./idfrect - 1 > /dev/null <<  _EOF\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
 "mm\n"
 "10\n"
 "10\n"
@@ -1217,7 +1224,7 @@ msgstr ""
 
 #. type: delimited block -
 #: IDF_Exporter.adoc:515
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid ""
 #| "#!/bin/bash\n"
 #| "# Generate an IDF outlines from a DXF file\n"
@@ -1242,22 +1249,25 @@ msgid ""
 msgstr ""
 "#!/bin/bash\n"
 "# Generate an IDF outlines from a DXF file\n"
+"dxf2idf - 1 > /dev/null << _EOF\n"
 "test.dxf\n"
 "mm\n"
-"“DXF TEST GEOMETRY”\n"
-"“DXF TEST  PART”\n"
+"DXF TEST GEOMETRY\n"
+"DXF TEST PART\n"
 "5\n"
-"# This is an IDF test file produced from the outline 'test.dxf'\n"
-"# This is a second IDF comment to demonstrate multiple comments\n"
+"This is an IDF test file produced from the outline 'test.dxf'\n"
+"This is a second IDF comment to demonstrate multiple comments\n"
 
 #. type: delimited block -
 #: IDF_Exporter.adoc:518
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "test_dxf2idf.idf\n"
 msgid ""
 "test_dxf2idf.idf\n"
 "_EOF\n"
-msgstr "test_dxf2idf.idf\n"
+msgstr ""
+"test_dxf2idf.idf\n"
+"_EOF\n"
 
 #. type: Title -
 #: IDF_Exporter.adoc:521
@@ -1315,3 +1325,9 @@ msgid ""
 "render a third party emn file which does employ the entity on the back side "
 "of a board.]"
 msgstr ""
+"[**バグ情報:** idf2vrml ツールは現在、基板の裏面となっている emn ファイル内"
+"の *OTHER_OUTLINE* 部分を正しくレンダリングしません。; しかしながら、このよう"
+"な設定をする方法がないので KiCad がエクスポートしたファイルを使う場合、このバ"
+"グに気付くことはないでしょう。基本的にこのバグは、（裏面に実体を持ったサード"
+"パーティー製の emn ファイルをレンダリングするような）稀な例でのみ問題となりま"
+"す。 ]"
