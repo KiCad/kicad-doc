@@ -13,15 +13,15 @@ You can reach the various commands by:
   commands or “tools”).
 * Clicking on the icons on the left side of the screen (display
   options).
-* Clicking on the mouse buttons (important complementary commands). In
-  particular a right click opens a contextual menu that depends on the
+* Pressing the mouse buttons (important complementary commands). In
+  particular a right click opens a contextual menu for the
   element under the cursor (Zoom, grid and edition of the elements).
-* Function keys of the keyboard (F1, F2, F3, F4, Insert and space keys).
+* Function keys (F1, F2, F3, F4, Insert and space keys).
   Specifically: The “Escape” key often allows the canceling of a command
   in progress. The “Insert” key allows the duplication of the last element
   created.
 
-Here are the various possible accesses to the commands.
+Here are the various possible command locations:
 
 image::images/en/commands_overview.png[commands overview]
 
@@ -34,7 +34,7 @@ Basic commands
 *Left button*
 
 * Single click: displays the characteristics of the component or text
-  under the cursor.
+  under the cursor in the status bar.
 * Double click: edit (if the element is editable) the component or text.
 
 *Right button*
@@ -47,48 +47,40 @@ Operations on blocks
 You can move, drag, copy and delete selected areas in all Eeschema
 menus.
 
-Areas are selected with the left mouse button. The command is completed
-with the release of the button.
+Areas are selected by dragging a box around them using the left mouse button.
 
-By holding one of the keys “Shift”, “Ctrl”, or the 2 keys “Shift and
-Ctrl”, during selection this results in the copying, dragging or
-deletion of the selected area.
-
-Commands summary:
+Holding "Shift", "Ctrl", or "Shift + Ctrl" during selection respectively
+performs copying, dragging, and deletion:
 
 [width="80%",cols="66%,34%",]
 |======================================================
 |left mouse button |Move selection.
 |Shift + left mouse button |Copy selection.
 |Ctrl + left mouse button |Drag selection.
-|Control + Shift + left mouse button |Delete selection.
+|Ctrl + Shift + left mouse button |Delete selection.
 |======================================================
 
-The command is executed at button release.
+When dragging or copying, you can:
 
-During selection you can:
-
-* Click again to place back the elements.
+* Click again to place the elements.
 * Click the right button to cancel.
 
-If a move block command has started, an other command block can be
-deselected via the pop-up menu (mouse, right button):
+If a block move command has started, another command can be
+selected via the pop-up menu (mouse, right button):
 
 image::images/en/main_window_popup.png[main window popup]
 
-Hot keys
+Hotkeys
 ~~~~~~~~
 
-The hot keys are not case sensitive.
+* The “?” key displays the current hotkey list.
+* Hotkeys can be managed by choosing "Edit Hotkeys" in the Preferences menu.
 
-* The “?” key displays the current hot keys list.
-* The Preference menu manage the hot keys.
-
-Here is the default hot key list.
+Here is the default hot key list:
 
 image::images/en/default_hot_key_list.png[Default hotkey list]
 
-All hot keys can be redefined by the user via the hotkey editor.
+All hot keys can be redefined by the user via the hotkey editor:
 
 image::images/en/shortcuts_editor.png[Hotkeys editor window]
 
@@ -96,16 +88,18 @@ Selecting grid size
 ~~~~~~~~~~~~~~~~~~~
 
 In Eeschema, the cursor moves over a grid, which can be displayed or
-not. The grid is always displayed in the library management menus.
+hidden. The grid is always displayed in the library manager.
 
-You can change the grid size via the pop-up menu or via the
-Preferences/Options menu. The default grid size is 50 mil (0.050") or
-1,27 millimeters.
+You can change the grid size via the pop-up menu or via the Preferences/Options menu.
 
-One can also work with the average (20 mil) or a finer grid (10 mil).
-This is however not recommended for usual work. The average or fine grid
-is especially intended to design or handle components with large numbers
-of pins like several hundreds pins.
+The default grid size is 50 mil (0.050") or 1,27 millimeters.
+
+This is the prefered grid to place components and wires in a schematic,
+and to place pins when designing a symbol in the Component Editor.
+
+One can also work with a smaller grid from 25 mil to 10 mil.
+This is only intended for designing the component body
+or placing text and comments, not for placing pins and wires.
 
 Zoom selection
 ~~~~~~~~~~~~~~
@@ -116,239 +110,240 @@ To change the zoom level:
 
 * Or use the function keys:
 
-  ** F1: Zoom in.
+  ** F1: Zoom in
 
-  ** F2: Zoom out.
+  ** F2: Zoom out
 
-  ** F3: Redraw.
+  ** F4 or simply click on the middle mouse button (without moving the mouse): Center the view around the cursor pointer position
 
-  ** F4 or simple click on the mouse middle button (without moving the mouse): Center the view around the cursor pointer position
+* Window Zoom:
 
-* Window Zoom: Mouse drag, with the middle button.
+  ** Mouse wheel: Zoom in/out
 
-  ** Mouse weel: Zoom in / Zoom out
+  ** Shift+Mouse wheel: Pan up/down
 
-  ** SHIFT+Mouse weel: Up/down panning
-
-  ** CTRL+Mouse weel: Left/Right panning
+  ** Ctrl+Mouse wheel: Pan left/right
 
 Displaying cursor coordinates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The display units are in inches or millimeters. However, Eeschema always
-works internally with 1/1000 of an inch.
+works internally in 0.001-inch (mil/thou) units.
 
 The following information is displayed at the bottom right hand side of
 the window:
 
-* The zoom factor.
-* The absolute position of the cursor.
-* The relative position of the cursor.
-* The relative coordinates (x, y) can be reset with the space bar.
-* The coordinates posted will then relate to this point.
+* The zoom factor
+* The absolute position of the cursor
+* The relative position of the cursor
+
+The relative coordinates can be reset to zero with the space bar. This is
+useful for making measurements between two points.
 
 image:images/en/status_bar.png[]
 
 Top menu bar
 ~~~~~~~~~~~~
 
-The top menu bar allows the opening and saving of schematics, the
-program configuration, and it also contains the help menu.
+The top menu bar allows the opening and saving of schematics,
+program configuration, and viewing the documentation.
 
-image:images/en/menu_bar.png[]
+image:images/en/menu_bar.png[menubar]
+
 
 Upper toolbar
 ~~~~~~~~~~~~~
 
 This toolbar gives access to the main functions of Eeschema.
 
-image:images/100000000000034B000000221D3CBEF3.png[100000000000034B000000221D3CBEF3_png]
+If Eeschema is run in standalone mode, this is the available tool set:
 
-[width="100%",cols="36%,64%",]
+image:images/sch_editor_main_toolbar.png[sch editor main toolbar]
+
+If Eeschema is run from the project manager (kicad), this is the available tool set:
+
+image:images/sch_editor_main_toolbar_on_prjmanager.png[sch editor main toolbar prj manager]
+
+Tools to initialize a project are not available, because these tools are in the _Project Manager_.
+
+[width="100%",cols="10%,90%",]
 |=======================================================================
-|image:images/1000000000000023000000229F43382D.png[1000000000000023000000229F43382D_png]
-|Create a new schematic.
+|image:images/icons/new_sch.png[new schematic icon]
+|Create a new schematic (only in standalone mode).
 
-|image:images/icons/open-schematic.png[Open schematic icon]
-|Open a schematic.
+|image:images/icons/open_document.png[Open schematic icon]
+|Open a schematic (only in standalone mode).
 
-|image:images/100000000000002200000022A1E90214.png[100000000000002200000022A1E90214_png]
+|image:images/icons/save.png[icons/save_png]
 a|
-Save complete schematic
+Save complete (hierarchical) schematic.
 
-(with the whole hierarchy).
+|image:images/icons/sheetset.png[Page Settings icon]
+|Select the sheet size and edit the title block.
 
-|image:images/1000000000000022000000221C8530A2.png[1000000000000022000000221C8530A2_png]
-|Select the sheet size and title block editing.
+|image:images/icons/print_button.png[icons/print_button_png]
+|Open print dialog.
 
-|image:images/1000000000000022000000227E318ED2.png[1000000000000022000000227E318ED2_png]
-|Open print menu.
+|image:images/icons/cut_button.png[icons/cut_button_png]
+|Remove the selected elements during a block move.
 
-|image:images/100000000000002100000025F269D11B.png[100000000000002100000025F269D11B_png]
-|Remove the selected elements during a move block.
+|image:images/icons/copyblock.png[icons/copyblock_png]
+|Copy selected elements to the clipboard during a block move.
 
-|image:images/10000000000000240000002590297EF1.png[10000000000000240000002590297EF1_png]
-|Copy selected elements in the clipboard during a move block.
-
-|image:images/10000000000000250000002561F2D858.png[10000000000000250000002561F2D858_png]
+|image:images/icons/paste.png[icons/paste_png]
 |Copy last selected element or block in the current sheet.
 
-|image:images/100000000000002500000025104A25E5.png[100000000000002500000025104A25E5_png]
+|image:images/icons/undo.png[icons/undo_png]
 |Undo: Cancel the last change (up to 10 levels).
 
-|image:images/10000000000000230000002547FD4C9E.png[10000000000000230000002547FD4C9E_png]
+|image:images/icons/redo.png[icons/redo_png]
 |Redo (up to 10 levels).
 
-|image:images/1000000000000024000000255522ABD1.png[1000000000000024000000255522ABD1_png]
-|Call the menu of components localization and texts.
+|image:images/icons/find.png[search icon]
+|Call the dialog to search components and texts in the schematic.
 
-|image:images/icons/zoom-in-out.png[]
-|Zoom in and out, around the center of screen.
+|image:images/icons/find_replace.png[search replace icon]
+|Call the dialog to search and replace texts in the schematic.
 
-|image:images/100000000000004100000025F21D3B62.png[100000000000004100000025F21D3B62_png]
-|Redraw of the screen and optimal Zoom.
+|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]
+|Zoom in and out.
 
-|image:images/100000000000002200000025C0F59654.png[100000000000002200000025C0F59654_png]
-|Call the navigator window, to display the tree structure of the diagram
-hierarchy (if it contains sub sheets) and the immediate selection of any
-sheet of the hierarchy.
+|image:images/icons/zoom_redraw.png[icons/zoom_redraw] image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]
+|Refresh screen; zoom to fit.
 
-|image:images/100000000000002300000025F2BC99A5.png[100000000000002300000025F2BC99A5_png]
-|Call component editor _Libedit_ (Examination, modification, and editing
-of library components).
+|image:images/icons/hierarchy_nav.png[hierarchy navigator icon]
+|View and navigate the hierarchy tree.
 
-|image:images/100000000000002400000023C03F2AE4.png[100000000000002400000023C03F2AE4_png]
+|image:images/icons/leave_sheet.png[icons/leave_sheet]
+|Leave the current sheet and go up in the hierarchy.
+
+|image:images/icons/libedit.png[icons/libedit_png]
+|Call component editor _Libedit_ to view and modify libraries and component symbols.
+
+|image:images/icons/library_browse.png[icons/library_browse_png]
 |Display libraries (Viewlib).
 
 |image:images/icons/annotate.png[icons_annotate_png]
-|Component annotation.
+|Annotate components.
 
-|image:images/100000000000002700000023737FA05C.png[100000000000002700000023737FA05C_png]
-|ERC (Electrical Rules Check). ERC automatically checks for electrical
-connections.
+|image:images/icons/erc.png[ERC icon]
+|Electrical rules check (ERC), automatically validate electrical connections.
 
-|image:images/10000000000000220000002353233D17.png[10000000000000220000002353233D17_png]
-|Creation of the netlist (Pcbnew, Spice and other formats).
+|image:images/icons/netlist.png[Netlist icon]
+|Export a netlist (Pcbnew, SPICE, and other formats).
 
-|image:images/1000000000000025000000230D237A08.png[1000000000000025000000230D237A08_png]
-|Generate the BOM (Bill of materials) and/or hierarchical labels.
+|image:images/icons/bom.png[BOM icon]
+|Generate the BOM (Bill of Materials).
 
-|image:images/100000000000002200000023D9BC0065.png[100000000000002200000023D9BC0065_png]
-|Call CvPvb.
+|image:images/icons/edit_module.png[edit_module icon]
+|Edit module.
 
-|image:images/1000000000000023000000254FA6011B.png[1000000000000023000000254FA6011B_png]
-|Call Pcbnew.
+|image:images/icons/cvpcb.png[run cvpcb icon]
+|Call CvPvb to assign footprints to components.
 
-|image:images/100000000000002400000025B5886D2F.png[100000000000002400000025B5886D2F_png]
-|Import a stuff file from CvPcb (fill the footprint field of components)
+|image:images/icons/pcbnew.png[icons/pcbnew_png]
+|Call Pcbnew to perform a PCB layout.
+
+|image:images/icons/import_footprint_names.png[Import Footprint Names icon]
+|Back-import component footprints (selected using CvPcb) into the "footprint" fields.
 |=======================================================================
 
 Right toolbar icons
 ~~~~~~~~~~~~~~~~~~~
 
-[width="100%",cols="47%,53%",]
+[width="100%",cols="10%,90%",]
 |=======================================================================
-|image:images/100000000000002100000279392B037B.png[100000000000002100000279392B037B_png]
+|image:images/sch_editor_right_toolbar.png[images/sch_editor_right_toolbar.png]
 a|
-This toolbar gives access to tools for:
+This toolbar contains tools to:
 
-* Component placement, wires and buses, junctions, labels, text, etc.
-* Navigation in the sheets hierarchy menu.
-* Creation of hierarchical sub-sheets and connection symbols.
-* Component deletion.
+* Place components, wires, buses, junctions, labels, text, etc.
+* Navigate the sheet hierarchy
+* Create hierarchical sub-sheets and connection symbols
+* Delete components
 
 |=======================================================================
 
 The detailed use of these tools is described in the chapter “Diagram
 Creation/Editing”. An outline of their use is given below.
 
-[width="100%",cols="35%,65%",]
+[width="100%",cols="10%,90%",]
 |=======================================================================
-|image:images/100000000000002100000022D6E2566C.png[100000000000002100000022D6E2566C_png]
-|Stop the order or tool in progress.
+|image:images/icons/cursor.png[icons/cursor_png]
+|Cancel the active command or tool.
 
-|image:images/100000000000002100000020FAA0568F.png[100000000000002100000020FAA0568F_png]
-|Navigation in the hierarchy: this tool makes it possible to open the
+|image:images/icons/hierarchy_cursor.png[icons/hierarchy_cursor_png]
+|Hierarchy navigation: this tool makes it possible to open the
 subsheet of the displayed schematic (click in the symbol of this
 subsheet), or to go back up in the hierarchy (click in a free area of
-the subsheet)
+the schematic).
 
-|image:images/100000000000002100000022A0ADE255.png[100000000000002100000022A0ADE255_png]
-|Call the component placement menu.
+|image:images/icons/new_component.png[New Component icon]
+|Display the component selector.
 
-|image:images/10000000000000210000001EAC4DD762.png[10000000000000210000001EAC4DD762_png]
-|``Powers'' placement menu.
+|image:images/icons/add_power.png[Add Power icon]
+|Display the power symbol selector.
 
-|image:images/100000000000002100000023B8CF86E8.png[100000000000002100000023B8CF86E8_png]
-|Wire placement.
+|image:images/icons/add_line.png[icons/add_line_png]
+|Draw a wire.
 
-|image:images/100000000000002100000021A223E16E.png[100000000000002100000021A223E16E_png]
-|Bus placement.
+|image:images/icons/add_bus.png[icons/add_bus_png]
+|Draw a bus.
 
-|image:images/10000000000000210000001FF831ADEC.png[10000000000000210000001FF831ADEC_png]
-|Wire to bus connections. These elements have only a decorative role and
-do not allow connection; thus they should not be used for connections
-between wires.
+|image:images/icons/add_line2bus.png[icons/add_line2bus_png]
+|Draw wire-to-bus entry points. These elements are only graphical and do not create
+a connection, thus they should not be used to connect wires together.
 
-|image:images/100000000000002100000021E71263FD.png[100000000000002100000021E71263FD_png]
-|Bus to bus connections. They can only connect two buses between
-themselves.
+|image:images/icons/add_bus2bus.png[icons/add_bus2bus_png]
+|Draw bus-to-bus entry points.
 
-|image:images/10000000000000210000001E229A5031.png[10000000000000210000001E229A5031_png]
-|“No connection” symbols. These are to be placed on component pins which
+|image:images/icons/noconn.png[icons/noconn_png]
+|Place a "no connection" symbol. These are placed on component pins which
 are not to be connected. This is useful in the ERC function to check if
 pins are intentionally left not connected or are missed.
 
-|image:images/10000000000000210000001F09B8170C.png[10000000000000210000001F09B8170C_png]
-|Local label placement. Two wires may be connected with identical labels
-**in the same sheet**. For connections between two different sheets,you
-have to use global symbols.
-
-|image:images/icons/global-label.png[Global label icon]
-a|
-Global label placement.
-
-All global labels are connected (even between different sheets).
-
-|image:images/100000000000002100000022740CD855.png[100000000000002100000022740CD855_png]
-|Junction placement. To connect two crossing wires, or a wire and a pin,
+|image:images/icons/add_junction.png[icons/add_junction_png]
+|Place a junction. This connects two crossing wires, or a wire and a pin,
 when it can be ambiguous. (i.e. if an end of the wire or pin is not
 connected to one of the ends of the other wire).
 
-|image:images/1000000000000021000000209B84B124.png[1000000000000021000000209B84B124_png]
-|Hierarchical label placement. This makes it possible to place a
-connection between a sheet and the root sheet which contains this sheet
-symbol.
+|image:images/icons/add_line_label.png[icons/add_line_label_png]
+|Local label placement. Two wires may be connected with identical labels
+**in the same sheet**. For connections between two different sheets, you
+have to use global or hierarchical labels.
 
-|image:images/100000000000002100000020F9992133.png[100000000000002100000020F9992133_png]
-|Hierarchical subsheet symbol placement (resizable rectangle). You have
-to specify the file name to save the data of this “subsheet”.
-
-|image:images/100000000000002100000021C98460F6.png[100000000000002100000021C98460F6_png]
+|image:images/icons/add_glabel.png[Global label icon]
 a|
-Global label importation from subsheet, in order to create a connection
-on a subsheet symbol. Global labels are supposed to be already placed in
-this subsheet.
+Place a global label. All global labels with the same name are connected, even between
+different sheets.
 
-For this hierarchy symbol, the created connection points are equivalent
-to a traditional component pin, and must be wired.
+|image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]
+|Place a hierarchical label. This makes it possible to place a
+connection between a sheet and the parent sheet that contains it.
 
-|image:images/1000000000000021000000239C3EC480.png[1000000000000021000000239C3EC480_png]
-|Global label creation in subsheets to create connection points. This
-function is similar to the previous one which does not require already
-defined global symbols.
+|image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsheet_png]
+|Place a hierarchical subsheet. You must specify the file name for this subsheet.
 
-|image:images/10000000000000210000001F169B0971.png[10000000000000210000001F169B0971_png]
-|Lines for framings... Only decorative, and does not perform a
-connection.
+|image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_label_png]
+a|
+Import hierarchical labels from a subsheet. These hierarchical labels must already be
+placed in the subsheet. These are equivalent to pins on a component, and must be connected
+using wires.
 
-|image:images/10000000000000210000002175501032.png[10000000000000210000002175501032_png]
-|Placement of comment text. Only decorative.
+|image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]
+|Place hierarchical label in a subsheet symbol. This is placed by name and does not require the
+label to already exist in the subsheet itself.
 
-|image:images/100000000000002100000023FCA3AB59.png[100000000000002100000023FCA3AB59_png]
-|Insert a bitmap image.
+|image:images/icons/add_dashed_line.png[icons/add_dashed_line_png]
+|Draw a line. These are only graphical and do not connect anything.
 
-|image:images/100000000000002100000022FAA5C92D.png[100000000000002100000022FAA5C92D_png]
+|image:images/icons/add_text.png[icons/add_text_png]
+|Place textual comments. These are only graphical.
+
+|image:images/icons/image.png[icons/image_png]
+|Place a bitmap image.
+
+|image:images/icons/delete.png[icons/cancel_png]
 a|
 Delete selected element.
 
@@ -363,17 +358,28 @@ deletions.
 Left toolbar icons
 ~~~~~~~~~~~~~~~~~~
 
-[width="100%",cols="48%,52%",]
-|=======================================================================
-|image:images/1000000000000023000000C93464FF5C.png[1000000000000023000000C93464FF5C_png]
-a|
 This toolbar manages the display options:
 
-* Grid.
-* Units.
-* Cursor.
-* Invisible pins.
-* Allowed directions of wires and buses.
+[width="100%",cols="10%,90%",]
+|=======================================================================
+
+|image:images/icons/grid.png[icons/grid]
+| Show/Hide the grid.
+
+|image:images/icons/unit_inch.png[icons/unit_inch]
+|Switch to inches.
+
+|image:images/icons/unit_mm.png[icons/unit_mm]
+|Switch to millimeters.
+
+|image:images/icons/cursor_shape.png[icons/cursor_shape]
+| Choose the cursor shape.
+
+|image:images/icons/hidden_pin.png[icons/hidden_pin]
+| Visibility of "invisible" pins.
+
+|image:images/icons/lines90.png[icons/lines90]
+| Allowed orientation of wires and buses.
 
 |=======================================================================
 
@@ -381,13 +387,11 @@ This toolbar manages the display options:
 Pop-up menus and quick editing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A right click opens a pop-up menu which content depends on the element
-selected, if any. You have immediate access to:
+A right-click opens a contextual menu for the selected element. This contains:
 
 * Zoom factor.
 * Grid adjustment.
-* And according to the case, editing of the most usually modified
-parameters.
+* Commonly edited parameters of the selected element.
 
 [width="95%",cols="60%,40%",]
 |=======================================================================

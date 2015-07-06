@@ -62,14 +62,14 @@ incorporates an elegant ensemble of the following software tools:
 
 * *Kicad* : project manager
 * *Eeschema* : schematic editor and component editor
-* *CvPcb* : footprint selector
+* *CvPcb* : footprint selector helper (always run from Eeschema)
 * *Pcbnew* : circuit board layout editor and footprint editor
 * *GerbView* : Gerber viewer
 
 3 utilities are included
 
-* *Bitmap2Component*: component maker for logos (Creates a schematic
-  component or a footprint from a bitmap picture).
+* *Bitmap2Component*: component maker for logos. It creates a schematic
+  component or a footprint from a bitmap picture.
 * *PcbCalculator*: A calculator that is helpful to calculate
   components for regulators, track width versus current, transmission
   lines...
@@ -95,61 +95,65 @@ Being open source (GPL licensed), kicad represents the ideal tool for
 projects oriented towards the creation of electronic hardware with an
 open-source flavour.
 
-Kicad is available for Linux, Windows and Apple OS X (still experimental, but now working well).
+Kicad is available for Linux, Windows and Apple OS X (still experimental, but is now working well).
 
 KiCad files and folders
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-KiCad creates and uses files with specific extension (and folders)
-for schematic and board edition.
+KiCad creates and uses files with the following specific file extensions (and folders)
+for schematic and board editing.
 
 *Project manager file:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.pro |The small files which contains a few parameters for the current project
-( schematic library list and some other parameters)
+|*.pro |Small file containing a few parameters for the current project, including the schematic library list.
 |=================================================================
 
 *Schematic editor files:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.sch |The schematic files (do not contain the components themselves)
-|*.lib |The schematic component library files
-(contain the component descriptions: graphic shape, pins, fields)
-|*.dcm |The schematic component library files documentation
-(contain some fields relative to component descriptions:
-comments, keywords, reference to data sheets)
-|*_cache.lib |The schematic component library cache file
-(contains a copy of components used in the schematic project)
+|*.sch |Schematic files, which do not contain the components themselves.
+|*.lib |Schematic component library files, containing the component descriptions: graphic shape, pins, fields.
+|*.dcm |Schematic component library documentation, containing some component descriptions:
+comments, keywords, reference to data sheets.
+|*_cache.lib |Schematic component library cache file, containing a copy of the components used in the schematic project.
 |=================================================================
 
 *Board editor files and folders:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.kicad_pcb |The board files (contain all info but the page layout)
-|*.pretty |The footprint **library folders**. The folder itself is the library
-|*.kicad_mod |The footprint files (contain one footprint description by file)
-|*.brd |The old board files (legacy format).
-Can be read, but not written by the board editor
-|*.mod |The old footprint library files (legacy format).
-Can be read by the footprint or the board editor, but not written
-|fp-lib-table |The footprint library list (_footprint libraries table_):
+|*.kicad_pcb |Board file containing all info but the page layout.
+|*.pretty |Footprint **library folders**. The folder itself is the library.
+|*.kicad_mod |Footprint files, containing one footprint description each.
+|*.brd |Board file in the legacy format.
+Can be read, but not written by the board editor.
+|*.mod |Footprint library in the legacy format.
+Can be read by the footprint or the board editor, but not written.
+|fp-lib-table |Footprint library list (_footprint libraries table_):
 list of footprint libraries (various formats) which are loaded
-by the board or the footprint editor or CvPcb
+by the board or the footprint editor or CvPcb.
 |=================================================================
 
 *Common files:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.kicad_wks |The page layout description files, for guy who want a worksheet
+|*.kicad_wks |The page layout description files, for people who want a worksheet
 with a custom look.
-|*.cmp |The file storing the association between components
-used in the schematic and their footprints.
-It is created by the tool CvPcb, but the schematic itself can store this info,
-depending on the work flow of users.
-|*.net |The netlist file created by the schematic, and read by the board editor.
-this file is associated to the .cmp file, for users who prefer a separate file
+|*.net |Netlist file created by the schematic, and read by the board editor.
+This file is associated to the .cmp file, for users who prefer a separate file
 for the component/footprint association.
+|=================================================================
+
+*Special file:*
+[width="100%",cols="20%,80%",]
+|=================================================================
+|*.cmp |Stores the association between components used in the schematic and their footprints.
+
+It can be created by Pcbnew, and imported by Eeschema.
+
+The purpose is a back import from Pcbnew to Eeschema, for users
+who change footprints inside Pcbnew (for instance using _Exchange Footprints_ command)
+and want to import these changes in schematic.
 |=================================================================
 
 *Other files:*
@@ -157,15 +161,15 @@ for the component/footprint association.
 They are generated by Kicad for fabrication or documentation.
 [width="100%",cols="20%,80%",]
 |=================================================================
-|*.gbr |The Gerber files, for fabrication
-|*.drl |The drill files (Excellon format), for fabrication
-|*.pos |The position files (ascii format), for automatic insertion machines
-|*.rpt |The report files (ascii format), for documentation
-|*.ps |The plot files (postscript), for documentation
-|*.pdf |The plot files (pdf format), for documentation
-|*.svg |The plot files (svg format), for documentation
-|*.dxf |The plot files (dxf format), for documentation
-|*.plt |The plot files (HPGL format), for documentation
+|*.gbr |Gerber files, for fabrication
+|*.drl |Drill files (Excellon format), for fabrication.
+|*.pos |Position files (ascii format), for automatic insertion machines.
+|*.rpt |Report files (ascii format), for documentation.
+|*.ps |Plot files (postscript), for documentation.
+|*.pdf |Plot files (pdf format), for documentation.
+|*.svg |Plot files (svg format), for documentation.
+|*.dxf |Plot files (dxf format), for documentation.
+|*.plt |Plot files (HPGL format), for documentation.
 |=================================================================
 
 
@@ -185,15 +189,15 @@ kicad/template. It serves as a template for any new project.
 
 If an other default configuration file named _fp-lib-table_ exists,
 it will be used only once to create a footprint library list.
-(else, this list will be created from scratch)
+(or else, this list will be created from scratch)
 
 *The default file _kicad.pro_ can be freely modified if necessary,
-mainly to set the list of libraries files loaded by Eeschema.*
+mainly to set the list of library files loaded by Eeschema.*
 
 A few other parameters (default text size, default line thickness, mainly
-for Pcbnew) are stored.
+for Pcbnew) are stored here.
 
-Verify you have a write access to kicad/template/kicad.pro
+Verify that you have write access to kicad/template/kicad.pro
 
 Run kicad and load _kicad.pro_ project.
 
@@ -204,10 +208,10 @@ time you create new projects.
 
 Run Pcbnew via kicad.
 Modify and update the Pcbnew configuration, especially the footprint library list.
-Pcbnew will creates or update a library list file called **footprint library table**.
+Pcbnew will create or update a library list file called **footprint library table**.
 There are 2 library list files (named fp-lib-table).
 The first (located in the user home directory) is global for all projects.
-The second, if exists (located in the project directory) is specific to the project.
+The second, if it exists (located in the project directory) is specific to the project.
 
 Initialization of some options and utilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -229,22 +233,21 @@ image:images/preferences_menu.png[]
 Configuration of paths
 ~~~~~~~~~~~~~~~~~~~~~~
 In Kicad, one can define some paths using an __environment variable__.
-A few environment variables are internally define by Kicad,
-and can be used to define path (like library paths, 3D shapes paths ...)
+A few environment variables are internally defined by Kicad,
+and can be used to define paths (for libraries, 3D shapes, etc).
 
-This is usefull when absolute paths are not known or are subject to change.
+This is useful when absolute paths are not known or are subject to change.
 This is the case for ``official'' libraries built for kicad:
 
-* for the path of these librairies, when installed on you disk
+* for the path of these libraries, when installed on your disk
 * for the path of 3D shapes files used in footprint definitions.
 
 For instance, the full path of _connect.pretty_ footprint library is
 defined like this, when using the KISYSMOD environment variable to define
-the full path.
-
+the full path:
 ${KISYSMOD}/connect.pretty
 
-Obvioulsy, one can use an usual full path definition, if this full path is
+Obviously, one can use a usual full path definition, if this full path is
 well known, and never changes.
 
 This option allows you to define some paths from an environment variable,
@@ -252,11 +255,11 @@ and add your own environment variables, to define personal paths, if needed.
 
 [width="100%",cols="20%,80%",]
 |=================================================================
-|KIGITHUB |is frequently used in footprint lib tables examples.
+|KIGITHUB |frequently used in footprint lib tables examples.
 If you are using this variable, it must be defined.
-|KISYS3DMOD |is the default base path of 3D shapes files,
+|KISYS3DMOD |default base path of 3D shapes files,
 and must be defined, because an absolute path is not usually used.
-|KISYSMOD |is the default base path of footprint library folders,
+|KISYSMOD |default base path of footprint library folders,
 and must be defined, if an absolute path is not used in footprint library names.
 |=================================================================
 
@@ -273,11 +276,11 @@ folder (the pretty footprint library) found **_inside the current project folder
 
 
 * *If you modify the configuration of paths, please quit and rerun Kicad,
-to avoid any issue in paths handling.*
+to avoid any issues in path handling.*
 
 Initialization of the text editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Before using a text editor to browse/edit files in current project,
+Before using a text editor to browse/edit files in the current project,
 you have to choose the text editor you want to use. The menu:
 
 _Preferences/SetText Editor_
@@ -286,9 +289,11 @@ allows you to set the text editor to use.
 
 Initialization of the PDF viewer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Your can use the default PDF viewer or a PDF viewer
-Select _Favourite PDF Viewer_
-chosen by _SetPDF Viewer_ menu.
+You can use the default PDF viewer or choose your own PDF viewer
+
+Select _Preferences/PDF Viewer/Favourite PDF Viewer_ to choose your favourite (default) PDF Viewer.
+
+Your own (non default) viewer is chosen by using the _Preferences/PDF Viewer/SetPDF Viewer_ menu.
 
 On Linux, the default PDF viewer is known to be sometimes strange,
 so using _Favourite PDF Viewer_ after selecting a suitable PDF viewer
@@ -366,7 +371,7 @@ Utility launch pane
 Kicad allows you to run all stand alone software tools that come with
 it.
 
-The launch pane is made of the above 8 buttons that correspond to the
+The launch pane is made of the 8 buttons below that correspond to the
 following commands (1 to 8, from left to right):
 
 image:images/launch_pane.png[]
@@ -378,10 +383,10 @@ image:images/launch_pane.png[]
 |2 |*LibEdit* |The component editor and component library manager.
 |3 |*Pcbnew* |The board layout editor.
 |4 |*ModEdit* |The footprint editor and footprint library manager.
-|5 |*Gerbview* |A GERBER file viewer. Its also can show drill files.
+|5 |*Gerbview* |A GERBER file viewer. It can also show drill files.
 |6 |*Bitmap2component* |A tool to build a footprint or a component from
 a B&W bitmap image to create logos.
-|7 |*Pcb Calculator* |A tool to calculate track widths, any many other
+|7 |*Pcb Calculator* |A tool to calculate track widths, and many other
 things.
 |8 |*Pl Editor* |The Page Layout editor, to create/customize frame
 references.
@@ -399,7 +404,7 @@ image:images/project_tree.png[]
     opening the file pic_programmer.kicad_pcb.
 
 *   Right clicking on any of the files in the project tree allows generic
-    files manipulation.
+    file manipulation.
 
 
 Top toolbar
@@ -536,7 +541,7 @@ image:images/menu_file.png[]
 
 - *Blank Project* Create a blank project by just copying
   template/kicad.pro to the current folder.
-- *Project from Template* Open the template selection dialog. The
+- *Project from Template* Opens the template selection dialog. The
   template selection dialog has a list of icons, and a display window. A
   single click on a template's icon on the left will load that templates
   info.html metadata file and display it in the display window. A click on

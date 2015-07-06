@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2015-04-04 02:26+0200\n"
-"PO-Revision-Date: 2015-04-05 01:41+0200\n"
+"POT-Creation-Date: 2015-06-27 22:39+0200\n"
+"PO-Revision-Date: 2015-06-28 00:41+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -142,7 +142,6 @@ msgstr "Disegno dei contorni della scheda"
 
 #. type: Plain text
 #: Pcbnew_create_and_modify_board.adoc:22
-#, fuzzy
 msgid ""
 "It is usually a good idea to define the outline of the board first.  The "
 "outline is drawn as a sequence of line segments. Select 'Edges pcb' as the "
@@ -154,13 +153,26 @@ msgid ""
 "space bar, and that the display units can also be toggled using 'Alt-U'.  "
 "Relative coordinates enable very precise dimensions to be drawn. It is "
 "possible to draw a circular (or arc) outline:"
-msgstr "Solitamente è considerata una buona idea definire per prima cosa i bordi della scheda.  I bordi si disegnano con una sequenza di segmenti di linea. Selezionare 'Edges pcb' come strato attivo e usare lo strumento 'Add graphic line or polygon' per tracciare il bordo, facendo clic alla posizione di ogni vertice e facendo doppio clic per finire. Boards usually have very precise dimensions, so it may be necessary to use the displayed cursor coordinates while tracing the outline. Remember that the relative coordinates can be zeroed at any time using the space bar, and that the display units can also be toggled using 'Alt-U'.  Relative coordinates enable very precise dimensions to be drawn. It is possible to draw a circular (or arc) outline:"
+msgstr ""
+"Solitamente è considerata una buona idea definire per prima cosa i bordi "
+"della scheda.  I bordi si disegnano con una sequenza di segmenti di linea. "
+"Selezionare 'Edges pcb' come strato attivo e usare lo strumento ``Aggiungi "
+"linea o poligono grafico'' per tracciare il bordo, facendo clic alla "
+"posizione di ogni vertice e facendo doppio clic per finire. Le schede di "
+"solito hanno dimensioni molto precise, perciò potrebbe essere necessario "
+"usare le coordinate mostrate del puntatore durante la tracciatura del "
+"contorno. Tenere a mente che le coordinate relative possono essere azzerate "
+"in qualsiasi momento usando la barra spaziatrice, e che le unità di misura "
+"mostrate possono essere abilitate/disabilitate usando la combinazione ``Alt-"
+"U''.  Le coordinate relative consentono disegni di dimensioni molto precise. "
+"È possibile disegnare un contorno circolare (o arcuato):"
 
 #. type: Plain text
 #: Pcbnew_create_and_modify_board.adoc:24
-#, fuzzy
 msgid "Select the 'Add graphic circle' or 'Add graphic arc' tool"
-msgstr "Selezionare lo strumento \"Aggiungi cerchio grafico\" o \"Aggiungi arco grafico\""
+msgstr ""
+"Selezionare lo strumento ``Aggiungi cerchio grafico'' o ``Aggiungi arco "
+"grafico''"
 
 #. type: Plain text
 #: Pcbnew_create_and_modify_board.adoc:25
@@ -179,12 +191,15 @@ msgstr "Terminare facendo nuovamente clic."
 
 #. type: Plain text
 #: Pcbnew_create_and_modify_board.adoc:32
-#, fuzzy
 msgid ""
 "Note that the width of the outline can be adjusted, in the Parameters menu "
 "(recommended width = 150 in 1/10 mils) or via the Options, but this will not "
 "be visible unless the graphics are displayed in other than outline mode."
-msgstr "Si noti che la larghezza del bordo può essere regolata, nel menu Parametri (larghezza raccomandata = 150 in decimi di mils) o attraverso le Opzioni, ma questa non sarà visibile a meno che la grafica non sia mostrata in una modalità diversa da outline."
+msgstr ""
+"Si noti che la larghezza del bordo può essere regolata, nel menu Parametri "
+"(larghezza raccomandata = 150 in decimi di mils) o attraverso le Opzioni, ma "
+"questa non sarà visibile a meno che la grafica non sia mostrata in una "
+"modalità diversa da contorni."
 
 #. type: Plain text
 #: Pcbnew_create_and_modify_board.adoc:34
@@ -194,42 +209,189 @@ msgstr "Il bordo risultante dovrebbe somigliare a questo:"
 #. type: Plain text
 #: Pcbnew_create_and_modify_board.adoc:36
 msgid "image:images/Pcbnew_simple_board_outline.png[]"
-msgstr ""
+msgstr "image:images/Pcbnew_simple_board_outline.png[]"
 
 #. type: Title ^
 #: Pcbnew_create_and_modify_board.adoc:38
+#, no-wrap
+msgid "Importing a DXF drawing for a board outline"
+msgstr "Importazione disegno DXF come contorno scheda"
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:44
+msgid ""
+"As an alternative to drawing the board outline in Pcbnew directly, an "
+"outline can also be imported from a DXF drawing. Using this feature allows "
+"for much more complex board shapes than is possible with the Pcbnew drawing "
+"capabilities."
+msgstr "In alternativa a disegnare il contorno scheda direttamente in Pcbnew, questo può essere importato da un disegno DXF. Usando questa funzione si possono creare forme di schede più complesse di quelle che si otterrebbe sfruttando solamente le capacità di disegno interne di Pcbnew."
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:48
+msgid ""
+"For example the required board shape may be exported as a DXF drawing from a "
+"mechanical CAD package and then imported into Pcbnew to define the exact "
+"board shape required to fit an enclosure."
+msgstr ""
+"Per esempio la forma scheda richiesta potrebbe essere stata esportata come "
+"disegno DXF da un CAD meccanico e poi importata in Pcbnew per definire "
+"esattamente la forma della scheda richiesta per inserirla in un contenitore."
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:52
+msgid ""
+"For best results use the *DXF R12* format for import into Pcbnew as there is "
+"limited support for _advanced_ features like Ellipsis as available in more "
+"recent versions of the DXF formats."
+msgstr "Per ottenere i migliori risultati usare il formato *DXF R12* per importare in Pcbnew, dato che c'è un supporto limitato a caratteristiche _avanzate_ come le ellissi che invece sono disponibili in versioni più recenti del formato DXF."
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:54
+msgid "To import a board shape from a *DXF R12* file:"
+msgstr "Per importare la forma di una scheda da un file **DXF R12**:"
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:56
+msgid "File > Import > DXF File."
+msgstr "File > Importa > File DXF."
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:57
+msgid "Select the DXF file to be imported."
+msgstr "Seleziona il file DXF da importare."
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:58
+msgid "Select which origin is used by the DXF shape."
+msgstr "Seleziona quale origine verrà usata dalla forma DXF."
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:61
+msgid ""
+"Select the board layer for the import. Edge.Cuts is needed for the board "
+"outline, but DXF drawings can be imported onto other layers as well."
+msgstr ""
+"Selezionare lo strato della scheda da importare. Per i contorni scheda serve "
+"Edge.Cuts, ma i disegni DXF possono essere importati anche in altri strati."
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:62
+msgid "Click OK"
+msgstr "Fare clic su OK"
+
+#. type: Title ^
+#: Pcbnew_create_and_modify_board.adoc:64
+#, no-wrap
+msgid "Notes on importing DXF files with advanced features like Ellipsis"
+msgstr "Note sull'importazione di file DXF con caratteristiche avanzate come le ellissi"
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:69
+msgid ""
+"If you require the use of more _advanced_ DXF drawing features for your "
+"board outline, it is possible to do so by exporting your DXF drawing in the "
+"older *DXF R12* format."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:76
+msgid ""
+"The DXF R12 format does not have support for _advanced_ drawing features.  "
+"As such, most CAD software converts these drawing features into a series of "
+"short line segments that approximate the required shape when exporting to "
+"DXF R12. Some CAD packages also allow you to select either the number of "
+"line segments or the length of the segments used for such an approximation.  "
+"You may have to experiment with your CAD export feature for best results."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:79
+msgid ""
+"LibreCAD is one of those CAD packages that is able to convert DXF files to "
+"the older DXF R12 format."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:81
+msgid "In LibreCAD:"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:83
+msgid "Open the DXF file"
+msgstr "Apri il file DXF"
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:84
+msgid "Use 'Save As...'"
+msgstr "Usa 'Salva con nome...'"
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:86
+msgid ""
+"In the 'Save Drawing As' dialog, select 'Drawing Exchange DXF R12 (*.dxf)' "
+"in the 'Save as type:' selection."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:87
+msgid ""
+"Enter a different file name, if you like to preserve your original DXF file."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:90
+msgid ""
+"Here is an example of such an DXF import with a board that had several "
+"elliptical segments approximated by a number of short line segments:"
+msgstr "Ecco un esempio di una tale importazione DXF con una scheda che ha diversi segmenti ellittici approssimati da una serie di corti segmenti di linea:"
+
+#. type: Plain text
+#: Pcbnew_create_and_modify_board.adoc:92
+msgid "image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]"
+msgstr ""
+
+#. type: Title ^
+#: Pcbnew_create_and_modify_board.adoc:94
 #, no-wrap
 msgid "Reading the netlist generated from the schematic"
 msgstr "Lettura della netlist generata dallo schema elettrico"
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:42
+#: Pcbnew_create_and_modify_board.adoc:98
 msgid ""
 "Activate the image:images/icons/netlist.png[] icon to display the netlist "
 "dialog window:"
-msgstr "Attivare l'icona image:images/icons/netlist.png[] per mostrare la finestra di dialogo della netlist:"
+msgstr ""
+"Attivare l'icona image:images/icons/netlist.png[] per mostrare la finestra "
+"di dialogo della netlist:"
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:44 Pcbnew_schematics.adoc:74
+#: Pcbnew_create_and_modify_board.adoc:100 Pcbnew_schematics.adoc:74
 msgid "image:images/Pcbnew_netlist_dialog.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:50
+#: Pcbnew_create_and_modify_board.adoc:106
 msgid ""
 "If the name (path) of the netlist in the window title is incorrect, use the "
 "'Select' button to browse to the desired netlist. Then 'Read' the netlist. "
 "Any modules not already loaded will appear, superimposed one upon another "
 "(we shall see below how to move them automatically)."
 msgstr ""
+"Se il nome (percorso) della netlist nel titolo della finestra è sbagliato, "
+"usare il pulsante ``Seleziona'' per sfogliare e selezionare la netlist "
+"desiderata. Poi ``Leggere'' la netlist. Ogni modulo non ancora caricato "
+"apparirà, sovrapposto uno sull'altro (vedremo poi come spostarli "
+"automaticamente)."
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:52
+#: Pcbnew_create_and_modify_board.adoc:108
 msgid "image:images/Pcbnew_board_outline_with_dogpile.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:58
+#: Pcbnew_create_and_modify_board.adoc:114
 msgid ""
 "If none of the modules have been placed, all of the modules will appear on "
 "the board in the same place, making them difficult to recognize. It is "
@@ -237,14 +399,19 @@ msgid ""
 "module' accessed via the right mouse button). Here is the result of such "
 "automatic arrangement:"
 msgstr ""
+"Se nessuno dei moduli è stato piazzato, tutti i moduli appariranno sulla "
+"scheda nello stesso punto, rendendoli difficili da riconoscere. È possibile "
+"disporli automaticamente (usando il comando 'Piazzamento globale/Sposta "
+"modulo' tramite il pulsante destro del mouse). Ecco il risultato di tale "
+"riorganizzazione:"
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:60
+#: Pcbnew_create_and_modify_board.adoc:116
 msgid "image:images/Pcbnew_board_outline_with_globally_placed_modules.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:68
+#: Pcbnew_create_and_modify_board.adoc:124
 msgid ""
 "If a board is modified by replacing an existing module with a new one (for "
 "example changing a 1/8W resistance to 1/2W) in CvPcb, it will be necessary "
@@ -255,49 +422,49 @@ msgid ""
 msgstr ""
 
 #. type: Title ~
-#: Pcbnew_create_and_modify_board.adoc:70
+#: Pcbnew_create_and_modify_board.adoc:126
 #, no-wrap
 msgid "Correcting a board"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:74
+#: Pcbnew_create_and_modify_board.adoc:130
 msgid ""
 "It is very often necessary to correct a board following a corresponding "
 "change in the schematic."
 msgstr ""
 
 #. type: Title ^
-#: Pcbnew_create_and_modify_board.adoc:76
+#: Pcbnew_create_and_modify_board.adoc:132
 #, no-wrap
 msgid "Steps to follow"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:79
+#: Pcbnew_create_and_modify_board.adoc:135
 msgid "Create a new netlist from the modified schematic."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:81
+#: Pcbnew_create_and_modify_board.adoc:137
 msgid ""
 "If new components have been added, link these to their corresponding modules "
 "in CvPcb."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:82
+#: Pcbnew_create_and_modify_board.adoc:138
 msgid "Read the new netlist in Pcbnew."
 msgstr ""
 
 #. type: Title ^
-#: Pcbnew_create_and_modify_board.adoc:84
+#: Pcbnew_create_and_modify_board.adoc:140
 #, no-wrap
 msgid "Deleting incorrect tracks"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:90
+#: Pcbnew_create_and_modify_board.adoc:146
 msgid ""
 "Pcbnew is able to automatically delete tracks that have become incorrect as "
 "a result of modifications. To do this, check the 'Delete' option in the 'Bad "
@@ -305,32 +472,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:92
+#: Pcbnew_create_and_modify_board.adoc:148
 msgid "image:images/Pcbnew_bad_tracks_deletion_option.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:95
+#: Pcbnew_create_and_modify_board.adoc:151
 msgid ""
 "However, it is often quicker to modify such tracks by hand (the DRC function "
 "allows their identification)."
 msgstr ""
 
 #. type: Title ^
-#: Pcbnew_create_and_modify_board.adoc:97
+#: Pcbnew_create_and_modify_board.adoc:153
 #, no-wrap
 msgid "Deleted components"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:101
+#: Pcbnew_create_and_modify_board.adoc:157
 msgid ""
 "Pcbnew can delete modules corresponding to components that have been removed "
 "from the schematic. This is optional."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:105
+#: Pcbnew_create_and_modify_board.adoc:161
 msgid ""
 "This is necessary because there are often modules (holes for fixation "
 "screws, for instance) that are added to the PCB that never appear in the "
@@ -338,32 +505,32 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:107
+#: Pcbnew_create_and_modify_board.adoc:163
 msgid "image:images/Pcbnew_extra_footprints_deletion_option.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:112
+#: Pcbnew_create_and_modify_board.adoc:168
 msgid ""
 "If the \"Remove Extra Footprints\" option is checked, a footprint "
-"corresponding to a component not found in netlist will be deleted, unless "
-"they have the option \"Locked\" active. It is a good idea to activate this "
-"option for \"mechanical\" footprints:"
+"corresponding to a component not found in the netlist will be deleted, "
+"unless they have the option \"Locked\" active. It is a good idea to activate "
+"this option for \"mechanical\" footprints:"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:114
+#: Pcbnew_create_and_modify_board.adoc:170
 msgid "image:images/Pcbnew_unlock_footprint_option.png[]"
 msgstr ""
 
 #. type: Title ^
-#: Pcbnew_create_and_modify_board.adoc:116
+#: Pcbnew_create_and_modify_board.adoc:172
 #, no-wrap
 msgid "Modified modules"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:122
+#: Pcbnew_create_and_modify_board.adoc:178
 msgid ""
 "If a module is modified in the netlist (using CvPcb), but the module has "
 "already been placed, it will not be modified by Pcbnew, unless the "
@@ -372,25 +539,25 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:124
+#: Pcbnew_create_and_modify_board.adoc:180
 msgid "image:images/Pcbnew_exchange_module_option.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:127
+#: Pcbnew_create_and_modify_board.adoc:183
 msgid ""
-"Changing a module (replacing a resistance with one of a different size, for "
+"Changing a module (replacing a resistor with one of a different size, for "
 "instance) can be effected directly by editing the module."
 msgstr ""
 
 #. type: Title ^
-#: Pcbnew_create_and_modify_board.adoc:129
+#: Pcbnew_create_and_modify_board.adoc:185
 #, no-wrap
 msgid "Advanced options - selection using time stamps"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:138
+#: Pcbnew_create_and_modify_board.adoc:194
 msgid ""
 "Sometimes the notation of the schematic is changed, without any material "
 "changes in the circuit (this would concern the references - like R5, U4...)."
@@ -401,12 +568,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:140
+#: Pcbnew_create_and_modify_board.adoc:196
 msgid "image:images/Pcbnew_module_selection_option.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:145
+#: Pcbnew_create_and_modify_board.adoc:201
 msgid ""
 "With this option, Pcbnew no longer identifies modules by their reference, "
 "but by their time stamp instead. The time stamp is automatically generated "
@@ -415,7 +582,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:153
+#: Pcbnew_create_and_modify_board.adoc:209
 msgid ""
 "Great care should be exercised when using this option (save the file "
 "first!). This is because the technique is complicated in the case of "
@@ -426,70 +593,70 @@ msgid ""
 msgstr ""
 
 #. type: Title ~
-#: Pcbnew_create_and_modify_board.adoc:155
+#: Pcbnew_create_and_modify_board.adoc:211
 #, no-wrap
 msgid "Direct exchange for footprints already placed on board"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:158
+#: Pcbnew_create_and_modify_board.adoc:214
 msgid ""
 "Changing a footprint ( or some identical footprints) to another footprint is "
 "very useful, and is very easy:"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:160
+#: Pcbnew_create_and_modify_board.adoc:216
 msgid "Click on a footprint to open the Edit dialog box."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:161
+#: Pcbnew_create_and_modify_board.adoc:217
 msgid "Activate Change Modules."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:163
+#: Pcbnew_create_and_modify_board.adoc:219
 msgid "image:images/Pcbnew_change_modules_button.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:165
+#: Pcbnew_create_and_modify_board.adoc:221
 msgid "Options for footprint exchange:"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:167
+#: Pcbnew_create_and_modify_board.adoc:223
 msgid "image:images/Pcbnew_footprint_exchange_options.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:169
+#: Pcbnew_create_and_modify_board.adoc:225
 msgid "One must choose a new footprint name and use:"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:171
+#: Pcbnew_create_and_modify_board.adoc:227
 #, no-wrap
 msgid "*Change Module* for the current footprint\n"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:172
+#: Pcbnew_create_and_modify_board.adoc:228
 #, no-wrap
 msgid "*Change same modules* for all footprints like the current footprint.\n"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:174
+#: Pcbnew_create_and_modify_board.adoc:230
 #, no-wrap
 msgid ""
-"*Change same module+value* for all footprints like the current \n"
+"*Change same module+value* for all footprints like the current\n"
 "footprint, restricted to components which have the same value.\n"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_create_and_modify_board.adoc:175
+#: Pcbnew_create_and_modify_board.adoc:231
 #, no-wrap
 msgid "*Change all* reloads all footprints on board.\n"
 msgstr ""
@@ -519,8 +686,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:12
 msgid ""
-"Changing pad properties (shape, layer), for individual pads or for all pads "
-"in a module."
+"Changing pad properties (shape, layer), for individual pads or for all the "
+"pads in a module."
 msgstr ""
 
 #. type: Plain text
@@ -649,8 +816,8 @@ msgstr ""
 #: Pcbnew_creating_editing_modules.adoc:72
 msgid ""
 "Directly via the image:images/icons/module_editor.png[] icon from the main "
-"toolbar of Pcbnew. This allows creation or modification of a module in the "
-"library."
+"toolbar of Pcbnew. This allows the creation or modification of a module in "
+"the library."
 msgstr ""
 
 #. type: Plain text
@@ -1126,7 +1293,7 @@ msgstr ""
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:304
-msgid "Setting clearance can be made at 3 levels:"
+msgid "Setting a clearance can be made at 3 levels:"
 msgstr ""
 
 #. type: Plain text
@@ -1146,7 +1313,7 @@ msgstr ""
 
 #. type: Plain text
 #: Pcbnew_creating_editing_modules.adoc:310
-msgid "Pcbnew uses the following to calculate clearance:"
+msgid "Pcbnew uses the following to calculate clearances:"
 msgstr ""
 
 #. type: Plain text
@@ -1446,53 +1613,53 @@ msgid "Setting scale allows:"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:440
+#: Pcbnew_creating_editing_modules.adoc:439
 msgid ""
-"To use the same 3D file for footprints which have similar shapes b ut "
+"To use the same 3D file for footprints which have similar shapes but "
 "different sizes (resistors, capacitors, SMD components...)"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:442
+#: Pcbnew_creating_editing_modules.adoc:441
 msgid ""
 "For small (or very large) packages, a better use of the Wings3D grid is to "
 "scale *0.1 inch in Pcbnew = 1 grid unit* in Wings3D."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:445
+#: Pcbnew_creating_editing_modules.adoc:444
 msgid ""
 "If such a file has been specified, it is possible to view the component in "
 "3D."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:447
+#: Pcbnew_creating_editing_modules.adoc:446
 msgid "image:images/Modedit_footprint_3d_preview.png[]"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:449
+#: Pcbnew_creating_editing_modules.adoc:448
 msgid ""
 "The 3D model will automatically appear in the 3D representation of the "
 "printed circuit board."
 msgstr ""
 
 #. type: Title ~
-#: Pcbnew_creating_editing_modules.adoc:451
+#: Pcbnew_creating_editing_modules.adoc:450
 #, no-wrap
 msgid "Saving a module into the active library"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:454
+#: Pcbnew_creating_editing_modules.adoc:453
 msgid ""
 "The save command (modification of the file of the active library) is "
 "activated by the image:images/icons/save_library.png[] button."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:456
+#: Pcbnew_creating_editing_modules.adoc:455
 msgid ""
 "If a module of the same name exists (an older version), it will be "
 "overwritten. Because it is important to be able to have confidence in the "
@@ -1501,24 +1668,441 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:458
+#: Pcbnew_creating_editing_modules.adoc:457
 msgid ""
 "Before saving, it is also recommended to change the reference or value of "
 "the module to be equal to the library name of the module."
 msgstr ""
 
 #. type: Title ~
-#: Pcbnew_creating_editing_modules.adoc:460
+#: Pcbnew_creating_editing_modules.adoc:459
 #, no-wrap
 msgid "Saving a module to the board"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_creating_editing_modules.adoc:464
+#: Pcbnew_creating_editing_modules.adoc:463
 msgid ""
 "If the edited footprint comes from the current board, the button image:"
 "images/icons/update_module_board.png[] will update this footprint on the "
 "board."
+msgstr ""
+
+#. type: Title -
+#: Pcbnew_editing_tools.adoc:2
+#, no-wrap
+msgid "Advanced PCB editing tools"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:7
+msgid ""
+"There are some more advanced editing tools available in Pcbnew and Modedit, "
+"which can help you to efficiently lay out components on the canvas."
+msgstr ""
+
+#. type: Title ~
+#: Pcbnew_editing_tools.adoc:9
+#, no-wrap
+msgid "Duplicating items"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:15
+msgid ""
+"Duplication is a method to clone an item and pick it up in the same action. "
+"It is broadly similar to copy-and-pasting, but it allows you to \"sprinkle\" "
+"components over the PCB and it allows you to manually lay out components "
+"using the \"Move Exact\" tool (see below) more easily."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:19
+msgid ""
+"Duplication is done by using the hotkey (which defaults to Ctrl-D) or the "
+"duplicate item option in the context menu. In the legacy renderer, these "
+"appear as below, depending on the item type:"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:26
+msgid ""
+"image:images/icons/duplicate_pad.png[] image:images/icons/duplicate_line."
+"png[] image:images/icons/duplicate_text.png[] image:images/icons/"
+"duplicate_module.png[] image:images/icons/duplicate_target.png[] image:"
+"images/icons/duplicate_zone.png[]"
+msgstr ""
+
+#. type: Title ~
+#: Pcbnew_editing_tools.adoc:28
+#, no-wrap
+msgid "Moving items exactly"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:35
+msgid ""
+"The \"Move Exact\" tool allows you to move an item (or group of items) by a "
+"certain amount, which can be entered in Cartesian or polar formats and which "
+"can be entered in any supported units. This is useful when it would "
+"otherwise be cumbersome to switch to a different grid, or when a feature is "
+"not spaced according to any existing grids."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:41
+msgid ""
+"To use this tools, select the items you wish to move and then use either the "
+"hotkey (defaults to Ctrl-M) or the context menu items to invoke the dialog. "
+"You can also invoke the dialog with the hotkey when moving or duplicating "
+"items, which can make it easy to repeatedly apply an offset to multiple "
+"components."
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_editing_tools.adoc:42
+#, no-wrap
+msgid "Move exact with Cartesian move vector entry"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:44
+msgid "image:images/Pcbnew_move_exact_cartesian.png[]"
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_editing_tools.adoc:45
+#, no-wrap
+msgid "Move exact with polar move vector entry"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:47
+msgid "image:images/Pcbnew_move_exact_polar.png[]"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:51
+msgid ""
+"The checkbox allows you to switch between Cartesian and polar co-ordinate "
+"systems. Whatever is currently in the form will be converted automatically "
+"to the other system."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:55
+msgid ""
+"Then you enter the desired move vector. You can use the units indicated by "
+"the labels (\"mm\" in the images above) or you can specify the units "
+"yourself (e.g. \"1 in\" for an inch, or \"2 rad\" for 2 radians)."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:61
+msgid ""
+"Pressing OK will apply the translation to the selection, and cancel will "
+"close the dialog and the items will not be moved. If OK is pressed, the move "
+"vector will be saved and pre-filled next time the dialog is opened, which "
+"allows repeated application of the same vector to multiple objects."
+msgstr ""
+
+#. type: Title ~
+#: Pcbnew_editing_tools.adoc:63
+#, no-wrap
+msgid "Array tools"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:68
+msgid ""
+"Pcbnew and the Module Editor both have assistants for creating arrays of "
+"features and components, which can be used to easily and accurately lay out "
+"repetitive elements on PCBs and in modules."
+msgstr ""
+
+#. type: Title ^
+#: Pcbnew_editing_tools.adoc:70
+#, no-wrap
+msgid "Activating the array tool"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:76
+msgid ""
+"The array tool acts on the component under the cursor, or, in GAL mode, on a "
+"selection. It can be accessed either via the context menu for the selection "
+"or by a keyboard shortcut (defaults to Ctrl-N). In legacy mode, the context "
+"menu icons indicate an array of the selected type:"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:83
+msgid ""
+"image:images/icons/array_pad.png[] image:images/icons/array_line.png[] image:"
+"images/icons/array_text.png[] image:images/icons/array_module.png[] image:"
+"images/icons/array_target.png[] image:images/icons/array_zone.png[]"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:87
+msgid ""
+"The array tool is presented as a dialog window, with a pane for the types of "
+"array. There are two type of array supported so far: grid, and circular."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:92
+msgid ""
+"Each type of array can be fully specified on the respective panes.  "
+"Geometric options (how the grid is laid out) go on the left; numbering "
+"options (including how the numbers progress across the grid) on the right."
+msgstr ""
+
+#. type: Title ^
+#: Pcbnew_editing_tools.adoc:94
+#, no-wrap
+msgid "Grid arrays"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:99
+msgid ""
+"Grid arrays are arrays that lay components out according to a 2-dimensional "
+"square grid. This kind of array can also produce a linear array by only "
+"laying out a single row or column."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:101
+msgid "The settings dialog for grid arrays look like this:"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:103
+msgid "image:images/Pcbnew_array_dialog_grid.png[]"
+msgstr ""
+
+#. type: Title +
+#: Pcbnew_editing_tools.adoc:105 Pcbnew_editing_tools.adoc:172
+#, no-wrap
+msgid "Geometric options"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:108
+msgid "The geometric options are as follow:"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:110
+#, no-wrap
+msgid "*x Count*: the number of \"columns\" in the grid.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:111
+#, no-wrap
+msgid "*y Count*: the number of \"rows\" in the grid.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:113
+#, no-wrap
+msgid ""
+"*x Spacing*: the horizontal distance from item to the item in the same row\n"
+"and next column. If this is negative, the grid progresses from right to left.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:116
+#, no-wrap
+msgid ""
+"*y Spacing*: the vertical distance from one item to the item in the same\n"
+"column and the next row. If this is negative, the grid progress bottom to\n"
+"top.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:117
+#, no-wrap
+msgid "*x Offset*: start each row this distance to the right of the previous\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:118
+#, no-wrap
+msgid "one\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:119
+#, no-wrap
+msgid "*y Offset*: start each column this distance below the previous one\n"
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_editing_tools.adoc:120
+#, no-wrap
+msgid "3x3 grid with x and y offsets"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:122
+msgid "image:images/Pcbnew_array_grid_offsets.png[]"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:125
+#, no-wrap
+msgid ""
+"*Stagger*: add an offset to every set of \"n\" rows/columns, with each row\n"
+"progressing by 1/n'th of the relevant spacing dimension:\n"
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_editing_tools.adoc:126
+#, no-wrap
+msgid "3x3 grid with a row stagger of 2"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:128
+msgid "image:images/Pcbnew_array_grid_stagger_rows_2.png[]"
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_editing_tools.adoc:129
+#, no-wrap
+msgid "4x3 grid with a column stagger of 3"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:131
+msgid "image:images/Pcbnew_array_grid_stagger_cols_3.png[]"
+msgstr ""
+
+#. type: Title +
+#: Pcbnew_editing_tools.adoc:133 Pcbnew_editing_tools.adoc:184
+#, no-wrap
+msgid "Numbering options"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:139
+#, no-wrap
+msgid ""
+"*Numbering direction*: Determines whether numbers proceed along rows and then\n"
+"moves to the next row, or down columns and then to the next column. Note that\n"
+"the direction on numbering is defined by the sign of the spacing: a negative\n"
+"spacing will result in right-to-left or bottom-to-top numbering.  i\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:144
+#, no-wrap
+msgid ""
+"*Reverse numbering on alternate row/columns*: If selected, the numbering order\n"
+"(left-to-right or right-to-left, for example) on alternate rows or columns.\n"
+"Whether rows or columns alternate depends on the numbering direction. This\n"
+"option is useful for packages like DIPs where the numbering proceeds up one\n"
+"side and down the other.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:145
+#, no-wrap
+msgid "*Restart numbering*: if laying out using items that already have numbers,\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:146
+#, no-wrap
+msgid "reset to the start, otherwise continue if possible from this items number\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:153
+#, no-wrap
+msgid ""
+"*Numbering scheme*\n"
+"** *Continuous*: the numbering just continues across a row/column break - if\n"
+"  the last item in the first row is numbered \"7\", the first item in the second\n"
+"  row will be \"8\".\n"
+"** *Co-ordinate*: the numbering uses a two-axis scheme where the\n"
+"  number is made up of the row and column index. Which one comes first\n"
+"  (row or column) is determined by the numbering direction.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:160
+#, no-wrap
+msgid ""
+"*Axis numberings*: what \"alphabet\" to use to number the axes. Choices are\n"
+"** *Numerals* for normal integer indices\n"
+"** *Hexadecimal* for base-16 indexing\n"
+"** *Alphabetic, minus IOSQXZ*, a common scheme for electronic components,\n"
+"  recommended by ASME Y14.35M-1997 sec. 5.2 (previously MIL-STD-100 sec. 406.5)\n"
+"  to avoid confusion with numerals.\n"
+"** *Full alphabet* from A-Z.\n"
+msgstr ""
+
+#. type: Title ^
+#: Pcbnew_editing_tools.adoc:162
+#, no-wrap
+msgid "Circular arrays"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:168
+msgid ""
+"Circular arrays lay out items around a circle or a circular arc. The circle "
+"is defined by the location of the selection (or the centre of a selected "
+"group)  and a centre point that is specified. Below is the circular array "
+"configuration dialog:"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:170
+msgid "image:images/Pcbnew_array_dialog_circular.png[]"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:176
+#, no-wrap
+msgid ""
+"*x Centre*, *y Centre*: The centre of the circle. The radius field\n"
+"below will update automatically when you adjust these.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:178
+#, no-wrap
+msgid ""
+"*Angle*: The angular difference between two adjacent items in the\n"
+"array. Set this to zero to evenly divide the circle with \"count\" elements.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:179
+#, no-wrap
+msgid "*Count*: Number of items in the array (including the original item)\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:182
+#, no-wrap
+msgid ""
+"*Rotate*: Rotate each item around its own location. Otherwise, the\n"
+"item will be translated but not rotated (for example, a square pad\n"
+"will always remain upright if this option is not set).\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:190
+msgid ""
+"Circular arrays have only one dimension and a simpler geometry than grids. "
+"The meanings of the available options are the same as for grids.  Items are "
+"numbered clockwise - for an anticlockwise array, specify a negative angle."
 msgstr ""
 
 #. type: Title -
@@ -1530,7 +2114,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:5
 msgid ""
-"Let us see now what are the step necessary for the creations of the "
+"Let us see now what are the steps necessary for the creations of the "
 "necessary files for the production of your printed circuit board."
 msgstr ""
 
@@ -1629,7 +2213,8 @@ msgstr ""
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:38
-msgid "Adjust parameters accordingly and then press the \"Start DRC\" button."
+msgid ""
+"Adjust the parameters accordingly and then press the \"Start DRC\" button."
 msgstr ""
 
 #. type: Plain text
@@ -1860,7 +2445,7 @@ msgstr ""
 
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:143
-msgid "Some options can be not available for some formats."
+msgid "Some options are not available for some formats."
 msgstr ""
 
 #. type: Plain text
@@ -1885,8 +2470,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:158
 msgid ""
-"Masks clearances values can be set globally for the solder mask layers and "
-"the solder paste layers. These clearances can be set following these steps."
+"Mask clearance values can be set globally for the solder mask layers and the "
+"solder paste layers. These clearances can be set at the following levels."
 msgstr ""
 
 #. type: Plain text
@@ -1960,7 +2545,7 @@ msgstr ""
 #: Pcbnew_fabrication_files.adoc:185
 msgid ""
 "A value near to 0.2 mm is usually good. This value is positive because the "
-"mask usually is bigger than the pad."
+"mask is usually bigger than the pad."
 msgstr ""
 
 #. type: Plain text
@@ -1991,7 +2576,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_fabrication_files.adoc:199
 msgid ""
-"This value is negative because the mask usually is smaller than the pad."
+"This value is negative because the mask is usually smaller than the pad."
 msgstr ""
 
 #. type: Title ~
@@ -2165,7 +2750,7 @@ msgstr ""
 
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:9
-msgid "In Pcbnew it is possible to executes command via various means:"
+msgid "In Pcbnew it is possible to execute commands using various means:"
 msgstr ""
 
 #. type: Plain text
@@ -2207,7 +2792,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:23
 msgid ""
-"The screen-shot below illustrates some of the possible accesses to the "
+"The screen-shot below illustrates some of the possible accesses to these "
 "operations:"
 msgstr ""
 
@@ -2343,7 +2928,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:95
 msgid ""
-"During elements layout the cursor moves on a grid. The grid can be turned on "
+"During element layout the cursor moves on a grid. The grid can be turned on "
 "or off using the icon on the left toolbar."
 msgstr ""
 
@@ -2370,16 +2955,16 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:107
 msgid ""
-"Open the pop-up window (using the right mouse button) and to select the "
+"Open the pop-up window (using the right mouse button) and then select the "
 "desired zoom."
 msgstr ""
 
 #. type: Plain text
 #: Pcbnew_general_operations.adoc:112
 msgid ""
-"Or use the function keys: ** `F1`: Enlarge (zoom in)  ** `F2`: Reduce (zoom "
-"out)  ** `F3`: Redraw the display ** `F4`: Centre view at the current cursor "
-"position"
+"Or use the following function keys: ** `F1`: Enlarge (zoom in)  ** `F2`: "
+"Reduce (zoom out)  ** `F3`: Redraw the display ** `F4`: Centre view at the "
+"current cursor position"
 msgstr ""
 
 #. type: Plain text
@@ -3242,7 +3827,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_installation.adoc:19
 msgid ""
-"This configuration file can be modified to change libraries to be loaded"
+"This configuration file can be modified to change the libraries to be loaded"
 msgstr ""
 
 #. type: Plain text
@@ -3285,7 +3870,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_installation.adoc:36
 msgid ""
-"You can access to the library list initialization from the Preferences menu:"
+"You can have access to the library list initialization from the Preferences "
+"menu:"
 msgstr ""
 
 #. type: Plain text
@@ -3308,15 +3894,15 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_installation.adoc:54
 msgid ""
-"You must to add all libraries that contain the footprints required for your "
-"project. You should also remove unused libraries from new projects to "
-"prevent footprint name clashes. Please note, there is a issue with the "
-"footprint library list when duplicate footprint names exist in more than one "
-"library.  When this occurs, the footprint will be loaded from the first "
-"library found in the list. This is an issue (you cannot load the footprint "
-"you want), either change the library list order using the “Up” and “Down” "
-"buttons in the dialog above or give the footprint a unique name in using the "
-"footprint editor."
+"You can use this to add all the libraries that contain the footprints "
+"required for your project. You should also remove unused libraries from new "
+"projects to prevent footprint name clashes. Please note, there is a issue "
+"with the footprint library list when duplicate footprint names exist in more "
+"than one library.  When this occurs, the footprint will be loaded from the "
+"first library found in the list. If this is an issue (you cannot load the "
+"footprint you want), either change the library list order using the “Up” and "
+"“Down” buttons in the dialog above or give the footprint a unique name in "
+"using the footprint editor."
 msgstr ""
 
 #. type: Title ~
@@ -3373,9 +3959,9 @@ msgstr ""
 #: Pcbnew_installation.adoc:88
 msgid ""
 "The global footprint library table contains the list of libraries that are "
-"always available irregardless of the currently loaded project file.  The "
-"table is saved in the file `fp-lib-table` in the user's home folder.  The "
-"location of this folder is dependent on the operating system."
+"always available regardless of the currently loaded project file.  The table "
+"is saved in the file `fp-lib-table` in the user's home folder.  The location "
+"of this folder is dependent on the operating system."
 msgstr ""
 
 #. type: Title ^
@@ -3610,14 +4196,26 @@ msgid ""
 "github.com."
 msgstr ""
 
+#. type: Plain text
+#: Pcbnew_installation.adoc:259
+msgid ""
+"Finally, Nginx can be used as a cache to the github server to speed up the "
+"loading of footprints. It can be installed locally or on a network server. "
+"There is an example configuration in Kicad sources at pcbnew/github/nginx."
+"conf. The most straightforward way to get this working is to overwrite the "
+"default nginx.conf with this one and `export KIGITHUB=http://my_server:54321/"
+"KiCad`, where `my_server` is the IP or domain name of the machine running "
+"nginx."
+msgstr ""
+
 #. type: Title ^
-#: Pcbnew_installation.adoc:253
+#: Pcbnew_installation.adoc:261
 #, no-wrap
 msgid "Usage Patterns"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_installation.adoc:265
+#: Pcbnew_installation.adoc:273
 msgid ""
 "Footprint libraries can be defined either globally or specifically to the "
 "currently loaded project.  Footprint libraries defined in the user's global "
@@ -3631,12 +4229,12 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_installation.adoc:267
+#: Pcbnew_installation.adoc:275
 msgid "There are advantages and disadvantages to each method:"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_installation.adoc:272
+#: Pcbnew_installation.adoc:280
 msgid ""
 "You can define all of your libraries in the global table which means they "
 "will always be available when you need them.  ** The disadvantage of this is "
@@ -3645,7 +4243,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_installation.adoc:277
+#: Pcbnew_installation.adoc:285
 msgid ""
 "You can define all your libraries on a project specific basis.  ** The "
 "advantage of this is that you only need to define the libraries you actually "
@@ -3655,20 +4253,385 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_installation.adoc:279
+#: Pcbnew_installation.adoc:287
 msgid ""
 "You can also define footprint libraries both globally and project "
 "specifically."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_installation.adoc:283
+#: Pcbnew_installation.adoc:291
 msgid ""
 "One usage pattern would be to define your most commonly used libraries "
 "globally and the library only require for the project in the project "
 "specific library table.  There is no restriction on how you define your "
 "libraries."
 msgstr ""
+
+#. type: Title -
+#: Pcbnew_interactive_router.adoc:3
+#, no-wrap
+msgid "Interactive Router"
+msgstr "Sbroglio Interattivo"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:8
+msgid ""
+"The Interactive Router lets you quickly and efficiently route your PCBs by "
+"shoving off or walking around items on the PCB that collide with the trace "
+"you are currently drawing."
+msgstr ""
+"Lo sbroglio interattivo permette di sbrogliare in maniera veloce ed "
+"efficiente i circuiti stampati, spingendo e girando attorno agli elementi "
+"sulla scheda che potrebbero collidere con le piste che si sta disegnando."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:10
+msgid "Following modes are supported:"
+msgstr "Sono supportate le seguenti modalità:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:13
+#, no-wrap
+msgid ""
+"*Highlight collisions*, which highlights all violating objects with a\n"
+"nice, shiny green color and shows violating clearance regions.\n"
+msgstr ""
+"*Evidenzia collisioni*, che evidenzia con un colore verde brillante\n"
+"tutti gli oggetti e le regioni che violano le regole di isolamento.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:16
+#, no-wrap
+msgid ""
+"*Shove*, attempting to push and shove all items colliding with the\n"
+"currently routed track.\n"
+msgstr ""
+"*Spingi*, tenta di spingere e compattare tutti gli elementi che collidono\n"
+"con la pista che si sta attualmente sbrogliando.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:19
+#, no-wrap
+msgid ""
+"*Walk around*, trying to avoid obstacles by hugging/walking around\n"
+"them.\n"
+msgstr ""
+"*Aggira*, tenta di evitare gli ostacoli circondandoli/girandoci\n"
+"attorno.\n"
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:22
+#, no-wrap
+msgid "Setting up"
+msgstr "Impostazione"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:25
+msgid "Before using the Interactive Router, please set up these two things:"
+msgstr "Prima di usare lo sbroglio interattivo, impostare queste due cose:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:29
+#, no-wrap
+msgid ""
+"*Clearance settings* To set the clearances, open the _Design Rules_\n"
+"dialog and make sure at least the default clearance value looks\n"
+"sensible.\n"
+msgstr ""
+"*Impostazioni isolamento*. Per configurare le impostazioni di isolamento,\n"
+"aprire la finestra di dialogo delle _Regole di progettazione_ e assicurarsi\n"
+"che i valori di isolamento predefiniti siano almeno ragionevoli.\n"
+
+#. type: Target for macro image
+#: Pcbnew_interactive_router.adoc:30
+#, no-wrap
+msgid "images/en/rules_editor.png"
+msgstr "images/it/rules_editor.png"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:34
+#, no-wrap
+msgid ""
+"*Enable OpenGL mode* By selecting _View->Switch canvas to OpenGL_ menu\n"
+"option or pressing **F11**.\n"
+msgstr ""
+"*Abilita la modalità OpenGL*, selezionando l'opzione di menu\n"
+"_Visualizza->Imposta schermo a OpenGL_ o premendo **F11**.\n"
+
+#. type: Target for macro image
+#: Pcbnew_interactive_router.adoc:35
+#, no-wrap
+msgid "images/en/opengl_menu.png"
+msgstr "images/it/opengl_menu.png"
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:38
+#, no-wrap
+msgid "Laying out tracks"
+msgstr "Disposizione delle piste"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:44
+msgid ""
+"To activate the router tool press the _Interactive Router_ button image:"
+"images/route_icon.png[Interactive Router Button] or the *X* key.  The cursor "
+"will turn into a cross and the tool name, will appear in the status bar."
+msgstr ""
+"Per attivare lo strumento di sbroglio premere il pulsante _Sbroglio "
+"interattivo_ image:images/route_icon.png[Interactive Router Button] o il "
+"pulsante *X*.  Il puntatore si trasformerà in una croce e il nome dello "
+"strumento apparirà nella barra di stato."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:49
+msgid ""
+"To start a track, click on any item (a pad, track or a via) or press the *X* "
+"key again hovering the mouse over that item. The new track will use the net "
+"of the starting item. Clicking or pressing *X* on empty PCB space starts a "
+"track with no net assigned."
+msgstr ""
+"Per cominciare a tracciare una pista, fare clic su un qualsiasi elemento "
+"(una piazzola, una pista o un via) o premere nuovamente il tasto *X* con il "
+"puntatore del mouse sopra l'elemento. La nuova pista userà il collegamento "
+"(net) dell'elemento di partenza. Facendo clic o premento *X* su una zona "
+"vuota del circuito stampato farà cominciare una pista senza un collegamento "
+"assegnato."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:55
+msgid ""
+"Move the mouse to define shape of the track. The router will try to follow "
+"the mouse trail, hugging unmovable obstacles (such as pads) and shoving "
+"colliding traces/vias, depending on the mode. Retreating the mouse cursor "
+"will cause the shoved items to spring back to their former locations."
+msgstr "Spostare il mouse per definire la forma della pista. Lo sbrogliatore proverà a seguire il mouse, scartando gli ostacoli inamovibili (come le piazzole) e spostando piste/via in rotta di collisione, a seconda della modalità in cui si trova. Ritirando il puntatore del mouse, gli elementi spostati torneranno alle loro posizioni iniziali."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:59
+msgid ""
+"Clicking on a pad/track/via in the same net finishes routing. Clicking in "
+"empty space fixes the segments routed so far and continues routing the trace."
+msgstr ""
+"Facendo clic su una piazzola/pista/via dello stesso collegamento (net) "
+"finisce lo sbroglio. Facendo clic in uno spazio vuoto fissa i segmenti "
+"sbrogliati fino a quel momento e continua lo sbroglio della pista."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:62
+msgid ""
+"In order to stop routing and undo all changes (shoved items, etc.), simply "
+"press **Esc**."
+msgstr ""
+"Per bloccare lo sbroglio e annullare tutti i cambiamenti (elementi spostati, "
+"ecc.), basta premere il tasto **Esc**."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:67
+msgid ""
+"Pressing *V* or selecting _Place Through Via_ from the context menu while "
+"routing a track attaches a via at the end of the trace being routed. "
+"Pressing *V* again disables via placement. Clicking in any spot establishes "
+"the via and continues routing."
+msgstr ""
+"Premendo *V* o selezionando _Piazza via passante_ dal menu contestuale "
+"durante lo sbroglio di una pista, si collega un via in cima alla pista che "
+"si sta sbrogliando. Premendo *V* ulteriormente si disabilita l'inserimento "
+"del via. Facendo clic in qualsiasi punto del circuito stampato, si piazza il "
+"via e lo sbroglio continua."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:71
+msgid ""
+"Pressing */* or selecting _Switch Track Posture_ from the context menu "
+"toggles the direction of the initial track segment between straight or "
+"diagonal."
+msgstr ""
+"Premendo */* o selezionando _commuta postura pista_ dal menu contestuale "
+"commuta la direzione del segmento di pista iniziale tra diritto e diagonale."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:75
+msgid ""
+"By default, the router snaps to centers/axes of the items.  Snapping can be "
+"disabled by holding *Shift* while routing or selecting items."
+msgstr ""
+"Come valore predefinito, lo sbroglio si aggancia automaticamente al centro o "
+"agli assi degli elementi. Questo magnetismo può essere disabilitato tenendo "
+"premuto il tasto *Maiusc* durante lo sbroglio o la selezione degli elementi."
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:77
+#, no-wrap
+msgid "Setting track widths and via sizes"
+msgstr "Impostazione larghezze piste e dimensioni via"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:81
+msgid ""
+"There are several ways to pre-select a track width/via size or to change it "
+"during routing:"
+msgstr ""
+"Ci sono diversi metodi per pre-selezionare la larghezza pista/dimensione via "
+"o per cambiarle durante lo sbroglio:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:83
+msgid "Use standard Kicad shortcuts."
+msgstr "Usare le scorciatoie da tastiera standard."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:86
+msgid ""
+"Press *W* or select _Custom Track Width_ from the context menu to type in a "
+"custom track width/via size."
+msgstr ""
+"Premere *W* o selezionare _Dimensione pista personalizzata_ dal menu "
+"contestuale per battere un valore personalizzato di spessore pista/"
+"dimensione via."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:89
+msgid ""
+"Pick a predefined width from the _Select Track Width_ sub-menu of the "
+"context menu."
+msgstr ""
+"Selezionare una larghezza predefinita dal sotto-menu _Seleziona larghezza "
+"pista_ del menu contestuale."
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:93
+msgid ""
+"Select _Use the starting track width_ in the _Select Track Width_ menu to "
+"pick the width from the start item (or the traces already connected to it)."
+msgstr ""
+"Selezionare _Usa la larghezza iniziale pista_ nel menu _Seleziona larghezza "
+"pista_ per prelevare la larghezza dall'elemento iniziale (o le piste già "
+"connesse ad esso)."
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:95
+#, no-wrap
+msgid "Dragging"
+msgstr "Trascinamento"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:101
+msgid ""
+"The router can drag track segments, corners and vias. To drag an item, click "
+"on it with *Ctrl* key pressed, hover the mouse and press *G* or select _Drag "
+"Track/Via_ from the context menu. Finish dragging by clicking again or abort "
+"by pressing __Esc__."
+msgstr ""
+"Lo sbrogliatore può trascinare segmenti di pista, angoli e via. Per "
+"trascinare un elemento, fare clic su di esso con il tasto *Ctrl* premuto, "
+"posizionare il puntatore del mouse sopra di esso e premere il *G* o "
+"selezionare _Trascina pista/via_ dal menu contestuale. Concludere "
+"trascinando e facendo clic nuovamente o interrompere premendo il tasto "
+"__Esc__."
+
+#. type: Title ~
+#: Pcbnew_interactive_router.adoc:103
+#, no-wrap
+msgid "Options"
+msgstr "Opzioni"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:107
+msgid ""
+"The router behavior be configured by pressing _E_ or selecting _Routing "
+"Options_ from the context menu. It opens a window like the one below:"
+msgstr ""
+"Il comportamento dello sbrogliatore può essere configurato premento il tasto "
+"_E_ o selezionando _Opzioni di sbroglio_ dal menu contestuale. Si aprirà una "
+"finestra come questa riportata in basso:"
+
+#. type: Target for macro image
+#: Pcbnew_interactive_router.adoc:108
+#, no-wrap
+msgid "images/en/router_options.png"
+msgstr "images/it/router_options.png"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:111
+msgid "The options are:"
+msgstr "Le opzioni sono:"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:114
+#, no-wrap
+msgid ""
+"*Mode* - select how the router handles DRC violation (shoving, walking\n"
+"around, etc.)\n"
+msgstr "*Modo* - seleziona come lo sbroglio gestisce la violazione delle regole di progettazione (DRC) (spingendo, girando attorno, ecc.)\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:117
+#, no-wrap
+msgid ""
+"*Shove vias* - when disabled, vias are treated as un-movable objects\n"
+"and hugged instead of shoved.\n"
+msgstr "*Spingi via* - se disabilitato, i via vengono trattati come oggetti inamovibili e circondati anziché spostati.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:121
+#, no-wrap
+msgid ""
+"*Jump over obstacles* - when enabled, the router tries to move\n"
+"colliding traces behind solid obstacles (e.g. pads) instead of\n"
+"\"reflecting\" back the collision\n"
+msgstr "*Salta sopra gli ostacoli* - se abilitata, lo sbrogliatore prova a spostare le piste collidenti dietro gli ostacoli pieni (come le piazzole) invece di \"riflettere\" indietro la collisione\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:126
+#, no-wrap
+msgid ""
+"*Remove redundant tracks* - removes loops while routing (e.g. if the\n"
+"new track ensures same connectivity as an already existing one, the old\n"
+"track is removed). Loop removal works locally (only between the start\n"
+"and end of the currently routed trace).\n"
+msgstr "*Elimina piste ridondanti* - elimina gli anelli durante lo sbroglio (cioè se la nuova pista garantisce la stessa connettività di una già esistente, la vecchia pista viene rimossa). La rimozione degli anelli funziona localmente (solo tra l'inizio e la fine della pista in fase di sbroglio).\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:130
+#, no-wrap
+msgid ""
+"*Automatic neckdown* - when enabled, the router tries to break out\n"
+"pads/vias in a clean way, avoiding acute angles and jagged breakout\n"
+"traces.\n"
+msgstr ""
+"*Restringimento automatico* - se abilitata, lo sbrogliatore prova a connettere \n"
+"piazzole/via in modo pulito, evitando angoli acuti e piste di connessione seghettate.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:133
+#, no-wrap
+msgid ""
+"*Smooth dragged segments* - when enabled, the router attempts to merge\n"
+"several jagged segments into a single straight one (dragging mode).\n"
+msgstr ""
+"*Arrotonda segmenti seghettati* - se abilitata, lo sbrogliatore cerca di fondere\n"
+"assieme diversi segmenti seghettati in uno singolo e dritto (modalità trascinamento).\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:136
+#, no-wrap
+msgid ""
+"*Allow DRC violations* (_Highlight collisions_ mode only) - allows\n"
+"to establish a track even if is violating the DRC rules.\n"
+msgstr ""
+"*Permetti violazioni DRC* (solo modalità _evidenzia collisioni_) - permette\n"
+"di stendere una pista anche se sta violando le regole di progettazione.\n"
+
+#. type: Plain text
+#: Pcbnew_interactive_router.adoc:140
+#, no-wrap
+msgid ""
+"*Optimizer effort* - defines how much time the router shall spend\n"
+"optimizing the routed/shoved traces. More effort means cleaner routing\n"
+"(but slower), less effort means faster routing but somewhat jagged\n"
+"traces.\n"
+msgstr "*Sforzo di ottimizzazione* - definisce quanto tempo lo sbroglio dovrà impiegare nell'ottimizzazione della disposizione/spostamento di piste. Un valore maggiore significa uno sbroglio più pulito (ma più lento), mentre valori più bassi portano a sbrogli più veloci ma con tracce più seghettate.\n"
 
 #. type: Title -
 #: Pcbnew_introduction.adoc:3
@@ -3696,7 +4659,7 @@ msgstr ""
 msgid ""
 "Pcbnew is used in association with the schematic capture software program "
 "Eeschema, which provides the Netlist file - this describes the electrical "
-"connections of the PCB to design."
+"connections of the PCB being designed."
 msgstr ""
 "Pcbnew viene usato assieme al programma di disegno schemi elettrici "
 "Eeschema. Quest'ultimo fornisce il file di Netlist, che descrive i "
@@ -3735,13 +4698,8 @@ msgid ""
 "by removal of any erroneous tracks, addition of the new components, or by "
 "modifying any value (and under certain conditions any reference) of the old "
 "or new modules, according to the electrical connections appearing in the "
-"scheme."
-msgstr ""
-"Pcbnew integra, automaticamente e immediatamente, qualsiasi modifica "
-"circuitale, rimuovendo ogni traccia errata, aggiungendo nuovi componenti o "
-"modificando qualunque valore (e in certe condizioni ogni riferimento) a "
-"vecchi o nuovi moduli, a seconda delle connessioni elettriche che appaiono "
-"nello schema."
+"schematic."
+msgstr "Pcbnew integra, automaticamente e immediatamente, qualsiasi modifica circuitale, rimuovendo ogni traccia errata, aggiungendo nuovi componenti o modificando qualunque valore (e in certe condizioni ogni riferimento) a vecchi o nuovi moduli, a seconda delle connessioni elettriche che appaiono nello schema."
 
 #. type: Plain text
 #: Pcbnew_introduction.adoc:35
@@ -3758,12 +4716,9 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_introduction.adoc:38
 msgid ""
-"Pcbnew has an active Design Rules Check (DRC) which automatically indicates "
-"any error of track layout in real time."
-msgstr ""
-"Pcbnew possiede un controllo attivo regole elettriche (DRC) in grado di "
-"indicare automaticamente ogni errore di posizionamento tracce, in tempo "
-"reale."
+"Pcbnew has an active Design Rules Check (DRC) function which automatically "
+"indicates any error of track layout in real time."
+msgstr "Pcbnew possiede un controllo regole elettriche (DRC) attivo in grado di indicare automaticamente ogni errore di posizionamento tracce, in tempo reale."
 
 #. type: Plain text
 #: Pcbnew_introduction.adoc:41
@@ -3778,19 +4733,16 @@ msgstr ""
 #: Pcbnew_introduction.adoc:45
 msgid ""
 "Pcbnew has a simple but effective autorouter to assist in the production of "
-"the circuit. An Export/Import in SPECCTRA dsn format allows to use more "
-"advanced auto-routers."
-msgstr ""
-"Pcbnew possiede un semplice ma efficace sbrogliatore per assistere nella "
-"produzione del circuito. La funzione di esportazione/importazione in formato "
-"dsn SPECCTRA permette inoltre l'uso di sbrogliatori più avanzati."
+"the circuit board. An Export/Import in SPECCTRA dsn format allows the use of "
+"more advanced auto-routers."
+msgstr "Pcbnew possiede un semplice ma efficace sbrogliatore per assistere nella produzione del circuito. Una funzione di esportazione/importazione in formato dsn SPECCTRA permette inoltre l'uso di sbrogliatori più avanzati."
 
 #. type: Plain text
 #: Pcbnew_introduction.adoc:49
 msgid ""
-"Pcbnew provides options specifically for the production of ultra high "
-"frequency circuits (such as pads of trapezoidal and complex form, automatic "
-"layout of coils on the printed circuit, etc)."
+"Pcbnew provides options specifically provided for the production of ultra "
+"high frequency microwave circuits (such as pads of trapezoidal and complex "
+"form, automatic layout of coils on the printed circuit, etc)."
 msgstr ""
 "Pcbnew fornisce opzioni specifiche per la produzione di circuiti ad ultra "
 "alta frequenza (come piazzole trapezoidali e di forme complesse, "
@@ -3800,7 +4752,7 @@ msgstr ""
 #: Pcbnew_introduction.adoc:52
 msgid ""
 "Pcbnew displays the elements (tracks, pads, texts, drawings and more) as "
-"actual size and according to personal preferences:"
+"actual size and according to the following personal preferences:"
 msgstr ""
 "Pcbnew può mostrare gli elementi (tracce, piazzole, testi, disegni e altro) "
 "alla dimensione reale e secondo preferenze personalizzabili:"
@@ -3867,24 +4819,21 @@ msgstr ""
 "rame, moduli...), utile per alcuni cirtuiti ad alta densità e multistrato."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:78
+#: Pcbnew_introduction.adoc:77
 msgid ""
 "For the complex circuits, the display of layers, zones, components can be "
-"removed in a selective way for a better legibility of the screen."
-msgstr ""
-"Per circuiti complessi, la visualizzazione degli strati, zone, componenti "
-"può essere disabilitata in maniera selettiva per una migliore leggibilità "
-"dello schermo."
+"removed in a selective way for clarity on screen."
+msgstr "Per i circuiti complessi, la visualizzazione degli strati, zone, componenti può essere disabilitata in maniera selettiva per una migliore chiarezza sullo schermo."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:80
+#: Pcbnew_introduction.adoc:79
 msgid "Modules can be rotated to any angle, with a step of 0.1 degree."
 msgstr ""
 "I moduli possono essere ruotati ad ogni angolo, con un passo di 0.1 grado."
 
 # TODO: da chiarire
 #. type: Plain text
-#: Pcbnew_introduction.adoc:84
+#: Pcbnew_introduction.adoc:83
 msgid ""
 "Pads can be round, rectangular, oval or trapezoidal (the latter is necessary "
 "for the production of ultra high frequency circuits). In addition several "
@@ -3895,7 +4844,7 @@ msgstr ""
 "frequenza). Inoltre si possono raggruppare diversi tipi base di piazzole."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:87
+#: Pcbnew_introduction.adoc:86
 msgid ""
 "Both the size of each pad, and the layers where they appear, can be "
 "adjusted. The drilling of holes can be offset."
@@ -3905,7 +4854,7 @@ msgstr ""
 "spostato."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:90
+#: Pcbnew_introduction.adoc:89
 msgid ""
 "Pcbnew can automatically generate copper planes, with automatic generation "
 "of thermal breaks around the pads concerned."
@@ -3914,7 +4863,7 @@ msgstr ""
 "automatica di interruzioni termiche attorno alle piazzole coinvolte."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:96
+#: Pcbnew_introduction.adoc:95
 msgid ""
 "The Footprint Editor can be accessed from the Pcbnew toolbar. The Editor "
 "allows creation or modification of a footprint from the PCB or a library and "
@@ -3931,61 +4880,63 @@ msgstr ""
 "libreria creando un archivio di impronte."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:99
+#: Pcbnew_introduction.adoc:98
 msgid ""
 "Pcbnew generates in an extremely simple way all the documents necessary:"
 msgstr ""
 "Pcbnew genera tutti i documenti necessari in modo estremamente semplice:"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:101
+#: Pcbnew_introduction.adoc:100
 msgid "Fabrication outputs:"
 msgstr "Prodotti per la fabbricazione:"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:103
+#: Pcbnew_introduction.adoc:102
 #, no-wrap
 msgid "** Files for Photoplotters in GERBER RS274X format.\n"
 msgstr "** File per fotoplotter in formato GERBER RS274X.\n"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:105
+#: Pcbnew_introduction.adoc:104
 #, no-wrap
 msgid "** Files for drilling in EXCELLON format.\n"
 msgstr "** File per la foratura in formato EXCELLON.\n"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:107
+#: Pcbnew_introduction.adoc:106
 msgid "Plot files in HPGL, SVG and DXF format."
 msgstr "Stampa di file in formato HPGL, SVG o DXF."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:109
+#: Pcbnew_introduction.adoc:108
 msgid "Plot and drilling maps in POSTSCRIPT format."
 msgstr "Mappe di disegno e forature in formato Postscript."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:111
+#: Pcbnew_introduction.adoc:110
 msgid "Local Printout."
 msgstr "Stampe locali."
 
 #. type: Title ~
-#: Pcbnew_introduction.adoc:113
+#: Pcbnew_introduction.adoc:112
 #, no-wrap
 msgid "General remarks"
 msgstr "Osservazioni generali"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:116
+#: Pcbnew_introduction.adoc:115
 msgid "Pcbnew requires a 3 button mouse. The 3rd button is mandatory."
 msgstr "Pcbnew richiede un mouse a 3 pulsanti. Il terzo pulsante è necessario."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:118
+#: Pcbnew_introduction.adoc:117
 msgid ""
 "Finally it should be noted that the diagrammatic tool Eeschema and CvPcb are "
 "needed to create the required netlists."
-msgstr "Infine si nota che gli strumenti Eeschema e CvPcb sono necessari per la creazione delle richieste netlist."
+msgstr ""
+"Infine si nota che gli strumenti Eeschema e CvPcb sono necessari per la "
+"creazione delle richieste netlist."
 
 #. type: Title -
 #: Pcbnew_layers.adoc:3
@@ -4449,7 +5400,7 @@ msgid ""
 "loaded, all libraries that appear in the library list are searched until the "
 "first instance of the module is found. In what follows, note that the active "
 "library is the library selected within the Module Editor (ModEdit), the "
-"program we be now described"
+"program will now be described"
 msgstr ""
 
 #. type: Plain text
@@ -4580,7 +5531,7 @@ msgid ""
 "| image:images/icons/library.png[]\n"
 "| Select the active library.\n"
 "| image:images/icons/save_library.png[]\n"
-"| Save the current module to the active library, and write it on disk.\n"
+"| Save the current module to the active library, and write it to disk.\n"
 "| image:images/icons/new_library.png[]\n"
 "| Create a new library and save the current module in it.\n"
 "| image:images/icons/modview_icon.png[]\n"
@@ -4964,7 +5915,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:21
 msgid ""
-"Select the module with the right mouse button then chose the Move command "
+"Select the module with the right mouse button then choose the Move command "
 "from the menu. Move the module to the required position and place it with "
 "the left mouse button. If required the selected module can also be rotated, "
 "inverted or edited. Select Cancel from the menu (or press the Esc key) to "
@@ -5113,9 +6064,9 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:89
 msgid ""
-"The automatic module of placement allows the placement of the modules onto "
-"the 2 faces of the circuit board (however switching a module onto the copper "
-"layer is not automatic)."
+"The automatic placement feature allows the placement of modules onto the 2 "
+"faces of the circuit board (however switching a module onto the copper layer "
+"is not automatic)."
 msgstr ""
 
 #. type: Plain text
@@ -5198,7 +6149,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_module_placement.adoc:129
 msgid ""
-"Usually resistances and non-polarized capacitors are authorized for 180 "
+"Usually resistors and non-polarized capacitors are authorized for 180 "
 "degrees rotation. Some modules (small transistors for example)  can be "
 "authorized for +/- 90 and 180 degrees rotation."
 msgstr ""
@@ -5394,7 +6345,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_routing.adoc:52
 msgid ""
-"Pcbnew allows you to define different routing parameters foe each net. "
+"Pcbnew allows you to define different routing parameters for each net. "
 "Parameters are defined by a group of nets."
 msgstr ""
 
@@ -5570,8 +6521,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_routing.adoc:118
 msgid ""
-"This dialog specify the smallest acceptable values for vias parameters. On a "
-"board, a via smaller than specified here generates a DRC error."
+"This dialog specifies the smallest acceptable values for via parameters. On "
+"a board, a via smaller than specified here generates a DRC error."
 msgstr ""
 
 #. type: Title ^
@@ -5739,10 +6690,10 @@ msgid ""
 "routing power tracks, making them wide and short and keeping analog and "
 "digital supplies well separated. Later, sensitive signal tracks should be "
 "routed. Amongst other problems, automatic routing often requires many vias. "
-"However, automatic routing can offer useful insight into the positioning of "
-"modules.  With experience, you will probably find that the automatic router "
-"is useful for quickly routing the 'obvious' tracks, but the remaining tracks "
-"will best be routed by hand."
+"However, automatic routing can offer a useful insight into the positioning "
+"of modules.  With experience, you will probably find that the automatic "
+"router is useful for quickly routing the 'obvious' tracks, but the remaining "
+"tracks will best be routed by hand."
 msgstr ""
 
 #. type: Title ~
@@ -5761,8 +6712,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_routing.adoc:210
 msgid ""
-"The button image:images/icons/net_highlight.png[] allows to highlight a net "
-"(click to a pad or an existing track to highlight the corresponding net)."
+"The button image:images/icons/net_highlight.png[] allows one to highlight a "
+"net (click to a pad or an existing track to highlight the corresponding net)."
 msgstr ""
 
 #. type: Plain text
@@ -5861,8 +6812,8 @@ msgstr ""
 #: Pcbnew_routing.adoc:254
 msgid ""
 "When clicking on a track or a pad, Pcbnew automatically selects the "
-"corresponding Netclass, and the track size and vias dimensions from this "
-"netclass."
+"corresponding Netclass, and the track size and vias dimensions are derived "
+"from this netclass."
 msgstr ""
 
 #. type: Plain text
@@ -5940,7 +6891,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_routing.adoc:301
 msgid ""
-"One can select a new size for routing, or to change a previously created via "
+"One can select a new size for routing, or change to a previously created via "
 "or track segment:"
 msgstr ""
 
@@ -5952,8 +6903,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_routing.adoc:307
 msgid ""
-"If you want to change many vias (or tracks) size, the best way is to use a "
-"specific Netclass to for the net(s) that must be edited (see global changes)."
+"If you want to change many via (or track) sizes, the best way is to use a "
+"specific Netclass for the net(s) that must be edited (see global changes)."
 msgstr ""
 
 #. type: Title ~
@@ -6057,9 +7008,10 @@ msgid ""
 "Eeschema or Orcad PCB 2. The netlist file, generated from the schematic is "
 "usually missing the footprint modules that correspond to the various "
 "components. Consequently an intermediate stage is necessary. During this "
-"intermediate process the association components/modules is performed. In "
-"KiCad, CvPcb is used to create this association and a file named `*.cmp` is "
-"produced. CvPcb also updates the netlist file using this information."
+"intermediate process the association of components with modules is "
+"performed. In KiCad, CvPcb is used to create this association and a file "
+"named `*.cmp` is produced. CvPcb also updates the netlist file using this "
+"information."
 msgstr ""
 
 #. type: Plain text
@@ -6111,8 +7063,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_schematics.adoc:41
 msgid ""
-"Assign each component in you netlist file to the corresponding module (often "
-"called footprint) used on the printed circuit using Cvpcb."
+"Assign each component in your netlist file to the corresponding module "
+"(often called footprint) used on the printed circuit using Cvpcb."
 msgstr ""
 
 #. type: Plain text
@@ -6305,8 +7257,9 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_zones.adoc:19
 msgid ""
-"Each option has its advantages and its disadvantages, mainly when redraw "
-"screen. The final result is however the same."
+"Each option has its advantages and its disadvantages, the main disadvantage "
+"being increased screen redraw time on slower machines. The final result is "
+"however the same."
 msgstr ""
 
 #. type: Plain text
@@ -6342,7 +7295,7 @@ msgstr ""
 #: Pcbnew_zones.adoc:34
 msgid ""
 "Select parameters (net name, layer...).  To switch on the layer and "
-"highlight this net is not mandatory but is a good practice."
+"highlight this net is not mandatory but it is good practice."
 msgstr ""
 
 #. type: Plain text
@@ -6359,8 +7312,8 @@ msgstr ""
 #: Pcbnew_zones.adoc:41
 msgid ""
 "Pcbnew tries to fill all zones in one piece, and usually, there will be no "
-"unconnected copper blocks. So it can happens that some areas remain not "
-"filled. Zones having no net are not cleaned and can have insulated areas."
+"unconnected copper blocks. So it can happens that some areas remain "
+"unfilled. Zones having no net are not cleaned and can have insulated areas."
 msgstr ""
 
 #. type: Title ~
@@ -6457,8 +7410,8 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_zones.adoc:78
 msgid ""
-"Here=follow you can see and example of a zone limit (polygon in thin hatched "
-"line)"
+"In the following image you can see an example of a zone limit (polygon in "
+"thin hatched line)"
 msgstr ""
 
 #. type: Plain text
@@ -6508,7 +7461,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_zones.adoc:103
 msgid ""
-"When filling a zone, Pcbnew remove all not connected copper islands.  To "
+"When filling a zone, Pcbnew removes all unconnected copper islands.  To "
 "access the zone filling command, right click on the edge zone."
 msgstr ""
 
@@ -6571,7 +7524,7 @@ msgstr ""
 
 #. type: Plain text
 #: Pcbnew_zones.adoc:128
-msgid "When you fill and area, you must choose:"
+msgid "When you fill an area, you must choose:"
 msgstr ""
 
 #. type: Plain text
@@ -6591,7 +7544,7 @@ msgstr ""
 
 #. type: Plain text
 #: Pcbnew_zones.adoc:133
-msgid "Thermal reliefs parameters."
+msgid "Thermal relief parameters."
 msgstr ""
 
 #. type: Title ^
@@ -6718,7 +7671,7 @@ msgstr ""
 #: Pcbnew_zones.adoc:192
 msgid ""
 "Additionally, a too large value for this parameter or for antipad size does "
-"not allow to create a thermal relief for small pads (like pads sizes used "
+"not allow one to create a thermal relief for small pads (like pad sizes used "
 "for SMD components)."
 msgstr ""
 
@@ -6864,8 +7817,8 @@ msgstr ""
 #: Pcbnew_zones.adoc:249
 msgid ""
 "When right clicking on an outline, and using 'Edit Zone Params' the Zone "
-"params Dialog box will open. Initial parameters can be imputed . If the zone "
-"is already filled, refilling it will be necessary."
+"params Dialog box will open. Initial parameters can be inputted . If the "
+"zone is already filled, refilling it will be necessary."
 msgstr ""
 
 #. type: Title ~
@@ -6877,7 +7830,7 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_zones.adoc:255
 msgid ""
-"When the board is finished, one must fill or refill all zones. To do that:"
+"When the board is finished, one must fill or refill all zones. To do this:"
 msgstr ""
 
 #. type: Plain text

@@ -12,7 +12,7 @@ accepts netlist files made with Eeschema or Orcad PCB 2. The netlist
 file, generated from the schematic is usually missing the footprint
 modules that correspond to the various components. Consequently an
 intermediate stage is necessary. During this intermediate process
-the association components/modules is performed. In KiCad, CvPcb is
+the association of components with modules is performed. In KiCad, CvPcb is
 used to create this association and a file named `*.cmp` is
 produced. CvPcb also updates the netlist file using this information.
 
@@ -36,7 +36,7 @@ Procedure for creating a printed circuit board
 After having created your schematic in Eeschema:
 
 * Generate the netlist using Eeschema.
-* Assign each component in you netlist file to the corresponding module
+* Assign each component in your netlist file to the corresponding module
 (often called footprint) used on the printed circuit using Cvpcb.
 * Launch Pcbnew and read the modified Netlist, this will also read the
 file with the  module selections.

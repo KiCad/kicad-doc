@@ -14,8 +14,8 @@ the DRC engine. A zone must be filled (not just created) to connect
 pads. Pcbnew uses currently track segments or polygons to fill
 copper areas.
 
-Each option has its advantages and its disadvantages, mainly when
-redraw screen. The final result is however the same.
+Each option has its advantages and its disadvantages, the main disadvantage being increased
+screen redraw time on slower machines. The final result is however the same.
 
 For calculation time reasons, the zone filling is not remade after
 each change, but only:
@@ -30,13 +30,13 @@ attached to a net.
 In order to create a copper zone you should:
 
 * Select parameters (net name, layer...).  To switch on the layer
-and highlight this net is not mandatory but is a good practice.
+and highlight this net is not mandatory but it is good practice.
 * Create the zone limit (If not, all the board will be filled.).
 * Fill the zone.
 
 Pcbnew tries to fill all zones in one piece, and usually, there will
 be no unconnected copper blocks. So it can happens that some areas
-remain not filled. Zones having no net are not cleaned and can have
+remain unfilled. Zones having no net are not cleaned and can have
 insulated areas.
 
 Creating a zone
@@ -73,7 +73,7 @@ Remarks:
 * The DRC control is active when creating zone outlines.
 * A corner which creates a DRC error will not be accepted by Pcbnew.
 
-Here=follow you can see and example of a zone limit (polygon in thin
+In the following image you can see an example of a zone limit (polygon in thin
 hatched line)
 
 image:images/Pcbnew_zone_limit_example.png[]
@@ -98,7 +98,7 @@ image:images/Pcbnew_zone_priority_example_after_filling.png[]
 Filling the zone
 ^^^^^^^^^^^^^^^^
 
-When filling a zone, Pcbnew remove all not connected copper islands.
+When filling a zone, Pcbnew removes all unconnected copper islands.
 To access the zone filling command, right click on the edge zone.
 
 image:images/Pcbnew_zone_context_menu.png[]
@@ -124,12 +124,12 @@ Filling options
 
 image:images/Pcbnew_zone_filling_options.png[]
 
-When you fill and area, you must choose:
+When you fill an area, you must choose:
 
 * The mode for filling.
 * The clearance and minimum copper thickness.
 * How pads are drawn inside the zone (or connected to this zone).
-* Thermal reliefs parameters.
+* Thermal relief parameters.
 
 Filling mode
 ^^^^^^^^^^^^
@@ -187,8 +187,8 @@ The copper width value for thermal reliefs must be bigger than the
 minimum thickness value for copper zone. If not, they cannot be drawn.
 
 Additionally, a too large value for this parameter or for antipad
-size does not allow to create a thermal relief for small pads (like
-pads sizes used for SMD components).
+size does not allow one to create a thermal relief for small pads (like
+pad sizes used for SMD components).
 
 Adding a cutout area inside a zone
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -245,13 +245,13 @@ image:images/Pcbnew_zone_add_similar_after.png[]
 Editing zone: parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-When right clicking on an outline, and using 'Edit Zone Params' the Zone params Dialog box will open. Initial parameters can be imputed . If the zone is already filled, refilling it will be necessary.
+When right clicking on an outline, and using 'Edit Zone Params' the Zone params Dialog box will open. Initial parameters can be inputted . If the zone is already filled, refilling it will be necessary.
 
 Final zone filling
 ~~~~~~~~~~~~~~~~~~
 
 When the board is finished, one must fill or refill all zones. To do
-that:
+this:
 
 * Activate the tool zones via the button image:images/icons/add_zone.png[].
 * Right click to display the pop-up menu.
