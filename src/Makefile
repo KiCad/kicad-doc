@@ -151,6 +151,12 @@ docbook-all: docbook $(DOCNAME).xml $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).xml
 $(DOCNAME).pdf: $(DOCNAME).adoc $(DOCCHAPTERS)
 	a2x -f pdf $(ASCIIDOCVAR) --dblatex-opts $(DBLATEXOPTS) $(DOCNAME).adoc
 
+#Japanese pdf
+DBLATEXOPTS-JA="-b xetex -p ../style/dblatex-pdf-ja.xsl -P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+$(DOCNAME)-ja.pdf: $(DOCNAME)-ja.adoc
+	echo "Note: To make japanese pdf, you need to install fonts-vlgothic (like: sudo apt-get install fonts-vlgothic)."
+	a2x -f pdf $(ASCIIDOCVAR) -a lang=ja --dblatex-opts $(DBLATEXOPTS-JA) $(DOCNAME)-ja.adoc
+
 #I18n pdf
 $(DOCNAME)-%.pdf: $(DOCNAME)-%.adoc
 	a2x -f pdf $(ASCIIDOCVAR) -a lang=$* --dblatex-opts $(DBLATEXOPTS) $(DOCNAME)-$*.adoc
