@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pl_Editor-ja\n"
 "POT-Creation-Date: 2015-07-05 11:48+0900\n"
-"PO-Revision-Date: 2015-07-02 01:30+0900\n"
+"PO-Revision-Date: 2015-07-18 01:17+0900\n"
 "Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
@@ -30,13 +30,13 @@ msgstr "*Pl_Editor*\n"
 #. type: Plain text
 #: Pl_Editor.adoc:13
 msgid "_Reference manual_"
-msgstr "リファレンスマニュアル"
+msgstr "_リファレンスマニュアル_"
 
 #. type: Plain text
 #: Pl_Editor.adoc:16
 #, no-wrap
 msgid "*Copyright*\n"
-msgstr "著作権\n"
+msgstr "*著作権*\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:23
@@ -57,7 +57,7 @@ msgstr ""
 #: Pl_Editor.adoc:26
 #, no-wrap
 msgid "*Contributors*\n"
-msgstr "貢献者\n"
+msgstr "*貢献者*\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:28
@@ -68,7 +68,7 @@ msgstr "Jean-Pierre Charras."
 #: Pl_Editor.adoc:31
 #, no-wrap
 msgid "*Feedback*\n"
-msgstr "フィードバック\n"
+msgstr "*フィードバック*\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:34
@@ -82,29 +82,29 @@ msgstr ""
 #. type: Plain text
 #: Pl_Editor.adoc:36
 msgid "_https://launchpad.net/~kicad-developers_"
-msgstr "_https://launchpad.net/~kicad-developers_"
+msgstr "_ https://launchpad.net/~kicad-developers _"
 
 #. type: Plain text
 #: Pl_Editor.adoc:39
 #, no-wrap
 msgid "*Acknowledgments*\n"
-msgstr "謝辞\n"
+msgstr "*謝辞*\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:42
 #, no-wrap
 msgid "*Publication date and software version*\n"
-msgstr "発行日とバージョン\n"
+msgstr "*発行日とソフトウェアのバージョン*\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:44
 msgid "may 23, 2015."
-msgstr "may 23, 2015."
+msgstr "2015年5月23日"
 
 #. type: Plain text
 #: Pl_Editor.adoc:47
 msgid "Introduction to *Pl_Editor*"
-msgstr "Pl_Editorについて"
+msgstr "*Pl_Editor* について"
 
 #. type: delimited block -
 #: Pl_Editor.adoc:51
@@ -141,11 +141,11 @@ msgid ""
 "* *Poly-polygons* (mainly to place logos and special graphic shapes)\n"
 "* *Bitmaps*.\n"
 msgstr ""
-"* *直線*\n"
-"* *矩形*\n"
-"* *テキスト*（EeschemaやPcbnewの実際の図面で日付やページ番号に自動的に置換えられる書式指定文字を含む）\n"
-"* *重畳された多角形* （主にロゴや特別な図形を配置するためのもの）\n"
-"* *ビットマップ画像*\n"
+"* *線(Line)*\n"
+"* *矩形(Rect)*\n"
+"* *テキスト(Text)* （EeschemaやPcbnewの実際の図面で日付やページ番号に自動的に置換えられる書式指定文字を含む）\n"
+"* *重畳された多角形(Poly)* （主にロゴや特別な図形を配置するためのもの）\n"
+"* *ビットマップ(Bitmap)*\n"
 
 #. type: delimited block -
 #: Pl_Editor.adoc:67
@@ -155,7 +155,7 @@ msgid ""
 "PS only) Therefore, for other plotters, only a bounding box will be\n"
 "plotted.\n"
 msgstr ""
-"注意：ビットマップ画像は一部の出力形式（PDFとPS）でのみ\n"
+"注意：ビットマップ(Bitmap)は一部の出力形式（PDFとPS）でのみ\n"
 "プロットできます。それ以外の出力形式では、ただの四角形として\n"
 "出力されます。\n"
 
@@ -163,7 +163,7 @@ msgstr ""
 #: Pl_Editor.adoc:69
 #, no-wrap
 msgid "* Items can be repeated, and texts and poly_polygons can be rotated.\n"
-msgstr "* これら要素は繰り返し配置が可能です。またテキストと重畳された多角形は回転させることができます。\n"
+msgstr "* これら要素は繰り返し配置が可能です。またテキスト(Text)と重畳された多角形(Poly)は回転させることができます。\n"
 
 #. type: delimited block -
 #: Pl_Editor.adoc:72
@@ -173,7 +173,7 @@ msgid ""
 "Pl_Editor files\n"
 msgstr ""
 "[[pl_editor-files]]\n"
-"Pl_Editorのファイル\n"
+"Pl_Editor のファイル\n"
 
 #. type: Title ~
 #: Pl_Editor.adoc:76
@@ -187,7 +187,8 @@ msgid ""
 "Pl_Editor reads or writes page layout description files *.kicad_wks (KiCad "
 "worksheet)."
 msgstr ""
-"Pl_Editorで利用できるのは、*.kicad_wks拡張子のファイルです。(kicad worksheet)"
+"Pl_Editorで利用できるのは、*.kicad_wks 拡張子のファイルです。(kicad "
+"worksheet)"
 
 #. type: Plain text
 #: Pl_Editor.adoc:83
@@ -209,7 +210,7 @@ msgid ""
 "The current page layout description can be written in a **.kicad_wks* file, "
 "using the S-expression format, which is widely used in KiCad."
 msgstr ""
-"ページレイアウトファイルはKiCadで広く使用されているS式形式の *.kicad_wks拡張"
+"ページレイアウトファイルはKiCadで広く使用されているS式形式の *.kicad_wks 拡張"
 "子のファイルとして出力されます。"
 
 #. type: Plain text
@@ -217,9 +218,7 @@ msgstr ""
 msgid ""
 "This file can be used to show the custom page layout in Eeschema and/or "
 "Pcbnew."
-msgstr ""
-"このファイルは、EeschemaやPcbnewで図枠テンプレートとして使用することが出来ま"
-"す。"
+msgstr "このファイルは、EeschemaやPcbnewで図枠として使用することが出来ます。"
 
 #. type: Title -
 #: Pl_Editor.adoc:96
@@ -242,13 +241,13 @@ msgstr "基本的なページレイアウトの要素は、次のものとなり
 #: Pl_Editor.adoc:105
 #, no-wrap
 msgid "*Lines*\n"
-msgstr "*直線*\n"
+msgstr "*線(Line)*\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:106
 #, no-wrap
 msgid "*Rectangles*\n"
-msgstr "*矩形*\n"
+msgstr "*矩形(Rect)*\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:108
@@ -256,7 +255,7 @@ msgstr "*矩形*\n"
 msgid ""
 "*Texts* (with format symbols, with will be replaced by the actual\n"
 "text, like the date, page number...) in Eeschema or Pcbnew.\n"
-msgstr "*テキスト*（EeschemaやPcbnewの実際の図面で日付やページ番号に自動的に置換えられる書式指定文字を含む）\n"
+msgstr "*テキスト(Text)* （EeschemaやPcbnewの実際の図面で日付やページ番号に自動的に置換えられる書式指定文字を含む）\n"
 
 # "* *重畳された～"を"*重畳された～"へ修正
 # 常体を敬体へ統一
@@ -269,20 +268,21 @@ msgid ""
 "built inside pl_editor, because it is not possible to create such shapes\n"
 "by hand.\n"
 msgstr ""
-"*重畳された多角形* （主にロゴや特別な図形を配置するためのもの）\n"
-"これら重畳された多角形は**Bitmap2component**によって生成されます。\n"
-"pl_editorでこのような図形は作成できません。\n"
+"*重畳された多角形(Poly)* （主にロゴや特別な図形を配置するためのもの）\n"
+"これら重畳された多角形(Poly)は **Bitmap2Component** によって生成されます。\n"
+"PL_Editor でこのような図形は作成できません。\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:113
 #, no-wrap
 msgid "*Bitmaps* to place logos.\n"
-msgstr "*ビットマップ画像*（ロゴを配置するための）\n"
+msgstr "*ビットマップ(Bitmap)* （ロゴを配置するための）\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:115
 msgid "Bitmaps can be plotted only by few plotters: PDF and PS only."
-msgstr "ビットマップ画像は一部の出力形式（PDFとPS）でのみプロットできます。"
+msgstr ""
+"ビットマップ(Bitmap)は一部の出力形式（PDFとPS）でのみプロットできます。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:117
@@ -295,7 +295,7 @@ msgstr "また："
 msgid ""
 "*Texts, poly-polygons* and *bitmaps* are defined by a position, and\n"
 "can be rotated.\n"
-msgstr "*テキスト、重畳された多角形*と*ビットマップ画像*は、位置を指定しての回転表示が可能です。\n"
+msgstr "*テキスト(Text)* と *重畳された多角形(Poly)* は、位置を指定しての回転表示が可能です。\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:123
@@ -305,7 +305,7 @@ msgid ""
 "a start point and a end point. They cannot be rotated (this is useless\n"
 "for segments)\n"
 msgstr ""
-"*直線*（多数のセグメントから成る）と*矩形* は始点/終点の2点の指定となります。\n"
+"*線(Line)* （多数のセグメントから成る）と *矩形(Rect)* は始点/終点の2点の指定となります。\n"
 "これらは回転できません。(セグメントに対して無効です）\n"
 
 #. type: Plain text
@@ -319,8 +319,8 @@ msgid ""
 "Texts which are repeated accept also an increment value for labels (has "
 "meaning only if the text is one letter or one digit)"
 msgstr ""
-"テキストについては内容をインクリメントしながらの繰り返し配置も可能です。（テ"
-"キストが1文字のアルファベット、または一桁の数値のみ）"
+"テキスト(Text)については内容をインクリメントしながらの繰り返し配置も可能で"
+"す。（テキスト(Text)が1文字のアルファベット、または一桁の数値のみ）"
 
 #. type: Title ~
 #: Pl_Editor.adoc:131
@@ -380,7 +380,8 @@ msgid ""
 "For rectangles and segments, which have two defined points, each point has "
 "its reference corner."
 msgstr ""
-"矩形や直線は、それぞれ原点となる角を指定した2点の座標指定で指定されます。"
+"矩形(Rect)や線(Line)は、それぞれ原点となる角を指定した2点の座標指定で指定され"
+"ます。"
 
 #. type: Title ~
 #: Pl_Editor.adoc:155
@@ -394,7 +395,8 @@ msgid ""
 "Items which have a position defined by just one point (texts and poly-"
 "polygons) can be rotated:"
 msgstr ""
-"一点を基準とする要素（テキストと重畳された多角形）は回転することができます。"
+"一点を基準とする要素（テキスト(Text)と重畳された多角形(Poly)）は回転すること"
+"ができます。"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:164
@@ -441,7 +443,7 @@ msgstr "image:images/ja/page_property_2.png[]"
 #: Pl_Editor.adoc:181
 #, no-wrap
 msgid "Texts and formats"
-msgstr "テキストと書式指定"
+msgstr "テキスト(Text)と書式指定"
 
 #. type: Title ~
 #: Pl_Editor.adoc:185
@@ -453,7 +455,8 @@ msgstr "書式指定文字"
 #: Pl_Editor.adoc:188
 msgid "Texts can be simple strings or can include format symbols."
 msgstr ""
-"テキスト中には、下記に示すような単純な書式指定文字を含めることが可能です。"
+"テキスト(Text)中には、下記に示すような単純な書式指定文字を含めることが可能で"
+"す。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:190
@@ -465,17 +468,17 @@ msgstr ""
 #. type: Plain text
 #: Pl_Editor.adoc:192
 msgid "They are like format symbols in printf function."
-msgstr "これらは(プログラム言語の)prinf関数と似ています。"
+msgstr "これらは(プログラム言語の)printf関数と似ています。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:194
 msgid "A format symbol is *%* followed by 1 letter."
-msgstr "書式指定文字は、%記号＋文字で定義されています。"
+msgstr "書式指定文字は、 *%* 記号＋１文字で定義されています。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:196
 msgid "The *%C* format has one digit (comment identifier)"
-msgstr "*%C*形式は一つの数字を引数に持ちます（コメント識別子）"
+msgstr "*%C* 形式は一つの数字を引数に持ちます（コメント識別子）"
 
 #. type: Plain text
 #: Pl_Editor.adoc:198
@@ -614,12 +617,12 @@ msgstr "Pl_Editorで指定された書式指定文字をそのまま表示しま
 #: Pl_Editor.adoc:247
 #, no-wrap
 msgid "Multi-line texts:"
-msgstr "複数行のテキスト:"
+msgstr "複数行のテキスト(Text):"
 
 #. type: Plain text
 #: Pl_Editor.adoc:250
 msgid "Texts can be multi-line."
-msgstr "テキストは複数行とすることが可能です。"
+msgstr "テキスト(Text)は複数行とすることが可能です。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:252
@@ -630,13 +633,12 @@ msgstr "ここでは、2通りの改行方法を説明します："
 #: Pl_Editor.adoc:255
 msgid "Insert the “n” 2 chars sequence (mainly in Page setup dialog in KiCad)"
 msgstr ""
-"“\n"
-"”の2文字を利用する方法（主にKiCadのページ設定ダイアログで使用します）"
+"\"\\n\" の2文字を利用する方法（主にKiCadのページ設定ダイアログで使用します）"
 
 #. type: Plain text
 #: Pl_Editor.adoc:256
 msgid "Insert a new line in Pl_Editor Design window."
-msgstr "Pl_Editorのデザインウインドウで直接改行する方法"
+msgstr "Pl_Editorのデザインウィンドウで直接改行する方法"
 
 #. type: Plain text
 #: Pl_Editor.adoc:258
@@ -670,7 +672,8 @@ msgstr "ページ設定ダイアログでの改行："
 msgid ""
 "In the page setup dialog, text controls do not accept a multi-line text."
 msgstr ""
-"ページ設定ダイアログでは、複数行のテキストがそのままの形では入力できません。"
+"ページ設定ダイアログでは、複数行のテキスト(Text)がそのままの形では入力できま"
+"せん。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:276
@@ -684,7 +687,8 @@ msgstr ""
 #: Pl_Editor.adoc:278
 msgid "Here is a two lines text, in _comment 2_ field:"
 msgstr ""
-"例えば、”コメント2”の欄へ2行に渡るテキストを入力する例が下記となります："
+"例えば、”コメント2”の欄へ2行に渡るテキスト(Text)を入力する例が下記となりま"
+"す："
 
 #. type: Plain text
 #: Pl_Editor.adoc:280
@@ -753,7 +757,7 @@ msgid ""
 msgstr ""
 "しかし、1ページ目のみに表示させたい、あるいは1ページ目以外のページにのみ表示"
 "させたい場合があります。\n"
-"これらは、プロパティ内の”１ページ目のオプション”から設定することが可能です："
+"これらは、プロパティ内の”１ページ目の設定”から設定することが可能です："
 
 #. type: delimited block |
 #: Pl_Editor.adoc:312
@@ -763,7 +767,7 @@ msgid ""
 "a|Page 1 option:\n"
 msgstr ""
 "|image:images/ja/display_options.png[]\n"
-"a|1ページ目のオプション：\n"
+"a|１ページ目の設定：\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:316
@@ -775,13 +779,13 @@ msgid ""
 msgstr ""
 "* なし：ページ番号による表示制限はありません。\n"
 "* １ページ目のみ： 要素は1ページ目のみに表示されます。\n"
-"* ２ページ目以降：要素は1ページ目には表示されず、2ページ目以降の全てのページに表示されます。\n"
+"* １ページ目には適用しない：要素は1ページ目には表示されず、2ページ目以降の全てのページに表示されます。\n"
 
 #. type: Title ~
 #: Pl_Editor.adoc:321
 #, no-wrap
 msgid "Text full size constraint"
-msgstr "テキストサイズの制限"
+msgstr "テキスト(Text)サイズの制限"
 
 #. type: Plain text
 #: Pl_Editor.adoc:324
@@ -791,17 +795,18 @@ msgstr "image:images/ja/constraint_options.png[]"
 #. type: Plain text
 #: Pl_Editor.adoc:326
 msgid "Only for texts, one can set 2 parameters :"
-msgstr "テキストについては、下記の2つのパラメータを設定することができます："
+msgstr ""
+"テキスト(Text)については、下記の2つのパラメータを設定することができます："
 
 #. type: Plain text
 #: Pl_Editor.adoc:328
 msgid "the max size X"
-msgstr "最大幅(X)"
+msgstr "最大Xサイズ(mm)"
 
 #. type: Plain text
 #: Pl_Editor.adoc:329
 msgid "the max size Y"
-msgstr "最大高さ(Y)"
+msgstr "最大Yサイズ(mm)"
 
 #. type: Plain text
 #: Pl_Editor.adoc:331
@@ -816,9 +821,9 @@ msgid ""
 "size is bigger than the max size X and/or the max size Y, to fit the full "
 "text size with this bounding box."
 msgstr ""
-"これらのパラメータが0でない場合、実際のテキストの長さと高さが入力値により制限"
-"されます。もしテキストの幅や高さが制限値を超えた場合は、入力された制限値に合"
-"うように変形されます。"
+"これらのパラメータが0でない場合、実際のテキスト(Text)の長さと高さが入力値によ"
+"り制限されます。もしテキスト(Text)の幅や高さが制限値を超えた場合は、入力され"
+"た制限値に合うように変形されます。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:339
@@ -826,8 +831,8 @@ msgid ""
 "When the actual full text size is smaller than the max size X and/or the max "
 "size Y, the text height and/or the text width is not modified."
 msgstr ""
-"入力されたテキストが幅や高さの制限値以下の場合には、テキストは変形されずにそ"
-"のまま表示されます。"
+"入力されたテキスト(Text)が幅や高さの制限値以下の場合には、テキスト(Text)は変"
+"形されずにそのまま表示されます。"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:344
@@ -843,13 +848,13 @@ msgstr ""
 #: Pl_Editor.adoc:346
 #, no-wrap
 msgid "Max size X = 0,0\n"
-msgstr "最大幅（X） = 0,0\n"
+msgstr "最大Xサイズ(mm) = 0,0\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:348 Pl_Editor.adoc:355
 #, no-wrap
 msgid "Max size Y = 0,0\n"
-msgstr "最大高さ（Y） = 0,0\n"
+msgstr "最大Yサイズ(mm) = 0,0\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:351
@@ -859,18 +864,18 @@ msgid ""
 "a|The *same* text with constraint.\n"
 msgstr ""
 "|image:images/ja/constraints_defined.png[]\n"
-"a|同じテキストについて、制限を設ける場合\n"
+"a|同じテキスト(Text)について、制限を設ける場合\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:353
 #, no-wrap
 msgid "Max size X = 40,0\n"
-msgstr "最大幅（X） = 40,0\n"
+msgstr "最大Xサイズ(mm) = 40,0\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:359
 msgid "A multi line text, constrained:"
-msgstr "複数行のテキストも、同様に制限させることが出来ます："
+msgstr "複数行のテキスト(Text)も、同様に制限させることが出来ます："
 
 #. type: delimited block |
 #: Pl_Editor.adoc:364
@@ -902,8 +907,8 @@ msgstr ""
 msgid ""
 "From a command line, the syntax is pl_editor <*.kicad_wks file to open>."
 msgstr ""
-"コマンドラインから起動する場合、 pl_editor <*.kicad_wksファイルパス>として呼"
-"び出してください。"
+"コマンドラインから起動する場合、 `pl_editor <*.kicad_wksファイルパス>` として"
+"呼び出してください。"
 
 #. type: Title -
 #: Pl_Editor.adoc:380
@@ -963,7 +968,7 @@ msgid ""
 "the net list file to be processed.\n"
 msgstr ""
 "|image:images/icons/page_new_layout.png[] |\n"
-"新規の空の図枠テンプレートを作成します。\n"
+"新規の空の図枠を作成します。\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:409
@@ -973,7 +978,7 @@ msgid ""
 "page layout description file.\n"
 msgstr ""
 "|image:images/icons/page_load_layout.png[] |\n"
-".kicad_wksファイルの図枠テンプレートをロードします。\n"
+".kicad_wksファイルの図枠をロードします。\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:412
@@ -981,7 +986,7 @@ msgstr ""
 msgid ""
 "|image:images/icons/page_save_layout.png[] |Save the\n"
 "current page layout description in a .kicad_wks file.\n"
-msgstr "|image:images/icons/page_save_layout.png[] |.kicad_wksファイルへ図枠テンプレートを保存します。\n"
+msgstr "|image:images/icons/page_save_layout.png[] |.kicad_wksファイルへ図枠を保存します。\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:415
@@ -1033,8 +1038,8 @@ msgid ""
 "page layout in user mode: texts are shown like in Eeschema or Pcbnew:\n"
 "text format symbols are replaced by the user texts.\n"
 msgstr ""
-"|image:images/icons/title_block_preview.png[] |ユーザーモードで図枠テンプレートを表示します。\n"
-"テキストはEeschemaやPcbnewで表示させた時と同じように、各種書式指定文字が\n"
+"|image:images/icons/title_block_preview.png[] |ユーザーモードで図枠を表示します。\n"
+"テキスト(Text)はEeschemaやPcbnewで表示させた時と同じように、各種書式指定文字が\n"
 "置換されて表示されます。\n"
 
 #. type: delimited block |
@@ -1045,7 +1050,7 @@ msgid ""
 "page layout in native mode: texts are displayed “as is”, with the\n"
 "contained formats, without any replacement.\n"
 msgstr ""
-"|image:images/icons/title_block_edit.png[] |タイトルブロック編集モードで図枠テンプレートを表示します。\n"
+"|image:images/icons/title_block_edit.png[] |タイトルブロック編集モードで図枠を表示します。\n"
 "書式指定文字はそのままの形で画面表示されます。\n"
 
 #. type: delimited block |
@@ -1083,7 +1088,7 @@ msgstr "これは、1ページ目のみ別のレイアウトを指定した際�
 #: Pl_Editor.adoc:451
 #, no-wrap
 msgid "Commands in drawing area (draw panel)"
-msgstr "描画エリアでのコマンド (draw panel)"
+msgstr "描画エリア(描画パネル)でのコマンド"
 
 #. type: Title ^
 #: Pl_Editor.adoc:455
@@ -1111,12 +1116,12 @@ msgstr ""
 "|F3 |画面の再描画\n"
 "|F4 |現在のカーソル位置の描画を画面中央へ移動させます\n"
 "|Home |画面全体を表示\n"
-"|Space Bar |dx/dy 表示座標をカーソル位置でゼロリセットします。\n"
+"|スペースキー |dx/dy 表示座標をカーソル位置でゼロリセットします。\n"
 "（dx/dy座標は画面下部ステータスバーに表示されます）\n"
-"|Right Arrow |カーソルを1グリッド分左へ移動します。\n"
-"|Left Arrow |カーソルを1グリッド分右へ移動します。\n"
-"|Up Arrow |カーソルを1グリッド分上へ移動します。\n"
-"|Down Arrow |カーソルを1グリッド分下へ移動します。\n"
+"|→（右矢印） |カーソルを1グリッド分右へ移動します。\n"
+"|←（左矢印） |カーソルを1グリッド分左へ移動します。\n"
+"|↑（上矢印） |カーソルを1グリッド分上へ移動します。\n"
+"|↓（下矢印） |カーソルを1グリッド分下へ移動します。\n"
 
 #. type: Title ^
 #: Pl_Editor.adoc:473
@@ -1167,7 +1172,7 @@ msgstr "テキスト入力"
 #. type: Plain text
 #: Pl_Editor.adoc:493
 msgid "Append Page Layout Descr File"
-msgstr "図枠テンプレートファイルを追加"
+msgstr "図枠ファイルを追加"
 
 #. type: Plain text
 #: Pl_Editor.adoc:496
@@ -1179,12 +1184,12 @@ msgstr "これらは要素を追加するための基本的なコマンドです
 #. type: Plain text
 #: Pl_Editor.adoc:498
 msgid "Zoom selection: direct selection of the display zoom."
-msgstr "画面拡大/縮小/再描画"
+msgstr "中央/ズームイン/ズームアウト/ビューの再描画/自動ズーム/ズームの選択"
 
 #. type: Plain text
 #: Pl_Editor.adoc:499
 msgid "Grid selection: direct selection of the grid."
-msgstr "グリッドの設定"
+msgstr "グリッドの選択"
 
 #. type: delimited block =
 #: Pl_Editor.adoc:504
@@ -1192,8 +1197,8 @@ msgid ""
 "_Append Page Layout Descr File_ is intended to add poly polygons to make "
 "logos."
 msgstr ""
-"_“図枠テンプレートファイルを追加”_は、図面上にロゴを追加するために使用される"
-"ことを意図しています。"
+"_“図枠ファイルを追加”_ は、図面上にロゴを追加するために使用されることを意図し"
+"ています。"
 
 #. type: delimited block =
 #: Pl_Editor.adoc:508
@@ -1231,14 +1236,14 @@ msgstr "image:images/ja/status_bar.png[]"
 msgid ""
 "Coordinates are *always relative to the corner* selected as **reference**."
 msgstr ""
-"座標系は、*常に原点として設定された角*を**基準**とした座標が表示されていま"
-"す。"
+"座標系は、 *常に原点として設定された角* を **基準** とした座標が表示されてい"
+"ます。"
 
 #. type: Title -
 #: Pl_Editor.adoc:525
 #, no-wrap
 msgid "Left window"
-msgstr "画面左ウインドウ(デザインツリー)"
+msgstr "画面左ウィンドウ(デザインツリー)"
 
 #. type: Plain text
 #: Pl_Editor.adoc:528
@@ -1251,7 +1256,7 @@ msgid ""
 "One can select a given item (left clicking on the line) or, when right "
 "clicking on the line, display a pop up menu."
 msgstr ""
-"一覧から左クリックで要素をひとつ選択する事ができ、右クリックでポップアップメ"
+"一覧から左クリックで要素をひとつ選択する事ができ、右クリックでコンテキストメ"
 "ニューを表示することが出来ます。"
 
 #. type: Plain text
@@ -1284,12 +1289,12 @@ msgstr ""
 #: Pl_Editor.adoc:546
 #, no-wrap
 msgid "Right window"
-msgstr "画面右ウインドウ"
+msgstr "画面右ウィンドウ"
 
 #. type: Plain text
 #: Pl_Editor.adoc:549
 msgid "The right window is the edit window."
-msgstr "(編集ウインドウ)"
+msgstr "(編集ウィンドウ)"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:554
@@ -1307,7 +1312,7 @@ msgid ""
 "On this dialog you can set the page property and the item property of the "
 "current item."
 msgstr ""
-"画面右に表示されている編集ウインドウでは、選択された要素のプロパティを編集す"
+"画面右に表示されている編集ウィンドウでは、選択された要素のプロパティを編集す"
 "ることが出来ます。"
 
 #. type: Plain text
@@ -1332,8 +1337,8 @@ msgid ""
 "|Settings for lines and rectangles\n"
 "|Settings for texts\n"
 msgstr ""
-"|直線/矩形の設定\n"
-"|テキストの設定\n"
+"|線(Line)/矩形(Rect)の設定\n"
+"|テキスト(Text)の設定\n"
 
 #. type: delimited block |
 #: Pl_Editor.adoc:571
@@ -1352,8 +1357,8 @@ msgid ""
 "|Settings for poly-polygons\n"
 "|Setting for bitmaps\n"
 msgstr ""
-"|重畳された多角形の設定\n"
-"|ビットマップイメージの設定\n"
+"|重畳された多角形(Poly)の設定\n"
+"|ビットマップ(Bitmap)の設定\n"
 
 #. type: Title -
 #: Pl_Editor.adoc:579
@@ -1375,7 +1380,7 @@ msgstr "要素を選択するには、下記の３通りの方法があります
 #. type: Plain text
 #: Pl_Editor.adoc:588
 msgid "From the Design tree."
-msgstr "デザインツリー(画面左ウインドウ)より、対象の要素を選択する"
+msgstr "デザインツリー(画面左ウィンドウ)より、対象の要素を選択する"
 
 #. type: Plain text
 #: Pl_Editor.adoc:589
@@ -1452,8 +1457,8 @@ msgid ""
 "selected, the item, or one of its end points, can be moved by moving the\n"
 "mouse and placed (right clicking on the mouse).\n"
 msgstr ""
-"|image:images/drag_element.png[] |直線や矩形の始点/終点を右クリックし、メニューより”始点の移動”または\n"
-"”終点の移動”を選択することで、始点/終点を移動させることが出来ます。\n"
+"|image:images/drag_element.png[] |線(Line)や矩形(Rect)の始点/終点を右クリックし、メニューより”始点を移動”または\n"
+"”終点を移動”を選択することで、始点/終点を移動させることが出来ます。\n"
 
 #. type: Title ~
 #: Pl_Editor.adoc:626
@@ -1473,7 +1478,7 @@ msgstr ""
 #. type: Plain text
 #: Pl_Editor.adoc:632
 msgid "A popup menu is displayed:"
-msgstr "ポップアップメニューが表示されます："
+msgstr "コンテキストメニューが表示されます："
 
 #. type: delimited block |
 #: Pl_Editor.adoc:637
@@ -1497,8 +1502,8 @@ msgid ""
 "Lines, rectangles and texts are added just by clicking on the corresponding "
 "menu item."
 msgstr ""
-"直線や矩形、テキストの追加は、メニューの該当するコマンドを選択することで作成"
-"できます。"
+"線(Line)や矩形(Rect)、テキスト(Text)の追加は、メニューの該当するコマンドを選"
+"択することで作成できます。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:646
@@ -1506,7 +1511,7 @@ msgid ""
 "Logos must first be created by Bitmap2component, which creates a page layout "
 "description file."
 msgstr ""
-"ロゴについては、Bitmap2componentプログラムでファイルを作成しなければなりませ"
+"ロゴについては、Bitmap2Componentプログラムでファイルを作成しなければなりませ"
 "ん。"
 
 #. type: Plain text
@@ -1515,20 +1520,20 @@ msgid ""
 "The Append Page Layout Descr File option append this file, to insert the "
 "logo (a poly polygon)"
 msgstr ""
-"ロゴ（重畳された多角形）は、”図枠テンプレートファイルを追加”コマンドより挿入"
-"します。"
+"ロゴ（重畳された多角形(Poly)）は、”図枠ファイルを追加”コマンドより挿入しま"
+"す。"
 
 #. type: Title ~
 #: Pl_Editor.adoc:652
 #, no-wrap
 msgid "Adding lines, rectangles and texts"
-msgstr "直線/矩形/テキストの追加"
+msgstr "線(Line)/矩形(Rect)/テキスト(Text)の追加"
 
 #. type: Plain text
 #: Pl_Editor.adoc:655
 msgid "When clicking on the option, a dialog is opened:"
 msgstr ""
-"右クリックメニューより各要素を追加すると、下記のようなウインドウが表示されま"
+"右クリックメニューより各要素を追加すると、下記のようなウィンドウが表示されま"
 "す："
 
 #. type: delimited block |
@@ -1545,12 +1550,12 @@ msgstr ""
 #: Pl_Editor.adoc:662
 #, no-wrap
 msgid "|Adding line or rectangle |Adding text\n"
-msgstr "|直線/矩形の追加 |テキストの追加\n"
+msgstr "|線(Line)/矩形(Rect)の追加 |テキスト(Text)の追加\n"
 
 #. type: Plain text
 #: Pl_Editor.adoc:665
 msgid "Position of end points, and corner reference can be defined here."
-msgstr "始点/終点座標や、座標系原点の設定はこのウインドウより行います。"
+msgstr "始点/終点座標や、座標系原点の設定はこのウィンドウより行います。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:668
@@ -1558,7 +1563,7 @@ msgid ""
 "However they can be defined later, from the right window, or by moving the "
 "item, or one of its end points."
 msgstr ""
-"これら設定は、後から画面右側の編集ウインドウから再設定することが可能です。ま"
+"これら設定は、後から画面右側の編集ウィンドウから再設定することが可能です。ま"
 "た始点/終点位置などは要素をマウス操作などで移動することによっても変更されま"
 "す。"
 
@@ -1583,8 +1588,8 @@ msgid ""
 "When an item is created, if is put in move mode, and you can refine its "
 "position (this is very useful for texts and small lines or rectangles)"
 msgstr ""
-"テキストや小さな図形などでは、要素作成後に右クリックメニューより要素を移動し"
-"位置を調整する方が便利な場合があります。"
+"テキスト(Text)や小さな図形などでは、要素作成後に右クリックメニューより要素を"
+"移動し位置を調整する方が便利な場合があります。"
 
 #. type: Title ~
 #: Pl_Editor.adoc:680
@@ -1598,9 +1603,9 @@ msgid ""
 "To add a logo, a poly polygon (the vectored image of the logo) must be first "
 "created using Bitmap2component."
 msgstr ""
-"重畳された多角形としてのロゴ（ベクトル線化された画像ロゴ）を挿入する場合、最"
-"初にBitmap2componentプログラムによりロゴファイルを生成しておく必要がありま"
-"す。"
+"重畳された多角形(Poly)としてのロゴ（ベクトル線化された画像ロゴ）を挿入する場"
+"合、最初にBitmap2Componentプログラムによりロゴファイルを生成しておく必要があ"
+"ります。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:687
@@ -1608,8 +1613,8 @@ msgid ""
 "Bitmap2component creates a page layout description file which is append to "
 "the current design, using the *Append Page Layout Descr File* option."
 msgstr ""
-"Bitmap2componentプログラムは、図枠テンプレートファイル形式で作成され、 *”図枠"
-"テンプレートファイルを追加”*コマンドによりデザインに取り込みます。"
+"Bitmap2Component プログラムは、図枠ファイル形式で作成され、 *”図枠ファイルを"
+"追加”* コマンドによりデザインに取り込みます。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:690
@@ -1617,8 +1622,8 @@ msgid ""
 "Bitmap2component creates a page layout description file which contains only "
 "one item: a poly polygon."
 msgstr ""
-"Bitmap2componentプログラムは、画像ファイルを一つの重畳された多角形へと変換"
-"し、図枠テンプレートファイル形式で出力します。"
+"Bitmap2Component プログラムは、画像ファイルを一つの重畳された多角形(Poly)へと"
+"変換し、図枠ファイル形式で出力します。"
 
 #. type: Plain text
 #: Pl_Editor.adoc:693
@@ -1626,22 +1631,22 @@ msgid ""
 "__However, this command can be used to append any page layout description "
 "file, which is merged with the current design__."
 msgstr ""
-"__このコマンドでは、全ての図枠テンプレートファイル形式のファイルを取り込み、"
-"現在のレイアウトにマージさせることが可能です。__"
+"__ このコマンドでは、全ての図枠ファイル形式のファイルを取り込み、現在のレイア"
+"ウトにマージさせることが可能です。 __"
 
 #. type: Plain text
 #: Pl_Editor.adoc:696
 msgid ""
 "Once a poly polygon is inserted, it can be moved and its parameters edited."
 msgstr ""
-"一度ロゴを取り込んだ後、移動や編集ウインドウによるパラメータの編集が可能で"
+"一度ロゴを取り込んだ後、移動や編集ウィンドウによるパラメータの編集が可能で"
 "す。"
 
 #. type: Title ~
 #: Pl_Editor.adoc:699
 #, no-wrap
 msgid "Adding image bitmaps"
-msgstr "ビットマップイメージの追加"
+msgstr "ビットマップ(Bitmap)の追加"
 
 #. type: Plain text
 #: Pl_Editor.adoc:703
@@ -1660,7 +1665,7 @@ msgstr "追加された画像ファイルは、300PPI(Pixel/Inch)として設定
 #. type: Plain text
 #: Pl_Editor.adoc:708
 msgid "This value can be modified in panel Properties (right panel)."
-msgstr "この設定は、編集ウインドウで変更することが可能です。（画面右）"
+msgstr "この設定は、編集ウィンドウで変更することが可能です。（画面右）"
 
 #. type: Plain text
 #: Pl_Editor.adoc:710
@@ -1680,4 +1685,5 @@ msgstr ""
 #. type: Plain text
 #: Pl_Editor.adoc:714
 msgid "A bitmap can be repeated, **but not rotated**."
-msgstr "ビットマップイメージは、繰り返し設定できますが、**回転できません**。"
+msgstr ""
+"ビットマップ(Bitmap)は、繰り返しの設定ができますが、 **回転はできません** 。"
