@@ -1,8 +1,6 @@
-ModEdit - Creating and Editing Modules
---------------------------------------
+== ModEdit - Creating and Editing Modules
 
-ModEdit overview
-~~~~~~~~~~~~~~~~
+=== ModEdit overview
 
 ModEdit is used for editing and creating PCB modules. This includes:
 
@@ -13,8 +11,7 @@ all the pads in a module.
 * Editing fields (value, reference, etc.).
 * Editing the associated documentation (description, keywords).
 
-Module elements
-~~~~~~~~~~~~~~~
+=== Module elements
 
 A module is the physical representation (footprint) of the part to
 be inserted in the PCB and it must  be linked to the relative
@@ -29,8 +26,7 @@ In addition, a number of other parameters must be correctly defined if
 the auto-placement function will be used. The same holds for the
 generation of auto-insertion files.
 
-Pads
-^^^^
+==== Pads
 
 Two pad properties are important:
 
@@ -41,16 +37,14 @@ characters. Thus, the following are all valid pad numbers: 1, 45 and
 of the corresponding pin number in the schematic, because it defines
 the matching pin and pad numbers that Pcbnew links pins and pads with.
 
-Contours
-^^^^^^^^
+==== Contours
 
 Graphical contours are used to draw the physical shape of the
 module. Several different types of contour are available: lines,
 circles, arcs, and text. Contours have no electrical significance,
 they are simply graphical aids.
 
-Fields
-^^^^^^
+==== Fields
 
 These are text elements associated with a module. Two are obligatory
 and always present: the reference field and the value field. These
@@ -61,8 +55,7 @@ value is replaced by the value of the corresponding part in the
 schematic (47K, 74LS02, etc.). Other fields can be added and these
 will behave like graphical text.
 
-Starting ModEdit and selecting a module to edit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Starting ModEdit and selecting a module to edit
 
 ModEdit can be started in two ways:
 
@@ -74,15 +67,13 @@ which offers a 'Go to Module Editor' button. If this option is used,
 the module from the board will be loaded into the editor, for
 modification or for saving.
 
-Module Editor Toolbars
-~~~~~~~~~~~~~~~~~~~~~~
+=== Module Editor Toolbars
 
 Calling ModEdit will launch a new window that looks like this:
 
 image:images/Modedit_main_window.png[]
 
-Edit toolbar (right-hand side)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Edit toolbar (right-hand side)
 
 This toolbar contains tools for:
 
@@ -118,8 +109,7 @@ and after the grid size can be set to the pad pitch.
 Placing pads is therefore very easy
 |======
 
-Display toolbar (left-hand side)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Display toolbar (left-hand side)
 
 These tools manage the display options in ModEdit:
 
@@ -143,8 +133,7 @@ These tools manage the display options in ModEdit:
 | Toggle high-contrast mode
 |======
 
-Context Menus
-~~~~~~~~~~~~~
+=== Context Menus
 
 The right mouse button calls up menus that depend upon the element
 beneath the cursor.
@@ -162,8 +151,7 @@ The context menu for editing graphic elements:
 image:images/Modedit_context_menu_graphics.png[]
 
 
-Module properties dialog
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== Module properties dialog
 
 This dialog can be launched when the cursor is over a module by
 clicking on the right mouse button and then selecting 'Edit Module'.
@@ -172,8 +160,7 @@ image:images/Modedit_module_properties_dialog.png[]
 
 The dialog can be used to define the main module parameters.
 
-Creating a new module
-~~~~~~~~~~~~~~~~~~~~~
+=== Creating a new module
 
 A new module can be created via the button
 image:images/icons/new_footprint.png[]. The name of the new module
@@ -201,15 +188,13 @@ image:images/icons/import_module.png[]).
 * Modify the reference field in order to generate a new identifier (name).
 * Edit and save the new module.
 
-Adding and editing pads
-~~~~~~~~~~~~~~~~~~~~~~~
+=== Adding and editing pads
 
 Once a module has been created, pads can be added, deleted or
 modified. Modification of pads can be local, affecting only the pad
 under the cursor, or global, affecting all pads of the module.
 
-Adding pads
-^^^^^^^^^^^
+==== Adding pads
 
 Select the image:images/icons/pad.png[] icon from the right hand
 toolbar. Pads can be added by clicking in the desired position with
@@ -218,8 +203,7 @@ properties menu.
 
 Do not forget to enter the pad number.
 
-Setting pad properties
-^^^^^^^^^^^^^^^^^^^^^^
+==== Setting pad properties
 
 This can be done in three different ways:
 
@@ -244,8 +228,7 @@ documentation.
 The Pad Type selector triggers an automatic selection of layers that
 is generally sufficient.
 
-Rectangular pads
-++++++++++++++++
+===== Rectangular pads
 
 For SMD modules of the VQFP/PQFP type which have rectangular pads on
 all four sides (both horizontal and vertical) it is recommended to
@@ -254,14 +237,12 @@ place it with different orientations (0 for horizontal and 90
 degrees for vertical). Global resizing of pads can then be done in a
 single operation.
 
-Rotate pads
-+++++++++++
+===== Rotate pads
 
 Rotations of -90 or -180 are only required for trapezoidal pads used
 in microwave modules.
 
-Non-plated through hole pads
-++++++++++++++++++++++++++++
+===== Non-plated through hole pads
 
 Pads can be defined as Non-Plated Through Hole pads (NPTH pads).
 
@@ -277,28 +258,24 @@ oval pad,  this pad is NOT plotted on copper layers in GERBER files.
 These pads are used for mechanical purposes, therefore no pad name
 or net name is allowed. A connection to a net is not possible.
 
-Pads not on copper layers
-+++++++++++++++++++++++++
+===== Pads not on copper layers
 
 These are unusual pads. This option can be used to create fiducials
 or masks on technical layers.
 
-Offset parameter
-++++++++++++++++
+===== Offset parameter
 
 Pad 3 has an offset Y = 15 mils:
 
 image:images/Modedit_pad_offset_example.png[]
 
-Delta Parameter (trapezoidal pads)
-++++++++++++++++++++++++++++++++++
+===== Delta Parameter (trapezoidal pads)
 
 Pad 1 has its parameter Delta X  = 10 mils
 
 image:images/Modedit_pad_delta_example.png[]
 
-Setting clearance for solder mask and solder paste mask layers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Setting clearance for solder mask and solder paste mask layers
 
 Setting a clearance can be made at 3 levels:
 
@@ -312,15 +289,13 @@ Pcbnew uses the following to calculate clearances:
 * Footprint settings. If null,
 * Global settings.
 
-Remarks
-+++++++
+===== Remarks
 
 The solder mask pad shape is usually bigger than the pad itself. So the
 clearance value is positive. The solder paste mask pad shape is usually
 smaller than the pad itself. So the clearance value is negative.
 
-Solder paste mask parameters
-++++++++++++++++++++++++++++
+===== Solder paste mask parameters
 
 For solder paste mask there are two parameters:
 
@@ -337,8 +312,7 @@ Pad level settings:
 
 image:images/Modedit_pad_level_pad_settings.png[]
 
-Fields Properties
-~~~~~~~~~~~~~~~~~
+=== Fields Properties
 
 There are at least two fields: reference and value.
 
@@ -348,8 +322,7 @@ the field, or by the footprint properties dialog box:
 
 image:images/Modedit_footprint_text_properties.png[]
 
-Automatic placement of a module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Automatic placement of a module
 
 If the user wishes to exploit the the full capabilities of the
 auto-placement functions, it is necessary to define the allowed
@@ -371,8 +344,7 @@ resistor might have a permission of 10 to rotate 180 degrees
 (unrestrained) and a permission of 5 for a +/- 90 degree rotation
 (allowed, but discouraged).
 
-Attributes
-~~~~~~~~~~
+=== Attributes
 
 The attributes window is the following:
 
@@ -386,8 +358,7 @@ most useful for surface mount components (SMDs).
 board. Examples would be edge connectors or inductors created by a
 particular track shape (as sometimes seen in microwave modules).
 
-Documenting modules in a library
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Documenting modules in a library
 
 It is strongly recommended to document newly created modules, in
 order to facilitate their rapid and accurate retrieval. Who is able
@@ -412,8 +383,7 @@ toolbar in Pcbnew), it is possible to type the text `=TO220` into
 the dialog box to have Pcbnew display a list of the modules
 possessing the keyword `TO220`
 
-3-dimensional visualisation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== 3-dimensional visualisation
 
 A module may have been associated with a file containing a
 three-dimensional representation of itself. In order to associate
@@ -446,8 +416,7 @@ image:images/Modedit_footprint_3d_preview.png[]
 
 The 3D model will automatically appear in the 3D representation of the printed circuit board.
 
-Saving a module into the active library
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Saving a module into the active library
 
 The save command (modification of the file of the active library) is activated by the image:images/icons/save_library.png[] button.
 
@@ -455,8 +424,7 @@ If a module of the same name exists (an older version), it will be overwritten. 
 
 Before saving, it is also recommended to change the reference or value of the module to be equal to the library name of the module.
 
-Saving a module to the board
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Saving a module to the board
 
 If the edited footprint comes from the current board, the button
 image:images/icons/update_module_board.png[] will update this footprint on

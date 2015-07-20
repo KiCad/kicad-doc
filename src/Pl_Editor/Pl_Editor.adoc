@@ -4,8 +4,7 @@
 :ascii-ids:
 
 [[pl_editor]]
-Pl_Editor
-=========
+= Pl_Editor
 
 *Pl_Editor*
 
@@ -43,8 +42,7 @@ _https://launchpad.net/~kicad-developers_
 may 23, 2015.
 
 [[introduction-to-pl_editor]]
-Introduction to *Pl_Editor*
--------------------------
+== Introduction to *Pl_Editor*
 
 Pl_Editor is a page layout editor tool to create custom title blocks,
 and frame references.
@@ -68,12 +66,10 @@ plotted.
 * Items can be repeated, and texts and poly_polygons can be rotated.
 
 [[pl_editor-files]]
-Pl_Editor files
----------------
+== Pl_Editor files
 
 [[input-file-and-default-title-block]]
-Input file and default title block
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Input file and default title block
 
 Pl_Editor reads or writes page layout description files *.kicad_wks
 (KiCad worksheet).
@@ -82,8 +78,7 @@ An internal default page layout description to display the default KiCad
 title block is used until a file is read
 
 [[output-file]]
-Output file
-~~~~~~~~~~~
+=== Output file
 
 The current page layout description can be written in a **.kicad_wks*
 file, using the S-expression format, which is widely used in KiCad.
@@ -92,12 +87,10 @@ This file can be used to show the custom page layout in Eeschema and/or
 Pcbnew.
 
 [[theory-of-operations]]
-Theory of operations
---------------------
+== Theory of operations
 
 [[basic-page-layout-items-properties]]
-Basic page layout items properties:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Basic page layout items properties:
 
 Basic page layout items are:
 
@@ -127,8 +120,7 @@ Texts which are repeated accept also an increment value for labels (has
 meaning only if the text is one letter or one digit)
 
 [[coordinates-definition]]
-Coordinates definition
-~~~~~~~~~~~~~~~~~~~~~~
+=== Coordinates definition
 
 Each position, start point and end point of items is always relative to
 a page corner.
@@ -137,8 +129,7 @@ a page corner.
 dependent on the paper size**.
 
 [[reference-corners-and-coordinates]]
-Reference corners and coordinates:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Reference corners and coordinates:
 
 image:images/en/page_property_1.png[]
 
@@ -151,8 +142,7 @@ For rectangles and segments, which have two defined points, each point
 has its reference corner.
 
 [[rotation]]
-Rotation
-~~~~~~~~
+=== Rotation
 
 Items which have a position defined by just one point (texts and
 poly-polygons) can be rotated:
@@ -167,8 +157,7 @@ poly-polygons) can be rotated:
 |=======================================================================
 
 [[repeat-option]]
-Repeat option
-~~~~~~~~~~~~~
+=== Repeat option
 
 Items can be repeated:
 
@@ -177,12 +166,10 @@ This is useful to create grid and grid labels.
 image:images/en/page_property_2.png[]
 
 [[texts-and-formats]]
-Texts and formats
------------------
+== Texts and formats
 
 [[format-symbols]]
-Format symbols:
-~~~~~~~~~~~~~~~
+=== Format symbols:
 
 Texts can be simple strings or can include format symbols.
 
@@ -243,8 +230,7 @@ The native texts entered in Pl_Editor, with their format symbols.
 |=======================================================================
 
 [[multi-line-texts]]
-Multi-line texts:
-~~~~~~~~~~~~~~~~~
+=== Multi-line texts:
 
 Texts can be multi-line.
 
@@ -266,8 +252,7 @@ Setup
 |================================================================
 
 [[multi-line-texts-in-page-setup-dialog]]
-Multi-line texts in Page Setup dialog:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Multi-line texts in Page Setup dialog:
 
 In the page setup dialog, text controls do not accept a multi-line text.
 
@@ -291,12 +276,10 @@ And the displayed text:
 image:images/en/multi_line_3.png[]
 
 [[constraints]]
-Constraints
------------
+== Constraints
 
 [[page-1-constraint]]
-Page 1 constraint
-~~~~~~~~~~~~~~~~~
+=== Page 1 constraint
 
 When using Eeschema, the full schematic often uses more than one page.
 
@@ -317,8 +300,7 @@ a|Page 1 option:
 |=================================================================
 
 [[text-full-size-constraint]]
-Text full size constraint
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Text full size constraint
 
 image:images/en/constraint_options.png[]
 
@@ -367,8 +349,7 @@ Setup
 |================================================================
 
 [[invoking-pl_editor]]
-Invoking Pl_Editor
-------------------
+== Invoking Pl_Editor
 
 Pl_Editor is typically invoked from a command line, or from the KiCad
 manager.
@@ -376,12 +357,10 @@ manager.
 From a command line, the syntax is pl_editor <*.kicad_wks file to open>.
 
 [[pl_editor-commands]]
-Pl_Editor Commands
-------------------
+== Pl_Editor Commands
 
 [[main-screen]]
-Main Screen
-~~~~~~~~~~~
+=== Main Screen
 
 The image below shows the main window of Pl_Editor.
 
@@ -392,8 +371,7 @@ The left pane contains the list of basic items.
 The right pane is the item settings editor.
 
 [[main-window-toolbar]]
-Main Window Toolbar
-~~~~~~~~~~~~~~~~~~~
+=== Main Window Toolbar
 
 image:images/en/main_toolbar.png[]
 
@@ -447,12 +425,10 @@ more than one page)
 |=======================================================================
 
 [[commands-in-drawing-area-draw-panel]]
-Commands in drawing area (draw panel)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Commands in drawing area (draw panel)
 
 [[keyboard-commands]]
-Keyboard Commands
-^^^^^^^^^^^^^^^^^
+==== Keyboard Commands
 
 [width="100%",cols="20%,80%",]
 |==================================================================
@@ -469,8 +445,7 @@ Keyboard Commands
 |==================================================================
 
 [[mouse-commands]]
-Mouse Commands
-^^^^^^^^^^^^^^
+==== Mouse Commands
 
 [width="100%",cols="32%,68%",]
 |============================================================
@@ -481,8 +456,7 @@ Mouse Commands
 |============================================================
 
 [[context-menu]]
-Context Menu
-^^^^^^^^^^^^
+==== Context Menu
 
 Displayed by right-clicking the mouse:
 
@@ -509,8 +483,7 @@ Bitmap2Component.
 
 
 [[status-bar-information]]
-Status Bar Information
-~~~~~~~~~~~~~~~~~~~~~~
+=== Status Bar Information
 
 The status bar is located a the bottom of the Pl_Editor and provides
 useful information to the user.
@@ -521,8 +494,7 @@ Coordinates are *always relative to the corner* selected as
 **reference**.
 
 [[left-window]]
-Left window
------------
+== Left window
 
 The left windows shows the list of layout items.
 
@@ -542,8 +514,7 @@ draw panel.
 |=======================================================================
 
 [[right-window]]
-Right window
-------------
+== Right window
 
 The right window is the edit window.
 
@@ -575,12 +546,10 @@ Displayed settings depend on the selected item:
 |=======================================================================
 
 [[interactive-edition]]
-Interactive edition
--------------------
+== Interactive edition
 
 [[item-selection]]
-Item selection
-~~~~~~~~~~~~~~
+=== Item selection
 
 An item can be selected:
 
@@ -622,8 +591,7 @@ mouse and placed (right clicking on the mouse).
 |=======================================================================
 
 [[item-creation]]
-Item creation
-~~~~~~~~~~~~~
+=== Item creation
 
 To add a new item, right click the mouse button when the cursor is on
 the left window or the draw area.
@@ -648,8 +616,7 @@ The Append Page Layout Descr File option append this file, to insert the
 logo (a poly polygon)
 
 [[adding-lines-rectangles-and-texts]]
-Adding lines, rectangles and texts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Adding lines, rectangles and texts
 
 When clicking on the option, a dialog is opened:
 
@@ -676,8 +643,7 @@ When an item is created, if is put in move mode, and you can refine its
 position (this is very useful for texts and small lines or rectangles)
 
 [[adding-logos]]
-Adding logos
-~~~~~~~~~~~~
+=== Adding logos
 
 To add a logo, a poly polygon (the vectored image of the logo) must be
 first created using Bitmap2component.
@@ -695,8 +661,7 @@ Once a poly polygon is inserted, it can be moved and its parameters
 edited.
 
 [[adding-image-bitmaps]]
-Adding image bitmaps
-~~~~~~~~~~~~~~~~~~~~
+=== Adding image bitmaps
 
 You can add an image bitmap using most of bitmap formats (PNG, JPEG, BMP
 ...)
