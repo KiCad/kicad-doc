@@ -1,12 +1,9 @@
 
-Setting routing parameters
---------------------------
+== Setting routing parameters
 
-Current settings
-~~~~~~~~~~~~~~~~
+=== Current settings
 
-Accessing the main dialog
-^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Accessing the main dialog
 
 The most important parameters are accessed from the following
 drop-down menu:
@@ -15,15 +12,13 @@ image:images/Pcbnew_design_rules_dropdown.png[]
 
 and are set in the Design Rules dialog.
 
-Current settings
-^^^^^^^^^^^^^^^^
+==== Current settings
 
 Current settings are displayed by the top toolbar.
 
 image:images/Pcbnew_design_rules_top_toolbar.png[]
 
-General options
-~~~~~~~~~~~~~~~
+=== General options
 The General options menu is available via the top toolbar link Preferences → General dialog.
 
 image:images/Pcbnew_preferences_menu.png[]
@@ -44,8 +39,7 @@ automatically deleted if considered redundant.
 pad area.
 *Magnetic Tracks*: The graphic cursor becomes the track axis.
 
-Netclasses
-~~~~~~~~~~
+=== Netclasses
 
 Pcbnew allows you to define different routing parameters for each
 net. Parameters are defined by a group of nets.
@@ -62,13 +56,11 @@ A netclass specifies:
 to the net of the track to create or edit, and therefore the routing
 parameters.
 
-Setting routing parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Setting routing parameters
 
 The choice is made in the menu: Design Rules → Design Rules.
 
-Netclass editor
-^^^^^^^^^^^^^^^
+==== Netclass editor
 
 The Netclass editor allows you to:
 * Add or delete Netclasses.
@@ -77,8 +69,7 @@ The Netclass editor allows you to:
 
 image:images/Pcbnew_design_rules_editor_netclass_tab.png[]
 
-Global Design Rules
-^^^^^^^^^^^^^^^^^^^
+==== Global Design Rules
 
 The global design rules are:
 * Via type.
@@ -99,8 +90,7 @@ via, instead of using the netclass's default value.
 Useful in critical cases when a small track segment must have a
 specific size.
 
-Via parameters
-^^^^^^^^^^^^^^
+==== Via parameters
 
 Pcbnew handles 3 types of vias:
 * The through via (usual vias).
@@ -116,14 +106,12 @@ This dialog specifies the smallest acceptable values for via
 parameters. On a board, a via smaller than specified here generates
 a DRC error.
 
-Track parameters
-^^^^^^^^^^^^^^^^
+==== Track parameters
 
 Specify the minimum acceptable track width. On a board, a track
 width smaller than specified here generates a DRC error.
 
-Specific sizes
-^^^^^^^^^^^^^^
+==== Specific sizes
 
 image:images/Pcbnew_specific_size_options.png[]
 
@@ -131,11 +119,9 @@ One can enter a set of extra tracks and/or vias sizes. While routing
 a track, these values can be used on demand instead of the values
 from the current netclass values.
 
-Examples and typical dimensions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Examples and typical dimensions
 
-Track width
-^^^^^^^^^^^
+==== Track width
 
 Use the largest possible value and conform to the minimum sizes given
 here.
@@ -147,8 +133,7 @@ here.
 | mils | 31 | 20 | 16 | 10 | 6
 |====
 
-Insulation (clearance)
-^^^^^^^^^^^^^^^^^^^^^^
+==== Insulation (clearance)
 
 [options="header"]
 |====
@@ -160,11 +145,9 @@ Insulation (clearance)
 Usually, the minimum clearance is very similar to the minimum track
 width.
 
-Examples
-~~~~~~~~
+=== Examples
 
-Rustic
-^^^^^^
+==== Rustic
 
 * Clearance: 0.35mm (0.0138 inches).
 * Track width: 0.8mm (0.0315 inches).
@@ -174,8 +157,7 @@ Rustic
 
 image:images/Pcbnew_dr_example_rustic.png[]
 
-Standard
-^^^^^^^^
+==== Standard
 
 * Clearance: 0.35mm (0.0138  inches).
 * Track width: 0.5mm (0.0127  inches).
@@ -184,8 +166,7 @@ Standard
 
 image:images/Pcbnew_dr_example_standard.png[]
 
-Manual routing
-~~~~~~~~~~~~~~
+=== Manual routing
 
 Manual routing is often recommended, because it is the only method
 offering control over routing priorities. For example, is is
@@ -198,8 +179,7 @@ With experience, you will probably find that the automatic router is
 useful for quickly routing the 'obvious' tracks, but the remaining
 tracks will best be routed by hand.
 
-Help when creating tracks
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Help when creating tracks
 
 Pcbnew can display the full ratsnest, if the button
 image:images/icons/modratsnest.png[] is activated.
@@ -213,8 +193,7 @@ create a track which does not match the DRC rules. It is possible to
 disable the DRC by clicking on the button . This is however not
 recommended, use it only in specific cases.
 
-Creating tracks
-^^^^^^^^^^^^^^^
+==== Creating tracks
 
 A track can be created by clicking on the button
 image:images/icons/add_tracks.png[]. A new track must
@@ -231,15 +210,13 @@ End the track by a double click, by the pop-up menu or by its hot key.
 
 image:images/Pcbnew_track_in_progres_context.png[]
 
-Moving and dragging tracks
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Moving and dragging tracks
 
 When the button image:images/icons/add_tracks.png[] is active,  the
 track where the cursor is positioned can be moved with the hotkey 'm'.
 If you want to drag the track you can use the hotkey 'g'.
 
-Via Insertion
-^^^^^^^^^^^^^
+==== Via Insertion
 
 A via can be inserted only when a track is in progress:
 
@@ -247,8 +224,7 @@ A via can be inserted only when a track is in progress:
 * By the hotkey 'v'.
 * By switching to a new copper layer using the appropriate hotkey.
 
-Select/edit the track width and via size
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Select/edit the track width and via size
 
 When clicking on a track or a pad, Pcbnew automatically selects the corresponding Netclass, and the track size and vias dimensions are derived from this netclass.
 
@@ -261,8 +237,7 @@ the current track width can be selected from the pop-up menu
 (accessible as well when creating a track).
 * The user can utilize the default Netclasses values or a specified value.
 
-Using the horizontal toolbar
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Using the horizontal toolbar
 
 image:images/Pcbnew_track_toolbar.png[]
 
@@ -293,8 +268,7 @@ When clicking on a track or a pad, Pcbnew automatically selects the correspondin
 When starting a track on an existing track, the new track has the same width as the existing track.
 |=====
 
-Using the pop-up menu
-^^^^^^^^^^^^^^^^^^^^^
+==== Using the pop-up menu
 
 One can select a new size for routing, or change to a previously created
 via or track segment:
@@ -305,11 +279,9 @@ If you want to change many via (or track) sizes, the best way is to
 use a specific Netclass for the net(s) that must be edited (see
 global changes).
 
-Editing and changing tracks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Editing and changing tracks
 
-Change a track
-^^^^^^^^^^^^^^
+==== Change a track
 
 In many cases redrawing a track is required.
 
@@ -323,8 +295,7 @@ image:images/Pcbnew_new_track_completed.png[]
 
 Pcbnew will remove automatically the old track if it is redundant.
 
-Global changes
-^^^^^^^^^^^^^^
+==== Global changes
 
 Global tracks and via sizes dialog editor is accessible via the
 pop-up window by right clicking on a track:

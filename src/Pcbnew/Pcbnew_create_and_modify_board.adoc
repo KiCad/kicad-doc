@@ -1,12 +1,9 @@
 
-Create and modify a board
--------------------------
+== Create and modify a board
 
-Creating a board
-~~~~~~~~~~~~~~~~
+=== Creating a board
 
-Drawing the board outline
-^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Drawing the board outline
 
 It is usually a good idea to define the outline of the board first.
 The outline is drawn as a sequence of line segments. Select 'Edges
@@ -34,8 +31,7 @@ The resulting outline might look something like this:
 
 image:images/Pcbnew_simple_board_outline.png[]
 
-Importing a DXF drawing for a board outline
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Importing a DXF drawing for a board outline
 
 As an alternative to drawing the board outline in Pcbnew directly, an
 outline can also be imported from a DXF drawing. Using this feature allows
@@ -60,8 +56,7 @@ To import a board shape from a *DXF R12* file:
   as well.
 . Click OK
 
-Notes on importing DXF files with advanced features like Ellipsis
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Notes on importing DXF files with advanced features like Ellipsis
 
 If you require the use of more _advanced_ DXF drawing features for your board
 outline, it is possible to do so by exporting your DXF drawing in the older
@@ -90,8 +85,7 @@ elliptical segments approximated by a number of short line segments:
 
 image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]
 
-Reading the netlist generated from the schematic
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Reading the netlist generated from the schematic
 
 Activate the image:images/icons/netlist.png[] icon to display the
 netlist dialog window:
@@ -122,22 +116,19 @@ replaced by an existing module, this is easier to do using the
 module dialog accessed by clicking the right mouse button over the
 module in question.
 
-Correcting a board
-~~~~~~~~~~~~~~~~~~
+=== Correcting a board
 
 It is very often necessary to correct a board following a
 corresponding change in the schematic.
 
-Steps to follow
-^^^^^^^^^^^^^^^
+==== Steps to follow
 
 . Create a new netlist from the modified schematic.
 . If new components have been added, link these to their corresponding
 modules in CvPcb.
 . Read the new netlist in Pcbnew.
 
-Deleting incorrect tracks
-^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Deleting incorrect tracks
 
 Pcbnew is able to automatically delete tracks that have become
 incorrect as a result of modifications. To do this, check the
@@ -149,8 +140,7 @@ image:images/Pcbnew_bad_tracks_deletion_option.png[]
 However, it is often quicker to modify such tracks by hand (the DRC
 function allows their identification).
 
-Deleted components
-^^^^^^^^^^^^^^^^^^
+==== Deleted components
 
 Pcbnew can delete modules corresponding to components that have been
 removed from the schematic. This is optional.
@@ -168,8 +158,7 @@ activate this option for "mechanical" footprints:
 
 image:images/Pcbnew_unlock_footprint_option.png[]
 
-Modified modules
-^^^^^^^^^^^^^^^^
+==== Modified modules
 
 If a module is modified in the netlist (using CvPcb), but the module
 has already been placed, it will not be modified by Pcbnew, unless
@@ -181,8 +170,7 @@ image:images/Pcbnew_exchange_module_option.png[]
 Changing a module (replacing a resistor with one of a different
 size, for instance) can be effected directly by editing the module.
 
-Advanced options - selection using time stamps
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Advanced options - selection using time stamps
 
 Sometimes the notation of the schematic is changed, without any
 material changes in the circuit (this would concern the references -
@@ -207,8 +195,7 @@ uniquely defined (for the 7400 there would be up to four – one for
 each part). Nevertheless, the time stamp option usually resolves
 re-annotation problems.
 
-Direct exchange for footprints already placed on board
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Direct exchange for footprints already placed on board
 Changing a footprint ( or some identical footprints) to another
 footprint is very useful, and is very easy:
 

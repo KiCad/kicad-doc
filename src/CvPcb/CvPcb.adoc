@@ -3,8 +3,7 @@
 :toc:
 :ascii-ids:
 
-CvPcb
-=====
+= CvPcb
 
 *CvPcb*
 
@@ -50,8 +49,7 @@ The KiCad support for the Apple OS X operating system is experimental.
 //Since docbook "article" is more compact, I have to separate this page
 <<<<
 
-Introduction to CvPcb
----------------------
+== Introduction to CvPcb
 
 CvPcb is a tool that allows you to associate components in your
 schematic to component footprints used when laying out the printed
@@ -91,17 +89,14 @@ the reasons are:
 This is possible only when Eeschema is running.
 
 
-CvPcb Features
---------------
+== CvPcb Features
 
-Manual or Automatic Association
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Manual or Automatic Association
 
 CvPcb allows for interactive assignment (manual) as well as automatic
 assignment via equivalence files.
 
-Invoking CvPcb
---------------
+== Invoking CvPcb
 
 *CvPcb is only invoked from the schematic capture program Eeschema*, by the tool:
 
@@ -110,11 +105,9 @@ image:images/icons/run-cvpcb.png[run cvpcb]
 Eeschema automatically passes the correct data (component list and footprints) to CvPcb.
 There is no update to do (unless some new components are not yet annotated), just run Cvpcb.
 
-CvPcb Commands
---------------
+== CvPcb Commands
 
-Main Screen
-~~~~~~~~~~~
+=== Main Screen
 
 The image below shows the main window of CvPcb.
 
@@ -128,8 +121,7 @@ The component pane will be empty if no netlist file has been loaded
 and the footprint pane can be also empty if no footprint libraries are
 found.
 
-Main Window Toolbar
-~~~~~~~~~~~~~~~~~~~
+=== Main Window Toolbar
 
 image:images/main_toolbar.png[]
 
@@ -179,8 +171,7 @@ the pin count of the selected component.
 selected library.
 |=======================================================================
 
-Main Window Keyboard Commands
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Main Window Keyboard Commands
 
 The following table lists the keyboard commands for the main window:
 
@@ -207,8 +198,7 @@ list.
 |End |Select the last item of the currently selected list.
 |=======================================================================
 
-CvPcb Configuration
-~~~~~~~~~~~~~~~~~~~
+=== CvPcb Configuration
 
 image:images/en/cvpcb_preference_menu.png[]
 
@@ -228,26 +218,21 @@ management:
   using this new method of library management, You can also use native libraries originating
   from GEDA/GPCB or even Eagle xml format files.
 
-Footprint Libraries Management
-------------------------------
+== Footprint Libraries Management
 
-Important remark:
-~~~~~~~~~~~~~~~~~
+=== Important remark:
 
 *_This section is relevant only for KiCad versions since December 2013_*
 
 
-Footprint Library tables
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== Footprint Library tables
 
 include::CvPcb_footprint_libraries_tables.adoc[po4a]
 
 
-Viewing the Current Footprint
------------------------------
+== Viewing the Current Footprint
 
-The view footprint command
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== The view footprint command
 
 
 The view footprint command displays the footprint currently selected in
@@ -257,15 +242,13 @@ viewer window.
 
 image:images/en/footprint_view.png[]
 
-Status Bar Information
-^^^^^^^^^^^^^^^^^^^^^^
+==== Status Bar Information
 
 The status bar is located at the bottom of the CvPcb new main window and
 provides useful information to the user. The following table defines the
 contents of each pane in the status bar.
 
-Keyboard Commands
-^^^^^^^^^^^^^^^^^
+==== Keyboard Commands
 
 [width="80%",cols="20%,80%",]
 |==================================================================
@@ -281,8 +264,7 @@ Keyboard Commands
 |Down Arrow |Move cursor down one grid position
 |==================================================================
 
-Mouse Commands
-^^^^^^^^^^^^^^
+==== Mouse Commands
 
 [width="80%",cols="32%,68%",]
 |============================================================
@@ -292,8 +274,7 @@ Mouse Commands
 |Right Button Click |Open context menu
 |============================================================
 
-Context Menu
-^^^^^^^^^^^^
+==== Context Menu
 
 image:images/en/context_menu.png[]
 
@@ -305,8 +286,7 @@ Displayed by right-clicking the mouse:
 |Grid Selection (Grid Select) |Direct selection of the grid.
 |====================================================================
 
-Horizontal Toolbar
-^^^^^^^^^^^^^^^^^^
+==== Horizontal Toolbar
 
 [width="90%",cols="10%,90%",]
 |=======================================================================
@@ -328,8 +308,7 @@ Horizontal Toolbar
 |Open 3D model viewer
 |=======================================================================
 
-Vertical Toolbar
-^^^^^^^^^^^^^^^^
+==== Vertical Toolbar
 
 [width="90%",cols="10%,90%",]
 |=======================================================================
@@ -358,13 +337,11 @@ Vertical Toolbar
 |Toggle between drawing edges in sketch or normal mode
 |=======================================================================
 
-Viewing the Current 3D Model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Viewing the Current 3D Model
 
 image:images/en/3d_window.png[]
 
-Mouse Commands
-^^^^^^^^^^^^^^
+==== Mouse Commands
 
 [width="90%",cols="32%,68%",]
 |============================================================
@@ -373,8 +350,7 @@ Mouse Commands
 |Shift + Scroll Wheel |Pan up and down
 |============================================================
 
-Horizontal Toolbar
-^^^^^^^^^^^^^^^^^^
+==== Horizontal Toolbar
 
 [width="90%",cols="10%,90%",]
 |=======================================================================
@@ -433,11 +409,9 @@ Horizontal Toolbar
 |Toggle orthographic projection mode on and off
 |=======================================================================
 
-Using CvPcb to Associate Components with Footprints
----------------------------------------------------
+== Using CvPcb to Associate Components with Footprints
 
-Manually Associating Footprints with Components
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Manually Associating Footprints with Components
 
 To manually associate a footprint with a component first select a
 component in the component pane. Then select a footprint in the
@@ -446,8 +420,7 @@ the desired footprint. The unassigned next component in the list is
 automatically selected. Changing the component footprint is performed in
 the same manner.
 
-Filtering the Footprint List
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Filtering the Footprint List
 
 If the selected component and/or library is highlighted when the one or
 more of the filtering option is enabled, the displayed footprint list
@@ -490,11 +463,9 @@ Filtered by the selected component pin count and the component filter:
 
 image:images/en/filter_comp_and_pincount.png[]
 
-Automatic Associations
-----------------------
+== Automatic Associations
 
-Equivalence files
-~~~~~~~~~~~~~~~~~
+=== Equivalence files
 
 Equivalence files allow for automatic assignment of footprints to
 components.
@@ -508,8 +479,7 @@ and must be created by the user.
 
 
 
-Equivalence File Format
-~~~~~~~~~~~~~~~~~~~~~~~
+=== Equivalence File Format
 
 Equivalence files consist of one line for each component. Each line has
 the following structure:
@@ -563,8 +533,7 @@ Here is an example equivalence file:
 -----------------------------------------------
 
 
-Automatically Associating Footprints to Components
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Automatically Associating Footprints to Components
 
 Click on the automatic footprint association button on the top toolbar
 to process an equivalence file.
@@ -575,16 +544,14 @@ will have their footprint automatically assigned._
 ////
 
 [index]
-Index
-=====
+= Index
 
 ////
 
 ////
 
 [[indices-and-tables]]
-Indices and tables
-==================
+= Indices and tables
 
 - genindex
 - modindex

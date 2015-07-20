@@ -1,11 +1,9 @@
 
 [[hierarchical-schematics]]
-Hierarchical schematics
------------------------
+== Hierarchical schematics
 
 [[introduction-2]]
-Introduction
-~~~~~~~~~~~~
+=== Introduction
 
 A hierarchical representation is generally a good solution for projects
 bigger than a few sheets. If you want to manage this kind of project, it
@@ -56,8 +54,7 @@ The two important steps to understand are:
 * How to build electric connections between sub-sheets.
 
 [[navigation-in-the-hierarchy]]
-Navigation in the Hierarchy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Navigation in the Hierarchy
 
 Navigation among sub-sheets It is very easy thanks to the navigator tool
 accessible via the button
@@ -78,12 +75,10 @@ selected:
 * Click elsewhere to select the main sheet.
 
 [[local-hierarchical-and-global-labels]]
-Local, hierarchical and global labels
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Local, hierarchical and global labels
 
 [[properties]]
-Properties
-^^^^^^^^^^
+==== Properties
 
 Local labels, tool
 image:images/icons/add_line_label.png[icons/add_line_label_png],
@@ -99,15 +94,13 @@ in_ and __power out__) invisible are like global labels because they are
 seen as connected between them across all the hierarchy.
 
 [[notes]]
-Notes
-^^^^^
+==== Notes
 
 Within a hierarchy (simple or complex) one can use both hierarchical
 labels and/or global labels.
 
 [[hierarchy-creation-of-headlines]]
-Hierarchy creation of headlines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Hierarchy creation of headlines
 
 You have to:
 
@@ -121,8 +114,7 @@ SheetLabels will be connected to the sheet symbol of the root sheet to
 the other elements of the schematic like standard component pins.
 
 [[sheet-symbol]]
-Sheet symbol
-~~~~~~~~~~~~
+=== Sheet symbol
 
 Draw a rectangle defined by two diagonal points symbolizing the
 sub-sheet.
@@ -151,8 +143,7 @@ You must give at least a file name. If there is no sheet name, the file
 name will be used as sheet name (usual way to do that).
 
 [[connections-hierarchical-pins]]
-Connections – hierarchical pins
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Connections – hierarchical pins
 
 You will create here points of connection (hierarchy pins) for the
 symbol which has been just created.
@@ -208,8 +199,7 @@ All necessary pins can thus be placed quickly and without error. Their
 aspect is in accordance with corresponding global labels.
 
 [[connections---hierarchical-labels]]
-Connections - hierarchical labels
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Connections - hierarchical labels
 
 Each pin of the sheet symbol just created, must correspond to a label
 called hierarchical Label in the sub-sheet. Hierarchical labels are
@@ -238,15 +228,13 @@ You can use hierarchical labels and hierarchy pins to connect two buses,
 according to the syntax (Bus [N. .m]) previously described.
 
 [[labels-hierarchical-labels-global-labels-and-invisible-power-pins]]
-Labels, hierarchical labels, global labels and invisible power pins
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Labels, hierarchical labels, global labels and invisible power pins
 
 Here are some comments on various ways to provide connections, others
 than wire connections.
 
 [[simple-labels]]
-Simple labels
-+++++++++++++
+===== Simple labels
 
 Simple labels have a local capacity of connection, i.e. limited to the
 schematic sheet where they are placed. This is due to the fact that :
@@ -260,8 +248,7 @@ sheet) you place in fact a label called “TOTO_1”, different from
 “TOTO_3”. This is always true, even if there is only one sheet.
 
 [[hierarchical-labels]]
-Hierarchical labels
-+++++++++++++++++++
+===== Hierarchical labels
 
 What is said for the simple labels is also true for hierarchical labels.
 
@@ -273,8 +260,7 @@ However a HLabel is considered to be connected to the corresponding
 SheetLabel symbol in the hierarchical symbol placed in the root sheet.
 
 [[invisible-power-pins]]
-Invisible power pins
-++++++++++++++++++++
+===== Invisible power pins
 
 It was seen that invisible power pins were connected together if they
 have the same name. Thus all the power pins declared “Invisible Power
@@ -290,8 +276,7 @@ VCC, it will have to be explicitly connected to an invisible power pin,
 thanks to a VCC power port.
 
 [[global-labels]]
-Global labels
-^^^^^^^^^^^^^
+==== Global labels
 
 Global labels that have an identical name are connected across the whole
 hierarchy.
@@ -299,8 +284,7 @@ hierarchy.
 (power labels like vcc ... are global labels)
 
 [[complex-hierarchy]]
-Complex Hierarchy
-~~~~~~~~~~~~~~~~~
+=== Complex Hierarchy
 
 Here is an example. The same schematic is used twice (two instances).
 The two sheets share the same schematic because the file name is the
@@ -310,8 +294,7 @@ different.
 image:images/10000000000001C6000001CAAC972C0B.png[10000000000001C6000001CAAC972C0B_png]
 
 [[flat-hierarchy]]
-Flat hierarchy
-~~~~~~~~~~~~~~
+=== Flat hierarchy
 
 You can create a project using many sheets, without creating connections
 between these sheets (flat hierarchy) if the next rules are respected:

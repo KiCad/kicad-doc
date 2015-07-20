@@ -1,6 +1,5 @@
 
-Setting up working layers
--------------------------
+== Setting up working layers
 
 Pcbnew can work on 50 different layers:
 
@@ -11,19 +10,16 @@ Pcbnew can work on 50 different layers:
 The number of copper layer, and, if needed, their names and
 attributes should be set. Unused technical layers can be disabled.
 
-Select copper layers
-~~~~~~~~~~~~~~~~~~~~
+=== Select copper layers
 
-Introduction
-^^^^^^^^^^^^
+==== Introduction
 
 Copper layers are the usual working layers used by the automatic
 router to place and re-arrange tracks. Layer 1 is the copper
 (solder) layer. Layer 16 is the component layer. Other layers are
 the inner layers, from L2 to L15.
 
-Select number of layers
-^^^^^^^^^^^^^^^^^^^^^^^
+==== Select number of layers
 
 To enable navigation between layers, it is necessary to select the
 number of working layers. To do this you can use the menu bar and
@@ -35,16 +31,14 @@ Then select the number of layers wanted, from 2 to 16.
 
 image:images/Pcbnew_layer_setup_dialog.png[]
 
-Copper layers
-^^^^^^^^^^^^^
+==== Copper layers
 
 The name of any copper layer is editable. Copper layers have
 attributes useful when using the external router _FreeRouter_.
 
 image:images/Pcbnew_layer_setup_dialog_layer_properties.png[]
 
-Auxiliary technical layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Auxiliary technical layers
 
 Some are associated in pairs, others not. When they appear as a pair
 this affects the behaviour of modules. The elements making up a
@@ -54,8 +48,7 @@ is inverted (mirrored).
 
 The technical layers are:
 
-Paired layers
-^^^^^^^^^^^^^
+==== Paired layers
 
 * The *Adhesives* layers (Copper and Component):
 ** These are used in the application of adhesive to stick SMD components
@@ -71,8 +64,7 @@ In theory only surface mount pads occupy these layers.
 the other of these layers (or both for through pads) to prevent the
 varnish covering the pads.
 
-Layers for general use
-^^^^^^^^^^^^^^^^^^^^^^
+==== Layers for general use
 
 * Comments
 * E.C.O. 1
@@ -83,16 +75,14 @@ These layers are for any use. They can be used for text such as
 instructions for assembly or wiring, or construction drawings, to be
 used to create a file for assembly or machining.
 
-Special layer
-^^^^^^^^^^^^^
+==== Special layer
 
 * *Edge Cuts* layer:
 ** this layer is reserved for the drawing of circuit board outline. Any
 element (graphic, texts...) placed on this layer appears on all the
 other layers. Use this layer only to draw board outlines.
 
-Selection of the active layer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Selection of the active layer
 
 The selection of the active working layer can be done in several ways:
 
@@ -102,13 +92,11 @@ The selection of the active working layer can be done in several ways:
 * Using the + and - keys (works on copper layers only).
 * By hot keys.
 
-Selection using the layer manager
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Selection using the layer manager
 
 image:images/Pcbnew_layer_manager_pane.png[]
 
-Selection using the upper toolbar
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Selection using the upper toolbar
 
 image:images/Pcbnew_layer_selection_dropdown.png[]
 
@@ -116,8 +104,7 @@ This directly selects the working layer.
 
 Hot keys to select  the working layer are displayed.
 
-Selection using the pop-up window
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Selection using the pop-up window
 
 image:images/Pcbnew_layer_selection_popup.png[]
 
@@ -126,8 +113,7 @@ the working layer
 
 image:images/Pcbnew_layer_selection_dialog.png[]
 
-Selection of the Layers for Vias
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Selection of the Layers for Vias
 
 If the *Add Tracks and Vias* icon is selected on the right hand
 toolbar, the Pop-Up window provides the option to change the layer
@@ -146,8 +132,7 @@ switched to the alternate layer of the layer pair used for the vias.
 One can also switch to an other active layer by hot keys, and if a
 track is in progress, a via will be inserted.
 
-Using the high-contrast mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Using the high-contrast mode
 
 This mode is entered when the tool (in the left toolbar) is activated:
 image:images/icons/contrast_mode.png[]
@@ -157,8 +142,7 @@ normal mode, but all others layers are displayed in gray color.
 
 There are two useful cases:
 
-Copper layers in high-contrast mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Copper layers in high-contrast mode
 
 When a board uses more than four layers, this option allows the
 active copper layer to seen more easily:
@@ -171,8 +155,7 @@ image:images/Pcbnew_copper_layers_contrast_normal.png[]
 
 image:images/Pcbnew_copper_layers_contrast_high.png[]
 
-Technical layers
-^^^^^^^^^^^^^^^^
+==== Technical layers
 
 The other case is when it is necessary to examine solder paste
 layers and solder mask layers, that are usually not displayed.

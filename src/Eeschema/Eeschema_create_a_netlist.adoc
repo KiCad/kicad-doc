@@ -1,10 +1,8 @@
 
 [[create-a-netlist]]
-Create a Netlist
-----------------
+== Create a Netlist
 
-Overview
-~~~~~~~~
+=== Overview
 
 A netlist is a file which describes electrical connections between
 components. In the netlist file you can find:
@@ -31,8 +29,7 @@ Eeschema supports several netlist formats.
 other simulators).
 
 [[netlist-format]]
-Netlist format
-~~~~~~~~~~~~~~
+=== Netlist format
 
 Select the tool
 image:images/icons/netlist.png[Netlist icon]
@@ -58,8 +55,7 @@ file name.
 With big projects, the netlist generation can take up to few minutes.
 
 [[netlist-examples]]
-Netlist Examples
-~~~~~~~~~~~~~~~~
+=== Netlist Examples
 
 You can see below a schematic design using the PSPICE library.
 
@@ -166,12 +162,10 @@ Q1   N-000010 /VIN N-000007 N-000007 Q2N2222
 -------------------------------------------------------------------------------
 
 [[note]]
-Note
-~~~~
+=== Note
 
 [[netlist-name-precautions]]
-Netlist Name Precautions
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== Netlist Name Precautions
 
 Many software tools that use netlists do not accept spaces in the
 component names, pins, equipotentials or others. Systematically avoid
@@ -183,8 +177,7 @@ but to the netlist formats that can then become not translatable to
 software that uses netlist files.
 
 [[pspice-netlists]]
-PSPICE netlists
-^^^^^^^^^^^^^^^
+==== PSPICE netlists
 
 For the Pspice simulator, you have to include some command lines in the
 netlist itself (.PROBE, .AC, etc.).
@@ -234,8 +227,7 @@ creates the four lines:
 Also note that the equipotential GND must be named 0 (zero) for Pspice.
 
 [[other-formats-using-plugins]]
-Other formats, using plugins
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Other formats, using plugins
 
 For other netlist formats you can add netlist converters. These
 converters are automatically launched by Eeschema. Chapter 14 gives
@@ -248,8 +240,7 @@ converter file to create the output file. In this case, the converter
 file (a sheet style) is very small and very easy to write.
 
 [[init-the-dialog-window]]
-Init the dialog window
-^^^^^^^^^^^^^^^^^^^^^^
+==== Init the dialog window
 
 You can add a new netlist plug-in via the Add Plugin tab.
 
@@ -270,8 +261,7 @@ When the netlist is generated:
 2.  Eeschema run the plug-in, which reads test.tmp and creates test.net.
 
 [[command-line-format]]
-Command line format
-^^^^^^^^^^^^^^^^^^^
+==== Command line format
 
 Here is an example, using xsltproc.exe as tool to convert .xsl files,
 and a file netlist_form_pads-pcb.xsl as converter sheet style:
@@ -300,8 +290,7 @@ f:/kicad/bin/xsltproc.exe -o test.net
 f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl test.tmp.
 
 [[converter-and-sheet-style-plug-in]]
-Converter and sheet style (plug in)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Converter and sheet style (plug in)
 
 This is a very simple piece of software, because its purpose is only to
 convert an input text file (the intermediate text file) to an other text
@@ -312,8 +301,7 @@ When using xsltproc as converter tool only the sheet style will be
 generated.
 
 [[intermediate-netlist-file-format]]
-Intermediate netlist file format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Intermediate netlist file format
 
 See Chapter 14 for more explanations about xslproc, the descriptions of
 intermediate file format, and some examples of sheet style for

@@ -3,8 +3,7 @@
 :toc:
 :ascii-ids:
 
-IDF Exporter
-============
+= IDF Exporter
 
 //image:images/kicad_logo.png[]
 
@@ -47,8 +46,7 @@ Published on January 26, 2014.
 //Since docbook "article" is more compact, I have to separate this page
 <<<<
 
-Introduction to the IDFv3 exporter
-----------------------------------
+== Introduction to the IDFv3 exporter
 
 The IDF exporter exports an IDFv3
 footnote:[http://www.simplifiedsolutionsinc.com/images/idf_v30_spec.pdf]
@@ -60,8 +58,7 @@ most basic set of mechanical data required for interaction with
 mechanical designers. All other entities described in the IDFv3
 specification are currently not exported.
 
-Specifying component models for use by the exporter
----------------------------------------------------
+== Specifying component models for use by the exporter
 
 The IDF exporter makes use of the 3D model file attribute which was
 originally used by the 3D viewer. Since the 3D viewer, IDF, and possible
@@ -112,8 +109,7 @@ image::images/idf_select.png[IDF component outline selection]
 image::images/idf_export.png[IDF output settings]
 
 
-Creating a component outline file
----------------------------------
+== Creating a component outline file
 
 The component outline file (*.idf) consists of a single .ELECTRICAL or .MECHANICAL
 section as described in the specification document. The
@@ -216,15 +212,13 @@ Example IDF File 2:
 .END_ELECTRICAL
 -------------------------------------------------
 
-Guidelines for creating outlines
---------------------------------
+== Guidelines for creating outlines
 
 When creating outlines, and especially when sharing the work with
 others, consistency in the design and naming of files helps people
 locate files quicker and place the components with minimal hassles.
 
-Package naming
-~~~~~~~~~~~~~~
+=== Package naming
 
 Try to make some information about the outline available in the filename
 to give the user a general idea of what the outline is. For example
@@ -236,15 +230,13 @@ pitch are the most important. If a device has a unique outline, the
 manufacturer's part number and a prefix to indicate the class of device
 are adequate.
 
-Comments
-~~~~~~~~
+=== Comments
 
 Use comments in the IDF file to give users more information about the
 outline, for example a reference to the source used for dimensional
 information.
 
-Geometry and Part Number entries
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Geometry and Part Number entries
 
 Think carefully about the values to give to the Geometry and Part Number
 entries. Taken together, these strings act as a unique identifier for
@@ -254,8 +246,7 @@ intended for the MCAD system to use as a unique ID. Ideally the values
 chosen will be unique within any large collection of outlines; choosing
 values well will result in fewer clashes especially in complex boards.
 
-Pin orientation and positioning
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Pin orientation and positioning
 
 For through-hole components there are no widely accepted schemes for
 determining the pin orientation and component center in 3D models. For
@@ -316,8 +307,7 @@ outlines were specified in units of inches.
 
 
 
-Tips on dimensions
-~~~~~~~~~~~~~~~~~~
+=== Tips on dimensions
 
 The purpose served by the extruded outlines is to give the mechanical
 designer some idea of the location and physical space occupied by each
@@ -337,8 +327,7 @@ models to ensure a good fit. After all, if you put garbage in you can
 expect garbage to come out. If you put in good information, you can be
 confident of good results.
 
-IDF Component Outline Tools
----------------------------
+== IDF Component Outline Tools
 
 A number of command-line tools are available to help generate IDF
 component outlines. The tools are:
@@ -352,13 +341,12 @@ component outlines. The tools are:
 3.  *dxf2idf:* converts a drawing in DXF format into an IDF component
     outline
 
-idfcyl
-~~~~~~
+=== idfcyl
 
 When *idfcyl* is invoked with no arguments it prints out a usage note
 and a summary of its inputs:
 
-----------------------------------------------------------------------
+------------------------------------
 idfcyl: This program generates an outline for a cylindrical component.
     The cylinder may be horizontal or vertical.
     A horizontal cylinder may have wires at one or both ends.
@@ -385,7 +373,7 @@ Input:
         **  only required for vertical orientation with axial leads
 
         *** only required for horizontal orientation with radial leads
-----------------------------------------------------------------------
+------------------------------------
 
 The notes can be suppressed by entering any arbitrary argument on the
 command line. A user can manually enter information at the command line
@@ -412,8 +400,7 @@ cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf
 _EOF
 ----------------------------------------------------------------
 
-idfrect
-~~~~~~~
+=== idfrect
 
 When *idfrect* is invoked with no arguments it prints out a usage note
 and a summary of its inputs:
@@ -471,8 +458,7 @@ rectLMM_10x10x12_D0.8_P6.0.idf
 _EOF
 -------------------------------------------------------------
 
-dxf2idf
-~~~~~~~
+=== dxf2idf
 
 The DXF file used to specify the component outline can be prepared with
 the free software http://librecad.org/[LibreCAD] for best compatibility.
@@ -517,8 +503,7 @@ test_dxf2idf.idf
 _EOF
 ---------------------------------------------------------------
 
-idf2vrml
---------
+== idf2vrml
 
 The idf2vrml tool reads a set of one IDF Board (__.emn) and one IDF
 Component file (__.emp) and produces a VRML file which can be viewed

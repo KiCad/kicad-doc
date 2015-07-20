@@ -1,13 +1,11 @@
 
-Creating copper zones
----------------------
+== Creating copper zones
 
 Copper zones are defined by an outline (closed polygon), and can
 include holes (closed polygons inside the outline). A zone can be
 drawn on a copper layer or alternatively on a technical layer.
 
-Creating zones on copper layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Creating zones on copper layers
 
 Pad (and tracks) connections by filled copper areas are checked by
 the DRC engine. A zone must be filled (not just created) to connect
@@ -39,11 +37,9 @@ be no unconnected copper blocks. So it can happens that some areas
 remain unfilled. Zones having no net are not cleaned and can have
 insulated areas.
 
-Creating a zone
-~~~~~~~~~~~~~~~
+=== Creating a zone
 
-Creating the limits of a zone
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Creating the limits of a zone
 
 Use the tool image:images/icons/add_zone.png[]. The active layer
 must be a copper layer. When clicking to start the zone outline, the
@@ -78,8 +74,7 @@ hatched line)
 
 image:images/Pcbnew_zone_limit_example.png[]
 
-Priority level
-^^^^^^^^^^^^^^
+==== Priority level
 
 Sometimes a small zone must be created inside a large zone.
 
@@ -95,8 +90,7 @@ After filling:
 
 image:images/Pcbnew_zone_priority_example_after_filling.png[]
 
-Filling the zone
-^^^^^^^^^^^^^^^^
+==== Filling the zone
 
 When filling a zone, Pcbnew removes all unconnected copper islands.
 To access the zone filling command, right click on the edge zone.
@@ -119,8 +113,7 @@ see an example:
 
 image:images/Pcbnew_zone_filled_with_cutout.png[]
 
-Filling options
-~~~~~~~~~~~~~~~
+=== Filling options
 
 image:images/Pcbnew_zone_filling_options.png[]
 
@@ -131,15 +124,13 @@ When you fill an area, you must choose:
 * How pads are drawn inside the zone (or connected to this zone).
 * Thermal relief parameters.
 
-Filling mode
-^^^^^^^^^^^^
+==== Filling mode
 
 Zones can be filled using polygons or segments. The result is the
 same. If you have problems with polygon mode (slow screen refresh)
 you should use segments.
 
-Clearance and minimum copper thickness
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Clearance and minimum copper thickness
 
 A good choice for clearance is a grid that is a bit bigger than the
 routing grid. Minimum copper thickness value ensures that there are
@@ -148,8 +139,7 @@ no too small copper ares.
 WARNING: if this value is too large, small shapes like thermal stubs
 in thermal reliefs cannot be drawn.
 
-Pad options
-^^^^^^^^^^^
+==== Pad options
 
 Pads of the net can either be included or excluded from the zone, or
 connected by thermal reliefs.
@@ -171,8 +161,7 @@ image:images/Pcbnew_zone_exclude_pads.png[]
 
 image:images/Pcbnew_zone_thermal_relief.png[]
 
-Thermal reliefs parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Thermal reliefs parameters
 
 image:images/Pcbnew_thermal_relief_settings.png[]
 
@@ -180,8 +169,7 @@ You can set two parameters for thermal reliefs:
 
 image:images/Pcbnew_thermal_relief_parameters.png[]
 
-Choice of parameters
-^^^^^^^^^^^^^^^^^^^^
+==== Choice of parameters
 
 The copper width value for thermal reliefs must be bigger than the
 minimum thickness value for copper zone. If not, they cannot be drawn.
@@ -190,8 +178,7 @@ Additionally, a too large value for this parameter or for antipad
 size does not allow one to create a thermal relief for small pads (like
 pad sizes used for SMD components).
 
-Adding a cutout area inside a zone
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Adding a cutout area inside a zone
 
 A zone must already exist. To add a cutout area (a non-filled area
 inside the zone):
@@ -205,8 +192,7 @@ image:images/Pcbnew_add_cutout_menu_item.png[]
 
 image:images/Pcbnew_zone_unfilled_cutout_outline.png[]
 
-Outlines editing
-~~~~~~~~~~~~~~~~
+=== Outlines editing
 
 An outline can be modified by:
 
@@ -231,8 +217,7 @@ image:images/Pcbnew_zone_corner_move_after.png[]
 
 Polygons are combined.
 
-Adding a similar zone
-^^^^^^^^^^^^^^^^^^^^^
+==== Adding a similar zone
 
 Adding the similar zone:
 
@@ -242,13 +227,11 @@ Final result:
 
 image:images/Pcbnew_zone_add_similar_after.png[]
 
-Editing zone: parameters
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== Editing zone: parameters
 
 When right clicking on an outline, and using 'Edit Zone Params' the Zone params Dialog box will open. Initial parameters can be inputted . If the zone is already filled, refilling it will be necessary.
 
-Final zone filling
-~~~~~~~~~~~~~~~~~~
+=== Final zone filling
 
 When the board is finished, one must fill or refill all zones. To do
 this:
@@ -259,8 +242,7 @@ this:
 
 WARNING: calculations can take some time, if the filling grid is small.
 
-Change zones net names
-~~~~~~~~~~~~~~~~~~~~~~
+=== Change zones net names
 
 After editing a schematic, you can change the name of any net. For
 instance VCC can be changed to +5V.
@@ -271,11 +253,9 @@ exists, and displays an error if not.
 A manual parameter zone edition will be necessary to change the old
 name to the new one.
 
-Creating zones on technical layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Creating zones on technical layers
 
-Creating zone limits
-^^^^^^^^^^^^^^^^^^^^
+==== Creating zone limits
 
 This is done using the button . The active layer must be a technical
 layer.
@@ -287,14 +267,12 @@ image:images/Pcbnew_technical_layer_zone_dialog.png[]
 Select the technical layer to place the zone and draw the zone
 outline like explained previously for copper layers.
 
-Notes
-^^^^^
+==== Notes
 
 * For editing outlines use the same way as for copper zones.
 * In necessary, cutout areas can be added.
 
-Creating a Keepout area
-~~~~~~~~~~~~~~~~~~~~~~~
+=== Creating a Keepout area
 
 Select the tool image:images/icons/add_keepout_area.png[]
 
