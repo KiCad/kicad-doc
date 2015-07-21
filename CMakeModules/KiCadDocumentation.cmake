@@ -51,6 +51,12 @@ macro( KiCadDocumentation DOCNAME )
 
         string( SUBSTRING "${LANGUAGE}" 0 2 LANGUAGE )
 
+        if(EXISTS "${CMAKE_SOURCE_DIR}/CMakeSupport/lang-${LANGUAGE}.conf")
+            set( LANGUAGE_OPTIONS "-f${CMAKE_SOURCE_DIR}/CMakeSupport/lang-${LANGUAGE}.conf" )
+        else()
+            set( LANGUAGE_OPTIONS "-a lang=${LANGUAGE}" ) # Fall back to the default config file for this language.
+        endif()
+
         if( "${LANGUAGE}" MATCHES "en" )
             # No need to translate, so just make a renamed copy of the source instead such
             # that we have the same source target as every other language
