@@ -1,16 +1,219 @@
 KiCad Documentation
 ===================
 
-Started as an experiment to test feasibility of a light markup for the
-documentation of the KiCad project, this repository is updated,
-almost daily.
+This respository contains the official KiCad documentation.
 
-Asciidoc has been choosen as the candidate, and is the only
-documentation directory that has survived in this repo from now on.
+image:http://ci.kicad-pcb.org/buildStatus/icon?job=any-kicad-doc-head["Build Status",
+link="http://ci.kicad-pcb.org/job/any-kicad-doc-head/"]
+image:https://img.shields.io/badge/docs-stable-brightgreen.svg["Stable version docs",
+link="http://docs.kicad-pcb.org/"]
+image:https://img.shields.io/badge/docs-nightly-lightgrey.svg["Nightly docs",
+link="http://ci.kicad-pcb.org/job/any-kicad-doc-head/lastSuccessfulBuild/artifact/src/"]
 
-Click on the icon
-image:http://ci.kicad-pcb.org/buildStatus/icon?job=any-kicad-doc-head["Build
-Status", link="http://ci.kicad-pcb.org/job/any-kicad-doc-head/"] to jump
-to the continuous integration project page.
+== Building
 
-Anyone who wants to contribute, please do.
+Having installed the dependencies, the following commands will build the PDF and HTML versions of the documentation.
+
+=== Windows
+
+    cd kicad-doc
+    mkdir build
+    cd build
+    cmake -G "MinGW Makefiles" -DPDF_GENERATOR=FOP ../
+    make
+
+=== Linux/MacOS
+
+    cd kicad-doc
+    mkdir build
+    cd build
+    cmake ../
+    make
+
+=== Docker
+
+Read utils/docker/README.adoc if you want to build the documentation in a container.
+
+=== CMake Build Options
+
+==== BUILD_FORMATS
+
+By default **BUILD_FORMATS** is set to `html;pdf` to enable building all supported
+document formats.
+
+It's possible to set **BUILD_FORMATS** in order to build only a subset of formats,
+e.g. `-DBUILD_FORMATS=html` or `-DBUILD_FORMATS=pdf`
+
+When only one build format is enabled the package name is transformed to include
+the format.
+
+==== SINGLE_LANGUAGE
+
+By default CMake will configure to build all languages available for each document.
+
+You can build just a single language by using the **SINGLE_LANGUAGE** option when
+configuring a build with CMake, e.g. `-DSINGLE_LANGUAGE=it`, etc.
+
+Currently, the available languages are : `en`, `fr`, `it`, `ja`, `nl`, and `pl` however, any
+language code can be selected. Only translated documents will be built, so for
+some languages there may only be a partial documentation output.
+
+When the **SINGLE_LANGUAGE** option is set, the package name is transformed to
+include the language.
+
+==== PDF_GENERATOR
+
+By default CMake will use dblatex building PDFs.
+
+You can build PDFs however using either `DBLATEX` or `FOP` by using the
+**PDF_GENERATOR** option whilst configuring a CMake build.
+
+For example, use `-DPDF_GENERATOR=FOP` to use FOP to build the PDFs. If the
+**BUILD_FORMATS** option doesn't include `pdf`, the **PDF_GENERATOR** option
+will have no effect on the build.
+
+This option doesn't transform the built package name.
+
+== Dependencies
+
+=== CMake
+
+CMake v2.8 or later is required.
+
+=== AsciiDoc
+
+http://asciidoc.org/[AsciiDoc] is the format of the documentation and is
+used to generate both PDF and HTML versions of the documentation.
+
+We don't use http://asciidoctor.org/[asciidoctor] because PDF generation is currently missing
+support for inline images, so it's not used.
+It's possible to use it to produce both HTML and PDF output (PDF through the
+http://asciidoctor.org/docs/convert-asciidoc-to-pdf/[asciidoctor-pdf]
+project).
+
+=== po4a
+
+https://po4a.alioth.debian.org/[po4a] 0.45+ is used to translate
+the English AsciiDoc documentation to another language before compilation to a
+final output format.
+
+=== Fonts
+
+VL Gothic font is required when you build the japanese PDFs. Look for a
+package named `fonts-vlgothic`. Otherwise use the SINGLE_LANGUAGE option
+to avoid build errors.
+
+=== Debian/Ubuntu dependencies
+
+You can install all dependencies with the following packages:
+
+    sudo apt-get install git make cmake asciidoc pandoc gettext po4a dblatex texlive-xetex fonts-vlgothic source-highlight texlive-lang-*
+
+=== Windows dependencies
+
+==== AsciiDoc on Windows
+
+To install AsciiDoc on windows, get the latest version from
+http://sourceforge.net/projects/asciidoc/[Sourceforge] and unzip somewhere on
+your drive. Make sure the asccidoc.py file is available in your path in order
+for CMake to be able to find it.
+
+AsciiDoc cannot produce PDF output without a PDF generator which can be either
+dblatex or Apache FOP. On Windows we must satisfy the PDF generator dependency
+ourselves.
+
+Details of how to install dblatex and FOP are included below.
+
+==== po4a on Windows
+
+po4a is a perl script and so requires PERL to be installed. If you're using a
+POSIX emulation layer with package management, grab the perl package.
+
+Outside of a POSIX emulation you'll need to grab PERL.
+http://www.activestate.com/activeperl/downloads[ActivePerl] is recommended.
+
+Install the CPAN modules which are required by po4a. After installing perl,
+on the command line type:
+
+    cpan Unicode::GCString
+
+Grab the latest po4a distribution from
+https://alioth.debian.org/frs/?group_id=30267[Alioth], decompress it somewhere
+on your harddrive and make sure the directory containing po4a is available in
+your PATH environment variable. CMake will be able to find po4a on Windows so
+long as Perl is working and po4a is in your path.
+
+That's all there is to get po4a working on Windows; It's just used in-place.
+
+NOTE: Be careful with any other projects you may have because PERL installs a
+MinGW compiler which it uses to compile perl modules. Usually it puts this at
+the start of your path so this version of the MinGW compiler becomes your
+default compiler!
+
+==== dblatex on Windows
+
+WARNING: Although dblatex support is provided for under Windows, it has only
+been unsuccessfully tested, failing due to a race condition with file
+permissions on successive xsltproc invocations. However, please do try it if
+you can because it will probably work one day!
+
+http://dblatex.sourceforge.net/[dblatex] has experimental support in the
+project for PDF generation on Windows. However, it has not been proven to
+work so currently FOP is the only **supported** PDF generator on Windows.
+
+In order for CMake to use DBLATEX, use the following when configuring with
+CMake:
+
+    -DPDF_GENERATOR=DBLATEX
+
+dblatex is currently the default PDF generator anyway, so omitting the above
+will also work if you just want to build using the default tools (in future
+we may change to something else, like FOP for example)
+
+Make sure you have the latest version of python 2 installed.
+
+Download and install http://miktex.org/download[MikTex] which provides the
+latex backend for dblatex. It's recommended during install to set the "Install
+packages on the fly" to yes so MikTex doesn't have to ask before installing
+packages - it's a real pain when installing dblatex otherwise!! It also
+appears that if you miss that setting dblatex will fail to install because of
+some crashes of MikTex which then reports missing elements in the toolchain.
+
+Download and install http://zlatkovic.com/libxml/[libxml2] which is pain.
+You'll need to download and decompress all the zip files. Then, manually copy
+each of the folders into a common directory so that you end up with one bin
+directory and one lib directory, etc. You must then make sure the bin path of
+your installation directory is added to your PATH environment variable.
+
+Then download the latest dblatex .tar.bz2 from
+https://sourceforge.net/projects/dblatex/[Sourceforge]
+
+Decompress the tar.bz2 somewhere and then install dbltatex:
+
+    cd dblatex-0.45
+    python setup.py install
+
+NOTE: Although CMake can find that you have dblatex installed, it's not
+possible for a2x to run dblatex on windows without supplying a dblatex
+executable. This can be done by placing the dblatex.cmd file from the
+CMakeSupport/windows directory in your path and modifying it as necessary.
+
+So long as the install works, CMake will be able to find dblatex in your
+python installation
+
+==== FOP on Windows
+
+NOTE: This is currently the only way of building PDF documents on Windows.
+
+It's possible to use https://xmlgraphics.apache.org/fop/[Apache FOP] for PDF
+generation with AsciiDoc instead of dbaltex. Some people will prefer the
+output of Apache FOP compared to dblatex. It brings with it a dependency on
+a Java runtime.
+
+In order for CMake to use FOP, use the following when configuring with CMake:
+
+    -DPDF_GENERATOR=FOP
+
+== Contributing
+
+Create pull requests at https://github.com/ciampix/kicad-doc/
