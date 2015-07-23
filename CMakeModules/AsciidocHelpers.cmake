@@ -48,7 +48,7 @@ endmacro()
 
 # Add an asciidoc to HTML conversion target
 macro( add_adoc_html_target TARGET INFILE OUTFILE LANGUAGE )
-    add_custom_target( ${TARGET} ALL ${ASCIIDOC_COMMAND} ${ASCIIDOC_OPTIONS} -a lang=${LANGUAGE} -o ${OUTFILE} ${INFILE} )
+    add_custom_target( ${TARGET} ALL ${ASCIIDOC_COMMAND} ${ASCIIDOC_OPTIONS} ${LANGUAGE_OPTIONS} -o ${OUTFILE} ${INFILE} )
 endmacro()
 
 # Pass an option to asciidoc

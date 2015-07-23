@@ -1,16 +1,107 @@
 KiCad Documentation
 ===================
 
-Started as an experiment to test feasibility of a light markup for the
-documentation of the KiCad project, this repository is updated,
-almost daily.
+This repository contains the official link:http://www.kicad-pcb.org/[KiCad] documentation.
 
-Asciidoc has been choosen as the candidate, and is the only
-documentation directory that has survived in this repo from now on.
+image:http://ci.kicad-pcb.org/buildStatus/icon?job=any-kicad-doc-head["Build Status",
+link="http://ci.kicad-pcb.org/job/any-kicad-doc-head/"]
+image:https://img.shields.io/badge/docs-stable-brightgreen.svg["Stable version docs",
+link="http://docs.kicad-pcb.org/"]
+image:https://img.shields.io/badge/docs-nightly-lightgrey.svg["Nightly docs",
+link="http://ci.kicad-pcb.org/job/any-kicad-doc-head/lastSuccessfulBuild/artifact/src/"]
 
-Click on the icon
-image:http://ci.kicad-pcb.org/buildStatus/icon?job=any-kicad-doc-head["Build
-Status", link="http://ci.kicad-pcb.org/job/any-kicad-doc-head/"] to jump
-to the continuous integration project page.
+== Contributing
 
-Anyone who wants to contribute, please do.
+You can discuss the documentation and its translations in the
+link:https://github.com/ciampix/kicad-doc/issues[repository issues].
+
+To participate to the translation effort read the link:translation_instructions.adoc[].
+
+The following instructions explain how to test changes before
+link:https://github.com/ciampix/kicad-doc/fork[submitting a pull-request].
+
+== Dependencies
+
+* http://asciidoc.org/[AsciiDoc] >= 8.6.9 is both the language of the
+documentation and the tool used to generate the PDF and HTML outputs.
+We don't use http://asciidoctor.org/[asciidoctor] because PDF generation is currently missing support for inline images (see the
+http://asciidoctor.org/docs/convert-asciidoc-to-pdf/[asciidoctor-pdf] project).
+
+* https://po4a.alioth.debian.org/[po4a] >= 0.45 is used to translate the English
+AsciiDoc documentation to other languages before the last compilation steps.
+* CMake >= 2.8
+* dblatex >= 0.3.4
+* gettext >= 0.18
+* source-highlight
+* The _VL Gothic_ font is required when you build the japanese PDFs. Look for a
+package named `fonts-vlgothic`. Otherwise use the SINGLE_LANGUAGE option
+to avoid build errors.
+
+== Building the docs
+
+=== Windows
+
+Start with link:windows_dependencies.adoc[] then run:
+
+    cd kicad-doc
+    mkdir build
+    cd build
+    cmake -G "MinGW Makefiles" -DPDF_GENERATOR=FOP ../
+    make
+
+=== MacOS
+
+    cd kicad-doc
+    mkdir build
+    cd build
+    cmake ../
+    make
+
+=== Debian / Ubuntu
+
+Install all dependencies with the following packages, then follow MacOS instructions.
+
+    sudo apt-get install git make cmake asciidoc pandoc gettext po4a dblatex texlive-xetex fonts-vlgothic source-highlight texlive-lang-*
+
+=== Docker
+Read link:utils/docker/README.adoc[] if you want to build the documentation in a container.
+
+=== CMake Build Options
+
+==== BUILD_FORMATS
+
+By default **BUILD_FORMATS** is set to `html;pdf` to enable building all supported
+document formats.
+
+It's possible to set **BUILD_FORMATS** in order to build only a subset of formats,
+e.g. `-DBUILD_FORMATS=html` or `-DBUILD_FORMATS=pdf`
+
+When only one build format is enabled the package name is transformed to include
+the format.
+
+==== SINGLE_LANGUAGE
+
+By default CMake will configure to build all languages available for each document.
+
+You can build just a single language by using the **SINGLE_LANGUAGE** option when
+configuring a build with CMake, e.g. `-DSINGLE_LANGUAGE=it`, etc.
+
+Currently, the available languages are : `en`, `fr`, `it`, `ja`, `nl`, and `pl` however, any
+language code can be selected. Only translated documents will be built, so for
+some languages there may only be a partial documentation output.
+
+When the **SINGLE_LANGUAGE** option is set, the package name is transformed to
+include the language.
+
+==== PDF_GENERATOR
+
+By default CMake will use dblatex building PDFs.
+
+You can build PDFs however using either `DBLATEX` or `FOP` by using the
+**PDF_GENERATOR** option whilst configuring a CMake build.
+
+For example, use `-DPDF_GENERATOR=FOP` to use FOP to build the PDFs. If the
+**BUILD_FORMATS** option doesn't include `pdf`, the **PDF_GENERATOR** option
+will have no effect on the build.
+
+This option doesn't transform the built package name.
