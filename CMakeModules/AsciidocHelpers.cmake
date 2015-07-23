@@ -51,6 +51,16 @@ macro( add_adoc_html_target TARGET INFILE OUTFILE LANGUAGE )
     add_custom_target( ${TARGET} ALL ${ASCIIDOC_COMMAND} ${ASCIIDOC_OPTIONS} ${LANGUAGE_OPTIONS} -o ${OUTFILE} ${INFILE} )
 endmacro()
 
+# Add an asciidoc to EPUB conversion target
+macro( add_adoc_epub_target TARGET INFILE OUTFILE LANGUAGE )
+    set( TITLE "${TARGET}" )
+    string(REGEX REPLACE "_epub_.." "" DOCINFO_OUT "${LANGUAGE}/${TARGET}-docinfo.xml" )
+    configure_file( ${CMAKE_SOURCE_DIR}/CMakeSupport/epub-cover-docinfo-template.xml # Prepare cover docinfo
+                    ${DOCINFO_OUT} )
+    set( _A2X_OPTIONS -f epub -a docinfo )
+    add_custom_target( ${TARGET} ALL ${A2X_COMMAND} ${_A2X_OPTIONS} ${INFILE} )
+endmacro()
+
 # Pass an option to asciidoc
 macro( add_adoc_option )
     foreach( OPT ${ARGN} )
