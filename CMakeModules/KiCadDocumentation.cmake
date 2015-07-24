@@ -131,6 +131,21 @@ macro( KiCadDocumentation DOCNAME )
 
             install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ./${LANGUAGE}/${DOCNAME}/pdf )
         endif()
+
+
+        # EPUB Generation
+        list( FIND BUILD_FORMATS "epub" EPUB_BUILD )
+        if( NOT "${EPUB_BUILD}" EQUAL "-1" )
+            add_adoc_epub_target( ${DOCNAME}_epub_${LANGUAGE}
+                    ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.adoc
+                    ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.epub
+                    ${LANGUAGE} )
+
+            add_dependencies( ${DOCNAME}_epub_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
+            add_dependencies( ${DOCNAME} ${DOCNAME}_epub_${LANGUAGE} )
+
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.epub DESTINATION ./${LANGUAGE}/${DOCNAME}/epub )
+        endif()
     endforeach()
 
 endmacro()

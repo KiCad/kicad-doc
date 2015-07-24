@@ -20,7 +20,7 @@ set( PDF_GENERATOR "DBLATEX" CACHE STRING "Specify which PDF generator to use: D
 set( SINGLE_LANGUAGE "" CACHE STRING "Specify a single language to build: en|fr|it|ja|nl|pl" )
 
 # Provide an option to decide which documentation formats to build.
-set( BUILD_FORMATS "html;pdf" CACHE LIST "Specify which output formats to build html/pdf" )
+set( BUILD_FORMATS "html;pdf;epub" CACHE LIST "Specify which output formats to build html/pdf/epub" )
 
 # Add our custom modules to the module path
 set( CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMakeModules" ${CMAKE_MODULE_PATH} )
