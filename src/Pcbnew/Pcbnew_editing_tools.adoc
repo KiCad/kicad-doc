@@ -107,7 +107,7 @@ The geometric options are as follow:
   column and the next row. If this is negative, the grid progress bottom to
   top.
 * *x Offset*: start each row this distance to the right of the previous
- one
+  one
 * *y Offset*: start each column this distance below the previous one
 
 .3x3 grid with x and y offsets
@@ -128,26 +128,36 @@ image:images/Pcbnew_array_grid_stagger_cols_3.png[]
   moves to the next row, or down columns and then to the next column. Note that
   the direction on numbering is defined by the sign of the spacing: a negative
   spacing will result in right-to-left or bottom-to-top numbering.  i
+
 * *Reverse numbering on alternate row/columns*: If selected, the numbering order
   (left-to-right or right-to-left, for example) on alternate rows or columns.
   Whether rows or columns alternate depends on the numbering direction. This
   option is useful for packages like DIPs where the numbering proceeds up one
   side and down the other.
-*  *Restart numbering*: if laying out using items that already have numbers,
+
+* *Restart numbering*: if laying out using items that already have numbers,
   reset to the start, otherwise continue if possible from this items number
+
 * *Numbering scheme*
+
 ** *Continuous*: the numbering just continues across a row/column break - if
-  the last item in the first row is numbered "7", the first item in the second
-  row will be "8".
+   the last item in the first row is numbered "7", the first item in the second
+   row will be "8".
+
 ** *Co-ordinate*: the numbering uses a two-axis scheme where the
-  number is made up of the row and column index. Which one comes first
-  (row or column) is determined by the numbering direction.
+   number is made up of the row and column index. Which one comes first
+   (row or column) is determined by the numbering direction.
+
 * *Axis numberings*: what "alphabet" to use to number the axes. Choices are
+
 ** *Numerals* for normal integer indices
+
 ** *Hexadecimal* for base-16 indexing
+
 ** *Alphabetic, minus IOSQXZ*, a common scheme for electronic components,
-  recommended by ASME Y14.35M-1997 sec. 5.2 (previously MIL-STD-100 sec. 406.5)
-  to avoid confusion with numerals.
+   recommended by ASME Y14.35M-1997 sec. 5.2 (previously MIL-STD-100 sec. 406.5)
+   to avoid confusion with numerals.
+
 ** *Full alphabet* from A-Z.
 
 ==== Circular arrays

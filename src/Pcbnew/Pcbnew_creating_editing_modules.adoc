@@ -6,7 +6,7 @@ ModEdit is used for editing and creating PCB modules. This includes:
 
 * Adding and removing pads.
 * Changing pad properties (shape, layer), for individual pads or for
-all the pads in a module.
+  all the pads in a module.
 * Adding and editing graphic elements (contours, text).
 * Editing fields (value, reference, etc.).
 * Editing the associated documentation (description, keywords).
@@ -32,10 +32,10 @@ Two pad properties are important:
 
 * Geometry (shape, layers, drill holes).
 * The pad number, which is constituted by up to four alphanumeric
-characters. Thus, the following are all valid pad numbers: 1, 45 and
-9999, but also AA56 and ANOD. The pad number must be identical to that
-of the corresponding pin number in the schematic, because it defines
-the matching pin and pad numbers that Pcbnew links pins and pads with.
+  characters. Thus, the following are all valid pad numbers: 1, 45 and
+  9999, but also AA56 and ANOD. The pad number must be identical to that
+  of the corresponding pin number in the schematic, because it defines
+  the matching pin and pad numbers that Pcbnew links pins and pads with.
 
 ==== Contours
 
@@ -60,12 +60,12 @@ will behave like graphical text.
 ModEdit can be started in two ways:
 
 * Directly via the image:images/icons/module_editor.png[] icon from the main
-toolbar of Pcbnew. This allows the creation or modification of a module in
-the library.
+  toolbar of Pcbnew. This allows the creation or modification of a module in
+  the library.
 * Double-clicking a module will launch the 'Module Properties' menu,
-which offers a 'Go to Module Editor' button. If this option is used,
-the module from the board will be loaded into the editor, for
-modification or for saving.
+  which offers a 'Go to Module Editor' button. If this option is used,
+  the module from the board will be loaded into the editor, for
+  modification or for saving.
 
 === Module Editor Toolbars
 
@@ -183,8 +183,8 @@ circuit board, an alternative and quicker method of creating the new
 module is as follows:
 
 * Load the similar module (image:images/icons/load_module_lib.png[],
-image:images/icons/load_module_board.png[] or
-image:images/icons/import_module.png[]).
+  image:images/icons/load_module_board.png[] or
+  image:images/icons/import_module.png[]).
 * Modify the reference field in order to generate a new identifier (name).
 * Edit and save the new module.
 
@@ -208,12 +208,12 @@ Do not forget to enter the pad number.
 This can be done in three different ways:
 
 * Selecting the image:images/icons/options_pad.png[] icon from the
-horizontal toolbar.
+  horizontal toolbar.
 * Clicking on an existing pad and selecting 'Edit Pad'. The pad's
-settings can then be edited.
+  settings can then be edited.
 * Clicking on an existing pad and selecting 'Export Pad Settings'.
-In this case, the geometrical properties of the selected pad will
-become the default pad properties.
+  In this case, the geometrical properties of the selected pad will
+  become the default pad properties.
 
 In the first two cases, the following dialog window will be displayed:
 
@@ -352,11 +352,11 @@ image:images/Modedit_module_attributes.png[]
 
 * Normal is the standard attribute.
 * Normal+Insert indicates that the module must appear in the automatic
-insertion file (for automatic insertion machines). This attribute is
-most useful for surface mount components (SMDs).
+  insertion file (for automatic insertion machines). This attribute is
+  most useful for surface mount components (SMDs).
 * Virtual indicates that a component is directly formed by the circuit
-board. Examples would be edge connectors or inductors created by a
-particular track shape (as sometimes seen in microwave modules).
+  board. Examples would be edge connectors or inductors created by a
+  particular track shape (as sometimes seen in microwave modules).
 
 === Documenting modules in a library
 
@@ -395,19 +395,19 @@ image:images/Modedit_module_3d_options.png[]
 The data information should be provided:
 
 * The file containing the 3D representation (created by the 3D modeler
-Wings3D, in vrml format, via the export to vrml command).
+  Wings3D, in vrml format, via the export to vrml command).
 * The default path is kicad/modules/package3d. In the example, the file
-name is discret/to_220horiz.wrl, using the default path)
+  name is discret/to_220horiz.wrl, using the default path)
 * The x, y and z scales.
 * The offset with respect to the anchor point of the module (usually
-zero).
+  zero).
 * The initial rotation in degrees about each axis (usually zero).
 
 Setting scale allows:
 
 * To use the same 3D file for footprints which have similar shapes but different sizes (resistors, capacitors, SMD components...)
 * For small (or very large) packages, a better use of the Wings3D grid
-is to scale *0.1 inch in Pcbnew = 1 grid unit* in Wings3D.
+  is to scale *0.1 inch in Pcbnew = 1 grid unit* in Wings3D.
 
 If such a file has been specified, it is possible to view the
 component in 3D.

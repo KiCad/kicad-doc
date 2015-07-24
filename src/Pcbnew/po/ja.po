@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pcbnew\n"
-"POT-Creation-Date: 2015-07-21 18:59+0900\n"
+"POT-Creation-Date: 2015-07-24 19:36+0900\n"
 "PO-Revision-Date: 2015-07-19 20:59+0900\n"
 "Last-Translator: yoneken <midpika@hotmail.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
@@ -815,653 +815,6 @@ msgstr ""
 "のファイルフォーマットには当てはまらないからです。"
 
 #. type: Title ==
-#: Pcbnew_installation.adoc:2
-#, no-wrap
-msgid "Installation"
-msgstr "インストール"
-
-#. type: Title ===
-#: Pcbnew_installation.adoc:4
-#, no-wrap
-msgid "Installation of the software"
-msgstr "ソフトウェアのインストール"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:7
-msgid "The installation procedure is described in the KiCad documentation."
-msgstr "インストールの手順は、KiCad のドキュメントに記載されています。"
-
-#. type: Title ===
-#: Pcbnew_installation.adoc:8
-#, no-wrap
-msgid "Modifying the default configuration"
-msgstr "デフォルト設定の変更"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:13
-msgid ""
-"A default configuration file `kicad.pro` is provided in `kicad/share/"
-"template`. This file is used as the initial configuration for all new "
-"projects."
-msgstr ""
-"デフォルトの設定ファイル `kicad.pro` は、KiCad インストール・ディレクトリ下 "
-"`kicad/share/template` にあります。このファイルは、すべての新規プロジェクトの"
-"初期設定として使用されます。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:16
-msgid ""
-"This configuration file can be modified to change the libraries to be loaded"
-msgstr "この設定により、ロードされるライブラリを変更するよう修正できます。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:18
-msgid "To do this:"
-msgstr "以下のようにします:"
-
-# 07102015：変更
-#. type: Plain text
-#: Pcbnew_installation.adoc:23
-msgid ""
-"Launch Pcbnew using kicad or directly. On Windows is in `C:\\kicad\\bin"
-"\\pcbnew.exe` and on Linux you can run `/usr/local/kicad/bin/kicad` or `/usr/"
-"local/kicad/bin/pcbnew` if the binaries are located in `/usr/local/kicad/"
-"bin`."
-msgstr ""
-"直接あるいは kicad を使って、pcbnew を起動します。Windows では `C:\\kicad"
-"\\bin\\pcbnew.exe`（ユーザ環境によって変わります） 、そしてLinux ではバイナリ"
-"が  `/usr/local/kicad/bin` にある場合、 `/usr/local/kicad/bin/kicad` あるい"
-"は `/usr/local/kicad/bin/pcbnew` で起動できます。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:24
-msgid "Select Preferences - Libs and Dir."
-msgstr "“設定” メニューより ”フットプリント ライブラリの管理” を選択します。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:25
-msgid "Edit as required."
-msgstr "ロードするライブラリ一覧を編集します。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:27
-msgid ""
-"Save the modified configuration (Save Cfg) to `kicad/share/template/kicad."
-"pro`."
-msgstr ""
-"変更されたコンフィグレーションを `kicad/share/template/kicad.pro` に保存しま"
-"す。( “設定” メニューより ”設定の保存” )"
-
-# 07102015：変更
-#. type: Title ===
-#: Pcbnew_installation.adoc:28
-#, no-wrap
-msgid "Managing Footprint Libraries: legacy versions"
-msgstr "フットプリント・ライブラリの管理: 以前のバージョン"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:32
-msgid ""
-"You can have access to the library list initialization from the Preferences "
-"menu:"
-msgstr "設定メニューからライブラリリストの初期設定へと進めます。:"
-
-# 07072015：/ja/へ変更
-#. type: Plain text
-#: Pcbnew_installation.adoc:34
-msgid "image:images/Library_list_menu_item.png[]"
-msgstr "image:images/ja/Library_list_menu_item.png[]"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:37
-msgid ""
-"The image below shows the dialog which allows you to set the footprint "
-"library list:"
-msgstr "下の図はフットプリント・ライブラリ・リストを設定するダイアログです。"
-
-# 07072015：/ja/へ変更
-#. type: Plain text
-#: Pcbnew_installation.adoc:39
-msgid "image:images/Footprint_library_list.png[]"
-msgstr "image:images/ja/Footprint_library_list.png[]"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:50
-msgid ""
-"You can use this to add all the libraries that contain the footprints "
-"required for your project. You should also remove unused libraries from new "
-"projects to prevent footprint name clashes. Please note, there is a issue "
-"with the footprint library list when duplicate footprint names exist in more "
-"than one library.  When this occurs, the footprint will be loaded from the "
-"first library found in the list. If this is an issue (you cannot load the "
-"footprint you want), either change the library list order using the “Up” and "
-"“Down” buttons in the dialog above or give the footprint a unique name in "
-"using the footprint editor."
-msgstr ""
-"あなたはプロジェクトに必要なフットプリントを含むライブラリを追加しなければな"
-"りません。フットプリント名の衝突を避けるため、新しいプロジェクトからは使わな"
-"いライブラリを削除することも必要です。複数のライブラリに重複したフットプリン"
-"ト名があると、フットプリントライブラリで問題となることに注意して下さい。この"
-"ような場合、フットプリントはリスト中、最初に見つかったライブラリからロードさ"
-"れます。これは問題（必要とするフットプリントをロードできない）で、上のダイア"
-"ログで “上” と “下” ボタンを使ってライブラリリストの順番を変えるか、フットプ"
-"リント・エディタを使って固有の名前のフットプリントにします。"
-
-# 07102015：訂正
-#. type: Title ===
-#: Pcbnew_installation.adoc:51
-#, no-wrap
-msgid "Managing Footprint Libraries: .pretty repositories"
-msgstr "フットプリント・ライブラリの管理: .pretty リポジトリ"
-
-# 07102015：発行からリリースへ変更
-#. type: Plain text
-#: Pcbnew_installation.adoc:57
-msgid ""
-"As of release rXXXX, Pcbnew uses the new footprint library table "
-"implementation to manage footprint libraries and the information in the "
-"previous section is no longer valid. The library table manager is accessible "
-"by:"
-msgstr ""
-"rXXXX をリリースするにあたって、Pcbnew はフットプリントライブラリを管理するた"
-"めに実装された新しいフットプリント・ライブラリ・テーブルを使用します。前のセ"
-"クションの情報はもはや無効です。ライブラリ・テーブル・マネージャは次のように"
-"呼び出せます。:"
-
-# 07072015：/ja/へ変更
-#. type: Plain text
-#: Pcbnew_installation.adoc:59
-msgid "image:images/Library_tables_menu_item.png[]"
-msgstr "image:images/ja/Library_tables_menu_item.png[]"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:63
-msgid ""
-"The image below shows the footprint library table editing dialog which can "
-"be opened by invoking the “Library Tables” entry from the “Preferences” menu."
-msgstr "下の図は、フットプリント・ライブラリ・テーブル編集ダイアログです。"
-
-# 07072015：/ja/へ変更
-#. type: Plain text
-#: Pcbnew_installation.adoc:65
-msgid "image:images/Footprint_tables_list.png[]"
-msgstr "image:images/ja/Footprint_tables_list.png[]"
-
-# 07102015：日本語修正
-#. type: Plain text
-#: Pcbnew_installation.adoc:74
-msgid ""
-"The footprint library table is used to map a footprint library of any "
-"supported library type to a library nickname.  This nickname is used to look "
-"up footprints instead of the previous method which depended on library "
-"search path ordering.  This allows Pcbnew to access footprints with the same "
-"name in different libraries by ensuring that the correct footprint is loaded "
-"from the appropriate library.  It also allows Pcbnew to support loading "
-"libraries from different PCB editors such as Eagle and GEDA."
-msgstr ""
-"フットプリント・ライブラリ・テーブルは、サポートされている全ての種類のフット"
-"プリントライブラリに別名 (nickname) を付けます。この別名は、見つかった順番の"
-"ライブラリを使用する以前の方法に代わって、フットプリントを探す時に使われま"
-"す。この仕組みによって適切なライブラリから正しいフットプリントを確実にロード"
-"できるので、別のライブラリにある同じ名前のフットプリントを呼び出すことができ"
-"ます。これはまた、Eagle や GEDA のような別の PCB エディタからのライブラリの読"
-"み出しをサポートします。"
-
-#. type: Title ====
-#: Pcbnew_installation.adoc:75
-#, no-wrap
-msgid "Global Footprint Library Table"
-msgstr "グローバル・フットプリント・ライブラリ・テーブル"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:82
-msgid ""
-"The global footprint library table contains the list of libraries that are "
-"always available regardless of the currently loaded project file.  The table "
-"is saved in the file `fp-lib-table` in the user's home folder.  The location "
-"of this folder is dependent on the operating system."
-msgstr ""
-"グローバル・フットプリント・ライブラリ・テーブルは、現在のプロジェクトに関係"
-"なく、常に有効なライブラリのリストを保持しています。このテーブルは、ユーザの"
-"ホームディレクトリにある “fp-lib-table” ファイルに保存されています。このディ"
-"レクトリの位置は、オペレーティングシステムに依存します。"
-
-#. type: Title ====
-#: Pcbnew_installation.adoc:83
-#, no-wrap
-msgid "Project Specific Footprint Library Table"
-msgstr "プロジェクト固有のフットプリント・ライブラリ・テーブル"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:92
-msgid ""
-"The project specific footprint library table contains the list of libraries "
-"that are available specifically for the currently loaded project file.  The "
-"project specific footprint library table can only be edited when it is "
-"loaded along with the project board file.  If no project file is loaded or "
-"there is no footprint library table file in the project path, an empty table "
-"is created which can be edited and later saved along with the board file."
-msgstr ""
-"プロジェクト固有のフットプリント・ライブラリ・テーブルは、現在のプロジェクト"
-"にのみ有効なライブラリのリストを保持しています。プロジェクト固有のフットプリ"
-"ント・ライブラリ・テーブルは、プロジェクトの基板ファイルが読み込まれている時"
-"のみ編集可能です。プロジェクトファイルが読み込まれていないか、プロジェクトの"
-"パスにフットプリント・ライブラリ・テーブル・ファイルがない場合、編集可能な空"
-"のテーブルが作られ、後で基板ファイルと一緒に保存されます。"
-
-#. type: Title ====
-#: Pcbnew_installation.adoc:93
-#, no-wrap
-msgid "Initial Configuration"
-msgstr "初期設定"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:105
-msgid ""
-"The first time CvPcb or Pcbnew is run and the global footprint table file "
-"`fp-lib-table` is not found in the user's home folder, Pcbnew will attempt "
-"to copy the default footprint table file fp_global_table stored in the "
-"system's KiCad template folder to the file `fp-lib-table` in the user's home "
-"folder.  If fp_global_table cannot be found, an empty footprint library "
-"table will be created in the user's home folder.  If this happens, the user "
-"can either copy fp_global_table manually or configure the table by hand.  "
-"The default footprint library table includes all of the standard footprint "
-"libraries that are installed as part of KiCad."
-msgstr ""
-"CvPcb または Pcbnew の初めての実行時には、グローバル・フットプリント・テーブ"
-"ル・ファイル `fp-lib-table` はユーザのホームディレクトリに見つかりません。"
-"Pcbnew は、システムの KiCad テンプレートディレクトリにあるデフォルトのフット"
-"プリント・テーブル・ファイル fp_global_table をユーザのホームディレクトリへ "
-"`fp-lib-table` ファイルとしてコピーしようとします。もし、`fp-lib-table` が見"
-"つからなかったら、ユーザのホームディレクトリに空のフットプリント・ライブラ"
-"リ・テーブルが作られるでしょう。こうなった場合、ユーザは自分で "
-"fp_global_table をコピーし、手動でテーブルを設定できます。デフォルトのフット"
-"プリント・ライブラリ・テーブルは、KiCad の一部としてインストールされる標準の"
-"フットプリントライブラリを全て含んでいます。"
-
-#. type: Title ====
-#: Pcbnew_installation.adoc:106
-#, no-wrap
-msgid "Adding Table Entries"
-msgstr "テーブル要素の追加"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:130
-msgid ""
-"In order to use a footprint library, it must first be added to either the "
-"global table or the project specific table.  The project specific table is "
-"only applicable when a board file is open.  Each library entry must have a "
-"unique nickname.  This does not have to be related in any way to the actual "
-"library file name or path.  The colon `:` character cannot be used anywhere "
-"in the nickname.  Each library entry must have a valid path and/or file name "
-"depending on the type of library.  Paths can be defined as absolute, "
-"relative, or by environment variable substitution.  The appropriate plug in "
-"type must be selected in order for the library to be properly read.  Pcbnew "
-"currently supports reading KiCad legacy, KiCad Pretty, Eagle, and GEDA "
-"footprint libraries.  There is also a description field to add a description "
-"of the library entry.  The option field is not used at this time so adding "
-"options will have no effect when loading libraries.  Please note that you "
-"cannot have duplicate library nicknames in the same table.  However, you can "
-"have duplicate library nicknames in both the global and project specific "
-"footprint library table.  The project specific table entry will take "
-"precedence over the global table entry when duplicated names occur.  When "
-"entries are defined in the project specific table, an fp-lib-table file "
-"containing the entries will be written into the folder of the currently open "
-"net list."
-msgstr ""
-"フットプリントライブラリを使うには、まず最初にグローバルテーブルかプロジェク"
-"ト固有のテーブルを追加しなければなりません。プロジェクト固有のテーブルは、基"
-"板ファイルが開かれた時のみ有効です。各ライブラリの入力項目は固有の別名 "
-"(nickname) を持つ必要があります。これは実際のファイル名やファイルパスとは全く"
-"関係ありません。コロン ( : ) は別名の中のいかなる場所でも使用できません。各ラ"
-"イブラリの入力項目は、そのライブラリの種類で有効なファイルパス、ファイル名を"
-"持つ必要があります。パスは、絶対、相対、または環境変数で指定できます。（下記 "
-"2.4.5 セクションを参照）プラグインの種類は、ライブラリが正しく読み込まれるよ"
-"う、適切に選択しなければなりません。Pcbnew は今のところ KiCad の古い種類、"
-"KiCad Pretty、Eagle と GEDA フットプリントライブラリをサポートしています。こ"
-"れらは、ライブラリ入力項目の説明フィールドに記述されます。オプションフィール"
-"ドはこの時点では使われていませんので、オプションフィールドへの追加はライブラ"
-"リの読み込みに影響を与えません。同じテーブルには重複した別名を持てないことに"
-"注意して下さい。しかしながら、グローバルとプロジェクト固有のフットプリント・"
-"ライブラリ・テーブルの両方で重複した別名を持つことは可能です。もし名前の衝突"
-"が起こったなら、プロジェクト固有のテーブルがグローバルテーブルに優先します。"
-"プロジェクト固有のテーブルに項目が入力されると、入力項目を含む fp-lib-table "
-"ファイルは現在開かれているネットリストのあるディレクトリに書き込まれます。"
-
-#. type: Title ====
-#: Pcbnew_installation.adoc:131
-#, no-wrap
-msgid "Environment Variable Substitution"
-msgstr "環境変数の代替"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:147
-msgid ""
-"One of the most powerful features of the footprint library table is "
-"environment variable substitution.  This allows you to define custom paths "
-"to where your libraries are stored in environment variables.  Environment "
-"variable substitution is supported by using the syntax `${ENV_VAR_NAME}` in "
-"the footprint library path.  By default, at run time Pcbnew defines the `"
-"$KISYSMOD` environment variable.  This points to where the default footprint "
-"libraries that were installed with KiCad are located.  You can override `"
-"$KISYSMOD` by defining it yourself which allows you to substitute your own "
-"libraries in place of the default KiCad footprint libraries.  When a board "
-"file is loaded, Pcbnew also defines the `$KPRJMOD` using the board file "
-"path.  This allows you to create libraries in the project path without "
-"having to define the absolute path to the library in the project specific "
-"footprint library table."
-msgstr ""
-"フットプリント・ライブラリ・テーブルの最も強力な機能の一つは、環境変数の代替"
-"です。環境変数に保存されたライブラリへの独自のパスを定義するすることができま"
-"す。環境変数の代替は、フットプリント・ライブラリ・パスで `${ENV_VAR_NAME}` 構"
-"文を使うことにより、サポートされます。デフォルトでは、実行中 Pcbnew は環境変"
-"数 `$KISYSMOD` を定義します。ここは KiCad と一緒にインストールされたデフォル"
-"トのフットプリントライブラリの場所です。デフォルトのフットプリントライブラリ"
-"に代わって自分のライブラリを置けるよう `$KISYSMOD` を上書きできます。基板が読"
-"み込まれると、Pcbnew はまた基板のファイルパスを使って、`$KPRJMOD` を定義しま"
-"す。これにより、プロジェクト固有のフットプリント・ライブラリ・テーブルでライ"
-"ブラリの絶対パスを定義することなく、プロジェクトのあるパスへライブラリを作る"
-"ことができます。"
-
-#. type: Title ====
-#: Pcbnew_installation.adoc:148
-#, no-wrap
-msgid "Using the GitHub Plugin"
-msgstr "GitHub プラグインの使用"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:159
-msgid ""
-"The GitHub plugin is a special plugin that provides an interface for read "
-"only access to a remote GitHub repository consisting of pretty (Pretty is "
-"name of the KiCad footprint file format) footprints and optionally provides "
-"\"Copy On Write\" (COW) support for editing footprints read from the GitHub "
-"repo and saving them locally.  Therefore the \"GitHub\" plugin is for *read "
-"only for accessing remote pretty footprint libraries* at https://github."
-"com.  To add a GitHub entry to the footprint library table the \"Library Path"
-"\" in the footprint library table row for a must be set to a valid GitHub "
-"URL."
-msgstr ""
-"GitHub プラグインは、pretty (Pretty は KiCad フットプリント・ファイル・フォー"
-"マットの名前です) フットプリントのリモート GitHub リポジトリへ読み込み専用で"
-"アクセスするためのインターフェイスを提供します。また、それらをローカルへ保存"
-"し、 GitHub リポジトリから読み込んだフットプリントを編集するための “Copy On "
-"Write“ (COW) サポートをオプションで提供します。このため、“GitHub“ プラグイン"
-"は、 https://github.com で *read only for accessing remote pretty footprint "
-"libraries* となります。 “ライブラリのパス“ へ GitHub エントリを追加するために"
-"は、フットプリント・ライブラリ・テーブルの行にある “ライブラリのパス“ へ有効"
-"な GitHub URL を設定する必要があります。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:161
-msgid "For example:"
-msgstr "例:"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:163
-#, no-wrap
-msgid "     https://github.com/liftoff-sr/pretty_footprints\n"
-msgstr "     https://github.com/liftoff-sr/pretty_footprints\n"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:165
-msgid "Tpically GitHub URLs take the form:"
-msgstr "（フォームを取得する）典型的な GitHub URL :"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:167
-#, no-wrap
-msgid "     https://github.com/user_name/repo_name\n"
-msgstr "     https://github.com/user_name/repo_name\n"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:183
-msgid ""
-"The \"Plugin Type\" must be set to \"Github\".  To enable the “Copy On Write"
-"\" feature the option `allow_pretty_writing_to_this_dir` must be added to "
-"the “Options” setting of the footprint library table entry.  This option is "
-"the \"Library Path\" for local storage of modified copies of footprints read "
-"from the GitHub repo.  The footprints saved to this path are combined with "
-"the read only part of the GitHub repository to create the footprint "
-"library.  If this option is missing, then the GitHub library is read only.  "
-"If the option is present for a GitHub library, then any writes to this "
-"hybrid library will go to the local `*.pretty` directory.  Note that the "
-"github.com resident portion of this hybrid COW library is always read only, "
-"meaning you cannot delete anything or modify any footprint in the specified "
-"GitHub repository directly. The aggregate library type remains \"Github\" in "
-"all further discussions, but it consists of both the local read/write "
-"portion and the remote read only portion."
-msgstr ""
-"“プラグインの種類“ は “Github“ を設定しなければなりません。 “Copy On Write“ "
-"機能を有効にするには、フットプリント・ライブラリ・テーブルの入力項目にある "
-"“オプション” へ `allow_pretty_writing_to_this_dir` を設定しなければなりませ"
-"ん。このオプションは、GitHub リポジトリから読み込んだフットプリントの編集され"
-"たコピーを保存するローカルストレージに対する “ライブラリパス“ です。このパス"
-"へ保存されたフットプリントは、GitHub リポジトリの他の読み込み専用パーツと一緒"
-"になってフットプリントライブラリを構成します。GitHub ライブラリのオプションが"
-"存在すると、このハイブリッドライブラリへの全ての書き込みは ローカルの `*."
-"pretty` ディレクトリに対して行われます。このハイブリッド COW ライブラリの一部"
-"となる github.com の部分は常に読み込み専用であることに注意、つまり、あなたは"
-"指定した GitHub リポジトリにあるどんなフットプリントに対しても変更、削除を直"
-"接行うことはできません。集合ライブラリタイプには “Github“ が残っていますが、"
-"ローカルの読み書き部分とリモートの読み込み専用部分の両方から構成されます。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:185
-msgid ""
-"The table below shows a footprint library table entry without the option "
-"`allow_pretty_writing_to_this_dir`:"
-msgstr ""
-"以下のテーブルは `allow_pretty_writing_to_this_dir` オプションがないフットプ"
-"リント・ライブラリ・テーブルの入力項目です。:"
-
-#. type: delimited block |
-#: Pcbnew_installation.adoc:194
-#, no-wrap
-msgid ""
-"| Nickname | Library Path | Plugin Type | Options | Description\n"
-"| github\n"
-"    | https://github.com/liftoff-sr/pretty_footprints\n"
-"    | Github\n"
-"    |\n"
-"    | Liftoff's GH footprints\n"
-msgstr ""
-"| Nickname | Library Path | Plugin Type | Options | Description\n"
-"|github\n"
-"|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]\n"
-"|Github | |Liftoff's GH footprints\n"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:203
-msgid ""
-"The table below shows a footprint library table entry with the COW option "
-"given.  Note the use of the environment variable `${HOME}` as an example "
-"only.  The github.pretty directory is located in `${HOME}/pretty/path`.  "
-"Anytime you use the option `allow_pretty_writing_to_this_dir`, you will need "
-"to create that directory manually in advance and it must end with the "
-"extension `.pretty`."
-msgstr ""
-"以下のテーブルは COW オプションのあるフットプリント・ライブラリ・テーブルの入"
-"力項目です。見本用のため、環境変数 `${HOME}` を使っていることに注意してくださ"
-"い。 github.pretty ディレクトリは、`${HOME}/pretty/path` となります。"
-"`allow_pretty_writing_to_this_dir` を使う時には必ず、あらかじめ `.pretty` と"
-"いう拡張子を持つディレクトリを作っておく必要があります。"
-
-#. type: delimited block |
-#: Pcbnew_installation.adoc:212
-#, no-wrap
-msgid ""
-"| Nickname | Library Path | Plugin Type | Options | Description\n"
-"| github\n"
-"    | https://github.com/liftoff-sr/pretty_footprints\n"
-"    | Github\n"
-"    | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty\n"
-"    | Liftoff's GH footprints\n"
-msgstr ""
-"| Nickname | Library Path | Plugin Type | Options | Description\n"
-"|github\n"
-"|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]\n"
-"|Github |allow_pretty_writing_to_this_dir= $\\{HOME\\}/pretty/github.pretty\n"
-"|Liftoff's GH footprints\n"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:220
-msgid ""
-"Footprint loads will always give precedence to the local footprints found in "
-"the path given by the option `allow_pretty_writing_to_this_dir`.  Once you "
-"have saved a footprint to the COW library's local directory by doing a "
-"footprint save in the footprint editor, no GitHub updates will be seen when "
-"loading a footprint with the same name as one for which you've saved locally."
-msgstr ""
-"フットプリントの読み込みは、`allow_pretty_writing_to_this_dir` オプションで指"
-"定されるパスにあるローカルフットプリントが常に優先されます。フットプリント・"
-"エディタからフットプリントを保存することで COW ライブラリのローカルディレクト"
-"リへフットプリントを保存すると、ローカルに保存したフットプリントと同じ名前の"
-"フットプリントを読み込む際に GitHub のアップデートは適用されなくなります。"
-
-# 07102015：訂正
-#. type: Plain text
-#: Pcbnew_installation.adoc:228
-msgid ""
-"Always keep a separate local `*.pretty` directory for each GitHub library, "
-"never combine them by referring to the same directory more than once.  Also, "
-"do not use the same COW (`*.pretty`) directory in a footprint library table "
-"entry.  This would likely create a mess.  The value of the option "
-"`allow_pretty_writing_to_this_dir` will expand any environment variable "
-"using the `${}` notation to create the path in the same way as the “Library "
-"Path” setting."
-msgstr ""
-"常に GitHub ライブラリごとに個別のローカル `*.pretty` ディレクトリを確保し、"
-"何回も同じディレクトリを参照することでこれらを結合してはいけません。また、"
-"フットプリント・ライブラリ・テーブルの入力項目に同じ COW (`*.pretty`) ディレ"
-"クトリを使用してはいけません。 これは恐らく混乱を招くでしょう。オプション "
-"`allow_pretty_writing_to_this_dir` の値は、 “ライブラリパス” の設定と同様、パ"
-"スを作るにあたって `${}` 表示を使い、環境変数を拡大できます。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:240
-msgid ""
-"What's the point of COW? It is to turbo-charge the sharing of footprints.  "
-"If you periodically email your COW pretty footprint modifications to the "
-"GitHub repository maintainer, you can help update the GitHub copy.  Simply "
-"email the individual `*.kicad_mod` files you find in your COW directories to "
-"the maintainer of the GitHub repository.  After you've received confirmation "
-"that your changes have been committed, you can safely delete your COW "
-"file(s)  and the updated footprint from the read only part of GitHub library "
-"will flow down.  Your goal should be to keep the COW file set as small as "
-"possible by contributing frequently to the shared master copies at https://"
-"github.com."
-msgstr ""
-"COW のポイントは何でしょう？それは、フットプリント共有のターボチャージャーの"
-"ようなものです。あなたが GitHub リポジトリのメインテナーに COW pretty フット"
-"プリントの変更を定期的にメールすることで、GitHub コピーのアップデートに貢献で"
-"きます。単に COW ディレクトリで見つかった `*.kicad_mod` ファイルをGitHub リポ"
-"ジトリのメインテナーへメールするだけです。あなたの変更がコミットされたことを"
-"確認したなら、あなたは安全に自分の COW ファイルを削除でき、GitHub ライブラリ"
-"の読み込み専用部分からアップデートされたフットプリントを落とせるでしょう。あ"
-"なたのゴールは、 https://github.com の共有マスターコピーへ頻繁に貢献すること"
-"で、COW ファイルのディレクトリサイズを可能な限り小さく保ち続けることです。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:248
-msgid ""
-"Finally, Nginx can be used as a cache to the github server to speed up the "
-"loading of footprints. It can be installed locally or on a network server. "
-"There is an example configuration in Kicad sources at pcbnew/github/nginx."
-"conf. The most straightforward way to get this working is to overwrite the "
-"default nginx.conf with this one and `export KIGITHUB=http://my_server:54321/"
-"KiCad`, where `my_server` is the IP or domain name of the machine running "
-"nginx."
-msgstr ""
-"最終に、Nginx(high-speed Web server/reverse proxy and email proxy) をフットプ"
-"リントの読み込みスピードを上げるための github のキャッシュとして使うことがで"
-"きます。これは、 pcbnew/github/nginx.conf での KiCad ソースの設定例です。これ"
-"を使う最も簡単な方法は、デフォルトの nginx.conf を `export KIGITHUB=http://"
-"my_server:54321/KiCad` で上書きすることです。ここで、 `my_server` は nginx を"
-"実行しているマシンの IP またはドメイン名です。"
-
-#. type: Title ====
-#: Pcbnew_installation.adoc:249
-#, no-wrap
-msgid "Usage Patterns"
-msgstr "使用パターン"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:261
-msgid ""
-"Footprint libraries can be defined either globally or specifically to the "
-"currently loaded project.  Footprint libraries defined in the user's global "
-"table are always available and are stored in the `fp-lib-table` file in the "
-"user's home folder.  Global footprint libraries can always be accessed even "
-"when there is no project net list file opened.  The project specific "
-"footprint table is active only for the currently open net list file.  The "
-"project specific footprint library table is saved in the file fp-lib-table "
-"in the path of the currently open board file.  You are free to define "
-"libraries in either table."
-msgstr ""
-"フットプリントライブラリは、読み込まれているプロジェクトに対して、グローバ"
-"ル、固有どちらとしてでも定義できます。ユーザのグローバルテーブルで定義された"
-"フットプリントライブラリは常に有効で、ユーザのホームディレクトリにある `fp-"
-"lib-table` ファイル内に保存されます。グローバル・フットプリント・ライブラリ"
-"は、プロジェクトのネットリストファイルを開いていない時でも、常にアクセスする"
-"ことができます。プロジェクト固有のフットプリントテーブルは、現在開かれている"
-"ネットリストファイルに対してのみ有効です。プロジェクト固有のフットプリント・"
-"ライブラリ・テーブルは現在開かれている基板ファイルのパスにある fp-lib-table "
-"ファイルに保存されます。どちらのテーブルにライブラリを定義しても構いません。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:263
-msgid "There are advantages and disadvantages to each method:"
-msgstr "以下は、各方法の長所と短所です。:"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:268
-msgid ""
-"You can define all of your libraries in the global table which means they "
-"will always be available when you need them.  ** The disadvantage of this is "
-"that you may have to search through a lot of libraries to find the footprint "
-"you are looking for."
-msgstr ""
-"全てのライブラリをグローバルテーブルで定義すると、必要な時にいつでも使うこと"
-"ができます。** これの短所は、探しているフットプリントを見つけるために多くのラ"
-"イブラリを調べなければならなくなることです。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:273
-msgid ""
-"You can define all your libraries on a project specific basis.  ** The "
-"advantage of this is that you only need to define the libraries you actually "
-"need for the project which cuts down on searching.  ** The disadvantage is "
-"that you always have to remember to add each footprint library that you need "
-"for every project."
-msgstr ""
-"全てのライブラリをプロジェクト固有のテーブルへ定義することもできます。** これ"
-"の長所は、プロジェクトが本当に必要とするライブラリだけとなるので、探しやすく"
-"なることです。** これの短所は、プロジェクトごとに必要とするフットプリントライ"
-"ブラリをそれぞれ忘れずに追加しなければならないことです。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:275
-msgid ""
-"You can also define footprint libraries both globally and project "
-"specifically."
-msgstr ""
-"フットプリントライブラリはグローバルとプロジェクト固有、両方のテーブルで定義"
-"することもできます。"
-
-#. type: Plain text
-#: Pcbnew_installation.adoc:279
-msgid ""
-"One usage pattern would be to define your most commonly used libraries "
-"globally and the library only require for the project in the project "
-"specific library table.  There is no restriction on how you define your "
-"libraries."
-msgstr ""
-"使用パターンの一つは、よく使うライブラリをグローバル、そのプロジェクトでのみ"
-"必要とされるライブラリはプロジェクト固有のライブラリテーブルに定義することで"
-"しょう。ライブラリを定義するにあたっての制約は特にありません。"
-
-#. type: Title ==
 #: Pcbnew_zones.adoc:2
 #, no-wrap
 msgid "Creating copper zones"
@@ -1904,70 +1257,83 @@ msgid "image:images/Pcbnew_zone_include_pads.png[]"
 msgstr "image:images/Pcbnew_zone_include_pads.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:155
-msgid ""
-"If excluded, the connection to the zone will not be very good.  ** The zone "
-"can be filled only if tracks exists to connect zones areas.  ** Pads must be "
-"connected by tracks."
+#: Pcbnew_zones.adoc:153
+msgid "If excluded, the connection to the zone will not be very good."
 msgstr ""
-"パッドへの接続部分をゾーンから除外する場合、ゾーンとの接続は十分に低いイン"
-"ピーダンスにはならないでしょう。 ** ゾーンの領域へ接続するトラックが存在する"
-"場合のみゾーンは塗り潰されます。 ** パッドはトラックで接続しなければなりませ"
-"ん。"
+
+#. type: Plain text
+#: Pcbnew_zones.adoc:155
+#, no-wrap
+msgid "** The zone can be filled only if tracks exists to connect zones areas.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_zones.adoc:157
+#, no-wrap
+msgid "** Pads must be connected by tracks.\n"
+msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:157
+#: Pcbnew_zones.adoc:159
 msgid "image:images/Pcbnew_zone_exclude_pads.png[]"
 msgstr "image:images/Pcbnew_zone_exclude_pads.png[]"
 
 #. type: Plain text
 #: Pcbnew_zones.adoc:161
-msgid ""
-"A thermal relief is a good compromise.  ** Pad is connected by 4 track "
-"segments.  ** The segment width is the current value used for the track "
-"width."
+msgid "A thermal relief is a good compromise."
 msgstr ""
-"サーマルパターンは好ましい妥協です。 ** パッドは4つの配線セグメントにより接続"
-"されています。** セグメント幅は配線幅で使用している現在値です。"
+
+#. type: Plain text
+#: Pcbnew_zones.adoc:163
+#, no-wrap
+msgid "** Pad is connected by 4 track segments.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_zones.adoc:165
+#, fuzzy, no-wrap
+#| msgid "A thermal relief is a good compromise.  ** Pad is connected by 4 track segments.  ** The segment width is the current value used for the track width."
+msgid "** The segment width is the current value used for the track width.\n"
+msgstr "サーマルパターンは好ましい妥協です。 ** パッドは4つの配線セグメントにより接続されています。** セグメント幅は配線幅で使用している現在値です。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:163
+#: Pcbnew_zones.adoc:167
 msgid "image:images/Pcbnew_zone_thermal_relief.png[]"
 msgstr "image:images/Pcbnew_zone_thermal_relief.png[]"
 
 #. type: Title ====
-#: Pcbnew_zones.adoc:164
+#: Pcbnew_zones.adoc:168
 #, no-wrap
 msgid "Thermal reliefs parameters"
 msgstr "サーマルパターンパラメータ"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:167
+#: Pcbnew_zones.adoc:171
 msgid "image:images/Pcbnew_thermal_relief_settings.png[]"
 msgstr "image:images/ja/Pcbnew_thermal_relief_settings.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:169
+#: Pcbnew_zones.adoc:173
 msgid "You can set two parameters for thermal reliefs:"
 msgstr "サーマルパターン用に2つのパラメータを設定することが可能です:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:171
+#: Pcbnew_zones.adoc:175
 msgid "image:images/Pcbnew_thermal_relief_parameters.png[]"
 msgstr "image:images/ja/Pcbnew_thermal_relief_parameters.png[]"
 
 #. type: Title ====
-#: Pcbnew_zones.adoc:172
+#: Pcbnew_zones.adoc:176
 #, no-wrap
 msgid "Choice of parameters"
 msgstr "パラメータの選択"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:176
+#: Pcbnew_zones.adoc:180
 msgid ""
 "The copper width value for thermal reliefs must be bigger than the minimum "
 "thickness value for copper zone. If not, they cannot be drawn."
@@ -1976,7 +1342,7 @@ msgstr ""
 "せん。さもなければ、それらを作成することができません。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:180
+#: Pcbnew_zones.adoc:184
 msgid ""
 "Additionally, a too large value for this parameter or for antipad size does "
 "not allow one to create a thermal relief for small pads (like pad sizes used "
@@ -1987,13 +1353,13 @@ msgstr ""
 "することができません。"
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:181
+#: Pcbnew_zones.adoc:185
 #, no-wrap
 msgid "Adding a cutout area inside a zone"
 msgstr "ゾーン内部への切り抜き領域の追加"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:185
+#: Pcbnew_zones.adoc:189
 msgid ""
 "A zone must already exist. To add a cutout area (a non-filled area inside "
 "the zone):"
@@ -2002,71 +1368,71 @@ msgstr ""
 "潰し領域）を追加するには:"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:187
+#: Pcbnew_zones.adoc:191
 msgid "Right click on an existing edge outline."
 msgstr "既存の外形線を右クリックします。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:188
+#: Pcbnew_zones.adoc:192
 msgid "Select Add Cutout Area."
 msgstr "“切り抜きの追加” を選択します。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:190
+#: Pcbnew_zones.adoc:194
 msgid "image:images/Pcbnew_add_cutout_menu_item.png[]"
 msgstr "image:images/ja/Pcbnew_add_cutout_menu_item.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:192
+#: Pcbnew_zones.adoc:196
 msgid "Create the new outline."
 msgstr "新規外形を作成します。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:194
+#: Pcbnew_zones.adoc:198
 msgid "image:images/Pcbnew_zone_unfilled_cutout_outline.png[]"
 msgstr "image:images/Pcbnew_zone_unfilled_cutout_outline.png[]"
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:195
+#: Pcbnew_zones.adoc:199
 #, no-wrap
 msgid "Outlines editing"
 msgstr "外形の編集"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:198
+#: Pcbnew_zones.adoc:202
 msgid "An outline can be modified by:"
 msgstr "外形には次のような修正が可能です:"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:200
+#: Pcbnew_zones.adoc:204
 msgid "Moving a corner or an edge."
 msgstr "角または辺を移動させる。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:201
+#: Pcbnew_zones.adoc:205
 msgid "Deleting or adding a corner."
 msgstr "角を削除または追加する。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:202
+#: Pcbnew_zones.adoc:206
 msgid "Adding a similar zone, or a cutout area."
 msgstr "同様のゾーンまたは切り抜きを追加する。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:204
+#: Pcbnew_zones.adoc:208
 msgid "If polygons are overlapping they will be combined."
 msgstr "ポリゴンが重なっている場合、それらは結合されます。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:206
+#: Pcbnew_zones.adoc:210
 msgid "image:images/Pcbnew_zone_modification_menu_items.png[]"
 msgstr "image:images/ja/Pcbnew_zone_modification_menu_items.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:209
+#: Pcbnew_zones.adoc:213
 msgid ""
 "To do that, right click on a corner or on an edge, then select the proper "
 "command."
@@ -2075,68 +1441,68 @@ msgstr ""
 "す。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:211
+#: Pcbnew_zones.adoc:215
 msgid "Here is a corner (from a cutout) that has been moved:"
 msgstr "以下は切抜きの頂点を移動した例です。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:213
+#: Pcbnew_zones.adoc:217
 msgid "image:images/Pcbnew_zone_corner_move_during.png[]"
 msgstr "image:images/Pcbnew_zone_corner_move_during.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:215
+#: Pcbnew_zones.adoc:219
 msgid "Here is the final result:"
 msgstr "以下は最終的な結果です:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:217
+#: Pcbnew_zones.adoc:221
 msgid "image:images/Pcbnew_zone_corner_move_after.png[]"
 msgstr "image:images/Pcbnew_zone_corner_move_after.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:219
+#: Pcbnew_zones.adoc:223
 msgid "Polygons are combined."
 msgstr "ポリゴンが結合されています。"
 
 #. type: Title ====
-#: Pcbnew_zones.adoc:220
+#: Pcbnew_zones.adoc:224
 #, no-wrap
 msgid "Adding a similar zone"
 msgstr "同じゾーンへの追加"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:223
+#: Pcbnew_zones.adoc:227
 msgid "Adding the similar zone:"
 msgstr "同じゾーンにゾーンを追加します:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:225
+#: Pcbnew_zones.adoc:229
 msgid "image:images/Pcbnew_zone_add_similar_during.png[]"
 msgstr "image:images/Pcbnew_zone_add_similar_during.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:227
+#: Pcbnew_zones.adoc:231
 msgid "Final result:"
 msgstr "最終結果です:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:229
+#: Pcbnew_zones.adoc:233
 msgid "image:images/Pcbnew_zone_add_similar_after.png[]"
 msgstr "image:images/Pcbnew_zone_add_similar_after.png[]"
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:230
+#: Pcbnew_zones.adoc:234
 #, no-wrap
 msgid "Editing zone: parameters"
 msgstr "ゾーンの編集: パラメータ"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:233
+#: Pcbnew_zones.adoc:237
 msgid ""
 "When right clicking on an outline, and using 'Edit Zone Params' the Zone "
 "params Dialog box will open. Initial parameters can be inputted . If the "
@@ -2147,13 +1513,13 @@ msgstr ""
 "ゾーンがすでに塗り潰されている場合には再塗り潰しが必要になります。"
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:234
+#: Pcbnew_zones.adoc:238
 #, no-wrap
 msgid "Final zone filling"
 msgstr "最終ゾーン塗り潰し"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:238
+#: Pcbnew_zones.adoc:242
 msgid ""
 "When the board is finished, one must fill or refill all zones. To do this:"
 msgstr ""
@@ -2161,20 +1527,20 @@ msgstr ""
 "せん。次のようにします。:"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:240
+#: Pcbnew_zones.adoc:244
 msgid ""
 "Activate the tool zones via the button image:images/icons/add_zone.png[]."
 msgstr ""
 "ボタン image:images/icons/add_zone.png[] によりゾーンのツールを実行します。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:241
+#: Pcbnew_zones.adoc:245
 msgid "Right click to display the pop-up menu."
 msgstr "右クリックしてコンテキストメニューを表示します。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:242
+#: Pcbnew_zones.adoc:246
 msgid ""
 "Use Fill or Refill All Zones: image:images/Pcbnew_fill_refill_all_zones.png[]"
 msgstr ""
@@ -2182,18 +1548,18 @@ msgstr ""
 "Pcbnew_fill_refill_all_zones.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:244
+#: Pcbnew_zones.adoc:248
 msgid "calculations can take some time, if the filling grid is small."
 msgstr "塗り潰しグリッドが小さいと計算に時間がかかることがあります。"
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:245
+#: Pcbnew_zones.adoc:249
 #, no-wrap
 msgid "Change zones net names"
 msgstr "ゾーンネット名の変更"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:249
+#: Pcbnew_zones.adoc:253
 msgid ""
 "After editing a schematic, you can change the name of any net. For instance "
 "VCC can be changed to +5V."
@@ -2202,7 +1568,7 @@ msgstr ""
 "+5V に変更可能です。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:252
+#: Pcbnew_zones.adoc:256
 msgid ""
 "When a global DRC control is made Pcbnew checks if the zone net name exists, "
 "and displays an error if not."
@@ -2211,7 +1577,7 @@ msgstr ""
 "をチェックし、もしそれがなければエラーを表示します。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:255
+#: Pcbnew_zones.adoc:259
 msgid ""
 "A manual parameter zone edition will be necessary to change the old name to "
 "the new one."
@@ -2220,19 +1586,19 @@ msgstr ""
 "を手作業で編集する必要があります。"
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:256
+#: Pcbnew_zones.adoc:260
 #, no-wrap
 msgid "Creating zones on technical layers"
 msgstr "テクニカルレイヤでのゾーン作成"
 
 #. type: Title ====
-#: Pcbnew_zones.adoc:258
+#: Pcbnew_zones.adoc:262
 #, no-wrap
 msgid "Creating zone limits"
 msgstr "ゾーン境界の作成"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:262
+#: Pcbnew_zones.adoc:266
 msgid ""
 "This is done using the button . The active layer must be a technical layer."
 msgstr ""
@@ -2240,7 +1606,7 @@ msgstr ""
 "カルレイヤでなければなりません。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:264
+#: Pcbnew_zones.adoc:268
 msgid "When clicking to start the zone outline, this dialog box is opened."
 msgstr ""
 "左クリックしてゾーン外形の作成を開始すると、このダイアログボックスが開きま"
@@ -2248,12 +1614,12 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:266
+#: Pcbnew_zones.adoc:270
 msgid "image:images/Pcbnew_technical_layer_zone_dialog.png[]"
 msgstr "image:images/ja/Pcbnew_technical_layer_zone_dialog.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:269
+#: Pcbnew_zones.adoc:273
 msgid ""
 "Select the technical layer to place the zone and draw the zone outline like "
 "explained previously for copper layers."
@@ -2262,39 +1628,39 @@ msgstr ""
 "ゾーン外形を作成します。"
 
 #. type: Title ====
-#: Pcbnew_zones.adoc:270
+#: Pcbnew_zones.adoc:274
 #, no-wrap
 msgid "Notes"
 msgstr "注"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:273
+#: Pcbnew_zones.adoc:277
 msgid "For editing outlines use the same way as for copper zones."
 msgstr "外形の編集は、導体ゾーンと同じ方法で行います。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:274
+#: Pcbnew_zones.adoc:278
 msgid "In necessary, cutout areas can be added."
 msgstr "必要に応じて、切り抜き領域を追加することも可能です。"
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:275
+#: Pcbnew_zones.adoc:279
 #, no-wrap
 msgid "Creating a Keepout area"
 msgstr "キープアウトエリアの作成"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:278
+#: Pcbnew_zones.adoc:282
 msgid "Select the tool image:images/icons/add_keepout_area.png[]"
 msgstr "ツール image:images/icons/add_keepout_area.png[] を選択します。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:280
+#: Pcbnew_zones.adoc:284
 msgid "The active layer should be a copper layer."
 msgstr "アクティブレイヤは導体レイヤである必要があります。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:283
+#: Pcbnew_zones.adoc:287
 msgid ""
 "After clicking on the starting point of a new keepout area, the dialog box "
 "is opened:"
@@ -2304,32 +1670,32 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_zones.adoc:285
+#: Pcbnew_zones.adoc:289
 msgid "image:images/Pcbnew_keepout_area_properties.png[]"
 msgstr "image:images/ja/Pcbnew_keepout_area_properties.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:287
+#: Pcbnew_zones.adoc:291
 msgid "One can select disallowed items:"
 msgstr "禁止するオプションを複数選択できます。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:289
+#: Pcbnew_zones.adoc:293
 msgid "tracks"
 msgstr "配線禁止"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:290
+#: Pcbnew_zones.adoc:294
 msgid "vias"
 msgstr "ビア禁止"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:291
+#: Pcbnew_zones.adoc:295
 msgid "copper pours"
 msgstr "塗りつぶし禁止（銅箔面）"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:294
+#: Pcbnew_zones.adoc:298
 msgid ""
 "When a track or a via is inside a keepout which does not allow it, a DRC "
 "error will be raised."
@@ -2338,7 +1704,7 @@ msgstr ""
 "す。"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:297
+#: Pcbnew_zones.adoc:301
 msgid ""
 "For copper zones, the area inside a keepout with no copper pour will be not "
 "filled. A keep-out area is a like a zone, so editing its outline is analog "
@@ -3095,7 +2461,7 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_routing.adoc:25 Pcbnew_general_operations.adoc:237
+#: Pcbnew_routing.adoc:25 Pcbnew_general_operations.adoc:257
 msgid "image:images/Pcbnew_preferences_menu.png[]"
 msgstr "image:images/ja/Pcbnew_preferences_menu.png[]"
 
@@ -3140,12 +2506,27 @@ msgid ""
 msgstr "*未接続の配線を削除* : 配線をやり直す時、冗長と見做した古い配線を自動的に削除します。\n"
 
 #. type: Plain text
-#: Pcbnew_routing.adoc:41
-#, no-wrap
+#: Pcbnew_routing.adoc:40
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*Magnetic Pads*: The graphic cursor becomes a pad, centered in the\n"
+#| "pad area.\n"
+#| "*Magnetic Tracks*: The graphic cursor becomes the track axis.\n"
 msgid ""
 "*Magnetic Pads*: The graphic cursor becomes a pad, centered in the\n"
 "pad area.\n"
-"*Magnetic Tracks*: The graphic cursor becomes the track axis.\n"
+msgstr ""
+"*マグネティックパッド* : カーソルの形状がパッドになり、パッド領域の中央に置かれます。\n"
+"*マグネティック配線* : カーソルの形状が配線軸になります。\n"
+
+#. type: Plain text
+#: Pcbnew_routing.adoc:41
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*Magnetic Pads*: The graphic cursor becomes a pad, centered in the\n"
+#| "pad area.\n"
+#| "*Magnetic Tracks*: The graphic cursor becomes the track axis.\n"
+msgid "*Magnetic Tracks*: The graphic cursor becomes the track axis.\n"
 msgstr ""
 "*マグネティックパッド* : カーソルの形状がパッドになり、パッド領域の中央に置かれます。\n"
 "*マグネティック配線* : カーソルの形状が配線軸になります。\n"
@@ -4840,77 +4221,89 @@ msgid "Paired layers"
 msgstr "ペアレイヤ"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:56
-msgid ""
-"The *Adhesives* layers (Copper and Component): ** These are used in the "
-"application of adhesive to stick SMD components to the circuit board, "
-"generally before wave soldering."
+#: Pcbnew_layers.adoc:54
+msgid "The *Adhesives* layers (Copper and Component):"
 msgstr ""
-"*接着 (ボンド)* レイヤ（表および裏）: ** 一般的にハンダディップ（フロー工程）"
-"の前に、SMDコンポーネントを回路基板に貼り付けるためのボンド塗布工程で使用され"
-"ます。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:60
+#: Pcbnew_layers.adoc:57
+#, fuzzy, no-wrap
+#| msgid "The *Adhesives* layers (Copper and Component): ** These are used in the application of adhesive to stick SMD components to the circuit board, generally before wave soldering."
 msgid ""
-"The *Solder Paste* layers paste SMD (Copper and Component): ** Used to "
-"produce a masks to allow solder paste to be placed on the pads of surface "
-"mount components, generally before reflow soldering.  In theory only surface "
-"mount pads occupy these layers."
-msgstr ""
-"*ハンダペースト* レイヤ（表および裏）: ** 一般的にはリフロー工程の前に、表面"
-"実装コンポーネントのパッド上にハンダペースト（クリームハンダ）を印刷するため"
-"のメタルマスクを作成するために使用されます。理論上は、表面実装パッドのみがこ"
-"れらのレイヤを占めます。"
+"** These are used in the application of adhesive to stick SMD components\n"
+"   to the circuit board, generally before wave soldering.\n"
+msgstr "*接着 (ボンド)* レイヤ（表および裏）: ** 一般的にハンダディップ（フロー工程）の前に、SMDコンポーネントを回路基板に貼り付けるためのボンド塗布工程で使用されます。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:62
-msgid ""
-"The *Silk Screen* layers (Copper and Component): ** They are the layers "
-"where the drawings of the components appear."
+#: Pcbnew_layers.adoc:59
+msgid "The *Solder Paste* layers paste SMD (Copper and Component):"
 msgstr ""
-"*シルクスクリーン* レイヤ（表および裏）: ** コンポーネントの図形要素（線や文"
-"字）を描くレイヤです。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:66
+#: Pcbnew_layers.adoc:63
+#, fuzzy, no-wrap
+#| msgid "The *Solder Paste* layers paste SMD (Copper and Component): ** Used to produce a masks to allow solder paste to be placed on the pads of surface mount components, generally before reflow soldering.  In theory only surface mount pads occupy these layers."
 msgid ""
-"The *Solder Mask* layers (Copper and Component): ** These define the solder "
-"masks. Normally all the pads appear on one or the other of these layers (or "
-"both for through pads) to prevent the varnish covering the pads."
+"** Used to produce a masks to allow solder paste to be placed on the\n"
+"   pads of surface mount components, generally before reflow soldering.\n"
+"   In theory only surface mount pads occupy these layers.\n"
+msgstr "*ハンダペースト* レイヤ（表および裏）: ** 一般的にはリフロー工程の前に、表面実装コンポーネントのパッド上にハンダペースト（クリームハンダ）を印刷するためのメタルマスクを作成するために使用されます。理論上は、表面実装パッドのみがこれらのレイヤを占めます。"
+
+#. type: Plain text
+#: Pcbnew_layers.adoc:65
+msgid "The *Silk Screen* layers (Copper and Component):"
 msgstr ""
-"*ハンダマスク* レイヤ（表および裏）: ** ハンダレジストのフォトマスクです。通"
-"常、すべてのパッドはこれらのレイヤのうち、どちらか一方（スルーホールのパッド"
-"の場合は両方）に現れ、レジスト膜がパッドを覆わないようにします。"
+
+#. type: Plain text
+#: Pcbnew_layers.adoc:67
+#, fuzzy, no-wrap
+#| msgid "The *Silk Screen* layers (Copper and Component): ** They are the layers where the drawings of the components appear."
+msgid "** They are the layers where the drawings of the components appear.\n"
+msgstr "*シルクスクリーン* レイヤ（表および裏）: ** コンポーネントの図形要素（線や文字）を描くレイヤです。"
+
+#. type: Plain text
+#: Pcbnew_layers.adoc:69
+msgid "The *Solder Mask* layers (Copper and Component):"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_layers.adoc:73
+#, fuzzy, no-wrap
+#| msgid "The *Solder Mask* layers (Copper and Component): ** These define the solder masks. Normally all the pads appear on one or the other of these layers (or both for through pads) to prevent the varnish covering the pads."
+msgid ""
+"** These define the solder masks. Normally all the pads appear on one or\n"
+"   the other of these layers (or both for through pads) to prevent the\n"
+"   varnish covering the pads.\n"
+msgstr "*ハンダマスク* レイヤ（表および裏）: ** ハンダレジストのフォトマスクです。通常、すべてのパッドはこれらのレイヤのうち、どちらか一方（スルーホールのパッドの場合は両方）に現れ、レジスト膜がパッドを覆わないようにします。"
 
 #. type: Title ====
-#: Pcbnew_layers.adoc:67
+#: Pcbnew_layers.adoc:74
 #, no-wrap
 msgid "Layers for general use"
 msgstr "汎用レイヤ"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:70
+#: Pcbnew_layers.adoc:77
 msgid "Comments"
 msgstr "コメント"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:71
+#: Pcbnew_layers.adoc:78
 msgid "E.C.O. 1"
 msgstr "ECO1"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:72
+#: Pcbnew_layers.adoc:79
 msgid "E.C.O. 2"
 msgstr "ECO2"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:73
+#: Pcbnew_layers.adoc:80
 msgid "Drawings"
 msgstr "図"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:77
+#: Pcbnew_layers.adoc:84
 msgid ""
 "These layers are for any use. They can be used for text such as instructions "
 "for assembly or wiring, or construction drawings, to be used to create a "
@@ -4921,110 +4314,120 @@ msgstr ""
 "に、これらのレイヤを使用することができます。"
 
 #. type: Title ====
-#: Pcbnew_layers.adoc:78
+#: Pcbnew_layers.adoc:85
 #, no-wrap
 msgid "Special layer"
 msgstr "特殊レイヤ"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:84
+#: Pcbnew_layers.adoc:88
 #, no-wrap
+msgid "*Edge Cuts* layer:\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_layers.adoc:92
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*Edge Cuts* layer:\n"
+#| "** this layer is reserved for the drawing of circuit board outline. Any\n"
+#| "element (graphic, texts...) placed on this layer appears on all the\n"
+#| "other layers. Use this layer only to draw board outlines.\n"
 msgid ""
-"*Edge Cuts* layer:\n"
 "** this layer is reserved for the drawing of circuit board outline. Any\n"
-"element (graphic, texts...) placed on this layer appears on all the\n"
-"other layers. Use this layer only to draw board outlines.\n"
+"   element (graphic, texts...) placed on this layer appears on all the\n"
+"   other layers. Use this layer only to draw board outlines.\n"
 msgstr ""
 "*Edge.Cuts (基板外形)* レイヤ:\n"
 "** このレイヤはプリント基板の外形図用に予約されています。このレイヤに配置されているすべての要素(グラフィック、テキスト…)は、他のすべてのレイヤに現れます。\n"
 "基板外形を作成するためにのみ、このレイヤを使用して下さい。\n"
 
 #. type: Title ===
-#: Pcbnew_layers.adoc:85
+#: Pcbnew_layers.adoc:93
 #, no-wrap
 msgid "Selection of the active layer"
 msgstr "アクティブレイヤの選択"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:88
+#: Pcbnew_layers.adoc:96
 msgid "The selection of the active working layer can be done in several ways:"
 msgstr "以下のようないくつかの方法でアクティブな作業レイヤの選択が可能です:"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:90
+#: Pcbnew_layers.adoc:98
 msgid "Using the right toolbar (Layer manager)."
 msgstr "右ツールバー（レイヤマネジャー）を使用する。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:91
+#: Pcbnew_layers.adoc:99
 msgid "Using the upper toolbar."
 msgstr "上部ツールバーを使用する。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:92
+#: Pcbnew_layers.adoc:100
 msgid "With the pop-up window (activated with the right mouse button)."
 msgstr "（マウスの右ボタンで開く）ポップアップウィンドウ使用する。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:93
+#: Pcbnew_layers.adoc:101
 msgid "Using the + and - keys (works on copper layers only)."
 msgstr "“＋” と “－” キーを使用する（導体レイヤ上のみ）。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:94
+#: Pcbnew_layers.adoc:102
 msgid "By hot keys."
 msgstr "ホットキーを使用する。"
 
 #. type: Title ====
-#: Pcbnew_layers.adoc:95
+#: Pcbnew_layers.adoc:103
 #, no-wrap
 msgid "Selection using the layer manager"
 msgstr "レイヤマネジャーを使用した選択"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:98
+#: Pcbnew_layers.adoc:106
 msgid "image:images/Pcbnew_layer_manager_pane.png[]"
 msgstr "image:images/ja/Pcbnew_layer_manager_pane.png[]"
 
 #. type: Title ====
-#: Pcbnew_layers.adoc:99
+#: Pcbnew_layers.adoc:107
 #, no-wrap
 msgid "Selection using the upper toolbar"
 msgstr "上部ツールバーを使用した選択"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:102
+#: Pcbnew_layers.adoc:110
 msgid "image:images/Pcbnew_layer_selection_dropdown.png[]"
 msgstr "image:images/ja/Pcbnew_layer_selection_dropdown.png[]"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:104
+#: Pcbnew_layers.adoc:112
 msgid "This directly selects the working layer."
 msgstr "これは作業レイヤを直接選択します。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:106
+#: Pcbnew_layers.adoc:114
 msgid "Hot keys to select the working layer are displayed."
 msgstr ""
 "作業レイヤを選択するためのホットキーが表示されます（ PgUp, PgDn など一部の"
 "み）。"
 
 #. type: Title ====
-#: Pcbnew_layers.adoc:107
+#: Pcbnew_layers.adoc:115
 #, no-wrap
 msgid "Selection using the pop-up window"
 msgstr "ポップアップウィンドウを使用した選択"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:110
+#: Pcbnew_layers.adoc:118
 msgid "image:images/Pcbnew_layer_selection_popup.png[]"
 msgstr "image:images/ja/Pcbnew_layer_selection_popup.png[]"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:113
+#: Pcbnew_layers.adoc:121
 msgid ""
 "The Pop-up window opens a menu window which provides a choice for the "
 "working layer"
@@ -5034,18 +4437,18 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:115
+#: Pcbnew_layers.adoc:123
 msgid "image:images/Pcbnew_layer_selection_dialog.png[]"
 msgstr "image:images/ja/Pcbnew_layer_selection_dialog.png[]"
 
 #. type: Title ===
-#: Pcbnew_layers.adoc:116
+#: Pcbnew_layers.adoc:124
 #, no-wrap
 msgid "Selection of the Layers for Vias"
 msgstr "ビア用レイヤの選択"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:121
+#: Pcbnew_layers.adoc:129
 msgid ""
 "If the *Add Tracks and Vias* icon is selected on the right hand toolbar, the "
 "Pop-Up window provides the option to change the layer pair used for vias:"
@@ -5055,12 +4458,12 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:123
+#: Pcbnew_layers.adoc:131
 msgid "image:images/Pcbnew_via_layer_pair_popup.png[]"
 msgstr "image:images/ja/Pcbnew_via_layer_pair_popup.png[]"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:126
+#: Pcbnew_layers.adoc:134
 msgid ""
 "This selection opens a menu window which provides choice of the layers used "
 "for vias."
@@ -5070,12 +4473,12 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:128
+#: Pcbnew_layers.adoc:136
 msgid "image:images/Pcbnew_via_layer_pair_dialog.png[]"
 msgstr "image:images/ja/Pcbnew_via_layer_pair_dialog.png[]"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:131
+#: Pcbnew_layers.adoc:139
 msgid ""
 "When a via is placed the working (active) layer is automatically switched to "
 "the alternate layer of the layer pair used for the vias."
@@ -5084,7 +4487,7 @@ msgstr ""
 "のもう一方のレイヤに自動的に切り替わります。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:134
+#: Pcbnew_layers.adoc:142
 msgid ""
 "One can also switch to an other active layer by hot keys, and if a track is "
 "in progress, a via will be inserted."
@@ -5093,13 +4496,13 @@ msgstr ""
 "の場合にはビアが挿入されます。"
 
 #. type: Title ===
-#: Pcbnew_layers.adoc:135
+#: Pcbnew_layers.adoc:143
 #, no-wrap
 msgid "Using the high-contrast mode"
 msgstr "ハイコントラストモードの使用"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:139
+#: Pcbnew_layers.adoc:147
 msgid ""
 "This mode is entered when the tool (in the left toolbar) is activated: image:"
 "images/icons/contrast_mode.png[]"
@@ -5108,7 +4511,7 @@ msgstr ""
 "合、このモードになります: image:images/icons/contrast_mode.png[]"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:142
+#: Pcbnew_layers.adoc:150
 msgid ""
 "When using this mode, the active layer is displayed like in the normal mode, "
 "but all others layers are displayed in gray color."
@@ -5117,18 +4520,18 @@ msgstr ""
 "他の全てのレイヤはグレイカラー表示になります。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:144
+#: Pcbnew_layers.adoc:152
 msgid "There are two useful cases:"
 msgstr "これは次の２つの場合に役立ちます:"
 
 #. type: Title ====
-#: Pcbnew_layers.adoc:145
+#: Pcbnew_layers.adoc:153
 #, no-wrap
 msgid "Copper layers in high-contrast mode"
 msgstr "ハイコントラストモードの導体レイヤ"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:149
+#: Pcbnew_layers.adoc:157
 msgid ""
 "When a board uses more than four layers, this option allows the active "
 "copper layer to seen more easily:"
@@ -5137,37 +4540,37 @@ msgstr ""
 "やすくさせることができます:"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:151
+#: Pcbnew_layers.adoc:159
 #, no-wrap
 msgid "*Normal mode* (back side copper layer active):\n"
 msgstr "*ノーマルモード* (裏面導体レイヤ・アクティブ):\n"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:153
+#: Pcbnew_layers.adoc:161
 msgid "image:images/Pcbnew_copper_layers_contrast_normal.png[]"
 msgstr "image:images/Pcbnew_copper_layers_contrast_normal.png[]"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:155
+#: Pcbnew_layers.adoc:163
 #, no-wrap
 msgid "*High-contrast mode* (back side copper layer active):\n"
 msgstr "*ハイコントラストモード* (裏面導体レイヤ・アクティブ):\n"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:157
+#: Pcbnew_layers.adoc:165
 msgid "image:images/Pcbnew_copper_layers_contrast_high.png[]"
 msgstr "image:images/Pcbnew_copper_layers_contrast_high.png[]"
 
 #. type: Title ====
-#: Pcbnew_layers.adoc:158
+#: Pcbnew_layers.adoc:166
 #, no-wrap
 msgid "Technical layers"
 msgstr "テクニカルレイヤ"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:162
+#: Pcbnew_layers.adoc:170
 msgid ""
 "The other case is when it is necessary to examine solder paste layers and "
 "solder mask layers, that are usually not displayed."
@@ -5176,31 +4579,31 @@ msgstr ""
 "る必要がある場合で、これらは通常表示されません。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:164
+#: Pcbnew_layers.adoc:172
 msgid "Masks on pads are displayed if this mode is active."
 msgstr "このモードが有効な場合、パッド上にマスクが表示されます。"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:166
+#: Pcbnew_layers.adoc:174
 #, no-wrap
 msgid "*Normal mode* (front side solder mask layer active):\n"
 msgstr "*ノーマルモード* （表面レジストレイヤ・アクティブ） :\n"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:168
+#: Pcbnew_layers.adoc:176
 msgid "image:images/Pcbnew_technical_layers_contrast_normal.png[]"
 msgstr "image:images/Pcbnew_technical_layers_contrast_normal.png[]"
 
 #. type: Plain text
-#: Pcbnew_layers.adoc:170
+#: Pcbnew_layers.adoc:178
 #, no-wrap
 msgid "*High-contrast mode* (front side solder mask layer active):\n"
 msgstr "*ハイコントラストモード* （表面レジストレイヤ・アクティブ） :\n"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_layers.adoc:171
+#: Pcbnew_layers.adoc:179
 msgid "image:images/Pcbnew_technical_layers_contrast_high.png[]"
 msgstr "image:images/Pcbnew_technical_layers_contrast_high.png[]"
 
@@ -6054,7 +5457,7 @@ msgid "image:images/Pcbnew_array_dialog_grid.png[]"
 msgstr "image:images/ja/Pcbnew_array_dialog_grid.png[]"
 
 #. type: Title =====
-#: Pcbnew_editing_tools.adoc:98 Pcbnew_editing_tools.adoc:162
+#: Pcbnew_editing_tools.adoc:98 Pcbnew_editing_tools.adoc:172
 #, no-wrap
 msgid "Geometric options"
 msgstr "幾何学的オプション"
@@ -6098,16 +5501,13 @@ msgstr ""
 "グリッドの方向は下から上となる。）\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:110
-#, no-wrap
-msgid "*x Offset*: start each row this distance to the right of the previous\n"
-msgstr "*横 (x) オフセット*: 先行する行に対し、各行はこの距離だけ右にずれた\n"
-
-#. type: Plain text
 #: Pcbnew_editing_tools.adoc:111
-#, no-wrap
-msgid "one\n"
-msgstr "ところから始まる（オフセットは１行ごとに加算される）。\n"
+#, fuzzy, no-wrap
+#| msgid "*x Offset*: start each row this distance to the right of the previous\n"
+msgid ""
+"*x Offset*: start each row this distance to the right of the previous\n"
+"one\n"
+msgstr "*横 (x) オフセット*: 先行する行に対し、各行はこの距離だけ右にずれた\n"
 
 #. type: Plain text
 #: Pcbnew_editing_tools.adoc:112
@@ -6162,7 +5562,7 @@ msgid "image:images/Pcbnew_array_grid_stagger_cols_3.png[]"
 msgstr "image:images/Pcbnew_array_grid_stagger_cols_3.png[]"
 
 #. type: Title =====
-#: Pcbnew_editing_tools.adoc:125 Pcbnew_editing_tools.adoc:173
+#: Pcbnew_editing_tools.adoc:125 Pcbnew_editing_tools.adoc:183
 #, no-wrap
 msgid "Numbering options"
 msgstr "ナンバリング・オプション"
@@ -6182,7 +5582,7 @@ msgstr ""
 "右から左または下から上となる。\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:136
+#: Pcbnew_editing_tools.adoc:137
 #, no-wrap
 msgid ""
 "*Reverse numbering on alternate row/columns*: If selected, the numbering order\n"
@@ -6198,28 +5598,60 @@ msgstr ""
 "反対側が下から上のような場合に役立ちます。）\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:137
-#, no-wrap
-msgid "*Restart numbering*: if laying out using items that already have numbers,\n"
-msgstr "*自動ナンバリング*: 既に番号を持っているアイテムを使ってレイアウトする場合、\n"
-
-#. type: Plain text
-#: Pcbnew_editing_tools.adoc:138
-#, no-wrap
-msgid "reset to the start, otherwise continue if possible from this items number\n"
+#: Pcbnew_editing_tools.adoc:140
+#, fuzzy, no-wrap
+#| msgid "reset to the start, otherwise continue if possible from this items number\n"
+msgid ""
+"*Restart numbering*: if laying out using items that already have numbers,\n"
+"reset to the start, otherwise continue if possible from this items number\n"
 msgstr "開始時にリセットするか、このアイテムの番号から続けてナンバリングする。\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:145
-#, no-wrap
+#: Pcbnew_editing_tools.adoc:142
+#, fuzzy, no-wrap
+#| msgid "Numbering options"
+msgid "*Numbering scheme*\n"
+msgstr "ナンバリング・オプション"
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:146
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*Numbering scheme*\n"
+#| "** *Continuous*: the numbering just continues across a row/column break - if\n"
+#| "  the last item in the first row is numbered \"7\", the first item in the second\n"
+#| "  row will be \"8\".\n"
+#| "** *Co-ordinate*: the numbering uses a two-axis scheme where the\n"
+#| "  number is made up of the row and column index. Which one comes first\n"
+#| "  (row or column) is determined by the numbering direction.\n"
 msgid ""
-"*Numbering scheme*\n"
 "** *Continuous*: the numbering just continues across a row/column break - if\n"
-"  the last item in the first row is numbered \"7\", the first item in the second\n"
-"  row will be \"8\".\n"
+"   the last item in the first row is numbered \"7\", the first item in the second\n"
+"   row will be \"8\".\n"
+msgstr ""
+"*ナンバリングの方式*\n"
+"** *連続*: 中断された行／列の番号に続いてナンバリングする - \n"
+"  もし、最初の行の最後のアイテムの番号が ”7” なら、次の行の最初の\n"
+"  アイテムの番号は ”8” となる。\n"
+"** *組み合わせ*: ナンバリングに２つの軸（Ｘ，Ｙ）を使用する。\n"
+"番号は行と列のインデックスから作られ、どちら（行または列）が先\n"
+"かは、ナンバリングの方向による。\n"
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:150
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*Numbering scheme*\n"
+#| "** *Continuous*: the numbering just continues across a row/column break - if\n"
+#| "  the last item in the first row is numbered \"7\", the first item in the second\n"
+#| "  row will be \"8\".\n"
+#| "** *Co-ordinate*: the numbering uses a two-axis scheme where the\n"
+#| "  number is made up of the row and column index. Which one comes first\n"
+#| "  (row or column) is determined by the numbering direction.\n"
+msgid ""
 "** *Co-ordinate*: the numbering uses a two-axis scheme where the\n"
-"  number is made up of the row and column index. Which one comes first\n"
-"  (row or column) is determined by the numbering direction.\n"
+"   number is made up of the row and column index. Which one comes first\n"
+"   (row or column) is determined by the numbering direction.\n"
 msgstr ""
 "*ナンバリングの方式*\n"
 "** *連続*: 中断された行／列の番号に続いてナンバリングする - \n"
@@ -6232,14 +5664,36 @@ msgstr ""
 #. type: Plain text
 #: Pcbnew_editing_tools.adoc:152
 #, no-wrap
+msgid "*Axis numberings*: what \"alphabet\" to use to number the axes. Choices are\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:154
+#, no-wrap
+msgid "** *Numerals* for normal integer indices\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:156
+#, no-wrap
+msgid "** *Hexadecimal* for base-16 indexing\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:160
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*Axis numberings*: what \"alphabet\" to use to number the axes. Choices are\n"
+#| "** *Numerals* for normal integer indices\n"
+#| "** *Hexadecimal* for base-16 indexing\n"
+#| "** *Alphabetic, minus IOSQXZ*, a common scheme for electronic components,\n"
+#| "  recommended by ASME Y14.35M-1997 sec. 5.2 (previously MIL-STD-100 sec. 406.5)\n"
+#| "  to avoid confusion with numerals.\n"
+#| "** *Full alphabet* from A-Z.\n"
 msgid ""
-"*Axis numberings*: what \"alphabet\" to use to number the axes. Choices are\n"
-"** *Numerals* for normal integer indices\n"
-"** *Hexadecimal* for base-16 indexing\n"
 "** *Alphabetic, minus IOSQXZ*, a common scheme for electronic components,\n"
-"  recommended by ASME Y14.35M-1997 sec. 5.2 (previously MIL-STD-100 sec. 406.5)\n"
-"  to avoid confusion with numerals.\n"
-"** *Full alphabet* from A-Z.\n"
+"   recommended by ASME Y14.35M-1997 sec. 5.2 (previously MIL-STD-100 sec. 406.5)\n"
+"   to avoid confusion with numerals.\n"
 msgstr ""
 "*軸のナンバリング*: 軸ナンバリングで使用する番号の ”文字(alphabet)” 。以下から選択する。\n"
 "** *数値* - 通常の整数表示\n"
@@ -6249,14 +5703,20 @@ msgstr ""
 "使われる文字を除いたもの\n"
 "** *アルファベット、２６文字全て* A から Z\n"
 
+#. type: Plain text
+#: Pcbnew_editing_tools.adoc:162
+#, no-wrap
+msgid "** *Full alphabet* from A-Z.\n"
+msgstr ""
+
 #. type: Title ====
-#: Pcbnew_editing_tools.adoc:153
+#: Pcbnew_editing_tools.adoc:163
 #, no-wrap
 msgid "Circular arrays"
 msgstr "円配列"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:159
+#: Pcbnew_editing_tools.adoc:169
 msgid ""
 "Circular arrays lay out items around a circle or a circular arc. The circle "
 "is defined by the location of the selection (or the centre of a selected "
@@ -6269,12 +5729,12 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:161
+#: Pcbnew_editing_tools.adoc:171
 msgid "image:images/Pcbnew_array_dialog_circular.png[]"
 msgstr "image:images/ja/Pcbnew_array_dialog_circular.png[]"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:166
+#: Pcbnew_editing_tools.adoc:176
 #, no-wrap
 msgid ""
 "*x Centre*, *y Centre*: The centre of the circle. The radius field\n"
@@ -6284,7 +5744,7 @@ msgstr ""
 "は中心位置を入力する度に自動更新される。\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:168
+#: Pcbnew_editing_tools.adoc:178
 #, no-wrap
 msgid ""
 "*Angle*: The angular difference between two adjacent items in the\n"
@@ -6294,13 +5754,13 @@ msgstr ""
 "０をセットすると、円は ”数” フィールドの値で分割される。\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:169
+#: Pcbnew_editing_tools.adoc:179
 #, no-wrap
 msgid "*Count*: Number of items in the array (including the original item)\n"
 msgstr "*数*: 配列のアイテム数 (オリジナルアイテムを含む)\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:172
+#: Pcbnew_editing_tools.adoc:182
 #, no-wrap
 msgid ""
 "*Rotate*: Rotate each item around its own location. Otherwise, the\n"
@@ -6312,7 +5772,7 @@ msgstr ""
 "されていない場合、角型パッドは常に直立状態を保つ）\n"
 
 #. type: Plain text
-#: Pcbnew_editing_tools.adoc:179
+#: Pcbnew_editing_tools.adoc:189
 msgid ""
 "Circular arrays have only one dimension and a simpler geometry than grids. "
 "The meanings of the available options are the same as for grids.  Items are "
@@ -6787,34 +6247,38 @@ msgstr ""
 "上部メニューバー（メインウィンドウ上部にあるテキストベースのメニュー）。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:10
+#: Pcbnew_general_operations.adoc:11
 msgid "top toolbar menu."
 msgstr "上部ツールバー。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:11
+#: Pcbnew_general_operations.adoc:13
 msgid "right toolbar menu."
 msgstr "右ツールバー。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:12
+#: Pcbnew_general_operations.adoc:15
 msgid "left toolbar menu."
 msgstr "左ツールバー。"
 
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:17
+msgid "mouse buttons (menu options). Specifically:"
+msgstr ""
+
 # 07102015：誤訳訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:15
+#: Pcbnew_general_operations.adoc:20
+#, fuzzy, no-wrap
+#| msgid "mouse buttons (menu options). Specifically: ** The right-hand mouse button reveals a Pop up menu the content of which depends on the element under the mouse arrow."
 msgid ""
-"mouse buttons (menu options). Specifically: ** The right-hand mouse button "
-"reveals a Pop up menu the content of which depends on the element under the "
-"mouse arrow."
-msgstr ""
-"マウスボタン（メニュー選択）。特に: ** マウスの右ボタンをクリックすると、マウ"
-"スの矢印の下にある要素に応じた内容のコンテキストメニューを表示します。"
+"** The right-hand mouse button reveals a Pop up menu the content of\n"
+"   which depends on the element under the mouse arrow.\n"
+msgstr "マウスボタン（メニュー選択）。特に: ** マウスの右ボタンをクリックすると、マウスの矢印の下にある要素に応じた内容のコンテキストメニューを表示します。"
 
 # 07102015：訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:18
+#: Pcbnew_general_operations.adoc:24
 msgid ""
 "keyboard (Function keys F1, F2, F3, F4, Shift, Delete, +, - Page Up, Page "
 "Down and “space” bar). The “Escape” key generally cancels an operation in "
@@ -6825,7 +6289,7 @@ msgstr ""
 "を取り消します。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:21
+#: Pcbnew_general_operations.adoc:27
 msgid ""
 "The screen-shot below illustrates some of the possible accesses to these "
 "operations:"
@@ -6833,67 +6297,92 @@ msgstr "次のスクリーンショットは、利用可能な操作法のいく
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:23
+#: Pcbnew_general_operations.adoc:29
 msgid "image:images/Right-click_legacy_menu.png[]"
 msgstr "image:images/ja/Right-click_legacy_menu.png[]"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:24
+#: Pcbnew_general_operations.adoc:30
 #, no-wrap
 msgid "Mouse commands"
 msgstr "マウスコマンド"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:26
+#: Pcbnew_general_operations.adoc:32
 #, no-wrap
 msgid "Basic commands"
 msgstr "基本的なコマンド"
 
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:35
+#, fuzzy
+#| msgid "Right button"
+msgid "Left button"
+msgstr "右ボタン"
+
 # 07102015：訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:33
+#: Pcbnew_general_operations.adoc:38
+#, fuzzy, no-wrap
+#| msgid "Left button ** Single click displays the characteristics of the module or text under the cursor to the lower status bar.  ** Double click displays the editor (if the element is editable) of the element under the cursor."
 msgid ""
-"Left button ** Single click displays the characteristics of the module or "
-"text under the cursor to the lower status bar.  ** Double click displays the "
-"editor (if the element is editable) of the element under the cursor."
+"** Single click displays the characteristics of the module or text under\n"
+"   the cursor to the lower status bar.\n"
+msgstr "左ボタン ** シングルクリック によりカーソル下のフットプリントやテキストの属性を下部のステータスバーに表示します。 ** ダブルクリック すると、（要素が編集可能な場合）カーソルの下の要素のエディタが起動されます。"
+
+# 07102015：訂正
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:41
+#, fuzzy, no-wrap
+#| msgid "Left button ** Single click displays the characteristics of the module or text under the cursor to the lower status bar.  ** Double click displays the editor (if the element is editable) of the element under the cursor."
+msgid ""
+"** Double click displays the editor (if the element is editable) of the\n"
+"   element under the cursor.\n"
+msgstr "左ボタン ** シングルクリック によりカーソル下のフットプリントやテキストの属性を下部のステータスバーに表示します。 ** ダブルクリック すると、（要素が編集可能な場合）カーソルの下の要素のエディタが起動されます。"
+
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:43
+msgid "Centre button/wheel"
 msgstr ""
-"左ボタン ** シングルクリック によりカーソル下のフットプリントやテキストの属性"
-"を下部のステータスバーに表示します。 ** ダブルクリック すると、（要素が編集可"
-"能な場合）カーソルの下の要素のエディタが起動されます。"
+
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:46
+#, no-wrap
+msgid ""
+"** Rapid zoom and some commands in layer manager. A 2 button mouse is\n"
+"   undesirable.\n"
+msgstr ""
 
 # 07102015：変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:39
+#: Pcbnew_general_operations.adoc:50
+#, fuzzy, no-wrap
+#| msgid "Centre button/wheel ** Rapid zoom and some commands in layer manager. A 2 button mouse is undesirable.  ** Hold down the centre button and draw a rectangle to zoom to the described area. The rotation of the mouse wheel will allow you to zoom in and zoom out."
 msgid ""
-"Centre button/wheel ** Rapid zoom and some commands in layer manager. A 2 "
-"button mouse is undesirable.  ** Hold down the centre button and draw a "
-"rectangle to zoom to the described area. The rotation of the mouse wheel "
-"will allow you to zoom in and zoom out."
-msgstr ""
-"中央ボタン／ホイール ** 高速ズームとレイヤマネージャでのコマンドに使われま"
-"す。２ボタンマウスは好ましくありません。 ** 特定領域にズームするためには、中"
-"央ボタンを押したままで矩形を描きます。マウスホイールの回転により、ズームイン"
-"とズームアウトすることができます。"
+"** Hold down the centre button and draw a rectangle to zoom to the\n"
+"   described area. The rotation of the mouse wheel will allow you to zoom\n"
+"   in and zoom out.\n"
+msgstr "中央ボタン／ホイール ** 高速ズームとレイヤマネージャでのコマンドに使われます。２ボタンマウスは好ましくありません。 ** 特定領域にズームするためには、中央ボタンを押したままで矩形を描きます。マウスホイールの回転により、ズームインとズームアウトすることができます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:40
+#: Pcbnew_general_operations.adoc:52
 msgid "Right button"
 msgstr "右ボタン"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:41
+#: Pcbnew_general_operations.adoc:54
 msgid "Displays a pop-up menu"
 msgstr "コンテキストメニューを表示します"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:42
+#: Pcbnew_general_operations.adoc:55
 #, no-wrap
 msgid "Operations on blocks"
 msgstr "ブロックでの操作"
 
 # 07102015：句読点追加
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:47
+#: Pcbnew_general_operations.adoc:60
 msgid ""
 "Operations to move, invert (mirror), copy, rotate and delete a block are all "
 "available via the pop-up menu. In addition the view can zoom to the area "
@@ -6904,7 +6393,7 @@ msgstr ""
 
 # 07102015：変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:51
+#: Pcbnew_general_operations.adoc:64
 msgid ""
 "The framework of the block is traced by moving the mouse whilst holding down "
 "the left mouse button. The operation is executed when the button is released."
@@ -6914,7 +6403,7 @@ msgstr ""
 
 # 07102015：誤訳訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:56
+#: Pcbnew_general_operations.adoc:69
 msgid ""
 "By holding down one of the hotkeys “Shift” or “Ctrl”, or both keys “Shift "
 "and Ctrl” together, whilst the block is drawn the operation invert, rotate "
@@ -6926,7 +6415,7 @@ msgstr ""
 
 # 07102015：訂正
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:70
+#: Pcbnew_general_operations.adoc:83
 #, no-wrap
 msgid ""
 "| Action | Effect\n"
@@ -6954,12 +6443,12 @@ msgstr ""
 "| ブロックをズームします\n"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:73
+#: Pcbnew_general_operations.adoc:86
 msgid "When moving a block:"
 msgstr "ブロックを移動する場合:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:76
+#: Pcbnew_general_operations.adoc:89
 msgid ""
 "Move block to new position and operate left mouse button to place the "
 "elements."
@@ -6968,7 +6457,7 @@ msgstr ""
 "ます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:78
+#: Pcbnew_general_operations.adoc:91
 msgid ""
 "To cancel the operation use the right mouse button and select Cancel Block "
 "from the menu (or press the Esc key)."
@@ -6978,7 +6467,7 @@ msgstr ""
 
 # 07102015：誤訳訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:82
+#: Pcbnew_general_operations.adoc:95
 msgid ""
 "Alternatively if no key is pressed when drawing the block use the right "
 "mouse button to display the pop-up menu and select the required operation."
@@ -6988,7 +6477,7 @@ msgstr ""
 
 # 07102015：誤訳訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:85
+#: Pcbnew_general_operations.adoc:98
 msgid ""
 "For each block operation a selection window enables the action to be limited "
 "to only some elements."
@@ -6997,13 +6486,13 @@ msgstr ""
 "けに限定して操作することができます。"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:86
+#: Pcbnew_general_operations.adoc:99
 #, no-wrap
 msgid "Selection of grid size"
 msgstr "グリッドサイズの選択"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:89
+#: Pcbnew_general_operations.adoc:102
 msgid ""
 "During element layout the cursor moves on a grid. The grid can be turned on "
 "or off using the icon on the left toolbar."
@@ -7013,7 +6502,7 @@ msgstr ""
 
 # 07102015：訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:94
+#: Pcbnew_general_operations.adoc:107
 msgid ""
 "Any of the pre-defined grid sizes, or a User Defined grid, can be chosen "
 "using the pop-up window, or the drop-down selector on the toolbar at the top "
@@ -7026,18 +6515,18 @@ msgstr ""
 "法 -> グリッド を選択してユーザグリッドで設定します。"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:95
+#: Pcbnew_general_operations.adoc:108
 #, no-wrap
 msgid "Adjustment of the zoom level"
 msgstr "ズームレベルの調整"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:98
+#: Pcbnew_general_operations.adoc:111
 msgid "To change the zoom level:"
 msgstr "ズームレベルを変更するには:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:100
+#: Pcbnew_general_operations.adoc:113
 msgid ""
 "Open the pop-up window (using the right mouse button) and then select the "
 "desired zoom."
@@ -7046,23 +6535,43 @@ msgstr ""
 "します。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:105
-msgid ""
-"Or use the following function keys: ** `F1`: Enlarge (zoom in)  ** `F2`: "
-"Reduce (zoom out)  ** `F3`: Redraw the display ** `F4`: Centre view at the "
-"current cursor position"
-msgstr ""
-"あるいはファンクションキーを使います: ** `F1`: 拡大 (ズームイン) ** `F2`: 縮"
-"小 (ズームアウト) ** `F3`: 画面を再描画 ** `F4`: 現在のカーソル位置を中央にし"
-"て表示"
+#: Pcbnew_general_operations.adoc:115
+#, fuzzy
+#| msgid "From this toolbar, the following functions are available:"
+msgid "Or use the following function keys:"
+msgstr "このツールバーから、次の機能が使用可能です:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:106
+#: Pcbnew_general_operations.adoc:117
+#, no-wrap
+msgid "** `F1`: Enlarge (zoom in)\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:119
+#, no-wrap
+msgid "** `F2`: Reduce (zoom out)\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:121
+#, no-wrap
+msgid "** `F3`: Redraw the display\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:123
+#, no-wrap
+msgid "** `F4`: Centre view at the current cursor position\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_general_operations.adoc:125
 msgid "Or rotate the mouse wheel."
 msgstr "あるいはマウスホイールを回転させます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:107
+#: Pcbnew_general_operations.adoc:127
 msgid ""
 "Or hold down the middle mouse button and draw a rectangle to zoom to the "
 "described area."
@@ -7070,13 +6579,13 @@ msgstr ""
 "あるいはマウス中央ボタンを押して、四角形を描きその領域をズームインします。"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:108
+#: Pcbnew_general_operations.adoc:128
 #, no-wrap
 msgid "Displaying cursor coordinates"
 msgstr "カーソル座標の表示"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:111
+#: Pcbnew_general_operations.adoc:131
 msgid ""
 "The cursor coordinates are displayed in inches or millimetres as selected "
 "using the 'In' or 'mm' icons on the left hand side toolbar."
@@ -7085,7 +6594,7 @@ msgstr ""
 "座標は ‘インチ’ または ‘mm’ で表示されます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:113
+#: Pcbnew_general_operations.adoc:133
 msgid ""
 "Whichever unit is selected Pcbnew always works to a precision of 1/10,000 of "
 "inch."
@@ -7093,22 +6602,22 @@ msgstr ""
 "どちらの単位が選択されても、Pcbnew は常に 1/10,000 インチ精度で稼働します。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:115
+#: Pcbnew_general_operations.adoc:135
 msgid "The status bar at the bottom of the screen gives:"
 msgstr "以下は画面下部のステータスバー表示です:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:117
+#: Pcbnew_general_operations.adoc:137
 msgid "The current zoom setting."
 msgstr "現在のズーム設定。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:118
+#: Pcbnew_general_operations.adoc:138
 msgid "The absolute position of the cursor."
 msgstr "カーソルの絶対位置。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:119
+#: Pcbnew_general_operations.adoc:139
 msgid ""
 "The relative position of the cursor. Note the relative coordinates (x,y) can "
 "be set to (0,0) at any position by pressing the space bar. The cursor "
@@ -7119,7 +6628,7 @@ msgstr ""
 "相対表示されます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:121
+#: Pcbnew_general_operations.adoc:141
 msgid ""
 "In addition the relative position of the cursor can be displayed using its "
 "polar co-ordinates (ray + angle). This can be turned on and off using the "
@@ -7130,18 +6639,18 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:123
+#: Pcbnew_general_operations.adoc:143
 msgid "image:images/Pcbnew_coordinate_status_display.png[]"
 msgstr "image:images/ja/Pcbnew_coordinate_status_display.png[]"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:124
+#: Pcbnew_general_operations.adoc:144
 #, no-wrap
 msgid "Keyboard commands - hotkeys"
 msgstr "キーボードコマンド - ホットキー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:127
+#: Pcbnew_general_operations.adoc:147
 msgid ""
 "Many commands are accessible directly with the keyboard. Selection can be "
 "either upper or lower case. Most hot keys are shown in menus. Some hot keys "
@@ -7149,43 +6658,43 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:129
+#: Pcbnew_general_operations.adoc:149
 msgid ""
 "`Delete`: deletes a module or a track. (_Available only if the Module tool "
 "or the track tool is active_)"
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:130
+#: Pcbnew_general_operations.adoc:150
 msgid ""
 "`V`: if the track tool is active switches working layer or place via, if a "
 "track is in progress."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:131
+#: Pcbnew_general_operations.adoc:151
 msgid "`+` and `-`: select next or previous layer."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:132
+#: Pcbnew_general_operations.adoc:152
 msgid "`?`: display the list off all hot keys."
 msgstr ""
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:133
+#: Pcbnew_general_operations.adoc:153
 msgid "`Space`: reset relative coordinates."
 msgstr ""
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:134
+#: Pcbnew_general_operations.adoc:154
 #, fuzzy, no-wrap
 #| msgid "Operations on blocks"
 msgid "Operation on blocks"
 msgstr "ブロックでの操作"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:139
+#: Pcbnew_general_operations.adoc:159
 msgid ""
 "Operations to move, invert (mirror), copy, rotate and delete a block are all "
 "available from the pop-up menu. In addition the view can zoom to that "
@@ -7196,7 +6705,7 @@ msgstr ""
 "す。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:143
+#: Pcbnew_general_operations.adoc:163
 msgid ""
 "The framework of the block is traced by moving the mouse whilst holding down "
 "the left mouse button. The operation is carried out on releasing the button."
@@ -7206,7 +6715,7 @@ msgstr ""
 
 # 07102015：誤訳訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:148
+#: Pcbnew_general_operations.adoc:168
 msgid ""
 "By holding down one of the keys “Shift” or “Ctrl” or both “Shift and Ctrl” "
 "together or “Alt”, whilst the block is drawn the operation invert, rotate, "
@@ -7217,7 +6726,7 @@ msgstr ""
 "が下表に示されるように自動選択されます:"
 
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:162
+#: Pcbnew_general_operations.adoc:182
 #, no-wrap
 msgid ""
 "| Action | Effect\n"
@@ -7246,7 +6755,7 @@ msgstr ""
 
 # 07102015：誤訳訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:166
+#: Pcbnew_general_operations.adoc:186
 msgid ""
 "When a block command is made, a dialog window is displayed, and items "
 "involved in this command can be chosen."
@@ -7255,7 +6764,7 @@ msgstr ""
 "るアイテムを選択することができます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:169
+#: Pcbnew_general_operations.adoc:189
 msgid ""
 "Any of the commands above can be cancelled via the same pop-up menu or by "
 "pressing the Escape key (`Esc`)."
@@ -7265,19 +6774,19 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:171
+#: Pcbnew_general_operations.adoc:191
 msgid "image:images/Pcbnew_legacy_block_selection_dialog.png[]"
 msgstr "image:images/ja/Pcbnew_legacy_block_selection_dialog.png[]"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:172
+#: Pcbnew_general_operations.adoc:192
 #, no-wrap
 msgid "Units used in dialogs"
 msgstr "ダイアログで使われる単位"
 
 # 07102015：未指定アイコンの追加
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:179
+#: Pcbnew_general_operations.adoc:199
 msgid ""
 "Units used to display dimensions values are inch and mm. The desired unit "
 "can be selected by pressing the icon located in left toolbar: image:images/"
@@ -7289,12 +6798,12 @@ msgstr ""
 "す。新しい値を入力する際には、値の単位も入力できます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:181
+#: Pcbnew_general_operations.adoc:201
 msgid "Accepted units are:"
 msgstr "利用可能な単位は次のとおりです:"
 
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:188
+#: Pcbnew_general_operations.adoc:208
 #, no-wrap
 msgid ""
 "| 1 *in*  | 1 inch\n"
@@ -7310,22 +6819,22 @@ msgstr ""
 "|6 *mm* | 6 mm\n"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:191
+#: Pcbnew_general_operations.adoc:211
 msgid "The rules are:"
 msgstr "ルールは次のとおりです:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:193
+#: Pcbnew_general_operations.adoc:213
 msgid "Spaces between the number and the unit are accepted."
 msgstr "数値と単位の間にはスペースを入れられます。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:194
+#: Pcbnew_general_operations.adoc:214
 msgid "Only the first two letters are significant."
 msgstr "最初の２文字だけが重要です。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:195
+#: Pcbnew_general_operations.adoc:215
 msgid ""
 "In countries using an alternative decimal separator than the period, the "
 "period (`.`) can be used as well. Therefore `1,5` and `1.5` are the same in "
@@ -7335,13 +6844,13 @@ msgstr ""
 "も同じ様に扱われます。従って `1,5` と `1.5` はフランス語では同じ意味です。"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:196
+#: Pcbnew_general_operations.adoc:216
 #, no-wrap
 msgid "Top menu bar"
 msgstr "上部メニューバー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:199
+#: Pcbnew_general_operations.adoc:219
 msgid ""
 "The top menu bar provides access to the files (loading and saving), "
 "configuration options, printing, plotting and the help files."
@@ -7351,24 +6860,24 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:201
+#: Pcbnew_general_operations.adoc:221
 msgid "image:images/Pcbnew_top_menu_bar.png[]"
 msgstr "image:images/ja/Pcbnew_top_menu_bar.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:202
+#: Pcbnew_general_operations.adoc:222
 #, no-wrap
 msgid "The File menu"
 msgstr "ファイルメニュー"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:205
+#: Pcbnew_general_operations.adoc:225
 msgid "image:images/Pcbnew_file_menu.png[]"
 msgstr "image:images/ja/Pcbnew_file_menu.png[]"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:208
+#: Pcbnew_general_operations.adoc:228
 msgid ""
 "The File menu allows the loading and saving of printed circuits files, as "
 "well as printing and plotting the circuit board. It enables the export (with "
@@ -7379,92 +6888,92 @@ msgstr ""
 "（ GenCAD1.4 形式）することもできます。"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:209
+#: Pcbnew_general_operations.adoc:229
 #, no-wrap
 msgid "Edit menu"
 msgstr "編集メニュー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:212
+#: Pcbnew_general_operations.adoc:232
 msgid "Allows some global edit actions:"
 msgstr "いくつかの基板全体に対する編集コマンドがあります:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:214
+#: Pcbnew_general_operations.adoc:234
 msgid "image:images/Pcbnew_edit_menu.png[]"
 msgstr "image:images/ja/Pcbnew_edit_menu.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:216
+#: Pcbnew_general_operations.adoc:236
 #, no-wrap
 msgid "View menu"
 msgstr "表示メニュー"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:219
+#: Pcbnew_general_operations.adoc:239
 msgid "image:images/Pcbnew_view_menu.png[]"
 msgstr "image:images/ja/Pcbnew_view_menu.png[]"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:221
+#: Pcbnew_general_operations.adoc:241
 msgid "Zoom functions and 3D board display."
 msgstr "ズーム機能と３Ｄビューア（３Ｄによる基板表示）があります。"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:222
+#: Pcbnew_general_operations.adoc:242
 #, no-wrap
 msgid "Sub menu View/3D display"
 msgstr "表示サブメニュー／３Ｄビューア"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:225
+#: Pcbnew_general_operations.adoc:245
 msgid "Opens the 3D board viewer. Here is a sample:"
 msgstr "３Ｄ基板ビューアを開きます。サンプルを示します:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:227
+#: Pcbnew_general_operations.adoc:247
 msgid "image:images/Sample_3D_board.png[]"
 msgstr "image:images/ja/Sample_3D_board.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:228
+#: Pcbnew_general_operations.adoc:248
 #, no-wrap
 msgid "Place menu"
 msgstr "配置メニュー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:231
+#: Pcbnew_general_operations.adoc:251
 msgid "Same function as the right-hand toolbar."
 msgstr "右ツールバーと同じ機能です。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:233
+#: Pcbnew_general_operations.adoc:253
 msgid "image:images/Pcbnew place menu.png[]"
 msgstr "image:images/ja/Pcbnew_place_menu.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:234
+#: Pcbnew_general_operations.adoc:254
 #, no-wrap
 msgid "The Preferences menu"
 msgstr "設定メニュー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:239
+#: Pcbnew_general_operations.adoc:259
 msgid "Allows:"
 msgstr "次の項目が実行可能です。:"
 
 # 07102015：フットプリントライブラリへ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:241
+#: Pcbnew_general_operations.adoc:261
 msgid "Selection of the module libraries."
 msgstr "フットプリントライブラリの選択。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:242
+#: Pcbnew_general_operations.adoc:262
 msgid ""
 "Hide/Show the Layers manager( colors selection for displaying layers and "
 "other elements. Also enables the display of elements to be turned on and "
@@ -7474,82 +6983,82 @@ msgstr ""
 "有無を選択。）"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:243
+#: Pcbnew_general_operations.adoc:263
 msgid "Management of general options (units, etc.)."
 msgstr "一般オプションの管理（単位など）。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:244
+#: Pcbnew_general_operations.adoc:264
 msgid "The management of other display options."
 msgstr "その他表示オプションの管理。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:245
+#: Pcbnew_general_operations.adoc:265
 msgid "Creation, edition (and re-read) of the hot keys file."
 msgstr "ホットキーファイルの作成、編集（および再読込）。"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:246
+#: Pcbnew_general_operations.adoc:266
 #, no-wrap
 msgid "Dimensions menu"
 msgstr "寸法メニュー"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:250
+#: Pcbnew_general_operations.adoc:270
 msgid "An important menu.  image:images/Pcbnew_dimensions_menu.png[]"
 msgstr "重要なメニューです。 image:images/ja/Pcbnew_dimensions_menu.png[]"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:252
+#: Pcbnew_general_operations.adoc:272
 msgid "Allows adjustment of:"
 msgstr "下記の調整ができます:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:254
+#: Pcbnew_general_operations.adoc:274
 msgid "User grid size."
 msgstr "ユーザ・グリッド・サイズ。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:255
+#: Pcbnew_general_operations.adoc:275
 msgid "Size of texts and the line width for drawings."
 msgstr "テキストの大きさと描画の線幅。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:256
+#: Pcbnew_general_operations.adoc:276
 msgid "Dimensions and characteristic of pads."
 msgstr "パッドの寸法と属性。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:257
+#: Pcbnew_general_operations.adoc:277
 msgid "Setting the global values for solder mask and solder paste layers"
 msgstr "ハンダ・レジスト・レイヤとハンダ・ペースト・レイヤのグローバル値の設定"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:258
+#: Pcbnew_general_operations.adoc:278
 #, no-wrap
 msgid "Tools menu"
 msgstr "ツールメニュー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:261
+#: Pcbnew_general_operations.adoc:281
 msgid "image:images/Pcbnew_place_menu.png[]"
 msgstr "image:images/ja/Pcbnew_place_menu.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:262
+#: Pcbnew_general_operations.adoc:282
 #, no-wrap
 msgid "The Design Rules menu"
 msgstr "デザイン・ルール・メニュー"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:265
+#: Pcbnew_general_operations.adoc:285
 msgid "image:images/Pcbnew_design_rules_menu.png[]"
 msgstr "image:images/ja/Pcbnew_design_rules_menu.png[]"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:268
+#: Pcbnew_general_operations.adoc:288
 msgid ""
 "Provides access to 2 dialogs: Setting the Design rules (tracks and vias "
 "sizes, clerances)."
@@ -7558,36 +7067,36 @@ msgstr ""
 "リアランスの設定)。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:269
+#: Pcbnew_general_operations.adoc:289
 msgid "Setting layers (Number, enabled and layers names)"
 msgstr "レイヤのセットアップ (レイヤの数、名前、有効化の設定)"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:271
+#: Pcbnew_general_operations.adoc:291
 #, no-wrap
 msgid "The Display 3D Model menu"
 msgstr "3D モデル表示メニュー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:275
+#: Pcbnew_general_operations.adoc:295
 msgid ""
 "Brings up the 3D viewer used to display the circuit board in 3 dimensions."
 msgstr "回路基板を 3 次元で表示する際に使用する3 D ビューアを起動します。"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:277
+#: Pcbnew_general_operations.adoc:297
 msgid "image:images/Pcbnew_display_model_menu.png[]"
 msgstr "image:images/ja/Pcbnew_display_model_menu.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:278
+#: Pcbnew_general_operations.adoc:298
 #, no-wrap
 msgid "The Help menu"
 msgstr "ヘルプメニュー"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:282
+#: Pcbnew_general_operations.adoc:302
 msgid ""
 "Provides access to the user manuals and to the version information menu "
 "(Pcbnew About)."
@@ -7596,25 +7105,25 @@ msgstr ""
 "ます。"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:283
+#: Pcbnew_general_operations.adoc:303
 #, no-wrap
 msgid "Using icons on the top toolbar"
 msgstr "上部ツールバーにあるアイコンの使用"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:286
+#: Pcbnew_general_operations.adoc:306
 msgid "This toolbar gives access to the principal functions of Pcbnew."
 msgstr "このツールバーは、Pcbnew の主な機能へのアクセスを提供します。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:288
+#: Pcbnew_general_operations.adoc:308
 msgid "image:images/Pcbnew_top_toolbar.png[]"
 msgstr "image:images/ja/Pcbnew_top_toolbar.png[]"
 
 # 07072015：/ja/へ変更(Pcbnew_layer_pair_indicator.png)
 # (Pcbnew_toolbar_layer_select_dropdown.png)
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:331
+#: Pcbnew_general_operations.adoc:351
 #, no-wrap
 msgid ""
 "| image:images/icons/new.png[]\n"
@@ -7698,7 +7207,7 @@ msgstr ""
 "    | 自動ルータ FreeRouting 用ファイルのインポート／エクスポート。\n"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:333
+#: Pcbnew_general_operations.adoc:353
 #, no-wrap
 msgid "Auxiliary toolbar"
 msgstr "補助ツールバー"
@@ -7708,7 +7217,7 @@ msgstr "補助ツールバー"
 # (Pcbnew_via_size_dropdown.png)
 # (Pcbnew_zoom_factor_dropdown.png)
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:349
+#: Pcbnew_general_operations.adoc:369
 #, no-wrap
 msgid ""
 "| image:images/Pcbnew_track_thickness_dropdown.png[]\n"
@@ -7736,20 +7245,20 @@ msgstr ""
 "    | ズームの選択。\n"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:351
+#: Pcbnew_general_operations.adoc:371
 #, no-wrap
 msgid "Right-hand side toolbar"
 msgstr "右ツールバー"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:354
+#: Pcbnew_general_operations.adoc:374
 msgid "image:images/Pcbnew_right_toolbar.png[float=\"right\"]"
 msgstr "image:images/Pcbnew_right_toolbar.png[float=\"right\"]"
 
 # 07102015：誤訳訂正
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:357
+#: Pcbnew_general_operations.adoc:377
 msgid ""
 "This toolbar gives access to the editing tool to change the PCB shown in "
 "Pcbnew:"
@@ -7758,28 +7267,28 @@ msgstr ""
 "します:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:359
+#: Pcbnew_general_operations.adoc:379
 msgid "Placement of modules, tracks, zones of copper, texts, etc."
 msgstr "フットプリント、配線、導体ゾーン、 テキストなどの配置。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:360
+#: Pcbnew_general_operations.adoc:380
 msgid "Net Highlighting."
 msgstr "ネットをハイライト表示。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:361
+#: Pcbnew_general_operations.adoc:381
 msgid "Creating notes, graphic elements, etc."
 msgstr "ノート（注釈、メモ）、グラフィック要素などの作成。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:362 Pcbnew_creating_editing_modules.adoc:84
+#: Pcbnew_general_operations.adoc:382 Pcbnew_creating_editing_modules.adoc:84
 msgid "Deleting elements."
 msgstr "要素の削除。"
 
 # 07102015：原文誤記に対応
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:395
+#: Pcbnew_general_operations.adoc:415
 #, no-wrap
 msgid ""
 "| image:images/icons/cursor.png[]\n"
@@ -7845,7 +7354,7 @@ msgstr ""
 "    | カーソルが指し示す要素を削除。\n"
 
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:407
+#: Pcbnew_general_operations.adoc:427
 #, no-wrap
 msgid ""
 "    *Note:*\n"
@@ -7870,26 +7379,26 @@ msgstr ""
 "    また、寸法／グリッドメニューでも設定できます。\n"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:410
+#: Pcbnew_general_operations.adoc:430
 #, no-wrap
 msgid "Left-hand side toolbar"
 msgstr "左ツールバー"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:413
+#: Pcbnew_general_operations.adoc:433
 msgid "image:images/Pcbnew_left_toolbar.png[float=\"right\"]"
 msgstr "image:images/Pcbnew_left_toolbar.png[float=\"right\"]"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:416
+#: Pcbnew_general_operations.adoc:436
 msgid ""
 "The left hand-side toolbar provides display and control options that affect "
 "Pcbnew's interface."
 msgstr "このツールバーは表示と制御オプションを提供します。"
 
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:457
+#: Pcbnew_general_operations.adoc:477
 #, no-wrap
 msgid ""
 "| image:images/icons/drc_off.png[]\n"
@@ -7968,13 +7477,13 @@ msgstr ""
 "    | マイクロウェーブツールにアクセス（開発中）\n"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:459
+#: Pcbnew_general_operations.adoc:479
 #, no-wrap
 msgid "Pop-up windows and fast editing"
 msgstr "ポップアップウィンドウを使った迅速な編集作業"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:463
+#: Pcbnew_general_operations.adoc:483
 msgid ""
 "A right click of the mouse open a pop-up window. Its contents depends on the "
 "element pointed at by the cursor."
@@ -7983,12 +7492,12 @@ msgstr ""
 "が指し示す要素によって変わります。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:465
+#: Pcbnew_general_operations.adoc:485
 msgid "This gives immediate access to:"
 msgstr "これは、次への迅速なアクセスを提供します:"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:468
+#: Pcbnew_general_operations.adoc:488
 msgid ""
 "Changing the display (centre display on cursor, zoom in or out or selecting "
 "the zoom)."
@@ -7997,12 +7506,12 @@ msgstr ""
 "ズームの選択)。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:469
+#: Pcbnew_general_operations.adoc:489
 msgid "Setting the grid size."
 msgstr "グリッドサイズの設定。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:471
+#: Pcbnew_general_operations.adoc:491
 msgid ""
 "Additionally a right click on an element enables editing of the most usually "
 "modified element parameters."
@@ -8011,20 +7520,20 @@ msgstr ""
 "す。"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:473
+#: Pcbnew_general_operations.adoc:493
 msgid "The screenshot below shows what the pop-up window looks like."
 msgstr ""
 "以下のスクリーンショットはポップアップウィンドウがどのように表示されるかを示"
 "しています。"
 
 #. type: Title ===
-#: Pcbnew_general_operations.adoc:474
+#: Pcbnew_general_operations.adoc:494
 #, no-wrap
 msgid "Available modes"
 msgstr "利用可能なモード"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:478
+#: Pcbnew_general_operations.adoc:498
 msgid ""
 "There are 3 modes when using pop up menus. In the pop-up menus, these modes "
 "add or remove some specific commands."
@@ -8034,7 +7543,7 @@ msgstr ""
 
 # 07102015：誤訳訂正
 #. type: delimited block |
-#: Pcbnew_general_operations.adoc:488
+#: Pcbnew_general_operations.adoc:508
 #, no-wrap
 msgid ""
 "| image:images/icons/mode_module.png[] and\n"
@@ -8054,55 +7563,55 @@ msgstr ""
 "    | 配線モード\n"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:490
+#: Pcbnew_general_operations.adoc:510
 #, no-wrap
 msgid "Normal mode"
 msgstr "ノーマルモード"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:493 Pcbnew_general_operations.adoc:509
-#: Pcbnew_general_operations.adoc:525
+#: Pcbnew_general_operations.adoc:513 Pcbnew_general_operations.adoc:529
+#: Pcbnew_general_operations.adoc:545
 msgid "Pop-up menu with no selection:"
 msgstr "未選択時のコンテキストメニュー:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:495
+#: Pcbnew_general_operations.adoc:515
 msgid "image:images/Pcbnew_popup_normal_mode.png[]"
 msgstr "image:images/ja/Pcbnew_popup_normal_mode.png[]"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:497 Pcbnew_general_operations.adoc:513
-#: Pcbnew_general_operations.adoc:529
+#: Pcbnew_general_operations.adoc:517 Pcbnew_general_operations.adoc:533
+#: Pcbnew_general_operations.adoc:549
 msgid "Pop-up menu with track selected:"
 msgstr "選択した配線上でのコンテキストメニュー:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:499
+#: Pcbnew_general_operations.adoc:519
 msgid "image:images/Pcbnew_popup_normal_mode_track.png[]"
 msgstr "image:images/ja/Pcbnew_popup_normal_mode_track.png[]"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:501 Pcbnew_general_operations.adoc:517
-#: Pcbnew_general_operations.adoc:533
+#: Pcbnew_general_operations.adoc:521 Pcbnew_general_operations.adoc:537
+#: Pcbnew_general_operations.adoc:553
 msgid "Pop-up menu with footprint selected:"
 msgstr "選択したフットプリント上でのコンテキストメニュー:"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:503
+#: Pcbnew_general_operations.adoc:523
 msgid "image:images/Pcbnew_popup_normal_mode_footprint.png[]"
 msgstr "image:images/ja/Pcbnew_popup_normal_mode_footprint.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:504
+#: Pcbnew_general_operations.adoc:524
 #, no-wrap
 msgid "Footprint mode"
 msgstr "フットプリントモード"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:507
+#: Pcbnew_general_operations.adoc:527
 msgid ""
 "Same cases in Footprint Mode (image:images/icons/mode_module.png[] enabled)"
 msgstr ""
@@ -8110,48 +7619,48 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:511
+#: Pcbnew_general_operations.adoc:531
 msgid "image:images/Pcbnew_popup_footprint_mode.png[]"
 msgstr "image:images/ja/Pcbnew_popup_footprint_mode.png[]"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:515
+#: Pcbnew_general_operations.adoc:535
 msgid "image:images/Pcbnew_popup_footprint_mode_track.png[]"
 msgstr "image:images/ja/Pcbnew_popup_footprint_mode_track.png[]"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:519
+#: Pcbnew_general_operations.adoc:539
 msgid "image:images/Pcbnew_popup_footprint_mode_footprint.png[]"
 msgstr "image:images/ja/Pcbnew_popup_footprint_mode_footprint.png[]"
 
 #. type: Title ====
-#: Pcbnew_general_operations.adoc:520
+#: Pcbnew_general_operations.adoc:540
 #, no-wrap
 msgid "Tracks mode"
 msgstr "配線モード"
 
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:523
+#: Pcbnew_general_operations.adoc:543
 msgid "Same cases in Track Mode (image:images/icons/mode_track.png[] enabled)"
 msgstr "配線モードでの同じ例 (image:images/icons/mode_track.png[] 有効) "
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:527
+#: Pcbnew_general_operations.adoc:547
 msgid "image:images/Pcbnew_popup_track_mode.png[]"
 msgstr "image:images/ja/Pcbnew_popup_track_mode.png[]"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:531
+#: Pcbnew_general_operations.adoc:551
 msgid "image:images/Pcbnew_popup_track_mode_track.png[]"
 msgstr "image:images/ja/Pcbnew_popup_track_mode_track.png[]"
 
 # 07072015：/ja/へ変更
 #. type: Plain text
-#: Pcbnew_general_operations.adoc:534
+#: Pcbnew_general_operations.adoc:554
 msgid "image:images/Pcbnew_popup_track_mode_footprint.png[]"
 msgstr "image:images/ja/Pcbnew_popup_track_mode_footprint.png[]"
 
@@ -9648,6 +9157,699 @@ msgstr ""
 "編集したフットプリントが現在の基板からのものである場合、ボタン image:images/"
 "icons/update_module_board.png[] により基板上のこのフットプリントを更新しま"
 "す。"
+
+#. type: Title ==
+#: Pcbnew_installation.adoc:2
+#, no-wrap
+msgid "Installation"
+msgstr "インストール"
+
+#. type: Title ===
+#: Pcbnew_installation.adoc:4
+#, no-wrap
+msgid "Installation of the software"
+msgstr "ソフトウェアのインストール"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:7
+msgid "The installation procedure is described in the KiCad documentation."
+msgstr "インストールの手順は、KiCad のドキュメントに記載されています。"
+
+#. type: Title ===
+#: Pcbnew_installation.adoc:8
+#, no-wrap
+msgid "Modifying the default configuration"
+msgstr "デフォルト設定の変更"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:13
+msgid ""
+"A default configuration file `kicad.pro` is provided in `kicad/share/"
+"template`. This file is used as the initial configuration for all new "
+"projects."
+msgstr ""
+"デフォルトの設定ファイル `kicad.pro` は、KiCad インストール・ディレクトリ下 "
+"`kicad/share/template` にあります。このファイルは、すべての新規プロジェクトの"
+"初期設定として使用されます。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:16
+msgid ""
+"This configuration file can be modified to change the libraries to be loaded"
+msgstr "この設定により、ロードされるライブラリを変更するよう修正できます。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:18
+msgid "To do this:"
+msgstr "以下のようにします:"
+
+# 07102015：変更
+#. type: Plain text
+#: Pcbnew_installation.adoc:23
+msgid ""
+"Launch Pcbnew using kicad or directly. On Windows is in `C:\\kicad\\bin"
+"\\pcbnew.exe` and on Linux you can run `/usr/local/kicad/bin/kicad` or `/usr/"
+"local/kicad/bin/pcbnew` if the binaries are located in `/usr/local/kicad/"
+"bin`."
+msgstr ""
+"直接あるいは kicad を使って、pcbnew を起動します。Windows では `C:\\kicad"
+"\\bin\\pcbnew.exe`（ユーザ環境によって変わります） 、そしてLinux ではバイナリ"
+"が  `/usr/local/kicad/bin` にある場合、 `/usr/local/kicad/bin/kicad` あるい"
+"は `/usr/local/kicad/bin/pcbnew` で起動できます。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:24
+msgid "Select Preferences - Libs and Dir."
+msgstr "“設定” メニューより ”フットプリント ライブラリの管理” を選択します。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:25
+msgid "Edit as required."
+msgstr "ロードするライブラリ一覧を編集します。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:27
+msgid ""
+"Save the modified configuration (Save Cfg) to `kicad/share/template/kicad."
+"pro`."
+msgstr ""
+"変更されたコンフィグレーションを `kicad/share/template/kicad.pro` に保存しま"
+"す。( “設定” メニューより ”設定の保存” )"
+
+# 07102015：変更
+#. type: Title ===
+#: Pcbnew_installation.adoc:28
+#, no-wrap
+msgid "Managing Footprint Libraries: legacy versions"
+msgstr "フットプリント・ライブラリの管理: 以前のバージョン"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:32
+msgid ""
+"You can have access to the library list initialization from the Preferences "
+"menu:"
+msgstr "設定メニューからライブラリリストの初期設定へと進めます。:"
+
+# 07072015：/ja/へ変更
+#. type: Plain text
+#: Pcbnew_installation.adoc:34
+msgid "image:images/Library_list_menu_item.png[]"
+msgstr "image:images/ja/Library_list_menu_item.png[]"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:37
+msgid ""
+"The image below shows the dialog which allows you to set the footprint "
+"library list:"
+msgstr "下の図はフットプリント・ライブラリ・リストを設定するダイアログです。"
+
+# 07072015：/ja/へ変更
+#. type: Plain text
+#: Pcbnew_installation.adoc:39
+msgid "image:images/Footprint_library_list.png[]"
+msgstr "image:images/ja/Footprint_library_list.png[]"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:50
+msgid ""
+"You can use this to add all the libraries that contain the footprints "
+"required for your project. You should also remove unused libraries from new "
+"projects to prevent footprint name clashes. Please note, there is a issue "
+"with the footprint library list when duplicate footprint names exist in more "
+"than one library.  When this occurs, the footprint will be loaded from the "
+"first library found in the list. If this is an issue (you cannot load the "
+"footprint you want), either change the library list order using the “Up” and "
+"“Down” buttons in the dialog above or give the footprint a unique name in "
+"using the footprint editor."
+msgstr ""
+"あなたはプロジェクトに必要なフットプリントを含むライブラリを追加しなければな"
+"りません。フットプリント名の衝突を避けるため、新しいプロジェクトからは使わな"
+"いライブラリを削除することも必要です。複数のライブラリに重複したフットプリン"
+"ト名があると、フットプリントライブラリで問題となることに注意して下さい。この"
+"ような場合、フットプリントはリスト中、最初に見つかったライブラリからロードさ"
+"れます。これは問題（必要とするフットプリントをロードできない）で、上のダイア"
+"ログで “上” と “下” ボタンを使ってライブラリリストの順番を変えるか、フットプ"
+"リント・エディタを使って固有の名前のフットプリントにします。"
+
+# 07102015：訂正
+#. type: Title ===
+#: Pcbnew_installation.adoc:51
+#, no-wrap
+msgid "Managing Footprint Libraries: .pretty repositories"
+msgstr "フットプリント・ライブラリの管理: .pretty リポジトリ"
+
+# 07102015：発行からリリースへ変更
+#. type: Plain text
+#: Pcbnew_installation.adoc:57
+msgid ""
+"As of release rXXXX, Pcbnew uses the new footprint library table "
+"implementation to manage footprint libraries and the information in the "
+"previous section is no longer valid. The library table manager is accessible "
+"by:"
+msgstr ""
+"rXXXX をリリースするにあたって、Pcbnew はフットプリントライブラリを管理するた"
+"めに実装された新しいフットプリント・ライブラリ・テーブルを使用します。前のセ"
+"クションの情報はもはや無効です。ライブラリ・テーブル・マネージャは次のように"
+"呼び出せます。:"
+
+# 07072015：/ja/へ変更
+#. type: Plain text
+#: Pcbnew_installation.adoc:59
+msgid "image:images/Library_tables_menu_item.png[]"
+msgstr "image:images/ja/Library_tables_menu_item.png[]"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:63
+msgid ""
+"The image below shows the footprint library table editing dialog which can "
+"be opened by invoking the “Library Tables” entry from the “Preferences” menu."
+msgstr "下の図は、フットプリント・ライブラリ・テーブル編集ダイアログです。"
+
+# 07072015：/ja/へ変更
+#. type: Plain text
+#: Pcbnew_installation.adoc:65
+msgid "image:images/Footprint_tables_list.png[]"
+msgstr "image:images/ja/Footprint_tables_list.png[]"
+
+# 07102015：日本語修正
+#. type: Plain text
+#: Pcbnew_installation.adoc:74
+msgid ""
+"The footprint library table is used to map a footprint library of any "
+"supported library type to a library nickname.  This nickname is used to look "
+"up footprints instead of the previous method which depended on library "
+"search path ordering.  This allows Pcbnew to access footprints with the same "
+"name in different libraries by ensuring that the correct footprint is loaded "
+"from the appropriate library.  It also allows Pcbnew to support loading "
+"libraries from different PCB editors such as Eagle and GEDA."
+msgstr ""
+"フットプリント・ライブラリ・テーブルは、サポートされている全ての種類のフット"
+"プリントライブラリに別名 (nickname) を付けます。この別名は、見つかった順番の"
+"ライブラリを使用する以前の方法に代わって、フットプリントを探す時に使われま"
+"す。この仕組みによって適切なライブラリから正しいフットプリントを確実にロード"
+"できるので、別のライブラリにある同じ名前のフットプリントを呼び出すことができ"
+"ます。これはまた、Eagle や GEDA のような別の PCB エディタからのライブラリの読"
+"み出しをサポートします。"
+
+#. type: Title ====
+#: Pcbnew_installation.adoc:75
+#, no-wrap
+msgid "Global Footprint Library Table"
+msgstr "グローバル・フットプリント・ライブラリ・テーブル"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:82
+msgid ""
+"The global footprint library table contains the list of libraries that are "
+"always available regardless of the currently loaded project file.  The table "
+"is saved in the file `fp-lib-table` in the user's home folder.  The location "
+"of this folder is dependent on the operating system."
+msgstr ""
+"グローバル・フットプリント・ライブラリ・テーブルは、現在のプロジェクトに関係"
+"なく、常に有効なライブラリのリストを保持しています。このテーブルは、ユーザの"
+"ホームディレクトリにある “fp-lib-table” ファイルに保存されています。このディ"
+"レクトリの位置は、オペレーティングシステムに依存します。"
+
+#. type: Title ====
+#: Pcbnew_installation.adoc:83
+#, no-wrap
+msgid "Project Specific Footprint Library Table"
+msgstr "プロジェクト固有のフットプリント・ライブラリ・テーブル"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:92
+msgid ""
+"The project specific footprint library table contains the list of libraries "
+"that are available specifically for the currently loaded project file.  The "
+"project specific footprint library table can only be edited when it is "
+"loaded along with the project board file.  If no project file is loaded or "
+"there is no footprint library table file in the project path, an empty table "
+"is created which can be edited and later saved along with the board file."
+msgstr ""
+"プロジェクト固有のフットプリント・ライブラリ・テーブルは、現在のプロジェクト"
+"にのみ有効なライブラリのリストを保持しています。プロジェクト固有のフットプリ"
+"ント・ライブラリ・テーブルは、プロジェクトの基板ファイルが読み込まれている時"
+"のみ編集可能です。プロジェクトファイルが読み込まれていないか、プロジェクトの"
+"パスにフットプリント・ライブラリ・テーブル・ファイルがない場合、編集可能な空"
+"のテーブルが作られ、後で基板ファイルと一緒に保存されます。"
+
+#. type: Title ====
+#: Pcbnew_installation.adoc:93
+#, no-wrap
+msgid "Initial Configuration"
+msgstr "初期設定"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:105
+msgid ""
+"The first time CvPcb or Pcbnew is run and the global footprint table file "
+"`fp-lib-table` is not found in the user's home folder, Pcbnew will attempt "
+"to copy the default footprint table file fp_global_table stored in the "
+"system's KiCad template folder to the file `fp-lib-table` in the user's home "
+"folder.  If fp_global_table cannot be found, an empty footprint library "
+"table will be created in the user's home folder.  If this happens, the user "
+"can either copy fp_global_table manually or configure the table by hand.  "
+"The default footprint library table includes all of the standard footprint "
+"libraries that are installed as part of KiCad."
+msgstr ""
+"CvPcb または Pcbnew の初めての実行時には、グローバル・フットプリント・テーブ"
+"ル・ファイル `fp-lib-table` はユーザのホームディレクトリに見つかりません。"
+"Pcbnew は、システムの KiCad テンプレートディレクトリにあるデフォルトのフット"
+"プリント・テーブル・ファイル fp_global_table をユーザのホームディレクトリへ "
+"`fp-lib-table` ファイルとしてコピーしようとします。もし、`fp-lib-table` が見"
+"つからなかったら、ユーザのホームディレクトリに空のフットプリント・ライブラ"
+"リ・テーブルが作られるでしょう。こうなった場合、ユーザは自分で "
+"fp_global_table をコピーし、手動でテーブルを設定できます。デフォルトのフット"
+"プリント・ライブラリ・テーブルは、KiCad の一部としてインストールされる標準の"
+"フットプリントライブラリを全て含んでいます。"
+
+#. type: Title ====
+#: Pcbnew_installation.adoc:106
+#, no-wrap
+msgid "Adding Table Entries"
+msgstr "テーブル要素の追加"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:130
+msgid ""
+"In order to use a footprint library, it must first be added to either the "
+"global table or the project specific table.  The project specific table is "
+"only applicable when a board file is open.  Each library entry must have a "
+"unique nickname.  This does not have to be related in any way to the actual "
+"library file name or path.  The colon `:` character cannot be used anywhere "
+"in the nickname.  Each library entry must have a valid path and/or file name "
+"depending on the type of library.  Paths can be defined as absolute, "
+"relative, or by environment variable substitution.  The appropriate plug in "
+"type must be selected in order for the library to be properly read.  Pcbnew "
+"currently supports reading KiCad legacy, KiCad Pretty, Eagle, and GEDA "
+"footprint libraries.  There is also a description field to add a description "
+"of the library entry.  The option field is not used at this time so adding "
+"options will have no effect when loading libraries.  Please note that you "
+"cannot have duplicate library nicknames in the same table.  However, you can "
+"have duplicate library nicknames in both the global and project specific "
+"footprint library table.  The project specific table entry will take "
+"precedence over the global table entry when duplicated names occur.  When "
+"entries are defined in the project specific table, an fp-lib-table file "
+"containing the entries will be written into the folder of the currently open "
+"net list."
+msgstr ""
+"フットプリントライブラリを使うには、まず最初にグローバルテーブルかプロジェク"
+"ト固有のテーブルを追加しなければなりません。プロジェクト固有のテーブルは、基"
+"板ファイルが開かれた時のみ有効です。各ライブラリの入力項目は固有の別名 "
+"(nickname) を持つ必要があります。これは実際のファイル名やファイルパスとは全く"
+"関係ありません。コロン ( : ) は別名の中のいかなる場所でも使用できません。各ラ"
+"イブラリの入力項目は、そのライブラリの種類で有効なファイルパス、ファイル名を"
+"持つ必要があります。パスは、絶対、相対、または環境変数で指定できます。（下記 "
+"2.4.5 セクションを参照）プラグインの種類は、ライブラリが正しく読み込まれるよ"
+"う、適切に選択しなければなりません。Pcbnew は今のところ KiCad の古い種類、"
+"KiCad Pretty、Eagle と GEDA フットプリントライブラリをサポートしています。こ"
+"れらは、ライブラリ入力項目の説明フィールドに記述されます。オプションフィール"
+"ドはこの時点では使われていませんので、オプションフィールドへの追加はライブラ"
+"リの読み込みに影響を与えません。同じテーブルには重複した別名を持てないことに"
+"注意して下さい。しかしながら、グローバルとプロジェクト固有のフットプリント・"
+"ライブラリ・テーブルの両方で重複した別名を持つことは可能です。もし名前の衝突"
+"が起こったなら、プロジェクト固有のテーブルがグローバルテーブルに優先します。"
+"プロジェクト固有のテーブルに項目が入力されると、入力項目を含む fp-lib-table "
+"ファイルは現在開かれているネットリストのあるディレクトリに書き込まれます。"
+
+#. type: Title ====
+#: Pcbnew_installation.adoc:131
+#, no-wrap
+msgid "Environment Variable Substitution"
+msgstr "環境変数の代替"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:147
+msgid ""
+"One of the most powerful features of the footprint library table is "
+"environment variable substitution.  This allows you to define custom paths "
+"to where your libraries are stored in environment variables.  Environment "
+"variable substitution is supported by using the syntax `${ENV_VAR_NAME}` in "
+"the footprint library path.  By default, at run time Pcbnew defines the `"
+"$KISYSMOD` environment variable.  This points to where the default footprint "
+"libraries that were installed with KiCad are located.  You can override `"
+"$KISYSMOD` by defining it yourself which allows you to substitute your own "
+"libraries in place of the default KiCad footprint libraries.  When a board "
+"file is loaded, Pcbnew also defines the `$KPRJMOD` using the board file "
+"path.  This allows you to create libraries in the project path without "
+"having to define the absolute path to the library in the project specific "
+"footprint library table."
+msgstr ""
+"フットプリント・ライブラリ・テーブルの最も強力な機能の一つは、環境変数の代替"
+"です。環境変数に保存されたライブラリへの独自のパスを定義するすることができま"
+"す。環境変数の代替は、フットプリント・ライブラリ・パスで `${ENV_VAR_NAME}` 構"
+"文を使うことにより、サポートされます。デフォルトでは、実行中 Pcbnew は環境変"
+"数 `$KISYSMOD` を定義します。ここは KiCad と一緒にインストールされたデフォル"
+"トのフットプリントライブラリの場所です。デフォルトのフットプリントライブラリ"
+"に代わって自分のライブラリを置けるよう `$KISYSMOD` を上書きできます。基板が読"
+"み込まれると、Pcbnew はまた基板のファイルパスを使って、`$KPRJMOD` を定義しま"
+"す。これにより、プロジェクト固有のフットプリント・ライブラリ・テーブルでライ"
+"ブラリの絶対パスを定義することなく、プロジェクトのあるパスへライブラリを作る"
+"ことができます。"
+
+#. type: Title ====
+#: Pcbnew_installation.adoc:148
+#, no-wrap
+msgid "Using the GitHub Plugin"
+msgstr "GitHub プラグインの使用"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:159
+msgid ""
+"The GitHub plugin is a special plugin that provides an interface for read "
+"only access to a remote GitHub repository consisting of pretty (Pretty is "
+"name of the KiCad footprint file format) footprints and optionally provides "
+"\"Copy On Write\" (COW) support for editing footprints read from the GitHub "
+"repo and saving them locally.  Therefore the \"GitHub\" plugin is for *read "
+"only for accessing remote pretty footprint libraries* at https://github."
+"com.  To add a GitHub entry to the footprint library table the \"Library Path"
+"\" in the footprint library table row for a must be set to a valid GitHub "
+"URL."
+msgstr ""
+"GitHub プラグインは、pretty (Pretty は KiCad フットプリント・ファイル・フォー"
+"マットの名前です) フットプリントのリモート GitHub リポジトリへ読み込み専用で"
+"アクセスするためのインターフェイスを提供します。また、それらをローカルへ保存"
+"し、 GitHub リポジトリから読み込んだフットプリントを編集するための “Copy On "
+"Write“ (COW) サポートをオプションで提供します。このため、“GitHub“ プラグイン"
+"は、 https://github.com で *read only for accessing remote pretty footprint "
+"libraries* となります。 “ライブラリのパス“ へ GitHub エントリを追加するために"
+"は、フットプリント・ライブラリ・テーブルの行にある “ライブラリのパス“ へ有効"
+"な GitHub URL を設定する必要があります。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:161
+msgid "For example:"
+msgstr "例:"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:163
+#, no-wrap
+msgid "     https://github.com/liftoff-sr/pretty_footprints\n"
+msgstr "     https://github.com/liftoff-sr/pretty_footprints\n"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:165
+msgid "Tpically GitHub URLs take the form:"
+msgstr "（フォームを取得する）典型的な GitHub URL :"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:167
+#, no-wrap
+msgid "     https://github.com/user_name/repo_name\n"
+msgstr "     https://github.com/user_name/repo_name\n"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:183
+msgid ""
+"The \"Plugin Type\" must be set to \"Github\".  To enable the “Copy On Write"
+"\" feature the option `allow_pretty_writing_to_this_dir` must be added to "
+"the “Options” setting of the footprint library table entry.  This option is "
+"the \"Library Path\" for local storage of modified copies of footprints read "
+"from the GitHub repo.  The footprints saved to this path are combined with "
+"the read only part of the GitHub repository to create the footprint "
+"library.  If this option is missing, then the GitHub library is read only.  "
+"If the option is present for a GitHub library, then any writes to this "
+"hybrid library will go to the local `*.pretty` directory.  Note that the "
+"github.com resident portion of this hybrid COW library is always read only, "
+"meaning you cannot delete anything or modify any footprint in the specified "
+"GitHub repository directly. The aggregate library type remains \"Github\" in "
+"all further discussions, but it consists of both the local read/write "
+"portion and the remote read only portion."
+msgstr ""
+"“プラグインの種類“ は “Github“ を設定しなければなりません。 “Copy On Write“ "
+"機能を有効にするには、フットプリント・ライブラリ・テーブルの入力項目にある "
+"“オプション” へ `allow_pretty_writing_to_this_dir` を設定しなければなりませ"
+"ん。このオプションは、GitHub リポジトリから読み込んだフットプリントの編集され"
+"たコピーを保存するローカルストレージに対する “ライブラリパス“ です。このパス"
+"へ保存されたフットプリントは、GitHub リポジトリの他の読み込み専用パーツと一緒"
+"になってフットプリントライブラリを構成します。GitHub ライブラリのオプションが"
+"存在すると、このハイブリッドライブラリへの全ての書き込みは ローカルの `*."
+"pretty` ディレクトリに対して行われます。このハイブリッド COW ライブラリの一部"
+"となる github.com の部分は常に読み込み専用であることに注意、つまり、あなたは"
+"指定した GitHub リポジトリにあるどんなフットプリントに対しても変更、削除を直"
+"接行うことはできません。集合ライブラリタイプには “Github“ が残っていますが、"
+"ローカルの読み書き部分とリモートの読み込み専用部分の両方から構成されます。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:185
+msgid ""
+"The table below shows a footprint library table entry without the option "
+"`allow_pretty_writing_to_this_dir`:"
+msgstr ""
+"以下のテーブルは `allow_pretty_writing_to_this_dir` オプションがないフットプ"
+"リント・ライブラリ・テーブルの入力項目です。:"
+
+#. type: delimited block |
+#: Pcbnew_installation.adoc:194
+#, no-wrap
+msgid ""
+"| Nickname | Library Path | Plugin Type | Options | Description\n"
+"| github\n"
+"    | https://github.com/liftoff-sr/pretty_footprints\n"
+"    | Github\n"
+"    |\n"
+"    | Liftoff's GH footprints\n"
+msgstr ""
+"| Nickname | Library Path | Plugin Type | Options | Description\n"
+"|github\n"
+"|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]\n"
+"|Github | |Liftoff's GH footprints\n"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:203
+msgid ""
+"The table below shows a footprint library table entry with the COW option "
+"given.  Note the use of the environment variable `${HOME}` as an example "
+"only.  The github.pretty directory is located in `${HOME}/pretty/path`.  "
+"Anytime you use the option `allow_pretty_writing_to_this_dir`, you will need "
+"to create that directory manually in advance and it must end with the "
+"extension `.pretty`."
+msgstr ""
+"以下のテーブルは COW オプションのあるフットプリント・ライブラリ・テーブルの入"
+"力項目です。見本用のため、環境変数 `${HOME}` を使っていることに注意してくださ"
+"い。 github.pretty ディレクトリは、`${HOME}/pretty/path` となります。"
+"`allow_pretty_writing_to_this_dir` を使う時には必ず、あらかじめ `.pretty` と"
+"いう拡張子を持つディレクトリを作っておく必要があります。"
+
+#. type: delimited block |
+#: Pcbnew_installation.adoc:212
+#, no-wrap
+msgid ""
+"| Nickname | Library Path | Plugin Type | Options | Description\n"
+"| github\n"
+"    | https://github.com/liftoff-sr/pretty_footprints\n"
+"    | Github\n"
+"    | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty\n"
+"    | Liftoff's GH footprints\n"
+msgstr ""
+"| Nickname | Library Path | Plugin Type | Options | Description\n"
+"|github\n"
+"|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]\n"
+"|Github |allow_pretty_writing_to_this_dir= $\\{HOME\\}/pretty/github.pretty\n"
+"|Liftoff's GH footprints\n"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:220
+msgid ""
+"Footprint loads will always give precedence to the local footprints found in "
+"the path given by the option `allow_pretty_writing_to_this_dir`.  Once you "
+"have saved a footprint to the COW library's local directory by doing a "
+"footprint save in the footprint editor, no GitHub updates will be seen when "
+"loading a footprint with the same name as one for which you've saved locally."
+msgstr ""
+"フットプリントの読み込みは、`allow_pretty_writing_to_this_dir` オプションで指"
+"定されるパスにあるローカルフットプリントが常に優先されます。フットプリント・"
+"エディタからフットプリントを保存することで COW ライブラリのローカルディレクト"
+"リへフットプリントを保存すると、ローカルに保存したフットプリントと同じ名前の"
+"フットプリントを読み込む際に GitHub のアップデートは適用されなくなります。"
+
+# 07102015：訂正
+#. type: Plain text
+#: Pcbnew_installation.adoc:228
+msgid ""
+"Always keep a separate local `*.pretty` directory for each GitHub library, "
+"never combine them by referring to the same directory more than once.  Also, "
+"do not use the same COW (`*.pretty`) directory in a footprint library table "
+"entry.  This would likely create a mess.  The value of the option "
+"`allow_pretty_writing_to_this_dir` will expand any environment variable "
+"using the `${}` notation to create the path in the same way as the “Library "
+"Path” setting."
+msgstr ""
+"常に GitHub ライブラリごとに個別のローカル `*.pretty` ディレクトリを確保し、"
+"何回も同じディレクトリを参照することでこれらを結合してはいけません。また、"
+"フットプリント・ライブラリ・テーブルの入力項目に同じ COW (`*.pretty`) ディレ"
+"クトリを使用してはいけません。 これは恐らく混乱を招くでしょう。オプション "
+"`allow_pretty_writing_to_this_dir` の値は、 “ライブラリパス” の設定と同様、パ"
+"スを作るにあたって `${}` 表示を使い、環境変数を拡大できます。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:240
+msgid ""
+"What's the point of COW? It is to turbo-charge the sharing of footprints.  "
+"If you periodically email your COW pretty footprint modifications to the "
+"GitHub repository maintainer, you can help update the GitHub copy.  Simply "
+"email the individual `*.kicad_mod` files you find in your COW directories to "
+"the maintainer of the GitHub repository.  After you've received confirmation "
+"that your changes have been committed, you can safely delete your COW "
+"file(s)  and the updated footprint from the read only part of GitHub library "
+"will flow down.  Your goal should be to keep the COW file set as small as "
+"possible by contributing frequently to the shared master copies at https://"
+"github.com."
+msgstr ""
+"COW のポイントは何でしょう？それは、フットプリント共有のターボチャージャーの"
+"ようなものです。あなたが GitHub リポジトリのメインテナーに COW pretty フット"
+"プリントの変更を定期的にメールすることで、GitHub コピーのアップデートに貢献で"
+"きます。単に COW ディレクトリで見つかった `*.kicad_mod` ファイルをGitHub リポ"
+"ジトリのメインテナーへメールするだけです。あなたの変更がコミットされたことを"
+"確認したなら、あなたは安全に自分の COW ファイルを削除でき、GitHub ライブラリ"
+"の読み込み専用部分からアップデートされたフットプリントを落とせるでしょう。あ"
+"なたのゴールは、 https://github.com の共有マスターコピーへ頻繁に貢献すること"
+"で、COW ファイルのディレクトリサイズを可能な限り小さく保ち続けることです。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:248
+msgid ""
+"Finally, Nginx can be used as a cache to the github server to speed up the "
+"loading of footprints. It can be installed locally or on a network server. "
+"There is an example configuration in Kicad sources at pcbnew/github/nginx."
+"conf. The most straightforward way to get this working is to overwrite the "
+"default nginx.conf with this one and `export KIGITHUB=http://my_server:54321/"
+"KiCad`, where `my_server` is the IP or domain name of the machine running "
+"nginx."
+msgstr ""
+"最終に、Nginx(high-speed Web server/reverse proxy and email proxy) をフットプ"
+"リントの読み込みスピードを上げるための github のキャッシュとして使うことがで"
+"きます。これは、 pcbnew/github/nginx.conf での KiCad ソースの設定例です。これ"
+"を使う最も簡単な方法は、デフォルトの nginx.conf を `export KIGITHUB=http://"
+"my_server:54321/KiCad` で上書きすることです。ここで、 `my_server` は nginx を"
+"実行しているマシンの IP またはドメイン名です。"
+
+#. type: Title ====
+#: Pcbnew_installation.adoc:249
+#, no-wrap
+msgid "Usage Patterns"
+msgstr "使用パターン"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:261
+msgid ""
+"Footprint libraries can be defined either globally or specifically to the "
+"currently loaded project.  Footprint libraries defined in the user's global "
+"table are always available and are stored in the `fp-lib-table` file in the "
+"user's home folder.  Global footprint libraries can always be accessed even "
+"when there is no project net list file opened.  The project specific "
+"footprint table is active only for the currently open net list file.  The "
+"project specific footprint library table is saved in the file fp-lib-table "
+"in the path of the currently open board file.  You are free to define "
+"libraries in either table."
+msgstr ""
+"フットプリントライブラリは、読み込まれているプロジェクトに対して、グローバ"
+"ル、固有どちらとしてでも定義できます。ユーザのグローバルテーブルで定義された"
+"フットプリントライブラリは常に有効で、ユーザのホームディレクトリにある `fp-"
+"lib-table` ファイル内に保存されます。グローバル・フットプリント・ライブラリ"
+"は、プロジェクトのネットリストファイルを開いていない時でも、常にアクセスする"
+"ことができます。プロジェクト固有のフットプリントテーブルは、現在開かれている"
+"ネットリストファイルに対してのみ有効です。プロジェクト固有のフットプリント・"
+"ライブラリ・テーブルは現在開かれている基板ファイルのパスにある fp-lib-table "
+"ファイルに保存されます。どちらのテーブルにライブラリを定義しても構いません。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:263
+msgid "There are advantages and disadvantages to each method:"
+msgstr "以下は、各方法の長所と短所です。:"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:266
+#, fuzzy
+#| msgid ""
+#| "You can define all of your libraries in the global table which means they "
+#| "will always be available when you need them.  ** The disadvantage of this "
+#| "is that you may have to search through a lot of libraries to find the "
+#| "footprint you are looking for."
+msgid ""
+"You can define all of your libraries in the global table which means they "
+"will always be available when you need them."
+msgstr ""
+"全てのライブラリをグローバルテーブルで定義すると、必要な時にいつでも使うこと"
+"ができます。** これの短所は、探しているフットプリントを見つけるために多くのラ"
+"イブラリを調べなければならなくなることです。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:269
+#, fuzzy, no-wrap
+#| msgid "You can define all of your libraries in the global table which means they will always be available when you need them.  ** The disadvantage of this is that you may have to search through a lot of libraries to find the footprint you are looking for."
+msgid ""
+"** The disadvantage of this is that you may have to search through a lot\n"
+"   of libraries to find the footprint you are looking for.\n"
+msgstr "全てのライブラリをグローバルテーブルで定義すると、必要な時にいつでも使うことができます。** これの短所は、探しているフットプリントを見つけるために多くのライブラリを調べなければならなくなることです。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:271
+#, fuzzy
+#| msgid ""
+#| "You can also define footprint libraries both globally and project "
+#| "specifically."
+msgid "You can define all your libraries on a project specific basis."
+msgstr ""
+"フットプリントライブラリはグローバルとプロジェクト固有、両方のテーブルで定義"
+"することもできます。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:276
+#, fuzzy, no-wrap
+#| msgid "You can define all your libraries on a project specific basis.  ** The advantage of this is that you only need to define the libraries you actually need for the project which cuts down on searching.  ** The disadvantage is that you always have to remember to add each footprint library that you need for every project."
+msgid ""
+"** The advantage of this is that you only need to define the libraries\n"
+"   you actually need for the project which cuts down on searching.\n"
+"** The disadvantage is that you always have to remember to add each\n"
+"   footprint library that you need for every project.\n"
+msgstr "全てのライブラリをプロジェクト固有のテーブルへ定義することもできます。** これの長所は、プロジェクトが本当に必要とするライブラリだけとなるので、探しやすくなることです。** これの短所は、プロジェクトごとに必要とするフットプリントライブラリをそれぞれ忘れずに追加しなければならないことです。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:279
+msgid ""
+"You can also define footprint libraries both globally and project "
+"specifically."
+msgstr ""
+"フットプリントライブラリはグローバルとプロジェクト固有、両方のテーブルで定義"
+"することもできます。"
+
+#. type: Plain text
+#: Pcbnew_installation.adoc:283
+msgid ""
+"One usage pattern would be to define your most commonly used libraries "
+"globally and the library only require for the project in the project "
+"specific library table.  There is no restriction on how you define your "
+"libraries."
+msgstr ""
+"使用パターンの一つは、よく使うライブラリをグローバル、そのプロジェクトでのみ"
+"必要とされるライブラリはプロジェクト固有のライブラリテーブルに定義することで"
+"しょう。ライブラリを定義するにあたっての制約は特にありません。"
+
+#~ msgid ""
+#~ "If excluded, the connection to the zone will not be very good.  ** The "
+#~ "zone can be filled only if tracks exists to connect zones areas.  ** Pads "
+#~ "must be connected by tracks."
+#~ msgstr ""
+#~ "パッドへの接続部分をゾーンから除外する場合、ゾーンとの接続は十分に低いイン"
+#~ "ピーダンスにはならないでしょう。 ** ゾーンの領域へ接続するトラックが存在す"
+#~ "る場合のみゾーンは塗り潰されます。 ** パッドはトラックで接続しなければなり"
+#~ "ません。"
+
+#~ msgid "one\n"
+#~ msgstr "ところから始まる（オフセットは１行ごとに加算される）。\n"
+
+#~ msgid "*Restart numbering*: if laying out using items that already have numbers,\n"
+#~ msgstr "*自動ナンバリング*: 既に番号を持っているアイテムを使ってレイアウトする場合、\n"
+
+#~ msgid ""
+#~ "Or use the following function keys: ** `F1`: Enlarge (zoom in)  ** `F2`: "
+#~ "Reduce (zoom out)  ** `F3`: Redraw the display ** `F4`: Centre view at "
+#~ "the current cursor position"
+#~ msgstr ""
+#~ "あるいはファンクションキーを使います: ** `F1`: 拡大 (ズームイン) ** `F2`: "
+#~ "縮小 (ズームアウト) ** `F3`: 画面を再描画 ** `F4`: 現在のカーソル位置を中"
+#~ "央にして表示"
 
 #~ msgid "1 board outlines layer"
 #~ msgstr "４つの予備レイヤ"
