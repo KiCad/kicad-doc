@@ -13,3 +13,6 @@ add_subdirectory( IDF_Exporter )
 add_subdirectory( KiCad )
 add_subdirectory( Pcbnew )
 add_subdirectory( Pl_Editor )
+add_subdirectory( GUI_Translation_HOWTO )
+
+KiCadDocumentation( webdocindex ) # PDF output won't be as useful as HTML
