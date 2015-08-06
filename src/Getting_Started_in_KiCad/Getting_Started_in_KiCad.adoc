@@ -63,7 +63,7 @@ tools:
 |Program name|Description|File extension
 |KiCad |Project manager|+*.pro+
 |Eeschema |Schematic editor (both schematic and component)|+*.sch, *.lib, *.net+
-|CvPcb |Footprint selector|+*.net, *.cmp+
+|CvPcb |Footprint selector|+*.net+
 |Pcbnew |Circuit board board editor|+*.kicad_pcb+
 |GerbView |Gerber viewer|All the usual gerbers
 |Bitmap2Component |Convert bitmap images to components or footprints|+*.lib, *.kicad_mod, *.kicad_wks+
@@ -94,26 +94,34 @@ On the Internet, the home of KiCad is:
 
 http://www.kicad-pcb.org/
 
-The old and original site was:
-
-http://iut-tice.ujf-grenoble.fr/kicad/index.html
 
 [[download-and-install-kicad]]
 === Download and install KiCad
 
-KiCad runs on GNU/Linux, Apple OS X and Windows. You can download a
-copy of KiCad from:
+KiCad runs on GNU/Linux, Apple OS X and Windows.
+You can find the most up to date instructions and download links at:
 
 http://www.kicad-pcb.org/display/KICAD/Installing+KiCad
 
-*Whatever installation method you choose, always go for a recent
-version of KiCad.*
+IMPORTANT: The current KiCad stable builds have not been updated since 2013. As 
+such they are missing many new features that have been added to KiCad. It is 
+suggested that you install the unstable nightly builds which occasionally 
+introduce new bugs, but are updated frequently and generally stable.
 
 [[under-linux]]
 === Under GNU/Linux
 
-Under GNU/Linux, the easiest way to install KiCad (daily build) is via _PPA_ and __Aptitude__. Type
-into your Terminal:
+.Stable builds
+Stable releases of KiCad can be found in most distibution's package managers as
+kicad and kicad-doc.
+
+.Unstable (nightly development) builds
+Unstable builds are built from the most recent source code. They can sometimes
+have bugs that cause file corruption, generate bad gerbers, etc, but are generally
+stable and have the latest features.
+
+Under Ubuntu, the easiest way to install an unstable nightly build of KiCad is 
+via _PPA_ and __Aptitude__. Type the following into your Terminal:
 
 __________________________________________________
 sudo add-apt-repository ppa:js-reynaud/ppa-kicad 
@@ -123,24 +131,44 @@ sudo aptitude update && sudo aptitude safe-upgrade
 sudo aptitude install kicad kicad-doc-en
 __________________________________________________
 
-At the time of writing, the standard _apt-get_ repository of Ubuntu
-offers a version of KiCad that is about two years old.
+
+Under fedora the easiest way to install an unstable nightly build is via _copr_.
+To install KiCad via copr type the following in to copr:
+
+__________________________________________________
+sudo dnf copr enable mangelajo/kicad
+
+sudo dnf install kicad
+__________________________________________________
 
 Alternatively, you can download and install a pre-compiled version of
 KiCad, or directly download the source code, compile and install KiCad.
 
 [[under-apple-os-x]]
 === Under Apple OS X
+.Stable builds
+There are currently no stable builds of KiCad for OS X.
 
-At the time of writing, the best way to install KiCad on Apple OS X is
-to download a nightly pre-build binary from:
+.Unstable (nightly development) builds
+Unstable builds are built from the most recent source code. They can sometimes
+have bugs that cause file corruption, generate bad gerbers, etc, but are generally
+stable and have the latest features.
 
+Unstable nightly development builds can be found at: 
 http://downloads.kicad-pcb.org/osx/
 
 [[under-Windows]]
 === Under Windows
-For Windows you can find the most recent build at:
+.Stable builds
+Stable builds of KiCad can be found at:
+http://iut-tice.ujf-grenoble.fr/cao/
 
+.Unstable (nightly development) builds
+Unstable builds are built from the most recent source code. They can sometimes
+have bugs that cause file corruption, generate bad gerbers, etc, but are generally
+stable and have the latest features.
+
+For Windows you can find nightly development builds at:
 http://www2.futureware.at/~nickoe/
 
 [[support]]
