@@ -1,59 +1,59 @@
 
-== Modules placement
+== Footprint placement
 
 === Assisted placement
 
-Whilst moving modules the module ratsnest (the net connections) can
+Whilst moving footprints the footprint ratsnest (the net connections) can
 be displayed to assist the placement. To enable this the icon
 image:images/icons/modratsnest.png[] of the left toolbar must be
 activated.
 
 === Manual placement
 
-Select the module with the right mouse button then choose the Move
-command from the menu. Move the module to the required position and
-place it with the left mouse button. If required the selected module
+Select the footprint with the right mouse button then choose the Move
+command from the menu. Move the footprint to the required position and
+place it with the left mouse button. If required the selected footprint
 can also be rotated, inverted or edited. Select Cancel from the menu
 (or press the Esc key) to abort.
 
-Here you can see the display of the module ratsnest during a move:
+Here you can see the display of the footprint ratsnest during a move:
 
 image:images/Pcbnew_ratsnest_during_move.png[]
 
-The circuit once all the modules are placed may be as shown:
+The circuit once all the footprints are placed may be as shown:
 
 image:images/Pcbnew_circuit_after_placement.png[]
 
-=== General re-orientation of modules
+=== General re-orientation of footprints
 
-Initially all modules inherit the same orientation that they had in
+Initially all footprints inherit the same orientation that they had in
 the library (normally 0).
 
-If an alternative orientation is required for an individual module,
-or all modules (for example all vertical) use the menu option
-AutoPlace/Orient All Modules. This orientation can be selective (for
-example to relate only to the modules whose reference starts with
+If an alternative orientation is required for an individual footprint,
+or all footprints (for example all vertical) use the menu option
+AutoPlace/Orient All Footprints. This orientation can be selective (for
+example to relate only to the footprints whose reference starts with
 "IC".
 
 image:images/Pcbnew_footprints_orientation_dialog.png[]
 
-=== Automatic Module Distribution
+=== Automatic Footprint Distribution
 
-Generally speaking, modules can only be moved if they have not been
+Generally speaking, footprints can only be moved if they have not been
 "Fixed".  This attribute can be turned on and off from the pop-up
-window (click right mouse button over module) whilst in Module Mode,
-or through the Edit Module Menu.
+window (click right mouse button over footprint) whilst in Footprint Mode,
+or through the Edit Footprint Menu.
 
 As stated in the last chapter, new
-modules loaded during the reading of the netlist appear piled up at
+footprints loaded during the reading of the netlist appear piled up at
 a single location on the board. Pcbnew allows an automatic
-distribution of the modules to make manual selection and placement
+distribution of the footprints to make manual selection and placement
 easier.
 
-* Select the option "Module Mode" (Icon image:images/icons/mode_module.png[] on the upper toolbar).
+* Select the option "Footprint Mode" (Icon image:images/icons/mode_module.png[] on the upper toolbar).
 * The pop-up window activated by the right mouse button becomes:
 
-If there is a module under the cursor:
+If there is a footprint under the cursor:
 
 image:images/Pcbnew_context_module_mode_module_under_cursor.png[]
 
@@ -63,32 +63,34 @@ image:images/Pcbnew_context_module_mode_no_module_under_cursor.png[]
 
 In both cases the following commands are available:
 
-* *Move all Modules* allows the automatic distribution of all the
-  modules not Fixed.  This is generally used after the first reading of a
-  netlist.
-* *Move new Modules* allows the automatic distribution of the modules
-  which have not been placed already within the PCB outline. This
-  command requires that an outline of the board has been drawn to
-  determine which modules can be automatically distributed.
+* *Spread out All Footprints* allows the automatic distribution of all the
+  footprints not Fixed.  This is generally used after the first reading of
+  a netlist.
 
-=== Automatic placement of modules
+* *Spread out Footprints not Already on Board* allows the automatic
+  distribution of the footprints which have not been placed already
+  within the PCB outline. This command requires that an outline
+  of the board has been drawn to determine which footprints can be
+  automatically distributed.
+
+=== Automatic placement of footprints
 
 ==== Characteristics of the automatic placer
 
-The automatic placement feature allows the placement of modules
-onto the 2 faces of the circuit board (however switching a module onto
-the copper layer is not automatic).
+The automatic placement feature allows the placement of footprints
+onto the 2 faces of the circuit board (however switching a footprint
+onto the copper layer is not automatic).
 
 It also seeks the best orientation (0, 90, -90, 180 degrees) of the
-module. The placement is made according to an optimization
+footprint. The placement is made according to an optimization
 algorithm, which seeks to minimize the length of the ratsnest, and
-which seeks to create space between the larger modules with with
+which seeks to create space between the larger footprints with with
 many pads. The order of placement is optimized to initially place
-these larger modules with many pads.
+these larger footprints with many pads.
 
 ==== Preparation
 
-Pcbnew can thus place the modules automatically, however it is
+Pcbnew can thus place the footprints automatically, however it is
 necessary to guide this placement, because no software can guess
 what the user wants to achieve.
 
@@ -98,56 +100,56 @@ Before an automatic placement is carried out one must:
   closed if the form is not rectangular).
 * Manually place the components whose positions are imposed (Connectors,
   clamp holes, etc).
-* Similarly, certain SMD modules and critical components (large
-  modules for example) must be on a specific side or position on the
+* Similarly, certain SMD footprints and critical components (large
+  footprints for example) must be on a specific side or position on the
   board and this must be done manually.
-* Having completed any manual placement these modules must be "Fixed" to
-  prevent them being moved. With the Module Mode icon
-  image:images/icons/mode_module.png[] selected right click on the module
-  and pick "Fix Module" on the Pop-up menu. This can also be done through
-  the Edit/Module Pop-up menu.
-* Automatic placement can then be carried out. With the Module Mode
+* Having completed any manual placement these footprints must be "Fixed" to
+  prevent them being moved. With the Footprint Mode icon
+  image:images/icons/mode_module.png[] selected right click on the footprint
+  and pick "Fix Footprint" on the Pop-up menu. This can also be done through
+  the Edit/Footprint Pop-up menu.
+* Automatic placement can then be carried out. With the Footprint Mode
   icon selected, right click and select Glob(al) Move and Place – then
-  Autoplace All Modules.
+  Autoplace All Footprints.
 
 During automatic placement, if required, Pcbnew can optimize the
-orientation of the modules. However rotation will only be attempted
-if this has been authorized for the module (see Edit Module Options).
+orientation of the footprints. However rotation will only be attempted
+if this has been authorized for the footprint (see Edit Footprint Options).
 
 Usually resistors and non-polarized capacitors are authorized for
-180 degrees rotation. Some modules (small transistors for example)
+180 degrees rotation. Some footprints (small transistors for example)
 can be authorized for +/- 90 and 180 degrees rotation.
 
-For each module one slider authorizes 90 degree Rot(ation) and a
+For each footprint one slider authorizes 90 degree Rot(ation) and a
 second slider authorizes 180 degree Rot(ation). A setting of 0
 prevents rotation, a setting of 10 authorizes it, and an
 intermediate value indicates a preference for/against rotation.
 
-The rotation authorization can be done by editing the module once it
+The rotation authorization can be done by editing the footprint once it
 is placed on the board. However it is preferable to set the required
-options to the module in the library as these settings will then be
-inherited each time the module is used.
+options to the footprint in the library as these settings will then be
+inherited each time the footprint is used.
 
 ==== Interactive auto-placement
 
 It may be necessary during automatic placement to stop (press Esc
-key) and manually re-position a module. Using the command Autoplace
-Next Module will restart the autoplacement from the point at which
+key) and manually re-position a footprint. Using the command Autoplace
+Next Footprint will restart the autoplacement from the point at which
 it was stopped.
 
-The command Autoplace new modules allows the automatic placement of
-the modules which have not been placed already within the PCB
+The command Autoplace new footprints allows the automatic placement of
+the footprints which have not been placed already within the PCB
 outline. It will not move those within the PCB outline even if they
 are not "fixed".
 
-The command Autoplace Module makes it possible to re-place the
-module pointed to by the mouse, even if its 'fixed' attribute is
+The command Autoplace Footprint makes it possible to re-place the
+footprint pointed to by the mouse, even if its 'fixed' attribute is
 active.
 
 ==== Additional note
 
 Pcbnew automatically determines the possible zone of placement of
-the modules by respecting the shape of the board outline, which is
+the footprints by respecting the shape of the board outline, which is
 not necessarily rectangular (It can be round, or have cutouts, etc).
 
 If the board is not rectangular, the outline must be closed, so that
@@ -155,7 +157,7 @@ Pcbnew can determine what is inside and what is outside the outline.
 In the same way, if there are internal cutouts, their outline will
 have to be closed.
 
-Pcbnew calculates the possible zone of placement of the modules
-using the outline of the board, then passes each module in turn over
+Pcbnew calculates the possible zone of placement of the footprints
+using the outline of the board, then passes each footprint in turn over
 this area in order to determine the optimum position at which to
 place it.
