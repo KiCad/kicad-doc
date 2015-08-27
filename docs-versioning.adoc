@@ -1,0 +1,71 @@
++++
+title = "Docs Versioning"
+[menu.main]
+    parent = "Community"
+    name   = "Docs Versioning"
++++
+
+This document is a work in progress and improvement suggestions are
+welcome.
+
+The purpose of this document is to specify how the given version for a
+document relates to the official releases of the main KiCad software
+itself. The audience of this manuscript is documentation writers and
+packagers. This also means that discussion about this topic does
+usually not belong on the KiCad developers list, but rather on the
+kicad-doc repository on github.
+
+== Main KiCad
+
+The versioning of the main KiCad application is made with a triplet,
+starting from 4.0.0. From the documentation teams point of view we
+would like to make it easy for everyone to deduce which documentation
+document that is applicable to whatever KiCad version of interest the
+end use might have. Therefore the docs are versioned to match the
+kicad releases but appended with a new tuple.
+
+== KiCad Documentation
+
+This new tuple appended to the KiCad version triplet will be an
+incrementing integer which is incremented whenever the documentation
+writers are ready to call a snapshot in the git tree ready for
+consumption.
+
+Because the KiCad documentation is translated to multiple
+internationalized languages there are multiple triggers for a new
+"snapshot" of the documentation state, in the sense a single edition
+of a translated version calls for a new version for all the docs. This
+means that we release the documentation as a monolithic release, or in
+other words a snapshot of all languages, determined by git tags.
+
+== Tagging and Branching Strategy
+
+Every release of the documentaion is composed of the git tree using
+the tags assigned on the given branch, usually the master branch.
+
+If there for some reason are going to be backported changes to some
+old release triplet (read KiCad aligned documentation version), then
+this can branch out, but will be a dead end which should never be
+intended to be merged back into master. It is up to the document
+writers to make sure that useful additions to a backport are applied
+on master if they are still relevant.
+
+A single tag does not denote a release, because a release consists of
+different time states of the repository. This is because this enables
+the translations not to break whenever the English documentation is
+updated, but the translators are not quick enough to follow along.
+
+The purpose of all this version joggling is because we want the
+documentation releases to be updated independent of the KiCad release
+cycle, but still align with it, at the same time making it easy for
+the documentation maintainers call for a new release.
+
+== Packaging
+
+This convoluted release tagging process needs to be supported by the
+cmake scripts, such that it is easy for packagers to package the docs
+in the way they want it.
+
+I propose that we make cmake be able to generate a release tarball
+where it only includes the relevant versions of the files that is
+needed to generate the documentation output.

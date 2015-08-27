@@ -3,7 +3,7 @@
 #
 
 # where the docs are pulled down to
-adocRoot=/mnt/src/kicad-doc/src/asciidoc
+adocRoot=/mnt/src/kicad-doc/src
 
 # function build each sub directory
 function makeAll {

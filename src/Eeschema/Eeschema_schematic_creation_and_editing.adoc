@@ -1,10 +1,8 @@
 
 [[schematic-creation-and-editing]]
-Schematic Creation and Editing
-------------------------------
+== Schematic Creation and Editing
 
-Introduction
-~~~~~~~~~~~~
+=== Introduction
 
 A schematic can be represented by a single sheet, but, if big enough, it
 will require several sheets.
@@ -16,8 +14,7 @@ described in the <<hierarchical-schematics,Hierarchical Schematics>>
 chapter.
 
 [[general-considerations]]
-General considerations
-~~~~~~~~~~~~~~~~~~~~~~
+=== General considerations
 
 A schematic designed with Eeschema is more than a simple graphic
 representation of an electronic device. It is normally the entry point
@@ -33,8 +30,7 @@ buses and power ports. For clarity in the schematic, you can place
 purely graphical elements like bus entries, comments, and dotted lines.
 
 [[the-development-chain]]
-The development chain
-~~~~~~~~~~~~~~~~~~~~~
+=== The development chain
 
 image:images/en/dev-chain.png[dev-chain_png]
 
@@ -43,12 +39,10 @@ the schematic is made, a netlist is generated, which is later used to
 import the set of connections and footprints into PcbNew.
 
 [[component-placement-and-editing]]
-Component placement and editing
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Component placement and editing
 
 [[find-and-place-a-component]]
-Find and place a component
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Find and place a component
 
 To load a component into your schematic you can use the icon
 image:images/icons/new_component.png[New Component icon].
@@ -68,8 +62,7 @@ Here is a component during placement:
 image:images/en/component_during_placement.png[component during placement]
 
 [[power-ports]]
-Power ports
-^^^^^^^^^^^
+==== Power ports
 
 A power port symbol is a component (the symbols are grouped in the
 “power” library), so they can be placed using the component chooser.
@@ -79,8 +72,7 @@ tool is available. This tool is similar, except
 that the search is done directly in the ``power'' library.
 
 [[component-editing-and-modification-already-placed-component]]
-Component Editing and Modification (already placed component)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Component Editing and Modification (already placed component)
 
 There are two ways to edit a component:
 
@@ -94,26 +86,24 @@ assign to it a reference number right away, or to select the unit
 manually). This can be done automatically by the annotation function.
 
 [[component-modification]]
-Component modification
-++++++++++++++++++++++
+===== Component modification
 
 To modify some feature of a component, position the cursor on the
 component, and then either:
 
 * Double-click on the component to open the full editing dialog.
 * Right-click to open the context menu and use one of the
-commands: Move, Orientation, Edit, Delete, etc.
+  commands: Move, Orientation, Edit, Delete, etc.
 
 [[text-fields-modification]]
-Text fields modification
-++++++++++++++++++++++++
+===== Text fields modification
 
 You can modify the reference, value, position, orientation, text size and
 visibility of the fields:
 
 * Double-click on the text field to modify it.
 * Right-click to open the context menu and use one of the
-commands: Move, Rotate, Edit, Delete, etc.
+  commands: Move, Rotate, Edit, Delete, etc.
 
 For more options, or in order to create fields,
 double-click on the component to open the Component Properties
@@ -131,12 +121,10 @@ orientation, and resets the options, size and position of each field.  However,
 texts fields are not modified because this could break the schematic.
 
 [[wires-buses-labels-power-ports]]
-Wires, Buses, Labels, Power ports
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Wires, Buses, Labels, Power ports
 
 [[introduction-1]]
-Introduction
-^^^^^^^^^^^^
+==== Introduction
 
 All these drawing elements can also be placed with the tools on the
 vertical right toolbar.
@@ -155,8 +143,7 @@ These elements are:
 * **Hierarchical sheets**, and their connection pins.
 
 [[connections-wires-and-labels]]
-Connections (Wires and Labels)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Connections (Wires and Labels)
 
 There are two ways to establish connection:
 
@@ -199,16 +186,14 @@ together and become equivalent: all the other elements connected to one
 or the other labels are then connected to all of them.
 
 [[connections-buses]]
-Connections (Buses)
-^^^^^^^^^^^^^^^^^^^
+==== Connections (Buses)
 
 In the following schematic, many pins are connected to buses.
 
 image:images/en/sch_with_buses.png[Example schematic with buses]
 
 [[bus-members]]
-Bus members
-+++++++++++
+===== Bus members
 
 From the schematic point of view, a bus is a collection of signals,
 starting with a common prefix, and ending with a number. For example,
@@ -220,8 +205,7 @@ the last wire number of this bus. Thus if PCA has 20 members from 0 to
 like PCA0, PCA1, PCA2, WRITE, READ cannot be contained in a bus.
 
 [[connections-between-bus-members]]
-Connections between bus members
-+++++++++++++++++++++++++++++++
+===== Connections between bus members
 
 Pins connected between the same members of a bus must be connected by
 labels. It is not possible to connect a pin directly to a bus; this
@@ -239,25 +223,25 @@ memories, microprocessors...):
 
 * Place the first label (for example PCA0)
 * Use the repetition command as much as needed to place members.
-Eeschema will automatically create the next labels (PCA1, PCA2...)
-vertically aligned, theoretically on the position of the other pins.
+  Eeschema will automatically create the next labels (PCA1, PCA2...)
+  vertically aligned, theoretically on the position of the other pins.
 * Draw the wire under the first label. Then use the repetition command
-to place the other wires under the labels.
+  to place the other wires under the labels.
 * If needed, place the bus entries by the same way (Place the first
-entry, then use the repetition command).
+  entry, then use the repetition command).
 
-*Note:*
-
+[NOTE]
+====
 In the Preferences/Options menu, you can set the repetition parameters:
 
 * Vertical step.
 * Horizontal step.
 * Label increment (which can thus be incremented by 2, 3. or
-decremented).
+  decremented).
+====
 
 [[global-connections-between-buses]]
-Global connections between buses
-++++++++++++++++++++++++++++++++
+===== Global connections between buses
 
 You may need connections between buses, in order to link two buses
 having different names, or in the case of a hierarchy, to create
@@ -281,8 +265,7 @@ BUS10)
 
 
 [[power-ports-connection]]
-Power ports connection
-^^^^^^^^^^^^^^^^^^^^^^
+==== Power ports connection
 
 When the power pins of the components are visible, they must be
 connected, as for any other signal.
@@ -297,8 +280,7 @@ And moreover, it would be a bad idea to make them visible and to connect
 them like the other pins, because the schematic would become unreadable
 and not in accordance with usual conventions.
 
-Note:
-
+[NOTE]
 If you want to enforce the display of these invisible power pins, you
 must check the option ``Show invisible power pins'' in the
 Preferences/Options dialog box of the main menu, or the icon
@@ -328,8 +310,7 @@ port not powered__.
 All these symbols are components of the schematic library ``power''.
 
 [[no-connection-symbols]]
-“No Connection” symbols
-^^^^^^^^^^^^^^^^^^^^^^^
+==== “No Connection” symbols
 
 These symbols are very useful to avoid undesired ERC warnings.
 The electric rules check ensures that no connection has been
@@ -342,12 +323,10 @@ on these pins. These symbols do not have any influence on the
 generated netlists.
 
 [[drawing-complements]]
-Drawing Complements
-~~~~~~~~~~~~~~~~~~~
+=== Drawing Complements
 
 [[text-comments]]
-Text Comments
-^^^^^^^^^^^^^
+==== Text Comments
 
 It can be useful (to aid in understanding the schematic) to place
 annotations such as text fields and frames. Text fields (tool
@@ -362,8 +341,7 @@ Here you can find an example of a frame with a textual comment.
 image:images/en/frame_example.png[Frame with comment example]
 
 [[sheet-title-block]]
-Sheet title block
-^^^^^^^^^^^^^^^^^
+==== Sheet title block
 
 The title block is edited with the tool
 image:images/icons/sheetset.png[Page Settings tool].
@@ -375,8 +353,7 @@ image:images/en/title_block.png[Title block]
 The sheet number (Sheet X/Y) is automatically updated.
 
 [[rescuing-cached-components]]
-Rescuing cached components
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Rescuing cached components
 
 By default, Eeschema loads component symbols out of the libraries according to the set paths.
 This can cause a problem when loading a very old project: if the symbols in the library have changed

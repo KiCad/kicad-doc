@@ -1,14 +1,11 @@
 
-Installation
-------------
+== Installation
 
-Installation of the software
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Installation of the software
 
 The installation procedure is described in the KiCad documentation.
 
-Modifying the default configuration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Modifying the default configuration
 
 A default configuration file `kicad.pro` is provided in
 `kicad/share/template`. This file is used as the initial
@@ -20,16 +17,15 @@ loaded
 To do this:
 
 * Launch Pcbnew using kicad or directly. On Windows is in
-`C:\kicad\bin\pcbnew.exe` and on Linux you can run
-`/usr/local/kicad/bin/kicad` or `/usr/local/kicad/bin/pcbnew` if the
-binaries are located in `/usr/local/kicad/bin`.
+  `C:\kicad\bin\pcbnew.exe` and on Linux you can run
+  `/usr/local/kicad/bin/kicad` or `/usr/local/kicad/bin/pcbnew` if the
+  binaries are located in `/usr/local/kicad/bin`.
 * Select Preferences - Libs and Dir.
 * Edit as required.
 * Save the modified configuration (Save Cfg) to
-`kicad/share/template/kicad.pro`.
+  `kicad/share/template/kicad.pro`.
 
-Managing Footprint Libraries: legacy versions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Managing Footprint Libraries: legacy versions
 
 You can have access to the library list initialization from the
 Preferences menu:
@@ -52,8 +48,7 @@ library list order using the “Up” and “Down” buttons in the dialog
 above or give the footprint a unique name in using the footprint
 editor.
 
-Managing Footprint Libraries: .pretty repositories
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Managing Footprint Libraries: .pretty repositories
 
 As of release rXXXX, Pcbnew uses the new footprint library table
 implementation to manage footprint libraries and the information in
@@ -77,8 +72,7 @@ ensuring that the correct footprint is loaded from the appropriate
 library.  It also allows Pcbnew to support loading libraries from
 different PCB editors such as Eagle and GEDA.
 
-Global Footprint Library Table
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Global Footprint Library Table
 
 The global footprint library table contains the list of libraries
 that are always available regardless of the currently loaded
@@ -86,8 +80,7 @@ project file.  The table is saved in the file `fp-lib-table` in the
 user's home folder.  The location of this folder is dependent on the
 operating system.
 
-Project Specific Footprint Library Table
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Project Specific Footprint Library Table
 
 The project specific footprint library table contains the list of
 libraries that are available specifically for the currently loaded
@@ -97,8 +90,7 @@ no project file is loaded or there is no footprint library table
 file in the project path, an empty table is created which can be
 edited and later saved along with the board file.
 
-Initial Configuration
-^^^^^^^^^^^^^^^^^^^^^
+==== Initial Configuration
 
 The first time CvPcb or Pcbnew is run and the global footprint table
 file `fp-lib-table` is not found in the user's home folder, Pcbnew
@@ -111,8 +103,7 @@ fp_global_table manually or configure the table by hand.  The
 default footprint library table includes all of the standard
 footprint libraries that are installed as part of KiCad.
 
-Adding Table Entries
-^^^^^^^^^^^^^^^^^^^^
+==== Adding Table Entries
 
 In order to use a footprint library, it must first be added to
 either the global table or the project specific table.  The project
@@ -122,7 +113,7 @@ related in any way to the actual library file name or path.  The
 colon `:` character cannot be used anywhere in the nickname.  Each
 library entry must have a valid path and/or file name depending on
 the type of library.  Paths can be defined as absolute, relative, or
-by environment variable substitution (see section 4.5.3 below).  The
+by environment variable substitution.  The
 appropriate plug in type must be selected in order for the library
 to be properly read.  Pcbnew currently supports reading KiCad
 legacy, KiCad Pretty, Eagle,  and GEDA footprint libraries.  There
@@ -137,8 +128,7 @@ duplicated names occur.  When entries are defined in the project
 specific table, an fp-lib-table file containing the entries will be
 written into the folder of the currently open net list.
 
-Environment Variable Substitution
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Environment Variable Substitution
 
 One of the most powerful features of the footprint library table is
 environment variable substitution.  This allows you to define custom
@@ -155,8 +145,7 @@ This allows you to create libraries in the project path without
 having to define the absolute path to the library in the project
 specific footprint library table.
 
-Using the GitHub Plugin
-^^^^^^^^^^^^^^^^^^^^^^^
+==== Using the GitHub Plugin
 
 The GitHub plugin is a special plugin that provides an interface for
 read only access to a remote GitHub repository consisting of pretty
@@ -172,7 +161,7 @@ For example:
 
      https://github.com/liftoff-sr/pretty_footprints
 
-Tpically GitHub URLs take the form:
+Typically GitHub URLs take the form:
 
      https://github.com/user_name/repo_name
 
@@ -257,8 +246,7 @@ this working is to overwrite the default nginx.conf with this one
 and `export KIGITHUB=http://my_server:54321/KiCad`, where
 `my_server` is the IP or domain name of the machine running nginx.
 
-Usage Patterns
-^^^^^^^^^^^^^^
+==== Usage Patterns
 
 Footprint libraries can be defined either globally or specifically
 to the currently loaded project.  Footprint libraries defined in the
@@ -274,16 +262,20 @@ libraries in either table.
 There are advantages and disadvantages to each method:
 
 * You can define all of your libraries in the global table which means
-they will always be available when you need them.
+  they will always be available when you need them.
+
 ** The disadvantage of this is that you may have to search through a lot
-of libraries to find the footprint you are looking for.
+   of libraries to find the footprint you are looking for.
+
 * You can define all your libraries on a project specific basis.
+
 ** The advantage of this is that you only need to define the libraries
-you actually need for the project which cuts down on searching.
+   you actually need for the project which cuts down on searching.
 ** The disadvantage is that you always have to remember to add each
-footprint library that you need for every project.
+   footprint library that you need for every project.
+
 * You can also define footprint libraries both globally and project
-specifically.
+  specifically.
 
 One usage pattern would be to define your most commonly used
 libraries globally and the library only require for the project in

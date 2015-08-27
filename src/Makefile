@@ -50,7 +50,7 @@ DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cove
 .PHONY: help
 help:
 	@echo "Please do './make.sh <target>' where <target> is one of"
-#	@echo "  pot        to build the english strings catalog .pot file"
+	@echo "  pot        to build the english strings catalog .pot file"
 	@echo "  $(PODIR)/NN.po   to build/update the single language NN i18n strings .po file"
 #	@echo "  po-NN      to build/update the single language NN i18n strings .po file"
 	@echo "  po-all     to update all languages i18n strings .po files"
@@ -80,11 +80,11 @@ help:
 #	@echo "DOCCHAPTERS: $(DOCCHAPTERS)"
 
 
-#.PHONY: pot
-#pot: $(PODIR)/$(DOCNAME).pot
+.PHONY: pot
+pot: $(PODIR)/$(DOCNAME).pot
 
-#$(PODIR)/$(DOCNAME).pot: $(DOCNAME).adoc
-#	po4a-gettextize -f asciidoc -M utf-8 -m $^ -p $@
+$(PODIR)/$(DOCNAME).pot: $(DOCNAME).adoc $(foreach l,$(DOCCHAPTERS), $(l))
+	po4a-gettextize -f asciidoc -M utf-8 -m $(DOCNAME).adoc $(foreach pot,$(DOCCHAPTERS),-m $(pot)) -p $@
 
 #Build/update the single language NN i18n strings .po file
 #$(PODIR)/%.po: $(DOCNAME).adoc #Single file dependency
@@ -150,6 +150,12 @@ docbook-all: docbook $(DOCNAME).xml $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).xml
 #English pdf
 $(DOCNAME).pdf: $(DOCNAME).adoc $(DOCCHAPTERS)
 	a2x -f pdf $(ASCIIDOCVAR) --dblatex-opts $(DBLATEXOPTS) $(DOCNAME).adoc
+
+#Japanese pdf
+DBLATEXOPTS-JA="-b xetex -p ../../xsl/dblatex-pdf-ja.xsl -P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+$(DOCNAME)-ja.pdf: $(DOCNAME)-ja.adoc
+	echo "Note: To make japanese pdf, you need to install fonts-vlgothic (like: sudo apt-get install fonts-vlgothic)."
+	a2x -f pdf $(ASCIIDOCVAR) -a lang=ja --dblatex-opts $(DBLATEXOPTS-JA) $(DOCNAME)-ja.adoc
 
 #I18n pdf
 $(DOCNAME)-%.pdf: $(DOCNAME)-%.adoc

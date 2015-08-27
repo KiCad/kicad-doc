@@ -1,0 +1,1435 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: KiCad-ja\n"
+"POT-Creation-Date: 2015-07-22 22:42+0900\n"
+"PO-Revision-Date: 2015-08-04 20:15+0900\n"
+"Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
+"Language-Team: kicad.jp <kicad@kicad.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
+
+#. type: Title ===
+#: KiCad.adoc:6 KiCad.adoc:54
+#, no-wrap
+msgid "KiCad"
+msgstr "KiCad"
+
+#. type: Plain text
+#: KiCad.adoc:9
+#, no-wrap
+msgid "*KiCad*\n"
+msgstr "*KiCad*\n"
+
+#. type: Plain text
+#: KiCad.adoc:11
+msgid "_Reference manual_"
+msgstr "_リファレンスマニュアル_"
+
+#. type: Plain text
+#: KiCad.adoc:14
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "*著作権*\n"
+
+#. type: Plain text
+#: KiCad.adoc:20
+msgid ""
+"This document is Copyright © 2010–2015 by its contributors as listed below. "
+"You may distribute it and/or modify it under the terms of either the GNU "
+"General Public License (http://www.gnu.org/licenses/gpl.html), version 3 or "
+"later, or the Creative Commons Attribution License (http://creativecommons."
+"org/licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"このドキュメントは以下の貢献者により著作権所有© 2010–2015 されています。あな"
+"たは、GNU General Public License ( http://www.gnu.org/licenses/gpl.html ) の"
+"バージョン 3 以降、あるいはクリエイティブ・コモンズ・ライセンス ( http://"
+"creativecommons.org/licenses/by/3.0/ ) のバージョン 3.0 以降のいずれかの条件"
+"の下で、配布または変更することができます。"
+
+#. type: Plain text
+#: KiCad.adoc:22
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr "このガイドの中のすべての商標は、正当な所有者に帰属します。"
+
+#. type: Plain text
+#: KiCad.adoc:25
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "*貢献者*\n"
+
+#. type: Plain text
+#: KiCad.adoc:27
+msgid "Jean-Pierre Charras, Fabrizio Tappero."
+msgstr "Jean-Pierre Charras, Fabrizio Tappero."
+
+#. type: Plain text
+#: KiCad.adoc:30
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "*フィードバック*\n"
+
+#. type: Plain text
+#: KiCad.adoc:33
+msgid ""
+"Please direct any comments or suggestions about this document to the kicad "
+"mailing list: _https://launchpad.net/~kicad-developers_"
+msgstr ""
+"このドキュメントに関するコメントや提案は、何でも KiCad メーリングリストへ送っ"
+"てください: _https://launchpad.net/~kicad-developers_"
+
+#. type: Plain text
+#: KiCad.adoc:36
+#, no-wrap
+msgid "*Acknowledgments*\n"
+msgstr "*謝辞*\n"
+
+#. type: Plain text
+#: KiCad.adoc:38
+msgid "None"
+msgstr "None"
+
+#. type: Plain text
+#: KiCad.adoc:41
+#, no-wrap
+msgid "*Publication date and software version*\n"
+msgstr "*発行日とバージョン*\n"
+
+#. type: Plain text
+#: KiCad.adoc:43
+msgid "2015, may 21."
+msgstr "2015年5月21日"
+
+#. type: Plain text
+#: KiCad.adoc:46
+#, no-wrap
+msgid "*Note for Mac users*\n"
+msgstr "*Macユーザへの注意*\n"
+
+#. type: Plain text
+#: KiCad.adoc:48
+msgid "The KiCad support for the Apple OS X operating system is experimental."
+msgstr "KiCadのApple OS Xに対するサポートは実験的です。"
+
+#. Since docbook "article" is more compact, I have to separate this page
+#. type: Plain text
+#: KiCad.adoc:51
+msgid "<<<"
+msgstr "<<<"
+
+#. type: Title ==
+#: KiCad.adoc:52
+#, no-wrap
+msgid "Introduction"
+msgstr "イントロダクション"
+
+#. type: Plain text
+#: KiCad.adoc:59
+msgid ""
+"KiCad is an open-source software tool for the creation of electronic "
+"schematic diagrams and PCB artwork. Beneath its singular surface, kicad "
+"incorporates an elegant ensemble of the following software tools:"
+msgstr ""
+"KiCadは回路図とPCBアートワーク作成のためのオープン・ソース・ソフトウェアで"
+"す。KiCad は、以下の統一された外観のツール群がエレガントに調和しています。"
+
+#. type: Plain text
+#: KiCad.adoc:61
+#, no-wrap
+msgid "*Kicad* : project manager\n"
+msgstr "*KiCad* : プロジェクトマネージャ\n"
+
+#. type: Plain text
+#: KiCad.adoc:62
+#, no-wrap
+msgid "*Eeschema* : schematic editor and component editor\n"
+msgstr "*Eeschema* : 回路図エディタとコンポーネント・ライブラリ・エディタ\n"
+
+#. type: Plain text
+#: KiCad.adoc:63
+#, no-wrap
+msgid "*CvPcb* : footprint selector helper (always run from Eeschema)\n"
+msgstr "*CvPcb* : フットプリント選択ヘルパー (常にEeschemaから起動されます)\n"
+
+#. type: Plain text
+#: KiCad.adoc:64
+#, no-wrap
+msgid "*Pcbnew* : circuit board layout editor and footprint editor\n"
+msgstr "*Pcbnew* : 回路基板レイアウトエディタとフットプリントエディタ\n"
+
+#. type: Plain text
+#: KiCad.adoc:65
+#, no-wrap
+msgid "*GerbView* : Gerber viewer\n"
+msgstr "*GerbView* : ガーバービューア\n"
+
+#. type: Plain text
+#: KiCad.adoc:67
+msgid "3 utilities are included"
+msgstr "さらに３つのユーティリティが含まれます"
+
+#. type: Plain text
+#: KiCad.adoc:70
+#, no-wrap
+msgid ""
+"*Bitmap2Component*: component maker for logos. It creates a schematic\n"
+"component or a footprint from a bitmap picture.\n"
+msgstr "*Bitmap2Component*: ロゴ用のコンポーネント作成。ビットマップ画像から回路図コンポーネントとフットプリントを作成します。\n"
+
+#. type: Plain text
+#: KiCad.adoc:73
+#, no-wrap
+msgid ""
+"*PcbCalculator*: A calculator that is helpful to calculate\n"
+"components for regulators, track width versus current, transmission\n"
+"lines...\n"
+msgstr "*PCBCalculator*: レギュレータの分圧抵抗や電流に対する配線幅、伝送線路などの計算機\n"
+
+#. type: Plain text
+#: KiCad.adoc:74
+#, no-wrap
+msgid "*PlEditor*: Page Layout Editor.\n"
+msgstr "*Pl_Editor*: 図枠の編集\n"
+
+#. type: Plain text
+#: KiCad.adoc:77
+msgid ""
+"These tools are usually run from the project manager, but can be also run as "
+"stand-alone tools."
+msgstr ""
+"これらのツールは通常プロジェクトマネージャから起動されますが、独立したツール"
+"として実行することもできます。"
+
+#. type: Plain text
+#: KiCad.adoc:80
+msgid ""
+"At the time of writing, KiCad is considered mature and can be used for the "
+"successful development and maintenance of complex electronic boards."
+msgstr ""
+"現時点でKiCadは安定しており複雑な電子基板の開発とメンテナンスに十分使用できる"
+"と考えられています。"
+
+#. type: Plain text
+#: KiCad.adoc:83
+msgid ""
+"Kicad does not present any board-size limitation and it can handle up to 32 "
+"copper layers, 14 technical layers and 4 auxiliary layers."
+msgstr ""
+"KiCadは基板サイズに制限はなく、最大32層までの配線層と14層のテクニカル層、4層"
+"の補助層を扱えます。"
+
+#. type: Plain text
+#: KiCad.adoc:85
+msgid "Kicad can create all the files necessary for building printed boards:"
+msgstr "KiCadはプリント基板作成に必要なすべてのファイルを作成できます。"
+
+#. type: Plain text
+#: KiCad.adoc:87
+msgid "Gerber files for photo-plotters"
+msgstr "フォトプロッタ用ガーバーファイル"
+
+#. type: Plain text
+#: KiCad.adoc:88
+msgid "drilling files"
+msgstr "穴あけファイル"
+
+#. type: Plain text
+#: KiCad.adoc:89
+msgid "component location files"
+msgstr "部品配置ファイル"
+
+#. type: Plain text
+#: KiCad.adoc:90
+msgid "and a lot more."
+msgstr "ほか多数"
+
+#. type: Plain text
+#: KiCad.adoc:94
+msgid ""
+"Being open source (GPL licensed), kicad represents the ideal tool for "
+"projects oriented towards the creation of electronic hardware with an open-"
+"source flavour."
+msgstr ""
+"KiCadはGPLライセンスに基づくオープンソースのため、オープンソース志向の電子機"
+"器作成プロジェクトに理想的なツールです。"
+
+#. type: Plain text
+#: KiCad.adoc:96
+msgid ""
+"Kicad is available for Linux, Windows and Apple OS X (still experimental, "
+"but is now working well)."
+msgstr ""
+"KiCadはLinuxとWindows、Apple OS Xで使用できます。ただしApple OS X版は十分機能"
+"しますが、まだ実験段階です。"
+
+#. type: Title ===
+#: KiCad.adoc:97
+#, no-wrap
+msgid "KiCad files and folders"
+msgstr "KiCadのファイルとフォルダ"
+
+#. type: Plain text
+#: KiCad.adoc:101
+msgid ""
+"KiCad creates and uses files with the following specific file extensions "
+"(and folders)  for schematic and board editing."
+msgstr ""
+"KiCadは特定の拡張子を持ったファイル（とフォルダ）を回路図と基板の編集に使用し"
+"ます。"
+
+#. type: Plain text
+#: KiCad.adoc:103
+#, no-wrap
+msgid "*Project manager file:*\n"
+msgstr "*プロジェクト・マネージャ・ファイル:*\n"
+
+#. type: delimited block |
+#: KiCad.adoc:106
+#, no-wrap
+msgid "|*.pro |Small file containing a few parameters for the current project, including the schematic library list.\n"
+msgstr "|*.pro |現在のプロジェクトに関連するパラメータとコンポーネント・ライブラリ・リストを保存する小さなファイル。\n"
+
+#. type: Plain text
+#: KiCad.adoc:109
+#, no-wrap
+msgid "*Schematic editor files:*\n"
+msgstr "*回路図エディタ:*\n"
+
+#. type: delimited block |
+#: KiCad.adoc:116
+#, no-wrap
+msgid ""
+"|*.sch |Schematic files, which do not contain the components themselves.\n"
+"|*.lib |Schematic component library files, containing the component descriptions: graphic shape, pins, fields.\n"
+"|*.dcm |Schematic component library documentation, containing some component descriptions:\n"
+"comments, keywords, reference to data sheets.\n"
+"|*_cache.lib |Schematic component library cache file, containing a copy of the components used in the schematic project.\n"
+msgstr ""
+"|*.sch |回路図ファイル。ただし使用しているコンポーネント自身の情報は含まない。\n"
+"|*.lib |コンポーネント・ライブラリ・ファイル。各コンポーネントの情報(コンポーネント記号、ピンとフィールド情報)を含む。\n"
+"|*.dcm |コンポーネントライブラリの説明ドキュメント。\n"
+"各コンポーネントに対するコメント、キーワード、データシートへの参照。\n"
+"|*_cache.lib |コンポーネントライブラリのキャッシュファイル。回路図で使用しているコンポーネントのコピーを保存する。\n"
+
+#. type: Plain text
+#: KiCad.adoc:119
+#, no-wrap
+msgid "*Board editor files and folders:*\n"
+msgstr "*基板エディタのファイルとフォルダ:*\n"
+
+#. type: delimited block |
+#: KiCad.adoc:131
+#, no-wrap
+msgid ""
+"|*.kicad_pcb |Board file containing all info but the page layout.\n"
+"|*.pretty |Footprint **library folders**. The folder itself is the library.\n"
+"|*.kicad_mod |Footprint files, containing one footprint description each.\n"
+"|*.brd |Board file in the legacy format.\n"
+"Can be read, but not written by the board editor.\n"
+"|*.mod |Footprint library in the legacy format.\n"
+"Can be read by the footprint or the board editor, but not written.\n"
+"|fp-lib-table |Footprint library list (_footprint libraries table_):\n"
+"list of footprint libraries (various formats) which are loaded\n"
+"by the board or the footprint editor or CvPcb.\n"
+msgstr ""
+"|*.kicad_pcb |図枠以外のすべての基板情報を含むファイル。\n"
+"|*.pretty |フットプリント・ ** ライブラリ・フォルダ ** 。フォルダ自体がライブラリになっています。\n"
+"|*.kicad_mod |説明を含んだフットプリントファイル。各ファイルにフットプリントが1つ。\n"
+"|*.brd |古いフォーマットの基板ファイル。\n"
+"基板エディタで読み込みは可能ですが、書き込みはできません。\n"
+"|*.mod |古いフォーマットのフットプリントライブラリ。\n"
+"フットプリントエディタと基板エディタで読み込みは可能ですが、書き込みはできません。\n"
+"|fp-lib-table |フットプリントライブラリのリスト (_フットプリント・ライブラリ・テーブル_):\n"
+"基板エディタやフットプリントエディタ、CvPcbで読み込まれるフットプリントライブラリのリスト。含まれるフットプリントライブラリには、様々なフォーマットのライブラリを指定できます。\n"
+
+#. type: Plain text
+#: KiCad.adoc:134
+#, no-wrap
+msgid "*Common files:*\n"
+msgstr "*共通ファイル:*\n"
+
+#. type: delimited block |
+#: KiCad.adoc:141
+#, no-wrap
+msgid ""
+"|*.kicad_wks |The page layout description files, for people who want a worksheet\n"
+"with a custom look.\n"
+"|*.net |Netlist file created by the schematic, and read by the board editor.\n"
+"This file is associated to the .cmp file, for users who prefer a separate file\n"
+"for the component/footprint association.\n"
+msgstr ""
+"|*.kicad_wks |修正したワークシートを使用したいユーザ向けの\n"
+"図枠記述ファイル。\n"
+"|*.net |回路図エディタが作成するネットリストファイル。基板エディタは\n"
+"このファイルを読み込みます。\n"
+"このファイルは、コンポーネントとフットプリントの対応を別ファイルにしておきたい\n"
+"ユーザ向けに .cmpファイルと関連付けられています。\n"
+
+#. type: Plain text
+#: KiCad.adoc:144
+#, no-wrap
+msgid "*Special file:*\n"
+msgstr "*スペシャルファイル:*\n"
+
+#. type: delimited block |
+#: KiCad.adoc:147
+#, no-wrap
+msgid "|*.cmp |Stores the association between components used in the schematic and their footprints.\n"
+msgstr "|*.cmp |回路図で使用しているコンポーネントとフットプリントの対応を保存しています。\n"
+
+#. type: delimited block |
+#: KiCad.adoc:149
+#, no-wrap
+msgid "It can be created by Pcbnew, and imported by Eeschema.\n"
+msgstr "Pcbnewがこのファイルを作成し、Eeschemaが取り込みます。\n"
+
+#. type: delimited block |
+#: KiCad.adoc:153
+#, no-wrap
+msgid ""
+"The purpose is a back import from Pcbnew to Eeschema, for users\n"
+"who change footprints inside Pcbnew (for instance using _Exchange Footprints_ command)\n"
+"and want to import these changes in schematic.\n"
+msgstr ""
+"例えばPcbnew上で _フットプリントを変更_ コマンドでフットプリントを変更した\n"
+"とします。この変更を回路図に反映するためEeschemaが読み込みます。\n"
+
+#. type: Plain text
+#: KiCad.adoc:156
+#, no-wrap
+msgid "*Other files:*\n"
+msgstr "*その他のファイル:*\n"
+
+#. type: Plain text
+#: KiCad.adoc:158
+msgid "They are generated by Kicad for fabrication or documentation."
+msgstr "次のファイルは製造や文書化のためにKiCadが作成します。"
+
+#. type: delimited block |
+#: KiCad.adoc:169
+#, no-wrap
+msgid ""
+"|*.gbr |Gerber files, for fabrication\n"
+"|*.drl |Drill files (Excellon format), for fabrication.\n"
+"|*.pos |Position files (ascii format), for automatic insertion machines.\n"
+"|*.rpt |Report files (ascii format), for documentation.\n"
+"|*.ps |Plot files (postscript), for documentation.\n"
+"|*.pdf |Plot files (pdf format), for documentation.\n"
+"|*.svg |Plot files (svg format), for documentation.\n"
+"|*.dxf |Plot files (dxf format), for documentation.\n"
+"|*.plt |Plot files (HPGL format), for documentation.\n"
+msgstr ""
+"|*.gbr |ガーバーファイル、製造用\n"
+"|*.drl |穴あけファイル(Excellon形式)、製造用\n"
+"|*.pos |ポジションファイル(アスキー形式)、自動部品挿入用\n"
+"|*.rpt |レポートファイル(アスキー形式)、文書化用\n"
+"|*.ps |プロットファイル(postscript)、文書化用\n"
+"|*.pdf |プロットファイル(pdf形式)、文書化用\n"
+"|*.svg |プロットファイル(svg形式)、文書化用\n"
+"|*.dxf |プロットファイル(dxf形式)、文書化用\n"
+"|*.plt |プロットファイル(HPGL形式)、文書化用\n"
+
+#. type: Title ==
+#: KiCad.adoc:172
+#, no-wrap
+msgid "Installation and configuration"
+msgstr "インストールと設定"
+
+#. type: Title ===
+#: KiCad.adoc:174
+#, no-wrap
+msgid "Display options"
+msgstr "ディスプレイ選択"
+
+#. type: Plain text
+#: KiCad.adoc:177
+msgid "Pcbnew needs the support of OpenGL v2.1 or more."
+msgstr ""
+"Pcbnewを使用するには、OpenGL v2.1以降をサポートするディスプレイが必要です。"
+
+#. type: Title ===
+#: KiCad.adoc:178
+#, no-wrap
+msgid "Initialization of the default configuration"
+msgstr "デフォルト設定の初期化"
+
+#. type: Plain text
+#: KiCad.adoc:182
+msgid ""
+"A default configuration file named _kicad.pro_ is supplied in kicad/"
+"template. It serves as a template for any new project."
+msgstr ""
+"kicad/templateにある _kicad.pro_ がデフォルト設定ファイルです。 このファイル"
+"は新規プロジェクトのテンプレートとして使われます。"
+
+#. type: Plain text
+#: KiCad.adoc:186
+msgid ""
+"If an other default configuration file named _fp-lib-table_ exists, it will "
+"be used only once to create a footprint library list.  (or else, this list "
+"will be created from scratch)"
+msgstr ""
+"_fp-lib-table_ が存在した場合は、最初にプロジェクトのフットプリント・ライブラ"
+"リ・リストを作成するときに使用されます。もし _fp-lib-table_ が無かった場合"
+"は、このリストは一から作成されます。"
+
+#. type: Plain text
+#: KiCad.adoc:189
+#, no-wrap
+msgid ""
+"*The default file _kicad.pro_ can be freely modified if necessary,\n"
+"mainly to set the list of library files loaded by Eeschema.*\n"
+msgstr ""
+"*デフォルトファイルの _kicad.pro_ は、Eeschemaがロードする\n"
+"ライブラリファイルのリストを設定するなど必要であれば自由に変更できます。*\n"
+
+#. type: Plain text
+#: KiCad.adoc:192
+msgid ""
+"A few other parameters (default text size, default line thickness, mainly "
+"for Pcbnew) are stored here."
+msgstr ""
+"このファイルには、その他にデフォルトのテキストサイズやライン幅など主にPcbnew"
+"のいくつかのパラメータが保存されています。"
+
+#. type: Plain text
+#: KiCad.adoc:194
+msgid "Verify that you have write access to kicad/template/kicad.pro"
+msgstr "kicad/template/kicad.proへの書き込み権限があることを確認して下さい。"
+
+#. type: Plain text
+#: KiCad.adoc:196
+msgid "Run kicad and load _kicad.pro_ project."
+msgstr "KiCadを起動して _kicad.pro_ プロジェクトを読み込みます。"
+
+#. type: Plain text
+#: KiCad.adoc:201
+msgid ""
+"Run Eeschema via kicad.  Modify and update the Eeschema configuration, and "
+"mainly the list of libraries you want to use each time you create new "
+"projects."
+msgstr ""
+"KiCadからEeschemaを起動します。作成したプロジェクトで使うライブラリのリストを"
+"中心にEeschemaの設定を変更します。"
+
+#. type: Plain text
+#: KiCad.adoc:208
+msgid ""
+"Run Pcbnew via kicad.  Modify and update the Pcbnew configuration, "
+"especially the footprint library list.  Pcbnew will create or update a "
+"library list file called **footprint library table**.  There are 2 library "
+"list files (named fp-lib-table).  The first (located in the user home "
+"directory) is global for all projects.  The second, if it exists (located in "
+"the project directory) is specific to the project."
+msgstr ""
+"KiCadからPcbnewを起動します。フットプリント・ライブラリ・リストなどPcbnewの設"
+"定を変更します。Pcbnewは、 **フットプリント・ライブラリ・テーブル** というラ"
+"イブラリファイルを作成・更新します。 二箇所に fp-lib-table というライブラリ"
+"ファイルがあります。ホームディレクトリにある fp-lib-table ファイルは、すべて"
+"のプロジェクトで使用されます。そしてプロジェクトのディレクトリにもある場合"
+"は、そのプロジェクト専用に使われます。"
+
+#. type: Title ===
+#: KiCad.adoc:209
+#, no-wrap
+msgid "Initialization of some options and utilities"
+msgstr "オプションとユーティリティの初期化"
+
+#. type: Plain text
+#: KiCad.adoc:213
+msgid ""
+"When using KiCad, a text editor and a PDF viewer are useful.  Setting them "
+"is a good idea."
+msgstr ""
+"KiCadを使用するときに、テキストエディタとPDFビューアが役に立ちます。最初にそ"
+"れらの設定をしておくことは良いアイデアです。"
+
+#. type: Plain text
+#: KiCad.adoc:215
+msgid "These settings are accessible from the Preference menu"
+msgstr "これらの設定は、設定メニューからアクセスできます。"
+
+#. type: Plain text
+#: KiCad.adoc:217
+msgid "image:images/preferences_menu.png[]"
+msgstr "image:images/ja/preferences_menu.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:219
+msgid "3 options are especially important:"
+msgstr "3つの設定が特に重要です:"
+
+#. type: Plain text
+#: KiCad.adoc:221
+msgid "Configure Paths"
+msgstr "環境変数の設定"
+
+#. type: Plain text
+#: KiCad.adoc:222
+msgid "PDF Viewer"
+msgstr "PDFビューア"
+
+#. type: Plain text
+#: KiCad.adoc:223
+msgid "Set Text Editor"
+msgstr "テキストエディタの設定"
+
+#. type: Title ===
+#: KiCad.adoc:225
+#, no-wrap
+msgid "Configuration of paths"
+msgstr "パスの設定"
+
+#. type: Plain text
+#: KiCad.adoc:229
+msgid ""
+"In Kicad, one can define some paths using an __environment variable__.  A "
+"few environment variables are internally defined by Kicad, and can be used "
+"to define paths (for libraries, 3D shapes, etc)."
+msgstr ""
+"_環境変数_ を使ってKiCadが使うパスの設定をすることができます。いくつかの環境"
+"変数はKiCad自身によって内部で設定され、使用するライブラリや3Dシェイプなどへの"
+"パスを指定するために使われます。"
+
+#. type: Plain text
+#: KiCad.adoc:232
+msgid ""
+"This is useful when absolute paths are not known or are subject to change.  "
+"This is the case for ``official'' libraries built for kicad:"
+msgstr ""
+"設定で変更できることは、絶対パスを事前に決められない場合や変更できるようにす"
+"る時に便利です。例えばKiCadの ``公式'' ライブラリがまさにそうです。"
+
+#. type: Plain text
+#: KiCad.adoc:234
+msgid "for the path of these libraries, when installed on your disk"
+msgstr "ユーザのディスクにインストールされたライブラリのパス"
+
+#. type: Plain text
+#: KiCad.adoc:235
+msgid "for the path of 3D shapes files used in footprint definitions."
+msgstr "フットプリントの定義で使用される3Dシェイプへのパス"
+
+#. type: Plain text
+#: KiCad.adoc:240
+msgid ""
+"For instance, the full path of _connect.pretty_ footprint library is defined "
+"like this, when using the KISYSMOD environment variable to define the full "
+"path: ${KISYSMOD}/connect.pretty"
+msgstr ""
+"例えばフットプリントライブラリ _connect.pretty_ のフルパスを環境変数KISYSMOD"
+"を使って定義すると次のようになります: $\\{KISYSMOD\\}/connect.pretty"
+
+#. type: Plain text
+#: KiCad.adoc:243
+msgid ""
+"Obviously, one can use a usual full path definition, if this full path is "
+"well known, and never changes."
+msgstr ""
+"使用するパスが一般的で決して変更されないならば、通常のフルパスを使用すること"
+"もできます。"
+
+#. type: Plain text
+#: KiCad.adoc:246
+msgid ""
+"This option allows you to define some paths from an environment variable, "
+"and add your own environment variables, to define personal paths, if needed."
+msgstr ""
+"このオプションは環境変数からパスを決められるようにします。さらに必要ならば"
+"ユーザが設定した環境変数をユーザごとのパス指定に使用できます。"
+
+#. type: delimited block |
+#: KiCad.adoc:255
+#, no-wrap
+msgid ""
+"|KIGITHUB |frequently used in footprint lib tables examples.\n"
+"If you are using this variable, it must be defined.\n"
+"|KISYS3DMOD |default base path of 3D shapes files,\n"
+"and must be defined, because an absolute path is not usually used.\n"
+"|KISYSMOD |default base path of footprint library folders,\n"
+"and must be defined, if an absolute path is not used in footprint library names.\n"
+msgstr ""
+"|KIGITHUB |フットプリン・ライブラリ・テーブルでよく使用されます。\n"
+"この変数を使用する場合には、ユーザが定義する必要があります。\n"
+"|KISYS3DMOD |3Dシェイプファイルのデフォルト・ベース・パス。\n"
+"絶対パスを通常使用しないので定義する必要があります。\n"
+"|KISYSMOD |フットプリント・ライブラリ・フォルダのデフォルト・ベース・パス。\n"
+"フットプリントライブラリの名前に絶対パスを使用しない場合は定義する必要があります。\n"
+
+#. type: Plain text
+#: KiCad.adoc:258
+msgid "image:images/configure_path_dlg.png[]"
+msgstr "image:images/ja/configure_path_dlg.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:260
+msgid "_Note also the environment variable_"
+msgstr "_環境変数に関する注意_"
+
+#. type: Plain text
+#: KiCad.adoc:262
+#, no-wrap
+msgid "*KIPRJMOD*\n"
+msgstr "*KIPRJMOD*\n"
+
+#. type: Plain text
+#: KiCad.adoc:264
+msgid ""
+"is *always* internally defined by Kicad, and is the **current project "
+"absolute path**."
+msgstr ""
+"は *常に* KiCadによって内部で定義され、 **現在のプロジェクトへの絶対パス** が"
+"設定されています。"
+
+#. type: Plain text
+#: KiCad.adoc:267
+msgid ""
+"For instance, *_$\\{KIPRJMOD\\}/connect.pretty_* is always the *_connect."
+"pretty_* folder (the pretty footprint library) found **_inside the current "
+"project folder_**."
+msgstr ""
+"例えば *_$\\{KIPRJMOD\\}/connect.pretty_* だったとすると、 *_connect."
+"pretty_* (prettyフットプリント)ライブラリフォルダは **_現在のプロジェクトフォ"
+"ルダ内_** にあります。"
+
+#. type: Plain text
+#: KiCad.adoc:271
+#, no-wrap
+msgid ""
+"*If you modify the configuration of paths, please quit and rerun Kicad,\n"
+"to avoid any issues in path handling.*\n"
+msgstr ""
+"*パスの設定を変更した場合は、パスに関連する問題を避けるために\n"
+"一旦KiCadを終了して再度起動してください。*\n"
+
+#. type: Title ===
+#: KiCad.adoc:272
+#, no-wrap
+msgid "Initialization of the text editor"
+msgstr "テキストエディタの初期化"
+
+#. type: Plain text
+#: KiCad.adoc:275
+msgid ""
+"Before using a text editor to browse/edit files in the current project, you "
+"have to choose the text editor you want to use. The menu:"
+msgstr ""
+"現在のプロジェクトにあるファイルをテキストエディタで閲覧・編集する前には、使"
+"用するテキストエディタを次のメニュー項目で選択しておく必要があります。"
+
+#. type: Plain text
+#: KiCad.adoc:277
+msgid "_Preferences/SetText Editor_"
+msgstr "_設定/テキストエディタの設定_"
+
+#. type: Plain text
+#: KiCad.adoc:279
+msgid "allows you to set the text editor to use."
+msgstr "で使用するテキストエディタを指定できます。"
+
+#. type: Title ===
+#: KiCad.adoc:280
+#, no-wrap
+msgid "Initialization of the PDF viewer"
+msgstr "PDFビューアの初期化"
+
+#. type: Plain text
+#: KiCad.adoc:282
+msgid "You can use the default PDF viewer or choose your own PDF viewer"
+msgstr "デフォルトのPDFビューアまたは指定したPDFビューアを使用できます。"
+
+#. type: Plain text
+#: KiCad.adoc:284
+msgid ""
+"Select _Preferences/PDF Viewer/Favourite PDF Viewer_ to choose your "
+"favourite (default) PDF Viewer."
+msgstr ""
+"指定したPDFビューアを使用するには、 _設定/PDFビューア/お気に入りのPDFビューア"
+"_ で指定します。"
+
+#. type: Plain text
+#: KiCad.adoc:286
+msgid ""
+"Your own (non default) viewer is chosen by using the _Preferences/PDF Viewer/"
+"SetPDF Viewer_ menu."
+msgstr ""
+"お気に入りのPDFビューアで使用されるビューアは、 _設定/PDFビューア/PDFビューア"
+"の設定_ メニューで指定します。"
+
+#. type: Plain text
+#: KiCad.adoc:290
+msgid ""
+"On Linux, the default PDF viewer is known to be sometimes strange, so using "
+"_Favourite PDF Viewer_ after selecting a suitable PDF viewer is mandatory."
+msgstr ""
+"LinuxではデフォルトのPDFビューアで正しく表示できないないことがあります。その"
+"ため正しく表示できる別のPDFビューアを指定しておき、 _お気に入りのPDFビューア"
+"_ を選択する必要必要があります。"
+
+#. type: Title ===
+#: KiCad.adoc:292
+#, no-wrap
+msgid "Kicad: principles of use"
+msgstr "KiCad:ファイルとディレクトリの命名則"
+
+#. type: Plain text
+#: KiCad.adoc:298
+msgid ""
+"In order to manage a Kicad project: schematic files, printed circuit board "
+"files, supplementary libraries, manufacturing files for photo-tracing, "
+"drilling and automatic component placement files, it is recommended to "
+"create a project as follows:"
+msgstr ""
+"KiCadプロジェクトの管理: 回路図ファイル、プリント基板ファイル, 補助ライブラ"
+"リ、 製造に使う各種ファイル(フォトトレース用ファイル、 穴あけおよび自動部品配"
+"置ファイル)を保存するプロジェクトを次のように作成することを推奨します。"
+
+#. type: Plain text
+#: KiCad.adoc:301
+#, no-wrap
+msgid ""
+"*Create a working directory for the project* (using KiCad or by other\n"
+"means).\n"
+msgstr "*プロジェクトの作業ディレクトリを作成する。* ディレクトリの作成は、KiCadまたは通常の方法を使用する。\n"
+
+#. type: Plain text
+#: KiCad.adoc:304
+#, no-wrap
+msgid ""
+"*In this directory, use Kicad to create a project file* (file with\n"
+"extension .pro) via the “Create a new project”\n"
+"or “Create a new project from template” icon.\n"
+msgstr ""
+"*KiCadを使用して、このディレクトリにプロジェクトファイルを作成します。*\n"
+"\"新規プロジェクト作成\"または\"テンプレートから新規プロジェクト作成\"アイコンを\n"
+"選ぶとプロジェクトファイル(拡張子が .proのファイル)が作成されます。\n"
+
+#. type: Plain text
+#: KiCad.adoc:308
+msgid ""
+"It is _strongly_ recommended to use the same name for both project file and "
+"its directory."
+msgstr ""
+"プロジェクトファイルとそのディレクトリ名を同じにすることを _強く推奨_ しま"
+"す。"
+
+#. type: Plain text
+#: KiCad.adoc:316
+msgid ""
+"Kicad creates a file with a .pro extension that maintains a number of "
+"parameters for project management (such as the list of libraries used in the "
+"schematic). Default names of both main schematic file and printed circuit "
+"board file are derived from the name of the project. Thus, if a project "
+"called _example.pro_ was created in a directory called _example_ , the "
+"default files will be created:"
+msgstr ""
+"KiCad は、プロジェクト管理のためのパラメータ(回路図で使用されるライブラリのリ"
+"ストなど )が多数記録されている拡張子が .pro というファイルを作成します。プロ"
+"ジェクトの名前は、メインの回路図ファイル名、プリント基板のファイル名に使用さ"
+"れます。例えば _example.pro_ というプロジェクトが _example_ ディレクトリに作"
+"成されたとすると、デフォルトのファイルは次のようになります:"
+
+#. type: delimited block |
+#: KiCad.adoc:327
+#, no-wrap
+msgid ""
+"|example.pro |project management file.\n"
+"|example.sch |main schematic file.\n"
+"|example.kicad_pcb |printed circuit board file.\n"
+"|example.net |netlist file.\n"
+"|example.xxx |various files created by the other utility programs.\n"
+"|example-cache.lib|library file automatically created and used by the\n"
+"schematic editor.\n"
+"(It contains a backup of the components used in the schematic).\n"
+msgstr ""
+"|example.pro |プロジェクト管理ファイル\n"
+"|example.sch |メインの回路図ファイル\n"
+"|example.kicad_pcb |プリント基板ファイル\n"
+"|example.net |ネットリストファイル\n"
+"|example.xxx |他のユーティリティプログラムによって作成される各種ファイル\n"
+"|example-cache.lib|回路図エディタが自動的に作成するライブラリファイル\n"
+"(回路図に使用されているコンポーネントのバックアップを保存)\n"
+
+#. type: Title ==
+#: KiCad.adoc:329
+#, no-wrap
+msgid "Use Kicad Manager"
+msgstr "KiCadマネージャの使用方法"
+
+#. type: Plain text
+#: KiCad.adoc:333
+msgid ""
+"The KiCad Manager (kicad or kicad.exe file) is a tool which can easily run "
+"the other tools (editors, gerber viewer and utility tools) when creating a "
+"design."
+msgstr ""
+"KiCadマネージャ(kicadまたはkicad.exe)は、デザインに必要な他のツール(エディタ"
+"やガーバービューア、その他ユーティリティ)を簡単に起動するツールです。"
+
+#. type: Plain text
+#: KiCad.adoc:335
+msgid "Running the other tools from Kicad manager has some advantages:"
+msgstr "ツールをKiCadマネージャから起動することには、利点がいくつかあります:"
+
+#. type: Plain text
+#: KiCad.adoc:337
+msgid "cross probing between schematic editor and board editor."
+msgstr "回路図エディタと基板エディタ間での連携"
+
+#. type: Plain text
+#: KiCad.adoc:339
+msgid "cross probing between schematic editor and footprint selector (CvPcb)."
+msgstr "回路図エディタとフットプリント選択ツール(CvPcb)間での連携"
+
+#. type: Plain text
+#: KiCad.adoc:341
+msgid "But you can only edit the current project files."
+msgstr "しかし編集できるのは、現在のプロジェクトのファイルのみです。"
+
+#. type: Plain text
+#: KiCad.adoc:344
+msgid ""
+"(When these tools are run in _stand alone_ mode, you can open any file in "
+"any project but cross probing between tools can give strange results)"
+msgstr ""
+"(これらのツールを _スタンド・アローン_ ・モードで実行すると、プロジェクトに関"
+"係なくすべてのファイルを開くことができます。しかしスタンド・アローン・モード"
+"ではツール間での連携は正しく機能しません。)"
+
+#. type: Title ===
+#: KiCad.adoc:345
+#, no-wrap
+msgid "Main window"
+msgstr "メインウィンドウ"
+
+#. type: Plain text
+#: KiCad.adoc:348
+msgid "image:images/main_window.png[]"
+msgstr "image:images/ja/main_window.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:353
+msgid ""
+"The main KiCad window is composed of a project tree view, a launch pane "
+"containing buttons used to run the various software tools, and a message "
+"window. The menu and the toolbar can be used to create, read and save "
+"project files."
+msgstr ""
+"KiCad のメインウィンドウは、プロジェクト・ツリー・ビューおよび、様々なソフト"
+"ウェア·ツールを起動するボタンのある起動ペイン、そしてメッセージ·ウィンドウで"
+"構成されています。メニューとツールバーは、プロジェクトファイルの作成、読み込"
+"みと保存に使用します。"
+
+#. type: Title ===
+#: KiCad.adoc:354
+#, no-wrap
+msgid "Utility launch pane"
+msgstr "ユーティリティ起動ペイン"
+
+#. type: Plain text
+#: KiCad.adoc:358
+msgid ""
+"Kicad allows you to run all stand alone software tools that come with it."
+msgstr ""
+"KiCad の全てのソフトウェア·ツールは、スタンドアローンでも実行できます。"
+
+#. type: Plain text
+#: KiCad.adoc:361
+msgid ""
+"The launch pane is made of the 8 buttons below that correspond to the "
+"following commands (1 to 8, from left to right):"
+msgstr ""
+"起動ペインには、次のコマンドに対応する8つのボタン(左から右の順に1から8)があり"
+"ます。"
+
+#. type: Plain text
+#: KiCad.adoc:363
+msgid "image:images/launch_pane.png[]"
+msgstr "image:images/launch_pane.png[]"
+
+#. type: delimited block |
+#: KiCad.adoc:378
+#, no-wrap
+msgid ""
+"|1 |*Eeschema* |The schematic editor.\n"
+"|2 |*LibEdit* |The component editor and component library manager.\n"
+"|3 |*Pcbnew* |The board layout editor.\n"
+"|4 |*ModEdit* |The footprint editor and footprint library manager.\n"
+"|5 |*Gerbview* |A GERBER file viewer. It can also show drill files.\n"
+"|6 |*Bitmap2component* |A tool to build a footprint or a component from\n"
+"a B&W bitmap image to create logos.\n"
+"|7 |*Pcb Calculator* |A tool to calculate track widths, and many other\n"
+"things.\n"
+"|8 |*Pl Editor* |The Page Layout editor, to create/customize frame\n"
+"references.\n"
+msgstr ""
+"|1 |*Eeschema* |回路図エディタ\n"
+"|2 |*Part Library Editor* |コンポーネントエディタとコンポーネント・ライブラリ・マネージャ\n"
+"|3 |*Pcbnew* |プリント基板エディタ\n"
+"|4 |*Footprint Editor* |フットプリントエディタとフットプリント・ライブラリ・マネージャ\n"
+"|5 |*GerbView* |ガーバー・ファイル・ビューア。 穴あけファイルも閲覧可能\n"
+"|6 |*Bitmap2component* |白黒のビットマップ画像からロゴ用の\n"
+"フットプリントとコンポーネントを作成するツール\n"
+"|7 |*PCB Calculator* |線幅などの計算ツール\n"
+"|8 |*Pl_Editor* |図枠の作成と修正をするエディタ\n"
+
+#. type: Title ===
+#: KiCad.adoc:380
+#, no-wrap
+msgid "Project tree view"
+msgstr "プロジェクト・ツリー・ビュー"
+
+#. type: Plain text
+#: KiCad.adoc:383
+msgid "image:images/project_tree.png[]"
+msgstr "image:images/project_tree.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:386
+msgid ""
+"Double-clicking on the Eeschema icon runs the schematic editor which in this "
+"case will open the file pic_programmer.sch."
+msgstr ""
+"Eeschemaアイコンをダブルクリックすると回路図エディタが起動し、この例では"
+"pic_programmer.schというファイルを開きます。"
+
+#. type: Plain text
+#: KiCad.adoc:389
+msgid ""
+"Double-clicking on the Pcbnew icon runs the layout editor, in this case "
+"opening the file pic_programmer.kicad_pcb."
+msgstr ""
+"Pcbnewアイコンをダブルクリックするとプリント基板エディタが起動して、この例で"
+"はpic_programmer.kicad_pcbというファイルを開きます。"
+
+#. type: Plain text
+#: KiCad.adoc:392
+msgid ""
+"Right clicking on any of the files in the project tree allows generic file "
+"manipulation."
+msgstr ""
+"プロジェクトツリーのファイル上で右クリックをすると削除など一般的などファイル"
+"操作を行えます。"
+
+#. type: Title ===
+#: KiCad.adoc:394
+#, no-wrap
+msgid "Top toolbar"
+msgstr "トップツールバー"
+
+#. type: Plain text
+#: KiCad.adoc:397
+msgid "image:images/main_toolbar.png[]"
+msgstr "image:images/main_toolbar.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:400
+msgid ""
+"Kicad top toolbar allows for some basic files operation (from left to right)."
+msgstr "KiCadのトップツールバーからは、次の基本的なファイル操作を行えます。"
+
+#. type: delimited block |
+#: KiCad.adoc:417
+#, no-wrap
+msgid ""
+"|image:images/icon_new_project.png[]\n"
+"|Create a project file. If the template kicad.pro is found in\n"
+"kicad/template, it is copied into the working directory.\n"
+"|image:images/icon_new_project_from_template.png[]\n"
+"|Create a project from a template.\n"
+"|image:images/icon_open_project.png[]\n"
+"|Open an existing project.\n"
+"|image:images/icon_save_project.png[]\n"
+"|Update and save the current project tree.\n"
+"|image:images/icon_archive_project.png[]\n"
+"|Create a zip archive of the whole project. This includes schematic\n"
+"files, libraries, pcb, etc.\n"
+"|image:images/icon_redraw_project_tree.png[]\n"
+"|Rebuild and redraw the tree list, sometimes needed after a tree change.\n"
+msgstr ""
+"|image:images/icon_new_project.png[]\n"
+"|プロジェクトファイルの作成。kicad/templateにテンプレート\n"
+"kicad.proがある場合は、作業ディレクトリにコピーされます。\n"
+"|image:images/icon_new_project_from_template.png[]\n"
+"|テンプレートからプロジェクトを作成。\n"
+"|image:images/icon_open_project.png[]\n"
+"|既存のプロジェクトを開く。\n"
+"|image:images/icon_save_project.png[]\n"
+"|現在のプロジェクトツリーを保存。\n"
+"|image:images/icon_archive_project.png[]\n"
+"|プロジェクト全体のzipアーカイブを作成。回路図やライブラリ、\n"
+"プリント基板などがzipアーカイブにまとめられます。\n"
+"|image:images/icon_redraw_project_tree.png[]\n"
+"|プロジェクトツリーの再構成と再表示。ツリーを変更した場合に\n"
+"必要になることがあります。\n"
+
+#. type: Title ==
+#: KiCad.adoc:419
+#, no-wrap
+msgid "Using templates"
+msgstr "テンプレートの使用"
+
+#. type: Title ===
+#: KiCad.adoc:421
+#, no-wrap
+msgid "Definitions"
+msgstr "定義"
+
+#. type: Plain text
+#: KiCad.adoc:425
+msgid ""
+"A template is a directory of files, which includes a directory of metadata."
+msgstr ""
+"テンプレートは、メタデータのディレクトリを含む一連のファイルがあるディレクト"
+"リです。"
+
+#. type: Plain text
+#: KiCad.adoc:429
+msgid ""
+"The template system name (SYSNAME) is the directory name under which the "
+"template files are stored. The metadata directory (METADIR) contains pre-"
+"defined files which provide information about the template."
+msgstr ""
+"テンプレートシステム名(SYSNAME)はディレクトリで、そのディレクトリにテンプレー"
+"トファイルが置かれます。メタデータディレクトリ(METADIR)にはテンプレート情報の"
+"ファイルが置かれています。"
+
+#. type: Plain text
+#: KiCad.adoc:432
+msgid ""
+"All files and directories in a template are copied to the new project path "
+"when a project is created using a template, except METADIR."
+msgstr ""
+"テンプレートからプロジェクトを作成すると、そのテンプレートのファイルとディレ"
+"クトリ(ただしMETADIRを除く)の内容が全て新しいプロジェクトパスにコピーされま"
+"す。"
+
+#. type: Plain text
+#: KiCad.adoc:435
+msgid ""
+"All files and directories which start with SYSNAME will have SYSNAME "
+"replaced by the new project file name, excluding the file extension."
+msgstr ""
+"SYSNAMEで始まるすべてのファイルとディレクトリは、拡張子の部分を除き名前が新規"
+"プロジェクトファイル名に置換されます。"
+
+#. type: Title ===
+#: KiCad.adoc:436
+#, no-wrap
+msgid "Templates"
+msgstr "テンプレート"
+
+#. type: Plain text
+#: KiCad.adoc:441
+msgid ""
+"They facilitate the easy setup of projects which have common attributes such "
+"as pre-defined board outlines, connector positions, schematic elements, "
+"design rules, etc. ."
+msgstr ""
+"テンプレートは、事前に決められている基板の外形やコネクタ位置、回路図の要素、"
+"デザインルールなど共通部分があるプロジェクトのセットアップを簡単にします。"
+
+#. type: Title ====
+#: KiCad.adoc:442
+#, no-wrap
+msgid "Metadata"
+msgstr "メタデータ"
+
+#. type: Plain text
+#: KiCad.adoc:446
+msgid ""
+"A template's METADIR must contain the required files, and might optionally "
+"contain any of the optional files."
+msgstr ""
+"テンプレートの METADIR には、テンプレート情報ファイルが含まれている必要があり"
+"ます。またその他にいくつかのオプションファイルが含まれていることがあります。"
+
+#. type: Title ====
+#: KiCad.adoc:447
+#, no-wrap
+msgid "Required Files:"
+msgstr "必須ファイル:"
+
+#. type: Plain text
+#: KiCad.adoc:450
+#, no-wrap
+msgid "*meta/info.html*\n"
+msgstr "*meta/info.html*\n"
+
+#. type: Plain text
+#: KiCad.adoc:455
+msgid ""
+"Contains html formatted information about the template which is used by the "
+"user to determine if the template is what they are after. The <title> tag "
+"determines the actual name of the template that is exposed to the user for "
+"template selection."
+msgstr ""
+"このファイルには、探しているテンプレートか判断するための情報がHTML形式で書か"
+"れています。<title>タグの内容がテンプレート選択時に表示される実際のテンプレー"
+"ト名となります。"
+
+#. type: Plain text
+#: KiCad.adoc:458
+msgid ""
+"Using html to format this document means that images can be in-lined without "
+"having to invent a new scheme."
+msgstr ""
+"テンプレートの情報は HTML 形式で記述できるため、画像などを加えてわかりやすい"
+"説明を作成することが出来ます。"
+
+#. type: Plain text
+#: KiCad.adoc:460
+msgid "Only a basic HTML language can be used to format this document."
+msgstr "このドキュメントの整形には基本的な HTML 言語だけが使用できます。"
+
+#. type: Title ====
+#: KiCad.adoc:461
+#, no-wrap
+msgid "Optional Files:"
+msgstr "オプショナルファイル:"
+
+#. type: Plain text
+#: KiCad.adoc:464
+#, no-wrap
+msgid "*meta/icon.png*\n"
+msgstr "*meta/icon.png*\n"
+
+#. type: Plain text
+#: KiCad.adoc:467
+msgid ""
+"A 64 x 64 pixels PNG icon file which is used as a clickable icon in the "
+"template selection dialog."
+msgstr ""
+"64 x 64ピクセルのPNGアイコンファイルは、テンプレート選択ダイアログでクリック"
+"可能なアイコンとして使用されます。"
+
+#. type: Title ====
+#: KiCad.adoc:468
+#, no-wrap
+msgid "Example:"
+msgstr "例:"
+
+#. type: Plain text
+#: KiCad.adoc:471
+msgid "Here is a template for a raspberrypi-gpio board:"
+msgstr "raspberrypi-gpio基板のテンプレート:"
+
+#. type: Plain text
+#: KiCad.adoc:473
+msgid "image:images/template_tree.png[]"
+msgstr "image:images/template_tree.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:475
+msgid "And the meta data info:"
+msgstr "基板のテンプレートのメタデータ情報:"
+
+#. type: Plain text
+#: KiCad.adoc:477
+msgid "image:images/template_tree_meta.png[]"
+msgstr "image:images/template_tree_meta.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:479
+msgid "brd.png is an optional file"
+msgstr "brd.pngは、オプショナルファイルです。"
+
+#. type: Plain text
+#: KiCad.adoc:481
+msgid "Here is an info.html file sample:"
+msgstr "info.htmlファイルのサンプル:"
+
+#. type: delimited block -
+#: KiCad.adoc:509
+#, no-wrap
+msgid ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n"
+"<HTML>\n"
+"<HEAD>\n"
+"<META HTTP-EQUIV=\"CONTENT-TYPE\" CONTENT=\"text/html;\n"
+"charset=windows-1252\">\n"
+"<TITLE>Raspberry Pi - Expansion Board</TITLE>\n"
+"<META NAME=\"GENERATOR\" CONTENT=\"LibreOffice 3.6 (Windows)\">\n"
+"<META NAME=\"CREATED\" CONTENT=\"0;0\">\n"
+"<META NAME=\"CHANGED\" CONTENT=\"20121015;19015295\">\n"
+"</HEAD>\n"
+"<BODY LANG=\"fr-FR\" DIR=\"LTR\">\n"
+"<P>This project template is the basis of an expansion board for the\n"
+"<A HREF=\"http://www.raspberrypi.org/\" TARGET=\"blank\">Raspberry Pi $25\n"
+"ARM board.</A> <BR><BR>This base project includes a PCB edge defined\n"
+"as the same size as the Raspberry-Pi PCB with the connectors placed\n"
+"correctly to align the two boards. All IO present on the Raspberry-Pi\n"
+"board is connected to the project through the 0.1&quot; expansion\n"
+"headers. <BR><BR>The board outline looks like the following:\n"
+"</P>\n"
+"<P><IMG SRC=\"brd.png\" NAME=\"brd\" ALIGN=BOTTOM WIDTH=680 HEIGHT=378\n"
+"BORDER=0><BR><BR><BR><BR>\n"
+"</P>\n"
+"<P>(c)2012 Brian Sidebotham<BR>(c)2012 Kicad Developers</P>\n"
+"</BODY>\n"
+"</HTML>\n"
+msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n"
+"<HTML>\n"
+"<HEAD>\n"
+"<META HTTP-EQUIV=\"CONTENT-TYPE\" CONTENT=\"text/html;\n"
+"charset=windows-1252\">\n"
+"<TITLE>Raspberry Pi - Expansion Board</TITLE>\n"
+"<META NAME=\"GENERATOR\" CONTENT=\"LibreOffice 3.6 (Windows)\">\n"
+"<META NAME=\"CREATED\" CONTENT=\"0;0\">\n"
+"<META NAME=\"CHANGED\" CONTENT=\"20121015;19015295\">\n"
+"</HEAD>\n"
+"<BODY LANG=\"fr-FR\" DIR=\"LTR\">\n"
+"<P>This project template is the basis of an expansion board for the\n"
+"<A HREF=\"http://www.raspberrypi.org/\" TARGET=\"blank\">Raspberry Pi $25\n"
+"ARM board.</A> <BR><BR>This base project includes a PCB edge defined\n"
+"as the same size as the Raspberry-Pi PCB with the connectors placed\n"
+"correctly to align the two boards. All IO present on the Raspberry-Pi\n"
+"board is connected to the project through the 0.1&quot; expansion\n"
+"headers. <BR><BR>The board outline looks like the following:\n"
+"</P>\n"
+"<P><IMG SRC=\"brd.png\" NAME=\"brd\" ALIGN=BOTTOM WIDTH=680 HEIGHT=378\n"
+"BORDER=0><BR><BR><BR><BR>\n"
+"</P>\n"
+"<P>(c)2012 Brian Sidebotham<BR>(c)2012 KiCad Developers</P>\n"
+"</BODY>\n"
+"</HTML>\n"
+
+#. type: Title ====
+#: KiCad.adoc:511
+#, no-wrap
+msgid "Operation"
+msgstr "操作"
+
+#. type: Plain text
+#: KiCad.adoc:514
+msgid "The KiCad File menu New shows 2 option:"
+msgstr "KiCadファイルメニューの新規プロジェクトに２つの選択が表示されます:"
+
+#. type: Plain text
+#: KiCad.adoc:516
+msgid "image:images/menu_file.png[]"
+msgstr "image:images/ja/menu_file.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:519
+#, no-wrap
+msgid ""
+"*Blank Project* Create a blank project by just copying\n"
+"template/kicad.pro to the current folder.\n"
+msgstr ""
+"*新規プロジェクト* : template/kicad.proのみを現在の\n"
+"フォルダにコピーした空のプロジェクトを作成します。\n"
+
+#. type: Plain text
+#: KiCad.adoc:527
+#, no-wrap
+msgid ""
+"*Project from Template* Opens the template selection dialog. The\n"
+"template selection dialog has a list of icons, and a display window. A\n"
+"single click on a template's icon on the left will load that templates\n"
+"info.html metadata file and display it in the display window. A click on\n"
+"the OK button starts the new project creation. The template will be\n"
+"copied to the new project location (excluding METADIR as mentioned\n"
+"earlier) and any files that match the string replacement rules will be\n"
+"renamed to reflect the new project's name.\n"
+msgstr ""
+"*テンプレートから新規プロジェクトを作成* : テンプレート選択ダイアログが開きます。\n"
+"テンプレート選択ダイアログには、アイコンのリストと表示用ウィンドウがあります。\n"
+"上部のテンプレートアイコンをクリックするとテンプレートのinfo.htmlメタ\n"
+"データファイルがロードされ、その内容が表示されます。OKボタンを\n"
+"クリックすると、新しいプロジェクトが作成されます。テンプレートは、\n"
+"新しいプロジェクト名を反映するように文字置換ルールに基づいてファイル名が変更されて\n"
+"新しいプロジェクトの場所にコピーされます。ただし前に触れたようにMETADIR\n"
+"はコピーされません。\n"
+
+#. type: Plain text
+#: KiCad.adoc:529
+msgid "image:images/template_selector.png[]"
+msgstr "image:images/ja/template_selector.png[]"
+
+#. type: Plain text
+#: KiCad.adoc:531
+msgid "After selection of a template:"
+msgstr "テンプレートを選択すると:"
+
+#. type: Plain text
+#: KiCad.adoc:533
+msgid "image:images/template_selected.png[]"
+msgstr "image:images/ja/template_selected.png[]"
+
+#. type: Title ====
+#: KiCad.adoc:534
+#, no-wrap
+msgid "Templates Location:"
+msgstr "テンプレートが置かれる場所:"
+
+#. type: Plain text
+#: KiCad.adoc:537
+msgid ""
+"The list of available templates are gathered from the following sources:"
+msgstr "使用可能なテンプレートは以下の場所から収集されリスト化されます。"
+
+#. type: Plain text
+#: KiCad.adoc:540
+msgid "For system templates: <kicad bin dir>/../share/template/"
+msgstr "システムテンプレート: <kicad bin dir>/../share/template/"
+
+#. type: Plain text
+#: KiCad.adoc:542
+msgid "For user templates:"
+msgstr "ユーザテンプレート:"
+
+#. type: Plain text
+#: KiCad.adoc:544
+#, no-wrap
+msgid "** on Unix:\n"
+msgstr "** Unixでは:\n"
+
+#. type: Plain text
+#: KiCad.adoc:545
+#, no-wrap
+msgid "~/kicad/templates/\n"
+msgstr "~/kicad/templates/\n"
+
+#. type: Plain text
+#: KiCad.adoc:547
+#, no-wrap
+msgid "** on Windows:\n"
+msgstr "** Windowsでは:\n"
+
+#. type: Plain text
+#: KiCad.adoc:548
+#, no-wrap
+msgid "C:\\Documents and Settings\\username\\My Documents\\kicad\\templates\n"
+msgstr "C:\\Documents and Settings\\username\\My Documents\\kicad\\templates\n"
+
+#. type: Plain text
+#: KiCad.adoc:550
+#, no-wrap
+msgid "** on Mac:\n"
+msgstr "** Macでは:\n"
+
+#. type: Plain text
+#: KiCad.adoc:551
+#, no-wrap
+msgid "~/Documents/kicad/templates/\n"
+msgstr "~/Documents/kicad/templates/\n"
+
+#. type: Plain text
+#: KiCad.adoc:555
+msgid ""
+"When the environment variable KICAD_PTEMPLATES is defined, there is a third "
+"page: Portable Templates, which lists templates found in KICAD_PTEMPLATES "
+"path."
+msgstr ""
+"環境変数KICAD_PTEMPLATESが定義されている場合は、移動可能テンプレートのページ"
+"もあります。この移動可能テンプレートのページには、KICAD_PTEMPLATESパスで見つ"
+"かったテンプレートのリストが表示されます。"
