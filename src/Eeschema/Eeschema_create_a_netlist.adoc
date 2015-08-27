@@ -28,8 +28,8 @@ Eeschema supports several netlist formats.
 * Spice format, for various simulators (the Spice format is also used by
   other simulators).
 
-[[netlist-format]]
-=== Netlist format
+[[netlist-formats]]
+=== Netlist formats
 
 Select the tool
 image:images/icons/netlist.png[Netlist icon]
@@ -50,12 +50,11 @@ is more legible) or net numbers (old Spice versions accept numbers
 only). By clicking the Netlist button, you will be asked for a netlist
 file name.
 
-*Note*
-
+[NOTE]
 With big projects, the netlist generation can take up to few minutes.
 
 [[netlist-examples]]
-=== Netlist Examples
+=== Netlist examples
 
 You can see below a schematic design using the PSPICE library.
 
@@ -161,11 +160,11 @@ Q1   N-000010 /VIN N-000007 N-000007 Q2N2222
 .end
 -------------------------------------------------------------------------------
 
-[[note]]
-=== Note
+[[notes-on-netlists]]
+=== Notes on Netlists
 
 [[netlist-name-precautions]]
-==== Netlist Name Precautions
+==== Netlist name precautions
 
 Many software tools that use netlists do not accept spaces in the
 component names, pins, equipotentials or others. Systematically avoid
@@ -196,7 +195,7 @@ image:images/100000000000021B000001BDEA9ADDBA.png[100000000000021B000001BDEA9ADD
 
 For example: if you type the following text (do not use a label!):
 
--PSPICE .PROBE
+ -PSPICE .PROBE
 
 a line .PROBE will be inserted in the netlist.
 
@@ -206,32 +205,26 @@ the netlist and two at the end with this technique.
 If you are using multiline texts, *+pspice* or *+gnucap* keywords are
 needed only once:
 
-+PSPICE .model NPN NPN
-
-.model PNP PNP
-
-.lib C:\Program Files\LTC\LTspiceIV\lib\cmp\standard.bjt
-
-.backanno
+ +PSPICE .model NPN NPN
+ .model PNP PNP
+ .lib C:\Program Files\LTC\LTspiceIV\lib\cmp\standard.bjt
+ .backanno
 
 creates the four lines:
 
-.model NPN NPN
-
-.model PNP PNP
-
-.lib C:\Program Files\LTC\LTspiceIV\lib\cmp\standard.bjt
-
-.backanno
+ .model NPN NPN
+ .model PNP PNP
+ .lib C:\Program Files\LTC\LTspiceIV\lib\cmp\standard.bjt
+ .backanno
 
 Also note that the equipotential GND must be named 0 (zero) for Pspice.
 
-[[other-formats-using-plugins]]
-=== Other formats, using plugins
+[[other-formats]]
+=== Other formats
 
-For other netlist formats you can add netlist converters. These
-converters are automatically launched by Eeschema. Chapter 14 gives
-some explanations and examples of converters.
+For other netlist formats you can add netlist converters in the form of
+plugins. These converters are automatically launched by Eeschema. Chapter
+14 gives some explanations and examples of converters.
 
 A converter is a text file (xsl format) but one can use other languages
 like Python. When using the xsl format, a tool (xsltproc.exe or
