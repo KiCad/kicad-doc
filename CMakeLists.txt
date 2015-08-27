@@ -75,6 +75,56 @@ find_package( A2X REQUIRED )
 include( KiCadDocumentation )
 add_subdirectory( src )
 
+# Start with the package version being unknown, then prove otherwise
+set( CPACK_PACKAGE_VERSION "unknown" )
+
+# Use Git to determine parts of the package name
+find_package( Git )
+
+if( GIT_FOUND )
+
+    # Discover information about the build (AT CONFIGURE TIME, not as a target that updates in
+    # subsequent builds)
+    execute_process( COMMAND "${GIT_EXECUTABLE}" describe --tags
+        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+        OUTPUT_VARIABLE git_tags_output
+        RESULT_VARIABLE git_tags_result
+        ERROR_VARIABLE git_tags_error
+        OUTPUT_STRIP_TRAILING_WHITESPACE )
+
+    execute_process( COMMAND "${GIT_EXECUTABLE}" rev-parse --abbrev-ref HEAD
+        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+        OUTPUT_VARIABLE git_branch_output
+        RESULT_VARIABLE git_branch_result
+        ERROR_VARIABLE git_branch_error
+        OUTPUT_STRIP_TRAILING_WHITESPACE )
+
+    # Due to how tags work in Git it's necessary for us to ensure a few things. For a start, if we
+    # create a new branch, switch to it and create a tag, that tag becomes visible in the master
+    # branch. Make sure if we're on the master branch that we use that in the
+    if( "${git_branch_output}" STREQUAL "master" )
+        # TODO: Should we include a 6-digit hash here too?
+        set( CPACK_PACKAGE_VERSION "master" )
+    else()
+        if( NOT "${git_tags_output}" STREQUAL "" )
+            # Make sure the tag is associated with the current branch. Otherwise we'll use the branch
+            # name instead. The tag and branch schema means we need branches in the format 1.0, 2.0,
+            # etc. and tags in the format 1.0.1, 2.0.1, etc. to match
+
+            string( SUBSTRING "${git_tags_output}" 0 3 GIT_TAG )
+
+            if( "${GIT_TAG}" STREQUAL "${git_branch_output}" )
+                # The tag matches the branch so use the tag as the package version
+                set( CPACK_PACKAGE_VERSION ${git_tags_output} )
+            else()
+                # Tag didn't match so assume it's there in error and use the more generic branch
+                # name as the package version instead
+                set( CPACK_PACKAGE_VERSION ${git_branch_output} )
+            endif()
+        endif()
+    endif()
+endif()
+
 # Set the language in the package name if the package only contains a single
 # language
 if( "${SINGLE_LANGUAGE}" STREQUAL "" )
@@ -94,7 +144,6 @@ endif()
 
 # Generate both .tar.gz and .zip package targets
 set( CPACK_GENERATOR "TGZ;ZIP" )
-set( CPACK_PACKAGE_VERSION "1.0.0" )
 set( CPACK_PACKAGE_FILE_NAME "kicad-doc${PACKAGE_BUILD_FORMAT}${PACKAGE_LANGUAGE}-${CPACK_PACKAGE_VERSION}" )
 include( CPack )
 
