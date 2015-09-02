@@ -1,51 +1,33 @@
 == KiCad Scripting Reference
+
 Scripting allow you to automate tasks within KiCad using the https://www.python.org/[Python] language.
 
 Also see the doxygen documentation on http://ci.kicad-pcb.org/job/kicad-doxygen/ws/build/pcbnew/doxygen-python/html/index.html[Python Scripting Reference].
 
+You can see python module help by typing `pydoc pcbnew` on your terminal.
+
 Using scripting you can create:
 
 - *Plugins*: this type of script is loaded when KiCad starts. Examples:
-    * *Footprint Wizards*: To help you build footprints easily filling in parameters. See the dedicated section below.
+    * *Footprint Wizards*: To help you build footprints easily filling in parameters. See the dedicated section <<Footprint_Wizards,Footprint Wizards>> below.
     * *File I/O* '(planned)': To let you write plugins to export/import other filetypes
     * *Actions* '(planned)': Associate events to scripting actions or register new menus or toolbar icons.
 
 - *Command Line Scripts*: scripts that can be used from the command line, load boards or libraries, modify them, and render outputs or new boards.  
 
-=== Building KiCad with Scripting Support
-The following CMake switch lets you build KiCad with Python scripting support:
-
-`-DKICAD_SCRIPTING=ON`
-
-Additionally you can build modules to import into scripts external to KiCad:
-
-`-DKICAD_SCRIPTING_MODULES=ON`
-
-If you want scripting console, and wxpython support into scripts:
-
-`-DKICAD_SCRIPTING_WXPYTHON=ON`
-
-There may be problems detecting the right Python2.x library if you have Python3 installed.Which is indicated by an output of CMake similar to:
-
-`-- Found PythonLibs: /usr/lib/libpython3.2mu.so (found version "3.2.4")`
-
-and errors during compilation similar to:
-
-`error: ‘PyString_Check’ was not declared in this scope`
-
-To solve this you have to point it to the right libpython2.x.so. On 32-bit Linux with Python2.7 this would be something like:
-`-DPYTHON_LIBRARY=/usr/lib/python2.7/config-i386-linux-gnu/libpython2.7.so`
-
 === KiCad Objects
+
 The scripting API reflects the internal object structure inside KiCad/pcbnew. BOARD is the main object, that has a set of properties and a set of MODULEs, and TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.
 Then MODULEs have D_PADs, EDGEs, etc.
 
 - See the BOARD section below.
 
 === Basic API Reference
+
 All the pcbnew API is provided from the "pcbnew" module in Python. GetBoard() method will return the current pcb open at editor, useful for commands written from the integrated scripting shell inside pcbnew or action plugins.
 
 === Loading and Saving a Board
+
 - *LoadBoard(filename):*
            loads a board from file returning a BOARD object, using the file format that matches the filename extension.
 
@@ -58,7 +40,7 @@ All the pcbnew API is provided from the "pcbnew" module in Python. GetBoard() me
 .Example that loads a board, hides all values, shows all references
 [source,python]
 ----------
-#!/usr/bin/env python
+#!/usr/bin/python
 import sys
 from pcbnew import *
 
@@ -66,22 +48,23 @@ filename=sys.argv[1]
 
 pcb = LoadBoard(filename)
 for module in pcb.GetModules():  
-print "* Module: %s"%module.GetReference()
-module.GetValueObj().SetVisible(False)      # set Value as Hidden
-module.GetReferenceObj().SetVisible(True)   # set Reference as Visible
+    print "* Module: %s"%module.GetReference()
+    module.GetValueObj().SetVisible(False)      # set Value as Hidden
+    module.GetReferenceObj().SetVisible(True)   # set Reference as Visible
 
 pcb.Save("mod_"+filename)
 ----------
 
 === Listing and Loading Libraries
+
 .Enumerate library, enumerate modules, enumerate pads
 [source,python]
 ----------
-#!/usr/bin/env python
+#!/usr/bin/python
  
 from pcbnew import *
  
-libpath = /usr/share/kicad/modules/sockets.mod"
+libpath = "/usr/share/kicad/modules/sockets.mod"
 lst = FootprintEnumerate(libpath)
  
 for name in lst:
@@ -91,12 +74,8 @@ for name in lst:
         print "\t",p.GetPadName(),p.GetPosition(),p.GetPos0(), p.GetOffset()
 ----------
 
-=== Scripting Support
-At this moment, scripting support is only available for pcbnew. Eeschema and gerbview will be covered in the future.
-
-Python is the scripting engine that we currently use, but we could add support for Javascript in the future.
-
 === BOARD
+
 Board is the basic object in KiCad pcbnew, it's the document.
 
 BOARD contains a set of object lists that can be accessed using the following methods, they will return iterable lists that can be iterated using "for obj in list:"
@@ -116,38 +95,36 @@ BOARD contains a set of object lists that can be accessed using the following me
 .Board Inspection Example
 [source,python]
 ----------
-#!/usr/bin/env python
+#!/usr/bin/python
 import sys
 from pcbnew import *
- 
  
 filename=sys.argv[1]
 pcb = LoadBoard(filename)
  
- 
 ToUnits=ToMils
 FromUnits=FromMils
- 
  
 print "LISTING VIAS:"
 for item in pcb.GetTracks():
     if type(item) is SEGVIA:
-         
+
         pos = item.GetPosition()
         drill = item.GetDrillValue()
         width = item.GetWidth()
         print " * Via:   %s - %f/%f "%(ToUnits(pos),ToUnits(drill),ToUnits(width))
-         
+
     elif type(item) is TRACK:
-         
+
         start = item.GetStart()
         end = item.GetEnd()
         width = item.GetWidth()
-         
+
         print " * Track: %s to %s, width %f" % (ToUnits(start),ToUnits(end),ToUnits(width))
-         
+
     else:
         print "Unknown type    %s" % type(item)
+
 print ""
 print "LISTING DRAWINGS:"
 for item in pcb.GetDrawings():
@@ -157,26 +134,26 @@ for item in pcb.GetDrawings():
         print "* Drawing: %s"%item.GetShapeStr() # dir(item)
     else:
         print type(item)
-     
+
 print ""
 print "LIST MODULES:"
 for module in pcb.GetModules():
     print "* Module: %s at %s"%(module.GetReference(),ToUnits(module.GetPosition()))
-     
+
 print ""
 print "LIST ZONES:"
 for zone in pcb.GetSegZones():
     print zone
-     
-     
+
 print ""
 print "RATSNEST:",len(pcb.GetFullRatsnest())
 ---------
 
 === Examples
-==== Change a component pins paste mask margin
-We only want to change pins from 1 to 14, 15 is a thermal pad that must be keep as it is.
 
+==== Change a component pins paste mask margin
+
+.We only want to change pins from 1 to 14, 15 is a thermal pad that must be keep as it is.
 [source,python]
 ----------
 b = pcbnew.GetBoard()
@@ -189,13 +166,16 @@ for p in pads:
     if id<15: p.SetLocalSolderPasteMargin(0)
 ---------
 
+[[Footprint_Wizards]]
 === Footprint Wizards
+
+.Build footprints easily filling in parameters.
 [source,python]
 ----------
 #!/usr/bin/python
- 
+
 from pcbnew import *
- 
+
 class FPCFootprintWizard(FootprintWizardPlugin):
     def __init__(self):
         FootprintWizardPlugin.__init__(self)
@@ -213,9 +193,9 @@ class FPCFootprintWizard(FootprintWizardPlugin):
                  "width":           FromMM(1.5),
                  "height":          FromMM(2)}
         }
- 
+
         self.ClearErrors()
- 
+
     # build a rectangular pad
     def smdRectPad(self,module,size,pos,name):
             pad = D_PAD(module)
@@ -237,7 +217,7 @@ class FPCFootprintWizard(FootprintWizardPlugin):
             self.parameter_errors["Pads"]["n"]="Must be positive"
             errors +="Pads/n has wrong value, "
         p["Pads"]["n"] = int(pads)  # make sure it stays as int (default is float)      
-                     
+
         pad_width       = p["Pads"]["width"]
         pad_height      = p["Pads"]["height"]
         pad_pitch       = p["Pads"]["pitch"]
@@ -245,20 +225,19 @@ class FPCFootprintWizard(FootprintWizardPlugin):
         shl_height      = p["Shield"]["height"]
         shl_to_pad      = p["Shield"]["shield_to_pad"]
         shl_from_top    = p["Shield"]["from_top"]
-         
+
         return errors
-     
-         
+
     # build the footprint from parameters
     def BuildFootprint(self):
-       
+
         print "parameters:",self.parameters
         #self.ClearErrors()
         #print "errors:",self.parameter_errors
-         
+
         module = MODULE(None) # create a new module
         self.module = module
-         
+
         p = self.parameters
         pads            = int(p["Pads"]["*n"])      
         pad_width       = p["Pads"]["width"]
@@ -268,20 +247,19 @@ class FPCFootprintWizard(FootprintWizardPlugin):
         shl_height      = p["Shield"]["height"]
         shl_to_pad      = p["Shield"]["shield_to_pad"]
         shl_from_top    = p["Shield"]["from_top"]
-         
+
         size_pad = wxSize(pad_width,pad_height)
         size_shld = wxSize(shl_width,shl_height)
-       
+
         module.SetReference("FPC"+str(pads))   # give it a reference name
         module.m_Reference.SetPos0(wxPointMM(-1,-2))
         module.m_Reference.SetPosition(wxPointMM(-1,-2))
-         
+
         # create a pad array and add it to the module
         for n in range (0,pads):
             pad = self.smdRectPad(module,size_pad,wxPoint(pad_pitch*n,0),str(n+1))
             module.Add(pad)
-           
- 
+
         pad_s0 = self.smdRectPad(module,
                             size_shld,
                             wxPoint(-shl_to_pad,shl_from_top),
@@ -290,23 +268,23 @@ class FPCFootprintWizard(FootprintWizardPlugin):
                             size_shld,
                             wxPoint((pads-1)*pad_pitch+shl_to_pad,shl_from_top),
                             "0")      
-                             
+
         module.Add(pad_s0)
         module.Add(pad_s1)
- 
+
         e = EDGE_MODULE(module)
         e.SetStartEnd(wxPointMM(-1,0),wxPointMM(0,0))
         e.SetWidth(FromMM(0.2))
         e.SetLayer(EDGE_LAYER)
         e.SetShape(S_SEGMENT)
         module.Add(e)
- 
+
         module.SetLibRef("FPC"+str(pads))
-                 
- 
+
 # create our footprint wizard
 fpc_wizard = FPCFootprintWizard()
- 
+
 # register it into pcbnew
 fpc_wizard.register()
 ---------
+
