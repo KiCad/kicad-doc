@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2015-08-26 12:10+0200\n"
-"PO-Revision-Date: 2015-06-05 21:05+0100\n"
+"POT-Creation-Date: 2015-09-05 03:20+0200\n"
+"PO-Revision-Date: 2015-09-04 20:48+0200\n"
 "Last-Translator: Kerusey Karyu <keruseykaryu@o2.pl>\n"
 "Language-Team: Polish KiCAD Team: Mateusz Skowroński, Krzysztof Kawa, "
 "Kerusey Karyu\n"
@@ -81,11 +81,11 @@ msgstr "*Kontakt*\n"
 #: Pcbnew.adoc:33
 msgid ""
 "Please direct any comments or suggestions about this document to the KiCad "
-"mailing list: _https://launchpad.net/~kicad-developers_"
+"mailing list: https://launchpad.net/~kicad-developers"
 msgstr ""
 "Wszelkie komentarze lub sugestie dotyczące tego dokumentu prosimy kierować "
-"na listę dyskusyjną deweloperów programu KiCad _https://launchpad.net/~kicad-"
-"developers_"
+"na listę dyskusyjną deweloperów programu KiCad https://launchpad.net/~kicad-"
+"developers"
 
 #. type: Plain text
 #: Pcbnew.adoc:36
@@ -6041,7 +6041,7 @@ msgstr "     https://github.com/liftoff-sr/pretty_footprints\n"
 #: Pcbnew_installation.adoc:165
 #, fuzzy
 #| msgid "Tpically GitHub URLs take the form:"
-msgid "Tipically GitHub URLs take the form:"
+msgid "Typically GitHub URLs take the form:"
 msgstr "Zwykle poprawna ścieżka URL jest tworzona wg następującego schematu:"
 
 #. type: Plain text
@@ -6735,49 +6735,35 @@ msgid "Description"
 msgstr "Kluczowe właściwości"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:8
+#: Pcbnew_introduction.adoc:10
+#, fuzzy
+#| msgid ""
+#| "Pcbnew is a powerful printed circuit board software tool available for "
+#| "the Linux, Microsoft Windows and Apple OS X operating systems."
 msgid ""
 "Pcbnew is a powerful printed circuit board software tool available for the "
-"Linux, Microsoft Windows and Apple OS X operating systems."
+"Linux, Microsoft Windows and Apple OS X operating systems.  Pcbnew is used "
+"in association with the schematic capture program Eeschema to create printed "
+"circuit boards."
 msgstr ""
 "Pcbnew jest potężną aplikacją do trasowania obwodów drukowanych, dostępną "
 "zarówno dla systemów Linux jak i Windows."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:12
+#: Pcbnew_introduction.adoc:17
 #, fuzzy
 #| msgid ""
-#| "Pcbnew is used in association with the schematic capture software program "
-#| "Eeschema, which provides the Netlist file - this describes the electrical "
-#| "connections of the PCB to design."
+#| "Pcbnew manages libraries of modules. Each module is a drawing of the "
+#| "physical component including its footprint - the layout of pads providing "
+#| "connections to the component. The required modules are automatically "
+#| "loaded during the reading of the Netlist produced by CvPcb."
 msgid ""
-"Pcbnew is used in association with the schematic capture software program "
-"Eeschema, which provides the Netlist file - this describes the electrical "
-"connections of the PCB being designed."
-msgstr ""
-"Jest on używany w połączeniu z oprogramowaniem do tworzenia schematów "
-"Eeschema, który dostarcza 'pliki list sieci' - opisujących połączenia "
-"elektryczne wymagane przy trasowaniu PCB."
-
-#. type: Plain text
-#: Pcbnew_introduction.adoc:17
-msgid ""
-"A second program CvPcb is used to assign each component in the Netlist "
-"produced by Eeschema, to a module that is used by Pcbnew.  This can be done "
-"either interactively or automatically using equivalence files."
-msgstr ""
-"Drugi program CvPcb jest używany do przypisania footprintów poszczególnym "
-"składnikom zawartym w liście sieci generowanej przez Eeschema, które są "
-"używane przez Pcbnew. Można to zrobić albo interaktywnie, albo automatycznie "
-"za pomocą plików przypisań."
-
-#. type: Plain text
-#: Pcbnew_introduction.adoc:23
-msgid ""
-"Pcbnew manages libraries of modules. Each module is a drawing of the "
-"physical component including its footprint - the layout of pads providing "
-"connections to the component. The required modules are automatically loaded "
-"during the reading of the Netlist produced by CvPcb."
+"Pcbnew manages libraries of footprints. Each footprint is a drawing of the "
+"physical component including its land pattern (the layout of pads on the "
+"circuit board). The required footprints are automatically loaded during the "
+"reading of the Netlist. Any changes to footprint selection or annotation can "
+"be changed in the schematic and updated in pcbnew by regenerating the "
+"netlist and reading it in pcbnew again."
 msgstr ""
 "Pcbnew zarządza też bibliotekami footprintów. Każdy fooprint jest rysunkiem "
 "fizycznych komponentów zawierający jego ``odcisk'' - czyli układ wyprowadzeń "
@@ -6785,33 +6771,26 @@ msgstr ""
 "automatycznie podczas wczytywania listy sieci generowanej przez Cvpcb."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:29
-#, fuzzy
-#| msgid ""
-#| "Pcbnew integrates, automatically and immediately, any circuit "
-#| "modification, by removal of any erroneous tracks, addition of the new "
-#| "components, or by modifying any value (and under certain conditions any "
-#| "reference) of the old or new modules, according to the electrical "
-#| "connections appearing in the scheme."
+#: Pcbnew_introduction.adoc:22
 msgid ""
-"Pcbnew integrates, automatically and immediately, any circuit modification, "
-"by removal of any erroneous tracks, addition of the new components, or by "
-"modifying any value (and under certain conditions any reference) of the old "
-"or new modules, according to the electrical connections appearing in the "
-"schematic."
+"Pcbnew provides a design rules check tool which prevents track and pad "
+"clearence issues as well as preventing nets from being connected that aren't "
+"connected in the netlist/schematic. When using the interactive router it "
+"continuously runs the design rules check and will help automatically route "
+"individual traces."
 msgstr ""
-"Pcbnew łączy automatycznie i natychmiast wszelkie zmiany w obwodzie "
-"wykonywane przez usunięcie błędnych ścieżek, dodawanie nowych komponentów "
-"lub modyfikacje każdej wartości (i pod pewnymi warunkami także wszelkich "
-"oznaczeń elementów) ze starych footprintów lub nowych footprintów, w "
-"zależności od połączeń elektrycznych znajdujących się na schemacie."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:33
+#: Pcbnew_introduction.adoc:26
+#, fuzzy
+#| msgid ""
+#| "Pcbnew provides a rats nest display, a hairline connecting the pads of "
+#| "modules which are connected on the schematic. These connections move "
+#| "dynamically as track and module movements are made."
 msgid ""
 "Pcbnew provides a rats nest display, a hairline connecting the pads of "
-"modules which are connected on the schematic. These connections move "
-"dynamically as track and module movements are made."
+"footprints which are connected on the schematic. These connections move "
+"dynamically as track and footprint movements are made."
 msgstr ""
 "Pcbnew zapewnia możliwość wyświetlania linii prowadzących (_ratsnest_), "
 "łączących poszczególne footprinty zgodnie z połączeniami na schemacie. "
@@ -6819,30 +6798,7 @@ msgstr ""
 "footprintów. "
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:36
-#, fuzzy
-#| msgid ""
-#| "Pcbnew has an active Design Rules Check (DRC) which automatically "
-#| "indicates any error of track layout in real time."
-msgid ""
-"Pcbnew has an active Design Rules Check (DRC) function which automatically "
-"indicates any error of track layout in real time."
-msgstr ""
-"Pcbnew ma również aktywne narzędzie do sprawdzania poprawności zasad "
-"projektowych (DRC), które automatycznie informuje o jakichkolwiek błędach w "
-"ścieżkach w czasie rzeczywistym."
-
-#. type: Plain text
-#: Pcbnew_introduction.adoc:39
-msgid ""
-"Pcbnew can automatically generate a copper plane, with or without thermal "
-"breaks on the pads."
-msgstr ""
-"Pcbnew może automatycznie generować wypełniające obszary miedzi, z lub bez "
-"łącz termicznych w miejscach pól lutowniczych i przelotek."
-
-#. type: Plain text
-#: Pcbnew_introduction.adoc:43
+#: Pcbnew_introduction.adoc:30
 #, fuzzy
 #| msgid ""
 #| "Pcbnew has a simple but effective autorouter to assist in the production "
@@ -6861,7 +6817,7 @@ msgstr ""
 "również z zaawansowanych zewnętrznych auto-routerów."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:47
+#: Pcbnew_introduction.adoc:34
 #, fuzzy
 #| msgid ""
 #| "Pcbnew provides options specifically for the production of ultra high "
@@ -6877,42 +6833,21 @@ msgstr ""
 "złożonej postaci, automatyczne tworzenie płaskich cewek na obwodzie "
 "drukowanym...)."
 
-#. type: Plain text
-#: Pcbnew_introduction.adoc:50
-#, fuzzy
-#| msgid ""
-#| "Pcbnew displays the elements (tracks, pads, texts, drawings and more) as "
-#| "actual size and according to personal preferences:"
-msgid ""
-"Pcbnew displays the elements (tracks, pads, texts, drawings and more) as "
-"actual size and according to the following personal preferences:"
-msgstr ""
-"Pcbnew wyświetla elementy (ścieżki, pola lutownicze, teksty, rysunki...) w "
-"rzeczywistym rozmiarze i według osobistych preferencji:"
-
-#. type: Plain text
-#: Pcbnew_introduction.adoc:52
-msgid "Display in full or outline."
-msgstr "Wyświetlanie w całości lub jako szkic."
-
-#. type: Plain text
-#: Pcbnew_introduction.adoc:53
-msgid "Display of the track/pad clearance."
-msgstr "Wyświetlanie prześwitów ścieżek/pól lutowniczych..."
-
 #. type: Title ===
-#: Pcbnew_introduction.adoc:54
+#: Pcbnew_introduction.adoc:35
 #, no-wrap
 msgid "Principal design features"
 msgstr "Główne cechy projektu"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:57
-msgid "Pcbnew has an internal resolution of 1/10000 inch."
-msgstr "Pcbnew posiada wewnętrzną rozdzielczość określoną na 1 nanometr."
+#: Pcbnew_introduction.adoc:39
+msgid ""
+"The smallest unit in pcbnew is 1 nanometer. All dimensions are stored as "
+"integer nanometers."
+msgstr ""
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:62
+#: Pcbnew_introduction.adoc:44
 #, fuzzy
 #| msgid ""
 #| "Pcbnew works on 16 layers of copper, plus 12 technical layers (silk "
@@ -6920,8 +6855,8 @@ msgstr "Pcbnew posiada wewnętrzną rozdzielczość określoną na 1 nanometr."
 #| "comments...) and manages in real time the hairline indication (rats nest) "
 #| "of missing tracks."
 msgid ""
-"Pcbnew works on 32 layers of copper, 14 technical layers (silk screen, "
-"solder mask, component adhesive, solder paste and edge cuts) plus 4 "
+"Pcbnew can generate up to 32 layers of copper, 14 technical layers (silk "
+"screen, solder mask, component adhesive, solder paste and edge cuts) plus 4 "
 "auxiliary layers (drawings and comments) and manages in real time the "
 "hairline indication (rats nest) of missing tracks."
 msgstr ""
@@ -6931,7 +6866,7 @@ msgstr ""
 "pomocniczymi (_ratsnest_) dla nieistniejących jeszcze ścieżek."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:65
+#: Pcbnew_introduction.adoc:47
 msgid ""
 "The display of the PCB elements (tracks, pads, text, drawings...)  can be "
 "customizable:"
@@ -6940,148 +6875,143 @@ msgstr ""
 "zostać spersonalizowane:"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:67
+#: Pcbnew_introduction.adoc:49
 msgid "In full or outline."
 msgstr "Przez wyświetlanie w trybie pełnym lub trybie uproszczonym."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:68
+#: Pcbnew_introduction.adoc:50
 msgid "With or without track clearance."
 msgstr "Wyświetlanie lub nie prześwitów na ścieżkach."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:71
-msgid ""
-"By hiding certain elements (copper layers, technical layers, zones of "
-"copper, modules...), which is useful for high-density multi-layer circuits."
-msgstr ""
-"Poprzez ukrywanie niektórych warstw (warstwy miedzi, warstwy techniczne, "
-"pola miedzi, footprinty, opisy...), które jest przydatne w przypadkach gęsto "
-"upakowanych, wielowarstwowych obwodów."
-
-#. type: Plain text
-#: Pcbnew_introduction.adoc:74
+#: Pcbnew_introduction.adoc:54
 #, fuzzy
 #| msgid ""
 #| "For the complex circuits, the display of layers, zones, components can be "
 #| "removed in a selective way for a better legibility of the screen."
 msgid ""
-"For the complex circuits, the display of layers, zones, components can be "
-"removed in a selective way for clarity on screen."
+"For the complex circuits the display of layers, zones, components can be "
+"hidden in a selective way for clarity on screen. Nets of traces can be "
+"highlighted to provide high contrast as well."
 msgstr ""
 "Przy skomplikowanych obwodach, wyświetlanie warstw, pól miedzi, elementów "
 "może zostać wyłączone w sposób selektywny dla polepszenia czytelności "
 "zawartości ekranu."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:76
-msgid "Modules can be rotated to any angle, with a step of 0.1 degree."
+#: Pcbnew_introduction.adoc:56
+#, fuzzy
+#| msgid "Modules can be rotated to any angle, with a step of 0.1 degree."
+msgid ""
+"Footprints can be rotated to any angle, with a resolution of 0.1 degree."
 msgstr "Footprinty mogą być obracane o dowolny kąt, z krokiem 0,1 stopnia."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:80
+#: Pcbnew_introduction.adoc:59
 msgid ""
-"Pads can be round, rectangular, oval or trapezoidal (the latter is necessary "
-"for the production of ultra high frequency circuits). In addition several "
-"basic pads can be grouped."
+"Pcbnew includes a footprint editor that allows editing of individual "
+"footprints that have been on a pcb or editing a footprint in a library."
 msgstr ""
-"Pola lutownicze mogą mieć kształt okrągły, prostokątny, owalny, lub "
-"trapezoidalny (ostatni jest potrzebny w produkcji obwodów dla wysokich "
-"częstotliwości). Dodatkowo niektóre podstawowe pola można zgrupować."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:83
-msgid ""
-"Both the size of each pad, and the layers where they appear, can be "
-"adjusted. The drilling of holes can be offset."
+#: Pcbnew_introduction.adoc:61
+msgid "The footprint editor provides many time saving tools such as:"
 msgstr ""
-"Można dostrajać zarówno rozmiar każdego pola, jak i warstwy na których on "
-"występuje. Otwory w polach lutowniczych mogą zostać również przesunięte."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:86
+#: Pcbnew_introduction.adoc:64
 msgid ""
-"Pcbnew can automatically generate copper planes, with automatic generation "
-"of thermal breaks around the pads concerned."
+"Fast pad numbering by simply dragging the mouse over pads in the order you "
+"want them numbered."
 msgstr ""
-"Pcbnew może automatycznie generować pola miedzi (_polygony, strefy "
-"wypełnień_) z automatyczną generacją łącz termicznych wokół pól lutowniczych "
-"mających połączenie z polem miedzi."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:92
+#: Pcbnew_introduction.adoc:66
 msgid ""
-"The Footprint Editor can be accessed from the Pcbnew toolbar. The Editor "
-"allows creation or modification of a footprint from the PCB or a library and "
-"then saved to either. A footprint saved to the PCB can be subsequently saved "
-"to a library. In addition all footprints on the PCB can be saved to a "
-"library by creating a footprint archive."
+"Easy generation of rectangular and circular arrays of pads for LGA/BGA or "
+"circular footprints."
 msgstr ""
-"Bezpośrednio z paska narzędzi Pcbnew można uruchomić edytor footprintów "
-"ModEdit. Edytor pozwala na tworzenie lub modyfikację footprint znajdujących "
-"się na PCB lub w bibliotece, a następnie zapisywane ich. Footprint zapisany "
-"na PCB może być następnie zapisany w bibliotece. Ponadto wszystkie "
-"footprinty na płytce można zapisać do biblioteki, tworząc archiwum "
-"footprintów."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:95
+#: Pcbnew_introduction.adoc:67
+msgid "Semi-automatic aligning of rows or columns of pads."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_introduction.adoc:74
+msgid ""
+"Footprint pads have a variety of properties that can be adjusted. The pads "
+"can be round, rectangular, oval or trapezoidal. For through hole parts "
+"drills can be offset inside the pad and be round or a slot. Individual pads "
+"can also be rotated and have unique soldermask, net, or paste clearence. "
+"Pads can also have a solid connection or a thermal relief connection for "
+"easier manufacturing. Any combination of unique pads can be placed within a "
+"footprint."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_introduction.adoc:78
 msgid ""
 "Pcbnew generates in an extremely simple way all the documents necessary:"
 msgstr "Pcbnew generuje w bardzo prosty sposób wszystkie potrzebne dokumenty:"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:97
+#: Pcbnew_introduction.adoc:80
 msgid "Fabrication outputs:"
 msgstr "Pliki produkcyjne:"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:99
+#: Pcbnew_introduction.adoc:82
 #, no-wrap
 msgid "** Files for Photoplotters in GERBER RS274X format.\n"
 msgstr "** Pliki dla fotoploterów w formacie GERBER RS274X.\n"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:101
+#: Pcbnew_introduction.adoc:84
 #, no-wrap
 msgid "** Files for drilling in EXCELLON format.\n"
 msgstr "** Pliki wierceń w formacie EXCELLON.\n"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:103
+#: Pcbnew_introduction.adoc:86
 msgid "Plot files in HPGL, SVG and DXF format."
 msgstr "Pliki dla ploterów w formatach HPGL, SVG oraz DXF."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:105
+#: Pcbnew_introduction.adoc:88
 msgid "Plot and drilling maps in POSTSCRIPT format."
 msgstr "Mapy rysunków i wierceń w formacie POSTSCRIPT."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:107
+#: Pcbnew_introduction.adoc:90
 msgid "Local Printout."
 msgstr "Pliki dla wydruków lokalnych."
 
 #. type: Title ===
-#: Pcbnew_introduction.adoc:108
+#: Pcbnew_introduction.adoc:91
 #, no-wrap
 msgid "General remarks"
 msgstr "Ważne informacje"
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:111
-msgid "Pcbnew requires a 3 button mouse. The 3rd button is mandatory."
+#: Pcbnew_introduction.adoc:96
+msgid ""
+"Due to the degree of control necessary it is highly suggested to use a 3 "
+"button mouse with pcbnew. Many features such as panning and zooming require "
+"a 3 button mouse."
 msgstr ""
-"Pcbnew wymaga myszy z trzema przyciskami. Trzeci przycisk jest obowiązkowy."
 
 #. type: Plain text
-#: Pcbnew_introduction.adoc:113
+#: Pcbnew_introduction.adoc:101
 msgid ""
-"Finally it should be noted that the diagrammatic tool Eeschema and CvPcb are "
-"needed to create the required netlists."
+"In the new release of KiCad pcbnew has seen wide sweeping changes from "
+"developers at CERN. This includes features such as a new renderer (OpenGL "
+"and Cairo view modes), an interative push and shove router, differential and "
+"meander trace routing and tuning, a reworked footprint editor, and many "
+"other features. Please note that most of these new features *only* exist in "
+"the new OpenGL and Cairo view modes."
 msgstr ""
-"Należy zauważyć, iż pozostałe narzędzia Eeschema oraz CvPcb mogą być "
-"wymagane do stworzenia poprawnej listy sieci."
 
 #. type: Title ==
 #: Pcbnew_layers.adoc:2
@@ -8328,7 +8258,7 @@ msgstr ""
 "do biblioteki bez zbędnego wysiłku przy jej tworzeniu."
 
 #. type: Plain text
-#: Pcbnew_managing_libs.adoc:252
+#: Pcbnew_managing_libs.adoc:253
 msgid ""
 "Future changes of Pcbnew may require regeneration of the libraries, "
 "something that can be done very quickly if circuit-board sources of this "
@@ -8341,6 +8271,719 @@ msgstr ""
 "drukowane tego typu. Jest to o tyle ważne, że format pliku z obwodem "
 "drukowanym jest gwarantowany tak by zapewnić wsteczną kompatybilność, co "
 "wcale nie musi być praktykowane w przypadku formatu pliku biblioteki."
+
+#. type: Title ===
+#: Pcbnew_managing_libs.adoc:254
+#, fuzzy, no-wrap
+#| msgid "Footprint level."
+msgid "Footprint Libraries Management"
+msgstr "Na poziomie footprintów."
+
+#. type: Plain text
+#: Pcbnew_managing_libs.adoc:260
+msgid ""
+"The list of footprint libraries in Pcbnew can be edited using the Footprint "
+"Libraries Manager. This allows you to add and remove footprint libraries by "
+"hand, and also allows you to invoke the Footprint Libraries Wizard by "
+"pressing the \"Append With Wizard\" button."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_managing_libs.adoc:265
+msgid ""
+"The Footprint Libraries Wizard can also be invoked through the Preferences "
+"menu, and can automatically add a library (detecting its type) from a file "
+"or from a Github URL. The URL for the official libraries is: https://github."
+"com/KiCad"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_managing_libs.adoc:269
+msgid ""
+"More details about footprint library tables and the Manager and Wizard can "
+"be found in the CvPcb Reference Manual in the section http://docs.kicad-pcb."
+"org/CvPcb/CvPcb.html#_footprint_library_tables[Footprint Library Tables]."
+msgstr ""
+
+#. type: Title ==
+#: Pcbnew_python_scripting.adoc:1
+#, no-wrap
+msgid "KiCad Scripting Reference"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:4
+msgid ""
+"Scripting allow you to automate tasks within KiCad using the https://www."
+"python.org/[Python] language."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:6
+msgid ""
+"Also see the doxygen documentation on http://ci.kicad-pcb.org/job/kicad-"
+"doxygen/ws/build/pcbnew/doxygen-python/html/index.html[Python Scripting "
+"Reference]."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:8
+msgid ""
+"You can see python module help by typing `pydoc pcbnew` on your terminal."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:10
+msgid "Using scripting you can create:"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:12
+#, no-wrap
+msgid "*Plugins*: this type of script is loaded when KiCad starts. Examples:\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:13
+#, no-wrap
+msgid "*Footprint Wizards*: To help you build footprints easily filling in parameters. See the dedicated section <<Footprint_Wizards,Footprint Wizards>> below.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:14
+#, no-wrap
+msgid "*File I/O* '(planned)': To let you write plugins to export/import other filetypes\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:15
+#, no-wrap
+msgid "*Actions* '(planned)': Associate events to scripting actions or register new menus or toolbar icons.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:17
+#, no-wrap
+msgid "*Command Line Scripts*: scripts that can be used from the command line, load boards or libraries, modify them, and render outputs or new boards.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:20
+msgid ""
+"It shall be noted that the only KiCad applicaiton that supports scripting is "
+"Pcbnew. It is also planned for Eeschema in the future."
+msgstr ""
+
+#. type: Title ===
+#: Pcbnew_python_scripting.adoc:21
+#, no-wrap
+msgid "KiCad Objects"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:25
+msgid ""
+"The scripting API reflects the internal object structure inside KiCad/"
+"pcbnew. BOARD is the main object, that has a set of properties and a set of "
+"MODULEs, and TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.  Then "
+"MODULEs have D_PADs, EDGEs, etc."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:27
+msgid "See the BOARD section below."
+msgstr ""
+
+#. type: Title ===
+#: Pcbnew_python_scripting.adoc:28
+#, no-wrap
+msgid "Basic API Reference"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:31
+msgid ""
+"All the pcbnew API is provided from the \"pcbnew\" module in Python. "
+"GetBoard() method will return the current pcb open at editor, useful for "
+"commands written from the integrated scripting shell inside pcbnew or action "
+"plugins."
+msgstr ""
+
+#. type: Title ===
+#: Pcbnew_python_scripting.adoc:32
+#, fuzzy, no-wrap
+#| msgid "Adding and removing pads."
+msgid "Loading and Saving a Board"
+msgstr "Dodawanie oraz usuwanie pól lutowniczych."
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:35
+#, no-wrap
+msgid "*LoadBoard(filename):*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:36
+#, no-wrap
+msgid "loads a board from file returning a BOARD object, using the file format that matches the filename extension.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:38
+#, no-wrap
+msgid "*SaveBoard(filename,board):*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:39
+#, no-wrap
+msgid "saves a BOARD object to file, using the file format that matches the filename extension.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:41
+#, no-wrap
+msgid "*board.Save(filename):*\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:42
+#, no-wrap
+msgid "same as above, but it's a method of BOARD object.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:43
+#, no-wrap
+msgid "\n"
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_python_scripting.adoc:43
+#, no-wrap
+msgid "Example that loads a board, hides all values, shows all references"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:49 Pcbnew_python_scripting.adoc:104
+#, no-wrap
+msgid ""
+"#!/usr/bin/python\n"
+"import sys\n"
+"from pcbnew import *\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:51
+#, no-wrap
+msgid "filename=sys.argv[1]\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:57
+#, no-wrap
+msgid ""
+"pcb = LoadBoard(filename)\n"
+"for module in pcb.GetModules():  \n"
+"    print \"* Module: %s\"%module.GetReference()\n"
+"    module.GetValueObj().SetVisible(False)      # set Value as Hidden\n"
+"    module.GetReferenceObj().SetVisible(True)   # set Reference as Visible\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:59
+#, no-wrap
+msgid "pcb.Save(\"mod_\"+filename)\n"
+msgstr ""
+
+#. type: Title ===
+#: Pcbnew_python_scripting.adoc:61
+#, fuzzy, no-wrap
+#| msgid "ModEdit - Managing Libraries"
+msgid "Listing and Loading Libraries"
+msgstr "ModEdit - Zarządzanie bibliotekami footprintów"
+
+#. type: Block title
+#: Pcbnew_python_scripting.adoc:63
+#, no-wrap
+msgid "Enumerate library, enumerate modules, enumerate pads"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:67 Pcbnew_python_scripting.adoc:179
+#, no-wrap
+msgid "#!/usr/bin/python\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:69 Pcbnew_python_scripting.adoc:181
+#, no-wrap
+msgid "from pcbnew import *\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:72
+#, no-wrap
+msgid ""
+"libpath = \"/usr/share/kicad/modules/sockets.mod\"\n"
+"lst = FootprintEnumerate(libpath)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:78
+#, no-wrap
+msgid ""
+"for name in lst:\n"
+"    m = FootprintLoad(libpath,name)\n"
+"    print name,\"->\",m.GetLibRef(), m.GetReference()\n"
+"    for p in m.GetPads():\n"
+"        print \"\\t\",p.GetPadName(),p.GetPosition(),p.GetPos0(), p.GetOffset()\n"
+msgstr ""
+
+#. type: Title ===
+#: Pcbnew_python_scripting.adoc:80
+#, no-wrap
+msgid "BOARD"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:83
+msgid "Board is the basic object in KiCad pcbnew, it's the document."
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:85
+msgid ""
+"BOARD contains a set of object lists that can be accessed using the "
+"following methods, they will return iterable lists that can be iterated "
+"using \"for obj in list:\""
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:87
+#, no-wrap
+msgid "*board.GetModules():* This method returns a list of MODULE objects, all the modules available in the board will be exposed here.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:88
+#, no-wrap
+msgid "*board.GetDrawings():* Returns the list of BOARD_ITEMS that belong to the board drawings\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:89
+#, no-wrap
+msgid "*board.GetTracks():* This method returns a list of TRACKs an SEGVIAs inside a BOARD\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:90
+#, no-wrap
+msgid "*board.GetSegZones():* Returns a list of SEGZONEs\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:91
+#, no-wrap
+msgid "*board.GetFullRatnest():* Returns the list of ratsnets (connections still not routed)\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:92
+#, no-wrap
+msgid "*board.GetLocalRatsnest():* Returns the list of ratsnest of a moving footprint (as it's dragged)\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:93
+#, no-wrap
+msgid "*board.GetNetClasses():* Returns the list of net classes\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:94
+#, no-wrap
+msgid "*board.GetCurrentNetClassName():* Returns the current net class\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:95
+#, no-wrap
+msgid "*board.GetViasDimensionsList():* Returns the list of Via dimensions available to the board.\n"
+msgstr ""
+
+#. type: Plain text
+#: Pcbnew_python_scripting.adoc:96
+#, no-wrap
+msgid "*board.GetTrackWidthList():* Returns the list of Track Widths available to the board.\n"
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_python_scripting.adoc:98
+#, no-wrap
+msgid "Board Inspection Example"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:107
+#, no-wrap
+msgid ""
+"filename=sys.argv[1]\n"
+"pcb = LoadBoard(filename)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:110
+#, no-wrap
+msgid ""
+"ToUnits=ToMils\n"
+"FromUnits=FromMils\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:114
+#, no-wrap
+msgid ""
+"print \"LISTING VIAS:\"\n"
+"for item in pcb.GetTracks():\n"
+"    if type(item) is SEGVIA:\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:119
+#, no-wrap
+msgid ""
+"        pos = item.GetPosition()\n"
+"        drill = item.GetDrillValue()\n"
+"        width = item.GetWidth()\n"
+"        print \" * Via:   %s - %f/%f \"%(ToUnits(pos),ToUnits(drill),ToUnits(width))\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:121
+#, no-wrap
+msgid "    elif type(item) is TRACK:\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:125
+#, no-wrap
+msgid ""
+"        start = item.GetStart()\n"
+"        end = item.GetEnd()\n"
+"        width = item.GetWidth()\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:127
+#, no-wrap
+msgid "        print \" * Track: %s to %s, width %f\" % (ToUnits(start),ToUnits(end),ToUnits(width))\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:130
+#, no-wrap
+msgid ""
+"    else:\n"
+"        print \"Unknown type    %s\" % type(item)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:140
+#, no-wrap
+msgid ""
+"print \"\"\n"
+"print \"LISTING DRAWINGS:\"\n"
+"for item in pcb.GetDrawings():\n"
+"    if type(item) is TEXTE_PCB:\n"
+"        print \"* Text:    '%s' at %s\"%(item.GetText(),item.GetPosition())\n"
+"    elif type(item) is DRAWSEGMENT:\n"
+"        print \"* Drawing: %s\"%item.GetShapeStr() # dir(item)\n"
+"    else:\n"
+"        print type(item)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:145
+#, no-wrap
+msgid ""
+"print \"\"\n"
+"print \"LIST MODULES:\"\n"
+"for module in pcb.GetModules():\n"
+"    print \"* Module: %s at %s\"%(module.GetReference(),ToUnits(module.GetPosition()))\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:150
+#, no-wrap
+msgid ""
+"print \"\"\n"
+"print \"LIST ZONES:\"\n"
+"for zone in pcb.GetSegZones():\n"
+"    print zone\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:153
+#, no-wrap
+msgid ""
+"print \"\"\n"
+"print \"RATSNEST:\",len(pcb.GetFullRatsnest())\n"
+msgstr ""
+
+#. type: Title ===
+#: Pcbnew_python_scripting.adoc:155 Pcbnew_routing.adoc:148
+#, no-wrap
+msgid "Examples"
+msgstr "Przykłady stosowanych reguł projektowych"
+
+#. type: Title ====
+#: Pcbnew_python_scripting.adoc:157
+#, no-wrap
+msgid "Change a component pins paste mask margin"
+msgstr ""
+
+#. type: Block title
+#: Pcbnew_python_scripting.adoc:159
+#, no-wrap
+msgid "We only want to change pins from 1 to 14, 15 is a thermal pad that must be keep as it is."
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:165
+#, no-wrap
+msgid ""
+"b = pcbnew.GetBoard()\n"
+"u304 = b.FindModuleByReference('U304')\n"
+"pads = u304.GetPads()\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:170
+#, no-wrap
+msgid ""
+"for p in pads:\n"
+"    print p.GetPadName(), pcbnew.ToMM(p.GetLocalSolderPasteMargin())\n"
+"    id = int(p.GetPadName())\n"
+"    if id<15: p.SetLocalSolderPasteMargin(0)\n"
+msgstr ""
+
+#. type: Title ===
+#: Pcbnew_python_scripting.adoc:173
+#, fuzzy, no-wrap
+#| msgid "Footprint mode"
+msgid "Footprint Wizards"
+msgstr "Tryb Automatycznego lub ręcznego przesuwanie footprintów"
+
+#. type: Block title
+#: Pcbnew_python_scripting.adoc:175
+#, no-wrap
+msgid "Build footprints easily filling in parameters."
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:199
+#, no-wrap
+msgid ""
+"class FPCFootprintWizard(FootprintWizardPlugin):\n"
+"    def __init__(self):\n"
+"        FootprintWizardPlugin.__init__(self)\n"
+"        self.name = \"FPC\"\n"
+"        self.description = \"FPC Footprint Wizard\"\n"
+"        self.parameters = {\n"
+"             \"Pads\":\n"
+"                {\"*n\":40,           # not internal units preceded by \"*\"\n"
+"                 \"pitch\":           FromMM(0.5),\n"
+"                 \"width\":           FromMM(0.25),\n"
+"                 \"height\":          FromMM(1.6)},\n"
+"             \"Shield\":\n"
+"                {\"shield_to_pad\":   FromMM(1.6),\n"
+"                 \"from_top\":        FromMM(1.3),\n"
+"                 \"width\":           FromMM(1.5),\n"
+"                 \"height\":          FromMM(2)}\n"
+"        }\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:201
+#, no-wrap
+msgid "        self.ClearErrors()\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:213
+#, no-wrap
+msgid ""
+"    # build a rectangular pad\n"
+"    def smdRectPad(self,module,size,pos,name):\n"
+"            pad = D_PAD(module)\n"
+"            pad.SetSize(size)\n"
+"            pad.SetShape(PAD_RECT)\n"
+"            pad.SetAttribute(PAD_SMD)\n"
+"            pad.SetLayerMask(PAD_SMD_DEFAULT_LAYERS)\n"
+"            pad.SetPos0(pos)\n"
+"            pad.SetPosition(pos)\n"
+"            pad.SetPadName(name)\n"
+"            return pad\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:223
+#, no-wrap
+msgid ""
+"    # This method checks the parameters provided to wizard and set errors\n"
+"    def CheckParameters(self):\n"
+"        p = self.parameters      \n"
+"        pads            = p[\"Pads\"][\"*n\"]      \n"
+"        errors = \"\"\n"
+"        if (pads<1):\n"
+"            self.parameter_errors[\"Pads\"][\"n\"]=\"Must be positive\"\n"
+"            errors +=\"Pads/n has wrong value, \"\n"
+"        p[\"Pads\"][\"n\"] = int(pads)  # make sure it stays as int (default is float)      \n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:231
+#, no-wrap
+msgid ""
+"        pad_width       = p[\"Pads\"][\"width\"]\n"
+"        pad_height      = p[\"Pads\"][\"height\"]\n"
+"        pad_pitch       = p[\"Pads\"][\"pitch\"]\n"
+"        shl_width       = p[\"Shield\"][\"width\"]\n"
+"        shl_height      = p[\"Shield\"][\"height\"]\n"
+"        shl_to_pad      = p[\"Shield\"][\"shield_to_pad\"]\n"
+"        shl_from_top    = p[\"Shield\"][\"from_top\"]\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:233
+#, no-wrap
+msgid "        return errors\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:236
+#, no-wrap
+msgid ""
+"    # build the footprint from parameters\n"
+"    def BuildFootprint(self):\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:240
+#, no-wrap
+msgid ""
+"        print \"parameters:\",self.parameters\n"
+"        #self.ClearErrors()\n"
+"        #print \"errors:\",self.parameter_errors\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:243
+#, no-wrap
+msgid ""
+"        module = MODULE(None) # create a new module\n"
+"        self.module = module\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:253
+#, no-wrap
+msgid ""
+"        p = self.parameters\n"
+"        pads            = int(p[\"Pads\"][\"*n\"])      \n"
+"        pad_width       = p[\"Pads\"][\"width\"]\n"
+"        pad_height      = p[\"Pads\"][\"height\"]\n"
+"        pad_pitch       = p[\"Pads\"][\"pitch\"]\n"
+"        shl_width       = p[\"Shield\"][\"width\"]\n"
+"        shl_height      = p[\"Shield\"][\"height\"]\n"
+"        shl_to_pad      = p[\"Shield\"][\"shield_to_pad\"]\n"
+"        shl_from_top    = p[\"Shield\"][\"from_top\"]\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:256
+#, no-wrap
+msgid ""
+"        size_pad = wxSize(pad_width,pad_height)\n"
+"        size_shld = wxSize(shl_width,shl_height)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:260
+#, no-wrap
+msgid ""
+"        module.SetReference(\"FPC\"+str(pads))   # give it a reference name\n"
+"        module.m_Reference.SetPos0(wxPointMM(-1,-2))\n"
+"        module.m_Reference.SetPosition(wxPointMM(-1,-2))\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:265
+#, no-wrap
+msgid ""
+"        # create a pad array and add it to the module\n"
+"        for n in range (0,pads):\n"
+"            pad = self.smdRectPad(module,size_pad,wxPoint(pad_pitch*n,0),str(n+1))\n"
+"            module.Add(pad)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:274
+#, no-wrap
+msgid ""
+"        pad_s0 = self.smdRectPad(module,\n"
+"                            size_shld,\n"
+"                            wxPoint(-shl_to_pad,shl_from_top),\n"
+"                            \"0\")\n"
+"        pad_s1 = self.smdRectPad(module,\n"
+"                            size_shld,\n"
+"                            wxPoint((pads-1)*pad_pitch+shl_to_pad,shl_from_top),\n"
+"                            \"0\")      \n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:277
+#, no-wrap
+msgid ""
+"        module.Add(pad_s0)\n"
+"        module.Add(pad_s1)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:284
+#, no-wrap
+msgid ""
+"        e = EDGE_MODULE(module)\n"
+"        e.SetStartEnd(wxPointMM(-1,0),wxPointMM(0,0))\n"
+"        e.SetWidth(FromMM(0.2))\n"
+"        e.SetLayer(EDGE_LAYER)\n"
+"        e.SetShape(S_SEGMENT)\n"
+"        module.Add(e)\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:286
+#, no-wrap
+msgid "        module.SetLibRef(\"FPC\"+str(pads))\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:289
+#, no-wrap
+msgid ""
+"# create our footprint wizard\n"
+"fpc_wizard = FPCFootprintWizard()\n"
+msgstr ""
+
+#. type: delimited block -
+#: Pcbnew_python_scripting.adoc:292
+#, no-wrap
+msgid ""
+"# register it into pcbnew\n"
+"fpc_wizard.register()\n"
+msgstr ""
 
 #. type: Title ====
 #: Pcbnew_routing.adoc:2 Pcbnew_routing.adoc:59
@@ -8792,12 +9435,6 @@ msgid ""
 msgstr ""
 "Zwykle, minimalny prześwit jest bardzo podobny do minimalnej szerokości "
 "ścieżki."
-
-#. type: Title ===
-#: Pcbnew_routing.adoc:148
-#, no-wrap
-msgid "Examples"
-msgstr "Przykłady stosowanych reguł projektowych"
 
 #. type: Title ====
 #: Pcbnew_routing.adoc:150
@@ -10531,42 +11168,36 @@ msgstr ""
 "(podobne do poznanych wcześniej) i za pomocą myszy narysować obrys strefy "
 "tak samo jak w przypadku stref na warstwach sygnałowych."
 
-#. type: Title ====
-#: Pcbnew_zones.adoc:274
-#, no-wrap
-msgid "Notes"
-msgstr "Uwagi"
-
-#. type: Plain text
+#. type: delimited block =
 #: Pcbnew_zones.adoc:277
 msgid "For editing outlines use the same way as for copper zones."
 msgstr ""
 "By dokonać zmian w obrysie strefy należy postępować w ten sam sposób co przy "
 "strefach na warstwach sygnałowych."
 
-#. type: Plain text
+#. type: delimited block =
 #: Pcbnew_zones.adoc:278
 msgid "In necessary, cutout areas can be added."
 msgstr "Na warstwach technicznych można również stosować strefy odcięte."
 
 #. type: Title ===
-#: Pcbnew_zones.adoc:279
+#: Pcbnew_zones.adoc:280
 #, no-wrap
 msgid "Creating a Keepout area"
 msgstr "Tworzenie stref chronionych"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:282
+#: Pcbnew_zones.adoc:283
 msgid "Select the tool image:images/icons/add_keepout_area.png[]"
 msgstr "Wybierz narzędzie image:images/icons/add_keepout_area.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:284
+#: Pcbnew_zones.adoc:285
 msgid "The active layer should be a copper layer."
 msgstr "Aktywną warstwą powinna być jedna ze stref sygnałowych (miedzi)."
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:287
+#: Pcbnew_zones.adoc:288
 msgid ""
 "After clicking on the starting point of a new keepout area, the dialog box "
 "is opened:"
@@ -10575,34 +11206,34 @@ msgstr ""
 "otwierany jest następujące okno dialogowe:"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:289
+#: Pcbnew_zones.adoc:290
 msgid "image:images/Pcbnew_keepout_area_properties.png[]"
 msgstr "image:images/pl/Pcbnew_keepout_area_properties.png[]"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:291
+#: Pcbnew_zones.adoc:292
 msgid "One can select disallowed items:"
 msgstr ""
 "Można tu wybrać kilka opcji, z której najważniejsza grupa zawiera wybór "
 "elementów, które nie moga znajdować się w obszarze chronionym:"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:293
+#: Pcbnew_zones.adoc:294
 msgid "tracks"
 msgstr "ścieżki,"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:294
+#: Pcbnew_zones.adoc:295
 msgid "vias"
 msgstr "przelotki,"
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:295
+#: Pcbnew_zones.adoc:296
 msgid "copper pours"
 msgstr "strefy wypełnienia."
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:298
+#: Pcbnew_zones.adoc:299
 msgid ""
 "When a track or a via is inside a keepout which does not allow it, a DRC "
 "error will be raised."
@@ -10611,7 +11242,7 @@ msgstr ""
 "to zgłoszony zostanie błąd DRC."
 
 #. type: Plain text
-#: Pcbnew_zones.adoc:301
+#: Pcbnew_zones.adoc:302
 msgid ""
 "For copper zones, the area inside a keepout with no copper pour will be not "
 "filled. A keep-out area is a like a zone, so editing its outline is analog "
@@ -10620,6 +11251,151 @@ msgstr ""
 "Dla stref miedzi, obszar wewnątrz obszaru chronionego nie może zostać "
 "wypełniony. Obszar chroniony jest jak strefa, więc edycja jego zarysu jest "
 "analogiczna jak w przypadku edycji stref wypełnień."
+
+#, fuzzy
+#~| msgid ""
+#~| "Pcbnew is used in association with the schematic capture software "
+#~| "program Eeschema, which provides the Netlist file - this describes the "
+#~| "electrical connections of the PCB to design."
+#~ msgid ""
+#~ "Pcbnew is used in association with the schematic capture software program "
+#~ "Eeschema, which provides the Netlist file - this describes the electrical "
+#~ "connections of the PCB being designed."
+#~ msgstr ""
+#~ "Jest on używany w połączeniu z oprogramowaniem do tworzenia schematów "
+#~ "Eeschema, który dostarcza 'pliki list sieci' - opisujących połączenia "
+#~ "elektryczne wymagane przy trasowaniu PCB."
+
+#~ msgid ""
+#~ "A second program CvPcb is used to assign each component in the Netlist "
+#~ "produced by Eeschema, to a module that is used by Pcbnew.  This can be "
+#~ "done either interactively or automatically using equivalence files."
+#~ msgstr ""
+#~ "Drugi program CvPcb jest używany do przypisania footprintów poszczególnym "
+#~ "składnikom zawartym w liście sieci generowanej przez Eeschema, które są "
+#~ "używane przez Pcbnew. Można to zrobić albo interaktywnie, albo "
+#~ "automatycznie za pomocą plików przypisań."
+
+#, fuzzy
+#~| msgid ""
+#~| "Pcbnew integrates, automatically and immediately, any circuit "
+#~| "modification, by removal of any erroneous tracks, addition of the new "
+#~| "components, or by modifying any value (and under certain conditions any "
+#~| "reference) of the old or new modules, according to the electrical "
+#~| "connections appearing in the scheme."
+#~ msgid ""
+#~ "Pcbnew integrates, automatically and immediately, any circuit "
+#~ "modification, by removal of any erroneous tracks, addition of the new "
+#~ "components, or by modifying any value (and under certain conditions any "
+#~ "reference) of the old or new modules, according to the electrical "
+#~ "connections appearing in the schematic."
+#~ msgstr ""
+#~ "Pcbnew łączy automatycznie i natychmiast wszelkie zmiany w obwodzie "
+#~ "wykonywane przez usunięcie błędnych ścieżek, dodawanie nowych komponentów "
+#~ "lub modyfikacje każdej wartości (i pod pewnymi warunkami także wszelkich "
+#~ "oznaczeń elementów) ze starych footprintów lub nowych footprintów, w "
+#~ "zależności od połączeń elektrycznych znajdujących się na schemacie."
+
+#, fuzzy
+#~| msgid ""
+#~| "Pcbnew has an active Design Rules Check (DRC) which automatically "
+#~| "indicates any error of track layout in real time."
+#~ msgid ""
+#~ "Pcbnew has an active Design Rules Check (DRC) function which "
+#~ "automatically indicates any error of track layout in real time."
+#~ msgstr ""
+#~ "Pcbnew ma również aktywne narzędzie do sprawdzania poprawności zasad "
+#~ "projektowych (DRC), które automatycznie informuje o jakichkolwiek błędach "
+#~ "w ścieżkach w czasie rzeczywistym."
+
+#~ msgid ""
+#~ "Pcbnew can automatically generate a copper plane, with or without thermal "
+#~ "breaks on the pads."
+#~ msgstr ""
+#~ "Pcbnew może automatycznie generować wypełniające obszary miedzi, z lub "
+#~ "bez łącz termicznych w miejscach pól lutowniczych i przelotek."
+
+#, fuzzy
+#~| msgid ""
+#~| "Pcbnew displays the elements (tracks, pads, texts, drawings and more) as "
+#~| "actual size and according to personal preferences:"
+#~ msgid ""
+#~ "Pcbnew displays the elements (tracks, pads, texts, drawings and more) as "
+#~ "actual size and according to the following personal preferences:"
+#~ msgstr ""
+#~ "Pcbnew wyświetla elementy (ścieżki, pola lutownicze, teksty, rysunki...) "
+#~ "w rzeczywistym rozmiarze i według osobistych preferencji:"
+
+#~ msgid "Display in full or outline."
+#~ msgstr "Wyświetlanie w całości lub jako szkic."
+
+#~ msgid "Display of the track/pad clearance."
+#~ msgstr "Wyświetlanie prześwitów ścieżek/pól lutowniczych..."
+
+#~ msgid "Pcbnew has an internal resolution of 1/10000 inch."
+#~ msgstr "Pcbnew posiada wewnętrzną rozdzielczość określoną na 1 nanometr."
+
+#~ msgid ""
+#~ "By hiding certain elements (copper layers, technical layers, zones of "
+#~ "copper, modules...), which is useful for high-density multi-layer "
+#~ "circuits."
+#~ msgstr ""
+#~ "Poprzez ukrywanie niektórych warstw (warstwy miedzi, warstwy techniczne, "
+#~ "pola miedzi, footprinty, opisy...), które jest przydatne w przypadkach "
+#~ "gęsto upakowanych, wielowarstwowych obwodów."
+
+#~ msgid ""
+#~ "Pads can be round, rectangular, oval or trapezoidal (the latter is "
+#~ "necessary for the production of ultra high frequency circuits). In "
+#~ "addition several basic pads can be grouped."
+#~ msgstr ""
+#~ "Pola lutownicze mogą mieć kształt okrągły, prostokątny, owalny, lub "
+#~ "trapezoidalny (ostatni jest potrzebny w produkcji obwodów dla wysokich "
+#~ "częstotliwości). Dodatkowo niektóre podstawowe pola można zgrupować."
+
+#~ msgid ""
+#~ "Both the size of each pad, and the layers where they appear, can be "
+#~ "adjusted. The drilling of holes can be offset."
+#~ msgstr ""
+#~ "Można dostrajać zarówno rozmiar każdego pola, jak i warstwy na których on "
+#~ "występuje. Otwory w polach lutowniczych mogą zostać również przesunięte."
+
+#~ msgid ""
+#~ "Pcbnew can automatically generate copper planes, with automatic "
+#~ "generation of thermal breaks around the pads concerned."
+#~ msgstr ""
+#~ "Pcbnew może automatycznie generować pola miedzi (_polygony, strefy "
+#~ "wypełnień_) z automatyczną generacją łącz termicznych wokół pól "
+#~ "lutowniczych mających połączenie z polem miedzi."
+
+#~ msgid ""
+#~ "The Footprint Editor can be accessed from the Pcbnew toolbar. The Editor "
+#~ "allows creation or modification of a footprint from the PCB or a library "
+#~ "and then saved to either. A footprint saved to the PCB can be "
+#~ "subsequently saved to a library. In addition all footprints on the PCB "
+#~ "can be saved to a library by creating a footprint archive."
+#~ msgstr ""
+#~ "Bezpośrednio z paska narzędzi Pcbnew można uruchomić edytor footprintów "
+#~ "ModEdit. Edytor pozwala na tworzenie lub modyfikację footprint "
+#~ "znajdujących się na PCB lub w bibliotece, a następnie zapisywane ich. "
+#~ "Footprint zapisany na PCB może być następnie zapisany w bibliotece. "
+#~ "Ponadto wszystkie footprinty na płytce można zapisać do biblioteki, "
+#~ "tworząc archiwum footprintów."
+
+#~ msgid "Pcbnew requires a 3 button mouse. The 3rd button is mandatory."
+#~ msgstr ""
+#~ "Pcbnew wymaga myszy z trzema przyciskami. Trzeci przycisk jest "
+#~ "obowiązkowy."
+
+#~ msgid ""
+#~ "Finally it should be noted that the diagrammatic tool Eeschema and CvPcb "
+#~ "are needed to create the required netlists."
+#~ msgstr ""
+#~ "Należy zauważyć, iż pozostałe narzędzia Eeschema oraz CvPcb mogą być "
+#~ "wymagane do stworzenia poprawnej listy sieci."
+
+#~ msgid "Notes"
+#~ msgstr "Uwagi"
 
 #~ msgid "Modules placement"
 #~ msgstr "Rozmieszczanie footprintów"
