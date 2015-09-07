@@ -19,7 +19,7 @@ do
     do
       NNLANG=`basename $j .po`
       echo -n "$i, $NNLANG, " >>$OUTPUTF
-      msgfmt --use-fuzzy --statistics $j 2>&1 |sed  -e 's/,/;/g' -e 's/\.//' -e 's/ messages//g'  -e 's/ message//g' -e 's/ translation//' -e 's/ translations//'  >> $OUTPUTF
+      msgfmt --statistics $j 2>&1 |sed  -e 's/,/;/g' -e 's/\.//' -e 's/ messages//g'  -e 's/ message//g' -e 's/ translation//' -e 's/ translations//'  >> $OUTPUTF
       #  
       rm messages.mo
     done
