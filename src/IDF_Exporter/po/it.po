@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2015-07-21 18:59+0900\n"
-"PO-Revision-Date: 2015-06-21 21:25+0200\n"
+"POT-Creation-Date: 2015-09-02 08:24+0200\n"
+"PO-Revision-Date: 2015-09-07 10:12+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -277,7 +277,7 @@ msgid ""
 "by the exporter into the library file and can be used to track metadata such "
 "as references to the documents used to determine the component's outline and "
 "dimensions."
-msgstr ""
+msgstr "Il file del contorno del componente (*.idf) consiste in un unica sezione .ELECTRICAL o .MECHANICAL come descritto nel documento delle specifiche. La sezione può essere preceduta da un numero qualsiasi di righe di commento; le righe di commento vengono copiate dall'esportatore nel file delle librerie e possono essere usate per tenere traccia dei metadati come i riferimenti ai documenti usati per determinare il contorno e le dimensioni del componente."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:130
@@ -290,7 +290,7 @@ msgid ""
 "is preferred for human readability. The decimal point must be a dot and not "
 "a comma. The IDF file must consist only of 7-bit ASCII characters; use of 8-"
 "bit characters will result in undefined behavior."
-msgstr ""
+msgstr "La sezione del contorno del componente contiene campi consistenti in stringhe, numeri interi, o in virgola mobile. Una stringa è un insieme di caratteri che può includere gli spazi; se una stringa contiene spazi, deve essere virgolettata. Le virgolette non possono apparire all'interno di una stringa. I numeri in virgola mobile possono essere rappresentati usando le notazioni decimale o esponenziale ma la notazione decimale è la preferita per questioni di leggibilità. Il punto decimale deve essere un punto e non una virgola. Il file IDF deve consistere solo di caratteri standard ASCII a 7-bit; l'uso di caratteri a 8-bit provocherà un comportamento imprevedibile."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:138
@@ -302,7 +302,7 @@ msgid ""
 "separated by one or more spaces which do not appear between quotation marks. "
 "All fields of a record must appear on a single line; records may not span "
 "lines."
-msgstr ""
+msgstr "Un file IDF è composto di diverse SECTION (sezioni) che a loro volta sono composte da RECORD che sono composti da FIELD (campi). Per i file contorno IDF, può esistere un solo tipo di sezione che deve essere di tipo .ELECTRICAL o .MECHANICAL. Un record è una singola riga di testo e può contenere uno o più field (campi). I field (campi) sono sequenze di caratteri separate da uno o più spazi che non appaiono tra virgolette. Tutti i campi di un record devono stare su una sola riga; i record non possono distribuirsi su più righe."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:142
@@ -323,7 +323,7 @@ msgid ""
 "the package name is a good value for the geometry name, for example "
 "“SOT-23”. For unique packages the manufacturer's part number is a good "
 "choice for the geometry name."
-msgstr ""
+msgstr "Geometry Name: una stringa che, assieme al Part Number deve formare un identificatore univoco per il contorno del componente. Per package standard, il nome del package è un buona scelta come valore del geometry name (nome geometria), per esempio “SOT-23”. Per package specifici, il codice parte del costruttore è una buona scelta per il geometry name."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:154
@@ -333,35 +333,35 @@ msgid ""
 "example if the geometry name is “TO-92”, the part number entry may be used "
 "to describe the layout of the pads or the orientation of this particular "
 "TO-92 outline file."
-msgstr ""
+msgstr "Part Number: malgrado sia stato ovviamente pensato per il codice parte, per esempio BS107, è meglio usare questa stringa come aiuto alla descrizione del package. Per esempio se il geometry name è “TO-92”, la voce part number può essere usata per descrivere la disposizione delle piazzole o l'orienamento di questo particolare file di contorno TO-92."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:157
 msgid ""
 "IDF Unit: this must be one of MM or THOU and it applies only to the units "
 "describing this single component outline."
-msgstr ""
+msgstr "IDF Unit: (unità di misura IDF) questa deve essere MM o THOU e si applica solo alle unità che descrivono il contorno di questo singolo componente."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:160
 msgid ""
 "Height: this is a floating point number representing the nominal height of "
 "the component using units specified in Field 3."
-msgstr ""
+msgstr "Height: (altezza) è un numero in virgola mobile che rappresenta l'altezza nominale del componente usando le unità specificate nel campo 3."
 
 #. type: Plain text
 #: IDF_Exporter.adoc:163
 msgid ""
 "Record 2 must be followed by a number of Record 3 entries which specify the "
 "outline of the component. Record 3 consists of four fields:"
-msgstr ""
+msgstr "Record 2 deve essere seguito da un numero di voci Record 3 che specificano il contorno del componente. Record 3 consiste di quattro campi:"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:166
 msgid ""
 "Loop Index: 0 (outline points are specified in counter-clockwise order) or 1 "
 "(outline points are specified in clockwise order)"
-msgstr ""
+msgstr "Loop Index: 0 (i punti del contorno sono specificati in ordine antiorario) o 1 (i punti del contorno sono specificati in ordine orario)"
 
 #. type: Plain text
 #: IDF_Exporter.adoc:168
@@ -397,7 +397,7 @@ msgstr ""
 #. type: Plain text
 #: IDF_Exporter.adoc:186
 msgid "Example IDF File 1:"
-msgstr "Esempio file IDF 1:"
+msgstr "Esempio IDF file 1:"
 
 #. type: delimited block -
 #: IDF_Exporter.adoc:194
@@ -441,6 +441,20 @@ msgid ""
 "    0 -0.5 8 180\n"
 ".END_ELECTRICAL\n"
 msgstr ""
+"# una T rovesciata\n"
+"# commento aggiunto per amore dei commenti\n"
+".ELECTRICAL\n"
+"    \"T Maiuscola\" \"5x8x10mm, rovesciata\" MM 10\n"
+"    0 -0.5 8 0\n"
+"    0 -0.5 0.5 0\n"
+"    0 -2.5 0.5 0\n"
+"    0 -2.5 -0.5 180\n"
+"    0 2.5 -0.5 0\n"
+"    0 2.5 0.5 180\n"
+"    0 0.5 0.5 0\n"
+"    0 0.5 8 0\n"
+"    0 -0.5 8 180\n"
+".END_ELECTRICAL\n"
 
 #. type: Title ==
 #: IDF_Exporter.adoc:215
@@ -454,7 +468,7 @@ msgid ""
 "When creating outlines, and especially when sharing the work with others, "
 "consistency in the design and naming of files helps people locate files "
 "quicker and place the components with minimal hassles."
-msgstr ""
+msgstr "Quando si creao contorni, in special modo quando si condivide il proprio lavoro con altri, la consistenza nella progettazione e nella scelta dei nomi dei file aiuta le persone a localizzare i file e a piazzare i componenti più velocemente e con minimo sforzo."
 
 #. type: Title ===
 #: IDF_Exporter.adoc:221
@@ -514,7 +528,7 @@ msgid "Pin orientation and positioning"
 msgstr "Orientamento e posizionamento pin"
 
 #. type: Plain text
-#: IDF_Exporter.adoc:263
+#: IDF_Exporter.adoc:261
 msgid ""
 "For through-hole components there are no widely accepted schemes for "
 "determining the pin orientation and component center in 3D models. For "
@@ -525,13 +539,18 @@ msgid ""
 "Pin 1 and diodes must have the cathode on Pin 1; this is to maintain "
 "compatibility of the schematic symbols with the orientation defined for SMT "
 "devices; however, note that many existing KiCad schematics and footprints "
-"place the anode at Pin 1 (*note:* in the latest revision of the KiCad "
-"footprints on github the anode is now Pin 2 for THT as well as SMT "
-"components)."
+"place the anode at Pin 1."
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:276
+#: IDF_Exporter.adoc:265
+msgid ""
+"In the latest revision of the KiCad footprints on github the anode is now "
+"Pin 2 for THT as well as SMT components."
+msgstr ""
+
+#. type: Plain text
+#: IDF_Exporter.adoc:278
 msgid ""
 "For DIP devices the center of the outline must be at the center of the "
 "rectangle described by the pin locations and Pin 1 is preferably at the top "
@@ -548,21 +567,20 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:285
-#, no-wrap
+#: IDF_Exporter.adoc:288
 msgid ""
-"*Note:* In the current revision of the KiCad footprint modules the\n"
-"THT components are being organized with pins along the Y axis\n"
-"rather than the X axis and Pin 1 of the device is at the origin rather\n"
-"than at the center of the package. Orient and position the component outline\n"
-"to suit your specific footprints; this will avoid the need to specify a\n"
-"non-zero rotation for the IDF component outlines. Since the IDF\n"
-"exporter currently ignores the (X,Y) offset values it is vital that\n"
-"you use the correct origin in the IDF component outline.\n"
+"In the current revision of the KiCad footprint modules the THT components "
+"are being organized with pins along the Y axis rather than the X axis and "
+"Pin 1 of the device is at the origin rather than at the center of the "
+"package. Orient and position the component outline to suit your specific "
+"footprints; this will avoid the need to specify a non-zero rotation for the "
+"IDF component outlines. Since the IDF exporter currently ignores the (X,Y) "
+"offset values it is vital that you use the correct origin in the IDF "
+"component outline."
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:295
+#: IDF_Exporter.adoc:298
 msgid ""
 "For SMT components the orientation, package center, and outline are defined "
 "by various standards. Use the standard appropriate to your work.  Also keep "
@@ -575,19 +593,19 @@ msgid ""
 msgstr ""
 
 #. type: Block title
-#: IDF_Exporter.adoc:297
+#: IDF_Exporter.adoc:300
 #, no-wrap
 msgid "Sample outlines generated by the programs idfcyl and idfrect and rendered by SolidWorks."
 msgstr ""
 
 #. type: Target for macro image
-#: IDF_Exporter.adoc:299
+#: IDF_Exporter.adoc:302
 #, no-wrap
 msgid "images/test_idf_blobs.jpg"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:307
+#: IDF_Exporter.adoc:310
 msgid ""
 "From left to right are (a) vertical radial leaded cylinder, (b) vertical "
 "axial leaded cylinder with wire on left, (c) vertical axial leaded cylinder "
@@ -599,13 +617,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: IDF_Exporter.adoc:310
+#: IDF_Exporter.adoc:313
 #, no-wrap
 msgid "Tips on dimensions"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:329
+#: IDF_Exporter.adoc:332
 msgid ""
 "The purpose served by the extruded outlines is to give the mechanical "
 "designer some idea of the location and physical space occupied by each "
@@ -626,20 +644,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: IDF_Exporter.adoc:330
+#: IDF_Exporter.adoc:333
 #, no-wrap
 msgid "IDF Component Outline Tools"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:334
+#: IDF_Exporter.adoc:337
 msgid ""
 "A number of command-line tools are available to help generate IDF component "
 "outlines. The tools are:"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:337
+#: IDF_Exporter.adoc:340
 #, no-wrap
 msgid ""
 "*idfcyl:* creates an outline of a cylinder in vertical or horizontal\n"
@@ -647,7 +665,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:340
+#: IDF_Exporter.adoc:343
 #, no-wrap
 msgid ""
 "*idfrect:* creates an outline of a rectangle which may have either\n"
@@ -655,7 +673,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:343
+#: IDF_Exporter.adoc:346
 #, no-wrap
 msgid ""
 "*dxf2idf:* converts a drawing in DXF format into an IDF component\n"
@@ -663,20 +681,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: IDF_Exporter.adoc:344
+#: IDF_Exporter.adoc:347
 #, no-wrap
 msgid "idfcyl"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:348
+#: IDF_Exporter.adoc:351
 msgid ""
 "When *idfcyl* is invoked with no arguments it prints out a usage note and a "
 "summary of its inputs:"
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:355
+#: IDF_Exporter.adoc:358
 #, no-wrap
 msgid ""
 "idfcyl: This program generates an outline for a cylindrical component.\n"
@@ -687,7 +705,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:368
+#: IDF_Exporter.adoc:371
 #, no-wrap
 msgid ""
 "Input:\n"
@@ -705,7 +723,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:372
+#: IDF_Exporter.adoc:375
 #, no-wrap
 msgid ""
 "    NOTES:\n"
@@ -714,19 +732,19 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:374
+#: IDF_Exporter.adoc:377
 #, no-wrap
 msgid "        **  only required for vertical orientation with axial leads\n"
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:376
+#: IDF_Exporter.adoc:379
 #, no-wrap
 msgid "        *** only required for horizontal orientation with radial leads\n"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:382
+#: IDF_Exporter.adoc:385
 msgid ""
 "The notes can be suppressed by entering any arbitrary argument on the "
 "command line. A user can manually enter information at the command line or "
@@ -735,7 +753,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:401
+#: IDF_Exporter.adoc:404
 #, no-wrap
 msgid ""
 "#!/bin/bash\n"
@@ -757,20 +775,20 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: IDF_Exporter.adoc:403
+#: IDF_Exporter.adoc:406
 #, no-wrap
 msgid "idfrect"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:407
+#: IDF_Exporter.adoc:410
 msgid ""
 "When *idfrect* is invoked with no arguments it prints out a usage note and a "
 "summary of its inputs:"
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:422
+#: IDF_Exporter.adoc:425
 #, no-wrap
 msgid ""
 "idfrect: This program generates an outline for a rectangular component.\n"
@@ -789,7 +807,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:425
+#: IDF_Exporter.adoc:428
 #, no-wrap
 msgid ""
 "    NOTES:\n"
@@ -797,13 +815,13 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:427
+#: IDF_Exporter.adoc:430
 #, no-wrap
 msgid "        **  only required for leaded components\n"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:433
+#: IDF_Exporter.adoc:436
 msgid ""
 "The notes can be suppressed by entering any arbitrary argument on the "
 "command line. A user can manually enter information at the command line or "
@@ -812,7 +830,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:459
+#: IDF_Exporter.adoc:462
 #, no-wrap
 msgid ""
 "#!/bin/bash\n"
@@ -841,13 +859,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ===
-#: IDF_Exporter.adoc:461
+#: IDF_Exporter.adoc:464
 #, no-wrap
 msgid "dxf2idf"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:467
+#: IDF_Exporter.adoc:470
 msgid ""
 "The DXF file used to specify the component outline can be prepared with the "
 "free software http://librecad.org/[LibreCAD] for best compatibility.  When "
@@ -856,7 +874,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:471
+#: IDF_Exporter.adoc:474
 #, no-wrap
 msgid ""
 "dxf2idf: this program takes line, arc, and circle segments\n"
@@ -864,7 +882,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:482
+#: IDF_Exporter.adoc:485
 #, no-wrap
 msgid ""
 "Input:\n"
@@ -880,7 +898,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:488
+#: IDF_Exporter.adoc:491
 msgid ""
 "The notes can be suppressed by entering any arbitrary argument on the "
 "command line. A user can manually enter information at the command line or "
@@ -889,7 +907,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:501
+#: IDF_Exporter.adoc:504
 #, no-wrap
 msgid ""
 "#!/bin/bash\n"
@@ -905,7 +923,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:504
+#: IDF_Exporter.adoc:507
 #, no-wrap
 msgid ""
 "test_dxf2idf.idf\n"
@@ -913,13 +931,13 @@ msgid ""
 msgstr ""
 
 #. type: Title ==
-#: IDF_Exporter.adoc:506
+#: IDF_Exporter.adoc:509
 #, no-wrap
 msgid "idf2vrml"
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:514
+#: IDF_Exporter.adoc:517
 msgid ""
 "The idf2vrml tool reads a set of one IDF Board (__.emn) and one IDF "
 "Component file (__.emp) and produces a VRML file which can be viewed with a "
@@ -929,7 +947,7 @@ msgid ""
 msgstr ""
 
 #. type: delimited block -
-#: IDF_Exporter.adoc:525
+#: IDF_Exporter.adoc:528
 #, no-wrap
 msgid ""
 ">./idf2vrml\n"
@@ -944,7 +962,7 @@ msgid ""
 msgstr ""
 
 #. type: Plain text
-#: IDF_Exporter.adoc:533
+#: IDF_Exporter.adoc:536
 msgid ""
 "[**BUG:** The idf2vrml tool currently does not correctly render "
 "*OTHER_OUTLINE* entities in an emn file if that entity is specifies on the "
