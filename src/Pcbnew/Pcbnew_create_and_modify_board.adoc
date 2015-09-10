@@ -31,56 +31,84 @@ The resulting outline might look something like this:
 
 image:images/Pcbnew_simple_board_outline.png[]
 
-==== Importing a DXF drawing for a board outline
+==== Using a DXF drawing for the board outline
 
-As an alternative to drawing the board outline in Pcbnew directly, an
-outline can also be imported from a DXF drawing. Using this feature allows
-for much more complex board shapes than is possible with the Pcbnew drawing
-capabilities.
+As an alternative to drawing the board outline in Pcbnew directly, 
+an outline can also be imported from a DXF drawing. 
 
-For example the required board shape may be exported as a DXF drawing from a
-mechanical CAD package and then imported into Pcbnew to define the exact
-board shape required to fit an enclosure.
+Using this feature allows for much more complex board shapes 
+than is possible with the Pcbnew drawing capabilities.
 
-For best results use the *DXF R12* format for import into Pcbnew as there is
-limited support for _advanced_ features like Ellipsis as available in more
-recent versions of the DXF formats.
+For example a mechanical CAD package can be used to define a 
+board shape that fits a particular enclosure.
 
-To import a board shape from a *DXF R12* file:
+===== Preparing the DXF drawing for import into KiCad
 
-. File > Import > DXF File.
-. Select the DXF file to be imported.
-. Select which origin is used by the DXF shape.
-. Select the board layer for the import. Edge.Cuts is needed
-  for the board outline, but DXF drawings can be imported onto other layers
-  as well.
-. Click OK
+The *DXF* import capability in KiCad does not support DXF
+features like *POLYLINES* and *ELLIPSIS* and DXF files that use
+these features require a few conversion steps to prepare them for
+import. 
 
-==== Notes on importing DXF files with advanced features like Ellipsis
+A software package like LibreCAD can be used for this conversion.
 
-If you require the use of more _advanced_ DXF drawing features for your board
-outline, it is possible to do so by exporting your DXF drawing in the older
-*DXF R12* format.
+As a first step, any *POLYLINES* need to be split (Exploded) 
+into their original simpler shapes. In LibreCAD use the following steps:
 
-The DXF R12 format does not have support for _advanced_ drawing features.
-As such, most CAD software converts these drawing features into a series of
-short line segments that approximate the required shape when exporting to
-DXF R12. Some CAD packages also allow you to select either the number of line
-segments or the length of the segments used for such an approximation.
-You may have to experiment with your CAD export feature for best results.
+. Open a copy of the DXF file.
+. Select the board shape (selected shapes are shown with dashed lines).
+. In the *Modify* menu, select *Explode*.
+. Press ENTER.
 
-LibreCAD is one of those CAD packages that is able to convert DXF files to
-the older DXF R12 format.
+As a next step, complex curves like *ELLIPSIS* need to be broken up in
+small line segments that 'approximate' the required shape. This happens 
+automatically when the DXF file is exported or saved in the older *DXF R12*
+file format (as the R12 format does not support complex curve shapes, CAD
+applications convert these shapes to line segements. Some CAD applications
+allow configuration of the number or the length of the line segments used). 
+In LibreCAD the segment length it generally small enough for use in board 
+shapes.
 
-In LibreCAD:
+In LibreCAD, use the following steps to export to the *DXF R12* file format:
 
-. Open the DXF file
-. Use 'Save As...'
-. In the 'Save Drawing As' dialog, select 'Drawing Exchange DXF R12 (*.dxf)'
-  in the 'Save as type:' selection.
-. Enter a different file name, if you like to preserve your original DXF file.
+. In the *File* menu, use *Save As...*
+. In the *Save Drawing As* dialog, there is a *Save as type:* selection 
+  near the bottom of the dialog. Select the option *Drawing Exchange DXF R12*.
+. Optionally enter a file name in the *File name:* field.
+. Click *Save*
 
-Here is an example of such an DXF import with a board that had several
+Your DXF file is now ready for import into KiCad.
+
+===== Importing the DXF file into KiCad
+
+The following steps describe the import of the prepared DXF file as a board shape
+into KiCad. Note that the import bahaviour is slightly different depending on which
+'canvas' is used.
+
+Using the "default" canvas mode:
+
+. In the *File* menu, select *Import* and then the *DXF File* option.
+. In the *Import DXF File* dialog use 'Browse' to select the prepared DXF file to be imported.
+. In the 'Place DXF origin (0,0) point:' option, select the placement of DXF origin 
+  relative to the board coordinates (the KiCad board has (0,0) in the top left corner).
+  For the 'User defined position' enter the coordinates in the 'X Position' and 'Y Position' fields.
+. In the 'Layer' selection, select the board layer for the import. *Edge.Cuts* is needed
+  for the board outline.
+. Click 'OK'.
+
+Using the "OpenGL" or "Cairo" canvas modes:
+
+. In the *File* menu, select *Import* and then the *DXF File* option.
+. In the *Import DXF File* dialog use 'Browse' to select the prepared DXF file to be imported.
+. The 'Place DXF origin (0,0) point:' option setting is ignored in this mode.
+. In the 'Layer' selection, select the board layer for the import. *Edge.Cuts* is needed
+  for the board outline.
+. Click 'OK'.
+. The shape is now attached to your cursor and it can be moved around the board area.
+. Click to 'drop' the shape on the board.
+
+===== Example imported DXF shape
+
+Here is an example of an DXF import with a board that had several
 elliptical segments approximated by a number of short line segments:
 
 image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]
