@@ -42,45 +42,66 @@ For example the required board shape may be exported as a DXF drawing from a
 mechanical CAD package and then imported into Pcbnew to define the exact
 board shape required to fit an enclosure.
 
-For best results use the *DXF R12* format for import into Pcbnew as there is
-limited support for _advanced_ features like Ellipsis as available in more
-recent versions of the DXF formats.
+Use the *DXF R12* format for best results. See the section below for notes
+on how to convert your DXF drawing into the *DXF R12* format suitable for
+import into KiCad.
 
-To import a board shape from a *DXF R12* file:
+To import a board shape from a *DXF R12* file in "default" canvas mode:
 
 . File > Import > DXF File.
 . Select the DXF file to be imported.
-. Select which origin is used by the DXF shape.
+. Select which origin is used by the DXF shape. It is also possible to specify
+  the origin with the "Custom" option.
 . Select the board layer for the import. Edge.Cuts is needed
   for the board outline, but DXF drawings can be imported onto other layers
   as well.
-. Click OK
+. Click OK.
 
-==== Notes on importing DXF files with advanced features like Ellipsis
+To import a board shape from a *DXF R12* file in "OpenGL" or "Cairo" canvas mode:
 
-If you require the use of more _advanced_ DXF drawing features for your board
-outline, it is possible to do so by exporting your DXF drawing in the older
-*DXF R12* format.
+. File > Import > DXF File.
+. Select the DXF file to be imported.
+. The origin selected is ignored in this mode.
+. Click OK.
+. The shape is attached to your cursor.
+. Position the shape.
+. Click to drop the shape in place.
 
-The DXF R12 format does not have support for _advanced_ drawing features.
-As such, most CAD software converts these drawing features into a series of
-short line segments that approximate the required shape when exporting to
-DXF R12. Some CAD packages also allow you to select either the number of line
-segments or the length of the segments used for such an approximation.
-You may have to experiment with your CAD export feature for best results.
+==== Notes on importing DXF files
 
-LibreCAD is one of those CAD packages that is able to convert DXF files to
-the older DXF R12 format.
+The *DXF* import capabilities in KiCad is limited as there is no support
+for 'advanced' shapes like *POLYLINES* and *ELLIPSIS*. For best results, 
+*POLYLINES* need to be broken into their original simpler shapes and 
+*ELLIPSIS* and other advanced curve shapes need to be converted into a 
+series of short line segments to approximate the shape.
 
-In LibreCAD:
+That an entity in a DXF drawing is a *POLYLINE*, can be noted in 
+LibreCAD when you try to select the shape and the whole shape 
+consisting of multiple curves and lines gets selected as one.
 
-. Open the DXF file
-. Use 'Save As...'
-. In the 'Save Drawing As' dialog, select 'Drawing Exchange DXF R12 (*.dxf)'
-  in the 'Save as type:' selection.
+To break up such a *POLYLINES*, use LibreCAD as follows:
+
+. Ensure you leave the *POLYLINE* *unselected*.
+. In the 'Modify' menu, select 'Explode'.
+. Click on the *POLYLINE* to select.
+. Press ENTER.
+. Click on parts of the original shape and notice that you can 
+  select/un-select individual segments of the shape.
+
+The conversion of the complex curves like *ELLIPSIS* can now be achieved
+by simply exporting the DXF drawing to the 'old' *DXF R12* file format.
+This format does not support shapes like *ELLIPSIS* and exporting to the 
+*DXF R12* format 'forces' the CAD software to 'approximate' the shape with
+line segments that can then be successfully imported into KiCad.
+
+With the DXF open in LibreCAD, export to the *DXF R12* format as follows:
+
+. In the 'File' menu, use 'Save As...'
+. Towards the bottom of 'Save Drawing As' dialog, select
+  'Drawing Exchange DXF R12 (*.dxf)' in the 'Save as type:' selection.
 . Enter a different file name, if you like to preserve your original DXF file.
 
-Here is an example of such an DXF import with a board that had several
+Here is an example of an DXF import with a board that had several
 elliptical segments approximated by a number of short line segments:
 
 image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]
