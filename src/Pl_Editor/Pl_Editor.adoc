@@ -3,10 +3,7 @@
 :toc:
 :ascii-ids:
 
-[[pl_editor]]
 = Pl_Editor
-
-*Pl_Editor*
 
 _Reference manual_
 
@@ -34,13 +31,13 @@ KiCad mailing list:
 https://launchpad.net/\~kicad-developers[https://launchpad.net/~kicad-developers]
 
 
-// [[acknowledgments]]
-// *Acknowledgments*
-
 [[publication_date_and_software_version]]
 *Publication date and software version*
 
 may 23, 2015.
+
+//Since docbook "article" is more compact, I have to separate this page
+<<<<
 
 [[introduction-to-pl_editor]]
 == Introduction to *Pl_Editor*
@@ -54,10 +51,14 @@ The title block, associated to frame references, and other graphic items
 Basic page layout items are:
 
 * *Lines*
+
 * *Rectangles*
+
 * *Texts* (with format symbols, that will be replaced by the actual text,
   like the date, page number...) in Eeschema or Pcbnew.
+
 * *Poly-polygons* (mainly to place logos and special graphic shapes)
+
 * *Bitmaps*.
 
 WARNING: Bitmaps can be plotted only by few plotters (PDF and
@@ -96,13 +97,17 @@ Pcbnew.
 Basic page layout items are:
 
 * *Lines*
+
 * *Rectangles*
+
 * *Texts* (with format symbols, with will be replaced by the actual
   text, like the date, page number...) in Eeschema or Pcbnew.
+
 * *Poly-polygons* (mainly to place logos and special graphic shapes).
   These poly polygons are created by **Bitmap2component**, and cannot be
   built inside pl_editor, because it is not possible to create such shapes
   by hand.
+
 * *Bitmaps* to place logos.
 
 WARNING: Bitmaps can be plotted only by few plotters: PDF and PS only.
@@ -111,6 +116,7 @@ Therefore:
 
 * *Texts, poly-polygons* and *bitmaps* are defined by a position, and
   can be rotated.
+
 * *Lines* (in fact segments) and *rectangles* are defined by two points:
   a start point and a end point. They cannot be rotated (this is useless
   for segments)
@@ -136,6 +142,7 @@ image:images/en/page_property_1.png[]
 
 * When the page size is changed, the position of the item, relative to
   its reference corner does not change.
+
 * Usually, title blocks are attached to the right bottom corner, and
   therefore this corner is the default corner, when creating an item.
 
@@ -239,6 +246,7 @@ There are 2 ways to insert a new line in texts:
 
 1.  Insert the “n” 2 chars sequence (mainly in Page setup dialog in
     KiCad)
+
 2.  Insert a new line in Pl_Editor Design window.
 
 Here is an example:
@@ -295,7 +303,9 @@ page 1, the “page 1 option” this is possible by setting this option:
 a|Page 1 option:
 
 * None: no constraint.
+
 * Page 1 only: the items is visible only on page 1.
+
 * Not on page 1: the items is visible on all pages but the page 1.
 
 |=================================================================
@@ -308,6 +318,7 @@ image:images/en/constraint_options.png[]
 Only for texts, one can set 2 parameters :
 
 * the max size X
+
 * the max size Y
 
 which define a bounding box
@@ -462,14 +473,18 @@ more than one page)
 Displayed by right-clicking the mouse:
 
 * Add Line
+
 * Add Rectangle
+
 * Add Text
+
 * Append Page Layout Descr File
 
 Are commands to add a basic layout item to the current page layout
 description.
 
 * Zoom selection: direct selection of the display zoom.
+
 * Grid selection: direct selection of the grid.
 
 [NOTE]
@@ -555,7 +570,9 @@ Displayed settings depend on the selected item:
 An item can be selected:
 
 * From the Design tree.
+
 * By Left clicking on it.
+
 * By Right clicking on it (and a pop up menu will be displayed).
 
 When selected, this item is drawn in yellow.
