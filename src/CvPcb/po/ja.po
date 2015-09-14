@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CvPcb-ja\n"
-"POT-Creation-Date: 2015-09-13 09:45+0200\n"
+"POT-Creation-Date: 2015-09-14 12:44+0200\n"
 "PO-Revision-Date: 2015-09-13 09:46+0200\n"
 "Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
@@ -39,7 +39,12 @@ msgid ""
 "GNU General Public License (http://www.gnu.org/licenses/gpl.html), version 3 "
 "or later, or the Creative Commons Attribution License (http://"
 "creativecommons.org/licenses/by/3.0/), version 3.0 or later."
-msgstr "このドキュメントは以下の貢献者により著作権所有 (C) 2010-2015 されています。あなたは、GNU General Public License ( http://www.gnu.org/licenses/gpl.html ) のバージョン 3 以降、あるいはクリエイティブ・コモンズ・ライセンス ( http://creativecommons.org/licenses/by/3.0/ ) のバージョン 3.0 以降のいずれかの条件の下で、配布または変更することができます。"
+msgstr ""
+"このドキュメントは以下の貢献者により著作権所有 (C) 2010-2015 されています。あ"
+"なたは、GNU General Public License ( http://www.gnu.org/licenses/gpl.html ) "
+"のバージョン 3 以降、あるいはクリエイティブ・コモンズ・ライセンス ( http://"
+"creativecommons.org/licenses/by/3.0/ ) のバージョン 3.0 以降のいずれかの条件"
+"の下で、配布または変更することができます。"
 
 #. type: Plain text
 #: CvPcb.adoc:20
@@ -174,22 +179,28 @@ msgstr ""
 
 # 07092015：訂正
 #. type: Plain text
-#: CvPcb.adoc:72
-#, no-wrap
+#: CvPcb.adoc:73
+#, fuzzy, no-wrap
+#| msgid ""
+#| "*It can be run only from Eeschema, form the main toolbar, when started\n"
+#| "as a project from the KiCad project manager*.\n"
 msgid ""
-"*It can be run only from Eeschema, form the main toolbar, when started\n"
-"as a project from the KiCad project manager*.\n"
+"**It can be run only from Eeschema**, from the top toolbar, either when\n"
+"Eeschema is started from the KiCad project manager or when Eeschema is\n"
+"started as a stand alone application.\n"
 msgstr ""
 "*CvPcb は、KiCad プロジェクトマネージャーからプロジェクトが開始された後、メインツールバー\n"
 "から呼び出した Eeschema からのみ実行できます。*\n"
 
 #. type: Plain text
-#: CvPcb.adoc:74
-msgid "the reasons are:"
-msgstr "これは以下の理由によります。:"
+#: CvPcb.adoc:76
+msgid ""
+"Running CvPcb from Eeschema lauched from the KiCad Manager is generally "
+"better because:"
+msgstr ""
 
 #. type: Plain text
-#: CvPcb.adoc:76
+#: CvPcb.adoc:79
 msgid ""
 "Cvpcb needs the project config file to know the footprint libraries to load."
 msgstr ""
@@ -197,28 +208,51 @@ msgstr ""
 "イルを必要とするため。"
 
 #. type: Plain text
-#: CvPcb.adoc:78
+#: CvPcb.adoc:83
+#, fuzzy
+#| msgid ""
+#| "Cvpcb initializes the components footprint fields of the current "
+#| "schematic project.  This is possible only when Eeschema is running."
 msgid ""
 "Cvpcb initializes the components footprint fields of the current schematic "
-"project.  This is possible only when Eeschema is running."
+"project. This is possible only if the project file is in the same path as "
+"the open schematic."
 msgstr ""
 "Cvpcb は現在の回路図プロジェクトのコンポーネントのフットプリントフィールドを"
 "初期化します。これは Eeschema の実行中のみ可能です。"
 
+#. type: Plain text
+#: CvPcb.adoc:86
+msgid ""
+"Lauching CvPcb from an Eeschema launched from the KiCad manager assures "
+"automatically all this."
+msgstr ""
+
+#. type: Plain text
+#: CvPcb.adoc:93
+msgid ""
+"You actually *can* launch CvPcb from a stand alone Eeschema session though, "
+"but please note that any schematic opened that does not have a project file "
+"in the same path may be missing components due to missing libraries which "
+"will not show up in CvPcb. If there is no fp-lib-table file in the same path "
+"as the open schematic, no project specific footprint libraries will be "
+"available either."
+msgstr ""
+
 #. type: Title ==
-#: CvPcb.adoc:80
+#: CvPcb.adoc:94
 #, no-wrap
 msgid "CvPcb Features"
 msgstr "CvPcb の特徴"
 
 #. type: Title ===
-#: CvPcb.adoc:82
+#: CvPcb.adoc:96
 #, no-wrap
 msgid "Manual or Automatic Association"
 msgstr "手作業あるいは自動での関連付け"
 
 #. type: Plain text
-#: CvPcb.adoc:86
+#: CvPcb.adoc:100
 msgid ""
 "CvPcb allows for interactive assignment (manual) as well as automatic "
 "assignment via equivalence files."
@@ -227,24 +261,24 @@ msgstr ""
 "を可能にします。"
 
 #. type: Title ==
-#: CvPcb.adoc:87
+#: CvPcb.adoc:101
 #, no-wrap
 msgid "Invoking CvPcb"
 msgstr "CvPcb を起動する"
 
 #. type: Plain text
-#: CvPcb.adoc:90
+#: CvPcb.adoc:104
 #, no-wrap
 msgid "*CvPcb is only invoked from the schematic capture program Eeschema*, by the tool:\n"
 msgstr "*CvPcb は Eeschema という回路図エディターからのみ呼び出しできます* 次のツールです:\n"
 
 #. type: Plain text
-#: CvPcb.adoc:92
+#: CvPcb.adoc:106
 msgid "image:images/icons/run-cvpcb.png[run cvpcb]"
 msgstr "image:images/icons/run-cvpcb.png[run cvpcb]"
 
 #. type: Plain text
-#: CvPcb.adoc:95
+#: CvPcb.adoc:109
 msgid ""
 "Eeschema automatically passes the correct data (component list and "
 "footprints) to CvPcb.  There is no update to do (unless some new components "
@@ -255,29 +289,29 @@ msgstr ""
 "ントがなければ）、Cvpcb を実行するだけです。"
 
 #. type: Title ==
-#: CvPcb.adoc:96
+#: CvPcb.adoc:110
 #, no-wrap
 msgid "CvPcb Commands"
 msgstr "CvPcbのコマンド"
 
 #. type: Title ===
-#: CvPcb.adoc:98
+#: CvPcb.adoc:112
 #, no-wrap
 msgid "Main Screen"
 msgstr "メイン画面"
 
 #. type: Plain text
-#: CvPcb.adoc:101
+#: CvPcb.adoc:115
 msgid "The image below shows the main window of CvPcb."
 msgstr "以下は、CvPcb のメイン画面です。"
 
 #. type: Plain text
-#: CvPcb.adoc:103
+#: CvPcb.adoc:117
 msgid "image:images/en/cvpcb_main_window.png[]"
 msgstr "image:images/ja/cvpcb_main_window.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:111
+#: CvPcb.adoc:125
 msgid ""
 "The left pane contains the list of available footprint library file names "
 "associated with the project. The center pane contains the list of components "
@@ -294,23 +328,23 @@ msgstr ""
 "イブラリが見つからない場合にはフットプリントウインドウは空白です。"
 
 #. type: Title ===
-#: CvPcb.adoc:112
+#: CvPcb.adoc:126
 #, no-wrap
 msgid "Main Window Toolbar"
 msgstr "メイン画面のツールバー"
 
 #. type: Plain text
-#: CvPcb.adoc:115
+#: CvPcb.adoc:129
 msgid "image:images/main_toolbar.png[]"
 msgstr "image:images/main_toolbar.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:117
+#: CvPcb.adoc:131
 msgid "The top toolbar allows for easy access to the following commands:"
 msgstr "上部ツールバーから下記のコマンドを簡単に呼び出せます。:"
 
 #. type: delimited block |
-#: CvPcb.adoc:122
+#: CvPcb.adoc:136
 #, no-wrap
 msgid ""
 "|image:images/icons/save.png[]\n"
@@ -320,7 +354,7 @@ msgstr ""
 "|Eeschema へ関連付けされるフットプリントを転送する (フットプリントフィールドの内容を更新)\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:125
+#: CvPcb.adoc:139
 #, no-wrap
 msgid ""
 "|image:images/icons/config.png[]\n"
@@ -330,7 +364,7 @@ msgstr ""
 "|CvPcbの設定メニューの呼び出し\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:129
+#: CvPcb.adoc:143
 #, no-wrap
 msgid ""
 "|image:images/icons/show_footprint.png[]\n"
@@ -342,7 +376,7 @@ msgstr ""
 "フットプリントウインドウに表示\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:133
+#: CvPcb.adoc:147
 #, no-wrap
 msgid ""
 "|image:images/icons/left.png[]\n"
@@ -354,7 +388,7 @@ msgstr ""
 "コンポーネントを自動的に選択\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:137
+#: CvPcb.adoc:151
 #, no-wrap
 msgid ""
 "|image:images/icons/right.png[]\n"
@@ -366,7 +400,7 @@ msgstr ""
 "コンポーネントを自動的に選択\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:141
+#: CvPcb.adoc:155
 #, no-wrap
 msgid ""
 "|image:images/icons/auto_association.png[]\n"
@@ -378,7 +412,7 @@ msgstr ""
 "自動的に関連付け\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:144
+#: CvPcb.adoc:158
 #, no-wrap
 msgid ""
 "|image:images/icons/delete_association.png[]\n"
@@ -388,7 +422,7 @@ msgstr ""
 "|全てのフットプリントの割当てを削除\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:148
+#: CvPcb.adoc:162
 #, no-wrap
 msgid ""
 "|image:images/icons/datasheet.png[]\n"
@@ -400,7 +434,7 @@ msgstr ""
 "ドキュメント pdf ファイルを開く\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:152
+#: CvPcb.adoc:166
 #, no-wrap
 msgid ""
 "|image:images/icons/filter_component.png[]\n"
@@ -412,7 +446,7 @@ msgstr ""
 "絞り込むフィルタを適用\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:156
+#: CvPcb.adoc:170
 #, no-wrap
 msgid ""
 "|image:images/icons/filter_pincount.png[]\n"
@@ -424,7 +458,7 @@ msgstr ""
 "のリストを表示\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:160
+#: CvPcb.adoc:174
 #, no-wrap
 msgid ""
 "|image:images/icons/filter_library.png[]\n"
@@ -436,18 +470,18 @@ msgstr ""
 "フィルタを適用\n"
 
 #. type: Title ===
-#: CvPcb.adoc:162
+#: CvPcb.adoc:176
 #, no-wrap
 msgid "Main Window Keyboard Commands"
 msgstr "メイン画面のキーボードコマンド"
 
 #. type: Plain text
-#: CvPcb.adoc:165
+#: CvPcb.adoc:179
 msgid "The following table lists the keyboard commands for the main window:"
 msgstr "以下の表はメイン画面のキーボードコマンドを一覧にしたものです。"
 
 #. type: delimited block |
-#: CvPcb.adoc:170
+#: CvPcb.adoc:184
 #, no-wrap
 msgid ""
 "|Right Arrow / Tab|Activate the next pane to the right of the currently activated pane.\n"
@@ -457,7 +491,7 @@ msgstr ""
 "フットプリントのペインをアクティブ化\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:173
+#: CvPcb.adoc:187
 #, no-wrap
 msgid ""
 "|Left Arrow |Activate the next pane to the left of the currently activated\n"
@@ -467,19 +501,19 @@ msgstr ""
 "コンポーネントのペインをアクティブ化\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:175
+#: CvPcb.adoc:189
 #, no-wrap
 msgid "|Up Arrow |Select the previous item of the currently selected list.\n"
 msgstr "|↑：上矢印 |現在の選択リストの前のアイテムを選択\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:177
+#: CvPcb.adoc:191
 #, no-wrap
 msgid "|Down Arrow |Select the next item of the currently selected list.\n"
 msgstr "|↓：下矢印 |現在の選択リストの次のアイテムを選択\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:180
+#: CvPcb.adoc:194
 #, no-wrap
 msgid ""
 "|Page Up |Select the item up one full page of the currently selected\n"
@@ -489,7 +523,7 @@ msgstr ""
 "を選択\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:183
+#: CvPcb.adoc:197
 #, no-wrap
 msgid ""
 "|Page Down |Select the item down one full page of the currently selected\n"
@@ -499,30 +533,30 @@ msgstr ""
 "を選択\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:185
+#: CvPcb.adoc:199
 #, no-wrap
 msgid "|Home |Select the first item of the currently selected list.\n"
 msgstr "|Home |現在の選択リストの最初のアイテムを選択\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:187
+#: CvPcb.adoc:201
 #, no-wrap
 msgid "|End |Select the last item of the currently selected list.\n"
 msgstr "|End |現在の選択リストの末尾のアイテムを選択\n"
 
 #. type: Title ===
-#: CvPcb.adoc:189
+#: CvPcb.adoc:203
 #, no-wrap
 msgid "CvPcb Configuration"
 msgstr "CvPcbの設定"
 
 #. type: Plain text
-#: CvPcb.adoc:192
+#: CvPcb.adoc:206
 msgid "image:images/en/cvpcb_preference_menu.png[]"
 msgstr "image:images/ja/cvpcb_preference_menu.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:195
+#: CvPcb.adoc:209
 msgid ""
 "CvPcb can be automatically closed after saving the footprint association "
 "file, or not."
@@ -531,7 +565,7 @@ msgstr ""
 "れます。"
 
 #. type: Plain text
-#: CvPcb.adoc:198
+#: CvPcb.adoc:212
 msgid ""
 "Invoking the ``Libraries'' entry in the ``Preferences'' menu displays the "
 "library configuration dialog."
@@ -540,20 +574,20 @@ msgstr ""
 "ラリ一覧の設定ダイアログを表示します。"
 
 #. type: Plain text
-#: CvPcb.adoc:201
+#: CvPcb.adoc:215
 msgid ""
 "Depending on the CvPcb version, there are 2 different methods of library "
 "management:"
 msgstr "CvPcb のバージョンによって、２通りのライブラリ管理方法があります。"
 
 #. type: Plain text
-#: CvPcb.adoc:203
+#: CvPcb.adoc:217
 msgid "The legacy management, using *.mod files, and a library list of files."
 msgstr ""
 "古い管理方法は、 *.mod ファイルとファイルのライブラリリストを使います。"
 
 #. type: Plain text
-#: CvPcb.adoc:208
+#: CvPcb.adoc:222
 msgid ""
 "The new ``Pretty'' format, using one file by footprint. It uses a folder "
 "list. Each folder (*.pretty folder name) is a library. When using this new "
@@ -566,43 +600,43 @@ msgstr ""
 "ブラリを使うことができます。"
 
 #. type: Title ==
-#: CvPcb.adoc:209
+#: CvPcb.adoc:223
 #, no-wrap
 msgid "Footprint Libraries Management"
 msgstr "フットプリントライブラリの管理"
 
 #. type: Title ===
-#: CvPcb.adoc:211
+#: CvPcb.adoc:225
 #, no-wrap
 msgid "Important remark:"
 msgstr "重要な注釈:"
 
 #. type: Plain text
-#: CvPcb.adoc:214
+#: CvPcb.adoc:228
 #, no-wrap
 msgid "*_This section is relevant only for KiCad versions since December 2013_*\n"
 msgstr "*_このセクションは 2013年12月以降の KiCad バージョンにのみ関係があります_*\n"
 
 #. type: Title ===
-#: CvPcb.adoc:216
+#: CvPcb.adoc:230
 #, no-wrap
 msgid "Footprint Library tables"
 msgstr "フットプリント・ライブラリ・テーブル"
 
 #. type: Title ==
-#: CvPcb.adoc:221
+#: CvPcb.adoc:235
 #, no-wrap
 msgid "Viewing the Current Footprint"
 msgstr "選択中のフットプリントを見る"
 
 #. type: Title ===
-#: CvPcb.adoc:223
+#: CvPcb.adoc:237
 #, no-wrap
 msgid "The view footprint command"
 msgstr "ビューフット・プリント・コマンド"
 
 #. type: Plain text
-#: CvPcb.adoc:230
+#: CvPcb.adoc:244
 msgid ""
 "The view footprint command displays the footprint currently selected in the "
 "_footprint_ window. A 3D model of the component can be shown if it has been "
@@ -614,18 +648,18 @@ msgstr ""
 "ウィンドウです。"
 
 #. type: Plain text
-#: CvPcb.adoc:232
+#: CvPcb.adoc:246
 msgid "image:images/en/footprint_view.png[]"
 msgstr "image:images/ja/footprint_view.png[]"
 
 #. type: Title ====
-#: CvPcb.adoc:233
+#: CvPcb.adoc:247
 #, no-wrap
 msgid "Status Bar Information"
 msgstr "ステータスバーの情報"
 
 #. type: Plain text
-#: CvPcb.adoc:238
+#: CvPcb.adoc:252
 msgid ""
 "The status bar is located at the bottom of the CvPcb new main window and "
 "provides useful information to the user. The following table defines the "
@@ -635,13 +669,13 @@ msgstr ""
 "の表はステータスバーのそれぞれの区画 (pane) の内容を示します。"
 
 #. type: Title ====
-#: CvPcb.adoc:239
+#: CvPcb.adoc:253
 #, no-wrap
 msgid "Keyboard Commands"
 msgstr "キーボードコマンド"
 
 #. type: delimited block |
-#: CvPcb.adoc:253
+#: CvPcb.adoc:267
 #, no-wrap
 msgid ""
 "|F1 |Zoom In\n"
@@ -667,13 +701,13 @@ msgstr ""
 "|↓ 下矢印 |カーソルを１グリッド下に移動\n"
 
 #. type: Title ====
-#: CvPcb.adoc:255 CvPcb.adoc:332
+#: CvPcb.adoc:269 CvPcb.adoc:346
 #, no-wrap
 msgid "Mouse Commands"
 msgstr "マウスコマンド"
 
 #. type: delimited block |
-#: CvPcb.adoc:263
+#: CvPcb.adoc:277
 #, no-wrap
 msgid ""
 "|Scroll Wheel |Zoom in and out at the current cursor position\n"
@@ -687,23 +721,23 @@ msgstr ""
 "|Right Button Click |コンテキストメニューを開く\n"
 
 #. type: Title ====
-#: CvPcb.adoc:265
+#: CvPcb.adoc:279
 #, no-wrap
 msgid "Context Menu"
 msgstr "コンテキストメニュー"
 
 #. type: Plain text
-#: CvPcb.adoc:268
+#: CvPcb.adoc:282
 msgid "image:images/en/context_menu.png[]"
 msgstr "image:images/ja/context_menu.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:270
+#: CvPcb.adoc:284
 msgid "Displayed by right-clicking the mouse:"
 msgstr "マウス右クリックにより表示されます:"
 
 #. type: delimited block |
-#: CvPcb.adoc:275
+#: CvPcb.adoc:289
 #, no-wrap
 msgid ""
 "|Zoom Selection (Select Zoom) |Direct selection of the display zoom.\n"
@@ -713,13 +747,13 @@ msgstr ""
 "|グリッドの選択 (Grid Select) |グリッドのサイズを直接選択。\n"
 
 #. type: Title ====
-#: CvPcb.adoc:277 CvPcb.adoc:341
+#: CvPcb.adoc:291 CvPcb.adoc:355
 #, no-wrap
 msgid "Horizontal Toolbar"
 msgstr "水平ツールバー"
 
 #. type: delimited block |
-#: CvPcb.adoc:285
+#: CvPcb.adoc:299
 #, no-wrap
 msgid ""
 "|image:images/icons/display_options.png[]\n"
@@ -733,7 +767,7 @@ msgstr ""
 "|ズームイン\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:288 CvPcb.adoc:359
+#: CvPcb.adoc:302 CvPcb.adoc:373
 #, no-wrap
 msgid ""
 "|image:images/icons/zoom_out.png[]\n"
@@ -743,7 +777,7 @@ msgstr ""
 "|ズームアウト\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:291 CvPcb.adoc:362
+#: CvPcb.adoc:305 CvPcb.adoc:376
 #, no-wrap
 msgid ""
 "|image:images/icons/redraw.png[]\n"
@@ -753,7 +787,7 @@ msgstr ""
 "|再描画\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:294 CvPcb.adoc:365
+#: CvPcb.adoc:308 CvPcb.adoc:379
 #, no-wrap
 msgid ""
 "|image:images/icons/zoom_fit_in_page.png[]\n"
@@ -763,7 +797,7 @@ msgstr ""
 "|表示範囲に描画を合わせる\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:297
+#: CvPcb.adoc:311
 #, no-wrap
 msgid ""
 "|image:images/icons/open_3d_model_view.png[]\n"
@@ -773,13 +807,13 @@ msgstr ""
 "|3D モデルビュアを開く\n"
 
 #. type: Title ====
-#: CvPcb.adoc:299
+#: CvPcb.adoc:313
 #, no-wrap
 msgid "Vertical Toolbar"
 msgstr "垂直ツールバー"
 
 #. type: delimited block |
-#: CvPcb.adoc:305
+#: CvPcb.adoc:319
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_grid.png[]\n"
@@ -789,7 +823,7 @@ msgstr ""
 "|グリッドの表示・非表示\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:308
+#: CvPcb.adoc:322
 #, no-wrap
 msgid ""
 "|image:images/icons/coordination_system.png[]\n"
@@ -799,7 +833,7 @@ msgstr ""
 "|極座標あるいは直交座標で座標を示す\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:311
+#: CvPcb.adoc:325
 #, no-wrap
 msgid ""
 "|image:images/icons/unit_inch.png[]\n"
@@ -809,7 +843,7 @@ msgstr ""
 "|inch で座標値を表示\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:314
+#: CvPcb.adoc:328
 #, no-wrap
 msgid ""
 "|image:images/icons/unit_mm.png[]\n"
@@ -819,7 +853,7 @@ msgstr ""
 "|mm で座標値を表示\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:317
+#: CvPcb.adoc:331
 #, no-wrap
 msgid ""
 "|image:images/icons/pointer_style.png[]\n"
@@ -829,7 +863,7 @@ msgstr ""
 "|カーソルのスタイルを変える(Toggle)\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:320
+#: CvPcb.adoc:334
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_pads_sketch.png[]\n"
@@ -839,7 +873,7 @@ msgstr ""
 "|パッド描画をスケッチモードから通常モードに切り替える(Toggle)\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:323
+#: CvPcb.adoc:337
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_text_sketch.png[]\n"
@@ -849,7 +883,7 @@ msgstr ""
 "|テキスト描画をスケッチモードから通常モードに切り替える(Toggle)\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:326
+#: CvPcb.adoc:340
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_edge_sketch.png[]\n"
@@ -859,18 +893,18 @@ msgstr ""
 "|輪郭線をスケッチモードから通常モードに切り替える(Toggle)\n"
 
 #. type: Title ===
-#: CvPcb.adoc:328
+#: CvPcb.adoc:342
 #, no-wrap
 msgid "Viewing the Current 3D Model"
 msgstr "選択中の3Dモデルを見る"
 
 #. type: Plain text
-#: CvPcb.adoc:331
+#: CvPcb.adoc:345
 msgid "image:images/en/3d_window.png[]"
 msgstr "image:images/ja/3d_window.png[]"
 
 #. type: delimited block |
-#: CvPcb.adoc:339
+#: CvPcb.adoc:353
 #, no-wrap
 msgid ""
 "|Scroll Wheel |Zoom in and out at the current cursor position\n"
@@ -882,7 +916,7 @@ msgstr ""
 "|Shift + Scroll Wheel |上下にパン\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:347
+#: CvPcb.adoc:361
 #, no-wrap
 msgid ""
 "|image:images/icons/3dmodel_reload.png[]\n"
@@ -892,7 +926,7 @@ msgstr ""
 "|3D モデルをリロード\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:350
+#: CvPcb.adoc:364
 #, no-wrap
 msgid ""
 "|image:images/icons/copy_to_clipboard.png[]\n"
@@ -902,7 +936,7 @@ msgstr ""
 "|クリップボードに3D イメージをコピー\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:353
+#: CvPcb.adoc:367
 #, no-wrap
 msgid ""
 "|image:images/icons/3d_viewer_options.png[]\n"
@@ -912,7 +946,7 @@ msgstr ""
 "|3Dビューアーのオプションをセット\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:356
+#: CvPcb.adoc:370
 #, no-wrap
 msgid ""
 "|image:images/icons/zoom_in.png[]\n"
@@ -922,7 +956,7 @@ msgstr ""
 "|ズームイン\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:368
+#: CvPcb.adoc:382
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_back_x.png[]\n"
@@ -932,7 +966,7 @@ msgstr ""
 "|X 軸を中心に後転\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:371
+#: CvPcb.adoc:385
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_forw_x.png[]\n"
@@ -942,7 +976,7 @@ msgstr ""
 "|X 軸を中心に前転\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:374
+#: CvPcb.adoc:388
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_back_y.png[]\n"
@@ -952,7 +986,7 @@ msgstr ""
 "|Y 軸を中心に後転\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:377
+#: CvPcb.adoc:391
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_forw_y.png[]\n"
@@ -962,7 +996,7 @@ msgstr ""
 "|Y 軸を中心に前転\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:380
+#: CvPcb.adoc:394
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_back_z.png[]\n"
@@ -972,7 +1006,7 @@ msgstr ""
 "|Z 軸を中心に後転\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:383
+#: CvPcb.adoc:397
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_forw_z.png[]\n"
@@ -982,7 +1016,7 @@ msgstr ""
 "|Z 軸を中心に前転\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:386
+#: CvPcb.adoc:400
 #, no-wrap
 msgid ""
 "|image:images/icons/left.png[]\n"
@@ -992,7 +1026,7 @@ msgstr ""
 "|視点を左へ\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:389
+#: CvPcb.adoc:403
 #, no-wrap
 msgid ""
 "|image:images/icons/right.png[]\n"
@@ -1002,7 +1036,7 @@ msgstr ""
 "|視点を右へ\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:392
+#: CvPcb.adoc:406
 #, no-wrap
 msgid ""
 "|image:images/icons/up.png[]\n"
@@ -1012,7 +1046,7 @@ msgstr ""
 "|視点を上へ\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:395
+#: CvPcb.adoc:409
 #, no-wrap
 msgid ""
 "|image:images/icons/down.png[]\n"
@@ -1022,7 +1056,7 @@ msgstr ""
 "|視点を下へ\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:398
+#: CvPcb.adoc:412
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_ortho.png[]\n"
@@ -1032,19 +1066,19 @@ msgstr ""
 "|正投影図法モードの切替(Toggle)\n"
 
 #. type: Title ==
-#: CvPcb.adoc:400
+#: CvPcb.adoc:414
 #, no-wrap
 msgid "Using CvPcb to Associate Components with Footprints"
 msgstr "CvPcb を使いフットプリントにコンポーネントを関連付ける"
 
 #. type: Title ===
-#: CvPcb.adoc:402
+#: CvPcb.adoc:416
 #, no-wrap
 msgid "Manually Associating Footprints with Components"
 msgstr "手作業でコンポーネントにフットプリントを関連付ける"
 
 #. type: Plain text
-#: CvPcb.adoc:410
+#: CvPcb.adoc:424
 msgid ""
 "To manually associate a footprint with a component first select a component "
 "in the component pane. Then select a footprint in the footprint pane by "
@@ -1060,13 +1094,13 @@ msgstr ""
 "ます。"
 
 #. type: Title ===
-#: CvPcb.adoc:411
+#: CvPcb.adoc:425
 #, no-wrap
 msgid "Filtering the Footprint List"
 msgstr "フットプリントリストをフィルタ"
 
 #. type: Plain text
-#: CvPcb.adoc:416
+#: CvPcb.adoc:430
 msgid ""
 "If the selected component and/or library is highlighted when the one or more "
 "of the filtering option is enabled, the displayed footprint list in CvPcb is "
@@ -1077,7 +1111,7 @@ msgstr ""
 "ます。"
 
 #. type: Plain text
-#: CvPcb.adoc:420
+#: CvPcb.adoc:434
 msgid ""
 "The icons image:images/icons_filter.png[] enable and disable the filtering "
 "feature. When the filtering is not enabled, the full footprint list is shown."
@@ -1087,18 +1121,18 @@ msgstr ""
 "示されます。"
 
 #. type: Plain text
-#: CvPcb.adoc:422
+#: CvPcb.adoc:436
 msgid "Without filtering:"
 msgstr "フィルタなし"
 
 #. type: Plain text
-#: CvPcb.adoc:424
+#: CvPcb.adoc:438
 msgid "image:images/en/filter_none.png[]"
 msgstr "image:images/ja/filter_none.png[]"
 
 # 07092015：誤記訂正
 #. type: Plain text
-#: CvPcb.adoc:428
+#: CvPcb.adoc:442
 msgid ""
 "Filtered by list of footprint filters assigned to the selected component. "
 "The component filters are listed on the center pane of the status bar at the "
@@ -1110,17 +1144,17 @@ msgstr ""
 
 # 07092015：誤記訂正
 #. type: Plain text
-#: CvPcb.adoc:430
+#: CvPcb.adoc:444
 msgid "Filtered by the footprint filter of the selected component:"
 msgstr "選択されたコンポーネントのフットプリントフィルタによるフィルタあり"
 
 #. type: Plain text
-#: CvPcb.adoc:432
+#: CvPcb.adoc:446
 msgid "image:images/en/filter_comp.png[]"
 msgstr "image:images/ja/filter_comp.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:436
+#: CvPcb.adoc:450
 msgid ""
 "In the component library editor in Eeschema, the footprint list was set "
 "using the entries in the footprint filter tab of the component properties "
@@ -1131,34 +1165,34 @@ msgstr ""
 "フィルタ・タブでの登録により設定されます。"
 
 #. type: Plain text
-#: CvPcb.adoc:438
+#: CvPcb.adoc:452
 msgid "image:images/en/eeschema_filter.png[]"
 msgstr "image:images/ja/eeschema_filter.png[]"
 
 # 07092015：誤記訂正
 #. type: Plain text
-#: CvPcb.adoc:440
+#: CvPcb.adoc:454
 msgid "Filtered by the pin count of the selected component:"
 msgstr "選択されたコンポーネントのピン数によるフィルタあり"
 
 #. type: Plain text
-#: CvPcb.adoc:442
+#: CvPcb.adoc:456
 msgid "image:images/en/filter_pincount.png[]"
 msgstr "image:images/ja/filter_pincount.png[]"
 
 # 07092015：誤記訂正
 #. type: Plain text
-#: CvPcb.adoc:444
+#: CvPcb.adoc:458
 msgid "Filtered by the selected library."
 msgstr "選択されたライブラリによるフィルタあり"
 
 #. type: Plain text
-#: CvPcb.adoc:446
+#: CvPcb.adoc:460
 msgid "image:images/en/filter_library.png[]"
 msgstr "image:images/ja/filter_library.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:449
+#: CvPcb.adoc:463
 msgid ""
 "The filtering can be combined to form more complex filtering to help reduce "
 "the number of footprints in the footprint pane."
@@ -1168,30 +1202,30 @@ msgstr ""
 
 # 07092015：誤記訂正
 #. type: Plain text
-#: CvPcb.adoc:451
+#: CvPcb.adoc:465
 msgid "Filtered by the selected component pin count and the component filter:"
 msgstr ""
 "選択されたコンポーネントのピン数とキーワードのフィルタによるフィルタあり"
 
 #. type: Plain text
-#: CvPcb.adoc:453
+#: CvPcb.adoc:467
 msgid "image:images/en/filter_comp_and_pincount.png[]"
 msgstr "image:images/ja/filter_comp_and_pincount.png[]"
 
 #. type: Title ==
-#: CvPcb.adoc:454
+#: CvPcb.adoc:468
 #, no-wrap
 msgid "Automatic Associations"
 msgstr "自動関連付け"
 
 #. type: Title ===
-#: CvPcb.adoc:456
+#: CvPcb.adoc:470
 #, no-wrap
 msgid "Equivalence files"
 msgstr "等価ファイル"
 
 #. type: Plain text
-#: CvPcb.adoc:460
+#: CvPcb.adoc:474
 msgid ""
 "Equivalence files allow for automatic assignment of footprints to components."
 msgstr ""
@@ -1199,7 +1233,7 @@ msgstr ""
 "ます。"
 
 #. type: Plain text
-#: CvPcb.adoc:464
+#: CvPcb.adoc:478
 msgid ""
 "They list the name of the corresponding footprint according to the name "
 "(__value field__) of the component. These files typically have the *.equ* "
@@ -1210,7 +1244,7 @@ msgstr ""
 "を持ちます。"
 
 #. type: Plain text
-#: CvPcb.adoc:467
+#: CvPcb.adoc:481
 msgid ""
 "They are plain text files and may be edited by using any plain text editor, "
 "and must be created by the user."
@@ -1219,13 +1253,13 @@ msgstr ""
 "ファイルで、ユーザが作らなければなりません。"
 
 #. type: Title ===
-#: CvPcb.adoc:470
+#: CvPcb.adoc:484
 #, no-wrap
 msgid "Equivalence File Format"
 msgstr "等価ファイルフォーマット"
 
 #. type: Plain text
-#: CvPcb.adoc:474
+#: CvPcb.adoc:488
 msgid ""
 "Equivalence files consist of one line for each component. Each line has the "
 "following structure:"
@@ -1234,13 +1268,13 @@ msgstr ""
 "の構成となっています。:"
 
 #. type: Plain text
-#: CvPcb.adoc:476
+#: CvPcb.adoc:490
 #, no-wrap
 msgid "*`component value' `footprint name'*\n"
 msgstr "*'component value' 'footprint name'*\n"
 
 #. type: Plain text
-#: CvPcb.adoc:479
+#: CvPcb.adoc:493
 msgid ""
 "Each name must be single quoted by the ’ character and the component and "
 "footprint names must be separated by one or more spaces."
@@ -1249,12 +1283,12 @@ msgstr ""
 "トとフットプリント名は１つ以上のスペースで区切る必要があります。"
 
 #. type: Plain text
-#: CvPcb.adoc:481
+#: CvPcb.adoc:495
 msgid "_Example:_"
 msgstr "_例:_"
 
 #. type: Plain text
-#: CvPcb.adoc:484
+#: CvPcb.adoc:498
 msgid ""
 "If the U3 component is circuit 14011 and its footprint is 14DIP300, the line "
 "is:"
@@ -1262,22 +1296,22 @@ msgstr ""
 "U3 コンポーネントが回路 14011 で、フットプリントが 14DIP300 の時、その行は:"
 
 #. type: Plain text
-#: CvPcb.adoc:486
+#: CvPcb.adoc:500
 msgid "+`14011' `14DIP300'+"
 msgstr "+`14011' `14DIP300'+"
 
 #. type: Plain text
-#: CvPcb.adoc:488
+#: CvPcb.adoc:502
 msgid "Any line starting with *#* is a comment."
 msgstr "＃で始まる行は全てコメントです。"
 
 #. type: Plain text
-#: CvPcb.adoc:490
+#: CvPcb.adoc:504
 msgid "Here is an example equivalence file:"
 msgstr "これは等価ファイルの例です："
 
 #. type: delimited block -
-#: CvPcb.adoc:515
+#: CvPcb.adoc:529
 #, no-wrap
 msgid ""
 "#integrated circuits (smd):\n"
@@ -1329,7 +1363,7 @@ msgstr ""
 "'XCF08P' 'BGA48'\n"
 
 #. type: delimited block -
-#: CvPcb.adoc:518
+#: CvPcb.adoc:532
 #, no-wrap
 msgid ""
 "#upro\n"
@@ -1339,7 +1373,7 @@ msgstr ""
 "'MCF5213-LQFP100' 'VQFP100'\n"
 
 #. type: delimited block -
-#: CvPcb.adoc:521
+#: CvPcb.adoc:535
 #, no-wrap
 msgid ""
 "#regulators\n"
@@ -1349,13 +1383,13 @@ msgstr ""
 "'LP2985LV' 'SOT23-5'\n"
 
 #. type: Title ===
-#: CvPcb.adoc:524
+#: CvPcb.adoc:538
 #, no-wrap
 msgid "Automatically Associating Footprints to Components"
 msgstr "コンポーネントへのフットプリントの自動的な関連付け"
 
 #. type: Plain text
-#: CvPcb.adoc:528
+#: CvPcb.adoc:542
 msgid ""
 "Click on the automatic footprint association button on the top toolbar to "
 "process an equivalence file."
@@ -1364,7 +1398,7 @@ msgstr ""
 "タンをクリックしてください。"
 
 #. type: Plain text
-#: CvPcb.adoc:531
+#: CvPcb.adoc:545
 msgid ""
 "_All components found by their value in the selected equivalence (*.equ) "
 "file will have their footprint automatically assigned._"
@@ -2220,3 +2254,6 @@ msgstr "ローカルテーブル（プロジェクト固有のライブラリテ
 #: CvPcb_footprint_libraries_tables.adoc:314
 msgid "image:images/en/fplib_wizard_chooseflt.png[ fplib wizard chooseflt]"
 msgstr "image:images/ja/fplib_wizard_chooseflt.png[ fplib wizard chooseflt]"
+
+#~ msgid "the reasons are:"
+#~ msgstr "これは以下の理由によります。:"

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2015-09-13 09:45+0200\n"
-"PO-Revision-Date: 2015-09-13 09:45+0200\n"
+"POT-Creation-Date: 2015-09-14 12:44+0200\n"
+"PO-Revision-Date: 2015-09-14 13:11+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -40,7 +40,14 @@ msgid ""
 "GNU General Public License (http://www.gnu.org/licenses/gpl.html), version 3 "
 "or later, or the Creative Commons Attribution License (http://"
 "creativecommons.org/licenses/by/3.0/), version 3.0 or later."
-msgstr "Questo documento è coperto dal Copyright (C) 2010-2015 dei suoi autori come elencati in seguito. È possibile distribuirlo e/o modificarlo nei termini sia della GNU General Public License (http://www.gnu.org/licenses/gpl.html[http://www.gnu.org/licenses/gpl.html]), versione 3 o successive, che della Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]), versione 3.0 o successive."
+msgstr ""
+"Questo documento è coperto dal Copyright (C) 2010-2015 dei suoi autori come "
+"elencati in seguito. È possibile distribuirlo e/o modificarlo nei termini "
+"sia della GNU General Public License (http://www.gnu.org/licenses/gpl."
+"html[http://www.gnu.org/licenses/gpl.html]), versione 3 o successive, che "
+"della Creative Commons Attribution License (http://creativecommons.org/"
+"licenses/by/3.0/[http://creativecommons.org/licenses/by/3.0/]), versione 3.0 "
+"o successive."
 
 #. type: Plain text
 #: CvPcb.adoc:20
@@ -181,20 +188,23 @@ msgstr ""
 "corretta."
 
 #. type: Plain text
-#: CvPcb.adoc:72
+#: CvPcb.adoc:73
 #, no-wrap
 msgid ""
-"*It can be run only from Eeschema, form the main toolbar, when started\n"
-"as a project from the KiCad project manager*.\n"
-msgstr "**Può essere eseguito solo da Eeschema, dalla barra degli strumenti principale, quando quest'ultimo viene eseguito su un progetto dal gestore KiCad**.\n"
-
-#. type: Plain text
-#: CvPcb.adoc:74
-msgid "the reasons are:"
-msgstr "le ragioni sono:"
+"**It can be run only from Eeschema**, from the top toolbar, either when\n"
+"Eeschema is started from the KiCad project manager or when Eeschema is\n"
+"started as a stand alone application.\n"
+msgstr "**CvPcb può essere eseguito solo da Eeschema**, dalla barra degli strumenti principale, sia quando Eeschema viene eseguito dal gestore dei progetti di KiCad che quando Eeschema viene eseguito come applicazione indipendente.\n"
 
 #. type: Plain text
 #: CvPcb.adoc:76
+msgid ""
+"Running CvPcb from Eeschema lauched from the KiCad Manager is generally "
+"better because:"
+msgstr "L'esecuzione di CvPcb da Eeschema fatto partire a sua volta dal gestore dei progetti di KiCad è generalmente da preferire perché:"
+
+#. type: Plain text
+#: CvPcb.adoc:79
 msgid ""
 "Cvpcb needs the project config file to know the footprint libraries to load."
 msgstr ""
@@ -202,28 +212,45 @@ msgstr ""
 "librerie di impronte da caricare."
 
 #. type: Plain text
-#: CvPcb.adoc:78
+#: CvPcb.adoc:83
 msgid ""
 "Cvpcb initializes the components footprint fields of the current schematic "
-"project.  This is possible only when Eeschema is running."
-msgstr ""
-"Cvpcb inizializza i campi impronte dei componenti dello schema del progetto "
-"corrente.  Ciò è possibile solo quando Eeschema è in esecuzione."
+"project. This is possible only if the project file is in the same path as "
+"the open schematic."
+msgstr "Cvpcb inizializza i campi impronte dei componenti dello schema del progetto corrente.  Ciò è possibile solo quando il file del progetto è nello stesso percorso dello schema elettrico aperto."
+
+#. type: Plain text
+#: CvPcb.adoc:86
+msgid ""
+"Lauching CvPcb from an Eeschema launched from the KiCad manager assures "
+"automatically all this."
+msgstr "L'esecuzione di CvPcb da una sessione di Eeschema eseguito dal gestore dei progetti di KiCad garantisce automaticamente tutto ciò."
+
+#. type: Plain text
+#: CvPcb.adoc:93
+msgid ""
+"You actually *can* launch CvPcb from a stand alone Eeschema session though, "
+"but please note that any schematic opened that does not have a project file "
+"in the same path may be missing components due to missing libraries which "
+"will not show up in CvPcb. If there is no fp-lib-table file in the same path "
+"as the open schematic, no project specific footprint libraries will be "
+"available either."
+msgstr "Comunque si *può* eseguire CvPcb da una sessione autonoma di Eeschema malgrado, si noti, che ad un qualsiasi schema elettrico aperto che non abbia nello stesso percorso un file di progetto potrebbero mancare componenti a causa delle librerie mancanti che non vengono rilevate da CvPcb. Inoltre se non c'è un file fp-lib-table nello stesso percorso dello schema elettrico aperto, non saranno disponibili le librerie impronte specifiche del progetto."
 
 #. type: Title ==
-#: CvPcb.adoc:80
+#: CvPcb.adoc:94
 #, no-wrap
 msgid "CvPcb Features"
 msgstr "Caratteristiche di CvPcb"
 
 #. type: Title ===
-#: CvPcb.adoc:82
+#: CvPcb.adoc:96
 #, no-wrap
 msgid "Manual or Automatic Association"
 msgstr "Associazione manuale o automatica"
 
 #. type: Plain text
-#: CvPcb.adoc:86
+#: CvPcb.adoc:100
 msgid ""
 "CvPcb allows for interactive assignment (manual) as well as automatic "
 "assignment via equivalence files."
@@ -232,24 +259,24 @@ msgstr ""
 "tramite i file delle equivalenze."
 
 #. type: Title ==
-#: CvPcb.adoc:87
+#: CvPcb.adoc:101
 #, no-wrap
 msgid "Invoking CvPcb"
 msgstr "Invocazione di CvPcb"
 
 #. type: Plain text
-#: CvPcb.adoc:90
+#: CvPcb.adoc:104
 #, no-wrap
 msgid "*CvPcb is only invoked from the schematic capture program Eeschema*, by the tool:\n"
 msgstr "*CvPcb viene invocato solo dal programma di cattura schemi elettrici Eeschema*, attraverso lo strumento:\n"
 
 #. type: Plain text
-#: CvPcb.adoc:92
+#: CvPcb.adoc:106
 msgid "image:images/icons/run-cvpcb.png[run cvpcb]"
 msgstr "image:images/icons/run-cvpcb.png[esegui cvpcb]"
 
 #. type: Plain text
-#: CvPcb.adoc:95
+#: CvPcb.adoc:109
 msgid ""
 "Eeschema automatically passes the correct data (component list and "
 "footprints) to CvPcb.  There is no update to do (unless some new components "
@@ -260,29 +287,29 @@ msgstr ""
 "dei nuovi componenti non ancora annotati), basta solo eseguire Cvpcb."
 
 #. type: Title ==
-#: CvPcb.adoc:96
+#: CvPcb.adoc:110
 #, no-wrap
 msgid "CvPcb Commands"
 msgstr "Comandi CvPcb"
 
 #. type: Title ===
-#: CvPcb.adoc:98
+#: CvPcb.adoc:112
 #, no-wrap
 msgid "Main Screen"
 msgstr "Schermo principale"
 
 #. type: Plain text
-#: CvPcb.adoc:101
+#: CvPcb.adoc:115
 msgid "The image below shows the main window of CvPcb."
 msgstr "L'immagine sottostante mostra la finestra principale di CvPcb."
 
 #. type: Plain text
-#: CvPcb.adoc:103
+#: CvPcb.adoc:117
 msgid "image:images/en/cvpcb_main_window.png[]"
 msgstr "image:images/it/cvpcb_main_window.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:111
+#: CvPcb.adoc:125
 msgid ""
 "The left pane contains the list of available footprint library file names "
 "associated with the project. The center pane contains the list of components "
@@ -300,23 +327,23 @@ msgstr ""
 "trovata, il pannello delle impronte resterà vuoto."
 
 #. type: Title ===
-#: CvPcb.adoc:112
+#: CvPcb.adoc:126
 #, no-wrap
 msgid "Main Window Toolbar"
 msgstr "La barra strumenti della finestra principale"
 
 #. type: Plain text
-#: CvPcb.adoc:115
+#: CvPcb.adoc:129
 msgid "image:images/main_toolbar.png[]"
 msgstr "image:images/main_toolbar.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:117
+#: CvPcb.adoc:131
 msgid "The top toolbar allows for easy access to the following commands:"
 msgstr "La barra superiore permette un facile accesso ai seguenti comandi:"
 
 #. type: delimited block |
-#: CvPcb.adoc:122
+#: CvPcb.adoc:136
 #, no-wrap
 msgid ""
 "|image:images/icons/save.png[]\n"
@@ -326,7 +353,7 @@ msgstr ""
 "|Invia l'associazione impronte corrente a Eeschema (cioè il contenuto dei campi impronte).\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:125
+#: CvPcb.adoc:139
 #, no-wrap
 msgid ""
 "|image:images/icons/config.png[]\n"
@@ -336,7 +363,7 @@ msgstr ""
 "|Invoca il menu di configurazione di CvPcb.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:129
+#: CvPcb.adoc:143
 #, no-wrap
 msgid ""
 "|image:images/icons/show_footprint.png[]\n"
@@ -347,7 +374,7 @@ msgstr ""
 "|Mostra l'impronta del componente selezionato nella finestra impronte.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:133
+#: CvPcb.adoc:147
 #, no-wrap
 msgid ""
 "|image:images/icons/left.png[]\n"
@@ -358,7 +385,7 @@ msgstr ""
 "|Seleziona automaticamente nell'elenco il componente precedente senza un'associazione impronta.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:137
+#: CvPcb.adoc:151
 #, no-wrap
 msgid ""
 "|image:images/icons/right.png[]\n"
@@ -369,7 +396,7 @@ msgstr ""
 "|Seleziona automaticamente nell'elenco il componente successivo senza un'associazione impronta.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:141
+#: CvPcb.adoc:155
 #, no-wrap
 msgid ""
 "|image:images/icons/auto_association.png[]\n"
@@ -380,7 +407,7 @@ msgstr ""
 "|Associa automaticamente impronte con componenti cominciando con l'usare un file di equivalenze.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:144
+#: CvPcb.adoc:158
 #, no-wrap
 msgid ""
 "|image:images/icons/delete_association.png[]\n"
@@ -390,7 +417,7 @@ msgstr ""
 "|Cancella tutte le associazioni impronte.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:148
+#: CvPcb.adoc:162
 #, no-wrap
 msgid ""
 "|image:images/icons/datasheet.png[]\n"
@@ -401,7 +428,7 @@ msgstr ""
 "|Apre il file di documentazione pdf dell'impronta selezionata usando il visualizzatore pdf predefinito.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:152
+#: CvPcb.adoc:166
 #, no-wrap
 msgid ""
 "|image:images/icons/filter_component.png[]\n"
@@ -412,7 +439,7 @@ msgstr ""
 "|Abilita o disabilita il filtro per limitare l'elenco impronte ai filtri impronta del componente selezionato.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:156
+#: CvPcb.adoc:170
 #, no-wrap
 msgid ""
 "|image:images/icons/filter_pincount.png[]\n"
@@ -423,7 +450,7 @@ msgstr ""
 "|Abilita o disabilita il filtro per limitare l'elenco impronte al numero di pin del componente selezionato.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:160
+#: CvPcb.adoc:174
 #, no-wrap
 msgid ""
 "|image:images/icons/filter_library.png[]\n"
@@ -434,19 +461,19 @@ msgstr ""
 "|Abilita o disabilita il filtro per limitare l'elenco impronte alla libreria selezionata.\n"
 
 #. type: Title ===
-#: CvPcb.adoc:162
+#: CvPcb.adoc:176
 #, no-wrap
 msgid "Main Window Keyboard Commands"
 msgstr "Comandi da tastiera della finestra principale"
 
 #. type: Plain text
-#: CvPcb.adoc:165
+#: CvPcb.adoc:179
 msgid "The following table lists the keyboard commands for the main window:"
 msgstr ""
 "La seguente tabella elenca il comandi da tastiera per la finestra principale:"
 
 #. type: delimited block |
-#: CvPcb.adoc:170
+#: CvPcb.adoc:184
 #, no-wrap
 msgid ""
 "|Right Arrow / Tab|Activate the next pane to the right of the currently activated pane.\n"
@@ -454,7 +481,7 @@ msgid ""
 msgstr "|Freccia destra / Tab|Attiva il pannello adiacente a destra del pannello attualmente attivo. A capo al primo pannello se è attivo l'ultimo pannello.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:173
+#: CvPcb.adoc:187
 #, no-wrap
 msgid ""
 "|Left Arrow |Activate the next pane to the left of the currently activated\n"
@@ -464,19 +491,19 @@ msgstr ""
 "attualmente attivo. A capo all'ultimo pannello se è attivo il primo pannello.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:175
+#: CvPcb.adoc:189
 #, no-wrap
 msgid "|Up Arrow |Select the previous item of the currently selected list.\n"
 msgstr "|Freccia su |Seleziona la voce precedente dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:177
+#: CvPcb.adoc:191
 #, no-wrap
 msgid "|Down Arrow |Select the next item of the currently selected list.\n"
 msgstr "|Freccia giù |Seleziona la voce successiva dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:180
+#: CvPcb.adoc:194
 #, no-wrap
 msgid ""
 "|Page Up |Select the item up one full page of the currently selected\n"
@@ -484,7 +511,7 @@ msgid ""
 msgstr "|Pagina su |Seleziona l'elemento di una pagina precedente dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:183
+#: CvPcb.adoc:197
 #, no-wrap
 msgid ""
 "|Page Down |Select the item down one full page of the currently selected\n"
@@ -494,30 +521,30 @@ msgstr ""
 "selezionato.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:185
+#: CvPcb.adoc:199
 #, no-wrap
 msgid "|Home |Select the first item of the currently selected list.\n"
 msgstr "|Home |Seleziona il primo elemento dell'elenco attualmente selezionato.\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:187
+#: CvPcb.adoc:201
 #, no-wrap
 msgid "|End |Select the last item of the currently selected list.\n"
 msgstr "|Fine |Seleziona l'ultimo elemento dell'elenco attualmente selezionato.\n"
 
 #. type: Title ===
-#: CvPcb.adoc:189
+#: CvPcb.adoc:203
 #, no-wrap
 msgid "CvPcb Configuration"
 msgstr "Configurazione CvPcb"
 
 #. type: Plain text
-#: CvPcb.adoc:192
+#: CvPcb.adoc:206
 msgid "image:images/en/cvpcb_preference_menu.png[]"
 msgstr "image:images/it/cvpcb_preference_menu.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:195
+#: CvPcb.adoc:209
 msgid ""
 "CvPcb can be automatically closed after saving the footprint association "
 "file, or not."
@@ -526,7 +553,7 @@ msgstr ""
 "chiuso automaticamente oppure no."
 
 #. type: Plain text
-#: CvPcb.adoc:198
+#: CvPcb.adoc:212
 msgid ""
 "Invoking the ``Libraries'' entry in the ``Preferences'' menu displays the "
 "library configuration dialog."
@@ -535,7 +562,7 @@ msgstr ""
 "finestra di dialogo della configurazione delle librerie."
 
 #. type: Plain text
-#: CvPcb.adoc:201
+#: CvPcb.adoc:215
 msgid ""
 "Depending on the CvPcb version, there are 2 different methods of library "
 "management:"
@@ -544,13 +571,13 @@ msgstr ""
 "librerie:"
 
 #. type: Plain text
-#: CvPcb.adoc:203
+#: CvPcb.adoc:217
 msgid "The legacy management, using *.mod files, and a library list of files."
 msgstr ""
 "La gestione tradizionale, con file *.mod e una libreria elenco di file."
 
 #. type: Plain text
-#: CvPcb.adoc:208
+#: CvPcb.adoc:222
 msgid ""
 "The new ``Pretty'' format, using one file by footprint. It uses a folder "
 "list. Each folder (*.pretty folder name) is a library. When using this new "
@@ -563,43 +590,43 @@ msgstr ""
 "librerie native che provengono da file xml in formato GEDA/GPCB o Eagle."
 
 #. type: Title ==
-#: CvPcb.adoc:209
+#: CvPcb.adoc:223
 #, no-wrap
 msgid "Footprint Libraries Management"
 msgstr "Gestione librerie impronte"
 
 #. type: Title ===
-#: CvPcb.adoc:211
+#: CvPcb.adoc:225
 #, no-wrap
 msgid "Important remark:"
 msgstr "Osservazione importante:"
 
 #. type: Plain text
-#: CvPcb.adoc:214
+#: CvPcb.adoc:228
 #, no-wrap
 msgid "*_This section is relevant only for KiCad versions since December 2013_*\n"
 msgstr "*_Questa sezione è rilevante solo per versioni di KiCad a partire dal dicembre 2013_*\n"
 
 #. type: Title ===
-#: CvPcb.adoc:216
+#: CvPcb.adoc:230
 #, no-wrap
 msgid "Footprint Library tables"
 msgstr "Tabelle librerie impronte"
 
 #. type: Title ==
-#: CvPcb.adoc:221
+#: CvPcb.adoc:235
 #, no-wrap
 msgid "Viewing the Current Footprint"
 msgstr "Visualizzazione dell'impronta corrente"
 
 #. type: Title ===
-#: CvPcb.adoc:223
+#: CvPcb.adoc:237
 #, no-wrap
 msgid "The view footprint command"
 msgstr "Il comando visualizza impronta"
 
 #. type: Plain text
-#: CvPcb.adoc:230
+#: CvPcb.adoc:244
 msgid ""
 "The view footprint command displays the footprint currently selected in the "
 "_footprint_ window. A 3D model of the component can be shown if it has been "
@@ -611,18 +638,18 @@ msgstr ""
 "può osservare la finestra di visualizzazione impronta."
 
 #. type: Plain text
-#: CvPcb.adoc:232
+#: CvPcb.adoc:246
 msgid "image:images/en/footprint_view.png[]"
 msgstr "image:images/it/footprint_view.png[]"
 
 #. type: Title ====
-#: CvPcb.adoc:233
+#: CvPcb.adoc:247
 #, no-wrap
 msgid "Status Bar Information"
 msgstr "Informazioni sulla barra di stato"
 
 #. type: Plain text
-#: CvPcb.adoc:238
+#: CvPcb.adoc:252
 msgid ""
 "The status bar is located at the bottom of the CvPcb new main window and "
 "provides useful information to the user. The following table defines the "
@@ -633,13 +660,13 @@ msgstr ""
 "contenuto di ogni pannello sulla barra di stato."
 
 #. type: Title ====
-#: CvPcb.adoc:239
+#: CvPcb.adoc:253
 #, no-wrap
 msgid "Keyboard Commands"
 msgstr "Comandi da tastiera"
 
 #. type: delimited block |
-#: CvPcb.adoc:253
+#: CvPcb.adoc:267
 #, no-wrap
 msgid ""
 "|F1 |Zoom In\n"
@@ -665,13 +692,13 @@ msgstr ""
 "|Freccia giù |Sposta il cursore in basso di una posizione nella griglia\n"
 
 #. type: Title ====
-#: CvPcb.adoc:255 CvPcb.adoc:332
+#: CvPcb.adoc:269 CvPcb.adoc:346
 #, no-wrap
 msgid "Mouse Commands"
 msgstr "Comandi con il mouse"
 
 #. type: delimited block |
-#: CvPcb.adoc:263
+#: CvPcb.adoc:277
 #, no-wrap
 msgid ""
 "|Scroll Wheel |Zoom in and out at the current cursor position\n"
@@ -685,23 +712,23 @@ msgstr ""
 "|Clic tasto destro |Apre il menu contestuale\n"
 
 #. type: Title ====
-#: CvPcb.adoc:265
+#: CvPcb.adoc:279
 #, no-wrap
 msgid "Context Menu"
 msgstr "Menu contestuale"
 
 #. type: Plain text
-#: CvPcb.adoc:268
+#: CvPcb.adoc:282
 msgid "image:images/en/context_menu.png[]"
 msgstr "image:images/it/context_menu.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:270
+#: CvPcb.adoc:284
 msgid "Displayed by right-clicking the mouse:"
 msgstr "Mostrato dal clic destro del mouse:"
 
 #. type: delimited block |
-#: CvPcb.adoc:275
+#: CvPcb.adoc:289
 #, no-wrap
 msgid ""
 "|Zoom Selection (Select Zoom) |Direct selection of the display zoom.\n"
@@ -711,13 +738,13 @@ msgstr ""
 "|Imposta griglia |Selezione diretta della griglia.\n"
 
 #. type: Title ====
-#: CvPcb.adoc:277 CvPcb.adoc:341
+#: CvPcb.adoc:291 CvPcb.adoc:355
 #, no-wrap
 msgid "Horizontal Toolbar"
 msgstr "Barra orizzontale"
 
 #. type: delimited block |
-#: CvPcb.adoc:285
+#: CvPcb.adoc:299
 #, no-wrap
 msgid ""
 "|image:images/icons/display_options.png[]\n"
@@ -731,7 +758,7 @@ msgstr ""
 "|Zoom in\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:288 CvPcb.adoc:359
+#: CvPcb.adoc:302 CvPcb.adoc:373
 #, no-wrap
 msgid ""
 "|image:images/icons/zoom_out.png[]\n"
@@ -741,7 +768,7 @@ msgstr ""
 "|Zoom out\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:291 CvPcb.adoc:362
+#: CvPcb.adoc:305 CvPcb.adoc:376
 #, no-wrap
 msgid ""
 "|image:images/icons/redraw.png[]\n"
@@ -751,7 +778,7 @@ msgstr ""
 "|Ridisegna\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:294 CvPcb.adoc:365
+#: CvPcb.adoc:308 CvPcb.adoc:379
 #, no-wrap
 msgid ""
 "|image:images/icons/zoom_fit_in_page.png[]\n"
@@ -761,7 +788,7 @@ msgstr ""
 "|Mostra l'area giusta in finestra\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:297
+#: CvPcb.adoc:311
 #, no-wrap
 msgid ""
 "|image:images/icons/open_3d_model_view.png[]\n"
@@ -771,13 +798,13 @@ msgstr ""
 "|Apri il visualizzatore modelli 3D\n"
 
 #. type: Title ====
-#: CvPcb.adoc:299
+#: CvPcb.adoc:313
 #, no-wrap
 msgid "Vertical Toolbar"
 msgstr "Barra strumenti verticale"
 
 #. type: delimited block |
-#: CvPcb.adoc:305
+#: CvPcb.adoc:319
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_grid.png[]\n"
@@ -787,7 +814,7 @@ msgstr ""
 "|Mostra o nasconde la griglia\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:308
+#: CvPcb.adoc:322
 #, no-wrap
 msgid ""
 "|image:images/icons/coordination_system.png[]\n"
@@ -797,7 +824,7 @@ msgstr ""
 "|Mostra le coordinate in notazione polare o rettangolare\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:311
+#: CvPcb.adoc:325
 #, no-wrap
 msgid ""
 "|image:images/icons/unit_inch.png[]\n"
@@ -807,7 +834,7 @@ msgstr ""
 "|Mostra le coordinate in pollici\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:314
+#: CvPcb.adoc:328
 #, no-wrap
 msgid ""
 "|image:images/icons/unit_mm.png[]\n"
@@ -817,7 +844,7 @@ msgstr ""
 "|Mostra le coordinate in millimetri\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:317
+#: CvPcb.adoc:331
 #, no-wrap
 msgid ""
 "|image:images/icons/pointer_style.png[]\n"
@@ -827,7 +854,7 @@ msgstr ""
 "|Commuta stile puntatore\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:320
+#: CvPcb.adoc:334
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_pads_sketch.png[]\n"
@@ -837,7 +864,7 @@ msgstr ""
 "|Scambia tra il disegno delle piazzole in modalità tratteggio e normale\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:323
+#: CvPcb.adoc:337
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_text_sketch.png[]\n"
@@ -847,7 +874,7 @@ msgstr ""
 "|Scambia tra il disegno del testo in modalità tratteggio e normale\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:326
+#: CvPcb.adoc:340
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_edge_sketch.png[]\n"
@@ -857,18 +884,18 @@ msgstr ""
 "|Scambia tra il disegno dei bordi in modalità tratteggio e normale\n"
 
 #. type: Title ===
-#: CvPcb.adoc:328
+#: CvPcb.adoc:342
 #, no-wrap
 msgid "Viewing the Current 3D Model"
 msgstr "Visualizzazione del modello 3D corrente"
 
 #. type: Plain text
-#: CvPcb.adoc:331
+#: CvPcb.adoc:345
 msgid "image:images/en/3d_window.png[]"
 msgstr "image:images/it/3d_window.png[]"
 
 #. type: delimited block |
-#: CvPcb.adoc:339
+#: CvPcb.adoc:353
 #, no-wrap
 msgid ""
 "|Scroll Wheel |Zoom in and out at the current cursor position\n"
@@ -880,7 +907,7 @@ msgstr ""
 "|Maiusc + Rotellina |Pan su e giù\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:347
+#: CvPcb.adoc:361
 #, no-wrap
 msgid ""
 "|image:images/icons/3dmodel_reload.png[]\n"
@@ -890,7 +917,7 @@ msgstr ""
 "|Ricarica il modello 3D\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:350
+#: CvPcb.adoc:364
 #, no-wrap
 msgid ""
 "|image:images/icons/copy_to_clipboard.png[]\n"
@@ -900,7 +927,7 @@ msgstr ""
 "|Copia l'immagine 3D negli appunti\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:353
+#: CvPcb.adoc:367
 #, no-wrap
 msgid ""
 "|image:images/icons/3d_viewer_options.png[]\n"
@@ -910,7 +937,7 @@ msgstr ""
 "|Imposta le opzioni del visualizzatore 3D\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:356
+#: CvPcb.adoc:370
 #, no-wrap
 msgid ""
 "|image:images/icons/zoom_in.png[]\n"
@@ -920,7 +947,7 @@ msgstr ""
 "|Zoom in\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:368
+#: CvPcb.adoc:382
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_back_x.png[]\n"
@@ -930,7 +957,7 @@ msgstr ""
 "|Ruota indietro lungo l'asse X\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:371
+#: CvPcb.adoc:385
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_forw_x.png[]\n"
@@ -940,7 +967,7 @@ msgstr ""
 "|Ruota in avanti lungo l'asse X\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:374
+#: CvPcb.adoc:388
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_back_y.png[]\n"
@@ -950,7 +977,7 @@ msgstr ""
 "|Ruota indietro lungo l'asse Y\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:377
+#: CvPcb.adoc:391
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_forw_y.png[]\n"
@@ -960,7 +987,7 @@ msgstr ""
 "|Ruota in avanti lungo l'asse Y\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:380
+#: CvPcb.adoc:394
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_back_z.png[]\n"
@@ -970,7 +997,7 @@ msgstr ""
 "|Ruota indietro lungo l'asse Z\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:383
+#: CvPcb.adoc:397
 #, no-wrap
 msgid ""
 "|image:images/icons/rotate_forw_z.png[]\n"
@@ -980,7 +1007,7 @@ msgstr ""
 "|Ruota avanti lungo l'asse Z\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:386
+#: CvPcb.adoc:400
 #, no-wrap
 msgid ""
 "|image:images/icons/left.png[]\n"
@@ -990,7 +1017,7 @@ msgstr ""
 "|Pan a sinistra\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:389
+#: CvPcb.adoc:403
 #, no-wrap
 msgid ""
 "|image:images/icons/right.png[]\n"
@@ -1000,7 +1027,7 @@ msgstr ""
 "|Pan a destra\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:392
+#: CvPcb.adoc:406
 #, no-wrap
 msgid ""
 "|image:images/icons/up.png[]\n"
@@ -1010,7 +1037,7 @@ msgstr ""
 "|Pan in su\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:395
+#: CvPcb.adoc:409
 #, no-wrap
 msgid ""
 "|image:images/icons/down.png[]\n"
@@ -1020,7 +1047,7 @@ msgstr ""
 "|Pan in giù\n"
 
 #. type: delimited block |
-#: CvPcb.adoc:398
+#: CvPcb.adoc:412
 #, no-wrap
 msgid ""
 "|image:images/icons/toggle_ortho.png[]\n"
@@ -1030,19 +1057,19 @@ msgstr ""
 "|Abilita/disabilita la proiezione ortografica\n"
 
 #. type: Title ==
-#: CvPcb.adoc:400
+#: CvPcb.adoc:414
 #, no-wrap
 msgid "Using CvPcb to Associate Components with Footprints"
 msgstr "Uso di CvPcb per associare componenti a impronte"
 
 #. type: Title ===
-#: CvPcb.adoc:402
+#: CvPcb.adoc:416
 #, no-wrap
 msgid "Manually Associating Footprints with Components"
 msgstr "Associazione manuale delle impronte ai componenti"
 
 #. type: Plain text
-#: CvPcb.adoc:410
+#: CvPcb.adoc:424
 msgid ""
 "To manually associate a footprint with a component first select a component "
 "in the component pane. Then select a footprint in the footprint pane by "
@@ -1058,13 +1085,13 @@ msgstr ""
 "dell'impronta di un componente viene effettuato con la stessa modalità."
 
 #. type: Title ===
-#: CvPcb.adoc:411
+#: CvPcb.adoc:425
 #, no-wrap
 msgid "Filtering the Footprint List"
 msgstr "Filtro dell'elenco impronte"
 
 #. type: Plain text
-#: CvPcb.adoc:416
+#: CvPcb.adoc:430
 msgid ""
 "If the selected component and/or library is highlighted when the one or more "
 "of the filtering option is enabled, the displayed footprint list in CvPcb is "
@@ -1075,7 +1102,7 @@ msgstr ""
 "viene filtrato di conseguenza."
 
 #. type: Plain text
-#: CvPcb.adoc:420
+#: CvPcb.adoc:434
 msgid ""
 "The icons image:images/icons_filter.png[] enable and disable the filtering "
 "feature. When the filtering is not enabled, the full footprint list is shown."
@@ -1085,17 +1112,17 @@ msgstr ""
 "impronte."
 
 #. type: Plain text
-#: CvPcb.adoc:422
+#: CvPcb.adoc:436
 msgid "Without filtering:"
 msgstr "Senza filtro:"
 
 #. type: Plain text
-#: CvPcb.adoc:424
+#: CvPcb.adoc:438
 msgid "image:images/en/filter_none.png[]"
 msgstr "image:images/it/filter_none.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:428
+#: CvPcb.adoc:442
 msgid ""
 "Filtered by list of footprint filters assigned to the selected component. "
 "The component filters are listed on the center pane of the status bar at the "
@@ -1106,17 +1133,17 @@ msgstr ""
 "barra di stato in fondo alla finestra principale."
 
 #. type: Plain text
-#: CvPcb.adoc:430
+#: CvPcb.adoc:444
 msgid "Filtered by the footprint filter of the selected component:"
 msgstr "Filtrato per numero di piedini del componente selezionato:"
 
 #. type: Plain text
-#: CvPcb.adoc:432
+#: CvPcb.adoc:446
 msgid "image:images/en/filter_comp.png[]"
 msgstr "image:images/it/filter_comp.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:436
+#: CvPcb.adoc:450
 msgid ""
 "In the component library editor in Eeschema, the footprint list was set "
 "using the entries in the footprint filter tab of the component properties "
@@ -1127,32 +1154,32 @@ msgstr ""
 "finestra di dialogo delle proprietà del componente, come mostrato in basso."
 
 #. type: Plain text
-#: CvPcb.adoc:438
+#: CvPcb.adoc:452
 msgid "image:images/en/eeschema_filter.png[]"
 msgstr "image:images/it/eeschema_filter.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:440
+#: CvPcb.adoc:454
 msgid "Filtered by the pin count of the selected component:"
 msgstr "Filtrato per numero di piedini del componente selezionato:"
 
 #. type: Plain text
-#: CvPcb.adoc:442
+#: CvPcb.adoc:456
 msgid "image:images/en/filter_pincount.png[]"
 msgstr "image:images/it/filter_pincount.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:444
+#: CvPcb.adoc:458
 msgid "Filtered by the selected library."
 msgstr "Filtrata per libreria selezionata."
 
 #. type: Plain text
-#: CvPcb.adoc:446
+#: CvPcb.adoc:460
 msgid "image:images/en/filter_library.png[]"
 msgstr "image:images/it/filter_library.png[]"
 
 #. type: Plain text
-#: CvPcb.adoc:449
+#: CvPcb.adoc:463
 msgid ""
 "The filtering can be combined to form more complex filtering to help reduce "
 "the number of footprints in the footprint pane."
@@ -1161,31 +1188,31 @@ msgstr ""
 "aiutare a ridurre il numero di impronte nel pannello delle impronte."
 
 #. type: Plain text
-#: CvPcb.adoc:451
+#: CvPcb.adoc:465
 msgid "Filtered by the selected component pin count and the component filter:"
 msgstr ""
 "Filtrata per numero di piedini del componente selezionato e per libreria "
 "selezionata:"
 
 #. type: Plain text
-#: CvPcb.adoc:453
+#: CvPcb.adoc:467
 msgid "image:images/en/filter_comp_and_pincount.png[]"
 msgstr "image:images/it/filter_comp_and_pincount.png[]"
 
 #. type: Title ==
-#: CvPcb.adoc:454
+#: CvPcb.adoc:468
 #, no-wrap
 msgid "Automatic Associations"
 msgstr "Associazioni automatiche"
 
 #. type: Title ===
-#: CvPcb.adoc:456
+#: CvPcb.adoc:470
 #, no-wrap
 msgid "Equivalence files"
 msgstr "File delle equivalenze"
 
 #. type: Plain text
-#: CvPcb.adoc:460
+#: CvPcb.adoc:474
 msgid ""
 "Equivalence files allow for automatic assignment of footprints to components."
 msgstr ""
@@ -1193,7 +1220,7 @@ msgstr ""
 "componenti."
 
 #. type: Plain text
-#: CvPcb.adoc:464
+#: CvPcb.adoc:478
 msgid ""
 "They list the name of the corresponding footprint according to the name "
 "(__value field__) of the component. These files typically have the *.equ* "
@@ -1204,7 +1231,7 @@ msgstr ""
 "equ**."
 
 #. type: Plain text
-#: CvPcb.adoc:467
+#: CvPcb.adoc:481
 msgid ""
 "They are plain text files and may be edited by using any plain text editor, "
 "and must be created by the user."
@@ -1213,13 +1240,13 @@ msgstr ""
 "qualsiasi editor di testo semplice; devono essere creati dall'utente."
 
 #. type: Title ===
-#: CvPcb.adoc:470
+#: CvPcb.adoc:484
 #, no-wrap
 msgid "Equivalence File Format"
 msgstr "Formato file delle equivalenze"
 
 #. type: Plain text
-#: CvPcb.adoc:474
+#: CvPcb.adoc:488
 msgid ""
 "Equivalence files consist of one line for each component. Each line has the "
 "following structure:"
@@ -1228,13 +1255,13 @@ msgstr ""
 "ha la seguente struttura:"
 
 #. type: Plain text
-#: CvPcb.adoc:476
+#: CvPcb.adoc:490
 #, no-wrap
 msgid "*`component value' `footprint name'*\n"
 msgstr "*`valore componente' `nome impronta'*\n"
 
 #. type: Plain text
-#: CvPcb.adoc:479
+#: CvPcb.adoc:493
 msgid ""
 "Each name must be single quoted by the ’ character and the component and "
 "footprint names must be separated by one or more spaces."
@@ -1243,12 +1270,12 @@ msgstr ""
 "componente e impronta devono essere separati da uno o più spazi."
 
 #. type: Plain text
-#: CvPcb.adoc:481
+#: CvPcb.adoc:495
 msgid "_Example:_"
 msgstr "_Esempio:_"
 
 #. type: Plain text
-#: CvPcb.adoc:484
+#: CvPcb.adoc:498
 msgid ""
 "If the U3 component is circuit 14011 and its footprint is 14DIP300, the line "
 "is:"
@@ -1257,22 +1284,22 @@ msgstr ""
 "riga è:"
 
 #. type: Plain text
-#: CvPcb.adoc:486
+#: CvPcb.adoc:500
 msgid "+`14011' `14DIP300'+"
 msgstr "+`14011' `14DIP300'+"
 
 #. type: Plain text
-#: CvPcb.adoc:488
+#: CvPcb.adoc:502
 msgid "Any line starting with *#* is a comment."
 msgstr "Ogni riga che comincia con *#* è un commento."
 
 #. type: Plain text
-#: CvPcb.adoc:490
+#: CvPcb.adoc:504
 msgid "Here is an example equivalence file:"
 msgstr "Ecco un esempio di file di equivalenze:"
 
 #. type: delimited block -
-#: CvPcb.adoc:515
+#: CvPcb.adoc:529
 #, no-wrap
 msgid ""
 "#integrated circuits (smd):\n"
@@ -1324,7 +1351,7 @@ msgstr ""
 "'XCF08P' 'BGA48'\n"
 
 #. type: delimited block -
-#: CvPcb.adoc:518
+#: CvPcb.adoc:532
 #, no-wrap
 msgid ""
 "#upro\n"
@@ -1334,7 +1361,7 @@ msgstr ""
 "'MCF5213-LQFP100' 'VQFP100'\n"
 
 #. type: delimited block -
-#: CvPcb.adoc:521
+#: CvPcb.adoc:535
 #, no-wrap
 msgid ""
 "#regulators\n"
@@ -1344,13 +1371,13 @@ msgstr ""
 "'LP2985LV' 'SOT23-5'\n"
 
 #. type: Title ===
-#: CvPcb.adoc:524
+#: CvPcb.adoc:538
 #, no-wrap
 msgid "Automatically Associating Footprints to Components"
 msgstr "Associazione automatica di impronte a componenti"
 
 #. type: Plain text
-#: CvPcb.adoc:528
+#: CvPcb.adoc:542
 msgid ""
 "Click on the automatic footprint association button on the top toolbar to "
 "process an equivalence file."
@@ -1359,7 +1386,7 @@ msgstr ""
 "barra degli strumenti per elaborare un file di equivalenze."
 
 #. type: Plain text
-#: CvPcb.adoc:531
+#: CvPcb.adoc:545
 msgid ""
 "_All components found by their value in the selected equivalence (*.equ) "
 "file will have their footprint automatically assigned._"
