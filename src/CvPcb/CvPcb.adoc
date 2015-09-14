@@ -67,15 +67,29 @@ associating the footprints in the schematic editor.
 CvPcb allows you to see the list of available footprints and to display them
 on the screen to ensure you are associating the correct footprint.
 
-*It can be run only from Eeschema, form the main toolbar, when started
-as a project from the KiCad project manager*.
+**It can be run only from Eeschema**, from the top toolbar, either when
+Eeschema is started from the KiCad project manager or when Eeschema is
+started as a stand alone application.
 
-the reasons are:
+Running CvPcb from Eeschema lauched from the KiCad Manager is generally
+better because:
 
-* Cvpcb needs the project config file to know the footprint libraries to load.
-* Cvpcb initializes the components footprint fields of the current schematic project.
-  This is possible only when Eeschema is running.
+* Cvpcb needs the project config file to know the footprint libraries to
+  load.
 
+* Cvpcb initializes the components footprint fields of the current
+  schematic project. This is possible only if the project file is in the
+  same path as the open schematic.
+
+Lauching CvPcb from an Eeschema launched from the KiCad manager assures
+automatically all this.
+
+WARNING: You actually *can* launch CvPcb from a stand alone Eeschema
+session though, but please note that any schematic opened that does not
+have a project file in the same path may be missing components due to
+missing libraries which will not show up in CvPcb. If there is no
+fp-lib-table file in the same path as the open schematic, no project
+specific footprint libraries will be available either.
 
 == CvPcb Features
 
