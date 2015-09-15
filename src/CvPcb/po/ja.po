@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CvPcb-ja\n"
 "POT-Creation-Date: 2015-09-14 12:44+0200\n"
-"PO-Revision-Date: 2015-09-13 09:46+0200\n"
-"Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
+"PO-Revision-Date: 2015-09-15 20:44+0900\n"
+"Last-Translator: starfort <starfort@nifty.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.2\n"
+"X-Generator: Poedit 1.8.4\n"
 
 # UD1: 07092015
 # PR1:07212015 proofreading - 1st time
@@ -180,17 +180,15 @@ msgstr ""
 # 07092015：訂正
 #. type: Plain text
 #: CvPcb.adoc:73
-#, fuzzy, no-wrap
-#| msgid ""
-#| "*It can be run only from Eeschema, form the main toolbar, when started\n"
-#| "as a project from the KiCad project manager*.\n"
+#, no-wrap
 msgid ""
 "**It can be run only from Eeschema**, from the top toolbar, either when\n"
 "Eeschema is started from the KiCad project manager or when Eeschema is\n"
 "started as a stand alone application.\n"
 msgstr ""
-"*CvPcb は、KiCad プロジェクトマネージャーからプロジェクトが開始された後、メインツールバー\n"
-"から呼び出した Eeschema からのみ実行できます。*\n"
+"**CvPcb は Eeschema からのみ実行できます。** Eeschema は KiCad プロジェクトマネージャー\n"
+"から起動、もしくは単独のアプリケーションとして起動され、どちらの場合でも、その上部ツールバー\n"
+"から CvPcb を実行することができます。\n"
 
 #. type: Plain text
 #: CvPcb.adoc:76
@@ -198,28 +196,27 @@ msgid ""
 "Running CvPcb from Eeschema lauched from the KiCad Manager is generally "
 "better because:"
 msgstr ""
+"KiCad プロジェクトマネージャーから起動した Eeschema から CvPcb を実行するほう"
+"が一般的には望ましいと言えます。何故なら:"
 
 #. type: Plain text
 #: CvPcb.adoc:79
 msgid ""
 "Cvpcb needs the project config file to know the footprint libraries to load."
 msgstr ""
-"Cvpcb は読み込まれたフットプリントライブラリを認識するためにプロジェクトファ"
-"イルを必要とするため。"
+"Cvpcb は読み込まれるフットプリントライブラリを認識するためにプロジェクト定義"
+"ファイルを必要とします。"
 
 #. type: Plain text
 #: CvPcb.adoc:83
-#, fuzzy
-#| msgid ""
-#| "Cvpcb initializes the components footprint fields of the current "
-#| "schematic project.  This is possible only when Eeschema is running."
 msgid ""
 "Cvpcb initializes the components footprint fields of the current schematic "
 "project. This is possible only if the project file is in the same path as "
 "the open schematic."
 msgstr ""
 "Cvpcb は現在の回路図プロジェクトのコンポーネントのフットプリントフィールドを"
-"初期化します。これは Eeschema の実行中のみ可能です。"
+"初期化します。これは、開かれた回路図とプロジェクトファイルが同じディレクトリ"
+"に存在する場合のみ可能です。"
 
 #. type: Plain text
 #: CvPcb.adoc:86
@@ -227,6 +224,8 @@ msgid ""
 "Lauching CvPcb from an Eeschema launched from the KiCad manager assures "
 "automatically all this."
 msgstr ""
+"KiCad プロジェクトマネージャーから起動した Eeschema からの CvPcb の実行は、こ"
+"れらが全て自動的に行われることを保証します。"
 
 #. type: Plain text
 #: CvPcb.adoc:93
@@ -238,6 +237,12 @@ msgid ""
 "as the open schematic, no project specific footprint libraries will be "
 "available either."
 msgstr ""
+"実際には、スタンドアロンで起動した Eeschema から CvPcb を呼び出すこともできま"
+"す。しかしながら、同じディレクトリにプロジェクトファイルがない状態で開かれた"
+"回路図はライブラリがないためコンポーネントを見失い、CvPcb で表示されないこと"
+"にご注意ください。もし開いた回路図と同じディレクトリに fp-lib-table ファイル"
+"がなければ、プロジェクト固有のフットプリントライブラリもまた無効になるでしょ"
+"う。"
 
 #. type: Title ==
 #: CvPcb.adoc:94
