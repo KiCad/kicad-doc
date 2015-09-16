@@ -5,14 +5,14 @@
 # (c)2015 Brian Sidebotham <brian.sidebotham@gmail.com>
 #
 
-add_subdirectory( CvPcb )
-add_subdirectory( Eeschema )
-add_subdirectory( GerbView )
-add_subdirectory( Getting_Started_in_KiCad )
-add_subdirectory( IDF_Exporter )
-add_subdirectory( KiCad )
-add_subdirectory( Pcbnew )
-add_subdirectory( Pl_Editor )
-add_subdirectory( GUI_Translation_HOWTO )
+add_subdirectory( cvpcb )
+add_subdirectory( eeschema )
+add_subdirectory( gerbview )
+add_subdirectory( getting_started_in_kicad )
+add_subdirectory( idf_exporter )
+add_subdirectory( kicad )
+add_subdirectory( pcbnew )
+add_subdirectory( pl_editor )
+add_subdirectory( gui_translation_howto )
 
 KiCadDocumentation( webdocindex ) # PDF output won't be as useful as HTML

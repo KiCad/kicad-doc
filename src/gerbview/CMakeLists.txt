@@ -5,4 +5,4 @@
 # (c)2015 Brian Sidebotham <brian.sidebotham@gmail.com>
 #
 
-KiCadDocumentation( Pl_Editor )
+KiCadDocumentation( gerbview )
