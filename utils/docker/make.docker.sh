@@ -15,12 +15,12 @@ function makeAll {
 cd "$adocRoot"
 
 # build each sub directory
-makeAll CvPcb
-makeAll Eeschema
-makeAll GerbView
-makeAll Getting_Started_in_KiCad
-makeAll IDF_Exporter
-makeAll Interactive_Router
-makeAll KiCad
-makeAll Pcbnew
-makeAll Pl_Editor
+makeAll cvpcb
+makeAll eeschema
+makeAll gerbview
+makeAll getting_started_in_kicad
+makeAll idf_exporter
+makeAll interactive_router
+makeAll kicad
+makeAll pcbnew
+makeAll pl_editor
