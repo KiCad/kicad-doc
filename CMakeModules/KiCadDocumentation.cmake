@@ -113,8 +113,8 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_html_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_html_${LANGUAGE} )
 
-            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
-            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ./${LANGUAGE}/${DOCNAME}/html )
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ./${LANGUAGE}/${DOCNAME}/html COMPONENT html-${LANGUAGE} )
+            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ./${LANGUAGE}/${DOCNAME}/html COMPONENT html-${LANGUAGE})
         endif()
 
 
@@ -129,7 +129,7 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_pdf_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_pdf_${LANGUAGE} )
 
-            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ./${LANGUAGE}/${DOCNAME}/pdf )
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ./${LANGUAGE}/${DOCNAME}/pdf COMPONENT pdf-${LANGUAGE})
         endif()
 
 
@@ -144,7 +144,7 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_epub_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_epub_${LANGUAGE} )
 
-            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.epub DESTINATION ./${LANGUAGE}/${DOCNAME}/epub )
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.epub DESTINATION ./${LANGUAGE}/${DOCNAME}/epub COMPONENT epub-${LANGUAGE})
         endif()
     endforeach()
 
