@@ -22,7 +22,7 @@ macro( add_adoc_pdf_target TARGET INFILE OUTFILE LANGUAGE )
         # Convert semi-colon separated list to space separated string
         string( REPLACE ";" " " DBLATEX_OPTIONS_STRING "${DBLATEX_OPTIONS}" )
         set( DBLATEX_OPTIONS_STRING "${DBLATEX_OPTIONS_STRING} -o ${OUTFILE}" )
-        list( APPEND _A2X_OPTIONS --dblatex-opts "${DBLATEX_OPTIONS_STRING}" )
+        list( APPEND _A2X_OPTIONS -a lang=${LANGUAGE} --dblatex-opts "${DBLATEX_OPTIONS_STRING}" )
     endif()
 
     # When using FOP, pass the -D option to pass the output directory
@@ -32,9 +32,12 @@ macro( add_adoc_pdf_target TARGET INFILE OUTFILE LANGUAGE )
         # trying to change the output filename, see:
         # https://groups.google.com/forum/#!topic/asciidoc/CXU_XnDlM5w
 
-        # string( REPLACE ";" " " FOP_OPTIONS_STRING "${FOP_OPTIONS}" )
-        # set( FOP_OPTIONS_STRING "${FOP_OPTIONS_STRING} -pdf ${OUTFILE}" )
-        # list( APPEND _A2X_OPTIONS --fop-opts "${FOP_OPTIONS_STRING}" )
+        #string( REPLACE ";" " " FOP_OPTIONS_STRING "${FOP_OPTIONS}" )
+        #set( FOP_OPTIONS_STRING "${FOP_OPTIONS_STRING} -pdf ${OUTFILE}" )
+        #list( APPEND _A2X_OPTIONS --fop-opts "${FOP_OPTIONS_STRING}" )
+
+        list( APPEND _A2X_OPTIONS -a lang=${LANGUAGE} )
+
 
         # No need to add the -D option to A2X because the translated "source"
         # now ends up in the same directory as the PDF output
