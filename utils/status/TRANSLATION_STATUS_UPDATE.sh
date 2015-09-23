@@ -1,8 +1,10 @@
 #!/bin/bash
 
+cd ../../src
+
 DIRLIST=`ls -d */ |tr -d '/'`
 
-OUTPUTF=i18n_status.csv
+OUTPUTF=../utils/status/i18n_status.csv
 
 rm -f $OUTPUTF
 
