@@ -9,6 +9,8 @@
 #
 #############################
 
+SCRIPTSBASEDIR:=../../utils/old-build-scripts
+
 #It takes the dir name as project name, and the doc title.
 #expect the asciidoc main doc being of the same name 
 #(i.e. ThisDirName.adoc)
@@ -41,15 +43,13 @@ ASCIIDOCVAR:= -a 'newline=\n' -v
 UTOC:= $(shell if [ -z "$$TOC2" ] ; then echo -n "-a toc2" ; fi )
 
 #disabling some unuseful print and added custom dblatex style to generate a nice cover image
-DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s $(SCRIPTSBASEDIR)/pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
 .SUFFIXES: #Disabe implicit rules
 
-#	@echo "This makefile should be not executed directly!"
-#	@echo "Please cd inside the project dir and then execute:"
 
 .PHONY: help
 help:
-	@echo "Please do './make.sh <target>' where <target> is one of"
+	@echo "Void or invalid target. Use one of:"
 	@echo "  pot        to build the english strings catalog .pot file"
 	@echo "  $(PODIR)/NN.po   to build/update the single language NN i18n strings .po file"
 #	@echo "  po-NN      to build/update the single language NN i18n strings .po file"
@@ -70,6 +70,7 @@ help:
 	@echo "  all        to make all of the above (english)"
 	@echo "  all-all    to make all of the above"
 	@echo ""
+	@echo "Please use this Makefile inside the project dir."
 	@echo "Default html has a side toc, to disable: export TOC2=no (or any other string) ; make html"
 #	@echo ""
 #	@echo "MAKEFILE DEBUG:"
@@ -152,7 +153,7 @@ $(DOCNAME).pdf: $(DOCNAME).adoc $(DOCCHAPTERS)
 	a2x -f pdf $(ASCIIDOCVAR) --dblatex-opts $(DBLATEXOPTS) $(DOCNAME).adoc
 
 #Japanese pdf
-DBLATEXOPTS-JA="-b xetex -p ../../xsl/dblatex-pdf-ja.xsl -P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+DBLATEXOPTS-JA="-b xetex -p ../../xsl/dblatex-pdf-ja.xsl -P latex.output.revhistory=0 -P doc.publisher.show=0 -s $(SCRIPTSBASEDIR)/pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
 $(DOCNAME)-ja.pdf: $(DOCNAME)-ja.adoc
 	echo "Note: To make japanese pdf, you need to install fonts-vlgothic (like: sudo apt-get install fonts-vlgothic)."
 	a2x -f pdf $(ASCIIDOCVAR) -a lang=ja --dblatex-opts $(DBLATEXOPTS-JA) $(DOCNAME)-ja.adoc
@@ -171,16 +172,20 @@ pdf-all: pdf $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).pdf)
 
 #Build cover docinfo
 $(DOCNAME)-docinfo.xml:
-	$(shell sed -e 's/DOCTITLE/$(DOCTITLE)/' ../epub-cover-docinfo-template.xml > $(DOCNAME)-docinfo.xml)
+	$(shell sed -e 's/DOCTITLE/$(DOCTITLE)/' $(SCRIPTSBASEDIR)/epub-cover-docinfo-template.xml > $(DOCNAME)-docinfo.xml)
+
+#	cp $(SCRIPTSBASEDIR)/epub-cover-docinfo-template-new.xml $(DOCNAME)-docinfo.xml
+
 
 #Build i18n cover docinfo
 $(DOCNAME)-%-docinfo.xml:
-	$(shell sed -e 's/DOCTITLE/$(DOCTITLE)/' ../epub-cover-docinfo-template.xml > $(DOCNAME)-$*-docinfo.xml)
+	$(shell sed -e 's/DOCTITLE/$(DOCTITLE)/' $(SCRIPTSBASEDIR)/epub-cover-docinfo-template.xml > $(DOCNAME)-$*-docinfo.xml)
+#	cp $(SCRIPTSBASEDIR)/epub-cover-docinfo-template-new.xml $(DOCNAME)-$*-docinfo.xml
 
 #English epub
 $(DOCNAME).epub: $(DOCNAME).adoc $(DOCCHAPTERS) $(DOCNAME)-docinfo.xml
 	a2x -f epub -a docinfo $(DOCNAME).adoc
-	rm $(DOCNAME)-docinfo.xml
+#	rm $(DOCNAME)-docinfo.xml
 
 #I18n epub
 $(DOCNAME)-%.epub: $(DOCNAME)-%.adoc $(DOCNAME)-%-docinfo.xml
