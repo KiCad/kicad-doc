@@ -43,7 +43,7 @@ ASCIIDOCVAR:= -a 'newline=\n' -v
 UTOC:= $(shell if [ -z "$$TOC2" ] ; then echo -n "-a toc2" ; fi )
 
 #disabling some unuseful print and added custom dblatex style to generate a nice cover image
-DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s $(SCRIPTSBASEDIR)/pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
 .SUFFIXES: #Disabe implicit rules
 
 
@@ -153,7 +153,7 @@ $(DOCNAME).pdf: $(DOCNAME).adoc $(DOCCHAPTERS)
 	a2x -f pdf $(ASCIIDOCVAR) --dblatex-opts $(DBLATEXOPTS) $(DOCNAME).adoc
 
 #Japanese pdf
-DBLATEXOPTS-JA="-b xetex -p ../../xsl/dblatex-pdf-ja.xsl -P latex.output.revhistory=0 -P doc.publisher.show=0 -s $(SCRIPTSBASEDIR)/pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+DBLATEXOPTS-JA="-b xetex -p ../../xsl/dblatex-pdf-ja.xsl -P latex.output.revhistory=0 -P doc.publisher.show=0 -s ../pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
 $(DOCNAME)-ja.pdf: $(DOCNAME)-ja.adoc
 	echo "Note: To make japanese pdf, you need to install fonts-vlgothic (like: sudo apt-get install fonts-vlgothic)."
 	a2x -f pdf $(ASCIIDOCVAR) -a lang=ja --dblatex-opts $(DBLATEXOPTS-JA) $(DOCNAME)-ja.adoc
