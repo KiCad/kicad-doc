@@ -11,6 +11,15 @@ macro( KiCadDocumentation DOCNAME )
     add_custom_target( ${DOCNAME} ALL )
     add_custom_target( ${DOCNAME}_updatepo_all )
 
+    # Define the install path
+    if( APPLE )
+        set( KICAD_DOC_PATH ${CMAKE_INSTALL_PREFIX}/help
+            CACHE PATH "Location of KiCad doc files." )
+    else()
+        set( KICAD_DOC_PATH ${CMAKE_INSTALL_PREFIX}/share/doc/kicad/help
+            CACHE PATH "Location of KiCad doc files." )
+    endif()
+
     # Get a list of all the doc chapters
     file( GLOB DOCCHAPTERFILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}_*.adoc )
 
@@ -113,8 +122,8 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_html_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_html_${LANGUAGE} )
 
-            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ./${LANGUAGE}/${DOCNAME}/html COMPONENT html-${LANGUAGE} )
-            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ./${LANGUAGE}/${DOCNAME}/html COMPONENT html-${LANGUAGE})
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT html-${LANGUAGE} )
+            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT html-${LANGUAGE})
         endif()
 
 
@@ -129,7 +138,7 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_pdf_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_pdf_${LANGUAGE} )
 
-            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ./${LANGUAGE}/${DOCNAME}/pdf COMPONENT pdf-${LANGUAGE})
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT pdf-${LANGUAGE})
         endif()
 
 
@@ -144,7 +153,7 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_epub_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_epub_${LANGUAGE} )
 
-            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.epub DESTINATION ./${LANGUAGE}/${DOCNAME}/epub COMPONENT epub-${LANGUAGE})
+            install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.epub DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT epub-${LANGUAGE})
         endif()
     endforeach()
 

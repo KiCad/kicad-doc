@@ -110,3 +110,17 @@ For example, use `-DPDF_GENERATOR=FOP` to use FOP to build the PDFs. If the
 will have no effect on the build.
 
 This option doesn't transform the built package name.
+
+=== Packaging the docs
+The docs use CMake as mentioned earlier, so to install it as a packager use the
+normal CMake way, for example:
+
+    mkdir build; cd build
+    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
+    make install
+
+And if on OS X you might want something like:
+
+    mkdir build; cd build
+    cmake -DCMAKE_INSTALL_PREFIX="/Library/Application Support/kicad" ..
+    make install
