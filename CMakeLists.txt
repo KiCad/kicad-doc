@@ -125,6 +125,10 @@ if( GIT_FOUND )
     endif()
 endif()
 
+# Everything without leading / is relative to CMAKE_INSTALL_PREFIX.
+set( KICAD_DOC_INSTALL_PATH share/doc/kicad
+     CACHE PATH "Install path of KiCad documentation files relative to CMAKE_INSTALL_PREFIX." )
+
 # Set the language in the package name if the package only contains a single
 # language
 if( "${SINGLE_LANGUAGE}" STREQUAL "" )
