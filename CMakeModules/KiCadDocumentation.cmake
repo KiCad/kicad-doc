@@ -153,6 +153,12 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_epub_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_epub_${LANGUAGE} )
 
+            # Make the epub target depend on the PDF build as the targets have a race
+            # condition, probably with intermediary files
+            if( NOT "${PDF_BUILD}" EQUAL "-1" )
+                add_dependencies( ${DOCNAME}_epub_${LANGUAGE} ${DOCNAME}_pdf_${LANGUAGE} )
+            endif()
+
             install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.epub DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT epub-${LANGUAGE})
         endif()
     endforeach()
