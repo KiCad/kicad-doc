@@ -45,7 +45,7 @@ if( ${PDF_GENERATOR} MATCHES DBLATEX )
     # --dblatex-opts command and uses the following options for that
     add_dblatex_option( -P latex.output.revhistory=0 )
     add_dblatex_option( -P doc.publisher.show=0 )
-    add_dblatex_option( -s ${PROJECT_SOURCE_DIR}/src/pdf-cover-dblatex.sty )
+    add_dblatex_option( -s ${PROJECT_SOURCE_DIR}/CMakeSupport/pdf-cover-dblatex.sty )
 
     find_package( DBLATEX REQUIRED )
 endif()
