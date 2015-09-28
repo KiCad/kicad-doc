@@ -13,10 +13,10 @@ macro( KiCadDocumentation DOCNAME )
 
     # Define the install path
     if( APPLE )
-        set( KICAD_DOC_PATH ${CMAKE_INSTALL_PREFIX}/help
+        set( KICAD_DOC_PATH ./help
             CACHE PATH "Location of KiCad doc files." )
     else()
-        set( KICAD_DOC_PATH ${CMAKE_INSTALL_PREFIX}/share/doc/kicad/help
+        set( KICAD_DOC_PATH ./share/doc/kicad/help
             CACHE PATH "Location of KiCad doc files." )
     endif()
 
