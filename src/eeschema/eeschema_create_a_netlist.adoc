@@ -8,7 +8,7 @@ A netlist is a file which describes electrical connections between
 components. In the netlist file you can find:
 
 * The list of the components
-* The list of connections between components, called equip-potential
+* The list of connections between components, called equi-potential
   nets.
 
 Different netlist formats exist. Sometimes the components list and the
@@ -56,11 +56,11 @@ With big projects, the netlist generation can take up to few minutes.
 [[netlist-examples]]
 === Netlist examples
 
-You can see below a schematic design using the PSPICE library.
+You can see below a schematic design using the PSPICE library:
 
 image:images/10000000000002BE0000017EB6C97C72.png[10000000000002BE0000017EB6C97C72_png]
 
-Example of a PCBNEW netlist file.
+Example of a PCBNEW netlist file:
 
 ------------------------------------------------------------
 # Eeschema Netlist Version 1.0 generee le 21/1/1997-16:51:15
@@ -123,7 +123,7 @@ Example of a PCBNEW netlist file.
 # End
 ------------------------------------------------------------
 
-In PSPICE format, the netlist is as follows.
+In PSPICE format, the netlist is as follows:
 
 -------------------------------------------------------------------------------
 * Eeschema Netlist Version 1.1 (Spice format) creation date: 18/6/2008-08:38:03
@@ -167,12 +167,12 @@ Q1   N-000010 /VIN N-000007 N-000007 Q2N2222
 ==== Netlist name precautions
 
 Many software tools that use netlists do not accept spaces in the
-component names, pins, equipotentials or others. Systematically avoid
+component names, pins, equi-potential nets or others. Systematically avoid
 spaces in labels, or names and value fields of components or their pins.
 
 In the same way, special characters other than letters and numbers can
-induce problems. Note that this limitation is not related to Eeschema,
-but to the netlist formats that can then become not translatable to
+cause problems. Note that this limitation is not related to Eeschema,
+but to the netlist formats that can then become untranslatable to
 software that uses netlist files.
 
 [[pspice-netlists]]
@@ -189,11 +189,11 @@ Any text line included in the schematic diagram starting with the
 keyword *+pspice* or *+gnucap* will be inserted (without the keyword) at
 the end of the netlist.
 
-Here is a sample using many one line texts and one multi-line text.
+Here is a sample using many one-line texts and one multi-line text:
 
 image:images/100000000000021B000001BDEA9ADDBA.png[100000000000021B000001BDEA9ADDBA_png]
 
-For example: if you type the following text (do not use a label!):
+For example, if you type the following text (do not use a label!):
 
  -PSPICE .PROBE
 
@@ -239,24 +239,24 @@ You can add a new netlist plug-in via the Add Plugin tab.
 
 image:images/10000000000000DA000000C6E73B58D7.png[10000000000000DA000000C6E73B58D7_png]
 
-Here is the plug-in PadsPcb setup window
+Here is the plug-in PadsPcb setup window:
 
 image:images/100000000000021300000103755CDB21.png[100000000000021300000103755CDB21_png]
 
 The setup will require:
 
-* A title (for instance: the name of the netlist format).
+* A title (for example, the name of the netlist format).
 * The plug-in to launch.
 
 When the netlist is generated:
 
-1.  Eeschema creates an intermediate file *.tmp, for instance test.tmp.
+1.  Eeschema creates an intermediate file *.tmp, for example test.tmp.
 2.  Eeschema run the plug-in, which reads test.tmp and creates test.net.
 
 [[command-line-format]]
 ==== Command line format
 
-Here is an example, using xsltproc.exe as tool to convert .xsl files,
+Here is an example, using xsltproc.exe as a tool to convert .xsl files,
 and a file netlist_form_pads-pcb.xsl as converter sheet style:
 
 *f:/kicad/bin/xsltproc.exe -o %O.net
@@ -283,19 +283,19 @@ f:/kicad/bin/xsltproc.exe -o test.net
 f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl test.tmp.
 
 [[converter-and-sheet-style-plug-in]]
-==== Converter and sheet style (plug in)
+==== Converter and sheet style (plug-in)
 
 This is a very simple piece of software, because its purpose is only to
-convert an input text file (the intermediate text file) to an other text
+convert an input text file (the intermediate text file) to another text
 file. Moreover, from the intermediate text file, you can create a BOM
 list.
 
-When using xsltproc as converter tool only the sheet style will be
+When using xsltproc as the converter tool only the sheet style will be
 generated.
 
 [[intermediate-netlist-file-format]]
 ==== Intermediate netlist file format
 
-See Chapter 14 for more explanations about xslproc, the descriptions of
+See Chapter 14 for more explanations about xslproc, descriptions of the
 intermediate file format, and some examples of sheet style for
 converters.
