@@ -26,11 +26,11 @@ A component is composed of:
   symbolic definition.
 * Pins which have both graphic properties (line, clock, inverted, low
   level active, etc ) and electrical properties (input, output,
-  bidirectional, etc.) used by the E lectrical R ules C heck (ERC) tool.
+  bidirectional, etc.) used by the Electrical Rules Check (ERC) tool.
 * Fields such as references, values, corresponding footprint names for
   PCB design, etc.
 * Aliases used to associate a common component such as a 7400 with all
-  of it's derivatives such as 74LS00, 74HC00, and 7437. All of these
+  of its derivatives such as 74LS00, 74HC00, and 7437. All of these
   aliases share the same library component.
 
 Proper component designing requires:
@@ -44,9 +44,9 @@ Proper component designing requires:
   name, number, and electrical property (input, output, tri-state, power
   port, etc.).
 * Adding an alias if other components have the same symbol and pin out
-  or removing one if the component has been created from an other
+  or removing one if the component has been created from another
   component.
-* Adding optional fields such the name of the footprint used by the PCB
+* Adding optional fields such as the name of the footprint used by the PCB
   design software and/or defining their visibility.
 * Documenting the component by adding a description string and links to
   data sheets, etc.
@@ -148,7 +148,7 @@ component does not have an alternate body style.
 documentation is defined for the current component.
 
 |image:images/toolbar_libedit_part.png[images/toolbar_libedit_part.png]
-|Select the unit to display. The drop down control will be disable if
+|Select the unit to display. The drop down control will be disabled if
 the current component is not derived from multiple units.
 
 |image:images/toolbar_libedit_alias.png[images/toolbar_libedit_part.png]
@@ -173,40 +173,40 @@ component. The table below defines each tool bar button.
 [width="100%",cols="10%,90%",]
 |=======================================================================
 |image:images/icons/cursor.png[icons/cursor_png]
-|Select tool. Right clicking with the select tool opens the context menu
-for the object under the cursor. Left clicking with the select tool
+|Select tool. Right-clicking with the select tool opens the context menu
+for the object under the cursor. Left-clicking with the select tool
 displays the attributes of the object under the cursor in the message
-panel at the bottom of the main window. Left double-click with the
+panel at the bottom of the main window. Double-left-clicking with the
 select tool will open the properties dialog for the object under the
 cursor.
 
 |image:images/icons/pin.png[icons/pin_png]
-|Pin tool. Left click to add a new pin.
+|Pin tool. Left-click to add a new pin.
 
 |image:images/icons/add_text.png[icons/add_text_png]
-|Graphical text tool. Left click to add a new graphical text item.
+|Graphical text tool. Left-click to add a new graphical text item.
 
 |image:images/icons/add_rectangle.png[icons/add_rectangle_png]
-|Rectangle tool. Left click to begin drawing the first corner of a
-graphical rectangle. Left click again to place the opposite corner of
+|Rectangle tool. Left-click to begin drawing the first corner of a
+graphical rectangle. Left-click again to place the opposite corner of
 the rectangle.
 
 |image:images/icons/add_circle.png[icons/add_circle_png]
-|Circle tool. Left click to begin drawing a new graphical circle from
-the center. Left click again to define the radius of the cicle.
+|Circle tool. Left-click to begin drawing a new graphical circle from
+the center. Left-click again to define the radius of the cicle.
 
 |image:images/icons/add_arc.png[icons/add_arc_png]
-|Arc tool. Left click to begin drawing a new graphical arc item from the
-center. Left click again to define the first arc end point. Left click
+|Arc tool. Left-click to begin drawing a new graphical arc item from the
+center. Left-click again to define the first arc end point. Left-click
 again to defint the second arc end point.
 
 |image:images/icons/add_polygon.png[icons/add_polygon_png]
-|Polygon tool. Left click to begin drawing a new graphical polygon item
-in the current component. Left click for each addition polygon line.
-Left double click to complete the polygon.
+|Polygon tool. Left-click to begin drawing a new graphical polygon item
+in the current component. Left-click for each addition polygon line.
+Double-left-click to complete the polygon.
 
 |image:images/icons/anchor.png[icons/anchor_png]
-|Anchor tool. Left click to set the anchor position of the component.
+|Anchor tool. Left-click to set the anchor position of the component.
 
 |image:images/icons/import.png[icons/import_png]
 |Import a component from a file.
@@ -215,7 +215,7 @@ Left double click to complete the polygon.
 |Export the current component to a file.
 
 |image:images/icons/delete.png[icons/delete_png]
-|Delete tool. Left click to delete an object from the current component.
+|Delete tool. Left-click to delete an object from the current component.
 |=======================================================================
 
 [[options-toolbar]]
@@ -247,11 +247,11 @@ The selection of the current library is possible via the
 image:images/icons/library.png[icons/library_png]
 which shows you all available libraries and allows you to select one.
 When a component is loaded or saved, it will be put in this library. The
-library name of component is the contents of it's value field.
+library name of component is the contents of its value field.
 
 [NOTE]
 ====
-* You must load a library in Eeschema, in order to access it's contents.
+* You must load a library in Eeschema, in order to access its contents.
 * The content of the current library can be saved after modification, by
   clicking on the
   image:images/icons/save_library.png[icons/save_library_png]
@@ -265,7 +265,7 @@ library name of component is the contents of it's value field.
 
 When you edit a component you are not really working on the component in
 its library but on a copy of it in the computer's memory. Any edit
-action can undone easily. A component may be loaded from a local library
+action can be undone easily. A component may be loaded from a local library
 or from an existing component.
 
 [[component-selection]]
@@ -277,8 +277,8 @@ on the main tool bar displays the list of the available components that
 you can select and load from the currently selected library.
 
 [NOTE]
-If a component selected by it's alias, the name of the loaded component
-is displayed on the window title bar instead of selected alias. The list
+If a component is selected by its alias, the name of the loaded component
+is displayed on the window title bar instead of the selected alias. The list
 of component aliases is always loaded with each component and can be
 edited. You can create a new component by selecting an alias of the
 current component from the 
@@ -295,8 +295,8 @@ image:images/icons/export.png[icons/export_png].
 [[save-a-component]]
 ===== Save a Component
 
-After modification, a component can be saved in the current library or
-in a new library or exported to a backup file.
+After modification, a component can be saved in the current library,
+in a new library, or exported to a backup file.
 
 To save the modified component in the current library, click the
 image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png].
@@ -329,7 +329,7 @@ image:images/icons/export.png[icons/export_png]
 to create a file containing only the current component. This file 
 will be a standard library file which will contains only one component.
 This file can be used to import the component into another library. In
-fact the create new library command and the export command are basically
+fact, the create new library command and the export command are basically
 identical.
 
 [[transfer-components-to-another-library]]
@@ -389,12 +389,12 @@ image:images/100000000000030A00000205F0A88B4F.png[100000000000030A00000205F0A88B
 
 Often, the component that you want to make is similar to one already in
 a component library. In this case it is easy to load and modify an
-already existing component.
+existing component.
 
 * Load the component which will be used as a starting point.
 * Click on the 
   image:images/icons/copycomponent.png[icons/copycomponent_png]
-  or modify its name by right click on the value field and editing the text.
+  or modify its name by right-click on the value field and editing the text.
   If you chose to duplicate the current component, you will be prompted
   for a new component name.
 * If the model component has aliases, you will be prompted to remove
@@ -417,14 +417,14 @@ already existing component.
 ==== Component Properties
 
 Component properties should be carefully set during the component
-creation or alternatively they are inherited from copied component. To
+creation or alternatively they are inherited from the copied component. To
 change the component properties, click on the
 image:images/icons/part_properties.png[icons/part_properties_png]
 to show the dialog below.
 
 image:images/10000000000001B2000001509F311F99.png[10000000000001B2000001509F311F99_png]
 
-It is very important to correct set the number of units per package and
+It is very important to correctly set the number of units per package and
 if the component has an alternate symbolic representation parameters
 correctly because when pins are edited or created the corresponding pins
 for each unit will created. If you change the number of units per
@@ -458,7 +458,7 @@ To edit the alternate symbol click on the
 image:images/icons/morgan2.png[icons/morgan2_png]. 
 Use the
 image:images/toolbar_libedit_alias.png[images/toolbar_libedit_alias.png]
-show below to select the unit you wish to edit.
+shown below to select the unit you wish to edit.
 
 image:images/1000000000000456000002680D968591.png[1000000000000456000002680D968591_png]
 
@@ -484,13 +484,13 @@ component's symbolic representation.
 
 Each graphic element (line, arc, circle, etc.) can be defined as common
 to all units and/or body styles or specific to a given unit and/or body
-style. Element options can be quickly accessed by the right clicking on
+style. Element options can be quickly accessed by right-clicking on
 the element to display the context menu for the selected element. Below
 is the context menu for a line element.
 
 image:images/20000009000056D200003432E4789F12.png[20000009000056D200003432E4789F12_png]
 
-You can also double left click on an element to modify it's properties.
+You can also double-left-click on an element to modify its properties.
 Below is the properties dialog for a polygon element.
 
 image:images/100000000000012100000146E8D1DDCE.png[100000000000012100000146E8D1DDCE_png]
@@ -594,14 +594,14 @@ to create and insert a pin. The editing of all pin properties is done by
 double-clicking on the pin or right-clicking on the pin to open the pin
 context menu. Pins must be created carefully, because any error will
 have consequences on the PCB design. Any pin already placed can be
-edited, deleted, and / or moved.
+edited, deleted, and/or moved.
 
 [[pin-overview]]
 ==== Pin Overview
 
-A pin is defined by it's graphical representation, it's name and it's
+A pin is defined by its graphical representation, its name and its
 “number”. The pin's “number” is defined by a set of 4 letters and / or
-numbers. For the electronic rules check (ERC) tool to be useful, the
+numbers. For the Electrical Rules Check (ERC) tool to be useful, the
 pin's “electrical” type (input, output, tri-state...) must also be
 defined correctly. If this type is not defined properly, the schematic
 ERC check results may be invalid.
@@ -616,7 +616,7 @@ Important notes:
   unnamed.
 * Pin names starting with “\#”, are reserved for power port symbols.
 * A pin “number” consists of 1 to 4 letters and/ or numbers. 1,2,..9999
-  are valid numbers. A1, B3, Anod, Gnd, Wi r e, etc. are also valid.
+  are valid numbers. A1, B3, Anod, Gnd, Wire, etc. are also valid.
 * Duplicate pin “numbers” cannot exist in a component.
 
 [[pin-properties]]
@@ -638,7 +638,7 @@ when double-clicking on an existing pin. This dialog allows you modify:
 [[pins-graphical-styles]]
 ==== Pins Graphical Styles
 
-You can see on the figure below the different pin graphical styles. The
+Shown in the figure below are the different pin graphical styles. The
 choice of graphic styles does not have any influence on the pin's
 electrical type.
 
@@ -701,7 +701,7 @@ A component can have two symbolic representations (representation known
 as “DeMorgan”) and can be made up of more than one unit as in the case
 of components with logic gates. For certain components, you may want
 several different graphic elements and pins. Like the relay sample shown
-in section 11.7.1, a relay can be represented three distinct units: a
+in section 11.7.1, a relay can be represented by three distinct units: a
 coil, switch contact 1, and switch contact 2.
 
 The management of the components with multiple units and components with
@@ -733,8 +733,8 @@ All library components are defined with four default fields. The
 reference designator, value, footprint assignment, and documentation
 file link fields are created whenever a component is created or copied.
 Only the reference designator and value fields are required. For
-existing fields, you can use the context menu commands by right click
-ing on the pin. Components defined in libraries typically are defined
+existing fields, you can use the context menu commands by right-clicking
+on the pin. Components defined in libraries are typically defined
 with these four default fields. Additional fields such as vendor, part
 number, unit cost, etc. can be added to library components but generally
 this is done in the schematic editor so the additional fields can be
@@ -743,7 +743,7 @@ applied to all of the components in the schematic.
 [[editing-component-fields]]
 ==== Editing Component Fields
 
-To edit an existing component field, right click on the field text to
+To edit an existing component field, right-click on the field text to
 show the field context menu shown below.
 
 image:images/200000090000154B000027E6496104E3.png[200000090000154B000027E6496104E3_png]
@@ -793,13 +793,13 @@ To create a power symbol, use the following steps:
   shown.
 * The anchor of the symbol is on the pin.
 * The component value is +5V.
-* The component reference is \#+5V. The reference text is no importance
+* The component reference is \#+5V. The reference text is not important
   except the first character which must be “\#” to indicate that the
   component is a power symbol. By convention, every component in which the
   reference field starts with a “\#” will not appear in the component list
   or in the netlist and the reference is declared as invisible.
 
-An easier method to create of a new power port symbol is to use another
+An easier method to create a new power port symbol is to use another
 symbol as model.
 
 You just need to:
