@@ -610,11 +610,11 @@ Important notes:
 
 * Do not use spaces in pin names and numbers.
 * To define a pin name with an inverted signal (overline) use the tilde
-  “~” character. The next “~” character will turn off the overline. For
-  example ~FO~O would display FO O.
+  “\~” character. The next “\~” character will turn off the overline. For
+  example \~FO\~O would display FO O.
 * If the pin name is reduced to a single symbol, the pin is regarded as
   unnamed.
-* Pin names starting with “#”, are reserved for power port symbols.
+* Pin names starting with “\#”, are reserved for power port symbols.
 * A pin “number” consists of 1 to 4 letters and/ or numbers. 1,2,..9999
   are valid numbers. A1, B3, Anod, Gnd, Wi r e, etc. are also valid.
 * Duplicate pin “numbers” cannot exist in a component.
@@ -793,10 +793,10 @@ To create a power symbol, use the following steps:
   shown.
 * The anchor of the symbol is on the pin.
 * The component value is +5V.
-* The component reference is #+5V. The reference text is no importance
-  except the first character which must be “#” to indicate that the
+* The component reference is \#+5V. The reference text is no importance
+  except the first character which must be “\#” to indicate that the
   component is a power symbol. By convention, every component in which the
-  reference field starts with a '#' will not appear in the component list
+  reference field starts with a “\#” will not appear in the component list
   or in the netlist and the reference is declared as invisible.
 
 An easier method to create of a new power port symbol is to use another
