@@ -138,6 +138,10 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME}_pdf_${LANGUAGE} ${DOCNAME}_translate_${LANGUAGE} )
             add_dependencies( ${DOCNAME} ${DOCNAME}_pdf_${LANGUAGE} )
 
+            if( NOT "${HTML_BUILD}" EQUAL "-1" )
+                add_dependencies( ${DOCNAME}_pdf_${LANGUAGE} ${DOCNAME}_html_${LANGUAGE} )
+            endif()
+
             install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.pdf DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT pdf-${LANGUAGE})
         endif()
 
