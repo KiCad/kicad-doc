@@ -15,7 +15,7 @@ automatically loaded during the reading of the Netlist. Any changes to footprint
 selection or annotation can be changed in the schematic and updated in pcbnew
 by regenerating the netlist and reading it in pcbnew again.
 
-Pcbnew provides a design rules check tool which prevents track and pad clearence
+Pcbnew provides a design rules check (DRC) tool which prevents track and pad clearance
 issues as well as preventing nets from being connected that aren't connected
 in the netlist/schematic. When using the interactive router it continuously 
 runs the design rules check and will help automatically route individual traces.
@@ -43,12 +43,12 @@ solder mask, component adhesive, solder paste and edge cuts) plus
 the hairline indication (rats nest) of missing tracks.
 
 The display of the PCB elements (tracks, pads, text, drawings...)
-can be customizable:
+is customizable:
 
 * In full or outline.
 * With or without track clearance.
 
-For the complex circuits the display of layers, zones, components
+For complex circuits, the display of layers, zones, and components
 can be hidden in a selective way for clarity on screen. Nets of traces can be
 highlighted to provide high contrast as well.
 
@@ -66,15 +66,14 @@ The footprint editor provides many time saving tools such as:
 * Semi-automatic aligning of rows or columns of pads.
 
 Footprint pads have a variety of properties that can be adjusted. The pads can be 
-round, rectangular, oval or trapezoidal. For through hole parts drills can be offset
+round, rectangular, oval or trapezoidal. For through-hole parts drills can be offset
 inside the pad and be round or a slot. Individual pads can also be rotated and have
-unique soldermask, net, or paste clearence. Pads can also have a solid connection
+unique soldermask, net, or paste clearance. Pads can also have a solid connection
 or a thermal relief connection for easier manufacturing. Any combination of unique
 pads can be placed within a footprint.
 
 
-Pcbnew generates in an extremely simple way all the documents
-necessary:
+Pcbnew easily generates all the documents necessary for production:
 
 * Fabrication outputs:
 
@@ -90,11 +89,11 @@ necessary:
 
 === General remarks
 
-Due to the degree of control necessary it is highly suggested to use a 3 button 
-mouse with pcbnew. Many features such as panning and zooming require a 3 button
+Due to the degree of control necessary it is highly suggested to use a 3-button 
+mouse with pcbnew. Many features such as panning and zooming require a 3-button
 mouse.
 
-In the new release of KiCad pcbnew has seen wide sweeping changes from developers
+In the new release of KiCad, pcbnew has seen wide sweeping changes from developers
 at CERN. This includes features such as a new renderer (OpenGL and Cairo view modes),
 an interative push and shove router, differential and meander trace routing and tuning,
 a reworked footprint editor, and many other features. Please note that most of
