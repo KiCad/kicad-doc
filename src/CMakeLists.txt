@@ -15,4 +15,3 @@ add_subdirectory( pcbnew )
 add_subdirectory( pl_editor )
 add_subdirectory( gui_translation_howto )
 
-KiCadDocumentation( webdocindex ) # PDF output won't be as useful as HTML
