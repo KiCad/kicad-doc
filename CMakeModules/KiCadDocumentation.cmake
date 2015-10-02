@@ -123,7 +123,7 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME} ${DOCNAME}_html_${LANGUAGE} )
 
             install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT html-${LANGUAGE} )
-            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT html-${LANGUAGE})
+            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images/ DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} OPTIONAL PATTERN "*.png")
         endif()
 
 
