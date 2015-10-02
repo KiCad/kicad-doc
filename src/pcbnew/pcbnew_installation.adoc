@@ -12,7 +12,7 @@ A default configuration file `kicad.pro` is provided in
 configuration for all new projects.
 
 This configuration file can be modified to change the libraries to be
-loaded
+loaded.
 
 To do this:
 
@@ -39,19 +39,19 @@ image:images/Footprint_library_list.png[]
 
 You can use this to add all the libraries that contain the footprints required
 for your project. You should also remove unused libraries from new
-projects to prevent footprint name clashes. Please note, there is a
+projects to prevent footprint name clashes. Please note, there is an
 issue with the footprint library list when duplicate footprint names
 exist in more than one library.  When this occurs, the footprint
 will be loaded from the first library found in the list. If this is an
 issue (you cannot load the footprint you want), either change the
 library list order using the “Up” and “Down” buttons in the dialog
-above or give the footprint a unique name in using the footprint
+above or give the footprint a unique name using the footprint
 editor.
 
 === Managing Footprint Libraries: .pretty repositories
 
 As of release 4.0, Pcbnew uses the new footprint library table
-implementation to manage footprint libraries and the information in
+implementation to manage footprint libraries. The information in
 the previous section is no longer valid. The library table manager is
 accessible by:
 
@@ -70,7 +70,7 @@ depended on library search path ordering.  This allows Pcbnew to
 access footprints with the same name in different libraries by
 ensuring that the correct footprint is loaded from the appropriate
 library.  It also allows Pcbnew to support loading libraries from
-different PCB editors such as Eagle and GEDA.
+different PCB editors such as Eagle and gEDA.
 
 ==== Global Footprint Library Table
 
@@ -116,7 +116,7 @@ the type of library.  Paths can be defined as absolute, relative, or
 by environment variable substitution.  The
 appropriate plug in type must be selected in order for the library
 to be properly read.  Pcbnew currently supports reading KiCad
-legacy, KiCad Pretty, Eagle,  and GEDA footprint libraries.  There
+legacy, KiCad Pretty, Eagle, and gEDA footprint libraries.  There
 is also a description field to add a description of the library
 entry.  The option field is not used at this time so adding options
 will have no effect when loading libraries.  Please note that you
@@ -126,7 +126,7 @@ project specific footprint library table.  The project specific
 table entry will take precedence over the global table entry when
 duplicated names occur.  When entries are defined in the project
 specific table, an fp-lib-table file containing the entries will be
-written into the folder of the currently open net list.
+written into the folder of the currently open netlist.
 
 ==== Environment Variable Substitution
 
@@ -148,14 +148,14 @@ specific footprint library table.
 ==== Using the GitHub Plugin
 
 The GitHub plugin is a special plugin that provides an interface for
-read only access to a remote GitHub repository consisting of pretty
+read-only access to a remote GitHub repository consisting of pretty
 (Pretty is name of the KiCad footprint file format) footprints and
-optionally provides "Copy On Write" (COW) support for editing
+optionally provides "Copy-On-Write" (COW) support for editing
 footprints read from the GitHub repo and saving them locally.
-Therefore the "GitHub" plugin is for *read only for accessing remote
+Therefore the "GitHub" plugin is for *read-only for accessing remote
 pretty footprint libraries* at https://github.com.  To add a GitHub
 entry to the footprint library table the "Library Path" in the
-footprint library table row for a must be set to a valid GitHub URL.
+footprint library table entry must be set to a valid GitHub URL.
 
 For example:
 
@@ -165,23 +165,24 @@ Typically GitHub URLs take the form:
 
      https://github.com/user_name/repo_name
 
-The "Plugin Type" must be set to "Github".  To enable the “Copy On
-Write" feature the option `allow_pretty_writing_to_this_dir` must be
+The "Plugin Type" must be set to "Github".  To enable the “Copy-On-Write"
+feature the option `allow_pretty_writing_to_this_dir` must be
 added to the “Options” setting of the footprint library table entry.
 This option is the "Library Path" for local storage of modified
 copies of footprints read from the GitHub repo.  The footprints
-saved to this path are combined with the read only part of the
+saved to this path are combined with the read-only part of the
 GitHub repository to create the footprint library.  If this option
-is missing, then the GitHub library is read only.  If the option is
+is missing, then the GitHub library is read-only.  If the option is
 present for a GitHub library, then any writes to this hybrid library
 will go to the local `*.pretty` directory.  Note that the github.com
-resident portion of this hybrid COW library is always read only,
+resident portion of this hybrid COW library is always read-only,
 meaning you cannot delete anything or modify any footprint in the
 specified GitHub repository directly. The aggregate library type
 remains "Github" in all further discussions, but it consists of both
-the local read/write portion and the remote read only portion.
+the local read/write portion and the remote read-only portion.
 
-The table below shows a footprint library table entry without the option `allow_pretty_writing_to_this_dir`:
+The table below shows a footprint library table entry without the
+option `allow_pretty_writing_to_this_dir`:
 
 [options="header"]
 |==============================================================
@@ -233,7 +234,7 @@ update the GitHub copy.  Simply email the individual `*.kicad_mod`
 files you find in your COW directories to the maintainer of the
 GitHub repository.  After you've received confirmation that your
 changes have been committed, you can safely delete your COW file(s)
-and the updated footprint from the read only part of GitHub library
+and the updated footprint from the read-only part of GitHub library
 will flow down.  Your goal should be to keep the COW file set as
 small as possible by contributing frequently to the shared master
 copies at https://github.com.

@@ -14,19 +14,19 @@ the association of components with modules is performed. In KiCad, CvPcb is
 used to create this association and a file named `*.cmp` is
 produced. CvPcb also updates the netlist file using this information.
 
-Cvppcb can also output a “stuff file” `*.stf` which can be back
+CvPcb can also output a “stuff file” `*.stf` which can be back
 annotated into the schematic file as the F2 field for each
 component, saving the task of re-assigning module footprints in each
 schematic edit pass. In Eeschema copying a component will also copy
 the footprint assignment and set the reference designator as
-unassigned for later auto-incremental-annotation.
+unassigned for later auto-incremental annotation.
 
 Pcbnew reads the modified netlist file `.net` and, if it exists, the
-.cmp file In the event of a module being changed directly in Pcbnew
-the .cmp file is automatically updated avoiding in this way the
-requirement to run CvPcb  again. The following figure illustrate the
-whole work-flow of KiCad and how intermediate files are obtained and
-used by the different software tools that made KiCad.
+`.cmp` file. In the event of a module being changed directly in Pcbnew
+the `.cmp` file is automatically updated avoiding the
+requirement to run CvPcb again. The following figure illustrates the
+work-flow of KiCad and how intermediate files are obtained and
+used by the different software tools that comprise KiCad.
 
 === Procedure for creating a printed circuit board
 
@@ -35,8 +35,8 @@ After having created your schematic in Eeschema:
 * Generate the netlist using Eeschema.
 * Assign each component in your netlist file to the corresponding module
   (often called footprint) used on the printed circuit using Cvpcb.
-* Launch Pcbnew and read the modified Netlist, this will also read the
-  file with the  module selections.
+* Launch Pcbnew and read the modified Netlist. This will also read the
+  file with the module selections.
 
 Pcbnew will then load automatically all the necessary modules.
 Modules can now be placed manually or automatically on the board and
@@ -53,7 +53,7 @@ generated), the following steps must be repeated:
 * Launch Pcbnew and re-read the modified netlist (this will also re-read
   the file with the module selections).
 
-Pcbnew will then load automatically any new module, add the new
+Pcbnew will then load automatically any new modules, add the new
 connections and remove redundant connections. This process is called
 forward annotation and is a very common procedure when a PCB is made
 and updated.

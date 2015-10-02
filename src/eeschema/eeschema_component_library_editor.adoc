@@ -168,7 +168,7 @@ components with multiple units and alternate symbols.
 
 The vertical toolbar typically located on the right hand side of the
 main window allows you to place all of the elements required to design a
-component. The table below defines each tool bar button.
+component. The table below defines each toolbar button.
 
 [width="100%",cols="10%,90%",]
 |=======================================================================
@@ -609,12 +609,12 @@ ERC check results may be invalid.
 Important notes:
 
 * Do not use spaces in pin names and numbers.
-* To define a pin name with an inverted signal (overline) use the tilde
-  “\~” character. The next “\~” character will turn off the overline. For
-  example \~FO\~O would display FO O.
+* To define a pin name with an inverted signal (overline) use the
+  `~` (tilde) character. The next `~` character will turn off the overline.
+  For example `\~FO~O` would display [overline]#FO# O.
 * If the pin name is reduced to a single symbol, the pin is regarded as
   unnamed.
-* Pin names starting with “\#”, are reserved for power port symbols.
+* Pin names starting with `#`, are reserved for power port symbols.
 * A pin “number” consists of 1 to 4 letters and/ or numbers. 1,2,..9999
   are valid numbers. A1, B3, Anod, Gnd, Wire, etc. are also valid.
 * Duplicate pin “numbers” cannot exist in a component.
@@ -792,17 +792,15 @@ To create a power symbol, use the following steps:
 * Place a small circle and a segment from the pin to the circle as
   shown.
 * The anchor of the symbol is on the pin.
-* The component value is +5V.
-* The component reference is \#+5V. The reference text is not important
-  except the first character which must be “\#” to indicate that the
+* The component value is `+5V`.
+* The component reference is `\#+5V`. The reference text is not important
+  except the first character which must be `#` to indicate that the
   component is a power symbol. By convention, every component in which the
-  reference field starts with a “\#” will not appear in the component list
+  reference field starts with a `#` will not appear in the component list
   or in the netlist and the reference is declared as invisible.
 
 An easier method to create a new power port symbol is to use another
-symbol as model.
-
-You just need to:
+symbol as a model:
 
 * Load an existing power symbol.
 * Edit the pin name with name of the new power symbol.
