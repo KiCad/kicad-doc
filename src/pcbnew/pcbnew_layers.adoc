@@ -3,12 +3,12 @@
 
 Pcbnew can work on 50 different layers:
 
-* 32 copper layers. (or of routing of tracks)
-* 14 technical layers. (include 1 board outlines layer)
+* 32 copper layers (for routing of tracks).
+* 14 technical layers (includes 1 board outline layer).
 * 4 auxiliary layers.
 
-The number of copper layer, and, if needed, their names and
-attributes should be set. Unused technical layers can be disabled.
+The number of copper layers, and if needed their names and
+attributes, should be set. Unused technical layers can be disabled.
 
 === Select copper layers
 
@@ -16,8 +16,8 @@ attributes should be set. Unused technical layers can be disabled.
 
 Copper layers are the usual working layers used by the automatic
 router to place and re-arrange tracks. Layer 1 is the copper
-(solder) layer. Layer 16 is the component layer. Other layers are
-the inner layers, from L2 to L15.
+(solder) layer. Layer 32 is the component layer. Other layers are
+the inner layers, from L2 to L31.
 
 ==== Select number of layers
 
@@ -27,7 +27,7 @@ select Preferences -> Layers Setup.
 
 image:images/Pcbnew_layer_setup_menu_item.png[]
 
-Then select the number of layers wanted, from 2 to 16.
+Then select the number of layers wanted, from 2 to 32.
 
 image:images/Pcbnew_layer_setup_dialog.png[]
 
@@ -57,9 +57,9 @@ The technical layers are:
 
 * The *Solder Paste*  layers paste SMD (Copper and Component):
 
-** Used to produce a masks to allow solder paste to be placed on the
+** Used to produce a mask to allow solder paste to be placed on the
    pads of surface mount components, generally before reflow soldering.
-   In theory only surface mount pads occupy these layers.
+   Usually only surface mount pads occupy these layers.
 
 * The *Silk Screen* layers (Copper and Component):
 
@@ -67,7 +67,7 @@ The technical layers are:
 
 * The *Solder Mask* layers (Copper and Component):
 
-** These define the solder masks. Normally all the pads appear on one or
+** These define the solder masks. Normally all pads appear on one or
    the other of these layers (or both for through pads) to prevent the
    varnish covering the pads.
 
@@ -86,7 +86,7 @@ used to create a file for assembly or machining.
 
 * *Edge Cuts* layer:
 
-** this layer is reserved for the drawing of circuit board outline. Any
+** This layer is reserved for the drawing of circuit board outline. Any
    element (graphic, texts...) placed on this layer appears on all the
    other layers. Use this layer only to draw board outlines.
 
@@ -110,14 +110,14 @@ image:images/Pcbnew_layer_selection_dropdown.png[]
 
 This directly selects the working layer.
 
-Hot keys to select  the working layer are displayed.
+Hot keys to select the working layer are displayed.
 
 ==== Selection using the pop-up window
 
 image:images/Pcbnew_layer_selection_popup.png[]
 
 The Pop-up window opens a menu window which provides a choice for
-the working layer
+the working layer.
 
 image:images/Pcbnew_layer_selection_dialog.png[]
 
@@ -153,7 +153,7 @@ There are two useful cases:
 ==== Copper layers in high-contrast mode
 
 When a board uses more than four layers, this option allows the
-active copper layer to seen more easily:
+active copper layer to be seen more easily:
 
 *Normal mode* (back side copper layer active):
 
@@ -166,7 +166,7 @@ image:images/Pcbnew_copper_layers_contrast_high.png[]
 ==== Technical layers
 
 The other case is when it is necessary to examine solder paste
-layers and solder mask layers, that are usually not displayed.
+layers and solder mask layers which are usually not displayed.
 
 Masks on pads are displayed if this mode is active.
 

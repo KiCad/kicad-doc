@@ -7,33 +7,33 @@ drawn on a copper layer or alternatively on a technical layer.
 
 === Creating zones on copper layers
 
-Pad (and tracks) connections by filled copper areas are checked by
+Pad (and track) connections to filled copper areas are checked by
 the DRC engine. A zone must be filled (not just created) to connect
-pads. Pcbnew uses currently track segments or polygons to fill
+pads. Pcbnew currently uses track segments or polygons to fill
 copper areas.
 
 Each option has its advantages and its disadvantages, the main disadvantage being increased
 screen redraw time on slower machines. The final result is however the same.
 
-For calculation time reasons, the zone filling is not remade after
+For calculation time reasons, the zone filling is not recreated after
 each change, but only:
 
 * If a filling zone command is executed.
-* When a DRC test is made.
+* When a DRC test is performed.
 
 Copper zones must be filled or refilled after changes in tracks or
-pads. Copper zones (usually ground and power planes) are usually
+pads are made. Copper zones (usually ground and power planes) are usually
 attached to a net.
 
 In order to create a copper zone you should:
 
-* Select parameters (net name, layer...).  To switch on the layer
-  and highlight this net is not mandatory but it is good practice.
-* Create the zone limit (If not, all the board will be filled.).
+* Select parameters (net name, layer...).  Turning on the layer
+  and highlighting this net is not mandatory but it is good practice.
+* Create the zone limit (If not, the entire board will be filled.).
 * Fill the zone.
 
 Pcbnew tries to fill all zones in one piece, and usually, there will
-be no unconnected copper blocks. So it can happens that some areas
+be no unconnected copper blocks. It can happen that some areas
 remain unfilled. Zones having no net are not cleaned and can have
 insulated areas.
 
@@ -49,28 +49,26 @@ image:images/Pcbnew_zone_properties_dialog.png[]
 
 You can specify all parameters for this zone:
 
-* net
-* layer
-* filling options
-* pad options
+* Net
+* Layer
+* Filling options
+* Pad options
 * Priority level
-* ...
 
-Draw the zone limit, on this layer. This zone limit is a polygon,
-created by a left clicking at each corner. A double click will end
-the polygon.
-
-The polygon will be automatically closed. If the starting point and
-the ending point are not at the same coordinate, Pcbnew will add a
+Draw the zone limit on this layer. This zone limit is a polygon,
+created by a left-clicking at each corner. A double-click will end
+and close the polygon. If the starting point and
+ending point are not at the same coordinate, Pcbnew will add a
 segment from the end point to the start point.
 
-Remarks:
-
+[NOTE]
+====
 * The DRC control is active when creating zone outlines.
 * A corner which creates a DRC error will not be accepted by Pcbnew.
+====
 
 In the following image you can see an example of a zone limit (polygon in thin
-hatched line)
+hatched line):
 
 image:images/Pcbnew_zone_limit_example.png[]
 
@@ -79,7 +77,10 @@ image:images/Pcbnew_zone_limit_example.png[]
 Sometimes a small zone must be created inside a large zone.
 
 This is possible if the small zone has a higher priority level than
-the large zone. Level setting:
+the large zone.
+
+Level setting:
+
 image:images/Pcbnew_zone_priority_level_setting.png[]
 
 Here is an example:
@@ -93,7 +94,7 @@ image:images/Pcbnew_zone_priority_example_after_filling.png[]
 ==== Filling the zone
 
 When filling a zone, Pcbnew removes all unconnected copper islands.
-To access the zone filling command, right click on the edge zone.
+To access the zone filling command, right-click on the edge zone.
 
 image:images/Pcbnew_zone_context_menu.png[]
 
@@ -176,7 +177,7 @@ image:images/Pcbnew_thermal_relief_parameters.png[]
 ==== Choice of parameters
 
 The copper width value for thermal reliefs must be bigger than the
-minimum thickness value for copper zone. If not, they cannot be drawn.
+minimum thickness value for the copper zone. If not, they cannot be drawn.
 
 Additionally, a too large value for this parameter or for antipad
 size does not allow one to create a thermal relief for small pads (like
@@ -187,7 +188,7 @@ pad sizes used for SMD components).
 A zone must already exist. To add a cutout area (a non-filled area
 inside the zone):
 
-* Right click on an existing edge outline.
+* Right-click on an existing edge outline.
 * Select Add Cutout Area.
 
 image:images/Pcbnew_add_cutout_menu_item.png[]
@@ -208,7 +209,7 @@ If polygons are overlapping they will be combined.
 
 image:images/Pcbnew_zone_modification_menu_items.png[]
 
-To do that, right click on a corner or on an edge, then select the
+To do that, right-click on a corner or on an edge, then select the
 proper command.
 
 Here is a corner (from a cutout) that has been moved:
@@ -231,9 +232,9 @@ Final result:
 
 image:images/Pcbnew_zone_add_similar_after.png[]
 
-=== Editing zone: parameters
+=== Editing zone parameters
 
-When right clicking on an outline, and using 'Edit Zone Params' the Zone params Dialog box will open. Initial parameters can be inputted . If the zone is already filled, refilling it will be necessary.
+When right-clicking on an outline, and using 'Edit Zone Params' the Zone params Dialog box will open. Initial parameters can be inputted . If the zone is already filled, refilling it will be necessary.
 
 === Final zone filling
 
@@ -241,10 +242,10 @@ When the board is finished, one must fill or refill all zones. To do
 this:
 
 * Activate the tool zones via the button image:images/icons/add_zone.png[].
-* Right click to display the pop-up menu.
+* Right-click to display the pop-up menu.
 * Use Fill or Refill All Zones: image:images/Pcbnew_fill_refill_all_zones.png[]
 
-WARNING: calculations can take some time, if the filling grid is small.
+WARNING: Calculation can take some time if the filling grid is small.
 
 === Change zones net names
 
@@ -254,7 +255,7 @@ instance VCC can be changed to +5V.
 When a global DRC control is made Pcbnew checks if the zone net name
 exists, and displays an error if not.
 
-A manual parameter zone edition will be necessary to change the old
+Manually editing the zone parameters will be necessary to change the old
 name to the new one.
 
 === Creating zones on technical layers
@@ -264,7 +265,7 @@ name to the new one.
 This is done using the button . The active layer must be a technical
 layer.
 
-When clicking to start the zone outline, this dialog box is opened.
+When clicking to start the zone outline, this dialog box is opened:
 
 image:images/Pcbnew_technical_layer_zone_dialog.png[]
 
@@ -273,8 +274,8 @@ outline like explained previously for copper layers.
 
 [NOTE]
 ====
-* For editing outlines use the same way as for copper zones.
-* In necessary, cutout areas can be added.
+* For editing outlines use the same method as for copper zones.
+* If necessary, cutout areas can be added.
 ====
 
 === Creating a Keepout area
@@ -290,13 +291,13 @@ image:images/Pcbnew_keepout_area_properties.png[]
 
 One can select disallowed items:
 
-* tracks
-* vias
-* copper pours
+* Tracks.
+* Vias.
+* Copper pours.
 
 When a track or a via is inside a keepout which does not allow it, a
 DRC error will be raised.
 
 For copper zones, the area inside a keepout with no copper pour will
 be not filled. A keep-out area is a like a zone, so editing its
-outline is analog to copper zone editing.
+outline is analogous to copper zone editing.

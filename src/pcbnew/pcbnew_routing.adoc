@@ -14,11 +14,12 @@ and are set in the Design Rules dialog.
 
 ==== Current settings
 
-Current settings are displayed by the top toolbar.
+Current settings are displayed in the top toolbar.
 
 image:images/Pcbnew_design_rules_top_toolbar.png[]
 
 === General options
+
 The General options menu is available via the top toolbar link Preferences → General dialog.
 
 image:images/Pcbnew_preferences_menu.png[]
@@ -52,7 +53,7 @@ A netclass specifies:
 
 * The width of tracks, via diameters and drills.
 * The clearance between pads and tracks (or vias).
-* When routing, Pcbnew selects automatically the netclass corresponding
+* When routing, Pcbnew automatically selects the netclass corresponding
   to the net of the track to create or edit, and therefore the routing
   parameters.
 
@@ -63,6 +64,7 @@ The choice is made in the menu: Design Rules → Design Rules.
 ==== Netclass editor
 
 The Netclass editor allows you to:
+
 * Add or delete Netclasses.
 * Set routing parameters values: clearance, track width, via sizes.
 * Group nets in netclasses.
@@ -72,6 +74,7 @@ image:images/Pcbnew_design_rules_editor_netclass_tab.png[]
 ==== Global Design Rules
 
 The global design rules are:
+
 * Via type.
 * Enabling/disabling micro-via use.
 * Minimum clearance (minimum distance between tracks, vias and pads).
@@ -84,7 +87,7 @@ image:images/Pcbnew_design_rules_editor_global_tab.png[]
 
 This dialog also allows to enter a "stock" of tracks and vias sizes.
 
-When routing, one can select one of these values to create a track of
+When routing, one can select one of these values to create a track or
 via, instead of using the netclass's default value.
 
 Useful in critical cases when a small track segment must have a
@@ -93,7 +96,8 @@ specific size.
 ==== Via parameters
 
 Pcbnew handles 3 types of vias:
-* The through via (usual vias).
+
+* Through vias (usual vias).
 * Blind or buried vias.
 * Micro Vias, like buried vias but restricted to an external layer to
   its nearest neighbor. They are intended to connect BGA pins to the
@@ -169,7 +173,7 @@ image:images/Pcbnew_dr_example_standard.png[]
 === Manual routing
 
 Manual routing is often recommended, because it is the only method
-offering control over routing priorities. For example, is is
+offering control over routing priorities. For example, it is
 preferable to start by routing power tracks, making them wide and
 short and keeping analog and digital supplies well separated. Later,
 sensitive signal tracks should be routed. Amongst other problems,
@@ -188,40 +192,40 @@ The button image:images/icons/net_highlight.png[] allows one to highlight a
 net (click to a pad or an existing track to highlight the corresponding
 net).
 
-The DRC checks in real time tracks when creating them. One cannot
+The DRC checks tracks in real time while creating them. One cannot
 create a track which does not match the DRC rules. It is possible to
-disable the DRC by clicking on the button . This is however not
+disable the DRC by clicking on the button. This is, however, not
 recommended, use it only in specific cases.
 
 ==== Creating tracks
 
 A track can be created by clicking on the button
 image:images/icons/add_tracks.png[]. A new track must
-start on a pad or on an other track,  because Pcbnew must know the
+start on a pad or on another track, because Pcbnew must know the
 net used for the new track (in order to match the DRC rules).
 
 image:images/Pcbnew_creating_new_track.png[]
 
-When creating a new track, Pcbnew shows links to nearest not
-connected pads, link number set in option "Max. Links" in General
+When creating a new track, Pcbnew shows links to nearest
+unconnected pads, link number set in option "Max. Links" in General
 Options.
 
-End the track by a double click, by the pop-up menu or by its hot key.
+End the track by double-clicking, by the pop-up menu or by its hot key.
 
 image:images/Pcbnew_track_in_progres_context.png[]
 
 ==== Moving and dragging tracks
 
-When the button image:images/icons/add_tracks.png[] is active,  the
-track where the cursor is positioned can be moved with the hotkey 'm'.
-If you want to drag the track you can use the hotkey 'g'.
+When the button image:images/icons/add_tracks.png[] is active, the
+track where the cursor is positioned can be moved with the hotkey 'M'.
+If you want to drag the track you can use the hotkey 'G'.
 
 ==== Via Insertion
 
 A via can be inserted only when a track is in progress:
 
 * By the pop-up menu.
-* By the hotkey 'v'.
+* By the hotkey 'V'.
 * By switching to a new copper layer using the appropriate hotkey.
 
 === Select/edit the track width and via size
@@ -293,7 +297,7 @@ When finished:
 
 image:images/Pcbnew_new_track_completed.png[]
 
-Pcbnew will remove automatically the old track if it is redundant.
+Pcbnew will automatically remove the old track if it is redundant.
 
 ==== Global changes
 
