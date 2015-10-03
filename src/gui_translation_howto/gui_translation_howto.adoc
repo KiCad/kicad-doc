@@ -10,7 +10,7 @@ _Reference manual_
 [[copyright]]
 *Copyright*
 
-This document is Copyright (C) 2010-2015 by it’s contributors as listed
+This document is Copyright (C) 2010-2015 by it's contributors as listed
 below. You may distribute it and/or modify it under the terms of either
 the GNU General Public License (http://www.gnu.org/licenses/gpl.html),
 version 3 or later, or the Creative Commons Attribution License
@@ -71,7 +71,7 @@ Files can be downloaded from Launchpad by using a tool named “bazaar”
 * Download KiCad sources using the command bzr branch lp:kicad
   <directory where sources files are copied>
 
-* You’ll find this doc about translation and poedit configuration in
+* You'll find this doc about translation and poedit configuration in
   Documentation: see Documentation/GUI_Translation_HOWTO.pdf
 
 [[_download_existing_translations_and_docs]]
@@ -99,10 +99,10 @@ The rules are:
   world")**, and displayed "hello world" but if a dictionary is found
   translated into the locale language before displaying.
 
-* A dictionary English→locale handle translation (one dictionary by
+* A dictionary English->locale handle translation (one dictionary by
   language).
 
-The easier way to create and maintain the dictionary English→locale is
+The easier way to create and maintain the dictionary English->locale is
 to use, **poedit**. Poedit scans KiCad sources and allows you to enter
 translations. You must download KiCad sources and set poedit in order to
 create translations.
@@ -278,7 +278,7 @@ language list can be useful for testing purposes.
 ==== Adding a new id in include/id.h.
 
 
-→ In include/id.h, locate the sequence like:
+-> In include/id.h, locate the sequence like:
 
 -----------------------
 ID_LANGUAGE_CHOICE,
@@ -299,7 +299,7 @@ ID_LANGUAGE_MY_LANGUAGE before ID_LANGUAGE_CHOICE_END.
 ==== Adding a new icon (aesthetic purpose only)
 
 
-→ Create a new icon in SVG (Using Inkscape for instance) format: usually
+-> Create a new icon in SVG (Using Inkscape for instance) format: usually
 the country flag. For instance lang_new.svg
 
 Others language icons are in `common/bitmaps_png/source`
@@ -308,7 +308,7 @@ Others language icons are in `common/bitmaps_png/source`
 ==== Editing bitmaps_png/CMakeLists.txt
 
 
-→ locate the text:
+-> locate the text:
 
 ------------
 lang_catalan
@@ -339,7 +339,7 @@ and add the new filename (without extension): lang_new
 ==== Editing include/bitmaps.h
 
 
-→ locate the text:
+-> locate the text:
 
 ---------------------------------
 EXTERN_BITMAP( lang_bg_xpm )
@@ -371,7 +371,7 @@ added to the filename).
 ==== Editing common/edaappl.cpp
 
 
-→ Locate:
+-> Locate:
 
 [source,c]
 -----------------------------------------------------------------------------------------------------------------
