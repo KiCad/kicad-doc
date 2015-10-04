@@ -374,7 +374,7 @@ value for the value field in the schematic editor), the reference designator
 (U, IC, R...), the number of units per package (for example a 7400 is made of
 4 units per package) and if an alternate body style (sometimes referred to
 as DeMorgan) is desired. If the reference designator field is left empty, it
-will default to “U”. These properties changed later, but it is preferable to
+will default to "U". These properties changed later, but it is preferable to
 set them correctly at the creation of the component.
 
 image:images/1000000000000153000001795877268E.png[1000000000000153000001795877268E_png]
@@ -432,16 +432,16 @@ package after pin creation and editing, there will be additional work
 introduced to add the new unit pins and symbols. Nevertheless, it is
 possible to modify these properies at any time.
 
-The graphic options “Show pin number” and “Show pin name” define the
+The graphic options "Show pin number" and "Show pin name" define the
 visibility of the pin number and pin name text. This text will be
-visible if the corresponding options are checked. The option “Place pin
-names inside” defines the pin name position relative to the pin body.
+visible if the corresponding options are checked. The option "Place pin
+names inside" defines the pin name position relative to the pin body.
 This text will be displayed inside the component outline if the option
-is checked. In this case the “Pin Name Position Offset” property defines
+is checked. In this case the "Pin Name Position Offset" property defines
 the shift of the text away from the body end of the pin. A value from 30
 to 40 (in 1/1000 inch) is reasonable.
 
-The example below shows a component with the “Place pin name inside”
+The example below shows a component with the "Place pin name inside"
 option unchecked. Notice the position of the names and pin numbers.
 
 image:images/2000000800003D8000002550D6E11DAF.png[2000000800003D8000002550D6E11DAF_png]
@@ -499,11 +499,11 @@ The properties of a graphic element are:
 
 * Line width which defines the width of the element's line in the
   current drawing units.
-* The “Common to all units in component” setting defines if the
+* The "Common to all units in component" setting defines if the
   graphical element is drawn for each unit in component with more than one
   unit per package or if the graphical element is only drawn for the
   current unit.
-* The “Common by all body styles (DeMorgan)” setting defines if the
+* The "Common by all body styles (DeMorgan)" setting defines if the
   graphical element is drawn for each symbolic representation in
   components with an alternate body style or if the graphical element is
   only drawn for the current body style.
@@ -524,7 +524,7 @@ graphical text items are not fields.
 === Multiple Units per Component and Alternate Body Styles
 
 Components can have two symbolic representations (a standard symbol and
-an alternate symbol often referred to as “DeMorgan”) and/or have more
+an alternate symbol often referred to as "DeMorgan") and/or have more
 than one unit per package (logic gates for example). Some components can
 have more than one unit per package each with different symbols and pin
 configurations.
@@ -581,7 +581,7 @@ interchangeable with units 1 and 2.
 Shown below are properties for a graphic body element. From the relay
 example above, the three units have different symbolic representations.
 Therefore, each unit was created separately and the graphical body
-elements must have the “Common to all units in component” disabled.
+elements must have the "Common to all units in component" disabled.
 
 image:images/2000000900003855000027B1F162801F.png[2000000900003855000027B1F162801F_png]
 
@@ -600,9 +600,9 @@ edited, deleted, and/or moved.
 ==== Pin Overview
 
 A pin is defined by its graphical representation, its name and its
-“number”. The pin's “number” is defined by a set of 4 letters and / or
+"number". The pin's "number" is defined by a set of 4 letters and / or
 numbers. For the Electrical Rules Check (ERC) tool to be useful, the
-pin's “electrical” type (input, output, tri-state...) must also be
+pin's "electrical" type (input, output, tri-state...) must also be
 defined correctly. If this type is not defined properly, the schematic
 ERC check results may be invalid.
 
@@ -615,9 +615,9 @@ Important notes:
 * If the pin name is reduced to a single symbol, the pin is regarded as
   unnamed.
 * Pin names starting with `#`, are reserved for power port symbols.
-* A pin “number” consists of 1 to 4 letters and/ or numbers. 1,2,..9999
+* A pin "number" consists of 1 to 4 letters and/ or numbers. 1,2,..9999
   are valid numbers. A1, B3, Anod, Gnd, Wire, etc. are also valid.
-* Duplicate pin “numbers” cannot exist in a component.
+* Duplicate pin "numbers" cannot exist in a component.
 
 [[pin-properties]]
 ==== Pin Properties
@@ -698,7 +698,7 @@ on the main tool bar. This will allow you to create pins for each unit
 and representation completely independently.
 
 A component can have two symbolic representations (representation known
-as “DeMorgan”) and can be made up of more than one unit as in the case
+as "DeMorgan") and can be made up of more than one unit as in the case
 of components with logic gates. For certain components, you may want
 several different graphic elements and pins. Like the relay sample shown
 in section 11.7.1, a relay can be represented by three distinct units: a
@@ -768,8 +768,8 @@ Important notes:
   or has the invisible attribute enable.
 * The footprint is defined as an absolute footprint using the
   LIBNAME:FPNAME format where LIBNAME is the name of the footprint library
-  defined in the footprint library table (see the “Footprint Library
-  Table” section in the Pcbnew “Reference Manual”) and FPNAME is the name
+  defined in the footprint library table (see the "Footprint Library
+  Table" section in the Pcbnew "Reference Manual") and FPNAME is the name
   of the footprint in the library LIBNAME.
 
 [[power-symbols]]
@@ -777,8 +777,8 @@ Important notes:
 
 Power symbols are created the same way as normal components. It may be
 useful to place them in a dedicated library such as power.lib. Power
-symbols consist of a graphical symbol and a pin of the type “Power
-Invisible”. Power port symbols are handled like any other component by
+symbols consist of a graphical symbol and a pin of the type "Power
+Invisible". Power port symbols are handled like any other component by
 the schematic capture software. Some precautions are essential. Below is
 an example of a power +5V symbol.
 
@@ -786,9 +786,9 @@ image:images/1000000000000438000002C20F7CD114.png[1000000000000438000002C20F7CD1
 
 To create a power symbol, use the following steps:
 
-* Add a pin of type “Power input” named +5V (important because this name
+* Add a pin of type "Power input" named +5V (important because this name
   will establish connection to the net +5V), with a pin number of 1
-  (number of no importance), a length of 0, and a “Line” “Graphic Style”.
+  (number of no importance), a length of 0, and a "Line" "Graphic Style".
 * Place a small circle and a segment from the pin to the circle as
   shown.
 * The anchor of the symbol is on the pin.

@@ -19,7 +19,7 @@ on its readability.
 
 From the root sheet, you must be able to find all sub-sheets.
 Hierarchical schematics management is very easy with Eeschema, thanks to
-an integrated “hierarchy navigator” accessible via the icon
+an integrated "hierarchy navigator" accessible via the icon
 image:images/icons/hierarchy_nav.png[icons/hierarchy_nav_png]
 of the upper and right toolbar.
 
@@ -102,7 +102,7 @@ labels and/or global labels.
 
 You have to:
 
-* Place in the root sheet a hierarchy symbol called “sheet symbol”.
+* Place in the root sheet a hierarchy symbol called "sheet symbol".
 * Enter into the new schematic (sub-sheet) with the navigator and draw
   it, like any other schematic.
 * Draw the electric connections between the two schematics by placing
@@ -162,7 +162,7 @@ The second solution is quite preferable.
 * Click on the hierarchy symbol where you want to place this pin.
 
 See below an example of the creation of the hierarchical pin called
-“CONNEXION”.
+"CONNEXION".
 
 image:images/1000000000000160000000CD797712D0.png[1000000000000160000000CD797712D0_png]
 
@@ -235,19 +235,19 @@ schematic sheet where they are placed. This is due to the fact that :
 * Each sheet has a sheet number.
 * This sheet number is associated to a label.
 
-Thus, if you place the label “TOTO” in sheet n° 3, in fact the true
-label is “TOTO_3”. If you also place a label “TOTO” in sheet n° 1 (root
-sheet) you place in fact a label called “TOTO_1”, different from
-“TOTO_3”. This is always true, even if there is only one sheet.
+Thus, if you place the label "TOTO" in sheet n° 3, in fact the true
+label is "TOTO_3". If you also place a label "TOTO" in sheet n° 1 (root
+sheet) you place in fact a label called "TOTO_1", different from
+"TOTO_3". This is always true, even if there is only one sheet.
 
 [[hierarchical-labels]]
 ===== Hierarchical labels
 
 What is said for the simple labels is also true for hierarchical labels.
 
-Thus in the same sheet, a HLabel “TOTO” is considered to be connected to
-a local label “TOTO”, but not connected to a HLabel or label called
-“TOTO” in another sheet.
+Thus in the same sheet, a HLabel "TOTO" is considered to be connected to
+a local label "TOTO", but not connected to a HLabel or label called
+"TOTO" in another sheet.
 
 However a HLabel is considered to be connected to the corresponding
 SheetLabel symbol in the hierarchical symbol placed in the root sheet.
@@ -256,8 +256,8 @@ SheetLabel symbol in the hierarchical symbol placed in the root sheet.
 ===== Invisible power pins
 
 It was seen that invisible power pins were connected together if they
-have the same name. Thus all the power pins declared “Invisible Power
-Pins“ and named VCC are connected and form the equipotential VCC,
+have the same name. Thus all the power pins declared "Invisible Power
+Pins" and named VCC are connected and form the equipotential VCC,
 whatever the sheet they are placed on.
 
 This means that if you place a VCC label in a sub-sheet, it will not be
