@@ -1,15 +1,15 @@
-== ModEdit - Managing Libraries
+== Footprint Editor - Managing Libraries
 
 
-=== Overview of ModEdit
+=== Overview of Footprint Editor
 
 Pcbnew can simultaneously maintain several libraries. Thus, when a
 module is loaded, all libraries that appear in the library list are
 searched until the first instance of the module is found. In what
 follows, note that the active library is the library selected within
-the Module Editor (ModEdit), the program will now be described
+the Footprint Editor, the program will now be described
 
-ModEdit enables the creation and the editing of modules:
+Footprint Editor enables the creation and the editing of modules:
 
 * Adding and removing pads.
 * Changing pad properties (shape, layer) for individual pads or
@@ -18,7 +18,7 @@ ModEdit enables the creation and the editing of modules:
 * Editing information fields (value, reference, etc.).
 * Editing the associated documentation (description, keywords).
 
-ModEdit allows the maintenance of the active library as well by:
+Footprint Editor allows the maintenance of the active library as well by:
 
 * Listing the modules in the active library.
 * Deletion of a module from the active library.
@@ -30,28 +30,28 @@ It is also possible to create new libraries.
 The library extension is `.mod`.
 
 
-=== Accessing ModEdit
+=== Accessing Footprint Editor
 
-The Module Editor can be accessed in two different ways:
+The Footprint Editor can be accessed in two different ways:
 
 * Directly, via the icon image:images/icons/module_editor.png[]
   in the main toolbar of Pcbnew.
 * In the edit dialog for the active module (see figure below: accessed
-  via the context menu), there is the button Module Editor.
+  via the context menu), there is the button Footprint Editor.
 
 image:images/Pcbnew_module_properties.png[]
 
-In this case, the active module of the board will be loaded automatically in ModEdit, enabling immediate editing or archiving.
+In this case, the active module of the board will be loaded automatically in Footprint Editor, enabling immediate editing or archiving.
 
 
-=== ModEdit user interface
+=== Footprint Editor user interface
 
-By calling ModEdit the following window will appear:
+By calling Footprint Editor the following window will appear:
 
 image:images/Modedit_main_window.png[]
 
 
-=== Top toolbar in Modedit
+=== Top toolbar in Footprint Editor
 
 image:images/Modedit_top_toolbar.png[]
 
@@ -66,7 +66,7 @@ From this toolbar, the following functions are available:
 | image:images/icons/new_library.png[]
 | Create a new library and save the current module in it.
 | image:images/icons/modview_icon.png[]
-| Open the footprint viewer
+| Open the Footprint Viewer
 | image:images/icons/delete.png[]
 | Access a dialog for deleting a module from the active library.
 | image:images/icons/new_footprint.png[]
@@ -108,30 +108,6 @@ image:images/icons/zoom_fit_in_page.png[]
 | image:images/icons/module_check.png[]
 | Perform a check of module correctness
 |======
-
-=== Creating a new module
-
-The button image:images/icons/new_footprint.png[] allows the creation
-of a new module. You will be asked for the name by which the module will
-be identified in the library. This text also serves as the module
-reference, which will be replaced by the final reference on the
-printed circuit board (U1, IC3, etc.)
-
-It will be necessary to add the following to the new module:
-
-* Outlines (and possibly text).
-* The pads.
-* A value (place-holding text that will subsequently be replaced by
-  the true value).
-
-When a new module is similar to an existing module in a library or board, this alternative and often quicker method should be used:
-
-* Load the similar module via the buttons
-  image:images/icons/load_module_lib.png[],
-  image:images/icons/load_module_board.png[] or
-  image:images/icons/import_module.png[].
-* Modify the reference field to the name of the new module.
-* Edit and save the new module.
 
 === Creating a new library
 
@@ -265,5 +241,9 @@ libraries is: https://github.com/KiCad
 
 More details about footprint library tables and the Manager and Wizard
 can be found in the CvPcb Reference Manual in the section
-http://docs.kicad-pcb.org/CvPcb/CvPcb.html#_footprint_library_tables[Footprint
-Library Tables].
+_Footprint Library Tables_.
+
+=== 3D Shapes Libraries Management
+
+The 3D shape libraries can be downloaded by 3D Shape Libraries Wizard.
+It can be invoked from the menu Preferences -> 3D Shapes Libraries Downloader.
