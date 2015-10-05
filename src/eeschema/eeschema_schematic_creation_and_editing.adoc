@@ -27,7 +27,7 @@ of a development chain that allows for:
 
 A schematic mainly consists of components, wires, labels, junctions,
 buses and power ports. For clarity in the schematic, you can place
-purely graphical elements like bus entries, comments, and dotted lines.
+purely graphical elements like bus entries, comments, and polylines.
 
 [[the-development-chain]]
 === The development chain
@@ -133,13 +133,13 @@ These elements are:
 
 * *Wires:* most connections between components.
 * *Buses:* to graphically join bus labels
-* *Dotted lines:* for graphic presentation.
+* *Polylines:* for graphic presentation.
 * *Junctions:* to create connections between crossing wires or buses.
 * *Bus entries:* to show connections between wires and buses. Graphical only!
 * *Labels:* for labeling or creating connections.
 * *Global labels:* for connections between sheets.
 * *Texts:* for comments and annotations.
-* *“No Connection” symbols:* to terminate a pin that does not need any connection.
+* *"No Connect" flags:* to terminate a pin that does not need any connection.
 * **Hierarchical sheets**, and their connection pins.
 
 [[connections-wires-and-labels]]
@@ -310,15 +310,14 @@ port not powered__.
 All these symbols are components of the schematic library ``power''.
 
 [[no-connection-symbols]]
-==== “No Connection” symbols
+==== "No Connect" flag
 
 These symbols are very useful to avoid undesired ERC warnings.
 The electric rules check ensures that no connection has been
 accidentally left unconnected.
 
-If pins must really remain unconnected, it is necessary to place a
-No-Connection symbol (tool
-image:images/icons/noconn.png[No connection icon])
+If pins must really remain unconnected, it is necessary to place
+a "No Connect" flag (tool image:images/icons/noconn.png[No connection icon])
 on these pins. These symbols do not have any influence on the
 generated netlists.
 
@@ -331,7 +330,7 @@ generated netlists.
 It can be useful (to aid in understanding the schematic) to place
 annotations such as text fields and frames. Text fields (tool
 image:images/icons/add_text.png[])
-and dotted lines (tool
+and Polyline (tool
 image:images/icons/add_dashed_line.png[])
 are intended for this use, contrary to labels and wires, which are
 connection elements.
