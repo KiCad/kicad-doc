@@ -24,9 +24,12 @@ unassigned for later auto-incremental annotation.
 Pcbnew reads the modified netlist file `.net` and, if it exists, the
 `.cmp` file. In the event of a module being changed directly in Pcbnew
 the `.cmp` file is automatically updated avoiding the
-requirement to run CvPcb again. The following figure illustrates the
-work-flow of KiCad and how intermediate files are obtained and
-used by the different software tools that comprise KiCad.
+requirement to run CvPcb again.
+
+Refer to the figure of "Getting Started in KiCad" manual
+in the section _KiCad Workflow_ that illustrates the work-flow of KiCad
+and how intermediate files are obtained and used by the different
+software tools that comprise KiCad.
 
 === Procedure for creating a printed circuit board
 
@@ -70,19 +73,21 @@ image:images/Pcbnew_netlist_dialog.png[]
 
 [cols="1,1"]
 |====
-| Module Selection
-| Components and corresponding footprints on board link:
+|Footprint Selection
+|Components and corresponding footprints on board link:
 normal link is Reference (normal option
 Timestamp can be used after reannotation of schematic, if the previous
 annotation was destroyed (special option)
-|Exchange Module:
-|If a footprint has changed  in the netlist: keep old footprint or
+|Exchange Footprint:
+|If a footprint has changed in the netlist: keep old footprint or
 change to the new one.
-|Bad Tracks Deletion
+|Unconnected Tracks
 |Keep all existing tracks, or delete erroneous tracks
 |Extra Footprints
 |Remove footprints which are on board but not in the netlist.
 Footprint with attribute "Locked" will not be removed.
+|Single Pad Nets
+|Remove single pad nets.
 |====
 
 ==== Loading new footprints
@@ -101,8 +106,8 @@ click on the right button:
 
 image:images/Pcbnew_move_all_modules.png[]
 
-* Move New Modules if there is already a board with existing footprints.
-* Move All Modules, the first time (when creating a board).
+* Automatically Place New Footprints, if there is already a board with existing footprints.
+* Automatically Place All Footprints, for the first time (when creating a board).
 
 The following screenshot shows the results.
 
