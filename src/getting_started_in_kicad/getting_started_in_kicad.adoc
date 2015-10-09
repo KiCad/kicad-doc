@@ -1241,8 +1241,7 @@ image:images/10000000000004800000026769DAE0A4.png[10000000000004800000026769DAE0
 Unlike other EDA software tools, which have one type of library that
 contains both the schematic symbol and the footprint variations, KiCad
 _.lib_ files contain schematic symbols and _.mod_ files contain
-footprints, or modules. _Cvpcb_ is used to successfully map footprints
-to symbols.
+footprints. _Cvpcb_ is used to successfully map footprints to symbols.
 
 As for _.lib_ files, _.mod_ library files are text files that can
 contain anything from one to several parts.
@@ -1252,9 +1251,9 @@ you might find that the footprint you need is not in the KiCad library.
 Here are the steps for creating a new PCB footprint in KiCad:
 
 1.  From the KiCad project manager start the _PCBnew_ tool. Click on
-    the 'Open Module Editor' icon
+    the 'Open Footprint Editor' icon
     image:images/edit_module.png[edit_module_png] on the top
-    toolbar. This will open the 'Module Editor'.
+    toolbar. This will open the 'Footprint Editor'.
 
 2.  We are going to save the new footprint in the footprint library
     'connect'. Click on the 'Select working library' icon
@@ -1263,12 +1262,12 @@ Here are the steps for creating a new PCB footprint in KiCad:
     if you want.
 
 [[myconn3]]
-3.  Click on the 'New Module' icon
+3.  Click on the 'New Footprint' icon
     image:images/new_footprint.png[new_footprint_png] on the top
-    toolbar.  Type 'MYCONN3' as the 'module reference'. In the middle
+    toolbar.  Type 'MYCONN3' as the 'footprint name'. In the middle
     of the screen the 'MYCONN3' label will appear. Under the label you
-    can can see the 'VAL*__' label. Right click on 'MYCONN3' and move
-    it above 'VAL'. Right click on 'VAL__*', select 'Edit Text Mod'
+    can see the 'REF*__' label. Right click on 'MYCONN3' and move
+    it above 'REF*__'. Right click on 'REF__*', select 'Edit Text'
     and rename it to 'SMD'. Set the 'Display' value to 'Invisible'.
 
 4.  Select the 'Add Pads' icon image:images/pad.png[pad_png] on the
@@ -1305,7 +1304,7 @@ image:images/pad_properties.png[Pad Properties]
     the right toolbar. Draw an outline of the connector around the
     component.
 
-11. Click on the 'Save Module in working directory' icon
+11. Click on the 'Save Footprint in Active Library' icon
     image:images/save_library.png[save_library_png] on the top
     toolbar, using the default name MYCONN3.
 
@@ -1325,22 +1324,22 @@ schematic and the board.
 With KiCad schematics, people need the _.lib_ files that contain the
 symbols. Those library files need to be loaded in the _Eeschema_
 preferences. On the other hand, with boards (__.kicad_pcb__ files),
-modules (footprints) can be stored inside the _.kicad_pcb_ file. You
+footprints can be stored inside the _.kicad_pcb_ file. You
 can send someone a _.kicad_pcb_ file and nothing else, and they would
 still be able to look at and edit the board. However, when they want
-to load components from a netlist, the module libraries (__.mod__
+to load components from a netlist, the footprint libraries (__.mod__
 files) need to be present and loaded in the _Pcbnew_ preferences just
 as for schematics. Also, it is necessary to load the _.mod_ files in
-the preferences of _Pcbnew_ in order for those modules to show up in
+the preferences of _Pcbnew_ in order for those footprints to show up in
 __Cvpcb__.
 
-If someone sends you a _.kicad_pcb_ file with modules you would like
-to use in another board, you can open the module editor, load a module
-from the current board, and save or export it into another module
-library. You can also export all the modules from a _.kicad_pcb_ file
+If someone sends you a _.kicad_pcb_ file with footprints you would like
+to use in another board, you can open the Footprint Editor, load a footprint
+from the current board, and save or export it into another footprint
+library. You can also export all the footprints from a _.kicad_pcb_ file
 at once via *Pcbnew* -> *File* -> *Archive* -> *Footprints* ->
 **Create footprint archive**, which will create a new _.mod_ file with
-all the board's modules.
+all the board's footprints.
 
 Bottom line, if the PCB is the only thing you want to distribute, then
 the board file _.kicad_pcb_ is enough. However, if you want to give

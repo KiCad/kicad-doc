@@ -1,21 +1,21 @@
-== Footprint Editor - Creating and Editing Modules
+== Footprint Editor - Creating and Editing Footprints
 
 === Footprint Editor overview
 
-Footprint Editor is used for editing and creating PCB modules. This includes:
+Footprint Editor is used for editing and creating PCB footprints. This includes:
 
 * Adding and removing pads.
 * Changing pad properties (shape, layer), for individual pads or for
-  all the pads in a module.
+  all the pads in a footprint.
 * Adding and editing graphic elements (contours, text).
 * Editing fields (value, reference, etc.).
 * Editing the associated documentation (description, keywords).
 
-=== Module elements
+=== Footprint elements
 
-A module is the physical representation (footprint) of the part to
+A footprint is the physical representation (footprint) of the part to
 be inserted in the PCB and it must  be linked to the relative
-component in your schematic. Each module includes three different
+component in your schematic. Each footprint includes three different
 elements:
 
 * The pads.
@@ -40,31 +40,31 @@ Two pad properties are important:
 ==== Contours
 
 Graphical contours are used to draw the physical shape of the
-module. Several different types of contour are available: lines,
+footprint. Several different types of contour are available: lines,
 circles, arcs, and text. Contours have no electrical significance,
 they are simply graphical aids.
 
 ==== Fields
 
-These are text elements associated with a module. Two are obligatory
+These are text elements associated with a footprint. Two are obligatory
 and always present: the reference field and the value field. These
 are automatically read and updated by Pcbnew when a netlist is read
-during the loading of modules into your board. The reference is
+during the loading of footprints into your board. The reference is
 replaced by the appropriate schematic reference (U1, IC3, etc.). The
 value is replaced by the value of the corresponding part in the
 schematic (47K, 74LS02, etc.). Other fields can be added and these
 will behave like graphical text.
 
-=== Starting Footprint Editor and selecting a module to edit
+=== Starting Footprint Editor and selecting a footprint to edit
 
 Footprint Editor can be started in two ways:
 
 * Directly via the image:images/icons/module_editor.png[] icon from the main
-  toolbar of Pcbnew. This allows the creation or modification of a module in
+  toolbar of Pcbnew. This allows the creation or modification of a footprint in
   the library.
-* Double-clicking a module will launch the 'Module Properties' menu,
+* Double-clicking a footprint will launch the 'Footprint Properties' menu,
   which offers a 'Go to Footprint Editor' button. If this option is used,
-  the module from the board will be loaded into the editor, for
+  the footprint from the board will be loaded into the editor, for
   modification or for saving.
 
 === Footprint Editor Toolbars
@@ -99,7 +99,7 @@ The specific functions are the following:
 | image:images/icons/add_text.png[]
 | Add graphical text (fields are not managed by this tool).
 | image:images/icons/anchor.png[]
-| Position the module anchor.
+| Position the footprint anchor.
 | image:images/icons/delete.png[]
 | Delete elements.
 | image:images/icons/grid_select_axis.png[]
@@ -138,7 +138,7 @@ These tools manage the display options in Footprint Editor:
 The right mouse button calls up menus that depend upon the element
 beneath the cursor.
 
-The context menu for editing module parameters:
+The context menu for editing footprint parameters:
 
 image:images/Modedit_context_menu_module_parameters.png[]
 
@@ -151,26 +151,26 @@ The context menu for editing graphic elements:
 image:images/Modedit_context_menu_graphics.png[]
 
 
-=== Module properties dialog
+=== Footprint properties dialog
 
-This dialog can be launched when the cursor is over a module by
-clicking on the right mouse button and then selecting 'Edit Module'.
+This dialog can be launched when the cursor is over a footprint by
+clicking on the right mouse button and then selecting 'Edit Footprint'.
 
 image:images/Modedit_module_properties_dialog.png[]
 
-The dialog can be used to define the main module parameters.
+The dialog can be used to define the main footprint parameters.
 
-=== Creating a new module
+=== Creating a new footprint
 
-A new module can be created via the button
-image:images/icons/new_footprint.png[]. The name of the new module
-will be requested. This will be the name by which the module will be
+A new footprint can be created via the button
+image:images/icons/new_footprint.png[]. The name of the new footprint
+will be requested. This will be the name by which the footprint will be
 identified in the library.
 
-This text also serves as the module reference, which is ultimately
+This text also serves as the footprint reference, which is ultimately
 replaced by the real reference (U1, IC3...).
 
-The new module will require:
+The new footprint will require:
 
 * Contours (and possibly graphic text).
 * Pads.
@@ -178,21 +178,21 @@ The new module will require:
 
 Alternative method:
 
-When a new module is similar to an existing module in a library or a
+When a new footprint is similar to an existing footprint in a library or a
 circuit board, an alternative and quicker method of creating the new
-module is as follows:
+footprint is as follows:
 
-* Load the similar module (image:images/icons/load_module_lib.png[],
+* Load the similar footprint (image:images/icons/load_module_lib.png[],
   image:images/icons/load_module_board.png[] or
   image:images/icons/import_module.png[]).
 * Modify the reference field in order to generate a new identifier (name).
-* Edit and save the new module.
+* Edit and save the new footprint.
 
 === Adding and editing pads
 
-Once a module has been created, pads can be added, deleted or
+Once a footprint has been created, pads can be added, deleted or
 modified. Modification of pads can be local, affecting only the pad
-under the cursor, or global, affecting all pads of the module.
+under the cursor, or global, affecting all pads of the footprint.
 
 ==== Adding pads
 
@@ -230,7 +230,7 @@ is generally sufficient.
 
 ===== Rectangular pads
 
-For SMD modules of the VQFP/PQFP type which have rectangular pads on
+For SMD footprints of the VQFP/PQFP type which have rectangular pads on
 all four sides (both horizontal and vertical) it is recommended to
 use just one shape (for example, a horizontal rectangle) and to
 place it with different orientations (0 for horizontal and 90
@@ -240,7 +240,7 @@ single operation.
 ===== Rotate pads
 
 Rotations of -90 or -180 are only required for trapezoidal pads used
-in microwave modules.
+in microwave footprints.
 
 ===== Non-plated through hole pads
 
@@ -322,19 +322,19 @@ the field, or by the footprint properties dialog box:
 
 image:images/Modedit_footprint_text_properties.png[]
 
-=== Automatic placement of a module
+=== Automatic placement of a footprint
 
 If the user wishes to exploit the the full capabilities of the
 auto-placement functions, it is necessary to define the allowed
-orientations of the module (Module Properties dialog).
+orientations of the footprint (Footprint Properties dialog).
 
 image:images/Modedit_module_autoplace_settings.png[]
 
 Usually, rotation of 180 degrees is permitted for resistors,
 non-polarized capacitors and other symmetrical elements.
 
-Some modules (small transistors, for example) are often permitted to
-rotate by +/- 90 or 180 degrees. By default, a new module will have
+Some footprints (small transistors, for example) are often permitted to
+rotate by +/- 90 or 180 degrees. By default, a new footprint will have
 its rotation permissions set to zero. This can be adjusted according
 to the following rule:
 
@@ -351,20 +351,20 @@ The attributes window is the following:
 image:images/Modedit_module_attributes.png[]
 
 * Normal is the standard attribute.
-* Normal+Insert indicates that the module must appear in the automatic
+* Normal+Insert indicates that the footprint must appear in the automatic
   insertion file (for automatic insertion machines). This attribute is
   most useful for surface mount components (SMDs).
 * Virtual indicates that a component is directly formed by the circuit
   board. Examples would be edge connectors or inductors created by a
-  particular track shape (as sometimes seen in microwave modules).
+  particular track shape (as sometimes seen in microwave footprints).
 
-=== Documenting modules in a library
+=== Documenting footprints in a library
 
-It is strongly recommended to document newly created modules, in
+It is strongly recommended to document newly created footprints, in
 order to facilitate their rapid and accurate retrieval. Who is able
-to recall the multiple pin-out variants of a TO92 module?
+to recall the multiple pin-out variants of a TO92 footprint?
 
-The Module Properties dialog offers a simple and yet powerful means
+The Footprint Properties dialog offers a simple and yet powerful means
 for documentation generation.
 
 image:images/Modedit_module_properties_documentation_fields.png[]
@@ -375,19 +375,19 @@ This menu allows:
 * Multiple keywords.
 
 The comment line is displayed with the component list in CvPcb and
-in the module selection menus in Pcbnew. The keywords can be used to
+in the footprint selection menus in Pcbnew. The keywords can be used to
 restrict searches to those parts possessing the given keywords.
 
-Thus, while using the load module command (icon  in the right-hand
+Thus, while using the load footprint command (icon  in the right-hand
 toolbar in Pcbnew), it is possible to type the text `=TO220` into
-the dialog box to have Pcbnew display a list of the modules
+the dialog box to have Pcbnew display a list of the footprints
 possessing the keyword `TO220`
 
 === 3-dimensional visualisation
 
-A module may have been associated with a file containing a
+A footprint may have been associated with a file containing a
 three-dimensional representation of itself. In order to associate
-such a file with a module, select the 3D Settings tab. The options
+such a file with a footprint, select the 3D Settings tab. The options
 panel is the following:
 
 image:images/Modedit_module_3d_options.png[]
@@ -399,7 +399,7 @@ The data information should be provided:
 * The default path is kicad/modules/package3d. In the example, the file
   name is discret/to_220horiz.wrl, using the default path)
 * The x, y and z scales.
-* The offset with respect to the anchor point of the module (usually
+* The offset with respect to the anchor point of the footprint (usually
   zero).
 * The initial rotation in degrees about each axis (usually zero).
 
@@ -416,15 +416,15 @@ image:images/Modedit_footprint_3d_preview.png[]
 
 The 3D model will automatically appear in the 3D representation of the printed circuit board.
 
-=== Saving a module into the active library
+=== Saving a footprint into the active library
 
 The save command (modification of the file of the active library) is activated by the image:images/icons/save_library.png[] button.
 
-If a module of the same name exists (an older version), it will be overwritten. Because it is important to be able to have confidence in the library modules, it is worth double-checking the module for errors before saving.
+If a footprint of the same name exists (an older version), it will be overwritten. Because it is important to be able to have confidence in the library footprints, it is worth double-checking the footprint for errors before saving.
 
-Before saving, it is also recommended to change the reference or value of the module to be equal to the library name of the module.
+Before saving, it is also recommended to change the reference or value of the footprint to be equal to the library name of the footprint.
 
-=== Saving a module to the board
+=== Saving a footprint to the board
 
 If the edited footprint comes from the current board, the button
 image:images/icons/update_module_board.png[] will update this footprint on
