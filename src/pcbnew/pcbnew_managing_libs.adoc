@@ -4,26 +4,26 @@
 === Overview of Footprint Editor
 
 Pcbnew can simultaneously maintain several libraries. Thus, when a
-module is loaded, all libraries that appear in the library list are
-searched until the first instance of the module is found. In what
+footprint is loaded, all libraries that appear in the library list are
+searched until the first instance of the footprint is found. In what
 follows, note that the active library is the library selected within
 the Footprint Editor, the program will now be described
 
-Footprint Editor enables the creation and the editing of modules:
+Footprint Editor enables the creation and the editing of footprints:
 
 * Adding and removing pads.
 * Changing pad properties (shape, layer) for individual pads or
-  globally for all pads of a module.
+  globally for all pads of a footprint.
 * Editing graphic elements (lines, text).
 * Editing information fields (value, reference, etc.).
 * Editing the associated documentation (description, keywords).
 
 Footprint Editor allows the maintenance of the active library as well by:
 
-* Listing the modules in the active library.
-* Deletion of a module from the active library.
-* Saving a module to the active library.
-* Saving all of the modules contained by a printed circuit.
+* Listing the footprints in the active library.
+* Deletion of a footprint from the active library.
+* Saving a footprint to the active library.
+* Saving all of the footprints contained by a printed circuit.
 
 It is also possible to create new libraries.
 
@@ -36,12 +36,12 @@ The Footprint Editor can be accessed in two different ways:
 
 * Directly, via the icon image:images/icons/module_editor.png[]
   in the main toolbar of Pcbnew.
-* In the edit dialog for the active module (see figure below: accessed
+* In the edit dialog for the active footprint (see figure below: accessed
   via the context menu), there is the button Footprint Editor.
 
 image:images/Pcbnew_module_properties.png[]
 
-In this case, the active module of the board will be loaded automatically in Footprint Editor, enabling immediate editing or archiving.
+In this case, the active footprint of the board will be loaded automatically in Footprint Editor, enabling immediate editing or archiving.
 
 
 === Footprint Editor user interface
@@ -62,40 +62,40 @@ From this toolbar, the following functions are available:
 | image:images/icons/library.png[]
 | Select the active library.
 | image:images/icons/save_library.png[]
-| Save the current module to the active library, and write it to disk.
+| Save the current footprint to the active library, and write it to disk.
 | image:images/icons/new_library.png[]
-| Create a new library and save the current module in it.
+| Create a new library and save the current footprint in it.
 | image:images/icons/modview_icon.png[]
 | Open the Footprint Viewer
 | image:images/icons/delete.png[]
-| Access a dialog for deleting a module from the active library.
+| Access a dialog for deleting a footprint from the active library.
 | image:images/icons/new_footprint.png[]
-| Create a new module.
+| Create a new footprint.
 | image:images/icons/module_wizard.png[]
-| Create a module using a wizard
+| Create a footprint using a wizard
 | image:images/icons/load_module_lib.png[]
-| Load a module from the active library.
+| Load a footprint from the active library.
 | image:images/icons/load_module_board.png[]
-| Load (import) a module from the printed circuit board.
+| Load (import) a footprint from the printed circuit board.
 | image:images/icons/update_module_board.png[]
-| Export the current module to the printed circuit board. when the
-module was previously imported from the current board. It will replace
-the corresponding module on the board (i.e., respecting position and
+| Export the current footprint to the printed circuit board. when the
+footprint was previously imported from the current board. It will replace
+the corresponding footprint on the board (i.e., respecting position and
 orientation).
 | image:images/icons/insert_module_board.png[]
-| Export the current module to the printed circuit board. It will be
+| Export the current footprint to the printed circuit board. It will be
 copied on to the printed circuit board at position 0.
 | image:images/icons/import_module.png[]
-| Import a module from a file created by the Export command.
+| Import a footprint from a file created by the Export command.
 | image:images/icons/export_module.png[]
-| Export a module. This command is essentially identical to that for
+| Export a footprint. This command is essentially identical to that for
 creating a library, the only difference being that  creates a library
 in the user directory, while  creates a library in the standard library
 directory (usually kicad/modules).
 | image:images/icons/undo.png[] image:images/icons/redo.png[]
 | Undo and Redo
 | image:images/icons/module_options.png[]
-| Invokes the module properties dialog.
+| Invokes the footprint properties dialog.
 | image:images/icons/print_button.png[]
 | Call the print dialog.
 | image:images/icons/zoom_in.png[]
@@ -106,7 +106,7 @@ image:images/icons/zoom_fit_in_page.png[]
 | image:images/icons/options_pad.png[]
 | Call the pad editor.
 | image:images/icons/module_check.png[]
-| Perform a check of module correctness
+| Perform a check of footprint correctness
 |======
 
 === Creating a new library
@@ -119,56 +119,56 @@ by default in your working directory.
 
 A file-choosing dialog allows the name of the library to be specified
 and its directory to be changed. In both cases, the library will
-contain the module being edited.
+contain the footprint being edited.
 
 WARNING: If an old library of the same name exists, it will be
 overwritten without warning.
 
-=== Saving a module in the active library
+=== Saving a footprint in the active library
 
-The action of saving a module (thereby modifying the file of the
+The action of saving a footprint (thereby modifying the file of the
 active library) is performed using this button
-image:images/icons/save_library.png[]. If a module of the same name
+image:images/icons/save_library.png[]. If a footprint of the same name
 already exists, it will be replaced. Since you will depend upon the
-accuracy of the library modules, it is worth double-checking the module
+accuracy of the library footprints, it is worth double-checking the footprint
 before saving.
 
 It is recommended to edit either the reference or value field text to
-the name of the module as identified in the library.
+the name of the footprint as identified in the library.
 
-=== Transferring a module from one library to another
+=== Transferring a footprint from one library to another
 
 * Select the source library via the button
   image:images/icons/library.png[].
-* Load the module via the button
+* Load the footprint via the button
   image:images/icons/load_module_lib.png[].
 * Select the destination library via the button
   image:images/icons/library.png[].
-* Save the module via the button image:images/icons/save_library.png[]
+* Save the footprint via the button image:images/icons/save_library.png[]
 
-You may also wish to delete the source module.
+You may also wish to delete the source footprint.
 
 * Reselect the source library with image:images/icons/library.png[]
-* Delete the old module via the button image:images/icons/delete.png[]
+* Delete the old footprint via the button image:images/icons/delete.png[]
 
-=== Saving all modules of your board in the active library
+=== Saving all footprints of your board in the active library
 
-It is possible to copy all of the modules of a given board design to
-the active library. These modules will keep their current library
+It is possible to copy all of the footprints of a given board design to
+the active library. These footprints will keep their current library
 names. This command has two uses:
 
-* To create an archive or complete a library with the modules from a
+* To create an archive or complete a library with the footprints from a
   board, in the event of the loss of a library.
 * More importantly, it facilitates library maintenance by enabling the
   production of documentation for the library, as below.
 
-=== Documentation for library modules
+=== Documentation for library footprints
 
-It is strongly recommended to document the modules you create, in
+It is strongly recommended to document the footprints you create, in
 order to enable rapid and error-free searching.
 
 For example, who is able to remember all of the multiple pin-out
-variants of a TO92 package? The Module Properties dialog offers a
+variants of a TO92 package? The Footprint Properties dialog offers a
 simple solution to this problem.
 
 image:images/Modedit_module_properties.png[]
@@ -179,15 +179,15 @@ This dialog accepts:
 * Multiple keywords.
 
 The description is displayed with the component list in Cvpcb and,
-in Pcbnew, it is used in the module selection dialogs.
+in Pcbnew, it is used in the footprint selection dialogs.
 
-The keywords enable searches to be restricted to those modules
+The keywords enable searches to be restricted to those footprints
 corresponding to particular keywords.
 
-When directly loading a module (the icon
+When directly loading a footprint (the icon
 image:images/icons/module.png[] of the right-hand Pcbnew toolbar),
 keywords may be entered in the dialog box. Thus, entering the
-text `=CONN` will cause the display of the list of modules whose
+text `=CONN` will cause the display of the list of footprints whose
 keyword lists contain the word `CONN`.
 
 === Documenting libraries - recommended practice
@@ -197,7 +197,7 @@ more auxiliary circuit boards that constitute the source of (part
 of) the library, as follows: Create a circuit board in A4 format, in
 order to be able to print easily to scale (scale = 1).
 
-Create the modules that the library will contain on this circuit
+Create the footprints that the library will contain on this circuit
 board. The library itself will be created with the File/Archive
 footprints/Create footprint archive command.
 
@@ -205,12 +205,12 @@ image:images/Pcbnew_archive_footprints_menu.png[]
 
 The "true source" of the library will thus be the auxiliary circuit
 board, and it is on this circuit that any subsequent alterations of
-modules will be made. Naturally, several circuit boards can be saved
+footprints will be made. Naturally, several circuit boards can be saved
 in the same library.
 
 It is generally a good idea to make different libraries for
 different kinds of components (connectors, discretes,...), since
-Pcbnew is able to search many libraries when loading modules.
+Pcbnew is able to search many libraries when loading footprints.
 
 Here is an example of such a library source:
 
