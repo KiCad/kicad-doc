@@ -993,6 +993,72 @@ re-route it again, using the del key and the routing tool, which is the
 'Add tracks' icon image:images/add_tracks.png[Add Track icon] on the
 right toolbar.
 
+[[forward-annotation-in-kicad]]
+== Forward annotation in KiCad
+
+Once you have completed your electronic schematic, the footprint
+assignment, the board layout and generated the Gerber files, you are
+ready to send everything to a PCB manufacturer so that your board can
+become reality.
+
+Often, this linear work-flow turns out to be not so uni-directional. For
+instance, when you have to modify/extend a board for which you or others
+have already completed this work-flow, it is possible that you need to
+move components around, replace them with others, change footprints and
+much more. During this modification process, what you do not want to do
+is to re-route the whole board again from scratch. Instead, this is how
+you do it:
+
+1.  Let's suppose that you want to replace a hypothetical connector CON1
+    with CON2.
+
+2.  You already have a completed schematic and a fully routed PCB.
+
+3.  From KiCad, start __Eeschema__, make your modifications by
+    deleting CON1 and adding CON2. Save your schematic project with
+    the icon image:images/save.png[Save icon] and c lick on the
+    'Netlist generation' icon image:images/netlist.png[netlist_png] on
+    the top toolbar.
+
+4.  Click on 'Netlist' then on 'save'. Save to the default file name.
+    You have to rewrite the old one.
+
+5.  Now assign a footprint to CON2. Click on the 'Run Cvpcb' icon
+    image:images/icon_cvpcb_small.png[icon_cvpcb_small_png] on the top
+    toolbar. Assign the footprint to the new device CON2. The rest of
+    the components still have the previous footprints assigned to
+    them. Close __Cvpcb__.
+
+6.  Back in the schematic editor, save the project by clicking on 'File'
+    -> 'Save Whole Schematic Project'. Close the schematic editor.
+
+7.  From the KiCad project manager, click on the 'Pcbnew' icon. The
+    'Pcbnew' window will open.
+
+8.  The old, already routed, board should automatically open. Let's
+    import the new netlist file. Click on the 'Read Netlist' icon
+    image:images/netlist.png[netlist_png] on the top toolbar.
+
+9.  Click on the 'Browse Netlist Files' button, select the netlist file
+    in the file selection dialogue, and click on 'Read Current Netlist'.
+    Then click the 'Close' button.
+
+10. At this point you should be able to see a layout with all previous
+    components already routed. On the top left corner you should see
+    all unrouted components, in our case the CON2. Select CON2 with
+    the mouse.  Move the component to the middle of the board.
+
+11. Place CON2 and route it. Once done, save and proceed with the Gerber
+    file generation as usual.
+
+The process described here can easily be repeated as many times as you
+need. Beside the Forward Annotation method described above, there is
+another method known as Backward Annotation. This method allows you to
+make modifications to your already routed PCB from Pcbnew and updates
+those modifications in your schematic and netlist file. The Backward
+Annotation method, however, is not that useful and is therefore not
+described here.
+
 [[make-schematic-components-in-kicad]]
 == Make schematic components in KiCad
 
@@ -1140,7 +1206,7 @@ will see how to export a component from the KiCad standard library
     toolbar.
 
 [[make-schematic-components-with-quicklib]]
-== Make schematic components with quicklib
+=== Make schematic components with quicklib
 
 This section presents an alternative way of creating the schematic
 component for MYCONN3 (see <<myconn3,MYCONN3>> above) using the
@@ -1401,72 +1467,6 @@ tutorial1/
     |-- ...
     \-- ...
 ----------------------
-
-[[forward-annotation-in-kicad]]
-== Forward annotation in KiCad
-
-Once you have completed your electronic schematic, the footprint
-assignment, the board layout and generated the Gerber files, you are
-ready to send everything to a PCB manufacturer so that your board can
-become reality.
-
-Often, this linear work-flow turns out to be not so uni-directional. For
-instance, when you have to modify/extend a board for which you or others
-have already completed this work-flow, it is possible that you need to
-move components around, replace them with others, change footprints and
-much more. During this modification process, what you do not want to do
-is to re-route the whole board again from scratch. Instead, this is how
-you do it:
-
-1.  Let's suppose that you want to replace a hypothetical connector CON1
-    with CON2.
-
-2.  You already have a completed schematic and a fully routed PCB.
-
-3.  From KiCad, start __Eeschema__, make your modifications by
-    deleting CON1 and adding CON2. Save your schematic project with
-    the icon image:images/save.png[Save icon] and c lick on the
-    'Netlist generation' icon image:images/netlist.png[netlist_png] on
-    the top toolbar.
-
-4.  Click on 'Netlist' then on 'save'. Save to the default file name.
-    You have to rewrite the old one.
-
-5.  Now assign a footprint to CON2. Click on the 'Run Cvpcb' icon
-    image:images/icon_cvpcb_small.png[icon_cvpcb_small_png] on the top
-    toolbar. Assign the footprint to the new device CON2. The rest of
-    the components still have the previous footprints assigned to
-    them. Close __Cvpcb__.
-
-6.  Back in the schematic editor, save the project by clicking on 'File'
-    -> 'Save Whole Schematic Project'. Close the schematic editor.
-
-7.  From the KiCad project manager, click on the 'Pcbnew' icon. The
-    'Pcbnew' window will open.
-
-8.  The old, already routed, board should automatically open. Let's
-    import the new netlist file. Click on the 'Read Netlist' icon
-    image:images/netlist.png[netlist_png] on the top toolbar.
-
-9.  Click on the 'Browse Netlist Files' button, select the netlist file
-    in the file selection dialogue, and click on 'Read Current Netlist'.
-    Then click the 'Close' button.
-
-10. At this point you should be able to see a layout with all previous
-    components already routed. On the top left corner you should see
-    all unrouted components, in our case the CON2. Select CON2 with
-    the mouse.  Move the component to the middle of the board.
-
-11. Place CON2 and route it. Once done, save and proceed with the Gerber
-    file generation as usual.
-
-The process described here can easily be repeated as many times as you
-need. Beside the Forward Annotation method described above, there is
-another method known as Backward Annotation. This method allows you to
-make modifications to your already routed PCB from Pcbnew and updates
-those modifications in your schematic and netlist file. The Backward
-Annotation method, however, is not that useful and is therefore not
-described here.
 
 [[more-about-kicad-documentation]]
 == More about KiCad documentation
