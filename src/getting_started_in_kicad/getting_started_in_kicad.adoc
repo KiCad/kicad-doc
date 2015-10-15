@@ -243,7 +243,7 @@ schematic using KiCad.
 1.  Under Windows run kicad.exe. Under Linux type 'kicad' in your
     Terminal. You are now in the main window of the KiCad project
     manager.  From here you have access to eight stand-alone software
-    tools: __EESchema__, __Schematic Library Editor__, __PCBnew__,
+    tools: __Eeschema__, __Schematic Library Editor__, __Pcbnew__,
     __PCB Footprint Editor__, __GerbView__, __Bitmap2Component__,
     __PCB Calculator__ and __Pl Editor__. Refer to the work-flow chart
     to give you an idea how the main tools are used.
@@ -576,7 +576,7 @@ image:images/cvpcb.png[cvpcb_png]
     footprints. This will be explained in a later section of this
     document.
 
-53. You can close _Cvpcb_ and go back to the _EESchema_ schematic
+53. You can close _Cvpcb_ and go back to the _Eeschema_ schematic
     editor. Save the project by clicking on *File* -> **Save Whole
     Schematic Project**. Close the schematic editor.
 
@@ -589,7 +589,7 @@ image:images/cvpcb.png[cvpcb_png]
 NOTE: Library files (__*.lib__) are text files too and they are also
 easily editable or scriptable.
 
-56. To create a Bill Of Materials (BOM), go to the _EESchema_ schematic 
+56. To create a Bill Of Materials (BOM), go to the _Eeschema_ schematic 
     editor and click on the 'Bill of materials' icon 
     image:images/bom.png[bom_png] on the top toolbar.
     By default there is no plugin active. You add one, by clicking on
@@ -703,13 +703,13 @@ image:images/10000000000004A2000001E05B3D8DFF.png[10000000000004A2000001E05B3D8D
 == Layout printed circuit boards
 
 It is now time to use the netlist file you generated to lay out the PCB.
-This is done with the _PCBnew_ tool.
+This is done with the _Pcbnew_ tool.
 
 [[using-pdbnew]]
-=== Using PCBnew
+=== Using Pcbnew
 
-1.  From the KiCad project manager, click on the 'PCBNew' icon
-    image:images/pcbnew.png[pcbnew_png]. The 'PCBNew' window will
+1.  From the KiCad project manager, click on the 'Pcbnew' icon
+    image:images/pcbnew.png[pcbnew_png]. The 'Pcbnew' window will
     open. If you get an error message saying that a _*.kicad_pcb_ file
     does not exist and asks if you want to create it, just click Yes.
 
@@ -895,7 +895,7 @@ Once your PCB is complete, you can generate Gerber files for each layer
 and send them to your favourite PCB manufacturer, who will make the
 board for you.
 
-1.  From KiCad, open the _PCBNew_ software tool and load your board
+1.  From KiCad, open the _Pcbnew_ software tool and load your board
     file by clicking on the icon
     image:images/open_document.png[open_document_png].
 
@@ -931,7 +931,7 @@ board for you.
 2.  Use the menu on the right to select/deselect which layer to show.
     Carefully inspect each layer before sending them for production.
 
-3.  To generate the drill file, from _PCBNew_ go again for the *File* ->
+3.  To generate the drill file, from _Pcbnew_ go again for the *File* ->
     *Plot* option. Default settings should be fine.
 
 [[automatically-route-with-freerouter]]
@@ -949,7 +949,7 @@ and it is needed to build by yourself to use with KiCad.
 Source code of Freerouter can be found on this site:
 https://github.com/nikropht/FreeRouting
 
-1.  From _PCBNew_ click on *File* -> *Export* -> *Specctra DSN* 
+1.  From _Pcbnew_ click on *File* -> *Export* -> *Specctra DSN* 
     or click on *Tools* -> *FreeRoute* -> **Export a Specctra 
     Design (*.dsn) file** and save the file locally.
     Launch FreeRouter and click on the 'Open Your Own Design'
@@ -983,7 +983,7 @@ use FreeRoute effectively.
     save the board file with the _.ses_ extension. You do not really
     need to save the FreeRouter rules file.
 
-6.  Back to __PCBnew__. You can import your freshly routed board by
+6.  Back to __Pcbnew__. You can import your freshly routed board by
     clicking on the link *Tools* -> *FreeRoute* and then on the icon
     'Back Import the Spectra Session (.ses) File' and selecting
     your _.ses_ file.
@@ -1012,13 +1012,13 @@ to a library file you can just use the cut and paste commands.
 [[using-component-library-editor]]
 === Using Component Library Editor
 
-1.  We can use the _Component Library Editor_ (part of __EESchema__)
+1.  We can use the _Component Library Editor_ (part of __Eeschema__)
     to make new components. In our project folder 'tutorial1' let's create
     a folder named 'library'. Inside we will put our new library file
     _myLib.lib_ as soon as we have created our new component.
 
 2.  Now we can start creating our new component. From KiCad, start
-    __EESchema__, click on the 'Library Editor' icon
+    __Eeschema__, click on the 'Library Editor' icon
     image:images/libedit.png[libedit_png] and then click on the 'New
     component' icon
     image:images/new_component.png[new_component_png]. The Component
@@ -1089,7 +1089,7 @@ image:images/10000000000000DD000000946E66C399.png[10000000000000DD000000946E66C3
     be available to you from the library __myLib__.
 
 13. You can make any library _file.lib_ file available to you by
-    adding it to the library path. From __EESchema__, go to
+    adding it to the library path. From __Eeschema__, go to
     *Preferences* -> *Library* and add both the path to it in 'User
     defined search path' and _file.lib_ in 'Component library files'.
 
@@ -1101,7 +1101,7 @@ easier to start from one already made and modify it. In this section we
 will see how to export a component from the KiCad standard library
 'device' to your own library _myOwnLib.lib_ and then modify it.
 
-1.  From KiCad, start __EESchema__, click on the 'Library Editor' icon
+1.  From KiCad, start __Eeschema__, click on the 'Library Editor' icon
     image:images/libedit.png[libedit_png], click on the 'Select
     working library' icon image:images/library.png[library_png] and
     choose the library 'device'. Click on 'Load component to edit from
@@ -1115,7 +1115,7 @@ will see how to export a component from the KiCad standard library
 
 3.  You can make this component and the whole library _myOwnLib.lib_
     available to you by adding it to the library path. From
-    __EESchema__, go to *Preferences* -> *Component Libraries* and add both
+    __Eeschema__, go to *Preferences* -> *Component Libraries* and add both
     _library/_ in 'User defined search path' and _myOwnLib.lib_ in the
     'Component library files'.
 
@@ -1161,7 +1161,7 @@ Internet tool __quicklib__.
     __tutorial1/library/myQuickLib.lib.__. You are done!
 
 5.  Have a look at it using KiCad. From the KiCad project manager, start
-    __EESchema__, click on the 'Library Editor' icon
+    __Eeschema__, click on the 'Library Editor' icon
     image:images/libedit.png[libedit_png], click on the 'Import Component'
     icon image:images/import.png[import_png], navigate to _tutorial1/library/_
     and select _myQuickLib.lib._
@@ -1170,7 +1170,7 @@ image:images/10000000000002EE00000177A7337383.png[10000000000002EE00000177A73373
 
 6.  You can make this component and the whole library _myQuickLib.lib_
     available to you by adding it to the KiCad library path. From
-    __EESchema__, go to *Preferences* -> *Component Libraries* and add _library_ in
+    __Eeschema__, go to *Preferences* -> *Component Libraries* and add _library_ in
     'User defined search path' and _myQuickLib.lib_ in 'Component library
     files'.
 
@@ -1230,9 +1230,9 @@ fin.close(); fout.close()
 -------------------------------------------------------------------------------
 
 1.  While merging the two components into one, it is necessary to use
-    the Library Editor from EESchema to move the first component so
+    the Library Editor from Eeschema to move the first component so
     that the second does not end up on top of it. Below you will find
-    the final .lib file and its representation in __EESchema__.
+    the final .lib file and its representation in __Eeschema__.
 
 .Contents of a *.lib file
 ----
@@ -1280,7 +1280,7 @@ Here are the steps for creating a new PCB footprint in KiCad:
 [[using-footprint-editor]]
 === Using Footprint Editor
 
-1.  From the KiCad project manager start the _PCBnew_ tool. Click on
+1.  From the KiCad project manager start the _Pcbnew_ tool. Click on
     the 'Open Footprint Editor' icon
     image:images/edit_module.png[edit_module_png] on the top
     toolbar. This will open the 'Footprint Editor'.
@@ -1423,7 +1423,7 @@ you do it:
 
 2.  You already have a completed schematic and a fully routed PCB.
 
-3.  From KiCad, start __EESchema__, make your modifications by
+3.  From KiCad, start __Eeschema__, make your modifications by
     deleting CON1 and adding CON2. Save your schematic project with
     the icon image:images/save.png[Save icon] and c lick on the
     'Netlist generation' icon image:images/netlist.png[netlist_png] on
@@ -1441,8 +1441,8 @@ you do it:
 6.  Back in the schematic editor, save the project by clicking on 'File'
     -> 'Save Whole Schematic Project'. Close the schematic editor.
 
-7.  From the KiCad project manager, click on the 'PCBNew' icon. The
-    'PCBNew' window will open.
+7.  From the KiCad project manager, click on the 'Pcbnew' icon. The
+    'Pcbnew' window will open.
 
 8.  The old, already routed, board should automatically open. Let's
     import the new netlist file. Click on the 'Read Netlist' icon
@@ -1463,7 +1463,7 @@ you do it:
 The process described here can easily be repeated as many times as you
 need. Beside the Forward Annotation method described above, there is
 another method known as Backward Annotation. This method allows you to
-make modifications to your already routed PCB from PCBNew and updates
+make modifications to your already routed PCB from Pcbnew and updates
 those modifications in your schematic and netlist file. The Backward
 Annotation method, however, is not that useful and is therefore not
 described here.
