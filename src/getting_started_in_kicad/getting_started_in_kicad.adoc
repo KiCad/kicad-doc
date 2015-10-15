@@ -181,6 +181,9 @@ characterised by an interesting work-flow in which schematic components
 and footprints are actually two separate entities. This is often the
 subject of discussion on Internet forums.
 
+[[kicad-work-flow-overview]]
+=== KiCad Workflow overview
+
 The KiCad work-flow is comprised of two main tasks: making the schematic
 and laying out the board. Both a component library and a footprint
 library are necessary for these two tasks. KiCad has plenty of both.
@@ -193,12 +196,10 @@ When applicable, the icon is added as well for convenience.
 
 image:images/kicad_flowchart.png["KiCad Flowchart"]
 
-
 For more information about creating a component, see the section of this
 document titled <<make-schematic-components-in-kicad,Make schematic components in KiCad>>. And for more
 information about how to create a new footprint, see the section of this document
 titled <<make-component-footprints,Make component footprints>>.
-
 
 On the following site:
 
@@ -235,6 +236,9 @@ section titled <<forward-annotation-in-kicad,Forward Annotation>>.
 
 In this section we are going to learn how to draw an electronic
 schematic using KiCad.
+
+[[using-eeschema]]
+=== Using Eeschema
 
 1.  Under Windows run kicad.exe. Under Linux type 'kicad' in your
     Terminal. You are now in the main window of the KiCad project
@@ -353,8 +357,10 @@ be connected. We will see later on why this is the case.
     for the schematic sheet__.
 
 19. Repeat the add-component steps, however this time select the
-    'microcontrollers' library instead of the 'device' library and pick the
-    'PIC12C508A' component instead of the 'R' component from it.
+    'microchip_pic12mcu' library instead of the 'device' library and pick the
+    'PIC12C508A-I/SN' component instead of the 'R' component from it.
+    Before add-component, add 'microchip_pic12mcu' to your Component library files
+    by *Preferences* -> **Component Libraries** and press Add button. 
 
 20. Hover the mouse over the microcontroller component. Press the y key
     or the x key on the keyboard. Notice how the component is flipped over
@@ -525,27 +531,30 @@ Warning Pin power_in not driven (Net xx)
     the top toolbar. Click on 'Netlist' then click on 'save'. Save
     under the default file name.
 
-47. You can now quit the schematic editor. From KiCad, click on the
-    'Run Cvpcb' icon
+47. After generating the Netlist file, click on the 'Run Cvpcb' icon
     image:images/icon_cvpcb_small.png[icon_cvpcb_small_png] on the top
     toolbar. If a missing file error window pops up, just ignore it
     and click OK.
 
 48. _Cvpcb_ allows you to link all the components in your schematic
-    with footprints in the KiCad library. The pane on the left shows
+    with footprints in the KiCad library. The pane on the center shows
     all the components used in your schematic. Here select 'D1'. In
     the pane on the right you have all the available footprints, here
-    scroll down to 'LEDV' and double click on
-    it. image:images/cvpcb.png[cvpcb_png]
+    scroll down to 'LEDs:LED-5MM' and double click on it. 
++
+image:images/cvpcb.png[cvpcb_png]
 
 49. It is possible that the pane on the right shows only a selected
     subgroup of available footprints. This is because KiCad is trying
     to suggest to you a subset of suitable footprints. Click on the
-    icon image:images/module_full_list.png[module_full_list_png] to
-    deselect this filter.
+    icons image:images/module_filtered_list.png[module_filtered_list_png],
+    image:images/module_pin_filtered_list.png[module_pin_filtered_list_png] and
+    image:images/module_library_list.png[module_library_list_png] to
+    enable or disable these filters.
 
-50. For 'J1' select the '3PIN_6mm' footprint. For 'R1' and 'R2' select
-    the 'R1' footprint. Select 'DIP-8_300' for 'U1'.
+50. For 'IC1' select the 'Housings_DIP:DIP-8_W7.62mm' footprint.
+    For 'J1' select the 'Connect:Banana_Jack_3Pin' footprint.
+    For 'R1' and 'R2' select the 'Discret:R1' footprint.
 
 51. If you are interested in knowing what the footprint you are
     choosing looks like, you have two options. You can click on the
@@ -560,7 +569,7 @@ Warning Pin power_in not driven (Net xx)
 
 52. You are done. You can now update your netlist file with all the
     associated footprints. Click on *File* -> **Save As**. The default
-    name 'tute1.net' is fine, click save. Otherwise you can use the
+    name 'tutorial1.net' is fine, click save. Otherwise you can use the
     icon image:images/save.png[Save icon].  Your netlist file has now
     been updated with all the footprints. Note that if you are missing
     the footprint of any device, you will need to make your own
@@ -696,6 +705,9 @@ image:images/10000000000004A2000001E05B3D8DFF.png[10000000000004A2000001E05B3D8D
 It is now time to use the netlist file you generated to lay out the PCB.
 This is done with the _PCBnew_ tool.
 
+[[using-pdbnew]]
+=== Using PCBnew
+
 1.  From the KiCad project manager, click on the 'PCBNew' icon
     image:images/pcbnew.png[pcbnew_png]. The 'PCBNew' window will
     open. If you get an error message saying that a _*.kicad_pcb_ file
@@ -703,7 +715,7 @@ This is done with the _PCBnew_ tool.
 
 2.  Begin by entering some schematic information. Click on the 'Page
     settings' icon image:images/sheetset.png[sheetset_png] on the top
-    toolbar. Set 'paper size' as 'A4' and 'title' as 'Tute 1'.
+    toolbar. Set 'paper size' as 'A4' and 'title' as 'Tutorial1'.
 
 3.  It is a good idea to start by setting the *clearance* and the
     *minimum track width* to those required by your PCB
@@ -723,7 +735,7 @@ image:images/design_rules.png[Design Rules Window]
 5.  Now we will import the netlist file. Click on the 'Read Netlist'
     icon image:images/netlist.png[netlist_png] on the top
     toolbar. Click on the 'Browse Netlist Files' button, select
-    'tute1.net' in the File selection dialogue, and click on 'Read
+    'tutorial1.net' in the File selection dialogue, and click on 'Read
     Current Netlist'. Then click the 'Close' button.
 
 6.  All components should now be visible in the top left hand corner
@@ -867,7 +879,9 @@ image:images/10000000000001830000015C1D559586.png[10000000000001830000015C1D5595
     OK to close the DRC Control dialogue.
 
 27. Save your file by clicking on *File* -> **Save**. To admire your
-    board in 3D, click on *View* -> **3D Display**.
+    board in 3D, click on *View* -> **3D Viewer**.
++
+image:images/pcbnew_3d_viewer.png[pcbnew_3d_viewer_png]
 
 28. You can drag your mouse around to rotate the PCB.
 
@@ -887,6 +901,7 @@ board for you.
 
 2.  Click on *File* -> **Plot**. Select 'Gerber' as the 'Plot Format'
     and select the folder in which to put all Gerber files.
+    Proceed by clicking on the 'Plot' button.
 
 3.  These are the layers you need to select for making a typical 2-layer
     PCB:
@@ -894,16 +909,19 @@ board for you.
 [width="100%",cols="32%,31%,37%",options="header"]
 |=========================================================
 |KiCad Layer Name |What it is |Gerber File Extension
-|Copper |Bottom Layer |.GBL
-|Component |Top Layer |.GTL
-|SilkS_Cmp |Top Overlay |.GTO
-|Mask_Cop |Bottom Solder Resist |.GBS
-|Mask_Cmp |Top Solder Resist |.GTS
-|Edges_Pcb |Edges |N/A
+|B.Cu (ex Copper) |Bottom Layer |.GBL
+|F.Cu (ex Component) |Top Layer |.GTL
+|F.SilkS (ex SilkS_Cmp) |Top Overlay |.GTO
+|B.Mask (ex Mask_Cop) |Bottom Solder Resist |.GBS
+|F.Mask (ex Mask_Cmp) |Top Solder Resist |.GTS
+|Edge.Cuts (ex Edges_Pcb) |Edges |N/A
 |=========================================================
 
-1.  Proceed by clicking on the 'Plot' button. To view all your Gerber
-    files go to the KiCad project manager and click on the 'GerbView' icon.
+[[using-gerbview]]
+=== Using GerbView
+
+1.  To view all your Gerber files go to the KiCad project manager and click
+    on the 'GerbView' icon.
     On the drag down menu select 'Layer 1'. Click on *File* -> *Load Gerber
     file* or click on the icon
     image:images/gerber_file.png[gerber_file_png]. Load all generated Gerber
@@ -925,6 +943,11 @@ should first route critical traces by hand and then set the autorouter
 to do the boring bits. Its work will only account for the unrouted
 traces. The autorouter we will use here is FreeRouter from
 __freerouting.net__.
+
+NOTE: Freerouter is a open source java application,
+and it is needed to build by yourself to use with KiCad.
+Source code of Freerouter can be found on this site:
+https://github.com/nikropht/FreeRouting
 
 1.  From _PCBNew_ click on *File* -> *Export* -> *Specctra DSN* 
     or click on *Tools* -> *FreeRoute* -> **Export a Specctra 
@@ -956,7 +979,7 @@ use FreeRoute effectively.
     left-click will stop the optimisation process. Unless you really
     need to stop, it is better to let FreeRouter finish its job.
 
-5.  Click on the *Tools* -> *Export Specctra Session File* menu and
+5.  Click on the *File* -> *Export Specctra Session File* menu and
     save the board file with the _.ses_ extension. You do not really
     need to save the FreeRouter rules file.
 
@@ -986,8 +1009,11 @@ ends with 'ENDDEF'. One or more components are normally placed in a
 library file with the extension __.lib__. If you want to add components
 to a library file you can just use the cut and paste commands.
 
+[[using-component-library-editor]]
+=== Using Component Library Editor
+
 1.  We can use the _Component Library Editor_ (part of __EESchema__)
-    to make new components. In our project folder 'demo1' let's create
+    to make new components. In our project folder 'tutorial1' let's create
     a folder named 'library'. Inside we will put our new library file
     _myLib.lib_ as soon as we have created our new component.
 
@@ -1008,7 +1034,7 @@ to a library file you can just use the cut and paste commands.
 
 3.  In the Pin Properties window that appears, set the pin name to
     'VCC', set the pin number to '1', and the 'Electrical type' to
-    'Power output' then click OK.
+    'Passive' then click OK.
 +
 image:images/pin_properties.png[Pin Properties]
 
@@ -1017,11 +1043,11 @@ image:images/pin_properties.png[Pin Properties]
 
 5.  Repeat the place-pin steps, this time 'Pin name' should be
     'INPUT', 'Pin number' should be '2', and 'Electrical Type' should
-    be 'Power input'.
+    be 'Passive'.
 
 6.  Repeat the place-pin steps, this time 'Pin name' should be 'GND',
-    'Pin number' should be '3', and 'Electrical Type' should be 'Power
-    output'. Arrange the pins one on top of the other. The component
+    'Pin number' should be '3', and 'Electrical Type' should be 'Passive'.
+    Arrange the pins one on top of the other. The component
     label 'MYCONN3' should be in the centre of the page (where the
     blue lines cross).
 
@@ -1037,10 +1063,10 @@ image:images/10000000000000DD000000946E66C399.png[10000000000000DD000000946E66C3
 
 8.  Save the component in your library __myLib.lib__. Click on the
     'New Library' icon image:images/new_library.png[new_library_png],
-    navigate into _demo1/library/_ folder and save the new library
+    navigate into _tutorial1/library/_ folder and save the new library
     file with the name __myLib.lib__.
 
-9.  Go to *Preferences* -> *Library* and add both _demo1/library/_ in
+9.  Go to *Preferences* -> *Library* and add both _tutorial1/library/_ in
     'User defined search path' and _myLib.lib in_ 'Component library files'.
 
 10. Click on the 'Select working library' icon
@@ -1124,27 +1150,28 @@ Internet tool __quicklib__.
     http://kicad.rohrbacher.net/quicklib.php
 
 2.  Fill out the page with the following information: Component name:
-    MYCONN3 Reference Prefix: J Pin Layout Style: SIL Pin Count, N: 5
+    MYCONN3 Reference Prefix: J Pin Layout Style: SIL Pin Count, N: 3
 
 3.  Click on the 'Assign Pins' icon. Fill out the page with the
-    following information: Pin 1: VCC Pin 2: input Pin 3: GND
+    following information: Pin 1: VCC Pin 2: input Pin 3: GND.
+    Type : Passive for all 3 pins.
 
 4.  Click on the icon 'Preview it' and, if you are satisfied, click on
     the 'Build Library Component'. Download the file and rename it
-    __demo1/library/myLib.lib.__. You are done!
+    __tutorial1/library/myQuickLib.lib.__. You are done!
 
 5.  Have a look at it using KiCad. From the KiCad project manager, start
     __EESchema__, click on the 'Library Editor' icon
     image:images/libedit.png[libedit_png], click on the 'Import Component'
-    icon image:images/import.png[import_png], navigate to _demo1/library/_
-    and select _myLib.lib._
+    icon image:images/import.png[import_png], navigate to _tutorial1/library/_
+    and select _myQuickLib.lib._
 +
 image:images/10000000000002EE00000177A7337383.png[10000000000002EE00000177A7337383_png]
 
-6.  You can make this component and the whole library _myLib.lib_
+6.  You can make this component and the whole library _myQuickLib.lib_
     available to you by adding it to the KiCad library path. From
-    __EESchema__, go to *Preferences* -> *Library* and add both _library_ in
-    'User defined search path' and _myOwnLib.lib_ in 'Component library
+    __EESchema__, go to *Preferences* -> *Component Libraries* and add _library_ in
+    'User defined search path' and _myQuickLib.lib_ in 'Component library
     files'.
 
 As you might guess, this method of creating library components can be
@@ -1240,26 +1267,35 @@ image:images/10000000000004800000026769DAE0A4.png[10000000000004800000026769DAE0
 
 Unlike other EDA software tools, which have one type of library that
 contains both the schematic symbol and the footprint variations, KiCad
-_.lib_ files contain schematic symbols and _.mod_ files contain
+_.lib_ files contain schematic symbols and _.kicad_mod_ files contain
 footprints. _Cvpcb_ is used to successfully map footprints to symbols.
 
-As for _.lib_ files, _.mod_ library files are text files that can
+As for _.lib_ files, _.kicad_mod_ library files are text files that can
 contain anything from one to several parts.
 
 There is an extensive footprint library with KiCad, however on occasion
 you might find that the footprint you need is not in the KiCad library.
 Here are the steps for creating a new PCB footprint in KiCad:
 
+[[using-footprint-editor]]
+=== Using Footprint Editor
+
 1.  From the KiCad project manager start the _PCBnew_ tool. Click on
     the 'Open Footprint Editor' icon
     image:images/edit_module.png[edit_module_png] on the top
     toolbar. This will open the 'Footprint Editor'.
 
-2.  We are going to save the new footprint in the footprint library
-    'connect'. Click on the 'Select working library' icon
+2.  We are going to save the new footprint 'MYCONN3' in the new
+    footprint library 'myfootprint'.
+    Create a new folder _myfootprint.pretty_ in the _tutorial1/_ project folder.
+    Click on the *Preferences* -> **Footprint Libraries Manager** and
+    press 'Append Library' button. In the table, enter "myfootprint"
+    as Nickname, enter "$\{KIPRJMOD\}/myfootprint.pretty" as Library Path
+    and enter "KiCad" as Plugin Type.
+    Press OK to close the PCB Library Tables window.
+    Click on the 'Select active library' icon
     image:images/library.png[library_png] on the top toolbar. Select
-    the 'connect' library, though you can choose a different location
-    if you want.
+    the 'myfootprint' library.
 
 [[myconn3]]
 3.  Click on the 'New Footprint' icon
@@ -1318,7 +1354,7 @@ When you have a KiCad project to share with somebody, it is important
 that the schematic file __.sch__, the board file __.kicad_pcb__, the
 project file _.pro_ and the netlist file __.net__, are sent together
 with both the schematic parts file _.lib_ and the footprints file
-__.mod__. Only this way will people have total freedom to modify the
+__.kicad_mod__. Only this way will people have total freedom to modify the
 schematic and the board.
 
 With KiCad schematics, people need the _.lib_ files that contain the
@@ -1327,9 +1363,9 @@ preferences. On the other hand, with boards (__.kicad_pcb__ files),
 footprints can be stored inside the _.kicad_pcb_ file. You
 can send someone a _.kicad_pcb_ file and nothing else, and they would
 still be able to look at and edit the board. However, when they want
-to load components from a netlist, the footprint libraries (__.mod__
+to load components from a netlist, the footprint libraries (__.kicad_mod__
 files) need to be present and loaded in the _Pcbnew_ preferences just
-as for schematics. Also, it is necessary to load the _.mod_ files in
+as for schematics. Also, it is necessary to load the _.kicad_mod_ files in
 the preferences of _Pcbnew_ in order for those footprints to show up in
 __Cvpcb__.
 
@@ -1338,7 +1374,7 @@ to use in another board, you can open the Footprint Editor, load a footprint
 from the current board, and save or export it into another footprint
 library. You can also export all the footprints from a _.kicad_pcb_ file
 at once via *Pcbnew* -> *File* -> *Archive* -> *Footprints* ->
-**Create footprint archive**, which will create a new _.mod_ file with
+**Create footprint archive**, which will create a new _.kicad_mod_ file with
 all the board's footprints.
 
 Bottom line, if the PCB is the only thing you want to distribute, then
@@ -1348,14 +1384,18 @@ components and the PCB, it is highly recommended that you zip and send
 the following project directory:
 
 ----------------------
-foxy_board/
-|-- foxy_board.pro
-|-- foxy_board.sch
-|-- foxy_board.kicad_pcb
-|-- foxy_board.net
-|-- lib/
-|   |-- foxy_board.lib
-|   \-- foxy_board.mod
+tutorial1/
+|-- tutorial1.pro
+|-- tutorial1.sch
+|-- tutorial1.kicad_pcb
+|-- tutorial1.net
+|-- library/
+|   |-- myLib.lib
+|   |-- myOwnLib.lib
+|   \-- myQuickLib.lib
+|
+|-- myfootprint.pretty/
+|   \-- MYCONN3.kicad_mod
 |
 \-- gerber/
     |-- ...
