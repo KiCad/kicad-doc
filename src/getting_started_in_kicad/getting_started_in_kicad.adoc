@@ -353,7 +353,7 @@ be connected. We will see later on why this is the case.
 18. Change the grid size. You have probably noticed that on the
     schematic sheet all components are snapped onto a large pitch grid. You
     can easily change the size of the grid by *Right-Click* -> **Grid
-    select**. __In general, it is recommendable to use a grid of 25.0 mils
+    select**. __In general, it is recommendable to use a grid of 50.0 mils
     for the schematic sheet__.
 
 19. Repeat the add-component steps, however this time select the
@@ -825,16 +825,12 @@ image:images/1000000000000169000001178613965A.png[100000000000016900000117861396
     Select**. Be sure to select the appropriate grid size before or after
     laying down the components and connecting them together with tracks.
 
-19. Considering, for instance, that a 0.8mm BGA component has a pin to
-    pin distance of about 30 mil (0.8mm), **it is generally commendable to
-    set a grid size of 5 mil when you route**.
-
-20. Repeat this process until all wires, except pin 3 of J1, are
+19. Repeat this process until all wires, except pin 3 of J1, are
     connected. Your board should look like the example below.
 +
 image:images/10000000000001F8000001B32F1802F1.png[10000000000001F8000001B32F1802F1_png]
 
-21. Let's now run a track on the other copper side of the PCB. Select
+20. Let's now run a track on the other copper side of the PCB. Select
     'B.Cu' in the drag down menu on the top toolbar. Click on the 'Add
     tracks and vias' icon
     image:images/add_tracks.png[add_tracks_png]. Draw a track between
@@ -842,7 +838,7 @@ image:images/10000000000001F8000001B32F1802F1.png[10000000000001F8000001B32F1802
     we could do this with the ground plane. Notice how the colour of
     the track has changed.
 
-22. **Go from pin A to pin B by changing layer**. It is possible to
+21. **Go from pin A to pin B by changing layer**. It is possible to
     change the copper plane while you are running a track by placing a
     via.  While you are running a track on the upper copper plane,
     right click and select 'Place Via' or simply press the v key. This
@@ -851,13 +847,13 @@ image:images/10000000000001F8000001B32F1802F1.png[10000000000001F8000001B32F1802
 +
 image:images/100000000000026E000002155D41D893.png[100000000000026E000002155D41D893_png]
 
-23. When you want to inspect a particular connection you can click on
+22. When you want to inspect a particular connection you can click on
     the 'Net highlight' icon
     image:images/net_highlight.png[net_highlight_png] on the right
     toolbar.  Click on pin 3 of J1. The track itself and all pads
     connected to it should become highlighted.
 
-24. Now we will make a ground plane that will be connected to all GND
+23. Now we will make a ground plane that will be connected to all GND
     pins. Click on the 'Add Zones' icon
     image:images/add_zone.png[add_zone_png] on the right toolbar. We
     are going to trace a rectangle around the board, so click where
@@ -865,27 +861,27 @@ image:images/100000000000026E000002155D41D893.png[100000000000026E000002155D41D8
     set 'Pad in Zone' to 'Thermal relief' and 'Zone edges orient' to
     'H,V' and click OK.
 
-25. Trace around the outline of the board by clicking each corner in
+24. Trace around the outline of the board by clicking each corner in
     rotation. Double-click to finish your rectangle. Right click inside the
     area you have just traced. Click on 'Fill or Refill All Zones'. The
     board should fill in with green and look something like this:
 +
 image:images/10000000000001830000015C1D559586.png[10000000000001830000015C1D559586_png]
 
-26. Run the design rules checker by clicking on the 'Perform Design
+25. Run the design rules checker by clicking on the 'Perform Design
     Rules Check' icon image:images/erc.png[erc_png] on the top
     toolbar.  Click on 'Start DRC'. There should be no errors. Click
     on 'List Unconnected'. There should be no unconnected track. Click
     OK to close the DRC Control dialogue.
 
-27. Save your file by clicking on *File* -> **Save**. To admire your
+26. Save your file by clicking on *File* -> **Save**. To admire your
     board in 3D, click on *View* -> **3D Viewer**.
 +
 image:images/pcbnew_3d_viewer.png[pcbnew_3d_viewer_png]
 
-28. You can drag your mouse around to rotate the PCB.
+27. You can drag your mouse around to rotate the PCB.
 
-29. Your board is complete. To send it off to a manufacturer you will
+28. Your board is complete. To send it off to a manufacturer you will
     need to generate all Gerber files.
 
 [[generate-gerber-files]]
@@ -1387,26 +1383,22 @@ image:images/pad_properties.png[Pad Properties]
     Select**. Be sure to select the appropriate grid size before
     laying down the components.
 
-7.  Considering, for instance, that a 0.8mm BGA component has a pin to
-    pin distance of about 30 mil (0.8mm), **it is generally
-    commendable to set a grid size of 5 mil when you route**.
-
-8.  Move the 'MYCONN3' label and the 'SMD' label out of the way so that
+7.  Move the 'MYCONN3' label and the 'SMD' label out of the way so that
     it looks like the image shown above.
 
-9.  When placing pads it is often necessary to measure relative
+8.  When placing pads it is often necessary to measure relative
     distances. Place the cursor where you want the relative coordinate
     point _(0,0)_ to be and press the space bar. While moving the
     cursor around, you will see a relative indication of the position
     of the cursor at the bottom of the page. Press the space bar at
     any time to set the new origin.
 
-10. Now add a footprint contour. Click on the 'Add graphic line or
+9.  Now add a footprint contour. Click on the 'Add graphic line or
     polygon' button image:images/add_polygon.png[add_polygon_png] in
     the right toolbar. Draw an outline of the connector around the
     component.
 
-11. Click on the 'Save Footprint in Active Library' icon
+10. Click on the 'Save Footprint in Active Library' icon
     image:images/save_library.png[save_library_png] on the top
     toolbar, using the default name MYCONN3.
 
