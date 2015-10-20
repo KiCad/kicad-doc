@@ -902,15 +902,16 @@ board for you.
 3.  These are the layers you need to select for making a typical 2-layer
     PCB:
 
-[width="100%",cols="32%,31%,37%",options="header"]
+[width="100%",cols="20%,20%,20%,20%,20%",options="header"]
 |=========================================================
-|KiCad Layer Name |What it is |Gerber File Extension
-|B.Cu (ex Copper) |Bottom Layer |.GBL
-|F.Cu (ex Component) |Top Layer |.GTL
-|F.SilkS (ex SilkS_Cmp) |Top Overlay |.GTO
-|B.Mask (ex Mask_Cop) |Bottom Solder Resist |.GBS
-|F.Mask (ex Mask_Cmp) |Top Solder Resist |.GTS
-|Edge.Cuts (ex Edges_Pcb) |Edges |N/A
+|Layer |KiCad Layer Name |Old KiCad Layer Name |Default Gerber Extension
+    |"Use Protel filename extensions" is enabled
+|Bottom Layer |B.Cu |Copper |.GBR |.GBL
+|Top Layer |F.Cu |Component |.GBR |.GTL
+|Top Overlay |F.SilkS |SilkS_Cmp |.GBR |.GTO
+|Bottom Solder Resist |B.Mask |Mask_Cop |.GBR |.GBS
+|Top Solder Resist |F.Mask |Mask_Cmp |.GBR |.GTS
+|Edges |Edge.Cuts |Edges_Pcb |.GBR |.GM1
 |=========================================================
 
 [[using-gerbview]]
