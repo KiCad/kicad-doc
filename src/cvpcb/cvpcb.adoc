@@ -113,7 +113,7 @@ There is no update to do (unless some new components are not yet annotated), jus
 
 The image below shows the main window of CvPcb.
 
-image:images/en/cvpcb_main_window.png[]
+image::images/en/cvpcb_main_window.png[scaledwidth="90%"]
 
 The left pane contains the list of available footprint library file
 names associated with the project. The center pane contains the list of
@@ -125,7 +125,7 @@ found.
 
 === Main Window Toolbar
 
-image:images/main_toolbar.png[]
+image::images/main_toolbar.png[scaledwidth="70%"]
 
 The top toolbar allows for easy access to the following commands:
 
@@ -202,7 +202,7 @@ list.
 
 === CvPcb Configuration
 
-image:images/en/cvpcb_preference_menu.png[]
+image::images/en/cvpcb_preference_menu.png[scaledwidth="35%"]
 
 CvPcb can be automatically closed after saving the footprint association
 file, or not.
@@ -220,6 +220,8 @@ management:
   using this new method of library management, You can also use native libraries originating
   from GEDA/GPCB or even Eagle xml format files.
 
+<<<<<
+
 == Footprint Libraries Management
 
 === Important remark:
@@ -231,6 +233,7 @@ management:
 
 include::cvpcb_footprint_libraries_tables.adoc[po4a]
 
+<<<<<
 
 == Viewing the Current Footprint
 
@@ -242,7 +245,7 @@ the _footprint_ window. A 3D model of the component can be shown if it
 has been created and assigned to the footprint. Below is the footprint
 viewer window.
 
-image:images/en/footprint_view.png[]
+image::images/en/footprint_view.png[scaledwidth="90%"]
 
 ==== Status Bar Information
 
@@ -278,9 +281,9 @@ contents of each pane in the status bar.
 
 ==== Context Menu
 
-image:images/en/context_menu.png[]
-
 Displayed by right-clicking the mouse:
+
+image::images/en/context_menu.png[scaledwidth="30%"]
 
 [width="80%",cols="44%,56%",]
 |====================================================================
@@ -300,7 +303,7 @@ Displayed by right-clicking the mouse:
 |image:images/icons/zoom_out.png[]
 |Zoom out
 
-|image:images/icons/redraw.png[]
+|image:images/icons/zoom_redraw.png[]
 |Redraw
 
 |image:images/icons/zoom_fit_in_page.png[]
@@ -341,7 +344,7 @@ Displayed by right-clicking the mouse:
 
 === Viewing the Current 3D Model
 
-image:images/en/3d_window.png[]
+image::images/en/3d_window.png[scaledwidth="90%"]
 
 ==== Mouse Commands
 
@@ -356,13 +359,13 @@ image:images/en/3d_window.png[]
 
 [width="90%",cols="10%,90%",]
 |=======================================================================
-|image:images/icons/3dmodel_reload.png[]
+|image:images/icons/import3d.png[]
 |Reload the 3D model
 
 |image:images/icons/copy_to_clipboard.png[]
 |Copy 3D image to clipboard
 
-|image:images/icons/3d_viewer_options.png[]
+|image:images/icons/read_setup.png[]
 |Set 3D viewer options
 
 |image:images/icons/zoom_in.png[]
@@ -371,7 +374,7 @@ image:images/en/3d_window.png[]
 |image:images/icons/zoom_out.png[]
 |Zoom out
 
-|image:images/icons/redraw.png[]
+|image:images/icons/zoom_redraw.png[]
 |Redraw
 
 |image:images/icons/zoom_fit_in_page.png[]
@@ -411,6 +414,8 @@ image:images/en/3d_window.png[]
 |Toggle orthographic projection mode on and off
 |=======================================================================
 
+<<<<<
+
 == Using CvPcb to Associate Components with Footprints
 
 === Manually Associating Footprints with Components
@@ -428,13 +433,15 @@ If the selected component and/or library is highlighted when the one or
 more of the filtering option is enabled, the displayed footprint list
 in CvPcb is filtered accordingly.
 
-The icons image:images/icons_filter.png[] enable and disable the
+The icons image:images/icons/filter_component.png[]
+image:images/icons/filter_pincount.png[]
+image:images/icons/filter_library.png[] enable and disable the
 filtering feature. When the filtering is not enabled, the full footprint
 list is shown.
 
 Without filtering:
 
-image:images/en/filter_none.png[]
+image::images/en/filter_none.png[scaledwidth="80%"]
 
 Filtered by list of footprint filters assigned to the selected
 component. The component filters are listed on the center pane of the
@@ -442,28 +449,30 @@ status bar at the bottom of the main window.
 
 Filtered by the footprint filter of the selected component:
 
-image:images/en/filter_comp.png[]
+image::images/en/filter_comp.png[scaledwidth="80%"]
 
 In the component library editor in Eeschema, the footprint list was set
 using the entries in the footprint filter tab of the component
 properties dialog as shown below.
 
-image:images/en/eeschema_filter.png[]
+image::images/en/eeschema_filter.png[scaledwidth="50%"]
 
 Filtered by the pin count of the selected component:
 
-image:images/en/filter_pincount.png[]
+image::images/en/filter_pincount.png[scaledwidth="80%"]
 
 Filtered by the selected library.
 
-image:images/en/filter_library.png[]
+image::images/en/filter_library.png[scaledwidth="80%"]
 
 The filtering can be combined to form more complex
 filtering to help reduce the number of footprints in the footprint pane.
 
 Filtered by the selected component pin count and the component filter:
 
-image:images/en/filter_comp_and_pincount.png[]
+image::images/en/filter_comp_and_pincount.png[scaledwidth="80%"]
+
+<<<<<
 
 == Automatic Associations
 
