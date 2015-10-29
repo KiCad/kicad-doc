@@ -29,7 +29,7 @@ displayed in other than outline mode.
 
 The resulting outline might look something like this:
 
-image:images/Pcbnew_simple_board_outline.png[]
+image::images/Pcbnew_simple_board_outline.png[scaledwidth="50%"]
 
 ==== Using a DXF drawing for the board outline
 
@@ -114,14 +114,14 @@ Using the "OpenGL" or "Cairo" canvas modes:
 Here is an example of an DXF import with a board that had several
 elliptical segments approximated by a number of short line segments:
 
-image:images/Pcbnew_board_outline_imported_from_a_DXF.png[]
+image::images/Pcbnew_board_outline_imported_from_a_DXF.png[scaledwidth="50%"]
 
 ==== Reading the netlist generated from the schematic
 
 Activate the image:images/icons/netlist.png[] icon to display the
 netlist dialog window:
 
-image:images/Pcbnew_netlist_dialog.png[]
+image::images/Pcbnew_netlist_dialog.png[scaledwidth="60%"]
 
 If the name (path) of the netlist in the window title is incorrect,
 use the 'Select' button to browse to the desired  netlist. Then
@@ -129,7 +129,7 @@ use the 'Select' button to browse to the desired  netlist. Then
 superimposed one upon another (we shall see below how to move them
 automatically).
 
-image:images/Pcbnew_board_outline_with_dogpile.png[]
+image::images/Pcbnew_board_outline_with_dogpile.png[scaledwidth="55%"]
 
 If none of the footprints have been placed, all of the footprints will
 appear on the board in the same place, making them difficult to
@@ -137,7 +137,7 @@ recognize. It is possible to arrange them automatically (using the
 command 'Global Spread and Place' accessed via the right mouse
 button). Here is the result of such automatic arrangement:
 
-image:images/Pcbnew_board_outline_with_globally_placed_modules.png[]
+image::images/Pcbnew_board_outline_with_globally_placed_modules.png[scaledwidth="50%"]
 
 NOTE: If a board is modified by replacing an existing footprint with a
 new one (for example changing a 1/8W resistance to 1/2W) in CvPcb,
@@ -166,7 +166,7 @@ incorrect as a result of modifications. To do this, check the
 'Delete' option in the 'Bad tracks deletion' box of the netlist
 dialog:
 
-image:images/Pcbnew_bad_tracks_deletion_option.png[]
+image::images/Pcbnew_bad_tracks_deletion_option.png[scaledwidth="30%"]
 
 However, it is often quicker to modify such tracks by hand (the DRC
 function allows their identification).
@@ -180,14 +180,14 @@ This is necessary because there are often footprints (holes for
 fixation screws, for instance) that are added to the PCB that never
 appear in the schematic.
 
-image:images/Pcbnew_extra_footprints_deletion_option.png[]
+image::images/Pcbnew_extra_footprints_deletion_option.png[scaledwidth="28%"]
 
 If the "Remove Extra Footprints" option is checked, a footprint
 corresponding to a component not found in the netlist will be deleted,
 unless they have the option "Locked" active. It is a good idea to
 activate this option for "mechanical" footprints:
 
-image:images/Pcbnew_unlock_footprint_option.png[]
+image::images/Pcbnew_unlock_footprint_option.png[scaledwidth="28%"]
 
 ==== Modified footprints
 
@@ -196,7 +196,7 @@ has already been placed, it will not be modified by Pcbnew, unless
 the corresponding option of the 'Exchange Footprint' box of the netlist
 dialog is checked:
 
-image:images/Pcbnew_exchange_module_option.png[]
+image::images/Pcbnew_exchange_module_option.png[scaledwidth="28%"]
 
 Changing a footprint (replacing a resistor with one of a different
 size, for instance) can be effected directly by editing the footprint.
@@ -211,7 +211,7 @@ footprints are represented by their reference. In this situation, the
 'Timestamp' option of the netlist dialog may be selected before
 re-reading the netlist:
 
-image:images/Pcbnew_module_selection_option.png[]
+image::images/Pcbnew_module_selection_option.png[scaledwidth="28%"]
 
 With this option, Pcbnew no longer identifies footprints by their
 reference, but by their time stamp instead. The time stamp is
@@ -233,11 +233,11 @@ footprint is very useful, and is very easy:
 . Click on a footprint to open the Edit dialog box.
 . Activate Change Footprints.
 
-image:images/Pcbnew_change_modules_button.png[]
+image::images/Pcbnew_change_modules_button.png[scaledwidth="60%"]
 
 Options for footprint exchange:
 
-image:images/Pcbnew_footprint_exchange_options.png[]
+image::images/Pcbnew_footprint_exchange_options.png[scaledwidth="70%"]
 
 One must choose a new footprint name and use:
 
