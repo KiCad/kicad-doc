@@ -35,6 +35,7 @@ add_adoc_option( --section-numbers )
 add_adoc_option( --theme flask )
 
 # Add the common a2x options
+add_a2x_option( --xsltproc-opts=--nonet )
 add_a2x_option( --no-xmllint )
 add_a2x_option( -f pdf )
 #add_a2x_option( --verbose )
