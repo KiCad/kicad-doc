@@ -37,7 +37,7 @@ DOCCHAPTERS:= $(filter-out $(DOCTRANSLATED), $(wildcard $(DOCNAME)_*.adoc))
 ASCIIDOCVAR:= -a 'newline=\n' -v
 
 #Uncomment this to debug pdflatex
-#DEBUGPDFLTX:= -d
+DEBUGPDFLTX:= -d
 
 #I like left side html toc
 UTOC:= $(shell if [ -z "$$TOC2" ] ; then echo -n "-a toc2" ; fi )
