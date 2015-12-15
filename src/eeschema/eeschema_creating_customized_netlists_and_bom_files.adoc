@@ -242,6 +242,7 @@ here:
 The pads-pcb format is comprised of two sections.
 
 * The footprint list.
+
 * The Nets list: grouping pads references by nets.
 
 Immediately below is a style-sheet which converts the Intermediate
@@ -370,11 +371,12 @@ kicad\\bin\\xsltproc.exe -o test.net kicad\\bin\\plugins\\netlist_form_pads-pcb.
 The Cadstar format is comprised of two sections.
 
 * The footprint list.
+
 * The Nets list: grouping pads references by nets.
 
 Here is the style-sheet file to make this specific conversion:
 
-----------------------------------------------------------------------------------------------------
+-----
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist format
     Copyright (C) 2010, Jean-Pierre Charras.
@@ -483,11 +485,11 @@ Here is the style-sheet file to make this specific conversion:
 </xsl:template>
 
 </xsl:stylesheet>
-----------------------------------------------------------------------------------------------------
+-----
 
 Here is the Cadstar output file.
 
-----------------------------------------------
+-----
 .HEA
 .TIM 21/08/2010 08:12:08
 .APP "eeschema (2010-08-09 BZR 2439)-unstable"
@@ -519,7 +521,7 @@ Here is the Cadstar output file.
          P1.3
 
 .END
-----------------------------------------------
+-----
 
 [[create-a-orcadpcb2-netlist-file]]
 ==== Create a OrcadPCB2 netlist file
@@ -529,7 +531,7 @@ footprint includes its list of pads with reference to a net.
 
 Here is the style-sheet for this specific conversion:
 
--------------------------------------------------------------------------------------
+-----
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist format
     Copyright (C) 2010, SoftPLC Corporation.
@@ -740,7 +742,7 @@ Here is the style-sheet for this specific conversion:
 </xsl:template>
 
 </xsl:stylesheet>
--------------------------------------------------------------------------------------
+-----
 
 Here is the OrcadPCB2 output file.
 
@@ -806,12 +808,13 @@ The Eeschema plug-in configuration dialog requires the following
 information:
 
 * The title: for instance, the name of the netlist format.
+
 * The command line to launch the converter.
 
 Once you click on the netlist button the following will happen:
 
-1.  Eeschema creates an intermediate netlist file __.xml, for
-instance__test.xml.*
+1.  Eeschema creates an intermediate netlist file __.xml, for instance__test.xml.*
+
 2.  Eeschema runs the plug-in by reading test.xml and creates test.net
 
 [[generate-netlist-files-with-the-command-line]]
@@ -821,18 +824,15 @@ Assuming we are using the program _xsltproc.exe_ to apply the sheet
 style to the intermediate file, _xsltproc.exe_ is executed with the
 following command.
 
-_xsltproc.exe -o <output filename> < style-sheet filename> <input XML
-file to convert>_
+_xsltproc.exe -o <output filename> < style-sheet filename> <input XML file to convert>_
 
 In KiCad under Windows the command line is the following.
 
-_f:/kicad/bin/xsltproc.exe -o "%O"
-f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl "%I"_
+_f:/kicad/bin/xsltproc.exe -o "%O" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl "%I"_
 
 Under Linux the command becomes as following.
 
-_xsltproc -o "%O" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl
-"%I"_
+_xsltproc -o "%O" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl "%I"_
 
 Where _netlist_form_pads-pcb.xsl_ is the style-sheet that you are
 applying. Do not forget the double quotes around the file names, this
@@ -844,13 +844,15 @@ The supported formatting parameters are.
 
 * %B => base filename and path of selected output file, minus path and
   extension.
+
 * %I => complete filename and path of the temporary input file (the
   intermediate net file).
+
 * %O => complete filename and path of the user chosen output file.
 
-%I will be replaced by the actual intermediate file name
+_%I_ will be replaced by the actual intermediate file name
 
-%O will be replaced by the actual output file name.
+_%O_ will be replaced by the actual output file name.
 
 [[command-line-format-example-for-xsltproc]]
 ===== Command line format: example for xsltproc
@@ -859,15 +861,13 @@ The command line format for xsltproc is the following:
 
 <path of xsltproc> xsltproc <xsltproc parameters>
 
-_under Windows._
+under Windows:
 
-*f:/kicad/bin/xsltproc.exe -o "%O"
-f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl "%I"*
+*f:/kicad/bin/xsltproc.exe -o "%O" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl "%I"*
 
 under Linux:
 
-*xsltproc -o "%O" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl
-"%I"*
+*xsltproc -o "%O" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl "%I"*
 
 The above examples assume xsltproc is installed on your PC under Windows
 and all files located in kicad/bin.
