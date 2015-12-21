@@ -27,9 +27,12 @@ credit as a translator.
 where, again, YOUR-CHOSEN-MANUAL is the name of the manual dir, for
 example "getting_started_in_kicad" and NN is your i18n language code.
 
-Edit the resulting src/YOUR-CHOSEN-MANUAL/po/NN.po file, starting from
+Edit the resulting ../src/YOUR-CHOSEN-MANUAL/po/NN.po file, starting from
 the headers, using a specialized po editor of your choice like poedit,
 gtranslator, virtaal, lokalize, emacs, vi, or others.
+For example do:
+
+ poedit ../src/getting_started_in_kicad/po/de.po
 
 4) try your translation with a:
 
@@ -41,17 +44,27 @@ For example:
 
 And see the results with a browser:
 
- firefox cvpcb-it.html
+ firefox src/cvpcb/it/cvpcb.html
 
 NOTE: you can try other formats like pdf or epub as well. HTML is just the fastest to build.
 
 5) when you reach 100% of the translation, or simply when you think you
    have done enough work, create a patch with:
 
+ cd ..
  git add src/YOUR-CHOSEN-MANUAL/po/addendum.NN src/YOUR-CHOSEN-MANUAL/po/NN.po
  git commit -m "Added translation for LANGUAGE"
  git format-patch HEAD^
 
 and submit a pull-request on Github.
+
+[NOTE]
+====
+To do the equivalent of a "make clean" just delete recursively the
+content of the build dir with:
+
+ rm -rf build/*
+
+====
 
 Happy translation!
