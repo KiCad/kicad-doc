@@ -1,20 +1,22 @@
-# Eeschema User Manual Italian Translation
+# Eeschema User Manual French Translation
 # Copyright (C) 2014, 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# Marco Ciampa <ciampix@libero.it>, 2014, 2015.
 #
+# Marco Ciampa <ciampix@libero.it>, 2014, 2015.
+# Marc BERLIOUX <marc.berlioux@gmail.com>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-12-21 08:04+0100\n"
-"PO-Revision-Date: 2015-12-15 11:35+0100\n"
-"Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
-"Language-Team: Italian <it@li.org>\n"
-"Language: it\n"
+"PO-Revision-Date: 2015-12-21 13:50+0100\n"
+"Last-Translator: Marc BERLIOUX <marc.berlioux@gmail.com>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. type: Title =
 #: eeschema.adoc:6
@@ -438,13 +440,13 @@ msgstr ""
 #: eeschema_component_library_editor.adoc:3
 #, no-wrap
 msgid "Component Library Editor"
-msgstr ""
+msgstr "L'Éditeur de Composants"
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:6
 #, no-wrap
 msgid "General Information About Component Libraries"
-msgstr ""
+msgstr "Informations générales à propos des librairies"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:16
@@ -457,12 +459,20 @@ msgid ""
 "components to files, and import components from files. The library editing "
 "tool provides a simple way to manage component library files."
 msgstr ""
+"Un symbole de composant est un élément qui contient une représentation "
+"graphique, des connexions électriques, et des champs définissant le composant "
+"lui-même. Les composants utilisés dans un schéma sont stockés dans des "
+"bibliothèques (ou librairies) de composants. Eeschema contient un éditeur qui "
+"vous permet de créer des librairies, d'ajouter, supprimer ou transférer des "
+"composants entre les librairies, d'exporter des composants vers des fichiers "
+"ou d'importer des composants depuis des fichiers. Bref, cet éditeur vous "
+"fournit un moyen simple de gérer vos fichiers de librairies de composants."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:18
 #, no-wrap
 msgid "Component Library Overview"
-msgstr ""
+msgstr "Vue d'ensemble des librairies de composants"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:22
@@ -470,11 +480,13 @@ msgid ""
 "A component library is composed of one or more components. Generally the "
 "components are logically grouped by function, type, and/or manufacturer."
 msgstr ""
+"Une librairie de composants contient un ou plusieurs composants. En général, "
+"les composants y sont regroupés par fonction, type, ou fabricant."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:24
 msgid "A component is composed of:"
-msgstr ""
+msgstr "Un composant contient :"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:27
@@ -482,6 +494,8 @@ msgid ""
 "Graphical items (lines, circles, arcs, text, etc ) that provide the symbolic "
 "definition."
 msgstr ""
+"Des éléments graphiques (lignes, cercles, arcs, textes, etc...), qui "
+"fournissent la définition du symbole."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:30
@@ -490,6 +504,10 @@ msgid ""
 "active, etc ) and electrical properties (input, output, bidirectional, etc.) "
 "used by the Electrical Rules Check (ERC) tool."
 msgstr ""
+"Des broches (pins), qui ont à la fois des propriétés graphiques (ligne, "
+"horloge, inversée, active à l'état bas, etc..), et des propriétés électriques "
+"(entrée, sortie, bidirectionnelle, etc..), qui sont utilisées par l'outil de "
+"vérification des règles électriques (ERC)."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:32
@@ -497,6 +515,8 @@ msgid ""
 "Fields such as references, values, corresponding footprint names for PCB "
 "design, etc."
 msgstr ""
+"Des champs : référence, valeur, empreintes correspondantes pour le dessin "
+"du circuit imprimé, etc..."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:35
@@ -505,16 +525,20 @@ msgid ""
 "derivatives such as 74LS00, 74HC00, and 7437. All of these aliases share the "
 "same library component."
 msgstr ""
+"Des alias, utilisés pour associer un composant générique à ses variantes, "
+"comme "
+"74LS00, 74HC00, 7437 pour le 7400. Ces alias partagent tous le même symbole "
+"en librairie."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:37
 msgid "Proper component designing requires:"
-msgstr ""
+msgstr "Le dessin d'un composant nécessite :"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:39
 msgid "Defining if the component is made up of one or more units."
-msgstr ""
+msgstr "De définir s'il est composé d'une ou de plusieurs unités."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:41
@@ -522,6 +546,8 @@ msgid ""
 "Defining if the component has an alternate body style also known as a De "
 "Morgan representation."
 msgstr ""
+"De définir si le composant a une autre représentation graphique, aussi "
+"appelée représentation De Morgan."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:43
@@ -529,6 +555,8 @@ msgid ""
 "Designing its symbolic representation using lines, rectangles, circles, "
 "polygons and text."
 msgstr ""
+"De dessiner sa représentation symbolique, au moyen de lignes, rectangles, "
+"cercles, polygones, et de texte."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:46
@@ -536,6 +564,9 @@ msgid ""
 "Adding pins by carefully defining each pin's graphical elements, name, "
 "number, and electrical property (input, output, tri-state, power port, etc.)."
 msgstr ""
+"D'ajouter des pins, en définissant leurs éléments graphiques, leurs noms, "
+"leurs numéros et leurs propriétés électriques (entrées, sorties, trois-états, "
+"alimentations, etc..). "
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:49
@@ -543,6 +574,9 @@ msgid ""
 "Adding an alias if other components have the same symbol and pin out or "
 "removing one if the component has been created from another component."
 msgstr ""
+"D'ajouter des alias, au cas où d'autres composants utiliseraient le même "
+"symbole, ou le même brochage. Ou d'en enlever, si le composant a été créé à "
+"partir d'un autre composant."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:51
@@ -550,6 +584,8 @@ msgid ""
 "Adding optional fields such as the name of the footprint used by the PCB "
 "design software and/or defining their visibility."
 msgstr ""
+"D'ajouter des champs supplémentaires, comme le nom de l'empreinte utilisée "
+"par le logiciel de dessin du circuit imprimé, et de définir leur visibilité."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:53
@@ -557,17 +593,19 @@ msgid ""
 "Documenting the component by adding a description string and links to data "
 "sheets, etc."
 msgstr ""
+"De documenter le composant, en ajoutant une description, des liens éventuels "
+"vers des datasheets, etc..."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:54
 msgid "Saving it in the desired library."
-msgstr ""
+msgstr "De le sauvegarder dans la librairie désirée."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:56
 #, no-wrap
 msgid "Component Library Editor Overview"
-msgstr ""
+msgstr "Interface de l'éditeur de librairies"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:62
@@ -577,6 +615,10 @@ msgid ""
 "editing area. Not all commands are available on the tool bars but can be "
 "accessed using the menus."
 msgstr ""
+"Ci-dessous, la fenêtre principale de l'éditeur de composants. Elle comporte 3 "
+"barres d'outils, pour accéder aux fonctions principales, et la zone "
+"d'affichage et d'édition du composant. Les quelques commandes qui ne sont pas "
+"disponibles dans les barres d'outils sont accessibles par les menus."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:63
@@ -594,7 +636,7 @@ msgstr ""
 #: eeschema_component_library_editor.adoc:66
 #, no-wrap
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Barre d'outils principale"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:71
@@ -603,6 +645,10 @@ msgid ""
 "consists of the library management tools, undo/redo commands, zoom commands, "
 "and component properties dialogs."
 msgstr ""
+"Ci-dessous, la barre d'outils principale, située en haut de la fenêtre. Elle "
+"contient les outils de gestion des librairies, les boutons 'Défaire' "
+"'Refaire', les commandes de Zoom, et les outils d'édition des propriétés du "
+"composant."
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:72
@@ -619,6 +665,10 @@ msgid ""
 "library is currently selected or no changes to the currently selected\n"
 "library have been made.\n"
 msgstr ""
+"|image:images/icons/save_library.png[icons/save_library_png]\n"
+"|Sauver la librairie courante sur disque. L'icône sera inactive (grisée) si "
+"aucune librairie n'a été sélectionnée, ou si aucune modification de la "
+"librairie courante n'a été effectuée."
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:83
@@ -627,6 +677,8 @@ msgid ""
 "|image:images/icons/library.png[icons/library_png]\n"
 "|Select the library to edit.\n"
 msgstr ""
+"|image:images/icons/library.png[icons/library_png]\n"
+"|Sélection de la librairie de travail.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:87
@@ -636,6 +688,9 @@ msgid ""
 "|Delete a component from the currently selected library or any library\n"
 "defined by the project if no library is currently selected.\n"
 msgstr ""
+"|image:images/icons/delete.png[icons/delete_png]\n"
+"|Supprimer un composant en librairie de travail, ou d'une des librairies "
+"définies dans le projet, si aucune librairie n'a été selectionnée.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:91
@@ -645,6 +700,9 @@ msgid ""
 "|Open the component library browser to select the library and component\n"
 "to edit.\n"
 msgstr ""
+"|image:images/icons/library_browse.png[icons/library_browse_png]\n"
+"|Ouvre le Visualisateur de librairies et de composants, pour choisir le "
+"composant à éditer\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:94
@@ -653,6 +711,8 @@ msgid ""
 "|image:images/icons/new_component.png[icons/new_component_png]\n"
 "|Create a new component.\n"
 msgstr ""
+"|image:images/icons/new_component.png[icons/new_component_png]\n"
+"|Créer un nouveau composant.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:97
@@ -661,6 +721,8 @@ msgid ""
 "|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
 "|Load component from currently selected library for editing.\n"
 msgstr ""
+"|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
+"|Charger un composant à éditer à partir de la librairie courante.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:100
@@ -669,6 +731,8 @@ msgid ""
 "|image:images/icons/copycomponent.png[icons/copycomponent_png]\n"
 "|Create a new component from the currently loaded component.\n"
 msgstr ""
+"|image:images/icons/copycomponent.png[icons/copycomponent_png]\n"
+"|Créer un nouveau composant à partir du composant courant.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:104
@@ -678,6 +742,9 @@ msgid ""
 "|Save the current component changes in memory. The library file is not\n"
 "changed.\n"
 msgstr ""
+"|image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]\n"
+"|Mettre à jour le composant en librairie de travail. Opération effectuée en "
+"mémoire, le fichier de librairie n'est pas modifié.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:107
@@ -686,6 +753,8 @@ msgid ""
 "|image:images/icons/import.png[icons/import_png]\n"
 "|Import one component from a file.\n"
 msgstr ""
+"|image:images/icons/import.png[icons/import_png]\n"
+"|Importer un composant, depuis un fichier.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:110
@@ -695,6 +764,8 @@ msgid ""
 "|image:images/icons/export.png[icons/export_png]\n"
 "|Export the current component to a file.\n"
 msgstr ""
+"|image:images/icons/export.png[icons/export_png]\n"
+"|Exporter le composant courant vers un fichier.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:114
@@ -704,6 +775,9 @@ msgid ""
 "|Create a new library file containing the current component. Note: new\n"
 "libraries are not automatically added to the project.\n"
 msgstr ""
+"|image:images/icons/new_library.png[icons/new_library_png]\n"
+"|Sauver le composant courant dans une nouvelle librairie. Note : la nouvelle "
+"librairie n'est pas ajoutée automatiquement au projet.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:117
@@ -712,6 +786,8 @@ msgid ""
 "|image:images/icons/undo.png[icons/undo_png]\n"
 "|Undo last edit.\n"
 msgstr ""
+"|image:images/icons/undo.png[icons/undo_png]\n"
+"|Défaire, Annuler la dernière modification.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:120
@@ -720,6 +796,8 @@ msgid ""
 "|image:images/icons/redo.png[icons/redo_png]\n"
 "|Redo last undo.\n"
 msgstr ""
+"|image:images/icons/redo.png[icons/redo_png]\n"
+"|Refaire, Rétablir la dernière modification annulée.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:123
@@ -728,6 +806,8 @@ msgid ""
 "|image:images/icons/part_properties.png[icons/part_properties_png]\n"
 "|Edit the current component properties.\n"
 msgstr ""
+"|image:images/icons/part_properties.png[icons/part_properties_png]\n"
+"|Éditer les propriétés du composant.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:126
@@ -736,6 +816,8 @@ msgid ""
 "|image:images/icons/add_text.png[icons/add_text_png]\n"
 "|Edit the fields of current component.\n"
 msgstr ""
+"|image:images/icons/add_text.png[icons/add_text_png]\n"
+"|Ajouter, supprimer des champs et éditer leur propriétés.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:129
@@ -744,30 +826,36 @@ msgid ""
 "|image:images/icons/erc.png[icons/erc_png]\n"
 "|Test the current component for design errors.\n"
 msgstr ""
+"|image:images/icons/erc.png[icons/erc_png]\n"
+"|Test pins oubliées et hors grille, vérification d'erreurs.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:131
 #, no-wrap
 msgid "|image:images/icons/zoom_in.png[]|Zoom in.\n"
-msgstr ""
+msgstr "|image:images/icons/zoom_in.png[]|Zoom avant.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:133
 #, no-wrap
 msgid "|image:images/icons/zoom_out.png[]|Zoom out.\n"
-msgstr ""
+msgstr "|image:images/icons/zoom_out.png[]|Zoom arrière.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:135
 #, no-wrap
 msgid "|image:images/icons/zoom_redraw.png[]|Refresh display.\n"
 msgstr ""
+"|image:images/icons/zoom_redraw.png[]|Rafraîchir l'écran, la vue du schéma.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:137
 #, no-wrap
-msgid "|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit component in display.\n"
+msgid ""
+"|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit component in display.\n"
 msgstr ""
+"|image:images/icons/zoom_fit_in_page.png[]|Ajuster la feuille de schéma à "
+"l'écran. (Zoom automatique).\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:141
@@ -777,6 +865,9 @@ msgid ""
 "|Select the normal body style. The button is disabled if the current\n"
 "component does not have an alternate body style.\n"
 msgstr ""
+"|image:images/icons/morgan1.png[icons/morgan1_png]\n"
+"|Afficher sous représentation normale. Le bouton sera désactivé si le "
+"composant courant n'a pas de représentation alternative.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:145
@@ -786,6 +877,9 @@ msgid ""
 "|Select the alternate body style. The button is disabled if the current\n"
 "component does not have an alternate body style.\n"
 msgstr ""
+"|image:images/icons/morgan2.png[icons/morgan2_png]\n"
+"|Afficher la représentation De Morgan. Affiche la représentation alternative. "
+"Le bouton sera désactivé si le composant courant n'en a pas.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:149
@@ -795,24 +889,37 @@ msgid ""
 "|Show the associated documentation. The button will be disabled if no\n"
 "documentation is defined for the current component.\n"
 msgstr ""
+"|image:images/icons/datasheet.png[icons/datasheet_png]\n"
+"|Afficher la documentation ou un document associé, datasheet ou autre. Le "
+"bouton sera désactivé si le composant courant n'en a pas.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:153
 #, no-wrap
 msgid ""
-"|image:images/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
+"|image:images/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\""
+",width=\"80%\"]\n"
 "|Select the unit to display. The drop down control will be disabled if\n"
 "the current component is not derived from multiple units.\n"
 msgstr ""
+"|image:images/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\""
+",width=\"80%\"]\n"
+"|Selection de l'unité à afficher. Le menu déroulant sera désactivé si le "
+"composant n'est pas multi-unités.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:157
 #, no-wrap
 msgid ""
-"|image:images/toolbar_libedit_alias.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
+"|image:images/toolbar_libedit_alias.png[alt=\"images/toolbar_libedit_part.png"
+"\",width=\"80%\"]\n"
 "|Selection the alias. The drop down control will be disabled if the\n"
 "current component does not have any aliases.\n"
 msgstr ""
+"|image:images/toolbar_libedit_alias.png[alt=\"images/toolbar_libedit_part.png"
+"\",width=\"80%\"]\n"
+"|Sélection de l'alias. Le menu déroulant sera désactivé si le composant n'a "
+"pas d'alias.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:161
@@ -822,6 +929,9 @@ msgid ""
 "|Pin editing: independent editing for pin shape and position for\n"
 "components with multiple units and alternate symbols.\n"
 msgstr ""
+"|image:images/icons/pin2pin.png[icons/pin2pin_png]\n"
+"|Éditer pins, unité par unité, ou forme par forme, pour les composants avec "
+"de multiple unités, ou des représentations alternatives.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:164
@@ -830,6 +940,8 @@ msgid ""
 "|image:images/icons/pin_table.png[icons/pin_table_png]\n"
 "|Show pin table.\n"
 msgstr ""
+"|image:images/icons/pin_table.png[icons/pin_table_png]\n"
+"|Montrer la table des pins.\n"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:167
@@ -2498,7 +2610,9 @@ msgstr ""
 #. type: delimited block -
 #: eeschema_create_a_netlist.adoc:129
 #, no-wrap
-msgid "* Eeschema Netlist Version 1.1 (Spice format) creation date: 18/6/2008-08:38:03\n"
+msgid ""
+"* Eeschema Netlist Version 1.1 (Spice format) creation date: "
+"18/6/2008-08:38:03\n"
 msgstr ""
 
 #. type: delimited block -
@@ -3210,7 +3324,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
-"<!--XSL style sheet to Eeschema Generic Netlist Format to PADS netlist format\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to PADS netlist "
+"format\n"
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
@@ -3242,7 +3357,8 @@ msgstr ""
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:550
 #, no-wrap
 msgid ""
-"<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">\n"
+"<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transfo"
+"rm\">\n"
 "<xsl:output method=\"text\" omit-xml-declaration=\"yes\" indent=\"no\"/>\n"
 msgstr ""
 
@@ -3383,7 +3499,9 @@ msgstr ""
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:366
 #, no-wrap
-msgid "kicad\\\\bin\\\\xsltproc.exe -o test.net kicad\\\\bin\\\\plugins\\\\netlist_form_pads-pcb.xsl test.tmp\n"
+msgid ""
+"kicad\\\\bin\\\\xsltproc.exe -o test.net "
+"kicad\\\\bin\\\\plugins\\\\netlist_form_pads-pcb.xsl test.tmp\n"
 msgstr ""
 
 #. type: Title ====
@@ -3407,7 +3525,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
-"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist format\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist "
+"format\n"
 "    Copyright (C) 2010, Jean-Pierre Charras.\n"
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
@@ -3420,11 +3539,15 @@ msgid ""
 "<!-- Netlist header -->\n"
 "<xsl:template match=\"/export\">\n"
 "    <xsl:text>.HEA&nl;</xsl:text>\n"
-"    <xsl:apply-templates select=\"design/date\"/>  <!-- Generate line .TIM <time> -->\n"
-"    <xsl:apply-templates select=\"design/tool\"/>  <!-- Generate line .APP <eeschema version> -->\n"
-"    <xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of components -->\n"
+"    <xsl:apply-templates select=\"design/date\"/>  <!-- Generate line .TIM <"
+"time> -->\n"
+"    <xsl:apply-templates select=\"design/tool\"/>  <!-- Generate line .APP <"
+"eeschema version> -->\n"
+"    <xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of "
+"components -->\n"
 "    <xsl:text>&nl;&nl;</xsl:text>\n"
-"    <xsl:apply-templates select=\"nets/net\"/>          <!-- Generate list of nets and connections -->\n"
+"    <xsl:apply-templates select=\"nets/net\"/>          <!-- Generate list of "
+"nets and connections -->\n"
 "    <xsl:text>&nl;.END&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
@@ -3464,7 +3587,8 @@ msgid ""
 "    <xsl:text> </xsl:text>\n"
 "    <xsl:choose>\n"
 "        <xsl:when test = \"value != '' \">\n"
-"            <xsl:text>\"</xsl:text> <xsl:apply-templates select=\"value\"/> <xsl:text>\"</xsl:text>\n"
+"            <xsl:text>\"</xsl:text> <xsl:apply-templates select=\"value\"/> <"
+"xsl:text>\"</xsl:text>\n"
 "        </xsl:when>\n"
 "        <xsl:otherwise>\n"
 "            <xsl:text>\"\"</xsl:text>\n"
@@ -3615,7 +3739,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
-"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist format\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist "
+"format\n"
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
@@ -3643,7 +3768,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "<!-- Generate the list of components -->\n"
-"<xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of components -->\n"
+"<xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of "
+"components -->\n"
 msgstr ""
 
 #. type: delimited block -
@@ -3750,7 +3876,8 @@ msgid ""
 "    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
 "        <xsl:for-each select=\"/export/libparts/libpart\">\n"
 "            <xsl:if test = \"@part = $cmplib_id \">\n"
-"                <xsl:apply-templates name=\"build_pin_list\" select=\"pins/pin\">\n"
+"                <xsl:apply-templates name=\"build_pin_list\" "
+"select=\"pins/pin\">\n"
 "                    <xsl:with-param name=\"cmp_ref\" select=\"$cmp_ref\"/>\n"
 "                </xsl:apply-templates>\n"
 "            </xsl:if>\n"
@@ -3803,7 +3930,8 @@ msgid ""
 "        <xsl:apply-templates name=\"Search_pin_netname\" select=\"node\">\n"
 "            <xsl:with-param name=\"cmp_ref\" select=\"$cmp_ref\"/>\n"
 "            <xsl:with-param name=\"pin_cnt_in_net\" select=\"$pinCnt\"/>\n"
-"            <xsl:with-param name=\"pin_num\"> <xsl:value-of select=\"$pinNum\"/>\n"
+"            <xsl:with-param name=\"pin_num\"> <xsl:value-of "
+"select=\"$pinNum\"/>\n"
 "            </xsl:with-param>\n"
 "        </xsl:apply-templates>\n"
 "    </xsl:for-each>\n"
@@ -3869,7 +3997,8 @@ msgid ""
 "                        <xsl:value-of select=\"../@name\"/>\n"
 "                    </xsl:when>\n"
 "                    <xsl:otherwise>\n"
-"                        <xsl:text>$N-0</xsl:text><xsl:value-of select=\"../@code\"/>\n"
+"                        <xsl:text>$N-0</xsl:text><xsl:value-of "
+"select=\"../@code\"/>\n"
 "                    </xsl:otherwise>\n"
 "                </xsl:choose>\n"
 "            </xsl:if>\n"
@@ -4141,7 +4270,9 @@ msgstr ""
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:867
 #, no-wrap
-msgid "*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
+msgid ""
+"*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pc"
+"b.xsl \"%I\"*\n"
 msgstr ""
 
 #. type: Plain text
@@ -4153,7 +4284,9 @@ msgstr ""
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:871
 #, no-wrap
-msgid "*xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
+msgid ""
+"*xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%"
+"I\"*\n"
 msgstr ""
 
 #. type: Plain text
@@ -6282,7 +6415,9 @@ msgstr ""
 #. type: Plain text
 #: eeschema_generic_commands.adoc:110
 #, no-wrap
-msgid "** F4 or simply click on the middle mouse button (without moving the mouse): Center the view around the cursor pointer position\n"
+msgid ""
+"** F4 or simply click on the middle mouse button (without moving the mouse): "
+"Center the view around the cursor pointer position\n"
 msgstr ""
 
 #. type: Plain text
@@ -6533,7 +6668,8 @@ msgstr ""
 #: eeschema_generic_commands.adoc:198
 #, no-wrap
 msgid ""
-"|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]\n"
+"|image:images/icons/zoom_in.png[icons/zoom_in] "
+"image:images/icons/zoom_out.png[icons/zoom_out]\n"
 "|Zoom in and out.\n"
 msgstr ""
 
@@ -6541,7 +6677,8 @@ msgstr ""
 #: eeschema_generic_commands.adoc:201
 #, no-wrap
 msgid ""
-"|image:images/icons/zoom_redraw.png[icons/zoom_redraw] image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]\n"
+"|image:images/icons/zoom_redraw.png[icons/zoom_redraw] "
+"image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]\n"
 "|Refresh screen; zoom to fit.\n"
 msgstr ""
 
@@ -6566,7 +6703,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|image:images/icons/libedit.png[icons/libedit_png]\n"
-"|Call component editor _Libedit_ to view and modify libraries and component symbols.\n"
+"|Call component editor _Libedit_ to view and modify libraries and component "
+"symbols.\n"
 msgstr ""
 
 #. type: delimited block |
@@ -6590,7 +6728,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|image:images/icons/erc.png[ERC icon]\n"
-"|Electrical rules check (ERC), automatically validate electrical connections.\n"
+"|Electrical rules check (ERC), automatically validate electrical "
+"connections.\n"
 msgstr ""
 
 #. type: delimited block |
@@ -6638,7 +6777,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|image:images/icons/import_footprint_names.png[Import Footprint Names icon]\n"
-"|Back-import component footprints (selected using CvPcb) into the \"footprint\" fields.\n"
+"|Back-import component footprints (selected using CvPcb) into the "
+"\"footprint\" fields.\n"
 msgstr ""
 
 #. type: Plain text
@@ -6671,7 +6811,8 @@ msgstr ""
 #: eeschema_generic_commands.adoc:253
 #, no-wrap
 msgid ""
-".20+^.^|image:images/toolbar_schedit_rightside.png[alt=\"images/toolbar_schedit_rightside.png\",width=\"80%\"]\n"
+".20+^.^|image:images/toolbar_schedit_rightside.png[alt=\"images/toolbar_schedi"
+"t_rightside.png\",width=\"80%\"]\n"
 "|image:images/icons/cursor.png[icons/cursor_png]\n"
 "|Cancel the active command or tool.\n"
 msgstr ""
@@ -6724,7 +6865,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|image:images/icons/add_line2bus.png[icons/add_line2bus_png]\n"
-"|Draw wire-to-bus entry points. These elements are only graphical and do not create\n"
+"|Draw wire-to-bus entry points. These elements are only graphical and do not "
+"create\n"
 "a connection, thus they should not be used to connect wires together.\n"
 msgstr ""
 
@@ -6771,7 +6913,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|image:images/icons/add_glabel.png[Global label icon]\n"
-"|Place a global label. All global labels with the same name are connected, even between\n"
+"|Place a global label. All global labels with the same name are connected, "
+"even between\n"
 "different sheets.\n"
 msgstr ""
 
@@ -6779,7 +6922,8 @@ msgstr ""
 #: eeschema_generic_commands.adoc:301
 #, no-wrap
 msgid ""
-"|image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]\n"
+"|image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_pn"
+"g]\n"
 "|Place a hierarchical label. This makes it possible to place a\n"
 "connection between a sheet and the parent sheet that contains it.\n"
 msgstr ""
@@ -6788,17 +6932,22 @@ msgstr ""
 #: eeschema_generic_commands.adoc:304
 #, no-wrap
 msgid ""
-"|image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsheet_png]\n"
-"|Place a hierarchical subsheet. You must specify the file name for this subsheet.\n"
+"|image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsh"
+"eet_png]\n"
+"|Place a hierarchical subsheet. You must specify the file name for this "
+"subsheet.\n"
 msgstr ""
 
 #. type: delimited block |
 #: eeschema_generic_commands.adoc:309
 #, no-wrap
 msgid ""
-"|image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_label_png]\n"
-"|Import hierarchical labels from a subsheet. These hierarchical labels must already be\n"
-"placed in the subsheet. These are equivalent to pins on a component, and must be connected\n"
+"|image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_la"
+"bel_png]\n"
+"|Import hierarchical labels from a subsheet. These hierarchical labels must "
+"already be\n"
+"placed in the subsheet. These are equivalent to pins on a component, and must "
+"be connected\n"
 "using wires.\n"
 msgstr ""
 
@@ -6807,7 +6956,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]\n"
-"|Place hierarchical label in a subsheet symbol. This is placed by name and does not require the\n"
+"|Place hierarchical label in a subsheet symbol. This is placed by name and "
+"does not require the\n"
 "label to already exist in the subsheet itself.\n"
 msgstr ""
 
@@ -8467,7 +8617,8 @@ msgstr "images/fr/annotate-dialog.png"
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:13
 #, no-wrap
-msgid "|New Schematic Project |Clear current schematic and initialize a new one\n"
+msgid ""
+"|New Schematic Project |Clear current schematic and initialize a new one\n"
 msgstr ""
 
 #. type: delimited block |
@@ -8485,7 +8636,9 @@ msgstr ""
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:19
 #, no-wrap
-msgid "|Append Schematic Sheet |Insert the contents of another sheet into the current one\n"
+msgid ""
+"|Append Schematic Sheet |Insert the contents of another sheet into the "
+"current one\n"
 msgstr ""
 
 #. type: delimited block |
@@ -8517,13 +8670,17 @@ msgstr ""
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:30
 #, no-wrap
-msgid "|Print |Print schematic hierarchy (See also chapter <<plot-and-print,Plot and Print>>).\n"
+msgid ""
+"|Print |Print schematic hierarchy (See also chapter <<plot-and-print,Plot and "
+"Print>>).\n"
 msgstr ""
 
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:32
 #, no-wrap
-msgid "|Plot |Export to PDF, PostScript, HPGL or SVG format (See chapter <<plot-and-print,Plot and Print>>).\n"
+msgid ""
+"|Plot |Export to PDF, PostScript, HPGL or SVG format (See chapter <"
+"<plot-and-print,Plot and Print>>).\n"
 msgstr ""
 
 #. type: delimited block |
@@ -8559,7 +8716,8 @@ msgstr "images/fr/annotate-dialog.png"
 msgid ""
 "|Component Libraries |Select libraries and library search path.\n"
 "|Set Colors Scheme |Select colors for display, print and plot.\n"
-"|Schematic Editor Options |General options (units, grid size, field names, etc.).\n"
+"|Schematic Editor Options |General options (units, grid size, field names, "
+"etc.).\n"
 "|Language |Select interface language.\n"
 "|Hotkeys |List, edit, export, and import hotkey settings.\n"
 "|Save Preferences |Save the project settings to the .pro file.\n"
@@ -8679,7 +8837,8 @@ msgstr ""
 #: eeschema_main_top_menu.adoc:99
 #, no-wrap
 msgid ""
-"**It is recommended to work with normal grid (0.050 inches or 1,27 mm)**. __Smaller\n"
+"**It is recommended to work with normal grid (0.050 inches or 1,27 mm)**. "
+"__Smaller\n"
 "grids are used for component building__.\n"
 msgstr ""
 
@@ -8700,7 +8859,8 @@ msgstr ""
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:106
 #, no-wrap
-msgid "|Default text size: |Text size used when creating new text items or labels\n"
+msgid ""
+"|Default text size: |Text size used when creating new text items or labels\n"
 msgstr ""
 
 #. type: delimited block |
@@ -8731,7 +8891,8 @@ msgstr ""
 #: eeschema_main_top_menu.adoc:118
 #, no-wrap
 msgid ""
-"|Repeat label increment: |Increment of label value during duplication of texts ending\n"
+"|Repeat label increment: |Increment of label value during duplication of "
+"texts ending\n"
 "in a number, such as bus members (usual value 1 or -1).\n"
 msgstr ""
 
@@ -8744,7 +8905,9 @@ msgstr ""
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:122
 #, no-wrap
-msgid "|Part id notation: |Style of suffix that is used to denote component parts (U1A, U1.A, U1-1, etc.)\n"
+msgid ""
+"|Part id notation: |Style of suffix that is used to denote component parts "
+"(U1A, U1.A, U1-1, etc.)\n"
 msgstr ""
 
 #. type: delimited block |
@@ -8757,20 +8920,25 @@ msgstr ""
 #: eeschema_main_top_menu.adoc:127
 #, no-wrap
 msgid ""
-"|Show hidden pins: |Display invisible (or __hidden__) pins, typically power pins. If checked,\n"
+"|Show hidden pins: |Display invisible (or __hidden__) pins, typically power "
+"pins. If checked,\n"
 "allows the display of power pins.\n"
 msgstr ""
 
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:129
 #, no-wrap
-msgid "|Do not center and warp cursor on zoom: |When zooming, keep the position and cursor where they are.\n"
+msgid ""
+"|Do not center and warp cursor on zoom: |When zooming, keep the position and "
+"cursor where they are.\n"
 msgstr ""
 
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:131
 #, no-wrap
-msgid "|Use middle mouse button to pan |When enabled, the sheet can be dragged around using the middle mouse button.\n"
+msgid ""
+"|Use middle mouse button to pan |When enabled, the sheet can be dragged "
+"around using the middle mouse button.\n"
 msgstr ""
 
 #. type: delimited block |
@@ -9506,7 +9674,8 @@ msgstr ""
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:139
 #, no-wrap
-msgid "*Bus entries:* to show connections between wires and buses. Graphical only!\n"
+msgid ""
+"*Bus entries:* to show connections between wires and buses. Graphical only!\n"
 msgstr ""
 
 #. type: Plain text
@@ -9530,7 +9699,9 @@ msgstr ""
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:143
 #, no-wrap
-msgid "*\"No Connect\" flags:* to terminate a pin that does not need any connection.\n"
+msgid ""
+"*\"No Connect\" flags:* to terminate a pin that does not need any "
+"connection.\n"
 msgstr ""
 
 #. type: Plain text
@@ -10232,7 +10403,8 @@ msgstr ""
 #, no-wrap
 msgid ""
 "|image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
-"image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
+"image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]"
+"\n"
 "|Zoom tools.\n"
 msgstr ""
 
@@ -10248,7 +10420,8 @@ msgstr ""
 #: eeschema_viewlib.adoc:60
 #, no-wrap
 msgid ""
-"|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
+"|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\""
+",width=\"70%\"]\n"
 "|Selection of the part, only for multi-part components.\n"
 msgstr ""
 
@@ -10267,5 +10440,8 @@ msgstr ""
 msgid ""
 "|image:images/icons/export.png[icons/export_png]\n"
 "|Close Viewlib and place the selected component in Eeschema.\n"
-"This icon is only displayed when Viewlib has been called from Eeschema (click on a symbol in the component chooser).\n"
+"This icon is only displayed when Viewlib has been called from Eeschema (click "
+"on a symbol in the component chooser).\n"
 msgstr ""
+
+
