@@ -1,5 +1,5 @@
-# Cvpcb user manual French translation
-# Copyright (C) YEAR Free Software Foundation, Inc.
+# CvPcb user manual German translation
+#
 # This file is distributed under the same license as the KiCad package.
 # André S.<ansc.de@gmail.com>, 2015-12.
 #
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-12-19 20:26+0100\n"
-"PO-Revision-Date: 2015-12-19 22:14+0100\n"
+"PO-Revision-Date: 2015-12-22 23:05+0100\n"
 "Last-Translator: André S. <ansc.de@gmail.com>\n"
 "Language-Team: German <??@??.??>\n"
 "Language: German\n"
@@ -233,18 +233,25 @@ msgid ""
 "as the open schematic, no project specific footprint libraries will be "
 "available either."
 msgstr ""
+"Sie *können* CvPcb tatsächlich auch aus einem eigenständig gestarteten "
+"Eeschema aufrufen, jedoch beachten Sie bitte, dass jeder geöffnete "
+"Schaltplan, der keine Projekt-Datei im gleichen Verzeichnis hat, fehlende "
+"Bauteile haben kann, da fehlende Bibliotheken nicht in CvPcb angezeigt "
+"werden. Wenn es im gleichen Verzeichnis wie der geöffnete Schaltplan keine "
+"fp-lib-table Datei  gibt, sind auch keine projektspezifischen Footprint-"
+"Bibliotheken verfügbar."
 
 #. type: Title ==
 #: cvpcb.adoc:94
 #, no-wrap
 msgid "CvPcb Features"
-msgstr ""
+msgstr "CvPcb Eigenschaften"
 
 #. type: Title ===
 #: cvpcb.adoc:96
 #, no-wrap
 msgid "Manual or Automatic Association"
-msgstr ""
+msgstr "Manuelle oder Automatische Zuordnung"
 
 #. type: Plain text
 #: cvpcb.adoc:100
@@ -252,18 +259,20 @@ msgid ""
 "CvPcb allows for interactive assignment (manual) as well as automatic "
 "assignment via equivalence files."
 msgstr ""
+"CvPcb erlaubt interaktive (manuelle) Zuweisung aber auch automatische "
+"Zuweisung über Äquivalenz-Dateien."
 
 #. type: Title ==
 #: cvpcb.adoc:101
 #, no-wrap
 msgid "Invoking CvPcb"
-msgstr ""
+msgstr "Aufruf von CvPcb"
 
 #. type: Plain text
 #: cvpcb.adoc:104
 #, no-wrap
 msgid "*CvPcb is only invoked from the schematic capture program Eeschema*, by the tool:\n"
-msgstr ""
+msgstr "*CvPcb wird nur aus dem Schaltplan-Eingabeprogramm Eeschema aufgerufen*, über das Werkzeug:\n"
 
 #. type: Plain text
 #: cvpcb.adoc:106
@@ -277,23 +286,27 @@ msgid ""
 "footprints) to CvPcb.  There is no update to do (unless some new components "
 "are not yet annotated), just run Cvpcb."
 msgstr ""
+"Eeschema übergibt automatisch die korrekten Daten (Bauteilliste und "
+"Footprints) an CvPcb. Es muss keine Aktualisierung durchgeführt werden "
+"(außer ein paar neue Bauteile haben noch keine Referenz), starten Sie "
+"einfach CvPcb."
 
 #. type: Title ==
 #: cvpcb.adoc:110
 #, no-wrap
 msgid "CvPcb Commands"
-msgstr ""
+msgstr "CvPcb Befehle"
 
 #. type: Title ===
 #: cvpcb.adoc:112
 #, no-wrap
 msgid "Main Screen"
-msgstr ""
+msgstr "Hauptbildschirm"
 
 #. type: Plain text
 #: cvpcb.adoc:115
 msgid "The image below shows the main window of CvPcb."
-msgstr ""
+msgstr "Das Bild unten zeigt das Hauptfenster von CvPcb."
 
 #. type: Target for macro image
 #: cvpcb.adoc:116
@@ -311,12 +324,19 @@ msgid ""
 "will be empty if no netlist file has been loaded and the footprint pane can "
 "be also empty if no footprint libraries are found."
 msgstr ""
+"Der linke Bereich enthält die Liste der verfügbaren Footprint-Bibliotheken, "
+"die dem Projekt zugewiesen sind. Der mittlere Bereich enthält die Liste der "
+"Bauteile, die aus der Netzliste geladen wurden. Der rechte Bereich enthält "
+"die Liste der verfügbaren Footprints, die aus den Projekt-Footprint-"
+"Bibliotheken geladen wurden. Der Bauteil-Bereich wird leer sein, wenn keine "
+"Neztliste geladen wurde und der Footprint-Bereich kann ebenfalls leer sein, "
+"wenn keine Footprint-Bibliotheken gefunden wurden."
 
 #. type: Title ===
 #: cvpcb.adoc:126
 #, no-wrap
 msgid "Main Window Toolbar"
-msgstr ""
+msgstr "Hauptfenster Werkzeugleiste"
 
 #. type: Target for macro image
 #: cvpcb.adoc:128
@@ -328,6 +348,7 @@ msgstr ""
 #: cvpcb.adoc:131
 msgid "The top toolbar allows for easy access to the following commands:"
 msgstr ""
+"Die oberste Werkzeugleiste erlaubt den leichten Zugriff auf folgende Befehle:"
 
 #. type: delimited block |
 #: cvpcb.adoc:136
@@ -336,6 +357,8 @@ msgid ""
 "|image:images/icons/save.png[]\n"
 "|Transfer the current footprint association to Eeschema (this is the content of footprint fields).\n"
 msgstr ""
+"|image:images/icons/save.png[]\n"
+"|Übertrage die aktuelle Footprint-Zuweisung an Eeschema (das ist der Inhalt des Footprint-Felds).\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:139
@@ -344,6 +367,8 @@ msgid ""
 "|image:images/icons/config.png[]\n"
 "|Invoke the CvPcb configuration menu.\n"
 msgstr ""
+"|image:images/icons/config.png[]\n"
+"|Das CvPcb Konfigurations-Menü aufrufen.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:143
@@ -353,6 +378,9 @@ msgid ""
 "|Display the footprint of the component selected in the footprint\n"
 "window.\n"
 msgstr ""
+"|image:images/icons/show_footprint.png[]\n"
+"|Zeige den Footprint des ausgewählten Bauteils im Footprint-\n"
+"Fenster.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:147
@@ -362,6 +390,9 @@ msgid ""
 "|Automatically select the previous component in the list without a\n"
 "footprint association.\n"
 msgstr ""
+"|image:images/icons/left.png[]\n"
+"|Wähle automatisch das vorherige Bauteil in der Liste ohne\n"
+"Footprint Zuweisung.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:151
@@ -371,6 +402,9 @@ msgid ""
 "|Automatically select the next component in the list without a footprint\n"
 "association.\n"
 msgstr ""
+"|image:images/icons/right.png[]\n"
+"|Wähle automatisch das nächste Bauteil in der Liste ohne Footprint\n"
+"Zuweisung.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:155
@@ -380,6 +414,9 @@ msgid ""
 "|Automatically associate footprints with components starting using an\n"
 "equivalence file.\n"
 msgstr ""
+"|image:images/icons/auto_association.png[]\n"
+"|Weise Footprints automatisch Bauteilen zu, unter Benutzung einer\n"
+"Äquivalenz-Datei.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:158
@@ -388,6 +425,8 @@ msgid ""
 "|image:images/icons/delete_association.png[]\n"
 "|Delete all footprint assignments.\n"
 msgstr ""
+"|image:images/icons/delete_association.png[]\n"
+"|Lösche alle Footprint-Zuweisungen.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:162
@@ -397,6 +436,9 @@ msgid ""
 "|Open the selected footprint documentation pdf file using the default\n"
 "pdf viewer.\n"
 msgstr ""
+"|image:images/icons/datasheet.png[]\n"
+"|öffne die gewählte Footprint-Dokumentations-Datei unter Benutzung des\n"
+"Standard-PDF-Betrachters.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:166
@@ -406,6 +448,9 @@ msgid ""
 "|Enable or disable the filtering to limit the list of footprints to the\n"
 "footprint filters of the selected component.\n"
 msgstr ""
+"|image:images/icons/filter_component.png[]\n"
+"|Ein- oder Ausschalten der Filterung, um die Liste der Footprints auf die\n"
+"für das gewählte Bauteil gefilterten Footprints zu begrenzen.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:170
@@ -415,6 +460,9 @@ msgid ""
 "|Enable or disable the filtering to limit the list of footprints using\n"
 "the pin count of the selected component.\n"
 msgstr ""
+"|image:images/icons/filter_pincount.png[]\n"
+"|Ein- oder Ausschalten der Filterung, um die Liste auf die Pin-Anzahl\n"
+"des gewählten Bauteils zu begrenzen.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:174
@@ -424,17 +472,21 @@ msgid ""
 "|Enable or disable filtering to limit the list of footprints using the\n"
 "selected library.\n"
 msgstr ""
+"|image:images/icons/filter_library.png[]\n"
+"|Ein- oder Ausschalten der Filterung, um die Liste der Footprints auf\n"
+"die gewählte Bibliothek zu begrenzen.\n"
 
 #. type: Title ===
 #: cvpcb.adoc:176
 #, no-wrap
 msgid "Main Window Keyboard Commands"
-msgstr ""
+msgstr "Hauptfenster Tastatur-Befehle"
 
 #. type: Plain text
 #: cvpcb.adoc:179
 msgid "The following table lists the keyboard commands for the main window:"
 msgstr ""
+"Die folgende Tabelle listet die Tastatur-Befehle für das Hauptfenster auf:"
 
 #. type: delimited block |
 #: cvpcb.adoc:184
@@ -443,6 +495,8 @@ msgid ""
 "|Right Arrow / Tab|Activate the next pane to the right of the currently activated pane.\n"
 "Wrap around to the first pane if the last pane is currently activated.\n"
 msgstr ""
+"|Rechter Pfeil / Tab|Aktiviere den nächsten Bereich rechts vom aktuell aktiven Breich.\n"
+"Springe zum ersten Bereich, wenn aktuell der letzte Bereich aktiv ist.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:187
@@ -451,18 +505,25 @@ msgid ""
 "|Left Arrow |Activate the next pane to the left of the currently activated\n"
 "pane. Wrap around to the last pane if the first pane is currently activated.\n"
 msgstr ""
+"|Linker Pfeil|Aktiviere den nächsten Breich links vom akutell aktivierten\n"
+"Bereich. Springe zum letzten Bereich, wenn der erste Bereich akutell aktiv\n"
+"ist.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:189
 #, no-wrap
 msgid "|Up Arrow |Select the previous item of the currently selected list.\n"
 msgstr ""
+"|Pfeil nach oben|Wähle den vorherigen Eintrag der akutell gewählten\n"
+"Liste.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:191
 #, no-wrap
 msgid "|Down Arrow |Select the next item of the currently selected list.\n"
 msgstr ""
+"|Pfeil nach unten|Wähle den nächsten Eintrag der akutell gewählten\n"
+"Liste.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:194
@@ -471,6 +532,8 @@ msgid ""
 "|Page Up |Select the item up one full page of the currently selected\n"
 "list.\n"
 msgstr ""
+"|Seite nach oben |Wähle den Eintrag eine ganze Seite weiter oben in\n"
+"der aktuell gewählten Liste.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:197
@@ -479,24 +542,28 @@ msgid ""
 "|Page Down |Select the item down one full page of the currently selected\n"
 "list.\n"
 msgstr ""
+"|Seite nach unten |Wähle den Eintrag eine ganze Seite nach unten in der\n"
+"aktuell gewählten Liste.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:199
 #, no-wrap
 msgid "|Home |Select the first item of the currently selected list.\n"
 msgstr ""
+"|Pos 1 |Wähle den ersten Eintrag in der akutell gewählten\n"
+"Liste.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:201
 #, no-wrap
 msgid "|End |Select the last item of the currently selected list.\n"
-msgstr ""
+msgstr "|Ende |Wähle den letzten Eintrag in der akutell gewählten Liste.\n"
 
 #. type: Title ===
 #: cvpcb.adoc:203
 #, no-wrap
 msgid "CvPcb Configuration"
-msgstr ""
+msgstr "CvPcb Konfiguration"
 
 #. type: Target for macro image
 #: cvpcb.adoc:205
@@ -510,6 +577,8 @@ msgid ""
 "CvPcb can be automatically closed after saving the footprint association "
 "file, or not."
 msgstr ""
+"CvPcb kann automatisch nach dem Speichern der Footprint-Zuordnungsdatei "
+"geschlossen werden, oder nicht."
 
 #. type: Plain text
 #: cvpcb.adoc:212
@@ -517,6 +586,8 @@ msgid ""
 "Invoking the ``Libraries'' entry in the ``Preferences'' menu displays the "
 "library configuration dialog."
 msgstr ""
+"Aufrufen des ``Bibliotheken'' Eintrags im ``Einstellungen'' Menü zeigt den "
+"Bibliotheks-Konfigurations-Dialog an."
 
 #. type: Plain text
 #: cvpcb.adoc:215
@@ -524,11 +595,15 @@ msgid ""
 "Depending on the CvPcb version, there are 2 different methods of library "
 "management:"
 msgstr ""
+"Abhängig von der CvPcb Version gibt es 2 unterschiedliche Methoden des "
+"Bibliotheks-Management:"
 
 #. type: Plain text
 #: cvpcb.adoc:217
 msgid "The legacy management, using *.mod files, and a library list of files."
 msgstr ""
+"Das historische Management, das *.mod Dateien und eine Bibliotheks-Liste von "
+"Dateien verwendet."
 
 #. type: Plain text
 #: cvpcb.adoc:222
@@ -538,6 +613,11 @@ msgid ""
 "method of library management, You can also use native libraries originating "
 "from GEDA/GPCB or even Eagle xml format files."
 msgstr ""
+"Das neue ``Pretty'' Format, des eine Datei pro Footprint verwendet. Es "
+"verwendet eine Verzeichnis-Liste. Jedes Verzeichnis (*.pretty Verzeichnis-"
+"Name) ist eine Bibliothek. Wenn diese neue Methode des Bibliotheks-"
+"Management verwendet wird, können sie ebenfalls native Bibliotheken aus GEDA/"
+"GPCB oder sogar Eagle XML-Format Dateien verwenden."
 
 #. type: Plain text
 #: cvpcb.adoc:224 cvpcb.adoc:237 cvpcb.adoc:418 cvpcb.adoc:476
@@ -552,37 +632,37 @@ msgstr "<<<<"
 #: cvpcb.adoc:225
 #, no-wrap
 msgid "Footprint Libraries Management"
-msgstr ""
+msgstr "Footprint Bibliotheken-Management"
 
 #. type: Title ===
 #: cvpcb.adoc:227
 #, no-wrap
 msgid "Important remark:"
-msgstr ""
+msgstr "Wichtiger Hinweis:"
 
 #. type: Plain text
 #: cvpcb.adoc:230
 #, no-wrap
 msgid "*_This section is relevant only for KiCad versions since December 2013_*\n"
-msgstr ""
+msgstr "*_Dieser Abschnitt ist nur für KiCad-Versionen ab Dezember 2013 relevant_*\n"
 
 #. type: Title ===
 #: cvpcb.adoc:232
 #, no-wrap
 msgid "Footprint Library tables"
-msgstr ""
+msgstr "Footprint Bibliothek Tabellen"
 
 #. type: Title ==
 #: cvpcb.adoc:238
 #, no-wrap
 msgid "Viewing the Current Footprint"
-msgstr ""
+msgstr "Den aktuellen Footprint anzeigen"
 
 #. type: Title ===
 #: cvpcb.adoc:240
 #, no-wrap
 msgid "The view footprint command"
-msgstr ""
+msgstr "Der Zeige Footprint Befehl"
 
 #. type: Plain text
 #: cvpcb.adoc:247
@@ -591,6 +671,10 @@ msgid ""
 "_footprint_ window. A 3D model of the component can be shown if it has been "
 "created and assigned to the footprint. Below is the footprint viewer window."
 msgstr ""
+"Der Zeige Footprint Befehl zeigt den aktuell ausgewählten Footprint im "
+"_Footprint_ Fenster. Ein 3D Modell des Bauteils kann angezeigt werden, wenn "
+"einer erstellt und dem Footprint zugewiesen wurde. Unten ist das Fooprint-"
+"Anzeige-Fenster.."
 
 #. type: Target for macro image
 #: cvpcb.adoc:248
@@ -602,7 +686,7 @@ msgstr ""
 #: cvpcb.adoc:250
 #, no-wrap
 msgid "Status Bar Information"
-msgstr ""
+msgstr "Status-Balken Information"
 
 #. type: Plain text
 #: cvpcb.adoc:255
@@ -611,12 +695,15 @@ msgid ""
 "provides useful information to the user. The following table defines the "
 "contents of each pane in the status bar."
 msgstr ""
+"Die Statuszeile befindet sich am unteren Ende des neuen CvPcb Hauptfensters "
+"und stellt nützliche Informationen für den Benutzer bereit. Die folgende "
+"Tabelle definiert die Inhalte jedes Bereichs in der Statuszeile."
 
 #. type: Title ====
 #: cvpcb.adoc:256
 #, no-wrap
 msgid "Keyboard Commands"
-msgstr ""
+msgstr "Tastatur-Befehle"
 
 #. type: delimited block |
 #: cvpcb.adoc:270
@@ -633,12 +720,22 @@ msgid ""
 "|Up Arrow |Move cursor up one grid position\n"
 "|Down Arrow |Move cursor down one grid position\n"
 msgstr ""
+"|F1 |Hineinzoomen\n"
+"|F2 |Herauszoomen\n"
+"|F3 |Anzeige erneuern\n"
+"|F4 |Curser in die Mitte des Anzeigefensters bewegen\n"
+"|Pos 1 |Footprint ins Anzeigefenster einpassen\n"
+"|Leerzeichen |Setze relative Koordinaten zur aktuellen Cursor-Position\n"
+"|Rechter Pfeil |Cursor eine Rasterposition nach rechts bewegen\n"
+"|Linker Pfeil |Cursor eine Rasterposition nach links bewegen\n"
+"|Pfeil hoch |Cursor eine Rasterpositiono nach oben bewegen\n"
+"|Pfeil runter |Cursor eine Rasterposition nach unten bewegen\n"
 
 #. type: Title ====
 #: cvpcb.adoc:272 cvpcb.adoc:349
 #, no-wrap
 msgid "Mouse Commands"
-msgstr ""
+msgstr "Maus-Befehle"
 
 #. type: delimited block |
 #: cvpcb.adoc:280
@@ -649,17 +746,21 @@ msgid ""
 "|Shift + Scroll Wheel |Pan up and down\n"
 "|Right Button Click |Open context menu\n"
 msgstr ""
+"|Scroll-Rad |Hinein- und Herauszoomen an der aktuellen Cursor-Position\n"
+"|Strg + Scroll-Rad |Bildinhalt nach rechts und links verschieben\n"
+"|Umschalt + Scroll-Rad |Bildinhalt nach oben und unten verschieben\n"
+"|Rechte Maustaste |Kontextmenü öffnen\n"
 
 #. type: Title ====
 #: cvpcb.adoc:282
 #, no-wrap
 msgid "Context Menu"
-msgstr ""
+msgstr "Kontextmenü"
 
 #. type: Plain text
 #: cvpcb.adoc:285
 msgid "Displayed by right-clicking the mouse:"
-msgstr ""
+msgstr "Wird bei einem Rechtsklick mit der Maus angezeigt:"
 
 #. type: Target for macro image
 #: cvpcb.adoc:286
@@ -674,12 +775,14 @@ msgid ""
 "|Zoom Selection (Select Zoom) |Direct selection of the display zoom.\n"
 "|Grid Selection (Grid Select) |Direct selection of the grid.\n"
 msgstr ""
+"|Zoomauswahl (Zoom auswählen) |Direkte Auswahl des Anzeige-Zooms.\n"
+"|Rasterauswahl (Raster auswählen) |Direkte Auswahl des Rasters.\n"
 
 #. type: Title ====
 #: cvpcb.adoc:294 cvpcb.adoc:358
 #, no-wrap
 msgid "Horizontal Toolbar"
-msgstr ""
+msgstr "Horizontale Werkzeugleiste"
 
 #. type: delimited block |
 #: cvpcb.adoc:302
@@ -690,6 +793,10 @@ msgid ""
 "|image:images/icons/zoom_in.png[]\n"
 "|Zoom in\n"
 msgstr ""
+"|image:images/icons/display_options.png[]\n"
+"|Zeige Dialog für Anzeigeeinstellungen\n"
+"|image:images/icons/zoom_in.png[]\n"
+"|Hineinzoomen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:305 cvpcb.adoc:376
@@ -698,6 +805,8 @@ msgid ""
 "|image:images/icons/zoom_out.png[]\n"
 "|Zoom out\n"
 msgstr ""
+"|image:images/icons/zoom_out.png[]\n"
+"|Herauszoomen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:308 cvpcb.adoc:379
@@ -706,6 +815,8 @@ msgid ""
 "|image:images/icons/zoom_redraw.png[]\n"
 "|Redraw\n"
 msgstr ""
+"|image:images/icons/zoom_redraw.png[]\n"
+"|Anzeie Aktualisieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:311 cvpcb.adoc:382
@@ -714,6 +825,8 @@ msgid ""
 "|image:images/icons/zoom_fit_in_page.png[]\n"
 "|Fit drawing in display area\n"
 msgstr ""
+"|image:images/icons/zoom_fit_in_page.png[]\n"
+"|Zeichnung in Anzeigefläche einpassen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:314
@@ -722,12 +835,14 @@ msgid ""
 "|image:images/icons/open_3d_model_view.png[]\n"
 "|Open 3D model viewer\n"
 msgstr ""
+"|image:images/icons/open_3d_model_view.png[]\n"
+"|Öffne 3D-Modell-Anzeige\n"
 
 #. type: Title ====
 #: cvpcb.adoc:316
 #, no-wrap
 msgid "Vertical Toolbar"
-msgstr ""
+msgstr "Senkrechte Werkzeugleiste"
 
 #. type: delimited block |
 #: cvpcb.adoc:322
@@ -736,6 +851,8 @@ msgid ""
 "|image:images/icons/toggle_grid.png[]\n"
 "|Show or hide the grid\n"
 msgstr ""
+"|image:images/icons/toggle_grid.png[]\n"
+"|Raster anzeigen oder verbergen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:325
@@ -744,6 +861,8 @@ msgid ""
 "|image:images/icons/coordination_system.png[]\n"
 "|Show coordinates in polar or rectangular notation\n"
 msgstr ""
+"|image:images/icons/coordination_system.png[]\n"
+"|Koordinaten in Polar- oder Rechteck-Notation anzeigen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:328
@@ -752,6 +871,8 @@ msgid ""
 "|image:images/icons/unit_inch.png[]\n"
 "|Display coordinates in inches\n"
 msgstr ""
+"|image:images/icons/unit_inch.png[]\n"
+"|Koordinaten in Zoll anzeigen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:331
@@ -760,6 +881,8 @@ msgid ""
 "|image:images/icons/unit_mm.png[]\n"
 "|Display coordinates in millimeters\n"
 msgstr ""
+"|image:images/icons/unit_mm.png[]\n"
+"|Koordinaten in Millimeter anzeigen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:334
@@ -768,6 +891,8 @@ msgid ""
 "|image:images/icons/pointer_style.png[]\n"
 "|Toggle pointer style\n"
 msgstr ""
+"|image:images/icons/pointer_style.png[]\n"
+"|Zeiger-Stil umschalten\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:337
@@ -776,6 +901,8 @@ msgid ""
 "|image:images/icons/toggle_pads_sketch.png[]\n"
 "|Toggle between drawing pads in sketch or normal mode\n"
 msgstr ""
+"|image:images/icons/toggle_pads_sketch.png[]\n"
+"|Umschalten zwischen Umriss- oder Normaldarstellung für Lötflächen.\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:340
@@ -784,6 +911,8 @@ msgid ""
 "|image:images/icons/toggle_text_sketch.png[]\n"
 "|Toggle between drawing text in sketch or normal mode\n"
 msgstr ""
+"|image:images/icons/toggle_text_sketch.png[]\n"
+"|Umschalten zwischen Umriss- oder Normalmodus für Text\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:343
@@ -792,12 +921,14 @@ msgid ""
 "|image:images/icons/toggle_edge_sketch.png[]\n"
 "|Toggle between drawing edges in sketch or normal mode\n"
 msgstr ""
+"|image:images/icons/toggle_edge_sketch.png[]\n"
+"|Umschalten zwischen Umriss- und Normalmodus für Bauteilränder\n"
 
 #. type: Title ===
 #: cvpcb.adoc:345
 #, no-wrap
 msgid "Viewing the Current 3D Model"
-msgstr ""
+msgstr "Anzeige des aktuellen 3D-Modells"
 
 #. type: Target for macro image
 #: cvpcb.adoc:347
@@ -813,6 +944,9 @@ msgid ""
 "|Ctrl + Scroll Wheel |Pan right and left\n"
 "|Shift + Scroll Wheel |Pan up and down\n"
 msgstr ""
+"|Scroll-Rad |Hinein- und Herauszoomen an der aktuellen Cursor-Position\n"
+"|Strg + Scroll-Rad |Bildinhalt nach rechts und links verschieben\n"
+"|Umschalt + Scroll-Rad |Bildinhalt nach oben und unten verschieben\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:364
@@ -821,6 +955,8 @@ msgid ""
 "|image:images/icons/import3d.png[]\n"
 "|Reload the 3D model\n"
 msgstr ""
+"|image:images/icons/import3d.png[]\n"
+"|3D-Modell neu laden\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:367
@@ -829,6 +965,8 @@ msgid ""
 "|image:images/icons/copy_to_clipboard.png[]\n"
 "|Copy 3D image to clipboard\n"
 msgstr ""
+"|image:images/icons/copy_to_clipboard.png[]\n"
+"|3D-Bild in Zwischenablage kopieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:370
@@ -837,6 +975,8 @@ msgid ""
 "|image:images/icons/read_setup.png[]\n"
 "|Set 3D viewer options\n"
 msgstr ""
+"|image:images/icons/read_setup.png[]\n"
+"|3D-Anzeigeeinstellungen setzen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:373
@@ -845,6 +985,8 @@ msgid ""
 "|image:images/icons/zoom_in.png[]\n"
 "|Zoom in\n"
 msgstr ""
+"|image:images/icons/zoom_in.png[]\n"
+"|Hineinzoomen\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:385
@@ -853,6 +995,8 @@ msgid ""
 "|image:images/icons/rotate_back_x.png[]\n"
 "|Rotate backward along the X axis\n"
 msgstr ""
+"|image:images/icons/rotate_back_x.png[]\n"
+"|Rückwärts entlang der X-Achse rotieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:388
@@ -861,6 +1005,8 @@ msgid ""
 "|image:images/icons/rotate_forw_x.png[]\n"
 "|Rotate forward along the X axis\n"
 msgstr ""
+"|image:images/icons/rotate_forw_x.png[]\n"
+"|Vorwärts entlang der X-Achse rotieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:391
@@ -869,6 +1015,8 @@ msgid ""
 "|image:images/icons/rotate_back_y.png[]\n"
 "|Rotate backward along the Y axis\n"
 msgstr ""
+"|image:images/icons/rotate_back_y.png[]\n"
+"|Rückwärts entlang der Y-Achse rotieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:394
@@ -877,6 +1025,8 @@ msgid ""
 "|image:images/icons/rotate_forw_y.png[]\n"
 "|Rotate forward along the Y axis\n"
 msgstr ""
+"|image:images/icons/rotate_forw_y.png[]\n"
+"|Vorwärts entlang der Y-Achse rotieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:397
@@ -885,6 +1035,8 @@ msgid ""
 "|image:images/icons/rotate_back_z.png[]\n"
 "|Rotate backward along the Z axis\n"
 msgstr ""
+"|image:images/icons/rotate_back_z.png[]\n"
+"|Rückwärts entlang der Z-Achse rotieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:400
@@ -893,6 +1045,8 @@ msgid ""
 "|image:images/icons/rotate_forw_z.png[]\n"
 "|Rotate forward along the Z axis\n"
 msgstr ""
+"|image:images/icons/rotate_forw_z.png[]\n"
+"|Vorwärts entlang der Z-Achse rotieren\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:403
@@ -901,6 +1055,8 @@ msgid ""
 "|image:images/icons/left.png[]\n"
 "|Pan left\n"
 msgstr ""
+"|image:images/icons/left.png[]\n"
+"|Bildinhalt nach links verschieben\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:406
@@ -909,6 +1065,8 @@ msgid ""
 "|image:images/icons/right.png[]\n"
 "|Pan right\n"
 msgstr ""
+"|image:images/icons/right.png[]\n"
+"|Bildinhalt nach rechts verschieben\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:409
@@ -917,6 +1075,8 @@ msgid ""
 "|image:images/icons/up.png[]\n"
 "|Pan up\n"
 msgstr ""
+"|image:images/icons/up.png[]\n"
+"|Bildinhalt nach oben verschieben\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:412
@@ -925,6 +1085,8 @@ msgid ""
 "|image:images/icons/down.png[]\n"
 "|Pan down\n"
 msgstr ""
+"|image:images/icons/down.png[]\n"
+"|Bildinhalt nach unten verschieben\n"
 
 #. type: delimited block |
 #: cvpcb.adoc:415
@@ -933,18 +1095,20 @@ msgid ""
 "|image:images/icons/toggle_ortho.png[]\n"
 "|Toggle orthographic projection mode on and off\n"
 msgstr ""
+"|image:images/icons/toggle_ortho.png[]\n"
+"|Ein- und Ausschalten des orthogonalen Anzeigemodus\n"
 
 #. type: Title ==
 #: cvpcb.adoc:419
 #, no-wrap
 msgid "Using CvPcb to Associate Components with Footprints"
-msgstr ""
+msgstr "CvPcb nutzen um Bauteile mit Footprints zu verbinden"
 
 #. type: Title ===
 #: cvpcb.adoc:421
 #, no-wrap
 msgid "Manually Associating Footprints with Components"
-msgstr ""
+msgstr "Manuelle Zuweisung von Footprints zu Bauteilen"
 
 #. type: Plain text
 #: cvpcb.adoc:429
@@ -955,12 +1119,18 @@ msgid ""
 "The unassigned next component in the list is automatically selected. "
 "Changing the component footprint is performed in the same manner."
 msgstr ""
+"Um manuell einen Footprint mit einem Bauteil zu verbinden, wählen Sie zuerst "
+"ein Bauteil im Bauteil-Bereich. Dann wählen Sie einen Footprint im Footprint-"
+"Bereich indem Sie mit der linken Maustaste doppelt auf den Namen des "
+"gewünschten Footprints klicken. Das nächste Bauteil ohne Zuweisung in der "
+"Liste wird automatisch ausgewählt. Den Footprint zu ändern, wird in der "
+"gleichen Weise durchgeführt. "
 
 #. type: Title ===
 #: cvpcb.adoc:430
 #, no-wrap
 msgid "Filtering the Footprint List"
-msgstr ""
+msgstr "Footprint-Liste filtern"
 
 #. type: Plain text
 #: cvpcb.adoc:435
@@ -969,6 +1139,9 @@ msgid ""
 "of the filtering option is enabled, the displayed footprint list in CvPcb is "
 "filtered accordingly."
 msgstr ""
+"Wenn das ausgewählte Bauteil und/oder Bibliothek hervorgehoben wird, wenn "
+"ein oder mehr Filter-Optionen eingeschaltet werden, wird die angezeigte "
+"Footprint-Liste in CvPcb entsprechend gefiltert."
 
 #. type: Plain text
 #: cvpcb.adoc:441
@@ -978,11 +1151,15 @@ msgid ""
 "disable the filtering feature. When the filtering is not enabled, the full "
 "footprint list is shown."
 msgstr ""
+"Die Icons image:images/icons/filter_component.png[] image:images/icons/"
+"filter_pincount.png[] image:images/icons/filter_library.png[] schalten die "
+"Filterfunktion ein und aus. Wenn die Filterung ausgeschaltet ist, wird die "
+"gesamte Footprint-Liste angezeigt."
 
 #. type: Plain text
 #: cvpcb.adoc:443
 msgid "Without filtering:"
-msgstr ""
+msgstr "Ohne Filterung:"
 
 #. type: Target for macro image
 #: cvpcb.adoc:444
@@ -997,11 +1174,14 @@ msgid ""
 "The component filters are listed on the center pane of the status bar at the "
 "bottom of the main window."
 msgstr ""
+"Gefiltert anhand der Liste von Footprint-Filtern die dem ausgewählten "
+"Bauteil zugewiesen sind. Die Bateilfilter sind im mittleren Bereich der "
+"Statusleiste am unteren Rand des Hauptfensters angezeigt."
 
 #. type: Plain text
 #: cvpcb.adoc:451
 msgid "Filtered by the footprint filter of the selected component:"
-msgstr ""
+msgstr "Gefiltert anhand des Footprint-Filters des ausgewählten Bauteils:"
 
 #. type: Target for macro image
 #: cvpcb.adoc:452
@@ -1016,6 +1196,9 @@ msgid ""
 "using the entries in the footprint filter tab of the component properties "
 "dialog as shown below."
 msgstr ""
+"Im Bauteil-Bibliotheks-Editor in Eeschema wurde die Footprint-Liste gesetzt, "
+"unter Nutzung der Einträge im Footprint-Filter-Tab des Bauteil-Eigenschaften-"
+"Dialogs wie unten gezeigt:"
 
 #. type: Target for macro image
 #: cvpcb.adoc:458
@@ -1026,7 +1209,7 @@ msgstr ""
 #. type: Plain text
 #: cvpcb.adoc:461
 msgid "Filtered by the pin count of the selected component:"
-msgstr ""
+msgstr "Gefiltert nach Pin-Anzahl der gewählten Bauteils:"
 
 #. type: Target for macro image
 #: cvpcb.adoc:462
@@ -1037,7 +1220,7 @@ msgstr ""
 #. type: Plain text
 #: cvpcb.adoc:465
 msgid "Filtered by the selected library."
-msgstr ""
+msgstr "Gefiltert nach der ausgewählten Bibliothek:"
 
 #. type: Target for macro image
 #: cvpcb.adoc:466
@@ -1051,11 +1234,13 @@ msgid ""
 "The filtering can be combined to form more complex filtering to help reduce "
 "the number of footprints in the footprint pane."
 msgstr ""
+"Die Filterung kann kombiniert werden, um komplexere Filter zu bilden, um die "
+"Anzahl der im Footprint-Bereich angezeigten Footprints zu reduzieren."
 
 #. type: Plain text
 #: cvpcb.adoc:472
 msgid "Filtered by the selected component pin count and the component filter:"
-msgstr ""
+msgstr "Gefiltert nach ausgewähltem Bauteil Pin-Anzahl und Bauteil-Filter:"
 
 #. type: Target for macro image
 #: cvpcb.adoc:473
@@ -1067,19 +1252,21 @@ msgstr ""
 #: cvpcb.adoc:477
 #, no-wrap
 msgid "Automatic Associations"
-msgstr ""
+msgstr "Automatische Zuweisung"
 
 #. type: Title ===
 #: cvpcb.adoc:479
 #, no-wrap
 msgid "Equivalence files"
-msgstr ""
+msgstr "Äquivalenz-Dateien"
 
 #. type: Plain text
 #: cvpcb.adoc:483
 msgid ""
 "Equivalence files allow for automatic assignment of footprints to components."
 msgstr ""
+"Äquivalenz-Dateien erlauben eine automatische Zuweisung von Footprints zu "
+"Bauteilen."
 
 #. type: Plain text
 #: cvpcb.adoc:487
@@ -1088,6 +1275,9 @@ msgid ""
 "(__value field__) of the component. These files typically have the *.equ* "
 "file extension."
 msgstr ""
+"Sie listen den Namen des zugehörigen Footprints gemäß des Namens (__value "
+"field__) des Bauteils. Diese Dateien haben typischerweise  die *.equ* Datei-"
+"Erweiterung."
 
 #. type: Plain text
 #: cvpcb.adoc:490
@@ -1095,12 +1285,14 @@ msgid ""
 "They are plain text files and may be edited by using any plain text editor, "
 "and must be created by the user."
 msgstr ""
+"Sie sind reine Textdateien und können mit einem normalen Texteditor "
+"bearbeitet werden und müssen vom Nutzer erstellt werden."
 
 #. type: Title ===
 #: cvpcb.adoc:493
 #, no-wrap
 msgid "Equivalence File Format"
-msgstr ""
+msgstr "Äquivalenz-Datei Format"
 
 #. type: Plain text
 #: cvpcb.adoc:497
@@ -1108,12 +1300,14 @@ msgid ""
 "Equivalence files consist of one line for each component. Each line has the "
 "following structure:"
 msgstr ""
+"Äquivalenz-Datei besteht aus einer Zeile für jedes Bauteil. Jede Zeile hat "
+"folgende Struktur:"
 
 #. type: Plain text
 #: cvpcb.adoc:499
 #, no-wrap
 msgid "*`component value' `footprint name'*\n"
-msgstr ""
+msgstr "*`Bauteilwert' `Footprint-Name'*\n"
 
 #. type: Plain text
 #: cvpcb.adoc:502
@@ -1121,11 +1315,14 @@ msgid ""
 "Each name must be single quoted by the ' character and the component and "
 "footprint names must be separated by one or more spaces."
 msgstr ""
+"Jeder Name muss mit einem einfachen Anführungszeigen ' eingeschlossen werden "
+"und der Bauteil- und Footprint-Name müssem mit einem oder mehreren "
+"Leerzeichen getrennt sein."
 
 #. type: Plain text
 #: cvpcb.adoc:504
 msgid "_Example:_"
-msgstr ""
+msgstr "_Beispiel:_"
 
 #. type: Plain text
 #: cvpcb.adoc:507
@@ -1133,21 +1330,23 @@ msgid ""
 "If the U3 component is circuit 14011 and its footprint is 14DIP300, the line "
 "is:"
 msgstr ""
+"Wenn das U3 Bauteil der Schaltkreis 14011 ist und sein Footprint 14DIP300 "
+"ist, lautet die Zeile:"
 
 #. type: Plain text
 #: cvpcb.adoc:509
 msgid "+`14011' `14DIP300'+"
-msgstr ""
+msgstr "+`14011' `14DIP300'+"
 
 #. type: Plain text
 #: cvpcb.adoc:511
 msgid "Any line starting with *#* is a comment."
-msgstr ""
+msgstr "Jede Zeile die mit einem *#* beginnt ist ein Kommentar."
 
 #. type: Plain text
 #: cvpcb.adoc:513
 msgid "Here is an example equivalence file:"
-msgstr ""
+msgstr "Hier ist ein Beispiel einer Äquivalenz-Datei:"
 
 #. type: delimited block -
 #: cvpcb.adoc:538
@@ -1177,6 +1376,29 @@ msgid ""
 "'XCR3128-VQ100' 'VQFP100'\n"
 "'XCF08P' 'BGA48'\n"
 msgstr ""
+"#Integrierte Schaltkreise (SMD):\n"
+"'74LV14' 'SO14E'\n"
+"'74HCT541M' 'SO20L'\n"
+"'EL7242C' 'SO8E'\n"
+"'DS1302N' 'SO8E'\n"
+"'XRC3064' 'VQFP44'\n"
+"'LM324N' 'S014E'\n"
+"'LT3430' 'SSOP17'\n"
+"'LM358' 'SO8E'\n"
+"'LTC1878' 'MSOP8'\n"
+"'24LC512I/SM' 'SO8E'\n"
+"'LM2903M' 'SO8E'\n"
+"'LT1129_SO8' 'SO8E'\n"
+"'LT1129CS8-3.3' 'SO8E'\n"
+"'LT1129CS8' 'SO8E'\n"
+"'LM358M' 'SO8E'\n"
+"'TL7702BID' 'SO8E'\n"
+"'TL7702BCD' 'SO8E'\n"
+"'U2270B' 'SO16E'\n"
+"#Xilinx\n"
+"'XC3S400PQ208' 'PQFP208'\n"
+"'XCR3128-VQ100' 'VQFP100'\n"
+"'XCF08P' 'BGA48'\n"
 
 #. type: delimited block -
 #: cvpcb.adoc:541
@@ -1185,6 +1407,8 @@ msgid ""
 "#upro\n"
 "'MCF5213-LQFP100' 'VQFP100'\n"
 msgstr ""
+"#upro\n"
+"'MCF5213-LQFP100' 'VQFP100'\n"
 
 #. type: delimited block -
 #: cvpcb.adoc:544
@@ -1193,12 +1417,14 @@ msgid ""
 "#regulators\n"
 "'LP2985LV' 'SOT23-5'\n"
 msgstr ""
+"#Spannungsregler\n"
+"'LP2985LV' 'SOT23-5'\n"
 
 #. type: Title ===
 #: cvpcb.adoc:547
 #, no-wrap
 msgid "Automatically Associating Footprints to Components"
-msgstr ""
+msgstr "Automatische Zuweisung von Footprints zu Bauteilen"
 
 #. type: Plain text
 #: cvpcb.adoc:551
@@ -1206,6 +1432,8 @@ msgid ""
 "Click on the automatic footprint association button on the top toolbar to "
 "process an equivalence file."
 msgstr ""
+"Klicken Sie auf den \"Automatische Footprint Zuordung\"-Button in der "
+"obersten Werkzeugleiste um eine Äquivalenz-Datei abzuarbeiten."
 
 #. type: Plain text
 #: cvpcb.adoc:554
@@ -1213,6 +1441,8 @@ msgid ""
 "_All components found by their value in the selected equivalence (*.equ) "
 "file will have their footprint automatically assigned._"
 msgstr ""
+"_Alle Bauteile die über ihren Wert in der ausgewählten Äquivalenz-Datei (*."
+"equ) gefunden wurden, bekommen ihren Footprint automatisch zugewiesen._"
 
 #
 #
@@ -1233,11 +1463,14 @@ msgid ""
 "based on *_footprint library tables_* which allows *direct use of footprint "
 "libraries* from"
 msgstr ""
+"Seit Dezember 2013 verwenden Pcbnew und CvPcb ein neues Bibliotheks-"
+"Verwaltungs-Werkzeug das auf *_footprint library tables_* basiert, was es "
+"erlaubt *Footprint Bibliotheken direkt zu verwenden* von:"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:7
 msgid "KiCad Legacy footprint libraries (.mod files)"
-msgstr ""
+msgstr "KiCad alte Footprint Bibliotheken (.mod Dateien)"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:9
@@ -1245,6 +1478,8 @@ msgid ""
 "KiCad New _.pretty_ footprint libraries (on your local disk)  (folders with ."
 "pretty extension, containing .kicad_mod files)"
 msgstr ""
+"KiCad neue _.pretty_ Footprint Bibliotheken (auf der lokalen Festplatte) "
+"(Verzeichnisse mit .pretty Erweiterung, die .kicad_mod Dateien enthalten)"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:10
@@ -1252,16 +1487,18 @@ msgid ""
 "KiCad New _.pretty_ footprint libraries (on our Github server, or other "
 "Github server)"
 msgstr ""
+"KiCad neue _.pretty_ Footprint Bibliotheken (auf unserem Github-Server, oder "
+"anderem Github-Server)"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:11
 msgid "GEDA libraries (folders containing .fp files)"
-msgstr ""
+msgstr "GEDA Bibliotheken (Verzeichnisse die .fp Dateien enthalten)"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:12
 msgid "Eagle footprint libraries"
-msgstr ""
+msgstr "Eagle Footprint Bibliotheken"
 
 #. type: delimited block =
 #: cvpcb_footprint_libraries_tables.adoc:17
@@ -1269,11 +1506,13 @@ msgid ""
 "you can write only KiCad _.pretty_ footprint library folders on your local "
 "disk (and the .kicad_mod files inside these folders)."
 msgstr ""
+"Sie können nur KiCad _.pretty_ Footprint Bibliotheken auf ihrer lokalen "
+"Festplatte schreiben (und die .kicad_mod Dateien in diesen Verzeichnissen)"
 
 #. type: delimited block =
 #: cvpcb_footprint_libraries_tables.adoc:18
 msgid "All other formats are read only."
-msgstr ""
+msgstr "Alle anderen Formate können nur gelesen werden."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:25
@@ -1282,6 +1521,9 @@ msgid ""
 "be opened by invoking the ``Footprint Libraries'' entry from the "
 "``Preferences'' menu."
 msgstr ""
+"Das Bild unten zeigt den Footprint-Bibliotheks-Tabelle Bearbeiten Dialog, "
+"welcher über das Aufrufen des ``Footprint Bibliotheken'' Eintrags im "
+"``Einstellungen'' Menü geöffnet werden kann. "
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:26
@@ -1303,6 +1545,11 @@ msgid ""
 "up footprints* instead of the previous method which depended on library "
 "search path ordering."
 msgstr ""
+"Die Footprint Bibliotheks Tabelle wird benutzt, um eine Footprint-Bibliothek "
+"jedes unterstützten Bibliothek-Typs mit einem Bezeichner zu verbinden. "
+"*Dieser Bezeichner wird benutzt, um nach Footprints zu suchen* anstelle der "
+"bisherigen Methode, welche auf die Anordnung des Bibliotheks-Such-Pfads "
+"angewiesen war"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:38
@@ -1312,12 +1559,17 @@ msgid ""
 "appropriate library. It also allows CvPcb to support loading libraries from "
 "different PCB editors such as Eagle and GEDA."
 msgstr ""
+"Das erlaubt es CvPcb auf Footprints mit dem gleichen Namen in "
+"unterschiedlichen Bibliotheken zuzugreifen und dabei sicherzustellen, dass "
+"der korrekte Footprint aus der passenden Bibliothek geladen wird. Es "
+"ermöglicht CvPcb ebenfalls Bibliotheken unterschiedlicher PCB-Editoren wie "
+"Eagle und GEDA zu laden."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:39
 #, no-wrap
 msgid "Global Footprint Library Table"
-msgstr ""
+msgstr "Globale Footprint Bibliotheks Tabelle"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:45
@@ -1327,12 +1579,17 @@ msgid ""
 "is saved in the file fp-lib-table in the user's home folder.  The location "
 "of this folder is dependent upon the operating system being used."
 msgstr ""
+"Die globale Footprint Bibliotheks Tabelle enthält eine Liste von "
+"Bibliotheken die immer verfügbar sind, unabhängig von der aktuell geladenen "
+"Projektdatei. Die Tabelle ist in der Datei fp-lib-table im Home-Verzeichnis "
+"des Benutzers gespeichert. Die Position des Verzeichnisses hängt vom "
+"verwendeten Betriebssystem ab."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:46
 #, no-wrap
 msgid "Project Specific Footprint Library Table"
-msgstr ""
+msgstr "Projektspezifische Footprint Bibliotheks Tabelle"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:55
@@ -1345,12 +1602,20 @@ msgid ""
 "is created which can be edited and later saved along with the footprint "
 "assignment file."
 msgstr ""
+"Die projektspezifische Footprint Bibliotheks Tabelle enthält die Liste von "
+"Bibliotheken die spezifisch  für die aktuell geladene Projektdatei verfügbar "
+"sind. Die projektspezifische Footprint Bibliotheks Tabelle kann nur "
+"bearbeitet werden, wenn sie gleichzeitig mit der Projekt-Netzliste geladen "
+"wird. Wenn keine Projektdatei geladen ist oder es keine Footprint "
+"Bibliotheks Tabllen-Datei im Projektpfad gibt, wird eine leere Tabelle "
+"erzeugt, welche bearbeitet werden kann und später mit der Footprint-"
+"Zuweisung-Datei gespeichert wird."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:56
 #, no-wrap
 msgid "Initial Configuration"
-msgstr ""
+msgstr "Erstkonfiguration"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:63
@@ -1361,6 +1626,11 @@ msgid ""
 "system's KiCad template folder to the file fp-lib-table in the user's home "
 "folder."
 msgstr ""
+"Wenn Pcbnew oder CvPcb das erste mal ausgeführt werden und die globale "
+"Footprint-Tabellen-Datei *fp-lib-table* wurde nicht im Home-Verzeichnis des "
+"Benutzers gefunden, werden Pcbnew oder CvPcb versuchen, die Standard-"
+"Footprint-Tabelle fp-lib-table, die im System-KiCad Vorlagen-Verzeichnis "
+"gespeichert ist, in das Home-Verzeichnis des Benutzers zu kopieren."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:67
@@ -1369,6 +1639,10 @@ msgid ""
 "created in the user's home folder. If this happens, the user can either copy "
 "fp-lib-table manually or configure the table by hand."
 msgstr ""
+"Wenn fp-lib-table nicht gefunden werden kann, wird eine leere Footprint-"
+"Bibliotheks-Tabelle im Home-Verzeichnis des Benutzers erzeugt. Wenn das "
+"passiert, kann der Benutzer entweder eine fp-lib-table von Hand kopieren "
+"oder die Tabelle von Hand einrichten."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:70
@@ -1376,6 +1650,8 @@ msgid ""
 "The default footprint library table includes many of the standard footprint "
 "libraries that are installed as part of KiCad."
 msgstr ""
+"Die Standard-Footprint-Bibliotheks-Tabelle enthält viele der Standard-"
+"Footprint-Bibliotheken, die als Teil von KiCad installiert werden."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:73
@@ -1384,17 +1660,20 @@ msgid ""
 "entries)  according to your work and the libraries you need for all your "
 "projects."
 msgstr ""
+"Offensichtlich ist *als Erstes* zu tun diese Tabelle zu bearbeiten "
+"(hinzufügen/entfernen von Einträgen) ensprechend Ihrer Tätigkeit und den "
+"Bibliotheken, die Sie für alle ihre Projekte benötigen."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:75
 msgid "(Too many libraries to load is time consuming)"
-msgstr ""
+msgstr "(Zu viele Bibliotheken zu laden dauert sehr lange)"
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:77
 #, no-wrap
 msgid "Adding Table Entries"
-msgstr ""
+msgstr "Tabelleneinträge hinzufügen"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:82
@@ -1403,12 +1682,16 @@ msgid ""
 "global table or the project specific table. The project specific table is "
 "only applicable when you have a net list file open."
 msgstr ""
+"Um eine Footprint-Bibliothek zu benutzen, muss sie zuerst entweder zur "
+"globalen oder zur projektspezifischen Tabelle hinzugefügt werden. Die "
+"projektspezifische Tabelle ist nur verwendbar, wenn Sie eine Netzlisten-"
+"Datei geöffnet haben."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:84
 #, no-wrap
 msgid "*Each library entry must have a unique nickname.*\n"
-msgstr ""
+msgstr "*Jeder Bibliothekseintrag muss einen eindeutigen Bezeichner haben.*\n"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:90
@@ -1419,6 +1702,13 @@ msgid ""
 "of library. Paths can be defined as absolute, relative, or by environment "
 "variable substitution (see section below)."
 msgstr ""
+"Dieser Bezeichner braucht in keiner Weise mit dem tatsächlichen "
+"Bibliotheksnamen oder -pfad in Verbindung zu stehen.\n"
+"Der Doppelpunkt : darf nirgends im Namen verwendet werden.\n"
+"Jeder Bibliothekseintrag muss einen gültigen Pfad und/oder Dateinamen "
+"aufweisen, abhängig von der Art der Bibliothek.\n"
+"Pfade können absolut, relativ oder durch Umgebungsvariablen-Ersetzung "
+"definiert werden. (Siehe nächsten Abschnitt)"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:94
@@ -1427,6 +1717,9 @@ msgid ""
 "properly read. KiCad currently supports reading KiCad legacy, KiCad Pretty, "
 "Eagle, and GEDA footprint libraries."
 msgstr ""
+"Der korrekte Plugin-Typ muss ausgewählt worden sein, damit die Bibliothek "
+"richtig gelesen werden kann. KiCad unterstützt derzeit das Lesen von KiCad "
+"alt, KiCad Pretty, Eagle und GEDA Footprint-Bibliotheken."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:98
@@ -1435,6 +1728,10 @@ msgid ""
 "The option field is not used at this time so adding options will have no "
 "effect when loading libraries."
 msgstr ""
+"Es gibt ebenfalls ein Beschreibungsfeld um eine Beschreibung des "
+"Bibliotheksentrags zu ergänzen. Das Optionsfeld wird derzeit nicht "
+"verwendet, das hinzufügen von Optionen hat keinen Einfluss, wenn "
+"Bibliotheken geladen werden."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:102
@@ -1443,6 +1740,9 @@ msgid ""
 "table. However, you can have duplicate library nicknames in both the global "
 "and project specific footprint library table."
 msgstr ""
+"Bitte beachten Sie, dass Sie keine doppelten Namen in der gleichen Tabelle "
+"verwenden können. Jedoch können Sie doppelte Bezeichner in der globalen und "
+"projektspezifischen Footprint-Bibliotheks-Tabelle verwenden."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:106
