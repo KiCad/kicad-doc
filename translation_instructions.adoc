@@ -7,29 +7,36 @@ To start translating these documents in a new language, follow these steps:
 
 2) create your language addendum. Do a:
 
- cp po/addendum.template po/addendum.NN
+ cp src/YOUR-CHOSEN-MANUAL/po/addendum.template src/YOUR-CHOSEN-MANUAL/po/addendum.NN
 
-where NN is the i18n language code. For example, for german do:
+where NN is the i18n language code and YOUR-CHOSEN-MANUAL is the name of
+the manual dir. For example, for "Getting Started in KiCad" in German do:
 
- cp po/addendum.template po/addendum.de
+ cp src/getting_started_in_kicad/po/addendum.template src/getting_started_in_kicad/po/addendum.de
 
 Edit, translate and add your name to the nationalized addendum for your
 credit as a translator.
 
-3) do a
+3) then, for creating your language template, do:
 
- make po/NN.po
+ mkdir build
+ cd build
+ cmake ..
+ make YOUR-CHOSEN-MANUAL_update_NN
 
-where, again, NN is your i18n language code.
+where, again, YOUR-CHOSEN-MANUAL is the name of the manual dir, for
+example "getting_started_in_kicad" and NN is your i18n language code.
 
-Edit the resulting po/NN.po file, starting from the headers, using a
-specialized po editor of your choice like poedit, gtranslator, virtaal,
-lokalize, emacs, vi, or others.
+Edit the resulting ../src/YOUR-CHOSEN-MANUAL/po/NN.po file, starting from
+the headers, using a specialized po editor of your choice like poedit,
+gtranslator, virtaal, lokalize, emacs, vi, or others.
+For example do:
+
+ poedit ../src/getting_started_in_kicad/po/de.po
 
 4) try your translation with a:
 
- cd build
- make NAME_OF_THE_PROJECT_html_NN
+ make YOUR-CHOSEN-MANUAL_html_NN
 
 For example:
 
@@ -37,14 +44,27 @@ For example:
 
 And see the results with a browser:
 
- firefox cvpcb-it.html
+ firefox src/cvpcb/it/cvpcb.html
 
-5) when you reach 100% of the translation, create a patch with:
+NOTE: you can try other formats like pdf or epub as well. HTML is just the fastest to build.
 
- git add po/addendum.NN po/NN.po
+5) when you reach 100% of the translation, or simply when you think you
+   have done enough work, create a patch with:
+
+ cd ..
+ git add src/YOUR-CHOSEN-MANUAL/po/addendum.NN src/YOUR-CHOSEN-MANUAL/po/NN.po
  git commit -m "Added translation for LANGUAGE"
  git format-patch HEAD^
 
 and submit a pull-request on Github.
+
+[NOTE]
+====
+To do the equivalent of a "make clean" just delete recursively the
+content of the build dir with:
+
+ rm -rf build/*
+
+====
 
 Happy translation!
