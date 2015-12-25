@@ -17,8 +17,9 @@ the manual dir. For example, for "Getting Started in KiCad" in German do:
 Edit, translate and add your name to the nationalized addendum for your
 credit as a translator.
 
-3) then, for creating your language template, do:
+3) then, for creating your language template, you _should_ do this:
 
+ touch src/YOUR-CHOSEN-MANUAL/po/NN.po
  mkdir build
  cd build
  cmake ..
@@ -26,6 +27,16 @@ credit as a translator.
 
 where, again, YOUR-CHOSEN-MANUAL is the name of the manual dir, for
 example "getting_started_in_kicad" and NN is your i18n language code.
+
+...but last command will not work for now because the cmake update 
+procedure is broken. So, in the meantime the cmake scripts are 
+mended you can go with the old _but working_ procedure:
+
+ rm -rf build/*
+ cd src/YOUR-CHOSEN-MANUAL
+ make -f ../../utils/old-build-scripts/Makefile po/NN.po
+ cd ../../build
+ cmake ..
 
 Edit the resulting ../src/YOUR-CHOSEN-MANUAL/po/NN.po file, starting from
 the headers, using a specialized po editor of your choice like poedit,
