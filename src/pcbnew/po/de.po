@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-12-30 10:48+0100\n"
-"PO-Revision-Date: 2015-12-30 23:11+0100\n"
+"PO-Revision-Date: 2016-01-01 00:42+0100\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,7 +111,7 @@ msgstr "Erstellen einer Leiterplatte"
 #: pcbnew_create_and_modify_board.adoc:6
 #, no-wrap
 msgid "Drawing the board outline"
-msgstr "Die Leiterplattenbegrenzung zeichnen"
+msgstr "Die Leiterplattenkontur zeichnen"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:19
@@ -125,16 +125,16 @@ msgid ""
 "coordinates enable very precise dimensions to be drawn. It is possible to draw a circular (or arc) "
 "outline:"
 msgstr ""
-"Überlicherweise ist es eine gute Idee, den Umriss der Leitplatte zuerst festzulegen.\n"
-"Der Umriss wird als eine Abfolge von Linien-Segmenten gezeichnet.\n"
+"Überlicherweise ist es eine gute Idee, die Kontur der Leitplatte zuerst festzulegen.\n"
+"Die Kontur wird als eine Abfolge von Linien-Segmenten gezeichnet.\n"
 "Wählen Sie 'Edge.Cuts' als die aktive Lage und benutzen Sie das Werkzeug 'Grafische Linie oder Polygon "
-"hinzufügen' um den Rand zu zeichnen. Klicken sie auf die Position für jede Ecke und machen Sie einen "
-"Doppelklick, um den Umriss zu beenden.\n"
+"hinzufügen' um die Kontur zu zeichnen. Klicken sie auf die Position für jede Ecke und machen Sie einen "
+"Doppelklick, um die Kontur zu beenden.\n"
 "Leiterplatten haben üblicherweise sehr genaue Abmessungen, daher kann es notwendig sein, die angezeigten "
-"Cursor-Koordinaten zu verwenden, während Sie den Umriss zeichnen. Beachten Sie, dass die relativen "
+"Cursor-Koordinaten zu verwenden, während Sie die Kontur zeichnen. Beachten Sie, dass die relativen "
 "Koordinaten jederzeit mit der Leertaste auf Null gesetzt werden können. Die angezeigte Maßeinheit kann "
 "über 'Strg+U' umgeschaltet werden. Relative Koordinaten ermöglichen es, sehr genaue Abmessungen zu "
-"zeichnen. Es ist auch möglich, einen kreis- oder bogenförmigen Umriss zu zeichnen:"
+"zeichnen. Es ist auch möglich, eine kreis- oder bogenförmige Kontur zu zeichnen:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:21
@@ -163,14 +163,14 @@ msgid ""
 "or via the Options, but this will not be visible unless the graphics are displayed in other than outline "
 "mode."
 msgstr ""
-"Die Breite des Umrisses (empfohlene Breite = 150 in 1/10 mils) kann im Einstellungen-Menü oder über die "
+"Die Breite der Kontur (empfohlene Breite = 150 in 1/10 mils) kann im Einstellungen-Menü oder über die "
 "Optionen angepasst werden. Wenn Grafiken im Umriss-Modus dargestellt werden, ist diese Änderung nicht "
 "sichtbar."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:31
 msgid "The resulting outline might look something like this:"
-msgstr "Der erstellte Umriss kann zum Beispiel so aussehen:"
+msgstr "Die erstellte Kontur kann zum Beispiel so aussehen:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:32
@@ -182,7 +182,7 @@ msgstr ""
 #: pcbnew_create_and_modify_board.adoc:34
 #, no-wrap
 msgid "Using a DXF drawing for the board outline"
-msgstr ""
+msgstr "Eine DXF Zeichung als Leiterplattenkontur nutzen"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:38
@@ -190,6 +190,8 @@ msgid ""
 "As an alternative to drawing the board outline in Pcbnew directly, an outline can also be imported from "
 "a DXF drawing."
 msgstr ""
+"Anstatt die Kontur der Leiterplatte direkt zu zeichnen, kann die Kontur alternativ auch aus einer DXF-"
+"Zeichnung importiert werden."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:41
@@ -197,6 +199,8 @@ msgid ""
 "Using this feature allows for much more complex board shapes than is possible with the Pcbnew drawing "
 "capabilities."
 msgstr ""
+"Diese Funktion erlaubt deutlich komplexere Leiterplattenkonturen, als sie mit den Zeichenmöglichkeiten "
+"von Pcbnew möglich wären."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:44
@@ -204,12 +208,14 @@ msgid ""
 "For example a mechanical CAD package can be used to define a board shape that fits a particular "
 "enclosure."
 msgstr ""
+"So kann zum Beispiel eine mechanische CAD Software verwendet werden, um eine Leiterplattenkontur zu "
+"erstellen, die in ein bestimmtes Gehäuse passt."
 
 #. type: Title =====
 #: pcbnew_create_and_modify_board.adoc:45
 #, no-wrap
 msgid "Preparing the DXF drawing for import into KiCad"
-msgstr ""
+msgstr "Eine DXF-Zeichnung für den Import in KiCad vorbereiten"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:51
@@ -217,11 +223,13 @@ msgid ""
 "The *DXF* import capability in KiCad does not support DXF features like *POLYLINES* and *ELLIPSIS* and "
 "DXF files that use these features require a few conversion steps to prepare them for import."
 msgstr ""
+"Die *DXF* Import-Fähigkeiten in KiCad unterstützen keine DXF-Funktionen wie *POLYLINES* und *ELLIPSIS*. "
+"DXF-Dateien, die diese Funktionen nutzen, müssen vor dem Import angepasst werden."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:53
 msgid "A software package like LibreCAD can be used for this conversion."
-msgstr ""
+msgstr "Ein Softwarepaket wie LibreCAD kann für diese Anpassung genutzt werden."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:56
@@ -229,26 +237,30 @@ msgid ""
 "As a first step, any *POLYLINES* need to be split (Exploded)  into their original simpler shapes. In "
 "LibreCAD use the following steps:"
 msgstr ""
+"Im ersten Schritt müssen alle *POLYLINES* in ihre einfacheren Originalformen aufgeteilt werden(\"explode"
+"\").\n"
+"Führen Sie in LibreCAD folgende Schritte durch:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:58
 msgid "Open a copy of the DXF file."
-msgstr ""
+msgstr "Öffnen Sie eine Kopie der DXF-Datei."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:60
 msgid "Select the board shape (selected shapes are shown with dashed lines)."
 msgstr ""
+"Wählen Sie die Leiterplattenkontur aus (ausgewählte Formen werden mit gestrichelten Linien dargestellt)."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:62
 msgid "In the **Modify** menu, select **Explode**."
-msgstr ""
+msgstr "Im **Bearbeiten** (Modify) Menü wählen Sie **Teilen** (Explode) aus."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:64
 msgid "Press ENTER."
-msgstr ""
+msgstr "Drücken Sie die Eingabetaste (ENTER)."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:73
@@ -260,16 +272,23 @@ msgid ""
 "number or the length of the line segments used).  In LibreCAD the segment length it generally small "
 "enough for use in board shapes."
 msgstr ""
+"Als nächsten Schritt müssen komplexe Kurven in lauter kleine Linien-Segmente aufgebrochen werden, die "
+"die benötigte Form nachbilden. Das passiert automatisch, wenn die DXF-Datei exportiert wird oder im "
+"älteren *DXF R12*-Format abgespeichert wird. (Das R12-Format unterstützt keine komplexen Kurvenformen, "
+"CAD-Anwendungen wandeln diese Formen in Linien-Segmente um. Manche CAD-Anwendungen erlauben, die Anzahl "
+"oder die Länge dieser Segmente einzustellen.)\n"
+"In LibreCAD ist diese Segmentlänge im Allgemeinen klein genug, um für Leiterplatten-Konturen verwendet "
+"zu werden."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:75
 msgid "In LibreCAD, use the following steps to export to the *DXF R12* file format:"
-msgstr ""
+msgstr "Im LibreCAD exportieren Sie ins *DXF R12*-Dateiformat mit folgenden Schritten:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:77
 msgid "In the *File* menu, use *Save As...*"
-msgstr ""
+msgstr "Wählen Sie im *Datei* Menü *Speichern unter…*"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:79
@@ -277,27 +296,29 @@ msgid ""
 "In the *Save Drawing As* dialog, there is a *Save as type:* selection near the bottom of the dialog. "
 "Select the option *Drawing Exchange DXF R12*."
 msgstr ""
+"Im *Speichern unter…*-Dialog gibt es eine Auswahl *Speichere als Typ:* am unteren Rand des Dialogs. "
+"Wählen Sie die Option *Drawing Exchange DXF R12*."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:80
 msgid "Optionally enter a file name in the *File name:* field."
-msgstr ""
+msgstr "Geben Sie optional einen Dateinamen im *File name:* Feld an."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:81
 msgid "Click *Save*"
-msgstr ""
+msgstr "Klicken Sie auf *Save*"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:83
 msgid "Your DXF file is now ready for import into KiCad."
-msgstr ""
+msgstr "Ihre DXF-Datei ist jetzt für den Import in KiCad vorbereitet."
 
 #. type: Title =====
 #: pcbnew_create_and_modify_board.adoc:84
 #, no-wrap
 msgid "Importing the DXF file into KiCad"
-msgstr ""
+msgstr "Eine DXF-Datei in KiCad importieren"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:89
@@ -305,21 +326,26 @@ msgid ""
 "The following steps describe the import of the prepared DXF file as a board shape into KiCad. Note that "
 "the import bahaviour is slightly different depending on which 'canvas' is used."
 msgstr ""
+"Die folgenden Schritte beschreiben den Import einer vorbereiteten DXF-Datei als Leiterplatten-Kontur in "
+"KiCad. Beachten Sie, dass sich das Import-Verhalten abhängig vom verwendeten Canvas etwas unterscheiden "
+"kann."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:91
 msgid "Using the \"default\" canvas mode:"
-msgstr ""
+msgstr "Im Standard-Canvas-Modus:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:93 pcbnew_create_and_modify_board.adoc:104
 msgid "In the *File* menu, select *Import* and then the *DXF File* option."
-msgstr ""
+msgstr "Wählen Sie im *Datei*-Menü *Importieren* und dann die Option *DXF-Datei*."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:94 pcbnew_create_and_modify_board.adoc:105
 msgid "In the *Import DXF File* dialog use 'Browse' to select the prepared DXF file to be imported."
 msgstr ""
+"Im Dialog *DXF-Datei importieren* verwenden Sie 'Durchsuchen', um die vorbereitete DXF-Datei für den "
+"Import auszuwählen."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:97
@@ -328,6 +354,10 @@ msgid ""
 "coordinates (the KiCad board has (0,0) in the top left corner).  For the 'User defined position' enter "
 "the coordinates in the 'X Position' and 'Y Position' fields."
 msgstr ""
+"In der Option 'DXF Ursprung (0,0) setzen:' wählen sie den Ursprung des DXF relativ zu den "
+"Leiterplattenkoordinaten (die KiCad-Leiterplatte hat den Ursprung (0,0) in der linken oberen Ecke). Für "
+"'Benutzerdefinierte Position' geben Sie die Koordinaten in die Felder für 'X Position' und 'Y Position' "
+"ein."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:99 pcbnew_create_and_modify_board.adoc:108
@@ -335,37 +365,39 @@ msgid ""
 "In the 'Layer' selection, select the board layer for the import. *Edge.Cuts* is needed for the board "
 "outline."
 msgstr ""
+"In der 'Lage'-Auswahl wählen Sie die Lage der Leiterplatte für den Import. Für den Leiterplattenumriss "
+"wird *Edge.Cuts* benötigt."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:100 pcbnew_create_and_modify_board.adoc:109
 msgid "Click 'OK'."
-msgstr ""
+msgstr "Klicken Sie auf 'OK'."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:102
 msgid "Using the \"OpenGL\" or \"Cairo\" canvas modes:"
-msgstr ""
+msgstr "Im \"OpenGL\" oder \"Cairo\" Canvas-Modus:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:106
 msgid "The 'Place DXF origin (0,0) point:' option setting is ignored in this mode."
-msgstr ""
+msgstr "Die Option 'DXF Ursprung (0,0) setzen:' wird in diesem Modus ignoriert."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:110
 msgid "The shape is now attached to your cursor and it can be moved around the board area."
-msgstr ""
+msgstr "Die Kontur ist jetzt am Cursor angehängt und kann im Leiterplattenbereich bewegt werden."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:111
 msgid "Click to 'drop' the shape on the board."
-msgstr ""
+msgstr "Klicken Sie, um die Kontur auf die Leiterplatte \"fallen\" zu lassen."
 
 #. type: Title =====
 #: pcbnew_create_and_modify_board.adoc:112
 #, no-wrap
 msgid "Example imported DXF shape"
-msgstr ""
+msgstr "Beispiel einer importierten DXF Kontur"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:116
@@ -373,6 +405,8 @@ msgid ""
 "Here is an example of an DXF import with a board that had several elliptical segments approximated by a "
 "number of short line segments:"
 msgstr ""
+"Hier ist ein Beispiel eines DXF-Imports für eine Leiterplatte, die mehrere elliptische Segmente hatte, "
+"die durch eine Anzahl kurzer Liniensegmente ersetzt wurde:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:117
@@ -384,12 +418,12 @@ msgstr ""
 #: pcbnew_create_and_modify_board.adoc:119
 #, no-wrap
 msgid "Reading the netlist generated from the schematic"
-msgstr ""
+msgstr "Einlesen der aus dem Schaltplan generierten Netzliste"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:123
 msgid "Activate the image:images/icons/netlist.png[] icon to display the netlist dialog window:"
-msgstr ""
+msgstr "Klicken Sie auf das Symbol image:images/icons/netlist.png[] um den Netzlisten-Dialog anzuzeigen:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:124 pcbnew_schematics.adoc:70
@@ -404,6 +438,10 @@ msgid ""
 "the desired netlist. Then 'Read' the netlist. Any footprints not already loaded will appear, "
 "superimposed one upon another (we shall see below how to move them automatically)."
 msgstr ""
+"Wenn der Name oder Dateipfad der Netzliste im Fenstertitel nicht korrekt ist, benutzen Sie den "
+"'Durchsuchen'-Button um die gewünschte Netzliste anzugeben. Klicken Sie dann auf 'Aktuelle Netzliste "
+"einlesen'. Jeder noch nicht geladene Footprint erscheint, einer über dem anderen platziert. Weiter unten "
+"sehen Sie, wie diese automatisch bewegt werden können."
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:132
@@ -419,6 +457,10 @@ msgid ""
 "command 'Global Spread and Place' accessed via the right mouse button). Here is the result of such "
 "automatic arrangement:"
 msgstr ""
+"Wenn noch kein Footprint platziert wurde, werden alle Footprints an der gleichen Stelle auf der "
+"Leiterplatte eingefügt, was es schwierig macht, sie zu erkennen. Es ist möglich, sie automatisch "
+"anzuordnen über den Befehl 'Global Spread and Place' aus dem Kontextmenü (rechte Maustaste). Hier sehen "
+"Sie das Ergebnis einer solchen Anordnung:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:140
