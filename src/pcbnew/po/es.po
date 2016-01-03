@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pcbnew\n"
 "POT-Creation-Date: 2015-12-29 15:09+0100\n"
-"PO-Revision-Date: 2016-01-03 01:13+0100\n"
+"PO-Revision-Date: 2016-01-03 20:56+0100\n"
 "Last-Translator: Antonio Morales <antonio1010.mr@gmail.com>\n"
 "Language-Team: Español <>\n"
 "Language: \n"
@@ -2505,6 +2505,10 @@ msgid ""
 "   the last item in the first row is numbered \"7\", the first item in the second\n"
 "   row will be \"8\".\n"
 msgstr ""
+"** *Continua*: La numeración continua tras un salto de fila/columna - si\n"
+"   el ultimo elemento de la primera fila es numerado como \"7\", el primer elemento de la segunda\n"
+"   fila sera el numero \"8\"\n"
+" "
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:152
@@ -2514,12 +2518,15 @@ msgid ""
 "   number is made up of the row and column index. Which one comes first\n"
 "   (row or column) is determined by the numbering direction.\n"
 msgstr ""
+"** *Coordinada*: la numeración usa un esquema de dos-ejes donde el\n"
+"   número está compuesto de índices de fila y columna. La dirección de numeración\n"
+"   determinará que índice irá primero (fila o columna)"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:154
 #, no-wrap
 msgid "*Axis numberings*: what \"alphabet\" to use to number the axes. Choices are\n"
-msgstr ""
+msgstr "*Numeración de ejes*: que nomenclatura usar para numerar los ejes. Las opciones son:\n"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:156
@@ -2531,7 +2538,7 @@ msgstr "** *Números* para índices numéricos de tipo entero\n"
 #: pcbnew_editing_tools.adoc:158
 #, no-wrap
 msgid "** *Hexadecimal* for base-16 indexing\n"
-msgstr ""
+msgstr "** *Hexadecimal* para índices en base-16"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:162
@@ -2541,18 +2548,21 @@ msgid ""
 "   recommended by ASME Y14.35M-1997 sec. 5.2 (previously MIL-STD-100 sec. 406.5)\n"
 "   to avoid confusion with numerals.\n"
 msgstr ""
+"** *Letras, excepto IOSQXZ* un esquema típico para componentes electrónicos,\n"
+"   recomendado por la ASME Y14.35M-1997 sec. 5.2 (anteriormente MIL-STD-100 sec. 406.5)\n"
+"   para evitar confusión con las numeraciones.\n"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:164
 #, no-wrap
 msgid "** *Full alphabet* from A-Z.\n"
-msgstr ""
+msgstr "** *Letras, 26 caracteres* desde la A a la Z.\n"
 
 #. type: Title ====
 #: pcbnew_editing_tools.adoc:165
 #, no-wrap
 msgid "Circular arrays"
-msgstr ""
+msgstr "Matrices circulares"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:171
@@ -2562,12 +2572,17 @@ msgid ""
 "group)  and a centre point that is specified. Below is the circular array "
 "configuration dialog:"
 msgstr ""
+"Las matrices circulares distribuyen los elementos alrededor de un circulo o "
+"un arco. El circulo se define mediante la posición de la selección (o el "
+"centro de un grupo seleccionado) y un punto central que es especificado. A "
+"continuación se muestra la ventana de configuración para las matrices "
+"circulares\n"
 
 #. type: Target for macro image
 #: pcbnew_editing_tools.adoc:172
 #, no-wrap
 msgid "images/Pcbnew_array_dialog_circular.png"
-msgstr ""
+msgstr "images/Pcbnew_array_dialog_circular.png"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:178
@@ -2576,6 +2591,8 @@ msgid ""
 "*Horizontal center*, *Vertical center*: The centre of the circle. The radius\n"
 "field below will update automatically when you adjust these.\n"
 msgstr ""
+"*Centro horizontal*, *Centro vertical*: el centro del circulo. El valor \n"
+"del radio mostrado debajo se actualizará automáticamente cuando ajuste estos valores\n"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:180
@@ -2584,12 +2601,14 @@ msgid ""
 "*Angle*: The angular difference between two adjacent items in the\n"
 "array. Set this to zero to evenly divide the circle with \"count\" elements.\n"
 msgstr ""
+"*Ángulo*: La distancia angular entre dos elementos adyacentes de la matriz.\n"
+"Ajústelo a cero para dividir la circunferencia completa entre la \"cantidad\" de elementos.\n"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:181
 #, no-wrap
 msgid "*Count*: Number of items in the array (including the original item)\n"
-msgstr ""
+msgstr "*Cantidad*: Número de elementos en la matriz (incluyendo el elemento original)\n"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:184
@@ -2599,6 +2618,9 @@ msgid ""
 "item will be translated but not rotated (for example, a square pad\n"
 "will always remain upright if this option is not set).\n"
 msgstr ""
+"*Rotar*: Rota cada elemento sobre su propia posición. Si no se selecciona,\n"
+"el elemento sera trasladado pero no rodado (por ejemplo, un pad cuadrado\n"
+"siempre permanecerá en la misma orientación si no se macar esta opción)"
 
 #. type: Plain text
 #: pcbnew_editing_tools.adoc:191
@@ -2607,12 +2629,17 @@ msgid ""
 "The meanings of the available options are the same as for grids.  Items are "
 "numbered clockwise - for an anticlockwise array, specify a negative angle."
 msgstr ""
+"Las matrices circulares tienen solo una dimensión y una geometría mas simple "
+"que las rectangulares. El significado de las opciones disponibles es el "
+"mismo que el de las matrices rectangulares. Los elementos son numerados en "
+"el sentido de las agujas del reloj - para matrices en sentido anti-horario, "
+"especifique un ángulo negativo."
 
 #. type: Title ==
 #: pcbnew_fabrication_files.adoc:1
 #, no-wrap
 msgid "Files for circuit fabrication"
-msgstr ""
+msgstr "Ficheros para la fabricación del circuito"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:4
@@ -2620,6 +2647,8 @@ msgid ""
 "Let us see now what are the steps necessary for the creation of the "
 "necessary files for the production of your printed circuit board."
 msgstr ""
+"Veamos ahora cuales son los pasos necesarios para la creación de los "
+"ficheros necesarios para la producción de su placa de circuito impreso."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:6
@@ -2628,12 +2657,15 @@ msgid ""
 "the same directory that contains the xxxx.brd file for the printed circuit "
 "board."
 msgstr ""
+"Todos los archivos generados por KiCad son ubicados en el directorio de "
+"trabajo que es el directorio que contiene el archivo xxx.brd de la placa de "
+"circuito impreso."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:7
 #, no-wrap
 msgid "Final preparations"
-msgstr ""
+msgstr "Preparativos finales"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:10
@@ -2641,6 +2673,8 @@ msgid ""
 "The generation of the necessary files for the production of your printed "
 "circuit board includes the following preparatory steps."
 msgstr ""
+"La generación de los archivos necesarios para la producción de su placa de "
+"circuito incluye los siguientes pasos previos:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:12
@@ -2648,6 +2682,9 @@ msgid ""
 "Mark any layer (e.g., 'top or front' and 'bottom or back') with the project "
 "name by placing appropriate text upon each of the layers."
 msgstr ""
+"Marque cualquier capa (por ejemplo, 'superior o frontal' y 'inferior o "
+"posterior') con el nombre del proyecto mediante la colocación del texto "
+"adecuado a cada una de las capas."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:13
@@ -2655,6 +2692,8 @@ msgid ""
 "All text on copper layers (sometimes called 'solder' or 'bottom') must be "
 "mirrored."
 msgstr ""
+"Todos los textos en las capas de cobre (aveces llamadas 'solder' o 'bottom') "
+"deber estar reflejado."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:14
@@ -2662,6 +2701,8 @@ msgid ""
 "Create any ground planes, modifying traces as required to ensure they are "
 "contiguous."
 msgstr ""
+"Cree planos de masa, modifique los trazados necesarios para asegurar que "
+"éstos tienen buena continuidad. "
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:15
@@ -2669,6 +2710,8 @@ msgid ""
 "Place alignment crosshairs and possibly the dimensions of the board outline "
 "(these are usually placed on one of the general purpose layers)."
 msgstr ""
+"Coloque marcas de alineamiento y posiblemente las dimensiones del contorno "
+"de la placa (éstas se colocan normalmente en las capas de propósito general)."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:17
@@ -2676,12 +2719,14 @@ msgid ""
 "Here is an example showing all of these elements, except ground planes, "
 "which have been omitted for better visibility:"
 msgstr ""
+"A continuación se muestran todos estos elementos, a excepción de los planos "
+"de masa, que han sido omitidos para mejorar la visibilidad."
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:18
 #, no-wrap
 msgid "images/Pcbnew_final_preparation_example_board.png"
-msgstr ""
+msgstr "images/Pcbnew_final_preparation_example_board.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:22
@@ -2689,12 +2734,14 @@ msgid ""
 "A color key for the 4 copper layers has also been included: image:images/"
 "Pcbnew_layer_colour_key.png[]"
 msgstr ""
+"Se ha añadido además una leyenda de colores para las 4 capas de cobre: image:"
+"images/Pcbnew_layer_colour_key.png[]"
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:23
 #, no-wrap
 msgid "Final DRC test"
-msgstr ""
+msgstr "Test DRC final"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:27
@@ -2702,6 +2749,8 @@ msgid ""
 "Before generating the output files, a global DRC test is very strongly "
 "recommended."
 msgstr ""
+"Antes de generar los ficheros de salida, es altamente recomendable realizar "
+"un test DRC global."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:31
@@ -2709,29 +2758,33 @@ msgid ""
 "Zones are filled or refilled when starting a DRC. Press the button image:"
 "images/icons/drc.png[] to launch the following DRC dialog:"
 msgstr ""
+"Las zonas son rellenadas o vueltas a rellenar cuando comienza el DRC. "
+"Presione el icono image:images/icons/drc.png[] para lanzar la siguiente "
+"ventana de DRC:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:32
 #, no-wrap
 msgid "images/Pcbnew_DRC_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_DRC_dialog.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:35
 msgid ""
 "Adjust the parameters accordingly and then press the \"Start DRC\" button."
 msgstr ""
+"Ajuste los parámetros adecuadamente y presiones el botón \"Comenzar DRC\"."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:37
 msgid "This final check will prevent any unpleasant surprises."
-msgstr ""
+msgstr "Esta comprobación final previene cualquier desagradable sorpresa."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:38
 #, no-wrap
 msgid "Setting coordinates origin"
-msgstr ""
+msgstr "Ajustando el origen de coordenadas"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:44
@@ -2741,30 +2794,36 @@ msgid ""
 "icons/pcb_offset.png[]. Move the auxiliary axis by left-clicking on the "
 "chosen location."
 msgstr ""
+"Ajuste el origen de coordenadas para los fotolitos y los ficheros de "
+"taladros, hay que colocar el eje auxiliar en este origen. Pulse el icono "
+"image:images/icons/pcb_offset.png[]. Mueva el eje auxiliar mediante clic "
+"izquierdo sobre la ubicación elegida."
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:45
 #, no-wrap
 msgid "images/Pcbnew_setting_pcb_origin.png"
-msgstr ""
+msgstr "images/Pcbnew_setting_pcb_origin.png"
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:47
 #, no-wrap
 msgid "Generating files for photo-tracing"
-msgstr ""
+msgstr "Generando ficheros para foto-trazado"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:51
 msgid ""
 "This is done via the Files/Plot menu option and invokes the following dialog:"
 msgstr ""
+"Esto se realiza a través de la opción de menú Archivo/Trazar el cual invoca "
+"la siguiente ventana:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:52
 #, no-wrap
 msgid "images/Pcbnew_plot_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_plot_dialog.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:57
@@ -2773,12 +2832,15 @@ msgid ""
 "produce output in both HPGL and POSTSCRIPT formats. When Postscript format "
 "is selected, this dialog will appear."
 msgstr ""
+"Por lo general, los archivos están en formato GERBER. Sin embargo, es "
+"posible producir una salida tanto en formatos HPGL como PostScript. Cuando "
+"se selecciona el formato Postscript, aparecerá este cuadro de diálogo."
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:58
 #, no-wrap
 msgid "images/Pcbnew_plot_postscript_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_plot_postscript_dialog.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:62
@@ -2786,18 +2848,20 @@ msgid ""
 "In these formats, a fine scale adjust can be used to compensate for the "
 "plotter accuracy and to have a true scale of 1 for the output:"
 msgstr ""
+"En estos formatos, un ajuste fino de escala puede usarse para compensar la "
+"precisión del ploter y tener una escala real de 1 a la salida:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:63
 #, no-wrap
 msgid "images/Pcbnew_plot_fine_scale_setting.png"
-msgstr ""
+msgstr "images/Pcbnew_plot_fine_scale_setting.png"
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:65
 #, no-wrap
 msgid "GERBER format"
-msgstr ""
+msgstr "Formato GERBER"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:72
@@ -2807,6 +2871,10 @@ msgid ""
 "represented by 10 digits, of which 4 are before the decimal point and 6 "
 "follow it), units in inches, and a scale of 1."
 msgstr ""
+"Para cada capa, Pcbnew genera un archivo independiente siguiendo el estándar "
+"GERBER 274X, por defecto en formato 4.6 (cada coordenada en el archivo está "
+"representada por 10 dígitos, de los cuales 4 de ellos antes del punto "
+"decimal y 6 tras éste), las unidades en pulgadas, y una escala de 1."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:77
@@ -2816,6 +2884,10 @@ msgid ""
 "layers. All of these files can be produced in one step, by selecting the "
 "appropriate check boxes."
 msgstr ""
+"Normalmente es necesario crear archivos para cada capa de cobre y, "
+"dependiendo del circuito, para la serigrafía, máscara de soldadura, máscara "
+"de pasta de soldadura. Todos estos archivos se pueden producir en un solo "
+"paso, mediante la selección de las casillas de verificación correspondientes."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:81
@@ -2824,51 +2896,57 @@ msgid ""
 "solder paste (for SMD components), 8 files should be generated ('xxxx' "
 "represents the name of the .brd file)."
 msgstr ""
+"Por ejemplo, para un circuito de doble cara con serigrafía, máscara de "
+"soldadura y pasta de soldadura (para componentes SMD), deben generarse 8 "
+"archivos ('xxxx' representa el nombre del archivo .brd) .."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:83
 msgid "xxxx-F_Cu.gbr for the component side."
 msgstr ""
+"xxxx-F_Cu.gbr para la capa de cobre del lado de los componentes o superior."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:84
 msgid "xxxx-B_Cu.gbr for the copper side."
-msgstr ""
+msgstr "xxxx-B_Cu.gbr para la capa de cobre inferior."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:85
 msgid "xxxx-F_SilkS.gbr for the component-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-F_SilkS.gbr para la serigrafía del lado de los componentes."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:86
 msgid "xxxx-B_SilkS.gbr for the copper-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-B_SilkS.gbr para la serigrafía de la cara inferior."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:87
 msgid "xxxx-F_Paste.gbr for the component-side solder paste."
 msgstr ""
+"xxxx-F_Paste.gbr para la máscara de pasta de soldadura de la cara superior."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:88
 msgid "xxxx-B_Paste.gbr for the copper-side solder paste."
 msgstr ""
+"xxxx-B_Paste.gbr para la máscara de pasta de soldadura de la cara inferior."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:89
 msgid "xxxx-F_Mask.gbr for the component-side solder mask."
-msgstr ""
+msgstr "xxxx-F_Mask.gbr para la máscara de soldadura de la capa superior."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:90
 msgid "xxxx-B_Mask.gbr for the copper-side solder mask."
-msgstr ""
+msgstr "xxxx-B_Mask.gbr para la mascara de soldadura de la cara inferior."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:92
 msgid "GERBER file format:"
-msgstr ""
+msgstr "Formato de archivo GERBER:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:95
@@ -2876,12 +2954,14 @@ msgid ""
 "The format used by Pcbnew is RS274X format 4.6, Imperial, Leading zero "
 "omitted, Abs format. These are very usual settings."
 msgstr ""
+"El formato usado por Pcbnew es RS274X formato 4.6, Imperial, omitiendo "
+"ceros, formato Abs. Estos ajustes son bastante comunes."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:96
 #, no-wrap
 msgid "POSTSCRIPT format"
-msgstr ""
+msgstr "formato POSTSCRIPT"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:103
@@ -2892,44 +2972,51 @@ msgid ""
 "coordinates of the tracing table is assumed to be in the centre of the "
 "drawing."
 msgstr ""
+"La extensión estándar para los ficheros de salida es .ps para el caso de "
+"salida postscript. Como para la salida en formato HPGL, el trazado puede ser "
+"escalado por el usuario y puede ser reflejado. Si la opción Org = Centre "
+"está activa, el origen de coordenadas de la tabla de trazado se asume en el "
+"centro del dibujo"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:105 pcbnew_fabrication_files.adoc:141
 msgid "If the Print Sheet Ref option is active, the sheet cartridge is traced."
 msgstr ""
+"Si la opción Imprimir referencia de la hoja está activa, se trazara el "
+"marcho de la hoja."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:106
 #, no-wrap
 msgid "Plot options"
-msgstr ""
+msgstr "Opciones de trazado"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:109
 msgid "Gerber format:"
-msgstr ""
+msgstr "Formato Gerber:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:110
 #, no-wrap
 msgid "images/Pcbnew_plot_options_gerber.png"
-msgstr ""
+msgstr "images/Pcbnew_plot_options_gerber.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:113
 msgid "Other formats:"
-msgstr ""
+msgstr "Otros formatos:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:114
 #, no-wrap
 msgid "images/Pcbnew_plot_options_other_formats.png"
-msgstr ""
+msgstr "images/Pcbnew_plot_options_other_formats.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:117
 msgid "GERBER format specific options:"
-msgstr ""
+msgstr "Opciones especificas del formato GERBER:"
 
 #. type: delimited block |
 #: pcbnew_fabrication_files.adoc:126
@@ -2942,27 +3029,35 @@ msgid ""
 "| Subtract soldermask from silkscreen\n"
 "| Remove all Silk from solder paste areas.\n"
 msgstr ""
+"| Utilizar extensiones de archivos Protel\n"
+"| Utiliza .gbl .gtl .gbs .gts .gbp .gtp .gbo .gto en lugar de .gbr como extensiones de nombre de archivo.\n"
+"| Incluir atributos extendidos\n"
+"| Envía los atributos extendidos al archivo.\n"
+"| Restar la máscara de soldadura de la serigrafía\n"
+"| Quita cualquier trazo de serigrafía sobre las áreas a depositar pasta de soldadura."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:128
 #, no-wrap
 msgid "Other formats"
-msgstr ""
+msgstr "Otros formatos"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:131
 msgid "The standard extension depends on the output file type."
-msgstr ""
+msgstr "La extensión estándar depende de tipo de fichero de salida."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:133
 msgid "Some options are not available for some formats."
-msgstr ""
+msgstr "Algunas opciones no están disponibles para algunos formatos."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:135
 msgid "The plot can be done at user-selected scales and can be mirrored."
 msgstr ""
+"El trazado puede realizarse con el escalado definido por el usuario y pueden "
+"ser reflejado."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:139
@@ -2971,12 +3066,15 @@ msgid ""
 "to the correct diameter or drilled with a small hole (to guide hand "
 "drilling)."
 msgstr ""
+"Las opciones de impresión para los taladros pueden ser relleno (sin "
+"taladro), taladrado con el diámetro correcto o taladrado con un pequeño "
+"hueco (como ayuda para el taladrado de forma manual)."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:142
 #, no-wrap
 msgid "Global clearance settings for the solder stop and the solder paste mask"
-msgstr ""
+msgstr "Ajustes globales del margen para la máscara de soldadura y la máscara de pasta de soldadura"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:147
@@ -2984,75 +3082,80 @@ msgid ""
 "Mask clearance values can be set globally for the solder mask layers and the "
 "solder paste layers. These clearances can be set at the following levels."
 msgstr ""
+"Los valores de margen para las máscaras de soldadura y pasta de soldadura "
+"pueden ajustarse de forma global. Estos margenes pueden ajustarse a estos "
+"niveles."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:149
 msgid "At pads level."
-msgstr ""
+msgstr "A nivel de pad."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:150
 msgid "At footprint level."
-msgstr ""
+msgstr "A nivel de huella."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:151
 msgid "Globally."
-msgstr ""
+msgstr "De forma global"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:153
 msgid "And Pcbnew uses by priority order."
-msgstr ""
+msgstr "Y Pcbnew usa como orden de prioridad."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:155
 msgid "Pad values. If null:"
-msgstr ""
+msgstr "Los valores de pad. Si no están especificados:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:156
 msgid "Footprint values. If null:"
-msgstr ""
+msgstr "Los valores de huella. Si no están especificados:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:157
 msgid "Global values."
-msgstr ""
+msgstr "Los valores globales."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:158
 #, no-wrap
 msgid "Access"
-msgstr ""
+msgstr "Acceso"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:161
 msgid "The menu option for this is available via the Dimensions menu:"
 msgstr ""
+"La opción del menú para especificar los margenes está disponible a través "
+"del menú Dimensiones:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:162
 #, no-wrap
 msgid "images/Pcbnew_pad_mask_clearance_menu_item.png"
-msgstr ""
+msgstr "images/Pcbnew_pad_mask_clearance_menu_item.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:165
 msgid "The dialog box is the following:"
-msgstr ""
+msgstr "La ventana es la siguiente:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:166
 #, no-wrap
 msgid "images/Pcbnew_pad_mask_settings_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_pad_mask_settings_dialog.png"
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:168
 #, no-wrap
 msgid "Solder mask clearance"
-msgstr ""
+msgstr "Margen para la máscara de soldadura"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:172
@@ -3060,11 +3163,15 @@ msgid ""
 "A value near to 0.2 mm is usually good. This value is positive because the "
 "mask is usually bigger than the pad."
 msgstr ""
+"Un valor próximo a 0.2 mm normalmente es suficiente. Este valor es positivo "
+"dado que la máscara normalmente es mayor que el pad."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:174
 msgid "One can set a minimum value for the solder mask width, between 2 pads."
 msgstr ""
+"Aquí puede ajustar el valor mínimo para el ancho de la máscara de soldadura "
+"entre 2 pads."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:177
@@ -3072,12 +3179,14 @@ msgid ""
 "If the actual value is smaller than the minimum value, the 2 solder mask "
 "shapes will be merged."
 msgstr ""
+"Si el valor actuar es menor que el valor mínimo, las 2 máscaras de soldadura "
+"se fusionarán en una sola."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:178
 #, no-wrap
 msgid "Solder paste clearance"
-msgstr ""
+msgstr "Margen de la máscara de pasta de soldadura"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:182
@@ -3085,18 +3194,22 @@ msgid ""
 "The final clearance is the sum of the solder paste clearance and a "
 "percentage of the pad size."
 msgstr ""
+"El margen fina es la suma del margen de las máscara de pasta de soldadura y "
+"un porcentaje del tamaño del pad."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:185
 msgid ""
 "This value is negative because the mask is usually smaller than the pad."
 msgstr ""
+"Este valor es negativo ya que la máscara normalmente es mas pequeña que el "
+"pad."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:186
 #, no-wrap
 msgid "Generating drill files"
-msgstr ""
+msgstr "Generando archivos para taladrado"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:190
@@ -3104,64 +3217,69 @@ msgid ""
 "The creation of a drill file xxxx.drl following the EXCELLON standard is "
 "always necessary."
 msgstr ""
+"La creación de archivos para taladrado xxxx.drl siguiendo el estándar "
+"EXCELLON siempre es necesaria."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:193
 msgid ""
 "One can also produce an optional drill report, and an optional drill map."
 msgstr ""
+"Opcionalmente puede generar un informe de taladrado, y un mapa de taladros."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:195
 msgid "The drill map can be plotted using several formats."
-msgstr ""
+msgstr "El mapa de taladros puede ser trazado usando distintos formatos."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:196
 msgid "The drill report is a plain text file."
-msgstr ""
+msgstr "El informe de taladrado es un fichero de texto plano."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:198
 msgid "The generation of these files is controlled via:"
-msgstr ""
+msgstr "La generación de estos archivos se controla vía:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:200
 msgid "\"Create Drill File\" button, or"
-msgstr ""
+msgstr "botón \"Generar archivo de taladros\", o"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:201
 msgid "Files/Fabrication Outputs/Drill file menu selection."
 msgstr ""
+"Seleccionando el menú Archivo/Archivos de Fabricación/Archivo de taladros"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:203
 msgid "The Drill tools dialog box will be the following:"
 msgstr ""
+"La ventana de herramientas de taladros será la mostrada a continuación:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:204
 #, no-wrap
 msgid "images/Pcbnew_drill_file_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_drill_file_dialog.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:207
 msgid "For setting the coordinate origin, the following dialog box is used:"
-msgstr ""
+msgstr "Para ajustar el origen de coordenadas, se usa la siguiente ventana:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:208
 #, no-wrap
 msgid "images/Pcbnew_drill_origin_setting.png"
-msgstr ""
+msgstr "images/Pcbnew_drill_origin_setting.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:211
 msgid "Absolute: absolute coordinate system is used."
-msgstr ""
+msgstr "Absoluto: se usa el sistema de coordenadas absoluto."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:213
@@ -3169,6 +3287,9 @@ msgid ""
 "Auxiliary axis: coordinates are relative to the auxiliary axis, use the icon "
 "(right toolbar) to set it."
 msgstr ""
+"Eje auxiliar: las coordenadas son relativas al eje auxiliar, use el icono "
+"correspondiente (en la barra de herramientas del lado derecho) para "
+"ajustarla. "
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:214
