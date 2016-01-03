@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-12-21 08:04+0100\n"
-"PO-Revision-Date: 2016-01-01 17:57+0100\n"
+"PO-Revision-Date: 2016-01-02 16:06+0100\n"
 "Last-Translator: Marc BERLIOUX <marc.berlioux@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -6211,7 +6211,7 @@ msgid ""
 "detect forgotten connections, and inconsistencies."
 msgstr ""
 "Cet outil effectue la vérification du schéma, et est particulièrement utile "
-"pour détecter des connections oubliées ou des incohérences."
+"pour détecter des connexions oubliées ou des incohérences."
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:148
@@ -8736,7 +8736,7 @@ msgid ""
 msgstr ""
 "Eeschema est conçu pour fonctionner avec PcbNew, le logiciel d'édition de "
 "circuit imprimés de KiCad. Il permet aussi d'exporter des fichiers Netlistes "
-"listant toutes les connections électriques, pour d'autres logiciels."
+"listant toutes les connexions électriques, pour d'autres logiciels."
 
 #. type: Plain text
 #: eeschema_introduction.adoc:28
@@ -10662,7 +10662,7 @@ msgstr ""
 msgid ""
 "*Bus entries:* to show connections between wires and buses. Graphical only!\n"
 msgstr ""
-"*Entrées de Bus* : pour montrer les connections entre fils et bus. Seulement "
+"*Entrées de Bus* : pour montrer les connexions entre fils et bus. Seulement "
 "pour l'aspect graphique !\n"
 
 #. type: Plain text
@@ -10839,12 +10839,13 @@ msgstr "Connexions (Bus)"
 #: eeschema_schematic_creation_and_editing.adoc:192
 msgid "In the following schematic, many pins are connected to buses."
 msgstr ""
+"Dans le schéma ci-dessous, de nombreuses pins sont connectées à des bus."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:193
 #, no-wrap
 msgid "Example schematic with buses"
-msgstr ""
+msgstr "Exemple de schéma avec des bus :"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:193
@@ -10856,7 +10857,7 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:196
 #, no-wrap
 msgid "Bus members"
-msgstr ""
+msgstr "Membres d'un bus"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:201
@@ -10865,6 +10866,9 @@ msgid ""
 "with a common prefix, and ending with a number. For example, PCA0, PCA1, and "
 "PCA2 are members of the PCA bus."
 msgstr ""
+"Du point de vue schématique, un bus est une collection de signaux, commençant "
+"par un préfixe commun, et se terminant par un numéro. Par exemple, PCA0, "
+"PCA1, PCA2 et sont des membres du bus PCA."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:206
@@ -10874,12 +10878,16 @@ msgid ""
 "complete bus is noted PCA[0..19]. A collection of signals like PCA0, PCA1, "
 "PCA2, WRITE, READ cannot be contained in a bus."
 msgstr ""
+"Le bus complet est nommé PCA[N..m], où N et m sont le premier et le dernier "
+"numéro des fils de ce bus. Ainsi, si  le bus PCA compte 20 membres, de 0 à "
+"19, le bus complet sera noté PCA[0..19]. Une collection de signaux comme "
+"PCA0, PCA1, PCA2, WRITE, READ ne peut être contenue dans un bus."
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:208
 #, no-wrap
 msgid "Connections between bus members"
-msgstr ""
+msgstr "Connexions entre membres de bus"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:213
@@ -10888,6 +10896,9 @@ msgid ""
 "labels. It is not possible to connect a pin directly to a bus; this type of "
 "connection will be ignored by Eeschema."
 msgstr ""
+"Les pins connectées entre les membres d'un même bus doivent être reliées par "
+"des labels. Il est impossible de connecter une pin directement à un bus ; ce "
+"type de connexion sera ignoré par Eeschema."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:218
@@ -10896,6 +10907,10 @@ msgid ""
 "connected to the pins. Bus entries (wire segments at 45 degrees) to buses "
 "are graphical only, and are not necessary to form logical connections."
 msgstr ""
+"Dans l'exemple ci-dessus, les connexions sont faites par des labels placés "
+"sur les fils connectés aux pins. Les entrées de bus (segments de fil à 45 "
+"degrés) sont purement décoratifs, et ne sont pas nécessaires pour établir des "
+"connexions logiques."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:223
@@ -10905,11 +10920,15 @@ msgid ""
 "increasing order (a common case in practice on components such as memories, "
 "microprocessors...):"
 msgstr ""
+"En pratique, en utilisant la commande de répétition (touche __Insert__), les "
+"connexions peuvent être très vite faites de la façon suivante, si les pins de "
+"composants sont alignées dans l'ordre croissant (un cas fréquent sur des "
+"composants tels que des mémoires, microprocesseurs, etc...) :"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:225
 msgid "Place the first label (for example PCA0)"
-msgstr ""
+msgstr "Placez le premier label (par exemple PCA0)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:228
@@ -10918,6 +10937,10 @@ msgid ""
 "will automatically create the next labels (PCA1, PCA2...)  vertically "
 "aligned, theoretically on the position of the other pins."
 msgstr ""
+"Utilisez la commande de répétition autant de fois que nécessaire pour placer "
+"les autres membres. Eeschema créera automatiquement les labels suivants "
+"(PCA1, PCA2 ...) alignés verticalement, théoriquement sur la position des "
+"autres pins."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:230
@@ -10925,6 +10948,8 @@ msgid ""
 "Draw the wire under the first label. Then use the repetition command to "
 "place the other wires under the labels."
 msgstr ""
+"Dessinez le fil sous le premier label. Ensuite, utilisez la commande de "
+"répétition pour placer les autres fils sous les autres labels."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:232
@@ -10932,33 +10957,39 @@ msgid ""
 "If needed, place the bus entries by the same way (Place the first entry, "
 "then use the repetition command)."
 msgstr ""
+"Au besoin, placez les entrées de bus de la même façon (placez la première "
+"entrée, puis utilisez la commande de répétition)."
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:236
 msgid "In the Preferences/Options menu, you can set the repetition parameters:"
 msgstr ""
+"Dans le menu Préférences / Options de l'éditeur de schématique, vous pouvez "
+"définir les paramètres de répétition :"
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:238
 msgid "Vertical step."
-msgstr ""
+msgstr "Pas vertical."
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:239
 msgid "Horizontal step."
-msgstr ""
+msgstr "Pas horizontal."
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:241
 msgid ""
 "Label increment (which can thus be incremented by 2, 3. or decremented)."
 msgstr ""
+"Incrémentation des labels (qui peuvent ainsi être incrémentés de 2, 3, ou "
+"décrémentés)."
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:244
 #, no-wrap
 msgid "Global connections between buses"
-msgstr ""
+msgstr "Connexions globales entre les bus"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:250
@@ -10968,12 +10999,16 @@ msgid ""
 "between different sheets. You can make these connections in the following "
 "way."
 msgstr ""
+"Vous pouvez avoir besoin de mettre des connexions entre des bus, pour, par "
+"exemple, relier deux bus ayant des noms différents, ou dans le cas d'une "
+"hiérarchie, pour créer des liens entre les différentes feuilles. Dans ce cas, "
+"effectuez ces connexions de la manière suivante :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:251
 #, no-wrap
 msgid "Bus junction example"
-msgstr ""
+msgstr "Exemple de jonction de bus"
 
 # TOTR
 #. type: Target for macro image
@@ -10990,6 +11025,9 @@ msgid ""
 "the junction here because the vertical bus wire joins the middle of the "
 "horizontal bus segment)."
 msgstr ""
+"Les bus PCA [0..15], ADR [0..7] et BUS [5..10] sont reliés entre eux "
+"(remarquez la jonction placée ici pour que le fil de bus vertical rejoigne le "
+"milieu du segment du bus horizontal)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:259
@@ -10997,6 +11035,8 @@ msgid ""
 "More precisely, the corresponding members are connected together : PCA0, "
 "ADR0 are connected, (as same as PCA1 and ADR1 ... PCA7 and ADR7)."
 msgstr ""
+"Plus précisément, les éléments correspondants sont reliés entre eux: PCA0, "
+"ADR0 sont connectés, (de même que PCA1 et ADR1, ..., PCA7 et ADR7)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:262
@@ -11004,18 +11044,21 @@ msgid ""
 "Furthermore, PCA5, BUS5 and ADR5 are connected (just as PCA6, BUS6 and ADR6 "
 "like PCA7, BUS7 and ADR7)."
 msgstr ""
+"De la même manière, PCA5, BUS5 et ADR5 sont connectés (tout comme PCA6, BUS6 "
+"et ADR6 et PCA7, BUS7 et ADR7)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:265
 msgid ""
 "PCA8 and BUS8 are also connected (just as PCA9 and BUS9, PCA10 and BUS10)"
 msgstr ""
+"PCA8 et BUS8 sont aussi connectés (tout comme PCA9 et BUS9, PCA10 et BUS10)"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:268
 #, no-wrap
 msgid "Power ports connection"
-msgstr ""
+msgstr "Connexion des sources d'alimentation"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:272
@@ -11023,6 +11066,8 @@ msgid ""
 "When the power pins of the components are visible, they must be connected, "
 "as for any other signal."
 msgstr ""
+"Lorsque les pins d'alimentation des composants sont visibles, elles doivent "
+"être connectées, comme pour tout autre signal."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:275
@@ -11030,16 +11075,19 @@ msgid ""
 "Components such as gates and flip-flops may have invisible power pins.  Care "
 "must be taken with these because:"
 msgstr ""
+"Les composants tels que les portes logiques et les bascules peuvent avoir des "
+"pins d'alimentation invisibles. Des précautions doivent être prises avec "
+"ceux-ci parce que :"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:277
 msgid "You cannot connect wires, because of their invisibility."
-msgstr ""
+msgstr "Vous ne pouvez pas connecter de fils, en raison de leur invisibilité."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:278
 msgid "You do not know their names."
-msgstr ""
+msgstr "Vous ne connaissez pas leurs noms."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:282
@@ -11048,6 +11096,9 @@ msgid ""
 "them like the other pins, because the schematic would become unreadable and "
 "not in accordance with usual conventions."
 msgstr ""
+"Et de plus, ce serait une mauvaise idée de les rendre visibles et de les "
+"relier comme les autres pins, parce que le schéma deviendrait illisible et "
+"non conforme aux conventions habituelles."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:289
@@ -11057,6 +11108,11 @@ msgid ""
 "dialog box of the main menu, or the icon image:images/icons/hidden_pin.png[] "
 "on the left (options) toolbar."
 msgstr ""
+"Si vous voulez forcer l'affichage de ces pins d'alimentation invisibles, vous "
+"devez cocher l'option «Afficher les pins invisibles» dans la boîte de "
+"dialogue du menu Préférences / Options de l'éditeur de schématique, ou "
+"cliquer sur l'icône image:images/icons/hidden_pin.png[] de la barre d'outils "
+"de gauche."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:294
@@ -11066,6 +11122,11 @@ msgid ""
 "names (for example, \"GND\" in TTL components and \"VSS\" in MOS "
 "components); use power ports for this."
 msgstr ""
+"Eeschema connecte automatiquement les pins d'alimentation invisibles de même "
+"nom, à la source d'alimentation portant ce nom. Il peut être nécessaire de "
+"relier des points d'alimentation de noms différents (par exemple, \"GND\" "
+"dans les composants TTL et \"VSS\" dans les composants MOS) ; utilisez les "
+"symboles d'alimentation pour cela."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:297
@@ -11073,18 +11134,22 @@ msgid ""
 "It is not recommended to use labels for power connection. These only have a "
 "“local” connection scope, and would not connect the invisible power pins."
 msgstr ""
+"Il est déconseillé d'utiliser des labels pour le raccordement aux "
+"alimentations. Ceux-ci ne disposent que d'une portée de connexion \"locale\", "
+"et ne relieraient pas les pins d'alimentation invisibles."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:299
 msgid "The figure below shows an example of power port connections."
 msgstr ""
+"La figure ci-dessous montre un exemple de connexion de sources d'alimentation."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:300
-#, fuzzy, no-wrap
+#, no-wrap
 #| msgid "Some examples"
 msgid "Power ports example"
-msgstr "Quelques exemples"
+msgstr "Exemples de sources d'alimentations"
 
 # TOTR
 #. type: Target for macro image
@@ -11100,6 +11165,8 @@ msgid ""
 "In this example, ground (GND) is connected to power port VSS, and power port "
 "VCC is connected to VDD."
 msgstr ""
+"Dans cet exemple, la masse (GND) est connectée à la source d'alimentation "
+"VSS, et la source d'alimentation VCC est connectée à VDD."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:309
@@ -11108,17 +11175,21 @@ msgid ""
 "and GND are really connected to a power source.  Without these two flags, "
 "the ERC tool would diagnose: __Warning: power port not powered__."
 msgstr ""
+"Deux symboles PWR_FLAG y sont visibles. Ils indiquent que les deux sources "
+"d'alimentation VCC et GND sont vraiment reliées à une source d'alimentation. "
+"Sans ces deux drapeaux, l'outil ERC diagnostiquerait : __Warning__ "
+"Avertissement : port d'alimentation non connecté."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:311
 msgid "All these symbols are components of the schematic library ``power''."
-msgstr ""
+msgstr "Tous ces symboles de composants font partie de la librairie ``power''."
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:313
 #, no-wrap
 msgid "\"No Connect\" flag"
-msgstr ""
+msgstr "Symboles de \"Non-Connexion\""
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:318
@@ -11127,6 +11198,9 @@ msgid ""
 "rules check ensures that no connection has been accidentally left "
 "unconnected."
 msgstr ""
+"Ces symboles sont très utiles pour éviter d'avoir des avertissements "
+"indésirables dans l'ERC. La vérification des règles électriques s'assurant "
+"qu'aucune connexion n'a été oubliée."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:323
@@ -11136,18 +11210,22 @@ msgid ""
 "these pins. These symbols do not have any influence on the generated "
 "netlists."
 msgstr ""
+"Si des pins doivent vraiment rester en l'air, il est nécessaire de placer un "
+"drapeau, symbole de \"Non Connexion\" (outil : "
+"image:images/icons/noconn.png[No connection icon]) sur ces broches. Ces "
+"symboles n'ont aucune incidence sur la génération des netlistes."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:325
 #, no-wrap
 msgid "Drawing Complements"
-msgstr ""
+msgstr "Compléments Graphiques"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:328
 #, no-wrap
 msgid "Text Comments"
-msgstr ""
+msgstr "Textes et Commentaires"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:337
@@ -11158,17 +11236,22 @@ msgid ""
 "png[])  are intended for this use, contrary to labels and wires, which are "
 "connection elements."
 msgstr ""
+"Il peut être utile, pour la compréhension le schéma, de placer des éléments "
+"tels que des textes, des notes, ou des cadres. Les outils Texte : "
+"image:images/icons/add_text.png[] et Polygones : "
+"image:images/icons/add_dashed_line.png[]) sont destinés à cet usage, "
+"contrairement aux labels et aux fils, qui sont des éléments de connexion."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:339
 msgid "Here you can find an example of a frame with a textual comment."
-msgstr ""
+msgstr "Ici, un exemple de cadre avec un texte de commentaire :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:340
 #, no-wrap
 msgid "Frame with comment example"
-msgstr ""
+msgstr "Cadre et exemple de texte de commentaire."
 
 # TOTR
 #. type: Target for macro image
@@ -11182,7 +11265,7 @@ msgstr "images/fr/annotate-dialog.png"
 #: eeschema_schematic_creation_and_editing.adoc:343
 #, no-wrap
 msgid "Sheet title block"
-msgstr ""
+msgstr "Cartouche"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:347
@@ -11190,18 +11273,20 @@ msgid ""
 "The title block is edited with the tool image:images/icons/sheetset.png[Page "
 "Settings tool]."
 msgstr ""
+"On peut modifier le cartouche et son contenu en cliquant sur l'outil "
+"image:images/icons/sheetset.png[Ajustage Opt Page]."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:348
 #, no-wrap
 msgid "Page settings dialog"
-msgstr ""
+msgstr "Fenêtre des Options de la page"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:350
 #, no-wrap
 msgid "Title block"
-msgstr ""
+msgstr "Bloc Titre"
 
 # TOTR
 #. type: Target for macro image
@@ -11214,13 +11299,13 @@ msgstr "images/fr/annotate-dialog.png"
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:353
 msgid "The sheet number (Sheet X/Y) is automatically updated."
-msgstr ""
+msgstr "Le nombre et le numéro de feuille sont automatiquement mis à jour."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:355
 #, no-wrap
 msgid "Rescuing cached components"
-msgstr ""
+msgstr "Restauration du cache des composants"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:362
@@ -11232,6 +11317,13 @@ msgid ""
 "new versions. The new versions might not line up correctly or might be "
 "oriented differently, leading to a broken schematic."
 msgstr ""
+"Par défaut,  EESchema va chercher les symboles de composants des librairies "
+"disponibles dans les chemins et emplacements configurés. Cela peut causer un "
+"problème lors du chargement d'un projet très ancien : si les symboles de la "
+"librairie ont changé depuis qu'ils ont été utilisés dans le projet, ils "
+"seraient remplacés automatiquement avec leurs nouvelles versions. Les "
+"nouvelles versions peuvent ne pas s'insérer correctement, ou être orientées "
+"différemment, ce qui conduit à un schéma cassé."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:367
@@ -11242,12 +11334,18 @@ msgid ""
 "libraries, Eeschema will scan the libraries for conflicts. Any conflicts "
 "found will be listed in the following dialog:"
 msgstr ""
+"Cependant, quand un projet est enregistré, une librairie de sauvegarde (ou "
+"cache) est enregistrée avec lui. Cela permet au projet d'être distribué sans "
+"les librairies complètes. Si vous chargez un projet où les symboles sont "
+"présents à la fois dans ce fichier cache et dans les librairies du système, "
+"Eeschema va scanner les bibliothèques pour trouver d'éventuels conflits. Les "
+"conflits trouvés seront affichés dans la fenêtre suivante :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:368
 #, no-wrap
 msgid "Rescue conflicts dialog"
-msgstr ""
+msgstr "Fenêtre de résolution des conflits"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:368
@@ -11264,6 +11362,12 @@ msgid ""
 "the old symbol to be saved into a special ``rescue'' library, and all the "
 "components using that symbol will be renamed to avoid naming conflicts."
 msgstr ""
+"Vous pouvez voir dans cet exemple que le projet  utilisait initialement une "
+"diode avec la cathode vers le haut, mais la librairie en contient maintenant "
+"une avec la cathode vers le bas. Ce changement pourrait ruiner le projet ! Un "
+"appui sur OK, provoquera la sauvegarde de l'ancien symbole dans une librairie "
+"spéciale ``rescue'',  et tous les composants utilisant ce symbole seront "
+"renommés pour éviter les conflits de noms."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:378
@@ -11273,6 +11377,11 @@ msgid ""
 "back and run the rescue function again: choose \"Rescue Cached Components\" "
 "in the Tools menu to call up the dialog again."
 msgstr ""
+"Si vous appuyez sur Annuler, aucune sauvegarde ne sera effectuée, et donc "
+"Eeschema va, par défaut, charger tous les nouveaux composants. Tant qu'aucun "
+"changement n'a été effectué, vous pouvez toujours revenir en arrière et "
+"relancer la restauration du cache : choisissez \"Sauver anciens composants\" "
+"du menu Outils pour faire apparaître la fenêtre à nouveau."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:381
@@ -11282,6 +11391,10 @@ msgid ""
 "loaded. This option can be changed back in the Component Libraries "
 "preferences."
 msgstr ""
+"Si vous préférez ne plus voir cette boîte de dialogue, vous pouvez appuyer "
+"sur \"Ne plus afficher\". La valeur par défaut est de ne rien faire et de "
+"permettre aux nouveaux composants d'être chargés. Cette option peut être "
+"modifiée dans les Préférences / Librairies de composants."
 
 #. type: Title ==
 #: eeschema_viewlib.adoc:3
