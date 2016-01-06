@@ -300,10 +300,9 @@ image:images/choose_component.png[Choose Component]
     use the mouse wheel to zoom in and zoom out. Press the wheel (central)
     mouse button to pan horizontally and vertically.
 
-9.  Hover the mouse over the component 'R' and press the r key. Notice
-    how the component rotates.
-+
-NOTE: You do not need to actually click on the component to rotate it.
+9.  Try to hover the mouse over the component 'R' and press the r key. The component should rotate. You do not need to actually click on the component to rotate it.
+
+NOTE: If your mouse was also over the _Field Reference_ ('R') or the _Field Value_ ('R?'), a menu will appear. You will see these 'Clarify Selection' menu often in KiCad, they allow working on objects that are on top of each other. In this case, tell KiCad you want to perform the action on the 'Component ...R...'.
 
 10. Right click in the middle of the component and select *Edit
     Component* -> **Value**. You can achieve the same result by hovering
@@ -363,11 +362,13 @@ be connected. We will see later on why this is the case.
     select**. __In general, it is recommendable to use a grid of 50.0 mils
     for the schematic sheet__.
 
+19. We are going to add a component from a library that isn't configured in the default project. In the menu, choose *Preferences* -> **Component Libraries** and click the **Add** button for **Component library files**.
+
+19. You need to find where the official KiCad libraries are installed on your computer. Look for a `library` directory containing a hundred of `.dcm` and `.lib` files. Try in `C:\Program Files (x86)\KiCad\share\` (Windows) and `/usr/share/kicad/library/` (Linux). When you have found the directory, choose and add the 'microchip_pic12mcu' library and close the window.
+
 19. Repeat the add-component steps, however this time select the
     'microchip_pic12mcu' library instead of the 'device' library and pick the
-    'PIC12C508A-I/SN' component instead of the 'R' component from it.
-    Before add-component, add 'microchip_pic12mcu' to your Component library files
-    by *Preferences* -> **Component Libraries** and press Add button. 
+    'PIC12C508A-I/SN' component.
 
 20. Hover the mouse over the microcontroller component. Press the y key
     or the x key on the keyboard. Notice how the component is flipped over
@@ -513,7 +514,7 @@ Warning Pin power_in not driven (Net xx)
 43. All components now need to have unique identifiers. In fact, many
     of our components are still named 'R?' or 'J?'. Identifier
     assignation can be done automatically by clicking on the 'Annotate
-    schematic' icon image:images/icons/annotate.png[annotate_png].
+    schematic' icon image:images/icons/annotate.png[annotate_png] on the top toolbar.
 
 44. In the Annotate Schematic window, select 'Use the entire
     schematic' and click on the 'Annotation' button. Click OK in the
@@ -523,20 +524,21 @@ Warning Pin power_in not driven (Net xx)
     'D1' and 'J1'.
 
 45. We will now check our schematic for errors. Click on the 'Perform
-    Electric Rules Check' icon image:images/icons/erc.png[erc_png]. Click on
-    the 'Test ERC' button. A report informing you of any errors or
+    electrical rules check' icon image:images/icons/erc.png[erc_png] on the top toolbar. Click on
+    the 'Run' button. A report informing you of any errors or
     warnings such as disconnected wires is generated. You should have
     0 Errors and 0 Warnings. In case of errors or warnings, a small
     green arrow will appear on the schematic in the position where the
-    error or the warning is located. Check 'Write ERC report' and
-    press the 'Test ERC' button again to receive more information
+    error or the warning is located. Check 'Create ERC file report' and
+    press the 'Run' button again to receive more information
     about the errors.
+
+NOTE: If you have a warning with "No default editor found you must choose it", try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit` (Linux).
 
 46. The schematic is now finished. We can now create a Netlist file to
     which we will add the footprint of each component. Click on the
-    'Netlist generation' icon image:images/icons/netlist.png[netlist_png] on
-    the top toolbar. Click on 'Netlist' then click on 'save'. Save
-    under the default file name.
+    'Generate netlist' icon image:images/icons/netlist.png[netlist_png] on
+    the top toolbar. Click on the 'Generate' button and save under the default file name.
 
 47. After generating the Netlist file, click on the 'Run Cvpcb' icon
     image:images/icons/cvpcb.png[cvpcb_png] on the top
@@ -1125,7 +1127,7 @@ image:images/pin_properties.png[Pin Properties]
     rectangle' icon
     image:images/icons/add_rectangle.png[add_rectangle_png]. We want to draw
     a rectangle next to the pins, as shown below. To do this, click
-    where you want the top left corner of the rectangle to be. Click
+    where you want the top left corner of the rectangle to be (do not hold the mouse button down). Click
     again where you want the bottom right corner of the rectangle to
     be.
 +
