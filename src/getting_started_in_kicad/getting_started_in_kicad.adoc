@@ -119,11 +119,11 @@ Unstable builds are built from the most recent source code. They can sometimes
 have bugs that cause file corruption, generate bad gerbers, etc, but are generally
 stable and have the latest features.
 
-Under Ubuntu, the easiest way to install an unstable nightly build of KiCad is 
+Under Ubuntu, the easiest way to install an unstable nightly build of KiCad is
 via _PPA_ and __Aptitude__. Type the following into your Terminal:
 
 __________________________________________________
-sudo add-apt-repository ppa:js-reynaud/ppa-kicad 
+sudo add-apt-repository ppa:js-reynaud/ppa-kicad
 
 sudo aptitude update && sudo aptitude safe-upgrade
 
@@ -197,8 +197,8 @@ library are necessary for these two tasks. KiCad has plenty of both.
 Just in case that is not enough, KiCad also has the tools necessary to
 make new ones.
 
-In the picture below, you see a flowchart representing the KiCad work-flow. 
-The picture explains which steps you need to take, in which order. 
+In the picture below, you see a flowchart representing the KiCad work-flow.
+The picture explains which steps you need to take, in which order.
 When applicable, the icon is added as well for convenience.
 
 image:images/kicad_flowchart.png["KiCad Flowchart"]
@@ -282,9 +282,9 @@ image:images/kicad_main_window.png[KiCad Main Window]
 NOTE: You can see a list of all available shortcut keys by pressing
 the '?' key.
 
-6.  Click on the middle of your schematic sheet. A __Choose Component__ 
+6.  Click on the middle of your schematic sheet. A __Choose Component__
     window will appear on the screen.
-    We're going to place a resistor. Search / filter on the 'R' of 
+    We're going to place a resistor. Search / filter on the 'R' of
     **R**esistor.
     You may notice the 'device' heading above the Resistor. This
     'device' heading is the name of the library where the component is
@@ -300,9 +300,15 @@ image:images/choose_component.png[Choose Component]
     use the mouse wheel to zoom in and zoom out. Press the wheel (central)
     mouse button to pan horizontally and vertically.
 
-9.  Try to hover the mouse over the component 'R' and press the r key. The component should rotate. You do not need to actually click on the component to rotate it.
-
-NOTE: If your mouse was also over the _Field Reference_ ('R') or the _Field Value_ ('R?'), a menu will appear. You will see these 'Clarify Selection' menu often in KiCad, they allow working on objects that are on top of each other. In this case, tell KiCad you want to perform the action on the 'Component ...R...'.
+9.  Try to hover the mouse over the component 'R' and press the r key. The
+    component should rotate. You do not need to actually click on the component
+    to rotate it.
++
+NOTE: If your mouse was also over the _Field Reference_ ('R') or the _Field
+Value_ ('R?'), a menu will appear. You will see these 'Clarify Selection' menu
+often in KiCad, they allow working on objects that are on top of each other. In
+this case, tell KiCad you want to perform the action on the 'Component
+...R...'.
 
 10. Right click in the middle of the component and select *Edit
     Component* -> **Value**. You can achieve the same result by hovering
@@ -362,36 +368,42 @@ be connected. We will see later on why this is the case.
     select**. __In general, it is recommendable to use a grid of 50.0 mils
     for the schematic sheet__.
 
-19. We are going to add a component from a library that isn't configured in the default project. In the menu, choose *Preferences* -> **Component Libraries** and click the **Add** button for **Component library files**.
+19. We are going to add a component from a library that isn't configured in the
+    default project. In the menu, choose *Preferences* -> **Component Libraries**
+    and click the **Add** button for **Component library files**.
 
-19. You need to find where the official KiCad libraries are installed on your computer. Look for a `library` directory containing a hundred of `.dcm` and `.lib` files. Try in `C:\Program Files (x86)\KiCad\share\` (Windows) and `/usr/share/kicad/library/` (Linux). When you have found the directory, choose and add the 'microchip_pic12mcu' library and close the window.
+20. You need to find where the official KiCad libraries are installed on your
+    computer. Look for a `library` directory containing a hundred of `.dcm` and
+    `.lib` files. Try in `C:\Program Files (x86)\KiCad\share\` (Windows) and
+    `/usr/share/kicad/library/` (Linux). When you have found the directory,
+    choose and add the 'microchip_pic12mcu' library and close the window.
 
-19. Repeat the add-component steps, however this time select the
+21. Repeat the add-component steps, however this time select the
     'microchip_pic12mcu' library instead of the 'device' library and pick the
     'PIC12C508A-I/SN' component.
 
-20. Hover the mouse over the microcontroller component. Press the y key
+22. Hover the mouse over the microcontroller component. Press the y key
     or the x key on the keyboard. Notice how the component is flipped over
     its x axis or its y axis. Press the key again to return it to its
     original orientation.
 
-21. Repeat the add-component steps, this time choosing the 'device'
+23. Repeat the add-component steps, this time choosing the 'device'
     library and picking the 'LED' component from it.
 
-22. Organise all components on your schematic sheet as shown below.
+24. Organise all components on your schematic sheet as shown below.
 +
 image:images/gsik_tutorial1_010.png[gsik_tutorial1_010_png]
 
-23. We now need to create the schematic component 'MYCONN3' for our
+25. We now need to create the schematic component 'MYCONN3' for our
     3-pin connector. You can jump to the section titled
     <<make-schematic-components-in-kicad,Make Schematic Components in KiCad>>
-    to learn how to make this component from scratch and then return 
+    to learn how to make this component from scratch and then return
     to this section to continue with the board.
 
-24. You can now place the freshly made component. Press the 'a' key and
+26. You can now place the freshly made component. Press the 'a' key and
     pick the 'MYCONN3' component in the 'myLib' library.
 
-25. The component identifier 'J?' will appear under the 'MYCONN3' label.
+27. The component identifier 'J?' will appear under the 'MYCONN3' label.
     If you want to change its position, right click on 'J?' and click on
     'Move Field' (equivalent to the m key option). It might be helpful to
     zoom in before/while doing this. Reposition 'J?' under the component as
@@ -399,26 +411,26 @@ image:images/gsik_tutorial1_010.png[gsik_tutorial1_010_png]
 +
 image:images/gsik_myconn3_s.png[gsik_myconn3_s_png]
 
-26. It is time to place the power and ground symbols. Click on the
+28. It is time to place the power and ground symbols. Click on the
     'Place a power port' button image:images/icons/add_power.png[add_power_png] on
-    the right toolbar. Alternatively, press the 'p' key. In the component 
+    the right toolbar. Alternatively, press the 'p' key. In the component
     selection window, scroll down and select 'VCC' from the 'power' library.
     Click OK.
 
-27. Click above the pin of the 1k resistor to place the VCC part. Click
+29. Click above the pin of the 1k resistor to place the VCC part. Click
     on the area above the microcontroller 'VDD'. In the 'Component Selection
     history' section select 'VCC' and place it next to the VDD pin. Repeat
     the add process again and place a VCC part above the VCC pin of
     'MYCONN3'.
 
-28. Repeat the add-pin steps but this time select the GND part. Place a
+30. Repeat the add-pin steps but this time select the GND part. Place a
     GND part under the GND pin of 'MYCONN3'. Place another GND symbol on the
     right of the VSS pin of the microcontroller. Your schematic should now
     look something like this:
 +
 image:images/gsik_tutorial1_020.png[gsik_tutorial1_020_png]
 
-29. Next, we will wire all our components. Click on the 'Place wire'
+31. Next, we will wire all our components. Click on the 'Place wire'
     icon image:images/icons/add_line.png[Place wire] on the right
     toolbar.
 +
@@ -427,7 +439,7 @@ beneath this button but has thicker lines. The section
 <<bus-connections-in-kicad,Bus Connections in KiCad>> will explain how
 to use a bus section.
 
-30. Click on the little circle at the end of pin 7 of the
+32. Click on the little circle at the end of pin 7 of the
     microcontroller and then click on the little circle on pin 2 of
     the LED.  You can zoom in while you are placing the connection.
 +
@@ -438,7 +450,7 @@ have forgotten how to move a component.
 +
 image:images/gsik_tutorial1_030.png[gsik_tutorial1_030_png]
 
-31. Repeat this process and wire up all the other components as shown
+33. Repeat this process and wire up all the other components as shown
     below. To terminate a wire just double-click. When wiring up the
     VCC and GND symbols, the wire should touch the bottom of the VCC
     symbol and the middle top of the GND symbol. See the screenshot
@@ -446,15 +458,15 @@ image:images/gsik_tutorial1_030.png[gsik_tutorial1_030_png]
 +
 image:images/gsik_tutorial1_040.png[gsik_tutorial1_040_png]
 
-32. We will now consider an alternative way of making a connection
+34. We will now consider an alternative way of making a connection
     using labels. Pick a net labelling tool by clicking on the 'Place
-    net name' icon image:images/icons/add_line_label.png[add_line_label_png] on the right
-    toolbar. You can also use the l key.
+    net name' icon image:images/icons/add_line_label.png[add_line_label_png]
+    on the right toolbar. You can also use the l key.
 
-33. Click in the middle of the wire connected to pin 6 of the
+35. Click in the middle of the wire connected to pin 6 of the
     microcontroller. Name this label 'INPUT'.
 
-34. Follow the same procedure and place another label on line on the
+36. Follow the same procedure and place another label on line on the
     right of the 100 ohm resistor. Also name it 'INPUT'. The two
     labels, having the same name, create an invisible connection
     between pin 6 of the PIC and the 100 ohm resistor. This is a
@@ -463,40 +475,40 @@ image:images/gsik_tutorial1_040.png[gsik_tutorial1_040_png]
     a label you do not necessarily need a wire, you can simply attach
     the label to a pin.
 
-35. Labels can also be used to simply label wires for informative
+37. Labels can also be used to simply label wires for informative
     purposes. Place a label on pin 7 of the PIC. Enter the name
     'uCtoLED'.  Name the wire between the resistor and the LED as
     'LEDtoR'. Name the wire between 'MYCONN3' and the resistor as
     'INPUTtoR'.
 
-36. You do not have to label the VCC and GND lines because the labels
+38. You do not have to label the VCC and GND lines because the labels
     are implied from the power objects they are connected to.
 
-37. Below you can see what the final result should look like.
+39. Below you can see what the final result should look like.
 +
 image:images/gsik_tutorial1_050.png[gsik_tutorial1_050_png]
 
-38. Let's now deal with unconnected wires. Any pin or wire that is not
+40. Let's now deal with unconnected wires. Any pin or wire that is not
     connected will generate a warning when checked by KiCad. To avoid
     these warnings you can either instruct the program that the
     unconnected wires are deliberate or manually flag each unconnected
     wire or pin as unconnected.
 
-39. Click on the 'Place no connect flag' icon
+41. Click on the 'Place no connect flag' icon
     image:images/icons/noconn.png[noconn_png] on the right toolbar. Click on
     pins 2, 3, 4 and 5. An X will appear to signify that the lack of a
     wire connection is intentional.
 +
 image:images/gsik_tutorial1_060.png[gsik_tutorial1_060_png]
 
-40. Some components have power pins that are invisible. You can make
+42. Some components have power pins that are invisible. You can make
     them visible by clicking on the 'Show hidden pins' icon
     image:images/icons/hidden_pin.png[hidden_pin_png] on the left
     toolbar. Hidden power pins get automatically connected if VCC and
     GND naming is respected. Generally speaking, you should try not to
     make hidden power pins.
 
-41. It is now necessary to add a 'Power Flag' to indicate to KiCad
+43. It is now necessary to add a 'Power Flag' to indicate to KiCad
     that power comes in from somewhere. Press the a key, select 'List
     All', double click on the 'power' library and search for
     'PWR_FLAG'. Place two of them. Connect them to a GND pin and to
@@ -507,45 +519,47 @@ image:images/gsik_tutorial1_070.png[gsik_tutorial1_070_png]
 NOTE: This will avoid the classic schematic checking warning:
 Warning Pin power_in not driven (Net xx)
 
-42. Sometimes it is good to write comments here and there. To add
+44. Sometimes it is good to write comments here and there. To add
     comments on the schematic use the 'Place graphic text (comment)'
     icon image:images/icons/add_text.png[add_text_png] on the right toolbar.
 
-43. All components now need to have unique identifiers. In fact, many
+45. All components now need to have unique identifiers. In fact, many
     of our components are still named 'R?' or 'J?'. Identifier
     assignation can be done automatically by clicking on the 'Annotate
-    schematic' icon image:images/icons/annotate.png[annotate_png] on the top toolbar.
+    schematic' icon image:images/icons/annotate.png[annotate_png] on the top
+    toolbar.
 
-44. In the Annotate Schematic window, select 'Use the entire
+46. In the Annotate Schematic window, select 'Use the entire
     schematic' and click on the 'Annotation' button. Click OK in the
     confirmation message and then click 'Close'. Notice how all the
     '?' have been replaced with numbers. Each identifier is now
     unique. In our example, they have been named 'R1', 'R2', 'U1',
     'D1' and 'J1'.
 
-45. We will now check our schematic for errors. Click on the 'Perform
-    electrical rules check' icon image:images/icons/erc.png[erc_png] on the top toolbar. Click on
-    the 'Run' button. A report informing you of any errors or
-    warnings such as disconnected wires is generated. You should have
-    0 Errors and 0 Warnings. In case of errors or warnings, a small
-    green arrow will appear on the schematic in the position where the
-    error or the warning is located. Check 'Create ERC file report' and
-    press the 'Run' button again to receive more information
-    about the errors.
+47. We will now check our schematic for errors. Click on the 'Perform
+    electrical rules check' icon image:images/icons/erc.png[erc_png] on the top
+    toolbar. Click on the 'Run' button. A report informing you of any errors or
+    warnings such as disconnected wires is generated. You should have 0 Errors
+    and 0 Warnings. In case of errors or warnings, a small green arrow will
+    appear on the schematic in the position where the error or the warning is
+    located. Check 'Create ERC file report' and press the 'Run' button again to
+    receive more information about the errors.
++
+NOTE: If you have a warning with "No default editor found you must choose it",
+try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
+(Linux).
 
-NOTE: If you have a warning with "No default editor found you must choose it", try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit` (Linux).
-
-46. The schematic is now finished. We can now create a Netlist file to
+48. The schematic is now finished. We can now create a Netlist file to
     which we will add the footprint of each component. Click on the
     'Generate netlist' icon image:images/icons/netlist.png[netlist_png] on
     the top toolbar. Click on the 'Generate' button and save under the default file name.
 
-47. After generating the Netlist file, click on the 'Run Cvpcb' icon
+49. After generating the Netlist file, click on the 'Run Cvpcb' icon
     image:images/icons/cvpcb.png[cvpcb_png] on the top
     toolbar. If a missing file error window pops up, just ignore it
     and click OK.
 
-48. _Cvpcb_ allows you to link all the components in your schematic
+50. _Cvpcb_ allows you to link all the components in your schematic
     with footprints in the KiCad library. The pane on the center shows
     all the components used in your schematic. Here select 'D1'. In
     the pane on the right you have all the available footprints, here
@@ -553,7 +567,7 @@ NOTE: If you have a warning with "No default editor found you must choose it", t
 +
 image:images/icons/cvpcb.png[cvpcb_png]
 
-49. It is possible that the pane on the right shows only a selected
+51. It is possible that the pane on the right shows only a selected
     subgroup of available footprints. This is because KiCad is trying
     to suggest to you a subset of suitable footprints. Click on the
     icons image:images/icons/module_filtered_list.png[module_filtered_list_png],
@@ -561,11 +575,11 @@ image:images/icons/cvpcb.png[cvpcb_png]
     image:images/icons/module_library_list.png[module_library_list_png] to
     enable or disable these filters.
 
-50. For 'IC1' select the 'Housings_DIP:DIP-8_W7.62mm' footprint.
+52. For 'IC1' select the 'Housings_DIP:DIP-8_W7.62mm' footprint.
     For 'J1' select the 'Connect:Banana_Jack_3Pin' footprint.
     For 'R1' and 'R2' select the 'Discret:R1' footprint.
 
-51. If you are interested in knowing what the footprint you are
+53. If you are interested in knowing what the footprint you are
     choosing looks like, you have two options. You can click on the
     'View selected footprint' icon
     image:images/icons/show_footprint.png[show_footprint_png] for a preview
@@ -576,7 +590,7 @@ image:images/icons/cvpcb.png[cvpcb_png]
     print it out and check your components to make sure that the
     dimensions match.
 
-52. You are done. You can now update your netlist file with all the
+54. You are done. You can now update your netlist file with all the
     associated footprints. Click on *File* -> **Save As**. The default
     name 'tutorial1.net' is fine, click save. Otherwise you can use the
     icon image:images/icons/save.png[Save icon].  Your netlist file has now
@@ -585,24 +599,24 @@ image:images/icons/cvpcb.png[cvpcb_png]
     footprints. This will be explained in a later section of this
     document.
 
-53. You can close _Cvpcb_ and go back to the _Eeschema_ schematic
+55. You can close _Cvpcb_ and go back to the _Eeschema_ schematic
     editor. Save the project by clicking on *File* -> **Save Whole
     Schematic Project**. Close the schematic editor.
 
-54. Switch to the KiCad project manager.
+56. Switch to the KiCad project manager.
 
-55. The netlist file describes all components and their respective pin
+57. The netlist file describes all components and their respective pin
     connections. The netlist file is actually a text file that you can
     easily inspect, edit or script.
 +
 NOTE: Library files (__*.lib__) are text files too and they are also
 easily editable or scriptable.
 
-56. To create a Bill Of Materials (BOM), go to the _Eeschema_ schematic 
-    editor and click on the 'Bill of materials' icon 
+58. To create a Bill Of Materials (BOM), go to the _Eeschema_ schematic
+    editor and click on the 'Bill of materials' icon
     image:images/icons/bom.png[bom_png] on the top toolbar.
     By default there is no plugin active. You add one, by clicking on
-    *Add Plugin* button. Select the *.xsl file you want to use, in 
+    *Add Plugin* button. Select the *.xsl file you want to use, in
     this case, we select __bom2csv.xsl__.
 +
 [NOTE]
@@ -628,7 +642,7 @@ xsltproc -o "%O.csv" "/home/<user>/kicad/eeschema/plugins/bom2csv.xsl" "%I"
 +
 Press Help button for more info.
 
-57. Now press 'Generate'. The file (same name as your project) is
+59. Now press 'Generate'. The file (same name as your project) is
     located in your project folder.  Open the **.csv* file with
     LibreOffice Calc or Excel. An import window will appear, press OK.
 
@@ -758,14 +772,14 @@ image:images/design_rules.png[Design Rules Window]
     __ratsnest__. Make sure that the 'Hide board ratsnest' button
     image:images/icons/general_ratsnest.png[general_ratsnest_png] is
     pressed. In this way you can see the ratsnest linking all
-    components. 
+    components.
 +
 NOTE: The tool-tip is backwards; pressing this button
 actually displays the ratsnest.
 
 9.  You can move each component by hovering over it and pressing the g
     key. Click where you want to place them. Move all components around
-    until you minimise the number of wire crossovers. 
+    until you minimise the number of wire crossovers.
 +
 NOTE: If instead of grabbing the components (with the g key ) you
 move them around using the m key you will later note that you lose the
@@ -955,13 +969,13 @@ and it is needed to build by yourself to use with KiCad.
 Source code of Freerouter can be found on this site:
 https://github.com/nikropht/FreeRouting
 
-1.  From _Pcbnew_ click on *File* -> *Export* -> *Specctra DSN* 
-    or click on *Tools* -> *FreeRoute* -> **Export a Specctra 
+1.  From _Pcbnew_ click on *File* -> *Export* -> *Specctra DSN*
+    or click on *Tools* -> *FreeRoute* -> **Export a Specctra
     Design (*.dsn) file** and save the file locally.
     Launch FreeRouter and click on the 'Open Your Own Design'
     button, browse for the _dsn_ file and load it.
 +
-NOTE: The *Tools* -> *FreeRoute* dialog has a nice help button 
+NOTE: The *Tools* -> *FreeRoute* dialog has a nice help button
 that opens a file viewer with a little document inside named
 **Freerouter Guidelines**. Please follow these guidelines to
 use FreeRoute effectively.
