@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-12-30 10:48+0100\n"
-"PO-Revision-Date: 2016-01-01 00:42+0100\n"
+"PO-Revision-Date: 2016-01-10 17:16+0100\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -459,8 +459,9 @@ msgid ""
 msgstr ""
 "Wenn noch kein Footprint platziert wurde, werden alle Footprints an der gleichen Stelle auf der "
 "Leiterplatte eingefügt, was es schwierig macht, sie zu erkennen. Es ist möglich, sie automatisch "
-"anzuordnen über den Befehl 'Global Spread and Place' aus dem Kontextmenü (rechte Maustaste). Hier sehen "
-"Sie das Ergebnis einer solchen Anordnung:"
+"anzuordnen über den Befehl 'Global Spread and Place' aus dem Kontextmenü (rechte Maustaste; nur "
+"verfügbar wenn 'Mode footprint' in der Hauptwerkzeugleiste aktiviert wurde). Hier sehen Sie das Ergebnis "
+"einer solchen Anordnung:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:140
@@ -477,44 +478,51 @@ msgid ""
 "this is easier to do using the footprint dialog accessed by clicking the right mouse button over the "
 "footprint in question."
 msgstr ""
+"Wenn auf einer Leiterplatte mit CvPcb ein bestehender Footprint durch einen neuen ersetzt wird (zum "
+"Beispiel einen 1/8 W Widerstand durch einen 1/2 W ersetzen), muss in Pcbnew das bestehende Bauteil "
+"gelöscht werden bevor Pcbnew die neue Bauform laden wird. Daher ist es leichter, einen bestehenden "
+"Footprint über den Footprint-Dialog auszutauschen, den Sie durch einen Rechtsklick auf das betreffende "
+"Bauteil aufrufen."
 
 #. type: Title ===
 #: pcbnew_create_and_modify_board.adoc:150
 #, no-wrap
 msgid "Correcting a board"
-msgstr ""
+msgstr "Eine Leiterplatte korrigieren"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:154
 msgid "It is very often necessary to correct a board following a corresponding change in the schematic."
 msgstr ""
+"Sehr häufig ist es notwendig eine Leiterplatte zu korrigieren, um eine entsprechende Änderung im "
+"Schaltplan umzusetzen."
 
 #. type: Title ====
 #: pcbnew_create_and_modify_board.adoc:155
 #, no-wrap
 msgid "Steps to follow"
-msgstr ""
+msgstr "Dazu müssen folgende Schritte ausgeführt werden:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:158
 msgid "Create a new netlist from the modified schematic."
-msgstr ""
+msgstr "Erstellen Sie eine neue Netzliste aus dem bearbeiteten Schaltplan."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:160
 msgid "If new components have been added, link these to their corresponding footprint in CvPcb."
-msgstr ""
+msgstr "Wenn neue Bauteile hinzugefügt wurden, verbinden Sie diese mit einem Footprint über CvPcb."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:161
 msgid "Read the new netlist in Pcbnew."
-msgstr ""
+msgstr "Lesen Sie die neue Netzliste in Pcbnew ein."
 
 #. type: Title ====
 #: pcbnew_create_and_modify_board.adoc:162
 #, no-wrap
 msgid "Deleting incorrect tracks"
-msgstr ""
+msgstr "Löschen Sie falsche Leiterbahnen."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:168
@@ -522,6 +530,8 @@ msgid ""
 "Pcbnew is able to automatically delete tracks that have become incorrect as a result of modifications. "
 "To do this, check the 'Delete' option in the 'Unconnected Tracks' box of the netlist dialog:"
 msgstr ""
+"Pcbnew kann automatisch Leiterbahnen löschen, die aufgrund einer Änderung inkorrekt geworden sind. Um "
+"das zu tun, aktivieren Sie die Option 'Entfernen' im Kasten 'Nicht verbundene Leiterbahnen':"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:169
@@ -535,19 +545,21 @@ msgid ""
 "However, it is often quicker to modify such tracks by hand (the DRC function allows their "
 "identification)."
 msgstr ""
+"Häufig geht es jedoch schneller, solche Leiterbahnen von Hand zu ändern; die DRC Funktion hilft dabei, "
+"diese zu finden."
 
 #. type: Title ====
 #: pcbnew_create_and_modify_board.adoc:174
 #, no-wrap
 msgid "Deleted components"
-msgstr ""
+msgstr "Bauteile löschen"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:178
 msgid ""
 "Pcbnew can delete footprint corresponding to components that have been removed from the schematic. This "
 "is optional."
-msgstr ""
+msgstr "Pcbnew kann optional auch Footprints löschen, die zu gelöschten Bauteilen gehören."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:182
@@ -555,6 +567,8 @@ msgid ""
 "This is necessary because there are often footprints (holes for fixation screws, for instance) that are "
 "added to the PCB that never appear in the schematic."
 msgstr ""
+"Das ist notwendig, weil es oft auch Footprints gibt (Löcher für Befestigungsschrauben zum Beispiel), die "
+"auf der Leiterplatte hinzugefügt werden, ohne dass sie im Schaltplan erscheinen."
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:183
@@ -569,6 +583,9 @@ msgid ""
 "netlist will be deleted, unless they have the option \"Locked\" active. It is a good idea to activate "
 "this option for \"mechanical\" footprints:"
 msgstr ""
+"Wenn die Option \"Zusätzliche Footprints\" aktiviert ist, werden Footprints gelöscht, die zu einem "
+"Bauteil gehören, das nicht in der Netzliste gefunden wird, außer im Footprint ist die Option \"Lock "
+"Footprint\" gesetzt. Für \"mechanische\" Footprints ist es eine gute Idee, diese Option zu aktivieren:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:190
@@ -580,7 +597,7 @@ msgstr ""
 #: pcbnew_create_and_modify_board.adoc:192
 #, no-wrap
 msgid "Modified footprints"
-msgstr ""
+msgstr "Geänderte Footprints"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:198
@@ -589,6 +606,9 @@ msgid ""
 "will not be modified by Pcbnew, unless the corresponding option of the 'Exchange Footprint' box of the "
 "netlist dialog is checked:"
 msgstr ""
+"Wenn ein Footprint in der Netzliste geändert wird (über CvPcb), der Footprint aber schon platziert "
+"wurde, wird der Footprint von Pcbnew nicht geändert, wenn nicht die zugehörige Option in 'Exchange "
+"Footprint' aktiviert ist:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:199
@@ -602,12 +622,14 @@ msgid ""
 "Changing a footprint (replacing a resistor with one of a different size, for instance) can be effected "
 "directly by editing the footprint."
 msgstr ""
+"Um den Footprint zu ändern (zum Beispiel bei einem Widerstand die Bauform tauschen), kann man den "
+"Footprint direkt bearbeiten."
 
 #. type: Title ====
 #: pcbnew_create_and_modify_board.adoc:204
 #, no-wrap
 msgid "Advanced options - selection using time stamps"
-msgstr ""
+msgstr "Erweiterte Möglichkeiten - Auswahl über Zeitstempel"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:213
@@ -618,6 +640,11 @@ msgid ""
 "reference. In this situation, the 'Timestamp' option of the netlist dialog may be selected before re-"
 "reading the netlist:"
 msgstr ""
+"Manchmal wird die Referenzierung des Schaltplans geändert, ohne dass sich irgendein Material im "
+"Schaltplan ändert (es sind als nur die Referenzen betroffen, wie R5, U4…). Die Leiterplatte bleibt daher "
+"unverändert (außer unter Umständen die Leiterplattenbedruckung). Jedoch sind intern Bauteile und "
+"Footprints über ihre Referenz repräsentiert. In dieser Situation kann die Option 'Zeitstempel' im "
+"Netzlisten-Dialog ausgewählt werden, bevor die Netzliste neu eingelesen wird:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:214
@@ -632,6 +659,9 @@ msgid ""
 "instead. The time stamp is automatically generated by Eeschema (it is the time and date when the "
 "component was placed in the schematic)."
 msgstr ""
+"Mit dieser Option identifiziert Pcbnew Footprints nicht mehr über ihre Referenz, sondern über ihren "
+"Zeitstempel. Der Zeitstempel wird automatisch von Eeschema generiert (es ist die Zeit und das Datum, "
+"wann das Bauteil im Schaltplan hinzugefügt wurde)."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:228
