@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pcbnew\n"
 "POT-Creation-Date: 2015-12-29 15:09+0100\n"
-"PO-Revision-Date: 2016-01-11 23:56+0100\n"
+"PO-Revision-Date: 2016-01-12 00:57+0100\n"
 "Last-Translator: Antonio Morales <antonio1010.mr@gmail.com>\n"
 "Language-Team: Español <>\n"
 "Language: es\n"
@@ -7922,7 +7922,7 @@ msgstr ""
 #: pcbnew_python_scripting.adoc:1
 #, no-wrap
 msgid "KiCad Scripting Reference"
-msgstr ""
+msgstr "Referencia de Scripts para KiCad"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:4
@@ -7930,6 +7930,8 @@ msgid ""
 "Scripting allow you to automate tasks within KiCad using the https://www."
 "python.org/[Python] language."
 msgstr ""
+"Los scripts (Secuencias de comandos) le permiten automatizar tareas dentro "
+"KiCad utilizando el lenguaje https://www.python.org/[Python]."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:6
@@ -7938,47 +7940,52 @@ msgid ""
 "doxygen/ws/build/pcbnew/doxygen-python/html/index.html[Python Scripting "
 "Reference]."
 msgstr ""
+"Consulte también la documentación de doxygen en http://ci.kicad-pcb.org/job/"
+"kicad-doxygen/ws/build/pcbnew/doxygen-python/html/index.html[Python "
+"Scripting Reference]."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:8
 msgid ""
 "You can see python module help by typing `pydoc pcbnew` on your terminal."
 msgstr ""
+"Puede ver la ayuda del módulo python escribiendo `pydoc pcbnew` en su "
+"terminal."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:10
 msgid "Using scripting you can create:"
-msgstr ""
+msgstr "Usando scripts puede crear:"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:12
 #, no-wrap
 msgid "*Plugins*: this type of script is loaded when KiCad starts. Examples:\n"
-msgstr ""
+msgstr "*Plugins*: este tipo de scripts se carga cuando comienza KiCad. Ejemplos:\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:13
 #, no-wrap
 msgid "*Footprint Wizards*: To help you build footprints easily filling in parameters. See the dedicated section <<Footprint_Wizards,Footprint Wizards>> below.\n"
-msgstr ""
+msgstr "*Asistentes para Huellas*: Para ayudar a construir huellas fácilmente rellenando parámetros. Vea la sección dedicada <<Footprint_Wizards,Asistentes para Huellas>> más abajo.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:14
 #, no-wrap
 msgid "*File I/O* '(planned)': To let you write plugins to export/import other filetypes\n"
-msgstr ""
+msgstr "* Ficheros de E/S* '(planificación)': Le permite escribir plugins para exportar/importar otros tipos de archivos\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:15
 #, no-wrap
 msgid "*Actions* '(planned)': Associate events to scripting actions or register new menus or toolbar icons.\n"
-msgstr ""
+msgstr "* Acciones * '(planificación)': Asocia eventos a scripts de acciones o registra nuevos menús o botones de barra de herramientas.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:17
 #, no-wrap
 msgid "*Command Line Scripts*: scripts that can be used from the command line, load boards or libraries, modify them, and render outputs or new boards.\n"
-msgstr ""
+msgstr "*Los scripts bajo línea de comandos*: secuencias de comandos que se pueden utilizar desde la línea de comandos, carga placas o bibliotecas, modificarlas y renderizar salidas o nuevas placas."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:20
@@ -7986,12 +7993,14 @@ msgid ""
 "It shall be noted that the only KiCad applicaiton that supports scripting is "
 "Pcbnew. It is also planned for Eeschema in the future."
 msgstr ""
+"Debe observarse que la única aplicación de KiCad que soporta scripts es "
+"Pcbnew. También está prevista su incorporación en Eeschema en el futuro."
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:21
 #, no-wrap
 msgid "KiCad Objects"
-msgstr ""
+msgstr "Objetos de KiCad "
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:25
@@ -8001,17 +8010,21 @@ msgid ""
 "MODULEs, and TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.  Then "
 "MODULEs have D_PADs, EDGEs, etc."
 msgstr ""
+"La API de scripts refleja la estructura de objetos interna dentro de KiCad/"
+"Pcbnew. BOARD es el objeto principal, que tiene un conjunto de propiedades y "
+"un conjunto de MODULEs, y TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, "
+"DRAWSEGMENT.  Así MODULEs tiene D_PADs, EDGEs, etc."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:27
 msgid "See the BOARD section below."
-msgstr ""
+msgstr "Vea la sección BOARD a continuación."
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:28
 #, no-wrap
 msgid "Basic API Reference"
-msgstr ""
+msgstr "Referencia de la API Básica"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:31
@@ -8021,60 +8034,64 @@ msgid ""
 "commands written from the integrated scripting shell inside pcbnew or action "
 "plugins."
 msgstr ""
+"Todo la API de Pcbnew se proporciona desde el módulo \"Pcbnew\" en Python. "
+"El método GertBoard() devolverá el PCB abierto actualmente en el editor, "
+"útil para los comandos escritos desde el shell integrado dentro de Pcbnew o "
+"plugins de acciónes."
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:32
 #, no-wrap
 msgid "Loading and Saving a Board"
-msgstr ""
+msgstr "Cargando y Almacenando una Placa"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:35
 #, no-wrap
 msgid "*LoadBoard(filename):*\n"
-msgstr ""
+msgstr "*LoadBoard(nombredearchivo):*\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:36
 #, no-wrap
 msgid "loads a board from file returning a BOARD object, using the file format that matches the filename extension.\n"
-msgstr ""
+msgstr "carga una placa desde un archivo y devuelve un objeto BOARD, utilizando el formato de archivo que coincide con la extensión de nombredearchivo.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:38
 #, no-wrap
 msgid "*SaveBoard(filename,board):*\n"
-msgstr ""
+msgstr "*SaveBoard(nombredearchivo,placa):*\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:39
 #, no-wrap
 msgid "saves a BOARD object to file, using the file format that matches the filename extension.\n"
-msgstr ""
+msgstr "guarda un objeto BOARD a un archivo, usando el formato de archivo que coincide con la extensión de nombredearchivo.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:41
 #, no-wrap
 msgid "*board.Save(filename):*\n"
-msgstr ""
+msgstr "*board.Save(nombredearchivo):*\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:42
 #, no-wrap
 msgid "same as above, but it's a method of BOARD object.\n"
-msgstr ""
+msgstr "Igual que el anterior, pero este es un método del objeto BOARD.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:43
 #, no-wrap
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:43
 #, no-wrap
 msgid "Example that loads a board, hides all values, shows all references"
-msgstr ""
+msgstr "Ejemplo que carga una placa, esconde todos los valores, muestra todas las referencias"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:49 pcbnew_python_scripting.adoc:104
@@ -8084,12 +8101,15 @@ msgid ""
 "import sys\n"
 "from pcbnew import *\n"
 msgstr ""
+"#!/usr/bin/python\n"
+"import sys\n"
+"from pcbnew import *\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:51
 #, no-wrap
 msgid "filename=sys.argv[1]\n"
-msgstr ""
+msgstr "filename=sys.argv[1]\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:57
@@ -8101,36 +8121,41 @@ msgid ""
 "    module.GetValueObj().SetVisible(False)      # set Value as Hidden\n"
 "    module.GetReferenceObj().SetVisible(True)   # set Reference as Visible\n"
 msgstr ""
+"pcb = LoadBoard(filename)\n"
+"for module in pcb.GetModules():  \n"
+"    print \"* Module: %s\"%module.GetReference()\n"
+"    module.GetValueObj().SetVisible(False)      # set Value as Hidden\n"
+"    module.GetReferenceObj().SetVisible(True)   # set Reference as Visible\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:59
 #, no-wrap
 msgid "pcb.Save(\"mod_\"+filename)\n"
-msgstr ""
+msgstr "pcb.Save(\"mod_\"+filename)\n"
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:61
 #, no-wrap
 msgid "Listing and Loading Libraries"
-msgstr ""
+msgstr "Listando y Cargando Bibliotecas"
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:63
 #, no-wrap
 msgid "Enumerate library, enumerate modules, enumerate pads"
-msgstr ""
+msgstr "Enumerar bibliotecas, enumerar módulos, enumerar pads"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:67 pcbnew_python_scripting.adoc:195
 #, no-wrap
 msgid "#!/usr/bin/python\n"
-msgstr ""
+msgstr "#!/usr/bin/python\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:69 pcbnew_python_scripting.adoc:197
 #, no-wrap
 msgid "from pcbnew import *\n"
-msgstr ""
+msgstr "from pcbnew import *\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:72
@@ -8139,6 +8164,8 @@ msgid ""
 "libpath = \"/usr/share/kicad/modules/sockets.mod\"\n"
 "lst = FootprintEnumerate(libpath)\n"
 msgstr ""
+"libpath = \"/usr/share/kicad/modules/sockets.mod\"\n"
+"lst = FootprintEnumerate(libpath)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:78
@@ -8150,17 +8177,22 @@ msgid ""
 "    for p in m.GetPads():\n"
 "        print \"\\t\",p.GetPadName(),p.GetPosition(),p.GetPos0(), p.GetOffset()\n"
 msgstr ""
+"for name in lst:\n"
+"    m = FootprintLoad(libpath,name)\n"
+"    print name,\"->\",m.GetLibRef(), m.GetReference()\n"
+"    for p in m.GetPads():\n"
+"        print \"\\t\",p.GetPadName(),p.GetPosition(),p.GetPos0(), p.GetOffset()\n"
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:80
 #, no-wrap
 msgid "BOARD"
-msgstr ""
+msgstr "BOARD"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:83
 msgid "Board is the basic object in KiCad pcbnew, it's the document."
-msgstr ""
+msgstr "Board es el objeto básico en KiCad Pcbnew, es el documento."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:85
@@ -8169,72 +8201,75 @@ msgid ""
 "following methods, they will return iterable lists that can be iterated "
 "using \"for obj in list:\""
 msgstr ""
+"BOARD contiene un conjunto de listas de objetos que se pueden acceder "
+"mediante los siguientes métodos, estos devolverán listas iterables que se "
+"pueden recorrer utilizando \"for obj in list:\""
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:87
 #, no-wrap
 msgid "*board.GetModules():* This method returns a list of MODULE objects, all the modules available in the board will be exposed here.\n"
-msgstr ""
+msgstr "*board.GetModules():* Este método devuelve una lista de objetos MODULE, todos los módulos disponibles en la placa serán expuestos aquí.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:88
 #, no-wrap
 msgid "*board.GetDrawings():* Returns the list of BOARD_ITEMS that belong to the board drawings\n"
-msgstr ""
+msgstr "*board.GetDrawings():* Devuelve la lista de BOARD_ITEMS que pertenecen a los dibujos de la placa\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:89
 #, no-wrap
 msgid "*board.GetTracks():* This method returns a list of TRACKs an SEGVIAs inside a BOARD\n"
-msgstr ""
+msgstr "*board.GetTracks():* Este método devuelve una lista de pistas de TRACKs y SEGVIAs dendtor de una BOARD\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:90
 #, no-wrap
 msgid "*board.GetSegZones():* Returns a list of SEGZONEs\n"
-msgstr ""
+msgstr "*board.GetSegZones():* Devuelve una lista de SEGZONEs\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:91
 #, no-wrap
 msgid "*board.GetFullRatnest():* Returns the list of ratsnets (connections still not routed)\n"
-msgstr ""
+msgstr "*board.GetFullRatnest():* Devuelve la lista de ratsnets (conexiones aún no trazadas)\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:92
 #, no-wrap
 msgid "*board.GetLocalRatsnest():* Returns the list of ratsnest of a moving footprint (as it's dragged)\n"
-msgstr ""
+msgstr "*board.GetLocalRatsnest():* Devuelve la lista de ratsnets de una huella en movimiento (conforme es arrastrada)\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:93
 #, no-wrap
 msgid "*board.GetNetClasses():* Returns the list of net classes\n"
-msgstr ""
+msgstr "*board.GetNetClasses():* Devuelve la lista de nodos\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:94
 #, no-wrap
 msgid "*board.GetCurrentNetClassName():* Returns the current net class\n"
-msgstr ""
+msgstr "*board.GetCurrentNetClassName():* Devuelve el nodo actual\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:95
 #, no-wrap
 msgid "*board.GetViasDimensionsList():* Returns the list of Via dimensions available to the board.\n"
-msgstr ""
+msgstr "*board.GetViasDimensionsList():* Devuelve la lista de dimensiones de Vías disponibles para la placa.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:96
 #, no-wrap
 msgid "*board.GetTrackWidthList():* Returns the list of Track Widths available to the board.\n"
-msgstr ""
+msgstr "*board.GetTrackWidthList():* Devuelve la lista de anchos de pista disponibles para la placa.\n"
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:98
 #, no-wrap
 msgid "Board Inspection Example"
-msgstr ""
+msgstr "Ejemplo de Inspección e Placa"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:107
@@ -8243,6 +8278,8 @@ msgid ""
 "filename=sys.argv[1]\n"
 "pcb = LoadBoard(filename)\n"
 msgstr ""
+"filename=sys.argv[1]\n"
+"pcb = LoadBoard(filename)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:110
@@ -8251,6 +8288,8 @@ msgid ""
 "ToUnits=ToMils\n"
 "FromUnits=FromMils\n"
 msgstr ""
+"ToUnits=ToMils\n"
+"FromUnits=FromMils\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:114
@@ -8260,6 +8299,9 @@ msgid ""
 "for item in pcb.GetTracks():\n"
 "    if type(item) is SEGVIA:\n"
 msgstr ""
+"print \"LISTING VIAS:\"\n"
+"for item in pcb.GetTracks():\n"
+"    if type(item) is SEGVIA:\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:119
@@ -8270,12 +8312,16 @@ msgid ""
 "        width = item.GetWidth()\n"
 "        print \" * Via:   %s - %f/%f \"%(ToUnits(pos),ToUnits(drill),ToUnits(width))\n"
 msgstr ""
+"        pos = item.GetPosition()\n"
+"        drill = item.GetDrillValue()\n"
+"        width = item.GetWidth()\n"
+"        print \" * Via:   %s - %f/%f \"%(ToUnits(pos),ToUnits(drill),ToUnits(width))\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:121
 #, no-wrap
 msgid "    elif type(item) is TRACK:\n"
-msgstr ""
+msgstr "    elif type(item) is TRACK:\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:125
@@ -8285,12 +8331,15 @@ msgid ""
 "        end = item.GetEnd()\n"
 "        width = item.GetWidth()\n"
 msgstr ""
+"        start = item.GetStart()\n"
+"        end = item.GetEnd()\n"
+"        width = item.GetWidth()\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:127
 #, no-wrap
 msgid "        print \" * Track: %s to %s, width %f\" % (ToUnits(start),ToUnits(end),ToUnits(width))\n"
-msgstr ""
+msgstr "        print \" * Track: %s to %s, width %f\" % (ToUnits(start),ToUnits(end),ToUnits(width))\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:130
@@ -8299,6 +8348,8 @@ msgid ""
 "    else:\n"
 "        print \"Unknown type    %s\" % type(item)\n"
 msgstr ""
+"    else:\n"
+"        print \"Unknown type    %s\" % type(item)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:140
@@ -8314,6 +8365,15 @@ msgid ""
 "    else:\n"
 "        print type(item)\n"
 msgstr ""
+"print \"\"\n"
+"print \"LISTING DRAWINGS:\"\n"
+"for item in pcb.GetDrawings():\n"
+"    if type(item) is TEXTE_PCB:\n"
+"        print \"* Text:    '%s' at %s\"%(item.GetText(),item.GetPosition())\n"
+"    elif type(item) is DRAWSEGMENT:\n"
+"        print \"* Drawing: %s\"%item.GetShapeStr() # dir(item)\n"
+"    else:\n"
+"        print type(item)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:145
@@ -8324,6 +8384,10 @@ msgid ""
 "for module in pcb.GetModules():\n"
 "    print \"* Module: %s at %s\"%(module.GetReference(),ToUnits(module.GetPosition()))\n"
 msgstr ""
+"print \"\"\n"
+"print \"LIST MODULES:\"\n"
+"for module in pcb.GetModules():\n"
+"    print \"* Module: %s at %s\"%(module.GetReference(),ToUnits(module.GetPosition()))\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:150
@@ -8334,6 +8398,10 @@ msgid ""
 "for zone in pcb.GetSegZones():\n"
 "    print zone\n"
 msgstr ""
+"print \"\"\n"
+"print \"LIST ZONES:\"\n"
+"for zone in pcb.GetSegZones():\n"
+"    print zone\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:153
@@ -8342,24 +8410,26 @@ msgid ""
 "print \"\"\n"
 "print \"RATSNEST:\",len(pcb.GetFullRatsnest())\n"
 msgstr ""
+"print \"\"\n"
+"print \"RATSNEST:\",len(pcb.GetFullRatsnest())\n"
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:155 pcbnew_routing.adoc:151
 #, no-wrap
 msgid "Examples"
-msgstr ""
+msgstr "Ejemplos"
 
 #. type: Title ====
 #: pcbnew_python_scripting.adoc:157
 #, no-wrap
 msgid "Change a component pins paste mask margin"
-msgstr ""
+msgstr "Cambiar el margen de la máscara de paste para un componente"
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:159
 #, no-wrap
 msgid "We only want to change pins from 1 to 14, 15 is a thermal pad that must be keep as it is."
-msgstr ""
+msgstr "Sólo queremos cambiar los pines del 1 al 14, el 15 es un pad con alivio térmico que debe mantenerse como esta."
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:165
@@ -8369,6 +8439,9 @@ msgid ""
 "u304 = b.FindModuleByReference('U304')\n"
 "pads = u304.GetPads()\n"
 msgstr ""
+"b = pcbnew.GetBoard()\n"
+"u304 = b.FindModuleByReference('U304')\n"
+"pads = u304.GetPads()\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:170
@@ -8379,12 +8452,16 @@ msgid ""
 "    id = int(p.GetPadName())\n"
 "    if id<15: p.SetLocalSolderPasteMargin(0)\n"
 msgstr ""
+"for p in pads:\n"
+"    print p.GetPadName(), pcbnew.ToMM(p.GetLocalSolderPasteMargin())\n"
+"    id = int(p.GetPadName())\n"
+"    if id<15: p.SetLocalSolderPasteMargin(0)\n"
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:173
 #, no-wrap
 msgid "Footprint Wizards"
-msgstr ""
+msgstr "Asistente para Huellas"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:179
@@ -8394,6 +8471,10 @@ msgid ""
 "a given wizard that allows you to see the footprint rendered, and you have "
 "some parameters you can edit."
 msgstr ""
+"Los asistentes para huellas son una colección de scripts en python que "
+"pueden accederse a través del editor de componentes. Si se llama a la "
+"ventana huella selecciona un asistente ya que le permite ver la huella "
+"renderizada, y tiene algunos parámetros que puede editar."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:183
@@ -8403,6 +8484,10 @@ msgid ""
 "launchpad.net/~kicad-product-committers/kicad/product/files/head:/pcbnew/"
 "scripting/plugins/[launchpad]."
 msgstr ""
+"Si los plugins no se distribuyen adecuadamente a los paquetes de su sistema, "
+"puede encontrar las últimas versiones en las fuentes de KiCad en link:http://"
+"bazaar.launchpad.net/~kicad-product-committers/kicad/product/files/head:/"
+"pcbnew/scripting/plugins/[launchpad]."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:186
@@ -8410,17 +8495,21 @@ msgid ""
 "They should be located in for example `C:\\Program Files\\KiCad\\bin"
 "\\scripting\\plugins`."
 msgstr ""
+"Deben estar ubicados por ejemplo en `C:\\Program Files\\KiCad\\bin\\scripting"
+"\\plugins`."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:189
 msgid "On linux you can also keep your user plugins in `$HOME/.kicad_plugins`."
 msgstr ""
+"En Linux también puede guardar sus plugins de usuario en `$HOME/."
+"kicad_plugins`."
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:191
 #, no-wrap
 msgid "Build footprints easily filling in parameters."
-msgstr ""
+msgstr "Crear huellas fácilmente rellenando los parámetros."
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:215
@@ -8444,12 +8533,29 @@ msgid ""
 "                 \"height\":          FromMM(2)}\n"
 "        }\n"
 msgstr ""
+"class FPCFootprintWizard(FootprintWizardPlugin):\n"
+"    def __init__(self):\n"
+"        FootprintWizardPlugin.__init__(self)\n"
+"        self.name = \"FPC\"\n"
+"        self.description = \"FPC Footprint Wizard\"\n"
+"        self.parameters = {\n"
+"             \"Pads\":\n"
+"                {\"*n\":40,           # not internal units preceded by \"*\"\n"
+"                 \"pitch\":           FromMM(0.5),\n"
+"                 \"width\":           FromMM(0.25),\n"
+"                 \"height\":          FromMM(1.6)},\n"
+"             \"Shield\":\n"
+"                {\"shield_to_pad\":   FromMM(1.6),\n"
+"                 \"from_top\":        FromMM(1.3),\n"
+"                 \"width\":           FromMM(1.5),\n"
+"                 \"height\":          FromMM(2)}\n"
+"        }\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:217
 #, no-wrap
 msgid "        self.ClearErrors()\n"
-msgstr ""
+msgstr "        self.ClearErrors()\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:229
@@ -8467,6 +8573,17 @@ msgid ""
 "            pad.SetPadName(name)\n"
 "            return pad\n"
 msgstr ""
+"    # build a rectangular pad\n"
+"    def smdRectPad(self,module,size,pos,name):\n"
+"            pad = D_PAD(module)\n"
+"            pad.SetSize(size)\n"
+"            pad.SetShape(PAD_RECT)\n"
+"            pad.SetAttribute(PAD_SMD)\n"
+"            pad.SetLayerMask(PAD_SMD_DEFAULT_LAYERS)\n"
+"            pad.SetPos0(pos)\n"
+"            pad.SetPosition(pos)\n"
+"            pad.SetPadName(name)\n"
+"            return pad\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:239
@@ -8482,6 +8599,17 @@ msgid ""
 "            errors +=\"Pads/n has wrong value, \"\n"
 "        p[\"Pads\"][\"n\"] = int(pads)  # make sure it stays as int (default is float)      \n"
 msgstr ""
+"    # build a rectangular pad\n"
+"    def smdRectPad(self,module,size,pos,name):\n"
+"            pad = D_PAD(module)\n"
+"            pad.SetSize(size)\n"
+"            pad.SetShape(PAD_RECT)\n"
+"            pad.SetAttribute(PAD_SMD)\n"
+"            pad.SetLayerMask(PAD_SMD_DEFAULT_LAYERS)\n"
+"            pad.SetPos0(pos)\n"
+"            pad.SetPosition(pos)\n"
+"            pad.SetPadName(name)\n"
+"            return pad\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:247
@@ -8495,12 +8623,19 @@ msgid ""
 "        shl_to_pad      = p[\"Shield\"][\"shield_to_pad\"]\n"
 "        shl_from_top    = p[\"Shield\"][\"from_top\"]\n"
 msgstr ""
+"        pad_width       = p[\"Pads\"][\"width\"]\n"
+"        pad_height      = p[\"Pads\"][\"height\"]\n"
+"        pad_pitch       = p[\"Pads\"][\"pitch\"]\n"
+"        shl_width       = p[\"Shield\"][\"width\"]\n"
+"        shl_height      = p[\"Shield\"][\"height\"]\n"
+"        shl_to_pad      = p[\"Shield\"][\"shield_to_pad\"]\n"
+"        shl_from_top    = p[\"Shield\"][\"from_top\"]\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:249
 #, no-wrap
 msgid "        return errors\n"
-msgstr ""
+msgstr "        return errors\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:252
@@ -8509,6 +8644,8 @@ msgid ""
 "    # build the footprint from parameters\n"
 "    def BuildFootprint(self):\n"
 msgstr ""
+"    # build the footprint from parameters\n"
+"    def BuildFootprint(self):\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:256
@@ -8518,6 +8655,9 @@ msgid ""
 "        #self.ClearErrors()\n"
 "        #print \"errors:\",self.parameter_errors\n"
 msgstr ""
+"        print \"parameters:\",self.parameters\n"
+"        #self.ClearErrors()\n"
+"        #print \"errors:\",self.parameter_errors\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:259
@@ -8526,6 +8666,8 @@ msgid ""
 "        module = MODULE(None) # create a new module\n"
 "        self.module = module\n"
 msgstr ""
+"        module = MODULE(None) # create a new module\n"
+"        self.module = module\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:269
@@ -8541,6 +8683,15 @@ msgid ""
 "        shl_to_pad      = p[\"Shield\"][\"shield_to_pad\"]\n"
 "        shl_from_top    = p[\"Shield\"][\"from_top\"]\n"
 msgstr ""
+"        p = self.parameters\n"
+"        pads            = int(p[\"Pads\"][\"*n\"])      \n"
+"        pad_width       = p[\"Pads\"][\"width\"]\n"
+"        pad_height      = p[\"Pads\"][\"height\"]\n"
+"        pad_pitch       = p[\"Pads\"][\"pitch\"]\n"
+"        shl_width       = p[\"Shield\"][\"width\"]\n"
+"        shl_height      = p[\"Shield\"][\"height\"]\n"
+"        shl_to_pad      = p[\"Shield\"][\"shield_to_pad\"]\n"
+"        shl_from_top    = p[\"Shield\"][\"from_top\"]\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:272
@@ -8549,6 +8700,8 @@ msgid ""
 "        size_pad = wxSize(pad_width,pad_height)\n"
 "        size_shld = wxSize(shl_width,shl_height)\n"
 msgstr ""
+"        size_pad = wxSize(pad_width,pad_height)\n"
+"        size_shld = wxSize(shl_width,shl_height)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:276
@@ -8558,6 +8711,9 @@ msgid ""
 "        module.m_Reference.SetPos0(wxPointMM(-1,-2))\n"
 "        module.m_Reference.SetPosition(wxPointMM(-1,-2))\n"
 msgstr ""
+"        module.SetReference(\"FPC\"+str(pads))   # give it a reference name\n"
+"        module.m_Reference.SetPos0(wxPointMM(-1,-2))\n"
+"        module.m_Reference.SetPosition(wxPointMM(-1,-2))\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:281
@@ -8568,6 +8724,10 @@ msgid ""
 "            pad = self.smdRectPad(module,size_pad,wxPoint(pad_pitch*n,0),str(n+1))\n"
 "            module.Add(pad)\n"
 msgstr ""
+"        # create a pad array and add it to the module\n"
+"        for n in range (0,pads):\n"
+"            pad = self.smdRectPad(module,size_pad,wxPoint(pad_pitch*n,0),str(n+1))\n"
+"            module.Add(pad)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:290
@@ -8582,6 +8742,14 @@ msgid ""
 "                            wxPoint((pads-1)*pad_pitch+shl_to_pad,shl_from_top),\n"
 "                            \"0\")      \n"
 msgstr ""
+"        pad_s0 = self.smdRectPad(module,\n"
+"                            size_shld,\n"
+"                            wxPoint(-shl_to_pad,shl_from_top),\n"
+"                            \"0\")\n"
+"        pad_s1 = self.smdRectPad(module,\n"
+"                            size_shld,\n"
+"                            wxPoint((pads-1)*pad_pitch+shl_to_pad,shl_from_top),\n"
+"                            \"0\")      \n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:293
@@ -8590,6 +8758,8 @@ msgid ""
 "        module.Add(pad_s0)\n"
 "        module.Add(pad_s1)\n"
 msgstr ""
+"        module.Add(pad_s0)\n"
+"        module.Add(pad_s1)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:300
@@ -8602,12 +8772,18 @@ msgid ""
 "        e.SetShape(S_SEGMENT)\n"
 "        module.Add(e)\n"
 msgstr ""
+"        e = EDGE_MODULE(module)\n"
+"        e.SetStartEnd(wxPointMM(-1,0),wxPointMM(0,0))\n"
+"        e.SetWidth(FromMM(0.2))\n"
+"        e.SetLayer(EDGE_LAYER)\n"
+"        e.SetShape(S_SEGMENT)\n"
+"        module.Add(e)\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:302
 #, no-wrap
 msgid "        module.SetLibRef(\"FPC\"+str(pads))\n"
-msgstr ""
+msgstr "        module.SetLibRef(\"FPC\"+str(pads))\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:305
@@ -8616,6 +8792,8 @@ msgid ""
 "# create our footprint wizard\n"
 "fpc_wizard = FPCFootprintWizard()\n"
 msgstr ""
+"# create our footprint wizard\n"
+"fpc_wizard = FPCFootprintWizard()\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:308
@@ -8624,6 +8802,8 @@ msgid ""
 "# register it into pcbnew\n"
 "fpc_wizard.register()\n"
 msgstr ""
+"# create our footprint wizard\n"
+"fpc_wizard = FPCFootprintWizard()\n"
 
 #. type: Title ====
 #: pcbnew_routing.adoc:2 pcbnew_routing.adoc:60
