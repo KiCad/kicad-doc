@@ -1424,11 +1424,15 @@ msgid ""
 "based on *_footprint library tables_* which allows *direct use of footprint "
 "libraries* from"
 msgstr ""
+"Depuis décembre 2013, PcbNew et CvPcb utilisent un nouvel outil de gestion "
+"des librairies, basé sur des *_tables de librairies d'empreintes_*, qui "
+"permet *l'utilisation directe des librairies d'empreintes* suivantes :"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:7
 msgid "KiCad Legacy footprint libraries (.mod files)"
 msgstr ""
+"Anciennes librairies KiCad (fichiers .mod), héritées des versions précédentes"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:9
@@ -1436,6 +1440,8 @@ msgid ""
 "KiCad New _.pretty_ footprint libraries (on your local disk)  (folders with "
 ".pretty extension, containing .kicad_mod files)"
 msgstr ""
+"Nouvelles librairies KiCad _.pretty_ depuis un disque local (dossiers avec "
+"l'extension .pretty contenant des fichiers .kicad_mod) "
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:10
@@ -1443,16 +1449,18 @@ msgid ""
 "KiCad New _.pretty_ footprint libraries (on our Github server, or other "
 "Github server)"
 msgstr ""
+"Nouvelles librairies KiCad _.pretty_ depuis le réseau (serveur GitHub de "
+"KiCad, ou autre serveur GitHub) "
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:11
 msgid "GEDA libraries (folders containing .fp files)"
-msgstr ""
+msgstr "Librairies GEDA (dossiers contenant des fichiers .fp)"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:12
 msgid "Eagle footprint libraries"
-msgstr ""
+msgstr "Librairies d'empreintes de Eagle"
 
 #. type: delimited block =
 #: cvpcb_footprint_libraries_tables.adoc:17
@@ -1460,11 +1468,13 @@ msgid ""
 "you can write only KiCad _.pretty_ footprint library folders on your local "
 "disk (and the .kicad_mod files inside these folders)."
 msgstr ""
+"En écriture, sur votre disque local, il est possible de créer uniquement des "
+"dossiers de librairies KiCad _.pretty_ contenant des fichiers .kicad_mod."
 
 #. type: delimited block =
 #: cvpcb_footprint_libraries_tables.adoc:18
 msgid "All other formats are read only."
-msgstr ""
+msgstr "Tous les autres formats sont en lecture seule."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:25
@@ -1473,12 +1483,15 @@ msgid ""
 "be opened by invoking the ``Footprint Libraries'' entry from the "
 "``Preferences'' menu."
 msgstr ""
+"L'image ci-dessous montre la fenêtre d'édition de la table des librairies "
+"d'empreintes, qui s'ouvre par le menu ``Préférences'', ``Librairies "
+"d'Empreintes''."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:26
 #, no-wrap
 msgid "lib table dlg"
-msgstr ""
+msgstr "lib table dlg"
 
 #. type: Target for macro image
 #: cvpcb_footprint_libraries_tables.adoc:26
@@ -1494,6 +1507,10 @@ msgid ""
 "up footprints* instead of the previous method which depended on library "
 "search path ordering."
 msgstr ""
+"La table des librairies d'empreintes est utilisée pour attribuer un "
+"pseudonyme à chaque librairie d'empreintes, de chaque type supporté. *Ce "
+"pseudo sera utilisé pour rechercher des empreintes*, en remplacement de la "
+"méthode précédente, qui ordonnait les librairies par leur chemin."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:38
@@ -1503,12 +1520,17 @@ msgid ""
 "appropriate library. It also allows CvPcb to support loading libraries from "
 "different PCB editors such as Eagle and GEDA."
 msgstr ""
+"Ceci permet à CvPcb d'accéder à des empreintes ayant le même nom dans "
+"différentes librairies, en s'assurant que ce soit l'empreinte correcte qui "
+"est chargée à partir de la librairie appropriée. Il permet également à CVPCB "
+"d'utiliser des librairies provenant de d'autres logiciels de PCB tels que "
+"Eagle ou GEDA."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:39
 #, no-wrap
 msgid "Global Footprint Library Table"
-msgstr ""
+msgstr "Table des Librairies Globales"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:45
@@ -1518,12 +1540,17 @@ msgid ""
 "is saved in the file fp-lib-table in the user's home folder.  The location "
 "of this folder is dependent upon the operating system being used."
 msgstr ""
+"La table des librairies globales d'empreintes contient la liste des "
+"librairies qui sont toujours disponibles, quel que soit le fichier de projet "
+"actuellement chargé. La table est enregistrée dans un fichier fp-lib-table "
+"dans le dossier personnel de l'utilisateur. L'emplacement de ce dossier "
+"dépend du système d'exploitation utilisé."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:46
 #, no-wrap
 msgid "Project Specific Footprint Library Table"
-msgstr ""
+msgstr "Table des Librairies Spécifiques au Projet"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:55
@@ -1536,12 +1563,20 @@ msgid ""
 "is created which can be edited and later saved along with the footprint "
 "assignment file."
 msgstr ""
+"La table des librairies spécifiques au projet contient la liste des "
+"librairies d'empreintes qui sont disponibles spécifiquement pour le projet "
+"actuellement chargé. Cette table ne peut être modifiée que quand elle est "
+"chargée en même temps que le fichier netliste du projet. Si aucun fichier de "
+"projet n'est chargé, ou s'il n'y a pas de fichier de table de librairies "
+"d'empreintes dans le dossier du projet, une table vide sera créée, et pourra "
+"être éditée et enregistrée plus tard, avec le fichier d'affectation des "
+"empreintes."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:56
 #, no-wrap
 msgid "Initial Configuration"
-msgstr ""
+msgstr "Configuration Initiale"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:63
@@ -1552,6 +1587,11 @@ msgid ""
 "system's KiCad template folder to the file fp-lib-table in the user's home "
 "folder."
 msgstr ""
+"Quand PcbNew ou CvPcb sont lancés pour la première fois, et que le fichier "
+"table des librairies d'empreintes globales *fp-lib-table* n'a pas été trouvé "
+"dans le dossier personnel de l'utilisateur, ils tenteront de copier le "
+"fichier fp-lib-table par défaut, du dossier système KiCad / template dans le "
+"dossier personnel de l'utilisateur."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:67
@@ -1560,6 +1600,10 @@ msgid ""
 "created in the user's home folder. If this happens, the user can either copy "
 "fp-lib-table manually or configure the table by hand."
 msgstr ""
+"Si le fichier fp-lib-table ne peut être trouvé, une table de librairies "
+"d'empreintes vide sera créée dans le dossier personnel de l'utilisateur. Dans "
+"ce cas, l'utilisateur pourra copier fp-lib-table manuellement, ou configurer "
+"la table à la main."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:70
@@ -1567,6 +1611,8 @@ msgid ""
 "The default footprint library table includes many of the standard footprint "
 "libraries that are installed as part of KiCad."
 msgstr ""
+"La table des librairies d'empreintes par défaut inclut beaucoup de librairies "
+"d'empreintes standards, qui sont installées en même temps que KiCad."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:73
@@ -1575,17 +1621,20 @@ msgid ""
 "entries)  according to your work and the libraries you need for all your "
 "projects."
 msgstr ""
+"Évidemment, la *première chose* à faire est de modifier cette table "
+"(ajouter/supprimer des entrées), suivant vos travaux et les librairies dont "
+"vous aurez besoin dans vos projets."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:75
 msgid "(Too many libraries to load is time consuming)"
-msgstr ""
+msgstr "(Charger trop de librairies fait perdre du temps)"
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:77
 #, no-wrap
 msgid "Adding Table Entries"
-msgstr ""
+msgstr "Ajouter des Entrées dans la Table"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:82
@@ -1594,12 +1643,16 @@ msgid ""
 "global table or the project specific table. The project specific table is "
 "only applicable when you have a net list file open."
 msgstr ""
+"Pour utiliser une librairie d'empreintes, elle doit d'abord être ajoutée à "
+"l'une ou l'autre des tables, globale ou spécifique au projet. La table "
+"spécifique au projet est utilisable uniquement lorsque vous avez un fichier "
+"netliste ouvert."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:84
 #, no-wrap
 msgid "*Each library entry must have a unique nickname.*\n"
-msgstr ""
+msgstr "*Chaque entrée de la table doit avoir un pseudo unique.*\n"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:90
@@ -1610,6 +1663,12 @@ msgid ""
 "of library. Paths can be defined as absolute, relative, or by environment "
 "variable substitution (see section below)."
 msgstr ""
+"Ce pseudo n'a pas besoin d'être lié au nom réel du fichier ou au chemin de la "
+"librairie. Le caractère : ne peut pas être utilisé dans le pseudo. Chaque "
+"entrée de librairie doit avoir un chemin d'accès et/ou un nom de fichier "
+"valides, suivant le type de librairie. Les chemins peuvent être définis comme "
+"absolus, relatifs, ou par la substitution d'une variable d'environnement "
+"(voir section ci-dessous)."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:94
