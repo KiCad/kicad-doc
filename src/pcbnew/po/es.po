@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pcbnew\n"
 "POT-Creation-Date: 2015-12-29 15:09+0100\n"
-"PO-Revision-Date: 2016-01-14 01:26+0100\n"
+"PO-Revision-Date: 2016-01-15 01:15+0100\n"
 "Last-Translator: Antonio Morales <antonio1010.mr@gmail.com>\n"
 "Language-Team: Español <>\n"
 "Language: es\n"
@@ -9703,13 +9703,13 @@ msgstr "images/Pcbnew_track_global_edit_dialog.png"
 #: pcbnew_schematics.adoc:2
 #, no-wrap
 msgid "Schematic Implementation"
-msgstr ""
+msgstr "Implementación del Esquema"
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:4
 #, no-wrap
 msgid "Linking a schematic to a printed circuit board"
-msgstr ""
+msgstr "Vinculando un esquema con la placa de circuito impreso"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:16
@@ -9724,6 +9724,16 @@ msgid ""
 "KiCad, CvPcb is used to create this association and a file named `*.cmp` is "
 "produced. CvPcb also updates the netlist file using this information."
 msgstr ""
+"En términos generales, una hoja de esquema está ligada a su placa de "
+"circuito impreso por medio del archivo netlist, que normalmente es generado "
+"por el editor de esquemas utilizado para hacer el esquema. Pcbnew acepta "
+"archivos netlist realizados con Eeschema o Orcad PCB 2. Al archivo netlist, "
+"generado a partir del esquema les suele faltar las huellas que corresponden "
+"a los diversos componentes. En consecuencia es necesaria una etapa "
+"intermedia. Durante este proceso intermedio se lleva a cabo la asociación de "
+"los componentes con las huellas. En KiCad, CvPcb se utiliza para crear esta "
+"asociación y se genera un archivo llamado `*.cmp`. Cvpcb también actualiza "
+"el archivo netlist usando esta información."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:23
@@ -9734,6 +9744,11 @@ msgid ""
 "a component will also copy the footprint assignment and set the reference "
 "designator as unassigned for later auto-incremental annotation."
 msgstr ""
+"CvPcb también puede emitir un `*.stf` que se puede reenviar al esquema "
+"anotando el archivo con el campo F2 para cada componente, ahorrando la tarea "
+"de re-asignación de huellas en cada pasada de edición del esquema. En "
+"Eeschema la copia de un componente también copia la asignación de la huella "
+"y establece el campo referencia como no asignado para su posterior anotación."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:28
@@ -9743,6 +9758,10 @@ msgid ""
 "cmp` file is automatically updated avoiding the requirement to run CvPcb "
 "again."
 msgstr ""
+"Pcbnew lee el archivo netlist `.net` modificado y, si existe, el archivo `."
+"cmp`. En el caso de que una huella se cambie directamente en Pcbnew, el "
+"archivo `.cmp` se actualiza automáticamente evitando tener que ejecutar "
+"CvPcb de nuevo."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:33
@@ -9752,22 +9771,26 @@ msgid ""
 "intermediate files are obtained and used by the different software tools "
 "that comprise KiCad."
 msgstr ""
+"Consulte la figura en el manual \"Comenzando en KiCad\" en la sección _Flujo "
+"de trabajo en KiCad_  que ilustra el flujo de trabajo de KiCad y cómo se "
+"obtienen los archivos intermedios y son utilizados por las diferentes "
+"herramientas software que componen KiCad."
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:34
 #, no-wrap
 msgid "Procedure for creating a printed circuit board"
-msgstr ""
+msgstr "Procedimiento para crear una placa de circuito impreso"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:37
 msgid "After having created your schematic in Eeschema:"
-msgstr ""
+msgstr "Después de haber creado su esquema con Eeschema:"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:39
 msgid "Generate the netlist using Eeschema."
-msgstr ""
+msgstr "Generar el fichero netlist utilizando Eeschema."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:41
@@ -9775,6 +9798,8 @@ msgid ""
 "Assign each component in your netlist file to the corresponding footprint "
 "(often called footprint) used on the printed circuit using Cvpcb."
 msgstr ""
+"Asigne a cada componente del netlist la huella correspondiente que se "
+"utilizará en el circuito impreso mediante CvPcb."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:43
@@ -9782,6 +9807,8 @@ msgid ""
 "Launch Pcbnew and read the modified Netlist. This will also read the file "
 "with the footprint selections."
 msgstr ""
+"Ejecute Pcbnew y lea el Netlist modificado. Esto también leerá el archivo "
+"con las selecciones de las huellas."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:47
@@ -9790,12 +9817,15 @@ msgid ""
 "Footprints can now be placed manually or automatically on the board and "
 "tracks can be routed."
 msgstr ""
+"Pcbnew cargará automáticamente todas las huellas necesarias.Ahora, pueden "
+"colocarse las huellas de forma manual o automática en la placa y pueden "
+"trazarse las pistas."
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:48
 #, no-wrap
 msgid "Procedure for updating a printed circuit board"
-msgstr ""
+msgstr "Procedimiento para la actualización de una placa de circuito impreso"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:52
@@ -9803,11 +9833,13 @@ msgid ""
 "If the schematic is modified (after a printed circuit board has been "
 "generated), the following steps must be repeated:"
 msgstr ""
+"Si se modifica el esquema (después de que se haya generado una placa de "
+"circuito impreso), deben repetirse los siguientes pasos:"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:54
 msgid "Generate a new netlist file using Eeschema."
-msgstr ""
+msgstr "Generar un nuevo archivo netlist utilizando Eeschema."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:56
@@ -9815,6 +9847,8 @@ msgid ""
 "If the changes to the schematic involve new components, the corresponding "
 "footprints must be assigned using Cvpcb."
 msgstr ""
+"Si los cambios en el esquema implican nuevos componentes, las huellas "
+"correspondientes deben asignarse utilizando CvPcb."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:58
@@ -9822,6 +9856,8 @@ msgid ""
 "Launch Pcbnew and re-read the modified netlist (this will also re-read the "
 "file with the footprint selections)."
 msgstr ""
+"Ejecute Pcbnew y vuelva a leer el fichero netlist modificado (esto también "
+"vuelve a leer el archivo con las selecciones de las huella)."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:63
@@ -9830,29 +9866,33 @@ msgid ""
 "connections and remove redundant connections. This process is called forward "
 "annotation and is a very common procedure when a PCB is made and updated."
 msgstr ""
+"Pcbnew entonces carga automáticamente las nuevas huellas, añade las nuevas "
+"conexiones y quita las conexiones redundantes. Este proceso se denomina "
+"anotación hacia adelante y es un procedimiento muy común cuando una PCB es "
+"realizada y actualizada."
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:64
 #, no-wrap
 msgid "Reading netlist file - loading footprints"
-msgstr ""
+msgstr "Leyendo el archivo netlist - cargando las huellas"
 
 #. type: Title ====
 #: pcbnew_schematics.adoc:66
 #, no-wrap
 msgid "Dialog box"
-msgstr ""
+msgstr "Ventana"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:69
 msgid "Accessible from the icon image:images/icons/netlist.png[]"
-msgstr ""
+msgstr "Accesible desde el icono image:images/icons/netlist.png[]"
 
 #. type: Title ====
 #: pcbnew_schematics.adoc:72
 #, no-wrap
 msgid "Available options"
-msgstr ""
+msgstr "Opciones disponibles"
 
 #. type: delimited block |
 #: pcbnew_schematics.adoc:91
@@ -9874,12 +9914,27 @@ msgid ""
 "|Single Pad Nets\n"
 "|Remove single pad nets.\n"
 msgstr ""
+"|Selección de Huellas\n"
+"|Enlace entre componente y su huella correspondiente en la placa:\n"
+"El enlace normal es Referencia (opción habitual)\n"
+"Puede usarse Marca de tiempo tras re-anotar el esquema, si el anterior\n"
+"anotado se modificó (opción especial)\n"
+"|Cambiar Huella:\n"
+"|Si una huella ha cambiado en el netlist: mantiene la huella anterior\n"
+"cambiar a la nueva.\n"
+"|Pistas sin conectar\n"
+"|Mantiene todas las pistas existentes, o borra las erróneas\n"
+"|Huellas Extra\n"
+"|Elimina las huellas que están en la placa, pero no en el netlist.\n"
+"Las huellas con el atributo \"bloqueada\", no se eliminarán.\n"
+"|Nodos con un solo Pad\n"
+"|Elimina los nodos con un solo pad.\n"
 
 #. type: Title ====
 #: pcbnew_schematics.adoc:93
 #, no-wrap
 msgid "Loading new footprints"
-msgstr ""
+msgstr "Cargando nuevas huellas"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:97
@@ -9887,12 +9942,14 @@ msgid ""
 "When new footprints are found in the netlist file, they will be "
 "automatically loaded and placed at coordinate (0,0)."
 msgstr ""
+"Cuando se encuentran huellas nuevas en el archivo de netlist, se cargarán "
+"automáticamente y se colocan en la coordenada (0,0)."
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:98
 #, no-wrap
 msgid "images/Pcbnew_stacked_footprints.png"
-msgstr ""
+msgstr "images/Pcbnew_stacked_footprints.png"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:101
@@ -9900,11 +9957,13 @@ msgid ""
 "New footprints can be moved and arranged one by one. A better way is to "
 "automatically move (unstack) them:"
 msgstr ""
+"Las huellas nuevas se pueden mover y ordenar una a una. Una manera mejor es "
+"moverlas de forma automática (desapilar):"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:103
 msgid "Activate footprint mode (image:images/icons/mode_module.png[])"
-msgstr ""
+msgstr "Active el modo huella (image:images/icons/mode_module.png[])"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:106
@@ -9912,12 +9971,14 @@ msgid ""
 "Move the mouse cursor to a suitable (free of component) area, and click on "
 "the right button:"
 msgstr ""
+"Mueva el cursor a un área adecuada (libre de componentes), y haga clic con "
+"el botón derecho:"
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:107
 #, no-wrap
 msgid "images/Pcbnew_move_all_modules.png"
-msgstr ""
+msgstr "images/Pcbnew_move_all_modules.png"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:110
@@ -9925,6 +9986,8 @@ msgid ""
 "Automatically Place New Footprints, if there is already a board with "
 "existing footprints."
 msgstr ""
+"Colocar automáticamente las nuevas huellas, si ya existe una placa con "
+"huellas existentes."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:111
@@ -9932,17 +9995,19 @@ msgid ""
 "Automatically Place All Footprints, for the first time (when creating a "
 "board)."
 msgstr ""
+"Colocar automáticamente todas las huellas, para la primera vez (cuando crea "
+"la placa)."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:113
 msgid "The following screenshot shows the results."
-msgstr ""
+msgstr "La siguiente captura de pantalla muestra los resultados."
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:114
 #, no-wrap
 msgid "images/Pcbnew_unstacked_footprints.png"
-msgstr ""
+msgstr "images/Pcbnew_unstacked_footprints.png"
 
 #. type: Title ==
 #: pcbnew_zones.adoc:2
