@@ -37,29 +37,9 @@ AsciiDoc documentation to other languages before the last compilation steps.
 package named `fonts-vlgothic`. Otherwise use the SINGLE_LANGUAGE option
 to avoid build errors.
 
-== Building the docs
-
-=== Windows
-
-Start with link:windows_dependencies.adoc[] then run:
-
-    cd kicad-doc
-    mkdir build
-    cd build
-    cmake -G "MinGW Makefiles" -DPDF_GENERATOR=FOP ../
-    make
-
-=== MacOS
-
-    cd kicad-doc
-    mkdir build
-    cd build
-    cmake ../
-    make
-
 === Debian / Ubuntu
 
-Install all dependencies with the following packages (about 1.5 GiB download), then follow MacOS instructions.
+To install the dependencies on Debian / Ubuntu  run the following (requires about 1.5GiB of space):
 
     sudo apt-get install git make cmake asciidoc pandoc gettext po4a dblatex
     texlive-xetex fonts-vlgothic source-highlight texlive-lang-english
@@ -76,6 +56,34 @@ or, if you do not have space problems:
 
     sudo apt-get install git make cmake asciidoc pandoc gettext po4a dblatex
     texlive-xetex fonts-vlgothic source-highlight texlive-lang-all
+
+=== Fedora
+
+To install the dependencies on Fedora run the following:
+
+    sudo dnf install git make cmake asciidoc pandoc gettext po4a dblatex
+    source-highlight texlive vlgothic-fonts perl-Unicode-LineBreak
+    texlive-scheme-full texlive-collection-xetex
+
+== Building the docs
+
+=== Windows
+
+Start with link:windows_dependencies.adoc[] then run:
+
+    cd kicad-doc
+    mkdir build
+    cd build
+    cmake -G "MinGW Makefiles" -DPDF_GENERATOR=FOP ../
+    make
+
+=== MacOS / Linux
+
+    cd kicad-doc
+    mkdir build
+    cd build
+    cmake ../
+    make
 
 === Docker
 Read link:utils/docker/README.adoc[] if you want to build the documentation in a container.
