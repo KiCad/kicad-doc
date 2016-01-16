@@ -1,0 +1,1179 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-01-10 19:51+0100\n"
+"PO-Revision-Date: 2016-01-16 10:55+0100\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Carsten Schoenert <c.schoenert@t-online.de>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
+
+# No need for translation.
+#. type: Title =
+#: idf_exporter.adoc:6
+#, no-wrap
+msgid "IDF Exporter"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:9
+msgid "_Reference manual_"
+msgstr "_Referenz Handbuch_"
+
+# No need for translation.
+#. type: Plain text
+#: idf_exporter.adoc:12
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:18
+msgid ""
+"This document is Copyright (C) 2014-2015 by it's contributors as listed "
+"below.  You may distribute it and/or modify it under the terms of either the "
+"GNU General Public License (http://www.gnu.org/licenses/gpl.html), version 3 "
+"or later, or the Creative Commons Attribution License (http://"
+"creativecommons.org/licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"Dieses Dokument ist geschützt (C) 2010-2015 durch deren Beitragende welche "
+"nachfolgend aufgeführt sind. Sie können es nach den Bedingungen der GNU "
+"General Public License (http://www.gnu.org/licenses/gpl.html), Version 3 "
+"oder später, oder der Creative Commons Attribution License (http://"
+"creativecommons.org/licenses/by/3.0/), Version 3.0 oder später verteilen "
+"oder verändern ."
+
+#. type: Plain text
+#: idf_exporter.adoc:20
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr ""
+"Alle Markenrechtsnamen in diesem Guide gehören den rechtmäßigen Eigentümern."
+
+#. type: Plain text
+#: idf_exporter.adoc:23
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "*Beitragende*\n"
+
+# No need for translation.
+#. type: Plain text
+#: idf_exporter.adoc:25
+msgid "Cirilo Bernardo"
+msgstr ""
+
+# No need for translation.
+#. type: Plain text
+#: idf_exporter.adoc:28
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:30
+msgid "Please direct any bug reports, suggestions or new versions to here:"
+msgstr ""
+"Bitte alle Bug Reports, Vorschläge oder neue Versionen an folgende Adressen "
+"richten:"
+
+#. type: Plain text
+#: idf_exporter.adoc:32
+msgid "About KiCad document: https://github.com/KiCad/kicad-doc/issues"
+msgstr "KiCad Dokumentation: https://github.com/KiCad/kicad-doc/issues"
+
+#. type: Plain text
+#: idf_exporter.adoc:34
+msgid "About KiCad software: https://bugs.launchpad.net/kicad"
+msgstr "KiCad Software: https://bugs.launchpad.net/kicad"
+
+#. type: Plain text
+#: idf_exporter.adoc:36
+msgid "About KiCad software i18n: https://github.com/KiCad/kicad-i18n/issues"
+msgstr ""
+"KiCad Software i18n Übersetzung: https://github.com/KiCad/kicad-i18n/issues"
+
+#. type: Plain text
+#: idf_exporter.adoc:40
+#, no-wrap
+msgid "*Publication date and software version*\n"
+msgstr "*Datum der Veröffentlichung und Softwareversion*\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:42
+msgid "Published on January 26, 2014."
+msgstr "26.01.2014"
+
+# No need for translation.
+#. Since docbook "article" is more compact, I have to separate this page
+#. type: Plain text
+#: idf_exporter.adoc:45
+msgid "<<<<"
+msgstr ""
+
+#. type: Title ==
+#: idf_exporter.adoc:46
+#, no-wrap
+msgid "Introduction to the IDFv3 exporter"
+msgstr "Einführung in den IDFv3 Exporter"
+
+#. type: Plain text
+#: idf_exporter.adoc:57
+msgid ""
+"The IDF exporter exports an IDFv3 footnote:[http://www."
+"simplifiedsolutionsinc.com/images/idf_v30_spec.pdf] compliant board (*.emn) "
+"and library (*.emp) file for communicating mechanical dimensions to a "
+"mechanical CAD package. The exporter currently exports the board outline and "
+"cutouts, all pad and mounting thru-holes including slotted holes, and "
+"component outlines; this is the most basic set of mechanical data required "
+"for interaction with mechanical designers. All other entities described in "
+"the IDFv3 specification are currently not exported."
+msgstr ""
+"Der IDF Exporter exportiert ein IDFv3 footnote:[http://www."
+"simplifiedsolutionsinc.com/images/idf_v30_spec.pdf] konformes Board (\\*."
+"emn) und Bibliothek (*.emp) um mechanische Dimensionen an ein mechanisches "
+"CAD Paket zu übertragen. Der Exporter kann aktuell die Abmessungen der "
+"Platinenaußenkanten und Ausschnitte in der Platine exportieren als auch alle "
+"Pads und Montagelöcher inklusive Langlöcher und Bauteilumrisse. Das sind die "
+"grundlegendsten mechanischen Daten die benötigt werden um mit mechanischen "
+"Designern interagieren zu können. Alle anderen Einheiten die in der IDFv3 "
+"Spezifikation beschrieben sind werden derzeit nicht exportiert."
+
+#. type: Title ==
+#: idf_exporter.adoc:58
+#, no-wrap
+msgid "Specifying component models for use by the exporter"
+msgstr "Spezifizierung des Bauteil Modells was vom Exporter benutzt wird"
+
+#. type: Plain text
+#: idf_exporter.adoc:65
+msgid ""
+"The IDF exporter makes use of the 3D model file attribute which was "
+"originally used by the 3D viewer. Since the 3D viewer, IDF, and possible "
+"future mechanical CAD exporters are generally interested in different types "
+"of file format, it is possible to use the 3D model file attribute to specify "
+"models for multiple exporters."
+msgstr ""
+"Der IDF Exporter benutzt 3D-Model Datei Attribute welche ursprünglich vom 3D-"
+"Betrachter benutzt worden sind. Seit dem 3D-Betrachter, IDF und möglicher "
+"Weise auch zukünftige mechanische CAD Exporter generell an verschiedenen "
+"Dateiformaten interessiert sind ist es möglich die 3D-Model Dateiattribute "
+"zu benutzen um Modelle für multiple Exporter zu spezifizieren."
+
+#. type: Plain text
+#: idf_exporter.adoc:84
+msgid ""
+"From within the Footprint Editor or Pcbnew, edit the footprint parameters "
+"and click on the 3D settings tab (see link:#figure-1[figure 1]), click on "
+"Add 3D Shape, and select the filter \"IDFv3 component files (*.idf)\" (see "
+"link:#figure-2[figure 2]). Select the desired outline file and enter any "
+"necessary values for the offset and rotation. Note that only the offset "
+"values and the Z rotation value are used by the IDF exporter; all other "
+"values are ignored. The offsets must be specified using the IDF board output "
+"units (mm or thou) and in the IDF coordinate system, that is a right-hand "
+"coordinate system with +Z moving towards the viewer, +X is to the viewer's "
+"right, and +Y is up. The rotation must be in degrees and a positive rotation "
+"is a counter-clockwise rotation as described in the IDFv3 specification. "
+"Multiple outlines may be combined with appropriate offsets to represent "
+"simple assemblies such as a DIP package in a socket. [**BUG:** in "
+"discussions it has been decided that the unit of the Z offset should be "
+"inches, which is consistent with the units of the VRML model offset. It may "
+"also be useful not to ignore the (X,Y) offset values. The behavior mentioned "
+"here will change at some point in the future.]"
+msgstr ""
+"Innerhalb des Footprint Editors oder in Pcbnew, bearbeiten Sie die Footprint "
+"Eigenschaften und klicken auf den Tab für die 3D-Settings (siehe link:"
+"#figure-1[Figur 1]), klicken Sie auf _3D Form hinzufügen_ und wählen den "
+"Filter _IDFv3 Bauteildateien (*.idf)_ (siehe  link:#figure-2[Figur 2]). "
+"Wählen Sie die gewünschte Datei mit den Außenlinien und geben Sie alle "
+"nötigen Werte für Offset und Drehung ein. Beachten Sie das nur die Werte für "
+"Offset und die Z-Drehung vom IDF Exporter benutzt werden, alle anderen Werte "
+"werden ignoriert. Der Offset muss auf Basis der IDF Board Ausgabemaßeinheit "
+"(mm oder 1/1000) angegeben werden, das IDF Koordinatensystem ist ein Rechte-"
+"Hand Koordinatensystem mit +Z in Richtung des Betrachters, +X ist rechts vom "
+"Betrachter und +Y ist oben. Die Drehung muss in Grad angegeben werden, eine "
+"positive Drehung ist eine Drehung entgegen dem Uhrzeigersinn wie in der "
+"IDFv3 Spezifikation beschrieben. Mehrere Außenlinien können mit einem "
+"geeigneten Offset kombiniert werden um einfache Baugruppen wie ein DIP "
+"Gehäuse in einer Buchse wiedergeben zu können. [**Fehler:** In Diskussionen "
+"wurde entschieden das für den Offset von Z als Einheit Zoll benutzt werden "
+"soll, was dann konsistent mit der Einheit für den Offset des VRML Modells "
+"ist. Es mag ebenso hilfreich sein nicht die Werte vom Offset (X,Y) zu "
+"ignorieren. Diese Handlungsweise die hier vorgeschlagen ist wird sich in der "
+"Zukunft irgendwann verändern.]"
+
+#. type: Plain text
+#: idf_exporter.adoc:92
+msgid ""
+"Once models have been specified for all desired components, from within "
+"pcbnew select the *File* menu then *Export* and finally **IDFv3 Export**. A "
+"dialog box will pop up (see link:#figure-3[figure 3]) which allows the "
+"output filename and IDF output units (mm or mils) to be set.  The exported "
+"IDF files can be viewed in the free mechanical CAD software http://www."
+"freecadweb.org/[FreeCAD] or converted to VRML using the idf2vrml tool and "
+"viewed with any suitable VRML viewer."
+msgstr ""
+"Wenn für alle gewünschten Bauteile die Modelle festgelegt worden sind wählen "
+"Sie in Pcbnew *Datei* -> *Export* und dort **IDFv3**. Eine Dialogbox öffnet "
+"sich (siehe link:#figure-3[Figur 3]) welche es erlaubt den Ausgabenamen und "
+"die Ausgabeeinheit (mm oder Mils) einzustellen. Die exportierte IDF Datei "
+"kann mit der freien mechanischen CAD Software http://www.freecadweb.org/"
+"[FreeCAD] betrachtet werden oder durch das Tool _idf2vrml_ in ein VRML "
+"umgewandelt werden um dann mit einen geeigneten VRML Betrachter angeschaut "
+"werden zu können."
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:95 idf_exporter.adoc:96
+#, no-wrap
+msgid "Footprint properties, 3D settings"
+msgstr "Footprint Eigenschaften, 3D Settings"
+
+#. type: Target for macro image
+#: idf_exporter.adoc:96
+#, no-wrap
+msgid "images/module_params.png"
+msgstr "images/de/module_params.png"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:100 idf_exporter.adoc:101
+#, no-wrap
+msgid "IDF component outline selection"
+msgstr "Auswahl IDF Bauteilkonturen"
+
+#. type: Target for macro image
+#: idf_exporter.adoc:101
+#, no-wrap
+msgid "images/idf_select.png"
+msgstr "images/de/idf_select.png"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:105 idf_exporter.adoc:106
+#, no-wrap
+msgid "IDF output settings"
+msgstr "IDF Ausgabe Einstellungen"
+
+#. type: Target for macro image
+#: idf_exporter.adoc:106
+#, no-wrap
+msgid "images/idf_export.png"
+msgstr "images/de/idf_export.png"
+
+#. type: Title ==
+#: idf_exporter.adoc:109
+#, no-wrap
+msgid "Creating a component outline file"
+msgstr "Erstellung einer Datei mit Bauteilkonturen"
+
+#. type: Plain text
+#: idf_exporter.adoc:117
+msgid ""
+"The component outline file (*.idf) consists of a single .ELECTRICAL or ."
+"MECHANICAL section as described in the specification document. The section "
+"may be preceded by any number of comment lines; the comment lines are copied "
+"by the exporter into the library file and can be used to track metadata such "
+"as references to the documents used to determine the component's outline and "
+"dimensions."
+msgstr ""
+"Die Datei mit den Bauteilkonturen (*.idf) enthält eine einzigen Abschnitt ."
+"ELECTRICAL oder .MECHANICAL wie in der Dokumenten Spezifikation beschrieben. "
+"Diesem Abschnitt kann ein Bereich von zahlreichen Zeilen zur Dokumentation "
+"vorangehen, diese Zeilen werden vom Exporter in die Bibliotheksdatei kopiert "
+"und können benutzt werden um Metadaten weiterzugeben wie z.B. Referenzen zu "
+"den Dokumenten die benutzt wurden sind um die Außenmaße und Dimensionen von "
+"Bauteilen zu erfahren."
+
+#. type: Plain text
+#: idf_exporter.adoc:127
+msgid ""
+"The component outline section contains fields which are strings, integers, "
+"or floating point numbers. A string is a combination of characters which may "
+"include spaces; if a string contains spaces then it must be quoted. "
+"Quotation marks must not appear within a string.  Floating point numbers may "
+"be represented using decimal or exponential notations but decimal notation "
+"is preferred for human readability. The decimal point must be a dot and not "
+"a comma. The IDF file must consist only of 7-bit ASCII characters; use of 8-"
+"bit characters will result in undefined behavior."
+msgstr ""
+"Die Sektion mit den Bauteilkonturen kann Felder für Zeichenketten, "
+"Ganzzahlen oder Gleitkommazahlen enthalten. Eine Zeichenkette ist eine "
+"Kombination von Buchstaben die auch Leerzeichen enthalten dürfen, diese "
+"müssen aber quotiert werden. Quotierungsmarkierungen erscheinen nicht in der "
+"späteren Zeichenkette. Gleitkommazahlen können in Dezimal- oder "
+"Exponentialschreibweise geschrieben werden, die dezimale Schreibweise sollte "
+"jedoch wegen der besseren Lesbarkeit für Menschen bevorzugt werden. Der "
+"Dezimalpunkt muss ein Punkt und darf kein Komma sein. Die IDF Datei darf nur "
+"aus 7-Bit ASCII Zeichen bestehen, die Verwendung von 8-Bit Zeichen führt zu "
+"einem undefinierten Verhalten."
+
+#. type: Plain text
+#: idf_exporter.adoc:135
+msgid ""
+"An IDF file consists of SECTIONS which consist of RECORDS which consist of "
+"FIELDS. For the IDF outline files only one type of section may exist and "
+"must be one of .ELECTRICAL or .MECHANICAL. A record is a single line of text "
+"and may contain one or more fields. Fields are sequences of characters "
+"separated by one or more spaces which do not appear between quotation marks. "
+"All fields of a record must appear on a single line; records may not span "
+"lines."
+msgstr ""
+"Eine IDF Datei besteht aus SECTIONS (Abschnitten) welche wiederum aus "
+"RECORDS (Datensätzen) besteht, diese enthalten FIELDS (Felder). Die IDF "
+"Datei mit den Konturen besteht aus nur einem Abschnitt der dann entweder ."
+"ELECTRICAL oder .MECHANICAL benannt werden muss. Ein Datensatz ist eine "
+"einzelne Zeile mit Text und kann eine oder mehrere Felder enthalten. Felder "
+"sind eine Reihenfolge von Zeichen die durch ein oder mehrere Leerzeichen "
+"getrennt sind, welche nicht zwischen Quotierungen liegen. Alle Felder eines "
+"Eintrages müssen in einer Zeile liegen, Einträge dürfen nicht über mehrere "
+"Zeilen verteilt liegen."
+
+#. type: Plain text
+#: idf_exporter.adoc:139
+msgid ""
+"The section heading (.ELECTRICAL or .MECHANICAL) is considered the first "
+"record (Record 1) of the section. Record 1 must be followed by Record 2 "
+"which has four fields:"
+msgstr ""
+"Die Abschnittsmarkierung (.ELECTRICAL oder .MECHANICAL) gilt als der erste "
+"Datensatz (Record 1) des Abschnitts. Datensatz 1 muss von Datensatz 2 "
+"gefolgt werden, welcher vier Felder hat:"
+
+#. type: Plain text
+#: idf_exporter.adoc:145
+msgid ""
+"Geometry Name: a string which in combination with the Part Number must form "
+"a unique identifier for the component outline. For standardized packages, "
+"the package name is a good value for the geometry name, for example "
+"\"SOT-23\". For unique packages the manufacturer's part number is a good "
+"choice for the geometry name."
+msgstr ""
+"Geometrischer Name: Eine Zeichenkette in Kombination mit der Teilenummer, "
+"diese muss eine eineindeutige Identifikation der Bauteilkonturen "
+"ermöglichen. Für standardisierte Bauteile kann man die Bauform benutzen um "
+"den geometrischen Namen zu bilden, zum Beispiel \"SOT-23\". Für die "
+"Eindeutigkeit der Bauteile benutzt man die Teilenummer des Herstellers und "
+"ergänzt damit den geometrischen Namen."
+
+#. type: Plain text
+#: idf_exporter.adoc:151
+msgid ""
+"Part Number: although obviously intended for the part number, for example "
+"BS107, it is better to use this string to help describe the package. For "
+"example if the geometry name is \"TO-92\", the part number entry may be used "
+"to describe the layout of the pads or the orientation of this particular "
+"TO-92 outline file."
+msgstr ""
+"Part Number: Obwohl diese schon in der Benamung Verwendung findet, zum "
+"Beispiel BS107, ist es besser diesen Eintrag zu benutzen um das Bauteil zu "
+"beschreiben. Wenn der geometrische Name zum Beispiel \"TO-92\" ist dann kann "
+"man den Eintrag _Teilenummer_ benutzen um das Layout und die Orientierung "
+"der Pads für dieses spezielle TO-92 Gehäuse zu beschreiben."
+
+#. type: Plain text
+#: idf_exporter.adoc:154
+msgid ""
+"IDF Unit: this must be one of MM or THOU and it applies only to the units "
+"describing this single component outline."
+msgstr ""
+"IDF Einheit: Dies muss entweder MM oder THOU sein, und es gilt nur für die "
+"Einheiten die diese einzelne Bauteilkonturen beschreibt."
+
+#. type: Plain text
+#: idf_exporter.adoc:157
+msgid ""
+"Height: this is a floating point number representing the nominal height of "
+"the component using units specified in Field 3."
+msgstr ""
+"Höhe: Diese Gleitkommazahl gibt die normale Höhe des Bauteils an, die "
+"Maßeinheit ist die die unter Feld 3 angegeben ist."
+
+#. type: Plain text
+#: idf_exporter.adoc:160
+msgid ""
+"Record 2 must be followed by a number of Record 3 entries which specify the "
+"outline of the component. Record 3 consists of four fields:"
+msgstr ""
+"Datensatz 2 muss von einer Anzahl von Einträgen für Datensatz 3 gefolgt sein "
+"welcher die Umrisse des Bauteils spezifiziert. Datensatz 3 hat vier Felder:"
+
+#. type: Plain text
+#: idf_exporter.adoc:163
+msgid ""
+"Loop Index: 0 (outline points are specified in counter-clockwise order) or 1 "
+"(outline points are specified in clockwise order)"
+msgstr ""
+"Loop Index: 0 (Konturenpunkte sind im Uhrzeigersinn angegeben) oder 1 "
+"(Konturenpunkte sind entgegen dem Uhrzeigersinn angegeben)"
+
+#. type: Plain text
+#: idf_exporter.adoc:165
+msgid "X coordinate: a floating point number"
+msgstr "X-Koordinate: Eine Gleitkommazahl."
+
+#. type: Plain text
+#: idf_exporter.adoc:167
+msgid "Y coordinate: a floating point number"
+msgstr "Y_Koordinate: Eine Gleitkommazahl."
+
+#. type: Plain text
+#: idf_exporter.adoc:177
+msgid ""
+"Included Angle: a floating point number. If the value is 0 then a straight "
+"line segment is drawn from the previous point to this point.  If the value "
+"is 360 then the previous point specifies the center of a circle and this "
+"point specifies a point on the circle; never specify a circle using a value "
+"of -360 as at least one major mechanical CAD package does not behave well in "
+"that situation. If the value is negative then a clockwise arc is drawn from "
+"the previous point to this point and if the value is positive then a counter-"
+"clockwise arc is drawn."
+msgstr ""
+"Öffnungswinkel: Eine Gleitkommazahl. Wenn der Wert 0 ist dann wird eine "
+"gerades Liniensegment vom vorherigen Punkt zu diesem Punkt gezogen. Wenn der "
+"Wert 360 ist dann wird der vorherige Punkt als Mittelpunkt eines Kreises "
+"benutzt und dieser Punkt spezifiziert einen Punkt auf dem Kreis. Geben Sie "
+"nie einen Wert von -360 an um einen Kreis zu spezifizieren da zumindest ein "
+"großes mechanisches CAD Programm damit nicht fehlerfrei zusammen arbeitet. "
+"Wenn der Wert negativ ist  dann wird der Bogen im Uhrzeigersinn vom "
+"vorherigen Punkt aus zu diesem Punkt gezogen, bei einem positiven Wert wird "
+"der Bogen entgegengesetzt zum Uhrzeigersinn gezogen."
+
+#. type: Plain text
+#: idf_exporter.adoc:181
+msgid ""
+"Only one closed loop is permitted and it is not possible to specify a "
+"cutout. The last point specified must be the same as the first point unless "
+"the outline is a circle."
+msgstr ""
+"Nur geschlossener Loop ist erlaubt, und es ist nicht möglich eine Aussparung "
+"festlegen. Der letzte angegebene Punkt muss der gleiche sein wie der erste "
+"Punkt, wenn der Umriss kein Kreis ist."
+
+#. type: Plain text
+#: idf_exporter.adoc:183
+msgid "Example IDF File 1:"
+msgstr "Beispiel IDF Datei 1:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:191
+#, no-wrap
+msgid ""
+"# a simple cylinder - this could represent an electrolytic capacitor\n"
+".ELECTRICAL\n"
+"    \"cylinder\" \"5mm OD, 5mm height\" MM 5\n"
+"    0 0 0 0\n"
+"    0 2.5 0 360\n"
+".END_ELECTRICAL\n"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:194
+msgid "Example IDF File 2:"
+msgstr "Beispiel IDF Datei 2:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:210
+#, no-wrap
+msgid ""
+"# an upside-down T\n"
+"# a comment added for the sake of adding comments\n"
+".ELECTRICAL\n"
+"    \"Capital T\" \"5x8x10mm, upside down\" MM 10\n"
+"    0 -0.5 8 0\n"
+"    0 -0.5 0.5 0\n"
+"    0 -2.5 0.5 0\n"
+"    0 -2.5 -0.5 180\n"
+"    0 2.5 -0.5 0\n"
+"    0 2.5 0.5 180\n"
+"    0 0.5 0.5 0\n"
+"    0 0.5 8 0\n"
+"    0 -0.5 8 180\n"
+".END_ELECTRICAL\n"
+msgstr ""
+
+#. type: Title ==
+#: idf_exporter.adoc:212
+#, no-wrap
+msgid "Guidelines for creating outlines"
+msgstr "Richtlinien zum Erstellen von Konturen"
+
+#. type: Plain text
+#: idf_exporter.adoc:217
+msgid ""
+"When creating outlines, and especially when sharing the work with others, "
+"consistency in the design and naming of files helps people locate files "
+"quicker and place the components with minimal hassles."
+msgstr ""
+"Wenn Konturen erstellt werden, und besonders wenn man die Arbeit mit anderen "
+"teilt, ist ein konsistentes Design und Benennen von Dateien hilfreich um die "
+"richtigen Dateien schnell finden zu können damit das Platzieren von "
+"Bauteilen ohne große Anstrengungen durchgeführt werden kann."
+
+#. type: Title ===
+#: idf_exporter.adoc:218
+#, no-wrap
+msgid "Package naming"
+msgstr "Benennung der Bauteile"
+
+#. type: Plain text
+#: idf_exporter.adoc:229
+msgid ""
+"Try to make some information about the outline available in the filename to "
+"give the user a general idea of what the outline is. For example axial "
+"leaded cylindrical packages may represent some types of capacitors as well "
+"as some types of resistors, so it makes sense to identify an outline as a "
+"horizontal or vertical axial leaded device and to add some extra information "
+"on the relevant dimensions: diameter, length, and pitch are the most "
+"important. If a device has a unique outline, the manufacturer's part number "
+"and a prefix to indicate the class of device are adequate."
+msgstr ""
+"Versuchen Sie durch den Dateinamen an die Benutzer ein paar Informationen "
+"über die Bauteilkonturen mitzugeben damit der Benutzer ein grobe Idee davon "
+"bekommt was es für eine Kontur ist. Zum Beispiel können axial verdrahtete "
+"zylindrische Bauteile einige Kondensatoren aber auch einige Typen von "
+"Widerständen repräsentieren. Daher macht es Sinn einer Kontur Informationen "
+"wie horizontale oder vertikale Verdrahtung mitzugeben und ebenso ein paar "
+"zusätzliche Informationen wie die relevanten Dimensionen. Der Durchmesser, "
+"die Länge und Abstände sind die wichtigsten. Wenn ein Bauteil eine eher "
+"allgemeine Kontur besitzt dann ist die Hersteller Teilenummer und ein "
+"Hersteller-Präfix hilfreich um die zugehörige Klasse des Bauteils zu "
+"kennzeichnen."
+
+#. type: Title ===
+#: idf_exporter.adoc:230
+#, no-wrap
+msgid "Comments"
+msgstr "Kommentare"
+
+#. type: Plain text
+#: idf_exporter.adoc:235
+msgid ""
+"Use comments in the IDF file to give users more information about the "
+"outline, for example a reference to the source used for dimensional "
+"information."
+msgstr ""
+"Benutzen Sie Kommentare um den Benutzern weitere Informationen über die "
+"Bauteilkontur mitzugeben, zum Beispiel einen Hinweis auf die Referenzen die "
+"benutzt worden sind um die Dimensionieren in Erfahrung zu bringen."
+
+#. type: Title ===
+#: idf_exporter.adoc:236
+#, no-wrap
+msgid "Geometry and Part Number entries"
+msgstr "Geometrie und Einträge der Teilenummer"
+
+#. type: Plain text
+#: idf_exporter.adoc:245
+msgid ""
+"Think carefully about the values to give to the Geometry and Part Number "
+"entries. Taken together, these strings act as a unique identifier for the "
+"MCAD system. The values of the strings will ideally have some meaning to a "
+"user, but this is not necessary: the values are primarily intended for the "
+"MCAD system to use as a unique ID. Ideally the values chosen will be unique "
+"within any large collection of outlines; choosing values well will result in "
+"fewer clashes especially in complex boards."
+msgstr ""
+"Bedenken Sie sorgfältig die Werte die Sie in die Felder für die Geometrie "
+"und die Teilenummer eintragen. Zusammen bilden diese Zeichenketten  eine "
+"eindeutige Kennung für das MCAD-System. Die Werte der Einträge haben "
+"idealerweise eine Bedeutung für einen Benutzer, aber dies ist nicht "
+"unbedingt notwendig. Diese Werte werden primär vom MCAD-System als Unique-ID "
+"benutzt. Im Idealfall sind die gewählten einzelnen Werte in diesen Feldern "
+"auch innerhalb einer größeren Zusammenstellung von Konturen eindeutig, eine "
+"gute Auswahl wird zu weniger Konflikten besonders in komplexen Boards führen."
+
+#. type: Title ===
+#: idf_exporter.adoc:246
+#, no-wrap
+msgid "Pin orientation and positioning"
+msgstr "Pin Ausrichtung und Positionierung"
+
+#. type: Plain text
+#: idf_exporter.adoc:258
+msgid ""
+"For through-hole components there are no widely accepted schemes for "
+"determining the pin orientation and component center in 3D models. For "
+"consistency, if there are only 2 pins they must be in a horizontal "
+"arrangement (see link:#figure-4[figure 4]) along the X axis and for 3 pins "
+"try to keep 2 in a horizontal arrangement on the X axis. Polarized devices "
+"such as electrolytic or tantalum capacitors must have the positive lead on "
+"Pin 1 and diodes must have the cathode on Pin 1; this is to maintain "
+"compatibility of the schematic symbols with the orientation defined for SMT "
+"devices; however, note that many existing KiCad schematics and footprints "
+"place the anode at Pin 1."
+msgstr ""
+"Für durchkontaktierte Bauteile gibt es keine weit akzeptierten Schemas für "
+"die Ermittlung der Pin Ausrichtung und Bauteilmittelpunkte in 3D-Modellen. "
+"Wenn es nur 2 Pins an einem Bauteil gibt müssen, aus Gründen der Konsistenz, "
+"diese in einer horizontalen Anordnung (siehe link:#figure-4[Figur 4]) "
+"entlang der X-Achse liegen und bei 3 Pins versuchen Sie zwei Pins in einer "
+"horizontalen Anordnung auf der X-Achse anzuordnen. Bei Bauteilen mit einer "
+"Polarität wie Tantal oder Elektrolyt Kondensatoren muss am Pin 1 der "
+"positive Pol liegen, Dioden müssen die Kathode auf Pin 1 liegen haben. Dies "
+"ist nötig aus Gründen der Kompatibilität zu Schaltplansymbolen die eine "
+"Ausrichtung für SMT Bauteile besitzen, beachten Sie aber, dass viele "
+"bestehende KiCad Schaltplansymbole und Footprints die Anode an Pin 1 haben."
+
+#. type: Plain text
+#: idf_exporter.adoc:262
+msgid ""
+"In the latest revision of the KiCad footprints on github the anode is now "
+"Pin 2 for THT as well as SMT components."
+msgstr ""
+"In den letzten Versionen der KiCad Footprints auf GitHub ist in den THT und "
+"SMT Bauteilen die Anode jetzt auf Pin 2."
+
+#. type: Plain text
+#: idf_exporter.adoc:275
+msgid ""
+"For DIP devices the center of the outline must be at the center of the "
+"rectangle described by the pin locations and Pin 1 is preferably at the top "
+"left corner; this will maintain some consistency with the standardized "
+"orientation of SMT components; however, such a model will be rotated -90 "
+"degrees relative to most existing KiCad component footprints and VRML "
+"models. For items such as a horizontal radial leaded capacitor or a "
+"horizontal TO-220 package, prefer to place the leads in a row on the X axis "
+"and with the body of the device extending upwards (see link:#figure-4[figure "
+"4]). Non-polarized vertical axial leaded components must have the wire on "
+"the right hand side; polarized vertical axial leaded components may have the "
+"wire on either side, depending on whether Pin 1 is on the lower end (wire on "
+"right) or on the upper end (wire on left)."
+msgstr ""
+"Bei DIP Gehäusen muss der Mittelpunkt der Kontur in der Mitte des Rechtecks "
+"liegen das von den einzelnen Pins begrenzt ist und Pin 1 liegt vorzugsweise "
+"oben links. Dies wird eine gewisse Konsistenz mit der standardisierten "
+"Ausrichtung von SMT-Komponenten erhalten, jedoch werden in den meisten "
+"existierenden KiCad Footprints und VRML-Modellen solche Modelle relativ um "
+"-90 Grad gedreht. Bei Bauteilen wie ein horizontal, radial verdrahteten "
+"Kondensator oder ein TO-220 Gehäuse sollten die Anschlussbeine längs auf der "
+"X-Achse liegen mit dem Gehäuse nach oben ausgerichtet (siehe link:"
+"#figure-4[Figur 4]). Unpolarisierte vertikal, axial verdrahtete Bauteile "
+"müssen die Anschlüsse rechts haben, polarisierte vertikal, axial "
+"bedrahtetete Bauteilen können die Anschlüsse auf beiden Seiten haben, je "
+"nachdem ob Pin 1 ist am unteren Ende (Draht rechts) oder am oberen Ende "
+"(Draht links) liegt."
+
+#. type: Plain text
+#: idf_exporter.adoc:285
+msgid ""
+"In the current revision of the KiCad footprint modules the THT components "
+"are being organized with pins along the Y axis rather than the X axis and "
+"Pin 1 of the device is at the origin rather than at the center of the "
+"package. Orient and position the component outline to suit your specific "
+"footprints; this will avoid the need to specify a non-zero rotation for the "
+"IDF component outlines. Since the IDF exporter currently ignores the (X,Y) "
+"offset values it is vital that you use the correct origin in the IDF "
+"component outline."
+msgstr ""
+"In den aktuellen Versionen von KiCad sind die Footprint Module der THT "
+"Bauteile entlang der Y-Achse anstatt der X-Achse ausgerichtet und Pin 1 vom "
+"Bauteil ist nicht in der Mitte des Bauteils. Ausrichtung und Position der "
+"Bauteilkontur müssen den spezifischen Footprints entsprechen, dies wird eine "
+"sonst nötige negative Drehung der IDF Bauteilkontur vermeiden. Da der IDF "
+"Exporter aktuell die (X,Y) Offsetwerte ignoriert es ist wichtig, dass Sie "
+"den richtigen Ursprung in der IDF Bauteilkontur verwenden."
+
+#. type: Plain text
+#: idf_exporter.adoc:295
+msgid ""
+"For SMT components the orientation, package center, and outline are defined "
+"by various standards. Use the standard appropriate to your work.  Also keep "
+"in mind that many devices do not conform to any standard; in such cases the "
+"offending device is probably best identified by using the manufacturer's "
+"part number in the outline file name. In general, an SMT outline is a "
+"rectangle encompassing the component package and including the leads; the "
+"package is oriented such that Pin 1 is as close as possible to the top left "
+"corner and the top left corner is usually chamfered for visual reference."
+msgstr ""
+"Für SMT Bauteile sind die Ausrichtung, Bauteilmitte und die Beschreibung der "
+"Kontur durch unterschiedliche Standards definiert. Benutzen Sie den "
+"passenden Standard der zu Ihrer Arbeit passt. Bedenken Sie auch, dass viel "
+"Bauteile nicht konform zu einem Standard sind, in so einem Fall ist es "
+"vermutlich das Beste das Bauteil durch die Teilenummer des Herstellers in "
+"der Datei mit den Konturen zu identifizieren. Im Allgemeinen ist eine SMT "
+"Kontur ein Rechteck welches das Bauteilgehäuse einschließlich der "
+"Anschlusspins umfasst und das Gehäuse so ausgerichtet ist, dass der Pin 1 "
+"ist so nah wie möglich an der oberen linken Ecke und der oberen linken Ecke "
+"ist, in der Regel visuell durch eine Vertiefung oder Referenz hervorgehoben."
+
+#. type: Block title
+#: idf_exporter.adoc:298
+#, no-wrap
+msgid "Sample outlines generated by the programs idfcyl and idfrect and rendered by SolidWorks."
+msgstr "Beispiele für Konturen erzeugt von den Programmen idfcyl und idfrect, gerendert durch SolidWorks"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:299
+#, no-wrap
+msgid "Sample outlines"
+msgstr "Beispiel Konturen"
+
+# No need for translation.
+#. type: Target for macro image
+#: idf_exporter.adoc:299
+#, no-wrap
+msgid "images/test_idf_blobs.png"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:308
+msgid ""
+"From left to right are (a) vertical radial leaded cylinder, (b) vertical "
+"axial leaded cylinder with wire on left, (c) vertical axial leaded cylinder "
+"with wire on right, (d) horizontal axial leaded cylinder, (e)  horizontal "
+"radial leaded cylinder, (f) square outline, plain, (g) square outline with "
+"chamfer, (h) square outline with axial lead on right. The top outlines were "
+"specified in units of millimeters while the bottom outlines were specified "
+"in units of inches."
+msgstr ""
+"Von links nach rechts sind (a) ein vertikal, radial verdrahteter Zylinder, "
+"(b) ein vertikal, axial verdrahteter Zylinder mit dem Anschlussdraht auf der "
+"linken Seite, (c) ein vertikal, axial verdrahteter Zylinder mit dem "
+"Anschlussdraht auf der rechten Seite, (d) ein horizontal, axial "
+"verdrahteter  Zylinder, (e) ein horizontal, radial verdrahteter Zylinder, "
+"(f) eine glatte quadratische Kontur, (g) eine quadratische Kontur mit einer "
+"Abschräge, (h) eine quadratische Kontur mit axialer Verkabelung auf der "
+"rechten Seite zu sehen. Die obere Reihe wurden mit der Maßeinheit mm "
+"erstellt, die untere Reihe benutzt Zoll als Maßeinheit."
+
+#. type: Title ===
+#: idf_exporter.adoc:311
+#, no-wrap
+msgid "Tips on dimensions"
+msgstr "Hinweise zu Abmessungen"
+
+#. type: Plain text
+#: idf_exporter.adoc:330
+msgid ""
+"The purpose served by the extruded outlines is to give the mechanical "
+"designer some idea of the location and physical space occupied by each "
+"component. In a typical scenario the mechanical designer will replace some "
+"of the crude outlines with more detailed mechanical models, for example when "
+"checking to ensure that a right-angle mounted LED will fit into a hole on a "
+"panel. In most situations the accuracy of an outline doesn't matter, but it "
+"is good practice to create outlines which convey the best mechanical "
+"information possible. In a few instances a user may wish to fit the "
+"component into a case with very little excess space, for example in a "
+"portable music player. In such a situation, if most extruded outlines are a "
+"good enough representation of components then the mechanical designer may "
+"only have to replace very few models while designing the case. If the "
+"outlines are not a reliable reflection of reality then the mechanical "
+"designer will waste a lot of time replacing models to ensure a good fit. "
+"After all, if you put garbage in you can expect garbage to come out. If you "
+"put in good information, you can be confident of good results."
+msgstr ""
+"Der Zweck hinter den modellierten Konturen besteht darin dem Designer von "
+"mechanischen Formen einen Überblick über den benötigten Platzbedarf der "
+"jeweiligen Bauteile zu geben. Typischer Weise wird der Designer diese "
+"abstrakten Formen mit detaillierteren Modellen ersetzen, zum Beispiel wenn "
+"er sicherstellen muss, dass eine um 90° nach rechts abstehende LED später in "
+"eine Gehäuse Aussparung passen muss. In den meisten Fällen ist eine hohe "
+"Detailtreue nicht nötig, jedoch ist es eine gute Praxis den größtmöglichen "
+"Anteil an mechanischen Informationen mitzuliefern. In manchen Situationen "
+"will der Benutzer seine Platine in einem Gehäuße mit sehr kleinen "
+"Abmessungen einbauen, zum Beispiel in einen mobilen Music Player. Wenn die "
+"Modelle der jeweiligen Konturen der Bauteile ausreichend gut sind muss der "
+"Designer des Gehäuses nur wenige Bauteile während des Designprozesses "
+"anpassen. Sind die Konturen allerdings recht ungenau wird der Designer für "
+"das Gehäuse einen erheblichen Zeitaufwand damit betreiben einzelne Bauteile "
+"zu kontrollieren um sicher stellen zu können, dass alle Komponenten in das "
+"geplante Gehäuse passen. Daher gilt, je besser die Basisinformationen umso "
+"besser auch das direkte Ergebnis. Je genauer die Informationen im Vorfeld "
+"sind desto präziser auch auch die entstehenden Modelle aus diesen "
+"Informationen."
+
+#. type: Title ==
+#: idf_exporter.adoc:331
+#, no-wrap
+msgid "IDF Component Outline Tools"
+msgstr "Tools für IDF Bauteilkonturen"
+
+#. type: Plain text
+#: idf_exporter.adoc:335
+msgid ""
+"A number of command-line tools are available to help generate IDF component "
+"outlines. The tools are:"
+msgstr ""
+"Es gibt eine Anzahl an Kommandozeilen Tools ,die helfen IDF Bauteilkonturen "
+"zu erstellen. Diese Tools sind:"
+
+#. type: Plain text
+#: idf_exporter.adoc:338
+#, no-wrap
+msgid ""
+"*idfcyl:* creates an outline of a cylinder in vertical or horizontal\n"
+"orientation and with axial or radial leads\n"
+msgstr "*idfcyl:* Erstellt eine Kontur von einem Zylinder in vertikaler oder horizontaler Ausrichtung mit axial oder radialen geführten Anschlussdrähten.\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:341
+#, no-wrap
+msgid ""
+"*idfrect:* creates an outline of a rectangle which may have either\n"
+"an axial lead or a chamfer in the top left corner\n"
+msgstr "*idfrect:* Erstellt eine Kontur von einem Rechteck welches axial geführte Anschlussdrähte besitzen kann oder eine Abschrägung.\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:344
+#, no-wrap
+msgid ""
+"*dxf2idf:* converts a drawing in DXF format into an IDF component\n"
+"outline\n"
+msgstr "*dxf2idf:* Konvertiert eine DXF Zeichnung in eine IDF Bauteilkontur.\n"
+
+# No need for translation.
+#. type: Title ===
+#: idf_exporter.adoc:345
+#, no-wrap
+msgid "idfcyl"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:349
+msgid ""
+"When *idfcyl* is invoked with no arguments it prints out a usage note and a "
+"summary of its inputs:"
+msgstr ""
+"Wird *idfcyl* ohne weitere Argumente aufgerufen werden Benutzungshinweise "
+"für die Parameter ausgegeben:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:356
+#, no-wrap
+msgid ""
+"idfcyl: This program generates an outline for a cylindrical component.\n"
+"    The cylinder may be horizontal or vertical.\n"
+"    A horizontal cylinder may have wires at one or both ends.\n"
+"    A vertical cylinder may have at most one wire which may be\n"
+"    placed on the left or right side.\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:369
+#, no-wrap
+msgid ""
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Orientation: V (vertical)\n"
+"    Lead type: X, R (axial, radial)\n"
+"    Diameter of body\n"
+"    Length of body\n"
+"    Board offset\n"
+"    *   Wire diameter\n"
+"    *   Pitch\n"
+"    **  Wire side: L, R (left, right)\n"
+"    *** Lead length\n"
+"    File name (must end in *.idf)\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:373
+#, no-wrap
+msgid ""
+"    NOTES:\n"
+"        *   only required for horizontal orientation or\n"
+"            vertical orientation with axial leads\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:375
+#, no-wrap
+msgid "        **  only required for vertical orientation with axial leads\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:377
+#, no-wrap
+msgid "        *** only required for horizontal orientation with radial leads\n"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:383
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a single "
+"axial leaded outline with the lead on the right hand side:"
+msgstr ""
+"Die Hinweise werden unterdrückt wenn irgendein Argument übergeben wird. Der "
+"Benutzer kann manuell die Argumente an das Tool übergeben oder erstellt ein "
+"Skript um die Konturen zu erstellen. Das folgende Skript erstellt eine "
+"einzelne axial verdrahtete Kontur mit den Anschlussdrähten auf der rechten "
+"Seite:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:402
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Generate a cylindrical IDF outline for test purposes\n"
+"# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
+"# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
+"idfcyl - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"v\n"
+"x\n"
+"5\n"
+"8\n"
+"3\n"
+"0.8\n"
+"3.5\n"
+"r\n"
+"cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
+"_EOF\n"
+msgstr ""
+
+# No need for translation.
+#. type: Title ===
+#: idf_exporter.adoc:404
+#, no-wrap
+msgid "idfrect"
+msgstr ""
+
+# No need for translation.
+#. type: Plain text
+#: idf_exporter.adoc:408
+msgid ""
+"When *idfrect* is invoked with no arguments it prints out a usage note and a "
+"summary of its inputs:"
+msgstr ""
+"Wird *idfrect* ohne weitere Argumente aufgerufen werden Benutzungshinweise "
+"für die Parameter ausgegeben:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:423
+#, no-wrap
+msgid ""
+"idfrect: This program generates an outline for a rectangular component.\n"
+"    The component may have a single lead (axial) or a chamfer on the\n"
+"    upper left corner.\n"
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Width:\n"
+"    Length:\n"
+"    Height:\n"
+"    Chamfer: length of the 45 deg. chamfer\n"
+"    *  Leaded: Y,N (lead is always to the right)\n"
+"    ** Wire diameter\n"
+"    ** Pitch\n"
+"    File name (must end in *.idf)\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:426
+#, no-wrap
+msgid ""
+"    NOTES:\n"
+"        *   only required if chamfer = 0\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:428
+#, no-wrap
+msgid "        **  only required for leaded components\n"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:434
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a "
+"chamfered rectangle and an axial leaded outline:"
+msgstr ""
+"Die Hinweise werden unterdrückt wenn irgendein Argument übergeben wird. Der "
+"Benutzer kann manuell die Argumente an das Tool übergeben oder erstellt ein "
+"Skript um die Konturen zu erstellen. Das folgende Skript erstellt eine "
+"einzelne axial verdrahtete rechteckige Kontur mit Abfasung:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:460
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Generate various rectangular IDF outlines for test purposes\n"
+"# 10x10, 1mm chamfer, 2mm height\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"2\n"
+"1\n"
+"rectMM_10x10x2_C0.5.idf\n"
+"_EOF\n"
+"# 10x10x12,  0.8mm lead on 6mm pitch\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"12\n"
+"0\n"
+"Y\n"
+"0.8\n"
+"6\n"
+"rectLMM_10x10x12_D0.8_P6.0.idf\n"
+"_EOF\n"
+msgstr ""
+
+# No need for translation.
+#. type: Title ===
+#: idf_exporter.adoc:462
+#, no-wrap
+msgid "dxf2idf"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:468
+msgid ""
+"The DXF file used to specify the component outline can be prepared with the "
+"free software http://librecad.org/[LibreCAD] for best compatibility.  When "
+"*dxf2idf* is invoked with no arguments it prints out a usage note and a "
+"summary of its inputs:"
+msgstr ""
+"Die DXF Datei die benutzt wird um die Bauteilkontur anzugeben die "
+"umgewandelt werden soll kann zum Beispiel mit der freien Software http://"
+"librecad.org/[LibreCAD] bearbeitet werden um die höchste Kompatibilität zu "
+"erreichen. Wird *dxf2idf* ohne Angabe von Argumenten aufgerufen so "
+"erscheinen die Benutzungshinweise und Hilfe zu den Argumenten wie schon bei "
+"den anderen Tools:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:472
+#, no-wrap
+msgid ""
+"dxf2idf: this program takes line, arc, and circle segments\n"
+"    from a DXF file and creates an IDF component outline file.\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:483
+#, no-wrap
+msgid ""
+"Input:\n"
+"    DXF filename: the input file, must end in '.dxf'\n"
+"    Units: mm, in (millimeters or inches)\n"
+"    Geometry Name: string, as per IDF version 3.0 specification\n"
+"    Part Name: as per IDF version 3.0 specification of Part Number\n"
+"    Height: extruded height of the outline\n"
+"    Comments: all non-empty lines are comments to be added to\n"
+"        the IDF file. An empty line signifies the end of\n"
+"        the comment block.\n"
+"    File name: output filename, must end in '.idf'\n"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:489
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the "
+"command line. A user can manually enter information at the command line or "
+"create scripts to generate outlines. The following script creates a 5mm high "
+"outline from a DXF file 'test.dxf':"
+msgstr ""
+"Die Hinweise werden unterdrückt wenn irgendein Argument übergeben wird. Der "
+"Benutzer kann manuell die Argumente an das Tool übergeben oder erstellt ein "
+"Skript um die Konturen zu erstellen. Das folgende Skript erstellt eine 5mm "
+"hohe Kontur aus der Datei _test.dxf_:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:502
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Generate an IDF outlines from a DXF file\n"
+"dxf2idf - 1 > /dev/null << _EOF\n"
+"test.dxf\n"
+"mm\n"
+"DXF TEST GEOMETRY\n"
+"DXF TEST PART\n"
+"5\n"
+"This is an IDF test file produced from the outline 'test.dxf'\n"
+"This is a second IDF comment to demonstrate multiple comments\n"
+msgstr ""
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:505
+#, no-wrap
+msgid ""
+"test_dxf2idf.idf\n"
+"_EOF\n"
+msgstr ""
+
+# No need for translation.
+#. type: Title ==
+#: idf_exporter.adoc:507
+#, no-wrap
+msgid "idf2vrml"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:515
+msgid ""
+"The idf2vrml tool reads a set of one IDF Board (__.emn) and one IDF "
+"Component file (__.emp) and produces a VRML file which can be viewed with a "
+"VRML viewer. This feature is useful for visualization of the board assembly "
+"in cases where the user does not have access to MCAD software. Invoking "
+"idf2vrml without any arguments will result in the display of a usage message:"
+msgstr ""
+"Das Tool _idf2vrml_ liest einen Satz IDF Board (__.emn__) und IDF "
+"Bauteildatei (__.emp__) ein uns erstellt daraus eine VRML Datei die dann mit "
+"einem VRML-Betrachter angeschaut werden kann. Dies ist ein hilfreiches "
+"Feature für die Visualisierung der Platinenbestückungen für die Fälle wo der "
+"Benutzer keinen Zugang zu MCAD-Software hat. Der Aufruf von _idf2vrml_ ohne "
+"Argumente zeigt wiederum Benutzungshinweise und die Hilfe zu den Argumenten "
+"an:"
+
+# No need for translation.
+#. type: delimited block -
+#: idf_exporter.adoc:526
+#, no-wrap
+msgid ""
+">./idf2vrml\n"
+"Usage: idf2vrml -f input_file.emn -s scale_factor {-k} {-d} {-z} {-m}\n"
+"flags:\n"
+"   -k: produce KiCad-friendly VRML output; default is compact VRML\n"
+"   -d: suppress substitution of default outlines\n"
+"   -z: suppress rendering of zero-height outlines\n"
+"   -m: print object mapping to stdout for debugging purposes\n"
+"example to produce a model for use by KiCad: idf2vrml -f input.emn -s 0.3937008 -k\n"
+">\n"
+msgstr ""
+
+#. type: Plain text
+#: idf_exporter.adoc:534
+msgid ""
+"[**BUG:** The idf2vrml tool currently does not correctly render "
+"*OTHER_OUTLINE* entities in an emn file if that entity is specifies on the "
+"back layer of the PCB; however you will not notice this bug using files "
+"exported by KiCad since there is no mechanism to specify such an entity.  "
+"Essentially this bug is only an issue in rare instances where you might "
+"render a third party emn file which does employ the entity on the back side "
+"of a board.]"
+msgstr ""
+"[**Fehler:**] Das _idf2vrml_ Tool rendert aktuell die *OTHER_OUTLINE* "
+"Einheiten in einer emn Datei nicht richtig wenn diese Einheiten auf der "
+"Rückseite der Platine liegen. Sie werden aber diesen Fehler nicht vorfinden "
+"wenn Sie Dateien benutzen die von KiCad exportiert worden sind, es gibt in "
+"KiCad keine Möglichkeit derartige Einheiten so festzulegen. Im Wesentlichen "
+"wird dieser Fehler nur sehr selten auftreten, und zwar nur dann wenn Sie "
+"eine .emn Datei von einer dritten Person benutzen die eine solche Einheit "
+"auf der Rückseite einer Platine definiert hat."
