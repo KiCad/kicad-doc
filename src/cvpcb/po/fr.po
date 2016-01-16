@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-10-29 07:50+0100\n"
-"PO-Revision-Date: 2016-01-16 10:27+0100\n"
+"PO-Revision-Date: 2016-01-16 16:42+0100\n"
 "Last-Translator: Marc BERLIOUX <marc.berlioux@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: French\n"
@@ -203,7 +203,11 @@ msgid ""
 "**It can be run only from Eeschema**, from the top toolbar, either when\n"
 "Eeschema is started from the KiCad project manager or when Eeschema is\n"
 "started as a stand alone application.\n"
-msgstr "**CvPcb ne peut être lancé qu'à partir de Eeschema**, par la barre d'outils supérieure, soit lorsque Eeschema est démarré à partir du gestionnaire de projet KiCad, soit lorsque Eeschema est lancé comme une application indépendante.\n"
+msgstr ""
+"**CvPcb ne peut être lancé qu'à partir de Eeschema**, par la barre d'outils "
+"supérieure, soit lorsque Eeschema est démarré à partir du gestionnaire de "
+"projet KiCad, soit lorsque Eeschema est lancé comme une application "
+"indépendante.\n"
 
 #. type: Plain text
 #: cvpcb.adoc:82
@@ -1673,6 +1677,9 @@ msgid ""
 "properly read. KiCad currently supports reading KiCad legacy, KiCad Pretty, "
 "Eagle, and GEDA footprint libraries."
 msgstr ""
+"Le plugin approprié doit être sélectionné pour que la librairie soit lue "
+"correctement. KiCad prend actuellement en charge en lecture les librairies "
+"d'empreintes : anciennes KiCad, nouvelles KiCad Pretty, Eagle, et GEDA."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:98
@@ -1681,6 +1688,9 @@ msgid ""
 "entry. The option field is not used at this time so adding options will have "
 "no effect when loading libraries."
 msgstr ""
+"Il y a aussi un champ description pour ajouter une description de l'entrée de "
+"librairie. Le champ option n'est pas utilisé pour l'instant, donc les options "
+"ajoutées n'auront aucun effet lors du chargement des librairies."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:102
@@ -1689,6 +1699,9 @@ msgid ""
 "table. However, you can have duplicate library nicknames in both the global "
 "and project specific footprint library table."
 msgstr ""
+"Veuillez noter que vous ne pouvez pas avoir des pseudos de librairies en "
+"double dans la même table. Cependant, vous pouvez avoir des surnoms de "
+"librairies en double dans les deux tables globale et spécifique au projet."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:106
@@ -1698,12 +1711,17 @@ msgid ""
 "specific table, an fp-lib-table file containing the entries will be written "
 "into the folder of the currently open net list."
 msgstr ""
+"L'entrée d'une table spécifique au projet aura préséance sur celle de la "
+"table globale dans le cas de noms dupliqués. Lorsque des entrées sont "
+"définies dans la table spécifique au projet, un fichier fp-lib-table "
+"contenant les entrées sera écrit dans le dossier du fichier netliste "
+"actuellement ouvert."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:107
 #, no-wrap
 msgid "Environment Variable Substitution"
-msgstr ""
+msgstr "Substitution d'une Variable d'Environnement"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:114
@@ -1714,11 +1732,18 @@ msgid ""
 "variable substitution is supported by using the syntax +$\\{ENV_VAR_NAME\\}+ "
 "in the footprint library path."
 msgstr ""
+"Une des fonctionnalités les plus puissantes de la table des librairies "
+"d'empreintes est la substitution de variables d'environnement. Ceci permet "
+"d'avoir des chemins personnalisés dans des variables d'environnement, pour "
+"définir où vos librairies sont stockées. La substitution de variables "
+"d'environnement est supportée en utilisant la syntaxe  +$\\{ENV_VAR_NAME\\}+ "
+"dans le chemin de la librairie d'empreintes."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:116
 msgid "By default, at run time KiCad defines **two environment variables**:"
 msgstr ""
+"Par défaut, au lancement, KiCad définit  **deux variables d'environnement** :"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:119
@@ -1726,6 +1751,8 @@ msgid ""
 "the *+KIPRJMOD+* environment variable. This points always the current "
 "project directory and cannot be modified."
 msgstr ""
+"La variable d'environnement *+KIPRJMOD+*. Celle-ci pointe toujours sur le "
+"dossier du projet actuel et ne peut être modifiée."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:122
@@ -1733,6 +1760,8 @@ msgid ""
 "the *+KISYSMOD+* environment variable. This points to where the default "
 "footprint libraries that were installed with KiCad are located."
 msgstr ""
+"La variable d'environnement *+KISYSMOD+*. Celle-ci pointe vers le dossier où "
+"ont été installées les librairies fournies avec KiCad."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:126
@@ -1741,6 +1770,9 @@ msgid ""
 "Path which allows you to substitute your own libraries in place of the "
 "default KiCad footprint libraries."
 msgstr ""
+"Vous pouvez redéfinir +KISYSMOD+ dans le menu Préférences / Configurer les "
+"Chemins, ce qui vous permet de remplacer les librairies d'empreintes par "
+"défaut de KiCad par vos propres librairies."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:129
@@ -1748,12 +1780,16 @@ msgid ""
 "When a project netlist file is loaded, CvPcb defines the +KIPRJMOD+ using "
 "the file path (the project path)."
 msgstr ""
+"Quand un fichier netliste est chargé, CvPcb définit +KIPRJMOD+ en utilisant "
+"le chemin du fichier (le chemin du projet)."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:131
 msgid ""
 "Pcbnew also defines this environment variable when loading a board file."
 msgstr ""
+"Pcbnew définit également cette variable d'environnement lors du chargement "
+"d'un fichier de circuit."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:135
@@ -1762,12 +1798,15 @@ msgid ""
 "define the absolute path (which is not always known) to the library in the "
 "project specific footprint library table."
 msgstr ""
+"Cela vous permet de stocker des librairies dans le dossier du projet, sans "
+"avoir à définir leur chemin absolu (qui n'est pas toujours connu) dans la "
+"table des librairies spécifiques au projet."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:136
 #, no-wrap
 msgid "Using the GitHub Plugin"
-msgstr ""
+msgstr "Utilisation du Plugin GitHub"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:147
@@ -1782,11 +1821,21 @@ msgid ""
 "footprint library table the ``Library Path'' in the footprint library table "
 "row a must be set to a valid GitHub URL."
 msgstr ""
+"Le plugin GitHub est un plugin spécial, qui fournit un interface d'accès en "
+"lecture seule à un dépôt GitHub distant, constitué de librairies d'empreintes "
+"au format Pretty (le nom du format de fichier d'empreinte de KiCad) et "
+"fournit accessoirement un support ``Copy On Write'' (COW) permettant d'éditer "
+"des empreintes lues à partir du dépôt GitHub, et de les enregistrer "
+"localement. Par conséquent, le ``plugin GitHub'' est *pour l'accès à distance "
+"et en lecture seule des librairies d'empreintes au format pretty* depuis "
+"https://github.com/[https://github.com]. Pour ajouter une entrée GitHub à la "
+"table des librairies d'empreintes, le champ ``Chemin Librairie'' de l'entrée "
+"dans la table doit pointer vers une URL GitHub valide."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:149
 msgid "For example:"
-msgstr ""
+msgstr "Par exemple :"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:151
@@ -1798,7 +1847,7 @@ msgstr ""
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:153
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:155
@@ -1808,13 +1857,15 @@ msgstr ""
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:158
 msgid "Typicality GitHub URLs take the form:"
-msgstr ""
+msgstr "Typiquement, les URL GitHub ont cette forme :"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:160
 msgid ""
 "https://github.com/user_name/repo_name[https://github.com/user_name/repo_name]"
 msgstr ""
+"https://github.com/nom_utilisateur/nom_dépot[https://github.com/nom_utilisateu"
+"r/nom_dépot]"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:176
@@ -1834,6 +1885,21 @@ msgid ""
 "``Github'' in all further discussions, but it consists of both the local "
 "read/write portion and the remote read only portion."
 msgstr ""
+"Le ``Type de Plugin'' doit être réglé sur ``Github''. Pour activer le ``Copy "
+"On Write'', une option *allow_pretty_writing_to_this_dir* doit être ajoutée "
+"dans le champ ``Options'' de l'entrée. Cette option donne le ``Chemin de "
+"Librairie'' pour le stockage local des empreintes modifiées, lues depuis le "
+"dépôt GitHub. Les empreintes enregistrées dans ce chemin sont combinées avec "
+"la partie en lecture seule du dépôt GitHub pour créer la librairie "
+"d'empreinte. Si cette option est manquante, alors la librairie GitHub est en "
+"lecture uniquement. Si l'option est présente pour une librairie GitHub, alors "
+"toute écriture vers cette librairie hybride se fera dans le répertoire local. "
+"Notez que la partie résidant sur github.com de cette librairie COW hybride "
+"est toujours en lecture seule, ce qui signifie que vous ne pouvez pas "
+"modifier ou supprimer quelque empreinte que ce soit directement dans le dépôt "
+"GitHub. Le type de ces librairies hybrides restera ``GitHub'' dans les "
+"paragraphes à venir, mais il se compose à la fois de la portion locale en "
+"lecture/écriture et de la portion distante en lecture seule."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:179
@@ -1841,12 +1907,14 @@ msgid ""
 "The table below shows a footprint library table entry without the option "
 "*allow_pretty_writing_to_this_dir*:"
 msgstr ""
+"Le tableau ci-dessous montre une entrée de table de librairies d'empreintes "
+"sans option *allow_pretty_writing_to_this_dir* :"
 
 #. type: delimited block |
 #: cvpcb_footprint_libraries_tables.adoc:183 cvpcb_footprint_libraries_tables.adoc:199
 #, no-wrap
 msgid "|Nickname |Library Path |Plugin Type |Options |Descript.\n"
-msgstr ""
+msgstr "|Pseudo nom|Chemin Librairie |Type de Plugin |Options |Descript.\n"
 
 #. type: delimited block |
 #: cvpcb_footprint_libraries_tables.adoc:187
@@ -1857,6 +1925,10 @@ msgid ""
 "/pretty_footprints]\n"
 "|Github | |Liftoff's GH footprints\n"
 msgstr ""
+"|github\n"
+"|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr"
+"/pretty_footprints]\n"
+"|Github | |Empreintes Liftoff's GH\n"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:195
@@ -1868,6 +1940,12 @@ msgid ""
 "to create that directory manually in advance and it must end with the "
 "extension *.pretty*."
 msgstr ""
+"Le tableau ci-dessous montre une entrée de table de librairies d'empreintes "
+"avec une option COW. Notez, pour exemple seulement, l'utilisation de la "
+"variable d'environnement $\\{HOME\\}. Le dossier github.pretty est situé dans "
+"le chemin $\\{HOME\\}/pretty/. Chaque fois que vous utilisez l'option "
+"*allow_pretty_writing_to_this_dir*, vous devez créer ce dossier manuellement "
+"au préalable, et il doit se terminer par l'extension *.pretty*."
 
 #. type: delimited block |
 #: cvpcb_footprint_libraries_tables.adoc:204
@@ -1880,6 +1958,12 @@ msgid ""
 "$\\{HOME\\}/pretty/github.pretty\n"
 "|Liftoff's GH footprints\n"
 msgstr ""
+"|github\n"
+"|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr"
+"/pretty_footprints]\n"
+"|Github |allow_pretty_writing_to_this_dir= "
+"$\\{HOME\\}/pretty/github.pretty\n"
+"|Empreintes Liftoff's GH\n"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:212
@@ -1891,6 +1975,13 @@ msgid ""
 "loading a footprint with the same name as one for which you've saved "
 "locally."
 msgstr ""
+"Le chargement des empreintes donnera toujours la priorité aux empreintes "
+"locales trouvées dans le chemin donné par l'option "
+"*allow_pretty_writing_to_this_dir*. Une fois que vous avez enregistré une "
+"empreinte dans le dossier local de la librairie COW avec l'éditeur de "
+"l'empreinte, aucune empreinte GitHub mise à jour ne sera visible lorsque vous "
+"chargerez une empreinte avec le même nom qu'une empreinte enregistrée "
+"localement."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:215
@@ -1898,6 +1989,9 @@ msgid ""
 "Always keep a separate local *.pretty directory for each Git Hub library, "
 "never combine them by referring to the same directory more than once."
 msgstr ""
+"Ayez toujours un dossier local *.pretty distinct pour chaque librairie "
+"GitHub, et ne les combinez jamais en vous référant plus d'une fois au même "
+"dossier."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:218
@@ -1905,6 +1999,8 @@ msgid ""
 "Also, do not use the same COW (*.pretty) directory in a footprint library "
 "table entry. This would likely create a mess."
 msgstr ""
+"Également, n'utilisez pas le même dossier COW (*.pretty) dans une entrée de "
+"table de librairies d'empreintes. Ça pourrait foutre le bordel."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:222
@@ -1913,12 +2009,17 @@ msgid ""
 "environment variable using the $\\{\\} notation to create the path in the "
 "same way as the ``Library Path'' setting."
 msgstr ""
+"La valeur de l'option *allow_pretty_writing_to_this_dir* substituera toute "
+"variable d'environnement utilisant la notation $\\{\\} pour désigner le "
+"chemin, de la même façon que pour le champ ``Chemin Librairie''."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:224
 msgid ""
 "What is the point of COW? It is to turbo-charge the sharing of footprints."
 msgstr ""
+"Quelle est la finalité du système COW ? Il est là pour booster le partage des "
+"empreintes."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:234
@@ -1933,12 +2034,21 @@ msgid ""
 "small as possible by contributing frequently to the shared master copies at "
 "https://github.com/[https://github.com]."
 msgstr ""
+"Si vous envoyez périodiquement vos modifications d'empreintes pretty COW au "
+"mainteneur du dépôt GitHub, vous aiderez à mettre à jour la copie GitHub. "
+"Envoyez simplement les fichiers individuels .kicad_mod que vous aurez dans "
+"vos dossiers COW au mainteneur du dépôt GitHub. Une fois que vous aurez reçu "
+"la confirmation que vos modifications ont été validées, vous pourrez "
+"supprimer en toute sécurité vos fichiers COW, et l'empreinte mise à jour de "
+"la librairie GitHub la remplacera. Votre objectif doit être de garder le "
+"dossier COW local aussi petit que possible en contribuant souvent aux copies "
+"maîtresses partagées sur https://github.com/[https://github.com]."
 
 #. type: Title ====
 #: cvpcb_footprint_libraries_tables.adoc:235
 #, no-wrap
 msgid "Usage Patterns"
-msgstr ""
+msgstr "Scénarios d'Utilisation"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:241
@@ -1948,6 +2058,10 @@ msgid ""
 "table are always available and are stored in the fp-lib-table file in the "
 "user's home folder."
 msgstr ""
+"Les librairies d'empreintes peuvent être définies comme globales, ou "
+"spécifiques au projet courant. Les librairies d'empreintes définies dans la "
+"table globale de l'utilisateur sont toujours disponibles, et sont décrites "
+"dans le fichier fp-lib-table du dossier personnel de l'utilisateur."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:244
@@ -1955,6 +2069,8 @@ msgid ""
 "Global footprint libraries can always be accessed even when there is no "
 "project net list file opened."
 msgstr ""
+"Les librairies d'empreintes globales sont toujours accessibles, même s'il n'y "
+"a pas de fichier netliste ouvert."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:246
@@ -1962,6 +2078,8 @@ msgid ""
 "The project specific footprint table is active only for the currently open "
 "net list file."
 msgstr ""
+"La table des librairies spécifiques au projet n'est active que pour le "
+"fichier netliste courant ouvert."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:250
@@ -1970,6 +2088,9 @@ msgid ""
 "fp-lib-table in the path of the currently open net list . You are free to "
 "define libraries in either table."
 msgstr ""
+"La table des librairies spécifiques au projet est enregistrée dans le fichier "
+"fp-lib-table, dans le chemin du fichier netliste actuellement ouvert. Vous "
+"êtes libres de définir des librairies dans chaque table."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:257
@@ -1980,6 +2101,12 @@ msgid ""
 "through a lot of libraries to find the footprint you are looking for. You "
 "can define all your libraries on a project specific basis."
 msgstr ""
+"Chaque méthode présente des avantages et des inconvénients. Vous pouvez "
+"définir toutes vos librairies dans la table globale, ce qui signifie qu'elles "
+"seront toujours disponibles quand vous en aurez besoin. L'inconvénient, c'est "
+"que vous devrez parfois parcourir beaucoup de librairies pour trouver "
+"l'empreinte que vous cherchez. Vous pouvez aussi définir toutes vos "
+"librairies sur une base spécifique par projet."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:260
@@ -1987,6 +2114,8 @@ msgid ""
 "The advantage of this is that you only need to define the libraries you "
 "actually need for the project which cuts down on searching."
 msgstr ""
+"L'avantage, c'est que vous aurez uniquement à définir les librairies "
+"nécessaires pour le projet, ce qui réduit la recherche."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:264
@@ -1995,6 +2124,10 @@ msgid ""
 "library that you need for every project. You can also define footprint "
 "libraries both globally and project specifically."
 msgstr ""
+"L'inconvénient c'est que vous devrez toujours vous rappeler d'ajouter chaque "
+"librairie d'empreintes dont vous avez besoin, pour chaque projet. Vous pouvez "
+"aussi définir à la fois des librairies d'empreintes globales, et des "
+"librairies spécifiques au projet."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:269
@@ -2004,12 +2137,16 @@ msgid ""
 "specific library table. There is no restriction on how you define your "
 "libraries."
 msgstr ""
+"Un autre scénario d'utilisation est de définir vos librairies les plus "
+"couramment utilisées de façon globale et les librairies seulement nécessaires "
+"pour le projet courant dans la table des librairies spécifiques. Il n'y a "
+"aucune restriction à la façon dont vous définissez vos librairies."
 
 #. type: Title ===
 #: cvpcb_footprint_libraries_tables.adoc:272
 #, no-wrap
 msgid "Using the Footprint Library Table Wizard"
-msgstr ""
+msgstr "Utilisation de l'Assistant des Librairies d'Empreintes"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:276
@@ -2017,17 +2154,24 @@ msgid ""
 "A wizard to add footprint libraries to the footprint library tables is "
 "available from the _footprint library table editing dialog_."
 msgstr ""
+"Un assistant pour ajouter des librairies d'empreintes aux tables est "
+"disponible depuis la _fenêtre d'édition des tables de librairies "
+"d'empreintes_."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:278
 msgid ""
 "Note also libraries can be any type of footprint library supported by KiCad."
 msgstr ""
+"Notez également que les librairies d'empreintes peuvent être de n'importe "
+"quel type pris en charge par KiCad."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:280
 msgid "It can add ``local'' libraries or libraries from a Github repository."
 msgstr ""
+"Il peut ajouter des librairies ``locales'', ou des librairies provenant d'un "
+"dépôt GitHub."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:283
@@ -2035,11 +2179,14 @@ msgid ""
 "When libraries are on a Github repository, they can be added as remote "
 "libraries, or **downloaded and added as _local libraries_**."
 msgstr ""
+"Quand des librairies sont sur un dépôt GitHub, elle peuvent être ajoutées "
+"comme des librairies distantes, ou **_téléchargées et ajoutées comme des "
+"librairies locales_**."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:285
 msgid "Here, the local libraries option is selected."
-msgstr ""
+msgstr "Ici, l'option librairie locale est cochée :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:286
@@ -2056,7 +2203,7 @@ msgstr ""
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:289
 msgid "Here, the remote libraries option is selected."
-msgstr ""
+msgstr "Ici, l'option librairie distante est cochée :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:290
@@ -2076,11 +2223,13 @@ msgid ""
 "Depending on the selected option, one of these pages will be displayed, to "
 "select a list of libraries:"
 msgstr ""
+"Suivant l'option choisie, une des pages suivantes sera affichée, pour "
+"sélectionner une liste de librairies."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:296
 msgid "Here, the local libraries option was selected."
-msgstr ""
+msgstr "Ici, quand l'option librairie locale a été choisie :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:297
@@ -2097,7 +2246,7 @@ msgstr ""
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:300
 msgid "Here, the remote libraries option was selected."
-msgstr ""
+msgstr "Ici, quand l'option librairie distante a été choisie :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:301
@@ -2116,6 +2265,8 @@ msgstr ""
 msgid ""
 "After a set of libraries is selected, the next page validates the choice:"
 msgstr ""
+"Après avoir sélectionné un jeu de librairies, la page suivante permet de "
+"valider son choix :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:305
@@ -2135,21 +2286,24 @@ msgid ""
 "If some selected libraries are incorrect (not supported, not a footprint "
 "library ...)  they will be flagged as ``INVALID''."
 msgstr ""
+"Si certaines des librairies sélectionnées sont incorrectes (non prises en "
+"charge, pas des librairies d'empreintes, etc..), elles seront marquées comme "
+"``INVALIDES''."
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:311
 msgid "The last choice is the footprint library table to populate:"
-msgstr ""
+msgstr "Le dernier choix est celui de la table à peupler :"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:313
 msgid "the global table"
-msgstr ""
+msgstr "la table globale"
 
 #. type: Plain text
 #: cvpcb_footprint_libraries_tables.adoc:314
 msgid "the local table (the project specific table)"
-msgstr ""
+msgstr "la table locale, spécifique au projet"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: cvpcb_footprint_libraries_tables.adoc:315
