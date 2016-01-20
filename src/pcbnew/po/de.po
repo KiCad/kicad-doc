@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-12-30 10:48+0100\n"
-"PO-Revision-Date: 2016-01-10 17:16+0100\n"
+"PO-Revision-Date: 2016-01-20 21:51+0100\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -672,12 +672,17 @@ msgid ""
 "to four - one for each part). Nevertheless, the time stamp option usually resolves re-annotation "
 "problems."
 msgstr ""
+"Wenn Sie diese Option verwenden sollten Sie sehr vorsichtig sein (speichern Sie die Datei vorher!). "
+"Diese Technik ist kompliziert im Falle von Bauteilen, die aus mehreren Teilen bestehen (z.B. ein 7400 "
+"hat 4 Teile in einem Gehäuse). In diesem Fall ist der Zeitstempel nicht einzigartig, der 7400 wird bis "
+"zu 4 haben, für jeden Teil einen. Nichtsdestotrotz löst die Zeitstempel-Option üblicherweise Probleme "
+"bei der Neu-Referenzierung."
 
 #. type: Title ===
 #: pcbnew_create_and_modify_board.adoc:229
 #, no-wrap
 msgid "Direct exchange for footprints already placed on board"
-msgstr ""
+msgstr "Direkter Austausch von schon platzierten Footprints"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:232
@@ -685,16 +690,18 @@ msgid ""
 "Changing a footprint ( or some identical footprints) to another footprint is very useful, and is very "
 "easy:"
 msgstr ""
+"Einen Footprint (oder einige identische Footprints) mit einem anderen Footprint auszutauschen ist sehr "
+"nützlich und sehr einfach:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:234
 msgid "Click on a footprint to open the Edit dialog box."
-msgstr ""
+msgstr "Klicken Sie auf einen Footprint, um den 'Bearbeiten' Dialog zu öffnen."
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:235
 msgid "Activate Change Footprints."
-msgstr ""
+msgstr "Aktivieren Sie 'Footprints austauschen'."
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:236
@@ -705,7 +712,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:239
 msgid "Options for Change Footprint(s):"
-msgstr ""
+msgstr "Optionen um Footprints auszutauschen:"
 
 #. type: Target for macro image
 #: pcbnew_create_and_modify_board.adoc:240
@@ -716,19 +723,19 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:243
 msgid "One must choose a new footprint name and use:"
-msgstr ""
+msgstr "Wählen Sie einen neuen Footprint indem Sie:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:245
 #, no-wrap
 msgid "*Change footprint of 'xx'* for the current footprint\n"
-msgstr ""
+msgstr "*Tausche Footprint von 'xx'* für den aktuellen Footprint\n"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:246
 #, no-wrap
 msgid "*Change footprints 'yy'* for all footprints like the current footprint.\n"
-msgstr ""
+msgstr "*Tausche Footprints 'yy'* für alle Footprints wie den aktuellen Footprint.\n"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:248
@@ -737,18 +744,20 @@ msgid ""
 "*Change footprints having same value* for all footprints like the current\n"
 "footprint, restricted to components which have the same value.\n"
 msgstr ""
+"*Tausche Footprints mit dem selben Wert* für alle Footprints wie den aktuellen\n"
+"Footprint, eingeschränkt auf Bauteile mit dem selben Wert.\n"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:249
 #, no-wrap
 msgid "*Update all footprints of the board* for reloads all footprints on board.\n"
-msgstr ""
+msgstr "*Alle Footprints aktualisieren* um alle Footprints auf der Leiterplatte neu zu laden.\n"
 
 #. type: Title ==
 #: pcbnew_zones.adoc:2
 #, no-wrap
 msgid "Creating copper zones"
-msgstr ""
+msgstr "Kupferflächen erzeugen"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:7
@@ -756,12 +765,15 @@ msgid ""
 "Copper zones are defined by an outline (closed polygon), and can include holes (closed polygons inside "
 "the outline). A zone can be drawn on a copper layer or alternatively on a technical layer."
 msgstr ""
+"Kupferflächen werden über einen Umriss (geschlossenes Polygon) definiert und können Löcher (geschlossene "
+"Polygone innerhalb des Umrisses) enthalten. Eine Fläche kann auf einer Kupferlage oder alternative auf "
+"einer technischen Lage gezeichnet werden."
 
 #. type: Title ===
 #: pcbnew_zones.adoc:8
 #, no-wrap
 msgid "Creating zones on copper layers"
-msgstr ""
+msgstr "Flächen auf Kupferlagen erzeugen"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:14
@@ -770,6 +782,9 @@ msgid ""
 "(not just created) to connect pads. Pcbnew currently uses track segments or polygons to fill copper "
 "areas."
 msgstr ""
+"Lötflächen- und Leiterbahnverbindungen zu gefüllten Kupferflächen werden von der DRC-Funktion geprüft. "
+"Eine Fläche muss gefüllt sein (nicht nur erzeugt) um Lötflächen zu verbinden. Pcbnew verwendet derzeit "
+"Leiterbahnsegmente oder Polygone um Kupferflächen zu füllen."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:17
@@ -777,21 +792,24 @@ msgid ""
 "Each option has its advantages and its disadvantages, the main disadvantage being increased screen "
 "redraw time on slower machines. The final result is however the same."
 msgstr ""
+"Jeder dieser Möglichkeiten hat ihre Vor- und Nachteile, der Hauptnachteil ist die Zeit die benötigt wird "
+"den Bildschirminhalt auf langsameren Rechnern neu zu zeichnen. Das Endergebnis ist jedoch das gleiche."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:20
 msgid "For calculation time reasons, the zone filling is not recreated after each change, but only:"
 msgstr ""
+"Aufgrund der Berechnungszeit wird die Flächenfüllung nicht nach jeder Änderung neu aufgebaut sondern nur:"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:22
 msgid "If a filling zone command is executed."
-msgstr ""
+msgstr "Wenn ein Flächenfüllbefehl ausgeführt wird."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:23
 msgid "When a DRC test is performed."
-msgstr ""
+msgstr "Wenn eine DRC Prüfung durchgeführt wird."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:27
@@ -799,11 +817,14 @@ msgid ""
 "Copper zones must be filled or refilled after changes in tracks or pads are made. Copper zones (usually "
 "ground and power planes) are usually attached to a net."
 msgstr ""
+"Kupferflächen müssen gefüllt oder neu gefüllt werden wenn Leiterbahnen geändert oder Lötflächen erstellt "
+"werden. Kupferflächen (üblicherweise Masse- und Versorgungsflächen) sind üblicherweise mit einem Netz "
+"verbunden."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:29
 msgid "In order to create a copper zone you should:"
-msgstr ""
+msgstr "Um eine Kupferfläche zu erzeugen sollten Sie:"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:32
