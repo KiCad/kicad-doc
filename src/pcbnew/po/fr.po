@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-01-22 12:21+0100\n"
-"PO-Revision-Date: 2016-01-22 12:29+0100\n"
+"PO-Revision-Date: 2016-01-25 12:52+0100\n"
 "Last-Translator: Marc BERLIOUX <marc.berlioux@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -6442,6 +6442,8 @@ msgid ""
 "Scripting allow you to automate tasks within KiCad using the "
 "https://www.python.org/[Python] language."
 msgstr ""
+"L'usage de scripts permet d'automatiser certaines tâches de KiCad au moyen du "
+"langage https://www.python.org/[Python]."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:6
@@ -6451,23 +6453,29 @@ msgid ""
 "index.html[Python "
 "Scripting Reference]."
 msgstr ""
+"Voyez aussi la documentation de doxygen sur "
+"http://ci.kicad-pcb.org/job/kicad-doxygen/ws/build/pcbnew/doxygen-python/html/"
+"index.html[Python Scripting Reference]."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:8
 msgid ""
 "You can see python module help by typing `pydoc pcbnew` on your terminal."
 msgstr ""
+"Vous pouvez obtenir l'aide du module python en tapant `pydoc pcbnew` dans "
+"votre terminal."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:10
 msgid "Using scripting you can create:"
-msgstr ""
+msgstr "Avec des scripts vous pouvez créer des : "
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:12
 #, no-wrap
 msgid "*Plugins*: this type of script is loaded when KiCad starts. Examples:\n"
 msgstr ""
+"*Plugins* : ce type de script est chargé au démarrage de KiCad. Exemples :\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:13
@@ -6477,6 +6485,9 @@ msgid ""
 "parameters. See the dedicated section <<Footprint_Wizards,Footprint "
 "Wizards>> below.\n"
 msgstr ""
+"*Assistants d'Empreintes* : Pour vous faciliter la fabrication d'empreintes "
+"en remplissant des paramètres. Voir ci-dessous la section dédiée <"
+"<Footprint_Wizards,Assistants d'Empreintes>>.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:14
@@ -6485,6 +6496,8 @@ msgid ""
 "*File I/O* '(planned)': To let you write plugins to export/import other "
 "filetypes\n"
 msgstr ""
+"*Fichier I/O* '(en projet)' : Pour vous permettre d'écrire des plugins "
+"d'import/export d'autres types de fichiers.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:15
@@ -6493,6 +6506,8 @@ msgid ""
 "*Actions* '(planned)': Associate events to scripting actions or register new "
 "menus or toolbar icons.\n"
 msgstr ""
+"*Actions* '(en projet)' : Pour associer des actions de scripts à des "
+"événements, ou ajouter de nouveaux menus ou icônes de barres d'outils.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:17
@@ -6501,6 +6516,9 @@ msgid ""
 "*Command Line Scripts*: scripts that can be used from the command line, load "
 "boards or libraries, modify them, and render outputs or new boards.\n"
 msgstr ""
+"*Scripts en Ligne de Commande* : ces scripts, utilisables en ligne de "
+"commande, peuvent charger des circuits ou des librairies, les modifier, et "
+"produire en sortie des rendus ou de nouveaux circuits.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:20
@@ -6508,12 +6526,15 @@ msgid ""
 "It shall be noted that the only KiCad applicaiton that supports scripting is "
 "Pcbnew. It is also planned for Eeschema in the future."
 msgstr ""
+"Il faut noter que la seule application de KiCad qui permette l'utilisation de "
+"scripts est Pcbnew. Il est prévu de pouvoir le faire avec Eeschema aussi dans "
+"le futur."
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:21
 #, no-wrap
 msgid "KiCad Objects"
-msgstr ""
+msgstr "Objets de KiCad"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:25
@@ -6523,17 +6544,21 @@ msgid ""
 "set of MODULEs, and TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.  Then "
 "MODULEs have D_PADs, EDGEs, etc."
 msgstr ""
+"L'API de scripting reflète la structure interne des objets dans KiCad/Pcbnew. "
+"BOARD est l'objet principal. Il a un jeu de propriétés et un jeu de MODULEs, "
+"TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT. Les MODULEs ont ensuite "
+"des D_PADs, EDGEs, etc..."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:27
 msgid "See the BOARD section below."
-msgstr ""
+msgstr "Voir la section BOARD ci-dessous."
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:28
 #, no-wrap
 msgid "Basic API Reference"
-msgstr ""
+msgstr "Référence de Base de l'API"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:31
@@ -6543,18 +6568,22 @@ msgid ""
 "for commands written from the integrated scripting shell inside pcbnew or "
 "action plugins."
 msgstr ""
+"Toute l'API de Pcbnew est contenue dans le module python \"pcbnew\". La "
+"méthode GetBoard() qui renvoie le PCB courant ouvert dans l'éditeur,  est "
+"utile pour des commandes tapées dans l'environnement de scripting intégré à "
+"Pcbnew ou pour les plugins d'actions."
 
 #. type: Title ===
 #: pcbnew_python_scripting.adoc:32
 #, no-wrap
 msgid "Loading and Saving a Board"
-msgstr ""
+msgstr "Charger et Sauvegarder un Circuit"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:35
 #, no-wrap
 msgid "*LoadBoard(filename):*\n"
-msgstr ""
+msgstr "*LoadBoard(nom_du_fichier) :*\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:36
@@ -6563,12 +6592,14 @@ msgid ""
 "loads a board from file returning a BOARD object, using the file format that "
 "matches the filename extension.\n"
 msgstr ""
+"charge un circuit depuis un fichier et retourne un objet de type BOARD, en "
+"utilisant le format de fichier correspondant à l'extension du fichier.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:38
 #, no-wrap
 msgid "*SaveBoard(filename,board):*\n"
-msgstr ""
+msgstr "*SaveBoard(nom_du_fichier,circuit) :*\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:39
@@ -6577,18 +6608,21 @@ msgid ""
 "saves a BOARD object to file, using the file format that matches the "
 "filename extension.\n"
 msgstr ""
+"sauvegarde un objet BOARD dans le fichier, en utilisant le format de fichier "
+"correspondant à l'extension du fichier.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:41
 #, no-wrap
 msgid "*board.Save(filename):*\n"
-msgstr ""
+msgstr "*circuit.Save(nom_du_fichier) :*\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:42
 #, no-wrap
 msgid "same as above, but it's a method of BOARD object.\n"
 msgstr ""
+"identique au précédent, mais cette fois par la méthode de l'objet BOARD.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:43
@@ -6601,6 +6635,8 @@ msgstr ""
 #, no-wrap
 msgid "Example that loads a board, hides all values, shows all references"
 msgstr ""
+"Un exemple qui charge un circuit, cache toutes les valeurs et montre toutes "
+"les références"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:49 pcbnew_python_scripting.adoc:104
@@ -6638,13 +6674,13 @@ msgstr ""
 #: pcbnew_python_scripting.adoc:61
 #, no-wrap
 msgid "Listing and Loading Libraries"
-msgstr ""
+msgstr "Lister et Charger des Librairies"
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:63
 #, no-wrap
 msgid "Enumerate library, enumerate modules, enumerate pads"
-msgstr ""
+msgstr "Énumérer une librairie, ses modules, et leurs pads"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:67 pcbnew_python_scripting.adoc:195
@@ -6682,12 +6718,12 @@ msgstr ""
 #: pcbnew_python_scripting.adoc:80
 #, no-wrap
 msgid "BOARD"
-msgstr ""
+msgstr "BOARD"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:83
 msgid "Board is the basic object in KiCad pcbnew, it's the document."
-msgstr ""
+msgstr "BOARD est l'objet de base dans Pcbnew de KiCad, c'est le document."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:85
@@ -6696,6 +6732,9 @@ msgid ""
 "following methods, they will return iterable lists that can be iterated "
 "using \"for obj in list:\""
 msgstr ""
+"BOARD contient un jeu de listes d'objets qui peuvent être atteintes par les "
+"méthodes suivantes, qui retournent des listes itérables pouvant être itérées "
+"en utilisant \"for obj in list:\""
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:87
@@ -6704,6 +6743,8 @@ msgid ""
 "*board.GetModules():* This method returns a list of MODULE objects, all the "
 "modules available in the board will be exposed here.\n"
 msgstr ""
+"*circuit.GetModules() :* retourne la liste des objets de type MODULE. Tous "
+"les modules présents sur le circuit y seront représentés.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:88
@@ -6712,6 +6753,8 @@ msgid ""
 "*board.GetDrawings():* Returns the list of BOARD_ITEMS that belong to the "
 "board drawings\n"
 msgstr ""
+"*circuit.GetDrawings() :* retourne la liste des BOARD_ITEMS qui sont des "
+"éléments graphiques du circuit.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:89
@@ -6720,12 +6763,14 @@ msgid ""
 "*board.GetTracks():* This method returns a list of TRACKs an SEGVIAs inside "
 "a BOARD\n"
 msgstr ""
+"*circuit.GetTracks() :*  retourne la liste des objets de type TRACKs et "
+"SEGVIAs d'un objet BOARD.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:90
 #, no-wrap
 msgid "*board.GetSegZones():* Returns a list of SEGZONEs\n"
-msgstr ""
+msgstr "*circuit.GetSegZones() :* retourne la liste des SEGZONEs.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:91
@@ -6734,6 +6779,8 @@ msgid ""
 "*board.GetFullRatnest():* Returns the list of ratsnets (connections still "
 "not routed)\n"
 msgstr ""
+"*circuit.GetFullRatnest() :*  retourne la liste des ratsnets (connexions "
+"encore non routées).\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:92
@@ -6742,18 +6789,20 @@ msgid ""
 "*board.GetLocalRatsnest():* Returns the list of ratsnest of a moving "
 "footprint (as it's dragged)\n"
 msgstr ""
+"*circuit.GetLocalRatsnest() :* retourne la liste des ratsnets d'une empreinte "
+"en cours de déplacement (pendant qu'elle est tirée).\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:93
 #, no-wrap
 msgid "*board.GetNetClasses():* Returns the list of net classes\n"
-msgstr ""
+msgstr "*circuit.GetNetClasses() :*  retourne la liste des net classes.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:94
 #, no-wrap
 msgid "*board.GetCurrentNetClassName():* Returns the current net class\n"
-msgstr ""
+msgstr "*circuit.GetCurrentNetClassName() :* retourne la net class courante.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:95
@@ -6762,6 +6811,8 @@ msgid ""
 "*board.GetViasDimensionsList():* Returns the list of Via dimensions "
 "available to the board.\n"
 msgstr ""
+"*circuit.GetViasDimensionsList() :* retourne la liste des dimensions des vias "
+"disponibles dans le circuit.\n"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:96
@@ -6770,12 +6821,14 @@ msgid ""
 "*board.GetTrackWidthList():* Returns the list of Track Widths available to "
 "the board.\n"
 msgstr ""
+"*circuit.GetTrackWidthList() :* retourne la liste des largeurs de piste "
+"disponibles dans le circuit.\n"
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:98
 #, no-wrap
 msgid "Board Inspection Example"
-msgstr ""
+msgstr "Exemple d'Inspection d'un Circuit"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:107
@@ -6893,13 +6946,13 @@ msgstr ""
 #: pcbnew_python_scripting.adoc:155 pcbnew_routing.adoc:151
 #, no-wrap
 msgid "Examples"
-msgstr ""
+msgstr "Exemples"
 
 #. type: Title ====
 #: pcbnew_python_scripting.adoc:157
 #, no-wrap
 msgid "Change a component pins paste mask margin"
-msgstr ""
+msgstr "Changer la marge du masque de soudure des pins d'un composant"
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:159
@@ -6908,6 +6961,8 @@ msgid ""
 "We only want to change pins from 1 to 14, 15 is a thermal pad that must be "
 "keep as it is."
 msgstr ""
+"Nous voulons seulement changer les pins de 1 à 14, la pin 15 étant une pin "
+"thermique qui doit être conservée telle quelle est."
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:165
@@ -6932,7 +6987,7 @@ msgstr ""
 #: pcbnew_python_scripting.adoc:173
 #, no-wrap
 msgid "Footprint Wizards"
-msgstr ""
+msgstr "Assistants d'Empreintes"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:179
@@ -6942,6 +6997,11 @@ msgid ""
 "a given wizard that allows you to see the footprint rendered, and you have "
 "some parameters you can edit."
 msgstr ""
+"Les assistants d'empreintes sont une collection de scripts python auxquels on "
+"accède par l'intermédiaire de l'éditeur d'empreintes. Si vous faites "
+"apparaître la boîte de dialogue de l'empreinte, vous sélectionnez un "
+"assistant donné qui vous permet de voir le rendu de l'empreinte, et quelques "
+"paramètres qui peuvent être modifiés."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:183
@@ -6951,6 +7011,10 @@ msgid ""
 "link:http://bazaar.launchpad.net/~kicad-product-committers/kicad/product/files"
 "/head:/pcbnew/scripting/plugins/[launchpad]."
 msgstr ""
+"Si les plugins ne sont pas tous installés pour votre système, vous pouvez "
+"trouver les dernières versions dans les sources de KiCad sur "
+"link:http://bazaar.launchpad.net/~kicad-product-committers/kicad/product/files"
+"/head:/pcbnew/scripting/plugins/[launchpad]."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:186
@@ -6958,17 +7022,21 @@ msgid ""
 "They should be located in for example `C:\\Program "
 "Files\\KiCad\\bin\\scripting\\plugins`."
 msgstr ""
+"Ils devront être enregistrés par exemple dans `C:\\Program "
+"Files\\KiCad\\bin\\scripting\\plugins`."
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:189
 msgid "On linux you can also keep your user plugins in `$HOME/.kicad_plugins`."
 msgstr ""
+"Sous Linux, vous pouvez aussi stocker vos plugins utilisateur dans "
+"`$HOME/.kicad_plugins`."
 
 #. type: Block title
 #: pcbnew_python_scripting.adoc:191
 #, no-wrap
 msgid "Build footprints easily filling in parameters."
-msgstr ""
+msgstr "Construire facilement des empreintes en remplissant des paramètres."
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:215
@@ -9002,4 +9070,5 @@ msgid ""
 "filled. A keep-out area is a like a zone, so editing its outline is "
 "analogous to copper zone editing."
 msgstr ""
+
 
