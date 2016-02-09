@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pcbnew\n"
-"POT-Creation-Date: 2016-01-15 13:17+0100\n"
+"POT-Creation-Date: 2016-02-09 15:49+0100\n"
 "PO-Revision-Date: 2016-01-03 17:16+0100\n"
 "Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
@@ -6644,57 +6644,122 @@ msgstr ""
 
 #. type: Title ==
 #: pcbnew_layers.adoc:2
-#, no-wrap
-msgid "Setting up working layers"
-msgstr "作業レイヤのセットアップ"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:5
-msgid "Pcbnew can work on 50 different layers:"
-msgstr "Pcbnew は 50 の異なるレイヤで作業することが可能です:"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:7
-msgid "32 copper layers (for routing of tracks)."
-msgstr "32 の導体レイヤ（配線用）"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:8
-msgid "14 technical layers (includes 1 board outline layer)."
-msgstr "14 のテクニカル レイヤ（１つの基板外形レイヤを含む）"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:9
-msgid "4 auxiliary layers."
-msgstr "4 つの補助レイヤ"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:12
-msgid ""
-"The number of copper layers, and if needed their names and attributes, "
-"should be set. Unused technical layers can be disabled."
-msgstr ""
-"導体レイヤの数、および（必要なら）それらの名前と属性を設定します。未使用のテ"
-"クニカル レイヤは、禁止に設定することが可能です。"
+#, fuzzy, no-wrap
+#| msgid "Layer"
+msgid "Layers"
+msgstr "レイヤ"
 
 #. type: Title ===
-#: pcbnew_layers.adoc:13
-#, no-wrap
-msgid "Select copper layers"
-msgstr "導体レイヤの選択"
-
-#. type: Title ====
-#: pcbnew_layers.adoc:15
+#: pcbnew_layers.adoc:4
 #, no-wrap
 msgid "Introduction"
 msgstr "はじめに"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:21
+#: pcbnew_layers.adoc:7
+#, fuzzy
+#| msgid "Pcbnew can work on 50 different layers:"
+msgid "Pcbnew can work with 50 different layers:"
+msgstr "Pcbnew は 50 の異なるレイヤで作業することが可能です:"
+
+#. type: Plain text
+#: pcbnew_layers.adoc:9
+#, fuzzy
+#| msgid "32 copper layers (for routing of tracks)."
+msgid "Between 2 and 32 copper layers for routing tracks."
+msgstr "32 の導体レイヤ（配線用）"
+
+#. type: Plain text
+#: pcbnew_layers.adoc:10
+#, fuzzy
+#| msgid "The technical layers are:"
+msgid "14 fixed-purpose technical layers:"
+msgstr "テクニカルレイヤは次のようなものです:"
+
+#. type: Plain text
+#: pcbnew_layers.adoc:11
+msgid "12 paired layers (Front/Back): *Adhesive*, *Solder Paste*,"
+msgstr ""
+
+#. type: Plain text
+#: pcbnew_layers.adoc:12
+#, no-wrap
+msgid "*Silk Screen*, *Solder Mask*, *Courtyard*, *Fabrication*\n"
+msgstr ""
+
+#. type: Plain text
+#: pcbnew_layers.adoc:13
+#, no-wrap
+msgid "2 standalone layers: *Edge Cuts*, *Margin*\n"
+msgstr ""
+
+#. type: Plain text
+#: pcbnew_layers.adoc:14
+#, no-wrap
+msgid "4 auxiliary layers that you can use any way you want: *Comments*, *E.C.O. 1*, *E.C.O. 2*, *Drawings*\n"
+msgstr ""
+
+#. type: Title ===
+#: pcbnew_layers.adoc:15
+#, fuzzy, no-wrap
+#| msgid "Setting up working layers"
+msgid "Setting up layers"
+msgstr "作業レイヤのセットアップ"
+
+#. type: Plain text
+#: pcbnew_layers.adoc:18
 msgid ""
-"Copper layers are the usual working layers used by the automatic router to "
-"place and re-arrange tracks. Layer 0 is the copper (solder) layer. Layer 31 "
-"is the component layer. Other layers are the inner layers, from In1 to In30."
+"To open the *Layers Setup* from the menu bar, select **Design Rules** -> "
+"**Layers Setup**."
+msgstr ""
+
+#. type: Plain text
+#: pcbnew_layers.adoc:21
+#, fuzzy
+#| msgid ""
+#| "The number of copper layers, and if needed their names and attributes, "
+#| "should be set. Unused technical layers can be disabled."
+msgid ""
+"The number of copper layers, their names, and their function are configured "
+"there.  Unused technical layers can be disabled."
+msgstr ""
+"導体レイヤの数、および（必要なら）それらの名前と属性を設定します。未使用のテ"
+"クニカル レイヤは、禁止に設定することが可能です。"
+
+# 07072015：/ja/へ変更
+#. type: Target for macro image
+#: pcbnew_layers.adoc:22
+#, no-wrap
+msgid "images/Pcbnew_layer_setup_dialog.png"
+msgstr "images/ja/Pcbnew_layer_setup_dialog.png"
+
+#. type: Title ===
+#: pcbnew_layers.adoc:24
+#, fuzzy, no-wrap
+#| msgid "Description"
+msgid "Layer Description"
+msgstr "説明"
+
+#. type: Title ====
+#: pcbnew_layers.adoc:26
+#, fuzzy, no-wrap
+#| msgid "Copper layers"
+msgid "Copper Layers"
+msgstr "導体レイヤ"
+
+#. type: Plain text
+#: pcbnew_layers.adoc:32
+#, fuzzy
+#| msgid ""
+#| "Copper layers are the usual working layers used by the automatic router "
+#| "to place and re-arrange tracks. Layer 0 is the copper (solder) layer. "
+#| "Layer 31 is the component layer. Other layers are the inner layers, from "
+#| "In1 to In30."
+msgid ""
+"Copper layers are the usual working layers used to place and re-arrange "
+"tracks.  Layer numbers start from 0 (the first copper layer, on Front) and "
+"end at 31 (Back). Since components cannot be placed in *inner layers* "
+"(number 1 to 30), only layers number 0 and 31 are *component layer*."
 msgstr ""
 "導体レイヤ（ .Cu ）は、自動／手動配線および再調整（ rearrange ）で使用される"
 "通常の作業レイヤです。0番目のレイヤは表面レイヤ（ F、両面基板でリフロー面、片"
@@ -6702,77 +6767,49 @@ msgstr ""
 "片面基板でディップ面）です。他のレイヤ、In1〜In30は内部レイヤ（ 内層 In1～"
 "30 ）です。"
 
-#. type: Title ====
-#: pcbnew_layers.adoc:22
-#, no-wrap
-msgid "Select number of layers"
-msgstr "レイヤ数の選択"
-
 #. type: Plain text
-#: pcbnew_layers.adoc:27
+#: pcbnew_layers.adoc:36
+#, fuzzy
+#| msgid ""
+#| "The name of any copper layer is editable. Copper layers have attributes "
+#| "useful when using the external router _Freerouter_."
 msgid ""
-"To enable navigation between layers, it is necessary to select the number of "
-"working layers. To do this you can use the menu bar and select Design Rules -"
-"> Layers Setup."
-msgstr ""
-"レイヤ間のナビゲーションを可能にするため、作業レイヤの数を選択しなければなり"
-"ません。これを行うためには、メニューバーを使用して、”デザインルール” -> “レイ"
-"ヤのセットアップ” を選択します。"
-
-# 07072015：/ja/へ変更
-#. type: Target for macro image
-#: pcbnew_layers.adoc:28
-#, no-wrap
-msgid "images/Pcbnew_layer_setup_menu_item.png"
-msgstr "images/ja/Pcbnew_layer_setup_menu_item.png"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:31
-msgid "Then select the number of layers wanted, from 2 to 32."
-msgstr "この時、２〜３２レイヤの範囲で必要な配線レイヤ数を選択します。"
-
-# 07072015：/ja/へ変更
-#. type: Target for macro image
-#: pcbnew_layers.adoc:32
-#, no-wrap
-msgid "images/Pcbnew_layer_setup_dialog.png"
-msgstr "images/ja/Pcbnew_layer_setup_dialog.png"
-
-#. type: Title ====
-#: pcbnew_layers.adoc:34
-#, no-wrap
-msgid "Copper layers"
-msgstr "導体レイヤ"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:38
-msgid ""
-"The name of any copper layer is editable. Copper layers have attributes "
-"useful when using the external router _Freerouter_."
+"The name of any copper layer is editable. Copper layers have a function "
+"attribute that is useful when using the external router _Freerouter_.  "
+"Example of default layer names are *F.Cu* and *In0* for layer number 0."
 msgstr ""
 "任意の導体レイヤは名前の編集が可能です。導体レイヤは外部ルーター "
 "_Freerouter_ を使用する場合に便利な属性を持ちます。"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:39
+#: pcbnew_layers.adoc:37
 #, no-wrap
 msgid "images/Pcbnew_layer_setup_dialog_layer_properties.png"
 msgstr "images/ja/Pcbnew_layer_setup_dialog_layer_properties.png"
 
-#. type: Title ===
-#: pcbnew_layers.adoc:41
-#, no-wrap
-msgid "Auxiliary technical layers"
-msgstr "テクニカルレイヤと予備レイヤ"
+#. type: Title ====
+#: pcbnew_layers.adoc:39
+#, fuzzy, no-wrap
+#| msgid "Technical layers"
+msgid "Paired Technical Layers"
+msgstr "テクニカルレイヤ"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:48
+#: pcbnew_layers.adoc:43
+#, fuzzy
+#| msgid ""
+#| "Some are associated in pairs, others not. When they appear as a pair this "
+#| "affects the behaviour of footprints. The elements making up a footprint "
+#| "(pads, drawing and text) appearing on a layer (solder or component), "
+#| "appear on the other complementary layer when the footprint is inverted "
+#| "(mirrored)."
 msgid ""
-"Some are associated in pairs, others not. When they appear as a pair this "
-"affects the behaviour of footprints. The elements making up a footprint "
-"(pads, drawing and text) appearing on a layer (solder or component), appear "
-"on the other complementary layer when the footprint is inverted (mirrored)."
+"12 technical layers come in pairs: one for the front, one for the back. You "
+"can recognize them with the \"F.\" or \"B.\" prefix in their names.  The "
+"elements making up a footprint (pad, drawing, text) of one of these layers "
+"are automatically mirrored and moved to the complementary layer when the "
+"footprint is flipped."
 msgstr ""
 "ペアになっているものと、そうでないものがあります。ペアになっている場合、フッ"
 "トプリントの挙動に影響を与えます。あるレイヤ（表または裏）に現れているフット"
@@ -6780,221 +6817,288 @@ msgstr ""
 "転（鏡像）されると、ペアになっているもう一方のレイヤに現れます。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:50
-msgid "The technical layers are:"
+#: pcbnew_layers.adoc:45
+#, fuzzy
+#| msgid "The technical layers are:"
+msgid "The paired technical layers are:"
 msgstr "テクニカルレイヤは次のようなものです:"
 
-#. type: Title ====
-#: pcbnew_layers.adoc:51
+#. type: Labeled list
+#: pcbnew_layers.adoc:46
 #, no-wrap
-msgid "Paired layers"
-msgstr "ペアレイヤ"
+msgid "*Adhesive* (F.Adhes and B.Adhes)"
+msgstr ""
+
+#. type: Plain text
+#: pcbnew_layers.adoc:49
+#, fuzzy
+#| msgid ""
+#| "** These are used in the application of adhesive to stick SMD components\n"
+#| "   to the circuit board, generally before wave soldering.\n"
+msgid ""
+"These are used in the application of adhesive to stick SMD components to the "
+"circuit board, generally before wave soldering."
+msgstr ""
+"** 一般的にハンダディップ（フロー工程）の前に、SMDコンポーネントを回路基板に"
+"貼り付けるためのボンド塗布工程で使用されます。\n"
+
+#. type: Labeled list
+#: pcbnew_layers.adoc:50
+#, no-wrap
+msgid "*Solder Paste* (F.Paste and B.Paste)"
+msgstr ""
 
 #. type: Plain text
 #: pcbnew_layers.adoc:54
-msgid "The *Adhesives* layers (Copper and Component):"
-msgstr "*接着(ボンド)* レイヤ（表および裏）:"
+#, fuzzy
+#| msgid ""
+#| "** Used to produce a mask to allow solder paste to be placed on the\n"
+#| "   pads of surface mount components, generally before reflow soldering.\n"
+#| "   Usually only surface mount pads occupy these layers.\n"
+msgid ""
+"Used to produce a mask to allow solder paste to be placed on the pads of "
+"surface mount components, generally before reflow soldering.  Usually only "
+"surface mount pads occupy these layers."
+msgstr ""
+"** 一般的にはリフロー工程の前に、表面実装コンポーネントのパッド上にハンダペー"
+"スト（クリームハンダ）を印刷するためのメタルマスクを作成するために使用されま"
+"す。通常は、表面実装パッドのみがこれらのレイヤを占めます。\n"
+
+#. type: Labeled list
+#: pcbnew_layers.adoc:55
+#, no-wrap
+msgid "*Silk Screen* (F.SilkS and B.SilkS)"
+msgstr ""
 
 #. type: Plain text
 #: pcbnew_layers.adoc:57
-#, no-wrap
 msgid ""
-"** These are used in the application of adhesive to stick SMD components\n"
-"   to the circuit board, generally before wave soldering.\n"
-msgstr "** 一般的にハンダディップ（フロー工程）の前に、SMDコンポーネントを回路基板に貼り付けるためのボンド塗布工程で使用されます。\n"
+"They are the layers where the drawings of the components appear. That's "
+"where you draw things like component polarity, first pin indicator, "
+"reference for mounting, ..."
+msgstr ""
+
+#. type: Labeled list
+#: pcbnew_layers.adoc:58
+#, no-wrap
+msgid "*Solder Mask* (F.Mask and B.Mask)"
+msgstr ""
 
 #. type: Plain text
-#: pcbnew_layers.adoc:59
-msgid "The *Solder Paste* layers paste SMD (Copper and Component):"
-msgstr "*ハンダペースト* レイヤ（表および裏）: "
+#: pcbnew_layers.adoc:60
+#, fuzzy
+#| msgid ""
+#| "** These define the solder masks. Normally all pads appear on one or\n"
+#| "   the other of these layers (or both for through pads) to prevent the\n"
+#| "   varnish covering the pads.\n"
+msgid ""
+"These define the solder masks. All pads should appear on one of these layers "
+"(SMT) or both (for through hole) to prevent the varnish from covering the "
+"pads."
+msgstr ""
+"** ハンダレジストのフォトマスクです。通常、すべてのパッドはこれらのレイヤのう"
+"ち、\n"
+"どちらか一方（スルーホールのパッドの場合は両方）に現れ、レジスト膜がパッド"
+"を\n"
+"覆わないようにします。\n"
+
+#. type: Labeled list
+#: pcbnew_layers.adoc:61
+#, no-wrap
+msgid "*Courtyard* (F.CrtYd and B.CrtYd)"
+msgstr ""
 
 #. type: Plain text
 #: pcbnew_layers.adoc:63
+msgid "Used to show how much space a component physically takes on the PCB."
+msgstr ""
+
+#. type: Labeled list
+#: pcbnew_layers.adoc:64
 #, no-wrap
-msgid ""
-"** Used to produce a mask to allow solder paste to be placed on the\n"
-"   pads of surface mount components, generally before reflow soldering.\n"
-"   Usually only surface mount pads occupy these layers.\n"
-msgstr "** 一般的にはリフロー工程の前に、表面実装コンポーネントのパッド上にハンダペースト（クリームハンダ）を印刷するためのメタルマスクを作成するために使用されます。通常は、表面実装パッドのみがこれらのレイヤを占めます。\n"
+msgid "*Fabrication* (F.Fab and B.Fab)"
+msgstr ""
 
 #. type: Plain text
-#: pcbnew_layers.adoc:65
-msgid "The *Silk Screen* layers (Copper and Component):"
-msgstr "*シルクスクリーン* レイヤ（表および裏）: "
+#: pcbnew_layers.adoc:66
+#, fuzzy
+#| msgid "Footprint level."
+msgid "Footprint assembly (?)."
+msgstr "フットプリントレベル。"
 
-#. type: Plain text
+#. type: Title ====
 #: pcbnew_layers.adoc:67
-#, no-wrap
-msgid "** They are the layers where the drawings of the components appear.\n"
-msgstr "** コンポーネントの図形要素（線や文字）を描くレイヤです。\n"
+#, fuzzy, no-wrap
+#| msgid "Technical layers"
+msgid "Independant Technical Layers"
+msgstr "テクニカルレイヤ"
 
-#. type: Plain text
+#. type: Labeled list
 #: pcbnew_layers.adoc:69
-msgid "The *Solder Mask* layers (Copper and Component):"
-msgstr "*ハンダマスク* レイヤ（表および裏）: "
+#, fuzzy, no-wrap
+#| msgid "*Edge Cuts* layer:\n"
+msgid "*Edge.Cuts*"
+msgstr "*Edge.Cuts (基板外形)* レイヤ:\n"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:73
-#, no-wrap
+#, fuzzy
+#| msgid ""
+#| "** This layer is reserved for the drawing of circuit board outline. Any\n"
+#| "   element (graphic, texts...) placed on this layer appears on all the\n"
+#| "   other layers. Use this layer only to draw board outlines.\n"
 msgid ""
-"** These define the solder masks. Normally all pads appear on one or\n"
-"   the other of these layers (or both for through pads) to prevent the\n"
-"   varnish covering the pads.\n"
+"This layer is reserved for the drawing of circuit board outline. Any element "
+"(graphic, texts...) placed on this layer appears on all the other layers. "
+"Use this layer only to draw board outlines."
 msgstr ""
-"** ハンダレジストのフォトマスクです。通常、すべてのパッドはこれらのレイヤのうち、\n"
-"どちらか一方（スルーホールのパッドの場合は両方）に現れ、レジスト膜がパッドを\n"
-"覆わないようにします。\n"
+"** このレイヤはプリント基板の外形図用に予約されています。このレイヤに配置され"
+"て\n"
+"いるすべての要素(グラフィック、テキスト…)は、他のすべてのレイヤに現れます。\n"
+"基板外形を作成するためにのみ、このレイヤを使用して下さい。\n"
+
+#. type: Labeled list
+#: pcbnew_layers.adoc:74
+#, no-wrap
+msgid "*Margin*"
+msgstr ""
+
+#. type: Plain text
+#: pcbnew_layers.adoc:76
+msgid "Board's edge setback outline (?)."
+msgstr ""
 
 #. type: Title ====
-#: pcbnew_layers.adoc:74
+#: pcbnew_layers.adoc:77
 #, no-wrap
 msgid "Layers for general use"
 msgstr "汎用レイヤ"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:77
-msgid "Comments"
-msgstr "コメント"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:78
-msgid "E.C.O. 1"
-msgstr "ECO1"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:79
-msgid "E.C.O. 2"
-msgstr "ECO2"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:80
-msgid "Drawings"
-msgstr "図"
-
-#. type: Plain text
-#: pcbnew_layers.adoc:84
+#: pcbnew_layers.adoc:82
+#, fuzzy
+#| msgid ""
+#| "These layers are for any use. They can be used for text such as "
+#| "instructions for assembly or wiring, or construction drawings, to be used "
+#| "to create a file for assembly or machining."
 msgid ""
 "These layers are for any use. They can be used for text such as instructions "
 "for assembly or wiring, or construction drawings, to be used to create a "
-"file for assembly or machining."
+"file for assembly or machining. Their names are:"
 msgstr ""
 "これらのレイヤは任意で使用できます。自動組立てや機械加工用のファイルを作るた"
 "めに使用したり、部品実装やコネクタ配線を指示するための指示書、基板の組立図"
 "に、これらのレイヤを使用することができます。"
 
-#. type: Title ====
+#. type: Plain text
+#: pcbnew_layers.adoc:84
+msgid "Comments"
+msgstr "コメント"
+
+#. type: Plain text
 #: pcbnew_layers.adoc:85
-#, no-wrap
-msgid "Special layer"
-msgstr "特殊レイヤ"
+msgid "E.C.O. 1"
+msgstr "ECO1"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:88
-#, no-wrap
-msgid "*Edge Cuts* layer:\n"
-msgstr "*Edge.Cuts (基板外形)* レイヤ:\n"
+#: pcbnew_layers.adoc:86
+msgid "E.C.O. 2"
+msgstr "ECO2"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:92
-#, no-wrap
-msgid ""
-"** This layer is reserved for the drawing of circuit board outline. Any\n"
-"   element (graphic, texts...) placed on this layer appears on all the\n"
-"   other layers. Use this layer only to draw board outlines.\n"
-msgstr ""
-"** このレイヤはプリント基板の外形図用に予約されています。このレイヤに配置されて\n"
-"いるすべての要素(グラフィック、テキスト…)は、他のすべてのレイヤに現れます。\n"
-"基板外形を作成するためにのみ、このレイヤを使用して下さい。\n"
+#: pcbnew_layers.adoc:87
+msgid "Drawings"
+msgstr "図"
 
 #. type: Title ===
-#: pcbnew_layers.adoc:93
+#: pcbnew_layers.adoc:88
 #, no-wrap
 msgid "Selection of the active layer"
 msgstr "アクティブレイヤの選択"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:96
+#: pcbnew_layers.adoc:91
 msgid "The selection of the active working layer can be done in several ways:"
 msgstr "以下のようないくつかの方法でアクティブな作業レイヤの選択が可能です:"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:98
+#: pcbnew_layers.adoc:93
 msgid "Using the right toolbar (Layer manager)."
 msgstr "右ツールバー（レイヤマネジャー）を使用する。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:99
+#: pcbnew_layers.adoc:94
 msgid "Using the upper toolbar."
 msgstr "上部ツールバーを使用する。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:100
+#: pcbnew_layers.adoc:95
 msgid "With the pop-up window (activated with the right mouse button)."
 msgstr "（マウスの右ボタンで開く）コンテキスト メニュー使用する。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:101
+#: pcbnew_layers.adoc:96
 msgid "Using the + and - keys (works on copper layers only)."
 msgstr "“＋” と “－” キーを使用する（導体レイヤ上のみ）。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:102
+#: pcbnew_layers.adoc:97
 msgid "By hot keys."
 msgstr "ホットキーを使用する。"
 
 #. type: Title ====
-#: pcbnew_layers.adoc:103
+#: pcbnew_layers.adoc:98
 #, no-wrap
 msgid "Selection using the layer manager"
 msgstr "レイヤマネジャーを使用した選択"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:105
+#: pcbnew_layers.adoc:100
 #, no-wrap
 msgid "images/Pcbnew_layer_manager_pane.png"
 msgstr "images/ja/Pcbnew_layer_manager_pane.png"
 
 #. type: Title ====
-#: pcbnew_layers.adoc:107
+#: pcbnew_layers.adoc:102
 #, no-wrap
 msgid "Selection using the upper toolbar"
 msgstr "上部ツールバーを使用した選択"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:109
+#: pcbnew_layers.adoc:104
 #, no-wrap
 msgid "images/Pcbnew_layer_selection_dropdown.png"
 msgstr "images/ja/Pcbnew_layer_selection_dropdown.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:112
+#: pcbnew_layers.adoc:107
 msgid "This directly selects the working layer."
 msgstr "これは作業レイヤを直接選択します。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:114
+#: pcbnew_layers.adoc:109
 msgid "Hot keys to select the working layer are displayed."
 msgstr ""
 "作業レイヤを選択するためのホットキーが表示されます（ PgUp, PgDn など一部の"
 "み）。"
 
 #. type: Title ====
-#: pcbnew_layers.adoc:115
+#: pcbnew_layers.adoc:110
 #, no-wrap
 msgid "Selection using the pop-up window"
 msgstr "コンテキスト メニューを使用した選択"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:117
+#: pcbnew_layers.adoc:112
 #, no-wrap
 msgid "images/Pcbnew_layer_selection_popup.png"
 msgstr "images/ja/Pcbnew_layer_selection_popup.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:121
+#: pcbnew_layers.adoc:116
 msgid ""
 "The Pop-up window opens a menu window which provides a choice for the "
 "working layer."
@@ -7004,19 +7108,19 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:122
+#: pcbnew_layers.adoc:117
 #, no-wrap
 msgid "images/Pcbnew_layer_selection_dialog.png"
 msgstr "images/ja/Pcbnew_layer_selection_dialog.png"
 
 #. type: Title ===
-#: pcbnew_layers.adoc:124
+#: pcbnew_layers.adoc:119
 #, no-wrap
 msgid "Selection of the Layers for Vias"
 msgstr "ビア用レイヤの選択"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:129
+#: pcbnew_layers.adoc:124
 msgid ""
 "If the *Add Tracks and Vias* icon is selected on the right hand toolbar, the "
 "Pop-Up window provides the option to change the layer pair used for vias:"
@@ -7026,13 +7130,13 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:130
+#: pcbnew_layers.adoc:125
 #, no-wrap
 msgid "images/Pcbnew_via_layer_pair_popup.png"
 msgstr "images/ja/Pcbnew_via_layer_pair_popup.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:134
+#: pcbnew_layers.adoc:129
 msgid ""
 "This selection opens a menu window which provides choice of the layers used "
 "for vias."
@@ -7042,13 +7146,13 @@ msgstr ""
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:135
+#: pcbnew_layers.adoc:130
 #, no-wrap
 msgid "images/Pcbnew_via_layer_pair_dialog.png"
 msgstr "images/ja/Pcbnew_via_layer_pair_dialog.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:139
+#: pcbnew_layers.adoc:134
 msgid ""
 "When a via is placed the working (active) layer is automatically switched to "
 "the alternate layer of the layer pair used for the vias."
@@ -7057,7 +7161,7 @@ msgstr ""
 "のもう一方のレイヤに自動的に切り替わります。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:142
+#: pcbnew_layers.adoc:137
 msgid ""
 "One can also switch to an other active layer by hot keys, and if a track is "
 "in progress, a via will be inserted."
@@ -7066,13 +7170,13 @@ msgstr ""
 "の場合にはビアが挿入されます。"
 
 #. type: Title ===
-#: pcbnew_layers.adoc:143
+#: pcbnew_layers.adoc:138
 #, no-wrap
 msgid "Using the high-contrast mode"
 msgstr "ハイコントラストモードの使用"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:147
+#: pcbnew_layers.adoc:142
 msgid ""
 "This mode is entered when the tool (in the left toolbar) is activated: image:"
 "images/icons/contrast_mode.png[]"
@@ -7081,7 +7185,7 @@ msgstr ""
 "合、このモードになります: image:images/icons/contrast_mode.png[]"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:150
+#: pcbnew_layers.adoc:145
 msgid ""
 "When using this mode, the active layer is displayed like in the normal mode, "
 "but all others layers are displayed in gray color."
@@ -7090,18 +7194,18 @@ msgstr ""
 "他の全てのレイヤはグレイカラー表示（グレイスケール）になります。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:152
+#: pcbnew_layers.adoc:147
 msgid "There are two useful cases:"
 msgstr "これは次の２つの場合に役立ちます:"
 
 #. type: Title ====
-#: pcbnew_layers.adoc:153
+#: pcbnew_layers.adoc:148
 #, no-wrap
 msgid "Copper layers in high-contrast mode"
 msgstr "ハイコントラストモードの導体レイヤ"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:157
+#: pcbnew_layers.adoc:152
 msgid ""
 "When a board uses more than four layers, this option allows the active "
 "copper layer to be seen more easily:"
@@ -7110,39 +7214,39 @@ msgstr ""
 "やすくさせることができます:"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:159
+#: pcbnew_layers.adoc:154
 #, no-wrap
 msgid "*Normal mode* (back side copper layer active):\n"
 msgstr "*ノーマルモード* (裏面導体レイヤ・アクティブ):\n"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:160
+#: pcbnew_layers.adoc:155
 #, no-wrap
 msgid "images/Pcbnew_copper_layers_contrast_normal.png"
 msgstr "images/Pcbnew_copper_layers_contrast_normal.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:163
+#: pcbnew_layers.adoc:158
 #, no-wrap
 msgid "*High-contrast mode* (back side copper layer active):\n"
 msgstr "*ハイコントラストモード* (裏面導体レイヤ・アクティブ):\n"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:164
+#: pcbnew_layers.adoc:159
 #, no-wrap
 msgid "images/Pcbnew_copper_layers_contrast_high.png"
 msgstr "images/Pcbnew_copper_layers_contrast_high.png"
 
 #. type: Title ====
-#: pcbnew_layers.adoc:166
+#: pcbnew_layers.adoc:161
 #, no-wrap
 msgid "Technical layers"
 msgstr "テクニカルレイヤ"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:170
+#: pcbnew_layers.adoc:165
 msgid ""
 "The other case is when it is necessary to examine solder paste layers and "
 "solder mask layers which are usually not displayed."
@@ -7151,32 +7255,32 @@ msgstr ""
 "る必要がある場合で、これらは通常表示されません。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:172
+#: pcbnew_layers.adoc:167
 msgid "Masks on pads are displayed if this mode is active."
 msgstr "このモードが有効な場合、パッド上にマスクが表示されます。"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:174
+#: pcbnew_layers.adoc:169
 #, no-wrap
 msgid "*Normal mode* (front side solder mask layer active):\n"
 msgstr "*ノーマルモード* （表面レジストレイヤ・アクティブ） :\n"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:175
+#: pcbnew_layers.adoc:170
 #, no-wrap
 msgid "images/Pcbnew_technical_layers_contrast_normal.png"
 msgstr "images/Pcbnew_technical_layers_contrast_normal.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:178
+#: pcbnew_layers.adoc:173
 #, no-wrap
 msgid "*High-contrast mode* (front side solder mask layer active):\n"
 msgstr "*ハイコントラストモード* （表面レジストレイヤ・アクティブ） :\n"
 
 # 07072015：/ja/へ変更
 #. type: Target for macro image
-#: pcbnew_layers.adoc:179
+#: pcbnew_layers.adoc:174
 #, no-wrap
 msgid "images/Pcbnew_technical_layers_contrast_high.png"
 msgstr "images/Pcbnew_technical_layers_contrast_high.png"
@@ -10861,3 +10965,55 @@ msgstr ""
 "導体ゾーンの場合、塗りつぶし禁止のキープアウトエリア内では塗り潰しできませ"
 "ん。キープアウトエリアはゾーンと似ており、その外形の編集は導体ゾーンの編集と"
 "同様に行います。"
+
+#~ msgid "14 technical layers (includes 1 board outline layer)."
+#~ msgstr "14 のテクニカル レイヤ（１つの基板外形レイヤを含む）"
+
+#~ msgid "4 auxiliary layers."
+#~ msgstr "4 つの補助レイヤ"
+
+#~ msgid "Select copper layers"
+#~ msgstr "導体レイヤの選択"
+
+#~ msgid "Select number of layers"
+#~ msgstr "レイヤ数の選択"
+
+#~ msgid ""
+#~ "To enable navigation between layers, it is necessary to select the number "
+#~ "of working layers. To do this you can use the menu bar and select Design "
+#~ "Rules -> Layers Setup."
+#~ msgstr ""
+#~ "レイヤ間のナビゲーションを可能にするため、作業レイヤの数を選択しなければな"
+#~ "りません。これを行うためには、メニューバーを使用して、”デザインルール” -> "
+#~ "“レイヤのセットアップ” を選択します。"
+
+# 07072015：/ja/へ変更
+#~ msgid "images/Pcbnew_layer_setup_menu_item.png"
+#~ msgstr "images/ja/Pcbnew_layer_setup_menu_item.png"
+
+#~ msgid "Then select the number of layers wanted, from 2 to 32."
+#~ msgstr "この時、２〜３２レイヤの範囲で必要な配線レイヤ数を選択します。"
+
+#~ msgid "Auxiliary technical layers"
+#~ msgstr "テクニカルレイヤと予備レイヤ"
+
+#~ msgid "Paired layers"
+#~ msgstr "ペアレイヤ"
+
+#~ msgid "The *Adhesives* layers (Copper and Component):"
+#~ msgstr "*接着(ボンド)* レイヤ（表および裏）:"
+
+#~ msgid "The *Solder Paste* layers paste SMD (Copper and Component):"
+#~ msgstr "*ハンダペースト* レイヤ（表および裏）: "
+
+#~ msgid "The *Silk Screen* layers (Copper and Component):"
+#~ msgstr "*シルクスクリーン* レイヤ（表および裏）: "
+
+#~ msgid "** They are the layers where the drawings of the components appear.\n"
+#~ msgstr "** コンポーネントの図形要素（線や文字）を描くレイヤです。\n"
+
+#~ msgid "The *Solder Mask* layers (Copper and Component):"
+#~ msgstr "*ハンダマスク* レイヤ（表および裏）: "
+
+#~ msgid "Special layer"
+#~ msgstr "特殊レイヤ"
