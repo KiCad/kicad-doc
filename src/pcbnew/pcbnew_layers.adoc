@@ -1,94 +1,89 @@
 
-== Setting up working layers
+== Layers
 
-Pcbnew can work on 50 different layers:
+=== Introduction
 
-* 32 copper layers (for routing of tracks).
-* 14 technical layers (includes 1 board outline layer).
-* 4 auxiliary layers.
+Pcbnew can work with 50 different layers:
 
-The number of copper layers, and if needed their names and
-attributes, should be set. Unused technical layers can be disabled.
+* Between 2 and 32 copper layers for routing tracks.
+* 14 fixed-purpose technical layers:
+    - 12 paired layers (Front/Back): *Adhesive*, *Solder Paste*,
+    *Silk Screen*, *Solder Mask*, *Courtyard*, *Fabrication*
+    - 2 standalone layers: *Edge Cuts*, *Margin*
+* 4 auxiliary layers that you can use any way you want: *Comments*, *E.C.O. 1*, *E.C.O. 2*, *Drawings*
 
-=== Select copper layers
+=== Setting up layers
 
-==== Introduction
+To open the *Layers Setup* from the menu bar, select **Design Rules** -> **Layers Setup**.
 
-Copper layers are the usual working layers used by the automatic
-router to place and re-arrange tracks. Layer 0 is the copper
-(solder) layer. Layer 31 is the component layer. Other layers are
-the inner layers, from In1 to In30.
-
-==== Select number of layers
-
-To enable navigation between layers, it is necessary to select the
-number of working layers. To do this you can use the menu bar and
-select Design Rules -> Layers Setup.
-
-image::images/Pcbnew_layer_setup_menu_item.png[scaledwidth="28%"]
-
-Then select the number of layers wanted, from 2 to 32.
+The number of copper layers, their names, and their function are configured there.
+Unused technical layers can be disabled.
 
 image::images/Pcbnew_layer_setup_dialog.png[scaledwidth="60%"]
 
-==== Copper layers
+=== Layer Description
+
+==== Copper Layers
+
+Copper layers are the usual working layers used to place and re-arrange tracks.
+Layer numbers start from 0 (the first copper layer, on Front) and end 
+at 31 (Back). Since components cannot be placed in *inner layers* (number 1 to 30),
+only layers number 0 and 31 are *component layer*.
 
 The name of any copper layer is editable. Copper layers have
-attributes useful when using the external router _Freerouter_.
+a function attribute that is useful when using the external router _Freerouter_.
+Example of default layer names are *F.Cu* and *In0* for layer number 0.
 
 image::images/Pcbnew_layer_setup_dialog_layer_properties.png[scaledwidth="60%"]
 
-=== Auxiliary technical layers
+==== Paired Technical Layers
 
-Some are associated in pairs, others not. When they appear as a pair
-this affects the behaviour of footprints. The elements making up a
-footprint (pads, drawing and text) appearing on a layer (solder or
-component), appear on the other complementary layer when the footprint
-is inverted (mirrored).
+12 technical layers come in pairs: one for the front, one for the back. You can recognize them with the "F." or "B." prefix in their names.
+The elements making up a footprint (pad, drawing, text) of one of these layers are automatically mirrored and moved to the complementary layer when the footprint is flipped.
 
-The technical layers are:
+The paired technical layers are:
 
-==== Paired layers
+*Adhesive* (F.Adhes and B.Adhes)::
+    These are used in the application of adhesive to stick SMD components
+    to the circuit board, generally before wave soldering.
 
-* The *Adhesives* layers (Copper and Component):
+*Solder Paste* (F.Paste and B.Paste)::
+    Used to produce a mask to allow solder paste to be placed on the
+    pads of surface mount components, generally before reflow soldering.
+    Usually only surface mount pads occupy these layers.
 
-** These are used in the application of adhesive to stick SMD components
-   to the circuit board, generally before wave soldering.
+*Silk Screen* (F.SilkS and B.SilkS)::
+    They are the layers where the drawings of the components appear. That's where you draw things like component polarity, first pin indicator, reference for mounting, ...
 
-* The *Solder Paste*  layers paste SMD (Copper and Component):
+*Solder Mask* (F.Mask and B.Mask)::
+    These define the solder masks. All pads should appear on one of these layers (SMT) or both (for through hole) to prevent the varnish from covering the pads.
 
-** Used to produce a mask to allow solder paste to be placed on the
-   pads of surface mount components, generally before reflow soldering.
-   Usually only surface mount pads occupy these layers.
+*Courtyard* (F.CrtYd and B.CrtYd)::
+    Used to show how much space a component physically takes on the PCB.
 
-* The *Silk Screen* layers (Copper and Component):
+*Fabrication* (F.Fab and B.Fab)::
+    Footprint assembly (?).
 
-** They are the layers where the drawings of the components appear.
+==== Independant Technical Layers
 
-* The *Solder Mask* layers (Copper and Component):
+*Edge.Cuts*::
+    This layer is reserved for the drawing of circuit board outline. Any
+    element (graphic, texts...) placed on this layer appears on all the
+    other layers. Use this layer only to draw board outlines.
 
-** These define the solder masks. Normally all pads appear on one or
-   the other of these layers (or both for through pads) to prevent the
-   varnish covering the pads.
+*Margin*::
+    Board's edge setback outline (?).
 
 ==== Layers for general use
+
+These layers are for any use. They can be used for text such as
+instructions for assembly or wiring, or construction drawings, to be
+used to create a file for assembly or machining. Their names are:
 
 * Comments
 * E.C.O. 1
 * E.C.O. 2
 * Drawings
-
-These layers are for any use. They can be used for text such as
-instructions for assembly or wiring, or construction drawings, to be
-used to create a file for assembly or machining.
-
-==== Special layer
-
-* *Edge Cuts* layer:
-
-** This layer is reserved for the drawing of circuit board outline. Any
-   element (graphic, texts...) placed on this layer appears on all the
-   other layers. Use this layer only to draw board outlines.
 
 === Selection of the active layer
 
