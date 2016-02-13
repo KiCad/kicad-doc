@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-02-09 15:49+0100\n"
-"PO-Revision-Date: 2016-02-10 16:06+0100\n"
+"PO-Revision-Date: 2016-02-13 13:20+0100\n"
 "Last-Translator: Marc BERLIOUX <marc.berlioux@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -8746,13 +8746,13 @@ msgstr ""
 #: pcbnew_schematics.adoc:2
 #, no-wrap
 msgid "Schematic Implementation"
-msgstr ""
+msgstr "Implémentation Schématique"
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:4
 #, no-wrap
 msgid "Linking a schematic to a printed circuit board"
-msgstr ""
+msgstr "Lier un schéma à un circuit imprimé"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:16
@@ -8767,6 +8767,16 @@ msgid ""
 "KiCad, CvPcb is used to create this association and a file named `*.cmp` is "
 "produced. CvPcb also updates the netlist file using this information."
 msgstr ""
+"D'une manière générale, une feuille schématique est liée à un circuit imprimé "
+"au moyen d'un fichier netliste, qui est normalement produit par l'éditeur "
+"utilisé pour faire le schéma. Pcbnew accepte des fichiers de netliste faits "
+"avec Eeschema ou Orcad PCB 2. Le fichier netliste, généré à partir du schéma, "
+"ne contient généralement pas les empreintes associées aux différents "
+"composants. Par conséquent, une étape intermédiaire est nécessaire. Au cours "
+"de cette étape intermédiaire, l'association des composants schématiques avec "
+"des empreintes physiques est effectuée. Dans KiCad, c'est CvPcb qui est "
+"utilisé pour créer cette association et un fichier nommé `*.cmp` est produit. "
+"CvPcb met également à jour le fichier netliste en utilisant ces informations."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:23
@@ -8777,6 +8787,12 @@ msgid ""
 "a component will also copy the footprint assignment and set the reference "
 "designator as unassigned for later auto-incremental annotation."
 msgstr ""
+"CvPcb peut également produire un \"fichier stuff\" `*.stf`, qui peut servir à "
+"la rétro-annotation du champ F2 de chaque composant dans le schéma, épargnant "
+"ainsi la tâche de ré-assignation d'empreintes à chaque passe d'édition du "
+"schéma. Dans Eeschema, la copie d'un composant copiera également "
+"l'affectation de l'empreinte, et marquera la référence comme non affectée "
+"pour l'annotation auto-incrémentielle qui suivra."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:28
@@ -8786,6 +8802,10 @@ msgid ""
 "cmp` file is automatically updated avoiding the requirement to run CvPcb "
 "again."
 msgstr ""
+"Pcbnew lit le fichier netliste `.net` modifié et, s'il existe, le fichier "
+"`.cmp`. Dans le cas d'une empreinte ayant été changée directement dans "
+"Pcbnew, le fichier `.cmp` est automatiquement mis à jour, évitant ainsi "
+"l'obligation d'exécuter CvPcb à nouveau."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:33
@@ -8795,22 +8815,26 @@ msgid ""
 "intermediate files are obtained and used by the different software tools "
 "that comprise KiCad."
 msgstr ""
+"Reportez-vous à la figure du manuel \"Getting Started in KiCad\" (Démarrer "
+"avec KiCad), section _Échanges de données dans KiCad_ qui illustre le flux "
+"des données de KiCad, et comment sont obtenus les fichiers intermédiaires "
+"utilisés par les différents outils logiciels qui composent KiCad."
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:34
 #, no-wrap
 msgid "Procedure for creating a printed circuit board"
-msgstr ""
+msgstr "Processus de création d'un circuit imprimé"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:37
 msgid "After having created your schematic in Eeschema:"
-msgstr ""
+msgstr "Après avoir créé votre schéma dans Eeschema :"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:39
 msgid "Generate the netlist using Eeschema."
-msgstr ""
+msgstr "Générez la netliste depuis Eeschema."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:41
@@ -8818,6 +8842,8 @@ msgid ""
 "Assign each component in your netlist file to the corresponding footprint "
 "(often called footprint) used on the printed circuit using Cvpcb."
 msgstr ""
+"Associez, à chaque composant du fichier netliste, l'empreinte correspondante "
+"qui sera utilisée sur le circuit imprimé, avec CvPcb."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:43
@@ -8825,6 +8851,8 @@ msgid ""
 "Launch Pcbnew and read the modified Netlist. This will also read the file "
 "with the footprint selections."
 msgstr ""
+"Lancez Pcbnew, et lisez le fichier netliste. Ceci lira également le fichier "
+".cmp contenant les associations d'empreintes."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:47
@@ -8833,12 +8861,15 @@ msgid ""
 "Footprints can now be placed manually or automatically on the board and "
 "tracks can be routed."
 msgstr ""
+"Pcbnew chargera alors automatiquement toutes les empreintes nécessaires. Les "
+"empreintes pourront alors être placées sur la carte, manuellement ou "
+"automatiquement, et les pistes tracées."
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:48
 #, no-wrap
 msgid "Procedure for updating a printed circuit board"
-msgstr ""
+msgstr "Processus de mise à jour d'un circuit imprimé"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:52
@@ -8846,11 +8877,13 @@ msgid ""
 "If the schematic is modified (after a printed circuit board has been "
 "generated), the following steps must be repeated:"
 msgstr ""
+"Si le schéma est modifié, après qu'un circuit imprimé ait été généré, les "
+"étapes suivantes doivent être répétées :"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:54
 msgid "Generate a new netlist file using Eeschema."
-msgstr ""
+msgstr "Générez une nouvelle netliste depuis Eeschema."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:56
@@ -8858,6 +8891,8 @@ msgid ""
 "If the changes to the schematic involve new components, the corresponding "
 "footprints must be assigned using Cvpcb."
 msgstr ""
+"Si les modifications apportées au schéma contiennent de nouveaux composants, "
+"les empreintes correspondantes devront être associées à l'aide de CvPcb."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:58
@@ -8865,6 +8900,8 @@ msgid ""
 "Launch Pcbnew and re-read the modified netlist (this will also re-read the "
 "file with the footprint selections)."
 msgstr ""
+"Lancez Pcbnew, et lisez le fichier netliste modifié. Ceci relira également le "
+"fichier .cmp contenant les associations d'empreintes."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:63
@@ -8873,29 +8910,33 @@ msgid ""
 "connections and remove redundant connections. This process is called forward "
 "annotation and is a very common procedure when a PCB is made and updated."
 msgstr ""
+"Pcbnew chargera alors automatiquement les nouvelles empreintes, ajoutera les "
+"nouvelles connexions et supprimera les connexions redondantes. Ce processus, "
+"appelé annotation \"vers l'avant\" (forward annotation), est un processus "
+"très courant quand un PCB est réalisé et mis à jour."
 
 #. type: Title ===
 #: pcbnew_schematics.adoc:64
 #, no-wrap
 msgid "Reading netlist file - loading footprints"
-msgstr ""
+msgstr "Lecture du fichier Netliste - Chargement d'empreintes"
 
 #. type: Title ====
 #: pcbnew_schematics.adoc:66
 #, no-wrap
 msgid "Dialog box"
-msgstr ""
+msgstr "Boite de dialogue"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:69
 msgid "Accessible from the icon image:images/icons/netlist.png[]"
-msgstr ""
+msgstr "Accessible par l'icône image:images/icons/netlist.png[]"
 
 #. type: Title ====
 #: pcbnew_schematics.adoc:72
 #, no-wrap
 msgid "Available options"
-msgstr ""
+msgstr "Options disponibles"
 
 #. type: delimited block |
 #: pcbnew_schematics.adoc:91
@@ -8917,12 +8958,27 @@ msgid ""
 "|Single Pad Nets\n"
 "|Remove single pad nets.\n"
 msgstr ""
+"|Sélection Empreinte\n"
+"|Lien entre composants et empreintes correspondantes sur le circuit :\n"
+"le lien normal est par la Référence (option normale).\n"
+"Le timestamp peut être utilisé, après une réannotation du schéma,\n"
+"si l'annotation précedente a été détruite (option spéciale)\n"
+"|Échange Empreinte\n"
+"|Si une empreinte a changé dans la netliste : garder l'ancienne ou\n"
+"changer pour la nouvelle.\n"
+"|Pistes non Connectées\n"
+"|Garder les pistes existantes, ou supprimer les pistes erronées\n"
+"|Empreintes Supplémentaires\n"
+"|Supprimer les empreintes du circuit qui ne sont plus en netliste.\n"
+"Les empreintes avec l'attribut \"Verrouillé\" ne seront pas supprimées.\n"
+"|Nets avec Pad Unique\n"
+"|Supprime les nets avec pad unique .\n"
 
 #. type: Title ====
 #: pcbnew_schematics.adoc:93
 #, no-wrap
 msgid "Loading new footprints"
-msgstr ""
+msgstr "Chargement de nouvelles empreintes"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:97
@@ -8931,6 +8987,9 @@ msgid ""
 "will be loaded, spread out, and be ready for you to place as a group where "
 "you would like."
 msgstr ""
+"Avec le backend GAL (Graphics Abstraction Layer), quand de nouvelles "
+"empreintes sont trouvées dans le fichier netliste, elles seront chargées, "
+"étalées, et prêtes à être placées en un groupe où vous le souhaiterez."
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:98
@@ -8944,6 +9003,9 @@ msgid ""
 "With the legacy backend when new footprints are found in the netlist file, "
 "they will be automatically loaded and placed at coordinate (0,0)."
 msgstr ""
+"Avec l'ancien backend, quand de nouvelles empreintes sont trouvées dans le "
+"fichier netliste, elles sont automatiquement chargées et placées aux "
+"coordonnées (0,0)."
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:103
@@ -8957,11 +9019,13 @@ msgid ""
 "New footprints can be moved and arranged one by one. A better way is to "
 "automatically move (unstack) them:"
 msgstr ""
+"Les nouvelles empreintes peuvent être déplacées et disposées une par une. Une "
+"meilleure façon est de les déplacer automatiquement :"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:108
 msgid "Activate footprint mode (image:images/icons/mode_module.png[])"
-msgstr ""
+msgstr "Activez le Mode Empreinte (image:images/icons/mode_module.png[])"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:111
@@ -8969,6 +9033,8 @@ msgid ""
 "Move the mouse cursor to a suitable (free of component) area, and click on "
 "the right button:"
 msgstr ""
+"Déplacez le curseur sur une zone appropriée (vide de tous composants), et "
+"cliquez sur le bouton droit :"
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:112
@@ -8982,6 +9048,8 @@ msgid ""
 "Automatically Place New Footprints, if there is already a board with "
 "existing footprints."
 msgstr ""
+"Place Automatiquement Nouvelles Empreintes, s'il y a déjà un circuit avec des "
+"empreintes existantes."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:116
@@ -8989,11 +9057,13 @@ msgid ""
 "Automatically Place All Footprints, for the first time (when creating a "
 "board)."
 msgstr ""
+"Place Automatiquement toutes les Empreintes, la première fois (à la création "
+"du circuit)."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:118
 msgid "The following screenshot shows the results."
-msgstr ""
+msgstr "L'image suivante vous montre le résultat :"
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:119
@@ -9005,7 +9075,7 @@ msgstr ""
 #: pcbnew_zones.adoc:2
 #, no-wrap
 msgid "Creating copper zones"
-msgstr ""
+msgstr "Création de zones cuivrées remplies"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:7
@@ -9790,4 +9860,5 @@ msgid ""
 "filled. A keep-out area is a like a zone, so editing its outline is "
 "analogous to copper zone editing."
 msgstr ""
+
 
