@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-12-30 10:48+0100\n"
-"PO-Revision-Date: 2016-02-15 21:08+0100\n"
+"PO-Revision-Date: 2016-02-17 22:10+0100\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3636,6 +3636,9 @@ msgid ""
 "origin. Activate the icon image:images/icons/pcb_offset.png[]. Move the auxiliary axis by left-clicking "
 "on the chosen location."
 msgstr ""
+"Um den Koordinatenursprung für die Plot- und Bohrdateien zu setzen, müssen Sie die Hilfsachse auf diesen "
+"Ursprung setzen. Aktivieren Sie das Symbol image:images/icons/pcb_offset.png[]. Bewegen Sie die "
+"Hilfsachse mit einem Linksklick auf die gewählte Position."
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:45
@@ -3647,12 +3650,12 @@ msgstr ""
 #: pcbnew_fabrication_files.adoc:47
 #, no-wrap
 msgid "Generating files for photo-tracing"
-msgstr ""
+msgstr "Dateien für den Photoplot erzeugen"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:51
 msgid "This is done via the Files/Plot menu option and invokes the following dialog:"
-msgstr ""
+msgstr "Wählen Sie aus dem Hauptmenü 'Datei -> Plotten'. Das öffnet diesen Dialog:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:52
@@ -3666,6 +3669,8 @@ msgid ""
 "Usually, the files are in the GERBER format. Nevertheless, it is possible to produce output in both HPGL "
 "and POSTSCRIPT formats. When Postscript format is selected, this dialog will appear."
 msgstr ""
+"Üblicherweise sind diese Dateien im GERBER Format. Nichtsdestotrotz ist es möglich, die Ausgabe im HPGL "
+"und POSTSCRIPT Format zu erzeugen. Wenn das POSTSCRIPT Format gewählt ist, erscheint dieser Dialog:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:58
@@ -3679,6 +3684,8 @@ msgid ""
 "In these formats, a fine scale adjust can be used to compensate for the plotter accuracy and to have a "
 "true scale of 1 for the output:"
 msgstr ""
+"In diesen Formaten kann der Feinmaßstab eingestellt werden, um die Genauigkeit des Druckers zu "
+"berücksichtigen und einen tatsächlichen Maßstab von 1 für die Ausgabe zu erhalten:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:63
@@ -3690,7 +3697,7 @@ msgstr ""
 #: pcbnew_fabrication_files.adoc:65
 #, no-wrap
 msgid "GERBER format"
-msgstr ""
+msgstr "GERBER Format"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:72
@@ -3699,6 +3706,9 @@ msgid ""
 "format (each coordinate in the file is represented by 10 digits, of which 4 are before the decimal point "
 "and 6 follow it), units in inches, and a scale of 1."
 msgstr ""
+"Pcbnew erzeugt für jede Lage eine separate Datei, gemäß des GERBER 247X Standards. Standardgemäß im 4.6 "
+"Format: jede Koordinate in der Datei wird mit 10 Stellen dargestellt, wovon 4 vor dem Dezimaltrenner "
+"stehen und 6 dahinter; Einheiten in Zoll und dem Maßstab 1."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:77
@@ -3707,6 +3717,9 @@ msgid ""
 "the silkscreen, solder mask, and solder paste layers. All of these files can be produced in one step, by "
 "selecting the appropriate check boxes."
 msgstr ""
+"Normalerweise ist es notwendig für jede Kupferlage eine Datei zu erzeugen -- und abhängig von der "
+"Schaltung -- für den Bestückdruck, die Lötstopmaske und Lotpasten-Lage. All diese Dateien können in "
+"einem Schritt erzeugt werden, indem Sie die passenden Auswahlfelder aktivieren."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:81
@@ -3714,51 +3727,53 @@ msgid ""
 "For example, for a double-sided circuit with silkscreen, solder mask and solder paste (for SMD "
 "components), 8 files should be generated ('xxxx' represents the name of the .brd file)."
 msgstr ""
+"Zum Beispiel sollten für eine doppelseitige Schaltung mit Bestückdruck, Lötstoppmaske und Lotpastenmaske "
+"(für SMD Bauteile) 8 Dateien erzeugt werden (`xxxx' steht für den Namen der `.brd' Datei)."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:83
 msgid "xxxx-F_Cu.gbr for the component side."
-msgstr ""
+msgstr "xxxx-F_Cu.gbr für die Bauteilseite."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:84
 msgid "xxxx-B_Cu.gbr for the copper side."
-msgstr ""
+msgstr "xxxx-B_Cu.gbr für die Kupferseite (Lötseite)."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:85
 msgid "xxxx-F_SilkS.gbr for the component-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-F_SilkS.gbr für den Bestückdruck der Bauteilseite."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:86
 msgid "xxxx-B_SilkS.gbr for the copper-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-B_SilkS.gbr für den Bestückdruck der Kupferseite (Lötseite)."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:87
 msgid "xxxx-F_Paste.gbr for the component-side solder paste."
-msgstr ""
+msgstr "xxxx-F_Paste.gbr für die Lotpastenmaske der Bauteilseite."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:88
 msgid "xxxx-B_Paste.gbr for the copper-side solder paste."
-msgstr ""
+msgstr "xxxx-B-Paste.gbr für die Lotpastenmaske der Kupferseite (Lötseite)."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:89
 msgid "xxxx-F_Mask.gbr for the component-side solder mask."
-msgstr ""
+msgstr "xxxx-F_Mask.gbr für die Lötstoppmaske der Bauteilseite."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:90
 msgid "xxxx-B_Mask.gbr for the copper-side solder mask."
-msgstr ""
+msgstr "xxxx-B_Mask.gbr für die Lötstoppmaske der Kupferseite (Lötseite)."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:92
 msgid "GERBER file format:"
-msgstr ""
+msgstr "GERBER Dateiformat:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:95
@@ -3766,12 +3781,14 @@ msgid ""
 "The format used by Pcbnew is RS274X format 4.6, Imperial, Leading zero omitted, Abs format. These are "
 "very usual settings."
 msgstr ""
+"Das von Pcbnew genutzte Format ist RS274X Format 4.6, Imperial, führende Nullen unterdrückt, Abs Format. "
+"Das sind sehr übliche Einstellungen."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:96
 #, no-wrap
 msgid "POSTSCRIPT format"
-msgstr ""
+msgstr "POSTSCRIPT Format"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:103
@@ -3780,22 +3797,24 @@ msgid ""
 "the tracing can be at user-selected scales and can be mirrored. If the Org = Centre option is active, "
 "the origin for the coordinates of the tracing table is assumed to be in the centre of the drawing."
 msgstr ""
+"Die Standarderweiterung für die Ausgabedateien ist '.ps' für Postscript-Ausgabe. Wie für die HPGL-"
+"Ausgabe kann die Zeichnung in benutzerdefiniertem Maßstab erfolgen und gespiegelt werden."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:105 pcbnew_fabrication_files.adoc:141
 msgid "If the Print Sheet Ref option is active, the sheet cartridge is traced."
-msgstr ""
+msgstr " "
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:106
 #, no-wrap
 msgid "Plot options"
-msgstr ""
+msgstr "Plot-Optionen"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:109
 msgid "Gerber format:"
-msgstr ""
+msgstr "GERBER Format:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:110
@@ -3806,7 +3825,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:113
 msgid "Other formats:"
-msgstr ""
+msgstr "Andere Formate:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:114
@@ -3817,7 +3836,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:117
 msgid "GERBER format specific options:"
-msgstr ""
+msgstr "Spezielle Optionen für das GERBER Format:"
 
 #. type: delimited block |
 #: pcbnew_fabrication_files.adoc:126
@@ -3830,27 +3849,33 @@ msgid ""
 "| Subtract soldermask from silkscreen\n"
 "| Remove all Silk from solder paste areas.\n"
 msgstr ""
+"| Benutze Protel Dateinamenserweiterungen\n"
+"| Benutze .gbl .gtl .gbs .gts. gbp .gtp .gbo .gto anstelle von .gbr als Dateinamenserweiterungen.\n"
+"| Erweiterte Attribute benutzen\n"
+"| Schreibt erweiterte Attribute in die Ausgabedatei.\n"
+"| Subtrahiere Lötstoppmaske von Siebdruckmaske\n"
+"| Entferne jede Bedruckung von Lötpastenbereichen.\n"
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:128
 #, no-wrap
 msgid "Other formats"
-msgstr ""
+msgstr "Andere Formate"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:131
 msgid "The standard extension depends on the output file type."
-msgstr ""
+msgstr "Die Standard-Dateiendung hängt vom Typ der Ausgabedatei ab."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:133
 msgid "Some options are not available for some formats."
-msgstr ""
+msgstr "Manche Optionen sind für manche Formate nicht verfügbar."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:135
 msgid "The plot can be done at user-selected scales and can be mirrored."
-msgstr ""
+msgstr "Der Plot kann im benutzerdefinierten Maßstab erfolgen und gespiegelt werden."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:139
@@ -3858,12 +3883,14 @@ msgid ""
 "The Print Drill Opt list offers the option of pads that are filled, drilled to the correct diameter or "
 "drilled with a small hole (to guide hand drilling)."
 msgstr ""
+"Die Auswahl Bohrlochmarkierungen bietet die Möglichkeit, dass die Lötflächen gefüllt sind, mit dem "
+"korrekten Durchmesser oder mit einem kleinen Loch gebohrt werden (um Bohrungen von Hand zu erleichtern)."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:142
 #, no-wrap
 msgid "Global clearance settings for the solder stop and the solder paste mask"
-msgstr ""
+msgstr "Globale Einstellungen für Abstände von Lötstopp- und Lotpastenmaske"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:147
@@ -3871,52 +3898,54 @@ msgid ""
 "Mask clearance values can be set globally for the solder mask layers and the solder paste layers. These "
 "clearances can be set at the following levels."
 msgstr ""
+"Die Werte für die Maskenabstände können global für die Lötstoppmasken- und Lotpastenmaskenlage "
+"eingestellt werden. Die Abstände können in folgender Abstufung gesetzt werden:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:149
 msgid "At pads level."
-msgstr ""
+msgstr "Für die Lötfläche."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:150
 msgid "At footprint level."
-msgstr ""
+msgstr "Für den Footprint."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:151
 msgid "Globally."
-msgstr ""
+msgstr "Global."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:153
 msgid "And Pcbnew uses by priority order."
-msgstr ""
+msgstr "Und Pcbnew benutzt die Prioritätsreihenfolge:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:155
 msgid "Pad values. If null:"
-msgstr ""
+msgstr "Lötflächenwert. Wenn Null:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:156
 msgid "Footprint values. If null:"
-msgstr ""
+msgstr "Footprint-Wert. Wenn Null:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:157
 msgid "Global values."
-msgstr ""
+msgstr "Globale Werte."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:158
 #, no-wrap
 msgid "Access"
-msgstr ""
+msgstr "Zugriff"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:161
 msgid "The menu option for this is available via the Dimensions menu:"
-msgstr ""
+msgstr "Die Menü-Option für dieses ist verfügbar im Abmessungen-Menü:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:162
@@ -3927,7 +3956,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:165
 msgid "The dialog box is the following:"
-msgstr ""
+msgstr "Der Dialog ist folgender:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:166
@@ -3939,7 +3968,7 @@ msgstr ""
 #: pcbnew_fabrication_files.adoc:168
 #, no-wrap
 msgid "Solder mask clearance"
-msgstr ""
+msgstr "Abstand Lötstoppmaske"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:172
@@ -3947,78 +3976,82 @@ msgid ""
 "A value near to 0.2 mm is usually good. This value is positive because the mask is usually bigger than "
 "the pad."
 msgstr ""
+"Ein Wert nahe bei 0,2 mm ist üblicherweise gut. Dieser Wert ist positiv, weil die Maskenöffnung "
+"üblicherweise größer als die Lötfläche ist."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:174
 msgid "One can set a minimum value for the solder mask width, between 2 pads."
-msgstr ""
+msgstr "Sie können einen Minimalwert für die Breite der Lötstoppmaske zwischen zwei Lötflächen einstellen."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:177
 msgid "If the actual value is smaller than the minimum value, the 2 solder mask shapes will be merged."
 msgstr ""
+"Wenn der tatsächliche Wert kleiner als der Minimalwert ist, dann werden die beiden Lötstoppmasken-Formen "
+"vereint."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:178
 #, no-wrap
 msgid "Solder paste clearance"
-msgstr ""
+msgstr "Abstand Lötpaste"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:182
 msgid "The final clearance is the sum of the solder paste clearance and a percentage of the pad size."
-msgstr ""
+msgstr "Der Endabstand ist die Summe von Lötpasten-Abstand und einem Prozentwert der Lötflächengröße."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:185
 msgid "This value is negative because the mask is usually smaller than the pad."
-msgstr ""
+msgstr "Dieser Wert ist negativ, weil die Maske üblicherweise kleiner als die Lötfläche ist."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:186
 #, no-wrap
 msgid "Generating drill files"
-msgstr ""
+msgstr "Erzeugen von Bohrdateien"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:190
 msgid "The creation of a drill file xxxx.drl following the EXCELLON standard is always necessary."
-msgstr ""
+msgstr "Das Erzeugen einer Bohrdatei 'xxxx.drl' nach dem EXCELLON Standard ist immer notwendig."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:193
 msgid "One can also produce an optional drill report, and an optional drill map."
-msgstr ""
+msgstr "Sie können ebenfalls optional eine Bohr-Protokoll- und/oder einen Bohrplan ausgeben lassen."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:195
 msgid "The drill map can be plotted using several formats."
-msgstr ""
+msgstr "Der Bohrplan kann in verschiedenen Formaten ausgegeben werden."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:196
 msgid "The drill report is a plain text file."
-msgstr ""
+msgstr "Das Bohrprotokoll ist eine reine Textdatei."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:198
 msgid "The generation of these files is controlled via:"
-msgstr ""
+msgstr "Die Ausgabe dieser Dateien wird gesteuert über:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:200
 msgid "\"Create Drill File\" button, or"
-msgstr ""
+msgstr "die Fläche 'Bohrdatei' oder"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:201
 msgid "Files/Fabrication Outputs/Drill file menu selection."
-msgstr ""
+msgstr "über die Menüauswahl 'Datei -> Fertigungsdateien -> Bohrdatei'"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:203
 msgid "The Drill tools dialog box will be the following:"
-msgstr ""
+msgstr "Der Bohrdatei-Dialog sieht wie folgt aus:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:204
@@ -4029,7 +4062,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:207
 msgid "For setting the coordinate origin, the following dialog box is used:"
-msgstr ""
+msgstr "Um den Koordinatenursprung zu setzen, wird der folgende Dialog genutzt:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:208
@@ -4040,19 +4073,21 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:211
 msgid "Absolute: absolute coordinate system is used."
-msgstr ""
+msgstr "*Absolut:* das absolute Koordinatensystem wird verwendet."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:213
 msgid ""
 "Auxiliary axis: coordinates are relative to the auxiliary axis, use the icon (right toolbar) to set it."
 msgstr ""
+"*Hilfsachse:* Verwendung von Koordinaten relativ zur Hilfsachse, benutzen Sie das Symbol image:images/"
+"icons/pcb_offset.png[] (rechte Werkzeugleiste) um sie zu festzulegen."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:214
 #, no-wrap
 msgid "Generating wiring documentation"
-msgstr ""
+msgstr "Erzeugen der Verdrahtungs-Dokumentation"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:221
@@ -4061,12 +4096,16 @@ msgid ""
 "Usually, just the component-side silkscreen markings are sufficient for wiring a PCB. If the copper-side "
 "silkscreen is used, the text it contains should be mirrored in order to be readable."
 msgstr ""
+"Um Dateien für die Verdrahtungs-Dokumentation zu erstellen, können die Lagen für den Bestückungsdruck "
+"der Bauteil- und Lötseite nachgezeichnet werden. Üblicherweise reicht der Bestückungsdruck für die "
+"Bauteilseite aus, um die Leiterplatte zu verdrahten. Wenn der Bestückungsdruck für die Lötseite "
+"verwendet wird, sollte der enthaltene Text gespiegelt werden, damit er lesbar ist."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:222
 #, no-wrap
 msgid "Generation of files for automatic component insertion"
-msgstr ""
+msgstr "Erzeugen von Dateien für automatische Bauteilbestückung"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:230
@@ -4076,12 +4115,17 @@ msgid ""
 "Footprints). One or two files will be produced, depending upon whether insertable components are present "
 "on one or both sides of the PCB. A dialogue box will display the names of the file(s) created."
 msgstr ""
+"Auf diese Option können Sie über 'Datei -> Exportieren -> Bauteildatei (.cmp)' zugreifen. Jedoch wird "
+"keine Datei erzeugt, solange nicht mindestens bei einem Footprint das Attribut Normal+Einfügen aktiviert "
+"ist (siehe Bearbeiten von Footprints). Ein oder zwei Dateien werden erzeugt, abhängig davon ob "
+"bestückbare Bauteile auf beiden Seiten der Leiterplatte vorhanden sind. Ein Dialogfenster wird die Namen "
+"der erzeugten Dateien anzeigen."
 
 #. type: Title ===
 #: pcbnew_fabrication_files.adoc:231
 #, no-wrap
 msgid "Advanced tracing options"
-msgstr ""
+msgstr "Erweiterte Ausgabeoptionen"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:237
@@ -4090,6 +4134,9 @@ msgid ""
 "tracing process. They are particularly useful when printing the silkscreen markings for wiring "
 "documentation."
 msgstr ""
+"Die nachfolgend beschriebenen Optionen (Teil des 'Datei -> Plotten' Dialogs) ermöglichen eine sehr feine "
+"Steuerung des Ausgabeprozesses. Sie sind besonders hilfreich wenn der Bestückungsdruck für die "
+"Verdrahtungsdokumentation gedruckt wird."
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:238
@@ -4100,7 +4147,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:241
 msgid "The available options are:"
-msgstr ""
+msgstr "Die verfügbaren Optionen lauten:"
 
 #. type: delimited block |
 #: pcbnew_fabrication_files.adoc:267
@@ -4131,18 +4178,42 @@ msgid ""
 "When creating files, use specific extensions foe each file.\n"
 "If disabled the Gerber file extension is .gbr.\n"
 msgstr ""
+"|Plotte Schaltplanreferenz auf allen Lagen\n"
+"|Zeichne Blattumriss und die Kasette.\n"
+"|Drucke Pads im Siebdruck\n"
+"|Aktiviert/deaktiviert das Drucken von Lötflächenumrissen auf Bestückungsdrucklagen\n"
+"(wenn die Lötflächen bereits so eingestellt wurden, dass sie auf diesen Lagen dargestellt\n"
+"werden). Verhindert den Druck aller Lötflächen wenn deaktiviert.\n"
+"|Plotte Footprintwerte\n"
+"|Aktiviert das Drucken des WERT Textes im Bestückungsdruck.\n"
+"|Plotte Footprint-Referenzen\n"
+"|Aktiviert das Drucken des REFERENCE Textes im Bestückungsdruck.\n"
+"|Erzwinge Ausdruck ausgeblendeter Werte/Referenzen\n"
+"|Erzwingt das Drucken von Feldern (Referenz, Wert) wenn sie als unsichtbar eingestellt\n"
+"wurden. In Kombination mit 'Drucke Footprintwerte' und 'Drucke Footprint-Referenzen'\n"
+"aktiviert diese Option die Ausgabe von Dokumenten zur Hilfe bei Verdrahtung und Reparaturen.\n"
+"Diese Optionen haben sich als notwendig erwiesen bei Schaltungen, die Bauteile verwenden\n"
+"die zu klein sind (SMD), um zwei Textfelder lesbar zu platzieren.\n"
+"|Durchkontaktierungen nicht umschließen\n"
+"|Entfernt die Lötstoppmaske über Durchkontaktierungen.\n"
+"|Schließe Platinenumrisslage von allen Lagen aus\n"
+"|Speziell für das GERBER Format. Keine Grafikelemente auf Randlagen plotten.\n"
+"|Benutze Protel Dateinamenerweiterungen\n"
+"|Speziell für das Gerberformat.\n"
+"Wenn Dateien erzeugt werden, werden spezielle Endungen für jede Datei benutzt.\n"
+"Wenn deaktiviert, ist die Dateiendung für GERBER Dateien .gbr.\n"
 
 #. type: Title ==
 #: pcbnew_managing_libs.adoc:1
 #, no-wrap
 msgid "Footprint Editor - Managing Libraries"
-msgstr ""
+msgstr "Footprint Editor - Verwaltung von Bibliotheken"
 
 #. type: Title ===
 #: pcbnew_managing_libs.adoc:4
 #, no-wrap
 msgid "Overview of Footprint Editor"
-msgstr ""
+msgstr "Überblick Footprint-Editor"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:11
@@ -4152,87 +4223,94 @@ msgid ""
 "follows, note that the active library is the library selected within the Footprint Editor, the program "
 "will now be described"
 msgstr ""
+"Pcbnew kann gleichzeitig mehrere Bibliotheken verwalten. Daher, wenn ein Footprint geladen wird, werden "
+"alle Bibliotheken, die in der Bibliothekenliste auftauchen, durchsucht, bis das erste Exemplar des "
+"Footprint gefunden wurde. Im Folgenden wird das Programm beschrieben. Beachten Sie, dass die aktive "
+"Bibliothek die im Footprinteditor ausgewählte ist."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:13
 msgid "Footprint Editor enables the creation and the editing of footprints:"
-msgstr ""
+msgstr "Der Footprinteditor ermöglicht das Erstellen und Bearbeiten von Footprints:"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:15 pcbnew_creating_editing_footprints.adoc:8
 msgid "Adding and removing pads."
-msgstr ""
+msgstr "Hinzufügen und Entfernen von Lötflächen."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:17
 msgid "Changing pad properties (shape, layer) for individual pads or globally for all pads of a footprint."
 msgstr ""
+"Ändern der Eigenschaften der Lötfläche (Form, Lage) für einzelne Lötflächen oder global für alle "
+"Lötflächen eines Footprints."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:18
 msgid "Editing graphic elements (lines, text)."
-msgstr ""
+msgstr "Bearbeiten von grafischen Elementen (Linien, Text)."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:19
 msgid "Editing information fields (value, reference, etc.)."
-msgstr ""
+msgstr "Bearbeiten von Informationsfeldern (Wert, Referenz, usw.)."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:20 pcbnew_creating_editing_footprints.adoc:13
 msgid "Editing the associated documentation (description, keywords)."
-msgstr ""
+msgstr "Bearbeiten der zugehörigen Dokumentation (Beschreibung, Schlüsselwörter)."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:22
 msgid "Footprint Editor allows the maintenance of the active library as well by:"
-msgstr ""
+msgstr "Der Footprinteditor erlaubt ebenfalls die Pflege der aktiven Bibliothek über:"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:24
 msgid "Listing the footprints in the active library."
-msgstr ""
+msgstr "Auflisten der Footprints in der aktiven Bibliothek."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:25
 msgid "Deletion of a footprint from the active library."
-msgstr ""
+msgstr "Löschen eines Footprint aus der aktiven Bibliothek."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:26
 msgid "Saving a footprint to the active library."
-msgstr ""
+msgstr "Speichern eines Footprint in die aktive Bibliothek."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:27
 msgid "Saving all of the footprints contained by a printed circuit."
-msgstr ""
+msgstr "Speichern alle Footprints die auf einer Leiterplatte enthalten sind."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:29
 msgid "It is also possible to create new libraries."
-msgstr ""
+msgstr "Es ist ebenso möglich, neue Bibliotheken zu erstellen."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:31
 msgid "The library extension is `.mod`."
-msgstr ""
+msgstr "Die Dateiendung für Bibliotheken ist `.mod`."
 
 #. type: Title ===
 #: pcbnew_managing_libs.adoc:33
 #, no-wrap
 msgid "Accessing Footprint Editor"
-msgstr ""
+msgstr "Zugriff auf den Footprinteditor"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:36
 msgid "The Footprint Editor can be accessed in two different ways:"
-msgstr ""
+msgstr "Auf den Footprinteditor kann auf zwei Wegen zugegriffen werden:"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:39
 msgid "Directly, via the icon image:images/icons/module_editor.png[] in the main toolbar of Pcbnew."
 msgstr ""
+"Direkt über das Symbol image:images/icons/module_editor.png[] in der Hauptwerkzeugleiste von Pcbnew."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:41
@@ -4240,6 +4318,8 @@ msgid ""
 "In the edit dialog for the active footprint (see figure below: accessed via the context menu), there is "
 "the button Footprint Editor."
 msgstr ""
+"Im Bearbeiten Dialog für den aktiven Footprint (siehe Bild unten: Zugriff über das Kontextmenü) ist die "
+"Schaltfläche \"Footprinteditor\"."
 
 #. type: Target for macro image
 #: pcbnew_managing_libs.adoc:42
@@ -4253,17 +4333,19 @@ msgid ""
 "In this case, the active footprint of the board will be loaded automatically in Footprint Editor, "
 "enabling immediate editing or archiving."
 msgstr ""
+"In diesem Fall wird der aktive Footprint der Leiterplatte automatisch im Footprinteditor geladen, was "
+"sofortiges Bearbeiten oder Sichern ermöglicht."
 
 #. type: Title ===
 #: pcbnew_managing_libs.adoc:47
 #, no-wrap
 msgid "Footprint Editor user interface"
-msgstr ""
+msgstr "Benutzeroberfläche des Footprinteditors"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:50
 msgid "By calling Footprint Editor the following window will appear:"
-msgstr ""
+msgstr "Wenn Sie den Footprinteditor aufrufen erscheint folgendes Fenster:"
 
 #. type: Target for macro image
 #: pcbnew_managing_libs.adoc:51 pcbnew_creating_editing_footprints.adoc:74
@@ -4275,7 +4357,7 @@ msgstr ""
 #: pcbnew_managing_libs.adoc:54
 #, no-wrap
 msgid "Top toolbar in Footprint Editor"
-msgstr ""
+msgstr "Obere Werkzeugleiste im Footprinteditor"
 
 #. type: Target for macro image
 #: pcbnew_managing_libs.adoc:56
@@ -4286,7 +4368,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:59
 msgid "From this toolbar, the following functions are available:"
-msgstr ""
+msgstr "Aus dieser Werkzeugleiste sind folgende Funktionen verfügbar:"
 
 #. type: delimited block |
 #: pcbnew_managing_libs.adoc:110
@@ -4341,12 +4423,59 @@ msgid ""
 "| image:images/icons/module_check.png[]\n"
 "| Perform a check of footprint correctness\n"
 msgstr ""
+"| image:images/icons/library.png[]\n"
+"| Wählt die aktive Bibliothek aus.\n"
+"| image:images/icons/save_library.png[]\n"
+"| Speichert den aktuellen Footprint in die aktive Bibliothek und schreibt ihn auf die Festplatte.\n"
+"| image:images/icons/new_library.png[]\n"
+"| Erstellt eine neue Bibliothek und speichert den aktuellen Footprint darin.\n"
+"| image:images/icons/modview_icon.png[]\n"
+"| Öffnet den Footprint-Betrachter\n"
+"| image:images/icons/delete.png[]\n"
+"| Öffnet einen Dialog um einen Footprint aus der aktiven Bibliothek zu löschen.\n"
+"| image:images/icons/new_footprint.png[]\n"
+"| Erstellt einen neuen Footprint.\n"
+"| image:images/icons/module_wizard.png[]\n"
+"| Erstellt einen Footprint mit Hilfe eines Assistenten.\n"
+"| image:images/icons/load_module_lib.png[]\n"
+"| Lade einen Footprint aus der aktiven Bibliothek.\n"
+"| image:images/icons/load_module_board.png[]\n"
+"| Lade (Importiere) einen Footprint aus der Leiterplatte.\n"
+"| image:images/icons/update_module_board.png[]\n"
+"| Exportiere den aktuellen Footprint zur Leiterplatte. Wenn der Footprint\n"
+"zuvor von der aktuellen Leiterplatte importiert wurde, wird der entsprechende\n"
+"Footprint ersetzt (d.h. unter Berücksichtigung von Position und Ausrichtung).\n"
+"| image:images/icons/insert_module_board.png[]\n"
+"| Exportiere den aktuellen Footprint zur Leiterplatte. Er wird dann auf die\n"
+"Leiterplatte auf Position 0,0 kopiert.\n"
+"| image:images/icons/import_module.png[]\n"
+"| Importiert einen Footprint aus einer Datei, die über den Export-Befehl erstellt wurde.\n"
+"| image:images/icons/export_module.png[]\n"
+"| Exportiere einen Footprint. Dieser Befehl ist grundsätzlich identisch zum Erstellen\n"
+"einer Bibliothek. Der einzige Unterschied ist, dass er eine Bibliothek im\n"
+"Benutzerverzeichnis erstellt, wären sonst eine Bibliothek im Standard Bibliotheks-\n"
+"Verzeichnis erstellt wird (üblicherweise 'kicad/modules').\n"
+"| image:images/icons/undo.png[] image:images/icons/redo.png[]\n"
+"| Rückgängig und Wiederholen.\n"
+"| image:images/icons/module_options.png[]\n"
+"| Ruft den Footprint-Eigenschaften-Dialog auf.\n"
+"| image:images/icons/print_button.png[]\n"
+"| Ruft den Druck-Dialog auf.\n"
+"| image:images/icons/zoom_in.png[]\n"
+"image:images/icons/zoom_out.png[]\n"
+"image:images/icons/zoom_redraw.png[]\n"
+"image:images/icons/zoom_fit_in_page.png[]\n"
+"| Standard Zoom-Befehle.\n"
+"| image:images/icons/options_pad.png[]\n"
+"| Ruft den Lötflächen-Editor auf.\n"
+"| image:images/icons/module_check.png[]\n"
+"| Führt eine Prüfung des Footprints auf Fehler aus.\n"
 
 #. type: Title ===
 #: pcbnew_managing_libs.adoc:112
 #, no-wrap
 msgid "Creating a new library"
-msgstr ""
+msgstr "Eine neue Bibliothek erstellen"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:119
@@ -4355,6 +4484,9 @@ msgid ""
 "the file is created by default in the library directory or via the button image:images/icons/"
 "export_module.png[], in which case the file is created by default in your working directory."
 msgstr ""
+"Eine neue Bibliothek wird über das Symbol image:images/icons/new_library.png[] erzeugt. In diesem Fall "
+"wird die Datei standardmäßig im Bibliotheks-Verzeichnis erzeugt oder über das Symbol image:images/icons/"
+"export_module.png[], was dann die Datei standardmäßig in Ihrem Arbeitsverzeichnis erzeugt."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:123
@@ -4362,17 +4494,19 @@ msgid ""
 "A file-choosing dialog allows the name of the library to be specified and its directory to be changed. "
 "In both cases, the library will contain the footprint being edited."
 msgstr ""
+"Ein Datei-Auswahlfenster erlaubt es den Namen der Bibliothek anzugeben und das Verzeichnis zu ändern. In "
+"beiden Fällen wird die Bibliothek den bearbeiteten Footprint enthalten."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:126
 msgid "If an old library of the same name exists, it will be overwritten without warning."
-msgstr ""
+msgstr "Wenn eine alte Bibliothek mit gleichem Namen vorhanden ist, wird sie ohne Warnung überschrieben."
 
 #. type: Title ===
 #: pcbnew_managing_libs.adoc:127
 #, no-wrap
 msgid "Saving a footprint in the active library"
-msgstr ""
+msgstr "Einen Footprint in der aktiven Bibliothek speichern"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:135
@@ -4382,6 +4516,10 @@ msgid ""
 "will be replaced. Since you will depend upon the accuracy of the library footprints, it is worth double-"
 "checking the footprint before saving."
 msgstr ""
+"Sie können einen Footprint über dieses Symbol speichern: image:images/icons/save_library.png[]. Dabei "
+"wird die aktive Bibliotheksdatei verändert. Wenn schon ein Footprint mit gleichem Namen vorhanden ist, "
+"wird er ersetzt. Weil Sie der Genauigkeit der Bibliotheks-Footprints vertrauen, sollten Sie den "
+"Footprint kontrollieren, bevor Sie ihn speichern."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:138
@@ -4389,53 +4527,55 @@ msgid ""
 "It is recommended to edit either the reference or value field text to the name of the footprint as "
 "identified in the library."
 msgstr ""
+"Es wird empfohlen entweder den Referenz- oder Wert-Feld-Text auf den Namen des Footprints setzen, wie er "
+"in der Bibliothek benannt ist."
 
 #. type: Title ===
 #: pcbnew_managing_libs.adoc:139
 #, no-wrap
 msgid "Transferring a footprint from one library to another"
-msgstr ""
+msgstr "Einen Footprint von einer Bibliothek zu einer anderen übertragen"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:143
 msgid "Select the source library via the button image:images/icons/library.png[]."
-msgstr ""
+msgstr "Wählen Sie die Start-Bibliothek über das Symbol image:images/icons/library.png[]."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:145
 msgid "Load the footprint via the button image:images/icons/load_module_lib.png[]."
-msgstr ""
+msgstr "Laden Sie den Footprint über das Symbol image:images/icons/load_module_lib.png[]."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:147
 msgid "Select the destination library via the button image:images/icons/library.png[]."
-msgstr ""
+msgstr "Wählen Sie die Ziel-Bibliothek über das Symbol image:images/icons/library.png[]."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:148
 msgid "Save the footprint via the button image:images/icons/save_library.png[]"
-msgstr ""
+msgstr "Speichern Sie den Footprint über das Symbol image:images/icons/save_library.png[]."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:150
 msgid "You may also wish to delete the source footprint."
-msgstr ""
+msgstr "Sie können auch den Footprint aus der Start-Bibliothek löschen wollen."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:152
 msgid "Reselect the source library with image:images/icons/library.png[]"
-msgstr ""
+msgstr "Wählen Sie noch einmal die Start-Bibliothek über das Symbol image:images/icons/library.png[]."
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:153
 msgid "Delete the old footprint via the button image:images/icons/delete.png[]"
-msgstr ""
+msgstr "Löschen Sie den Footprint über das Symbol image:images/icons/delete.png[]."
 
 #. type: Title ===
 #: pcbnew_managing_libs.adoc:154
 #, no-wrap
 msgid "Saving all footprints of your board in the active library"
-msgstr ""
+msgstr "Speichern aller Footprints der Leiterplatte in die aktive Bibliothek"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:159
