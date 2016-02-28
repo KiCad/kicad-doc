@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2015-12-21 08:04+0100\n"
-"PO-Revision-Date: 2016-02-04 08:31+0100\n"
+"PO-Revision-Date: 2016-02-26 16:25+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: it\n"
@@ -2712,7 +2712,7 @@ msgstr ""
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:54
 msgid "With big projects, the netlist generation can take up to few minutes."
-msgstr ""
+msgstr "Con grossi progetti, la generazione della netlist potrebbe impiegare alcuni minuti."
 
 #. type: Title ===
 #: eeschema_create_a_netlist.adoc:56
@@ -2723,7 +2723,7 @@ msgstr "Esempi netlist"
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:59
 msgid "You can see below a schematic design using the PSPICE library:"
-msgstr ""
+msgstr "In basso si può osservare uno schema che usa la libreria PSPICE:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_create_a_netlist.adoc:60
@@ -2740,7 +2740,7 @@ msgstr ""
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:63
 msgid "Example of a PCBNEW netlist file:"
-msgstr ""
+msgstr "Esempio di file di netlist PCBNEW:"
 
 #. type: delimited block -
 #: eeschema_create_a_netlist.adoc:123
@@ -2805,17 +2805,75 @@ msgid ""
 ")\n"
 "# End\n"
 msgstr ""
+"# Eeschema Netlist Versione 1.0 generato il 21/1/1997-16:51:15\n"
+"(\n"
+"(32E35B76 $noname C2 1NF {Lib=C}\n"
+"(1 0)\n"
+"(2 VOUT_1)\n"
+")\n"
+"(32CFC454 $noname V2 AC_0.1 {Lib=VSOURCE}\n"
+"(1 N-000003)\n"
+"(2 0)\n"
+")\n"
+"(32CFC413 $noname C1 1UF {Lib=C}\n"
+"(1 INPUT_1)\n"
+"(2 N-000003)\n"
+")\n"
+"(32CFC337 $noname V1 DC_12V {Lib=VSOURCE}\n"
+"(1 +12V)\n"
+"(2 0)\n"
+")\n"
+"(32CFC293 $noname R2 10K {Lib=R}\n"
+"(1 INPUT_1)\n"
+"(2 0)\n"
+")\n"
+"(32CFC288 $noname R6 22K {Lib=R}\n"
+"(1 +12V)\n"
+"(2 INPUT_1)\n"
+")\n"
+"(32CFC27F $noname R5 22K {Lib=R}\n"
+"(1 +12V)\n"
+"(2 N-000008)\n"
+")\n"
+"(32CFC277 $noname R1 10K {Lib=R}\n"
+"(1 N-000008)\n"
+"(2 0)\n"
+")\n"
+"(32CFC25A $noname R7 470 {Lib=R}\n"
+"(1 EMET_1)\n"
+"(2 0)\n"
+")\n"
+"(32CFC254 $noname R4 1K {Lib=R}\n"
+"(1 +12V)\n"
+"(2 VOUT_1)\n"
+")\n"
+"(32CFC24C $noname R3 1K {Lib=R}\n"
+"(1 +12V)\n"
+"(2 N-000006)\n"
+")\n"
+"(32CFC230 $noname Q2 Q2N2222 {Lib=NPN}\n"
+"(1 VOUT_1)\n"
+"(2 N-000008)\n"
+"(3 EMET_1)\n"
+")\n"
+"(32CFC227 $noname Q1 Q2N2222 {Lib=NPN}\n"
+"(1 N-000006)\n"
+"(2 INPUT_1)\n"
+"(3 EMET_1)\n"
+")\n"
+")\n"
+"# End\n"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:126
 msgid "In PSPICE format, the netlist is as follows:"
-msgstr ""
+msgstr "In formato PSPICE, la netlist è la seguente:"
 
 #. type: delimited block -
 #: eeschema_create_a_netlist.adoc:129
 #, no-wrap
 msgid "* Eeschema Netlist Version 1.1 (Spice format) creation date: 18/6/2008-08:38:03\n"
-msgstr ""
+msgstr "* Eeschema Netlist Versione 1.1 (formato Spice) data creazione: 18/6/2008-08:38:03\n"
 
 #. type: delimited block -
 #: eeschema_create_a_netlist.adoc:133
@@ -2825,6 +2883,9 @@ msgid ""
 ".AC 10 1Meg \\*1.2\n"
 ".DC V1 10 12 0.5\n"
 msgstr ""
+".model Q2N2222 npn (bf=200)\n"
+".AC 10 1Meg \\*1.2\n"
+".DC V1 10 12 0.5\n"
 
 #. type: delimited block -
 #: eeschema_create_a_netlist.adoc:155
@@ -2851,6 +2912,26 @@ msgid ""
 "Q2   N-000009 N-000012 N-000007 N-000007 Q2N2222\n"
 "Q1   N-000010 /VIN N-000007 N-000007 Q2N2222\n"
 msgstr ""
+"R12   /VOUT N-000003 22K\n"
+"R11   +12V N-000003 100\n"
+"L1   N-000003 /VOUT 100mH\n"
+"R10   N-000005 N-000004 220\n"
+"C3   N-000005 0 10uF\n"
+"C2   N-000009 0 1nF\n"
+"R8   N-000004 0 2.2K\n"
+"Q3   /VOUT N-000009 N-000004 N-000004 Q2N2222\n"
+"V2   N-000008 0 AC 0.1\n"
+"C1   /VIN N-000008 1UF\n"
+"V1   +12V 0 DC 12V\n"
+"R2   /VIN 0 10K\n"
+"R6   +12V /VIN 22K\n"
+"R5   +12V N-000012 22K\n"
+"R1   N-000012 0 10K\n"
+"R7   N-000007 0 470\n"
+"R4   +12V N-000009 1K\n"
+"R3   +12V N-000010 1K\n"
+"Q2   N-000009 N-000012 N-000007 N-000007 Q2N2222\n"
+"Q1   N-000010 /VIN N-000007 N-000007 Q2N2222\n"
 
 #. type: delimited block -
 #: eeschema_create_a_netlist.adoc:158
@@ -2859,24 +2940,26 @@ msgid ""
 ".print ac v(vout)\n"
 ".plot ac v(nodes) (-1,5)\n"
 msgstr ""
+".print ac v(vout)\n"
+".plot ac v(nodes) (-1,5)\n"
 
 #. type: delimited block -
 #: eeschema_create_a_netlist.adoc:160
 #, no-wrap
 msgid ".end\n"
-msgstr ""
+msgstr ".end\n"
 
 #. type: Title ===
 #: eeschema_create_a_netlist.adoc:163
 #, no-wrap
 msgid "Notes on Netlists"
-msgstr "Note sulle netlist"
+msgstr "Note sulla netlist"
 
 #. type: Title ====
 #: eeschema_create_a_netlist.adoc:166
 #, no-wrap
 msgid "Netlist name precautions"
-msgstr ""
+msgstr "Precauzioni sul nomi netlist"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:171
@@ -2884,7 +2967,7 @@ msgid ""
 "Many software tools that use netlists do not accept spaces in the component "
 "names, pins, equi-potential nets or others. Systematically avoid spaces in "
 "labels, or names and value fields of components or their pins."
-msgstr ""
+msgstr "Molti strumenti software che usano le netlists non accettano spazi nei nomi dei componenti, pins, collegamenti equi-potenziali o altri elementi. Si consiglia di evitare sistematicamente l'uso degli spazi nelle etichette, o nei campi nome o valore dei componenti o dei loro piedini."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:176
@@ -2893,20 +2976,20 @@ msgid ""
 "problems. Note that this limitation is not related to Eeschema, but to the "
 "netlist formats that can then become untranslatable to software that uses "
 "netlist files."
-msgstr ""
+msgstr "Allo stesso modo, i caratteri speciali diversi dalle lettere e numeri possono causare dei problemi. Si noti che questa limitazione non è relativa a Eeschema, ma sui formati di netlist che possono diventare intraducibili verso software che usi i file di netlist."
 
 #. type: Title ====
 #: eeschema_create_a_netlist.adoc:178
 #, no-wrap
 msgid "PSPICE netlists"
-msgstr ""
+msgstr "Netlist PSPICE"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:182
 msgid ""
 "For the Pspice simulator, you have to include some command lines in the "
 "netlist itself (.PROBE, .AC, etc.)."
-msgstr ""
+msgstr "Per il simulatore Pspice, è necessario includere alcune linee di comando nella netlist stessa (.PROBE, .AC, ecc.)."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:186
@@ -2914,7 +2997,7 @@ msgid ""
 "Any text line included in the schematic diagram starting with the keyword *-"
 "pspice* or *-gnucap* will be inserted (without the keyword) at the top of "
 "the netlist."
-msgstr ""
+msgstr "Ogni linea di testo inclusa nello schema elettrico che cominci con la parola chiave *-pspice* o *-gnucap* sarà inserita (senza la parola chiave) in cima alla netlist."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:190
@@ -2922,12 +3005,12 @@ msgid ""
 "Any text line included in the schematic diagram starting with the keyword *"
 "+pspice* or *+gnucap* will be inserted (without the keyword) at the end of "
 "the netlist."
-msgstr ""
+msgstr "Ogni linea di testo inclusa nello schema elettrico che cominci con la parola chiave *+pspice* o *+gnucap* verrà inserita (senza parola chiave) alla fine della netlist."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:192
 msgid "Here is a sample using many one-line texts and one multi-line text:"
-msgstr ""
+msgstr "Ecco un esempio di testo con molte linee singole e una multilinea:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_create_a_netlist.adoc:193
@@ -2944,32 +3027,32 @@ msgstr ""
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:196
 msgid "For example, if you type the following text (do not use a label!):"
-msgstr ""
+msgstr "Per esempio, se si batte il testo seguente (non usate un'etichetta!):"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:198
 #, no-wrap
 msgid " -PSPICE .PROBE\n"
-msgstr ""
+msgstr " -PSPICE .PROBE\n"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:200
 msgid "a line .PROBE will be inserted in the netlist."
-msgstr ""
+msgstr "verrà inserita nella netlist una linea .PROBE ."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:203
 msgid ""
 "In the previous example three lines were inserted at the beginning of the "
 "netlist and two at the end with this technique."
-msgstr ""
+msgstr "Nell'esempio precedente, tre linee erano state inserite all'inizio della netlist e due alla fine, con questa tecnica."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:206
 msgid ""
 "If you are using multiline texts, *+pspice* or *+gnucap* keywords are needed "
 "only once:"
-msgstr ""
+msgstr "Se si usano testi multilinea, le parole chiave *+pspice* o *+gnucap* sono necessarie solo una volta:"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:211
@@ -2980,11 +3063,15 @@ msgid ""
 " .lib C:\\Program Files\\LTC\\LTspiceIV\\lib\\cmp\\standard.bjt\n"
 " .backanno\n"
 msgstr ""
+" +PSPICE .model NPN NPN\n"
+" .model PNP PNP\n"
+" .lib C:\\Program Files\\LTC\\LTspiceIV\\lib\\cmp\\standard.bjt\n"
+" .backanno\n"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:213
 msgid "creates the four lines:"
-msgstr ""
+msgstr "crea le quattro linee:"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:218
@@ -2995,17 +3082,21 @@ msgid ""
 " .lib C:\\Program Files\\LTC\\LTspiceIV\\lib\\cmp\\standard.bjt\n"
 " .backanno\n"
 msgstr ""
+" .model NPN NPN\n"
+" .model PNP PNP\n"
+" .lib C:\\Program Files\\LTC\\LTspiceIV\\lib\\cmp\\standard.bjt\n"
+" .backanno\n"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:220
 msgid "Also note that the equipotential GND must be named 0 (zero) for Pspice."
-msgstr ""
+msgstr "Si noti anche che il GND equipotenziale deve essere chiamato 0 (zero) per Pspice."
 
 #. type: Title ===
 #: eeschema_create_a_netlist.adoc:222
 #, no-wrap
 msgid "Other formats"
-msgstr ""
+msgstr "Altri formati"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:227
@@ -3013,7 +3104,7 @@ msgid ""
 "For other netlist formats you can add netlist converters in the form of "
 "plugins. These converters are automatically launched by Eeschema. Chapter 14 "
 "gives some explanations and examples of converters."
-msgstr ""
+msgstr "Per altri formati di netlist si possono aggiungere convertitori di netlist in forma di plugin. Questi convertitori vengono automaticamente eseguiti da Eeschema. Il capitolo 14 contiene alcune spiegazioni ed esempi di convertitori."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:233
@@ -3023,18 +3114,18 @@ msgid ""
 "the intermediate file created by Eeschema, and the converter file to create "
 "the output file. In this case, the converter file (a sheet style) is very "
 "small and very easy to write."
-msgstr ""
+msgstr "Un convertitore è un file di testo (in formato xsl) ma si possono anche usare altri linguaggi come Python. Quando si usa il formato xsl, uno strumento (xsltproc.exe o xsltproc) legge il file intermedio creato da Eeschema, ed il file convertitore per creare il file in uscita. In questo caso, il file convertitore (un foglio di stile) è molto piccolo e facile da scrivere."
 
 #. type: Title ====
 #: eeschema_create_a_netlist.adoc:235
 #, no-wrap
 msgid "Init the dialog window"
-msgstr ""
+msgstr "La finestra di dialogo di inizializzazione"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:238
 msgid "You can add a new netlist plug-in via the Add Plugin button."
-msgstr ""
+msgstr "Per aggiungere un nuovo plugin di netlist si usa il pulsante _Aggiungi plugin_."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_create_a_netlist.adoc:239
@@ -3051,7 +3142,7 @@ msgstr ""
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:242
 msgid "Here is the plug-in PadsPcb setup window:"
-msgstr ""
+msgstr "Ecco la finestra di impostazione del plugin PadsPcb:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_create_a_netlist.adoc:243
@@ -3068,45 +3159,45 @@ msgstr ""
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:246
 msgid "The setup will require:"
-msgstr ""
+msgstr "L'impostazione richiederà:"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:248
 msgid "A title (for example, the name of the netlist format)."
-msgstr ""
+msgstr "Un titolo (per esempio, il nome del formato della netlist)."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:249
 msgid "The plug-in to launch."
-msgstr ""
+msgstr "Il plugin la lanciare."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:251
 msgid "When the netlist is generated:"
-msgstr ""
+msgstr "Quando la netlist viene generata:"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:253
 msgid "Eeschema creates an intermediate file *.tmp, for example test.tmp."
-msgstr ""
+msgstr "Eeschema crea un file intermedio *.tmp, per esempio test.tmp."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:254
 msgid "Eeschema run the plug-in, which reads test.tmp and creates test.net."
-msgstr ""
+msgstr "Eeschema esegue il plugin, il quale legge test.tmp e crea test.net."
 
 #. type: Title ====
 #: eeschema_create_a_netlist.adoc:256
 #, no-wrap
 msgid "Command line format"
-msgstr ""
+msgstr "Formato a linea di comando"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:260
 msgid ""
 "Here is an example, using xsltproc.exe as a tool to convert .xsl files, and "
 "a file netlist_form_pads-pcb.xsl as converter sheet style:"
-msgstr ""
+msgstr "Ecco un esempio, che usa xsltproc.exe come strumento per convertire dei file .xsl, e un file netlist_form_pads-pcb.xsl come foglio di stile di conversione:"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:263
@@ -3119,19 +3210,19 @@ msgstr ""
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:265
 msgid "With:"
-msgstr ""
+msgstr "Con:"
 
 #. type: delimited block |
 #: eeschema_create_a_netlist.adoc:269
 #, no-wrap
 msgid "|f:/kicad/bin/xsltproc.exe |A tool to read and convert xsl file\n"
-msgstr ""
+msgstr "|f:/kicad/bin/xsltproc.exe |Uno strumento per leggere e convertire file xsl\n"
 
 #. type: delimited block |
 #: eeschema_create_a_netlist.adoc:271
 #, no-wrap
 msgid "|-o %O.net |Output file: %O will define the output file.\n"
-msgstr ""
+msgstr "|-o %O.net |File in uscita: %O definirà il file in uscita.\n"
 
 #. type: delimited block |
 #: eeschema_create_a_netlist.adoc:274
@@ -3139,7 +3230,7 @@ msgstr ""
 msgid ""
 "|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |File name converter (a\n"
 "sheet style, xsl format).\n"
-msgstr ""
+msgstr "|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |Nome file convertitore (un foglio di stile, formato xsl).\n"
 
 #. type: delimited block |
 #: eeschema_create_a_netlist.adoc:277
@@ -3148,24 +3239,26 @@ msgid ""
 "|%I |Will be replaced by the intermediate file created by Eeschema\n"
 "(*.tmp).\n"
 msgstr ""
+"|%I |Sarà rimpiazzato dal file intermedio creato da Eeschema\n"
+"(*.tmp).\n"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:280
 msgid "For a schematic named test.sch, the actual command line is:"
-msgstr ""
+msgstr "Per lo schema elettrico test.sch, la riga di comando sarà:"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:283
 msgid ""
 "f:/kicad/bin/xsltproc.exe -o test.net f:/kicad/bin/plugins/netlist_form_pads-"
 "pcb.xsl test.tmp."
-msgstr ""
+msgstr "f:/kicad/bin/xsltproc.exe -o test.net f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl test.tmp."
 
 #. type: Title ====
 #: eeschema_create_a_netlist.adoc:285
 #, no-wrap
 msgid "Converter and sheet style (plug-in)"
-msgstr ""
+msgstr "Convertitore e foglio di stie (plugin)"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:291
@@ -3173,33 +3266,33 @@ msgid ""
 "This is a very simple piece of software, because its purpose is only to "
 "convert an input text file (the intermediate text file) to another text "
 "file. Moreover, from the intermediate text file, you can create a BOM list."
-msgstr ""
+msgstr "Questo è un software molto semplice, dato che il suo scopo è esclusivamente di convertire un testo in ingresso (il file di testo intermedio) in un altro file di testo. Inoltre, dal file di testo intermedio, è possibile creare una distinta materiali."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:294
 msgid ""
 "When using xsltproc as the converter tool only the sheet style will be "
 "generated."
-msgstr ""
+msgstr "Quando si usa xsltproc come strumento di conversione, viene generato solo il foglio di stile."
 
 #. type: Title ====
 #: eeschema_create_a_netlist.adoc:296
 #, no-wrap
 msgid "Intermediate netlist file format"
-msgstr ""
+msgstr "Formato file netlist intermedio"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:300
 msgid ""
 "See Chapter 14 for more explanations about xslproc, descriptions of the "
 "intermediate file format, and some examples of sheet style for converters."
-msgstr ""
+msgstr "Consultare il capitolo 14 per ottenere ulteriori informazioni su xslproc, sulle descrizioni del formato file intermedio, e alcuni esempi di fogli di stile per convertitori."
 
 #. type: Title ==
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:3
 #, no-wrap
 msgid "Creating Customized Netlists and BOM Files"
-msgstr ""
+msgstr "Creazione di netlist personalizzate e distinte materiali"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:6
@@ -3212,7 +3305,7 @@ msgstr "File di netlist intermedio"
 msgid ""
 "BOM files and netlist files can be converted from an Intermediate netlist "
 "file created by Eeschema."
-msgstr ""
+msgstr "File distinte materiali e di netlist possono essere convertiti da un file di netlist intermedio creato da Eeschema."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:15
@@ -3221,21 +3314,21 @@ msgid ""
 "intermediate netlist includes a large amount of data about your board and "
 "because of this, it can be used with post-processing to create a BOM or "
 "other reports."
-msgstr ""
+msgstr "Questo file usa la sintassi XML e si chiama netlist intermedia. La netlist intermedia include una grande quantità di dati sulla scheda e perciò, può essere usata tramite elaborazione successiva per generare distinte materiali o altri rapporti."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:18
 msgid ""
 "Depending on the output (BOM or netlist), different subsets of the complete "
 "Intermediate Netlist file will be used in the post-processing."
-msgstr ""
+msgstr "A seconda del risultato (distinta materiali o netlist), differenti sottoinsiemi dell'intero file di netlist intermedia saranno usati nella post-elaborazione."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:20
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:22
 #, no-wrap
 msgid "Schematic sample"
-msgstr ""
+msgstr "Campione di schema"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:22
@@ -3247,14 +3340,14 @@ msgstr ""
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:25
 #, no-wrap
 msgid "The Intermediate Netlist file sample"
-msgstr ""
+msgstr "Campione di file di netlist intermedia"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:29
 msgid ""
 "The corresponding intermediate netlist (using XML syntax) of the circuit "
 "above is shown below."
-msgstr ""
+msgstr "La corrispondente netlist intermedia (sintassi XML) del circuito precedente viene mostrata di seguito."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:212
@@ -3442,6 +3535,187 @@ msgid ""
 "  </nets>\n"
 "</export>\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
+"<export version=\"D\">\n"
+"  <design>\n"
+"    <source>F:\\kicad_aux\\netlist_test\\netlist_test.sch</source>\n"
+"    <date>29/08/2010 20:35:21</date>\n"
+"    <tool>eeschema (2010-08-28 BZR 2458)-unstable</tool>\n"
+"  </design>\n"
+"  <components>\n"
+"    <comp ref=\"P1\">\n"
+"      <value>CONN_4</value>\n"
+"      <libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2141</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U2\">\n"
+"      <value>74LS74</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS74\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20BA</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U1\">\n"
+"      <value>74LS04</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS04\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20A6</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"C1\">\n"
+"      <value>CP</value>\n"
+"      <libsource lib=\"device\" part=\"CP\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2094</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"R1\">\n"
+"      <value>R</value>\n"
+"      <libsource lib=\"device\" part=\"R\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E208A</tstamp>\n"
+"    </comp>\n"
+"  </components>\n"
+"  <libparts>\n"
+"    <libpart lib=\"device\" part=\"C\">\n"
+"      <description>Condensateur non polarise</description>\n"
+"      <footprints>\n"
+"        <fp>SM*</fp>\n"
+"        <fp>C?</fp>\n"
+"        <fp>C1-1</fp>\n"
+"      </footprints>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">C</field>\n"
+"        <field name=\"Value\">C</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"device\" part=\"R\">\n"
+"      <description>Resistance</description>\n"
+"      <footprints>\n"
+"        <fp>R?</fp>\n"
+"        <fp>SM0603</fp>\n"
+"        <fp>SM0805</fp>\n"
+"        <fp>R?-*</fp>\n"
+"        <fp>SM1206</fp>\n"
+"      </footprints>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">R</field>\n"
+"        <field name=\"Value\">R</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"conn\" part=\"CONN_4\">\n"
+"      <description>Symbole general de connecteur</description>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">P</field>\n"
+"        <field name=\"Value\">CONN_4</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"P1\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"P2\" type=\"passive\"/>\n"
+"        <pin num=\"3\" name=\"P3\" type=\"passive\"/>\n"
+"        <pin num=\"4\" name=\"P4\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"74xx\" part=\"74LS04\">\n"
+"      <description>Hex Inverseur</description>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">U</field>\n"
+"        <field name=\"Value\">74LS04</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"3\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"4\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"5\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"6\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"7\" name=\"GND\" type=\"power_in\"/>\n"
+"        <pin num=\"8\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"9\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"10\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"11\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"12\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"13\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"14\" name=\"VCC\" type=\"power_in\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"74xx\" part=\"74LS74\">\n"
+"      <description>Dual D FlipFlop, Set &amp; Reset</description>\n"
+"      <docs>74xx/74hc_hct74.pdf</docs>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">U</field>\n"
+"        <field name=\"Value\">74LS74</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"Cd\" type=\"input\"/>\n"
+"        <pin num=\"2\" name=\"D\" type=\"input\"/>\n"
+"        <pin num=\"3\" name=\"Cp\" type=\"input\"/>\n"
+"        <pin num=\"4\" name=\"Sd\" type=\"input\"/>\n"
+"        <pin num=\"5\" name=\"Q\" type=\"output\"/>\n"
+"        <pin num=\"6\" name=\"~Q\" type=\"output\"/>\n"
+"        <pin num=\"7\" name=\"GND\" type=\"power_in\"/>\n"
+"        <pin num=\"8\" name=\"~Q\" type=\"output\"/>\n"
+"        <pin num=\"9\" name=\"Q\" type=\"output\"/>\n"
+"        <pin num=\"10\" name=\"Sd\" type=\"input\"/>\n"
+"        <pin num=\"11\" name=\"Cp\" type=\"input\"/>\n"
+"        <pin num=\"12\" name=\"D\" type=\"input\"/>\n"
+"        <pin num=\"13\" name=\"Cd\" type=\"input\"/>\n"
+"        <pin num=\"14\" name=\"VCC\" type=\"power_in\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"  </libparts>\n"
+"  <libraries>\n"
+"    <library logical=\"device\">\n"
+"      <uri>F:\\kicad\\share\\library\\device.lib</uri>\n"
+"    </library>\n"
+"    <library logical=\"conn\">\n"
+"      <uri>F:\\kicad\\share\\library\\conn.lib</uri>\n"
+"    </library>\n"
+"    <library logical=\"74xx\">\n"
+"      <uri>F:\\kicad\\share\\library\\74xx.lib</uri>\n"
+"    </library>\n"
+"  </libraries>\n"
+"  <nets>\n"
+"    <net code=\"1\" name=\"GND\">\n"
+"      <node ref=\"U1\" pin=\"7\"/>\n"
+"      <node ref=\"C1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"7\"/>\n"
+"      <node ref=\"P1\" pin=\"4\"/>\n"
+"    </net>\n"
+"    <net code=\"2\" name=\"VCC\">\n"
+"      <node ref=\"R1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"14\"/>\n"
+"      <node ref=\"U2\" pin=\"4\"/>\n"
+"      <node ref=\"U2\" pin=\"1\"/>\n"
+"      <node ref=\"U2\" pin=\"14\"/>\n"
+"      <node ref=\"P1\" pin=\"1\"/>\n"
+"    </net>\n"
+"    <net code=\"3\" name=\"\">\n"
+"      <node ref=\"U2\" pin=\"6\"/>\n"
+"    </net>\n"
+"    <net code=\"4\" name=\"\">\n"
+"      <node ref=\"U1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"3\"/>\n"
+"    </net>\n"
+"    <net code=\"5\" name=\"/SIG_OUT\">\n"
+"      <node ref=\"P1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"5\"/>\n"
+"      <node ref=\"U2\" pin=\"2\"/>\n"
+"    </net>\n"
+"    <net code=\"6\" name=\"/CLOCK_IN\">\n"
+"      <node ref=\"R1\" pin=\"2\"/>\n"
+"      <node ref=\"C1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"1\"/>\n"
+"      <node ref=\"P1\" pin=\"3\"/>\n"
+"    </net>\n"
+"  </nets>\n"
+"</export>\n"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:215
