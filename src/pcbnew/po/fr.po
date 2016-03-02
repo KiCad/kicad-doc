@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-02-09 15:49+0100\n"
-"PO-Revision-Date: 2016-02-29 12:26+0100\n"
+"PO-Revision-Date: 2016-03-02 16:55+0100\n"
 "Last-Translator: Marc BERLIOUX <marc.berlioux@gmail.com>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -5639,7 +5639,7 @@ msgstr ""
 #: pcbnew_interactive_router.adoc:2
 #, no-wrap
 msgid "Interactive Router"
-msgstr ""
+msgstr "Routeur Interactif"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:7
@@ -5648,11 +5648,14 @@ msgid ""
 "shoving off or walking around items on the PCB that collide with the trace "
 "you are currently drawing."
 msgstr ""
+"Le routeur interactif vous permet de router rapidement et efficacement vos "
+"PCB, en repoussant ou en contournant les éléments du PCB qui s'interposent "
+"sur le chemin de la piste que vous êtes en train de tracer."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:9
 msgid "Following modes are supported:"
-msgstr ""
+msgstr "Les modes suivants sont supportés :"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:12
@@ -5661,6 +5664,10 @@ msgid ""
 "*Highlight collisions*, which highlights all violating objects with a\n"
 "nice, shiny green color and shows violating clearance regions.\n"
 msgstr ""
+"*Surbrillance des Collisions*, qui met en surbrillance tous les objets posant "
+"problème au moyen\n"
+"d'une jolie et brillante couleur verte, et qui indique les zones violant "
+"l'isolation.\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:15
@@ -5669,6 +5676,9 @@ msgid ""
 "*Shove*, attempting to push and shove all items colliding with the\n"
 "currently routed track.\n"
 msgstr ""
+"*Pousser*, qui essaie de pousser et traverser tous les éléments qui entrent "
+"en collision avec la\n"
+" piste en cours de routage.\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:18
@@ -5677,17 +5687,21 @@ msgid ""
 "*Walk around*, trying to avoid obstacles by hugging/walking around\n"
 "them.\n"
 msgstr ""
+"*Contourner*, qui essaie d'éviter les obstacles en les rasant et en les\n"
+"contournant.\n"
 
 #. type: Title ===
 #: pcbnew_interactive_router.adoc:20
 #, no-wrap
 msgid "Setting up"
-msgstr ""
+msgstr "Réglages"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:23
 msgid "Before using the Interactive Router, please set up these two things:"
 msgstr ""
+"Avant d'utiliser le routeur interactif, veuillez effectuer les deux choses "
+"suivantes :"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:27
@@ -5697,6 +5711,10 @@ msgid ""
 "dialog and make sure at least the default clearance value looks\n"
 "sensible.\n"
 msgstr ""
+"*Paramètres d'isolation* Pour régler les distances d'isolation, ouvrez la "
+"fenêtre\n"
+"des Règles de Conception, et assurez-vous que la valeur par défaut a l'air\n"
+"correcte.\n"
 
 #. type: Target for macro image
 #: pcbnew_interactive_router.adoc:28
@@ -5711,6 +5729,9 @@ msgid ""
 "*Enable OpenGL mode* By selecting _View->Switch canvas to OpenGL_ menu\n"
 "option or pressing **F11**.\n"
 msgstr ""
+"*Passez en mode OpenGL*, menu _Affichage -> Commuter l'affichage sur "
+"OpenGL_,\n"
+"ou en appuyant sur **F11**.\n"
 
 #. type: Target for macro image
 #: pcbnew_interactive_router.adoc:33
@@ -5722,7 +5743,7 @@ msgstr ""
 #: pcbnew_interactive_router.adoc:35
 #, no-wrap
 msgid "Laying out tracks"
-msgstr ""
+msgstr "Tracé des pistes"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:41
@@ -5731,6 +5752,10 @@ msgid ""
 "images/route_icon.png[Interactive Router Button] or the *X* key.  The cursor "
 "will turn into a cross and the tool name, will appear in the status bar."
 msgstr ""
+"Pour activer l'outil de routage, appuyez sur le bouton du Routeur Interactif "
+"image:images/route_icon.png[Interactive Router Button], ou sur la touche *X*. "
+"Le curseur va se transformer en une croix, et le nom de l'outil apparaîtra "
+"dans la barre d'état."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:46
@@ -5740,6 +5765,10 @@ msgid ""
 "of the starting item. Clicking or pressing *X* on empty PCB space starts a "
 "track with no net assigned."
 msgstr ""
+"Pour débuter une piste, cliquez sur un élément (pastille, piste ou via), ou "
+"appuyez sur la touche *X*, tout en survolant un élément avec la souris. La "
+"nouvelle piste utilise le net de l'élément de départ. Un clic, ou l'appui sur "
+"*X*, sur un circuit vide, démarre une piste sans aucun net assigné."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:52
@@ -5749,6 +5778,11 @@ msgid ""
 "colliding traces/vias, depending on the mode. Retreating the mouse cursor "
 "will cause the shoved items to spring back to their former locations."
 msgstr ""
+"Déplacez la souris pour définir la forme de la piste. Suivant le mode, le "
+"routeur essayera de suivre la trace de la souris, en contournant les "
+"obstacles immobiles (comme les pastilles) et en repoussant les pistes/vias "
+"gênantes sur le parcours. Le retrait du curseur de la souris remettra à leurs "
+"anciens emplacements les éléments repoussés."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:56
@@ -5756,6 +5790,9 @@ msgid ""
 "Clicking on a pad/track/via in the same net finishes routing. Clicking in "
 "empty space fixes the segments routed so far and continues routing the trace."
 msgstr ""
+"Un clic sur un élément, pastille/piste/via, appartenant à la même "
+"équipotentielle (net) termine le tracé. Un clic sur un espace vide fixe les "
+"segments de piste déjà tracés et continue le routage de la piste."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:59
@@ -5763,6 +5800,8 @@ msgid ""
 "In order to stop routing and undo all changes (shoved items, etc.), simply "
 "press **Esc**."
 msgstr ""
+"Pour interrompre le tracé et annuler les changements (éléments repoussés, "
+"etc...), appuyez simplement sur **Echap**."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:64
@@ -5772,6 +5811,11 @@ msgid ""
 "Pressing *V* again disables via placement. Clicking in any spot establishes "
 "the via and continues routing."
 msgstr ""
+"Pendant le tracé d'une piste, un appui sur *V*, ou la sélection de _Placer "
+"Via Traversante_ du menu contextuel, permet d'insérer une via au bout de la "
+"piste en cours de tracé. En appuyant à nouveau sur *V* on annule l'insertion "
+"de la via. En cliquant à n'importe quel autre endroit, la via est insérée et "
+"le tracé continue."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:68
@@ -5780,6 +5824,9 @@ msgid ""
 "toggles the direction of the initial track segment between straight or "
 "diagonal."
 msgstr ""
+"En appuyant sur */*, ou en sélectionnant _Commuter Orientation_ dans le menu "
+"contextuel, on bascule la direction initiale du segment de piste entre "
+"directe ou diagonale."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:72
@@ -5787,12 +5834,15 @@ msgid ""
 "By default, the router snaps to centers/axes of the items.  Snapping can be "
 "disabled by holding *Shift* while routing or selecting items."
 msgstr ""
+"Par défaut, le routeur va être attiré et va coller aux centres/axes des "
+"éléments. Cette attraction peut être désactivée en appuyant sur "
+"*Shift(Majuscule)* pendant le tracé ou la sélection des éléments."
 
 #. type: Title ===
 #: pcbnew_interactive_router.adoc:73
 #, no-wrap
 msgid "Setting track widths and via sizes"
-msgstr ""
+msgstr "Paramétrage des dimensions des pistes et des vias"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:77
@@ -5800,11 +5850,13 @@ msgid ""
 "There are several ways to pre-select a track width/via size or to change it "
 "during routing:"
 msgstr ""
+"Il y a plusieurs façons de sélectionner une largeur de piste / taille de via, "
+"ou de la changer pendant le routage :"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:79
 msgid "Use standard KiCad shortcuts."
-msgstr ""
+msgstr "En utilisant les raccourcis standards de KiCad."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:82
@@ -5812,6 +5864,9 @@ msgid ""
 "Press *W* or select _Custom Track Width_ from the context menu to type in a "
 "custom track width/via size."
 msgstr ""
+"En appuyant sur *Q*, ou en sélectionnant _Dim Utilisateur des Pistes et Vias_ "
+"dans le menu contextuel, pour saisir une largeur de piste, ou une taille de "
+"via, personnalisée."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:85
@@ -5819,6 +5874,8 @@ msgid ""
 "Pick a predefined width from the _Select Track Width_ sub-menu of the "
 "context menu."
 msgstr ""
+"En choisissant une largeur prédéfinie du sous-menu contextuel _Sélection "
+"Largeur Piste/Via_."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:89
@@ -5826,12 +5883,15 @@ msgid ""
 "Select _Use the starting track width_ in the _Select Track Width_ menu to "
 "pick the width from the start item (or the traces already connected to it)."
 msgstr ""
+"En sélectionnant _Utiliser la largeur de la piste de départ_ du sous-menu "
+"contextuel _Sélection Largeur Piste/Via_ pour reprendre la largeur de piste "
+"de l'élément de départ, ou des pistes qui y sont déjà connectées."
 
 #. type: Title ===
 #: pcbnew_interactive_router.adoc:90
 #, no-wrap
 msgid "Dragging"
-msgstr ""
+msgstr "Traction d'une piste (Drag)"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:96
@@ -5841,12 +5901,17 @@ msgid ""
 "Track/Via_ from the context menu. Finish dragging by clicking again or abort "
 "by pressing __Esc__."
 msgstr ""
+"Le routeur peut faire glisser des segments de piste, des virages et des vias. "
+"Pour tracter un élément, cliquez dessus avec la touche *Ctrl* enfoncée, ou "
+"survolez le à la souris et appuyez sur *G*, ou encore sélectionnez _Drag "
+"Piste/Via_ dans le menu contextuel. Terminez le déplacement en cliquant à "
+"nouveau, ou annulez en appuyant sur __Echap__."
 
 #. type: Title ===
 #: pcbnew_interactive_router.adoc:97
 #, no-wrap
 msgid "Options"
-msgstr ""
+msgstr "Options"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:102
@@ -5855,11 +5920,14 @@ msgid ""
 "Options_ from the context menu while in the Track mode.  It opens a window "
 "like the one below:"
 msgstr ""
+"Le comportement du routeur est configuré en appuyant sur _E_ ou en "
+"sélectionnant _Options de Routage_ dans le menu contextuel, en étant en mode "
+"Piste. Il s'ouvre une fenêtre comme celle ci-dessous :"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:104
 msgid "The options are:"
-msgstr ""
+msgstr "Les options sont :"
 
 #. type: Target for macro image
 #: pcbnew_interactive_router.adoc:105
@@ -5874,6 +5942,9 @@ msgid ""
 "*Mode* - select how the router handles DRC violation (shoving, walking\n"
 "around, etc.)\n"
 msgstr ""
+"*Mode* - sélectionne comment le routeur gère les violations des règles de "
+"conception (DRC) (pousser,\n"
+"contourner, etc...)\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:112
@@ -5882,6 +5953,9 @@ msgid ""
 "*Shove vias* - when disabled, vias are treated as un-movable objects\n"
 "and hugged instead of shoved.\n"
 msgstr ""
+"*Pousser les vias* - si désactivée, les vias sont considérées comme des "
+"objets inamovibles\n"
+"et seront contournées plutôt que poussées.\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:116
@@ -5891,6 +5965,10 @@ msgid ""
 "colliding traces behind solid obstacles (e.g. pads) instead of\n"
 "\"reflecting\" back the collision\n"
 msgstr ""
+"*Sauter les obstacles* - si activée, le routeur tente de déplacer les pistes\n"
+"en collision derrière les obstacles fixes (par exemple les pastilles) au lieu "
+"de\n"
+"les \"réfléchir\" derrière la collision\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:121
@@ -5901,6 +5979,13 @@ msgid ""
 "track is removed). Loop removal works locally (only between the start\n"
 "and end of the currently routed trace).\n"
 msgstr ""
+"*Supprimer les pistes redondantes* - supprime les boucles pendant le routage "
+"(par ex. si la\n"
+"nouvelle piste assure la même connectivité qu'une déjà existante, l'ancienne "
+"piste sera\n"
+"supprimée). La suppression de boucle fonctionne localement (seulement entre "
+"le début\n"
+"et la fin de la piste en cours de tracé).\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:125
@@ -5910,6 +5995,10 @@ msgid ""
 "pads/vias in a clean way, avoiding acute angles and jagged breakout\n"
 "traces.\n"
 msgstr ""
+"*Rétrécissement automatique* - si activée, le routeur tente de passer à "
+"travers\n"
+"les pads/vias de manière propre, en évitant les pistes traversantes avec des\n"
+"angles aigus et dentelés\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:128
@@ -5918,6 +6007,8 @@ msgid ""
 "*Smooth dragged segments* - when enabled, the router attempts to merge\n"
 "several jagged segments into a single straight one (dragging mode).\n"
 msgstr ""
+"*Lissage du drag des segments* - si activée, le routeur tente de fusionner\n"
+"plusieurs segments dentelés en un seul bien droit (en mode drag).\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:131
@@ -5926,6 +6017,9 @@ msgid ""
 "*Allow DRC violations* (_Highlight collisions_ mode only) - allows\n"
 "to establish a track even if is violating the DRC rules.\n"
 msgstr ""
+"*Autoriser les violations de DRC* (mode _Surbrillance des Collisions_ "
+"seulement) - permet\n"
+"de tracer une piste, même si on viole les règles de conception.\n"
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:135
@@ -5936,6 +6030,12 @@ msgid ""
 "(but slower), less effort means faster routing but somewhat jagged\n"
 "traces.\n"
 msgstr ""
+"*Effort de l'Optimisation* - définit combien de temps le routeur doit passer "
+"à\n"
+"optimiser les pistes routées/poussées. Plus d'effort signifie un routage plus "
+"propre\n"
+"(mais plus lent), moins d'effort un routage plus rapide, mais des pistes un\n"
+"peu dentelées. \ n"
 
 #. type: Title ==
 #: pcbnew_introduction.adoc:2
