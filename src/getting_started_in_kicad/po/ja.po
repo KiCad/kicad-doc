@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KiCadことはじめ\n"
 "POT-Creation-Date: 2016-01-07 20:18+0100\n"
-"PO-Revision-Date: 2015-12-26 18:39+0100\n"
+"PO-Revision-Date: 2016-03-12 00:23+0900\n"
 "Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
@@ -714,17 +714,14 @@ msgstr ""
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:306
-#, fuzzy
-#| msgid ""
-#| "Hover the mouse over the component 'R' and press the r key. Notice how "
-#| "the component rotates."
 msgid ""
 "Try to hover the mouse over the component 'R' and press the r key. The "
 "component should rotate. You do not need to actually click on the component "
 "to rotate it."
 msgstr ""
 "コンポーネント 'R' の上にマウスカーソルを合わせて、\"r\" キーを押します。コン"
-"ポーネントがどのように回転するか注目しましょう。"
+"ポーネントが回転します。回転させるためにコンポーネント上でクリックする必要は"
+"ありません。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:312
@@ -735,6 +732,10 @@ msgid ""
 "In this case, tell KiCad you want to perform the action on the 'Component ..."
 "R...'."
 msgstr ""
+"マウスカーソルが _フィールド Reference_  ('R') か _フィールド Value_ ('R?') "
+"の上にあればメニューが現れるでしょう。この '明示的な選択' メニューはしばしば "
+"KiCad で見られ、互いに重なっているオブジェクトへの作業を可能にします。今回の"
+"場合、 'コンポーネント R' にアクションを実行することを KiCad に伝えます。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:318
@@ -893,6 +894,10 @@ msgid ""
 "default project. In the menu, choose *Preferences* -> **Component "
 "Libraries** and click the **Add** button for **Component library files**."
 msgstr ""
+"デフォルトのプロジェクトでは設定されていないライブラリに含まれているコンポー"
+"ネントを追加します。メニューで *設定* -> **コンポーネント ライブラリ** を選ん"
+"で **コンポーネント ライブラリ ファイル** の右にある **追加** ボタンをクリッ"
+"クします。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:380
@@ -903,20 +908,23 @@ msgid ""
 "`/usr/share/kicad/library/` (Linux). When you have found the directory, "
 "choose and add the 'microchip_pic12mcu' library and close the window."
 msgstr ""
+"公式の KiCad ライブラリがあなたのコンピュータのどこにインストールされているか"
+"見つける必要があります。たくさんの '.dcm' ファイルと '.lib' ファイルのある "
+"'library' ディレクトリを探しましょう。 `C:\\Program Files (x86)\\KiCad\\share"
+"\\` (Windows) や `/usr/share/kicad/library/` (Linux) を見てみましょう。ディレ"
+"クトリを見つけたら、 'microchip_pic12mcu' ライブラリを選んで追加し、コンポー"
+"ネントライブラリのダイアログを閉じましょう。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:384
-#, fuzzy
-#| msgid ""
-#| "Repeat the add-component steps, this time choosing the 'device' library "
-#| "and picking the 'LED' component from it."
 msgid ""
 "Repeat the add-component steps, however this time select the "
 "'microchip_pic12mcu' library instead of the 'device' library and pick the "
 "'PIC12C508A-I/SN' component."
 msgstr ""
-"コンポーネント追加のステップを続けますが、今度は 'device' ライブラリを選択し"
-"て 'LED' コンポーネントを選びましょう。"
+"コンポーネント追加のステップを続けますが、今度は 'device' ライブラリの代わり"
+"に 'microchip_pic12mcu' ライブラリを選択して 'PIC12C508A-I/SN' コンポーネント"
+"を選びましょう。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:389
@@ -1062,7 +1070,7 @@ msgid ""
 "then click on the little circle on pin 2 of the LED.  You can zoom in while "
 "you are placing the connection."
 msgstr ""
-"マイクロコントローラのピン7の端の小丸をクリックし、それからLEDのピン2の小丸を"
+"マイクロコントローラのピン7の端の小丸をクリックし、それからLEDのピン1の小丸を"
 "クリックします。接続を配置する時にズームインすることができます。"
 
 #. type: Plain text
@@ -1075,7 +1083,7 @@ msgid ""
 msgstr ""
 "配線されたコンポーネントを再配置したい場合、\"g\" キー (掴む) を使うことが重"
 "要で、\"m\" キー (移動) は使うべきではありません。(掴む) を使うことでワイヤの"
-"接続を維持できます。コンポーネントの移動方法を忘れたならステップ16,25を見直し"
+"接続を維持できます。コンポーネントの移動方法を忘れたならステップ16,27を見直し"
 "ましょう。"
 
 #. type: Plain text
@@ -1254,22 +1262,16 @@ msgstr ""
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:531
-#, fuzzy
-#| msgid ""
-#| "All components now need to have unique identifiers. In fact, many of our "
-#| "components are still named 'R?' or 'J?'. Identifier assignation can be "
-#| "done automatically by clicking on the 'Annotate schematic' icon image:"
-#| "images/icons/annotate.png[annotate_png]."
 msgid ""
 "All components now need to have unique identifiers. In fact, many of our "
 "components are still named 'R?' or 'J?'. Identifier assignation can be done "
 "automatically by clicking on the 'Annotate schematic' icon image:images/"
 "icons/annotate.png[annotate_png] on the top toolbar."
 msgstr ""
-"全てのコンポーネントはユニークな識別子を持つ必要があります。実際には私達のコ"
-"ンポーネントの多くはまだ 'R?' や 'J?' と名付けられています。識別子の割り当て"
-"は、'回路図のアノテーション' のアイコン image:images/icons/annotate."
-"png[annotate_png] をクリックすることで自動的に行われます。"
+"全てのコンポーネントは今ユニークな識別子を持つ必要があります。実際には私達の"
+"コンポーネントの多くはまだ 'R?' や 'J?' と名付けられています。識別子の割り当"
+"ては、トップツールバーの '回路図のアノテーション' のアイコン image:images/"
+"icons/annotate.png[annotate_png] をクリックすることで自動的に行われます。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:538
@@ -1288,16 +1290,6 @@ msgstr ""
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:547
-#, fuzzy
-#| msgid ""
-#| "We will now check our schematic for errors. Click on the 'Perform "
-#| "Electric Rules Check' icon image:images/icons/erc.png[erc_png]. Click on "
-#| "the 'Test ERC' button. A report informing you of any errors or warnings "
-#| "such as disconnected wires is generated. You should have 0 Errors and 0 "
-#| "Warnings. In case of errors or warnings, a small green arrow will appear "
-#| "on the schematic in the position where the error or the warning is "
-#| "located. Check 'Write ERC report' and press the 'Test ERC' button again "
-#| "to receive more information about the errors."
 msgid ""
 "We will now check our schematic for errors. Click on the 'Perform electrical "
 "rules check' icon image:images/icons/erc.png[erc_png] on the top toolbar. "
@@ -1308,12 +1300,13 @@ msgid ""
 "Check 'Create ERC file report' and press the 'Run' button again to receive "
 "more information about the errors."
 msgstr ""
-"ここで回路図のエラーをチェックします。'ERCの実行' アイコン image:images/"
-"icons/erc.png[erc_png] をクリックします。'実行' ボタンをクリックします。接続"
-"されていないワイヤ等のエラーや警告のレポートが通知されます。エラー０、警告０"
-"にしましょう。エラーや警告がある場合には、小さな緑色の矢印が回路図上のエラー"
-"や警告のある場所に表示されます 。よりエラーの情報を得るため 'ERCレポートファ"
-"イルの生成' をチェックし、'実行' ボタンを再度押します。"
+"ここで回路図のエラーをチェックします。トップツールバーの 'エレクトリカル ルー"
+"ル チェックの実行' アイコン image:images/icons/erc.png[erc_png] をクリックし"
+"ます。'実行' ボタンをクリックします。接続されていないワイヤ等のエラーや警告の"
+"レポートが通知されます。エラー０、警告０にしましょう。エラーや警告がある場合"
+"には、小さな緑色の矢印が回路図上のエラーや警告のある場所に表示されます 。より"
+"エラーの情報を得るため 'ERCレポートファイルの生成' をチェックし、'実行' ボタ"
+"ンを再度押します。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:551
@@ -1322,16 +1315,12 @@ msgid ""
 "try setting the path to `c:\\windows\\notepad.exe` (windows) or `/usr/bin/"
 "gedit` (Linux)."
 msgstr ""
+"もしも \"デフォルトのエディタが指定されていません。エディタを指定して下さ"
+"い。\" のワーニングが出たなら、 `C:\\Windows\\notepad.exe` (Windows) か `/"
+"usr/bin/gedit` (Linux) を設定してみてください。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:556
-#, fuzzy
-#| msgid ""
-#| "The schematic is now finished. We can now create a Netlist file to which "
-#| "we will add the footprint of each component. Click on the 'Netlist "
-#| "generation' icon image:images/icons/netlist.png[netlist_png] on the top "
-#| "toolbar. Click on 'Netlist' then click on 'save'. Save under the default "
-#| "file name."
 msgid ""
 "The schematic is now finished. We can now create a Netlist file to which we "
 "will add the footprint of each component. Click on the 'Generate netlist' "
@@ -2703,13 +2692,6 @@ msgstr ""
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:1147
-#, fuzzy
-#| msgid ""
-#| "Next, draw the contour of the component. Click on the 'Add rectangle' "
-#| "icon image:images/icons/add_rectangle.png[add_rectangle_png]. We want to "
-#| "draw a rectangle next to the pins, as shown below. To do this, click "
-#| "where you want the top left corner of the rectangle to be. Click again "
-#| "where you want the bottom right corner of the rectangle to be."
 msgid ""
 "Next, draw the contour of the component. Click on the 'Add rectangle' icon "
 "image:images/icons/add_rectangle.png[add_rectangle_png]. We want to draw a "
@@ -2721,8 +2703,8 @@ msgstr ""
 "次にコンポーネントの輪郭を描きましょう。 'コンポーネントのボディに矩形を入"
 "力' のアイコン image:images/icons/add_rectangle.png[add_rectangle_png] をク"
 "リックします。以下に示すようにピンに隣接して長方形を描きます。まず、長方形の"
-"左上の角にしたい所をクリックします。そして、長方形の右下の角にしたい所をク"
-"リックします。"
+"左上の角にしたい所をクリックします（マウスボタンを押したままにしません）。そ"
+"して、長方形の右下の角にしたい所をクリックします。"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:1149
