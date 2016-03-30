@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2016-03-09 10:58+0100\n"
-"PO-Revision-Date: 2016-03-09 21:27+0100\n"
+"PO-Revision-Date: 2016-03-30 17:58+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: it\n"
@@ -5196,38 +5196,40 @@ msgstr "Generazione di file di netlist tramite linea di comando"
 msgid ""
 "Assuming we are using the program _xsltproc.exe_ to apply the sheet style to "
 "the intermediate file, _xsltproc.exe_ is executed with the following command."
-msgstr ""
+msgstr "Assumendo che si stia usando il programma _xsltproc.exe_ per applicare il foglio di stile al file intermedio, _xsltproc.exe_ verrà eseguito tramite il seguente comando."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:828
 msgid ""
 "_xsltproc.exe -o <output filename> < style-sheet filename> <input XML file "
 "to convert>_"
-msgstr ""
+msgstr "_xsltproc.exe -o <nomefile in uscita> <nomefile foglio di stile> <file XML in ingresso da convertire>_"
 
+# FIX
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:830
 msgid "In KiCad under Windows the command line is the following."
-msgstr ""
+msgstr "In KiCad sotto Windows la riga di comando è la seguente:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:832
 msgid ""
 "_f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-"
 "pcb.xsl \"%I\"_"
-msgstr ""
+msgstr "_f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"_"
 
+# FIX
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:834
 msgid "Under Linux the command becomes as following."
-msgstr ""
+msgstr "Sotto Linux il comando diventa il seguente:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:836
 msgid ""
 "_xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl "
 "\"%I\"_"
-msgstr ""
+msgstr "_xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:840
@@ -5235,80 +5237,81 @@ msgid ""
 "Where _netlist_form_pads-pcb.xsl_ is the style-sheet that you are applying. "
 "Do not forget the double quotes around the file names, this allows them to "
 "have spaces after the substitution by Eeschema."
-msgstr ""
+msgstr "Dove _netlist_form_pads-pcb.xsl_ è il foglio di stile che si sta applicando. Non si deve dimenticare le virgolette intorno ai nomi dei file, ciò permette di avere spazi dopo la sostituzione da parte di Eeschema."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:842
 msgid "The command line format accepts parameters for filenames:"
-msgstr ""
+msgstr "Il formato della riga di comando accetta parametri nei nomi di file:"
 
+# FIX
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:844
 msgid "The supported formatting parameters are."
-msgstr ""
+msgstr "I parametri di formattazione supportati sono:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:847
 msgid ""
 "%B => base filename and path of selected output file, minus path and "
 "extension."
-msgstr ""
+msgstr "%B => nome file base e percorso del file di uscita selezionato, senza percorso ed estensione."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:850
 msgid ""
 "%I => complete filename and path of the temporary input file (the "
 "intermediate net file)."
-msgstr ""
+msgstr "%I => il nome del file completo di percorso del file di ingresso temporaneo (il netfile intermedio)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:852
 msgid "%O => complete filename and path of the user chosen output file."
-msgstr ""
+msgstr "%O => nome e percorso completi del file d'uscita scelto dall'utente."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:854
 msgid "_%I_ will be replaced by the actual intermediate file name"
-msgstr ""
+msgstr "_%I_ verrà rimpiazzato dall'effettivo nome file intermedio"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:856
 msgid "_%O_ will be replaced by the actual output file name."
-msgstr ""
+msgstr "_%O_ verrà rimpiazzato dall'effettivo nome del file d'uscita."
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:858
 #, no-wrap
 msgid "Command line format: example for xsltproc"
-msgstr ""
+msgstr "Formato della riga di comando: esempio per xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:861
 msgid "The command line format for xsltproc is the following:"
-msgstr ""
+msgstr "Il formato della riga di comando per xsltproc è il seguente:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:863
 msgid "<path of xsltproc> xsltproc <xsltproc parameters>"
-msgstr ""
+msgstr "<percorso di xsltproc> xsltproc <parametri di xsltproc>"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:865
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:899
 msgid "under Windows:"
-msgstr ""
+msgstr "sotto Windows:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:867
 #, no-wrap
 msgid "*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
-msgstr ""
+msgstr "*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:869
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:903
 msgid "under Linux:"
-msgstr ""
+msgstr "sotto Linux:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:871
