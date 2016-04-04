@@ -100,6 +100,8 @@ macro( KiCadDocumentation DOCNAME )
             # Non-ascii languages needs some special treatments
             if( "${LANGUAGE}" MATCHES "ja" )
                 add_dblatex_option( -b xetex -p ${CMAKE_CURRENT_SOURCE_DIR}/../../xsl/dblatex-pdf-ja.xsl )
+            elseif( "${LANGUAGE}" MATCHES "ru" )
+                add_dblatex_option( -b xetex -p ${CMAKE_CURRENT_SOURCE_DIR}/../../xsl/dblatex-pdf-ru.xsl )
             endif()
 
             # Deal with chapters for all languages...
