@@ -43,7 +43,7 @@ DEBUGPDFLTX:= -d
 UTOC:= $(shell if [ -z "$$TOC2" ] ; then echo -n "-a toc2" ; fi )
 
 #disabling some unuseful print and added custom dblatex style to generate a nice cover image
-DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s $(SCRIPTSBASEDIR)/pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+DBLATEXOPTS="-P latex.output.revhistory=0 -P doc.publisher.show=0 -s $(SCRIPTSBASEDIR)/pdf-cover-dblatex.sty $(DEBUGPDFLTX) -b xetex"
 .SUFFIXES: #Disabe implicit rules
 
 
