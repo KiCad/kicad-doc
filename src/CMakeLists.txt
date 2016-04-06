@@ -12,6 +12,7 @@ add_subdirectory( getting_started_in_kicad )
 add_subdirectory( idf_exporter )
 add_subdirectory( kicad )
 add_subdirectory( pcbnew )
+add_subdirectory( plugins )
 add_subdirectory( pl_editor )
 add_subdirectory( gui_translation_howto )
 
