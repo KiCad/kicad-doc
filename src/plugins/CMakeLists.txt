@@ -12,4 +12,4 @@
 # (c)2015 Brian Sidebotham <brian.sidebotham@gmail.com>
 #
 
-KiCadDocumentation( kicad_plugins )
+KiCadDocumentation( plugins )
