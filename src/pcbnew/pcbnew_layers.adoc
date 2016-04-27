@@ -5,12 +5,17 @@
 
 Pcbnew can work with 50 different layers:
 
-* Between 2 and 32 copper layers for routing tracks.
+* Between 1 and 32 copper layers for routing tracks.
+
 * 14 fixed-purpose technical layers:
-    - 12 paired layers (Front/Back): *Adhesive*, *Solder Paste*,
-    *Silk Screen*, *Solder Mask*, *Courtyard*, *Fabrication*
-    - 2 standalone layers: *Edge Cuts*, *Margin*
-* 4 auxiliary layers that you can use any way you want: *Comments*, *E.C.O. 1*, *E.C.O. 2*, *Drawings*
+
+  - 12 paired layers (Front/Back): *Adhesive*, *Solder Paste*,
+  *Silk Screen*, *Solder Mask*, *Courtyard*, *Fabrication*
+
+  - 2 standalone layers: *Edge Cuts*, *Margin*
+
+* 4 auxiliary layers that you can use any way you want:
+  *Comments*, *E.C.O. 1*, *E.C.O. 2*, *Drawings*
 
 === Setting up layers
 
@@ -38,8 +43,11 @@ image::images/Pcbnew_layer_setup_dialog_layer_properties.png[scaledwidth="60%"]
 
 ==== Paired Technical Layers
 
-12 technical layers come in pairs: one for the front, one for the back. You can recognize them with the "F." or "B." prefix in their names.
-The elements making up a footprint (pad, drawing, text) of one of these layers are automatically mirrored and moved to the complementary layer when the footprint is flipped.
+12 technical layers come in pairs: one for the front, one for the back.
+You can recognize them with the "F." or "B." prefix in their names. The
+elements making up a footprint (pad, drawing, text) of one of these
+layers are automatically mirrored and moved to the complementary layer
+when the footprint is flipped.
 
 The paired technical layers are:
 
@@ -132,7 +140,7 @@ image::images/Pcbnew_via_layer_pair_dialog.png[scaledwidth="40%"]
 When a via is placed the working (active) layer is automatically
 switched to the alternate layer of the layer pair used for the vias.
 
-One can also switch to an other active layer by hot keys, and if a
+One can also switch to another active layer by hot keys, and if a
 track is in progress, a via will be inserted.
 
 === Using the high-contrast mode

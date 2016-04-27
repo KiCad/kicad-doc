@@ -46,8 +46,10 @@ Pcbnew allows you to define different routing parameters for each
 net. Parameters are defined by a group of nets.
 
 * A group of nets is called a Netclass.
+
 * There is always a netclass called "default".
-* Users can add others Netclasses.
+
+* Users can add other Netclasses.
 
 A netclass specifies:
 
@@ -66,7 +68,9 @@ The choice is made in the menu: Design Rules -> Design Rules.
 The Netclass editor allows you to:
 
 * Add or delete Netclasses.
+
 * Set routing parameters values: clearance, track width, via sizes.
+
 * Group nets in netclasses.
 
 image::images/Pcbnew_design_rules_editor_netclass_tab.png[scaledwidth="70%"]
@@ -76,7 +80,9 @@ image::images/Pcbnew_design_rules_editor_netclass_tab.png[scaledwidth="70%"]
 The global design rules are:
 
 * Enabling/disabling Blind/buried Vias use.
+
 * Enabling/disabling Micro Vias use.
+
 * Minimum Allowed Values for tracks and vias.
 
 A DRC error is raised when a value smaller than the minimum value
@@ -84,7 +90,7 @@ specified is encountered. The second dialog panel is:
 
 image::images/Pcbnew_design_rules_editor_global_tab.png[scaledwidth="70%"]
 
-This dialog also allows to enter a "stock" of tracks and vias sizes.
+This dialog also allows to enter a "stock" of tracks and via sizes.
 
 When routing, one can select one of these values to create a track or
 via, instead of using the netclass's default value.
@@ -118,7 +124,7 @@ width smaller than specified here generates a DRC error.
 
 image::images/Pcbnew_specific_size_options.png[scaledwidth="50%"]
 
-One can enter a set of extra tracks and/or vias sizes. While routing
+One can enter a set of extra tracks and/or via sizes. While routing
 a track, these values can be used on demand instead of the values
 from the current netclass values.
 
@@ -152,20 +158,29 @@ width.
 
 ==== Rustic
 
-* Clearance: 0.35mm (0.0138 inches).
-* Track width: 0.8mm (0.0315 inches).
-* Pad diameter for ICs and vias: 1.91mm (0.0750  inches ).
-* Pad diameter for discrete components: 2.54mm (0.1 inches).
-* Ground track width: 2.54mm (0.1 inches).
+* Clearance: 0.35 mm (0.0138 inches).
+
+* Track width: 0.8 mm (0.0315 inches).
+
+* Pad diameter for ICs and vias: 1.91 mm (0.0750 inches).
+
+* Pad diameter for discrete components: 2.54 mm (0.1 inches).
+
+* Ground track width: 2.54 mm (0.1 inches).
 
 image::images/Pcbnew_dr_example_rustic.png[scaledwidth="80%"]
 
 ==== Standard
 
-* Clearance: 0.35mm (0.0138  inches).
-* Track width: 0.5mm (0.0127  inches).
-* Pad diameter for ICs: make them elongated in order to allow tracks to pass between IC pads and yet have the pads offer a sufficient adhesive surface (1.27 x 2.54 mm -->0.05x 0.1 inches).
-* Vias: 1.27mm (0.0500  inches).
+* Clearance: 0.35mm (0.0138 inches).
+
+* Track width: 0.5mm (0.0127 inches).
+
+* Pad diameter for ICs: make them elongated in order to allow tracks to
+  pass between IC pads and yet have the pads offer a sufficient adhesive
+  surface (1.27 x 2.54 mm --> 0.05 x 0.1 inches).
+
+* Vias: 1.27 mm (0.0500 inches).
 
 image::images/Pcbnew_dr_example_standard.png[scaledwidth="80%"]
 
@@ -177,7 +192,7 @@ preferable to start by routing power tracks, making them wide and
 short and keeping analog and digital supplies well separated. Later,
 sensitive signal tracks should be routed. Amongst other problems,
 automatic routing often requires many vias. However, automatic
-routing can offer a useful insight into the positioning of footprins.
+routing can offer a useful insight into the positioning of footprints.
 With experience, you will probably find that the automatic router is
 useful for quickly routing the 'obvious' tracks, but the remaining
 tracks will best be routed by hand.
@@ -224,20 +239,26 @@ If you want to drag the track you can use the hotkey 'G'.
 A via can be inserted only when a track is in progress:
 
 * By the pop-up menu.
+
 * By the hotkey 'V'.
+
 * By switching to a new copper layer using the appropriate hotkey.
 
 === Select/edit the track width and via size
 
-When clicking on a track or a pad, Pcbnew automatically selects the corresponding Netclass, and the track size and vias dimensions are derived from this netclass.
+When clicking on a track or a pad, Pcbnew automatically selects the
+corresponding Netclass, and the track size and via dimensions are
+derived from this netclass.
 
 As previously seen, the Global Design Rules editor has a tool to insert
-extra tracks and vias sizes.
+extra tracks and via sizes.
 
 * The horizontal toolbar can be used to select a size.
+
 * When the button image:images/icons/add_tracks.png[] is active,
   the current track width can be selected from the pop-up menu
   (accessible as well when creating a track).
+
 * The user can utilize the default Netclasses values or a specified value.
 
 ==== Using the horizontal toolbar
@@ -251,15 +272,15 @@ image::images/Pcbnew_track_toolbar.png[scaledwidth="95%"]
 value selection.
 | image:images/Pcbnew_track_toolbar_track_width_selection_in_use.png[width="70%"]
 | Selecting a specific track width value.
-The first value in list is always the netclass value.
-Others values are tracks widths entered from the Global Design Rules editor.
+The first value in the list is always the netclass value.
+Other values are tracks widths entered from the Global Design Rules editor.
 | image:images/Pcbnew_track_toolbar_via_size_selection.png[width="70%"]
 | Via size selection.
 The symbol * is a mark for default Netclass value selection.
 | image:images/Pcbnew_track_toolbar_via_size_selection_in_use.png[width="70%"]
 | Selecting a specific via dimension value.
-The first value in list is always the netclass value.
-Others values are vias dimensions entered from the Global Design Rules editor.
+The first value in the list is always the netclass value.
+Other values are via dimensions entered from the Global Design Rules editor.
 | image:images/icons/auto_track_width.png[]
 | When enabled: Automatic track width selection.
 When starting a track on an existing track, the new track has the same width as the existing track.
@@ -306,6 +327,7 @@ image::images/Pcbnew_track_global_edit_context_menu.png[scaledwidth="60%"]
 The dialog editor allows global changes of tracks and/or vias for:
 
 * The current net.
+
 * The whole board.
 
 image::images/Pcbnew_track_global_edit_dialog.png[scaledwidth="70%"]

@@ -74,9 +74,12 @@ shapes.
 In LibreCAD, use the following steps to export to the *DXF R12* file format:
 
 . In the *File* menu, use *Save As...*
+
 . In the *Save Drawing As* dialog, there is a *Save as type:* selection 
   near the bottom of the dialog. Select the option *Drawing Exchange DXF R12*.
+
 . Optionally enter a file name in the *File name:* field.
+
 . Click *Save*
 
 Your DXF file is now ready for import into KiCad.
@@ -90,28 +93,38 @@ into KiCad. Note that the import bahaviour is slightly different depending on wh
 Using the "default" canvas mode:
 
 . In the *File* menu, select *Import* and then the *DXF File* option.
+
 . In the *Import DXF File* dialog use 'Browse' to select the prepared DXF file to be imported.
+
 . In the 'Place DXF origin (0,0) point:' option, select the placement of DXF origin 
   relative to the board coordinates (the KiCad board has (0,0) in the top left corner).
   For the 'User defined position' enter the coordinates in the 'X Position' and 'Y Position' fields.
+
 . In the 'Layer' selection, select the board layer for the import. *Edge.Cuts* is needed
   for the board outline.
+
 . Click 'OK'.
 
 Using the "OpenGL" or "Cairo" canvas modes:
 
 . In the *File* menu, select *Import* and then the *DXF File* option.
+
 . In the *Import DXF File* dialog use 'Browse' to select the prepared DXF file to be imported.
+
 . The 'Place DXF origin (0,0) point:' option setting is ignored in this mode.
+
 . In the 'Layer' selection, select the board layer for the import. *Edge.Cuts* is needed
   for the board outline.
+
 . Click 'OK'.
+
 . The shape is now attached to your cursor and it can be moved around the board area.
+
 . Click to 'drop' the shape on the board.
 
 ===== Example imported DXF shape
 
-Here is an example of an DXF import with a board that had several
+Here is an example of a DXF import with a board that had several
 elliptical segments approximated by a number of short line segments:
 
 image::images/Pcbnew_board_outline_imported_from_a_DXF.png[scaledwidth="50%"]
@@ -242,8 +255,11 @@ image::images/Pcbnew_footprint_exchange_options.png[scaledwidth="70%"]
 One must choose a new footprint name and use:
 
 * *Change footprint of 'xx'* for the current footprint
+
 * *Change footprints 'yy'* for all footprints like the current footprint.
+
 * *Change footprints having same value* for all footprints like the current
   footprint, restricted to components which have the same value.
-* *Update all footprints of the board* for reloads all footprints on board.
+
+* *Update all footprints of the board* for reloading of all footprints on board.
 

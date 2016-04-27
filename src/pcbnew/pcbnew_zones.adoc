@@ -19,6 +19,7 @@ For calculation time reasons, the zone filling is not recreated after
 each change, but only:
 
 * If a filling zone command is executed.
+
 * When a DRC test is performed.
 
 Copper zones must be filled or refilled after changes in tracks or
@@ -29,7 +30,9 @@ In order to create a copper zone you should:
 
 * Select parameters (net name, layer...).  Turning on the layer
   and highlighting this net is not mandatory but it is good practice.
+
 * Create the zone limit (If not, the entire board will be filled.).
+
 * Fill the zone.
 
 Pcbnew tries to fill all zones in one piece, and usually, there will
@@ -50,13 +53,17 @@ image::images/Pcbnew_zone_properties_dialog.png[scaledwidth="80%"]
 You can specify all parameters for this zone:
 
 * Net
+
 * Layer
+
 * Filling options
+
 * Pad options
+
 * Priority level
 
 Draw the zone limit on this layer. This zone limit is a polygon,
-created by a left-clicking at each corner. A double-click will end
+created by left-clicking at each corner. A double-click will end
 and close the polygon. If the starting point and
 ending point are not at the same coordinate, Pcbnew will add a
 segment from the end point to the start point.
@@ -152,7 +159,7 @@ image::images/Pcbnew_zone_include_pads.png[scaledwidth="50%"]
 
 * If excluded, the connection to the zone will not be very good.
 
-** The zone can be filled only if tracks exists to connect zones areas.
+** The zone can be filled only if tracks exists to connect zone areas.
 
 ** Pads must be connected by tracks.
 
@@ -166,7 +173,7 @@ image::images/Pcbnew_zone_exclude_pads.png[scaledwidth="50%"]
 
 image::images/Pcbnew_zone_thermal_relief.png[scaledwidth="50%"]
 
-==== Thermal reliefs parameters
+==== Thermal relief parameters
 
 image::images/Pcbnew_thermal_relief_settings.png[scaledwidth="30%"]
 

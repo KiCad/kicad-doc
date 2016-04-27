@@ -36,8 +36,11 @@ software tools that comprise KiCad.
 After having created your schematic in Eeschema:
 
 * Generate the netlist using Eeschema.
-* Assign each component in your netlist file to the corresponding footprint
-  (often called footprint) used on the printed circuit using Cvpcb.
+
+* Assign each component in your netlist file to the corresponding land
+  pattern (often called footprint) used on the printed circuit using
+  Cvpcb.
+
 * Launch Pcbnew and read the modified Netlist. This will also read the
   file with the footprint selections.
 
@@ -51,8 +54,10 @@ If the schematic is modified (after a printed circuit board has been
 generated), the following steps must be repeated:
 
 * Generate a new netlist file using Eeschema.
+
 * If the changes to the schematic involve new components, the
   corresponding footprints must be assigned using Cvpcb.
+
 * Launch Pcbnew and re-read the modified netlist (this will also re-read
   the file with the footprint selections).
 

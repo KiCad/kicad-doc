@@ -1,6 +1,6 @@
 == KiCad Scripting Reference
 
-Scripting allow you to automate tasks within KiCad using the https://www.python.org/[Python] language.
+Scripting allows you to automate tasks within KiCad using the https://www.python.org/[Python] language.
 
 Also see the doxygen documentation on http://ci.kicad-pcb.org/job/kicad-doxygen/ws/build/pcbnew/doxygen-python/html/index.html[Python Scripting Reference].
 
@@ -20,14 +20,19 @@ scripting is Pcbnew. It is also planned for Eeschema in the future.
 
 === KiCad Objects
 
-The scripting API reflects the internal object structure inside KiCad/pcbnew. BOARD is the main object, that has a set of properties and a set of MODULEs, and TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.
+The scripting API reflects the internal object structure inside
+KiCad/pcbnew. BOARD is the main object, that has a set of properties and
+a set of MODULEs, and TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.
 Then MODULEs have D_PADs, EDGEs, etc.
 
 - See the BOARD section below.
 
 === Basic API Reference
 
-All the pcbnew API is provided from the "pcbnew" module in Python. GetBoard() method will return the current pcb open at editor, useful for commands written from the integrated scripting shell inside pcbnew or action plugins.
+All the pcbnew API is provided from the "pcbnew" module in Python.
+GetBoard() method will return the current pcb open at editor, useful for
+commands written from the integrated scripting shell inside pcbnew or
+action plugins.
 
 === Loading and Saving a Board
 
@@ -85,7 +90,7 @@ BOARD contains a set of object lists that can be accessed using the following me
 
 - *board.GetModules():* This method returns a list of MODULE objects, all the modules available in the board will be exposed here.
 - *board.GetDrawings():* Returns the list of BOARD_ITEMS that belong to the board drawings
-- *board.GetTracks():* This method returns a list of TRACKs an SEGVIAs inside a BOARD
+- *board.GetTracks():* This method returns a list of TRACKs and SEGVIAs inside a BOARD
 - *board.GetSegZones():* Returns a list of SEGZONEs
 - *board.GetFullRatnest():* Returns the list of ratsnets (connections still not routed)
 - *board.GetLocalRatsnest():* Returns the list of ratsnest of a moving footprint (as it's dragged)
@@ -156,7 +161,7 @@ print "RATSNEST:",len(pcb.GetFullRatsnest())
 
 ==== Change a component pins paste mask margin
 
-.We only want to change pins from 1 to 14, 15 is a thermal pad that must be keep as it is.
+.We only want to change pins from 1 to 14, 15 is a thermal pad that must be kept as it is.
 [source,python]
 ----------
 b = pcbnew.GetBoard()
@@ -173,7 +178,7 @@ for p in pads:
 === Footprint Wizards
 
 The footprint wizards are a collection of python scripts that can be
-access via from the Footprint Editor. If you invoke the footprint
+accessed from the Footprint Editor. If you invoke the footprint
 dialog you select a given wizard that allows you to see the footprint
 rendered, and you have some parameters you can edit.
 
