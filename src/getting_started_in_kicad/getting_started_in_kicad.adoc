@@ -201,7 +201,7 @@ In the picture below, you see a flowchart representing the KiCad work-flow.
 The picture explains which steps you need to take, in which order.
 When applicable, the icon is added as well for convenience.
 
-image:images/kicad_flowchart.png["KiCad Flowchart"]
+image::images/kicad_flowchart.png["KiCad Flowchart"]
 
 For more information about creating a component, see the section of this
 document titled <<make-schematic-components-in-kicad,Make schematic components in KiCad>>. And for more
@@ -255,7 +255,7 @@ schematic using KiCad.
     __PCB Calculator__ and __Pl Editor__. Refer to the work-flow chart
     to give you an idea how the main tools are used.
 +
-image:images/kicad_main_window.png[KiCad Main Window]
+image::images/kicad_main_window.png[KiCad Main Window]
 
 2.  Create a new project: *File* -> **New Project** -> **New Project**.
     Name the project file 'tutorial1'. The project file will automatically
@@ -290,7 +290,7 @@ the '?' key.
     'device' heading is the name of the library where the component is
     located, which is quite a generic and useful library.
 +
-image:images/choose_component.png[Choose Component]
+image::images/choose_component.png[Choose Component]
 
 7.  Double click on it. This will close the 'Choose Component' window.
     Place the component in the schematic sheet by clicking where you
@@ -316,7 +316,7 @@ this case, tell KiCad you want to perform the action on the 'Component
     take you to the more general Edit window. Notice how the right-click
     menu below shows shortcut keys for all available actions.
 +
-image:images/edit_component_dropdown.png[Edit component menu]
+image::images/edit_component_dropdown.png[Edit component menu]
 
 11. The Component value window will appear. Replace the current value
     'R' with '1 k'. Click OK.
@@ -324,7 +324,7 @@ image:images/edit_component_dropdown.png[Edit component menu]
 NOTE: Do not change the Reference field (R?), this will be done automatically
 later on. The value inside the resistor should now be '1 k'.
 +
-image:images/resistor_value.png[Resistor Value]
+image::images/resistor_value.png[Resistor Value]
 
 12. To place another resistor, simply click where you want the resistor
     to appear. The Component Selection window will appear again.
@@ -332,7 +332,7 @@ image:images/resistor_value.png[Resistor Value]
 13. The resistor you previously chose is now in your history list,
     appearing as 'R'. Click OK and place the component.
 +
-image:images/component_history.png[Component history]
+image::images/component_history.png[Component history]
 
 14. In case you make a mistake and want to delete a component, right
     click on the component and click 'Delete Component'. This will remove
@@ -392,7 +392,7 @@ be connected. We will see later on why this is the case.
 
 24. Organise all components on your schematic sheet as shown below.
 +
-image:images/gsik_tutorial1_010.png[gsik_tutorial1_010_png]
+image::images/gsik_tutorial1_010.png[gsik_tutorial1_010_png]
 
 25. We now need to create the schematic component 'MYCONN3' for our
     3-pin connector. You can jump to the section titled
@@ -409,7 +409,7 @@ image:images/gsik_tutorial1_010.png[gsik_tutorial1_010_png]
     zoom in before/while doing this. Reposition 'J?' under the component as
     shown below. Labels can be moved around as many times as you please.
 +
-image:images/gsik_myconn3_s.png[gsik_myconn3_s_png]
+image::images/gsik_myconn3_s.png[gsik_myconn3_s_png]
 
 28. It is time to place the power and ground symbols. Click on the
     'Place a power port' button image:images/icons/add_power.png[add_power_png] on
@@ -428,7 +428,7 @@ image:images/gsik_myconn3_s.png[gsik_myconn3_s_png]
     right of the VSS pin of the microcontroller. Your schematic should now
     look something like this:
 +
-image:images/gsik_tutorial1_020.png[gsik_tutorial1_020_png]
+image::images/gsik_tutorial1_020.png[gsik_tutorial1_020_png]
 
 31. Next, we will wire all our components. Click on the 'Place wire'
     icon image:images/icons/add_line.png[Place wire] on the right
@@ -448,7 +448,7 @@ use the g key (grab) option and not the m key (move) option. Using the
 grab option will keep the wires connected. Review step 24 in case you
 have forgotten how to move a component.
 +
-image:images/gsik_tutorial1_030.png[gsik_tutorial1_030_png]
+image::images/gsik_tutorial1_030.png[gsik_tutorial1_030_png]
 
 33. Repeat this process and wire up all the other components as shown
     below. To terminate a wire just double-click. When wiring up the
@@ -456,7 +456,7 @@ image:images/gsik_tutorial1_030.png[gsik_tutorial1_030_png]
     symbol and the middle top of the GND symbol. See the screenshot
     below.
 +
-image:images/gsik_tutorial1_040.png[gsik_tutorial1_040_png]
+image::images/gsik_tutorial1_040.png[gsik_tutorial1_040_png]
 
 34. We will now consider an alternative way of making a connection
     using labels. Pick a net labelling tool by clicking on the 'Place
@@ -486,7 +486,7 @@ image:images/gsik_tutorial1_040.png[gsik_tutorial1_040_png]
 
 39. Below you can see what the final result should look like.
 +
-image:images/gsik_tutorial1_050.png[gsik_tutorial1_050_png]
+image::images/gsik_tutorial1_050.png[gsik_tutorial1_050_png]
 
 40. Let's now deal with unconnected wires. Any pin or wire that is not
     connected will generate a warning when checked by KiCad. To avoid
@@ -499,7 +499,7 @@ image:images/gsik_tutorial1_050.png[gsik_tutorial1_050_png]
     pins 2, 3, 4 and 5. An X will appear to signify that the lack of a
     wire connection is intentional.
 +
-image:images/gsik_tutorial1_060.png[gsik_tutorial1_060_png]
+image::images/gsik_tutorial1_060.png[gsik_tutorial1_060_png]
 
 42. Some components have power pins that are invisible. You can make
     them visible by clicking on the 'Show hidden pins' icon
@@ -514,7 +514,7 @@ image:images/gsik_tutorial1_060.png[gsik_tutorial1_060_png]
     'PWR_FLAG'. Place two of them. Connect them to a GND pin and to
     VCC as shown below.
 +
-image:images/gsik_tutorial1_070.png[gsik_tutorial1_070_png]
+image::images/gsik_tutorial1_070.png[gsik_tutorial1_070_png]
 +
 NOTE: This will avoid the classic schematic checking warning:
 Warning Pin power_in not driven (Net xx)
@@ -563,9 +563,9 @@ try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
     with footprints in the KiCad library. The pane on the center shows
     all the components used in your schematic. Here select 'D1'. In
     the pane on the right you have all the available footprints, here
-    scroll down to 'LEDs:LED-5MM' and double click on it. 
+    scroll down to 'LEDs:LED-5MM' and double click on it.
 +
-image:images/icons/cvpcb.png[cvpcb_png]
+image::images/icons/cvpcb.png[cvpcb_png]
 
 51. It is possible that the pane on the right shows only a selected
     subgroup of available footprints. This is because KiCad is trying
@@ -720,7 +720,7 @@ have been placed with this option.
     been extensively used to place the many series of 'Wire to bus entry'
     using the icon image:images/icons/add_line2bus.png[add_line2bus_png].
 +
-image:images/gsik_bus_connection.png[gsik_bus_connection_png]
+image::images/gsik_bus_connection.png[gsik_bus_connection_png]
 
 [[layout-printed-circuit-boards]]
 == Layout printed circuit boards
@@ -749,7 +749,7 @@ This is done with the _Pcbnew_ tool.
     of the window to '0.25' and the 'Track Width' field to '0.25' as
     shown below. Measurements here are in mm.
 +
-image:images/design_rules.png[Design Rules Window]
+image::images/design_rules.png[Design Rules Window]
 
 4.  Click on the 'Global Design Rules' tab and set 'Min track width' to
     0.25'. Click the OK button to commit your changes and close the Design
@@ -786,7 +786,7 @@ move them around using the m key you will later note that you lose the
 track connection (the same occurs in the schematic editor). Bottom
 line, always use the g key option.
 +
-image:images/gsik_tutorial1_080.png[gsik_tutorial1_080_png]
+image::images/gsik_tutorial1_080.png[gsik_tutorial1_080_png]
 
 10. If the ratsnest disappears or the screen gets messy, right click
     and click 'Redraw view'. Note how one pin of the 100 ohm resistor
@@ -811,7 +811,7 @@ image:images/gsik_tutorial1_080.png[gsik_tutorial1_080_png]
     'F.Cu (PgUp)' in the drop-down menu on the top toolbar. This is the
     front top copper layer.
 +
-image:images/select_top_copper.png[Select the Front top copper layer]
+image::images/select_top_copper.png[Select the Front top copper layer]
 
 14. If you decide, for instance, to do a 4 layer PCB instead, go to
     *Design Rules* -> *Layers Setup* and change 'Copper Layers' to 4. In
@@ -827,7 +827,7 @@ image:images/select_top_copper.png[Select the Front top copper layer]
     the track width from the drop-down menu in the top toolbar. Mind
     that by default you have only one track width available.
 +
-image:images/pcbnew_1.png[pcbnew_1_png]
+image::images/pcbnew_1.png[pcbnew_1_png]
 
 16. If you would like to add more track widths go to: *Design Rules* ->
     *Design Rules* -> *Global Design Rules* tab and at the bottom right of
@@ -835,7 +835,7 @@ image:images/pcbnew_1.png[pcbnew_1_png]
     can then choose the widths of the track from the drop-down menu while
     you lay out your board. See the example below (inches).
 +
-image:images/custom_tracks_width.png[custom_tracks_width_png]
+image::images/custom_tracks_width.png[custom_tracks_width_png]
 
 17. Alternatively, you can add a Net Class in which you specify a set of
     options. Go to *Design Rules* -> *Design Rules* -> *Net Classes Editor*
@@ -851,7 +851,7 @@ image:images/custom_tracks_width.png[custom_tracks_width_png]
 19. Repeat this process until all wires, except pin 3 of J1, are
     connected. Your board should look like the example below.
 +
-image:images/gsik_tutorial1_090.png[gsik_tutorial1_090_png]
+image::images/gsik_tutorial1_090.png[gsik_tutorial1_090_png]
 
 20. Let's now run a track on the other copper side of the PCB. Select
     'B.Cu' in the drop-down menu on the top toolbar. Click on the 'Add
@@ -868,7 +868,7 @@ image:images/gsik_tutorial1_090.png[gsik_tutorial1_090_png]
     will take you to the bottom layer where you can complete your
     track.
 +
-image:images/place_a_via.png[place_a_via_png]
+image::images/place_a_via.png[place_a_via_png]
 
 22. When you want to inspect a particular connection you can click on
     the 'Net highlight' icon
@@ -889,7 +889,7 @@ image:images/place_a_via.png[place_a_via_png]
     area you have just traced. Click on 'Fill or Refill All Zones'. The
     board should fill in with green and look something like this:
 +
-image:images/gsik_tutorial1_100.png[gsik_tutorial1_100_png]
+image::images/gsik_tutorial1_100.png[gsik_tutorial1_100_png]
 
 25. Run the design rules checker by clicking on the 'Perform Design
     Rules Check' icon image:images/icons/drc.png[drc_png] on the top
@@ -900,7 +900,7 @@ image:images/gsik_tutorial1_100.png[gsik_tutorial1_100_png]
 26. Save your file by clicking on *File* -> **Save**. To admire your
     board in 3D, click on *View* -> **3D Viewer**.
 +
-image:images/pcbnew_3d_viewer.png[pcbnew_3d_viewer_png]
+image::images/pcbnew_3d_viewer.png[pcbnew_3d_viewer_png]
 
 27. You can drag your mouse around to rotate the PCB.
 
@@ -1122,7 +1122,7 @@ to a library file you can just use the cut and paste commands.
     'VCC', set the pin number to '1', and the 'Electrical type' to
     'Passive' then click OK.
 +
-image:images/pin_properties.png[Pin Properties]
+image::images/pin_properties.png[Pin Properties]
 
 4.  Place the pin by clicking on the location you would like it to go,
     right below the 'MYCONN3' label.
@@ -1145,7 +1145,7 @@ image:images/pin_properties.png[Pin Properties]
     again where you want the bottom right corner of the rectangle to
     be.
 +
-image:images/gsik_myconn3_l.png[gsik_myconn3_l_png]
+image::images/gsik_myconn3_l.png[gsik_myconn3_l_png]
 
 8.  Save the component in your library __myLib.lib__. Click on the
     'New Library' icon image:images/icons/new_library.png[new_library_png],
@@ -1252,7 +1252,7 @@ Internet tool __quicklib__.
     icon image:images/icons/import.png[import_png], navigate to _tutorial1/library/_
     and select _myQuickLib.lib._
 +
-image:images/gsik_myconn3_quicklib.png[gsik_myconn3_quicklib_png]
+image::images/gsik_myconn3_quicklib.png[gsik_myconn3_quicklib_png]
 
 6.  You can make this component and the whole library _myQuickLib.lib_
     available to you by adding it to the KiCad library path. From
@@ -1341,7 +1341,7 @@ ENDDEF
 #End Library
 ----
 
-image:images/gsik_high_number_pins.png[gsik_high_number_pins_png]
+image::images/gsik_high_number_pins.png[gsik_high_number_pins_png]
 
 1.  The Python script presented here is a very powerful tool for
     manipulating both pin numbers and pin labels. Mind, however, that
@@ -1382,7 +1382,6 @@ Here are the steps for creating a new PCB footprint in KiCad:
     Click on the 'Select active library' icon
     image:images/icons/library.png[library_png] on the top toolbar. Select
     the 'myfootprint' library.
-
 [[myconn3]]
 3.  Click on the 'New Footprint' icon
     image:images/icons/new_footprint.png[new_footprint_png] on the top
@@ -1397,7 +1396,7 @@ Here are the steps for creating a new PCB footprint in KiCad:
     click on the new pad and click 'Edit Pad'. You can otherwise use
     the e key shortcut.
 +
-image:images/pad_properties.png[Pad Properties]
+image::images/pad_properties.png[Pad Properties]
 
 5.  Set the 'Pad Num' to '1', 'Pad Shape' to 'Rect', 'Pad Type' to
     'SMD', 'Shape Size X' to '0.4', and 'Shape Size Y' to '0.8'. Click
