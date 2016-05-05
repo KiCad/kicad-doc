@@ -5,6 +5,23 @@
 # (c)2015 Brian Sidebotham <brian.sidebotham@gmail.com>
 #
 
+add_custom_target( updatepo_all )
+
+file( GLOB ALLPO RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/*/po/*.po )
+
+foreach( PO ${ALLPO} )
+    string( REGEX REPLACE ".*/+po/+([a-z][a-z]).po" "\\1" LANG "${PO}" )
+    list( APPEND LANGS "${LANG}" )
+endforeach()
+
+list( REMOVE_DUPLICATES LANGS )
+list( SORT LANGS )
+
+foreach( LANG ${LANGS} )
+    add_custom_target( updatepo_${LANG} )
+endforeach()
+
 add_subdirectory( cvpcb )
 add_subdirectory( eeschema )
 add_subdirectory( gerbview )
