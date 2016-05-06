@@ -28,9 +28,8 @@ credit as a translator.
 where, again, YOUR-CHOSEN-MANUAL is the name of the manual dir, for
 example "getting_started_in_kicad" and NN is your i18n language code.
 
-...but last command will not work for now because the cmake update 
-procedure is broken. So, in the meantime the cmake scripts are 
-mended you can go with the old _but working_ procedure:
+If last command should not work for any reason, it is still possible
+to use the old scripts procedure:
 
  rm -rf build/*
  cd src/YOUR-CHOSEN-MANUAL
@@ -57,10 +56,18 @@ And see the results with a browser:
 
  firefox src/cvpcb/it/cvpcb.html
 
-NOTE: you can try other formats like pdf or epub as well. HTML is just the fastest to build.
+NOTE: you can try other formats like pdf or epub as well. HTML is just
+the fastest to build.
+
+NOTE: before commit any result it is recommended to try the other
+formats like pdf and epub. These formats sometimes trigger errors that
+the other build processes may not see. These errors should never reach
+the repository since they may block the site automatic compilation of
+the different formats.
 
 5) when you reach 100% of the translation, or simply when you think you
-   have done enough work, create a patch with:
+   have done enough work, test your work trying to compile it in the
+   various formats. When there are no errors, create a patch with:
 
  cd ..
  git add src/YOUR-CHOSEN-MANUAL/po/addendum.NN src/YOUR-CHOSEN-MANUAL/po/NN.po
