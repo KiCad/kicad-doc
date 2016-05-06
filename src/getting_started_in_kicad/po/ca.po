@@ -877,7 +877,7 @@ msgstr "KiCad genera automàticament l'ordre, per exemple:"
 #: getting_started_in_kicad.adoc:635
 #, no-wrap
 msgid "xsltproc -o \"%O\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
-msgstr "xsltproc -o “%O” “/home/<user>/kicad/eeschema/plugins/bom2csv.xsl” “%I”\n"
+msgstr "xsltproc -o \"%O\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
 
 #. type: Block title
 #: getting_started_in_kicad.adoc:637
@@ -889,7 +889,7 @@ msgstr "És possible que vulgueu afegir-hi l'extensió, canvieu aquesta línia d
 #: getting_started_in_kicad.adoc:640
 #, no-wrap
 msgid "xsltproc -o \"%O.csv\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
-msgstr "xsltproc -o “%O.csv” “/home/<user>/kicad/eeschema/plugins/bom2csv.xsl” “%I”\n"
+msgstr "xsltproc -o \"%O.csv\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:643
@@ -1104,7 +1104,7 @@ msgstr "images/select_top_copper.png"
 #. type: Plain text
 #: getting_started_in_kicad.adoc:820
 msgid "If you decide, for instance, to do a 4 layer PCB instead, go to *Design Rules* -> *Layers Setup* and change 'Copper Layers' to 4. In the 'Layers' table you can name layers and decide what they can be used for.  Notice that there are very useful presets that can be selected via the 'Preset Layer Groupings' menu."
-msgstr "Si decidiu, per exemple, fer un PCB de 4 capes PCB, aneu a *Regles de disseny* -> *Configuració de les capes* i canvieu les «Capes de coure» a 4. A la taula de les «Capes» podeu anomenar les capes i decidir com s'utilitzen. Denoteu que hi ha uns quants preajusts que són molt útils i que es poden seleccionar al menú d'«Agrupacions predefinides de les capes»."
+msgstr "Si decidiu, per exemple, fer un PCB de 4 capes PCB, aneu a *Regles de disseny* -> *Configuració de les capes* i canvieu les «Capes de coure» a «4». A la taula de les «Capes» podeu anomenar les capes i decidir com s'utilitzen. Denoteu que hi ha uns quants preajusts que són molt útils i que es poden seleccionar al menú d'«Agrupacions predefinides de les capes»."
 
 #. type: Plain text
 #: getting_started_in_kicad.adoc:828
@@ -1713,10 +1713,10 @@ msgstr ""
 "    fin=open(sys.argv[1],'r')\n"
 "    fout=open(sys.argv[2],'w')\n"
 "except:\n"
-"    print “oh, wrong use of this app, try:”, sys.argv[0], “in.txt out.txt”\n"
+"    print \"oh, wrong use of this app, try:\", sys.argv[0], \"in.txt out.txt\"\n"
 "    sys.exit()\n"
 "for ln in fin.readlines():\n"
-"    obj=re.search(“(X PIN)(\\d*)(\\s)(\\d*)(\\s.*)”,ln)\n"
+"    obj=re.search(\"(X PIN)(\\d*)(\\s)(\\d*)(\\s.*)\",ln)\n"
 "if obj:\n"
 "    num = int(obj.group(2))+25\n"
 "    ln=obj.group(1) + str(num) + obj.group(3) + str(num) + obj.group(5) +'\\n'\n"
@@ -1757,8 +1757,8 @@ msgstr ""
 "#encoding utf-8\n"
 "# COMP\n"
 "DEF COMP U 0 40 Y Y 1 F N\n"
-"F0 “U” -1800 -100 50 H V C CNN\n"
-"F1 “COMP” -1800 100 50 H V C CNN\n"
+"F0 \"U\" -1800 -100 50 H V C CNN\n"
+"F1 \"COMP\" -1800 100 50 H V C CNN\n"
 "DRAW\n"
 "S -2250 -800 -1350 800 0 0 0 N\n"
 "S -450 -800 450 800 0 0 0 N\n"
