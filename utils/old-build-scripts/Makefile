@@ -34,7 +34,7 @@ DOCCHAPTERS:= $(filter-out $(DOCTRANSLATED), $(wildcard $(DOCNAME)_*.adoc))
 #DOCCHAPTERS:=$(wildcard $(DOCNAME)_*.adoc)
 
 #I like HTML in Unix style text
-ASCIIDOCVAR:= -a 'newline=\n' -v
+ASCIIDOCVAR:= -a 'newline=\n' -v --section-numbers
 
 #Uncomment this to debug pdflatex
 DEBUGPDFLTX:= -d
@@ -118,11 +118,11 @@ adoc-all: $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).adoc)
 
 #English html
 $(DOCNAME).html: $(DOCNAME).adoc $(DOCCHAPTERS)
-	asciidoc $(UTOC) $(ASCIIDOCVAR) --theme flask --section-numbers $(DOCNAME).adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --theme flask $(DOCNAME).adoc ;
 
 #I18n html
 $(DOCNAME)-%.html: $(DOCNAME)-%.adoc
-	asciidoc $(UTOC) $(ASCIIDOCVAR) --theme flask --section-numbers -a lang=$* $(DOCNAME)-$*.adoc ;
+	asciidoc $(UTOC) $(ASCIIDOCVAR) --theme flask -a lang=$* $(DOCNAME)-$*.adoc ;
 
 .PHONY: html
 html: $(DOCNAME).html
@@ -134,11 +134,11 @@ html-all: html $(foreach i,$(LANGUAGES),$(DOCNAME)-$(i).html)
 
 #English docbook
 $(DOCNAME).xml: $(DOCNAME).adoc $(DOCCHAPTERS)
-	asciidoc -b docbook $(ASCIIDOCVAR) --section-numbers $(DOCNAME).adoc
+	asciidoc -b docbook $(ASCIIDOCVAR) $(DOCNAME).adoc
 
 #I18n docbook
 $(DOCNAME)-%.xml: $(DOCNAME)-%.adoc
-	asciidoc -b docbook $(ASCIIDOCVAR) --section-numbers -a lang=$* $(DOCNAME)-$*.adoc
+	asciidoc -b docbook $(ASCIIDOCVAR) -a lang=$* $(DOCNAME)-$*.adoc
 
 .PHONY: docbook
 docbook: $(DOCNAME).xml
