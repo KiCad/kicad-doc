@@ -34,10 +34,10 @@ DOCCHAPTERS:= $(filter-out $(DOCTRANSLATED), $(wildcard $(DOCNAME)_*.adoc))
 #DOCCHAPTERS:=$(wildcard $(DOCNAME)_*.adoc)
 
 #I like HTML in Unix style text
-ASCIIDOCVAR:= -a 'newline=\n' -v --section-numbers
+ASCIIDOCVAR:= -a 'newline=\n' -v
 
 #Uncomment this to debug pdflatex
-DEBUGPDFLTX:= -d
+#DEBUGPDFLTX:= -d
 
 #I like left side html toc
 UTOC:= $(shell if [ -z "$$TOC2" ] ; then echo -n "-a toc2" ; fi )
