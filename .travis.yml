@@ -1,0 +1,22 @@
+language: bash
+dist: trusty
+sudo: required
+cache: apt
+
+before_script:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y asciidoc pandoc gettext po4a dblatex
+  - sudo apt-get install -y source-highlight
+  - sudo apt-get install -y fonts-freefont-ttf fonts-vlgothic
+  - sudo apt-get install -y texlive-xetex
+  - sudo apt-get install -y texlive-lang-cjk
+  - sudo apt-get install -y texlive-lang-cyrillic
+  - sudo apt-get install -y texlive-lang-dutch
+  - sudo apt-get install -y texlive-lang-english
+  - sudo apt-get install -y texlive-lang-french
+  - sudo apt-get install -y texlive-lang-german
+  - sudo apt-get install -y texlive-lang-italian
+  - sudo apt-get install -y texlive-lang-polish
+  - sudo apt-get install -y texlive-lang-spanish
+
+script: mkdir build && cd build && cmake .. && make -j4
