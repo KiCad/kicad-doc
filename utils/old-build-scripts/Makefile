@@ -34,7 +34,7 @@ DOCCHAPTERS:= $(filter-out $(DOCTRANSLATED), $(wildcard $(DOCNAME)_*.adoc))
 #DOCCHAPTERS:=$(wildcard $(DOCNAME)_*.adoc)
 
 #I like HTML in Unix style text
-ASCIIDOCVAR:= -a 'newline=\n' -v
+ASCIIDOCVAR:= -a 'newline=\n' -v -a numbered
 
 #Uncomment this to debug pdflatex
 #DEBUGPDFLTX:= -d
