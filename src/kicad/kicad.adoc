@@ -390,65 +390,92 @@ files, libraries, PCB, etc.
 |Rebuild and redraw the tree view, sometimes needed after a tree change.
 |=======================================================================
 
-== Using templates
+== Project templates
 
-=== Definitions
+A template facilitates the easy creation of a new project, based on a
+template definition. Templates may contain pre-defined board outlines,
+connector positions, schematic elements, design rules, etc. Complete
+schematics and/or PCBs used as seed files for the new project may
+even be included.
 
-A template is a collection of files, which includes a directory of
-metadata. Templates facilitate the easy set up of projects which have
-common attributes such as pre-defined board outlines, connector
-positions, schematic elements, design rules, etc.
+=== Using Templates
 
-The template system name (SYSNAME) is the directory name under which the
-template files are stored. The metadata directory (METADIR) contains
-pre-defined files which provide information about the template.
+The _KiCad/File/New Project/New Project from Template_ menu will
+open the Project Template Selector dialog:
+
+image::images/template_selector.png[scaledwidth="80%"]
+
+A single click on a template's icon will load that template's information,
+and a further click on the OK button creates the new project. The template
+files will be copied to the new project location and renamed to reflect
+the new project's name.
+
+After selection of a template:
+
+image::images/template_selected.png[scaledwidth="80%"]
+
+=== Template Locations:
+
+The list of available templates are gathered from the following sources:
+
+- System templates:
+  <kicad bin dir>/../share/kicad/template/
+
+- User templates:
+
+  ** Unix:
+     ~/kicad/templates/
+
+  ** Windows:
+     C:\Documents and Settings\username\My Documents\kicad\templates
+
+  ** Mac:
+     ~/Documents/kicad/templates/
+
+- When the environment variable KICAD_PTEMPLATES is defined there is a
+  third tab, Portable Templates, which lists templates found at the
+  KICAD_PTEMPLATES path.
+  
+=== Creating templates
+
+The template name is the directory name under which the template
+files are stored. The metadata directory, in a subdirectory
+named *meta*, contains files which describe the template.
 
 All files and directories in a template are copied to the new project
-path when a project is created using a template, except METADIR.
+path when a project is created using a template, except *meta*.
 
-All files and directories which start with SYSNAME will have SYSNAME
-replaced by the new project file name, excluding the file extension.
+All files and directories which start with the template name will be
+renamed with the new project file name, excluding the file extension.
 
-=== Metadata
+The metadata consists of one required file, and may contain optional files.
+All files must be created by the user using a text editor or previous
+KiCad project files, and placed into the required directory structure.
 
-A template's METADIR must contain the required files, and may
-optionally contain optional files.
-
-==== Required Files:
-
-*meta/info.html*
-
-Contains HTML-formatted information about the template which is used by
-the user to determine the template's suitability. The
-<title> tag determines the actual name of the template that is exposed
-to the user for template selection.
-
-Using HTML to format this document means that images can be in-lined
-without having to invent a new scheme.
-
-Only basic HTML tags can be used in this document.
-
-==== Optional Files:
-
-*meta/icon.png*
-
-A 64 x 64 pixel PNG icon file which is used as a clickable icon in the
-template selection dialog.
-
-=== Example:
-
-Here is a template for a raspberrypi-gpio board:
+Here are project files for a *raspberrypi-gpio* template:
 
 image::images/template_tree.png[scaledwidth="70%"]
 
-And the meta data info:
+And the metadata files:
 
 image::images/template_tree_meta.png[scaledwidth="70%"]
 
-brd.png is an optional file, shown during template selection, to provide
-an example board made with the template.
+==== Required File:
 
-Here is a sample info.html file:
+[width="100%",cols="20%,80%",]
+|=================================================================
+|meta/info.html |HTML-formatted information describing the template.
+|=================================================================
+
+The <title> tag determines the actual name of the template that is exposed
+to the user for template selection. Note that the project template name
+will be cut off if it's too long. Due to font kerning, typically 7 or 8
+characters can be displayed.
+
+Using HTML means that images can be easily in-lined without having to
+invent a new scheme. Only basic HTML tags can be used in this document.
+
+Here is a sample *info.html* file:
 
 [source,html]
 ----------------------------------------------------------------
@@ -479,47 +506,13 @@ BORDER=0><BR><BR><BR><BR>
 </HTML>
 ----------------------------------------------------------------
 
-=== Operation
+==== Optional Files:
 
-The _KiCad/File/New Project_ menu has 2 options:
+[width="100%",cols="20%,80%",]
+|=================================================================
+|meta/icon.png |A 64 x 64 pixel PNG icon file which is used as a
+clickable icon in the template selection dialog.
+|=================================================================
 
-image::images/menu_file.png[scaledwidth="70%"]
-
-- *New Project:* Create a blank project by copying
-  template/kicad.pro to the current folder.
-- *Project from Template:* Open the template selection dialog containing
-  a list of icons and a display window. A single click on a template's
-  icon will load that template's info.html metadata file and display it at
-  the bottom of the window. A click on the OK button starts the new project
-  creation. The template will be copied to the new project location
-  (excluding METADIR as mentioned earlier) and any files that match the
-  string replacement rules will be renamed to reflect the new project's name.
-
-image::images/template_selector.png[scaledwidth="80%"]
-
-After selection of a template:
-
-image::images/template_selected.png[scaledwidth="80%"]
-
-=== Templates Location:
-
-The list of available templates are gathered from the following sources:
-
-- System templates:
-  <kicad bin dir>/../share/template/
-
-- User templates:
-
-  ** Unix:
-     ~/kicad/templates/
-
-  ** Windows:
-     C:\Documents and Settings\username\My Documents\kicad\templates
-
-  ** Mac:
-     ~/Documents/kicad/templates/
-
-- When the environment variable KICAD_PTEMPLATES is defined there is a
-  third tab, Portable Templates, which lists templates found at the
-  KICAD_PTEMPLATES path.
-
+Any other image files used by *meta/info.html*, such as the image of the
+board file in the dialog above, are placed in this folder as well.
