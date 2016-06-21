@@ -54,19 +54,18 @@ tools:
 |===================================
 |Program name|Description|File extension
 |KiCad |Project manager|+*.pro+
-|Eeschema |Schematic editor (both schematic and component)|+*.sch, *.lib, *.net+
+|Eeschema |Schematic and component editor|+*.sch, *.lib, *.net+
 |CvPcb |Footprint selector|+*.net+
-|Pcbnew |Circuit board board editor|+*.kicad_pcb+
-|GerbView |Gerber viewer|All the usual gerbers
+|Pcbnew |Circuit board board and footprint editor|+*.kicad_pcb, *.kicad_mod+
+|GerbView |Gerber and drill file viewer|All the usual Gerbers, +*.drl+
 |Bitmap2Component |Convert bitmap images to components or footprints|+*.lib, *.kicad_mod, *.kicad_wks+
 |PCB Calculator |Calculator for components, track width, electrical spacing, color codes, and more...|None
 |Pl Editor |Page layout editor|+*.kicad_wks+
 |===================================
-
+ 
 NOTE: The file extension list is not complete and only contains a
-subset of the files that KiCad works with that is useful for the basic
-understanding of which files are used for each KiCad unique
-application.
+subset of the files that KiCad supports. It is useful for the basic
+understanding of which files are used for each KiCad application.
 
 KiCad can be considered mature enough to be used
 for the successful development and maintenance of complex electronic
@@ -82,13 +81,13 @@ Being open source (GPL licensed), KiCad represents the ideal tool for
 projects oriented towards the creation of electronic hardware with an
 open-source flavour.
 
-On the Internet, the home of KiCad is:
+On the Internet, the homepage of KiCad is:
 
 http://www.kicad-pcb.org/
 
 
 [[download-and-install-kicad]]
-=== Download and install KiCad
+=== Downloading and installing KiCad
 
 KiCad runs on GNU/Linux, Apple OS X and Windows.
 You can find the most up to date instructions and download links at:
@@ -97,27 +96,22 @@ http://www.kicad-pcb.org/download/
 
 IMPORTANT: KiCad stable releases occur periodically per the
 http://ci.kicad-pcb.org/job/kicad-doxygen/ws/Documentation/doxygen/html/md_Documentation_development_stable-release-policy.html[KiCad
-Stable Release Policy].  New features are continually being added to the
-development branch.  If you would like to take advantage of these new
+Stable Release Policy]. New features are continually being added to the
+development branch. If you would like to take advantage of these new
 features and help out by testing them, please download the latest
-nightly build package for your platform.  Nightly builds may introduce
-bugs but it is the goal of the KiCad Development Team to keep the
-development branch as usable as possible during new feature development.
+nightly build package for your platform. Nightly builds may introduce
+bugs such as file corruption, generation of bad Gerbers, etc., but it
+is the goal of the KiCad Development Team to keep the development
+branch as usable as possible during new feature development.
 
 
 [[under-linux]]
-=== Under GNU/Linux
+==== Under GNU/Linux
 
-.Stable builds
 Stable releases of KiCad can be found in most distribution's package
 managers as kicad and kicad-doc. If your distribution does not provide
 latest stable version, please follow the instruction for unstable builds
 and select and install the latest stable version.
-
-.Unstable (nightly development) builds
-Unstable builds are built from the most recent source code. They can sometimes
-have bugs that cause file corruption, generate bad gerbers, etc, but are generally
-stable and have the latest features.
 
 Under Ubuntu, the easiest way to install an unstable nightly build of KiCad is
 via _PPA_ and __Aptitude__. Type the following into your Terminal:
@@ -144,29 +138,19 @@ Alternatively, you can download and install a pre-compiled version of
 KiCad, or directly download the source code, compile and install KiCad.
 
 [[under-apple-os-x]]
-=== Under Apple OS X
-.Stable builds
+==== Under Apple OS X
+
 Stable builds of KiCad for OS X can be found at:
 http://downloads.kicad-pcb.org/osx/stable/
-
-.Unstable (nightly development) builds
-Unstable builds are built from the most recent source code. They can sometimes
-have bugs that cause file corruption, generate bad gerbers, etc, but are generally
-stable and have the latest features.
 
 Unstable nightly development builds can be found at:
 http://downloads.kicad-pcb.org/osx/
 
 [[under-Windows]]
-=== Under Windows
-.Stable builds
+==== Under Windows
+
 Stable builds of KiCad for Windows can be found at:
 http://downloads.kicad-pcb.org/windows/stable/
-
-.Unstable (nightly development) builds
-Unstable builds are built from the most recent source code. They can sometimes
-have bugs that cause file corruption, generate bad gerbers, etc, but are generally
-stable and have the latest features.
 
 For Windows you can find nightly development builds at:
 http://downloads.kicad-pcb.org/windows/
@@ -175,9 +159,9 @@ http://downloads.kicad-pcb.org/windows/
 === Support
 If you have ideas, remarks or questions, or if you just need help:
 
-* Visit the https://forum.kicad.info/[Forum]
+* https://forum.kicad.info/[Visit the forum]
 * Join the http://webchat.freenode.net/?channels=kicad[#kicad IRC channel] on Freenode
-* Watch http://www.kicad-pcb.org/help/tutorials/[Tutorials]
+* http://www.kicad-pcb.org/help/tutorials/[Watch tutorials]
 
 
 [[kicad-work-flow]]
