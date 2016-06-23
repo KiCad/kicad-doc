@@ -636,25 +636,27 @@ easily editable or scriptable.
 +
 [NOTE]
 =====================================================================
-*Windows:*
-
-xsltproc.exe is located at _<KiCad install directory>\bin_, while the included
-*.xsl files can be found at _<KiCad install directory>\bin\scripting\plugins_.
-
 *Linux:*
 
-The *.xsl files are located in the _plugins_ directory of the KiCad installation,
-which is located at: _/usr/lib/kicad/plugins/_.
+*.xsl files are located at: _/usr/lib/kicad/plugins/_.
 
-You can get bom2csv.xsl via:
+If these files are missing, they are available via the following
+commands (change the *.xsl file name as desired):
 ---------
+sudo apt-get install xsltproc
 wget https://raw.githubusercontent.com/KiCad/kicad-source-mirror/master/eeschema/plugins/bom2csv.xsl
 ---------
 
-If xsltproc is missing, you can downloaded it with:
----------
-sudo apt-get install xsltproc
----------
+*Apple OS X:*
+
+You can find the included *.xsl files at
+_<KiCad install directory>/Library/Application Support/kicad/plugins/_.
+
+*Windows:*
+
+xsltproc.exe the included *.xsl files can be found at
+_<KiCad install directory>\bin_ and
+_<KiCad install directory>\bin\scripting\plugins_, respectively.
 =====================================================================
 +
 .KiCad automatically generates the command, for example:
