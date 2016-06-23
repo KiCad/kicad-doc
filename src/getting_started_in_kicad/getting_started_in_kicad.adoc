@@ -104,7 +104,6 @@ bugs such as file corruption, generation of bad Gerbers, etc., but it
 is the goal of the KiCad Development Team to keep the development
 branch as usable as possible during new feature development.
 
-
 [[under-linux]]
 ==== Under GNU/Linux
 
@@ -115,7 +114,6 @@ and select and install the latest stable version.
 
 Under Ubuntu, the easiest way to install an unstable nightly build of KiCad is
 via _PPA_ and __Aptitude__. Type the following into your Terminal:
-
 __________________________________________________
 sudo add-apt-repository ppa:js-reynaud/ppa-kicad
 
@@ -124,10 +122,8 @@ sudo aptitude update && sudo aptitude safe-upgrade
 sudo aptitude install kicad kicad-doc-en
 __________________________________________________
 
-
 Under Fedora the easiest way to install an unstable nightly build is via __copr__.
 To install KiCad via copr type the following in to copr:
-
 __________________________________________________
 sudo dnf copr enable mangelajo/kicad
 
@@ -163,69 +159,62 @@ If you have ideas, remarks or questions, or if you just need help:
 * Join the http://webchat.freenode.net/?channels=kicad[#kicad IRC channel] on Freenode
 * http://www.kicad-pcb.org/help/tutorials/[Watch tutorials]
 
-
 [[kicad-work-flow]]
 == KiCad Workflow
 
-Despite its similarities with other PCB software tools, KiCad is
-characterised by an interesting work-flow in which schematic components
-and footprints are actually two separate entities. This is often the
-subject of discussion on Internet forums.
+Despite its similarities with other PCB design software, KiCad is
+characterised by a unique workflow in which schematic components
+and footprints are separate. Only after creating a
+schematic are footprints assigned to the components.
 
 [[kicad-work-flow-overview]]
-=== KiCad Workflow overview
+=== Overview
 
-The KiCad work-flow is comprised of two main tasks: making the schematic
-and laying out the board. Both a component library and a footprint
-library are necessary for these two tasks. KiCad has plenty of both.
-Just in case that is not enough, KiCad also has the tools necessary to
-make new ones.
+The KiCad workflow is comprised of two main tasks: drawing the schematic
+and laying out the board. Both a schematic component library and a
+PCB footprint library are necessary for these two tasks. KiCad includes
+many components and footprints, and also has the tools to create new ones.
 
-In the picture below, you see a flowchart representing the KiCad work-flow.
-The picture explains which steps you need to take, in which order.
-When applicable, the icon is added as well for convenience.
+In the picture below, you see a flowchart representing the KiCad workflow.
+The flowchart explains which steps you need to take, and in which order.
+When applicable, the icon is added for convenience.
 
 image::images/kicad_flowchart.png["KiCad Flowchart"]
 
-For more information about creating a component, see the section of this
-document titled <<make-schematic-components-in-kicad,Make schematic components in KiCad>>. And for more
-information about how to create a new footprint, see the section of this document
-titled <<make-component-footprints,Make component footprints>>.
+For more information about creating a component, read
+<<make-schematic-components-in-kicad,Making schematic components>>.
+And for information about how to create a new footprint, see
+<<make-component-footprints,Making component footprints>>.
 
-On the following site:
-
-http://kicad.rohrbacher.net/quicklib.php
-
-You will find an example of use of a tool that allows you to quickly
-create KiCad library components. For more information about quicklib,
-refer to the section of this document titled
-<<make-schematic-components-with-quicklib,Make Schematic Components
-With quicklib>>.
+http://kicad.rohrbacher.net/quicklib.php[Quicklib] is a tool that
+allows you to quickly create KiCad library components with a web-based
+interface. For more information about Quicklib, refer to
+<<make-schematic-components-with-quicklib,Making Schematic Components
+With Quicklib>>.
 
 [[forward-and-backward-annotation]]
 === Forward and backward annotation
 
 Once an electronic schematic has been fully drawn, the next step is to
-transfer it to a PCB following the KiCad work-flow. Once the board
-layout process has been partially or completely done, additional
-components or nets might need to be added, parts moved around and much
-more. This can be done in two ways: Backward Annotation and Forward
-Annotation.
+transfer it to a PCB. Often, additional components might need to be
+added, parts changed to a different size, net renamed, etc. This can be
+done in two ways: Forward Annotation or Backward Annotation.
+
+Forward Annotation is the process of sending schematic information to a
+corresponding PCB layout. This is a fundamental feature because you 
+must do it at least once to initially import the schematic into the PCB.
+Afterwards, forward annotation allows sending incremental schematic
+changes to the PCB. Details about Forward Annotation are discussed in
+the section <<forward-annotation-in-kicad,Forward Annotation>>.
 
 Backward Annotation is the process of sending a PCB layout change back
 to its corresponding schematic. Some do not consider this particular
 feature especially useful.
 
-Forward Annotation is the process of sending schematic changes to a
-corresponding PCB layout. This is a fundamental feature because you do
-not really want to re-do the layout of the whole PCB every time you make
-a modification to your schematic. Forward Annotation is discussed in the
-section titled <<forward-annotation-in-kicad,Forward Annotation>>.
-
 [[using-kicad]]
 == Using KiCad
 
-=== Accelerator keys and hotkeys
+=== Shortcut keys
 
 KiCad has two kinds of related but different shortcut keys: accelerator keys and
 hotkeys. Both are used to speed up working in KiCad by using the keyboard instead
@@ -379,7 +368,7 @@ for moving anything around, but it is better to use this only for component
 labels and components yet to be connected. We will see later on why this is the case.
 
 17. Edit the second resistor by hovering over it and pressing [v]. Replace
-    'R' with '100'. You can undo any of your editing actions with [Ctrl+z].
+    'R' with '100'. You can undo any of your editing actions with Ctrl+Z.
 
 18. Change the grid size. You have probably noticed that on the
     schematic sheet all components are snapped onto a large pitch grid. You
