@@ -208,8 +208,12 @@ changes to the PCB. Details about Forward Annotation are discussed in
 the section <<forward-annotation-in-kicad,Forward Annotation>>.
 
 Backward Annotation is the process of sending a PCB layout change back
-to its corresponding schematic. Some do not consider this particular
-feature especially useful.
+to its corresponding schematic. Two common causes for Backward Annotation
+are gate swaps and pin swaps. In these situations, there are gates or pins
+which are functionally equivalent, but it may only be during layout that
+there is a strong case for choosing the exact gate or pin. Once the choice
+is made in the PCB, this change is then pushed back to the schematic.
+
 
 [[using-kicad]]
 == Using KiCad
