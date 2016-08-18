@@ -47,7 +47,7 @@ Published on January 29, 2016.
 The KiCad plugin system is a framework for extending the capabilities
 of KiCad using shared libraries. One of the main advantages of using
 a plugin is that it is not necessary to rebuild the KiCad suite while
-developing a plugin; in fact plugins can be built with the aid of a
+developing a plugin; in fact, plugins can be built with the aid of a
 very small set of headers from the KiCad source tree. Removing the
 requirement to build KiCad during plugin development greatly increases
 productivity by ensuring that the developer only compiles code directly
@@ -56,41 +56,41 @@ time required for each build and test cycle.
 
 Plugins were initially developed for the 3D model viewer to make it
 possible to support more types of 3D models without requiring major
-changes to the KiCad source for each new model supported. The plugin
-framework was later generalized so that in the future developers can
-create different classes of plugins.  Currently only 3D plugins are
+changes to the KiCad source for each new model type supported. The
+plugin framework was later generalized so that in the future developers
+can create different classes of plugins.  Currently only 3D plugins are
 implemented within KiCad but it is envisioned that a PCB plugin will
 eventually be developed to make it possible for users to implement
 data Importers and Exporters.
 
 
-[[REF:PLUGIN_CLASSES]]
+[[plugin-classes]]
 === Plugin Classes
 
 Plugins are divided into Plugin Classes since each plugin addresses
 problems in a specific domain and therefore requires an interface
 unique to that domain. For example, the 3D model plugins load 3D
 model data from files and translate that data into a format which
-can be displayed by the 3D viewer while a PCB Import/Export plugin
-would take PCB data and export to other electronics or mechanical
-data formats or translate a foreign format into a KiCad PCB. At
-the moment only the 3D Plugin Class has been developed and this
+can be displayed by the 3D viewer. A PCB Import/Export plugin
+would take PCB data and export to other electrical or mechanical
+data formats, or translate a foreign format into a KiCad PCB. At
+the moment only the 3D Plugin Class has been developed and it
 will be the focus of this document.
 
 Implementing a Plugin Class requires creating code within the KiCad
 source tree which manages the loading of plugin code. Within the
-KiCad source tree, the file plugins/ldr/pluginldr.h declares the
+KiCad source tree, the file `plugins/ldr/pluginldr.h` declares the
 base class for all plugin loaders.  This class declares the most
 basic functions which we would expect to find in any KiCad plugin
 (boilerplate code) and its implementation provides basic checks
 on version compatibility between the plugin loader and the
-available plugins. The header plugins/ldr/3d/pluginldr3D.h declares
+available plugins. The header `plugins/ldr/3d/pluginldr3D.h` declares
 a loader for the 3D Plugin Class. The loader is responsible for
 loading a given plugin and making its functions available to KiCad.
 Each instance of a plugin loader represents an actual plugin
-implementation and acts as a transparent bridge between kicad and
+implementation and acts as a transparent bridge between KiCad and
 the plugin's features. The loader is not the only code required within
-KiCad to support plugins; we also need code to discover the plugins
+KiCad to support plugins: we also need code to discover the plugins
 and code to invoke the functions of the plugins via the plugin loader.
 In the case of the 3D plugins the discovery and invocation functions
 are all contained within the S3D_CACHE class.
@@ -100,11 +100,11 @@ KiCad's internal code for managing plugins unless a new Plugin
 Class is being developed; a plugin only needs to define the functions
 declared by their specific plugin class.
 
-The header include/plugins/kicad_plugin.h declares the generic
+The header `include/plugins/kicad_plugin.h` declares the generic
 functions required of all KiCad plugins; these functions identify
 the Plugin Class, provide the name of the specific plugin, provide
 version information for the Plugin Class API, provide version
-information for the specific plugin, and provides a basic version
+information for the specific plugin, and provide a basic version
 compatibility check on the Plugin Class API. In brief, these
 functions are:
 
@@ -133,10 +133,10 @@ void GetPluginVersion( unsigned char* Major, unsigned char* Minor,
 -----
 
 
-[[REF:CLASS_PLUGIN_3D]]
+[[class-plugin-3d]]
 ==== Plugin Class: PLUGIN_3D
 
-The header include/plugins/3d/3d_plugin.h declares the functions
+The header `include/plugins/3d/3d_plugin.h` declares the functions
 which must be implemented by all 3D plugins and defines a number of
 functions which are required by the plugin and which the user must
 not reimplement. The defined functions which the user must not
@@ -201,26 +201,26 @@ PLUGIN_3D class and walks the user through the setup and building of
 the code.
 
 
-=== Tutorial: 3D Plugin, Demo 1
+[[basic-3d-plugin]]
+=== Basic 3D Plugin
 
 This tutorial walks the user through the development of a very basic
-3D plugin named ``PLUGIN_3D_DEMO1''. The purpose of the tutorial is
+3D plugin named "PLUGIN_3D_DEMO1". The purpose of this tutorial is only
 to demonstrate the construction of a very basic 3D plugin which does
-nothing other than provide a few filter strings which permit the
-KiCad user to filter file names while browsing for 3D models. The
-code demonstrated here is the absolute minimum requirement for any
-3D plugin and can be used as a template for creating more functional
-plugins.
+nothing other than provide a few filter strings which permit the KiCad
+user to filter file names while browsing for 3D models. The code
+demonstrated here is the absolute minimum requirement for any 3D plugin
+and can be used as a template for creating more advanced plugins.
 
 In order to build the demo project we require the following:
 
-* CMake
+* https://cmake.org/[CMake]
 * KiCad plugin headers
-* KiCad Scene Graph library, kicad_3dsg
+* KiCad Scene Graph library `kicad_3dsg`
 
 To automatically detect the KiCad headers and library we shall use a
 CMake FindPackage script; the script supplied in this tutorial should
-work on Linux and MSWindows if the relevant header files are installed
+work on Linux and Windows if the relevant header files are installed
 to `${KICAD_ROOT_DIR}/kicad` and the KiCad Scene Graph library is
 installed in `${KICAD_ROOT_DIR}/lib`.
 
@@ -313,12 +313,12 @@ _EOF
 Kicad and its plugin headers must be installed; if they are installed
 to a user directory or under `/opt` on Linux, or you are using Windows,
 you will need to set the `KICAD_ROOT_DIR` environment variable to
-point to the directory containing the kicad `include` and `lib`
-directories. For OSX the FindPackage script presented here may require
+point to the directory containing the KiCad `include` and `lib`
+directories. For OS X the FindPackage script presented here may require
 some adjustments.
 
 To configure and build the tutorial code we will use CMake and
-create a CMakeLists.txt script file:
+create a `CMakeLists.txt` script file:
 
 [source,bash]
 -----
@@ -533,11 +533,11 @@ models but it can provide KiCad with a list of supported model
 file extensions and file extension filters to enhance the 3D
 model file selection dialog. Within KiCad the extension strings
 are used to select the plugins which may be used to load a
-specified model; for example if the plugin is `wrl` then KiCad
+specified model; for example, if the plugin is `wrl` then KiCad
 will invoke each plugin which claims to support the extension
-`wrl` in turn until a plugin returns visualization data. The
-file filters provided by each plugin are passed onto the 3D
-file selector dialogs to improve the browsing UI.
+`wrl` until a plugin returns visualization data. The file
+filters provided by each plugin are passed to the 3D file
+selector dialog to improve the browsing UI.
 
 To build the plugin:
 
@@ -549,16 +549,16 @@ mkdir build && cd build
 cmake .. && make
 -----
 
-The plugin will be built but not installed; you may copy the
-plugin to the same directory in which the kicad installation
-has its plugins if you wish to load the plugin.
+The plugin will be built but not installed; you must copy the
+plugin file to KiCad's plugin directory if you wish to load the plugin.
 
 
-=== Tutorial: 3D Plugin, Demo 2
+[[advanced-3d-plugin]]
+=== Advanced 3D Plugin
 
 This tutorial walks the user through the development of a 3D plugin
-named ``PLUGIN_3D_DEMO2''. The purpose of the tutorial is to demonstrate
-the construction of a very basic scene graph which the kicad previewer
+named "PLUGIN_3D_DEMO2". The purpose of this tutorial is to demonstrate
+the construction of a very basic scene graph which the KiCad previewer
 can render. The plugin claims to handle files of type `txt`. Although
 the file must exist in order for the cache manager to invoke the
 plugin, the file contents are not processed by this plugin; instead,
@@ -567,18 +567,18 @@ This tutorial assumes that the first tutorial had been completed and
 that the CMakeLists.txt and FindKICAD.cmake script files have been
 created.
 
-The new source file shall be placed in the same directory as the
-previous tutorial's source file and we shall extend the previous
-tutorial's CMakeLists.txt file to build this tutorial. Since this
-plugin will create a scene graph for KiCad we need to link to
-KiCad's scene graph library `kicad_3dsg`. KiCad's Scene Graph
-Library provides a set of classes which can be used to build the
-Scene Graph Object; the Scene Graph Object is an intermediate
-data visualization format used by the 3D Cache Manager. All plugins
-which support model visualization must translate the model data into
-a scene graph via this library.
+Place the new source file in the same directory as the previous
+tutorial's source file and we will extend the previous tutorial's
+CMakeLists.txt file to build this tutorial. Since this plugin will
+create a scene graph for KiCad we need to link to KiCad's scene
+graph library `kicad_3dsg`. KiCad's Scene Graph Library provides
+a set of classes which can be used to build the Scene Graph Object;
+the Scene Graph Object is an intermediate data visualization format
+used by the 3D Cache Manager. All plugins which support model
+visualization must translate the model data into a scene graph via
+this library.
 
-First step: extend CMakeLists.txt to build this tutorial project:
+The first step is to extend `CMakeLists.txt` to build this tutorial project:
 
 [source,bash]
 -----
@@ -921,11 +921,11 @@ SCENEGRAPH* Load( char const* aFileName )
 Plugins are implemented via Application Programming Interface (API)
 implementations. Each Plugin Class has its specific API and in the
 3D Plugin tutorials we have seen examples of the implementation of
-the 3D Plugin API as declared by the header 3d_plugin.h. Plugins
+the 3D Plugin API as declared by the header `3d_plugin.h`. Plugins
 may also rely on other APIs defined within the KiCad source tree;
 in the case of 3D plugins, all plugins which support visualization
 of models must interact with the Scene Graph API as declared in
-the header ifsg_all.h and its included headers.
+the header `ifsg_all.h` and its included headers.
 
 This section describes the details of available Plugin Class APIs
 and other KiCad APIs which may be required for implementations of
@@ -933,10 +933,10 @@ plugin classes.
 
 === Plugin Class APIs
 
-There is currently only one plugin class declared for KiCad and
-this is the 3D Plugin Class. All KiCad plugin classes must implement
-a basic set of functions declared in the header file kicad_plugin.h;
-these declarations shall be referred to as the Base Kicad Plugin Class.
+There is currently only one plugin class declared for KiCad: the 3D
+Plugin Class. All KiCad plugin classes must implement
+a basic set of functions declared in the header file `kicad_plugin.h`;
+these declarations are referred to as the Base Kicad Plugin Class.
 No implementation of the Base Kicad Plugin Class exists; the header file
 exists purely to ensure that plugin developers implement these
 defined functions in each plugin implementation.
@@ -954,14 +954,14 @@ invoke each function on behalf of the user.
 
 ==== API: Base Kicad Plugin Class
 
-The Base Kicad Plugin Class is defined by the header file kicad_plugin.h.
+The Base Kicad Plugin Class is defined by the header file `kicad_plugin.h`.
 This header must be included in the declaration of all other plugin
-classes; for example see the 3D Plugin Class declaration in the
-header file 3d_plugin.h. The prototypes for these functions were briefly
-described in <<REF:PLUGIN_CLASSES,Plugin Classes>>. The API is implemented
-by the base plugin loader as defined in pluginldr.cpp.
+classes; for an example see the 3D Plugin Class declaration in the
+header file `3d_plugin.h`. The prototypes for these functions were briefly
+described in <<plugin-classes,Plugin Classes>>. The API is implemented
+by the base plugin loader as defined in `pluginldr.cpp`.
 
-To help make sense of the functions required by the base kicad plugin header
+To help make sense of the functions required by the base KiCad plugin header
 we must look at what happens in the base Plugin Loader class. The Plugin
 Loader class declares a virtual function `Open()` which takes the full
 path to the plugin to be loaded. The implementation of the `Open()` function
@@ -978,14 +978,14 @@ Plugin Loader instance.
 . Plugin `GetClassVersion()` is invoked to retrieve the Plugin Class API Version
 implemented by the plugin.
 . Plugin Loader virtual `GetLoaderVersion()` function is invoked to retrieve the
-Plugin Class API Version implemented by the loader
+Plugin Class API Version implemented by the loader.
 . The Plugin Class API Version reported by the plugin and the loader are
 required to have the same Major Version number, otherwise they are
 considered incompatible. This is the most basic version test and it is
 enforced by the base plugin loader.
 . Plugin `CheckClassVersion()` is invoked with the Plugin Class API Version
 information of the Plugin Loader; if the Plugin supports the given version
-then it returns `true` to indicate success, in which case the loader creates
+then it returns `true` to indicate success. If successful the loader creates
 a PluginInfo string based on the results of `GetKicadPluginName()` and
 `GetPluginVersion()`, and the plugin loading procedure
 continues within the Plugin Loader's `Open()` implementation.
@@ -993,10 +993,10 @@ continues within the Plugin Loader's `Open()` implementation.
 
 ==== API: 3D Plugin Class
 
-The 3D Plugin Class is declared by the header file 3d_plugin.h and it
+The 3D Plugin Class is declared by the header file `3d_plugin.h` and it
 extends the required plugin functions as described in
-<<REF:CLASS_PLUGIN_3D, Plugin Class: PLUGIN_3D>>. The corresponding
-Plugin Loader is defined in pluginldr3D.cpp and the loader implements
+<<class-plugin-3d,Plugin Class: PLUGIN_3D>>. The corresponding
+Plugin Loader is defined in `pluginldr3D.cpp` and the loader implements
 the following public functions in addition to the required API functions:
 
 [source,c]
@@ -1051,13 +1051,13 @@ void GetPluginInfo( std::string& aPluginInfo );
 
 In typical situations, the user would do the following:
 
-. Create an instance of `KICAD_PLUGIN_LDR_3D`
-. Invoke `Open( "/path/to/myplugin.so" )` to open a specific plugin;
-the return value must be checked to ensure that the plugin loaded
+. Create an instance of `KICAD_PLUGIN_LDR_3D`.
+. Invoke `Open( "/path/to/myplugin.so" )` to open a specific plugin.
+The return value must be checked to ensure that the plugin loaded
 as desired.
-. Invoke any of the 3D Plugin Class calls as exposed by `KICAD_PLUGIN_LDR_3D`
-. Invoke `Close()` to close (unlink) the plugin
-. Destroy the `KICAD_PLUGIN_LDR_3D` instance
+. Invoke any of the 3D Plugin Class calls as exposed by `KICAD_PLUGIN_LDR_3D`.
+. Invoke `Close()` to close (unlink) the plugin.
+. Destroy the `KICAD_PLUGIN_LDR_3D` instance.
 
 === Scenegraph Class APIs
 
@@ -1330,7 +1330,7 @@ public:
 -----
 
 
-`IFSG_APPEARANCE` is similar to a VRML2.0 Appearance node, however
+`IFSG_APPEARANCE` is similar to a VRML2.0 Appearance node, however,
 at the moment it only represents the equivalent of an Appearance
 node containing a Material node.
 
@@ -1386,9 +1386,9 @@ A simplistic normals calculation function is provided to aid
 the user in assigning normal values to surfaces. The deviations
 from the VRML2.0 analogue are as follows:
 
-. normals are always per-vertex
-. colors are always per vertex
-. the coordinate index set must describe triangular faces only
+. Normals are always per-vertex.
+. Colors are always per vertex.
+. The coordinate index set must describe triangular faces only.
 
 .ifsg_faceset.h
 [source,c]
@@ -1447,7 +1447,7 @@ public:
 
 
 `IFSG_COORDINDEX` is similar to a VRML2.0 coordIdx[]
-set; however it must exclusively describe triangular
+set except it must exclusively describe triangular
 faces, which implies that the total number of indices
 is divisible by 3.
 
@@ -1719,6 +1719,6 @@ namespace S3D
 };
 -----
 
-For examples of actual usage of the Scenegraph API see the
-3D Plugin DEMO2 tutorial and the kicad VRML1, VRML2, and X3D
-parsers.
+For actual usage examples of the Scenegraph API see the
+<<advanced-3d-plugin,Advanced 3D Plugin tutorial>> above and the KiCad VRML1, VRML2,
+and X3D parsers.
