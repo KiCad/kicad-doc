@@ -90,7 +90,6 @@ $(PODIR)/$(DOCNAME).pot: $(DOCNAME).adoc $(foreach l,$(DOCCHAPTERS), $(l))
 #Build/update the single language NN i18n strings .po file
 #$(PODIR)/%.po: $(DOCNAME).adoc #Single file dependency
 $(PODIR)/%.po: $(DOCNAME).adoc $(foreach l,$(DOCCHAPTERS), $(l))
-	@touch $(DOCNAME).adoc
 	@po4a-updatepo -f asciidoc -v -M utf-8 -m $(DOCNAME).adoc $(foreach l,$(DOCCHAPTERS),-m $(l)) -p $@
 
 .PHONY: po-all
