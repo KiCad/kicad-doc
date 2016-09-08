@@ -45,24 +45,23 @@ Published on February 14, 2015.
 
 == Introduction to GerbView
 
-GerbView is a Gerber file viewer (RS 274 X format), and is also able
-to display drill files from Pcbnew (in Excellon format).
+GerbView is a Gerber file (RS-274X format) and Excellon drill file
+viewer. Up to 32 files can be displayed at once.
 
-It accepts up to 32 files (Gerber and/or Drill files)
+For more information about the Gerber file format please read
+http://www.ucamco.com/files/downloads/file/81/the_gerber_file_format_specification.pdf[the Gerber File Format Specification].
+Details about drill file format can be found at
+http://web.archive.org/web/20071030075236/http://www.excellon.com/manuals/program.htm[the Excellon format description].
 
-Files can be displayed using a transparency mode or stacked mode.
+== Interface
 
-For more information about the Gerber file format please have a read
-at the specification in
-http://www.ucamco.com/files/downloads/file/81/the_gerber_file_format_specification.pdf[The Gerber File Format Specification - Ucamco].
-
-== Main Screen
+=== Main window
 
 image::images/gerbview_main_screen.png[scaledwidth="95%",alt="gerbview_main_screen_png"]
 
 <<<<<
 
-== Top toolbar
+=== Top toolbar
 
 image::images/gerbview_top_toolbar.png[scaledwidth="95%",alt="gerbview_top_toolbar_png"]
 
@@ -75,78 +74,92 @@ image::images/gerbview_top_toolbar.png[scaledwidth="95%",alt="gerbview_top_toolb
 |Load Gerber files
 
 |image:images/icons/gerbview_drill_file.png[gerbview_drill_file_png]
-|Load drill files (Excellon format from Pcbnew)
+|Load Excellon drill files
 
 |image:images/icons/sheetset.png[sheetset_png]
-|Set page size for printing and show/hide page limits
+|Set page size
 
 |image:images/icons/print_button.png[print_button_png]
-|Open print dialog
+|Print
 
 |image:images/icons/zoom_in.png[zoom_in_png] image:images/icons/zoom_out.png[zoom_out_png]
-|Zoom in and out
+|Zoom in or out
 
 |image:images/icons/zoom_redraw.png[zoom_redraw_png]
-|Refresh screen
+|Redraw view
 
 |image:images/icons/zoom_fit_in_page.png[zoom_fit_in_page_png]
-|Zoom fit in page
+|Zoom auto (zoom fit)
 
 |image:images/gerbview_top_layer.png[width="70%",alt="gerbview_top_layer_png"]
-|Layer selection
+|Select active layer
 
 |image:images/gerbview_top_dcode.png[width="70%",alt="gerbview_top_dcode_png"]
-|D Code selection (hight light items that use this dcode)
+|Highlight items of selected D Code on the active layer
 
 |image:images/gerbview_top_info.png[width="70%",alt="gerbview_top_info_png"]
-|Info about Gerber file options loaded in the current layer
+|Display info about active layer
 |=======================================================================
 
 <<<<<
 
-== Left toolbar
+=== Left toolbar
 
 [width="100%",cols="10%,5%,85%",]
 |=======================================================================
-.10+^.^|image:images/gerbview_left_toolbar.png[gerbview_left_toolbar_png]
+.11+^.^|image:images/gerbview_left_toolbar.png[gerbview_left_toolbar_png]
 |image:images/icons/grid.png[grid_png]
-|Grid on / off
+|Toggle grid visibility
 
 |image:images/icons/polar_coord.png[polar_coord_png]
-|Display polar coordinates on / off
+|Toggle polar coordinates display
 
 |image:images/icons/unit_inch.png[unit_inch_png] image:images/icons/unit_mm.png[unit_mm_png]
-|Units selection to display coordinates
+|Select inch or millimeter units
 
 |image:images/icons/cursor_shape.png[cursor_shape_png]
-|On grid cursor shape selection
+|Toggle full-screen cursor
 
 |image:images/icons/pad_sketch.png[pad_sketch_png]
-|Display mode selection (solid or outlines) for flashed items
+|Display flashed items in sketch (outline) mode
 
 |image:images/icons/track_sketch.png[track_sketch_png]
-|Display mode selection (solid or outlines) for lines
+|Display lines in sketch (outline) mode
 
 |image:images/icons/opt_show_polygon.png[opt_show_polygon_png]
-|Display mode selection (solid or outlines) for polygons
+|Display polygons in sketch (outline) mode
 
 |image:images/icons/gerbview_show_negative_objects.png[gerbview_show_negative_objects_png]
 |Show negative objects in ghost color
 
 |image:images/icons/show_dcodenumber.png[show_dcodenumber_png]
-|Show / hide D Codes values (for items using a dcode)
+|Show/hide D Codes
 
 |image:images/icons/gbr_select_mode0.png[gbr_select_mode0_png]
  image:images/icons/gbr_select_mode1.png[gbr_select_mode1_png]
  image:images/icons/gbr_select_mode2.png[gbr_select_mode2_png]
-|Mode used by Gerbview to show layers.
+|Select raw/stacked/transparency display mode
 
 |image:images/icons/layers_manager.png[layers_manager_png]
-|Show / hide the layer manager
+|Show/hide layers manager toolbar
 
 |=======================================================================
 
 <<<<<
+
+=== Layers Manager
+
+image::images/gerbview_layer_manager.png[scaledwidth="40%",alt="gerbview_layer_manager_png"]
+
+The Layers Manager controls and displays visibility of all layers. An arrow
+indicates the active layer, and each layer can be shown or hidden with
+the checkboxes.
+
+Mouse button assignments:
+
+* Left click: select the active layer
+* Right click: show/hide/sort layers options
+* Middle click (on color swatch): select the layer color
 
 == Commands in menu bar
 
@@ -154,143 +167,99 @@ image::images/gerbview_top_toolbar.png[scaledwidth="95%",alt="gerbview_top_toolb
 
 image::images/gerbview_file_menu.png[scaledwidth="45%",alt="gerbview_file_menu_png"]
 
-It is possible to load gerber and drill files into Gerbview. There is
-also an auxiliary option to export gerbers to pcbnew. Previously (a long
-time ago) it was also possible to load so called Dcodes, but those are
-now obsolete and is therefore not possible anymore.
-
-==== Export to Pcbnew
-
-GerbView has a limited capability to export Gerber files to Pcbnew.
-
-The final result depends on what features of RS 274 X format are used in
-Gerber Files.
-
-RS 274 X format has raster oriented features that cannot be converted
-(mainly all features relative to negative objects).
-
-Flashed items are converted to vias.
-
-Lines items are converted to track segments (or graphic lines for non
-copper layers)
-
-So the usability of the converted file is very dependent upon the way
-each Gerber file was built by the original Pcb tool.
+* *Export to Pcbnew* is a limited capability to export Gerber files into
+Pcbnew. The final result depends on what features of the RS-274X format
+are used in the original Gerber files: rasterized items cannot be converted
+(typically negative objects), flashed items are converted to vias, lines are
+converted to track segments (or graphic lines for non-copper layers).
 
 === Preferences menu
 
 image::images/gerbview_preferences_menu.png[scaledwidth="33%",alt="gerbview_preferences_menu_png"]
 
-Gives access to the hot keys editor, and some options to display items.
-
 === Miscellaneous menu
 
 image::images/gerbview_misc_menu.png[scaledwidth="25%",alt="gerbview_misc_menu_png"]
 
-* List Dcodes shows the Dcodes in use and some of Dcode parameters.
-* Show Source displays the Gerber file contents of the active layer in a
+* *List DCodes* shows the D Code information for all layers.
+* *Show Source* displays the Gerber file contents of the active layer in a
   text editor.
-* Clear Layer erases the contents of the active layer.
+* *Clear Layer* erases the contents of the active layer.
 
-<<<<<
+== Display modes
 
-== Layer Manager
+GerbView has three display modes which are useful for different
+situations or requirements.
 
-The layer manager has 2 purposes:
+NOTE: Stacked mode and Transparency mode provide a better graphical
+experience, but may be slower then Raw mode on some computers.
 
-* Select the active layer
-* Show/hide layers
+=== Raw mode
 
-image::images/gerbview_layer_manager.png[scaledwidth="40%",alt="gerbview_layer_manager_png"]
+This mode is selected by
+image:images/icons/gbr_select_mode0.png[gbr_select_mode0_png].
+Each file and each item in the file are drawn in the order files are
+loaded. However, the active layer is drawn last.
 
-The active layer is drawn after the other layers.
-
-When loading a new file, the active layer is used (the new data replace
-the previous data)
-
-Note:
-
-* Mouse left click on a line: select the active layer
-* Mouse right click on the layer manager: show/hide all layers
-* Mouse middle click on a icon: select the layer color.
-
-<<<<<
-
-=== Modes to show Gerber layers
-
-
-* Raw mode image:images/icons/gbr_select_mode0.png[gbr_select_mode0_png]
-
-Each gerber file and each item in files are drawn in the order files are
-loaded.
-
-However the *active layer* is draw last.
-
-When Gerber files have negative items (drawn in black) artefacts are
-visible on already drawn layers
+When Gerber files have negative items (drawn in black), artifacts may be
+visible on already-drawn layers.
 
 image::images/gerbview_mode_raw_stack.png[scaledwidth="60%",alt="gerbview_mode_raw_stack_png"]
 
+=== Stacked mode
 
-* Stacked mode image:images/icons/gbr_select_mode1.png[gbr_select_mode1_png]
-
-Each gerber file is drawn in the order files are loaded.
-
-The *active layer* is draw last.
+Invoked by image:images/icons/gbr_select_mode1.png[gbr_select_mode1_png],
+each file is drawn in the order files are loaded. Again, the active
+layer is drawn last.
 
 When Gerber files have negative items (drawn in black) there are no
-artefacts on already drawn layers, because this mode draws each file in
-a local buffer before it is shown on screen. Negative items do not create
-artefacts.
+artifacts on already-drawn layers because this mode draws each file in
+a local buffer before it is shown on screen.
 
 image::images/gerbview_mode_raw_stack.png[scaledwidth="60%",alt="gerbview_mode_raw_stack_png"]
 
+=== Transparency mode
 
-* Transparency mode image:images/icons/gbr_select_mode2.png[gbr_select_mode2_png]
+Use image:images/icons/gbr_select_mode2.png[gbr_select_mode2_png] to display in this
+mode, where no artifacts are present and layers are blended together with the active
+layer on top.
 
 image::images/gerbview_mode_transparency.png[scaledwidth="60%",alt="gerbview_mode_transparency_png"]
 
+=== Layer occlusion
 
-=== Effect of layer selection for drawings
+In raw or stacked mode, the active layer will be on top of other layers
+and hide items below it.
 
-This effect is visible only in raw or stacked mode.
-
-The layer 1 (green layer) is drawn after the layer 2
+Here, layer 1 (green) is the active layer (note the triangle next to it)
+and so it is drawn on top of layer 2 (blue):
 
 image::images/gerbview_layer_select_1.png[scaledwidth="60%",alt="gerbview_layer_select_1_png"]
 
-The layer 2 (blue layer) is drawn after the layer 1
+Making layer 2 (blue) the active layer brings it to the top:
 
 image::images/gerbview_layer_select_2.png[scaledwidth="60%",alt="gerbview_layer_select_2_png"]
 
+== Moving items
 
-<<<<<
+Items may be selected by holding down the left mouse button and drawing a
+rectangle. Releasing the button picks up the items. A click of the left
+mouse button places the items.
 
-== Print layers
-
-=== Print dialog access
+== Printing
 
 To print layers, use the
 image:images/icons/print_button.png[print_button_png]
-tool, or the main menu (files)
+icon or the *File -> Print* menu.
 
 [CAUTION]
 ========================================
-But be sure items are inside the printable area (select by
-image:images/icons/sheetset.png[sheetset_png]
-a suitable page format).
+Be sure items are inside the printable area. Use
+image:images/icons/sheetset.png[sheetset_png] to select a
+suitable page format.
 
-Do not forget photoplotters can use a large plottable area, much bigger than the page
-sizes used by printers)
-
-Moving (by block move command) the entire layers is often needed.
+Note that many photoplotters support a large plottable area, much
+bigger than the page sizes used by most printers. Moving the entire
+layer set may be required.
 
 ========================================
-
-=== Move block command
-
-You can move items by selecting them (drag the mouse with left button down) and then
-moving the selected area on screen.
-
-Click the left button to finally place the area you are moving.
-

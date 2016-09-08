@@ -1,9 +1,5 @@
-+++
-title = "Docs Versioning"
-[menu.main]
-    parent = "Community"
-    name   = "Docs Versioning"
-+++
+Docs Versioning
+===============
 
 This document is a work in progress and improvement suggestions are
 welcome.
@@ -22,7 +18,7 @@ starting from 4.0.0. From the documentation teams point of view we
 would like to make it easy for everyone to deduce which documentation
 document that is applicable to whatever KiCad version of interest the
 end use might have. Therefore the docs are versioned to match the
-kicad releases but appended with a new tuple.
+KiCad releases but appended with a new tuple.
 
 == KiCad Documentation
 
@@ -40,7 +36,7 @@ other words a snapshot of all languages, determined by git tags.
 
 == Tagging and Branching Strategy
 
-Every release of the documentaion is composed of the git tree using
+Every release of the documentation is composed of the git tree using
 the tags assigned on the given branch, usually the master branch.
 
 If, for some reason, there are going to be backported changes to some
@@ -59,6 +55,64 @@ The purpose of all this version joggling is because we want the
 documentation releases to be updated independent of the KiCad release
 cycle, but still align with it, at the same time making it easy for
 the documentation maintainers call for a new release.
+
+== Branch Relations, Working Rules for Document
+
+KiCad application is developed on *lp:kicad* development branch,
+and new functions for the future release are developed here.
+On the other hand, stable version of KiCad is maintained on stable
+branch (e.g. *lp:kicad/4.0*), and bugfix version of stable KiCad
+releases will come out from here.
+
+Having separate branches for devs and maintenance enables 2 different jobs
+independent.
+To follow this way of management, docs team also uses multi branches.
+
+The *master* branch is for docs development and relates to *lp:kicad* KiCad
+application development branch.
+We will update original English docs here.
+Docs stable branch (e.g. *4.0*) is for translation and relates to
+stable KiCad application branch (e.g. *lp:kicad/4.0*).
+We will manage localized stable docs here.
+
+```
+[[Application - launchpad]]
+<lp:kicad>     [+]--------------------[+]  -  -  -  - {development}
+                |                      |
+                V                      V
+<stable>       [#]------$-----        [#]  -  -  -  - {bugfix, maintenance}
+               <lp:kicad/4.0>
+
+[[Documentation - GitHub]]
+<master>       [+]--------------------[+]  -  -  -  - {writers}
+                |                      |
+                V                      V
+<stable>       [#]------$-----        [#]  -  -  -  - {translators}
+               <4.0>    4.0.3         <5.0>
+```
+
+On *master* branch:
+
+- Writers update English .adoc files and related English menu screenshots.
+- Translators have to understand that the master reference documents
+  (English .adoc) are volatile here, so translations will probably be
+  invalidated quickly. We don't reject translation works here, but would
+  recommend to post to stable branch.
+
+On stable branch (e.g. *4.0*):
+
+- Translators create Localized .po files and related localized menu screenshots
+  for stable docs.
+- In case if you want to modify original English .adoc files here for fixing
+  typo or something, be careful not to invalidate the translations by it.
+  Usually, it is resolved by also fixing the english typo in the `msgid` of all
+  po files.
+
+Branching stable from *master*:
+
+- Stable docs branch is made from *master* branch when the English docs
+  for the next application release are ready.
+- Old stable docs branches remain as historical branch.
 
 == Packaging
 

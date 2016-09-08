@@ -70,12 +70,11 @@ the successful development and maintenance of complex electronic boards.
 KiCad does not present any board-size limitation and it can
 handle up to 32 copper layers, 14 technical layers and 4 auxiliary layers.
 
-KiCad can create all the files necessary for building printed boards:
+KiCad can create all the files necessary for building printed circuit boards, including:
 
 * Gerber files for photo-plotters
 * drilling files
 * component location files
-* and a lot more.
 
 Being open source (GPL licensed), KiCad represents the ideal tool for
 projects oriented towards the creation of electronic hardware with an
@@ -108,7 +107,7 @@ comments, keywords, reference to data sheets.
 [width="100%",cols="20%,80%",]
 |=================================================================
 |*.kicad_pcb |Board file containing all info but the page layout.
-|*.pretty |Footprint **library folders**. The folder itself is the library.
+|*.pretty |Footprint library folders. The folder itself is the library.
 |*.kicad_mod |Footprint files, containing one footprint description each.
 |*.brd |Board file in the legacy format.
 Can be read, but not written, by the current board editor.
@@ -163,23 +162,23 @@ Pcbnew needs the support of OpenGL v2.1 or higher.
 
 === Initialization of the default configuration
 
-A default configuration file named _kicad.pro_ is supplied in
+A default configuration file named *kicad.pro* is supplied in
 kicad/template. It serves as a template for any new project and
 is used to set the list of library files loaded by Eeschema.
 A few other parameters for Pcbnew (default text size, default line
 thickness, etc.) are also stored here.
 
-Another default configuration file named _fp-lib-table_ may exist.
+Another default configuration file named *fp-lib-table* may exist.
 It will be used only once to create a footprint library list;
 otherwise the list will be created from scratch.
 
 === Modifying the default configuration
 
-The default _kicad.pro_ file can be freely modified, if desired.
+The default *kicad.pro* file can be freely modified, if desired.
 
 Verify that you have write access to kicad/template/kicad.pro
 
-Run KiCad and load _kicad.pro_ project.
+Run KiCad and load *kicad.pro* project.
 
 Run Eeschema via KiCad.
 Modify and update the Eeschema configuration,
@@ -286,7 +285,7 @@ parameters for project management (such as the list of libraries
 used in the schematic). Default names of both main schematic file
 and printed circuit board file are
 derived from the name of the project. Thus, if a project called
-_example.pro_ was created in a directory called _example_, the default
+*example.pro* was created in a directory called *example*, the default
 files will be created:
 
 [width="100%",cols="27%,73%",]
@@ -295,14 +294,14 @@ files will be created:
 |example.sch |Main schematic file.
 |example.kicad_pcb |Printed circuit board file.
 |example.net |Netlist file.
-|example.xxx |Various files created by the other utility programs.
+|example.* |Various files created by the other utility programs.
 |example-cache.lib|Library file automatically created and used by the
 schematic editor containing a backup of the components used in the schematic.
 |=================================================================
 
 == Using KiCad manager
 
-The KiCad Manager (kicad or kicad.exe file) is a tool which can easily run the other tools
+The KiCad Manager (kicad or kicad.exe) is a tool which can easily run the other tools
 (schematic and PCB editors, Gerber viewer and utility tools) when creating a design.
 
 Running the other tools from KiCad manager has some advantages:
@@ -355,10 +354,10 @@ references.
 image::images/project_tree.png[scaledwidth="35%"]
 
 Double-clicking on the Eeschema icon runs the schematic editor, in
-this case opening the file pic_programmer.sch.
+this case opening the file *pic_programmer.sch*.
 
 Double-clicking on the Pcbnew icon runs the layout editor, in this case
-opening the file pic_programmer.kicad_pcb.
+opening the file *pic_programmer.kicad_pcb*.
 
 Right clicking on any of the files in the project tree allows generic
 file manipulation.
@@ -373,8 +372,8 @@ KiCad top toolbar allows for some basic file operations:
 [width="100%",cols="26%,74%",]
 |=======================================================================
 |image:images/icons/new_project.png[]
-|Create a project file. If the template kicad.pro is found in
-kicad/template, it is copied into the working directory.
+|Create a project file. If the template *kicad.pro* is found in
+*kicad/template*, it is copied into the working directory.
 |image:images/icons/new_project_with_template.png[]
 |Create a project from a template.
 |image:images/icons/open_project.png[]
