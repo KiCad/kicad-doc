@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-09-08 09:39+0300\n"
-"PO-Revision-Date: 2016-09-14 09:54+0300\n"
+"PO-Revision-Date: 2016-09-17 16:07+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -119,7 +119,7 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:127 eeschema_viewlib.adoc:5
 #, no-wrap
 msgid "Introduction"
-msgstr ""
+msgstr "Введение"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:14
@@ -9370,7 +9370,7 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:3
 #, no-wrap
 msgid "Schematic Creation and Editing"
-msgstr ""
+msgstr "Создание и редактирование схем"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:9
@@ -9378,6 +9378,8 @@ msgid ""
 "A schematic can be represented by a single sheet, but, if big enough, it "
 "will require several sheets."
 msgstr ""
+"Схема может быть представлена на одном листе или на нескольких, если проект "
+"достаточно большой."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:15
@@ -9387,12 +9389,16 @@ msgid ""
 "project. The manipulation of hierarchical schematics will be described in "
 "the <<hierarchical-schematics,Hierarchical Schematics>> chapter."
 msgstr ""
+"Сложные схемы, представленные на нескольких листах, являются иерархическими. "
+"Все листы (каждому из которых соответствует отдельный файл) составляют "
+"единый проект схемы в Eeschema. Как работать с иерархическими листами будет "
+"рассказано в разделе <<hierarchical-schematics,Иерархические листы>>."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:17
 #, no-wrap
 msgid "General considerations"
-msgstr ""
+msgstr "Основные положения"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:22
@@ -9401,6 +9407,9 @@ msgid ""
 "representation of an electronic device. It is normally the entry point of a "
 "development chain that allows for:"
 msgstr ""
+"Схема, разработанная в Eeschema, является не просто графическим "
+"представлением электронного устройства. В общем случае, она является "
+"отправной точкой в цикле разработки и позволяет выполнять следующее:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:24
@@ -9408,6 +9417,8 @@ msgid ""
 "Validating against a set of rules (<<erc,Electrical Rules Check>>) to detect "
 "errors and omissions."
 msgstr ""
+"<<erc,Проверку электрических правил проектирования>> для выявления ошибок и "
+"упущений."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:25
@@ -9415,6 +9426,8 @@ msgid ""
 "Automatically generating a bill of materials (<<creating-customized-netlists-"
 "and-bom-files,BOM>>)."
 msgstr ""
+"Автоматически формировать перечень элементов (<<creating-customized-netlists-"
+"and-bom-files,BOM>>)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:26
@@ -9422,6 +9435,8 @@ msgid ""
 "<<creating-customized-netlists-and-bom-files,Generating a netlist>> for "
 "simulation software such as SPICE."
 msgstr ""
+"<<creating-customized-netlists-and-bom-files,Формировать список цепей>> для "
+"приложений симуляции работы электрических схем, таких как SPICE."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:27
@@ -9429,6 +9444,8 @@ msgid ""
 "<<creating-customized-netlists-and-bom-files,Generating a netlist>> for "
 "transferring to PCB layout."
 msgstr ""
+"<<creating-customized-netlists-and-bom-files,Формировать список цепей>> для "
+"передачи в приложение трассировки печатной платы."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:31
@@ -9437,12 +9454,16 @@ msgid ""
 "and power ports. For clarity in the schematic, you can place purely "
 "graphical elements like bus entries, comments, and polylines."
 msgstr ""
+"Схема, в основном, состоит из компонентов, проводников, меток, соединений, "
+"шин и символов питания. Помимо этого, можно размещать и графические "
+"элементы, такие как выводы соединения с шиной, текстовые комментарии и "
+"графические линии."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:33
 #, no-wrap
 msgid "The development chain"
-msgstr ""
+msgstr "Цикл разработки"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:35
@@ -9454,7 +9475,7 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:35
 #, no-wrap
 msgid "images/en/dev-chain.png"
-msgstr ""
+msgstr "images/ru/dev-chain.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:40
@@ -9463,18 +9484,21 @@ msgid ""
 "schematic is made, a netlist is generated, which is later used to import the "
 "set of connections and footprints into PcbNew."
 msgstr ""
+"Компоненты добавляются в схему из библиотеки. Затем, когда схема готова, "
+"создаётся список цепей, который позже используется для импорта соединений и "
+"посадочных мест в PcbNew."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:42
 #, no-wrap
 msgid "Component placement and editing"
-msgstr ""
+msgstr "Размещение и редактирование компонентов"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:45
 #, no-wrap
 msgid "Find and place a component"
-msgstr ""
+msgstr "Поиск и размещение компонента"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:50
@@ -9483,18 +9507,21 @@ msgid ""
 "icons/new_component.png[New Component icon].  A dialog box allows you to "
 "type the name of the component to load."
 msgstr ""
+"Чтобы добавить компонент на схему, нужно нажать кнопку image:images/icons/"
+"new_component.png[Разместить компонент]. Диалоговое окно позволяет найти "
+"нужный компонент по имени."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:51
 #, no-wrap
 msgid "Choose Component dialog"
-msgstr ""
+msgstr "Диалог выбора компонента"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:51
 #, no-wrap
 msgid "images/en/dialog_choose_component.png"
-msgstr ""
+msgstr "images/ru/dialog_choose_component.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:55
@@ -9502,6 +9529,8 @@ msgid ""
 "The Choose Component dialog will filter components by name, keywords, and "
 "description according to what you type into the search field."
 msgstr ""
+"Диалог выбора отфильтрует компоненты по имени, ключевым словам или описанию, "
+"согласно запросу, введенном в текстовое поле."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:59
@@ -9510,29 +9539,32 @@ msgid ""
 "and edit its fields, by either using the hotkeys or the right-click context "
 "menu. This can be done the same way after placement."
 msgstr ""
+"Прежде чем расположить компонент на схему можно его вращать, отражать и "
+"редактировать значения полей с помощью горячих клавиш или контекстного меню. "
+"Эти же операции можно выполнить и после расположения."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:61
 msgid "Here is a component during placement:"
-msgstr ""
+msgstr "Так выглядит компонент в процессе расположения:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:62
 #, no-wrap
 msgid "component during placement"
-msgstr ""
+msgstr "компонент в процессе расположения"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:62
 #, no-wrap
 msgid "images/en/component_during_placement.png"
-msgstr ""
+msgstr "images/ru/component_during_placement.png"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:65
 #, no-wrap
 msgid "Power ports"
-msgstr ""
+msgstr "Символы питания"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:73
@@ -9543,17 +9575,23 @@ msgid ""
 "Power icon] tool is available. This tool is similar, except that the search "
 "is done directly in the ``power'' library."
 msgstr ""
+"Символ питания представляет из себя компонент (все символы питания собраны в "
+"библиотеке “power”), поэтому его можно добавить с помощью диалога выбора "
+"компонента. Но, так как эти символы добавляются часто, существует отдельный "
+"инструмент image:images/icons/add_power.png[Разместить порт питания]. Этот "
+"инструмент аналогичен добавлению компонента, только список состоит из "
+"символов питания."
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:75
 #, no-wrap
 msgid "Component Editing and Modification (already placed component)"
-msgstr ""
+msgstr "Редактирование размещённых компонентов"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:78
 msgid "There are two ways to edit a component:"
-msgstr ""
+msgstr "Редактировать компоненты можно двумя путями:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:80
@@ -9561,6 +9599,8 @@ msgid ""
 "Modification of the component itself: position, orientation, unit selection "
 "on a multi-unit component."
 msgstr ""
+"Редактирование самого компонента: позиция, ориентация, выбор части в "
+"составных компонентах."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:81
@@ -9568,6 +9608,8 @@ msgid ""
 "Modification of one of the fields of the component: reference, value, "
 "footprint, etc."
 msgstr ""
+"Редактирование одного из полей компонента: обозначение, значение, посадочное "
+"место и т.д."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:87
@@ -9578,12 +9620,17 @@ msgid ""
 "components with locked units, which you have to assign manually). This can "
 "be done automatically by the annotation function."
 msgstr ""
+"Как только компонент был размещен, можно задать его значение (в частности "
+"для резисторов, конденсаторов и т.д.). Но не стоит сразу указывать "
+"порядковый номер в обозначении или номер части (кроме случая, когда нужная "
+"часть выбирается вручную), так как это выполняется автоматически с помощью "
+"функции обозначения."
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:89
 #, no-wrap
 msgid "Component modification"
-msgstr ""
+msgstr "Изменение компонента"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:93
@@ -9591,11 +9638,14 @@ msgid ""
 "To modify some feature of a component, position the cursor on the component, "
 "and then either:"
 msgstr ""
+"Для изменения какого-нибудь свойства компонента расположите курсор над ним и "
+"затем выполните:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:95
 msgid "Double-click on the component to open the full editing dialog."
 msgstr ""
+"Двойной щелчок левой кнопкой мыши для вызова редактора свойств компонента."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:97
@@ -9603,12 +9653,14 @@ msgid ""
 "Right-click to open the context menu and use one of the commands: Move, "
 "Orientation, Edit, Delete, etc."
 msgstr ""
+"Щелчок правой кнопкой мыши для вызова контекстного меню и выбор одного из "
+"вариантов: Переместить, Ориентировать, Править, Удалить и т.д."
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:99
 #, no-wrap
 msgid "Text fields modification"
-msgstr ""
+msgstr "Изменение значения полей"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:103
@@ -9616,11 +9668,14 @@ msgid ""
 "You can modify the reference, value, position, orientation, text size and "
 "visibility of the fields:"
 msgstr ""
+"Можно изменять значение, позицию, ориентацию, размер текста и видимость "
+"полей:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:105
 msgid "Double-click on the text field to modify it."
 msgstr ""
+"Двойной щелчок левой кнопки мыши на текстовом поле для начала редактирования."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:107
@@ -9628,6 +9683,8 @@ msgid ""
 "Right-click to open the context menu and use one of the commands: Move, "
 "Rotate, Edit, Delete, etc."
 msgstr ""
+"Щелчок правой кнопкой мыши для вызова контекстного меню и выбор одной из "
+"команд: Переместить, Повернуть, Править, Удалить и т.д."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:111
@@ -9635,6 +9692,8 @@ msgid ""
 "For more options, or in order to create fields, double-click on the "
 "component to open the Component Properties dialog."
 msgstr ""
+"Чтобы получить больше опций или если нужно добавить поля, выполните двойной "
+"щелчок по компоненту для вызова диалога редактирования свойств компонента."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:118
@@ -9644,6 +9703,10 @@ msgid ""
 "displayed component (no rotation or mirroring) and is relative to the anchor "
 "point of the component."
 msgstr ""
+"Каждое поле можно показать или спрятать, отобразить горизонтально или "
+"вертикально. Указанная позиция всегда соответствует нормально расположенному "
+"компоненту (без поворотов и отражения) и относительно точки привязки "
+"компонента."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:122
@@ -9653,12 +9716,15 @@ msgid ""
 "However, texts fields are not modified because this could break the "
 "schematic."
 msgstr ""
+"Опция “Сбросить установки” устанавливает ориентацию в нормальное положение и "
+"сбрасывает свойства, размер и позицию для каждого поля. Но при этом, "
+"значения полей не изменяются, так как это может разрушить схему."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:124
 #, no-wrap
 msgid "Wires, Buses, Labels, Power ports"
-msgstr ""
+msgstr "Проводники, шины, метки, символы питания"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:131
@@ -9666,103 +9732,105 @@ msgid ""
 "All these drawing elements can also be placed with the tools on the vertical "
 "right toolbar."
 msgstr ""
+"Все эти элементы черчения можно добавить с помощью инструментов на правой "
+"панели."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:133
 msgid "These elements are:"
-msgstr ""
+msgstr "Вот эти элементы:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:135
 #, no-wrap
 msgid "*Wires:* most connections between components.\n"
-msgstr ""
+msgstr "*Проводник:* большинство соединений между компонентами.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:136
 #, no-wrap
 msgid "*Buses:* to graphically join bus labels\n"
-msgstr ""
+msgstr "*Шины:* графическое соединение меток шины.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:137
 #, no-wrap
 msgid "*Polylines:* for graphic presentation.\n"
-msgstr ""
+msgstr "*Графические линии:* черчение графических элементов.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:138
 #, no-wrap
 msgid "*Junctions:* to create connections between crossing wires or buses.\n"
-msgstr ""
+msgstr "*Соединения:* создание соединения между пересекающимися проводниками или шинами.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:139
 #, no-wrap
 msgid "*Bus entries:* to show connections between wires and buses. Graphical only!\n"
-msgstr ""
+msgstr "*Ввод шины:* служит для соединения проводника с шиной. Соединение только визуальное!\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:140
 #, no-wrap
 msgid "*Labels:* for labeling or creating connections.\n"
-msgstr ""
+msgstr "*Метки:* для обозначения или создания соединений.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:141
 #, no-wrap
 msgid "*Global labels:* for connections between sheets.\n"
-msgstr ""
+msgstr "*Глобальные метки:* для соединений между листами.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:142
 #, no-wrap
 msgid "*Texts:* for comments and annotations.\n"
-msgstr ""
+msgstr "*Текст:* для комментариев и надписей.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:143
 #, no-wrap
 msgid "*\"No Connect\" flags:* to terminate a pin that does not need any connection.\n"
-msgstr ""
+msgstr "*Флаг \"Не подключено\":* для обозначения выводов, которые не нужно ни куда подключать.\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:144
 #, no-wrap
 msgid "**Hierarchical sheets**, and their connection pins.\n"
-msgstr ""
+msgstr "**Иерархический лист** и его выводы для подключения.\n"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:146
 #, no-wrap
 msgid "Connections (Wires and Labels)"
-msgstr ""
+msgstr "Соединения с помощью проводников и меток"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:149
 msgid "There are two ways to establish connection:"
-msgstr ""
+msgstr "Есть два пути для создания соединения:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:151
 msgid "Pin to pin wires."
-msgstr ""
+msgstr "Проводник от вывода к вывод."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:152
 msgid "Labels."
-msgstr ""
+msgstr "Метки."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:154
 msgid "The following figure shows the two methods:"
-msgstr ""
+msgstr "Следующее изображение показывает оба метода:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:155
 #, no-wrap
 msgid "Wires labels"
-msgstr ""
+msgstr "Проводники и метки"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:155
@@ -9774,7 +9842,7 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:158
 #, no-wrap
 msgid "*Note 1:*\n"
-msgstr ""
+msgstr "*Примечание 1:*\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:162
@@ -9783,6 +9851,8 @@ msgid ""
 "letter of the label. This point is displayed with a small square when not "
 "connected."
 msgstr ""
+"Место “контакта” метки -- нижний левый край её первого символа. Если метка "
+"не подключена, эта точка отображается в виде маленького квадрата."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:165
@@ -9790,12 +9860,14 @@ msgid ""
 "This point must thus be in contact with the wire, or be superimposed at the "
 "end of a pin so that the label is seen as connected."
 msgstr ""
+"Данная точка должна располагаться на проводнике или накладываться на конец "
+"вывода, чтобы принять вид подключенной."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:167
 #, no-wrap
 msgid "*Note 2:*\n"
-msgstr ""
+msgstr "*Примечание 2:*\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:170
@@ -9803,6 +9875,8 @@ msgid ""
 "To establish a connection, a segment of wire must be connected by its ends "
 "to an another segment or to a pin."
 msgstr ""
+"Для образования соединения, сегменты должны подключаться концами друг к "
+"другу или к выводам."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:173
@@ -9810,12 +9884,14 @@ msgid ""
 "If there is overlapping (if a wire passes over a pin, but without being "
 "connected to the pin end) there is no connection."
 msgstr ""
+"При пересечении (если проводник проходит над выводом, но не соединяется с "
+"его концом) соединение не создается."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:175
 #, no-wrap
 msgid "*Note 3:*\n"
-msgstr ""
+msgstr "*Примечание 3:*\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:178
@@ -9823,6 +9899,8 @@ msgid ""
 "Wires that cross are not implicitly connected. It is necessary to join them "
 "with a junction dot if a connection is desired."
 msgstr ""
+"Пересекающиеся проводники сами по себе не соединяются. Их нужно соединять "
+"явно, с помощью точки соединения, если это необходимо."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:181
@@ -9830,12 +9908,15 @@ msgid ""
 "The previous figure (wires connected to DB25FEMALE pins 22, 21, 20, 19)  "
 "shows such a case of connection using a junction symbol."
 msgstr ""
+"На предыдущем изображении показано случай, когда используются точки для "
+"соединения (проводники подключенные к выводам 22, 21, 20, 19 компонента "
+"DB25FEMALE)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:183
 #, no-wrap
 msgid "*Note 4:*\n"
-msgstr ""
+msgstr "*Примечание 4:*\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:187
@@ -9844,23 +9925,26 @@ msgid ""
 "together and become equivalent: all the other elements connected to one or "
 "the other labels are then connected to all of them."
 msgstr ""
+"Если две разные метки расположены на одном проводнике, то они соединяются "
+"вместе и становятся эквивалентными: все прочие элементы, подключенные к "
+"одной или другой метке соединяются между собой."
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:189
 #, no-wrap
 msgid "Connections (Buses)"
-msgstr ""
+msgstr "Соединения с помощью шин"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:192
 msgid "In the following schematic, many pins are connected to buses."
-msgstr ""
+msgstr "На следующей схеме множество выводов подключены к шине."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:193
 #, no-wrap
 msgid "Example schematic with buses"
-msgstr ""
+msgstr "Пример схемы с шинами"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:193
@@ -9872,7 +9956,7 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:196
 #, no-wrap
 msgid "Bus members"
-msgstr ""
+msgstr "Сигналы шины"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:201
@@ -9881,6 +9965,9 @@ msgid ""
 "with a common prefix, and ending with a number. For example, PCA0, PCA1, and "
 "PCA2 are members of the PCA bus."
 msgstr ""
+"С точки зрения схемы, шина -- это совокупность проводников, метки которых "
+"имеют одинаковый префикс и заканчиваются порядковым номером. Например, PCA0, "
+"PCA1 и PCA2 являются сигналами шины PCA."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:206
@@ -9890,12 +9977,17 @@ msgid ""
 "complete bus is noted PCA[0..19]. A collection of signals like PCA0, PCA1, "
 "PCA2, WRITE, READ cannot be contained in a bus."
 msgstr ""
+"Законченная шина обозначается как PCA[N..m], где N и m -- номера первого и "
+"последнего проводника этой шины. Таким образом, если шина PCA имеет 20 "
+"сигналов от 0 до 19, то, в итоге, шина будет обозначена как PCA[0..19]. "
+"Совокупность сигналов типа PCA0, PCA1, PCA2, WRITE, READ нельзя соединить в "
+"одну шину."
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:208
 #, no-wrap
 msgid "Connections between bus members"
-msgstr ""
+msgstr "Соединение сигналов шины"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:213
@@ -9904,6 +9996,9 @@ msgid ""
 "labels. It is not possible to connect a pin directly to a bus; this type of "
 "connection will be ignored by Eeschema."
 msgstr ""
+"Выводы, подключенные к одинаковым сигналам шины, соединяются по средствам "
+"меток. Невозможно подключить вывод напрямую к шине, такие соединения "
+"игнорируются в Eeschema."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:218
@@ -9912,6 +10007,10 @@ msgid ""
 "connected to the pins. Bus entries (wire segments at 45 degrees) to buses "
 "are graphical only, and are not necessary to form logical connections."
 msgstr ""
+"На приведённом выше примере, соединения выполнены с помощью меток, "
+"расположенных на проводниках, которые подключены к выводам. Ввод шины "
+"(отрезок проводника под углом 45 градусов) всего лишь графический элемент и "
+"не требуется для создания логической связи."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:223
@@ -9921,11 +10020,15 @@ msgid ""
 "increasing order (a common case in practice on components such as memories, "
 "microprocessors...):"
 msgstr ""
+"На практике, использование команды повторения (клавиша __Insert__) позволяет "
+"значительно ускорить процесс создания соединений следующим образом, если шаг "
+"выводов соответствует шагу повторения (обычно, при работе с такими "
+"компонентами как память, микропроцессор и пр.):"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:225
 msgid "Place the first label (for example PCA0)"
-msgstr ""
+msgstr "Расположить первую метку (например, PCA0)"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:228
@@ -9934,6 +10037,9 @@ msgid ""
 "will automatically create the next labels (PCA1, PCA2...)  vertically "
 "aligned, theoretically on the position of the other pins."
 msgstr ""
+"Использовать команду повторения столько раз, сколько нужно для создания всех "
+"сигналов. Eeschema автоматически создаст следующие метки (PCA1, PCA2, ...), "
+"выровненные по вертикали и, предположительно, на уровне остальных выводов."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:230
@@ -9941,6 +10047,8 @@ msgid ""
 "Draw the wire under the first label. Then use the repetition command to "
 "place the other wires under the labels."
 msgstr ""
+"Начертить проводник под первой меткой. Затем использовать команду повторения "
+"для размещения остальных проводников под остальными метками."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:232
@@ -9948,33 +10056,37 @@ msgid ""
 "If needed, place the bus entries by the same way (Place the first entry, "
 "then use the repetition command)."
 msgstr ""
+"Если необходимо, расположите вводы в шину таким же образом (сначала "
+"расположите первый ввод, затем остальные с помощью команды повторения)."
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:236
 msgid "In the Preferences/Options menu, you can set the repetition parameters:"
 msgstr ""
+"В меню Настройки/Параметры редактора схем можно установить параметры "
+"повторения:"
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:238
 msgid "Vertical step."
-msgstr ""
+msgstr "Шаг по вертикали"
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:239
 msgid "Horizontal step."
-msgstr ""
+msgstr "Шаг по горизонтали"
 
 #. type: delimited block =
 #: eeschema_schematic_creation_and_editing.adoc:241
 msgid ""
 "Label increment (which can thus be incremented by 2, 3. or decremented)."
-msgstr ""
+msgstr "Инкремент метки (которая может увеличиваться на 2, 3 или уменьшаться)."
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:244
 #, no-wrap
 msgid "Global connections between buses"
-msgstr ""
+msgstr "Глобальные соединения между шинами"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:250
@@ -9984,12 +10096,15 @@ msgid ""
 "between different sheets. You can make these connections in the following "
 "way."
 msgstr ""
+"Иногда, может потребоваться соединить шины между собой, чтобы связать две "
+"шины с разными именами или, в случае иерархических схем, чтобы создать "
+"соединения между разными листами. Сделать это можно следующим способом."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:251
 #, no-wrap
 msgid "Bus junction example"
-msgstr ""
+msgstr "Пример соединения шин"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:251
@@ -10004,6 +10119,9 @@ msgid ""
 "the junction here because the vertical bus wire joins the middle of the "
 "horizontal bus segment)."
 msgstr ""
+"Шины PCA [0..15], ADR [0..7] и BUS [5..10] соединены вместе (заметьте, точка "
+"соединения используется для соединения вертикального отрезка шины с "
+"серединой горизонтального)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:259
@@ -10011,6 +10129,8 @@ msgid ""
 "More precisely, the corresponding members are connected together : PCA0, "
 "ADR0 are connected, (as same as PCA1 and ADR1 ... PCA7 and ADR7)."
 msgstr ""
+"При этом, соответствующие сигналы тоже соединяются между собой: PCA0 с ADR0, "
+"PCA1 с ADR1, ..., PCA7 с ADR7, и т.д."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:262
@@ -10018,18 +10138,20 @@ msgid ""
 "Furthermore, PCA5, BUS5 and ADR5 are connected (just as PCA6, BUS6 and ADR6 "
 "like PCA7, BUS7 and ADR7)."
 msgstr ""
+"Более того, PCA5, BUS5 и ADR5 тоже соединяются (также как и PCA6, BUS6, ADR6 "
+"или PCA7, BUS7, ADR7)."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:265
 msgid ""
 "PCA8 and BUS8 are also connected (just as PCA9 and BUS9, PCA10 and BUS10)"
-msgstr ""
+msgstr "И PCA8 соединён с BUS8 (как и PCA9 с BUS9, и PCA10 с BUS10)."
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:268
 #, no-wrap
 msgid "Power ports connection"
-msgstr ""
+msgstr "Подключение символов питания"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:272
@@ -10037,6 +10159,8 @@ msgid ""
 "When the power pins of the components are visible, they must be connected, "
 "as for any other signal."
 msgstr ""
+"Если выводы питания компонента видимы, то они должны подключаться также как "
+"и любые другие выводы."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:275
@@ -10044,16 +10168,18 @@ msgid ""
 "Components such as gates and flip-flops may have invisible power pins.  Care "
 "must be taken with these because:"
 msgstr ""
+"Такие компоненты как логические элементы или триггеры могут иметь скрытые "
+"выводы питания. С ними нужно работать аккуратно, потому что:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:277
 msgid "You cannot connect wires, because of their invisibility."
-msgstr ""
+msgstr "К ним нельзя подключить проводники, так как они невидимы."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:278
 msgid "You do not know their names."
-msgstr ""
+msgstr "Их имена неизвестны."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:282
@@ -10062,6 +10188,9 @@ msgid ""
 "them like the other pins, because the schematic would become unreadable and "
 "not in accordance with usual conventions."
 msgstr ""
+"Более того, не стоит делать их видимыми и соединять как обычные выводы, так "
+"как схема при этом становиться нечитаемой и не соответствует общим "
+"рекомендациям."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:289
@@ -10071,6 +10200,9 @@ msgid ""
 "dialog box of the main menu, or the icon image:images/icons/hidden_pin.png[] "
 "on the left (options) toolbar."
 msgstr ""
+"Чтобы скрытые выводы стали видны, нужно установить параметр ``Показать "
+"скрытые выводы`` через меню Настройки/Параметры редактора схем или с помощью "
+"кнопки image:images/icons/hidden_pin.png[] на левой панели инструментов."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:294
@@ -10080,6 +10212,10 @@ msgid ""
 "names (for example, \"GND\" in TTL components and \"VSS\" in MOS "
 "components); use power ports for this."
 msgstr ""
+"Eeschema автоматически соединяет невидимые выводы питания с одноимёнными "
+"силовыми линиями. Если нужно их подключить к линиям с другими именами "
+"(например, \"GND\" для компонентов ТТЛ-логики, а \"VSS\" для КМОП-"
+"компонентов) -- используйте символы питания."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:297
@@ -10087,17 +10223,20 @@ msgid ""
 "It is not recommended to use labels for power connection. These only have a "
 "“local” connection scope, and would not connect the invisible power pins."
 msgstr ""
+"Не рекомендуется использовать метки для соединения выводов питания. Они "
+"имеют только локальную область действия и не соединяются со скрытыми "
+"выводами."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:299
 msgid "The figure below shows an example of power port connections."
-msgstr ""
+msgstr "На рисунке ниже показан пример подключения символов питания."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:300
 #, no-wrap
 msgid "Power ports example"
-msgstr ""
+msgstr "Пример символов питания"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:300
@@ -10111,6 +10250,8 @@ msgid ""
 "In this example, ground (GND) is connected to power port VSS, and power port "
 "VCC is connected to VDD."
 msgstr ""
+"В этом примере земля (GND) соединена с выводом питания VSS, а символ питания "
+"VCC соединён с VDD."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:309
@@ -10119,17 +10260,21 @@ msgid ""
 "and GND are really connected to a power source.  Without these two flags, "
 "the ERC tool would diagnose: __Warning: power port not powered__."
 msgstr ""
+"Здесь видно два флага PWR_FLAG. Они указывают на то, что оба символа питания "
+"VCC и GND подключены к источнику питания. Без этих флагов, при проверке "
+"электрических правил, будет показано сообщение: __Предупреждение: символы "
+"питания не запитаны__."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:311
 msgid "All these symbols are components of the schematic library ``power''."
-msgstr ""
+msgstr "Все эти символы -- компоненты библиотеки ``power''."
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:313
 #, no-wrap
 msgid "\"No Connect\" flag"
-msgstr ""
+msgstr "Флаг \"Не подключено\""
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:318
@@ -10138,6 +10283,9 @@ msgid ""
 "rules check ensures that no connection has been accidentally left "
 "unconnected."
 msgstr ""
+"Эти символы очень полезны при контроле схемы с помощью электрических правил "
+"проектирования. С их помощью можно указать что выводы оставлены без "
+"соединений намеренно."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:323
@@ -10147,18 +10295,22 @@ msgid ""
 "these pins. These symbols do not have any influence on the generated "
 "netlists."
 msgstr ""
+"Так, если выводы нужно оставить не подключенными, расположите флаг \"Не "
+"подключено\" на их концах с помощью инструмента image:images/icons/noconn."
+"png[Флаг не подключено]. Эти символы никак не влияют на создаваемый список "
+"соединений."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:325
 #, no-wrap
 msgid "Drawing Complements"
-msgstr ""
+msgstr "Чертежные элементы"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:328
 #, no-wrap
 msgid "Text Comments"
-msgstr ""
+msgstr "Текстовые комментарии"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:337
@@ -10169,17 +10321,22 @@ msgid ""
 "png[])  are intended for this use, contrary to labels and wires, which are "
 "connection elements."
 msgstr ""
+"Может быть полезным (для уточнений в схеме) размещение пояснений в виде "
+"текста или рамок. Текстовые поля (кнопка image:images/icons/add_text.png[]) "
+"и графические линии (кнопка image:images/icons/add_dashed_line.png[]) "
+"предназначены для этих целей, в отличии от меток и проводников, которые "
+"служат для создания соединений."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:339
 msgid "Here you can find an example of a frame with a textual comment."
-msgstr ""
+msgstr "Здесь представлен пример рамки с текстовым комментарием."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:340
 #, no-wrap
 msgid "Frame with comment example"
-msgstr ""
+msgstr "Пример рамки с текстом"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:340
@@ -10191,7 +10348,7 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:343
 #, no-wrap
 msgid "Sheet title block"
-msgstr ""
+msgstr "Основная надпись"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:347
@@ -10199,35 +10356,37 @@ msgid ""
 "The title block is edited with the tool image:images/icons/sheetset.png[Page "
 "Settings tool]."
 msgstr ""
+"Содержимое основной надписи изменяется с помощью инструмента image:images/"
+"icons/sheetset.png[Редактор основной надписи]."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:348
 #, no-wrap
 msgid "Page settings dialog"
-msgstr ""
+msgstr "Диалог параметров страницы"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:350
 #, no-wrap
 msgid "Title block"
-msgstr ""
+msgstr "Основная надпись"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:350
 #, no-wrap
 msgid "images/en/title_block.png"
-msgstr ""
+msgstr "images/ru/title_block.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:353
 msgid "The sheet number (Sheet X/Y) is automatically updated."
-msgstr ""
+msgstr "Количество листов (Лист/Листов) подсчитывается автоматически."
 
 #. type: Title ===
 #: eeschema_schematic_creation_and_editing.adoc:355
 #, no-wrap
 msgid "Rescuing cached components"
-msgstr ""
+msgstr "Восстановление кэшированных компонентов"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:362
@@ -10239,6 +10398,11 @@ msgid ""
 "new versions. The new versions might not line up correctly or might be "
 "oriented differently, leading to a broken schematic."
 msgstr ""
+"По умолчанию, Eeschema загружает компоненты из библиотек согласно порядку "
+"настроенных путей. Это может создать проблемы при загрузке старых проектов: "
+"если компонент библиотеки изменился с момента использования его в проекте, "
+"то он будет автоматически обновлён до новой версии. Обновлённый компонент "
+"может иметь другие размеры или ориентацию, что в свою очередь испортит схему."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:367
@@ -10249,18 +10413,24 @@ msgid ""
 "libraries, Eeschema will scan the libraries for conflicts. Any conflicts "
 "found will be listed in the following dialog:"
 msgstr ""
+"В любом случае, при сохранении проекта рядом с ним создается кэш библиотеки "
+"компонентов. Это позволяет распространять проект без предоставления всех "
+"используемых библиотек. Если при загрузке проекта компонент существует в "
+"обоих библиотеках, кэшированной и системной, то Eeschema выполнит поиск "
+"конфликтов между ними. Все найденные проблемы будут показаны в таком "
+"диалоговом окне:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_schematic_creation_and_editing.adoc:368
 #, no-wrap
 msgid "Rescue conflicts dialog"
-msgstr ""
+msgstr "Диалог решения проблем :)"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:368
 #, no-wrap
 msgid "images/rescue-conflicts.png"
-msgstr ""
+msgstr "images/ru/rescue-conflicts.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:374
@@ -10271,6 +10441,11 @@ msgid ""
 "the old symbol to be saved into a special ``rescue'' library, and all the "
 "components using that symbol will be renamed to avoid naming conflicts."
 msgstr ""
+"Из данного примера видно, что проект изначально использовал диод с катодом "
+"вверху, но теперь в библиотеке он расположен катодом вниз. Такое изменение "
+"разрушит проект! Если нажать кнопку OK, старый компонент будет сохранён в "
+"специальной ``rescue'' библиотеке под новым именем, что решает проблему "
+"конфликта с новой версией компонента."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:378
@@ -10280,6 +10455,11 @@ msgid ""
 "back and run the rescue function again: choose \"Rescue Cached Components\" "
 "in the Tools menu to call up the dialog again."
 msgstr ""
+"Если нажать кнопку Cancel, никаких действий по восстановлению не будет "
+"предпринято и Eeschema загрузит новую версию компонента из библиотеки. Так "
+"как при этом не применяются никакие изменения, можно вернуться и запустить "
+"процесс восстановления заново с помощью пункта меню \"Инструменты\"->"
+"\"Спасти старые компоненты\"."
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:381
@@ -10289,6 +10469,10 @@ msgid ""
 "loaded. This option can be changed back in the Component Libraries "
 "preferences."
 msgstr ""
+"Чтобы этот диалог больше не отображался нужно нажать кнопку \"Больше никогда "
+"не показывать\". По умолчанию, ни какие действия не будут предприниматься и "
+"будут загружаться новые версии компонентов. Это поведение можно изменить "
+"(вернуть обратно) в диалоговом окне настроек библиотек."
 
 #. type: Title ==
 #: eeschema_viewlib.adoc:3
