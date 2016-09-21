@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-09-08 09:39+0300\n"
-"PO-Revision-Date: 2016-09-21 12:44+0300\n"
+"PO-Revision-Date: 2016-09-21 18:48+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -108,7 +108,7 @@ msgstr "14 июня 2016 года"
 #: eeschema_automatic_classification_annotation.adoc:3
 #, no-wrap
 msgid "Automatic classification Annotation"
-msgstr ""
+msgstr "Автоматическое обозначение компонентов схемы"
 
 #. type: Title ===
 #: eeschema_automatic_classification_annotation.adoc:5
@@ -131,13 +131,19 @@ msgid ""
 "icon image:images/icons/annotate.png[icons_annotate_png].  Here you find its "
 "main window."
 msgstr ""
+"Инструмент обозначения компонентов позволяет автоматически присвоить "
+"уникальный порядковый номер каждому компоненту в схеме. В составных "
+"компонентах суффиксы присваиваются частям таким образом, чтобы использовать "
+"как можно меньше целых компонентов. Инструмент обозначения компонентов "
+"вызывается с помощью кнопки image:images/icons/annotate."
+"png[icons_annotate_png]. Ниже показано его диалоговое окно."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:15
 #: eeschema_general_top_toolbar.adoc:107
 #, no-wrap
 msgid "annotate-dialog_img"
-msgstr ""
+msgstr "annotate-dialog_img"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:15
@@ -149,12 +155,13 @@ msgstr "images/ru/annotate-dialog.png"
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:18
 msgid "Various possibilities are available:"
-msgstr ""
+msgstr "Доступно несколько возможностей:"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:20
 msgid "Annotate all the components (reset existing annotation option)"
 msgstr ""
+"Обозначить все компоненты (параметр: Сбросить существующие обозначения)"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:22
@@ -162,6 +169,7 @@ msgid ""
 "Annotate all the components, but do not swap any previously annotated multi-"
 "unit parts."
 msgstr ""
+"Обозначить все компоненты, но не изменять назначенные ранее суффиксы частей."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:24
@@ -169,16 +177,18 @@ msgid ""
 "Annotate new components only (i.e. those whose reference finishes by? like "
 "IC? ) (keep existing annotation option)."
 msgstr ""
+"Обозначить только новые компоненты (обозначения которых заканчиваются знаком "
+"вопроса, например DA?) (параметр: Сохранить существующие обозначения)."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:25
 msgid "Annotate the whole hierarchy (use the entire schematic option)."
-msgstr ""
+msgstr "Обозначить всю иерархию листов (параметр: По всей схеме)."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:26
 msgid "Annotate the current sheet only (use current page only option)."
-msgstr ""
+msgstr "Обозначить только текущий лист (параметр: Только текущий лист)."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:33
@@ -190,6 +200,12 @@ msgid ""
 "you want to ensure that pin groupings are maintained, if you have already "
 "decided by yourself which subunits are best placed where."
 msgstr ""
+"Параметр ``Сбросить, но не менять аннотированные части компонентов'' "
+"позволяет сохранить все присвоенные суффиксы частям составных компонентов. "
+"Таким образом, если имеются компоненты U2A и U2B, то их можно заново "
+"обозначить как U1A и U1B, соответственно, но никак не U1A и U2B или U2B и "
+"U2A. Это будет полезным в случае, когда уже спланировано где каждая часть "
+"будет расположена и нужно сохранить соответствие выводов."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:36
@@ -197,6 +213,7 @@ msgid ""
 "The annotation order choice gives the method used to set the reference "
 "number inside each sheet of the hierarchy."
 msgstr ""
+"Выбранный порядок обозначения будет использоваться на каждом листе иерархии."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:40
@@ -205,11 +222,16 @@ msgid ""
 "project (all sheets) and to the new components, if you don't want to modify "
 "previous annotations."
 msgstr ""
+"Исключением является случай, когда вся схема уже обозначена (на всех листах) "
+"и добавляются новые компоненты, которые обозначаются отдельно, чтобы не "
+"нарушать уже присвоенные обозначения."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:42
 msgid "The Annotation Choice gives the method used to calculate reference Id:"
 msgstr ""
+"Выбор варианта обозначения позволяет использовать разные методы для "
+"образования порядкового номера:"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:46
@@ -218,6 +240,9 @@ msgid ""
 "each reference prefix). If a previous annotation exists, not yet in use "
 "numbers will be used."
 msgstr ""
+"Использовать первый свободный номер в схеме: компоненты обозначаются от 1 "
+"(для каждого типа элемента). Если присутствуют уже обозначенные компоненты, "
+"будут использоваться не занятые номера."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:51
@@ -228,6 +253,11 @@ msgid ""
 "annotation tool uses the number 200 and more, and annotation for sheet 2 "
 "will start from the next free number."
 msgstr ""
+"Начать с номер_листа*100 и использовать первый свободный: порядковые номера "
+"начинаются с 101 для первого листа, с 201 для второго и т.д. Если имеется "
+"более 99 элементов одного типа (DA, R, ...) внутри первого листа то "
+"инструмент обозначения будет использовать порядковый номер 200 и более, а "
+"обозначения на втором листе начнутся со следующего свободного."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:53
@@ -235,75 +265,79 @@ msgid ""
 "Start to sheet number*1000 and use first free number. Annotation start from "
 "1001 for the sheet 1, from 2001 for the sheet 2."
 msgstr ""
+"Начать с номер_листа*1000 и использовать первый свободный. Порядковые номера "
+"начинаются с 1001 на первом листе, с 2001 на втором и т.д."
 
 #. type: Title ===
 #: eeschema_automatic_classification_annotation.adoc:55
 #, no-wrap
 msgid "Some examples"
-msgstr ""
+msgstr "Примеры работы инструмента"
 
 #. type: Title ====
 #: eeschema_automatic_classification_annotation.adoc:58
 #, no-wrap
 msgid "Annotation order"
-msgstr ""
+msgstr "Порядок обозначения"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:61
 msgid "This example shows 5 elements placed, but not annotated."
-msgstr ""
+msgstr "На этом примере показано 5 элементов без обозначения."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:62
 #, no-wrap
 msgid "eeschema_annotation_order_none_png"
-msgstr ""
+msgstr "eeschema_annotation_order_none_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:62
 #, no-wrap
 msgid "images/eeschema_annotation_order_none.png"
-msgstr ""
+msgstr "images/eeschema_annotation_order_none.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:65
 msgid ""
 "After the annotation tool Is executed, the following result is obtained."
 msgstr ""
+"После работы инструмента обозначения компонентов будет получен следующий "
+"результат."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:67
 msgid "Sort by X position."
-msgstr ""
+msgstr "Сортировка компонентов по X-координате."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:68
 #, no-wrap
 msgid "eeschema_annotation_order_x_png"
-msgstr ""
+msgstr "eeschema_annotation_order_x_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:68
 #, no-wrap
 msgid "images/eeschema_annotation_order_x.png"
-msgstr ""
+msgstr "images/eeschema_annotation_order_x.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:71
 msgid "Sort by Y position."
-msgstr ""
+msgstr "Сортировка компонентов по Y-координате."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:72
 #, no-wrap
 msgid "eeschema_annotation_order_y_png"
-msgstr ""
+msgstr "eeschema_annotation_order_y_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:72
 #, no-wrap
 msgid "images/eeschema_annotation_order_y.png"
-msgstr ""
+msgstr "images/eeschema_annotation_order_y.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:76
@@ -311,12 +345,14 @@ msgid ""
 "You can see that four 74LS00 gates were distributed in U1 package, and that "
 "the fifth 74LS00 has been assigned to the next, U2."
 msgstr ""
+"Как можно заметить, четыре части элемента 74LS00 образуют один компонент U1, "
+"а пятый -- U2."
 
 #. type: Title ====
 #: eeschema_automatic_classification_annotation.adoc:78
 #, no-wrap
 msgid "Annotation Choice"
-msgstr ""
+msgstr "Выбор варианта обозначений"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:82
@@ -324,18 +360,20 @@ msgid ""
 "Here is an annotation in sheet 2 where the option use first free number in "
 "schematic was set."
 msgstr ""
+"Далее приведён пример обозначения на листе №2 с применением параметра "
+"\"Использовать первый свободный номер на схеме\"."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:83
 #, no-wrap
 msgid "eeschema_annotation_choice_free_png"
-msgstr ""
+msgstr "eeschema_annotation_choice_free_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:83
 #, no-wrap
 msgid "images/eeschema_annotation_choice_free.png"
-msgstr ""
+msgstr "images/eeschema_annotation_choice_free.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:87
@@ -343,18 +381,20 @@ msgid ""
 "Option start to sheet number*100 and use first free number give the "
 "following result."
 msgstr ""
+"Применение параметра \"Начать с номер листа*100 и использовать первый "
+"свободный номер\" даст следующий результат."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:88
 #, no-wrap
 msgid "eeschema_annotation_choice_x100_png"
-msgstr ""
+msgstr "eeschema_annotation_choice_x100_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:88
 #, no-wrap
 msgid "images/eeschema_annotation_choice_x100.png"
-msgstr ""
+msgstr "images/eeschema_annotation_choice_x100.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:92
@@ -362,18 +402,20 @@ msgid ""
 "The option start to sheet number*1000 and use first free number gives the "
 "following result."
 msgstr ""
+"Применение параметра \"Начать с номер листа*1000 и использовать первый "
+"свободный номер\" даст следующий результат."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:93
 #, no-wrap
 msgid "eeschema_annotation_choice_x1000_png"
-msgstr ""
+msgstr "eeschema_annotation_choice_x1000_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:93
 #, no-wrap
 msgid "images/eeschema_annotation_choice_x1000.png"
-msgstr ""
+msgstr "images/eeschema_annotation_choice_x1000.png"
 
 #. type: Title ==
 #: eeschema_component_library_editor.adoc:3
