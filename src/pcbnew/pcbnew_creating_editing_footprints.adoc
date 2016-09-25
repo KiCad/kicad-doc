@@ -393,36 +393,137 @@ possessing the keyword `TO220`
 
 === 3-dimensional visualisation
 
-A footprint may have been associated with a file containing a
-three-dimensional representation of itself. In order to associate
-such a file with a footprint, select the 3D Settings tab. The options
-panel is the following:
+A footprint may be associated with a file containing a three-dimensional
+representation of the component. In order to associate a footprint with
+a model file, select the _3D Settings_ tab as shown below.
 
+[[img-Modedit_module_3d_options]]
+.3D Model selection interface
 image::images/Modedit_module_3d_options.png[scaledwidth="60%"]
 
-The data information should be provided:
+The buttons on the right have the following functions:
 
-* The file containing the 3D representation (created by the 3D modeler
-  Wings3D, in vrml format, via the export to vrml command).
-* The default path is kicad/modules/package3d. In the example, the file
-  name is discret/to_220horiz.wrl, using the default path)
-* The x, y and z scales.
-* The offset with respect to the anchor point of the footprint (usually
-  zero).
-* The initial rotation in degrees about each axis (usually zero).
+* *Add 3D Shape* shows a 3D file selection dialog and creates a
+new model entry for the component.
+* *Remove 3D Shape* deletes the selected model entry.
+* *Edit Filename* shows a text editor for manual entry of
+the model file name.
+* *Configure Paths* shows a configuration dialog which
+allows the user to edit the list of path aliases and
+alias values.
 
-Setting scale allows:
+The _3D Settings_ tab contains a panel with a preview of the
+selected model and the scale, offset, and rotation data
+for the model.
 
-* To use the same 3D file for footprints which have similar shapes but different sizes (resistors, capacitors, SMD components...)
-* For small (or very large) packages, a better use of the Wings3D grid
-  is to scale *0.1 inch in Pcbnew = 1 grid unit* in Wings3D.
+Scale values are useful for visualisation
+formats such as VRML1, VRML2, and X3D. Since the model may
+have been produced by any number of VRML/X3D editors or
+exporters and VRML does not enforce a unit of length for
+the models, users can enter an appropriate scale value to
+ensure that the model appears as it should within the 3DViewer.
+Some users employ a simple VRML box as a generic model for
+components and select scale values so that the box
+has the correct size to represent the component. For Mechanical
+CAD (MCAD) models the scale values should be left at unity.
+MCAD formats always specify a unit length and any exporters
+which make use of MCAD data formats will ignore the scale values.
+However the 3DViewer will always apply the scale values; if
+scale values other than unity are used with MCAD models, the
+output of the 3DViewer will differ from any exported MCAD
+models such as IDF.
 
-If such a file has been specified, it is possible to view the
-component in 3D.
+Offset and Rotation values are typically required to align
+a 3D model with a footprint. Due to differences in 3D modeling
+software as well as differences in how users construct a
+model, in the vast majority of cases it is necessary for
+users to enter Offset and Rotation values to achieve the
+desired positioning of a 3D model. The Rotation values are
+given in degrees and are applied successively in the order
+ZYX; the convention used is that a positive angle results
+in a clockwise rotation of the part when viewing from the
+positive position of the axis towards the origin.
 
-image::images/Modedit_footprint_3d_preview.png[scaledwidth="80%"]
+KiCad supports 3D model formats via a plugin system and
+support is provided for the visual model formats VRML1,
+VRML2, and X3D as well as the MCAD format IDF. The MCAD
+formats IGES and STEP are supported via the OCE Plugin
+which requires a suitable version of the OpenCascade or
+OpenCascade Community Edition (OCE) software.
 
-The 3D model will automatically appear in the 3D representation of the printed circuit board.
+
+==== 3D Model Paths
+In the past KiCad used a fixed path to a directory of
+3D models and later relied on the _KISYS3DMOD_ environment
+variable to specify the location of the model directory.
+Other base directories for models could be specified by
+using additional environment variables. The current
+version of KiCad has a specialised _alias_ system for
+handling 3D model names. The aim of the new file name
+management system (filename resolution system)
+is to provide a scheme which is compatible with earlier
+versions of KiCad while offering a more flexible mechanism
+for specifying 3D model file names and improving the
+ability to share project files.
+
+Due to the requirement to support previous schemes while
+offering a flexible new scheme for finding 3D models, there
+are two distinct methods for specifying base search paths
+for 3D models.
+
+In order to maintain the legibility of the _kicad_pcb_ and
+_pretty_ data files, KiCad prefers to use filenames which
+have been shortened via the use of environment variables
+(old method) or aliases (new method). Since setting environment
+variables can be cumbersome especially on GUI-based
+operating systems, the environment variable scheme for
+supporting model search paths has been extended to make
+use of KiCad's existing internally defined _Path Configuration_
+dialog.  This dialog is available via the _Preferences->Configure Paths_
+menu and is shown below. Setting additional paths within this
+dialog will extend the search paths used to find 3D model files.
+The dialog does not actually set environment variables but the
+filename resolution system acts as if it does; in cases where
+an actual environment variable with the same name is
+defined, the environment variable's value overrides any
+internally defined values. File names relative to these
+defined variables begin with _${MY_ENV_VAR}_ where _MY_ENV_VAR_
+is a variable defined via the _Path Configuration_ dialog or
+an actual environment variable.
+
+[[img-Modedit_internal_path_config]]
+.KiCad Path Configuration dialog
+image::images/Modedit_internal_path_config.png[scaledwidth="60%"]
+
+The newer scheme to support shortened file names is the
+_alias_ system. In this system a path begins with the
+string _:my alias:_ where _my alias_ is a text string which
+is preferably chosen to be short while also being significant
+to the user; for example an alias to a directory containing the
+official KiCad models may have an alias _Official Models_ while
+your personal model collection may have an alias _My Models_.
+The aliases may be set up by clicking on the *Configure Paths*
+button within the *3D Settings* tab shown previously. The
+alias configuration dialog is shown below.
+
+[[img-Modedit_alias_path_config]]
+.KiCad Alias Configuration dialog
+image::images/Modedit_alias_path_config.png[scaledwidth="60%"]
+
+3D model files can be selected by clicking *Add 3D Shape* to
+display the 3D Model Browser shown below. The model browser
+provides a 3D preview, file filter, and a drop-down path
+selector which contains the current list of search paths
+defined via environment variables or aliases. Depending on
+the model size and complexity it may take a few seconds for
+a model to be displayed when it is selected. In an extreme case
+a BGA package model which was used during testing took around
+12 seconds to display.
+
+[[img-Modedit_3D_file_browser]]
+.KiCad 3D File Browser
+image::images/Modedit_3D_file_browser.png[scaledwidth="60%"]
+
 
 === Saving a footprint into the active library
 
