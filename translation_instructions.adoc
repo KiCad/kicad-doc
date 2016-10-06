@@ -124,6 +124,30 @@ Linux is installable with just:
 
  sudo gem install git-whistles
 
+[NOTE]
+====
+
+Please note that (actual stable, at the time of writing) 1.1.3 version of
+git-whistles have a small but fastidious bug. If you see a message like
+this:
+
+ git merge-po
+ trap: ERR: bad trap
+
+then what you all have to do is to change the first line of 
+
+ /var/lib/gems/2.3.0/gems/git-whistles-1.1.3/libexec/git-merge-po.sh 
+
+from
+
+ #!/bin/sh
+
+to
+
+ #!/bin/bash
+
+====
+
 If some errors arise, try updating gem first:
 
  sudo gem update --system
