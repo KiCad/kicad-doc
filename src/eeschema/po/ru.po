@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-09-08 09:39+0300\n"
-"PO-Revision-Date: 2016-09-28 08:38+0300\n"
+"PO-Revision-Date: 2016-10-15 09:42+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -421,13 +421,13 @@ msgstr "images/eeschema_annotation_choice_x1000.png"
 #: eeschema_component_library_editor.adoc:3
 #, no-wrap
 msgid "Component Library Editor"
-msgstr ""
+msgstr "Редактор библиотеки компонентов"
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:6
 #, no-wrap
 msgid "General Information About Component Libraries"
-msgstr ""
+msgstr "Общая информация о библиотеках компонентов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:16
@@ -440,12 +440,20 @@ msgid ""
 "components to files, and import components from files. The library editing "
 "tool provides a simple way to manage component library files."
 msgstr ""
+"Компонент -- это элемент схемы, который содержит условное графическое "
+"обозначение (УГО), электрические соединения и поля, определяющие компонент. "
+"Компоненты, используемые в схеме, хранятся в библиотеках. Eeschema содержит "
+"инструмент для создания библиотек компонентов, который позволяет создавать "
+"новые библиотеки, добавлять, удалять и перемещать компоненты меду "
+"библиотеками, экспортировать их в файлы и импортировать обратно. Инструмент "
+"редактирования библиотек предоставляет простой путь к управлению файлами "
+"библиотек компонентов."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:18
 #, no-wrap
 msgid "Component Library Overview"
-msgstr ""
+msgstr "Обзор библиотеки компонентов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:22
@@ -453,11 +461,14 @@ msgid ""
 "A component library is composed of one or more components. Generally the "
 "components are logically grouped by function, type, and/or manufacturer."
 msgstr ""
+"Библиотека компонентов состоит из одного или нескольких компонентов. Обычно, "
+"компоненты объединяют по функциональному назначению, типу, и/или "
+"производителю."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:24
 msgid "A component is composed of:"
-msgstr ""
+msgstr "Компонент состоит из:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:27
@@ -465,6 +476,8 @@ msgid ""
 "Graphical items (lines, circles, arcs, text, etc ) that provide the symbolic "
 "definition."
 msgstr ""
+"Графических элементов (линий, окружностей, дуг, текста и пр.), определяющих "
+"его графическое представление."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:30
@@ -473,6 +486,10 @@ msgid ""
 "active, etc ) and electrical properties (input, output, bidirectional, etc.) "
 "used by the Electrical Rules Check (ERC) tool."
 msgstr ""
+"Выводов, которые имеют как графические свойства (линия, динамический, "
+"инверсный, тактовый по заднему фронту и пр.) и электрические свойства (вход, "
+"выход, двунаправленный и т.д.), которые используются для проверки "
+"электрических правил проектирования (ERC)."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:32
@@ -480,6 +497,8 @@ msgid ""
 "Fields such as references, values, corresponding footprint names for PCB "
 "design, etc."
 msgstr ""
+"Полей, таких как обозначение, значение, назначенное посадочное место для "
+"проекта печатной платы и другие."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:35
@@ -488,16 +507,19 @@ msgid ""
 "derivatives such as 74LS00, 74HC00, and 7437. All of these aliases share the "
 "same library component."
 msgstr ""
+"Псевдонимов, используемых для связывания подобных компонентов, таких как "
+"7400 и его аналогов 74LS00, 74HC00 и 7437. Все эти псевдонимы ссылаются к "
+"одному и тому же компоненту."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:37
 msgid "Proper component designing requires:"
-msgstr ""
+msgstr "Для создания правильного компонента необходимо:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:39
 msgid "Defining if the component is made up of one or more units."
-msgstr ""
+msgstr "Определить, состоит ли компонент из нескольких частей."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:41
@@ -505,6 +527,8 @@ msgid ""
 "Defining if the component has an alternate body style also known as a De "
 "Morgan representation."
 msgstr ""
+"Определить, имеет ли компонент альтернативное начертание, также известное "
+"как дополнительное обозначение по де Моргану."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:43
@@ -512,6 +536,8 @@ msgid ""
 "Designing its symbolic representation using lines, rectangles, circles, "
 "polygons and text."
 msgstr ""
+"Начертить его графическое обозначение используя линии, прямоугольники, "
+"окружности, полигоны и текст."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:46
@@ -519,6 +545,9 @@ msgid ""
 "Adding pins by carefully defining each pin's graphical elements, name, "
 "number, and electrical property (input, output, tri-state, power port, etc.)."
 msgstr ""
+"Добавить выводы, внимательно назначая каждому графическое представление, "
+"имя, номер и электрический тип (вход, выход, трехстабильный, вывод питания и "
+"т.п.)."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:49
@@ -526,6 +555,9 @@ msgid ""
 "Adding an alias if other components have the same symbol and pin out or "
 "removing one if the component has been created from another component."
 msgstr ""
+"Добавить псевдонимы, если другие компоненты имеют такое же обозначение и "
+"расположение выводов, или удалить их, если компонент был создан на основе "
+"другого."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:51
@@ -533,6 +565,8 @@ msgid ""
 "Adding optional fields such as the name of the footprint used by the PCB "
 "design software and/or defining their visibility."
 msgstr ""
+"Добавить дополнительные поля, такие как имя посадочного места, используемого "
+"при проектировании печатной платы, и/или установить их видимость."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:53
@@ -540,17 +574,19 @@ msgid ""
 "Documenting the component by adding a description string and links to data "
 "sheets, etc."
 msgstr ""
+"Документировать компонент, путём заполнения строки описания, указания ссылки "
+"на справочную документацию и пр."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:54
 msgid "Saving it in the desired library."
-msgstr ""
+msgstr "Сохранить его в спроектированной библиотеке."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:56
 #, no-wrap
 msgid "Component Library Editor Overview"
-msgstr ""
+msgstr "Обзор редактора библиотеки компонентов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:62
@@ -560,24 +596,28 @@ msgid ""
 "editing area. Not all commands are available on the tool bars but can be "
 "accessed using the menus."
 msgstr ""
+"Основное окно редактора библиотек компонентов показано ниже. Оно состоит из "
+"троих панелей инструментов для быстрого доступа к основным командам и поля "
+"для просмотра и редактирования. На панелях инструментов расположены не все "
+"доступные команды, остальные можно найти в меню."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:63
 #, no-wrap
 msgid "libedit_main_window_png"
-msgstr ""
+msgstr "libedit_main_window_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:63
 #, no-wrap
 msgid "images/libedit_main_window.png"
-msgstr ""
+msgstr "images/ru/libedit_main_window.png"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:66
 #, no-wrap
 msgid "Main Toolbar"
-msgstr ""
+msgstr "Основная панель инструментов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:71
@@ -586,12 +626,16 @@ msgid ""
 "below consists of the library management tools, undo/redo commands, zoom "
 "commands, and component properties dialogs."
 msgstr ""
+"Основная панель инструментов, как обычно, расположена в верхней части "
+"основного окна и состоит из команд управления библиотекой, отмены/повторения "
+"действий, масштабирования и вызова диалогов настройки компонента, как "
+"показано ниже."
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:72
 #, no-wrap
 msgid "images/toolbar_libedit.png"
-msgstr ""
+msgstr "images/ru/toolbar_libedit.png"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:80
@@ -602,6 +646,10 @@ msgid ""
 "library is currently selected or no changes to the currently selected\n"
 "library have been made.\n"
 msgstr ""
+"|image:images/icons/save_library.png[icons/save_library_png]\n"
+"|Сохранить выбранную в данный момент библиотеку. Кнопка не активна, если\n"
+"не выбрана ни одна из библиотек или не было сделано никаких изменений в\n"
+"текущей библиотеке.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:83
@@ -610,6 +658,8 @@ msgid ""
 "|image:images/icons/library.png[icons/library_png]\n"
 "|Select the library to edit.\n"
 msgstr ""
+"|image:images/icons/library.png[icons/library_png]\n"
+"|Выбрать библиотеку для редактирования.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:87
@@ -619,6 +669,9 @@ msgid ""
 "|Delete a component from the currently selected library or any library\n"
 "defined by the project if no library is currently selected.\n"
 msgstr ""
+"|image:images/icons/delete.png[icons/delete_png]\n"
+"|Удалить компонент из текущей библиотеки или другой, определённой в\n"
+"проекте, если ни одна из библиотек не выбрана.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:91
@@ -628,6 +681,9 @@ msgid ""
 "|Open the component library browser to select the library and component\n"
 "to edit.\n"
 msgstr ""
+"|image:images/icons/library_browse.png[icons/library_browse_png]\n"
+"|Открыть просмотрщик компонентов для выбора библиотеки или компонента для\n"
+"дальнейшего редактирования.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:94
@@ -636,6 +692,8 @@ msgid ""
 "|image:images/icons/new_component.png[icons/new_component_png]\n"
 "|Create a new component.\n"
 msgstr ""
+"|image:images/icons/new_component.png[icons/new_component_png]\n"
+"|Создать новый компонент.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:97
@@ -644,6 +702,8 @@ msgid ""
 "|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
 "|Load component from currently selected library for editing.\n"
 msgstr ""
+"|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
+"|Загрузить компонент из текущей библиотеки для редактирования.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:100
@@ -652,6 +712,8 @@ msgid ""
 "|image:images/icons/copycomponent.png[icons/copycomponent_png]\n"
 "|Create a new component from the currently loaded component.\n"
 msgstr ""
+"|image:images/icons/copycomponent.png[icons/copycomponent_png]\n"
+"|Создать новый компонент из выбранного в данный момент.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:104
@@ -661,6 +723,9 @@ msgid ""
 "|Save the current component changes in memory. The library file is not\n"
 "changed.\n"
 msgstr ""
+"|image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]\n"
+"|Сохранить изменения текущего компонента в памяти. Файл библиотеки остается\n"
+"без изменений.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:107
@@ -669,6 +734,8 @@ msgid ""
 "|image:images/icons/import.png[icons/import_png]\n"
 "|Import one component from a file.\n"
 msgstr ""
+"|image:images/icons/import.png[icons/import_png]\n"
+"|Импортировать один компонент из файла.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:110
@@ -678,6 +745,8 @@ msgid ""
 "|image:images/icons/export.png[icons/export_png]\n"
 "|Export the current component to a file.\n"
 msgstr ""
+"|image:images/icons/export.png[icons/export_png]\n"
+"|Экспортировать текущий компонент в файл.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:114
@@ -687,6 +756,9 @@ msgid ""
 "|Create a new library file containing the current component. Note: new\n"
 "libraries are not automatically added to the project.\n"
 msgstr ""
+"|image:images/icons/new_library.png[icons/new_library_png]\n"
+"|Создать новую библиотеку, содержащую текущий компонент. Примечание:\n"
+"новая библиотека не добавляется в проект автоматически.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:117
@@ -695,6 +767,8 @@ msgid ""
 "|image:images/icons/undo.png[icons/undo_png]\n"
 "|Undo last edit.\n"
 msgstr ""
+"|image:images/icons/undo.png[icons/undo_png]\n"
+"|Отменить последнее изменение.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:120
@@ -703,6 +777,8 @@ msgid ""
 "|image:images/icons/redo.png[icons/redo_png]\n"
 "|Redo last undo.\n"
 msgstr ""
+"|image:images/icons/redo.png[icons/redo_png]\n"
+"|Повторить предыдущее изменение.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:123
@@ -711,6 +787,8 @@ msgid ""
 "|image:images/icons/part_properties.png[icons/part_properties_png]\n"
 "|Edit the current component properties.\n"
 msgstr ""
+"|image:images/icons/part_properties.png[icons/part_properties_png]\n"
+"|Редактировать свойства текущего компонента.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:126
@@ -719,6 +797,8 @@ msgid ""
 "|image:images/icons/add_text.png[icons/add_text_png]\n"
 "|Edit the fields of current component.\n"
 msgstr ""
+"|image:images/icons/add_text.png[icons/add_text_png]\n"
+"|Редактировать поля текущего компонента.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:129
@@ -727,30 +807,35 @@ msgid ""
 "|image:images/icons/erc.png[icons/erc_png]\n"
 "|Test the current component for design errors.\n"
 msgstr ""
+"|image:images/icons/erc.png[icons/erc_png]\n"
+"|Проверить текущий компонент на наличие ошибок проектирования.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:131
 #, no-wrap
 msgid "|image:images/icons/zoom_in.png[]|Zoom in.\n"
-msgstr ""
+msgstr "|image:images/icons/zoom_in.png[]|Увеличить масштаб.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:133
 #, no-wrap
 msgid "|image:images/icons/zoom_out.png[]|Zoom out.\n"
-msgstr ""
+msgstr "|image:images/icons/zoom_out.png[]|Уменьшить масштаб.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:135
 #, no-wrap
 msgid "|image:images/icons/zoom_redraw.png[]|Refresh display.\n"
-msgstr ""
+msgstr "|image:images/icons/zoom_redraw.png[]|Обновить изображение.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:137
 #, no-wrap
 msgid "|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit component in display.\n"
 msgstr ""
+"|image:images/icons/zoom_fit_in_page.png[]\n"
+"|Масштабировать так, чтобы изображение компонента полностью поместилось\n"
+"на экране.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:141
@@ -760,6 +845,9 @@ msgid ""
 "|Select the normal body style. The button is disabled if the current\n"
 "component does not have an alternate body style.\n"
 msgstr ""
+"|image:images/icons/morgan1.png[icons/morgan1_png]\n"
+"|Выбрать нормальное обозначение компонента. Эта кнопка недоступна, если\n"
+"текущий компонент не имеет дополнительных обозначений (по де Моргану).\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:145
@@ -769,6 +857,9 @@ msgid ""
 "|Select the alternate body style. The button is disabled if the current\n"
 "component does not have an alternate body style.\n"
 msgstr ""
+"|image:images/icons/morgan2.png[icons/morgan2_png]\n"
+"|Выбрать дополнительное обозначение компонента. Эта кнопка недоступна, если\n"
+"текущий компонент не имеет дополнительных обозначений (по де Моргану).\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:149
@@ -778,6 +869,9 @@ msgid ""
 "|Show the associated documentation. The button will be disabled if no\n"
 "documentation is defined for the current component.\n"
 msgstr ""
+"|image:images/icons/datasheet.png[icons/datasheet_png]\n"
+"|Показать документацию для текущего компонента. Кнопка не активна, если\n"
+"файл документации не указан в свойствах компонента.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:153
@@ -787,6 +881,9 @@ msgid ""
 "|Select the unit to display. The drop down control will be disabled if\n"
 "the current component is not derived from multiple units.\n"
 msgstr ""
+"|image:images/ru/toolbar_libedit_part.png[alt=\"images/ru/toolbar_libedit_part.png\",width=\"80%\"]\n"
+"|Выбор части для отображения. Выпадающий список не активен, если текущий\n"
+"компонент не состоит из нескольких частей.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:157
@@ -796,6 +893,9 @@ msgid ""
 "|Select the alias. The drop down control will be disabled if the\n"
 "current component does not have any aliases.\n"
 msgstr ""
+"|image:images/ru/toolbar_libedit_alias.png[alt=\"images/ru/toolbar_libedit_part.png\",width=\"80%\"]\n"
+"|Выбор псевдонима. Выпадающий список не активен, если текущий\n"
+"компонент не имеет псевдонимов.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:161
@@ -805,6 +905,10 @@ msgid ""
 "|Pin editing: independent editing for pin shape and position for\n"
 "components with multiple units and alternate symbols.\n"
 msgstr ""
+"|image:images/icons/pin2pin.png[icons/pin2pin_png]\n"
+"|Редактировать выводы: редактирование формы и положения отличающихся\n"
+"выводов в компонентах с несколькими частями и/или дополнительными\n"
+"обозначениями.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:164
@@ -813,12 +917,14 @@ msgid ""
 "|image:images/icons/pin_table.png[icons/pin_table_png]\n"
 "|Show pin table.\n"
 msgstr ""
+"|image:images/icons/pin_table.png[icons/pin_table_png]\n"
+"|Показать таблицу выводов.\n"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:167
 #, no-wrap
 msgid "Element Toolbar"
-msgstr ""
+msgstr "Панель инструментов чертёжных элементов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:172
@@ -827,6 +933,9 @@ msgid ""
 "window allows you to place all of the elements required to design a "
 "component. The table below defines each toolbar button."
 msgstr ""
+"Вертикальная панель инструментов, расположенная с правой стороны основного "
+"окна, позволяет размещать все необходимые элементы обозначения компонента. В "
+"таблице ниже приведено описание каждой кнопки."
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:182
@@ -840,6 +949,12 @@ msgid ""
 "select tool will open the properties dialog for the object under the\n"
 "cursor.\n"
 msgstr ""
+"|image:images/icons/cursor.png[icons/cursor_png]\n"
+"|Инструмент выделения. Щелчок правой кнопки мыши на выделенном элементе\n"
+"открывает контекстное меню для объекта под курсором. При нажатии левой\n"
+"кнопки мыши, на информационной панели, внизу основного окна, будут показаны\n"
+"свойства объекта, находящегося под курсором. Двойной щелчок левой кнопки\n"
+"мыши откроет диалоговое окно свойств объекта, что находится под курсором.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:185
@@ -848,6 +963,8 @@ msgid ""
 "|image:images/icons/pin.png[icons/pin_png]\n"
 "|Pin tool. Left-click to add a new pin.\n"
 msgstr ""
+"|image:images/icons/pin.png[icons/pin_png]\n"
+"|Добавить вывод. Щелчок левой кнопки мыши для добавления нового вывода.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:188
@@ -856,6 +973,9 @@ msgid ""
 "|image:images/icons/add_text.png[icons/add_text_png]\n"
 "|Graphical text tool. Left-click to add a new graphical text item.\n"
 msgstr ""
+"|image:images/icons/add_text.png[icons/add_text_png]\n"
+"|Добавить текст. Щелчок левой кнопки мыши для добавления нового текстового\n"
+"элемента.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:193
@@ -866,6 +986,10 @@ msgid ""
 "graphical rectangle. Left-click again to place the opposite corner of\n"
 "the rectangle.\n"
 msgstr ""
+"|image:images/icons/add_rectangle.png[icons/add_rectangle_png]\n"
+"|Добавить прямоугольник. Щелчок левой кнопки мыши для расположения первого\n"
+"угла прямоугольника. Ещё один щелчок для расположения второго,\n"
+"противоположного, угла прямоугольника.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:197
@@ -875,6 +999,9 @@ msgid ""
 "|Circle tool. Left-click to begin drawing a new graphical circle from\n"
 "the center. Left-click again to define the radius of the circle.\n"
 msgstr ""
+"|image:images/icons/add_circle.png[icons/add_circle_png]\n"
+"|Добавить окружность. Щелчок левой кнопки мыши для начала черчения новой\n"
+"окружности от центра. Ещё один щелчок для установки радиуса окружности.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:202
@@ -885,6 +1012,10 @@ msgid ""
 "center. Left-click again to define the first arc end point. Left-click\n"
 "again to define the second arc end point.\n"
 msgstr ""
+"|image:images/icons/add_arc.png[icons/add_arc_png]\n"
+"|Добавление дуги. Щелчок левой кнопки мыши для начала черчения новой дуги,\n"
+"начиная из центра. Ещё один щелчок для установки первой конечной точки.\n"
+"Последний щелчок для установки второй конечной точки.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:207
@@ -895,6 +1026,11 @@ msgid ""
 "in the current component. Left-click for each addition polygon line.\n"
 "Double-left-click to complete the polygon.\n"
 msgstr ""
+"|image:images/icons/add_polygon.png[icons/add_polygon_png]\n"
+"|Добавление полигона. Щелчок левой кнопки мыши для начала черчения\n"
+"полигональной линии для текущего компонента. Щелчок левой кнопки мыши для\n"
+"добавления следующего отрезка полигональной лини. Двойной щелчок левой\n"
+"кнопки мыши для завершения полигона.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:210
@@ -903,6 +1039,9 @@ msgid ""
 "|image:images/icons/anchor.png[icons/anchor_png]\n"
 "|Anchor tool. Left-click to set the anchor position of the component.\n"
 msgstr ""
+"|image:images/icons/anchor.png[icons/anchor_png]\n"
+"|Точка привязки компонента. Щелчок левой кнопки мыши для установки точки\n"
+"привязки компонента."
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:213
@@ -911,6 +1050,8 @@ msgid ""
 "|image:images/icons/import.png[icons/import_png]\n"
 "|Import a component from a file.\n"
 msgstr ""
+"|image:images/icons/import.png[icons/import_png]\n"
+"|Импорт компонента из файла.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:219
@@ -919,12 +1060,15 @@ msgid ""
 "|image:images/icons/delete.png[icons/delete_png]\n"
 "|Delete tool. Left-click to delete an object from the current component.\n"
 msgstr ""
+"|image:images/icons/delete.png[icons/delete_png]\n"
+"|Инструмент удаления.Щелчок левой кнопки мыши для удаления объекта из\n"
+"текущего компонента.\n"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:222
 #, no-wrap
 msgid "Options Toolbar"
-msgstr ""
+msgstr "Панель инструментов параметров"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:227
@@ -933,6 +1077,9 @@ msgid ""
 "window allows you to set some of the editor drawing options. The table below "
 "defines each tool bar button."
 msgstr ""
+"Вертикальная панель инструментов, расположенная с левой стороны основного "
+"окна, позволяет установить некоторые параметры редактирования. В таблице "
+"ниже приведена таблица с описанием каждой кнопки."
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:232
@@ -941,6 +1088,8 @@ msgid ""
 "|image:images/icons/grid.png[icons/grid_png]\n"
 "|Toggle grid visibility on and off.\n"
 msgstr ""
+"|image:images/icons/grid.png[icons/grid_png]\n"
+"|Переключить видимость сетки (вкл. или выкл.)\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:235
@@ -949,6 +1098,8 @@ msgid ""
 "|image:images/icons/unit_inch.png[icons/unit_inch_png]\n"
 "|Set units to inches.\n"
 msgstr ""
+"|image:images/icons/unit_inch.png[icons/unit_inch_png]\n"
+"|Установить в качестве единиц измерения -- дюймы.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:238
@@ -957,6 +1108,8 @@ msgid ""
 "|image:images/icons/unit_mm.png[icons/unit_mm_png]\n"
 "|Set units to millimeters.\n"
 msgstr ""
+"|image:images/icons/unit_mm.png[icons/unit_mm_png]\n"
+"|Установить в качестве единиц измерения -- миллиметры.\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:241
@@ -965,12 +1118,14 @@ msgid ""
 "|image:images/icons/cursor_shape.png[icons/cursor_shape_png]\n"
 "|Toggle full screen cursor on and off.\n"
 msgstr ""
+"|image:images/icons/cursor_shape.png[icons/cursor_shape_png]\n"
+"|Переключить режим отображения курсора.\n"
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:244
 #, no-wrap
 msgid "Library Selection and Maintenance"
-msgstr ""
+msgstr "Выбор и управление библиотекой"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:251
@@ -981,11 +1136,18 @@ msgid ""
 "put in this library. The library name of component is the contents of its "
 "value field."
 msgstr ""
+"Выбрать текущую библиотеку можно с помощью кнопки image:images/icons/library."
+"png[icons/library_png], которая показывает все доступные библиотеки и "
+"позволяет выбрать одну из них. Когда компонент загружен или сохранён, он "
+"будет помещен в эту библиотеку. В качестве имени компонента в библиотеке "
+"принимается содержимое его поля \"Значение\"."
 
 #. type: delimited block =
 #: eeschema_component_library_editor.adoc:255
 msgid "You must load a library into Eeschema, in order to access its contents."
 msgstr ""
+"Сначала нужно загрузить библиотеку в Eeschema, чтобы потом получить доступ к "
+"её содержимому."
 
 #. type: delimited block =
 #: eeschema_component_library_editor.adoc:259
@@ -994,6 +1156,9 @@ msgid ""
 "clicking on the image:images/icons/save_library.png[icons/save_library_png] "
 "on the main tool bar."
 msgstr ""
+"Содержимое текущей библиотеки можно сохранить после внесённых изменений с "
+"помощью кнопки image:images/icons/save_library.png[icons/save_library_png] "
+"из главной панели инструментов."
 
 #. type: delimited block =
 #: eeschema_component_library_editor.adoc:261
@@ -1001,12 +1166,14 @@ msgid ""
 "A component can be removed from any library by clicking on the image:images/"
 "icons/delete.png[icons/delete_png]."
 msgstr ""
+"Компонент можно удалить из библиотеки, нажав на кнопку image:images/icons/"
+"delete.png[icons/delete_png]."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:264
 #, no-wrap
 msgid "Select and Save a Component"
-msgstr ""
+msgstr "Выбор и сохранение компонента"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:270
@@ -1016,12 +1183,16 @@ msgid ""
 "undone easily. A component may be loaded from a local library or from an "
 "existing component."
 msgstr ""
+"При редактировании компонента, изменения, на самом деле, применяются не к "
+"компоненту из библиотеки, а к копии, расположенной в памяти компьютера. "
+"Любые операции редактирования можно легко отменить. Компонент можно "
+"загрузить из локальной библиотеки или из существующего компонента."
 
 #. type: Title =====
 #: eeschema_component_library_editor.adoc:272
 #, no-wrap
 msgid "Component Selection"
-msgstr ""
+msgstr "Выбор компонента"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:278
@@ -1031,6 +1202,10 @@ msgid ""
 "available components that you can select and load from the currently "
 "selected library."
 msgstr ""
+"При нажатии на кнопку image:images/icons/import_cmp_from_lib.png[icons/"
+"import_cmp_from_lib_png] из основной панели инструментов, отобразится "
+"перечень доступных компонентов, которые можно выбрать и загрузить из текущей "
+"библиотеки."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:287
@@ -1043,6 +1218,12 @@ msgid ""
 "toolbar_libedit_alias.png].  The first item in the alias list is the root "
 "name of the component."
 msgstr ""
+"Если выбран псевдоним какого-нибудь компонента, то в заголовке окна будет "
+"показано имя оригинального компонента, вместо псевдонима. Список псевдонимов "
+"всегда загружается вместе с компонентом и его можно редактировать. Можно "
+"создать новый компонент, выбрав один из псевдонимов текущего компонента из "
+"image:images/ru/toolbar_libedit_alias.png[images/ru/toolbar_libedit_alias."
+"png]. Первый элемент списка псевдонимов является оригинальным компонентом."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:294
@@ -1051,12 +1232,15 @@ msgid ""
 "allows you to load a component which has been previously saved by the image:"
 "images/icons/export.png[icons/export_png]."
 msgstr ""
+"Также, нажатие кнопки image:images/icons/import.png[icons/import_png] "
+"позволяет загрузить компонент, который ранее был сохранён с помощью кнопки "
+"image:images/icons/export.png[icons/export_png]."
 
 #. type: Title =====
 #: eeschema_component_library_editor.adoc:296
 #, no-wrap
 msgid "Save a Component"
-msgstr ""
+msgstr "Сохранение компонента"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:300
@@ -1064,6 +1248,8 @@ msgid ""
 "After modification, a component can be saved in the current library, in a "
 "new library, or exported to a backup file."
 msgstr ""
+"После применённых изменений, компонент можно сохранить в текущей библиотеке, "
+"новой библиотеке или экспортировать в файл резервной копии."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:306
@@ -1073,6 +1259,10 @@ msgid ""
 "that the update command only saves the component changes in the local "
 "memory. This way, you can make up your mind before you save the library."
 msgstr ""
+"Для сохранения изменённого компонента в текущей библиотеке, нажмите image:"
+"images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]. Пожалуйста "
+"заметьте, что команда обновления лишь сохранит изменения в выделенной "
+"памяти. Об этом нужно помнить до сохранения библиотеки."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:311
@@ -1081,6 +1271,10 @@ msgid ""
 "image:images/icons/save_library.png[icons/save_library_png] which will "
 "overwrite the existing library file with the component changes."
 msgstr ""
+"Чтобы непосредственно сохранить изменения компонента в файл библиотеки, "
+"нажмите кнопку image:images/icons/save_library.png[icons/save_library_png], "
+"которая перезапишет существующий файл библиотеки новым содержимым со всеми "
+"изменениями."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:316
@@ -1089,11 +1283,14 @@ msgid ""
 "the image:images/icons/new_library.png[icons/new_library_png].  You will be "
 "asked to enter a new library name."
 msgstr ""
+"Если нужно создать новую библиотеку, содержащую текущий компонент, нажмите "
+"image:images/icons/new_library.png[icons/new_library_png]. Будет выдан "
+"запрос на ввод имени новой библиотеки."
 
 #. type: delimited block =
 #: eeschema_component_library_editor.adoc:320
 msgid "New libraries are not automatically added to the current project."
-msgstr ""
+msgstr "Новые библиотеки не добавляются в текущий проект автоматически."
 
 #. type: delimited block =
 #: eeschema_component_library_editor.adoc:323
@@ -1101,11 +1298,14 @@ msgid ""
 "You must add any new library you wish to use in a schematic to the list of "
 "project libraries in Eeschema using the component configuration dialog."
 msgstr ""
+"Нужно добавлять все новые, необходимые для схемы, библиотеки в список "
+"библиотек проекта с помощью соответствующего диалогового окна в Eeschema."
 
 #. type: delimited block =
 #: eeschema_component_library_editor.adoc:325
 msgid "image:images/en/libsettings.png[alt=\"Library settings\",width=\"50%\"]"
 msgstr ""
+"image:images/ru/libsettings.png[alt=\"Настройка библиотек\",width=\"50%\"]"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:334
@@ -1116,12 +1316,17 @@ msgid ""
 "the component into another library. In fact, the create new library command "
 "and the export command are basically identical."
 msgstr ""
+"Нажмите image:images/icons/export.png[icons/export_png], чтобы создать файл, "
+"содержащий только текущий компонент. Этот файл будет стандартной "
+"библиотекой, которая содержит всего один компонент. Его можно использовать "
+"для импорта компонента в другую библиотеку. Таким образом, команда создания "
+"новой библиотеки и команда экспорта, в основном, одинаковы."
 
 #. type: Title =====
 #: eeschema_component_library_editor.adoc:336
 #, no-wrap
 msgid "Transfer Components to Another Library"
-msgstr ""
+msgstr "Перемещение компонента в другую библиотеку"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:340
@@ -1129,6 +1334,8 @@ msgid ""
 "You can very easily copy a component from a source library into a "
 "destination library using the following commands:"
 msgstr ""
+"Можно, достаточно просто, скопировать компонент из одной библиотеки в другую "
+"используя следующие команды:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:343
@@ -1136,6 +1343,8 @@ msgid ""
 "Select the source library by clicking the image:images/icons/library."
 "png[icons/library_png]."
 msgstr ""
+"Выбрать исходную библиотеку, нажав кнопку image:images/icons/library."
+"png[icons/library_png]."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:346
@@ -1144,6 +1353,9 @@ msgid ""
 "import_cmp_from_lib.png[icons/import_cmp_from_lib_png].  The component will "
 "be displayed in the editing area."
 msgstr ""
+"Загрузить компонент, который нужно переместить, нажав кнопку image:images/"
+"icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]. Этот компонент "
+"будет показан в области редактирования."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:348
@@ -1151,6 +1363,8 @@ msgid ""
 "Select the destination library by clicking the image:images/icons/library."
 "png[icons/library_png]."
 msgstr ""
+"Выбрать конечную библиотеку, нажав кнопку image:images/icons/library."
+"png[icons/library_png]."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:351
@@ -1159,6 +1373,8 @@ msgid ""
 "clicking the image:images/icons/save_part_in_mem.png[icons/"
 "save_part_in_mem_png]."
 msgstr ""
+"Сохранить текущий компонент в выделенной памяти новой библиотеки, нажав "
+"кнопку image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:353
@@ -1166,12 +1382,14 @@ msgid ""
 "Save the component in the current local library file by clicking the image:"
 "images/icons/save_library.png[icons/save_library_png]."
 msgstr ""
+"Сохранить компонент в файл библиотеки, нажав кнопку image:images/icons/"
+"save_library.png[icons/save_library_png]."
 
 #. type: Title =====
 #: eeschema_component_library_editor.adoc:355
 #, no-wrap
 msgid "Discarding Component Changes"
-msgstr ""
+msgstr "Отмена изменений компонента"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:363
@@ -1183,18 +1401,24 @@ msgid ""
 "the library file, you can always quit and start again. Eeschema will undo "
 "all the changes."
 msgstr ""
+"При редактировании компонента, изменения выполняются только над рабочей "
+"копией настоящего компонента библиотеки. Это значит, что пока изменения не "
+"сохранены в памяти, компонент можно перезагрузить заново, отменив, тем "
+"самым, все сделанные изменения. Если изменения уже записаны в память, но не "
+"записаны в файл библиотеки, то всегда можно выйти из редактора и начать "
+"заново. Eeschema отменит все изменения."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:365
 #, no-wrap
 msgid "Creating Library Components"
-msgstr ""
+msgstr "Создание компонентов библиотеки"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:368
 #, no-wrap
 msgid "Create a New Component"
-msgstr ""
+msgstr "Создание нового компонента"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:379
@@ -1209,18 +1433,26 @@ msgid ""
 "These properties can be changed later, but it is preferable to set them "
 "correctly at the creation of the component."
 msgstr ""
+"Новый компонент можно создать, нажав кнопку image:images/icons/new_component."
+"png[icons/new_component_png]. Будет запрошено имя компонента (это имя будет "
+"использовано в качестве значения его поля \"Значение\" в редакторе схем), "
+"префикс обозначения (DA, VT, R, ...), количество частей (например, 7400 "
+"состоит из четырёх частей) и, если нужно, дополнительное начертание (также "
+"известное как обозначение по де Моргану). Если префикс обозначения не "
+"указан, будет использовано значение по умолчанию \"U\". Все эти параметры "
+"можно позже изменить, но, все же, лучше сразу задавать верные значения."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:380
 #, no-wrap
 msgid "eeschema_component_properties_png"
-msgstr ""
+msgstr "eeschema_component_properties_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:380
 #, no-wrap
 msgid "images/eeschema_component_properties.png"
-msgstr ""
+msgstr "images/ru/eeschema_component_properties.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:384
@@ -1228,24 +1460,26 @@ msgid ""
 "A new component will be created using the properties above and will appear "
 "in the editor as shown below."
 msgstr ""
+"Будет создан новый компонент с указанными выше параметрами и представлен в "
+"редакторе, как показано ниже."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:385
 #, no-wrap
 msgid "eeschema_libedit_new_png"
-msgstr ""
+msgstr "eeschema_libedit_new_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:385
 #, no-wrap
 msgid "images/eeschema_libedit_new.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_new.png"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:388
 #, no-wrap
 msgid "Create a Component from Another Component"
-msgstr ""
+msgstr "Создание компонента на основе другого"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:393
@@ -1254,11 +1488,13 @@ msgid ""
 "component library. In this case it is easy to load and modify an existing "
 "component."
 msgstr ""
+"Часто компонент, который нужно сделать, похож на один из уже существующих в "
+"библиотеке. В этом случае легко загрузить и поправить существующий компонент."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:395
 msgid "Load the component which will be used as a starting point."
-msgstr ""
+msgstr "Загрузите компонент, который нужно взять за основу."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:400
@@ -1268,6 +1504,10 @@ msgid ""
 "text.  If you chose to duplicate the current component, you will be prompted "
 "for a new component name."
 msgstr ""
+"Нажмите кнопку image:images/icons/copycomponent.png[icons/copycomponent_png] "
+"или изменив его имя, используя щелчок правой кнопки мыши на поле значения и "
+"измените его текст. При нажатии кнопки дублирования, будет запрошено новое "
+"имя для компонента."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:404
@@ -1277,11 +1517,15 @@ msgid ""
 "answer is no the new component creation will be aborted.  Component "
 "libraries cannot have any duplicate names or aliases."
 msgstr ""
+"Если компонент имеет псевдонимы, будет показано сообщение с предложением "
+"удалить их из нового компонента, чтобы устранить конфликт в библиотеке. Если "
+"отказаться от этого, создание нового компонента будет отменено. В библиотеке "
+"компонентов не может быть дубликатов имён или псевдонимов."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:405
 msgid "Edit the new component as required."
-msgstr ""
+msgstr "Выполните все необходимые изменения в компоненте."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:413
@@ -1293,6 +1537,12 @@ msgid ""
 "existing library select the other library by clicking on the image:images/"
 "icons/library.png[icons/library_png] and save the new component."
 msgstr ""
+"Обновите новый компонента в текущей библиотеке, нажав кнопку image:images/"
+"icons/save_part_in_mem.png[icons/save_part_in_mem_png] или сохраните его в "
+"новой библиотеке, нажав кнопку image:images/icons/new_library.png[icons/"
+"new_library_png] или, если нужно, сохраните этот новый компонент в другой "
+"библиотеке, выбрав для этого другую библиотеку с помощью image:images/icons/"
+"library.png[icons/library_png] и сохранив в неё новый компонент."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:415
@@ -1300,12 +1550,14 @@ msgid ""
 "Save the current library file to disk by clicking the image:images/icons/"
 "save_library.png[icons/save_library_png]."
 msgstr ""
+"Сохраните файл текущей библиотеки на диске с помощью кнопки image:images/"
+"icons/save_library.png[icons/save_library_png]."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:417
 #, no-wrap
 msgid "Component Properties"
-msgstr ""
+msgstr "Свойства компонента"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:424
@@ -1315,18 +1567,23 @@ msgid ""
 "component properties, click on the image:images/icons/part_properties."
 "png[icons/part_properties_png] to show the dialog below."
 msgstr ""
+"Свойства компонента должны быть внимательно заданы в процессе его создания, "
+"иначе, они будут унаследованы от скопированного компонента. Чтобы изменить "
+"свойства компонента, нажмите кнопку image:images/icons/part_properties."
+"png[icons/part_properties_png], будет показано диалоговое окно, как на "
+"рисунке ниже."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:425
 #, no-wrap
 msgid "eeschema_properties_for_component_png"
-msgstr ""
+msgstr "eeschema_properties_for_component_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:425
 #, no-wrap
 msgid "images/eeschema_properties_for_component.png"
-msgstr ""
+msgstr "images/ru/eeschema_properties_for_component.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:433
@@ -1338,6 +1595,11 @@ msgid ""
 "there will be additional work to add the new unit pins and symbols.  "
 "Nevertheless, it is possible to modify these properties at any time."
 msgstr ""
+"Очень важно, чтобы было правильно указано количество частей и наличие "
+"дополнительного начертания, потому что, редактирование или создание выводов "
+"затронет каждую из частей. Если количество частей изменено уже после "
+"создания и редактирования выводов, то нужно дополнительно обработать выводы "
+"и обозначение новых частей."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:442
@@ -1351,6 +1613,13 @@ msgid ""
 "away from the body end of the pin. A value from 30 to 40 (in 1/1000 inch) is "
 "reasonable."
 msgstr ""
+"Параметры графического характера \"Показать номер вывода\" и \"Показать имя "
+"вывода\" определяют видимость номера и имени выводов. Эти надписи будут "
+"отображаться, если соответствующий параметр отмечен. Опция \"Имя вывода "
+"внутри\" определяет положение имени вывода по отношению к его обозначению. "
+"Эта надпись будет показана внутри контура компонента, если параметр отмечен. "
+"В таком случае, параметр \"Смещение позиции имени вывода\" задаёт смещение "
+"текста от края вывода. Приемлемое значение от 30 до 40 (в 1/1000 дюйма)."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:445
@@ -1358,24 +1627,26 @@ msgid ""
 "The example below shows a component with the \"Place pin name inside\" "
 "option unchecked. Notice the position of the names and pin numbers."
 msgstr ""
+"На примере ниже показан компонент с выключенным параметром \"Имя вывода "
+"внутри\". Обратите внимание на положение имени и номера выводов."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:446
 #, no-wrap
 msgid "eeschema_uncheck_pin_name_inside_png"
-msgstr ""
+msgstr "eeschema_uncheck_pin_name_inside_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:446
 #, no-wrap
 msgid "images/eeschema_uncheck_pin_name_inside.png"
-msgstr ""
+msgstr "images/eeschema_uncheck_pin_name_inside.png"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:449
 #, no-wrap
 msgid "Components with Alternate Symbols"
-msgstr ""
+msgstr "Компоненты с дополнительным начертаниями"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:455
@@ -1385,6 +1656,9 @@ msgid ""
 "the normal symbol, click the image:images/icons/morgan1.png[icons/"
 "morgan1_png]."
 msgstr ""
+"Если компонент имеет больше чем одно графическое обозначение, можно выбрать "
+"нужное для редактирования. Чтобы редактировать нормальное начертание, "
+"нажмите кнопку image:images/icons/morgan1.png[icons/morgan1_png]."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:461
@@ -1394,24 +1668,28 @@ msgid ""
 "png[images/toolbar_libedit_part.png] shown below to select the unit you wish "
 "to edit."
 msgstr ""
+"Чтобы редактировать дополнительное начертание, нажмите кнопку image:images/"
+"icons/morgan2.png[icons/morgan2_png]. Используйте image:images/ru/"
+"toolbar_libedit_part.png[images/ru/toolbar_libedit_part.png], как показано "
+"ниже, чтобы выбрать нужную часть компонента для редактирования."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:462
 #, no-wrap
 msgid "eeschema_libedit_select_unit_png"
-msgstr ""
+msgstr "eeschema_libedit_select_unit_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:462
 #, no-wrap
 msgid "images/eeschema_libedit_select_unit.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_select_unit.png"
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:465
 #, no-wrap
 msgid "Graphical Elements"
-msgstr ""
+msgstr "Графические элементы"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:470
@@ -1420,21 +1698,23 @@ msgid ""
 "contain no electrical connection information. Their design is possible using "
 "the following tools:"
 msgstr ""
+"С помощью графических элементов создают контур элемента, они не несут "
+"никакой электрической информации. Создаются с помощью следующих инструментов:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:472
 msgid "Lines and polygons defined by start and end points."
-msgstr ""
+msgstr "Линии и полигоны, задаются начальной и конечной точками."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:473
 msgid "Rectangles defined by two diagonal corners."
-msgstr ""
+msgstr "Прямоугольники, задаются двумя противоположными углами."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:474
 msgid "Circles defined by the center and radius."
-msgstr ""
+msgstr "Окружности, задаются центром и радиусом."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:476
@@ -1442,6 +1722,8 @@ msgid ""
 "Arcs defined by the starting and ending point of the arc and its center. An "
 "arc goes from 0° to 180°."
 msgstr ""
+"Дуги, задаются начальной и конечной точками дуги и её центром. Дуга может "
+"быть в пределах от 0° до 180°."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:480
@@ -1450,12 +1732,15 @@ msgid ""
 "place all of the graphical elements required to design a component's "
 "symbolic representation."
 msgstr ""
+"Вертикальная панель инструментов с правой стороны основного окна позволяет "
+"размещать все графические элементы, необходимые для построения условного "
+"графического обозначения компонента."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:482
 #, no-wrap
 msgid "Graphical Element Membership"
-msgstr ""
+msgstr "Графические элементы в частях и дополнительных начертаниях"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:489
@@ -1466,18 +1751,23 @@ msgid ""
 "display the context menu for the selected element. Below is the context menu "
 "for a line element."
 msgstr ""
+"Каждый графический элемент (линия, дуга, окружность, и пр.) можно определить "
+"как общий для всех частей и/или дополнительных начертаний или отдельный для "
+"данной части и/или начертания. К параметрам элемента можно легко получить "
+"доступ через щелчок правой кнопки мыши на на нём для вызова контекстного "
+"меню. Ниже показано контекстное меню для линии."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:490
 #, no-wrap
 msgid "eeschema_libedit_context_menu_png"
-msgstr ""
+msgstr "eeschema_libedit_context_menu_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:490
 #, no-wrap
 msgid "images/eeschema_libedit_context_menu.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_context_menu.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:494
@@ -1485,23 +1775,25 @@ msgid ""
 "You can also double-left-click on an element to modify its properties.  "
 "Below is the properties dialog for a polygon element."
 msgstr ""
+"Также, можно дважды щёлкнуть на элементе для изменения его параметров. Ниже "
+"приведён диалог настройки элемента полигона."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:495
 #, no-wrap
 msgid "eeschema_libedit_polyline_properties_png"
-msgstr ""
+msgstr "eeschema_libedit_polyline_properties_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:495
 #, no-wrap
 msgid "images/eeschema_libedit_polyline_properties.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_polyline_properties.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:498
 msgid "The properties of a graphic element are:"
-msgstr ""
+msgstr "Свойства графического элемента:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:501
@@ -1509,6 +1801,7 @@ msgid ""
 "Line width which defines the width of the element's line in the current "
 "drawing units."
 msgstr ""
+"Толщина определяет толщину линии элемента в текущих единицах измерения."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:505
@@ -1517,6 +1810,9 @@ msgid ""
 "element is drawn for each unit in component with more than one unit per "
 "package or if the graphical element is only drawn for the current unit."
 msgstr ""
+"\"Общий для всех частей компонента\" определяет, принадлежит ли нарисованный "
+"графический элемент каждой части компонента, состоящего из нескольких "
+"частей, или только к текущей части."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:509
@@ -1526,6 +1822,9 @@ msgid ""
 "with an alternate body style or if the graphical element is only drawn for "
 "the current body style."
 msgstr ""
+"\"Общий для всех начертаний (по де Моргану)\" определяет, принадлежит ли "
+"нарисованный графический элемент каждому обозначению компонента, содержащего "
+"альтернативное начертание, или только текущему обозначению."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:512
@@ -1533,12 +1832,14 @@ msgid ""
 "The fill style setting determines if the symbol defined by the graphical "
 "element is to be drawn unfilled, background filled, or foreground filled."
 msgstr ""
+"Стилем заливки определяется каким образом будет закрашен графический "
+"элемент: без заливки, заливкой переднего плана, заливкой заднего фона."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:514
 #, no-wrap
 msgid "Graphical Text Elements"
-msgstr ""
+msgstr "Графический текст"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:521
@@ -1547,12 +1848,15 @@ msgid ""
 "creation of graphical text. Graphical text is always readable, even when the "
 "component is mirrored. Please note that graphical text items are not fields."
 msgstr ""
+"Команда image:images/icons/add_text.png[icons/add_text_png] позволяет "
+"создавать графический текст. Он всегда остаётся читаемым, даже когда "
+"компонент отражён. Обратите внимание, что графический текст -- это не поле."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:523
 #, no-wrap
 msgid "Multiple Units per Component and Alternate Body Styles"
-msgstr ""
+msgstr "Компоненты из нескольких частей и с дополнительными начертаниями"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:530
@@ -1563,6 +1867,11 @@ msgid ""
 "more than one unit per package each with different symbols and pin "
 "configurations."
 msgstr ""
+"Компонент может иметь два графических представления (обычное и "
+"дополнительное, часто называемое в честь \"де Моргана\") и/или более одной "
+"части (например, логические элементы). Некоторые компоненты могут иметь "
+"несколько частей и при этом отличаться друг от друга обозначением и "
+"расположением выводов."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:537
@@ -1574,6 +1883,12 @@ msgid ""
 "units or specific to a given unit or they can be common to both symbolic "
 "representation so are specific to a given symbol representation."
 msgstr ""
+"Рассмотрим реле с двумя контактами -- оно может быть представлено как "
+"компонент с тремя разными частями: катушки, контакта 1 и контакта 2. "
+"Проектирование компонентов, состоящих из нескольких частей и/или начертаний, "
+"выполняется достаточно гибко. Вывод или часть обозначения может быть общим "
+"для всех частей или уникальным для текущей части, либо они могут бить общими "
+"для всех начертаний или уникальными только для текущего."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:546
@@ -1587,12 +1902,18 @@ msgid ""
 "common to each unit (but typically are specific to each symbolic "
 "representation)."
 msgstr ""
+"По умолчанию, выводы являются уникальными для каждого начертания и для "
+"каждой части, так как номера выводов отличаются. Если вывод должен быть "
+"общим для всех начертаний и частей, его нужно создать всего лишь раз, общим "
+"для всех частей и начертаний (обычно так поступают с выводами питания). Это "
+"касается и графических элементов обозначения и текста, которые также могут "
+"быть общими для всех частей (но, обычно, разными для каждого начертания)."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:548
 #, no-wrap
 msgid "Example of a Component Having Multiple Units with Different Symbols:"
-msgstr ""
+msgstr "Пример компонента из нескольких частей и с несколькими начертаниями"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:552
@@ -1600,6 +1921,7 @@ msgid ""
 "This is an example of a relay defined with three units per package, switch "
 "1, switch 2, and the coil:"
 msgstr ""
+"Это пример реле, состоящего из трёх частей: контакта 1, контакта 2 и реле:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:555
@@ -1607,86 +1929,88 @@ msgid ""
 "Option: pins are not linked. One can add or edit pins for each unit without "
 "any coupling with pins of other units."
 msgstr ""
+"Параметр: не связанные выводы. Можно добавлять или редактировать выводы в "
+"каждой из частей отдельно без изменения остальных частей."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:556
 #, no-wrap
 msgid "eeschema_libedit_pins_per_part_png"
-msgstr ""
+msgstr "eeschema_libedit_pins_per_part_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:556
 #, no-wrap
 msgid "images/eeschema_libedit_pins_per_part.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_pins_per_part.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:559
 msgid "All units are not interchangeable must be selected."
-msgstr ""
+msgstr "Все части не взаимозаменяемы, это нужно указать."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:560
 #, no-wrap
 msgid "eeschema_libedit_not_interchangeable_png"
-msgstr ""
+msgstr "eeschema_libedit_not_interchangeable_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:560
 #, no-wrap
 msgid "images/eeschema_libedit_not_interchangeable.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_not_interchangeable.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:563
 msgid "Unit 1"
-msgstr ""
+msgstr "Часть 1"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:564
 #, no-wrap
 msgid "eeschema_libedit_unit1_png"
-msgstr ""
+msgstr "eeschema_libedit_unit1_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:564
 #, no-wrap
 msgid "images/eeschema_libedit_unit1.png"
-msgstr ""
+msgstr "images/eeschema_libedit_unit1.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:567
 msgid "Unit 2"
-msgstr ""
+msgstr "Часть 2"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:568
 #, no-wrap
 msgid "eeschema_libedit_unit2_png"
-msgstr ""
+msgstr "eeschema_libedit_unit2_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:568
 #, no-wrap
 msgid "images/eeschema_libedit_unit2.png"
-msgstr ""
+msgstr "images/eeschema_libedit_unit2.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:571
 msgid "Unit 3"
-msgstr ""
+msgstr "Часть 3"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:572
 #, no-wrap
 msgid "eeschema_libedit_unit3_png"
-msgstr ""
+msgstr "eeschema_libedit_unit3_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:572
 #, no-wrap
 msgid "images/eeschema_libedit_unit3.png"
-msgstr ""
+msgstr "images/eeschema_libedit_unit3.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:576
@@ -1694,12 +2018,14 @@ msgid ""
 "It does not have the same symbol and pin layout and therefore is not "
 "interchangeable with units 1 and 2."
 msgstr ""
+"Она отличается обозначением и расположением выводов, следовательно, не может "
+"быть заменена ни частью 1, ни частью 2."
 
 #. type: Title =====
 #: eeschema_component_library_editor.adoc:579
 #, no-wrap
 msgid "Graphical Symbolic Elements"
-msgstr ""
+msgstr "Элементы графического обозначения"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:585
@@ -1709,24 +2035,28 @@ msgid ""
 "Therefore, each unit was created separately and the graphical body elements "
 "must have the \"Common to all units in component\" disabled."
 msgstr ""
+"Ниже показаны свойства графического контура компонента. Из примера с реле, "
+"показанного выше, три части отличаются графическим обозначением. "
+"Следовательно, каждая часть создавалась отдельно и у графических элементов "
+"должен быть отключен параметр \"Общий для всех частей компонента\"."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:586
 #, no-wrap
 msgid "eeschema_libedit_disable_common_png"
-msgstr ""
+msgstr "eeschema_libedit_disable_common_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:586
 #, no-wrap
 msgid "images/eeschema_libedit_disable_common.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_disable_common.png"
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:589
 #, no-wrap
 msgid "Pin Creation and Editing"
-msgstr ""
+msgstr "Создание и редактирование выводов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:598
@@ -1737,12 +2067,18 @@ msgid ""
 "must be created carefully, because any error will have consequences on the "
 "PCB design. Any pin already placed can be edited, deleted, and/or moved."
 msgstr ""
+"Чтобы создать и добавить новый вывод нужно нажать кнопку image:images/icons/"
+"pin.png[icons/pin_png]. Редактирование всех свойств вывода выполняется с "
+"помощью двойного щелчка мыши по нему или через контекстное меню, используя "
+"правую кнопку мыши. Выводы нужно создавать внимательно, потому что любая "
+"ошибка скажется, в итоге, на печатной плате. Любой, уже добавленный, вывод "
+"можно отредактировать, удалить и/или переместить."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:600
 #, no-wrap
 msgid "Pin Overview"
-msgstr ""
+msgstr "Общие сведения о выводах"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:608
@@ -1754,17 +2090,22 @@ msgid ""
 "correctly. If this type is not defined properly, the schematic ERC check "
 "results may be invalid."
 msgstr ""
+"Вывод объединяет в себе графическое представление, имя и \"номер\". \"Номер"
+"\" вывода может содержать до четырех букв и/или цифр. Чтобы использовать "
+"инструмент проверки электрических правил проектирования (ERC), нужно также "
+"корректно указать тип вывода (вход, выход, трехстабильный и т.д.). Если же "
+"тип указан не точно, результат проверки ERC в схеме будет не верным."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:610
 #: eeschema_component_library_editor.adoc:762
 msgid "Important notes:"
-msgstr ""
+msgstr "Важные замечания:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:612
 msgid "Do not use spaces in pin names and numbers."
-msgstr ""
+msgstr "Не используйте пробелы в именах и номерах выводов."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:615
@@ -1773,6 +2114,9 @@ msgid ""
 "character. The next `~` character will turn off the overline.  For example `"
 "\\~FO~O` would display [overline]#FO# O."
 msgstr ""
+"Чтобы задать имя выводу с обозначением инверсии (подчёркнутым сверху), "
+"используйте символ \\~ (тильда). Следующий символ  \\~ завершит "
+"подчёркивание. Например, слово \\~FO~O будет отображено как [overline]#FO# O."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:617
@@ -1780,11 +2124,14 @@ msgid ""
 "If the pin name is reduced to a single symbol, the pin is regarded as "
 "unnamed."
 msgstr ""
+"Если имя вывода уменьшиться до одного символа, то вывод будет считаться "
+"безымённым."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:618
 msgid "Pin names starting with `#`, are reserved for power port symbols."
 msgstr ""
+"Имена выводов, начинающиеся с `#`, зарезервированы для символов питания."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:620
@@ -1792,29 +2139,32 @@ msgid ""
 "A pin \"number\" consists of 1 to 4 letters and/ or numbers. 1,2,..9999 are "
 "valid numbers. A1, B3, Anod, Gnd, Wire, etc. are also valid."
 msgstr ""
+"\"Номер\" вывода состоит из 1-4 букв и/или цифр. 1,2,..9999 -- допустимые "
+"значения. A1, B3, Anod, Wire и т.д. -- тоже допустимые значения."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:621
 msgid "Duplicate pin \"numbers\" cannot exist in a component."
 msgstr ""
+"Не допускается наличие выводов с одинаковыми \"номерами\" в одном компоненте."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:623
 #, no-wrap
 msgid "Pin Properties"
-msgstr ""
+msgstr "Свойства выводов"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:625
 #, no-wrap
 msgid "eeschema_libedit_pin_properties_png"
-msgstr ""
+msgstr "eeschema_libedit_pin_properties_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:625
 #, no-wrap
 msgid "images/eeschema_libedit_pin_properties.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_pin_properties.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:630
@@ -1823,42 +2173,45 @@ msgid ""
 "pin. This dialog pops up automatically when you create a pin or when double-"
 "clicking on an existing pin. This dialog allows you to modify:"
 msgstr ""
+"Диалог свойств вывода позволяет редактировать все его параметры. Этот диалог "
+"автоматически отображается при создании вывода или при двойном щелчке на "
+"существующем выводе. Данный диалог позволяет изменять:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:632
 msgid "Name and name's text size."
-msgstr ""
+msgstr "Имя и размер текста имени."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:633
 msgid "Number and number's text size."
-msgstr ""
+msgstr "Номер и размер текста номера."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:634
 msgid "Length."
-msgstr ""
+msgstr "Длину."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:635
 msgid "Electrical and graphical types."
-msgstr ""
+msgstr "Электрический и графический тип."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:636
 msgid "Unit and alternate representation membership."
-msgstr ""
+msgstr "Принадлежность к части или альтернативному начертанию."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:637
 msgid "Visibility."
-msgstr ""
+msgstr "Видимость."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:639
 #, no-wrap
 msgid "Pins Graphical Styles"
-msgstr ""
+msgstr "Графическое представление выводов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:644
@@ -1866,24 +2219,26 @@ msgid ""
 "Shown in the figure below are the different pin graphical styles. The choice "
 "of graphic styles does not have any influence on the pin's electrical type."
 msgstr ""
+"На изображении ниже показаны разные стили начертания вывода. Выбор внешнего "
+"вида вывода никак не отразится на его электрическом типе."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:645
 #, no-wrap
 msgid "eeschema_libedit_pin_properties_style_png"
-msgstr ""
+msgstr "eeschema_libedit_pin_properties_style_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:645
 #, no-wrap
 msgid "images/eeschema_libedit_pin_properties_style.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_pin_properties_style.png"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:648
 #, no-wrap
 msgid "Pin Electrical Types"
-msgstr ""
+msgstr "Электрический тип выводов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:652
@@ -1891,6 +2246,8 @@ msgid ""
 "Choosing the correct electrical type is important for the schematic ERC "
 "tool. The electrical types defined are:"
 msgstr ""
+"Правильное назначение электрического типа важно для инструмента проверки ERC "
+"в схеме. Электрические типы определены как:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:655
@@ -1898,21 +2255,26 @@ msgid ""
 "Bidirectional which indicates bidirectional pins commutable between input "
 "and output (microprocessor data bus for example)."
 msgstr ""
+"Двунаправленный -- указывает на двунаправленный обмен данными между входом и "
+"выходом (шина данных микропроцессора, к примеру)."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:656
 msgid "Tri-state is the usual 3 states output."
-msgstr ""
+msgstr "Трехстабильный -- выход с тремя состояниями."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:658
 msgid "Passive is used for passive component pins, resistors, connectors, etc."
 msgstr ""
+"Пассивный -- используется для обозначения выводов в пассивных компонентах, "
+"таких как резисторы, разъемы, и т.п."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:659
 msgid "Unspecified can be used when the ERC check doesn't matter."
 msgstr ""
+"Не определено -- может использоваться в случае, когда проверка ERC не нужна."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:662
@@ -1920,11 +2282,16 @@ msgid ""
 "Power input is used for the component's power pins. Power pins are "
 "automatically connected to the other power input pins with the same name."
 msgstr ""
+"Вход питания -- используется для обозначения выводов питания компонентов. "
+"Выводы питания автоматически соединяются с остальными входами питания с "
+"такими же именами."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:663
 msgid "Power output is used for regulator outputs."
 msgstr ""
+"Выход питания -- используется для обозначения выходов стабилизаторов "
+"напряжения."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:665
@@ -1932,6 +2299,8 @@ msgid ""
 "Open emitter and open collector types can be used for logic outputs defined "
 "as such."
 msgstr ""
+"Открытый эмиттер и открытый коллектор -- можно использовать для обозначения "
+"выходов логических элементов."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:667
@@ -1939,12 +2308,14 @@ msgid ""
 "Not connected is used when a component has a pin that has no internal "
 "connection."
 msgstr ""
+"Не подсоединен -- используется когда компонент содержит вывод, не имеющий "
+"внутреннего подключения (изолирован)."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:669
 #, no-wrap
 msgid "Pin Global Properties"
-msgstr ""
+msgstr "Глобальные свойства выводов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:675
@@ -1954,24 +2325,28 @@ msgid ""
 "parameter you want to modify and type the new value which will then be "
 "applied to all of the current component's pins."
 msgstr ""
+"Можно изменять длину или размер текста имени и/или номера всех выводов "
+"сразу, используя пункты глобальных команд из контекстного меню вывода. "
+"Щелкните левой кнопкой мыши по параметру, который хотите изменить и введите "
+"новое значение, которое будет применено ко всем выводам текущего компонента."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:676
 #, no-wrap
 msgid "eeschema_libedit_pin_context_menu_png"
-msgstr ""
+msgstr "eeschema_libedit_pin_context_menu_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:676
 #, no-wrap
 msgid "images/eeschema_libedit_pin_context_menu.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_pin_context_menu.png"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:679
 #, no-wrap
 msgid "Defining Pins for Multiple Units and Alternate Symbolic Representations"
-msgstr ""
+msgstr "Установка выводов в компонентах с частями и альтернативными начертаниями"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:692
@@ -1987,6 +2362,16 @@ msgid ""
 "made for all units of a multiple unit component and both representations for "
 "components with an alternate representation."
 msgstr ""
+"Компоненты, состоящие из нескольких частей и/или содержащие альтернативные "
+"начертания, имеют некоторые сложности при создании и редактировании выводов. "
+"Большинство выводов устанавливаются отдельно для каждой части (так как номер "
+"вывода уникален для каждой из них) и каждого альтернативного начертания (из-"
+"за различий в форме и положении). Создание и редактирование выводов может "
+"быть усложненным для компонентов, которые одновременно состоят из нескольких "
+"частей и содержат альтернативное начертание. Редактор библиотек позволяет "
+"создавать выводы для всего одновременно. По умолчанию, изменения вывода "
+"применяются ко всем частям сложного компонента и обоих начертаний, если "
+"компонент содержит альтернативное начертание."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:699
@@ -1998,6 +2383,12 @@ msgid ""
 "allow you to create pins for each unit and representation completely "
 "independently."
 msgstr ""
+"Единственное исключение при этом -- это графический тип вывода и его имя. "
+"Эта зависимость была установлена, чтобы упростить создание и редактирование "
+"выводов в большинстве случаев. Данную зависимость можно отключить с помощью "
+"кнопки image:images/icons/pin2pin.png[icons/pin2pin_png] из главной панели "
+"инструментов. Это позволит создавать выводы для каждой части и начертания "
+"отдельно."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:706
@@ -2009,6 +2400,12 @@ msgid ""
 "11.7.1, a relay can be represented by three distinct units: a coil, switch "
 "contact 1, and switch contact 2."
 msgstr ""
+"Компонент может иметь два графических начертания (по де Моргану) и "
+"применяться к каждой из частей, как в случае с логическими элементами. "
+"Некоторые компоненты могут содержать части с разными графическими "
+"обозначениями и разными выводами. Подобно примеру с реле из раздела 11.7.1, "
+"которое представлено тремя частями: катушкой, переключающими контактами 1 и "
+"2."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:711
@@ -2018,6 +2415,10 @@ msgid ""
 "specific to different units. A pin can also be common to both symbolic "
 "representations or specific to each symbolic representation."
 msgstr ""
+"Управление компонентами из нескольких частей и с несколькими начертаниями "
+"довольно гибко. Вывод может быть общим или уникальным для разных частей. "
+"Также, вывод может быть общим для обоих начертаний или уникальными для "
+"каждого из них."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:716
@@ -2027,6 +2428,10 @@ msgid ""
 "symbolic representation. When a pin is common to all units, it only has to "
 "drawn once such as in the case of power pins."
 msgstr ""
+"По умолчанию, выводы устанавливаются отдельно для каждой части и для каждого "
+"начертания, так как их номера для каждой из частей и внешний вид для каждого "
+"из начертаний различные. Если вывод общий для всех частей, его достаточно "
+"установить один раз, как в случае с выводами питания."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:728
@@ -2042,12 +2447,22 @@ msgid ""
 "toolbar_libedit_alias.png[images/toolbar_libedit_alias.png] drop down "
 "control."
 msgstr ""
+"Возьмём для примера выходной вывод микросхемы 7400 -- это четыре логических "
+"элемента ИЛИ-НЕ. Так как он состоит из четырех частей и двух графических "
+"начертаний, то нужно установить восемь уникальных выходных выводов для "
+"каждого. При редактировании компонента 7400, в редакторе библиотек будет "
+"показана часть A в нормальном начертании. Чтобы изменить внешний вид "
+"альтернативного начертания, нужно сначала на него переключиться с помощью "
+"кнопки image:images/icons/morgan2.png[icons/morgan2_png] из панели "
+"инструментов. Для редактирования номера выводов каждой из частей, нужно "
+"выбрать соответствующую часть с помощью выпадающего меню image:images/ru/"
+"toolbar_libedit_alias.png[images/ru/toolbar_libedit_alias.png]."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:730
 #, no-wrap
 msgid "Component Fields"
-msgstr ""
+msgstr "Поля компонентов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:742
@@ -2063,12 +2478,22 @@ msgid ""
 "the additional fields can be applied to all of the components in the "
 "schematic."
 msgstr ""
+"Все компоненты библиотеки определяются по четырём стандартным полям. "
+"Обозначение, значение, посадочное место и файл документации -- эти поля "
+"создаются всегда при создании или копировании компонента. Обязательными для "
+"заполнения являются только два поля -- обозначение и значение. Для "
+"существующих полей можно вызывать контекстное меню с помощью правой кнопки "
+"мыши. Компоненты, содержащиеся в библиотеке, обычно, содержат эти четыре "
+"стандартных поля. Дополнительные поля, такие как производитель, каталожный "
+"номер, цена и пр. можно добавить в компонент библиотеки, но, обычно, это "
+"выполняют в редакторе схем, так как поля можно добавлять любому компоненту "
+"схемы."
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:744
 #, no-wrap
 msgid "Editing Component Fields"
-msgstr ""
+msgstr "Редактирование полей компонентов"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:748
@@ -2076,18 +2501,20 @@ msgid ""
 "To edit an existing component field, right-click on the field text to show "
 "the field context menu shown below."
 msgstr ""
+"Чтобы изменить существующие поле, нужно вызвать контекстное меню с помощью "
+"правой кнопки мыши, как показано на рисунке ниже."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:749
 #, no-wrap
 msgid "eeschema_libedit_field_context_menu_png"
-msgstr ""
+msgstr "eeschema_libedit_field_context_menu_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:749
 #, no-wrap
 msgid "images/eeschema_libedit_field_context_menu.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_field_context_menu.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:754
@@ -2096,18 +2523,22 @@ msgid ""
 "images/icons/add_text.png[icons/add_text_png] on the main tool bar to open "
 "the field properties dialog shown below."
 msgstr ""
+"Чтобы изменить пустое поле, добавить новое или удалить одно из них, "
+"используйте image:images/icons/add_text.png[icons/add_text_png] из главной "
+"панели инструментов, чтобы открыть диалог свойств полей, который показан "
+"ниже."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:755
 #, no-wrap
 msgid "eeschema_libedit_field_properties_png"
-msgstr ""
+msgstr "eeschema_libedit_field_properties_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:755
 #, no-wrap
 msgid "images/eeschema_libedit_field_properties.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_field_properties.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:760
@@ -2115,6 +2546,8 @@ msgid ""
 "Fields are text sections associated with the component. Do not confuse them "
 "with the text belonging to the graphic representation of this component."
 msgstr ""
+"Поля -- это текстовые свойства, связанные с компонентом. Не путайте их с "
+"текстом, расположенном на графическом обозначении этого компонента."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:767
@@ -2124,6 +2557,9 @@ msgid ""
 "has the name contained in the value field when you save it to the currently "
 "selected library."
 msgstr ""
+"Изменяя поле значения можно создавать новые компоненты, используя текущий в "
+"качестве шаблона для нового. При сохранении компонента в текущей библиотеке, "
+"в качестве имени будет использовано значение из поля значения."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:769
@@ -2131,6 +2567,8 @@ msgid ""
 "The field edit dialog above must be used to edit a field that is empty or "
 "has the invisible attribute enabled."
 msgstr ""
+"Диалог редактирования полей, показанный выше, должен использоваться при "
+"редактировании пустых или скрытых полей."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:774
@@ -2141,12 +2579,16 @@ msgid ""
 "Pcbnew \"Reference Manual\") and FPNAME is the name of the footprint in the "
 "library LIBNAME."
 msgstr ""
+"Посадочное место указывается как абсолютный путь, используя формат LIBNAME:"
+"FPNAME, где LIBNAME -- имя библиотеки посадочных мест из таблицы библиотек "
+"(см. раздел \"Таблица библиотек посадочных мест\" из руководства "
+"пользователя Pcbnew) и FPNAME -- имя посадочного места из библиотеки LIBNAME."
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:776
 #, no-wrap
 msgid "Power Symbols"
-msgstr ""
+msgstr "Символы питания"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:784
@@ -2158,23 +2600,29 @@ msgid ""
 "capture software. Some precautions are essential. Below is an example of a "
 "power +5V symbol."
 msgstr ""
+"Символы питания создаются также как и обычные компоненты. Желательно "
+"помещать их в специальную библиотеку, такую как power.lib. Символы питания "
+"состоят из графического обозначения и вывода \"скрытый вход питания\". Они "
+"обрабатываются также как и остальные компоненты в редакторе схем. Есть "
+"несколько существенных мер предосторожности. Ниже показан пример символа "
+"питания +5V."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:785
 #, no-wrap
 msgid "eeschema_libedit_power_symbol_png"
-msgstr ""
+msgstr "eeschema_libedit_power_symbol_png"
 
 #. type: Target for macro image
 #: eeschema_component_library_editor.adoc:785
 #, no-wrap
 msgid "images/eeschema_libedit_power_symbol.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_power_symbol.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:788
 msgid "To create a power symbol, use the following steps:"
-msgstr ""
+msgstr "Для создания символа питания применяйте следующие шаги:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:792
@@ -2183,21 +2631,26 @@ msgid ""
 "will establish connection to the net +5V), with a pin number of 1 (number of "
 "no importance), a length of 0, and a \"Line\" \"Graphic Style\"."
 msgstr ""
+"Добавьте вывод типа \"Вход питания\" с именем +5V (это важно, так как это "
+"имя будет использовано для соединения с цепью +5V), номером 1 (значение "
+"номера не важно), длиной 0 и графическим стилем \"Линия\"."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:794
 msgid "Place a small circle and a segment from the pin to the circle as shown."
 msgstr ""
+"С помощью графических элементов изобразите внешний вид символа питания, как "
+"показано на рисунке."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:795
 msgid "The anchor of the symbol is on the pin."
-msgstr ""
+msgstr "Установите точку привязки на выводе."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:796
 msgid "The component value is `+5V`."
-msgstr ""
+msgstr "Значение компонента -- `+5V`."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:801
@@ -2208,6 +2661,11 @@ msgid ""
 "field starts with a `#` will not appear in the component list or in the "
 "netlist and the reference is declared as invisible."
 msgstr ""
+"Обозначение компонента -- `#+5V`. Текст обозначения не имеет значения, за "
+"исключением первого символа, которым обязательно должен быть `#`, чтобы "
+"указать, что компонент является символом питания. Условно, каждый компонент, "
+"в котором поле обозначения начинается с `#`, не передаётся в список "
+"компонентов или список цепей и само обозначение устанавливается невидимым."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:804
@@ -2215,16 +2673,18 @@ msgid ""
 "An easier method to create a new power port symbol is to use another symbol "
 "as a model:"
 msgstr ""
+"Более простой способ создания нового символа питания, используя другой как "
+"шаблон:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:806
 msgid "Load an existing power symbol."
-msgstr ""
+msgstr "Загрузить существующий символ питания."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:807
 msgid "Edit the pin name with name of the new power symbol."
-msgstr ""
+msgstr "Изменить имя вывода на имя нового символа питания."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:809
@@ -2232,11 +2692,13 @@ msgid ""
 "Edit the value field to the same name as the pin, if you want to display the "
 "power port value."
 msgstr ""
+"Изменить поле значения на то же имя, что и у вывода, если хотите, чтобы оно "
+"было показано."
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:809
 msgid "Save the new component."
-msgstr ""
+msgstr "Сохраните новый компонент."
 
 #. type: Title ==
 #: eeschema_create_a_netlist.adoc:3
