@@ -1,7 +1,9 @@
 KiCad documentation translation
 ===============================
 
-To start translating these documents in a new language, follow these steps:
+== Starting a translation from scratch
+
+To start translating the KiCad documentation in a new language, follow these steps:
 
 1) read the README.adoc for the preliminary requirements
 
@@ -84,5 +86,115 @@ content of the build dir with:
  rm -rf build/*
 
 ====
+
+
+== Translating more than one doc branch at a time
+
+With the new branching policy of KiCad documentation, life could be
+hard, especially if the stable branch of the documentation in your
+tongue is not already completed.
+
+
+In this case you would want to translate the stable branch of the
+documentation and add all unupdated strings and screenshots to the
+development ``rolling'' branch.
+
+Git has this beautiful command that is ``cherry-pick''. This command
+enable the user to pick a commit from a branch and apply this commit to
+another.
+
+What we want to do is to translate and commit the translation update on
+the stable branch of the documentation and then pick this commit and
+apply it to the new dev branch of the documentation. 
+
+Then, let the gettext suite commands purge the modified strings but
+keeping the unchanged ones.
+
+This is all wonderful but sadly the merge command does not work well with 
+`.po` files due to the large percent of comments that change with trivial
+changes in source making the merge conflicts something neare a nightmare.
+
+Again, the flexibility of git saves our days of works letting to
+customize the merge in a file-type per file-type basis.
+
+All we have to do is to tell git to use a special po aware merge command
+instead of the classic one: this is what po-merge is for. po-merge is
+part of the https://github.com/mezis/git-whistles[git-whistles] and under
+Linux is installable with just:
+
+ sudo gem install git-whistles
+
+[NOTE]
+====
+
+Please note that (actual stable, at the time of writing) 1.1.3 version of
+git-whistles have a small but fastidious bug. If you see a message like
+this:
+
+ git merge-po
+ trap: ERR: bad trap
+
+then what you all have to do is to change the first line of 
+
+ /var/lib/gems/2.3.0/gems/git-whistles-1.1.3/libexec/git-merge-po.sh 
+
+from
+
+ #!/bin/sh
+
+to
+
+ #!/bin/bash
+
+====
+
+If some errors arise, try updating gem first:
+
+ sudo gem update --system
+
+and then retry the installation. Then you will have a new command:
+
+ git merge-po <ancestor> <left> <right>
+
+But you don't have to call this directly, you just have to configure your
+git environment: add this to your .git/config:
+
+  [merge "pofile"]
+    name = Gettext merge driver
+    driver = git merge-po %O %A %B
+
+and add this to .gitattributes or .git/info/attributes:
+
+  *.po   merge=pofile
+  *.pot  merge=pofile
+
+Or globally
+
+Add to ~/.gitconfig:
+
+  [core]
+    attributesfile = ~/.gitattributes
+  [merge "pofile"]
+    name = Gettext merge driver
+    driver = git merge-po %O %A %B
+
+Create ~/.gitattributes:
+
+  *.po   merge=pofile
+  *.pot  merge=pofile
+
+Then try:
+
+ git checkout 4.0
+ git add ...
+ git commit -m "Translation update..." 
+
+write down the commit hash or check it with `git log`
+
+ git push
+ git checkout master
+ git cherry-pick <commit>
+
+Done!
 
 Happy translation!
