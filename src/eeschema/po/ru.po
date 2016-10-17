@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2016-09-08 09:39+0300\n"
-"PO-Revision-Date: 2016-10-15 09:42+0300\n"
+"PO-Revision-Date: 2016-10-17 15:20+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -102,7 +102,7 @@ msgstr "*Дата публикации*\n"
 #. type: Plain text
 #: eeschema.adoc:42
 msgid "Published on may 30, 2015."
-msgstr "14 июня 2016 года"
+msgstr "30 мая 2015 года"
 
 #. type: Title ==
 #: eeschema_automatic_classification_annotation.adoc:3
@@ -3483,13 +3483,13 @@ msgstr ""
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:3
 #, no-wrap
 msgid "Creating Customized Netlists and BOM Files"
-msgstr ""
+msgstr "Создание списков цепей и перечней элементов в различных форматах"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:6
 #, no-wrap
 msgid "Intermediate Netlist File"
-msgstr ""
+msgstr "Промежуточный файл списка цепей"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:10
@@ -3497,6 +3497,8 @@ msgid ""
 "BOM files and netlist files can be converted from an Intermediate netlist "
 "file created by Eeschema."
 msgstr ""
+"Перечни элементов и списки цепей можно создавать из промежуточного файла "
+"списка цепей, который создаёт Eeschema."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:15
@@ -3506,6 +3508,10 @@ msgid ""
 "because of this, it can be used with post-processing to create a BOM or "
 "other reports."
 msgstr ""
+"Этот файл построен с применением синтаксиса XML и называется промежуточным. "
+"Он содержит в себе большое количество данных о печатной плате и, благодаря "
+"этому, может быть использован для последующего преобразования в перечень "
+"элементов или файл другого формата."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:18
@@ -3513,25 +3519,27 @@ msgid ""
 "Depending on the output (BOM or netlist), different subsets of the complete "
 "Intermediate Netlist file will be used in the post-processing."
 msgstr ""
+"В зависимости от выходного формата (перечень элементов или список цепей), "
+"будут использоваться различные области промежуточного файла, при генерации."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:20
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:22
 #, no-wrap
 msgid "Schematic sample"
-msgstr ""
+msgstr "Пример схемы"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:22
 #, no-wrap
 msgid "images/schematic-sample.png"
-msgstr ""
+msgstr "images/schematic-sample.png"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:25
 #, no-wrap
 msgid "The Intermediate Netlist file sample"
-msgstr ""
+msgstr "Пример промежуточного файла списка цепей"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:29
@@ -3539,6 +3547,8 @@ msgid ""
 "The corresponding intermediate netlist (using XML syntax) of the circuit "
 "above is shown below."
 msgstr ""
+"Промежуточный файл списка цепей (в формате XML), соответствующий приведённой "
+"выше схеме, показан далее."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:212
@@ -3726,12 +3736,193 @@ msgid ""
 "  </nets>\n"
 "</export>\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
+"<export version=\"D\">\n"
+"  <design>\n"
+"    <source>F:\\kicad_aux\\netlist_test\\netlist_test.sch</source>\n"
+"    <date>29/08/2010 20:35:21</date>\n"
+"    <tool>eeschema (2010-08-28 BZR 2458)-unstable</tool>\n"
+"  </design>\n"
+"  <components>\n"
+"    <comp ref=\"P1\">\n"
+"      <value>CONN_4</value>\n"
+"      <libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2141</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U2\">\n"
+"      <value>74LS74</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS74\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20BA</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U1\">\n"
+"      <value>74LS04</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS04\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20A6</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"C1\">\n"
+"      <value>CP</value>\n"
+"      <libsource lib=\"device\" part=\"CP\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2094</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"R1\">\n"
+"      <value>R</value>\n"
+"      <libsource lib=\"device\" part=\"R\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E208A</tstamp>\n"
+"    </comp>\n"
+"  </components>\n"
+"  <libparts>\n"
+"    <libpart lib=\"device\" part=\"C\">\n"
+"      <description>Condensateur non polarise</description>\n"
+"      <footprints>\n"
+"        <fp>SM*</fp>\n"
+"        <fp>C?</fp>\n"
+"        <fp>C1-1</fp>\n"
+"      </footprints>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">C</field>\n"
+"        <field name=\"Value\">C</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"device\" part=\"R\">\n"
+"      <description>Resistance</description>\n"
+"      <footprints>\n"
+"        <fp>R?</fp>\n"
+"        <fp>SM0603</fp>\n"
+"        <fp>SM0805</fp>\n"
+"        <fp>R?-*</fp>\n"
+"        <fp>SM1206</fp>\n"
+"      </footprints>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">R</field>\n"
+"        <field name=\"Value\">R</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"conn\" part=\"CONN_4\">\n"
+"      <description>Symbole general de connecteur</description>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">P</field>\n"
+"        <field name=\"Value\">CONN_4</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"P1\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"P2\" type=\"passive\"/>\n"
+"        <pin num=\"3\" name=\"P3\" type=\"passive\"/>\n"
+"        <pin num=\"4\" name=\"P4\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"74xx\" part=\"74LS04\">\n"
+"      <description>Hex Inverseur</description>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">U</field>\n"
+"        <field name=\"Value\">74LS04</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"3\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"4\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"5\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"6\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"7\" name=\"GND\" type=\"power_in\"/>\n"
+"        <pin num=\"8\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"9\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"10\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"11\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"12\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"13\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"14\" name=\"VCC\" type=\"power_in\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"74xx\" part=\"74LS74\">\n"
+"      <description>Dual D FlipFlop, Set &amp; Reset</description>\n"
+"      <docs>74xx/74hc_hct74.pdf</docs>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">U</field>\n"
+"        <field name=\"Value\">74LS74</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"Cd\" type=\"input\"/>\n"
+"        <pin num=\"2\" name=\"D\" type=\"input\"/>\n"
+"        <pin num=\"3\" name=\"Cp\" type=\"input\"/>\n"
+"        <pin num=\"4\" name=\"Sd\" type=\"input\"/>\n"
+"        <pin num=\"5\" name=\"Q\" type=\"output\"/>\n"
+"        <pin num=\"6\" name=\"~Q\" type=\"output\"/>\n"
+"        <pin num=\"7\" name=\"GND\" type=\"power_in\"/>\n"
+"        <pin num=\"8\" name=\"~Q\" type=\"output\"/>\n"
+"        <pin num=\"9\" name=\"Q\" type=\"output\"/>\n"
+"        <pin num=\"10\" name=\"Sd\" type=\"input\"/>\n"
+"        <pin num=\"11\" name=\"Cp\" type=\"input\"/>\n"
+"        <pin num=\"12\" name=\"D\" type=\"input\"/>\n"
+"        <pin num=\"13\" name=\"Cd\" type=\"input\"/>\n"
+"        <pin num=\"14\" name=\"VCC\" type=\"power_in\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"  </libparts>\n"
+"  <libraries>\n"
+"    <library logical=\"device\">\n"
+"      <uri>F:\\kicad\\share\\library\\device.lib</uri>\n"
+"    </library>\n"
+"    <library logical=\"conn\">\n"
+"      <uri>F:\\kicad\\share\\library\\conn.lib</uri>\n"
+"    </library>\n"
+"    <library logical=\"74xx\">\n"
+"      <uri>F:\\kicad\\share\\library\\74xx.lib</uri>\n"
+"    </library>\n"
+"  </libraries>\n"
+"  <nets>\n"
+"    <net code=\"1\" name=\"GND\">\n"
+"      <node ref=\"U1\" pin=\"7\"/>\n"
+"      <node ref=\"C1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"7\"/>\n"
+"      <node ref=\"P1\" pin=\"4\"/>\n"
+"    </net>\n"
+"    <net code=\"2\" name=\"VCC\">\n"
+"      <node ref=\"R1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"14\"/>\n"
+"      <node ref=\"U2\" pin=\"4\"/>\n"
+"      <node ref=\"U2\" pin=\"1\"/>\n"
+"      <node ref=\"U2\" pin=\"14\"/>\n"
+"      <node ref=\"P1\" pin=\"1\"/>\n"
+"    </net>\n"
+"    <net code=\"3\" name=\"\">\n"
+"      <node ref=\"U2\" pin=\"6\"/>\n"
+"    </net>\n"
+"    <net code=\"4\" name=\"\">\n"
+"      <node ref=\"U1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"3\"/>\n"
+"    </net>\n"
+"    <net code=\"5\" name=\"/SIG_OUT\">\n"
+"      <node ref=\"P1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"5\"/>\n"
+"      <node ref=\"U2\" pin=\"2\"/>\n"
+"    </net>\n"
+"    <net code=\"6\" name=\"/CLOCK_IN\">\n"
+"      <node ref=\"R1\" pin=\"2\"/>\n"
+"      <node ref=\"C1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"1\"/>\n"
+"      <node ref=\"P1\" pin=\"3\"/>\n"
+"    </net>\n"
+"  </nets>\n"
+"</export>\n"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:215
 #, no-wrap
 msgid "Conversion to a new netlist format"
-msgstr ""
+msgstr "Преобразование списка цепей в другой формат"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:222
@@ -3742,6 +3933,11 @@ msgid ""
 "be written using Python, XSLT, or any other tool capable of taking XML as "
 "input."
 msgstr ""
+"Применяя сценарии преобразования, можно из промежуточного файла списка цепей "
+"получить упрощенный список цепей или перечень элементов. Так как выполняется "
+"преобразование из текстового файла в текстовый, то сценарий для "
+"преобразования можно составить на языках Python, XSLT или любом другом, "
+"умеющем работать с XML данными."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:230
@@ -3754,47 +3950,57 @@ msgid ""
 "conventions. The full conversion process is handled by Eeschema, after it is "
 "configured once to run xsltproc in a specific way."
 msgstr ""
+"XSLT сам по себе построен на синтаксисе XML и очень удобен для работы с XML-"
+"файлами. Существует бесплатное приложение _xsltproc_, которое можно "
+"загрузить и установить. Приложение xsltproc можно использовать для "
+"считывания промежуточного файла списка цепей в формате XML, применить "
+"сценарий для преобразования полученных данных и сохранить результат в "
+"выходной файл. Использование xsltproc требует написания сценария на языке "
+"XSLT. Весь процесс преобразования контролирует Eeschema, нужно лишь один раз "
+"настроить её для запуска xsltproc."
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:232
 #, no-wrap
 msgid "XSLT approach"
-msgstr ""
+msgstr "Основы XSLT"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:236
 msgid ""
 "The document that describes XSL Transformations (XSLT) is available here:"
 msgstr ""
+"Документ, объясняющий преобразования XSL (XSLT - XSL Transformations), "
+"доступен здесь:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:238
 #, no-wrap
 msgid "*http://www.w3.org/TR/xslt*\n"
-msgstr ""
+msgstr "*http://www.w3.org/TR/xslt*\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:240
 #, no-wrap
 msgid "Create a Pads-Pcb netlist file"
-msgstr ""
+msgstr "Создание списка цепей в формате Pads-Pcb"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:243
 msgid "The pads-pcb format is comprised of two sections."
-msgstr ""
+msgstr "Формат pads-pcb состоит из двух частей."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:245
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:374
 msgid "The footprint list."
-msgstr ""
+msgstr "Списка посадочных мест."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:247
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:376
 msgid "The Nets list: grouping pads references by nets."
-msgstr ""
+msgstr "Списка соединений: контактные площадки сгруппированы по именам цепей."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:250
@@ -3802,6 +4008,8 @@ msgid ""
 "Immediately below is a style-sheet which converts the Intermediate Netlist "
 "file to a pads-pcb netlist format:"
 msgstr ""
+"Сразу под этим, показан сценарий для преобразования промежуточного списка "
+"цепей в файл в формате pads-pcb:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:256
@@ -3812,6 +4020,10 @@ msgid ""
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to PADS netlist format\n"
+"    Copyright (C) 2010, SoftPLC Corporation.\n"
+"    GPL v2.\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:260
@@ -3822,6 +4034,9 @@ msgid ""
 "        https://lists.launchpad.net/kicad-developers/msg05157.html\n"
 "-->\n"
 msgstr ""
+"    How to use:\n"
+"        https://lists.launchpad.net/kicad-developers/msg05157.html\n"
+"-->\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:264
@@ -3833,6 +4048,9 @@ msgid ""
 "  <!ENTITY nl  \"&#xd;&#xa;\"> <!--new line CR, LF -->\n"
 "]>\n"
 msgstr ""
+"<!DOCTYPE xsl:stylesheet [\n"
+"  <!ENTITY nl  \"&#xd;&#xa;\"> <!--new line CR, LF -->\n"
+"]>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:267
@@ -3843,6 +4061,8 @@ msgid ""
 "<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">\n"
 "<xsl:output method=\"text\" omit-xml-declaration=\"yes\" indent=\"no\"/>\n"
 msgstr ""
+"<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">\n"
+"<xsl:output method=\"text\" omit-xml-declaration=\"yes\" indent=\"no\"/>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:275
@@ -3856,6 +4076,13 @@ msgid ""
 "    <xsl:text>*END*&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<xsl:template match=\"/export\">\n"
+"    <xsl:text>*PADS-PCB*&nl;*PART*&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"components/comp\"/>\n"
+"    <xsl:text>&nl;*NET*&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"nets/net\"/>\n"
+"    <xsl:text>*END*&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:291
@@ -3877,6 +4104,21 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each component -->\n"
+"<xsl:template match=\"comp\">\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"footprint != '' \">\n"
+"            <xsl:apply-templates select=\"footprint\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>unknown</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:310
@@ -3901,6 +4143,24 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each net -->\n"
+"<xsl:template match=\"net\">\n"
+"    <!-- nets are output only if there is more than one pin in net -->\n"
+"    <xsl:if test=\"count(node)>1\">\n"
+"        <xsl:text>*SIGNAL* </xsl:text>\n"
+"        <xsl:choose>\n"
+"            <xsl:when test = \"@name != '' \">\n"
+"                <xsl:value-of select=\"@name\"/>\n"
+"            </xsl:when>\n"
+"            <xsl:otherwise>\n"
+"                <xsl:text>N-</xsl:text>\n"
+"                <xsl:value-of select=\"@code\"/>\n"
+"            </xsl:otherwise>\n"
+"        </xsl:choose>\n"
+"        <xsl:text>&nl;</xsl:text>\n"
+"        <xsl:apply-templates select=\"node\"/>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:319
@@ -3915,6 +4175,14 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each node -->\n"
+"<xsl:template match=\"node\">\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text>.</xsl:text>\n"
+"    <xsl:value-of select=\"@pin\"/>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:321
@@ -3922,12 +4190,14 @@ msgstr ""
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:745
 #, no-wrap
 msgid "</xsl:stylesheet>\n"
-msgstr ""
+msgstr "</xsl:stylesheet>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:324
 msgid "And here is the pads-pcb output file after running xsltproc:"
 msgstr ""
+"А здесь, показано содержимое выходного файла в формате pads-pcb после работы "
+"xsltproc:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:358
@@ -3966,39 +4236,71 @@ msgid ""
 "U1.1\n"
 "P1.3\n"
 msgstr ""
+"*PADS-PCB*\n"
+"*PART*\n"
+"P1 unknown\n"
+"U2 unknown\n"
+"U1 unknown\n"
+"C1 unknown\n"
+"R1 unknown\n"
+"*NET*\n"
+"*SIGNAL* GND\n"
+"U1.7\n"
+"C1.2\n"
+"U2.7\n"
+"P1.4\n"
+"*SIGNAL* VCC\n"
+"R1.1\n"
+"U1.14\n"
+"U2.4\n"
+"U2.1\n"
+"U2.14\n"
+"P1.1\n"
+"*SIGNAL* N-4\n"
+"U1.2\n"
+"U2.3\n"
+"*SIGNAL* /SIG_OUT\n"
+"P1.2\n"
+"U2.5\n"
+"U2.2\n"
+"*SIGNAL* /CLOCK_IN\n"
+"R1.2\n"
+"C1.1\n"
+"U1.1\n"
+"P1.3\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:360
 #, no-wrap
 msgid "*END*\n"
-msgstr ""
+msgstr "*END*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:363
 msgid "The command line to make this conversion is:"
-msgstr ""
+msgstr "Командная строка для запуска этого преобразования:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:366
 #, no-wrap
 msgid "kicad\\\\bin\\\\xsltproc.exe -o test.net kicad\\\\bin\\\\plugins\\\\netlist_form_pads-pcb.xsl test.tmp\n"
-msgstr ""
+msgstr "kicad\\\\bin\\\\xsltproc.exe -o test.net kicad\\\\bin\\\\plugins\\\\netlist_form_pads-pcb.xsl test.tmp\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:369
 #, no-wrap
 msgid "Create a Cadstar netlist file"
-msgstr ""
+msgstr "Создание списка цепей в формате Cadstar"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:372
 msgid "The Cadstar format is comprised of two sections."
-msgstr ""
+msgstr "Формат Cadstar состоит из двух частей."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:378
 msgid "Here is the style-sheet file to make this specific conversion:"
-msgstr ""
+msgstr "Далее показан файл сценария для выполнения необходимых преобразований:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:385
@@ -4010,6 +4312,11 @@ msgid ""
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist format\n"
+"    Copyright (C) 2010, Jean-Pierre Charras.\n"
+"    Copyright (C) 2010, SoftPLC Corporation.\n"
+"    GPL v2.\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:403
@@ -4026,6 +4333,16 @@ msgid ""
 "    <xsl:text>&nl;.END&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- Netlist header -->\n"
+"<xsl:template match=\"/export\">\n"
+"    <xsl:text>.HEA&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"design/date\"/>  <!-- Generate line .TIM <time> -->\n"
+"    <xsl:apply-templates select=\"design/tool\"/>  <!-- Generate line .APP <eeschema version> -->\n"
+"    <xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of components -->\n"
+"    <xsl:text>&nl;&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"nets/net\"/>          <!-- Generate list of nets and connections -->\n"
+"    <xsl:text>&nl;.END&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:410
@@ -4038,6 +4355,12 @@ msgid ""
 "    <xsl:text>\"&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+" <!-- Generate line .TIM 20/08/2010 10:45:33 -->\n"
+"<xsl:template match=\"tool\">\n"
+"    <xsl:text>.APP \"</xsl:text>\n"
+"    <xsl:apply-templates/>\n"
+"    <xsl:text>\"&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:417
@@ -4050,6 +4373,12 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+" <!-- Generate line .APP \"eeschema (2010-08-17 BZR 2450)-unstable\" -->\n"
+"<xsl:template match=\"date\">\n"
+"    <xsl:text>.TIM </xsl:text>\n"
+"    <xsl:apply-templates/>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:433
@@ -4071,6 +4400,21 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each component -->\n"
+"<xsl:template match=\"comp\">\n"
+"    <xsl:text>.ADD_COM </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"value != '' \">\n"
+"            <xsl:text>\"</xsl:text> <xsl:apply-templates select=\"value\"/> <xsl:text>\"</xsl:text>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>\"\"</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:456
@@ -4099,6 +4443,28 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each net -->\n"
+"<xsl:template match=\"net\">\n"
+"    <!-- nets are output only if there is more than one pin in net -->\n"
+"    <xsl:if test=\"count(node)>1\">\n"
+"    <xsl:variable name=\"netname\">\n"
+"        <xsl:text>\"</xsl:text>\n"
+"        <xsl:choose>\n"
+"            <xsl:when test = \"@name != '' \">\n"
+"                <xsl:value-of select=\"@name\"/>\n"
+"            </xsl:when>\n"
+"            <xsl:otherwise>\n"
+"                <xsl:text>N-</xsl:text>\n"
+"                <xsl:value-of select=\"@code\"/>\n"
+"        </xsl:otherwise>\n"
+"        </xsl:choose>\n"
+"        <xsl:text>\"&nl;</xsl:text>\n"
+"        </xsl:variable>\n"
+"        <xsl:apply-templates select=\"node\" mode=\"first\"/>\n"
+"        <xsl:value-of select=\"$netname\"/>\n"
+"        <xsl:apply-templates select=\"node\" mode=\"others\"/>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:467
@@ -4115,6 +4481,16 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each node -->\n"
+"<xsl:template match=\"node\" mode=\"first\">\n"
+"    <xsl:if test=\"position()=1\">\n"
+"       <xsl:text>.ADD_TER </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text>.</xsl:text>\n"
+"    <xsl:value-of select=\"@pin\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:486
@@ -4139,11 +4515,29 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<xsl:template match=\"node\" mode=\"others\">\n"
+"    <xsl:choose>\n"
+"        <xsl:when test='position()=1'>\n"
+"        </xsl:when>\n"
+"        <xsl:when test='position()=2'>\n"
+"           <xsl:text>.TER     </xsl:text>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"           <xsl:text>         </xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:if test=\"position()>1\">\n"
+"        <xsl:value-of select=\"@ref\"/>\n"
+"        <xsl:text>.</xsl:text>\n"
+"        <xsl:value-of select=\"@pin\"/>\n"
+"        <xsl:text>&nl;</xsl:text>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:491
 msgid "Here is the Cadstar output file."
-msgstr ""
+msgstr "Это выходной файл в формате Cadstar."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:501
@@ -4158,6 +4552,14 @@ msgid ""
 ".ADD_COM C1 \"CP\"\n"
 ".ADD_COM R1 \"R\"\n"
 msgstr ""
+".HEA\n"
+".TIM 21/08/2010 08:12:08\n"
+".APP \"eeschema (2010-08-09 BZR 2439)-unstable\"\n"
+".ADD_COM P1 \"CONN_4\"\n"
+".ADD_COM U2 \"74LS74\"\n"
+".ADD_COM U1 \"74LS04\"\n"
+".ADD_COM C1 \"CP\"\n"
+".ADD_COM R1 \"R\"\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:522
@@ -4183,18 +4585,37 @@ msgid ""
 "         U1.1\n"
 "         P1.3\n"
 msgstr ""
+".ADD_TER U1.7 \"GND\"\n"
+".TER     C1.2\n"
+"         U2.7\n"
+"         P1.4\n"
+".ADD_TER R1.1 \"VCC\"\n"
+".TER     U1.14\n"
+"         U2.4\n"
+"         U2.1\n"
+"         U2.14\n"
+"         P1.1\n"
+".ADD_TER U1.2 \"N-4\"\n"
+".TER     U2.3\n"
+".ADD_TER P1.2 \"/SIG_OUT\"\n"
+".TER     U2.5\n"
+"         U2.2\n"
+".ADD_TER R1.2 \"/CLOCK_IN\"\n"
+".TER     C1.1\n"
+"         U1.1\n"
+"         P1.3\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:524
 #, no-wrap
 msgid ".END\n"
-msgstr ""
+msgstr ".END\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:527
 #, no-wrap
 msgid "Create an OrcadPCB2 netlist file"
-msgstr ""
+msgstr "Создание списка цепей в формате OrcadPCB2"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:531
@@ -4202,11 +4623,14 @@ msgid ""
 "This format has only one section which is the footprint list. Each footprint "
 "includes its list of pads with reference to a net."
 msgstr ""
+"Этот формат имеет только одну часть, которая является списком посадочных "
+"мест. Каждое посадочное место содержит перечень его контактных площадок с "
+"указанием подсоединённых цепей."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:533
 msgid "Here is the style-sheet for this specific conversion:"
-msgstr ""
+msgstr "Здесь приведён сценарий для выполнения необходимых преобразований:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:539
@@ -4217,6 +4641,10 @@ msgid ""
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist format\n"
+"    Copyright (C) 2010, SoftPLC Corporation.\n"
+"    GPL v2.\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:563
@@ -4235,6 +4663,18 @@ msgid ""
 "<xsl:apply-templates select=\"design/tool\"/>\n"
 "<xsl:text>}&nl;</xsl:text>\n"
 msgstr ""
+"<!--\n"
+"    Netlist header\n"
+"    Creates the entire netlist\n"
+"    (can be seen as equivalent to main function in C\n"
+"-->\n"
+"<xsl:template match=\"/export\">\n"
+"    <xsl:text>( { Eeschema Netlist Version 1.1  </xsl:text>\n"
+"    <!-- Generate line .TIM <time> -->\n"
+"<xsl:apply-templates select=\"design/date\"/>\n"
+"<!-- Generate line eeschema version ... -->\n"
+"<xsl:apply-templates select=\"design/tool\"/>\n"
+"<xsl:text>}&nl;</xsl:text>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:566
@@ -4243,6 +4683,8 @@ msgid ""
 "<!-- Generate the list of components -->\n"
 "<xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of components -->\n"
 msgstr ""
+"<!-- Generate the list of components -->\n"
+"<xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of components -->\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:570
@@ -4252,6 +4694,9 @@ msgid ""
 "<xsl:text>)&nl;*&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- end of file -->\n"
+"<xsl:text>)&nl;*&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:577
@@ -4264,6 +4709,12 @@ msgid ""
 "    <xsl:apply-templates/>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    Generate id in header like \"eeschema (2010-08-17 BZR 2450)-unstable\"\n"
+"-->\n"
+"<xsl:template match=\"tool\">\n"
+"    <xsl:apply-templates/>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:585
@@ -4277,6 +4728,13 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    Generate date in header like \"20/08/2010 10:45:33\"\n"
+"-->\n"
+"<xsl:template match=\"date\">\n"
+"    <xsl:apply-templates/>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:632
@@ -4329,6 +4787,52 @@ msgid ""
 "    <xsl:text> )&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    This template read each component\n"
+"    (path = /export/components/comp)\n"
+"    creates lines:\n"
+"     ( 3EBF7DBD $noname U1 74LS125\n"
+"      ... pin list ...\n"
+"      )\n"
+"    and calls \"create_pin_list\" template to build the pin list\n"
+"-->\n"
+"<xsl:template match=\"comp\">\n"
+"    <xsl:text> ( </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"tstamp != '' \">\n"
+"            <xsl:apply-templates select=\"tstamp\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>00000000</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"footprint != '' \">\n"
+"            <xsl:apply-templates select=\"footprint\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>$noname</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"value != '' \">\n"
+"            <xsl:apply-templates select=\"value\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>\"~\"</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"    <xsl:call-template name=\"Search_pin_list\" >\n"
+"        <xsl:with-param name=\"cmplib_id\" select=\"libsource/@part\"/>\n"
+"        <xsl:with-param name=\"cmp_ref\" select=\"@ref\"/>\n"
+"    </xsl:call-template>\n"
+"    <xsl:text> )&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:653
@@ -4355,6 +4859,26 @@ msgid ""
 "        </xsl:for-each>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    This template search for a given lib component description in list\n"
+"    lib component descriptions are in /export/libparts,\n"
+"    and each description start at ./libpart\n"
+"    We search here for the list of pins of the given component\n"
+"    This template has 2 parameters:\n"
+"        \"cmplib_id\" (reference in libparts)\n"
+"        \"cmp_ref\"   (schematic reference of the given component)\n"
+"-->\n"
+"<xsl:template name=\"Search_pin_list\" >\n"
+"    <xsl:param name=\"cmplib_id\" select=\"0\" />\n"
+"    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
+"        <xsl:for-each select=\"/export/libparts/libpart\">\n"
+"            <xsl:if test = \"@part = $cmplib_id \">\n"
+"                <xsl:apply-templates name=\"build_pin_list\" select=\"pins/pin\">\n"
+"                    <xsl:with-param name=\"cmp_ref\" select=\"$cmp_ref\"/>\n"
+"                </xsl:apply-templates>\n"
+"            </xsl:if>\n"
+"        </xsl:for-each>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:670
@@ -4376,6 +4900,21 @@ msgid ""
 "<xsl:template name=\"build_pin_list\" match=\"pin\">\n"
 "    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
 msgstr ""
+"<!--\n"
+"    This template writes the pin list of a component\n"
+"    from the pin list of the library description\n"
+"    The pin list from library description is something like\n"
+"          <pins>\n"
+"            <pin num=\"1\" type=\"passive\"/>\n"
+"            <pin num=\"2\" type=\"passive\"/>\n"
+"          </pins>\n"
+"    Output pin list is ( <pin num> <net name> )\n"
+"    something like\n"
+"            ( 1 VCC )\n"
+"            ( 2 GND )\n"
+"-->\n"
+"<xsl:template name=\"build_pin_list\" match=\"pin\">\n"
+"    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:675
@@ -4386,6 +4925,10 @@ msgid ""
 "    <xsl:value-of select=\"@num\"/>\n"
 "    <xsl:text> </xsl:text>\n"
 msgstr ""
+"    <!-- write pin numner and separator -->\n"
+"    <xsl:text>  ( </xsl:text>\n"
+"    <xsl:value-of select=\"@num\"/>\n"
+"    <xsl:text> </xsl:text>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:690
@@ -4406,6 +4949,20 @@ msgid ""
 "        </xsl:apply-templates>\n"
 "    </xsl:for-each>\n"
 msgstr ""
+"    <!-- search net name in nets section and write it: -->\n"
+"    <xsl:variable name=\"pinNum\" select=\"@num\" />\n"
+"    <xsl:for-each select=\"/export/nets/net\">\n"
+"        <!-- net name is output only if there is more than one pin in net\n"
+"             else use \"?\" as net name, so count items in this net\n"
+"        -->\n"
+"        <xsl:variable name=\"pinCnt\" select=\"count(node)\" />\n"
+"        <xsl:apply-templates name=\"Search_pin_netname\" select=\"node\">\n"
+"            <xsl:with-param name=\"cmp_ref\" select=\"$cmp_ref\"/>\n"
+"            <xsl:with-param name=\"pin_cnt_in_net\" select=\"$pinCnt\"/>\n"
+"            <xsl:with-param name=\"pin_num\"> <xsl:value-of select=\"$pinNum\"/>\n"
+"            </xsl:with-param>\n"
+"        </xsl:apply-templates>\n"
+"    </xsl:for-each>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:694
@@ -4415,6 +4972,9 @@ msgid ""
 "    <xsl:text> )&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"    <!-- close line -->\n"
+"    <xsl:text> )&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:712
@@ -4438,6 +4998,23 @@ msgid ""
 "        \"pin_num\"   (pin number)\n"
 "-->\n"
 msgstr ""
+"<!--\n"
+"    This template writes the pin netname of a given pin of a given component\n"
+"    from the nets list\n"
+"    The nets list description is something like\n"
+"      <nets>\n"
+"        <net code=\"1\" name=\"GND\">\n"
+"          <node ref=\"J1\" pin=\"20\"/>\n"
+"              <node ref=\"C2\" pin=\"2\"/>\n"
+"        </net>\n"
+"        <net code=\"2\" name=\"\">\n"
+"          <node ref=\"U2\" pin=\"11\"/>\n"
+"        </net>\n"
+"    </nets>\n"
+"    This template has 2 parameters:\n"
+"        \"cmp_ref\"   (schematic reference of the given component)\n"
+"        \"pin_num\"   (pin number)\n"
+"-->\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:717
@@ -4448,6 +5025,10 @@ msgid ""
 "    <xsl:param name=\"pin_num\" select=\"0\" />\n"
 "    <xsl:param name=\"pin_cnt_in_net\" select=\"0\" />\n"
 msgstr ""
+"<xsl:template name=\"Search_pin_netname\" match=\"node\">\n"
+"    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
+"    <xsl:param name=\"pin_num\" select=\"0\" />\n"
+"    <xsl:param name=\"pin_cnt_in_net\" select=\"0\" />\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:741
@@ -4477,17 +5058,40 @@ msgid ""
 "        </xsl:if>\n"
 "    </xsl:if>\n"
 msgstr ""
+"    <xsl:if test = \"@ref = $cmp_ref \">\n"
+"        <xsl:if test = \"@pin = $pin_num\">\n"
+"        <!-- net name is output only if there is more than one pin in net\n"
+"             else use \"?\" as net name\n"
+"        -->\n"
+"            <xsl:if test = \"$pin_cnt_in_net>1\">\n"
+"                <xsl:choose>\n"
+"                    <!-- if a net has a name, use it,\n"
+"                        else build a name from its net code\n"
+"                    -->\n"
+"                    <xsl:when test = \"../@name != '' \">\n"
+"                        <xsl:value-of select=\"../@name\"/>\n"
+"                    </xsl:when>\n"
+"                    <xsl:otherwise>\n"
+"                        <xsl:text>$N-0</xsl:text><xsl:value-of select=\"../@code\"/>\n"
+"                    </xsl:otherwise>\n"
+"                </xsl:choose>\n"
+"            </xsl:if>\n"
+"            <xsl:if test = \"$pin_cnt_in_net &lt;2\">\n"
+"                <xsl:text>?</xsl:text>\n"
+"            </xsl:if>\n"
+"        </xsl:if>\n"
+"    </xsl:if>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:743
 #, no-wrap
 msgid "</xsl:template>\n"
-msgstr ""
+msgstr "</xsl:template>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:748
 msgid "Here is the OrcadPCB2 output file."
-msgstr ""
+msgstr "Здесь показан выходной файл в формате OrcadPCB2."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:784
@@ -4528,12 +5132,46 @@ msgid ""
 ")\n"
 "*\n"
 msgstr ""
+"( { Eeschema Netlist Version 1.1  29/08/2010 21:07:51\n"
+"eeschema (2010-08-28 BZR 2458)-unstable}\n"
+" ( 4C6E2141 $noname P1 CONN_4\n"
+"  (  1 VCC )\n"
+"  (  2 /SIG_OUT )\n"
+"  (  3 /CLOCK_IN )\n"
+"  (  4 GND )\n"
+" )\n"
+" ( 4C6E20BA $noname U2 74LS74\n"
+"  (  1 VCC )\n"
+"  (  2 /SIG_OUT )\n"
+"  (  3 N-04 )\n"
+"  (  4 VCC )\n"
+"  (  5 /SIG_OUT )\n"
+"  (  6 ? )\n"
+"  (  7 GND )\n"
+"  (  14 VCC )\n"
+" )\n"
+" ( 4C6E20A6 $noname U1 74LS04\n"
+"  (  1 /CLOCK_IN )\n"
+"  (  2 N-04 )\n"
+"  (  7 GND )\n"
+"  (  14 VCC )\n"
+" )\n"
+" ( 4C6E2094 $noname C1 CP\n"
+"  (  1 /CLOCK_IN )\n"
+"  (  2 GND )\n"
+" )\n"
+" ( 4C6E208A $noname R1 R\n"
+"  (  1 VCC )\n"
+"  (  2 /CLOCK_IN )\n"
+" )\n"
+")\n"
+"*\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:787
 #, no-wrap
 msgid "Eeschema plugins interface"
-msgstr ""
+msgstr "Подключение плагинов в Eeschema"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:791
@@ -4541,12 +5179,14 @@ msgid ""
 "Intermediate Netlist converters can be automatically launched within "
 "Eeschema."
 msgstr ""
+"Инструменты преобразования промежуточного списка цепей можно автоматически "
+"запускать из Eeschema."
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:793
 #, no-wrap
 msgid "Init the Dialog window"
-msgstr ""
+msgstr "Настройка диалогового окна"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:797
@@ -4554,79 +5194,84 @@ msgid ""
 "One can add a new netlist plug-in user interface tab by clicking on the Add "
 "Plugin button."
 msgstr ""
+"Каждый может добавить вкладку для нового плагина генерации списка соединений "
+"с помощью кнопки \"Добавить плагин\"."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:798
 #, no-wrap
 msgid "eeschema_plugin_add_plugin_png"
-msgstr ""
+msgstr "eeschema_plugin_add_plugin_png"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:798
 #, no-wrap
 msgid "images/eeschema_plugin_add_plugin.png"
-msgstr ""
+msgstr "images/ru/eeschema_plugin_add_plugin.png"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:801
 msgid "Here is what the configuration data for the PadsPcb tab looks like:"
 msgstr ""
+"Здесь показано как выглядит вкладка с параметрами нового плагина PadsPcb:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:802
 #, no-wrap
 msgid "eeschema_plugin_padspcb_png"
-msgstr ""
+msgstr "eeschema_plugin_padspcb_png"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:802
 #, no-wrap
 msgid "images/eeschema_plugin_padspcb.png"
-msgstr ""
+msgstr "images/ru/eeschema_plugin_padspcb.png"
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:805
 #, no-wrap
 msgid "Plugin Configuration Parameters"
-msgstr ""
+msgstr "Параметры плагина"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:809
 msgid ""
 "The Eeschema plug-in configuration dialog requires the following information:"
 msgstr ""
+"Диалоговое окно настройки плагина в Eeschema требует следующую информацию:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:811
 msgid "The title: for instance, the name of the netlist format."
-msgstr ""
+msgstr "Наименование: имя формата списка цепей, к примеру."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:813
 msgid "The command line to launch the converter."
-msgstr ""
+msgstr "Командная строка для запуска преобразования."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:815
 msgid "Once you click on the netlist button the following will happen:"
-msgstr ""
+msgstr "Как только будет нажата кнопка Сформировать, произойдет следующее:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:817
 msgid ""
 "Eeschema creates an intermediate netlist file *.xml, for instance test.xml."
 msgstr ""
+"Eeschema создаст промежуточный файл списка цепей *.xml, например, test.xml."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:819
 msgid "Eeschema runs the plug-in by reading test.xml and creates test.net."
-msgstr ""
+msgstr "Eeschema запустит плагин, который считает test.xml и создаст test.net."
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:821
 #, no-wrap
 msgid "Generate netlist files with the command line"
-msgstr ""
+msgstr "Создание списка цепей с помощью командной строки"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:826
@@ -4634,6 +5279,9 @@ msgid ""
 "Assuming we are using the program _xsltproc.exe_ to apply the sheet style to "
 "the intermediate file, _xsltproc.exe_ is executed with the following command:"
 msgstr ""
+"Предположим, используется приложение _xsltproc.exe_ для выполнения сценария "
+"по преобразованию промежуточного файла, тогда командная строка для запуска "
+"_xsltproc.exe_ будет выглядеть так:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:828
@@ -4641,11 +5289,15 @@ msgid ""
 "_xsltproc.exe -o <output filename> < style-sheet filename> <input XML file "
 "to convert>_"
 msgstr ""
+"_xsltproc.exe -o <имя выходного файла> <имя сценария> <имя входного XML "
+"файла для преобразования>_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:830
 msgid "In KiCad under Windows the command line is the following:"
 msgstr ""
+"Если KiCad работает в операционной системе Windows, то командная строка "
+"будет иметь следующий вид:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:832
@@ -4653,11 +5305,13 @@ msgid ""
 "_f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-"
 "pcb.xsl \"%I\"_"
 msgstr ""
+"_f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-"
+"pcb.xsl \"%I\"_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:834
 msgid "Under Linux the command becomes as follows:"
-msgstr ""
+msgstr "В операционных системах на базе Linux командная строка будет такой:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:836
@@ -4665,6 +5319,8 @@ msgid ""
 "_xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl "
 "\"%I\"_"
 msgstr ""
+"_xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl "
+"\"%I\"_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:840
@@ -4673,23 +5329,26 @@ msgid ""
 "Do not forget the double quotes around the file names, this allows them to "
 "have spaces after the substitution by Eeschema."
 msgstr ""
+"Где _netlist_form_pads-pcb.xsl_ -- файл сценария, который нужно применить. "
+"Не забывайте ставить кавычки вокруг имён файлов, это позволит Eeschema "
+"обрабатывать файлы с пробелами в именах."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:842
 msgid "The command line format accepts parameters for filenames:"
-msgstr ""
+msgstr "Командная строка поддерживает команды для указания имен файлов:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:844
 msgid "The supported formatting parameters are."
-msgstr ""
+msgstr "Поддерживаемые параметры форматирования."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:847
 msgid ""
 "%B => base filename and path of selected output file, minus path and "
 "extension."
-msgstr ""
+msgstr "%B => базовое имя -- полное имя выходного файла без пути и расширения."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:850
@@ -4697,61 +5356,62 @@ msgid ""
 "%I => complete filename and path of the temporary input file (the "
 "intermediate net file)."
 msgstr ""
+"%I => полное имя временного входного файла (промежуточный файл списка цепей)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:852
 msgid "%O => complete filename and path of the user chosen output file."
-msgstr ""
+msgstr "%O => полное имя выходного файла."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:854
 msgid "_%I_ will be replaced by the actual intermediate file name"
-msgstr ""
+msgstr "_%I_ будет заменено актуальным именем промежуточного файла"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:856
 msgid "_%O_ will be replaced by the actual output file name."
-msgstr ""
+msgstr "_%O_ будет заменено актуальным именем выходного файла."
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:858
 #, no-wrap
 msgid "Command line format: example for xsltproc"
-msgstr ""
+msgstr "Формат командной строки: пример для xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:861
 msgid "The command line format for xsltproc is the following:"
-msgstr ""
+msgstr "Формат командной строки для xsltproc следующий:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:863
 msgid "<path of xsltproc> xsltproc <xsltproc parameters>"
-msgstr ""
+msgstr "<путь к xsltproc> xsltproc <параметры для xsltproc>"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:865
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:899
 msgid "under Windows:"
-msgstr ""
+msgstr "В Windows:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:867
 #, no-wrap
 msgid "*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
-msgstr ""
+msgstr "*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:869
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:903
 msgid "under Linux:"
-msgstr ""
+msgstr "В Linux:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:871
 #, no-wrap
 msgid "*xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
-msgstr ""
+msgstr "*xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:874
@@ -4759,12 +5419,14 @@ msgid ""
 "The above examples assume xsltproc is installed on your PC under Windows and "
 "all files located in kicad/bin."
 msgstr ""
+"В приведённых выше примерах предполагается, что все файлы xsltproc на ПК с "
+"ОС Windows установлены в каталог kicad/bin."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:876
 #, no-wrap
 msgid "Bill of Materials Generation"
-msgstr ""
+msgstr "Создание перечня элементов"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:882
@@ -4773,18 +5435,22 @@ msgid ""
 "components, a BOM can be extracted from it. Here is the plug-in setup window "
 "(on Linux) to create a customized Bill Of Materials (BOM)  file:"
 msgstr ""
+"Так как промежуточный файл списка цепей содержит всю информацию об "
+"использованных компонентах, то из него можно извлечь перечень элементов. "
+"Далее показано диалоговое окно с настроенным плагином (в Linux) для "
+"генерации перечня элементов (Bill Of Materials -- BOM):"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:883
 #, no-wrap
 msgid "bom-netlist-tab_png"
-msgstr ""
+msgstr "bom-netlist-tab_png"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:883
 #, no-wrap
 msgid "images/en/bom-netlist-tab.png"
-msgstr ""
+msgstr "images/ru/bom-netlist-tab.png"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:890
@@ -4794,50 +5460,56 @@ msgid ""
 "xsl__. You are free to modify it according to your needs, and if you develop "
 "something generally useful, ask that it become part of the KiCad project."
 msgstr ""
+"Путь к файлу сценария bom2csv.xsl зависит от используемой операционной "
+"системы. На данный момент, лучший сценарий XSLT для создания перечня "
+"элементов называется __bom2csv.xsl__. Если нужно, его всегда можно изменить "
+"и, если в результате получится что-то полезное для всех, попросить сделать "
+"новый сценарий частью проекта KiCad."
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:892
 #, no-wrap
 msgid "Command line format: example for python scripts"
-msgstr ""
+msgstr "Формат командной строки: пример сценария на языке Python"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:895
 msgid "The command line format for python is something like:"
 msgstr ""
+"Командная строка для скрипта на языке Python выглядит, приблизительно, так:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:897
 msgid "python <script file name> <input filename> <output filename>"
-msgstr ""
+msgstr "python <имя файла скрипта> <имя входного файла> <имя выходного файла>"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:901
 #, no-wrap
 msgid "*python *.exe f:/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
-msgstr ""
+msgstr "*python *.exe f:/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:905
 #, no-wrap
 msgid "*python /usr/local/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
-msgstr ""
+msgstr "*python /usr/local/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:907
 msgid "Assuming python is installed on your PC."
-msgstr ""
+msgstr "Предполагается, что Python уже установлен на ПК."
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:909
 #, no-wrap
 msgid "Intermediate Netlist structure"
-msgstr ""
+msgstr "Структура промежуточного файла списка цепей"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:912
 msgid "This sample gives an idea of the netlist file format."
-msgstr ""
+msgstr "Этот пример даёт представление о формате файла списка цепей."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:989
@@ -4919,47 +5591,122 @@ msgid ""
 "  </nets>\n"
 "</export>\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
+"<export version=\"D\">\n"
+"  <design>\n"
+"    <source>F:\\kicad_aux\\netlist_test\\netlist_test.sch</source>\n"
+"    <date>29/08/2010 21:07:51</date>\n"
+"    <tool>eeschema (2010-08-28 BZR 2458)-unstable</tool>\n"
+"  </design>\n"
+"  <components>\n"
+"    <comp ref=\"P1\">\n"
+"      <value>CONN_4</value>\n"
+"      <libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2141</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U2\">\n"
+"      <value>74LS74</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS74\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20BA</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U1\">\n"
+"      <value>74LS04</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS04\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20A6</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"C1\">\n"
+"      <value>CP</value>\n"
+"      <libsource lib=\"device\" part=\"CP\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2094</tstamp>\n"
+"    <comp ref=\"R1\">\n"
+"      <value>R</value>\n"
+"      <libsource lib=\"device\" part=\"R\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E208A</tstamp>\n"
+"    </comp>\n"
+"  </components>\n"
+"  <libparts/>\n"
+"  <libraries/>\n"
+"  <nets>\n"
+"    <net code=\"1\" name=\"GND\">\n"
+"      <node ref=\"U1\" pin=\"7\"/>\n"
+"      <node ref=\"C1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"7\"/>\n"
+"      <node ref=\"P1\" pin=\"4\"/>\n"
+"    </net>\n"
+"    <net code=\"2\" name=\"VCC\">\n"
+"      <node ref=\"R1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"14\"/>\n"
+"      <node ref=\"U2\" pin=\"4\"/>\n"
+"      <node ref=\"U2\" pin=\"1\"/>\n"
+"      <node ref=\"U2\" pin=\"14\"/>\n"
+"      <node ref=\"P1\" pin=\"1\"/>\n"
+"    </net>\n"
+"    <net code=\"3\" name=\"\">\n"
+"      <node ref=\"U2\" pin=\"6\"/>\n"
+"    </net>\n"
+"    <net code=\"4\" name=\"\">\n"
+"      <node ref=\"U1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"3\"/>\n"
+"    </net>\n"
+"    <net code=\"5\" name=\"/SIG_OUT\">\n"
+"      <node ref=\"P1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"5\"/>\n"
+"      <node ref=\"U2\" pin=\"2\"/>\n"
+"    </net>\n"
+"    <net code=\"6\" name=\"/CLOCK_IN\">\n"
+"      <node ref=\"R1\" pin=\"2\"/>\n"
+"      <node ref=\"C1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"1\"/>\n"
+"      <node ref=\"P1\" pin=\"3\"/>\n"
+"    </net>\n"
+"  </nets>\n"
+"</export>\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:992
 #, no-wrap
 msgid "General netlist file structure"
-msgstr ""
+msgstr "Основные элементы файла списка цепей"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:995
 msgid "The intermediate Netlist accounts for five sections."
-msgstr ""
+msgstr "Промежуточный файл насчитывает пять разделов."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:997
 msgid "The header section."
-msgstr ""
+msgstr "Раздел оглавления (design)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:998
 msgid "The components section."
-msgstr ""
+msgstr "Раздел компонентов (components)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:999
 msgid "The lib parts section."
-msgstr ""
+msgstr "Раздел частей компонента (libparts)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1000
 msgid "The libraries section."
-msgstr ""
+msgstr "Раздел библиотек (libraries)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1001
 msgid "The nets section."
-msgstr ""
+msgstr "Раздел цепей (nets)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1003
 msgid "The file content has the delimiter <export>"
-msgstr ""
+msgstr "Содержимое файла ограничивается разделителем <export>"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1008
@@ -4969,17 +5716,20 @@ msgid ""
 "...\n"
 "</export>\n"
 msgstr ""
+"<export version=\"D\">\n"
+"...\n"
+"</export>\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1011
 #, no-wrap
 msgid "The header section"
-msgstr ""
+msgstr "Оглавление"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1014
 msgid "The header has the delimiter <design>"
-msgstr ""
+msgstr "Оглавление ограничивается разделителем <design>"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1021
@@ -4991,22 +5741,27 @@ msgid ""
 "<tool>eeschema (2010-08-09 BZR 2439)-unstable</tool>\n"
 "</design>\n"
 msgstr ""
+"<design>\n"
+"<source>F:\\kicad_aux\\netlist_test\\netlist_test.sch</source>\n"
+"<date>21/08/2010 08:12:08</date>\n"
+"<tool>eeschema (2010-08-09 BZR 2439)-unstable</tool>\n"
+"</design>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1024
 msgid "This section can be considered a comment section."
-msgstr ""
+msgstr "Этот раздел может содержать подраздел с комментариями."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1026
 #, no-wrap
 msgid "The components section"
-msgstr ""
+msgstr "Компоненты"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1029
 msgid "The component section has the delimiter <components>"
-msgstr ""
+msgstr "Раздел компонентов ограничивается разделителем <components>"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1039
@@ -5021,6 +5776,14 @@ msgid ""
 "</comp>\n"
 "</components>\n"
 msgstr ""
+"<components>\n"
+"<comp ref=\"P1\">\n"
+"<value>CONN_4</value>\n"
+"<libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"<sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"<tstamp>4C6E2141</tstamp>\n"
+"</comp>\n"
+"</components>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1043
@@ -5028,6 +5791,8 @@ msgid ""
 "This section contains the list of components in your schematic. Each "
 "component is described like this:"
 msgstr ""
+"Этот раздел содержит перечень компонентов используемых в схеме. Каждый "
+"компонент имеет следующее описание:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1051
@@ -5040,18 +5805,24 @@ msgid ""
 "<tstamp>4C6E2141</tstamp>\n"
 "</comp>\n"
 msgstr ""
+"<comp ref=\"P1\">\n"
+"<value>CONN_4</value>\n"
+"<libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"<sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"<tstamp>4C6E2141</tstamp>\n"
+"</comp>\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1056
 #, no-wrap
 msgid "|*libsource* |name of the lib where this component was found.\n"
-msgstr ""
+msgstr "|*libsource* |имя библиотеки, из которой был взят компонент.\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1058
 #, no-wrap
 msgid "|*part* |component name inside this library.\n"
-msgstr ""
+msgstr "|*part* |имя компонента в библиотеке.\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1061
@@ -5059,25 +5830,25 @@ msgstr ""
 msgid ""
 "|*sheetpath* |path of the sheet inside the hierarchy: identify the sheet\n"
 "within the full schematic hierarchy.\n"
-msgstr ""
+msgstr "|*sheetpath* |путь к листу иерархии: указан лист из всей иерархии схемы\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1063
 #, no-wrap
 msgid "|*tstamps (time stamps)* |time stamp of the schematic file.\n"
-msgstr ""
+msgstr "|*tstamps (time stamps)* |метка времени файла схемы.\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1065
 #, no-wrap
 msgid "|*tstamp (time stamp)* |time stamp of the component.\n"
-msgstr ""
+msgstr "|*tstamp (time stamp)* |метка времени компонента.\n"
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1068
 #, no-wrap
 msgid "Note about time stamps for components"
-msgstr ""
+msgstr "Замечание о метке времени компонента"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1076
@@ -5088,6 +5859,12 @@ msgid ""
 "on the board. This allows the re-annotation of components in a schematic "
 "project and does not loose the link between the component and its footprint."
 msgstr ""
+"Для сопоставления компонентов из списка цепей, компонентам из печатной "
+"платы, используют метки времени в качестве уникального идентификатора для "
+"каждого компонента. Этот способ используется в KiCad как вспомогательный, "
+"для нахождения соответствующего компонента из списка цепей на печатной "
+"плате. Это позволяет заново обозначать компоненты в проекте схемы и не "
+"терять при этом связь с посадочным местом."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1081
@@ -5096,6 +5873,10 @@ msgid ""
 "schematic project. However, in complex hierarchies, the same sheet is used "
 "more than once, so this sheet contains components having the same time stamp."
 msgstr ""
+"Метка времени -- это уникальный идентификатор для каждого компонента или "
+"листа в проекте схемы. Но, в сложных иерархиях, где один файл схемы может "
+"использоваться несколькими листами, компоненты из этих листов имеют одни и "
+"те же метки времени."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1085
@@ -5104,12 +5885,15 @@ msgid ""
 "sheetpath. A given component (inside a complex hierarchy) has an unique "
 "identifier: the sheetpath + its tstamp"
 msgstr ""
+"Каждый лист сложной иерархии имеет свой уникальный идентификатор: его путь "
+"(sheetpath). Каждый компонент (из листа сложной иерархии), тоже, имеет "
+"уникальный идентификатор: путь листа + его метка времени."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1087
 #, no-wrap
 msgid "The libparts section"
-msgstr ""
+msgstr "Части компонента"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1092
@@ -5117,21 +5901,24 @@ msgid ""
 "The libparts section has the delimiter <libparts>, and the content of this "
 "section is defined in the schematic libraries. The libparts section contains"
 msgstr ""
+"Раздел частей компонента ограничивается разделителем <libparts> и содержит "
+"описания из библиотеки схемы. Этот раздел содержит:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1094
 msgid "The allowed footprints names (names use jokers) delimiter <fp>."
 msgstr ""
+"Подходящие имена посадочных мест (фильтры для CvPcb) -- разделитель <fp>."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1095
 msgid "The fields defined in the library delimiter <fields>."
-msgstr ""
+msgstr "Поля, указанные в библиотеке -- разделитель <fields>."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1096
 msgid "The list of pins delimiter <pins>."
-msgstr ""
+msgstr "Перечень выводов -- разделитель <pins>."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1115
@@ -5155,6 +5942,23 @@ msgid ""
 "</libpart>\n"
 "</libparts>\n"
 msgstr ""
+"<libparts>\n"
+"<libpart lib=\"device\" part=\"CP\">\n"
+"  <description>Condensateur polarise</description>\n"
+"  <footprints>\n"
+"    <fp>CP*</fp>\n"
+"    <fp>SM*</fp>\n"
+"  </footprints>\n"
+"  <fields>\n"
+"    <field name=\"Reference\">C</field>\n"
+"    <field name=\"Valeur\">CP</field>\n"
+"  </fields>\n"
+"  <pins>\n"
+"    <pin num=\"1\" name=\"1\" type=\"passive\"/>\n"
+"    <pin num=\"2\" name=\"2\" type=\"passive\"/>\n"
+"  </pins>\n"
+"</libpart>\n"
+"</libparts>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1119
@@ -5162,6 +5966,8 @@ msgid ""
 "Lines like <pin num=\"1\" type=\"passive\"/> give also the electrical pin "
 "type. Possible electrical pin types are"
 msgstr ""
+"Строки типа <pin num=\"1\" type=\"passive\"/> также содержат электрический "
+"тип вывода. Доступны следующие электрические типы:"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1133
@@ -5179,12 +5985,23 @@ msgid ""
 "|Open emitter |Open emitter sometimes found in logic\n"
 "|Not connected |Must be left open in schematic\n"
 msgstr ""
+"|Input |Вход -- обычный входной вывод\n"
+"|Output |Выход -- обычный выходной вывод\n"
+"|Bidirectional |Двунаправленный -- может быть как входом, так и выходом\n"
+"|Tri-state |Трехстабильный -- ввод/вывод шины\n"
+"|Passive |Пассивный -- обычный вывод пассивных компонентов\n"
+"|Unspecified |Не определено -- не известный электрический тип\n"
+"|Power input |Вход питания -- вход питания компонента\n"
+"|Power output |Выход питания -- выход, на подобии выхода стабилизатора напряжения\n"
+"|Open collector |Открытый коллектор -- часто используется в аналоговых компараторах\n"
+"|Open emitter |Открытый эмиттер -- иногда используется в логических элементах\n"
+"|Not connected |Не подсоединен -- должен остаться без подключения в схеме\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1136
 #, no-wrap
 msgid "The libraries section"
-msgstr ""
+msgstr "Библиотеки"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1140
@@ -5192,6 +6009,8 @@ msgid ""
 "The libraries section has the delimiter <libraries>. This section contains "
 "the list of schematic libraries used in the project."
 msgstr ""
+"Раздел библиотек ограничивается разделителем <libraries>. Этот раздел "
+"состоит из списка библиотек компонентов, используемых в проекте схемы."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1150
@@ -5206,12 +6025,20 @@ msgid ""
 "  </library>\n"
 "</libraries>\n"
 msgstr ""
+"<libraries>\n"
+"  <library logical=\"device\">\n"
+"    <uri>F:\\kicad\\share\\library\\device.lib</uri>\n"
+"  </library>\n"
+"  <library logical=\"conn\">\n"
+"    <uri>F:\\kicad\\share\\library\\conn.lib</uri>\n"
+"  </library>\n"
+"</libraries>\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1153
 #, no-wrap
 msgid "The nets section"
-msgstr ""
+msgstr "Цепи"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1157
@@ -5219,6 +6046,8 @@ msgid ""
 "The nets section has the delimiter <nets>. This section contains the "
 "\"connectivity\" of the schematic."
 msgstr ""
+"Раздел цепей ограничивается разделителем <nets>. Этот раздел состоит из "
+"\"подключений\" в схеме."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1175
@@ -5241,16 +6070,32 @@ msgid ""
 "  </net>\n"
 "</nets>\n"
 msgstr ""
+"<nets>\n"
+"  <net code=\"1\" name=\"GND\">\n"
+"    <node ref=\"U1\" pin=\"7\"/>\n"
+"    <node ref=\"C1\" pin=\"2\"/>\n"
+"    <node ref=\"U2\" pin=\"7\"/>\n"
+"    <node ref=\"P1\" pin=\"4\"/>\n"
+"  </net>\n"
+"  <net code=\"2\" name=\"VCC\">\n"
+"    <node ref=\"R1\" pin=\"1\"/>\n"
+"    <node ref=\"U1\" pin=\"14\"/>\n"
+"    <node ref=\"U2\" pin=\"4\"/>\n"
+"    <node ref=\"U2\" pin=\"1\"/>\n"
+"    <node ref=\"U2\" pin=\"14\"/>\n"
+"    <node ref=\"P1\" pin=\"1\"/>\n"
+"  </net>\n"
+"</nets>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1178
 msgid "This section lists all nets in the schematic."
-msgstr ""
+msgstr "В этом разделе перечисляются все цепи, присутствующие в схеме."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1180
 msgid "A possible net contains the following."
-msgstr ""
+msgstr "Обычно цепь состоит из следующего:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1188
@@ -5263,6 +6108,12 @@ msgid ""
 "  <node ref=\"P1\" pin=\"4\"/>\n"
 "</net>\n"
 msgstr ""
+"<net code=\"1\" name=\"GND\">\n"
+"  <node ref=\"U1\" pin=\"7\"/>\n"
+"  <node ref=\"C1\" pin=\"2\"/>\n"
+"  <node ref=\"U2\" pin=\"7\"/>\n"
+"  <node ref=\"P1\" pin=\"4\"/>\n"
+"</net>\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1195
@@ -5272,17 +6123,20 @@ msgid ""
 "|name |is a name for this net\n"
 "|node |give a pin reference connected to this net\n"
 msgstr ""
+"|net code |внутренний идентификатор данной цепи\n"
+"|name |имя цепи\n"
+"|node |содержит ссылку на вывод компонента, подключенного к данной цепи\n"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1198
 #, no-wrap
 msgid "More about xsltproc"
-msgstr ""
+msgstr "Более подробно о xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1201
 msgid "Refer to the page: _http://xmlsoft.org/XSLT/xsltproc.html_"
-msgstr ""
+msgstr "Просмотрите страницу: _http://xmlsoft.org/XSLT/xsltproc.html_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1208
@@ -5291,6 +6145,9 @@ msgid ""
 "documents. While it was developed as part of the GNOME project, it can "
 "operate independently of the GNOME desktop."
 msgstr ""
+"xsltproc -- это консольное приложение для выполнения сценариев XSLT по "
+"преобразованию XML-файлов. На данный момент оно разрабатывается как часть "
+"проекта GNOME, но может использоваться отдельно от рабочего окружения GNOME."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1213
@@ -5300,6 +6157,9 @@ msgid ""
 "sheet is to be applied. It will use the standard input if a filename "
 "provided is - ."
 msgstr ""
+"xsltproc вызывается из командной строки (терминала) с указанием сценария и "
+"имени файла, к которому этот сценарий должен быть применён. Если нужно "
+"преобразовать стандартный ввод вместо файла, используют - (дефис)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1219
@@ -5310,12 +6170,17 @@ msgid ""
 "it. By default, the output is to __stdout__. You can specify a file for "
 "output using the -o option."
 msgstr ""
+"Если сценарий содержится в самом XML-файле, то его не нужно указывать в "
+"командной строке. xsltproc автоматически определит наличие сценария в файле "
+"и применит его. По умолчанию, результат преобразования будет выведен на "
+"экран (__stdout__). Можно, вместо этого, указать имя выходного файла с "
+"помощью параметра -o."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1221
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Формат командной строки"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1231
@@ -5329,27 +6194,34 @@ msgid ""
 "[--writesubtree] | [--nodtdattr]] [ *stylesheet* ] [ *file1* ] [ *file2* ] \n"
 "[ *....* ]\n"
 msgstr ""
+"xsltproc [[-V] | [-v] | [-o *file* ] | [--timing] | [--repeat] |\n"
+"[--debug] | [--novalid] | [--noout] | [--maxdepth *val* ] | [--html] |\n"
+"[--param *name* *value* ] | [--stringparam *name* *value* ] | [--nonet] |\n"
+"[--path *paths* ] | [--load-trace] | [--catalogs] | [--xinclude] |\n"
+"[--profile] | [--dumpextensions] | [--nowrite] | [--nomkdir] |\n"
+"[--writesubtree] | [--nodtdattr]] [ *stylesheet* ] [ *file1* ] [ *file2* ] \n"
+"[ *....* ]\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1234
 #, no-wrap
 msgid "Command line options"
-msgstr ""
+msgstr "Параметры командной строки"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1237
 msgid "_-V_ or _--version_"
-msgstr ""
+msgstr "_-V_ или _--version_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1239
 msgid "Show the version of libxml and libxslt used."
-msgstr ""
+msgstr "Показать версию используемых библиотек libxml и libxslt."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1241
 msgid "_-v_ or _--verbose_"
-msgstr ""
+msgstr "_-v_ или _--verbose_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1244
@@ -5357,11 +6229,13 @@ msgid ""
 "Output each step taken by xsltproc in processing the stylesheet and the "
 "document."
 msgstr ""
+"Выводить описание каждого шага работы xsltproc в процессе применения "
+"сценария к документу."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1246
 msgid "_-o_ or _--output file_"
-msgstr ""
+msgstr "_-o_ или _--output имя_файла_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1250
@@ -5370,11 +6244,14 @@ msgid ""
 "as ``chunking'', -o directory/ directs the output files to a specified "
 "directory. The directory must already exist."
 msgstr ""
+"Направляет вывод в файл под именем __имя_файла__. При множественном выводе "
+"параметр __-o имя_каталога/__ указывает выводить файлы в указанный каталог. "
+"Данный каталог должен существовать."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1252
 msgid "_--timing_"
-msgstr ""
+msgstr "_--timing_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1256
@@ -5382,51 +6259,56 @@ msgid ""
 "Display the time used for parsing the stylesheet, parsing the document and "
 "applying the stylesheet and saving the result. Displayed in milliseconds."
 msgstr ""
+"Отобразить время, затраченное на считывание сценария, выполнение "
+"преобразования и сохранение результата. Отображается в миллисекундах."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1258
 msgid "_--repeat_"
-msgstr ""
+msgstr "_--repeat_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1260
 msgid "Run the transformation 20 times. Used for timing tests."
 msgstr ""
+"Выполнить преобразование 20 раз. Используется для тестирования времени "
+"обработки."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1262
 msgid "_--debug_"
-msgstr ""
+msgstr "_--debug_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1264
 msgid "Output an XML tree of the transformed document for debugging purposes."
 msgstr ""
+"Выводит дополнительный файл с древовидной XML-структурой в целях отладки."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1266
 msgid "_--novalid_"
-msgstr ""
+msgstr "_--novalid_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1268
 msgid "Skip loading the document's DTD."
-msgstr ""
+msgstr "Пропустить загрузку элемента DTD из документа."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1270
 msgid "_--noout_"
-msgstr ""
+msgstr "_--noout_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1272
 msgid "Do not output the result."
-msgstr ""
+msgstr "Не выводить результат."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1274
 msgid "_--maxdepth value_"
-msgstr ""
+msgstr "_--maxdepth значение_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1277
@@ -5434,21 +6316,23 @@ msgid ""
 "Adjust the maximum depth of the template stack before libxslt concludes it "
 "is in an infinite loop. The default is 500."
 msgstr ""
+"Настроить максимальную глубину стека, чтобы обеспечить выход из бесконечного "
+"цикла в libxslt. Значение по умолчанию -- 500."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1279
 msgid "_--html_"
-msgstr ""
+msgstr "_--html_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1281
 msgid "The input document is an HTML file."
-msgstr ""
+msgstr "Входной файл в формате HTML."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1283
 msgid "_--param name value_"
-msgstr ""
+msgstr "_--param параметр значение_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1288
@@ -5457,11 +6341,14 @@ msgid ""
 "pass multiple name/value pairs up to a maximum of 32. If the value being "
 "passed is a string rather than a node identifier, use --stringparam instead."
 msgstr ""
+"Передать параметр _параметр_ со значением _значение_ в сценарий. Можно "
+"передавать несколько параметров (до 32). Если в качестве значения будет "
+"передаваться строка, нужно использовать параметр --stringparam."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1290
 msgid "_--stringparam name value_"
-msgstr ""
+msgstr "_--stringparam параметр значение_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1293
@@ -5469,21 +6356,23 @@ msgid ""
 "Pass a paramenter of name _name_ and value _value_ where _value_ is a string "
 "rather than a node identifier. (Note: The string must be utf-8.)"
 msgstr ""
+"Передать параметр _параметр_ со значением _значение_, где _значение_ -- "
+"строка. (Примечание: строка должна быть в формате utf-8)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1295
 msgid "_--nonet_"
-msgstr ""
+msgstr "_--nonet_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1297
 msgid "Do not use the Internet to fetch DTD's, entities or documents."
-msgstr ""
+msgstr "Не использовать Интернет для получения DTD, объектов или документов."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1299
 msgid "_--path paths_"
-msgstr ""
+msgstr "_--path пути_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1302
@@ -5491,21 +6380,26 @@ msgid ""
 "Use the list (separated by space or column) of filesystem paths specified by "
 "_paths_ to load DTDs, entities or documents."
 msgstr ""
+"Использовать список (разделённый пробелами или точками с запятой) путей "
+"файловой системы, указанных в _пути_ для загрузки DTD, объектов или "
+"документов."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1304
 msgid "_--load-trace_"
-msgstr ""
+msgstr "_--load-trace_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1306
 msgid "Display to stderr all the documents loaded during the processing."
 msgstr ""
+"Показать в стандартном выводе stderr все документы, загруженные в процессе "
+"работы."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1308
 msgid "_--catalogs_"
-msgstr ""
+msgstr "_--catalogs_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1313
@@ -5514,11 +6408,15 @@ msgid ""
 "of external entities. By default, xsltproc looks for the catalog specified "
 "in XML_CATALOG_FILES. If that is not specified, it uses /etc/xml/catalog."
 msgstr ""
+"Использовать каталог SGML, указанный в SGML_CATALOG_FILES, для установки "
+"расположения внешних объектов. По умолчанию, xsltproc ищет их в каталоге, "
+"указанном в XML_CATALOG_FILES. Если он не задан, используется /etc/xml/"
+"catalog."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1315
 msgid "_--xinclude_"
-msgstr ""
+msgstr "_--xinclude_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1319
@@ -5527,11 +6425,14 @@ msgid ""
 "this can be found in the Xinclude specification: http://www.w3.org/TR/"
 "xinclude/[http://www.w3.org/TR/xinclude/]"
 msgstr ""
+"Преобразовать входной документ используя спецификацию Xinclude. Больше "
+"информации об этом можно найти здесь: http://www.w3.org/TR/xinclude/[http://"
+"www.w3.org/TR/xinclude/]"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1321
 msgid "_--profile --norman_"
-msgstr ""
+msgstr "_--profile --norman_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1325
@@ -5539,62 +6440,65 @@ msgid ""
 "Output profiling information detailing the amount of time spent in each part "
 "of the stylesheet. This is useful in optimizing stylesheet performance."
 msgstr ""
+"Выводить профильную информацию с детальным описанием времени, потраченного "
+"на каждую часть сценария. Это будет полезным для оптимизации быстродействия "
+"сценария."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1327
 msgid "_--dumpextensions_"
-msgstr ""
+msgstr "_--dumpextensions_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1329
 msgid "Dumps the list of all registered extensions to stdout."
-msgstr ""
+msgstr "Вывести перечень всех зарегистрированных расширений на экран."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1331
 msgid "_--nowrite_"
-msgstr ""
+msgstr "_--nowrite_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1333
 msgid "Refuses to write to any file or resource."
-msgstr ""
+msgstr "Запретить запись в любой файл или источник."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1335
 msgid "_--nomkdir_"
-msgstr ""
+msgstr "_--nomkdir_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1337
 msgid "Refuses to create directories."
-msgstr ""
+msgstr "Запретить создание каталогов."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1339
 msgid "_--writesubtree path_"
-msgstr ""
+msgstr "_--writesubtree каталог_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1341
 msgid "Allow file write only within the _path_ subtree."
-msgstr ""
+msgstr "Разрешить записывать файл только внутри указанного каталога."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1343
 msgid "_--nodtdattr_"
-msgstr ""
+msgstr "_--nodtdattr_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1345
 msgid "Do not apply default attributes from the document's DTD."
-msgstr ""
+msgstr "Не применять значение по умолчанию для атрибута DTD в файле."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1347
 #, no-wrap
 msgid "Xsltproc return values"
-msgstr ""
+msgstr "Возвращаемые значения xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1351
@@ -5602,82 +6506,85 @@ msgid ""
 "xsltproc returns a status number that can be quite useful when calling it "
 "within a script."
 msgstr ""
+"xsltproc возвращает код результата, который может быть очень полезен при "
+"работе из командной строки."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1353
 msgid "0: normal"
-msgstr ""
+msgstr "0: норма"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1355
 msgid "1: no argument"
-msgstr ""
+msgstr "1: нет аргументов"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1357
 msgid "2: too many parameters"
-msgstr ""
+msgstr "2: слишком много параметров"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1359
 msgid "3: unknown option"
-msgstr ""
+msgstr "3: неизвестный параметр"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1361
 msgid "4: failed to parse the stylesheet"
-msgstr ""
+msgstr "4: невозможно загрузить сценарий"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1363
 msgid "5: error in the stylesheet"
-msgstr ""
+msgstr "5: ошибка в сценарии"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1365
 msgid "6: error in one of the documents"
-msgstr ""
+msgstr "6: ошибка в одном из документов"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1367
 msgid "7: unsupported xsl:output method"
-msgstr ""
+msgstr "7: не поддерживаемый метод вывода xsl"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1369
 msgid "8: string parameter contains both quote and double-quotes"
-msgstr ""
+msgstr "8: строковый параметр содержит как одинарные, так и двойные кавычки"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1371
 msgid "9: internal processing error"
-msgstr ""
+msgstr "9: внутренняя ошибка обработки"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1373
 msgid "10: processing was stopped by a terminating message"
-msgstr ""
+msgstr "10: работа была прервана внешним сигналом"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1375
 msgid "11: could not write the result to the output file"
-msgstr ""
+msgstr "11: невозможно записать результат в выходной файл"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1377
 #, no-wrap
 msgid "More Information about xsltproc"
-msgstr ""
+msgstr "Больше подробностей о xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1380
 msgid "libxml web page: http://www.xmlsoft.org/[http://www.xmlsoft.org/]"
-msgstr ""
+msgstr "Страница о libxml: http://www.xmlsoft.org/[http://www.xmlsoft.org/]"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1381
 msgid "W3C XSLT page: http://www.w3.org/TR/xslt[http://www.w3.org/TR/xslt]"
 msgstr ""
+"Страница о W3C XSLT: http://www.w3.org/TR/xslt[http://www.w3.org/TR/xslt]"
 
 #. type: Title ==
 #: eeschema_design_verification_with_erc.adoc:3
@@ -6737,7 +7644,7 @@ msgstr "Здесь показано расположение основных к
 #: eeschema_generic_commands.adoc:24
 #, no-wrap
 msgid "commands overview"
-msgstr ""
+msgstr "обзор команд"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:24
@@ -6863,7 +7770,7 @@ msgstr ""
 #: eeschema_generic_commands.adoc:66
 #, no-wrap
 msgid "main window popup"
-msgstr ""
+msgstr "контекстное меню основного окна"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:66
@@ -7093,7 +8000,7 @@ msgstr ""
 #: eeschema_generic_commands.adoc:134
 #, no-wrap
 msgid "status_bar"
-msgstr ""
+msgstr "панель_состояния"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:134
@@ -7120,7 +8027,7 @@ msgstr ""
 #: eeschema_generic_commands.adoc:141
 #, no-wrap
 msgid "menubar"
-msgstr ""
+msgstr "основное меню"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:141
@@ -7150,7 +8057,7 @@ msgstr ""
 #: eeschema_generic_commands.adoc:150
 #, no-wrap
 msgid "images/toolbar_schedit_standalone.png"
-msgstr ""
+msgstr "images/toolbar_schedit_standalone.png"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:153
@@ -7165,7 +8072,7 @@ msgstr ""
 #: eeschema_generic_commands.adoc:154
 #, no-wrap
 msgid "images/toolbar_schedit.png"
-msgstr ""
+msgstr "images/toolbar_schedit.png"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:157
@@ -7439,7 +8346,7 @@ msgstr ""
 #. type: Plain text
 #: eeschema_generic_commands.adoc:240
 msgid "<<<<<"
-msgstr ""
+msgstr "<<<<<"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:241
@@ -7826,7 +8733,7 @@ msgstr "Обычное контекстное меню (без выделенн�
 #: eeschema_generic_commands.adoc:372
 #, no-wrap
 msgid "eeschema_popup_without_element_png"
-msgstr ""
+msgstr "eeschema_popup_without_element_png"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:372
@@ -7843,7 +8750,7 @@ msgstr "Контекстное меню для метки."
 #: eeschema_generic_commands.adoc:376
 #, no-wrap
 msgid "eeschema_popup_edit_label_png"
-msgstr ""
+msgstr "eeschema_popup_edit_label_png"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:376
@@ -7860,7 +8767,7 @@ msgstr "Контекстное меню для компонента."
 #: eeschema_generic_commands.adoc:380
 #, no-wrap
 msgid "eeschema_popup_edit_component_png"
-msgstr ""
+msgstr "eeschema_popup_edit_component_png"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:380
@@ -8780,17 +9687,17 @@ msgstr ""
 #. type: Plain text
 #: eeschema_introduction.adoc:10
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #. type: Plain text
 #: eeschema_introduction.adoc:11
 msgid "Apple OS X"
-msgstr ""
+msgstr "Apple OS X"
 
 #. type: Plain text
 #: eeschema_introduction.adoc:12
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #. type: Plain text
 #: eeschema_introduction.adoc:15
@@ -8917,17 +9824,17 @@ msgstr "LibEdit - Редактор компонентов"
 #. type: Plain text
 #: eeschema_libedit_components.adoc:8
 msgid "A component consist of the following elements"
-msgstr ""
+msgstr "Компонент состоит из следующих элементов"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:10
 msgid "A graphical representation (geometrical shapes, texts)."
-msgstr ""
+msgstr "Графическое обозначение (графические линии, текст)."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:11
 msgid "Pins."
-msgstr ""
+msgstr "Выводы."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:13
@@ -8935,6 +9842,8 @@ msgid ""
 "Fields or associated text used by the post processors: netlist, components "
 "list."
 msgstr ""
+"Поля или связанный текст, который используется генераторами списка цепей и "
+"перечня элементов."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:18
@@ -8944,6 +9853,10 @@ msgid ""
 "footprint, the other fields are the free fields, they can generally remain "
 "empty, and could be filled during schematic capture."
 msgstr ""
+"Два поля должны быть заполнены: обозначение и значение. Название "
+"документации на компонент, имя назначенного посадочного места и прочие поля "
+"-- свободны, их, в общем случае, можно оставить пустыми и заполнять при "
+"построении схемы."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:22
@@ -8952,61 +9865,65 @@ msgid ""
 "facilitates the research, use and maintenance of libraries. The associated "
 "documentation consists of"
 msgstr ""
+"Но с другой стороны, назначение документации для любого из компонентов "
+"облегчает изучение, использование и управление библиотеками. Документация "
+"состоит из:"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:24
 msgid "A line of comment."
-msgstr ""
+msgstr "Строки комментария."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:25
 msgid "A line of key words such as TTL CMOS NAND2, separated by spaces."
-msgstr ""
+msgstr "Строки ключевых слов, таких как TTL CMOS NAND2, разделяемых пробелами."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:26
 msgid "An attached file name (for example an application note or a pdf file)."
 msgstr ""
+"Имени приложенного файла (например, пример использования или pdf-файл)."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:28
 msgid "The default directory for attached files:"
-msgstr ""
+msgstr "Каталог по умолчанию для приложенных файлов:"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:30
 msgid "kicad/share/library/doc"
-msgstr ""
+msgstr "kicad/share/library/doc"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:32
 msgid "If not found:"
-msgstr ""
+msgstr "Или:"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:34
 msgid "kicad/library/doc"
-msgstr ""
+msgstr "kicad/library/doc"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:36
 msgid "Under linux:"
-msgstr ""
+msgstr "В Linux:"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:38
 msgid "/usr/local/kicad/share/library/doc"
-msgstr ""
+msgstr "/usr/local/kicad/share/library/doc"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:40
 msgid "/usr/share/kicad/library/doc"
-msgstr ""
+msgstr "/usr/share/kicad/library/doc"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:42
 msgid "/usr/local/share/kicad/library/doc"
-msgstr ""
+msgstr "/usr/local/share/kicad/library/doc"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:47
@@ -9015,6 +9932,9 @@ msgid ""
 "various selection criteria. Comments and key words are displayed in various "
 "menus, and particularly when you select a component from the library."
 msgstr ""
+"Ключевые слова позволяют выборочно находить компоненты, в соответствии с "
+"разными критериями выбора. Комментарии и ключевые слова отображаются в "
+"разных меню и, в частности, при выборе компонента в библиотеке."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:52
@@ -9023,6 +9943,9 @@ msgid ""
 "relative to this anchor point and during a placement this point is used as a "
 "reference position. It is thus useful to position this anchor accurately."
 msgstr ""
+"Компонент также имеет точку привязки. Поворот или отражение выполняется "
+"относительно этой точки и в процессе размещения, она используется в качестве "
+"опорной. Поэтому, располагать эту точку привязки нужно аккуратно."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:57
@@ -9031,6 +9954,10 @@ msgid ""
 "considerably reduce the number of components that need to be created (for "
 "example, a 74LS00 can have aliases such as 74000, 74HC00, 74HCT00...)."
 msgstr ""
+"Компонент может содержать псевдонимы, т.е. эквивалентные имена. Это "
+"позволяет значительно сократить количество компонентов, которые нужно "
+"создать (например, компоненту 74LS00 можно назначить псевдонимы 74000, "
+"74HC00, 74HCT00, ...)."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:60
@@ -9038,12 +9965,15 @@ msgid ""
 "Finally, the components are distributed in libraries (classified by topics, "
 "or manufacturer) in order to facilitate their management."
 msgstr ""
+"И последнее, компоненты распространяются в библиотеках (сгруппированы по "
+"назначению или производителю) упорядоченных так, чтобы облегчить работу с "
+"ними."
 
 #. type: Title ===
 #: eeschema_libedit_components.adoc:62
 #, no-wrap
 msgid "Position a component anchor"
-msgstr ""
+msgstr "Установка точки привязки"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:66
@@ -9051,18 +9981,20 @@ msgid ""
 "The anchor is at the coordinates (0,0) and it is shown by the blue axes "
 "displayed on your screen."
 msgstr ""
+"Точка привязки имеет координаты (0,0) и отображается в виде синих осей на "
+"дисплее."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit_components.adoc:67
 #, no-wrap
 msgid "eeschema_libedit_anchor_png"
-msgstr ""
+msgstr "eeschema_libedit_anchor_png"
 
 #. type: Target for macro image
 #: eeschema_libedit_components.adoc:67
 #, no-wrap
 msgid "images/eeschema_libedit_anchor.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_anchor.png"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:73
@@ -9072,12 +10004,16 @@ msgid ""
 "position. The drawing will be automatically re-centered on the new anchor "
 "point."
 msgstr ""
+"Точку привязки можно установить заново, выбрав image:images/icons/anchor."
+"png[icons/anchor_png] и нажав левой кнопкой мыши в точке её новой позиции. "
+"Изображение будет автоматически перерисовано с новым центром в указанной "
+"точке."
 
 #. type: Title ===
 #: eeschema_libedit_components.adoc:75
 #, no-wrap
 msgid "Component aliases"
-msgstr ""
+msgstr "Псевдонимы компонента"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:81
@@ -9087,6 +10023,10 @@ msgid ""
 "by only one component, having several aliases (e.g. 7400 with alias 74LS00, "
 "74HC00, 74LS37 )."
 msgstr ""
+"Псевдоним -- это другое имя, связанное с одним и тем же компонентом "
+"библиотеки. Компоненты с подобным расположением выводов и графическим "
+"обозначением можно представить как один компонент с несколькими псевдонимами "
+"(как 7400 с псевдонимами 74LS00, 74HC00, 74LS37)."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:85
@@ -9095,6 +10035,9 @@ msgid ""
 "addition these libraries, being much more compact, are easily loaded by "
 "KiCad."
 msgstr ""
+"Применение псевдонимов позволяет строить целые библиотеки быстрее. Плюс ко "
+"всему, эти библиотеки будут намного компактнее и будут проще загружаться в "
+"KiCad."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:90
@@ -9103,18 +10046,21 @@ msgid ""
 "via the icon image:images/icons/part_properties.png[icons/"
 "part_properties_png] and select the alias folder."
 msgstr ""
+"Чтобы изменить список псевдонимов, нужно вызвать окно редактирования главных "
+"свойств с помощью image:images/icons/part_properties.png[icons/"
+"part_properties_png] и выбрать вкладку псевдонимов."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit_components.adoc:91
 #, no-wrap
 msgid "eeschema_libedit_alias_png"
-msgstr ""
+msgstr "eeschema_libedit_alias_png"
 
 #. type: Target for macro image
 #: eeschema_libedit_components.adoc:91
 #, no-wrap
 msgid "images/eeschema_libedit_alias.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_alias.png"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:95
@@ -9122,6 +10068,8 @@ msgid ""
 "You can thus add or remove the desired alias. The current alias cannot "
 "obviously be removed since it is edited."
 msgstr ""
+"Здесь можно добавлять или удалять нужные псевдонимы. Текущий псевдоним "
+"нельзя удалить, пока он загружен в редактор."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:99
@@ -9130,12 +10078,15 @@ msgid ""
 "first component in the alias list in the window of selection of the main "
 "toolbar."
 msgstr ""
+"Чтобы удалить все псевдонимы, нужно сначала выбрать корневой компонент. Это "
+"первый компонент в списке псевдонимов из выпадающего списка на панели "
+"инструментов."
 
 #. type: Title ===
 #: eeschema_libedit_components.adoc:101
 #, no-wrap
 msgid "Component fields"
-msgstr ""
+msgstr "Поля компонента"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:105
@@ -9143,6 +10094,8 @@ msgid ""
 "The field editor is called via the icon image:images/icons/add_text."
 "png[icons/add_text_png]."
 msgstr ""
+"Редактор полей вызывается с помощью кнопки image:images/icons/add_text."
+"png[icons/add_text_png]."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:108
@@ -9150,28 +10103,30 @@ msgid ""
 "There are four special fields (texts attached to the component), and "
 "configurable user fields"
 msgstr ""
+"В нём присутствуют четыре стандартных поля (текст, связанный с компонентом) "
+"и настраиваемые пользовательские поля."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit_components.adoc:109
 #, no-wrap
 msgid "eeschema_library_component_field_png"
-msgstr ""
+msgstr "eeschema_library_component_field_png"
 
 #. type: Target for macro image
 #: eeschema_libedit_components.adoc:109
 #, no-wrap
 msgid "images/eeschema_library_component_field.png"
-msgstr ""
+msgstr "images/ru/eeschema_library_component_field.png"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:112
 msgid "Special fields"
-msgstr ""
+msgstr "Стандартные поля:"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:114
 msgid "Reference."
-msgstr ""
+msgstr "Обозначение."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:116
@@ -9179,6 +10134,8 @@ msgid ""
 "Value. It is the component name in the library and the default value field "
 "in schematic."
 msgstr ""
+"Значение. Содержимое этого поля используется в качестве имени компонента в "
+"библиотеке и значения по умолчанию в схеме."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:119
@@ -9186,17 +10143,20 @@ msgid ""
 "Footprint. It is the footprint name used for the board. Not very useful when "
 "using CvPcb to setup the footprint list, but mandatory if CvPcb is not used."
 msgstr ""
+"Посадочное место. Здесь хранится имя посадочного места, используемого при "
+"проектировании печатной платы. При использовании CvPcb для назначения "
+"посадочных мест оно не очень полезно, но в противном случае -- необходимо."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:120
 msgid "Sheet. It is a reserved field, not used at the time of writing."
-msgstr ""
+msgstr "Документация. Это зарезервированное поле и пока не используется."
 
 #. type: Title ===
 #: eeschema_libedit_components.adoc:122
 #, no-wrap
 msgid "Component documentation"
-msgstr ""
+msgstr "Документация компонента"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:128
@@ -9205,18 +10165,21 @@ msgid ""
 "window of the component via the icon image:images/icons/part_properties."
 "png[icons/part_properties_png] and to select the document folder."
 msgstr ""
+"Для редактирования информации о компоненте нужно открыть окно главных "
+"свойств с помощью кнопки image:images/icons/part_properties.png[icons/"
+"part_properties_png] и выбрать вкладку описания."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit_components.adoc:129
 #, no-wrap
 msgid "eeschema_libedit_description_png"
-msgstr ""
+msgstr "eeschema_libedit_description_png"
 
 #. type: Target for macro image
 #: eeschema_libedit_components.adoc:129
 #, no-wrap
 msgid "images/eeschema_libedit_description.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_description.png"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:135
@@ -9226,12 +10189,16 @@ msgid ""
 "\"Copy Doc\" button allows you to copy the documentation information from "
 "the root component towards the currently edited alias."
 msgstr ""
+"Нужно убедиться, что выбран нужный псевдоним или корневой компонент, так как "
+"это описание указывается отдельно для каждого из них. Кнопка \"Копировать "
+"документацию из родителя\" позволяет копировать информацию из корневого "
+"компонента в поля текущего."
 
 #. type: Title ====
 #: eeschema_libedit_components.adoc:137
 #, no-wrap
 msgid "Component keywords"
-msgstr ""
+msgstr "Ключевые слова компонента"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:142
@@ -9239,6 +10206,9 @@ msgid ""
 "Keywords allow you to search in a selective way for a component according to "
 "specific selection criteria (function, technological family, etc.)"
 msgstr ""
+"Ключевые слова позволяют вести выборочный поиск компонентов, в соответствии "
+"с заданными параметрами поиска (по функциональному назначению, технологии "
+"изготовления и пр.)."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:145
@@ -9246,11 +10216,13 @@ msgid ""
 "The Eeschema research tool is not case sensitive. The most current key words "
 "used in the libraries are"
 msgstr ""
+"Инструмент поиска в Eeschema не чувствителен к регистру. В библиотеках в "
+"основном используются следующие ключевые слова:"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:147
 msgid "CMOS TTL for the logic families"
-msgstr ""
+msgstr "CMOS TTL -- для микросхем стандартной логики"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:149
@@ -9258,16 +10230,19 @@ msgid ""
 "AND2 NOR3 XOR2 INV... for the gates (AND2 = 2 inputs AND gate, NOR3 = 3 "
 "inputs NOR gate)."
 msgstr ""
+"AND2 NOR3 XOR2 INV... -- для логических элементов (AND2 = элемент "
+"логического И с двумя входами, NOR3 = элемент логического ИЛИ-НЕ с тремя "
+"входами). "
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:150
 msgid "JKFF DFF... for JK or D flip-flop."
-msgstr ""
+msgstr "JKFF DFF ... -- для JK или D триггеров."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:151
 msgid "ADC, DAC, MUX..."
-msgstr ""
+msgstr "ADC, DAC, MUX, ..."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:155
@@ -9276,12 +10251,16 @@ msgid ""
 "capture software, you search the component: by keywords NAND2 OpenCol "
 "Eeschema will display the list of components having these 2 key words."
 msgstr ""
+"OpenCol -- для логических элементов с выходным каскадом в виде транзистора с "
+"открытым коллектором. Таким образом, если в редакторе схем в поле поиска "
+"компонента ввести ключевые слова NAND2 OpenCol, то Eeschema покажет список "
+"компонентов, которые их содержат."
 
 #. type: Title ====
 #: eeschema_libedit_components.adoc:157
 #, no-wrap
 msgid "Component documentation (Doc)"
-msgstr ""
+msgstr "Документация компонента"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:162
@@ -9290,6 +10269,8 @@ msgid ""
 "particularly when you select a component in the displayed components list of "
 "a library and in the ViewLib menu."
 msgstr ""
+"Строка описания (и ключевых слов) отображается в разных меню, в частности, "
+"при выборе компонента в списке библиотеки и в меню ViewLib."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:166
@@ -9297,12 +10278,14 @@ msgid ""
 "If this Doc. file exists, it is also accessible in the schematic capture "
 "software, in the pop-up menu displayed by right-clicking on the component."
 msgstr ""
+"Если файл документации существует, то он будет доступен в редакторе схем из "
+"контекстного меню, которое открывается с помощью правой кнопки мыши."
 
 #. type: Title ====
 #: eeschema_libedit_components.adoc:168
 #, no-wrap
 msgid "Associated documentation file (DocFileName)"
-msgstr ""
+msgstr "Связанный файл документации"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:172
@@ -9310,12 +10293,14 @@ msgid ""
 "Indicates an attached file (documentation, application schematic)  available "
 "( pdf file, schematic diagram, etc.)."
 msgstr ""
+"Указан файл (документации, примера применения), связанный с компонентом (pdf-"
+"файл, файл схемы или другое)."
 
 #. type: Title ====
 #: eeschema_libedit_components.adoc:174
 #, no-wrap
 msgid "Footprint filtering for CvPcb"
-msgstr ""
+msgstr "Фильтры посадочных мест для CvPcb"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:179
@@ -9324,29 +10309,34 @@ msgid ""
 "as a filter used by CvPcb to display only the allowed footprints. A void "
 "list does not filter anything."
 msgstr ""
+"Можно ввести список подходящих посадочных мест для компонента. Этот список "
+"выступает в качестве фильтра, используемого в CvPcb для отображения только "
+"подходящих посадочных мест. Если список пуст -- фильтрация не происходит."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit_components.adoc:180
 #, no-wrap
 msgid "eeschema_libedit_footprint_png"
-msgstr ""
+msgstr "eeschema_libedit_footprint_png"
 
 #. type: Target for macro image
 #: eeschema_libedit_components.adoc:180
 #, no-wrap
 msgid "images/eeschema_libedit_footprint.png"
-msgstr ""
+msgstr "images/ru/eeschema_libedit_footprint.png"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:183
 msgid "Wild-card characters are allowed."
-msgstr ""
+msgstr "Допускается использование символов обобщения (масок, wild-card)."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:186
 msgid ""
 "S014* allows CvPcb to show all the footprints with a name starting by SO14."
 msgstr ""
+"SO14* указывает CvPcb отобразить все посадочные места, имена которых "
+"начинаются с SO14."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:189
@@ -9354,51 +10344,53 @@ msgid ""
 "For a resistor, R? shows all the footprints with a 2 letters name starting "
 "by R."
 msgstr ""
+"В случае с резисторами, R? покажет все посадочные места с именем из двух "
+"букв, первая из которых R."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:191
 msgid "Here are samples: with and without filtering"
-msgstr ""
+msgstr "Далее пример: с использованием фильтрации и без:"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:193
 msgid "With filtering"
-msgstr ""
+msgstr "С фильтрацией"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit_components.adoc:194
 #, no-wrap
 msgid "eeschema_cvpcb_with_filtering_png"
-msgstr ""
+msgstr "eeschema_cvpcb_with_filtering_png"
 
 #. type: Target for macro image
 #: eeschema_libedit_components.adoc:194
 #, no-wrap
 msgid "images/eeschema_cvpcb_with_filtering.png"
-msgstr ""
+msgstr "images/ru/eeschema_cvpcb_with_filtering.png"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:197
 msgid "Without filtering"
-msgstr ""
+msgstr "Без фильтрации"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit_components.adoc:198
 #, no-wrap
 msgid "eeschema_cvpcb_without_filtering_png"
-msgstr ""
+msgstr "eeschema_cvpcb_without_filtering_png"
 
 #. type: Target for macro image
 #: eeschema_libedit_components.adoc:198
 #, no-wrap
 msgid "images/eeschema_cvpcb_without_filtering.png"
-msgstr ""
+msgstr "images/ru/eeschema_cvpcb_without_filtering.png"
 
 #. type: Title ===
 #: eeschema_libedit_components.adoc:202
 #, no-wrap
 msgid "Symbol library"
-msgstr ""
+msgstr "Библиотека символов"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:208
@@ -9408,28 +10400,34 @@ msgid ""
 "the shape of AND, OR, Exclusive OR gates, etc.) for saving and subsequent re-"
 "use."
 msgstr ""
+"Можно достаточно просто создать файл библиотеки графических символов, "
+"который будет содержать часто используемые символы. Они будут полезны при "
+"создании компонентов (треугольники, контуры логических элементов И, ИЛИ, "
+"исключающее ИЛИ и т.п.), для чего их сохраняют и, в последующем, используют."
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:210
 msgid "These files are stored by default in the library directory and have a"
 msgstr ""
+"Эти файлы, по умолчанию, располагаются в каталоге обычных библиотек и имеют "
+"расширение *"
 
 #. type: Block title
 #: eeschema_libedit_components.adoc:210
 #, no-wrap
 msgid "sym extension. The symbols are not gathered in libraries like the"
-msgstr ""
+msgstr "sym. Символы не собираются в библиотеки, как"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:212
 msgid "components because they are generally not so many."
-msgstr ""
+msgstr "компоненты, потому что их обычно не так много."
 
 #. type: Title ====
 #: eeschema_libedit_components.adoc:214
 #, no-wrap
 msgid "Export or create a symbol"
-msgstr ""
+msgstr "Экспорт (создание) символа"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:220
@@ -9438,12 +10436,15 @@ msgid ""
 "export.png[icons/export_png].  You can generally create only one graphic, "
 "also it will be a good idea to delete all pins, if they exist."
 msgstr ""
+"Компонент можно экспортировать как символ с помощью инструмента image:images/"
+"icons/export.png[icons/export_png]. Достаточно будет наличия только "
+"графического обозначения и, желательно, удалить все выводы, если они есть."
 
 #. type: Title ====
 #: eeschema_libedit_components.adoc:222
 #, no-wrap
 msgid "Import a symbol"
-msgstr ""
+msgstr "Импорт символа"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:228
@@ -9453,6 +10454,10 @@ msgid ""
 "graphic icon].  Imported graphics are added as they were created in existing "
 "graphics."
 msgstr ""
+"Импорт позволяет добавлять графические обозначения в редактируемый "
+"компонент. Символ загружается с помощью кнопки image:images/icons/import."
+"png[Import graphic icon]. Загруженное графическое обозначение размещается в "
+"том месте, в котором было создано перед экспортом."
 
 #. type: Title ==
 #: eeschema_main_top_menu.adoc:3
@@ -10357,7 +11362,7 @@ msgstr "Цикл разработки"
 #: eeschema_schematic_creation_and_editing.adoc:35
 #, no-wrap
 msgid "dev-chain_png"
-msgstr ""
+msgstr "dev-chain_png"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:35
@@ -10724,7 +11729,7 @@ msgstr "Проводники и метки"
 #: eeschema_schematic_creation_and_editing.adoc:155
 #, no-wrap
 msgid "images/wires_labels.png"
-msgstr ""
+msgstr "images/wires_labels.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:158
@@ -10838,7 +11843,7 @@ msgstr "Пример схемы с шинами"
 #: eeschema_schematic_creation_and_editing.adoc:193
 #, no-wrap
 msgid "images/en/sch_with_buses.png"
-msgstr ""
+msgstr "images/en/sch_with_buses.png"
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:196
@@ -10998,7 +12003,7 @@ msgstr "Пример соединения шин"
 #: eeschema_schematic_creation_and_editing.adoc:251
 #, no-wrap
 msgid "images/en/bus_junction.png"
-msgstr ""
+msgstr "images/en/bus_junction.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:256
@@ -11130,7 +12135,7 @@ msgstr "Пример символов питания"
 #: eeschema_schematic_creation_and_editing.adoc:300
 #, no-wrap
 msgid "images/en/power_ports_example.png"
-msgstr ""
+msgstr "images/en/power_ports_example.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:304
@@ -11230,7 +12235,7 @@ msgstr "Пример рамки с текстом"
 #: eeschema_schematic_creation_and_editing.adoc:340
 #, no-wrap
 msgid "images/en/frame_example.png"
-msgstr ""
+msgstr "images/en/frame_example.png"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:343
@@ -11366,7 +12371,7 @@ msgstr ""
 #: eeschema_viewlib.adoc:3
 #, no-wrap
 msgid "Viewlib"
-msgstr ""
+msgstr "Viewlib -- просмотр компонентов"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:12
@@ -11376,36 +12381,40 @@ msgid ""
 "library_browse_png] or by the \"place component\" tool available from the "
 "right-hand side toolbar."
 msgstr ""
+"Viewlib позволяет быстро просмотреть содержимое библиотек. Viewlib "
+"вызывается с помощью инструмента image:images/icons/library_browse.png[icons/"
+"library_browse_png] или командой \"расположить компонент\", расположенной на "
+"панели инструментов справа."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_viewlib.adoc:13
 #, no-wrap
 msgid "eeschema_viewlib_choose_png"
-msgstr ""
+msgstr "eeschema_viewlib_choose_png"
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:13
 #, no-wrap
 msgid "images/eeschema_viewlib_choose.png"
-msgstr ""
+msgstr "images/ru/eeschema_viewlib_choose.png"
 
 #. type: Title ===
 #: eeschema_viewlib.adoc:16
 #, no-wrap
 msgid "Viewlib - main screen"
-msgstr ""
+msgstr "Главное окно"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_viewlib.adoc:18
 #, no-wrap
 msgid "eeschema_viewlib_select_library_png"
-msgstr ""
+msgstr "eeschema_viewlib_select_library_png"
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:18
 #, no-wrap
 msgid "images/eeschema_viewlib_select_library.png"
-msgstr ""
+msgstr "images/ru/eeschema_viewlib_select_library.png"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:23
@@ -11414,40 +12423,43 @@ msgid ""
 "the list on the left-hand side. Available components will then appear in the "
 "second list which allow you to select a component."
 msgstr ""
+"Чтобы просмотреть содержимое нужной библиотеки, нужно выбрать её в первой "
+"колонке слева. Доступные компоненты будут показаны во второй колонке, где "
+"можно выбрать нужный компонент."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_viewlib.adoc:24
 #, no-wrap
 msgid "eeschema_viewlib_select_component_png"
-msgstr ""
+msgstr "eeschema_viewlib_select_component_png"
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:24
 #, no-wrap
 msgid "images/eeschema_viewlib_select_component.png"
-msgstr ""
+msgstr "images/ru/eeschema_viewlib_select_component.png"
 
 #. type: Title ===
 #: eeschema_viewlib.adoc:27
 #, no-wrap
 msgid "Viewlib top toolbar"
-msgstr ""
+msgstr "Панель инструментов"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:30
 msgid "The top tool bar in Viewlib is shown below."
-msgstr ""
+msgstr "Верхняя панель инструментов Viewlib показана ниже."
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:31
 #, no-wrap
 msgid "images/toolbar_viewlib.png"
-msgstr ""
+msgstr "images/toolbar_viewlib.png"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:34
 msgid "The available commands are:"
-msgstr ""
+msgstr "Доступны следующие команды:"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:40
@@ -11457,6 +12469,9 @@ msgid ""
 "|Selection of the desired library which can be also selected in the\n"
 "displayed list.\n"
 msgstr ""
+"|image:images/icons/library.png[icons/library_png]\n"
+"|Выбор необходимой библиотеки, которую также можно выбрать из\n"
+"показанного списка.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:44
@@ -11466,6 +12481,9 @@ msgid ""
 "|Selection of the component which can be also selected in the displayed\n"
 "list.\n"
 msgstr ""
+"|image:images/icons/add_component.png[icons/add_component_png]\n"
+"|Выбор необходимого компонента, который также можно выбрать из\n"
+"показанного списка.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:47
@@ -11474,6 +12492,8 @@ msgid ""
 "|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
 "|Display previous component.\n"
 msgstr ""
+"|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
+"|Показать предыдущий компонент.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:50
@@ -11482,6 +12502,8 @@ msgid ""
 "|image:images/icons/lib_next.png[icons/lib_next_png]\n"
 "|Display next component.\n"
 msgstr ""
+"|image:images/icons/lib_next.png[icons/lib_next_png]\n"
+"|Показать следующий компонент.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:54
@@ -11491,6 +12513,9 @@ msgid ""
 "image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
 "|Zoom tools.\n"
 msgstr ""
+"|image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
+"image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
+"|Инструменты масштабирования.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:57
@@ -11499,6 +12524,8 @@ msgid ""
 "|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
 "|Selection of the representation (normal or converted) if exist.\n"
 msgstr ""
+"|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
+"|Выбор начертания (нормальное или альтернативное), если присутствует.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:60
@@ -11507,6 +12534,8 @@ msgid ""
 "|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
 "|Selection of the part, only for multi-part components.\n"
 msgstr ""
+"|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
+"|Выбор части, только для сложных компонентов (из нескольких частей).\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:64
@@ -11516,6 +12545,9 @@ msgid ""
 "|If it exist, display the associated documents. Exists only when called\n"
 "by the place component dialog frame from Eeschema.\n"
 msgstr ""
+"|image:images/icons/datasheet.png[icons/datasheet_png]\n"
+"|Если присутствует -- показать назначенную документацию. Эта кнопка\n"
+"появляется, только при вызове из Eeschema для добавления компонента.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:68
@@ -11525,3 +12557,7 @@ msgid ""
 "|Close Viewlib and place the selected component in Eeschema.\n"
 "This icon is only displayed when Viewlib has been called from Eeschema (click on a symbol in the component chooser).\n"
 msgstr ""
+"|image:images/icons/export.png[icons/export_png]\n"
+"|Закрыть Viewlib и расположить выбранный компонент в Eeschema.\n"
+"Эта кнопка отображается только в том случае, если Viewlib была запущена\n"
+"из Eeschema (с помощью кнопки \"расположить компонент\").\n"
