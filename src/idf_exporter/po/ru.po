@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IDF Exporter\n"
 "POT-Creation-Date: 2016-04-19 02:54+0600\n"
-"PO-Revision-Date: 2016-05-20 09:06+0300\n"
-"Last-Translator: alex9\n"
-"Language-Team: Russian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2016-10-23 16:39+0300\n"
+"Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: vim 8.0\n"
 
 #. type: Title =
 #: idf_exporter.adoc:6
@@ -65,7 +65,7 @@ msgstr "*Соавторы*\n"
 #. type: Plain text
 #: idf_exporter.adoc:25
 msgid "Cirilo Bernardo"
-msgstr ""
+msgstr "Cirilo Bernardo"
 
 #. type: Plain text
 #: idf_exporter.adoc:28
@@ -110,7 +110,7 @@ msgstr "5 мая 2016 года."
 #. type: Plain text
 #: idf_exporter.adoc:45
 msgid "<<<<"
-msgstr ""
+msgstr "<<<<"
 
 #. type: Title ==
 #: idf_exporter.adoc:46
@@ -459,6 +459,12 @@ msgid ""
 "    0 2.5 0 360\n"
 ".END_ELECTRICAL\n"
 msgstr ""
+"# a simple cylinder - this could represent an electrolytic capacitor\n"
+".ELECTRICAL\n"
+"    \"cylinder\" \"5mm OD, 5mm height\" MM 5\n"
+"    0 0 0 0\n"
+"    0 2.5 0 360\n"
+".END_ELECTRICAL\n"
 
 #. type: Plain text
 #: idf_exporter.adoc:194
@@ -484,6 +490,20 @@ msgid ""
 "    0 -0.5 8 180\n"
 ".END_ELECTRICAL\n"
 msgstr ""
+"# an upside-down T\n"
+"# a comment added for the sake of adding comments\n"
+".ELECTRICAL\n"
+"    \"Capital T\" \"5x8x10mm, upside down\" MM 10\n"
+"    0 -0.5 8 0\n"
+"    0 -0.5 0.5 0\n"
+"    0 -2.5 0.5 0\n"
+"    0 -2.5 -0.5 180\n"
+"    0 2.5 -0.5 0\n"
+"    0 2.5 0.5 180\n"
+"    0 0.5 0.5 0\n"
+"    0 0.5 8 0\n"
+"    0 -0.5 8 180\n"
+".END_ELECTRICAL\n"
 
 #. type: Title ==
 #: idf_exporter.adoc:212
@@ -707,7 +727,7 @@ msgstr "Пример контуров"
 #: idf_exporter.adoc:299
 #, no-wrap
 msgid "images/test_idf_blobs.png"
-msgstr ""
+msgstr "images/test_idf_blobs.png"
 
 #. type: Plain text
 #: idf_exporter.adoc:308
@@ -822,7 +842,7 @@ msgstr ""
 #: idf_exporter.adoc:345
 #, no-wrap
 msgid "idfcyl"
-msgstr ""
+msgstr "idfcyl"
 
 #. type: Plain text
 #: idf_exporter.adoc:349
@@ -843,6 +863,11 @@ msgid ""
 "    A vertical cylinder may have at most one wire which may be\n"
 "    placed on the left or right side.\n"
 msgstr ""
+"idfcyl: This program generates an outline for a cylindrical component.\n"
+"    The cylinder may be horizontal or vertical.\n"
+"    A horizontal cylinder may have wires at one or both ends.\n"
+"    A vertical cylinder may have at most one wire which may be\n"
+"    placed on the left or right side.\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:369
@@ -861,6 +886,18 @@ msgid ""
 "    *** Lead length\n"
 "    File name (must end in *.idf)\n"
 msgstr ""
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Orientation: V (vertical)\n"
+"    Lead type: X, R (axial, radial)\n"
+"    Diameter of body\n"
+"    Length of body\n"
+"    Board offset\n"
+"    *   Wire diameter\n"
+"    *   Pitch\n"
+"    **  Wire side: L, R (left, right)\n"
+"    *** Lead length\n"
+"    File name (must end in *.idf)\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:373
@@ -870,18 +907,21 @@ msgid ""
 "        *   only required for horizontal orientation or\n"
 "            vertical orientation with axial leads\n"
 msgstr ""
+"    NOTES:\n"
+"        *   only required for horizontal orientation or\n"
+"            vertical orientation with axial leads\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:375
 #, no-wrap
 msgid "        **  only required for vertical orientation with axial leads\n"
-msgstr ""
+msgstr "        **  only required for vertical orientation with axial leads\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:377
 #, no-wrap
 msgid "        *** only required for horizontal orientation with radial leads\n"
-msgstr ""
+msgstr "        *** only required for horizontal orientation with radial leads\n"
 
 #. type: Plain text
 #: idf_exporter.adoc:383
@@ -918,12 +958,28 @@ msgid ""
 "cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
 "_EOF\n"
 msgstr ""
+"#!/bin/bash\n"
+"# Generate a cylindrical IDF outline for test purposes\n"
+"# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
+"# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
+"idfcyl - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"v\n"
+"x\n"
+"5\n"
+"8\n"
+"3\n"
+"0.8\n"
+"3.5\n"
+"r\n"
+"cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
+"_EOF\n"
 
 #. type: Title ===
 #: idf_exporter.adoc:404
 #, no-wrap
 msgid "idfrect"
-msgstr ""
+msgstr "idfrect"
 
 #. type: Plain text
 #: idf_exporter.adoc:408
@@ -952,6 +1008,19 @@ msgid ""
 "    ** Pitch\n"
 "    File name (must end in *.idf)\n"
 msgstr ""
+"idfrect: This program generates an outline for a rectangular component.\n"
+"    The component may have a single lead (axial) or a chamfer on the\n"
+"    upper left corner.\n"
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Width:\n"
+"    Length:\n"
+"    Height:\n"
+"    Chamfer: length of the 45 deg. chamfer\n"
+"    *  Leaded: Y,N (lead is always to the right)\n"
+"    ** Wire diameter\n"
+"    ** Pitch\n"
+"    File name (must end in *.idf)\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:426
@@ -960,12 +1029,14 @@ msgid ""
 "    NOTES:\n"
 "        *   only required if chamfer = 0\n"
 msgstr ""
+"    NOTES:\n"
+"        *   only required if chamfer = 0\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:428
 #, no-wrap
 msgid "        **  only required for leaded components\n"
-msgstr ""
+msgstr "        **  only required for leaded components\n"
 
 #. type: Plain text
 #: idf_exporter.adoc:434
@@ -1009,12 +1080,35 @@ msgid ""
 "rectLMM_10x10x12_D0.8_P6.0.idf\n"
 "_EOF\n"
 msgstr ""
+"#!/bin/bash\n"
+"# Generate various rectangular IDF outlines for test purposes\n"
+"# 10x10, 1mm chamfer, 2mm height\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"2\n"
+"1\n"
+"rectMM_10x10x2_C0.5.idf\n"
+"_EOF\n"
+"# 10x10x12,  0.8mm lead on 6mm pitch\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"12\n"
+"0\n"
+"Y\n"
+"0.8\n"
+"6\n"
+"rectLMM_10x10x12_D0.8_P6.0.idf\n"
+"_EOF\n"
 
 #. type: Title ===
 #: idf_exporter.adoc:462
 #, no-wrap
 msgid "dxf2idf"
-msgstr ""
+msgstr "dxf2idf"
 
 #. type: Plain text
 #: idf_exporter.adoc:468
@@ -1037,6 +1131,8 @@ msgid ""
 "dxf2idf: this program takes line, arc, and circle segments\n"
 "    from a DXF file and creates an IDF component outline file.\n"
 msgstr ""
+"dxf2idf: this program takes line, arc, and circle segments\n"
+"    from a DXF file and creates an IDF component outline file.\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:483
@@ -1053,6 +1149,16 @@ msgid ""
 "        the comment block.\n"
 "    File name: output filename, must end in '.idf'\n"
 msgstr ""
+"Input:\n"
+"    DXF filename: the input file, must end in '.dxf'\n"
+"    Units: mm, in (millimeters or inches)\n"
+"    Geometry Name: string, as per IDF version 3.0 specification\n"
+"    Part Name: as per IDF version 3.0 specification of Part Number\n"
+"    Height: extruded height of the outline\n"
+"    Comments: all non-empty lines are comments to be added to\n"
+"        the IDF file. An empty line signifies the end of\n"
+"        the comment block.\n"
+"    File name: output filename, must end in '.idf'\n"
 
 #. type: Plain text
 #: idf_exporter.adoc:489
@@ -1082,6 +1188,16 @@ msgid ""
 "This is an IDF test file produced from the outline 'test.dxf'\n"
 "This is a second IDF comment to demonstrate multiple comments\n"
 msgstr ""
+"#!/bin/bash\n"
+"# Generate an IDF outlines from a DXF file\n"
+"dxf2idf - 1 > /dev/null << _EOF\n"
+"test.dxf\n"
+"mm\n"
+"DXF TEST GEOMETRY\n"
+"DXF TEST PART\n"
+"5\n"
+"This is an IDF test file produced from the outline 'test.dxf'\n"
+"This is a second IDF comment to demonstrate multiple comments\n"
 
 #. type: delimited block -
 #: idf_exporter.adoc:505
@@ -1090,12 +1206,14 @@ msgid ""
 "test_dxf2idf.idf\n"
 "_EOF\n"
 msgstr ""
+"test_dxf2idf.idf\n"
+"_EOF\n"
 
 #. type: Title ==
 #: idf_exporter.adoc:507
 #, no-wrap
 msgid "idf2vrml"
-msgstr ""
+msgstr "idf2vrml"
 
 #. type: Plain text
 #: idf_exporter.adoc:515
@@ -1127,6 +1245,15 @@ msgid ""
 "example to produce a model for use by KiCad: idf2vrml -f input.emn -s 0.3937008 -k\n"
 ">\n"
 msgstr ""
+">./idf2vrml\n"
+"Usage: idf2vrml -f input_file.emn -s scale_factor {-k} {-d} {-z} {-m}\n"
+"flags:\n"
+"   -k: produce KiCad-friendly VRML output; default is compact VRML\n"
+"   -d: suppress substitution of default outlines\n"
+"   -z: suppress rendering of zero-height outlines\n"
+"   -m: print object mapping to stdout for debugging purposes\n"
+"example to produce a model for use by KiCad: idf2vrml -f input.emn -s 0.3937008 -k\n"
+">\n"
 
 #. type: Plain text
 #: idf_exporter.adoc:534
