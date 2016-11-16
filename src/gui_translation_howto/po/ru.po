@@ -1,0 +1,1059 @@
+# GUI translation HOWTO Russian translation
+# Copyright (C) 2016 Free Software Foundation, Inc.
+# This file is distributed under the same license as the KiCad documentation package.
+# Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-10-31 20:27+0200\n"
+"PO-Revision-Date: 2016-11-16 11:16+0200\n"
+"Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: vim 8.0\n"
+
+#. type: Title =
+#: gui_translation_howto.adoc:6
+#, no-wrap
+msgid "GUI Translation HOWTO"
+msgstr "Перевод графического пользовательского интерфейса"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:9
+msgid "_Reference manual_"
+msgstr "Справочное руководство"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:12
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "*Авторские права*\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:18
+msgid ""
+"This document is Copyright (C) 2010-2015 by it's contributors as listed "
+"below. You may distribute it and/or modify it under the terms of either the "
+"GNU General Public License (http://www.gnu.org/licenses/gpl.html), version 3 "
+"or later, or the Creative Commons Attribution License (http://"
+"creativecommons.org/licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"Авторские права на данный документ © 2010-2015 принадлежит его разработчикам "
+"(соавторам), перечисленным ниже. Вы можете распространять и/или изменять его "
+"в соответствии с правилами лицензии GNU General Public License (http://www."
+"gnu.org/licenses/gpl.html), версии 3 или более поздней, или лицензии типа "
+"Creative Commons Attribution License (http://creativecommons.org/licenses/"
+"by/3.0/), версии 3.0 или более поздней."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:20
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr "Все торговые знаки этого руководства принадлежат его владельцам."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:23
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "*Соавторы*\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:25
+msgid "Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh."
+msgstr "Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:28
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "*Обратная связь*\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:30
+msgid "Please direct any bug reports, suggestions or new versions to here:"
+msgstr "Просьба оставлять все комментарии и замечания на следующих ресурсах:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:32
+msgid "About KiCad document: https://github.com/KiCad/kicad-doc/issues"
+msgstr "О документации KiCad: https://github.com/KiCad/kicad-doc/issues"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:34
+msgid "About KiCad software: https://bugs.launchpad.net/kicad"
+msgstr "О программном обеспечении KiCad: https://bugs.launchpad.net/kicad"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:36
+msgid "About KiCad software i18n: https://github.com/KiCad/kicad-i18n/issues"
+msgstr ""
+"О переводе программного обеспечения KiCad: https://github.com/KiCad/kicad-"
+"i18n/issues"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:40
+#, no-wrap
+msgid "*Publication date and software version*\n"
+msgstr "*Дата публикации*\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:42
+msgid "Published on October 15, 2015."
+msgstr "10 октября 2015 года"
+
+#. Since docbook "article" is more compact, I have to separate this page
+#. type: Plain text
+#: gui_translation_howto.adoc:45
+msgid "<<<<"
+msgstr "<<<<"
+
+#. type: Title ==
+#: gui_translation_howto.adoc:47
+#, no-wrap
+msgid "Needed files and tools"
+msgstr "Необходимые файлы и инструменты"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:51
+msgid ""
+"Creating and/or maintaining translations do not need any skill in C++ "
+"programming: *there is no change to do in KiCad files.*"
+msgstr ""
+"Перевод и его сопровождение не требует особых навыков, как, например, "
+"программирование на C++: *здесь не нужно изменять файлы исходных кодов KiCad."
+"*"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:58
+msgid ""
+"Translations are easy to do with a tool *PoEdit* that locate (in KiCad "
+"sources) sentences to translate and is able to create a dictionary for KiCad "
+"from translations created with this tool. So you need to install PoEdit, and "
+"get latest KiCad sources, and, for existing translations, get latest "
+"translations. Translations can be made under Linux, Window or MacOSX."
+msgstr ""
+"Достаточно просто выполнять перевод с помощью приложения *PoEdit*, которое "
+"находит (в исходных кодах KiCad) термины для перевода и позволяет создать "
+"словарь для KiCad из переводов этих терминов. Таким образом, нужно "
+"установить PoEdit и получить последнюю версию исходных кодов KiCad, и, если "
+"доступны уже существующие переводы, получить их последнюю версию. Переводить "
+"можно в Linux, Windows или MacOSX."
+
+#. type: Title ===
+#: gui_translation_howto.adoc:60
+#, no-wrap
+msgid "Download PoEdit"
+msgstr "Загрузка PoEdit"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:63
+msgid "See: http://www.poedit.net/"
+msgstr "Смотрите: http://www.poedit.net/"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:65
+#, no-wrap
+msgid "Downloading KiCad sources"
+msgstr "Загрузка исходных кодов KiCad"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:68
+msgid "KiCad sources are currently hosted on Launchpad:"
+msgstr "В данный момент исходные коды KiCad хранятся на Launchpad:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:70
+msgid "https://launchpad.net/kicad"
+msgstr "https://launchpad.net/kicad"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:73
+msgid ""
+"Files can be downloaded from Launchpad by using a tool named \"bazaar\" (bzr "
+"in commands). So:"
+msgstr ""
+"Файлы можно загрузить из Launchpad с помощью инструмента под названием "
+"\"bazaar\" (команда bzr). Для этого:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:76
+msgid ""
+"Install, if not already done, the tool named bazaar (easy to install under "
+"all platforms): see http://bazaar.canonical.com/"
+msgstr ""
+"Установите, если еще не установлен, инструмент bazaar (легко устанавливается "
+"в любой из операционных систем): смотрите http://bazaar.canonical.com/"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:79
+msgid ""
+"Download KiCad sources using the command bzr branch lp:kicad <directory "
+"where sources files are copied>"
+msgstr ""
+"Загрузите исходные коды KiCad, используя команду bzr branch lp:kicad "
+"<каталог для хранения файлов исходных кодов>"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:82
+msgid ""
+"You'll find this doc about translation and poedit configuration in "
+"Documentation on http://docs.kicad-pcb.org/en/gui_translation_howto.html"
+msgstr ""
+"Найдите это справочное руководство о переводе и настройке poedit в разделе "
+"Документация на http://docs.kicad-pcb.org/en/gui_translation_howto.html"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:84
+#, no-wrap
+msgid "Download existing translations and docs"
+msgstr "Загрузка существующих переводов и руководств пользователя"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:88
+msgid ""
+"KiCad translations and documentations are also hosted on github at: https://"
+"github.com/KiCad/kicad-i18n/"
+msgstr ""
+"Переводы KiCad и руководств пользователя хранятся на github: https://github."
+"com/KiCad/kicad-i18n/"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:90
+msgid "Download translations using command:"
+msgstr "Загрузите переводы используя команду:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:92
+#, no-wrap
+msgid "  git clone https://github.com/KiCad/kicad-i18n.git\n"
+msgstr "  git clone https://github.com/KiCad/kicad-i18n.git\n"
+
+#. type: Title ==
+#: gui_translation_howto.adoc:94
+#, no-wrap
+msgid "Find sentences to translate"
+msgstr "Поиск терминов для перевода"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:100
+msgid ""
+"The different menus and tool tips in KiCad are internationalized, and can be "
+"easily translated into a local language __without source code "
+"modifications__."
+msgstr ""
+"Разнообразные меню и всплывающие подсказки в KiCad интернационализированы и "
+"могут быть легко переведены на нужный язык __без изменения исходных кодов__."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:102
+msgid "The rules are:"
+msgstr "Основные положения:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:104
+msgid "They are written in English."
+msgstr "Исходные термины написаны на английском языке."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:108
+msgid ""
+"All strings which must be translated are written like: **_(\"hello world"
+"\")**, and displayed \"hello world\" but if a dictionary is found translated "
+"into the locale language before displaying."
+msgstr ""
+"Все строки, которые должны быть переведены, записаны в формате: **_(\"hello "
+"world\")**. Если будет обнаружен словарь перевода на текущий язык, то "
+"отобразится перевод термина \"hello world\"."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:111
+msgid ""
+"A dictionary English->locale handle translation (one dictionary by language)."
+msgstr ""
+"Словарь хранится в формате английский язык -> текущий язык (по одному "
+"словарю для каждого языка)."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:116
+msgid ""
+"The easier way to create and maintain the dictionary English->locale is to "
+"use, **poedit**. Poedit scans KiCad sources and allows you to enter "
+"translations. You must download KiCad sources and set poedit in order to "
+"create translations."
+msgstr ""
+"Самый простой путь для создания и сопровождения словарей английский язык -> "
+"текущий язык -- использовать **poedit**. PoEdit ищет термины в исходных "
+"кодах KiCad и позволяет выполнять их перевод. Нужно только загрузить "
+"исходные коды KiCad и настроить нужным образом poedit для создания перевода."
+
+#. type: Title ==
+#: gui_translation_howto.adoc:118
+#, no-wrap
+msgid "KiCad tree for translations"
+msgstr "Структура каталога переводов KiCad"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:121
+#, no-wrap
+msgid "Dictionary tree"
+msgstr "Каталоги словарей"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:124
+msgid "The dictionary will be found by KiCad only if it is in a suitable path:"
+msgstr ""
+"KiCad сможет найти словарь, только в том случае, если он находится по "
+"следующему пути:"
+
+#. type: delimited block |
+#: gui_translation_howto.adoc:128
+#, no-wrap
+msgid ""
+"|image:images/i18n-tree.png[images/i18n-tree.png] a|\n"
+"The suitable path is **kicad/internat/xx**,\n"
+msgstr ""
+"|image:images/i18n-tree.png[images/i18n-tree.png] a|\n"
+"Правильный путь **kicad/internat/xx**,\n"
+
+#. type: delimited block |
+#: gui_translation_howto.adoc:130
+#, no-wrap
+msgid "or *kicad/internat/xx_yy*\n"
+msgstr "или *kicad/internat/xx_yy*\n"
+
+#. type: delimited block |
+#: gui_translation_howto.adoc:132
+#, no-wrap
+msgid "with: *xx* = normalised locale indicator (short form) like:\n"
+msgstr "где: *xx* = стандартное обозначение языка (сокращенная форма), например:\n"
+
+#. type: delimited block |
+#: gui_translation_howto.adoc:137
+#, no-wrap
+msgid ""
+"* fr = france\n"
+"* en = english\n"
+"* es = spanish\n"
+"* pt = portuguese\n"
+msgstr ""
+"* fr = французский\n"
+"* en = английский\n"
+"* es = испанский\n"
+"* pt = португальский\n"
+
+#. type: delimited block |
+#: gui_translation_howto.adoc:139
+#, no-wrap
+msgid "or: *xx_yy* = normalized locale indicator (long form) like:\n"
+msgstr "или: *xx_yy* = стандартное обозначение языка (расширенная форма), например:\n"
+
+#. type: delimited block |
+#: gui_translation_howto.adoc:143
+#, no-wrap
+msgid ""
+"* fr_FR\n"
+"* en_GB\n"
+"* en_US\n"
+msgstr ""
+"* fr_FR\n"
+"* en_GB\n"
+"* en_US\n"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:147
+#, no-wrap
+msgid "Search path"
+msgstr "Пути поиска"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:150
+msgid "Dictionaries and on-line help files are searched in this order:"
+msgstr "Поиск словарей переводов ведется в следующем порядке:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:153
+msgid ""
+"In the path in normalized locale indicator (long form)  (kicad/internat/"
+"xx_yy)"
+msgstr ""
+"В каталоге с обозначением языка в расширенной форме (kicad/internat/xx_yy)"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:156
+msgid ""
+"In the path in normalized locale indicator (short form)  (kicad/internat/xx)"
+msgstr ""
+"В каталоге с обозначением языка в сокращенной форме (kicad/internat/xx)"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:158
+msgid "And for on-line help files search is made in:"
+msgstr "А поиск руководств пользователя выполняется:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:161
+msgid ""
+"In the path in normalized locale indicator (long form)  (kicad/help/xx_yy)"
+msgstr "В каталоге с обозначением языка в расширенной форме (kicad/help/xx_yy)"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:164
+msgid ""
+"In the path in normalized locale indicator (short form)  (kicad/help/xx)"
+msgstr "В каталоге с обозначением языка в сокращенной форме (kicad/help/xx)"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:166
+msgid "kicad/help/en"
+msgstr "kicad/help/en"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:168
+msgid "kicad/help/fr"
+msgstr "kicad/help/fr"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:173
+msgid ""
+"The main KiCad path in retrieved from the binary path, or (if not found):"
+msgstr ""
+"Путь к корневому каталогу KiCad образуется из пуки к исполняемому файлу или "
+"(если это не возможно):"
+
+#. type: Block title
+#: gui_translation_howto.adoc:174
+#, no-wrap
+msgid "under windows:"
+msgstr "в Winodws:"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:176
+msgid "c:\\kicad"
+msgstr "c:\\kicad"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:177
+msgid "d:\\kicad"
+msgstr "d:\\kicad"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:178
+msgid "c:\\Program Files\\kicad"
+msgstr "c:\\Program Files\\kicad"
+
+#. type: Block title
+#: gui_translation_howto.adoc:179
+#, no-wrap
+msgid "under linux:"
+msgstr "в Linux"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:181
+msgid "/usr/share/kicad"
+msgstr "/usr/share/kicad"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:182
+msgid "/usr/local/share/kicad"
+msgstr "/usr/local/share/kicad"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:183
+msgid "/usr/local/kicad/share/kicad"
+msgstr "/usr/local/kicad/share/kicad"
+
+#. type: delimited block =
+#: gui_translation_howto.adoc:184
+msgid "/usr/local/kicad"
+msgstr "/usr/local/kicad"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:186
+#, no-wrap
+msgid "Files"
+msgstr "Файлы"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:189
+msgid "In each directory there are 2 files **kicad/internat/xx**:"
+msgstr "В каждом каталоге присутствует по 2 файла **kicad/internat/xx**:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:191
+msgid "internat.po (the dictionary file"
+msgstr "internat.po (файл словаря)"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:192
+msgid "internat.mo (the poedit work file)"
+msgstr "internat.mo (служебный файл poedit)"
+
+#. type: Title ==
+#: gui_translation_howto.adoc:194
+#, no-wrap
+msgid "Using poedit"
+msgstr "Использование poedit"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:197
+#, no-wrap
+msgid "Installation"
+msgstr "Установка"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:201
+msgid ""
+"Download and install poedit (http://www.poedit.net). Poedit exists on "
+"Windows, Linux and Mac OS X."
+msgstr ""
+"Загрузите и установите poedit (http://www.poedit.net). Существуют версии "
+"Poedit для Windows, Linux и Mac OS X."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:203
+msgid "Download and unzip KiCad sources."
+msgstr "Загрузите и распакуйте исходные коды KiCad."
+
+#. type: Title ===
+#: gui_translation_howto.adoc:205
+#, no-wrap
+msgid "KiCad preparation"
+msgstr "Подготовка KiCad"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:209
+msgid ""
+"KiCad sources: in this example files are in f:/kicad/. All the strings to "
+"translate are tagged like **_(\"string to translate\")**."
+msgstr ""
+"Исходные коды KiCad: в этом примере предполагается, что файлы расположены в /"
+"tmp/kicad/. Все строки для перевода обозначены в виде **_(\"строка для "
+"перевода\")**."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:211
+msgid "poedit must search the _ (underscore) symbol to locate these strings."
+msgstr ""
+"Poedit должен искать символ _ (подчёркивание) для обнаружения этих строк."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:215
+msgid ""
+"One must add in KiCad the suitable directory for the dictionary (**kicad/"
+"share/internat/xx**). In this example, the directory is **kicad/share/"
+"internat/fr**."
+msgstr ""
+"Сначала нужно добавить в KiCad каталог для хранения словаря (**kicad/share/"
+"internat/xx**). В данном примере этим каталогом будет **kicad/share/internat/"
+"ru**."
+
+#. type: Title ===
+#: gui_translation_howto.adoc:217
+#, no-wrap
+msgid "Poedit Configuration"
+msgstr "Настройка Poedit"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:220
+msgid "Run poedit."
+msgstr "Запустите poedit."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:222
+msgid "Run File/New catalog..."
+msgstr "Выполните команду Файл/Новый каталог..."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:224
+msgid "You should see something like:"
+msgstr "Увидите что-то на подобии этого:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:226
+msgid "image:images/poedit-settings.png[images/poedit-settings.png]"
+msgstr "image:images/ru/poedit-settings.png[images/ru/poedit-settings.png]"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:228
+#, no-wrap
+msgid "Project Configuration"
+msgstr "Настройка проекта"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:231
+msgid "image:images/poedit-settings-fr.png[images/poedit-settings-fr.png]"
+msgstr ""
+"image:images/ru/poedit-settings-ru.png[images/ru/poedit-settings-ru.png]"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:234
+msgid ""
+"The source files are in English, so no need to choose something for source "
+"code."
+msgstr ""
+"Файлы исходных кодов на английском языке, поэтому для них не нужно ничего "
+"настраивать."
+
+#. type: Title ===
+#: gui_translation_howto.adoc:236
+#, no-wrap
+msgid "Path and files Configuration"
+msgstr "Настройка каталогов и файлов"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:239
+msgid ""
+"image:images/poedit-settings-paths.png[images/poedit-settings-paths.png]"
+msgstr ""
+"image:images/ru/poedit-settings-paths.png[images/ru/poedit-settings-paths."
+"png]"
+
+#. type: Title ===
+#: gui_translation_howto.adoc:241
+#, no-wrap
+msgid "Keyword Configuration"
+msgstr "Настройка ключевых слов"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:244
+msgid ""
+"image:images/poedit-settings-keywords.png[images/poedit-settings-keywords."
+"png]"
+msgstr ""
+"image:images/ru/poedit-settings-keywords.png[images/ru/poedit-settings-"
+"keywords.png]"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:246
+msgid "A couple of keywords to enter here:"
+msgstr "Здесь нужно указать пару ключевых слов:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:248
+msgid "_ (underscore) used as tag in generic source files"
+msgstr ""
+"_ (подчёркивание) используется в качестве отметки в обычных файлах исходных "
+"кодов."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:250
+msgid "_HKI used as a tag for the hotkeys description translation."
+msgstr ""
+"_HKI используется в качестве отметки для перевода описания сочетаний клавиш."
+
+#. type: Title ===
+#: gui_translation_howto.adoc:252
+#, no-wrap
+msgid "Save the project"
+msgstr "Сохранение проекта"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:256
+msgid ""
+"Save the new projet in *kicad/share/internat/xx* with the name **kicad.po**."
+msgstr ""
+"Сохраните новый проект в *kicad/share/internat/xx* под именем **kicad.po**."
+
+#. type: Title ==
+#: gui_translation_howto.adoc:258
+#, no-wrap
+msgid "Create or edit a dictionary"
+msgstr "Создание или редактирование словаря"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:261
+msgid "Run poedit and load a project (here: **kicad.po**)."
+msgstr "Запустите poedit и загрузите проект (здесь это **kicad.po**)."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:263
+msgid "image:images/poedit-settings-dict.png[images/poedit-settings-dict.png]"
+msgstr ""
+"image:images/ru/poedit-settings-dict.png[images/ru/poedit-settings-dict.png]"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:265
+msgid "Run the command **Catalog/update from sources**."
+msgstr "Выполните команду **Каталог/Обновить из исходного кода**."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:268
+msgid ""
+"New strings (not yet translated) will be displayed on the top of the window."
+msgstr "Новые строки (без перевода) будут показаны в верхней части окна."
+
+#. type: Title ==
+#: gui_translation_howto.adoc:270
+#, no-wrap
+msgid "Adding a new language entry in KiCad source code (devs only)"
+msgstr "Добавление пункта меню для нового языка в исходный код KiCad (только для разработчиков)"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:274
+msgid ""
+"This step in NOT required. It is useful only for developers, and for testing "
+"purpose only"
+msgstr ""
+"Этот шаг НЕ является обязательным. Эта функция используется только "
+"разработчиками и только в целях отладки."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:276
+msgid "In KiCad we can force the used language."
+msgstr "В KiCad можно принудительно изменить язык интерфейса."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:278
+msgid "It is highly recommended to use the default language."
+msgstr "Крайне рекомендуется использовать язык по умолчанию."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:281
+msgid ""
+"image:images/kicad-settings-language.png[images/kicad-settings-language.png]"
+msgstr ""
+"image:images/ru/kicad-settings-language.png[images/ru/kicad-settings-"
+"language.png]"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:284
+msgid ""
+"But because developers have to test translations, a new entry in the "
+"language list can be useful for testing purposes."
+msgstr ""
+"Но, так как разработчикам нужно проверять состояние переводов, то новый "
+"элемент в меню языков может быть полезным при тестировании."
+
+#. type: Title ===
+#: gui_translation_howto.adoc:286
+#, no-wrap
+msgid "Steps"
+msgstr "Действия"
+
+#. type: Title ====
+#: gui_translation_howto.adoc:289
+#, no-wrap
+msgid "Adding a new id in include/id.h."
+msgstr "Добавление нового идентификатора в include/id.h."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:293
+msgid "-> In include/id.h, locate the sequence like:"
+msgstr "-> В include/id.h найдите строки, как здесь:"
+
+#. type: delimited block -
+#: gui_translation_howto.adoc:303
+#, no-wrap
+msgid ""
+"ID_LANGUAGE_CHOICE,\n"
+"ID_LANGUAGE_DEFAULT,\n"
+"ID_LANGUAGE_ENGLISH,\n"
+"ID_LANGUAGE_FRENCH,\n"
+"ID_LANGUAGE_SPANISH,\n"
+"ID_LANGUAGE_GERMAN,\n"
+"ID_LANGUAGE_RUSSIAN,\n"
+"ID_LANGUAGE_PORTUGUESE,\n"
+msgstr ""
+"ID_LANGUAGE_CHOICE,\n"
+"ID_LANGUAGE_DEFAULT,\n"
+"ID_LANGUAGE_ENGLISH,\n"
+"ID_LANGUAGE_FRENCH,\n"
+"ID_LANGUAGE_SPANISH,\n"
+"ID_LANGUAGE_GERMAN,\n"
+"ID_LANGUAGE_RUSSIAN,\n"
+"ID_LANGUAGE_PORTUGUESE,\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:306
+msgid "and add a new entry in list (which will be used later in menus) like:"
+msgstr ""
+"и добавьте новый элемент списка (который позже будет использоваться в меню), "
+"например:"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:308
+msgid "ID_LANGUAGE_MY_LANGUAGE before ID_LANGUAGE_CHOICE_END."
+msgstr "ID_LANGUAGE_MY_LANGUAGE перед ID_LANGUAGE_CHOICE_END."
+
+#. type: Title ====
+#: gui_translation_howto.adoc:310
+#, no-wrap
+msgid "Adding a new icon (aesthetic purpose only)"
+msgstr "Добавление новой иконки (только в эстетических целях)"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:315
+msgid ""
+"-> Create a new icon in SVG (Using Inkscape for instance) format: usually "
+"the country flag. For instance lang_new.svg"
+msgstr ""
+"-> Создайте новую иконку в формате SVG (используя Inkscape, например): "
+"обычно это флаг страны. К примеру lang_new.svg"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:317
+msgid "Others language icons are in `common/bitmaps_png/source`"
+msgstr "Иконки других языков расположены в `common/bitmaps_png/source`"
+
+#. type: Title ====
+#: gui_translation_howto.adoc:319
+#, no-wrap
+msgid "Editing bitmaps_png/CMakeLists.txt"
+msgstr "Редактирование bitmaps_png/CMakeLists.txt"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:323 gui_translation_howto.adoc:354
+msgid "-> locate the text:"
+msgstr "-> Найдите текст:"
+
+#. type: delimited block -
+#: gui_translation_howto.adoc:345
+#, no-wrap
+msgid ""
+"lang_catalan\n"
+"lang_chinese\n"
+"lang_bg\n"
+"lang_cs\n"
+"lang_def\n"
+"lang_de\n"
+"lang_en\n"
+"lang_es\n"
+"lang_fr\n"
+"lang_fi\n"
+"lang_gr\n"
+"lang_hu\n"
+"lang_it\n"
+"lang_jp\n"
+"lang_ko\n"
+"lang_nl\n"
+"lang_pl\n"
+"lang_pt\n"
+"lang_ru\n"
+"lang_sl\n"
+msgstr ""
+"lang_catalan\n"
+"lang_chinese\n"
+"lang_bg\n"
+"lang_cs\n"
+"lang_def\n"
+"lang_de\n"
+"lang_en\n"
+"lang_es\n"
+"lang_fr\n"
+"lang_fi\n"
+"lang_gr\n"
+"lang_hu\n"
+"lang_it\n"
+"lang_jp\n"
+"lang_ko\n"
+"lang_nl\n"
+"lang_pl\n"
+"lang_pt\n"
+"lang_ru\n"
+"lang_sl\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:348
+msgid "and add the new filename (without extension): lang_new"
+msgstr "и добавьте имя нового файла (без расширения): lang_new"
+
+#. type: Title ====
+#: gui_translation_howto.adoc:350
+#, no-wrap
+msgid "Editing include/bitmaps.h"
+msgstr "Редактирование include/bitmaps.h"
+
+#. type: delimited block -
+#: gui_translation_howto.adoc:376
+#, no-wrap
+msgid ""
+"EXTERN_BITMAP( lang_bg_xpm )\n"
+"EXTERN_BITMAP( lang_catalan_xpm )\n"
+"EXTERN_BITMAP( lang_chinese_xpm )\n"
+"EXTERN_BITMAP( lang_cs_xpm )\n"
+"EXTERN_BITMAP( lang_def_xpm )\n"
+"EXTERN_BITMAP( lang_de_xpm )\n"
+"EXTERN_BITMAP( lang_en_xpm )\n"
+"EXTERN_BITMAP( lang_es_xpm )\n"
+"EXTERN_BITMAP( lang_fr_xpm )\n"
+"EXTERN_BITMAP( lang_fi_xpm )\n"
+"EXTERN_BITMAP( lang_gr_xpm )\n"
+"EXTERN_BITMAP( lang_hu_xpm )\n"
+"EXTERN_BITMAP( lang_it_xpm )\n"
+"EXTERN_BITMAP( lang_jp_xpm )\n"
+"EXTERN_BITMAP( lang_ko_xpm )\n"
+"EXTERN_BITMAP( lang_nl_xpm )\n"
+"EXTERN_BITMAP( lang_pl_xpm )\n"
+"EXTERN_BITMAP( lang_pt_xpm )\n"
+"EXTERN_BITMAP( lang_ru_xpm )\n"
+"EXTERN_BITMAP( lang_sl_xpm )\n"
+msgstr ""
+"EXTERN_BITMAP( lang_bg_xpm )\n"
+"EXTERN_BITMAP( lang_catalan_xpm )\n"
+"EXTERN_BITMAP( lang_chinese_xpm )\n"
+"EXTERN_BITMAP( lang_cs_xpm )\n"
+"EXTERN_BITMAP( lang_def_xpm )\n"
+"EXTERN_BITMAP( lang_de_xpm )\n"
+"EXTERN_BITMAP( lang_en_xpm )\n"
+"EXTERN_BITMAP( lang_es_xpm )\n"
+"EXTERN_BITMAP( lang_fr_xpm )\n"
+"EXTERN_BITMAP( lang_fi_xpm )\n"
+"EXTERN_BITMAP( lang_gr_xpm )\n"
+"EXTERN_BITMAP( lang_hu_xpm )\n"
+"EXTERN_BITMAP( lang_it_xpm )\n"
+"EXTERN_BITMAP( lang_jp_xpm )\n"
+"EXTERN_BITMAP( lang_ko_xpm )\n"
+"EXTERN_BITMAP( lang_nl_xpm )\n"
+"EXTERN_BITMAP( lang_pl_xpm )\n"
+"EXTERN_BITMAP( lang_pt_xpm )\n"
+"EXTERN_BITMAP( lang_ru_xpm )\n"
+"EXTERN_BITMAP( lang_sl_xpm )\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:380
+msgid ""
+"and add a line to include the new icon name called lang_new_xpm (_xpm added "
+"to the filename)."
+msgstr ""
+"и добавьте строку для подключения новой иконки под именем lang_new_xpm (_xpm "
+"добавляется к имени файла)."
+
+#. type: Title ====
+#: gui_translation_howto.adoc:382
+#, no-wrap
+msgid "Editing common/edaappl.cpp"
+msgstr "Редактирование common/edaappl.cpp"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:386
+msgid "-> Locate:"
+msgstr "-> Найдите:"
+
+#. type: delimited block -
+#: gui_translation_howto.adoc:397
+#, no-wrap
+msgid ""
+"struct LANGUAGE_DESCR\n"
+"{\n"
+"    int           m_WX_Lang_Identifier;                 // wxWidget locale identifier (see wxWidget doc)\n"
+"    int           m_KI_Lang_Identifier;                 // kicad identifier used in menu selection (see id.h)\n"
+"    const char**  m_Lang_Icon;                          // the icon used in menus\n"
+"    const wxChar* m_Lang_Label;                         // Label used in menus\n"
+"    bool          m_DoNotTranslate;                     // set to true if the m_Lang_Label must not be translated\n"
+"};\n"
+msgstr ""
+"struct LANGUAGE_DESCR\n"
+"{\n"
+"    int           m_WX_Lang_Identifier;                 // wxWidget locale identifier (see wxWidget doc)\n"
+"    int           m_KI_Lang_Identifier;                 // kicad identifier used in menu selection (see id.h)\n"
+"    const char**  m_Lang_Icon;                          // the icon used in menus\n"
+"    const wxChar* m_Lang_Label;                         // Label used in menus\n"
+"    bool          m_DoNotTranslate;                     // set to true if the m_Lang_Label must not be translated\n"
+"};\n"
+
+#. type: delimited block -
+#: gui_translation_howto.adoc:420
+#, no-wrap
+msgid ""
+"#define LANGUAGE_DESCR_COUNT 14\n"
+"static struct LANGUAGE_DESCR s_Language_List[LANGUAGE_DESCR_COUNT] =\n"
+"{\n"
+"    {\n"
+"        wxLANGUAGE_DEFAULT,\n"
+"        ID_LANGUAGE_DEFAULT,\n"
+"        lang_def_xpm,\n"
+"        _( \"Default\" )\n"
+"    },\n"
+"    {\n"
+"        wxLANGUAGE_ENGLISH,\n"
+"        ID_LANGUAGE_ENGLISH,\n"
+"        lang_en_xpm,\n"
+"        wxT( \"English\" ),\n"
+"        true;\n"
+"    },\n"
+"    {\n"
+"        wxLANGUAGE_FRENCH,\n"
+"        ID_LANGUAGE_FRENCH,\n"
+"        lang_fr_xpm,\n"
+"        _( \"French\" )\n"
+"    },\n"
+msgstr ""
+"#define LANGUAGE_DESCR_COUNT 14\n"
+"static struct LANGUAGE_DESCR s_Language_List[LANGUAGE_DESCR_COUNT] =\n"
+"{\n"
+"    {\n"
+"        wxLANGUAGE_DEFAULT,\n"
+"        ID_LANGUAGE_DEFAULT,\n"
+"        lang_def_xpm,\n"
+"        _( \"Default\" )\n"
+"    },\n"
+"    {\n"
+"        wxLANGUAGE_ENGLISH,\n"
+"        ID_LANGUAGE_ENGLISH,\n"
+"        lang_en_xpm,\n"
+"        wxT( \"English\" ),\n"
+"        true;\n"
+"    },\n"
+"    {\n"
+"        wxLANGUAGE_FRENCH,\n"
+"        ID_LANGUAGE_FRENCH,\n"
+"        lang_fr_xpm,\n"
+"        _( \"French\" )\n"
+"    },\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:423
+msgid "and add a new entry like:"
+msgstr "и добавьте новый блок, например так:"
+
+#. type: delimited block -
+#: gui_translation_howto.adoc:432
+#, no-wrap
+msgid ""
+"    {\n"
+"        wxLANGUAGE_MY_LANGUAGE,\n"
+"        ID_LANGUAGE_MY_LANGUAGE,\n"
+"        lang_new_xpm,\n"
+"        _( \"My_language\" )\n"
+"    },\n"
+msgstr ""
+"    {\n"
+"        wxLANGUAGE_MY_LANGUAGE,\n"
+"        ID_LANGUAGE_MY_LANGUAGE,\n"
+"        lang_new_xpm,\n"
+"        _( \"My_language\" )\n"
+"    },\n"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:436
+msgid ""
+"_wxLANGUAGE_MY_LANGUAGE_ is the wxWidgets language identifier for the "
+"country (see wxWidget doc)."
+msgstr ""
+"_wxLANGUAGE_MY_LANGUAGE_ - это идентификатор языка страны для wxWidgets (см. "
+"документацию на wxWidgets)."
+
+#. type: Title ====
+#: gui_translation_howto.adoc:438
+#, no-wrap
+msgid "Recompiling"
+msgstr "Повторная сборка проекта"
+
+#. type: Plain text
+#: gui_translation_howto.adoc:444
+msgid ""
+"You should be a PNG Maintainer (see bitmaps_png/CMakeLists.txt file), i.e "
+"compile KiCad with the option MAINTAIN_PNGS on Obviously, this is the next "
+"and last step."
+msgstr ""
+"Нужно быть управляющим по изображениям PNG (см. файл bitmaps_png/CMakeLists."
+"txt), т.е. компилировать KiCad с включенным параметром MAINTAIN_PNGS. Как "
+"можно догадаться, этот шаг является завершающим."
+
+#. type: Plain text
+#: gui_translation_howto.adoc:446
+msgid "'''''"
+msgstr "'''''"
