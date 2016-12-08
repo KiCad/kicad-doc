@@ -48,17 +48,17 @@ action plugins.
 .Example that loads a board, hides all values, shows all references
 [source,python]
 ----------
-#!/usr/bin/python
+#!/usr/bin/env python2.7
 import sys
 from pcbnew import *
 
 filename=sys.argv[1]
 
 pcb = LoadBoard(filename)
-for module in pcb.GetModules():  
+for module in pcb.GetModules():
     print "* Module: %s"%module.GetReference()
-    module.GetValueObj().SetVisible(False)      # set Value as Hidden
-    module.GetReferenceObj().SetVisible(True)   # set Reference as Visible
+    module.Value().SetVisible(False)      # set Value as Hidden
+    module.Reference().SetVisible(True)   # set Reference as Visible
 
 pcb.Save("mod_"+filename)
 ----------
