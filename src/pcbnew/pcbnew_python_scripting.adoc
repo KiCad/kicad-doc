@@ -159,19 +159,30 @@ print "RATSNEST:",len(pcb.GetFullRatsnest())
 
 === Examples
 
-==== Change a component pins paste mask margin
+==== Change a component pin's paste mask margin
 
 .We only want to change pins from 1 to 14, 15 is a thermal pad that must be kept as it is.
 [source,python]
 ----------
-b = pcbnew.GetBoard()
-u304 = b.FindModuleByReference('U304')
-pads = u304.GetPads()
- 
+#!/usr/bin/env python2.7
+import sys
+from pcbnew import *
+
+filename=sys.argv[1]
+pcb = LoadBoard(filename)
+
+# Find module U304
+u304 = pcb.FindModuleByReference('U304')
+pads = u304.Pads()
+
+#  Iterate over pads, printing solder paste margin
 for p in pads:
-    print p.GetPadName(), pcbnew.ToMM(p.GetLocalSolderPasteMargin())
+    print p.GetPadName(), ToMM(p.GetLocalSolderPasteMargin())
     id = int(p.GetPadName())
+    # Set margin to 0 for all but pad (pin) 15
     if id<15: p.SetLocalSolderPasteMargin(0)
+
+pcb.Save("mod_"+filename)
 ---------
 
 [[Footprint_Wizards]]
