@@ -22,7 +22,7 @@ scripting is Pcbnew. It is also planned for Eeschema in the future.
 
 The scripting API reflects the internal object structure inside
 KiCad/pcbnew. BOARD is the main object, that has a set of properties and
-a set of MODULEs, and TRACKs/SEGVIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.
+a set of MODULEs, and TRACKs/VIAs, TEXTE_PCB, DIMENSION, DRAWSEGMENT.
 Then MODULEs have D_PADs, EDGEs, etc.
 
 - See the BOARD section below.
@@ -111,8 +111,7 @@ BOARD contains a set of object lists that can be accessed using the following me
 
 - *board.GetModules():* This method returns a list of MODULE objects, all the modules available in the board will be exposed here.
 - *board.GetDrawings():* Returns the list of BOARD_ITEMS that belong to the board drawings
-- *board.GetTracks():* This method returns a list of TRACKs and SEGVIAs inside a BOARD
-- *board.GetSegZones():* Returns a list of SEGZONEs
+- *board.GetTracks():* This method returns a list of TRACKs and VIAs inside a BOARD
 - *board.GetFullRatnest():* Returns the list of ratsnets (connections still not routed)
 - *board.GetLocalRatsnest():* Returns the list of ratsnest of a moving footprint (as it's dragged)
 - *board.GetNetClasses():* Returns the list of net classes
