@@ -69,17 +69,38 @@ pcb.Save("mod_"+filename)
 [source,python]
 ----------
 #!/usr/bin/python
- 
+
 from pcbnew import *
- 
-libpath = "/usr/share/kicad/modules/sockets.mod"
-lst = FootprintEnumerate(libpath)
- 
-for name in lst:
-    m = FootprintLoad(libpath,name)
-    print name,"->",m.GetLibRef(), m.GetReference()
-    for p in m.GetPads():
-        print "\t",p.GetPadName(),p.GetPosition(),p.GetPos0(), p.GetOffset()
+
+libpath = "/usr/share/kicad/modules/Sockets.pretty"
+print ">> enumerate footprints, pads of",libpath
+
+# Load the suitable plugin to read/write the .pretty library
+# (containing the .kicad_mod footprint files)
+src_type = IO_MGR.GuessPluginTypeFromLibPath( libpath );
+# Rem: we can force the plugin type by using IO_MGR.PluginFind( IO_MGR.KICAD )
+plugin = IO_MGR.PluginFind( src_type )
+
+# Print plugin type name: (Expecting "KiCad" for a .pretty library)
+print( "Selected plugin type: %s" % plugin.PluginName() )
+
+list_of_footprints = plugin.FootprintEnumerate(libpath)
+
+for name in list_of_footprints:
+    fp = plugin.FootprintLoad(libpath,name)
+    # print the short name of the footprint
+    print name  # this is the name inside the loaded library
+    # followed by ref field, value field, and decription string:
+    # Remember ref and value texts are dummy texts, replaced by the schematic values
+    # when reading a netlist.
+    print "  ->", fp.GetReference(), fp.GetValue(), fp.GetDescription()
+
+    # print pad info: GetPos0() is the pad position relative to the footrint position
+    for pad in fp.Pads():
+        print "    pad [%s]" % pad.GetPadName(), "at",\
+        "pos0", ToMM(pad.GetPos0().x), ToMM(pad.GetPos0().y),"mm",\
+        "shape offset", ToMM(pad.GetOffset().x), ToMM(pad.GetOffset().y), "mm"
+    print ""
 ----------
 
 === BOARD
