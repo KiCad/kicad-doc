@@ -289,8 +289,9 @@ image::images/kicad_main_window.png[KiCad Main Window]
 
 4.  Click on the 'Page Settings' icon
     image:images/icons/sheetset.png[Sheet settings icon] on the top
-    toolbar. Set the Page Size as 'A4' and enter the Title as 'Tutorial
-    1'. You will see that more information can be entered here if
+    toolbar. Set the appropriate 'paper size' ('A4','8.5x11' etc.)
+    and enter the Title as 'Tutorial1'.
+    You will see that more information can be entered here if
     necessary. Click OK. This information will populate the schematic
     sheet at the bottom right corner. Use the mouse wheel to zoom in.
     Save the whole schematic project: *File* -> **Save Schematic Project**
@@ -449,7 +450,7 @@ beneath this button but has thicker lines. The section
 to use a bus section.
 
 32. Click on the little circle at the end of pin 7 of the
-    microcontroller and then click on the little circle on pin 2 of
+    microcontroller and then click on the little circle on pin 1 of
     the LED.  You can zoom in while you are placing the connection.
 +
 NOTE: If you want to reposition wired components, it is important to
@@ -773,7 +774,8 @@ This is done with the _Pcbnew_ tool.
 
 2.  Begin by entering some schematic information. Click on the 'Page
     settings' icon image:images/icons/sheetset.png[sheetset_png] on the top
-    toolbar. Set 'paper size' as 'A4' and 'title' as 'Tutorial1'.
+    toolbar. Set the appropriate 'paper size' ('A4','8.5x11' etc.)
+    and 'title' as 'Tutorial1'.
 
 3.  It is a good idea to start by setting the *clearance* and the
     *minimum track width* to those required by your PCB
@@ -829,13 +831,15 @@ image::images/gsik_tutorial1_080.png[gsik_tutorial1_080_png]
     preferred to actual wires because they make the schematic much
     less messy.
 
-11. Now we will define the edge of the PCB. Select 'Edge.Cuts' from
+11. Now we will define the edge of the PCB. Select the 'Edge.Cuts' layer from
     the drop-down menu in the top toolbar. Click on the 'Add graphic
     line or polygon' icon
     image:images/icons/add_dashed_line.png[add_dashed_line_png] on the right
     toolbar. Trace around the edge of the board, clicking at each
     corner, and remember to leave a small gap between the edge of the
     green and the edge of the PCB.
++
+image::images/select_edge_cuts.png[Select the Edge.Cuts layer]
 
 12. Next, connect up all the wires except GND. In fact, we will
     connect all GND connections in one go using a ground plane placed
@@ -1153,7 +1157,7 @@ to a library file you can just use the cut and paste commands.
 
 3.  In the Pin Properties window that appears, set the pin name to
     'VCC', set the pin number to '1', and the 'Electrical type' to
-    'Passive' then click OK.
+    'Power input' then click OK.
 +
 image::images/pin_properties.png[Pin Properties]
 
