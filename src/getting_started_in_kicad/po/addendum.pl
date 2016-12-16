@@ -3,5 +3,5 @@ PO4A-HEADER: mode=after; position=^\[\[contributors\]\]; beginboundary=\[\[
 *Tłumaczenie*
 
 //Translators put your names below here in the addendum file
-Kerusey Karyu <keruseykaryu@o2.pl>, 2014-2015.
+Kerusey Karyu <keruseykaryu@o2.pl>, 2014-2016.
 
