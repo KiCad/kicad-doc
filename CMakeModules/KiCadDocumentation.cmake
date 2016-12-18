@@ -136,7 +136,14 @@ macro( KiCadDocumentation DOCNAME )
             add_dependencies( ${DOCNAME} ${DOCNAME}_html_${LANGUAGE} )
 
             install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT html-${LANGUAGE} )
-            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images/ DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} OPTIONAL PATTERN "*.png")
+
+            # It seems to be nescesary to use diffrent install commands to
+            # install the images properly without having other lagunages
+            # polluting the images folder
+            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images/${LANGUAGE} DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} OPTIONAL PATTERN "*.png")
+            install( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images/icons DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} OPTIONAL PATTERN "*.png")
+            file(GLOB UNIVERSAL_IMAGES "${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/images/*.png")
+            install( FILES ${UNIVERSAL_IMAGES} DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} )
         endif()
 
 
