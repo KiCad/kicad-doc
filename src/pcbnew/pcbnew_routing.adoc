@@ -220,11 +220,28 @@ net used for the new track (in order to match the DRC rules).
 
 image::images/Pcbnew_creating_new_track.png[scaledwidth="80%"]
 
+As you move the mouse, a track is drawn connecting the origin of the
+track with the current mouse position. The track will be drawn with at
+most two segments (for example, rightwards, then a switch to
+diagonally). Clicking while routing locks in the corner node.
+
+The direction that the track is drawn in first (e.g. right first, then
+diagonally, or diagonally first then right) is called the "Track
+Posture" and can be switched with the hotkey '/' or the button
+image:images/icons/change_entry_orient.png[].
+
+image:images/Pcbnew_routing_posture.png[]
+
+Holding 'Ctrl' while routing in the non-legacy canvases constrains the
+routing to a single horizontal or vertical segment. Switching posture
+changes to a single diagonal segment.
+
 When creating a new track, Pcbnew shows links to nearest
 unconnected pads, link number set in option "Max. Links" in General
 Options.
 
-End the track by double-clicking, by the pop-up menu or by its hot key.
+End the track by double-clicking, by the pop-up menu or by the hotkey
+'End'.
 
 image::images/Pcbnew_track_in_progres_context.png[scaledwidth="60%"]
 
