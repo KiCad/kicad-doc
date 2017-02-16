@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Eeschema-ja\n"
 "POT-Creation-Date: 2016-10-14 19:22+0200\n"
-"PO-Revision-Date: 2016-05-31 01:34+0200\n"
-"Last-Translator: kinichiro <kinichiro.inoguchi@gmail.com>\n"
+"PO-Revision-Date: 2017-02-12 16:31+0900\n"
+"Last-Translator: starfort_jp <starfort@nifty.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.11\n"
 
 # PR1:07102015 proofreading - chapter1
 # PR2:07122015 proofreading - chapter2,3
@@ -205,7 +205,7 @@ msgstr "適切なコンポーネント設計には以下のことが要求され
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:39
 msgid "Defining if the component is made up of one or more units."
-msgstr "コンポーネントは一つ以上のパーツで構成されるように定義する。"
+msgstr "コンポーネントは一つ以上のユニットで構成されるよう定義する。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:41
@@ -213,8 +213,8 @@ msgid ""
 "Defining if the component has an alternate body style also known as a De "
 "Morgan representation."
 msgstr ""
-"コンポーネントがド・モルガン表現として知られる代替ボディスタイルを持つように"
-"定義する。"
+"コンポーネントはド・モルガン表現として知られる代替ボディスタイルを持つよう定"
+"義する。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:43
@@ -562,7 +562,7 @@ msgid ""
 "the current component is not derived from multiple units.\n"
 msgstr ""
 "|image:images/ja/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
-"|表示するパーツを選択する。（多パーツコンポーネントではない場合、\n"
+"|表示するユニットを選択する。（複数ユニット・コンポーネントではない場合、\n"
 "ドロップダウンは無効です）\n"
 
 #. type: delimited block |
@@ -586,7 +586,7 @@ msgid ""
 "components with multiple units and alternate symbols.\n"
 msgstr ""
 "|image:images/icons/pin2pin.png[icons/pin2pin_png]\n"
-"|ピンを編集する：多パーツコンポーネントおよび代替シンボルを持つ場合、\n"
+"|ピンを編集する：複数ユニット・コンポーネントで代替シンボルを持つ場合、\n"
 "ピンの形状と位置は個別に編集\n"
 
 #. type: delimited block |
@@ -670,15 +670,15 @@ msgstr ""
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:197
-#, fuzzy, no-wrap
+#, no-wrap
 msgid ""
 "|image:images/icons/add_circle.png[icons/add_circle_png]\n"
 "|Circle tool. Left-click to begin drawing a new graphical circle from\n"
 "the center. Left-click again to define the radius of the circle.\n"
 msgstr ""
 "|image:images/icons/add_circle.png[icons/add_circle_png]\n"
-"|円ツール。（左クリックで中心から円の描画を始めます。\n"
-"次の左クリックで円の半径が決まります。）\n"
+"|円ツール。左クリックで中心から円の描画を始めます。\n"
+"次の左クリックで円の半径が決まります。\n"
 
 #. type: delimited block |
 #: eeschema_component_library_editor.adoc:202
@@ -1112,12 +1112,12 @@ msgstr ""
 "image:images/icons/new_component.png[icons/new_component_png] ボタンの "
 "NewPart コマンドを使用して新規コンポーネントの作成が可能です。コンポーネント"
 "名（名前は回路図エディタで定数フィールドのデフォルト値として使用される）、リ"
-"ファレンス（U、IC、R ...）、パッケージ内のパーツ数（例えば、標準コンポーネン"
-"トの 7400 は１つのパッケージ内に４つのパーツを持っている）、（ド・モルガンと"
-"呼ぶこともある）代替ボディスタイルが存在するかどうかの入力が要求されます。も"
-"しリファレンスフィールドが空白のままであると、デフォルトの “U“ になります。こ"
-"れらのプロパティはすべて後で設定することが可能ですが、コンポーネントの作成時"
-"に設定した方がいいでしょう。"
+"ファレンス（U、IC、R ...）、パッケージ内のユニット数（例えば、標準コンポーネ"
+"ントの 7400 は１つのパッケージ内に４つのユニットを持っている）、（ド・モルガ"
+"ンと呼ぶこともある）代替ボディスタイルが存在するかどうかの入力が要求されま"
+"す。もしリファレンスフィールドが空白のままだと、デフォルトの “U“ になります。"
+"これらのプロパティはすべて後で設定することも可能ですが、コンポーネントの作成"
+"時に設定した方がいいでしょう。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:380
@@ -1267,7 +1267,6 @@ msgstr "images/ja/eeschema_properties_for_component.png"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:433
-#, fuzzy
 msgid ""
 "It is very important to correctly set the number of units per package and "
 "the alternate symbolic representation, if enabled, because when pins are "
@@ -1276,12 +1275,11 @@ msgid ""
 "there will be additional work to add the new unit pins and symbols.  "
 "Nevertheless, it is possible to modify these properties at any time."
 msgstr ""
-"パッケージあたりのパーツ数を正しく設定することは大変重要です。またコンポーネ"
-"ントが代替シンボル表現を定義するパラメータを正確に持つなら、ピンが編集または"
-"作成される時、各パーツに相当するピンは正しく作成されるでしょう。ピンの作成／"
-"編集後にパッケージあたりのパーツ数を増やすと、新しいパーツへのピンとシンボル"
-"の追加という余計な仕事をする破目になるでしょう。例えそうだとしても、これらの"
-"パラメータの変更はいつでも可能です。"
+"パッケージあたりのユニット数と代替シンボル表現を正しく設定することは大変重要"
+"です。もし設定が有効なら、ピンの作成または編集時にピンは各ユニットに正しく反"
+"映されるでしょう。ピンの作成／編集後にパッケージあたりのユニット数を増やす"
+"と、新しいユニットへピンとシンボルを追加するという余計な仕事をする破目になり"
+"ます。例えそうだとしても、これらのパラメータはいつでも変更可能です。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:442
@@ -1433,10 +1431,11 @@ msgid ""
 "display the context menu for the selected element. Below is the context menu "
 "for a line element."
 msgstr ""
-"個々のグラフィック要素（ライン、円弧、円など）は、全てのパーツで共通／全ての"
-"ボディスタイルで共通／パーツ毎／ボディスタイル毎に定義することが可能です。要"
-"素オプションは、選択した要素を右クリックしてコンテキストメニューを表示するこ"
-"とで簡単に設定できます。次にラインのコンテキストメニューの例を示します。"
+"個々のグラフィック要素（ライン、円弧、円など）は、全てのユニットで共通／全て"
+"のボディスタイルで共通／ユニット毎／ボディスタイル毎に定義することが可能で"
+"す。要素オプションは、選択した要素を右クリックしてコンテキストメニューを表示"
+"することで簡単に設定できます。次にラインのコンテキストメニューの例を示しま"
+"す。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:490
@@ -1482,8 +1481,8 @@ msgid ""
 "Line width which defines the width of the element's line in the current "
 "drawing units."
 msgstr ""
-"“一般設定” の “幅 (W)” は、現在表示しているパーツにおけるライン要素の幅を定義"
-"します。"
+"“一般設定” の “幅 (W)” は、現在表示しているユニットにおけるライン要素の幅を定"
+"義します。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:505
@@ -1492,9 +1491,9 @@ msgid ""
 "element is drawn for each unit in component with more than one unit per "
 "package or if the graphical element is only drawn for the current unit."
 msgstr ""
-"“共有” の ”コンポーネントの全てのパーツで共通” 設定は、パッケージに一つ以上の"
-"パーツを持つコンポーネントの各パーツ全てへグラフィック要素を描く、または現在"
-"のパーツにのみグラフィック要素を描く、のどちらかを定義します。"
+"“共有” の ”コンポーネントの全てのユニットで共通” 設定は、パッケージに一つ以上"
+"のユニットを持つコンポーネントのユニット全てにグラフィック要素を描く、または"
+"現在のユニットにのみグラフィック要素を描く、のどちらかを定義します。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:509
@@ -1541,7 +1540,7 @@ msgstr ""
 #: eeschema_component_library_editor.adoc:523
 #, no-wrap
 msgid "Multiple Units per Component and Alternate Body Styles"
-msgstr "多パーツコンポーネントと代替ボディスタイル"
+msgstr "複数ユニット・コンポーネントと代替ボディ・スタイル"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:530
@@ -1553,9 +1552,9 @@ msgid ""
 "configurations."
 msgstr ""
 "コンポーネントは２つのシンボル表現（標準シンボルとド・モルガンと呼ばれる代替"
-"シンボル）を持つことができ、パッケージ（例えば論理ゲート）毎に１つ以上のパー"
-"ツを持っています。いくつかのコンポーネントは、異なったシンボル表現と異なるピ"
-"ン定義を持つパーツを１つのパッケージ内に複数持っています。"
+"シンボル）を持つことができ、パッケージ（例えば論理ゲート）毎に１つ以上のユ"
+"ニットを持っています。いくつかのコンポーネントは、異なったシンボル表現と異な"
+"るピン定義を持つユニットを１つのパッケージ内に複数持っています。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:537
@@ -1567,11 +1566,12 @@ msgid ""
 "units or specific to a given unit or they can be common to both symbolic "
 "representation so are specific to a given symbol representation."
 msgstr ""
-"例として、３つの別のパーツ（コイル、スイッチ1、スイッチ2）として表現するこ と"
-"が可能な２つのスイッチを持つリレーを考えてみましょう。多パーツコンポーネント"
-"と代替ボディスタイルを持つコンポーネントの設計はとても柔軟に行えます。ピンま"
-"たはシンボルは、それぞれのパーツに共通または特定のパーツのみ、もしくは両方の"
-"ボディスタイルに共通または特定のボディスタイルのみ、に適用できます。"
+"例として、３つの別のユニット（コイル、スイッチ1、スイッチ2）として表現するこ "
+"とが可能な２つのスイッチを持つリレーを考えてみましょう。複数ユニットコンポー"
+"ネントと代替ボディスタイルを持つコンポーネントの設計はとても柔軟に行えます。"
+"ピンまたはシンボルは、それぞれのユニットに共通または特定のユニットのみ、もし"
+"くは両方のボディスタイルに共通または特定のボディスタイルのみ、に適用できま"
+"す。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:546
@@ -1585,18 +1585,18 @@ msgid ""
 "common to each unit (but typically are specific to each symbolic "
 "representation)."
 msgstr ""
-"デフォルトでは、ピンはそれぞれのパーツのそれぞれのシンボル表現に固有です。そ"
-"れは、ピンの数は各パーツで異なり、シンボル表現に依存した形状となるからです。"
-"ピンが各パーツまたは各シンボル表現で共通の場合、全てのパーツとシンボル表現に"
-"対して一度作成するだけで済みます(これは電源ピンの場合には一般的です)。これ"
-"は、それぞれのパーツで共通であるようなボディスタイルのグラフィックとテキスト"
-"の場合も同様です（しかし、普通は各シンボル表現で固有です）。"
+"デフォルトでは、ピンはそれぞれのユニットのそれぞれのシンボル表現に固有です。"
+"それは、ピンの数は各ユニットで異なり、シンボル表現に依存した形状となるからで"
+"す。ピンが各ユニットまたは各シンボル表現で共通の場合には、全てのユニットとシ"
+"ンボル表現に対して一度作成するだけで済みます(電源ピンの場合は一般的)。これ"
+"は、それぞれのユニットで共通であるようなボディスタイルのグラフィックとテキス"
+"トの場合も同様です（しかし、普通は各シンボル表現で固有です）。"
 
 #. type: Title ====
 #: eeschema_component_library_editor.adoc:548
 #, no-wrap
 msgid "Example of a Component Having Multiple Units with Different Symbols:"
-msgstr "異なったシンボル表現を持つ多パーツコンポーネントの例:"
+msgstr "異なったシンボル表現を持つ複数ユニットコンポーネントの例:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:552
@@ -1604,8 +1604,8 @@ msgid ""
 "This is an example of a relay defined with three units per package, switch "
 "1, switch 2, and the coil:"
 msgstr ""
-"これはパッケージ毎に３つのパーツ（スイッチ1、スイッチ2、コイル）で定義される"
-"リレーの例です。:"
+"これはパッケージ毎に３つのユニット（スイッチ1、スイッチ2、コイル）で定義され"
+"るリレーの例です。:"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:555
@@ -1613,8 +1613,8 @@ msgid ""
 "Option: pins are not linked. One can add or edit pins for each unit without "
 "any coupling with pins of other units."
 msgstr ""
-"オプション: ピンはリンクしていない。別のパーツのいかなるピンとも同期せず、各"
-"パーツごとに単独でピンを追加/編集できる。"
+"オプション: ピンはリンクしていない。別のユニットのいかなるピンとも同期せず、"
+"各ユニットごとに単独でピンを追加/編集できる。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:556
@@ -1631,7 +1631,7 @@ msgstr "images/ja/eeschema_libedit_pins_per_part.png"
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:559
 msgid "All units are not interchangeable must be selected."
-msgstr "選択されている全てのパーツは入れ替えできない。"
+msgstr "選択されている全てのユニットは入れ替えできない。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:560
@@ -1648,7 +1648,7 @@ msgstr "images/ja/eeschema_libedit_not_interchangeable.png"
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:563
 msgid "Unit 1"
-msgstr "パーツ 1"
+msgstr "ユニット 1"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:564
@@ -1665,7 +1665,7 @@ msgstr "images/eeschema_libedit_unit1.png"
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:567
 msgid "Unit 2"
-msgstr "パーツ 2"
+msgstr "ユニット 2"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:568
@@ -1682,7 +1682,7 @@ msgstr "images/eeschema_libedit_unit2.png"
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:571
 msgid "Unit 3"
-msgstr "パーツ 3"
+msgstr "ユニット3"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:572
@@ -1720,9 +1720,9 @@ msgid ""
 "must have the \"Common to all units in component\" disabled."
 msgstr ""
 "次にグラフィックシンボル要素のプロパティを示します。上のリレーの例ですが、３"
-"つのパーツは異なったシンボル表現を持っています。そのため、各パーツは個別に作"
-"成され、グラフィックシンボル要素は ”コンポーネントの全てのパーツで共通”（のプ"
-"ロパティ）を無効としなければなりません。"
+"つのユニットは異なったシンボル表現を持っています。そのため、各ユニットは個別"
+"に作成され、グラフィックシンボル要素は ”コンポーネントの全てのユニットで共"
+"通”（のプロパティ）を無効としなければなりません。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:586
@@ -1885,8 +1885,8 @@ msgstr "“エレクトリックタイプ (E)” および “グラフィック
 #: eeschema_component_library_editor.adoc:636
 msgid "Unit and alternate representation membership."
 msgstr ""
-"“コンポーネントの全てのパーツで共通” および “全てのボディスタイル（ド・モルガ"
-"ン）で共有する (S)”"
+"“コンポーネントの全てのユニットで共通” および “全てのボディスタイル（ド・モル"
+"ガン）で共有する (S)”"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:637
@@ -2004,11 +2004,11 @@ msgid ""
 "parameter you want to modify and type the new value which will then be "
 "applied to all of the current component's pins."
 msgstr ""
-"すべてのピンの長さ、あるいはテキストサイズ（名前、パーツ番号）を変更可能で"
-"す。右クリックでポップアップされるピンのコンテキストメニューのグローバルコマ"
-"ンドを使用してこれら３つのパラメータの一つを設定します。変更したいパラメータ"
-"をクリックし、新しい値を入力します。その値は現在の表現のすべてのコンポーネン"
-"トピンに適用されます。"
+"すべてのピンの長さ、あるいはテキストサイズ（名前、番号）を変更可能です。右ク"
+"リックでポップアップされるピンのコンテキストメニューのグローバルコマンドを使"
+"用してこれら３つのパラメータの一つを設定します。変更したいパラメータをクリッ"
+"クし、新しい値を入力します。その値は現在の表現のすべてのコンポーネントピンに"
+"適用されます。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_component_library_editor.adoc:676
@@ -2026,7 +2026,7 @@ msgstr "images/ja/eeschema_libedit_pin_context_menu.png"
 #: eeschema_component_library_editor.adoc:679
 #, no-wrap
 msgid "Defining Pins for Multiple Units and Alternate Symbolic Representations"
-msgstr "多パーツコンポーネントおよび代替シンボル表現におけるピンの定義"
+msgstr "複数ユニットコンポーネントおよび代替シンボル表現におけるピンの定義"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:692
@@ -2042,13 +2042,13 @@ msgid ""
 "made for all units of a multiple unit component and both representations for "
 "components with an alternate representation."
 msgstr ""
-"ピンの作成、編集を行う場合、多パーツコンポーネントおよび代替シンボル表現をも"
-"つコンポーネントは特に問題を含んでいます。ピンは個別のパーツ（ピン番号はパー"
-"ツごとに指定される）と個別のシンボル表現（形状と位置はシンボル表現ごとに指定"
-"される）で指定されます。コンポーネントライブラリエディタは同時にこれらのピン"
-"の作成を行えます。デフォルトでは、ピンへの変更は、多パーツコンポーネントの全"
-"てのパーツと代替シンボル表現をもつコンポーネントの両方の表現に対して行われま"
-"す。"
+"ピンの作成、編集を行う場合、複数ユニットコンポーネントおよび代替シンボル表現"
+"をもつコンポーネントは特に問題を含んでいます。ピンは個別のユニット（ピン番号"
+"はユニットごとに指定される）と個別のシンボル表現（形状と位置はシンボル表現ご"
+"とに指定される）で指定されます。コンポーネントライブラリエディタは同時にこれ"
+"らのピンの作成を行えます。デフォルトでは、ピンへの変更は、複数ユニットコン"
+"ポーネントの全てのユニットと代替シンボル表現をもつコンポーネントの両方の表現"
+"に対して行われます。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:699
@@ -2063,8 +2063,8 @@ msgstr ""
 "これに対して、ピンの形状（グラフィックスタイル）と名前は例外です。この依存関"
 "係は多くの場合、ピンの作成、編集を容易にします。また、この依存関係はメイン"
 "ツールバーの image:images/icons/pin2pin.png[icons/pin2pin_png] で無効にできま"
-"す（トグル動作です）。これにより完全に独立して、各パーツと個別のシンボル表現"
-"に対してピンを作成することができます。"
+"す（トグル動作です）。これにより完全に独立して、各ユニットと個別のシンボル表"
+"現に対してピンを作成することができます。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:706
@@ -2077,11 +2077,11 @@ msgid ""
 "contact 1, and switch contact 2."
 msgstr ""
 "コンポーネントは２つのシンボル表現（ド・モルガンとして知られる表現）を持つこ"
-"とができ、ロジックゲートのように複数のパーツから構成することができます。ある"
-"コンポーネントでは、いくつかの異なったグラフィック要素やピンを必要とすること"
-"もあるでしょう。セクション 11.7.1 にあるリレーのサンプルのように、リレーは３"
-"つの別のパーツ（コイル、スイッチ接点１、スイッチ接点２）で表現することができ"
-"ます。"
+"とができ、ロジックゲートのように複数のユニットから構成することができます。あ"
+"るコンポーネントでは、いくつかの異なったグラフィック要素やピンを必要とするこ"
+"ともあるでしょう。セクション 11.7.1 にあるリレーのサンプルのように、リレーは"
+"３つの別のユニット（コイル、スイッチ接点１、スイッチ接点２）で表現することが"
+"できます。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:711
@@ -2091,9 +2091,10 @@ msgid ""
 "specific to different units. A pin can also be common to both symbolic "
 "representations or specific to each symbolic representation."
 msgstr ""
-"多パーツコンポーネントと代替シンボル表現を持つコンポーネントの管理はとても柔"
-"軟に行えます。ピンは、全パーツで共通または各パーツで固有に設定できます。ピン"
-"はまた、両方のシンボル表現で共通または各シンボル表現で固有に設定できます。"
+"複数ユニットコンポーネントと代替シンボル表現を持つコンポーネントの管理はとて"
+"も柔軟に行えます。ピンは、複数ユニットで共通または各ユニットで固有に設定でき"
+"ます。ピンはまた、両方のシンボル表現で共通または各シンボル表現で固有に設定で"
+"きます。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:716
@@ -2103,10 +2104,10 @@ msgid ""
 "symbolic representation. When a pin is common to all units, it only has to "
 "drawn once such as in the case of power pins."
 msgstr ""
-"デフォルトでは、ピンは各パーツのそれぞれの表現に固有です。それは、ピンの数は"
-"各パーツで異なり、それら（パーツ）のデザインは各シンボル表現で異なるからで"
-"す。全てのパーツでピンが共通の場合は、（電源ピンのように）単に一度作成するだ"
-"けで済みます。"
+"デフォルトでは、ピンは各ユニットのそれぞれの表現に固有です。それは、ピンの数"
+"は各ユニットで異なり、それら（ユニット）のデザインは各シンボル表現で異なるか"
+"らです。全てのユニットでピンが共通の場合は、（電源ピンのように）単に一度作成"
+"するだけで済みます。"
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:728
@@ -2125,12 +2126,12 @@ msgstr ""
 "例えば、４つの２入力 NAND ゲート 7400 の出力ピンを考えてみましょう。４つの入"
 "力と２つのシンボル表現があるので、コンポーネントの定義では８個の出力ピンを"
 "別々に定義します。新しい 7400 コンポーネントが作られると、通常シンボル表現の"
-"パーツＡがライブラリエディタに表示されるでしょう。別のシンボル表現のピン形状"
-"（スタイル）を編集するには、まずツールバーのボタン image:images/icons/"
-"morgan2.png[icons/morgan2_png] をクリックして有効にしなければなりません。各"
-"パーツのピン番号を編集するには、ドロップダウン image:images/ja/"
-"toolbar_libedit_alias.png[images/ja/toolbar_libedit_alias.png] を使ってパーツ"
-"を選択します。"
+"ユニットＡがライブラリエディタに表示されるでしょう。別のシンボル表現のピン形"
+"状（スタイル）を編集するには、まずツールバーのボタン image:images/icons/"
+"morgan2.png[icons/morgan2_png] をクリックして有効にしなければなりません。各ユ"
+"ニットのピン番号を編集するには、ドロップダウン image:images/ja/"
+"toolbar_libedit_alias.png[images/ja/toolbar_libedit_alias.png] を使ってユニッ"
+"トを選択します。"
 
 #. type: Title ===
 #: eeschema_component_library_editor.adoc:730
@@ -2236,7 +2237,6 @@ msgstr ""
 
 #. type: Plain text
 #: eeschema_component_library_editor.adoc:769
-#, fuzzy
 msgid ""
 "The field edit dialog above must be used to edit a field that is empty or "
 "has the invisible attribute enabled."
@@ -2833,7 +2833,6 @@ msgstr ""
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:230
-#, fuzzy
 msgid ""
 "XSLT itself is an XML language very suitable for XML transformations.  There "
 "is a free program called _xsltproc_ that you can download and install. The "
@@ -3504,9 +3503,9 @@ msgstr ".END\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:527
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "Create an OrcadPCB2 netlist file"
-msgstr "OrCAD PCB2 形式ネットリストファイルの生成"
+msgstr "OrCAD PCB2 形式ネットリスト・ファイルの生成"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:531
@@ -5585,9 +5584,8 @@ msgstr "images/ja/toolbar_viewlib.png"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:34
-#, fuzzy
 msgid "The available commands are:"
-msgstr "利用可能なコマンドは以下のとおりです。"
+msgstr "利用可能なコマンドは以下のとおりです :"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:40
@@ -7269,7 +7267,7 @@ msgid ""
 "part suffix is also allocated (thus a 7400 TTL designated U3 will be divided "
 "into U3A, U3B, U3C and U3D)."
 msgstr ""
-"多パーツコンポーネント（４ゲート入りの 7400 TTL など）には、マルチパート "
+"複数ユニットコンポーネント（４ゲート入りの 7400 TTL など）には、マルチパート "
 "(multi-part) の接尾辞が割り当てられます。従って、U3に指定された7400 TTL は、"
 "U3A、U3B、U3C、U3D に分かれます。"
 
@@ -7346,8 +7344,8 @@ msgid ""
 "of multiple units (e.g. U2A, U2B) together when reannotating."
 msgstr ""
 "既存のアノテーションをリセット、ただし複数ユニットを持つ部品はキープ：再アノ"
-"テートの時、全ての多パーツコンポーネントのグループ (例えば、U2A, U2B) を維持"
-"します。"
+"テートの時、全ての複数ユニットコンポーネントのグループ (例えば、U2A, U2B) を"
+"維持します。"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:129
@@ -7945,13 +7943,12 @@ msgstr "デフォルトのグリッドサイズは、50 mil (0.050”) あるい
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:92
-#, fuzzy
 msgid ""
 "This is the preferred grid to place components and wires in a schematic, and "
 "to place pins when designing a symbol in the Component Editor."
 msgstr ""
 "これは回路図上で配線や部品を配置したり、コンポーネント・ライブラリ・エディタ"
-"上で回路記号のピンを配置するのに適したサイズです。"
+"上で回路記号のピンを配置するのに適したグリッド・サイズです。"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:96
@@ -10230,7 +10227,6 @@ msgstr "ERC レポートファイル"
 
 #. type: Plain text
 #: eeschema_design_verification_with_erc.adoc:106
-#, fuzzy
 msgid ""
 "An ERC report file can be generated and saved by checking the option Write "
 "ERC report. The file extension for ERC report files is .erc. Here is an "
@@ -11106,7 +11102,6 @@ msgstr "*手動配置:*\n"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:162
-#, fuzzy
 msgid ""
 "Select the tool image:images/icons/add_hierar_pin.png[icons/"
 "add_hierar_pin_png]."
@@ -11116,40 +11111,37 @@ msgstr ""
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:163
-#, fuzzy
 msgid "Click on the hierarchy symbol where you want to place the pin."
 msgstr "ピンを配置したい階層シンボルをクリックします。"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:166
-#, fuzzy
 msgid ""
 "See below for an example of creating a hierarchical pin named \"CONNECTION\":"
-msgstr "以下は “CONNEXION” と言う名前の階層ピンを作成する例です。"
+msgstr "以下は “CONNEXION” と言う名前の階層ピンを作成する例です :"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_hierarchical_schematics.adoc:167
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "eeschema_hierarchical_pin_png"
-msgstr "eeschema_hierarchical_label_png"
+msgstr "eeschema_hierarchical_pin_png"
 
 #. type: Target for macro image
 #: eeschema_hierarchical_schematics.adoc:167
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "images/eeschema_hierarchical_pin.png"
-msgstr "images/ja/eeschema_hierarchical_label.png"
+msgstr "images/eeschema_hierarchical_pin.png"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:171
-#, fuzzy
 msgid ""
 "You can define the name, size and direction of the pin during creation or "
 "later, by right clicking the pin and selecting Edit Sheet Pin in the popup "
 "menu."
 msgstr ""
-"階層ラベルのプロパティ（右クリックしてコンテキストメニューの “階層ラベルの編"
-"集” を選択）を編集して，グラフィカルな属性とサイズを定義できます。後で行うこ"
-"とも可能です。"
+"階層ピンの作成時あるいは作成後に右クリックしてコンテキストメニューの “シート"
+"ピンを編集” を選択するとシートピン プロパティが開き、ピンの名前と接続のタイプ"
+"を定義することができます。"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:175
@@ -11158,6 +11150,9 @@ msgid ""
 "the Hierarchical Pin. Taking care to correctly match these names must be "
 "done manually, which is why the second method, below, is preferred."
 msgstr ""
+"シート内では、階層ラベルは階層ピンと同じ名前にプリセットされなければなりませ"
+"ん。手動配置では正しくこれらの名前を合わせるために十分な配慮が必要となります"
+"が、これが下記の第２の方法がより好ましい理由となっています。"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:177
@@ -11562,9 +11557,9 @@ msgstr "images/eeschema_flat_hierarchy_3.png"
 
 #. type: Title ==
 #: eeschema_libedit_components.adoc:3
-#, fuzzy, no-wrap
+#, no-wrap
 msgid "LibEdit - Components"
-msgstr "コンポーネント・ライブラリ・エディタ – 補足"
+msgstr "コンポーネント・ライブラリ・エディタ – コンポーネント"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:8
@@ -11988,7 +11983,6 @@ msgstr "ADC, DAC, MUX…"
 # 07102015：変更（原文誤り）
 #. type: Plain text
 #: eeschema_libedit_components.adoc:155
-#, fuzzy
 msgid ""
 "OpenCol for the gates with open collector output. Thus if in the schematic "
 "capture software, you search the component: by keywords NAND2 OpenCol "
@@ -12169,13 +12163,12 @@ msgstr "シンボルの作成、エクスポート"
 
 #. type: Plain text
 #: eeschema_libedit_components.adoc:220
-#, fuzzy
 msgid ""
 "A component can be exported as a symbol with the button image:images/icons/"
 "export.png[icons/export_png].  You can generally create only one graphic, "
 "also it will be a good idea to delete all pins, if they exist."
 msgstr ""
-"コンポーネントは image:images/icons/import.png[icons/import_png] ボタンで、シ"
+"コンポーネントは image:images/icons/export.png[icons/export_png] ボタンで、シ"
 "ンボルとしてエクスポートすることができます。一般的に１つのグラフィックを作成"
 "でき、ピンがある場合には、全てのピンを削除することをお勧めします。"
 
