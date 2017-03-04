@@ -137,13 +137,45 @@ macro( KiCadDocumentation DOCNAME )
 
             install( FILES ${CMAKE_CURRENT_BINARY_DIR}/${LANGUAGE}/${DOCNAME}.html DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE} COMPONENT html-${LANGUAGE} )
 
-            # It seems to be nescesary to use diffrent install commands to
-            # install the images properly without having other lagunages
+            # It seems to be necessary to use different install commands to
+            # install the images properly without having other languages
             # polluting the images folder
             install( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/images/${LANGUAGE} DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} OPTIONAL PATTERN "*.png")
             install( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/images/icons DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} OPTIONAL PATTERN "*.png")
+
+            # And we try to detect the non-localized images here to be
+            # able to only install the images that are not already
+            # covered by the localized version
             file(GLOB UNIVERSAL_IMAGES "${CMAKE_CURRENT_SOURCE_DIR}/images/*.png")
-            install( FILES ${UNIVERSAL_IMAGES} DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} )
+            file(GLOB KICAD_DOC_LANG_IMAGES "${CMAKE_CURRENT_SOURCE_DIR}/images/${LANGUAGE}/*.png")
+
+            # Get filename of localized images
+            string(REGEX REPLACE
+              "${CMAKE_CURRENT_SOURCE_DIR}/images/${LANGUAGE}/" ""
+              KICAD_DOC_LANG_IMAGES_NAME "${KICAD_DOC_LANG_IMAGES}")
+
+            set (_image "")
+            set (KICAD_DOC_ENG_IMAGES "")
+            # Test if a localized image exist, if not save it
+            foreach (_image ${UNIVERSAL_IMAGES})
+                get_filename_component(_name ${_image} NAME)
+                list(FIND KICAD_DOC_LANG_IMAGES_NAME ${_name} _add_this)
+                if(_add_this EQUAL -1)
+                  list (APPEND KICAD_DOC_ENG_IMAGES ${_name})
+                endif()
+            endforeach()
+
+            # Finally add the images to the install location
+            if ( NOT "${KICAD_DOC_ENG_IMAGES}" STREQUAL "" )
+                string(REGEX REPLACE
+                  "([^;]+)"
+                  "${CMAKE_CURRENT_SOURCE_DIR}/images/\\1"
+                  install_this "${KICAD_DOC_ENG_IMAGES}")
+
+                foreach( _f ${install_this} )
+                  install( FILES "${_f}" DESTINATION ${KICAD_DOC_PATH}/${LANGUAGE}/images COMPONENT html-${LANGUAGE} )
+                endforeach()
+            endif()
         endif()
 
 
