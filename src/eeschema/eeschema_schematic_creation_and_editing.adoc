@@ -51,7 +51,33 @@ A dialog box allows you to type the name of the component to load.
 image::images/en/dialog_choose_component.png[alt="Choose Component dialog",scaledwidth="60%"]
 
 The Choose Component dialog will filter components by name, keywords,
-and description according to what you type into the search field.
+and description according to what you type into the search field. Advanced
+filters can be used just by typing them:
+
+* *Wildcards:* use the characters `?` and `*` respectively to mean "any
+  character" and "any number of characters".
+* *Relational:* if a library part's description or keywords contain a tag
+  of the format "Key:123", you can match relative to that by typing
+  "Key>123" (greater than), "Key<123" (less than), etc. Numbers may include
+  one of the following case-insensitive suffixes:
++
+[width="100%"]
+|===
+| p | n | u | m | k | meg | g | t
+| 10^-12^ | 10^-9^ | 10^-6^ | 10^-3^ | 10^3^ | 10^6^ | 10^9^ | 10^12^
+|===
++
+[width="50%"]
+|===
+| ki | mi | gi | ti
+| 2^10^ | 2^20^ | 2^30^ | 2^40^
+|===
+
+* *Regular expression:* if you're familiar with regular expressions, these
+  can be used too. The regular expression flavor used is the
+  http://docs.wxwidgets.org/3.0/overview_resyntax.html[wxWidgets
+  Advanced Regular Expression style], which is similar to Perl regular
+  expressions.
 
 Before placing the component in the schematic, you can rotate it, mirror
 it, and edit its fields, by either using the hotkeys or the right-click
