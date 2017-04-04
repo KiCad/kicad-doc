@@ -178,6 +178,83 @@ There are some default variables that KiCad defines:
   path without having to repeat the absolute path to the library in the
   project specific footprint library table.
 
+==== Adding Table Entries using the Library Wizard
+
+There is an interactive wizard that can assist you adding libraries to
+your library tables. It is accessible from the menu:
+
+image::images/Library_tables_menu_item.png[scaledwidth="40%"]
+
+It can also be launched from the library manager, using the "Append
+With Wizard" button.
+
+Here, the local libraries option is selected.
+
+image::images/en/fplib_wizard_locallibstartpage.png[scaledwidth="65%", alt="Footprint library wizard local libstartpage"]
+
+Here, the remote libraries option is selected.
+
+image::images/en/fplib_wizard_startpage_github.png[scaledwidth="65%", alt="Footprint library wizard startpage GitHub"]
+
+The wizard will then lead you though the steps to adding a library,
+which will depend on the type of library you are adding. The process for
+each type will be explained below.
+
+After a set of libraries is selected, the next page validates the choice:
+
+image::images/en/fplib_wizard_validate.png[scaledwidth="65%", alt="Footprint libary wizard validate"]
+
+If some selected libraries are incorrect (not supported, not a footprint library ...)
+they will be flagged as ``INVALID''.
+
+The last choice is the footprint library table to populate either:
+
+* the global table, or
+* the project specific table
+
+image::images/en/fplib_wizard_chooseflt.png[scaledwidth="65%", alt="Footprint library wizard choose local folder"]
+
+===== Adding Existing Local Libraries
+
+You might have local libraries already on your computer. For example:
+
+* Previously downloaded KiCad pretty directories
+* Legacy KiCad _.mod_ files from an older installations
+* Geda or Eagle libraries
+
+These can be added with the "Files on my computer" option. You will
+be asked for the directory of the library to add and the format:
+
+image::images/en/fplib_wizard_locallibselection.png[scaledwidth="65%", alt="Footprint library wizard local lib selection"]
+
+If you don't select the format, the wizard will try to guess the right format.
+
+===== Adding Libraries from Github
+
+The wizard can also add libraries from Github with the "Github repository"
+option.
+
+You need to specify the Github account that contains the repositories
+you want to add.
+
+TIP: The offical KiCad library Github account is
+    https://github.com/KiCad
+
+You may choose to save a local copy. If you do _not_ save a local
+copy, the library will be a _Github_ library, and will resync
+on every library reload. If you _do_ save a local copy, the library
+will be a _KiCad_ (pretty) library and will not automatically update
+in future.
+
+The next page will load a list of _.pretty_ repositories found on that
+Github account. You can choose any number to add to the library.
+
+image::images/en/fplib_wizard_githubselection.png[scaledwidth="65%", alt="Footprint library wizard GitHub selection"]
+
+After confirmation,if you opted to save a copy, the footprints will be
+downloaded to the specified local location now. If you are using the
+Github plugin (no local copy), the footprints are loaded from Github
+when needed.
 
 ==== Using the GitHub Plugin
 
