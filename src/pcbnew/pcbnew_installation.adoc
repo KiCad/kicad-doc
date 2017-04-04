@@ -453,3 +453,22 @@ One usage pattern would be to define your most commonly used
 libraries globally and the library only required for the project in
 the project specific library table.  There is no restriction on how
 you define your libraries.
+
+===== Modifying footprints in a PCB project
+
+When a footprint is added to a PCB, the entire footprint is copied into
+the PCB file (_.kicad_pcb_). This means changes to the footprint in the
+library do not automatically affect the PCB.
+
+This also means that you can individually edit footprints on the PCB
+without affecting other instances of the same footprint (either
+on the same PCB or on other PCBs).
+
+However, if you modify the library footprint, the next time you place
+an instance, it will not match existing footprints of the same name.
+
+TIP: A common practice is to copy all the footprints you use to a separate
+version-controlled location, so that this project is not unexpectedly
+affected by changes to system or user libraries. Also, it ensures all
+the footprint resources used for the PCB can be easily distributed with
+the PCB file.
