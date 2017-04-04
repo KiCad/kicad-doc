@@ -256,6 +256,44 @@ downloaded to the specified local location now. If you are using the
 Github plugin (no local copy), the footprints are loaded from Github
 when needed.
 
+==== Using the KiCad plugin
+
+The KiCad plugin deals with native KiCad libraries that exist on your
+computer (or some accessible filesystem).
+
+It is used for pre-installed libraries that are installed along with
+KiCad, as well as other KiCad libraries, either from the official
+KiCad library collection, 3rd party libraries or your own curated
+libraries.
+
+===== Installing KiCad plugin libraries
+
+The Footprint Library Wizard can help you install libraries already
+on disk or on Github. However, for libraries on disk, you need to
+put them there yourself in the first place.
+
+A KiCad library is a directory that contains some number of
+_.kicad_mod_ files.
+
+This is often done by unpacking an archive file, copying a directory
+from another location, or cloning a version-controlled repository.
+
+The KiCad plugin does not specify any kind of version control, but Git is
+very commonly used to track changes to libraries, which can be critical
+to ensuring library data is safely recorded and backed up.
+
+It is easy to track changes and contribute with the offical
+KiCad Github libraries. This is done using the Git version control
+software. If you want to contribute back, you'll have to
+fork the repos on Github so you can send pull requests. If you just want
+to update libraries when needed, you don't need to do that, you can clone
+the offical KiCad libraries directly and pull as needed.
+
+NOTE: Sending pull requests via Github will allow the automatic
+library standards checker to verify your proposed changes. See
+https://github.com/KiCad/kicad-library/wiki/Kicad-Library-Convention[KiCad Library Conventions]
+for details of the library conventions.
+
 ==== Using the GitHub Plugin
 
 The GitHub plugin is a special plugin that provides an interface for
@@ -364,7 +402,8 @@ small as possible by contributing frequently to the shared master
 copies at https://github.com.
 
 TIP: You can also contribute to library developement using local
-Git clones of the relevant libraries using the _KiCad_ plugin.
+Git clones of the relevant libraries using the _KiCad_ plugin and
+submitting pull requests to the library maintainers.
 
 ===== Caching Github requests
 
