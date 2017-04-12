@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2016-12-13 17:33+0100\n"
-"PO-Revision-Date: 2017-04-11 22:46+0200\n"
+"PO-Revision-Date: 2017-04-12 08:42+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -1017,7 +1017,7 @@ msgid ""
 "\"Fixed\".  This attribute can be turned on and off from the pop-up window "
 "(click right mouse button over footprint) whilst in Footprint Mode, or "
 "through the Edit Footprint Menu."
-msgstr ""
+msgstr "In generale, le impronte si possono spostare solo se non sono state ``Bloccate''.  Questo attributo può essere acceso o spento dal menu a discesa (pulsante destro del mouse sopra l'impronta) durante la modalità impronte o tramite il menu di modifica dell'impronta."
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:39
@@ -1026,46 +1026,46 @@ msgid ""
 "the netlist appear piled up at a single location on the board. Pcbnew allows "
 "an automatic distribution of the footprints to make manual selection and "
 "placement easier."
-msgstr ""
+msgstr "Come dichiarato nello precedente capitolo, le nuove impronte caricate durante la lettura della netlist appaiono impilate in una singola posizione sulla scheda. Pcbnew permette la distribuzione automatica delle impronte per semplificarne la selezione ed il piazzamento manuali."
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:41
 msgid ""
 "Select the option \"Footprint Mode\" (Icon image:images/icons/mode_module."
 "png[] on the upper toolbar)."
-msgstr ""
+msgstr "Selezionare l'opzione ``Modalità impronte'' (icona image:images/icons/mode_module.png[] sulla barra strumenti in alto)."
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:42
 msgid "The pop-up window activated by the right mouse button becomes:"
-msgstr ""
+msgstr "La finestra a scomparsa attivata dal pulsante destro del mouse diventa:"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:44
 msgid "If there is a footprint under the cursor:"
-msgstr ""
+msgstr "Se è presente un'impronta sotto il puntatore del mouse:"
 
 #. type: Target for macro image
 #: pcbnew_footprint_placement.adoc:45
 #, no-wrap
 msgid "images/Pcbnew_context_module_mode_module_under_cursor.png"
-msgstr ""
+msgstr "images/Pcbnew_context_module_mode_module_under_cursor.png"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:48
 msgid "If there is nothing under the cursor:"
-msgstr ""
+msgstr "Se non c'è niente sotto il puntatore:"
 
 #. type: Target for macro image
 #: pcbnew_footprint_placement.adoc:49
 #, no-wrap
 msgid "images/Pcbnew_context_module_mode_no_module_under_cursor.png"
-msgstr ""
+msgstr "images/Pcbnew_context_module_mode_no_module_under_cursor.png"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:52
 msgid "In both cases the following commands are available:"
-msgstr ""
+msgstr "In entrambi i casi i seguenti comandi sono disponibili:"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:56
@@ -1075,6 +1075,9 @@ msgid ""
 "footprints not Fixed.  This is generally used after the first reading of\n"
 "a netlist.\n"
 msgstr ""
+"*Disponi tutte le impronte* permette la distribuzione automatica di tutte le\n"
+"impronte non bloccate.  In generale viene usato dopo la prima lettura di\n"
+"una netlist.\n"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:62
@@ -1086,18 +1089,23 @@ msgid ""
 "of the board has been drawn to determine which footprints can be\n"
 "automatically distributed.\n"
 msgstr ""
+"*Disponi tutte le impronte non già presenti sulla scheda* permette la\n"
+"distribuzione automatica delle impronte che non sono già state piazzate\n"
+"all'interno dei contorni dello stampato. Questo comando richiede che sia\n"
+"già presente un bordo scheda per determinare quali impronte possano\n"
+"essere distribuite automaticamente.\n"
 
 #. type: Title ===
 #: pcbnew_footprint_placement.adoc:63
 #, no-wrap
 msgid "Automatic placement of footprints"
-msgstr ""
+msgstr "Disposizione automatica di impronte"
 
 #. type: Title ====
 #: pcbnew_footprint_placement.adoc:65
 #, no-wrap
 msgid "Characteristics of the automatic placer"
-msgstr ""
+msgstr "Caratteristiche del piazzamento automatico"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:70
@@ -1105,7 +1113,7 @@ msgid ""
 "The automatic placement feature allows the placement of footprints onto the "
 "2 faces of the circuit board (however switching a footprint onto the copper "
 "layer is not automatic)."
-msgstr ""
+msgstr "La funzione di piazzamento automatico permette il piazzamento di impronte sulle 2 facce di un circuito stampato (anche se lo spostamento di un'impronta sullo strato rame non è automatico)."
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:77
@@ -1122,7 +1130,7 @@ msgstr ""
 #: pcbnew_footprint_placement.adoc:78
 #, no-wrap
 msgid "Preparation"
-msgstr ""
+msgstr "Preparazione"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:83
@@ -3857,7 +3865,7 @@ msgstr ""
 #: pcbnew_routing.adoc:173
 #, no-wrap
 msgid "Standard"
-msgstr ""
+msgstr "Standard"
 
 #. type: Plain text
 #: pcbnew_routing.adoc:176
@@ -6323,13 +6331,13 @@ msgid ""
 "can either copy fp_global_table manually or configure the table by hand.  "
 "The default footprint library table includes all of the standard footprint "
 "libraries that are installed as part of KiCad."
-msgstr ""
+msgstr "La prima volta che CvPcb o Pcbnew vengono eseguiti e il file della tabella globale delle impronte `fp-lib-table` non viene trovato nella cartella home dell'utente, Pcbnew cercherà di copiare il file della tabella delle impronte predefinito `fp_global_table` memorizzato nella cartella di sistema dei modelli di KiCad sul file `fp-lib-table` nella cartella home dell'utente. Se `fp_global_table` non si trova, verrà creato un file di tabella librerie di impronte vuoto nella cartella home dell'utente.  Se si verifica quest'ultima azione, l'utente può sia copiare il file `fp_global_table` manualmente o configurare la tabella a mano.  La tabella librerie di impronte predefinita include tutte le librerie di impronte standard che vengono installate come parte di KiCad."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:106
 #, no-wrap
 msgid "Adding Table Entries"
-msgstr ""
+msgstr "Aggiunta voci di tabella"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:130
