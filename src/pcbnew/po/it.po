@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2016-12-13 17:33+0100\n"
-"PO-Revision-Date: 2017-05-23 09:23+0200\n"
+"PO-Revision-Date: 2017-06-19 13:35+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -1460,12 +1460,27 @@ msgid ""
 "|Single Pad Nets\n"
 "|Remove single pad nets.\n"
 msgstr ""
+"|Selezione impronte\n"
+"|Componenti e collegamento impronte corrispondenti sulla scheda:\n"
+"il collegamento normale è il riferimento (come opzione normale\n"
+"la marcatura temporale può essere usata dopo la riannotazione dello schema, se l'annotazione\n"
+"precedente era andata persa (opzione speciale)\n"
+"|Scambio impronte:\n"
+"|Se un'impronta è cambiata nella netlist: mantieni la vecchia impronta o\n"
+"cambia con la nuova versione.\n"
+"|Piste non connesse\n"
+"|Mantiene tutte le piste esistenti, o cancella le piste errate\n"
+"|Impronte extra\n"
+"|Rimuovi le impronte presenti sulla scheda ma non nella netlist.\n"
+"Le impronte con attributo \"Bloccata\" non saranno rimosse.\n"
+"|Collegamenti a piazzola singola\n"
+"|Rimuovi i collegamenti a singola piazzole."
 
 #. type: Title ====
 #: pcbnew_schematics.adoc:98
 #, no-wrap
 msgid "Loading new footprints"
-msgstr ""
+msgstr "Caricamento nuove impronte"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:102
@@ -1473,82 +1488,82 @@ msgid ""
 "With the GAL backend when new footprints are found in the netlist file, they "
 "will be loaded, spread out, and be ready for you to place as a group where "
 "you would like."
-msgstr ""
+msgstr "Con la visualizzazione GAL quando nuove impronte vengono rilevate nel file netlist, queste vengono caricate, sparse, e rese disponibili per il piazzamento come grupo dove si desidera."
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:103
 #, no-wrap
 msgid "images/Pcbnew_import_spread_footprints.png"
-msgstr ""
+msgstr "images/Pcbnew_import_spread_footprints.png"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:107
 msgid ""
 "With the legacy backend when new footprints are found in the netlist file, "
 "they will be automatically loaded and placed at coordinate (0,0)."
-msgstr ""
+msgstr "Con la visualizzazione tradizionale quando le nuove impronte vengono rilevate nel file netlist, queste vengono automaticamente caricate e piazzate alle coordinate (0,0)."
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:108
 #, no-wrap
 msgid "images/Pcbnew_stacked_footprints.png"
-msgstr ""
+msgstr "images/Pcbnew_stacked_footprints.png"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:111
 msgid ""
 "New footprints can be moved and arranged one by one. A better way is to "
 "automatically move (unstack) them:"
-msgstr ""
+msgstr "Le nuove impronte possono essere spostate e sistemate una ad una. Un modo migliore per spostarle automaticamente è:"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:113
 msgid "Activate footprint mode (image:images/icons/mode_module.png[])"
-msgstr ""
+msgstr "Attivazione della modalità impronta (image:images/icons/mode_module.png[])"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:116
 msgid ""
 "Move the mouse cursor to a suitable (free of component) area, and click on "
 "the right button:"
-msgstr ""
+msgstr "Spostare il puntatore del mouse in un'area consona (libera da componenti) e fare clic con il tasto destro del mouse:"
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:117
 #, no-wrap
 msgid "images/Pcbnew_move_all_modules.png"
-msgstr ""
+msgstr "images/Pcbnew_move_all_modules.png"
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:120
 msgid ""
 "Automatically Place New Footprints, if there is already a board with "
 "existing footprints."
-msgstr ""
+msgstr "Posiziona automaticamente le nuove impronte, se c'è già una scheda con impronte preesistenti."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:121
 msgid ""
 "Automatically Place All Footprints, for the first time (when creating a "
 "board)."
-msgstr ""
+msgstr "Posiziona automaticamente tutte le impronte, per la prima volta (quando si crea una scheda)."
 
 #. type: Plain text
 #: pcbnew_schematics.adoc:123
 msgid "The following screenshot shows the results."
-msgstr ""
+msgstr "La schermata seguente mostra i risultati."
 
 #. type: Target for macro image
 #: pcbnew_schematics.adoc:124
 #, no-wrap
 msgid "images/Pcbnew_unstacked_footprints.png"
-msgstr ""
+msgstr "images/Pcbnew_unstacked_footprints.png"
 
 #. type: Title ==
 #: pcbnew_zones.adoc:2
 #, no-wrap
 msgid "Creating copper zones"
-msgstr ""
+msgstr "Creazione di zone in rame"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:7
@@ -1556,13 +1571,13 @@ msgid ""
 "Copper zones are defined by an outline (closed polygon), and can include "
 "holes (closed polygons inside the outline). A zone can be drawn on a copper "
 "layer or alternatively on a technical layer."
-msgstr ""
+msgstr "Le zone rame sono definite da un contorno (poligono chiuso), e possono includere fori (poligoni chiusi dentro il contorno). Una zone può essere disegnata su uno strato rame o in alternativa su uno strato tecnico."
 
 #. type: Title ===
 #: pcbnew_zones.adoc:8
 #, no-wrap
 msgid "Creating zones on copper layers"
-msgstr ""
+msgstr "Creazione zone su strati rame"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:14
@@ -1570,7 +1585,7 @@ msgid ""
 "Pad (and track) connections to filled copper areas are checked by the DRC "
 "engine. A zone must be filled (not just created) to connect pads. Pcbnew "
 "currently uses track segments or polygons to fill copper areas."
-msgstr ""
+msgstr "Le connessioni piazzola (e pista) verso aree rame piene vengono controllate dal motore di controllo regole elettriche. Una zona deve essere piena (non basta solo crearla) per essere connessa a delle piazzole. Pcbnew attualmente usa segmenti di pista o poligoni per riempire le aree rame."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:17
@@ -1578,24 +1593,24 @@ msgid ""
 "Each option has its advantages and its disadvantages, the main disadvantage "
 "being increased screen redraw time on slower machines. The final result is "
 "however the same."
-msgstr ""
+msgstr "Ogni opzione ha i suoi vantaggi e svantaggi; il principale svantaggio consiste nel tempo di ridisegno dello schermo che aumenta sensibilmente sulle macchine lente. Il risultato finale è comunque lo stesso."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:20
 msgid ""
 "For calculation time reasons, the zone filling is not recreated after each "
 "change, but only:"
-msgstr ""
+msgstr "Per risparmiare tempo di elaborazione, lo riempimento delle zone non viene rifatto ad ogni cambiamento, ma solo:"
 
 #. type: Plain text
 #: pcbnew_zones.adoc:22
 msgid "If a filling zone command is executed."
-msgstr ""
+msgstr "Se viene eseguito un comando di riempimento area."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:24
 msgid "When a DRC test is performed."
-msgstr ""
+msgstr "Quando viene effettuato un controllo regole elettriche."
 
 #. type: Plain text
 #: pcbnew_zones.adoc:28
