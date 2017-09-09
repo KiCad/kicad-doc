@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Eeschema-ja\n"
-"POT-Creation-Date: 2017-03-04 11:12+0900\n"
-"PO-Revision-Date: 2017-03-16 15:37+0900\n"
+"POT-Creation-Date: 2017-07-28 23:54+0900\n"
+"PO-Revision-Date: 2017-09-10 01:16+0900\n"
 "Last-Translator: starfort_jp <starfort@nifty.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.3\n"
 
 # PR1:07102015 proofreading - chapter1
 # PR2:07122015 proofreading - chapter2,3
@@ -120,7 +120,7 @@ msgstr "ライブラリブラウザ (Viewlib)"
 #: eeschema_hierarchical_schematics.adoc:6
 #: eeschema_design_verification_with_erc.adoc:5
 #: eeschema_schematic_creation_and_editing.adoc:5
-#: eeschema_schematic_creation_and_editing.adoc:127
+#: eeschema_schematic_creation_and_editing.adoc:153
 #: eeschema_automatic_classification_annotation.adoc:5
 #: eeschema_plot_and_print.adoc:5
 #, no-wrap
@@ -7482,16 +7482,72 @@ msgid "images/en/dialog_choose_component.png"
 msgstr "images/ja/dialog_choose_component.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:55
+#: eeschema_schematic_creation_and_editing.adoc:56
 msgid ""
 "The Choose Component dialog will filter components by name, keywords, and "
-"description according to what you type into the search field."
+"description according to what you type into the search field. Advanced "
+"filters can be used just by typing them:"
 msgstr ""
 "“コンポーネントの選択” ダイアログは、名前、キーワード、検索フィールドへの入力"
-"内容でコンポーネントをフィルタリングできます。"
+"内容でコンポーネントをフィルタリングできます。以下の入力により、アドバンスト "
+"フィルターを使用することが可能です:"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:59
+#, no-wrap
+msgid ""
+"*Wildcards:* use the characters `?` and `*` respectively to mean \"any\n"
+"character\" and \"any number of characters\".\n"
+msgstr ""
+"*ワイルドカード:* 文字 `?` と `*` を使用します。これらは \"任意の\n"
+"一文字\" と \"長さ0以上の任意の文字列\" を意味します。\n"
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:63
+#, no-wrap
+msgid ""
+"*Relational:* if a library part's description or keywords contain a tag\n"
+"of the format \"Key:123\", you can match relative to that by typing\n"
+"\"Key>123\" (greater than), \"Key<123\" (less than), etc. Numbers may include\n"
+"one of the following case-insensitive suffixes:\n"
+msgstr ""
+"*関係型:* ライブラリーの部品の説明またはキーワードがフォーマット \"Key:123\" のタグを\n"
+"含んでいる場合、\"Key>123\" (以上)、\"Key<123\" (以下) 等のように入力することで、それに応じて\n"
+"一致させることができます。数字は以下の大文字・小文字を区別しない\n"
+"接尾辞の何れかを含めることができます:\n"
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:69
+msgid ""
+"|=== | p | n | u | m | k | meg | g | t | 10^-12^ | 10^-9^ | 10^-6^ | 10^-3^ "
+"| 10^3^ | 10^6^ | 10^9^ | 10^12^ |==="
+msgstr ""
+"|=== | p | n | u | m | k | meg | g | t | 10^-12^ | 10^-9^ | 10^-6^ | 10^-3^ "
+"| 10^3^ | 10^6^ | 10^9^ | 10^12^ |==="
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:75
+msgid "|=== | ki | mi | gi | ti | 2^10^ | 2^20^ | 2^30^ | 2^40^ |==="
+msgstr "|=== | ki | mi | gi | ti | 2^10^ | 2^20^ | 2^30^ | 2^40^ |==="
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:81
+#, no-wrap
+msgid ""
+"*Regular expression:* if you're familiar with regular expressions, these\n"
+"can be used too. The regular expression flavor used is the\n"
+"http://docs.wxwidgets.org/3.0/overview_resyntax.html[wxWidgets\n"
+"Advanced Regular Expression style], which is similar to Perl regular\n"
+"expressions.\n"
+msgstr ""
+"*正規表現:* もし正規表現に精通しているのであれば、これらを\n"
+"使うこともできます。使用されている正規表現のタイプは \n"
+"http://docs.wxwidgets.org/3.0/overview_resyntax.html[wxWidgets\n"
+"Advanced Regular Expression style] で、Perl の正規表現\n"
+"と似たような形式です。\n"
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:85
 msgid ""
 "Before placing the component in the schematic, you can rotate it, mirror it, "
 "and edit its fields, by either using the hotkeys or the right-click context "
@@ -7503,30 +7559,30 @@ msgstr ""
 "に行うことができます。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:61
+#: eeschema_schematic_creation_and_editing.adoc:87
 msgid "Here is a component during placement:"
 msgstr "配置中のコンポーネントは次のようになります。:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:62
+#: eeschema_schematic_creation_and_editing.adoc:88
 #, no-wrap
 msgid "component during placement"
 msgstr "配置中のコンポーネントは次のようになります。:"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:62
+#: eeschema_schematic_creation_and_editing.adoc:88
 #, no-wrap
 msgid "images/en/component_during_placement.png"
 msgstr "images/ja/component_during_placement.png"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:65
+#: eeschema_schematic_creation_and_editing.adoc:91
 #, no-wrap
 msgid "Power ports"
 msgstr "電源ポート（コンポーネント）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:73
+#: eeschema_schematic_creation_and_editing.adoc:99
 msgid ""
 "A power port symbol is a component (the symbols are grouped in the “power” "
 "library), so they can be placed using the component chooser.  However, as "
@@ -7541,18 +7597,18 @@ msgstr ""
 "のツールは “power” ライブラリを探して直接参照します。"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:75
+#: eeschema_schematic_creation_and_editing.adoc:101
 #, no-wrap
 msgid "Component Editing and Modification (already placed component)"
 msgstr "（配置された）コンポーネントの編集と変更"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:78
+#: eeschema_schematic_creation_and_editing.adoc:104
 msgid "There are two ways to edit a component:"
 msgstr "コンポーネントの編集には，以下の２種類があります:"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:80
+#: eeschema_schematic_creation_and_editing.adoc:106
 msgid ""
 "Modification of the component itself: position, orientation, unit selection "
 "on a multi-unit component."
@@ -7561,7 +7617,7 @@ msgstr ""
 "のユニット選択。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:81
+#: eeschema_schematic_creation_and_editing.adoc:107
 msgid ""
 "Modification of one of the fields of the component: reference, value, "
 "footprint, etc."
@@ -7569,7 +7625,7 @@ msgstr ""
 "コンポーネントフィールドの変更：リファレンス、定数、フットプリント、等。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:87
+#: eeschema_schematic_creation_and_editing.adoc:113
 msgid ""
 "When a component has just been placed, you may have to modify its value "
 "(particularly for resistors, capacitors, etc.), but it is useless to assign "
@@ -7585,13 +7641,13 @@ msgstr ""
 "から自動的に割り振ることができます。"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:89
+#: eeschema_schematic_creation_and_editing.adoc:115
 #, no-wrap
 msgid "Component modification"
 msgstr "コンポーネントの変更"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:93
+#: eeschema_schematic_creation_and_editing.adoc:119
 msgid ""
 "To modify some feature of a component, position the cursor on the component, "
 "and then either:"
@@ -7600,14 +7656,14 @@ msgstr ""
 "移動させ、以下のいずれかの操作をします。:"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:95
+#: eeschema_schematic_creation_and_editing.adoc:121
 msgid "Double-click on the component to open the full editing dialog."
 msgstr ""
 "コンポーネントをダブルクリックして、全てのプロパティを編集することができるダ"
 "イアログボックス（コンポーネントプロパティ）を開く。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:97
+#: eeschema_schematic_creation_and_editing.adoc:123
 msgid ""
 "Right-click to open the context menu and use one of the commands: Move, "
 "Orientation, Edit, Delete, etc."
@@ -7616,13 +7672,13 @@ msgstr ""
 "移動、回転、編集、削除など。"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:99
+#: eeschema_schematic_creation_and_editing.adoc:125
 #, no-wrap
 msgid "Text fields modification"
 msgstr "テキストフィールドの編集"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:103
+#: eeschema_schematic_creation_and_editing.adoc:129
 msgid ""
 "You can modify the reference, value, position, orientation, text size and "
 "visibility of the fields:"
@@ -7631,12 +7687,12 @@ msgstr ""
 "ます。:"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:105
+#: eeschema_schematic_creation_and_editing.adoc:131
 msgid "Double-click on the text field to modify it."
 msgstr "テキストフィールドをダブルクリックし編集する。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:107
+#: eeschema_schematic_creation_and_editing.adoc:133
 msgid ""
 "Right-click to open the context menu and use one of the commands: Move, "
 "Rotate, Edit, Delete, etc."
@@ -7645,7 +7701,7 @@ msgstr ""
 "移動、回転、編集、削除など。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:111
+#: eeschema_schematic_creation_and_editing.adoc:137
 msgid ""
 "For more options, or in order to create fields, double-click on the "
 "component to open the Component Properties dialog."
@@ -7654,21 +7710,21 @@ msgstr ""
 "ダブルクリックし、コンポーネントプロパティのダイアログを開きます。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:112
+#: eeschema_schematic_creation_and_editing.adoc:138
 #: eeschema_general_top_toolbar.adoc:214
 #, no-wrap
 msgid "Component Properties dialog"
 msgstr "コンポーネントプロパティの編集"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:112
+#: eeschema_schematic_creation_and_editing.adoc:138
 #: eeschema_general_top_toolbar.adoc:214
 #, no-wrap
 msgid "images/en/dialog_component_properties.png"
 msgstr "images/ja/dialog_component_properties.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:118
+#: eeschema_schematic_creation_and_editing.adoc:144
 msgid ""
 "Each field can be visible or hidden, and displayed horizontally or "
 "vertically. The displayed position is always indicated for a normally "
@@ -7680,7 +7736,7 @@ msgstr ""
 "するもので、コンポーネントのアンカー位置への相対座標で指定します。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:122
+#: eeschema_schematic_creation_and_editing.adoc:148
 msgid ""
 "The option “Reset to Library Defaults” sets the component to the original "
 "orientation, and resets the options, size and position of each field.  "
@@ -7693,13 +7749,13 @@ msgstr ""
 "フットプリント等）の内容は変更されません。"
 
 #. type: Title ===
-#: eeschema_schematic_creation_and_editing.adoc:124
+#: eeschema_schematic_creation_and_editing.adoc:150
 #, no-wrap
 msgid "Wires, Buses, Labels, Power ports"
 msgstr "ワイヤ、バス、ラベル、電源ポートの接続"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:131
+#: eeschema_schematic_creation_and_editing.adoc:157
 msgid ""
 "All these drawing elements can also be placed with the tools on the vertical "
 "right toolbar."
@@ -7708,116 +7764,116 @@ msgstr ""
 "す。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:133
+#: eeschema_schematic_creation_and_editing.adoc:159
 msgid "These elements are:"
 msgstr "これらの要素を以下に示します:"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:135
+#: eeschema_schematic_creation_and_editing.adoc:161
 #, no-wrap
 msgid "*Wires:* most connections between components.\n"
 msgstr "*ワイヤ:* コンポーネント間の接続\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:136
+#: eeschema_schematic_creation_and_editing.adoc:162
 #, no-wrap
 msgid "*Buses:* to graphically join bus labels\n"
 msgstr "*バス:* バス配線をまとめラベルを用いて接続\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:137
+#: eeschema_schematic_creation_and_editing.adoc:163
 #, no-wrap
 msgid "*Polylines:* for graphic presentation.\n"
 msgstr "*図形ライン, ポリゴン:* （画面を見やすくする）グラフィック表現用\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:138
+#: eeschema_schematic_creation_and_editing.adoc:164
 #, no-wrap
 msgid "*Junctions:* to create connections between crossing wires or buses.\n"
 msgstr "*ジャンクション（接続点）:* ワイヤやバスの交差点で接続\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:139
+#: eeschema_schematic_creation_and_editing.adoc:165
 #, no-wrap
 msgid "*Bus entries:* to show connections between wires and buses. Graphical only!\n"
 msgstr "*ワイヤ - バスエントリ:* バス配線とワイヤの接続。グラフィックのみ!\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:140
+#: eeschema_schematic_creation_and_editing.adoc:166
 #, no-wrap
 msgid "*Labels:* for labeling or creating connections.\n"
 msgstr "*ネット名（ローカルラベル）:* 接続の作成やラベリング\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:141
+#: eeschema_schematic_creation_and_editing.adoc:167
 #, no-wrap
 msgid "*Global labels:* for connections between sheets.\n"
 msgstr "*グローバルラベル:* シート間での接続\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:142
+#: eeschema_schematic_creation_and_editing.adoc:168
 #, no-wrap
 msgid "*Texts:* for comments and annotations.\n"
 msgstr "*テキスト:* コメントとアノテーション用\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:143
+#: eeschema_schematic_creation_and_editing.adoc:169
 #, no-wrap
 msgid "*\"No Connect\" flags:* to terminate a pin that does not need any connection.\n"
 msgstr "*“空き端子” フラグ:* 接続する必要のないピンを終端。\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:144
+#: eeschema_schematic_creation_and_editing.adoc:170
 #, no-wrap
 msgid "**Hierarchical sheets**, and their connection pins.\n"
 msgstr "**階層シート**, とその接続ピン\n"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:146
+#: eeschema_schematic_creation_and_editing.adoc:172
 #, no-wrap
 msgid "Connections (Wires and Labels)"
 msgstr "接続 （ワイヤとラベル）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:149
+#: eeschema_schematic_creation_and_editing.adoc:175
 msgid "There are two ways to establish connection:"
 msgstr "接続を確立する方法は2つあります:"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:151
+#: eeschema_schematic_creation_and_editing.adoc:177
 msgid "Pin to pin wires."
 msgstr "ピン間のワイヤ"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:152
+#: eeschema_schematic_creation_and_editing.adoc:178
 msgid "Labels."
 msgstr "ラベル"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:154
+#: eeschema_schematic_creation_and_editing.adoc:180
 msgid "The following figure shows the two methods:"
 msgstr "以下の図はこれら2種類の接続方法を示します。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:155
+#: eeschema_schematic_creation_and_editing.adoc:181
 #, no-wrap
 msgid "Wires labels"
 msgstr "（単純な）ラベル"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:155
+#: eeschema_schematic_creation_and_editing.adoc:181
 #, no-wrap
 msgid "images/wires_labels.png"
 msgstr "images/wires_labels.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:158
+#: eeschema_schematic_creation_and_editing.adoc:184
 #, no-wrap
 msgid "*Note 1:*\n"
 msgstr "*注 1:*\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:162
+#: eeschema_schematic_creation_and_editing.adoc:188
 msgid ""
 "The point of “contact” of a label is the lower left corner of the first "
 "letter of the label. This point is displayed with a small square when not "
@@ -7827,7 +7883,7 @@ msgstr ""
 "には小さな四角で表示されます。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:165
+#: eeschema_schematic_creation_and_editing.adoc:191
 msgid ""
 "This point must thus be in contact with the wire, or be superimposed at the "
 "end of a pin so that the label is seen as connected."
@@ -7836,20 +7892,20 @@ msgstr ""
 "ん。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:167
+#: eeschema_schematic_creation_and_editing.adoc:193
 #, no-wrap
 msgid "*Note 2:*\n"
 msgstr "*注 2:*\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:170
+#: eeschema_schematic_creation_and_editing.adoc:196
 msgid ""
 "To establish a connection, a segment of wire must be connected by its ends "
 "to an another segment or to a pin."
 msgstr "接続を確立するためには、ワイヤの端を他のセグメントかピンへ接続します。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:173
+#: eeschema_schematic_creation_and_editing.adoc:199
 msgid ""
 "If there is overlapping (if a wire passes over a pin, but without being "
 "connected to the pin end) there is no connection."
@@ -7858,13 +7914,13 @@ msgstr ""
 "越えた場合）、これらは接続されません。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:175
+#: eeschema_schematic_creation_and_editing.adoc:201
 #, no-wrap
 msgid "*Note 3:*\n"
 msgstr "*注 3:*\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:178
+#: eeschema_schematic_creation_and_editing.adoc:204
 msgid ""
 "Wires that cross are not implicitly connected. It is necessary to join them "
 "with a junction dot if a connection is desired."
@@ -7873,7 +7929,7 @@ msgstr ""
 "ヤの交差点にジャンクション（接続点）シンボルの配置が必要になります。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:181
+#: eeschema_schematic_creation_and_editing.adoc:207
 msgid ""
 "The previous figure (wires connected to DB25FEMALE pins 22, 21, 20, 19)  "
 "shows such a case of connection using a junction symbol."
@@ -7882,13 +7938,13 @@ msgstr ""
 "では，このジャンクション（接続点）シンボルを使った場合を示しています。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:183
+#: eeschema_schematic_creation_and_editing.adoc:209
 #, no-wrap
 msgid "*Note 4:*\n"
 msgstr "*注 4:*\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:187
+#: eeschema_schematic_creation_and_editing.adoc:213
 msgid ""
 "If two different labels are placed on the same wire, they are connected "
 "together and become equivalent: all the other elements connected to one or "
@@ -7899,36 +7955,36 @@ msgstr ""
 "号が互いに接続されます。"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:189
+#: eeschema_schematic_creation_and_editing.adoc:215
 #, no-wrap
 msgid "Connections (Buses)"
 msgstr "バス接続"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:192
+#: eeschema_schematic_creation_and_editing.adoc:218
 msgid "In the following schematic, many pins are connected to buses."
 msgstr "以下に示す回路図では、多くのピンがバスへ接続されています。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:193
+#: eeschema_schematic_creation_and_editing.adoc:219
 #, no-wrap
 msgid "Example schematic with buses"
 msgstr "image:images/ja/sch_with_buses.png[Example schematic with buses]"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:193
+#: eeschema_schematic_creation_and_editing.adoc:219
 #, no-wrap
 msgid "images/sch_with_buses.png"
 msgstr "images/sch_with_buses.png"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:196
+#: eeschema_schematic_creation_and_editing.adoc:222
 #, no-wrap
 msgid "Bus members"
 msgstr "バスのメンバ"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:201
+#: eeschema_schematic_creation_and_editing.adoc:227
 msgid ""
 "From the schematic point of view, a bus is a collection of signals, starting "
 "with a common prefix, and ending with a number. For example, PCA0, PCA1, and "
@@ -7939,7 +7995,7 @@ msgstr ""
 "メンバとなります。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:206
+#: eeschema_schematic_creation_and_editing.adoc:232
 msgid ""
 "The complete bus is named PCA[N..m], where N and m are the first and the "
 "last wire number of this bus. Thus if PCA has 20 members from 0 to 19, the "
@@ -7953,13 +8009,13 @@ msgstr ""
 "とはできません。"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:208
+#: eeschema_schematic_creation_and_editing.adoc:234
 #, no-wrap
 msgid "Connections between bus members"
 msgstr "バスのメンバ同士の接続"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:213
+#: eeschema_schematic_creation_and_editing.adoc:239
 msgid ""
 "Pins connected between the same members of a bus must be connected by "
 "labels. It is not possible to connect a pin directly to a bus; this type of "
@@ -7970,7 +8026,7 @@ msgstr ""
 "Eeschema はこのような接続を無視します。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:218
+#: eeschema_schematic_creation_and_editing.adoc:244
 msgid ""
 "In the example above, connections are made by the labels placed on wires "
 "connected to the pins. Bus entries (wire segments at 45 degrees) to buses "
@@ -7982,7 +8038,7 @@ msgstr ""
 "りません。（論理的な接続である必要はありません）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:223
+#: eeschema_schematic_creation_and_editing.adoc:249
 msgid ""
 "In fact, using the repetition command (__Insert__ key), connections can be "
 "very quickly made in the following way, if component pins are aligned in "
@@ -7994,12 +8050,12 @@ msgstr ""
 "サート__ キー ) を用いることで非常に速く接続を行う事ができます。:"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:225
+#: eeschema_schematic_creation_and_editing.adoc:251
 msgid "Place the first label (for example PCA0)"
 msgstr "最初のラベルを配置します（例えば PCA0 ）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:228
+#: eeschema_schematic_creation_and_editing.adoc:254
 msgid ""
 "Use the repetition command as much as needed to place members.  Eeschema "
 "will automatically create the next labels (PCA1, PCA2...)  vertically "
@@ -8010,7 +8066,7 @@ msgstr ""
 "します。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:230
+#: eeschema_schematic_creation_and_editing.adoc:256
 msgid ""
 "Draw the wire under the first label. Then use the repetition command to "
 "place the other wires under the labels."
@@ -8019,7 +8075,7 @@ msgstr ""
 "の下へワイヤを配置していきます。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:232
+#: eeschema_schematic_creation_and_editing.adoc:258
 msgid ""
 "If needed, place the bus entries by the same way (Place the first entry, "
 "then use the repetition command)."
@@ -8028,24 +8084,24 @@ msgstr ""
 "を用い、バスエントリを配置して下さい。"
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:236
+#: eeschema_schematic_creation_and_editing.adoc:262
 msgid "In the Preferences/Options menu, you can set the repetition parameters:"
 msgstr ""
 "メインメニュー “設定” → “回路図エディタオプション” で、繰り返しに関するパラ"
 "メータを設定することができます:"
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:238
+#: eeschema_schematic_creation_and_editing.adoc:264
 msgid "Vertical step."
 msgstr "アイテムを垂直方向にリピート（縦方向の間隔）。"
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:239
+#: eeschema_schematic_creation_and_editing.adoc:265
 msgid "Horizontal step."
 msgstr "アイテムを水平方向にリピート（横方向の間隔）。"
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:241
+#: eeschema_schematic_creation_and_editing.adoc:267
 msgid ""
 "Label increment (which can thus be incremented by 2, 3. or decremented)."
 msgstr ""
@@ -8053,13 +8109,13 @@ msgstr ""
 "デクリメント(減算)）"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:244
+#: eeschema_schematic_creation_and_editing.adoc:270
 #, no-wrap
 msgid "Global connections between buses"
 msgstr "バスのシート間接続"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:250
+#: eeschema_schematic_creation_and_editing.adoc:276
 msgid ""
 "You may need connections between buses, in order to link two buses having "
 "different names, or in the case of a hierarchy, to create connections "
@@ -8070,19 +8126,19 @@ msgstr ""
 "必要がある場合があります。この接続の手順を以下に示します。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:251
+#: eeschema_schematic_creation_and_editing.adoc:277
 #, no-wrap
 msgid "Bus junction example"
 msgstr "Bus junction example"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:251
+#: eeschema_schematic_creation_and_editing.adoc:277
 #, no-wrap
 msgid "images/bus_junction.png"
 msgstr "images/bus_junction.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:256
+#: eeschema_schematic_creation_and_editing.adoc:282
 msgid ""
 "Buses PCA [0..15], ADR [0..7] and BUS [5..10] are connected together (note "
 "the junction here because the vertical bus wire joins the middle of the "
@@ -8092,7 +8148,7 @@ msgstr ""
 "意してください。縦方向のバスが横方向のバスの中央で接続されています。）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:259
+#: eeschema_schematic_creation_and_editing.adoc:285
 msgid ""
 "More precisely, the corresponding members are connected together : PCA0, "
 "ADR0 are connected, (as same as PCA1 and ADR1 ... PCA7 and ADR7)."
@@ -8101,7 +8157,7 @@ msgstr ""
 "ば、PCA0 とADR0が接続されています。（同様に、PCA1 と ADR1 … PCA7 と ADR7）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:262
+#: eeschema_schematic_creation_and_editing.adoc:288
 msgid ""
 "Furthermore, PCA5, BUS5 and ADR5 are connected (just as PCA6, BUS6 and ADR6 "
 "like PCA7, BUS7 and ADR7)."
@@ -8110,7 +8166,7 @@ msgstr ""
 "と BUS7 と ADR7 も同様です）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:265
+#: eeschema_schematic_creation_and_editing.adoc:291
 msgid ""
 "PCA8 and BUS8 are also connected (just as PCA9 and BUS9, PCA10 and BUS10)"
 msgstr ""
@@ -8118,13 +8174,13 @@ msgstr ""
 "様です）"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:268
+#: eeschema_schematic_creation_and_editing.adoc:294
 #, no-wrap
 msgid "Power ports connection"
 msgstr "電源ポートの接続"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:272
+#: eeschema_schematic_creation_and_editing.adoc:298
 msgid ""
 "When the power pins of the components are visible, they must be connected, "
 "as for any other signal."
@@ -8133,7 +8189,7 @@ msgstr ""
 "す。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:275
+#: eeschema_schematic_creation_and_editing.adoc:301
 msgid ""
 "Components such as gates and flip-flops may have invisible power pins.  Care "
 "must be taken with these because:"
@@ -8142,17 +8198,17 @@ msgstr ""
 "います。これらの扱いは少し厄介です。難点は以下の２つです:"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:277
+#: eeschema_schematic_creation_and_editing.adoc:303
 msgid "You cannot connect wires, because of their invisibility."
 msgstr "電源ピンが非表示であるため、ワイヤを接続できない。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:278
+#: eeschema_schematic_creation_and_editing.adoc:304
 msgid "You do not know their names."
 msgstr "電源ピンの名前が解らない。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:282
+#: eeschema_schematic_creation_and_editing.adoc:308
 msgid ""
 "And moreover, it would be a bad idea to make them visible and to connect "
 "them like the other pins, because the schematic would become unreadable and "
@@ -8163,7 +8219,7 @@ msgstr ""
 "習に反することになってしまいます。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:289
+#: eeschema_schematic_creation_and_editing.adoc:315
 msgid ""
 "If you want to enforce the display of these invisible power pins, you must "
 "check the option ``Show invisible power pins'' in the Preferences/Options "
@@ -8176,7 +8232,7 @@ msgstr ""
 "ピンの表示” オプションをチェックします。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:294
+#: eeschema_schematic_creation_and_editing.adoc:320
 msgid ""
 "Eeschema automatically connects invisible power pins of the same name to the "
 "power net of that name. It may be necessary to join power nets of different "
@@ -8189,7 +8245,7 @@ msgstr ""
 "ボルを使います。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:297
+#: eeschema_schematic_creation_and_editing.adoc:323
 msgid ""
 "It is not recommended to use labels for power connection. These only have a "
 "“local” connection scope, and would not connect the invisible power pins."
@@ -8198,31 +8254,31 @@ msgstr ""
 "(local)” な接続機能しか無く、非表示の電源ピンは接続されません。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:299
+#: eeschema_schematic_creation_and_editing.adoc:325
 msgid "The figure below shows an example of power port connections."
 msgstr "以下の図は、電源ポートの接続例です。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:300
+#: eeschema_schematic_creation_and_editing.adoc:326
 #, no-wrap
 msgid "Power ports example"
 msgstr "電源ポート（コンポーネント）"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:300
+#: eeschema_schematic_creation_and_editing.adoc:326
 #, no-wrap
 msgid "images/en/power_ports_example.png"
 msgstr "images/ja/power_ports_example.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:304
+#: eeschema_schematic_creation_and_editing.adoc:330
 msgid ""
 "In this example, ground (GND) is connected to power port VSS, and power port "
 "VCC is connected to VDD."
 msgstr "この例では、GND と VSS、VCC と VDD が接続されています。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:309
+#: eeschema_schematic_creation_and_editing.adoc:335
 msgid ""
 "Two PWR_FLAG symbols are visible. They indicate that the two power ports VCC "
 "and GND are really connected to a power source.  Without these two flags, "
@@ -8233,20 +8289,20 @@ msgstr ""
 "合、ERCは __Warning: power port not powered__ という診断結果を出力します。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:311
+#: eeschema_schematic_creation_and_editing.adoc:337
 msgid "All these symbols are components of the schematic library ``power''."
 msgstr ""
 "これらすべてのシンボルは、コンポーネントとして “power” ライブラリに収められて"
 "います。"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:313
+#: eeschema_schematic_creation_and_editing.adoc:339
 #, no-wrap
 msgid "\"No Connect\" flag"
 msgstr "“空き端子” フラグ"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:318
+#: eeschema_schematic_creation_and_editing.adoc:344
 msgid ""
 "These symbols are very useful to avoid undesired ERC warnings.  The electric "
 "rules check ensures that no connection has been accidentally left "
@@ -8256,7 +8312,7 @@ msgstr ""
 "す。ERC で接続忘れの空きピンを確実に見つけることができます。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:323
+#: eeschema_schematic_creation_and_editing.adoc:349
 msgid ""
 "If pins must really remain unconnected, it is necessary to place a \"No "
 "Connect\" flag (tool image:images/icons/noconn.png[No connection icon])  on "
@@ -8268,19 +8324,19 @@ msgstr ""
 "は生成するネットリストに影響を与えません。"
 
 #. type: Title ===
-#: eeschema_schematic_creation_and_editing.adoc:325
+#: eeschema_schematic_creation_and_editing.adoc:351
 #, no-wrap
 msgid "Drawing Complements"
 msgstr "回路図作成に関する補足"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:328
+#: eeschema_schematic_creation_and_editing.adoc:354
 #, no-wrap
 msgid "Text Comments"
 msgstr "テキストコメント"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:337
+#: eeschema_schematic_creation_and_editing.adoc:363
 msgid ""
 "It can be useful (to aid in understanding the schematic) to place "
 "annotations such as text fields and frames. Text fields (tool image:images/"
@@ -8295,30 +8351,30 @@ msgstr ""
 "図しています。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:339
+#: eeschema_schematic_creation_and_editing.adoc:365
 msgid "Here you can find an example of a frame with a textual comment."
 msgstr "図形コメントの例を以下に示します。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:340
+#: eeschema_schematic_creation_and_editing.adoc:366
 #, no-wrap
 msgid "Frame with comment example"
 msgstr "Frame with comment example"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:340
+#: eeschema_schematic_creation_and_editing.adoc:366
 #, no-wrap
 msgid "images/en/frame_example.png"
 msgstr "images/ja/frame_example.png"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:343
+#: eeschema_schematic_creation_and_editing.adoc:369
 #, no-wrap
 msgid "Sheet title block"
 msgstr "シートの表題欄（タイトルブロック）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:347
+#: eeschema_schematic_creation_and_editing.adoc:373
 msgid ""
 "The title block is edited with the tool image:images/icons/sheetset.png[Page "
 "Settings tool]."
@@ -8327,43 +8383,43 @@ msgstr ""
 "ツールで編集することができます。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:348
+#: eeschema_schematic_creation_and_editing.adoc:374
 #, no-wrap
 msgid "Page settings dialog"
 msgstr "ERC ダイアログ：オプション"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:348
+#: eeschema_schematic_creation_and_editing.adoc:374
 #: eeschema_general_top_toolbar.adoc:13
 #, no-wrap
 msgid "images/en/page_settings.png"
 msgstr "images/ja/page_settings.png"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:350
+#: eeschema_schematic_creation_and_editing.adoc:376
 #, no-wrap
 msgid "Title block"
 msgstr "シートの表題欄（タイトルブロック）"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:350
+#: eeschema_schematic_creation_and_editing.adoc:376
 #, no-wrap
 msgid "images/en/title_block.png"
 msgstr "images/ja/title_block.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:353
+#: eeschema_schematic_creation_and_editing.adoc:379
 msgid "The sheet number (Sheet X/Y) is automatically updated."
 msgstr "シート数Ｙ、シート番号Ｘ（Sheet X/Y）は自動更新されます。"
 
 #. type: Title ===
-#: eeschema_schematic_creation_and_editing.adoc:355
+#: eeschema_schematic_creation_and_editing.adoc:381
 #, no-wrap
 msgid "Rescuing cached components"
 msgstr "キャッシュされたコンポーネントのレスキュー"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:362
+#: eeschema_schematic_creation_and_editing.adoc:388
 msgid ""
 "By default, Eeschema loads component symbols out of the libraries according "
 "to the set paths.  This can cause a problem when loading a very old project: "
@@ -8380,7 +8436,7 @@ msgstr ""
 "とがあると、回路図の破損につながります。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:367
+#: eeschema_schematic_creation_and_editing.adoc:393
 msgid ""
 "However, when a project is saved, a cache library is saved along with it. "
 "This allows the project to be distributed without the full libraries. If you "
@@ -8395,19 +8451,19 @@ msgstr ""
 "された衝突は次のダイアログに一覧表示されます。:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:368
+#: eeschema_schematic_creation_and_editing.adoc:394
 #, no-wrap
 msgid "Rescue conflicts dialog"
 msgstr "Rescue conflicts dialog"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:368
+#: eeschema_schematic_creation_and_editing.adoc:394
 #, no-wrap
 msgid "images/en/rescue-conflicts.png"
 msgstr "images/ja/rescue-conflicts.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:374
+#: eeschema_schematic_creation_and_editing.adoc:400
 msgid ""
 "You can see in this example that the project originally used a diode with "
 "the cathode facing up, but the library now contains one with the cathode "
@@ -8422,7 +8478,7 @@ msgstr ""
 "ンポーネントは名前の衝突を避けるために変更 (rename) されます。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:378
+#: eeschema_schematic_creation_and_editing.adoc:404
 msgid ""
 "If you press Cancel, no rescues will be made, so Eeschema will load all the "
 "new components by default. Because no changes were made, you can still go "
@@ -8435,7 +8491,7 @@ msgstr ""
 "たコンポーネントのレスキュー” を選んで、ダイアログを再び呼び出します。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:381
+#: eeschema_schematic_creation_and_editing.adoc:407
 msgid ""
 "If you would prefer not to see this dialog, you can press \"Never Show Again"
 "\". The default will be to do nothing and allow the new components to be "

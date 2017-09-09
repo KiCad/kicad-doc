@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pcbnew\n"
-"POT-Creation-Date: 2017-03-04 17:45+0900\n"
-"PO-Revision-Date: 2017-03-15 07:55+0900\n"
+"POT-Creation-Date: 2017-07-28 23:54+0900\n"
+"PO-Revision-Date: 2017-09-10 01:15+0900\n"
 "Last-Translator: starfort_jp <starfort@nifty.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.3\n"
 
 # PR1:07102015 proofreading - chapter1, 2
 # PR2:07122015 proofreading - chapter3
@@ -157,8 +157,8 @@ msgid ""
 "binaries are located in `/usr/local/kicad/bin`."
 msgstr ""
 "直接あるいは kicad を使って、Pcbnew を起動します。Windows では `C:\\kicad\\bin\\pcbnew."
-"exe`（ユーザ環境によって変わります） 、そしてLinux ではバイナリが  `/usr/local/kicad/bin` にあ"
-"る場合、 `/usr/local/kicad/bin/kicad` あるいは `/usr/local/kicad/bin/pcbnew` で起動できます。"
+"exe`（ユーザー環境によって変わります） 、そしてLinux ではバイナリが  `/usr/local/kicad/bin` に"
+"ある場合、 `/usr/local/kicad/bin/kicad` あるいは `/usr/local/kicad/bin/pcbnew` で起動できます。"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:24
@@ -181,120 +181,107 @@ msgstr ""
 #. type: Title ===
 #: pcbnew_installation.adoc:28
 #, no-wrap
-msgid "Managing Footprint Libraries: legacy versions"
-msgstr "フットプリント・ライブラリの管理: 以前のバージョン"
+msgid "Managing Footprint Libraries"
+msgstr "フットプリント・ライブラリの管理"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:32
-msgid "You can have access to the library list initialization from the Preferences menu:"
-msgstr "設定メニューからライブラリリストの初期設定へと進めます。:"
-
-# 07072015：/ja/へ変更
-#. type: Target for macro image
-#: pcbnew_installation.adoc:33
-#, no-wrap
-msgid "images/Library_list_menu_item.png"
-msgstr "images/ja/Library_list_menu_item.png"
+#: pcbnew_installation.adoc:35
+msgid ""
+"As of release 4.0, Pcbnew organises the footprint libraries using files called \"footprint "
+"library tables\". A footprint library table contains descriptions of some number of individual "
+"footprint libraries, along with a \"nickname\" for each library, which is used to refer to "
+"that library when referencing a footprint."
+msgstr ""
+"リリース 4.0 では、Pcbnew は\"フットプリント・ライブラリ・テーブル\"と呼ばれるファイルを使用し"
+"てフットプリント・ライブラリを体系化します。フットプリント・ライブラリ・テーブルは、”ニックネー"
+"ム” を持つ独立したフットプリント・ライブラリのいくつかの記述を含んでいます。これらはフットプリ"
+"ントを照合する時のライブラリを参照するために使用されます。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:37
-msgid "The image below shows the dialog which allows you to set the footprint library list:"
-msgstr "下の図はフットプリント・ライブラリ・リストを設定するダイアログです。"
-
-# 07072015：/ja/へ変更
-#. type: Target for macro image
 #: pcbnew_installation.adoc:38
-#, no-wrap
-msgid "images/Footprint_library_list.png"
-msgstr "images/ja/Footprint_library_list.png"
+msgid ""
+"There are several kinds of library supported by Pcbnew, each of which is supported by a "
+"\"plugin\":"
+msgstr ""
+"Pcbnew でサポートされるライブラリにはいくつか種類があり、それぞれ \"plugin\" によってサポートさ"
+"れます:"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:50
-msgid ""
-"You can use this to add all the libraries that contain the footprints required for your "
-"project. You should also remove unused libraries from new projects to prevent footprint name "
-"clashes. Please note, there is an issue with the footprint library list when duplicate "
-"footprint names exist in more than one library.  When this occurs, the footprint will be "
-"loaded from the first library found in the list. If this is an issue (you cannot load the "
-"footprint you want), either change the library list order using the \"Up\" and \"Down\" "
-"buttons in the dialog above or give the footprint a unique name using the footprint editor."
+#: pcbnew_installation.adoc:40
+msgid "KiCad - native KiCad footprint libraries stored on a local filesystem"
 msgstr ""
-"あなたはプロジェクトに必要なフットプリントを含むライブラリを追加しなければなりません。フットプ"
-"リント名の衝突を避けるため、新しいプロジェクトからは使わないライブラリを削除することも必要で"
-"す。複数のライブラリに重複したフットプリント名があると、フットプリントライブラリで問題となるこ"
-"とに注意して下さい。このような場合、フットプリントはリスト中、最初に見つかったライブラリから"
-"ロードされます。これは問題（必要とするフットプリントをロードできない）で、上のダイアログで "
-"“上” と “下” ボタンを使ってライブラリリストの順番を変えるか、フットプリント・エディタを使って固"
-"有の名前のフットプリントにします。"
+"KiCad - ローカルのファイル・システムに保存された KiCad 本来のフットプリント・ライブラリ、"
 
-# 07102015：訂正
-#. type: Title ===
+#. type: Plain text
+#: pcbnew_installation.adoc:41
+msgid "in the _.pretty_ format (folders containing _.kicad_mod_ files)"
+msgstr "_.pretty_ フォーマット (_.kicad_mod_ ファイルを含んだフォルダー)"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:42
+msgid "Github - native KiCad footprint libraries in the _.pretty_ format,"
+msgstr ""
+"Github - Github リポジトリとしてオンラインに保存された KiCad 本来のフットプリント・ライブラリ、"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:43
+msgid "stored online as a Github repository"
+msgstr "_.pretty_ フォーマット"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:44
+msgid "Legacy - old-style KiCad footprint libraries (_.mod_ files)"
+msgstr "レガシー - 古い形式の KiCad フットプリント・ライブラリ (_.mod_ files)"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:45
+msgid "Eagle - Eagle footprint libraries (folders containing _.fp_ files)"
+msgstr "Eagle - Eagle のフットプリント・ライブラリ (_.fp_ ファイルを含んだフォルダー)"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:46
+msgid "Geda-PCB - Geda PCB libraries"
+msgstr "Geda-PCB - Geda PCB のライブラリ"
+
+#. type: delimited block =
 #: pcbnew_installation.adoc:51
-#, no-wrap
-msgid "Managing Footprint Libraries: .pretty repositories"
-msgstr "フットプリント・ライブラリの管理: .pretty リポジトリ"
-
-# 07102015：発行からリリースへ変更
-#. type: Plain text
-#: pcbnew_installation.adoc:57
 msgid ""
-"As of release 4.0, Pcbnew uses the new footprint library table implementation to manage "
-"footprint libraries. The information in the previous section is no longer valid. The library "
-"table manager is accessible by:"
+"You can write only KiCad _.pretty_ footprint library folders on your local disk (and the ."
+"kicad_mod files inside these folders)."
 msgstr ""
-"4.0 をリリースするにあたって、Pcbnew はフットプリントライブラリを管理するために実装された新しい"
-"フットプリント・ライブラリ・テーブルを使用します。前のセクションの情報はもはや無効です。ライブ"
-"ラリ・テーブル・マネージャは次のように呼び出せます。:"
+"ローカル・ディスク上にある KiCad _.pretty_ フットプリント・ライブラリ・フォルダー (およびフォル"
+"ダー内にある .kicad_mod ファイル) にのみ書き込みできます。"
 
-# 07072015：/ja/へ変更
-#. type: Target for macro image
+#. type: delimited block =
+#: pcbnew_installation.adoc:52
+msgid "All other formats are read only."
+msgstr "他の全てのフォーマットは読み込み専用です。"
+
+#. type: Plain text
 #: pcbnew_installation.adoc:58
-#, no-wrap
-msgid "images/Library_tables_menu_item.png"
-msgstr "images/ja/Library_tables_menu_item.png"
+msgid ""
+"It is allowed to have footprints with the same name in different libraries. The footprint will "
+"be stored as a combination of library _and_ footprint name, ensuring that the correct "
+"footprint is loaded from the appropriate library."
+msgstr ""
+"別のライブラリで同じ名前のフットプリントを持つことができます。正しいフットプリントが適切なライ"
+"ブラリから読み込まれるのを保証するため、フットプリントはライブラリ _と_ フットプリント名の組み"
+"合わせとして保存されることになります。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:63
-msgid ""
-"The image below shows the footprint library table editing dialog which can be opened by "
-"invoking the \"Footprint Libraries Manager\" entry from the \"Preferences\" menu."
+#: pcbnew_installation.adoc:61
+msgid "There are two footprint library tables: the global one and the project one."
 msgstr ""
-"下の図は、フットプリント・ライブラリ・テーブル編集 (PCB ライブラリ一覧) ダイアログです。上部メ"
-"ニューバーにある “設定” -> “ライブラリ テーブルの管理”と辿ると表示できます。"
-
-# 07072015：/ja/へ変更
-#. type: Target for macro image
-#: pcbnew_installation.adoc:64
-#, no-wrap
-msgid "images/Footprint_tables_list.png"
-msgstr "images/ja/Footprint_tables_list.png"
-
-# 07102015：日本語修正
-#. type: Plain text
-#: pcbnew_installation.adoc:74
-msgid ""
-"The footprint library table is used to map a footprint library of any supported library type "
-"to a library nickname.  This nickname is used to look up footprints instead of the previous "
-"method which depended on library search path ordering.  This allows Pcbnew to access "
-"footprints with the same name in different libraries by ensuring that the correct footprint is "
-"loaded from the appropriate library.  It also allows Pcbnew to support loading libraries from "
-"different PCB editors such as Eagle and gEDA."
-msgstr ""
-"フットプリント・ライブラリ・テーブルは、サポートされている全ての種類のフットプリントライブラリ"
-"に別名 (nickname) を付けます。この別名は、見つかった順番のライブラリを使用する以前の方法に代"
-"わって、フットプリントを探す時に使われます。この仕組みによって適切なライブラリから正しいフット"
-"プリントを確実にロードできるので、別のライブラリにある同じ名前のフットプリントを呼び出すことが"
-"できます。これはまた、Eagle や gEDA のような別の PCB エディタからのライブラリの読み出しをサポー"
-"トします。"
+"フットプリント・ライブラリ・テーブルには２種類あります: グローバルとプロジェクト固有です。"
 
 #. type: Title ====
-#: pcbnew_installation.adoc:75
+#: pcbnew_installation.adoc:62
 #, no-wrap
 msgid "Global Footprint Library Table"
 msgstr "グローバル・フットプリント・ライブラリ・テーブル"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:82
+#: pcbnew_installation.adoc:69
 msgid ""
 "The global footprint library table contains the list of libraries that are always available "
 "regardless of the currently loaded project file.  The table is saved in the file `fp-lib-"
@@ -302,18 +289,18 @@ msgid ""
 "system."
 msgstr ""
 "グローバル・フットプリント・ライブラリ・テーブルは、現在のプロジェクトに関係なく、常に有効なラ"
-"イブラリのリストを保持しています。このテーブルは、ユーザのホームディレクトリにある “fp-lib-"
+"イブラリのリストを保持しています。このテーブルは、ユーザーのホームディレクトリにある “fp-lib-"
 "table” ファイルに保存されています。このディレクトリの位置は、オペレーティングシステムに依存しま"
 "す。"
 
 #. type: Title ====
-#: pcbnew_installation.adoc:83
+#: pcbnew_installation.adoc:70
 #, no-wrap
 msgid "Project Specific Footprint Library Table"
 msgstr "プロジェクト固有のフットプリント・ライブラリ・テーブル"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:92
+#: pcbnew_installation.adoc:79
 msgid ""
 "The project specific footprint library table contains the list of libraries that are available "
 "specifically for the currently loaded project file.  The project specific footprint library "
@@ -327,190 +314,697 @@ msgstr ""
 "いないか、プロジェクトのパスにフットプリント・ライブラリ・テーブル・ファイルがない場合、編集可"
 "能な空のテーブルが作られ、後で基板ファイルと一緒に保存されます。"
 
+#. type: Plain text
+#: pcbnew_installation.adoc:83
+msgid ""
+"When entries are defined in the project specific table, an `fp-lib-table file `containing the "
+"entries will be written into the folder of the currently open PCB."
+msgstr ""
+"エントリーがプロジェクト固有のテーブルとして定義されている場合、エントリーを含む `fp-lib-table "
+"ファイル` は現在開かれている基板のフォルダーに書き込まれます。"
+
 #. type: Title ====
-#: pcbnew_installation.adoc:93
+#: pcbnew_installation.adoc:84
 #, no-wrap
 msgid "Initial Configuration"
 msgstr "初期設定"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:105
+#: pcbnew_installation.adoc:94
 msgid ""
 "The first time CvPcb or Pcbnew is run and the global footprint table file `fp-lib-table` is "
 "not found in the user's home folder, Pcbnew will attempt to copy the default footprint table "
-"file fp_global_table stored in the system's KiCad template folder to the file `fp-lib-table` "
-"in the user's home folder.  If fp_global_table cannot be found, an empty footprint library "
+"file `fp_global_table` stored in the system's KiCad template folder to the file `fp-lib-table` "
+"in the user's home folder.  If `fp_global_table` cannot be found, an empty footprint library "
 "table will be created in the user's home folder.  If this happens, the user can either copy "
-"fp_global_table manually or configure the table by hand.  The default footprint library table "
-"includes all of the standard footprint libraries that are installed as part of KiCad."
+"`fp_global_table` manually or configure the table by hand."
 msgstr ""
 "CvPcb または Pcbnew の初めての実行時には、グローバル・フットプリント・テーブル・ファイル `fp-"
-"lib-table` はユーザのホームディレクトリに見つかりません。Pcbnew は、システムの KiCad テンプレー"
-"トディレクトリにあるデフォルトのフットプリント・テーブル・ファイル fp_global_table をユーザの"
-"ホームディレクトリへ `fp-lib-table` ファイルとしてコピーしようとします。もし、`fp-lib-table` が"
-"見つからなかったら、ユーザのホームディレクトリに空のフットプリント・ライブラリ・テーブルが作ら"
-"れるでしょう。こうなった場合、ユーザは自分で fp_global_table をコピーし、手動でテーブルを設定で"
-"きます。デフォルトのフットプリント・ライブラリ・テーブルは、KiCad の一部としてインストールされ"
-"る標準のフットプリントライブラリを全て含んでいます。"
+"lib-table` はユーザーのホームディレクトリに見つかりません。Pcbnew は、システムの KiCad テンプ"
+"レートディレクトリにあるデフォルトのフットプリント・テーブル・ファイル `fp_global_table` をユー"
+"ザーのホームディレクトリへ `fp-lib-table` ファイルとしてコピーしようとします。もし、"
+"`fp_global_table` が見つからなかったら、ユーザーのホームディレクトリに空のフットプリント・ライ"
+"ブラリ・テーブルが作られるでしょう。こうなった場合、ユーザーは自分で `fp_global_table` をコピー"
+"し、手動でテーブルを設定できます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:97
+msgid ""
+"The default footprint library table includes all of the standard footprint libraries that are "
+"installed as part of KiCad."
+msgstr ""
+"デフォルトのフットプリント・ライブラリ・テーブルは、KiCad の一部としてインストールされる標準の"
+"フットプリント・ライブラリを全て含んでいます。"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:103
+msgid ""
+"There are also sample `fp-lib-table` files in the official https://github.com/KiCad/kicad-"
+"library[KiCad library repository] that you can use as your own starting point:"
+msgstr ""
+"公式の https://github.com/KiCad/kicad-library[KiCad library repository] に、雛型として使うこと"
+"ができるサンプルの `fp-lib-table` ファイルがあります:"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:105
+msgid "All KiCad libraries via Github:"
+msgstr "全ての KiCad ライブラリ、Github 経由:"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:106
+msgid ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-github[fp-lib-"
+"table.for-github]"
+msgstr ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-github[fp-lib-"
+"table.for-github]"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:107
+msgid ""
+"All KiCad libraries, assuming they are on your disk already (you will need to download them if "
+"you do not already have them):"
+msgstr ""
+"全ての KiCad ライブラリ、既にディスク上にあると仮定 (もしライブラリがなければ、ダウンロードする"
+"必要があります):"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:108
+msgid ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-pretty[fp-lib-"
+"table.for-pretty]"
+msgstr ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-pretty[fp-lib-"
+"table.for-pretty]"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:109
+msgid "Standard Eagle libraries (for Eagle 6.4.0)"
+msgstr "標準 Eagle ライブラリ (Eagle 6.4.0 用)"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:110
+msgid ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-eagle-6.4.0[fp-"
+"lib-table.for-eagle-6.4.0]"
+msgstr ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-eagle-6.4.0[fp-"
+"lib-table.for-eagle-6.4.0]"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:115
+msgid ""
+"The *first thing* to when configuring KiCad do is to modify this table (add/remove entries) "
+"according to your work and the libraries you need for your projects."
+msgstr ""
+"KiCad を設定する時に *最初にすべきこと* は、このテーブルをプロジェクトが必要とするライブラリと"
+"あなたの業務に応じて変更 (エントリーを追加/削除) することです。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:119
+msgid ""
+"It can be time consuming to have many libraries, especially if they are only found online "
+"(such as the Github libraries). If you find libraries slow to load, try removing ones you "
+"don't need."
+msgstr ""
+"特に (Github ライブラリのような) オンラインにしか見つからない場合、多くのライブラリを所有するに"
+"は時間がかかることがあります。もしライブラリの読み込みが遅いと感じるようなら、不要なものを削除"
+"してみて下さい。"
 
 #. type: Title ====
-#: pcbnew_installation.adoc:106
+#: pcbnew_installation.adoc:121
 #, no-wrap
-msgid "Adding Table Entries"
-msgstr "テーブル要素の追加"
+msgid "Adding Table Entries using the Libraries Manager"
+msgstr "ライブラリ・マネージャーを使用したテーブル・エントリーの追加"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:124
+msgid "The library table manager is accessible by:"
+msgstr "ライブラリ・テーブル・マネージャは次のように呼び出せます:"
+
+# 07072015：/ja/へ変更
+#. type: Target for macro image
+#: pcbnew_installation.adoc:125 pcbnew_installation.adoc:185
+#, no-wrap
+msgid "images/Library_tables_menu_item.png"
+msgstr "images/ja/Library_tables_menu_item.png"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:130
 msgid ""
+"The image below shows the footprint library table editing dialog which can be opened by "
+"invoking the \"Footprint Libraries Manager\" entry from the \"Preferences\" menu."
+msgstr ""
+"下の図は、フットプリント・ライブラリ・テーブル編集 (PCB ライブラリ一覧) ダイアログです。上部メ"
+"ニューバーにある “設定” -> “ライブラリ テーブルの管理”と辿ると表示できます。"
+
+# 07072015：/ja/へ変更
+#. type: Target for macro image
+#: pcbnew_installation.adoc:131
+#, no-wrap
+msgid "images/Footprint_tables_list.png"
+msgstr "images/ja/Footprint_tables_list.png"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:136
+msgid ""
 "In order to use a footprint library, it must first be added to either the global table or the "
 "project specific table.  The project specific table is only applicable when a board file is "
-"open.  Each library entry must have a unique nickname.  This does not have to be related in "
-"any way to the actual library file name or path.  The colon `:` character cannot be used "
-"anywhere in the nickname.  Each library entry must have a valid path and/or file name "
-"depending on the type of library.  Paths can be defined as absolute, relative, or by "
-"environment variable substitution.  The appropriate plug in type must be selected in order for "
-"the library to be properly read.  Pcbnew currently supports reading KiCad legacy, KiCad "
-"Pretty, Eagle, and gEDA footprint libraries.  There is also a description field to add a "
-"description of the library entry.  The option field is not used at this time so adding options "
-"will have no effect when loading libraries.  Please note that you cannot have duplicate "
-"library nicknames in the same table.  However, you can have duplicate library nicknames in "
-"both the global and project specific footprint library table.  The project specific table "
-"entry will take precedence over the global table entry when duplicated names occur.  When "
-"entries are defined in the project specific table, an fp-lib-table file containing the entries "
-"will be written into the folder of the currently open netlist."
+"open."
 msgstr ""
-"フットプリントライブラリを使うには、まず最初にグローバルテーブルかプロジェクト固有のテーブルを"
-"追加しなければなりません。プロジェクト固有のテーブルは、基板ファイルが開かれた時のみ有効です。"
-"各ライブラリの入力項目は固有の別名 (nickname) を持つ必要があります。これは実際のファイル名や"
-"ファイルパスとは全く関係ありません。コロン ( : ) は別名の中のいかなる場所でも使用できません。各"
-"ライブラリの入力項目は、そのライブラリの種類で有効なファイルパス、ファイル名を持つ必要がありま"
-"す。パスは、絶対、相対、または環境変数で指定できます。プラグインの種類は、ライブラリが正しく読"
-"み込まれるよう、適切に選択しなければなりません。Pcbnew は今のところ KiCad の古い種類、KiCad "
-"Pretty、Eagle と gEDA フットプリントライブラリをサポートしています。これらは、ライブラリ入力項"
-"目の説明フィールドに記述されます。オプションフィールドはこの時点では使われていませんので、オプ"
-"ションフィールドへの追加はライブラリの読み込みに影響を与えません。同じテーブルには重複した別名"
-"を持てないことに注意して下さい。しかしながら、グローバルとプロジェクト固有のフットプリント・ラ"
-"イブラリ・テーブルの両方で重複した別名を持つことは可能です。もし名前の衝突が起こったなら、プロ"
-"ジェクト固有のテーブルがグローバルテーブルに優先します。プロジェクト固有のテーブルに項目が入力"
-"されると、入力項目を含む fp-lib-table ファイルは現在開かれているネットリストのあるディレクトリ"
-"に書き込まれます。"
+"フットプリント・ライブラリを使うには、まず最初にグローバル・テーブルかプロジェクト固有のテーブ"
+"ルを追加しなければなりません。プロジェクト固有のテーブルは、基板ファイルが開かれた時のみ有効で"
+"す。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:140
+msgid ""
+"Each library table entry has a nickname. This _must_ be unique within that table. The nickname "
+"does not have to be related in any way to the actual library file name or path."
+msgstr ""
+"各ライブラリ・テーブルのエントリーはニックネームを持っています。これはテーブル内で固有である _"
+"必要_ があります。ニックネームは実際のファイル名やファイル・パスとは全く関係ありません。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:142
+msgid "There are some rules for valid library table entries:"
+msgstr "有効なライブラリ・テーブルのエントリーとするためにはいくつかルールがあります:"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:144
+msgid "The colon `:` character cannot be used anywhere in the nickname."
+msgstr "コロン `:` はニックネーム内のいかなる場所でも使用できません。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:147
+msgid ""
+"Each library entry must have a valid path and/or file name depending on the type of library. "
+"Paths can be defined as absolute, relative, or by environment variable substitution (see below)"
+msgstr ""
+"各ライブラリのエントリーは、そのライブラリの種類で有効なファイル・パス、ファイル名を持つ必要が"
+"あります。パスは、絶対、相対、または環境変数で指定できます。 (下記参照)"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:149
+msgid ""
+"The appropriate plug in type must be selected in order for the library to be properly read."
+msgstr "プラグインの種類は、ライブラリが正しく読み込まれるよう、適切に選択しなければなりません。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:153
+msgid ""
+"There is also a description field to add a description of the library entry.  The option field "
+"contains special options that are plugin-specific and is generally blank."
+msgstr ""
+"説明フィールドは、ライブラリ・エントリーの説明を追加するためのものです。オプション・フィールド"
+"はプラグイン固有の特別なオプションを保持しており、通常は空白です。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:159
+msgid ""
+"Although you cannot have duplicate library nicknames in the same table, you can have duplicate "
+"library nicknames in both the global and project specific footprint library table.  The "
+"project specific table entry will take precedence over the global table entry when duplicated "
+"names occur."
+msgstr ""
+"同じテーブルでは重複したライブラリのニックネームを持てませんが、グローバルとプロジェクト固有の"
+"フットプリント・ライブラリ・テーブルの両方で重複したライブラリのニックネームを持つことは可能で"
+"す。もし名前の衝突が起こった場合、プロジェクト固有のテーブル・エントリーがグローバル・テーブ"
+"ル・エントリーに優先します。"
 
 #. type: Title ====
-#: pcbnew_installation.adoc:131
+#: pcbnew_installation.adoc:160
 #, no-wrap
 msgid "Environment Variable Substitution"
 msgstr "環境変数の代替"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:147
+#: pcbnew_installation.adoc:165
 msgid ""
 "One of the most powerful features of the footprint library table is environment variable "
 "substitution.  This allows you to define custom paths to where your libraries are stored in "
-"environment variables.  Environment variable substitution is supported by using the syntax `"
-"${ENV_VAR_NAME}` in the footprint library path.  By default, at run time Pcbnew defines the `"
-"$KISYSMOD` environment variable.  This points to where the default footprint libraries that "
-"were installed with KiCad are located.  You can override `$KISYSMOD` by defining it yourself "
-"which allows you to substitute your own libraries in place of the default KiCad footprint "
-"libraries.  When a board file is loaded, Pcbnew also defines the `$KPRJMOD` using the board "
-"file path.  This allows you to create libraries in the project path without having to define "
-"the absolute path to the library in the project specific footprint library table."
+"environment variables."
 msgstr ""
 "フットプリント・ライブラリ・テーブルの最も強力な機能の一つは、環境変数の代替です。環境変数に保"
-"存されたライブラリへの独自のパスを定義するすることができます。環境変数の代替は、フットプリン"
-"ト・ライブラリ・パスで `${ENV_VAR_NAME}` 構文を使うことにより、サポートされます。デフォルトで"
-"は、実行中 Pcbnew は環境変数 `$KISYSMOD` を定義します。ここは KiCad と一緒にインストールされた"
-"デフォルトのフットプリントライブラリの場所です。デフォルトのフットプリントライブラリに代わって"
-"自分のライブラリを置けるよう `$KISYSMOD` を上書きできます。基板が読み込まれると、Pcbnew はまた"
-"基板のファイルパスを使って、`$KPRJMOD` を定義します。これにより、プロジェクト固有のフットプリン"
-"ト・ライブラリ・テーブルでライブラリの絶対パスを定義することなく、プロジェクトのあるパスへライ"
-"ブラリを作ることができます。"
+"存されたライブラリへのパスを独自に定義することができます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:168
+msgid ""
+"Environment variable substitution is supported by using the syntax `${ENV_VAR_NAME}` in the "
+"footprint library path."
+msgstr ""
+"環境変数の代替は、フットプリント・ライブラリ・パスで `${ENV_VAR_NAME}` 構文を使うことにより、サ"
+"ポートされます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:170
+msgid "There are some default variables that KiCad defines:"
+msgstr "KiCadが定義するデフォルトの変数がいくつかあります:"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:175
+msgid ""
+"`$KISYSMOD`: This points to where the default footprint libraries that were installed along "
+"with KiCad are located.  You can override `$KISYSMOD` by defining it yourself which allows you "
+"to substitute your own libraries in place of the default KiCad footprint libraries."
+msgstr ""
+"`$KISYSMOD`: これは KiCad と一緒にインストールされたデフォルトのフットプリント・ライブラリの場"
+"所を示しています。デフォルトの KiCad フットプリント・ライブラリに代えて自分のライブラリを置ける"
+"よう `$KISYSMOD` を上書きすることができます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:179
+msgid ""
+"When a board file is loaded, `$KPRJMOD` is defined using that board's path. This allows you to "
+"refer to libraries in the project path without having to repeat the absolute path to the "
+"library in the project specific footprint library table."
+msgstr ""
+"基板が読み込まれた場合、`$KPRJMOD` が基板のパスを使って定義されます。これにより、プロジェクト固"
+"有のフットプリント・ライブラリ・テーブルでライブラリへの絶対パスを繰り返し定義することなく、プ"
+"ロジェクトのあるパスでライブラリを参照することができます。"
 
 #. type: Title ====
-#: pcbnew_installation.adoc:148
+#: pcbnew_installation.adoc:180
+#, no-wrap
+msgid "Adding Table Entries using the Library Wizard"
+msgstr "ライブラリ・ウィザードを使用したテーブル・エントリーの追加"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:184
+msgid ""
+"There is an interactive wizard that can assist you adding libraries to your library tables. It "
+"is accessible from the menu:"
+msgstr ""
+"ライブラリ・テーブルにライブラリを追加するのを支援するためのインタラクティブなウィザードが用意"
+"されています。メニューから呼び出せます:"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:189
+msgid ""
+"It can also be launched from the library manager, using the \"Append With Wizard\" button."
+msgstr ""
+"\"ウィザードを使用して追加\" ボタンを使って、ライブラリ・マネージャーから起動することもできま"
+"す。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:191
+msgid "Here, the local libraries option is selected."
+msgstr "これは、ローカル・ライブラリのオプションが選択された場合です。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: pcbnew_installation.adoc:192
+#, no-wrap
+msgid "Footprint library wizard local libstartpage"
+msgstr "フットプリント・ライブラリ・ウィザード local libstartpage"
+
+#. type: Target for macro image
+#: pcbnew_installation.adoc:192
+#, no-wrap
+msgid "images/en/fplib_wizard_locallibstartpage.png"
+msgstr "images/ja/fplib_wizard_locallibstartpage.png"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:195
+msgid "Here, the remote libraries option is selected."
+msgstr "これは、リモート・ライブラリのオプションが選択された場合です。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: pcbnew_installation.adoc:196
+#, no-wrap
+msgid "Footprint library wizard startpage GitHub"
+msgstr "フットプリント・ライブラリ・ウィザード startpage GitHub"
+
+#. type: Target for macro image
+#: pcbnew_installation.adoc:196
+#, no-wrap
+msgid "images/en/fplib_wizard_startpage_github.png"
+msgstr "images/ja/fplib_wizard_startpage_github.png"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:201
+msgid ""
+"The wizard will then lead you though the steps to adding a library, which will depend on the "
+"type of library you are adding. The process for each type will be explained below."
+msgstr ""
+"ウィザードは、追加するライブラリの種類に応じて、ライブラリを追加するステップを示すでしょう。各"
+"タイプの手順を以下で説明します。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:203
+msgid "After a set of libraries is selected, the next page validates the choice:"
+msgstr "ライブラリのセットを選択後、\"次のページ\" の選択が有効になります:"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: pcbnew_installation.adoc:204
+#, no-wrap
+msgid "Footprint libary wizard validate"
+msgstr "フットプリント・ライブラリ・ウィザードの有効化"
+
+#. type: Target for macro image
+#: pcbnew_installation.adoc:204
+#, no-wrap
+msgid "images/en/fplib_wizard_validate.png"
+msgstr "images/ja/fplib_wizard_validate.png"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:208
+msgid ""
+"If some selected libraries are incorrect (not supported, not a footprint library ...)  they "
+"will be flagged as ``INVALID''."
+msgstr ""
+"もし選択されたいくつかのライブラリが無効 (未サポート、フットプリント・ライブラリではない ...) "
+"の場合、``INVALID'' としてフラグ付けされます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:210
+msgid "The last choice is the footprint library table to populate either:"
+msgstr "最後の選択は、フットプリント・ライブラリ・テーブルを次のどちらかに決めることです:"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:212
+msgid "the global table, or"
+msgstr "グローバル・テーブル、または"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:213
+msgid "the project specific table"
+msgstr "プロジェクト固有のテーブル"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: pcbnew_installation.adoc:214
+#, no-wrap
+msgid "Footprint library wizard choose local folder"
+msgstr "フットプリント・ライブラリ・ウィザード choose local folder"
+
+#. type: Target for macro image
+#: pcbnew_installation.adoc:214
+#, no-wrap
+msgid "images/en/fplib_wizard_chooseflt.png"
+msgstr "images/ja/fplib_wizard_chooseflt.png"
+
+#. type: Title =====
+#: pcbnew_installation.adoc:216
+#, no-wrap
+msgid "Adding Existing Local Libraries"
+msgstr "既存のローカル・ライブラリを追加"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:219
+msgid "You might have local libraries already on your computer. For example:"
+msgstr "既にコンピューター上にローカル・ライブラリを持っていることもあるでしょう。例えば:"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:221
+msgid "Previously downloaded KiCad pretty directories"
+msgstr "以前にダウンロードした KiCad pretty ディレクトリ"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:222
+msgid "Legacy KiCad _.mod_ files from an older installations"
+msgstr "過去にインストールした昔のバージョンから引き継いでいる古い形式の KiCad _.mod_ ファイル"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:223
+msgid "Geda or Eagle libraries"
+msgstr "Geda や Eagle のライブラリ"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:226
+msgid ""
+"These can be added with the \"Files on my computer\" option. You will be asked for the "
+"directory of the library to add and the format:"
+msgstr ""
+"これらは、\"このコンピューターにあるファイル\" オプションで追加することができます。追加するライ"
+"ブラリのディレクトリとフォーマットが質問されます:"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: pcbnew_installation.adoc:227
+#, no-wrap
+msgid "Footprint library wizard local lib selection"
+msgstr "フットプリント・ライブラリ・ウィザード local lib selection"
+
+# 07072015：/ja/へ変更
+#. type: Target for macro image
+#: pcbnew_installation.adoc:227
+#, no-wrap
+msgid "images/en/fplib_wizard_locallibselection.png"
+msgstr "images/ja/fplib_wizard_locallibselection.png"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:230
+msgid "If you don't select the format, the wizard will try to guess the right format."
+msgstr ""
+"もしフォーマットを選択していなければ、ウィザードは正しいフォーマットを推測しようとするでしょ"
+"う。"
+
+#. type: Title =====
+#: pcbnew_installation.adoc:231
+#, no-wrap
+msgid "Adding Libraries from Github"
+msgstr "GitHub からライブラリを追加"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:235
+msgid "The wizard can also add libraries from Github with the \"Github repository\" option."
+msgstr ""
+"ウィザードは、\"Github リポジトリ\" オプションで、GitHub からライブラリを追加することもできま"
+"す。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:238
+msgid "You need to specify the Github account that contains the repositories you want to add."
+msgstr "追加したいリポジトリを含む GitHub アカウントを指定する必要があります。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:241
+#, no-wrap
+msgid ""
+"The offical KiCad library Github account is\n"
+"    https://github.com/KiCad\n"
+msgstr ""
+"公式 KiCad ライブラリ Github アカウントは下記のとおりです\n"
+"    https://github.com/KiCad\n"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:247
+msgid ""
+"You may choose to save a local copy. If you do _not_ save a local copy, the library will be a "
+"_Github_ library, and will resync on every library reload. If you _do_ save a local copy, the "
+"library will be a _KiCad_ (pretty) library and will not automatically update in future."
+msgstr ""
+"ローカル・コピーの保存を選ぶこともできます。ローカル・コピーの保存を _しない_ 場合、ライブラリ"
+"は _Github_ ライブラリとなり、ライブラリが読み込まれるたびに再同期されることになります。ローカ"
+"ル・コピーの保存を _する_ 場合、ライブラリは _KiCad_ (pretty) ライブラリとなり、以降は自動で更"
+"新されなくなります。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:250
+msgid ""
+"The next page will load a list of _.pretty_ repositories found on that Github account. You can "
+"choose any number to add to the library."
+msgstr ""
+"次のページは GitHub アカウントで見つかった _.pretty_ リポジトリのリストを読み込みます。ライブラ"
+"リに追加する任意の個数を選択できます。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: pcbnew_installation.adoc:251
+#, no-wrap
+msgid "Footprint library wizard GitHub selection"
+msgstr "フットプリント・ライブラリ・ウィザード GitHub selection"
+
+# 07072015：/ja/へ変更
+#. type: Target for macro image
+#: pcbnew_installation.adoc:251
+#, no-wrap
+msgid "images/en/fplib_wizard_githubselection.png"
+msgstr "images/ja/fplib_wizard_githubselection.png"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:257
+msgid ""
+"After confirmation,if you opted to save a copy, the footprints will be downloaded to the "
+"specified local location now. If you are using the Github plugin (no local copy), the "
+"footprints are loaded from Github when needed."
+msgstr ""
+"確認後、コピーの保存を選択した場合、フットプリントは即座に指定したローカルの場所にダウンロード"
+"されます。GitHub プラグイン (ローカル・コピーなし) を使用している場合、フットプリントは必要な時"
+"に GItHub から読み込まれます。"
+
+#. type: Title ====
+#: pcbnew_installation.adoc:258
+#, no-wrap
+msgid "Using the KiCad plugin"
+msgstr "KiCad プラグインの使用"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:262
+msgid ""
+"The KiCad plugin deals with native KiCad libraries that exist on your computer (or some "
+"accessible filesystem)."
+msgstr ""
+"KiCad プラグインは、コンピューター (またはアクセス可能なファイルシステム) 上にある KiCad 本来の"
+"ライブラリを扱います。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:267
+msgid ""
+"It is used for pre-installed libraries that are installed along with KiCad, as well as other "
+"KiCad libraries, either from the official KiCad library collection, 3rd party libraries or "
+"your own curated libraries."
+msgstr ""
+"KiCad と一緒にインストールされたライブラリや同様な他の KiCad ライブラリ、公式な KiCad ライブラ"
+"リ・コレクション、サード・パーティーのライブラリや自作のライブラリのような、事前に用意されてい"
+"るライブラリを使用するためのものです。"
+
+#. type: Title =====
+#: pcbnew_installation.adoc:268
+#, no-wrap
+msgid "Installing KiCad plugin libraries"
+msgstr "KiCad プラグイン・ライブラリのインストール"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:273
+msgid ""
+"The Footprint Library Wizard can help you install libraries already on disk or on Github. "
+"However, for libraries on disk, you need to put them there yourself in the first place."
+msgstr ""
+"フットプリント・ライブラリ・ウィザードは、ディスクあるいは GitHub 上に既にあるライブラリのイン"
+"ストールを助けます。しかしながら、ディスク上のライブラリに対しては、最初に自分でそれらを配置す"
+"る必要があります。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:276
+msgid "A KiCad library is a directory that contains some number of _.kicad_mod_ files."
+msgstr "KiCad ライブラリは、_.kicad_mod_ ファイルをいくつか含んだディレクトリです。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:279
+msgid ""
+"This is often done by unpacking an archive file, copying a directory from another location, or "
+"cloning a version-controlled repository."
+msgstr ""
+"これは、アーカイブ・ファイルを解凍、別の場所からディレクトリをコピー、あるいはバージョン管理さ"
+"れたリポジトリをクローンすることで作られます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:283
+msgid ""
+"The KiCad plugin does not specify any kind of version control, but Git is very commonly used "
+"to track changes to libraries, which can be critical to ensuring library data is safely "
+"recorded and backed up."
+msgstr ""
+"KiCad プラグインはバージョン・コントロールの種類を特定しませんが、データの安全な記録やバック"
+"アップを保証するのが困難なライブラリの変更を追跡するためには一般的に Git がよく使われています。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:290
+msgid ""
+"It is easy to track changes and contribute with the offical KiCad Github libraries. This is "
+"done using the Git version control software. If you want to contribute back, you'll have to "
+"fork the repos on Github so you can send pull requests. If you just want to update libraries "
+"when needed, you don't need to do that, you can clone the offical KiCad libraries directly and "
+"pull as needed."
+msgstr ""
+"変更の追跡や公式 KiCad GitHub ライブラリへの寄贈は簡単に行えます。これは Git バージョン管理ソフ"
+"トを使用することで実現できます。もし寄贈を行いたいなら、プル・リクエストを送ることができるよう"
+"に GitHub のリポジトリをフォークしなければならないでしょう。単にライブラリを更新したいだけな"
+"ら、この必要はなく、公式 KiCad ライブラリを直接クローンあるいは必要ならプルすることができます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:295
+msgid ""
+"Sending pull requests via Github will allow the automatic library standards checker to verify "
+"your proposed changes. See https://github.com/KiCad/kicad-library/wiki/Kicad-Library-"
+"Convention[KiCad Library Conventions] for details of the library conventions."
+msgstr ""
+"GitHub でプル・リクエストを送ると、提案した変更を確認するため自動ライブラリ標準チェッカーに任せ"
+"られます。ライブラリに関する取り決めの詳細は https://github.com/KiCad/kicad-library/wiki/Kicad-"
+"Library-Convention[KiCad Library Conventions] を参照してください。"
+
+#. type: Title ====
+#: pcbnew_installation.adoc:296
 #, no-wrap
 msgid "Using the GitHub Plugin"
 msgstr "GitHub プラグインの使用"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:159
+#: pcbnew_installation.adoc:302
 msgid ""
 "The GitHub plugin is a special plugin that provides an interface for read-only access to a "
-"remote GitHub repository consisting of pretty (Pretty is name of the KiCad footprint file "
-"format) footprints and optionally provides \"Copy-On-Write\" (COW) support for editing "
-"footprints read from the GitHub repo and saving them locally.  Therefore the \"GitHub\" plugin "
-"is for *read-only for accessing remote pretty footprint libraries* at https://github.com.  To "
-"add a GitHub entry to the footprint library table the \"Library Path\" in the footprint "
-"library table entry must be set to a valid GitHub URL."
+"remote GitHub repository consisting of _.pretty_ footprints and optionally provides \"Copy-On-"
+"Write\" (COW) support for editing footprints read from the GitHub repo and saving them locally."
 msgstr ""
-"GitHub プラグインは、pretty (Pretty は KiCad フットプリント・ファイル・フォーマットの名前です) "
-"フットプリントのリモート GitHub リポジトリへ読み込み専用でアクセスするためのインターフェイスを"
-"提供します。また、それらをローカルへ保存し、 GitHub リポジトリから読み込んだフットプリントを編"
-"集するための “Copy-On-Write“ (COW) サポートをオプションで提供します。このため、“GitHub“ プラグ"
-"インは、 https://github.com で *read-only for accessing remote pretty footprint libraries* とな"
-"ります。 “ライブラリのパス“ へ GitHub エントリを追加するためには、フットプリント・ライブラリ・"
-"テーブルの行にある “ライブラリのパス“ へ有効な GitHub URL を設定する必要があります。"
+"GitHub プラグインは、_.pretty_ フットプリントで構成されるリモート GitHub リポジトリに読み込み専"
+"用でアクセスするためのインターフェイスを提供する特別なプラグインです。また、それらをローカルへ"
+"保存し、 GitHub リポジトリから読み込んだフットプリントを編集するための “Copy-On-Write“ (COW) サ"
+"ポートをオプションで提供します。"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:307
+msgid ""
+"The \"GitHub\" plugin is for *read-only access of remote pretty footprint libraries* at "
+"https://github.com."
+msgstr ""
+"\"GitHub\" プラグインは、https://github.com にある *リモート pretty フットプリント・ライブラリ"
+"の読み込み専用アクセス* を行うためのものです。"
+
+#. type: delimited block =
+#: pcbnew_installation.adoc:309
+msgid ""
+"You will not be told if a remote repository changed since your last use of it. Be cautious "
+"when using footprint directly from Github."
+msgstr ""
+"最後に使用してからリモート・リポジトリに変更があったとしても、通知されません。GitHub から直接"
+"フットプリントを使っている場合には注意が必要です。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:161
+#: pcbnew_installation.adoc:313
+msgid ""
+"To add a GitHub entry to the footprint library table the \"Library Path\" in the footprint "
+"library table entry must be set to a valid GitHub URL."
+msgstr ""
+"フットプリント・ライブラリ・テーブルへ GitHub エントリーを追加するためには、フットプリント・ラ"
+"イブラリ・テーブルの \"ライブラリ・パス\" に有効な GitHub URL をセットしなければなりません。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:315
 msgid "For example:"
 msgstr "例:"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:163
+#: pcbnew_installation.adoc:317
 #, no-wrap
 msgid "     https://github.com/liftoff-sr/pretty_footprints\n"
 msgstr "     https://github.com/liftoff-sr/pretty_footprints\n"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:165
+#: pcbnew_installation.adoc:319
 msgid "Typically GitHub URLs take the form:"
-msgstr "（フォームを取得する）典型的な GitHub URL :"
+msgstr "典型的な GitHub URL の形式:"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:167
+#: pcbnew_installation.adoc:321
 #, no-wrap
 msgid "     https://github.com/user_name/repo_name\n"
 msgstr "     https://github.com/user_name/repo_name\n"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:183
-msgid ""
-"The \"Plugin Type\" must be set to \"Github\".  To enable the \"Copy-On-Write\" feature the "
-"option `allow_pretty_writing_to_this_dir` must be added to the \"Options\" setting of the "
-"footprint library table entry.  This option is the \"Library Path\" for local storage of "
-"modified copies of footprints read from the GitHub repo.  The footprints saved to this path "
-"are combined with the read-only part of the GitHub repository to create the footprint "
-"library.  If this option is missing, then the GitHub library is read-only.  If the option is "
-"present for a GitHub library, then any writes to this hybrid library will go to the local `*."
-"pretty` directory.  Note that the github.com resident portion of this hybrid COW library is "
-"always read-only, meaning you cannot delete anything or modify any footprint in the specified "
-"GitHub repository directly. The aggregate library type remains \"Github\" in all further "
-"discussions, but it consists of both the local read/write portion and the remote read-only "
-"portion."
-msgstr ""
-"“プラグインの種類“ は “Github“ を設定しなければなりません。 “Copy-On-Write“ 機能を有効にするに"
-"は、フットプリント・ライブラリ・テーブルの入力項目にある “オプション” へ "
-"`allow_pretty_writing_to_this_dir` を設定しなければなりません。このオプションは、GitHub リポジ"
-"トリから読み込んだフットプリントの編集されたコピーを保存するローカル ストレージに対する “ライブ"
-"ラリ パス“ です。このパスへ保存されたフットプリントは、GitHub リポジトリの他の読み込み専用パー"
-"ツと一緒になってフットプリント ライブラリを構成します。GitHub ライブラリのオプションが存在する"
-"と、このハイブリッドライブラリへの全ての書き込みは ローカルの `*.pretty` ディレクトリに対して行"
-"われます。このハイブリッド COW ライブラリの一部となる github.com の部分は常に読み込み専用である"
-"ことに注意、つまり、あなたは指定した GitHub リポジトリにあるどんなフットプリントに対しても変"
-"更、削除を直接行うことはできません。集合ライブラリタイプには “Github“ が残っていますが、ローカ"
-"ルの読み書き部分とリモートの読み込み専用部分の両方から構成されます。"
+#: pcbnew_installation.adoc:323
+msgid "The \"Plugin Type\" must be set to \"Github\"."
+msgstr "“プラグインの種類“ は “Github“ を設定しなければなりません。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:186
+#: pcbnew_installation.adoc:326
 msgid ""
-"The table below shows a footprint library table entry without the option "
-"`allow_pretty_writing_to_this_dir`:"
+"The table below shows a footprint library table entry with the default options (no COW "
+"support):"
 msgstr ""
-"以下のテーブルは `allow_pretty_writing_to_this_dir` オプションがないフットプリント・ライブラ"
-"リ・テーブルの入力項目です。:"
+"以下のテーブルはデフォルト (COW サポートなし) のフットプリント・ライブラリ・テーブル入力項目を"
+"示しています:"
 
 #. type: delimited block |
-#: pcbnew_installation.adoc:195
+#: pcbnew_installation.adoc:335
 #, no-wrap
 msgid ""
 "| Nickname | Library Path | Plugin Type | Options | Description\n"
@@ -525,8 +1019,47 @@ msgstr ""
 "|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]\n"
 "|Github | |Liftoff's GH footprints\n"
 
+#. type: Title =====
+#: pcbnew_installation.adoc:337
+#, no-wrap
+msgid "Copy-On-Write"
+msgstr "Copy-On-Write"
+
 #. type: Plain text
-#: pcbnew_installation.adoc:204
+#: pcbnew_installation.adoc:349
+msgid ""
+"To enable the \"Copy-On-Write\" feature the option `allow_pretty_writing_to_this_dir` must be "
+"added to the \"Options\" setting of the footprint library table entry.  This option is the "
+"\"Library Path\" for local storage of modified copies of footprints read from the GitHub "
+"repo.  The footprints saved to this path are combined with the read-only part of the GitHub "
+"repository to create the footprint library.  If this option is missing, then the GitHub "
+"library is read-only.  If the option is present for a GitHub library, then any writes to this "
+"hybrid library will go to the local `*.pretty` directory."
+msgstr ""
+"“Copy-On-Write“ 機能を有効にするには、フットプリント・ライブラリ・テーブルの入力項目にある “オ"
+"プション” へ `allow_pretty_writing_to_this_dir` を設定しなければなりません。このオプションは、"
+"GitHub リポジトリから読み込んだフットプリントの編集されたコピーを保存するローカル ストレージに"
+"対する “ライブラリ パス“ です。このパスへ保存されたフットプリントは、GitHub リポジトリの他の読"
+"み込み専用パーツと一緒になってフットプリント ライブラリを構成します。もしこのオプションが見つか"
+"らなければ、GitHub ライブラリは読み込み専用です。GitHub ライブラリに対してオプションが存在する"
+"と、このハイブリッド ライブラリへの全ての書き込みは ローカルの `*.pretty` ディレクトリに対して"
+"行われます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:356
+msgid ""
+"The github.com resident portion of this hybrid COW library is always read-only, meaning you "
+"cannot delete anything or modify any footprint in the specified GitHub repository directly. "
+"The aggregate library type remains \"Github\" in all further discussions, but it consists of "
+"both the local read/write portion and the remote read-only portion."
+msgstr ""
+"このハイブリッド COW ライブラリの一部となる github.com の部分は常に読み込み専用です。つまり、あ"
+"なたは指定した GitHub リポジトリにあるどんなフットプリントに対しても変更、削除を直接行うことは"
+"できません。集合ライブラリ・タイプには “Github“ が残っていますが、ローカルの読み書き部分とリ"
+"モートの読み込み専用部分の両方から構成されます。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:364
 msgid ""
 "The table below shows a footprint library table entry with the COW option given.  Note the use "
 "of the environment variable `${HOME}` as an example only.  The github.pretty directory is "
@@ -540,24 +1073,25 @@ msgstr ""
 "め `.pretty` という拡張子を持つディレクトリを作っておく必要があります。"
 
 #. type: delimited block |
-#: pcbnew_installation.adoc:213
+#: pcbnew_installation.adoc:373
 #, no-wrap
 msgid ""
 "| Nickname | Library Path | Plugin Type | Options | Description\n"
 "| github\n"
 "    | https://github.com/liftoff-sr/pretty_footprints\n"
 "    | Github\n"
-"    | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty\n"
+"    | `allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty`\n"
 "    | Liftoff's GH footprints\n"
 msgstr ""
 "| Nickname | Library Path | Plugin Type | Options | Description\n"
-"|github\n"
-"|https://github.com/liftoff-sr/pretty_footprints[https://github.com/liftoff-sr/pretty_footprints]\n"
-"|Github |allow_pretty_writing_to_this_dir= $\\{HOME\\}/pretty/github.pretty\n"
-"|Liftoff's GH footprints\n"
+"| github\n"
+"    | https://github.com/liftoff-sr/pretty_footprints\n"
+"    | Github\n"
+"    | `allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty`\n"
+"    | Liftoff's GH footprints\n"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:221
+#: pcbnew_installation.adoc:381
 msgid ""
 "Footprint loads will always give precedence to the local footprints found in the path given by "
 "the option `allow_pretty_writing_to_this_dir`.  Once you have saved a footprint to the COW "
@@ -572,7 +1106,7 @@ msgstr ""
 
 # 07102015：訂正
 #. type: Plain text
-#: pcbnew_installation.adoc:229
+#: pcbnew_installation.adoc:389
 msgid ""
 "Always keep a separate local `*.pretty` directory for each GitHub library, never combine them "
 "by referring to the same directory more than once.  Also, do not use the same COW (`*.pretty`) "
@@ -586,83 +1120,111 @@ msgstr ""
 "ん。 これは恐らく混乱を招くでしょう。オプション `allow_pretty_writing_to_this_dir` の値は、 “ラ"
 "イブラリパス” の設定と同様、パスを作るにあたって `${}` 表示を使い、環境変数を拡大できます。"
 
-#. type: Plain text
-#: pcbnew_installation.adoc:241
-msgid ""
-"What's the point of COW? It is to turbo-charge the sharing of footprints.  If you periodically "
-"email your COW pretty footprint modifications to the GitHub repository maintainer, you can "
-"help update the GitHub copy.  Simply email the individual `*.kicad_mod` files you find in your "
-"COW directories to the maintainer of the GitHub repository.  After you've received "
-"confirmation that your changes have been committed, you can safely delete your COW file(s)  "
-"and the updated footprint from the read-only part of GitHub library will flow down.  Your goal "
-"should be to keep the COW file set as small as possible by contributing frequently to the "
-"shared master copies at https://github.com."
-msgstr ""
-"COW のポイントは何でしょう？それは、フットプリント共有のターボチャージャーのようなものです。あ"
-"なたが GitHub リポジトリのメインテナーに COW pretty フットプリントの変更を定期的にメールするこ"
-"とで、GitHub コピーのアップデートに貢献できます。単に COW ディレクトリで見つかった `*."
-"kicad_mod` ファイルをGitHub リポジトリのメインテナーへメールするだけです。あなたの変更がコミッ"
-"トされたことを確認したなら、あなたは安全に自分の COW ファイルを削除でき、GitHub ライブラリの読"
-"み込み専用部分からアップデートされたフットプリントを落とせるでしょう。あなたのゴールは、 "
-"https://github.com の共有マスターコピーへ頻繁に貢献することで、COW ファイルのディレクトリサイズ"
-"を可能な限り小さく保ち続けることです。"
+#. type: Title =====
+#: pcbnew_installation.adoc:390
+#, no-wrap
+msgid "Using Copy-On-Write to share footprints"
+msgstr "共用フットプリントでの Copy-On-Write の使用"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:249
+#: pcbnew_installation.adoc:402
 msgid ""
-"Finally, Nginx can be used as a cache to the github server to speed up the loading of "
-"footprints. It can be installed locally or on a network server. There is an example "
-"configuration in KiCad sources at pcbnew/github/nginx.conf. The most straightforward way to "
-"get this working is to overwrite the default nginx.conf with this one and `export "
-"KIGITHUB=http://my_server:54321/KiCad`, where `my_server` is the IP or domain name of the "
-"machine running nginx."
+"What's the point of COW? If you periodically email your COW pretty footprint modifications to "
+"the GitHub repository maintainer, you can help update the GitHub copy.  Simply email the "
+"individual `*.kicad_mod` files you find in your COW directories to the maintainer of the "
+"GitHub repository.  After you've received confirmation that your changes have been committed, "
+"you can safely delete your COW file(s)  and the updated footprint from the read-only part of "
+"GitHub library will flow down.  Your goal should be to keep the COW file set as small as "
+"possible by contributing frequently to the shared master copies at https://github.com."
 msgstr ""
-"最終に、Nginx(high-speed Web server/reverse proxy and email proxy) をフットプリントの読み込みス"
-"ピードを上げるための github のキャッシュとして使うことができます。これは、 pcbnew/github/nginx."
-"conf での KiCad ソースの設定例です。これを使う最も簡単な方法は、デフォルトの nginx.conf を "
-"`export KIGITHUB=http://my_server:54321/KiCad` で上書きすることです。ここで、 `my_server` は "
-"nginx を実行しているマシンの IP またはドメイン名です。"
+"COW のポイントは何でしょう？あなたが GitHub リポジトリのメインテナーに COW pretty フットプリン"
+"トの変更を定期的にメールすることで、GitHub コピーのアップデートに貢献できます。単に COW ディレ"
+"クトリで見つかった `*.kicad_mod` ファイルをGitHub リポジトリのメインテナーへメールするだけで"
+"す。あなたの変更がコミットされたことを確認したなら、あなたは安全に自分の COW ファイルを削除で"
+"き、GitHub ライブラリの読み込み専用部分からアップデートされたフットプリントを落とせるでしょう。"
+"あなたのゴールは、 https://github.com の共有マスターコピーへ頻繁に貢献することで、COW ファイル"
+"のディレクトリサイズを可能な限り小さく保ち続けることです。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:406
+msgid ""
+"You can also contribute to library developement using local Git clones of the relevant "
+"libraries using the _KiCad_ plugin and submitting pull requests to the library maintainers."
+msgstr ""
+"_KiCad_ プラグインを使用した適切なライブラリのローカル Git クローンを使ったり、ライブラリのメン"
+"テナーへプル・リクエストを送って、ライブラリ開発に貢献することもできます。"
+
+#. type: Title =====
+#: pcbnew_installation.adoc:407
+#, no-wrap
+msgid "Caching Github requests"
+msgstr "GitHub リクエストのキャッシュ"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:411
+msgid ""
+"The Github plugin can be slow, as it must download all the libraries from the Internet before "
+"they can be used."
+msgstr ""
+"使用前にインターネットから全てのライブラリをダウンロードしなければならないので、GitHub プラグイ"
+"ンは動作が遅くなることがあります。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:419
+msgid ""
+"Nginx can be used as a cache to the github server to speed up the loading of footprints. It "
+"can be installed locally or on a network server. There is an example configuration in KiCad "
+"sources at `pcbnew/github/nginx.conf`. The most straightforward way to get this working is to "
+"overwrite the default nginx.conf with this one and `export KIGITHUB=http://my_server:54321/"
+"KiCad`, where `my_server` is the IP or domain name of the machine running nginx."
+msgstr ""
+"Nginx(high-speed Web server/reverse proxy and email proxy) をフットプリントの読み込みスピードを"
+"上げるための github サーバーのキャッシュとして使うことができます。これはローカルまたはネット"
+"ワーク・サーバー上にインストールすることができます。GitHub上のKiCad ソース・ツリーにある "
+"`pcbnew/github/nginx.conf` はその設定例です。これを使う最も簡単な方法は、デフォルトの nginx."
+"conf をこのファイルで上書きし、 `KIGITHUB=http://my_server:54321/KiCad` をエクスポートすること"
+"です。ここで `my_server` は nginx を実行しているマシンの IP またはドメイン名です。"
 
 #. type: Title ====
-#: pcbnew_installation.adoc:250
+#: pcbnew_installation.adoc:420
 #, no-wrap
 msgid "Usage Patterns"
 msgstr "使用パターン"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:262
+#: pcbnew_installation.adoc:432
 msgid ""
 "Footprint libraries can be defined either globally or specifically to the currently loaded "
 "project.  Footprint libraries defined in the user's global table are always available and are "
 "stored in the `fp-lib-table` file in the user's home folder.  Global footprint libraries can "
 "always be accessed even when there is no project net list file opened.  The project specific "
 "footprint table is active only for the currently open net list file.  The project specific "
-"footprint library table is saved in the file fp-lib-table in the path of the currently open "
+"footprint library table is saved in the file `fp-lib-table` in the path of the currently open "
 "board file.  You are free to define libraries in either table."
 msgstr ""
-"フットプリントライブラリは、読み込まれているプロジェクトに対して、グローバル、固有どちらとして"
-"でも定義できます。ユーザのグローバルテーブルで定義されたフットプリントライブラリは常に有効で、"
-"ユーザのホームディレクトリにある `fp-lib-table` ファイル内に保存されます。グローバル・フットプ"
-"リント・ライブラリは、プロジェクトのネットリストファイルを開いていない時でも、常にアクセスする"
-"ことができます。プロジェクト固有のフットプリントテーブルは、現在開かれているネットリストファイ"
-"ルに対してのみ有効です。プロジェクト固有のフットプリント・ライブラリ・テーブルは現在開かれてい"
-"る基板ファイルのパスにある fp-lib-table ファイルに保存されます。どちらのテーブルにライブラリを"
-"定義しても構いません。"
+"フットプリント・ライブラリは、読み込まれているプロジェクトに対して、グローバル、固有どちらとし"
+"てでも定義できます。ユーザーのグローバル・テーブルで定義されたフットプリント・ライブラリは常に"
+"有効で、ユーザーのホームディレクトリにある `fp-lib-table` ファイル内に保存されます。グローバ"
+"ル・フットプリント・ライブラリは、プロジェクトのネットリスト・ファイルが開かれていない時でも、"
+"常にアクセスできます。プロジェクト固有のフットプリント・テーブルは、現在開かれているネットリス"
+"ト・ファイルに対してのみ有効です。プロジェクト固有のフットプリント・ライブラリ・テーブルは現在"
+"開かれている基板ファイルのパスにある `fp-lib-table` ファイルに保存されます。どちらのテーブルに"
+"ライブラリを定義しても構いません。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:264
+#: pcbnew_installation.adoc:434
 msgid "There are advantages and disadvantages to each method:"
 msgstr "以下は、各方法の長所と短所です。:"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:267
+#: pcbnew_installation.adoc:437
 msgid ""
 "You can define all of your libraries in the global table which means they will always be "
 "available when you need them."
 msgstr "全てのライブラリをグローバルテーブルで定義すると、必要な時にいつでも使うことができます。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:270
+#: pcbnew_installation.adoc:440
 #, no-wrap
 msgid ""
 "** The disadvantage of this is that you may have to search through a lot\n"
@@ -672,12 +1234,12 @@ msgstr ""
 "ライブラリを調べなければならなくなることです。\n"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:272
+#: pcbnew_installation.adoc:442
 msgid "You can define all your libraries on a project specific basis."
 msgstr "全てのライブラリをプロジェクト固有のテーブルへ定義することもできます。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:277
+#: pcbnew_installation.adoc:447
 #, no-wrap
 msgid ""
 "** The advantage of this is that you only need to define the libraries\n"
@@ -691,14 +1253,14 @@ msgstr ""
 "それぞれ忘れずに追加しなければならないことです。\n"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:280
+#: pcbnew_installation.adoc:450
 msgid "You can also define footprint libraries both globally and project specifically."
 msgstr ""
 "フットプリントライブラリはグローバルとプロジェクト固有、両方のテーブルで定義することもできま"
 "す。"
 
 #. type: Plain text
-#: pcbnew_installation.adoc:284
+#: pcbnew_installation.adoc:455
 msgid ""
 "One usage pattern would be to define your most commonly used libraries globally and the "
 "library only required for the project in the project specific library table.  There is no "
@@ -707,6 +1269,54 @@ msgstr ""
 "使用パターンの一つは、よく使うライブラリをグローバル、そのプロジェクトでのみ必要とされるライブ"
 "ラリはプロジェクト固有のライブラリテーブルに定義することでしょう。ライブラリを定義するにあたっ"
 "ての制約は特にありません。"
+
+#. type: Title =====
+#: pcbnew_installation.adoc:456
+#, no-wrap
+msgid "Modifying footprints in a PCB project"
+msgstr "基板プロジェクトでのフットプリント変更"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:461
+msgid ""
+"When a footprint is added to a PCB, the entire footprint is copied into the PCB file (_."
+"kicad_pcb_). This means changes to the footprint in the library do not automatically affect "
+"the PCB."
+msgstr ""
+"フットプリントが基板に追加された場合、全てのフットプリントが基板ファイル (_.kicad_pcb_) にコ"
+"ピーされます。これはライブラリでのフットプリントの変更が自動的に基板に反映されないことを意味し"
+"ています。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:465
+msgid ""
+"This also means that you can individually edit footprints on the PCB without affecting other "
+"instances of the same footprint (either on the same PCB or on other PCBs)."
+msgstr ""
+"これはまた、同じフットプリントの別のインスタンス (同じ基板上あるいは別の基板上のいずれでも) に"
+"影響を与えることなく基板上のフットプリントを独立して編集できることも意味しています。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:468
+msgid ""
+"However, if you modify the library footprint, the next time you place an instance, it will not "
+"match existing footprints of the same name."
+msgstr ""
+"しかしながら、ライブラリのフットプリントを変更すると、次にフットプリントのインスタンスを配置し"
+"た時に、既存の同じ名前のフットプリントとは異なったものになるでしょう。"
+
+#. type: Plain text
+#: pcbnew_installation.adoc:473
+msgid ""
+"A common practice is to copy all the footprints you use to a separate version-controlled "
+"location, so that this project is not unexpectedly affected by changes to system or user "
+"libraries. Also, it ensures all the footprint resources used for the PCB can be easily "
+"distributed with the PCB file."
+msgstr ""
+"一般的な方法は、プロジェクトがシステムやユーザーのライブラリの変更によって不用意に影響されない"
+"よう、個別にバージョン管理された場所を用意して全てのフットプリントをコピーしておくことです。ま"
+"た、基板ファイルと一緒に基板で使われた全てのフットプリントのリソースを簡単に配布できることも保"
+"証されます。"
 
 #. type: Title ==
 #: pcbnew_python_scripting.adoc:1
@@ -1354,7 +1964,7 @@ msgid ""
 msgstr ""
 "フットプリント ウィザードは、フットプリント エディタから呼び出せる python スクリプトのコレク"
 "ションです。ダイアログを呼び出すと、使用できるウィザードを選択してフットプリントを表示させるこ"
-"とができます。また幾つかのパラメータを編集することもできます。"
+"とができます。またいくつかのパラメータを編集することもできます。"
 
 #. type: Plain text
 #: pcbnew_python_scripting.adoc:231
@@ -2426,9 +3036,10 @@ msgid ""
 "window, or the drop-down selector on the toolbar at the top of the screen. The size of the "
 "User Defined grid is set using the menu bar option Dimensions -> User Grid Size."
 msgstr ""
-"定義済のグリッドサイズとするか、ユーザ定義のグリッドサイズとするかは、画面の上部のツールバーの"
-"ドロップダウンリストあるいはコンテキスト メニューを使用して選択することができます。ユーザ定義の"
-"グリッドサイズは、メニューバーから 寸法 -> グリッド を選択してユーザグリッドで設定します。"
+"定義済のグリッドサイズとするか、ユーザー定義のグリッドサイズとするかは、画面の上部のツールバー"
+"のドロップダウンリストあるいはコンテキスト メニューを使用して選択することができます。ユーザー定"
+"義のグリッドサイズは、メニューバーから 寸法 -> グリッド を選択してユーザーグリッドで設定しま"
+"す。"
 
 #. type: Title ===
 #: pcbnew_general_operations.adoc:107
@@ -2970,7 +3581,7 @@ msgstr "重要なメニューです。下記の調整ができます:"
 #. type: Plain text
 #: pcbnew_general_operations.adoc:285
 msgid "User grid size."
-msgstr "ユーザ・グリッド・サイズ。"
+msgstr "ユーザー・グリッド・サイズ。"
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:286
@@ -3037,7 +3648,7 @@ msgstr "ヘルプメニュー"
 #. type: Plain text
 #: pcbnew_general_operations.adoc:306
 msgid "Provides access to the user manuals and to the version information menu (Pcbnew About)."
-msgstr "ユーザマニュアルとバージョン情報(Pcbnew について)メニューへのアクセスを提供します。"
+msgstr "ユーザーマニュアルとバージョン情報(Pcbnew について)メニューへのアクセスを提供します。"
 
 #. type: Title ===
 #: pcbnew_general_operations.adoc:307
@@ -4124,6 +4735,44 @@ msgstr ""
 "円配列は１つの次元しか持たず、グリッドより単純な幾何学的図形です。用意されているオプションの意"
 "味は、グリッドと同様です。アイテムは通常は時計回りにナンバリングされ、負の角度が指定された場合"
 "に反時計回りとなります。"
+
+#. type: Title ===
+#: pcbnew_editing_tools.adoc:192
+#, no-wrap
+msgid "Measurement (ruler) tool"
+msgstr "計測 (定規) ツール"
+
+#. type: Plain text
+#: pcbnew_editing_tools.adoc:196
+msgid ""
+"The measurement tool is a linear ruler that can be used to visually check sizes and spacings "
+"on a PCB."
+msgstr "計測ツールは、基板の大きさや間隔を目視で確認するために使用できる直線定規です。"
+
+#. type: Plain text
+#: pcbnew_editing_tools.adoc:200
+msgid ""
+"It is accessible via the calipers icon image:images/icons/measurement.png[] in the right hand "
+"toolbar, in the \"Dimension\" menu and with the hotkey (Ctrl-Shift-M by default)."
+msgstr ""
+"右ツールバー、\"寸法\" メニューにあるカリパス・アイコン image:images/icons/measurement.png[] お"
+"よびホットキー (デフォルトは Ctrl-Shift-M) で呼び出せます。"
+
+#. type: Plain text
+#: pcbnew_editing_tools.adoc:205
+msgid ""
+"When active, you can draw a temporary ruler over the canvas, which will be marked with the "
+"current units. You can snap to 45-degree angles by holding the Ctrl key. Units can be changed "
+"without leaving the tool using the ususal hotkey (Ctrl-U by default)."
+msgstr ""
+"有効な場合、キャンパス上に現在の単位を目盛りとする定規を配置することができます。Ctrl キーを押し"
+"続けることで４５度の角度にスナップできます。ツールを終了させることなく、ホットキー (デフォルト"
+"は Ctrl-U) を使って、単位を変更することもできます。"
+
+#. type: Plain text
+#: pcbnew_editing_tools.adoc:206
+msgid "image:images/Pcbnew_measurement_tool.png[]"
+msgstr "image:images/Pcbnew_measurement_tool.png[]"
 
 #. type: Title ==
 #: pcbnew_creating_editing_footprints.adoc:1
@@ -6177,7 +6826,7 @@ msgstr ""
 #: pcbnew_managing_libs.adoc:54
 #, no-wrap
 msgid "Footprint Editor user interface"
-msgstr "フットプリント エディタのユーザ インタフェース"
+msgstr "フットプリント エディタのユーザー インタフェース"
 
 #. type: Plain text
 #: pcbnew_managing_libs.adoc:57
@@ -6960,8 +7609,8 @@ msgid ""
 "Centre option is active, the origin for the coordinates of the tracing table is assumed to be "
 "in the centre of the drawing."
 msgstr ""
-"PostScript 形式の場合、標準のファイル拡張子は .ps となります。HPGL 出力と同様に、ユーザが選択し"
-"たスケールと反転／非反転の設定で出力が可能です。もし Org = Centre オプションがアクティブなら"
+"PostScript 形式の場合、標準のファイル拡張子は .ps となります。HPGL 出力と同様に、ユーザーが選択"
+"したスケールと反転／非反転の設定で出力が可能です。もし Org = Centre オプションがアクティブなら"
 "ば、トレーステーブルの座標の原点は図の中心にあると仮定されます。"
 
 #. type: Plain text
@@ -7038,12 +7687,12 @@ msgstr "標準の拡張子は、出力ファイルの種類によって異なり
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:145
 msgid "Some options are not available for some formats."
-msgstr "幾つかのオプションはフォーマットによっては使用できません。"
+msgstr "いくつかのオプションはフォーマットによっては使用できません。"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:147
 msgid "The plot can be done at user-selected scales and can be mirrored."
-msgstr "ユーザが選択した倍率で出図でき、反転することも可能です。"
+msgstr "ユーザーが選択した倍率で出図でき、反転することも可能です。"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:151
@@ -7523,7 +8172,7 @@ msgstr "“デフォルト” のネットクラスが必ず存在します。"
 #. type: Plain text
 #: pcbnew_routing.adoc:53
 msgid "Users can add other Netclasses."
-msgstr "ユーザは、別のネットクラスを追加できます。"
+msgstr "ユーザーは、別のネットクラスを追加できます。"
 
 #. type: Plain text
 #: pcbnew_routing.adoc:55
@@ -8094,7 +8743,7 @@ msgstr ""
 #. type: Plain text
 #: pcbnew_routing.adoc:280
 msgid "The user can utilize the default Netclasses values or a specified value."
-msgstr "ユーザはデフォルトのネットクラス値あるいは特定の値のどちらも利用できます。"
+msgstr "ユーザーはデフォルトのネットクラス値あるいは特定の値のどちらも利用できます。"
 
 #. type: Title ====
 #: pcbnew_routing.adoc:281
@@ -9163,7 +9812,7 @@ msgid ""
 "placement, because no software can guess what the user wants to achieve."
 msgstr ""
 "前述のように Pcbnew はフットプリントを自動的に配置することが可能ですが、ソフトウェアは全てを推"
-"測できないので実行にはユーザの補助が必要です。"
+"測できないので実行にはユーザーの補助が必要です。"
 
 #. type: Plain text
 #: pcbnew_footprint_placement.adoc:85
@@ -10779,8 +11428,8 @@ msgid ""
 "Changing a footprint ( or some identical footprints) to another footprint is very useful, and "
 "is very easy:"
 msgstr ""
-"あるフットプリント（または幾つかの同じフットプリント）を別のフットプリントに置き換えることは大"
-"変便利で簡単に行えます:"
+"あるフットプリント（またはいくつかの同じフットプリント）を別のフットプリントに置き換えることは"
+"大変便利で簡単に行えます:"
 
 #. type: Plain text
 #: pcbnew_create_and_modify_board.adoc:247
@@ -10843,6 +11492,124 @@ msgstr ""
 #, no-wrap
 msgid "*Update all footprints of the board* for reloading of all footprints on board.\n"
 msgstr "*基板上の全てのフットプリントを再読み込み*  基板上にあるフットプリントを全て読み込み直します。\n"
+
+#~ msgid "You can have access to the library list initialization from the Preferences menu:"
+#~ msgstr "設定メニューからライブラリリストの初期設定へと進めます。:"
+
+# 07072015：/ja/へ変更
+#~ msgid "images/Library_list_menu_item.png"
+#~ msgstr "images/ja/Library_list_menu_item.png"
+
+#~ msgid "The image below shows the dialog which allows you to set the footprint library list:"
+#~ msgstr "下の図はフットプリント・ライブラリ・リストを設定するダイアログです。"
+
+# 07072015：/ja/へ変更
+#~ msgid "images/Footprint_library_list.png"
+#~ msgstr "images/ja/Footprint_library_list.png"
+
+#~ msgid ""
+#~ "You can use this to add all the libraries that contain the footprints required for your "
+#~ "project. You should also remove unused libraries from new projects to prevent footprint "
+#~ "name clashes. Please note, there is an issue with the footprint library list when duplicate "
+#~ "footprint names exist in more than one library.  When this occurs, the footprint will be "
+#~ "loaded from the first library found in the list. If this is an issue (you cannot load the "
+#~ "footprint you want), either change the library list order using the \"Up\" and \"Down\" "
+#~ "buttons in the dialog above or give the footprint a unique name using the footprint editor."
+#~ msgstr ""
+#~ "あなたはプロジェクトに必要なフットプリントを含むライブラリを追加しなければなりません。フット"
+#~ "プリント名の衝突を避けるため、新しいプロジェクトからは使わないライブラリを削除することも必要"
+#~ "です。複数のライブラリに重複したフットプリント名があると、フットプリントライブラリで問題とな"
+#~ "ることに注意して下さい。このような場合、フットプリントはリスト中、最初に見つかったライブラリ"
+#~ "からロードされます。これは問題（必要とするフットプリントをロードできない）で、上のダイアログ"
+#~ "で “上” と “下” ボタンを使ってライブラリリストの順番を変えるか、フットプリント・エディタを"
+#~ "使って固有の名前のフットプリントにします。"
+
+# 07102015：訂正
+#~ msgid "Managing Footprint Libraries: .pretty repositories"
+#~ msgstr "フットプリント・ライブラリの管理: .pretty リポジトリ"
+
+# 07102015：発行からリリースへ変更
+#~ msgid ""
+#~ "As of release 4.0, Pcbnew uses the new footprint library table implementation to manage "
+#~ "footprint libraries. The information in the previous section is no longer valid. The "
+#~ "library table manager is accessible by:"
+#~ msgstr ""
+#~ "4.0 をリリースするにあたって、Pcbnew はフットプリントライブラリを管理するために実装された新"
+#~ "しいフットプリント・ライブラリ・テーブルを使用します。前のセクションの情報はもはや無効です。"
+#~ "ライブラリ・テーブル・マネージャは次のように呼び出せます。:"
+
+# 07102015：日本語修正
+#~ msgid ""
+#~ "The footprint library table is used to map a footprint library of any supported library "
+#~ "type to a library nickname.  This nickname is used to look up footprints instead of the "
+#~ "previous method which depended on library search path ordering.  This allows Pcbnew to "
+#~ "access footprints with the same name in different libraries by ensuring that the correct "
+#~ "footprint is loaded from the appropriate library.  It also allows Pcbnew to support loading "
+#~ "libraries from different PCB editors such as Eagle and gEDA."
+#~ msgstr ""
+#~ "フットプリント・ライブラリ・テーブルは、サポートされている全ての種類のフットプリントライブラ"
+#~ "リに別名 (nickname) を付けます。この別名は、見つかった順番のライブラリを使用する以前の方法に"
+#~ "代わって、フットプリントを探す時に使われます。この仕組みによって適切なライブラリから正しい"
+#~ "フットプリントを確実にロードできるので、別のライブラリにある同じ名前のフットプリントを呼び出"
+#~ "すことができます。これはまた、Eagle や gEDA のような別の PCB エディタからのライブラリの読み"
+#~ "出しをサポートします。"
+
+#~ msgid ""
+#~ "In order to use a footprint library, it must first be added to either the global table or "
+#~ "the project specific table.  The project specific table is only applicable when a board "
+#~ "file is open.  Each library entry must have a unique nickname.  This does not have to be "
+#~ "related in any way to the actual library file name or path.  The colon `:` character cannot "
+#~ "be used anywhere in the nickname.  Each library entry must have a valid path and/or file "
+#~ "name depending on the type of library.  Paths can be defined as absolute, relative, or by "
+#~ "environment variable substitution.  The appropriate plug in type must be selected in order "
+#~ "for the library to be properly read.  Pcbnew currently supports reading KiCad legacy, KiCad "
+#~ "Pretty, Eagle, and gEDA footprint libraries.  There is also a description field to add a "
+#~ "description of the library entry.  The option field is not used at this time so adding "
+#~ "options will have no effect when loading libraries.  Please note that you cannot have "
+#~ "duplicate library nicknames in the same table.  However, you can have duplicate library "
+#~ "nicknames in both the global and project specific footprint library table.  The project "
+#~ "specific table entry will take precedence over the global table entry when duplicated names "
+#~ "occur.  When entries are defined in the project specific table, an fp-lib-table file "
+#~ "containing the entries will be written into the folder of the currently open netlist."
+#~ msgstr ""
+#~ "フットプリントライブラリを使うには、まず最初にグローバルテーブルかプロジェクト固有のテーブル"
+#~ "を追加しなければなりません。プロジェクト固有のテーブルは、基板ファイルが開かれた時のみ有効で"
+#~ "す。各ライブラリの入力項目は固有の別名 (nickname) を持つ必要があります。これは実際のファイル"
+#~ "名やファイルパスとは全く関係ありません。コロン ( : ) は別名の中のいかなる場所でも使用できま"
+#~ "せん。各ライブラリの入力項目は、そのライブラリの種類で有効なファイルパス、ファイル名を持つ必"
+#~ "要があります。パスは、絶対、相対、または環境変数で指定できます。プラグインの種類は、ライブラ"
+#~ "リが正しく読み込まれるよう、適切に選択しなければなりません。Pcbnew は今のところ KiCad の古い"
+#~ "種類、KiCad Pretty、Eagle と gEDA フットプリントライブラリをサポートしています。これらは、ラ"
+#~ "イブラリ入力項目の説明フィールドに記述されます。オプションフィールドはこの時点では使われてい"
+#~ "ませんので、オプションフィールドへの追加はライブラリの読み込みに影響を与えません。同じテーブ"
+#~ "ルには重複した別名を持てないことに注意して下さい。しかしながら、グローバルとプロジェクト固有"
+#~ "のフットプリント・ライブラリ・テーブルの両方で重複した別名を持つことは可能です。もし名前の衝"
+#~ "突が起こったなら、プロジェクト固有のテーブルがグローバルテーブルに優先します。プロジェクト固"
+#~ "有のテーブルに項目が入力されると、入力項目を含む fp-lib-table ファイルは現在開かれているネッ"
+#~ "トリストのあるディレクトリに書き込まれます。"
+
+#~ msgid ""
+#~ "One of the most powerful features of the footprint library table is environment variable "
+#~ "substitution.  This allows you to define custom paths to where your libraries are stored in "
+#~ "environment variables.  Environment variable substitution is supported by using the syntax `"
+#~ "${ENV_VAR_NAME}` in the footprint library path.  By default, at run time Pcbnew defines the "
+#~ "`$KISYSMOD` environment variable.  This points to where the default footprint libraries "
+#~ "that were installed with KiCad are located.  You can override `$KISYSMOD` by defining it "
+#~ "yourself which allows you to substitute your own libraries in place of the default KiCad "
+#~ "footprint libraries.  When a board file is loaded, Pcbnew also defines the `$KPRJMOD` using "
+#~ "the board file path.  This allows you to create libraries in the project path without "
+#~ "having to define the absolute path to the library in the project specific footprint library "
+#~ "table."
+#~ msgstr ""
+#~ "フットプリント・ライブラリ・テーブルの最も強力な機能の一つは、環境変数の代替です。環境変数に"
+#~ "保存されたライブラリへの独自のパスを定義するすることができます。環境変数の代替は、フットプリ"
+#~ "ント・ライブラリ・パスで `${ENV_VAR_NAME}` 構文を使うことにより、サポートされます。デフォル"
+#~ "トでは、実行中 Pcbnew は環境変数 `$KISYSMOD` を定義します。ここは KiCad と一緒にインストール"
+#~ "されたデフォルトのフットプリントライブラリの場所です。デフォルトのフットプリントライブラリに"
+#~ "代わって自分のライブラリを置けるよう `$KISYSMOD` を上書きできます。基板が読み込まれると、"
+#~ "Pcbnew はまた基板のファイルパスを使って、`$KPRJMOD` を定義します。これにより、プロジェクト固"
+#~ "有のフットプリント・ライブラリ・テーブルでライブラリの絶対パスを定義することなく、プロジェク"
+#~ "トのあるパスへライブラリを作ることができます。"
 
 #~ msgid ""
 #~ "As a next step, complex curves like *ELLIPSIS* need to be broken up in small line segments "
