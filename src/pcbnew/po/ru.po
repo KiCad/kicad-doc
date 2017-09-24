@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-09-17 08:26+0300\n"
-"PO-Revision-Date: 2017-09-24 14:15+0300\n"
+"POT-Creation-Date: 2017-09-24 21:24+0300\n"
+"PO-Revision-Date: 2017-09-24 21:26+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -9964,7 +9964,19 @@ msgid "Action plugin example: Add date to any text item with content '$date$'"
 msgstr "Пример плагина действия: добавить дату ко всем текстовым меткам вида '$date$'"
 
 #. type: delimited block -
-#: pcbnew_python_scripting.adoc:416
+#: pcbnew_python_scripting.adoc:410
+#, no-wrap
+msgid ""
+"import pcbnew\n"
+"import re\n"
+"import datetime\n"
+msgstr ""
+"import pcbnew\n"
+"import re\n"
+"import datetime\n"
+
+#. type: delimited block -
+#: pcbnew_python_scripting.adoc:420
 #, no-wrap
 msgid ""
 "class text_by_date(pcbnew.ActionPlugin):\n"
@@ -9988,7 +10000,7 @@ msgstr ""
 "    \"\"\"\n"
 
 #. type: delimited block -
-#: pcbnew_python_scripting.adoc:428
+#: pcbnew_python_scripting.adoc:432
 #, no-wrap
 msgid ""
 "    def defaults(self):\n"
@@ -10015,12 +10027,12 @@ msgstr ""
 "        self.description = \"Automatically add date on an existing PCB\"\n"
 
 #. type: delimited block -
-#: pcbnew_python_scripting.adoc:437
+#: pcbnew_python_scripting.adoc:441
 #, no-wrap
 msgid ""
 "    def Run(self):\n"
 "        pcb = pcbnew.GetBoard()\n"
-"        for draw in pcb.m_Drawings:\n"
+"        for draw in pcb.GetDrawings():\n"
 "            if draw.GetClass() == 'PTEXT':\n"
 "                txt = re.sub(\"\\$date\\$ [0-9]{4}-[0-9]{2}-[0-9]{2}\",\n"
 "                                 \"$date$\", draw.GetText())\n"
@@ -10029,7 +10041,7 @@ msgid ""
 msgstr ""
 "    def Run(self):\n"
 "        pcb = pcbnew.GetBoard()\n"
-"        for draw in pcb.m_Drawings:\n"
+"        for draw in pcb.GetDrawings():\n"
 "            if draw.GetClass() == 'PTEXT':\n"
 "                txt = re.sub(\"\\$date\\$ [0-9]{4}-[0-9]{2}-[0-9]{2}\",\n"
 "                                 \"$date$\", draw.GetText())\n"
@@ -10037,7 +10049,7 @@ msgstr ""
 "                    draw.SetText(\"$date$ %s\"%datetime.date.today())\n"
 
 #. type: delimited block -
-#: pcbnew_python_scripting.adoc:440
+#: pcbnew_python_scripting.adoc:444
 #, no-wrap
 msgid "text_by_date().register()\n"
 msgstr "text_by_date().register()\n"
