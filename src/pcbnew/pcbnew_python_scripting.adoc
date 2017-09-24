@@ -404,6 +404,10 @@ image::images/Pcbnew_action_menu.png[scaledwidth="35%"]
 .Action plugin example: Add date to any text item with content '$date$'
 [source,python]
 ----------
+import pcbnew
+import re
+import datetime
+
 class text_by_date(pcbnew.ActionPlugin):
     """
     test_by_date: A sample plugin as an example of ActionPlugin
@@ -428,7 +432,7 @@ class text_by_date(pcbnew.ActionPlugin):
 
     def Run(self):
         pcb = pcbnew.GetBoard()
-        for draw in pcb.m_Drawings:
+        for draw in pcb.GetDrawings():
             if draw.GetClass() == 'PTEXT':
                 txt = re.sub("\$date\$ [0-9]{4}-[0-9]{2}-[0-9]{2}",
                                  "$date$", draw.GetText())
