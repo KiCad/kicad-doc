@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2017-10-31 14:27+0100\n"
-"PO-Revision-Date: 2017-11-13 15:45+0100\n"
+"PO-Revision-Date: 2017-11-14 11:08+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -8476,66 +8476,67 @@ msgid ""
 "For example, for a double-sided circuit with silkscreen, solder mask and "
 "solder paste (for SMD components), 8 files should be generated ('xxxx' "
 "represents the name of the .brd file)."
-msgstr ""
+msgstr "Per esempio, per un circuito stampato a doppia faccia con serigrafia, maschera di saldatura e pasta adesiva (per i componenti SMD), si dovrebbero generare 8 file ('xxxx' rappresenta il nome del file .brd)."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:95
 msgid "xxxx-F_Cu.gbr for the component side."
-msgstr ""
+msgstr "xxxx-F_Cu.gbr per il lato componenti."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:96
 msgid "xxxx-B_Cu.gbr for the copper side."
-msgstr ""
+msgstr "xxxx-B_Cu.gbr per il lato rame."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:97
 msgid "xxxx-F_SilkS.gbr for the component-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-F_SilkS.gbr per la serigrafia del lato componenti."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:98
 msgid "xxxx-B_SilkS.gbr for the copper-side silkscreen markings."
-msgstr ""
+msgstr "xxxx-B_SilkS.gbr per la serigrafia del lato rame."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:99
 msgid "xxxx-F_Paste.gbr for the component-side solder paste."
-msgstr ""
+msgstr "xxxx-F_Paste.gbr per la pasta adesiva del lato componenti."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:100
 msgid "xxxx-B_Paste.gbr for the copper-side solder paste."
-msgstr ""
+msgstr "xxxx-B_Paste.gbr per la pasta adesiva del lato rame."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:101
 msgid "xxxx-F_Mask.gbr for the component-side solder mask."
-msgstr ""
+msgstr "xxxx-F_Mask.gbr per la maschera di saldatura del lato componenti."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:102
 msgid "xxxx-B_Mask.gbr for the copper-side solder mask."
-msgstr ""
+msgstr "xxxx-B_Mask.gbr per la maschera di saldatura del lato rame."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:104
 msgid "GERBER file format:"
-msgstr ""
+msgstr "Formato dei file GERBER:"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:107
 msgid ""
 "The format used by Pcbnew is RS274X format 4.6, Imperial, Leading zero "
 "omitted, Abs format. These are very usual settings."
-msgstr ""
+msgstr "Il formato usato da Pcbnew è il formato RS274X 4.6, sistema britannico imperiale, senza zeri iniziali, assoluto. Queste sono impostazioni molto comuni."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:108
 #, no-wrap
 msgid "POSTSCRIPT format"
-msgstr ""
+msgstr "Formato POSTSCRIPT"
 
+# FIXME: this option doesn't seem to exist, obsolete?
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:115
 msgid ""
@@ -8544,29 +8545,29 @@ msgid ""
 "can be mirrored. If the Org = Centre option is active, the origin for the "
 "coordinates of the tracing table is assumed to be in the centre of the "
 "drawing."
-msgstr ""
+msgstr "L'estensione standard per i file in uscita è .ps nel caso di risultati postscript. Per quanto riguarda invece i risultati HPGL, la tracciatura può essere impostata a fattori di scala selezionati dall'utente e può essere speculare. Se l'opzione Orig = Centro è attiva, l'origine delle coordinate della tabella di tracciatura si assume sia nel centro del disegno."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:117 pcbnew_fabrication_files.adoc:153
 msgid "If the Print Sheet Ref option is active, the sheet cartridge is traced."
-msgstr ""
+msgstr "Se l'opzione squadratura è attiva, viene tracciato anche il riquadro del foglio di lavoro."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:118
 #, no-wrap
 msgid "Plot options"
-msgstr ""
+msgstr "Opzioni di tracciatura"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:121
 msgid "Gerber format:"
-msgstr ""
+msgstr "Formato Gerber:"
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:122
 #, no-wrap
 msgid "images/Pcbnew_plot_options_gerber.png"
-msgstr ""
+msgstr "images/Pcbnew_plot_options_gerber.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:125
@@ -8577,13 +8578,14 @@ msgstr "Altri formati:"
 #: pcbnew_fabrication_files.adoc:126
 #, no-wrap
 msgid "images/Pcbnew_plot_options_other_formats.png"
-msgstr ""
+msgstr "images/Pcbnew_plot_options_other_formats.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:129
 msgid "GERBER format specific options:"
-msgstr ""
+msgstr "Opzioni specifiche del formato Gerber:"
 
+# TODO: reference strings are changed and extended
 #. type: delimited block |
 #: pcbnew_fabrication_files.adoc:138
 #, no-wrap
@@ -8595,22 +8597,28 @@ msgid ""
 "| Subtract soldermask from silkscreen\n"
 "| Remove all Silk from solder paste areas.\n"
 msgstr ""
+"| Usare le estensioni dei nomi file Protel\n"
+"| Usa .gbl .gtl .gbs .gts .gbp .gtp .gbo .gto invece di .gbr per le estensioni dei nomi dei file.\n"
+"| Includi gli attributi estesi (X2)\n"
+"| Il risultato degli attributi estesi (formato file Gerber X2) finisce nel file Gerber.\n"
+"| Sottrai maschera di saldatura dalla serigrafia\n"
+"| Rimuove tutte le serigrafie dalle aree dedicate alla pastasalda."
 
 #. type: Title ====
 #: pcbnew_fabrication_files.adoc:140
 #, no-wrap
 msgid "Other formats"
-msgstr ""
+msgstr "Altri formati"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:143
 msgid "The standard extension depends on the output file type."
-msgstr ""
+msgstr "L'estensione standard dipende dal tipo di file in uscita."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:145
 msgid "Some options are not available for some formats."
-msgstr ""
+msgstr "Alcune opzioni non sono disponibili in altri formati."
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:147
