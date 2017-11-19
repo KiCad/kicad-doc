@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2017-11-14 11:13+0100\n"
-"PO-Revision-Date: 2017-11-15 08:57+0100\n"
+"PO-Revision-Date: 2017-11-19 01:58+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -8795,7 +8795,7 @@ msgid ""
 "| Subtract soldermask from silkscreen\n"
 "| Remove all Silk from solder paste areas.\n"
 msgstr ""
-"| Usare le estensioni dei nomi file Protel\n"
+"| Usa le estensioni dei nomi file Protel\n"
 "| Usa .gbl .gtl .gbs .gts .gbp .gtp .gbo .gto invece di .gbr per le estensioni dei nomi dei file.\n"
 "| Includi gli attributi estesi (X2)\n"
 "| Il risultato degli attributi estesi (formato file Gerber X2) finisce nel file Gerber.\n"
@@ -9065,7 +9065,7 @@ msgstr ""
 #: pcbnew_fabrication_files.adoc:244
 #, no-wrap
 msgid "Advanced tracing options"
-msgstr ""
+msgstr "Opzioni di tracciamento avanzate"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:250
@@ -9073,18 +9073,18 @@ msgid ""
 "The options described below (part of the Files/Plot dialogue) allow for fine-"
 "grained control of the tracing process. They are particularly useful when "
 "printing the silkscreen markings for wiring documentation."
-msgstr ""
+msgstr "Le opzioni descritte sotto (parte della finestra di dialogo File/Traccia) permettono un controllo fine del processo di tracciamento. Sono particolarmente utili durante la stampa delle marcature sulla serigrafia per la documentazione del cablaggio."
 
 #. type: Target for macro image
 #: pcbnew_fabrication_files.adoc:251
 #, no-wrap
 msgid "images/Pcbnew_advanced_tracing_options.png"
-msgstr ""
+msgstr "images/Pcbnew_advanced_tracing_options.png"
 
 #. type: Plain text
 #: pcbnew_fabrication_files.adoc:254
 msgid "The available options are:"
-msgstr ""
+msgstr "Le opzioni disponibili sono:"
 
 #. type: delimited block |
 #: pcbnew_fabrication_files.adoc:280
@@ -9115,6 +9115,30 @@ msgid ""
 "When creating files, use specific extensions for each file.\n"
 "If disabled the Gerber file extension is .gbr.\n"
 msgstr ""
+"|Traccia squadratura su tutti gli strati\n"
+"|Disegna la disposizione di pagina (layout) e il riquadro iscrizioni (cartiglio) su tutti gli strati.\n"
+"|Traccia piazzole sulla serigrafia\n"
+"|Abilita il disegno dei profili delle piazzole sulgli strati serigrafici (se le piazzole sono state\n"
+"già impostate per apparire su questi strati). Se disabilitata impedisce la stampa\n"
+"di qualsiasi piazzola.\n"
+"|Traccia i valori dell'impronta\n"
+"|Abilita il disegno del testo VALORE sulla serigrafia.\n"
+"|Traccia i riferimenti dell'impronta\n"
+"|Abilita il disegno del testo RIFERIMENTO sulla serigrafia.\n"
+"|Forza la tracciatura di valori e/o riferimenti invisibili\n"
+"|Forza la stampa dei campi (riferimento, valore) dichiarati come invisibili.\n"
+"In combinazione con ``Traccia i valori dell'impronta'' e ``Traccia i riferimenti dell'impronta'',\n"
+"questa opzione abilita la produzione di documenti guida per il cablaggio e la riparazione.\n"
+"Queste opzioni si sono rivelate necessarie per i circuiti utilizzanti componenti troppo\n"
+"piccoli (SMD) per permettere guide di piazzamento leggibili di due campi di testo separati.\n"
+"|Non coprire i via (tent)\n"
+"|Cancella la maschera sopra i via (lasciandoli scoperti).\n"
+"|Escludi il contenuto dello strato di bordo scheda dagli altri strati\n"
+"|Specifica del formato GERBER. Non disegnare gli elementi grafici sullo strato del bordo.\n"
+"|Usa le estensioni dei nomifile Protel\n"
+"|Specifica del formato GERBER.\n"
+"Durante la creazione dei file, usa specifiche estensioni per ogni file.\n"
+"Se disabilitata l'estensione del file Gerber sarà .gbr.\n"
 
 #. type: Title ==
 #: pcbnew_layers.adoc:2
@@ -9179,7 +9203,7 @@ msgstr "Impostazione degli strati"
 msgid ""
 "To open the *Layers Setup* from the menu bar, select **Design Rules** -> "
 "**Layers Setup**."
-msgstr ""
+msgstr "Per aprire la voce *Impostazione strati* dalla barra del menu, selezionare **Regole di progettazione** -> **Impostazione strati**."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:26
@@ -9194,7 +9218,7 @@ msgstr ""
 #: pcbnew_layers.adoc:27
 #, no-wrap
 msgid "images/Pcbnew_layer_setup_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_layer_setup_dialog.png"
 
 #. type: Title ===
 #: pcbnew_layers.adoc:29
@@ -9215,7 +9239,7 @@ msgid ""
 "tracks.  Layer numbers start from 0 (the first copper layer, on Front) and "
 "end at 31 (Back). Since components cannot be placed in *inner layers* "
 "(number 1 to 30), only layers number 0 and 31 are *component layer*."
-msgstr ""
+msgstr "Gli strati rame sono i classici strati di lavoro usati per piazzare e impostare le piste.  La numerazione degli strati comincia da 0 (il primo strato in rame, di fronte) e finisce a 31 (retro). Dato che i componenti non possono essere piazzati negli *strati interni* (dal numero 1 al 30), solo gli strati numero 0 e 31 sono *strati componente*."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:41
@@ -9223,19 +9247,19 @@ msgid ""
 "The name of any copper layer is editable. Copper layers have a function "
 "attribute that is useful when using the external router _Freerouter_.  "
 "Example of default layer names are *F.Cu* and *In0* for layer number 0."
-msgstr ""
+msgstr "Il nome di tutti gli strati rame è modificabile. Gli strati rame hanno un attributo di funzione utile nell'uso il router esterno _Freerouter_.  Esempi di nomi di strati predefiniti sono *F.Cu* e *In0* per lo strato numero 0."
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:42
 #, no-wrap
 msgid "images/Pcbnew_layer_setup_dialog_layer_properties.png"
-msgstr ""
+msgstr "images/Pcbnew_layer_setup_dialog_layer_properties.png"
 
 #. type: Title ====
 #: pcbnew_layers.adoc:44
 #, no-wrap
 msgid "Paired Technical Layers"
-msgstr ""
+msgstr "Strati tecnici accoppiati"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:51
@@ -9245,31 +9269,31 @@ msgid ""
 "elements making up a footprint (pad, drawing, text) of one of these layers "
 "are automatically mirrored and moved to the complementary layer when the "
 "footprint is flipped."
-msgstr ""
+msgstr "12 strati tecnici sono accoppiati: uno per la parte frontale, ed uno per il retro.  Li si possono riconoscere dal prefisso ``F.'' o ``B.'' nel nome. Gli elementi che compongono un'impronta (piazzola, disegno, testo) di uno di questi strati vengono automaticamente resi speculari e spostati sugli strati complementari quando l'impronta viene ribaltata."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:53
 msgid "The paired technical layers are:"
-msgstr ""
+msgstr "Gli strati tecnici accoppiati sono:"
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:54
 #, no-wrap
 msgid "*Adhesive* (F.Adhes and B.Adhes)"
-msgstr ""
+msgstr "*Adesivo* (F.Adhes e B.Adhes)"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:57
 msgid ""
 "These are used in the application of adhesive to stick SMD components to the "
 "circuit board, generally before wave soldering."
-msgstr ""
+msgstr "Questi vengono usati per l'applicazione di colla che serve a mantenere i componenti SMD al loro posto sul circuito stampato, in genere durante la saldatura ad onda."
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:58
 #, no-wrap
 msgid "*Solder Paste* (F.Paste and B.Paste)"
-msgstr ""
+msgstr "*Pastasalda* (F.Paste e B.Paste)"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:62
@@ -9283,7 +9307,7 @@ msgstr ""
 #: pcbnew_layers.adoc:63
 #, no-wrap
 msgid "*Silk Screen* (F.SilkS and B.SilkS)"
-msgstr ""
+msgstr "*Serigrafia* (F.SilkS e B.SilkS)"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:65
@@ -9291,13 +9315,13 @@ msgid ""
 "They are the layers where the drawings of the components appear. That's "
 "where you draw things like component polarity, first pin indicator, "
 "reference for mounting, ..."
-msgstr ""
+msgstr "Sono gli strati dove appaiono i disegni dei componenti. È dove si disegnano cose come la polarità del componente, l'indicatore del piedino 1, i riferimenti per il montaggio, ..."
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:66
 #, no-wrap
 msgid "*Solder Mask* (F.Mask and B.Mask)"
-msgstr ""
+msgstr "*Maschera di saldatura* (F.Mask e B.Mask)"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:68
@@ -9305,41 +9329,41 @@ msgid ""
 "These define the solder masks. All pads should appear on one of these layers "
 "(SMT) or both (for through hole) to prevent the varnish from covering the "
 "pads."
-msgstr ""
+msgstr "Questi definiscono le maschere di saldatura. Tutte le piazzole dovrebbero apparire su uno di questi strati (SMT) o su entrambi (per i componenti passanti) per prevenire che la vernice copra le piazzole."
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:69
 #, no-wrap
 msgid "*Courtyard* (F.CrtYd and B.CrtYd)"
-msgstr ""
+msgstr "*Courtyard* (F.CrtYd e B.CrtYd)"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:71
 msgid "Used to show how much space a component physically takes on the PCB."
-msgstr ""
+msgstr "Usato per mostrare quanto spazio un componente fisicamente prende sul circuito stampato."
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:72
 #, no-wrap
 msgid "*Fabrication* (F.Fab and B.Fab)"
-msgstr ""
+msgstr "*Fabbricazione* (F.Fab e B.Fab)"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:74
 msgid "Footprint assembly (?)."
-msgstr ""
+msgstr "Assemblaggio impronte (?)."
 
 #. type: Title ====
 #: pcbnew_layers.adoc:75
 #, no-wrap
 msgid "Independant Technical Layers"
-msgstr ""
+msgstr "Strati tecnici indipendenti"
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:77
 #, no-wrap
 msgid "*Edge.Cuts*"
-msgstr ""
+msgstr "*Edge.Cuts*"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:81
@@ -9347,13 +9371,13 @@ msgid ""
 "This layer is reserved for the drawing of circuit board outline. Any element "
 "(graphic, texts...) placed on this layer appears on all the other layers. "
 "Use this layer only to draw board outlines."
-msgstr ""
+msgstr "Questo strato è riservato per il disegno del bordo del circuito stampato. Ogni elemento (grafica, testi...) piazzto su questo strato appare su tutti gli altri strati. Usare questo strato solo per disegnare i bordi della scheda."
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:82
 #, no-wrap
 msgid "*Margin*"
-msgstr ""
+msgstr "*Margin*"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:84
@@ -9364,7 +9388,7 @@ msgstr ""
 #: pcbnew_layers.adoc:85
 #, no-wrap
 msgid "Layers for general use"
-msgstr ""
+msgstr "Strati di uso generale"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:90
@@ -9372,314 +9396,314 @@ msgid ""
 "These layers are for any use. They can be used for text such as instructions "
 "for assembly or wiring, or construction drawings, to be used to create a "
 "file for assembly or machining. Their names are:"
-msgstr ""
+msgstr "Questi strati sono a disposizione per qualsiasi uso. Possono essere usati per testo come istruzioni per l'assemblaggio o il cablaggio, o per disegni per la costruzione, da usare per creare un file di assemblaggio o lavorazione. I loro nomi sono:"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:92
 msgid "Comments"
-msgstr ""
+msgstr "Commenti"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:93
 msgid "E.C.O. 1"
-msgstr ""
+msgstr "E.C.O. 1"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:94
 msgid "E.C.O. 2"
-msgstr ""
+msgstr "E.C.O. 2"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:95
 msgid "Drawings"
-msgstr ""
+msgstr "Disegni"
 
 #. type: Title ===
 #: pcbnew_layers.adoc:96
 #, no-wrap
 msgid "Selection of the active layer"
-msgstr ""
+msgstr "Selezione dello strato attivo"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:99
 msgid "The selection of the active working layer can be done in several ways:"
-msgstr ""
+msgstr "La selezione dello strato di lavoro attivo può essere effettuata in diverse maniere:"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:101
 msgid "Using the right toolbar (Layer manager)."
-msgstr ""
+msgstr "Usando la barra strumenti a destra (gestore strati)."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:102
 msgid "Using the upper toolbar."
-msgstr ""
+msgstr "Usando la barra in alto."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:103
 msgid "With the pop-up window (activated with the right mouse button)."
-msgstr ""
+msgstr "Con la finestra a scomparsa (attivata dal tasto destro del mouse)."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:104
 msgid "Using the + and - keys (works on copper layers only)."
-msgstr ""
+msgstr "Usando i tasti + e - (funzionano solo sugli strati rame)."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:105
 msgid "By hot keys."
-msgstr ""
+msgstr "Tramite i comandi da tastiera."
 
 #. type: Title ====
 #: pcbnew_layers.adoc:106
 #, no-wrap
 msgid "Selection using the layer manager"
-msgstr ""
+msgstr "La selezione usando il gestore degli strati"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:108
 #, no-wrap
 msgid "images/Pcbnew_layer_manager_pane.png"
-msgstr ""
+msgstr "images/Pcbnew_layer_manager_pane.png"
 
 #. type: Title ====
 #: pcbnew_layers.adoc:110
 #, no-wrap
 msgid "Selection using the upper toolbar"
-msgstr ""
+msgstr "La selezione usando la barra in alto"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:112
 #, no-wrap
 msgid "images/Pcbnew_layer_selection_dropdown.png"
-msgstr ""
+msgstr "images/Pcbnew_layer_selection_dropdown.png"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:115
 msgid "This directly selects the working layer."
-msgstr ""
+msgstr "Questo seleziona direttamente lo strato di lavoro."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:117
 msgid "Hot keys to select the working layer are displayed."
-msgstr ""
+msgstr "Sono mostrati i comandi da tastiera per selezionare lo strato di lavoro."
 
 #. type: Title ====
 #: pcbnew_layers.adoc:118
 #, no-wrap
 msgid "Selection using the pop-up window"
-msgstr ""
+msgstr "La selezione usando la finestra a scomparsa"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:120
 #, no-wrap
 msgid "images/Pcbnew_layer_selection_popup.png"
-msgstr ""
+msgstr "images/Pcbnew_layer_selection_popup.png"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:124
 msgid ""
 "The Pop-up window opens a menu window which provides a choice for the "
 "working layer."
-msgstr ""
+msgstr "La finestra a scomparsa apre un menu che fornisce la scelta dello strato di lavoro."
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:125
 #, no-wrap
 msgid "images/Pcbnew_layer_selection_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_layer_selection_dialog.png"
 
 #. type: Title ===
 #: pcbnew_layers.adoc:127
 #, no-wrap
 msgid "Selection of the Layers for Vias"
-msgstr ""
+msgstr "La selezione degli strati per i via"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:132
 msgid ""
 "If the *Add Tracks and Vias* icon is selected on the right hand toolbar, the "
 "Pop-Up window provides the option to change the layer pair used for vias:"
-msgstr ""
+msgstr "Se l'icona *Aggiungi piste e via* è selezionata sulla barra a destra, la finestra a scomparsa fornisce l'opzione di cambiare la coppia di strati usati per i via:"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:133
 #, no-wrap
 msgid "images/Pcbnew_via_layer_pair_popup.png"
-msgstr ""
+msgstr "images/Pcbnew_via_layer_pair_popup.png"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:137
 msgid ""
 "This selection opens a menu window which provides choice of the layers used "
 "for vias."
-msgstr ""
+msgstr "Questa selezione apre una finestra di menu che fornisce la scelta di strati usati per i via."
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:138
 #, no-wrap
 msgid "images/Pcbnew_via_layer_pair_dialog.png"
-msgstr ""
+msgstr "images/Pcbnew_via_layer_pair_dialog.png"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:142
 msgid ""
 "When a via is placed the working (active) layer is automatically switched to "
 "the alternate layer of the layer pair used for the vias."
-msgstr ""
+msgstr "Quando un via viene piazzato lo strato di lavoro (attivo) viene automaticamente commutato sullo strato alternativo della coppia di strati usati per i via."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:145
 msgid ""
 "One can also switch to another active layer by hot keys, and if a track is "
 "in progress, a via will be inserted."
-msgstr ""
+msgstr "È possibile anche commutare su un altro strato attivo usando i comandi da tastiera, e se si sta collegando una pista, verrà inserito un via."
 
 #. type: Title ===
 #: pcbnew_layers.adoc:146
 #, no-wrap
 msgid "Using the high-contrast mode"
-msgstr ""
+msgstr "Uso della modalità ad alto contrasto"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:150
 msgid ""
 "This mode is entered when the tool (in the left toolbar) is activated: image:"
 "images/icons/contrast_mode.png[]"
-msgstr ""
+msgstr "Questa modalità viene avviata quando lo strumento (nella barra comandi a sinstra) viene attivato: image:images/icons/contrast_mode.png[]"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:153
 msgid ""
 "When using this mode, the active layer is displayed like in the normal mode, "
 "but all others layers are displayed in gray color."
-msgstr ""
+msgstr "Quando si usa questa modalità, lo strato attivo viene mostrato come nella modalità normale ma tutti gli altri strati vengono mostrati di colore grigio."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:155
 msgid "There are two useful cases:"
-msgstr ""
+msgstr "Ci sono due casi in cui è utile:"
 
 #. type: Title ====
 #: pcbnew_layers.adoc:156
 #, no-wrap
 msgid "Copper layers in high-contrast mode"
-msgstr ""
+msgstr "Strati rame in modalità alto contrasto"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:160
 msgid ""
 "When a board uses more than four layers, this option allows the active "
 "copper layer to be seen more easily:"
-msgstr ""
+msgstr "Quando una scheda usa più di quattro strati, questa opzione permette allo strato rame attivo di essere visto più facilmente:"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:162
 #, no-wrap
 msgid "*Normal mode* (back side copper layer active):\n"
-msgstr ""
+msgstr "*Modalità normale* (strato rame lato retro attivo):\n"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:163
 #, no-wrap
 msgid "images/Pcbnew_copper_layers_contrast_normal.png"
-msgstr ""
+msgstr "images/Pcbnew_copper_layers_contrast_normal.png"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:166
 #, no-wrap
 msgid "*High-contrast mode* (back side copper layer active):\n"
-msgstr ""
+msgstr "*Modalità alto contrasto* (strato rame lato retro attivo):\n"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:167
 #, no-wrap
 msgid "images/Pcbnew_copper_layers_contrast_high.png"
-msgstr ""
+msgstr "images/Pcbnew_copper_layers_contrast_high.png"
 
 #. type: Title ====
 #: pcbnew_layers.adoc:169
 #, no-wrap
 msgid "Technical layers"
-msgstr ""
+msgstr "Strati tecnici"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:173
 msgid ""
 "The other case is when it is necessary to examine solder paste layers and "
 "solder mask layers which are usually not displayed."
-msgstr ""
+msgstr "L'altro caso è quando è necessario esaminare gli strati di pastasalda e di maschera di saldatura che normalmente non sono visualizzati."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:175
 msgid "Masks on pads are displayed if this mode is active."
-msgstr ""
+msgstr "Le maschere sulle piazzole vengono mostrate se questa modalità è attiva."
 
 #. type: Plain text
 #: pcbnew_layers.adoc:177
 #, no-wrap
 msgid "*Normal mode* (front side solder mask layer active):\n"
-msgstr ""
+msgstr "*Modalità normale* (strato maschera di saldatura lato fronte attivo):\n"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:178
 #, no-wrap
 msgid "images/Pcbnew_technical_layers_contrast_normal.png"
-msgstr ""
+msgstr "images/Pcbnew_technical_layers_contrast_normal.png"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:181
 #, no-wrap
 msgid "*High-contrast mode* (front side solder mask layer active):\n"
-msgstr ""
+msgstr "*Modalità alto contrasto* (strato maschera di saldatura lato fronte attivo):\n"
 
 #. type: Target for macro image
 #: pcbnew_layers.adoc:182
 #, no-wrap
 msgid "images/Pcbnew_technical_layers_contrast_high.png"
-msgstr ""
+msgstr "images/Pcbnew_technical_layers_contrast_high.png"
 
 #. type: Title ==
 #: pcbnew_general_operations.adoc:2
 #, no-wrap
 msgid "General operations"
-msgstr ""
+msgstr "Operazioni generali"
 
 #. type: Title ===
 #: pcbnew_general_operations.adoc:4
 #, no-wrap
 msgid "Toolbars and commands"
-msgstr ""
+msgstr "Barre strumenti e comandi"
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:7
 msgid "In Pcbnew it is possible to execute commands using various means:"
-msgstr ""
+msgstr "In Pcbnew è possibile eseguire comandi usando vari metodi:"
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:9
 msgid "Text-based menu at the top of the main window."
-msgstr ""
+msgstr "Il menu testuale in cima alla finestra principale."
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:11
 msgid "Top toolbar menu."
-msgstr ""
+msgstr "Il menu della barra in alto."
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:13
 msgid "Right toolbar menu."
-msgstr ""
+msgstr "Il menu della barra a destra."
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:15
 msgid "Left toolbar menu."
-msgstr ""
+msgstr "Il menu della barra a sinistra."
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:17
 msgid "Mouse buttons (menu options). Specifically:"
-msgstr ""
+msgstr "I pulsanti del mouse (opzioni di menu). Specificatamente:"
 
 #. type: Plain text
 #: pcbnew_general_operations.adoc:20
