@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
 "POT-Creation-Date: 2017-11-08 16:09+0100\n"
-"PO-Revision-Date: 2017-12-12 10:20+0100\n"
+"PO-Revision-Date: 2017-12-14 18:31+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -6580,7 +6580,7 @@ msgid ""
 "This layer is reserved for the drawing of circuit board outline. Any element "
 "(graphic, texts...) placed on this layer appears on all the other layers. "
 "Use this layer only to draw board outlines."
-msgstr "Questo strato è riservato per il disegno del bordo del circuito stampato. Ogni elemento (grafica, testi...) piazzto su questo strato appare su tutti gli altri strati. Usare questo strato solo per disegnare i bordi della scheda."
+msgstr "Questo strato è riservato per il disegno del bordo del circuito stampato. Ogni elemento (grafica, testi...) piazzato su questo strato appare su tutti gli altri strati. Usare questo strato solo per disegnare i bordi della scheda."
 
 #. type: Labeled list
 #: pcbnew_layers.adoc:82
@@ -6591,7 +6591,7 @@ msgstr "*Margin*"
 #. type: Plain text
 #: pcbnew_layers.adoc:84
 msgid "Board's edge setback outline (?)."
-msgstr ""
+msgstr "Limite assoluto sporgenza scheda."
 
 #. type: Title ====
 #: pcbnew_layers.adoc:85
@@ -10170,7 +10170,7 @@ msgid ""
 "footprint you want), either change the library list order using the \"Up\" "
 "and \"Down\" buttons in the dialog above or give the footprint a unique name "
 "using the footprint editor."
-msgstr ""
+msgstr "Si può usare questa funzionalità per aggiungere tutte le librerie che contengono le impronte richieste dal progetto. Si possono anche rimuovere le librerie inutilizzate dai nuovi progetti per prevenire collisioni di nomi di impronte. Si noti che c'è un problema con gli elenchi di librerie di impronte quando esistono nomi di impronte duplicati in più di una libreria.  Se ciò accade, l'impronta verrà caricata dalla prima libreria incontrata nell'elenco. Se questo è un problema (cioè se non si riesce a caricare l'impronta desiderata), cambiare l'ordine dell'elenco delle librerie usando i pulsanti \"Su\" e \"Giù\" presenti nella finestra di dialogo sopra o dare un nome univoco all'impronta usando l'editor delle impronte."
 
 #. type: Title ===
 #: pcbnew_installation.adoc:51
@@ -10317,6 +10317,7 @@ msgstr "Aggiunta voci di tabella"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:130
+#, fuzzy
 msgid ""
 "In order to use a footprint library, it must first be added to either the "
 "global table or the project specific table.  The project specific table is "
@@ -10338,7 +10339,7 @@ msgid ""
 "entries are defined in the project specific table, an fp-lib-table file "
 "containing the entries will be written into the folder of the currently open "
 "netlist."
-msgstr ""
+msgstr "Per usare una libreria di impronte, bisogna prima aggiungerla alla tabella globale o alla tabella specifica del progetto.  La tabella specifica del progetto è applicabile solo quando un file scheda viene aperto. Ogni voce di libreria deve avere un denominatore univoco.  Questo non deve avere alcuna relazione con il nome file della libreria o il suo percorso. Il carattere due punti `:` non può essere usato da nessuna parte nel denominatore. Ogni voce di libreria deve avere un valido percorso e/o nome file a seconda del tipo di libreria.  I percorsi possono essere definiti assoluti, relativi o per sostituzione di variabile ambiente.  Deve essere selezionato il tipo appropriato di plugin, in modo consentire la corretta lettura della libreria.  Pcbnew attualmente supporta la lettura di file di librerie di impronte tradizionali di KiCad (legacy), KiCad Pretty, Eagle e gEDA. C'è anche un campo apposito per aggiungere una descrizione della voce di libreria.  Il campo opzioni non viene attualmente usato e quindi aggiungere opzioni non ha alcun effetto sul caricamento delle librerie.  Si noti che non è possibile avere denominatori di librerie duplicati nella stessa tabella.  Comunque, si possono avere gli stessi denominatori di librerie di impronte sia nella tabella globale che in quella specifica del progetto.  La voce della tabella specifica del progetto ha la precendenza sulla corrispondente voce della tabella globale, in caso di nomi corrispondenti.  Quando le voci vengono definite nella tabella specifica del progetto, viene scritto un file fp-lib-table contenente queste voci nella cartella della netlist aperta correntemente."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:131
@@ -10362,13 +10363,13 @@ msgid ""
 "path.  This allows you to create libraries in the project path without "
 "having to define the absolute path to the library in the project specific "
 "footprint library table."
-msgstr ""
+msgstr "Una delle più potenti caratteristiche della tabella delle librerie di impronte è la sostituzione delle variabili d'ambiente. Questa caratteristica permette di inserire i percorsi personalizzati delle posizioni dove sono memorizzate le proprie librerie, in variabili d'ambiente. La sostituzione delle variabili d'ambiente è supportata usando la sintassi `${NOME_VAR_AMB}` nel percorso della libreria di impronte.  Come impostazione predefinita, a tempo di esecuzione Pcbnew definisce la variabile ambiente `$KISYSMOD`.  Questa punta alla posizione dove sono state installate con KiCad le librerie impronte predefinite.  Si può sovrascrivere `$KISYSMOD` definendola, e ciò permette di sostituire alle librerie di impronte predefinite di KiCad le proprie.  Quando un file di circuito stampato viene caricato, Pcbnew definisce anche `$KPRJMOD` usando il percorso del file.  Ciò permette di creare librerie nel percorso del progetto senza dover definire percorsi assoluti alla libreria nella tabella delle librerie di impronte specifiche del progetto."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:148
 #, no-wrap
 msgid "Using the GitHub Plugin"
-msgstr ""
+msgstr "Uso del plugin GitHub"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:159
@@ -10381,29 +10382,29 @@ msgid ""
 "only for accessing remote pretty footprint libraries* at https://github."
 "com.  To add a GitHub entry to the footprint library table the \"Library Path"
 "\" in the footprint library table entry must be set to a valid GitHub URL."
-msgstr ""
+msgstr "Il plugin di GitHub è uno speciale plugin che fornisce una interfaccia per un accesso in sola lettura ad un repository remoto GitHub. Questo repository consiste in un insieme di impronte pretty (Pretty è il nome del formato file delle impronte di KiCad). Il plugin fornisce opzionalmente supporto a funzionalità ``Copy-On-Write'' (COW) per la modifica delle impronte lette dal repository GitHub e salvate in locale.  Perciò il plugin ``GitHub'' serve ad *accedere in sola lettura a librerie di impronte pretty remote* su https://github.com.  Per aggiungere una voce GitHub alla tabella librerie di impronte il ``Percorso libreria'' nella voce della tabella librerie di impronte deve essere impostata ad un URL GitHub valido."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:161
 msgid "For example:"
-msgstr ""
+msgstr "Per esempio:"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:163
 #, no-wrap
 msgid "     https://github.com/liftoff-sr/pretty_footprints\n"
-msgstr ""
+msgstr "     https://github.com/liftoff-sr/pretty_footprints\n"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:165
 msgid "Typically GitHub URLs take the form:"
-msgstr ""
+msgstr "Tipicamente gli URL GitHub hanno la forma:"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:167
 #, no-wrap
 msgid "     https://github.com/user_name/repo_name\n"
-msgstr ""
+msgstr "     https://github.com/nome_utente/nome_repository\n"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:183
@@ -10422,14 +10423,14 @@ msgid ""
 "GitHub repository directly. The aggregate library type remains \"Github\" in "
 "all further discussions, but it consists of both the local read/write "
 "portion and the remote read-only portion."
-msgstr ""
+msgstr "Il ``Tipo di plugin'' deve essere impostato a ``Github''.  Per abilitare la caratteristica \"Copy-On-Write\" l'opzione `allow_pretty_writing_to_this_dir` deve essere aggiunta alle impostazioni delle \"Opzioni\" della voce della tabella delle librerie di impronte.  Questa opzione è il ``Percorso libreria'' per la memorizzazione locale delle copie modificate delle impronte lette dal repository GitHub.  Le impronte salvate su questo percorso vengono combinate con la parte a sola lettura del repository GitHub per creare la libreria impronte.  Se manca questa opzione, allora la libreria GitHub rimane a sola lettura.  Se l'opzione è presente per una libreria GitHub, allora qualunque scrittura a questa libreria ibrida finirà nella cartella locale `*.pretty`.  Si noti che la porzione residente di github.com di questa libreria ibrida COW è sempre in sola lettura. Questo significa che non è possibile cancellare niente o neanche modificare direttamente qualunque impronta del repository GitHub specificato. La libreria aggregata rimane di tipo ``Github'' in tutte le successive disquisizioni, ma in effetti questa consiste di entrambe le parti; la porzione locale in lettura/scrittura e quella remota, in sola lettura."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:186
 msgid ""
 "The table below shows a footprint library table entry without the option "
 "`allow_pretty_writing_to_this_dir`:"
-msgstr ""
+msgstr "La tabella sottostante mostra una voce di tabella delle librerie di impronte senza l'opzione `allow_pretty_writing_to_this_dir`:"
 
 #. type: delimited block |
 #: pcbnew_installation.adoc:195
@@ -10442,6 +10443,12 @@ msgid ""
 "    |\n"
 "    | Liftoff's GH footprints\n"
 msgstr ""
+"| Denominazione | Percorso libreria | Tipo plugin | Opzioni | Descrizione\n"
+"| github\n"
+"    | https://github.com/liftoff-sr/pretty_footprints\n"
+"    | Github\n"
+"    |\n"
+"    | Liftoff's GH footprints\n"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:204
@@ -10452,7 +10459,7 @@ msgid ""
 "Anytime you use the option `allow_pretty_writing_to_this_dir`, you will need "
 "to create that directory manually in advance and it must end with the "
 "extension `.pretty`."
-msgstr ""
+msgstr "La tabella sottostante mostra una voce nella tabella librerie di impronte con l'opzione COW.  Si noti l'uso della variabile ambiente `${HOME}` solo come esempio.  La cartella github.pretty è posizionata in `${HOME}/pretty/path`.  Ogni volta che si usa l'opzione `allow_pretty_writing_to_this_dir`, è necessario creare manualmente ed in anticipo la cartella, il cui nome deve terminare con l'estensione `.pretty`."
 
 #. type: delimited block |
 #: pcbnew_installation.adoc:213
@@ -10465,6 +10472,12 @@ msgid ""
 "    | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty\n"
 "    | Liftoff's GH footprints\n"
 msgstr ""
+"| Denominazione | Percorso libreria | Tipo plugin | Opzioni | Descrizione\n"
+"| github\n"
+"    | https://github.com/liftoff-sr/pretty_footprints\n"
+"    | Github\n"
+"    | allow_pretty_writing_to_this_dir=${HOME}/pretty/github.pretty\n"
+"    | Liftoff's GH footprints\n"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:221
@@ -10474,7 +10487,7 @@ msgid ""
 "have saved a footprint to the COW library's local directory by doing a "
 "footprint save in the Footprint Editor, no GitHub updates will be seen when "
 "loading a footprint with the same name as one for which you've saved locally."
-msgstr ""
+msgstr "Il caricamento delle impronte darà sempre la precedenza alle impronte locali che si trovano nel percorso dato dall'opzione `allow_pretty_writing_to_this_dir`.  Una volta salvata un'impronta nella cartella di libreria COW locale facendo un salvataggio impronta nell'editor delle impronte, nessun aggiornamento a GitHub verrà notato dal caricamento di un'impronta con lo stesso nome di quella salvata localmente."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:229
@@ -10486,7 +10499,7 @@ msgid ""
 "`allow_pretty_writing_to_this_dir` will expand any environment variable "
 "using the `${}` notation to create the path in the same way as the \"Library "
 "Path\" setting."
-msgstr ""
+msgstr "Mantenere sempre una cartella locale `*.pretty` separata per ogni libreria GitHub, mai combinarle facendo riferimento alla stessa cartella più di una volta.  Inoltre, non usare la stessa cartella COW (`*.pretty`) in una voce di tabella di libreria impronte.  Ciò farebbe molto probabilmente confusione.  Il valore dell'opzione `allow_pretty_writing_to_this_dir` espanderà qualunque variabile ambiente che utilizzi la notazione `${}` per creare il percorso in modo analogo alle impostazioni del ``Percorso librerie''."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:241
@@ -10501,7 +10514,7 @@ msgid ""
 "will flow down.  Your goal should be to keep the COW file set as small as "
 "possible by contributing frequently to the shared master copies at https://"
 "github.com."
-msgstr ""
+msgstr "Qual è il punto di COW? Serve a caricare col turbo la condivisione delle impronte. Se si inviano periodicamente via e-mail modifiche al footprint di COW al manutentore del repository GitHub, si può aiutare ad aggiornare la copia di GitHub. Inviare semplicemente i singoli file `* .kicad_mod` che si trovano nelle cartelle COW al manutentore del repository GitHub. Dopo aver ricevuto conferma delle modifiche, si può tranquillamente eliminare i file COW e il footprint aggiornato dalla parte di sola lettura della libreria GitHub scorrerà verso il basso. L'obiettivo dovrebbe essere quello di mantenere il file COW il più piccolo possibile contribuendo frequentemente alle copie master condivise su https://github.com."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:249
@@ -10513,13 +10526,13 @@ msgid ""
 "default nginx.conf with this one and `export KIGITHUB=http://my_server:54321/"
 "KiCad`, where `my_server` is the IP or domain name of the machine running "
 "nginx."
-msgstr ""
+msgstr "Infine, Nginx può essere usato come cache sul server github per accelerare il caricamento delle impronte. Può essere installato localmente o su un server di rete. Nei sorgenti di KiCad c'è una configurazione di esempio in pcbnew/github/nginx.conf. Il modo più semplice per farlo funzionare è sovrascrivere il file predefinito nginx.conf con questo e fare `export KIGITHUB=http://mio_server:54321/KiCad`, dove `mio_server` è l'IP o il nome di dominio della macchina su cui gira nginx."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:250
 #, no-wrap
 msgid "Usage Patterns"
-msgstr ""
+msgstr "Modelli d'utilizzo"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:262
@@ -10533,19 +10546,19 @@ msgid ""
 "project specific footprint library table is saved in the file fp-lib-table "
 "in the path of the currently open board file.  You are free to define "
 "libraries in either table."
-msgstr ""
+msgstr "Le librerie di impronte possono essere definite globalmente o specificamente per il progetto attualmente caricato. Le librerie di impronte definite nella tabella globale dell'utente sono sempre disponibili e sono memorizzate nel file `fp-lib-table` nella cartella home dell'utente. È sempre possibile accedere alle librerie di impronte globali anche quando non è aperto alcun file di netlist di progetto. La tabella impronte specifica del progetto è attiva solo per il file di netlist correntemente aperto. La tabella della libreria di impronte specifiche del progetto viene salvata nel file fp-lib-table nel percorso del file della scheda attualmente aperta. È possibile definire le librerie in entrambe le tabelle."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:264
 msgid "There are advantages and disadvantages to each method:"
-msgstr ""
+msgstr "Ci sono vantaggi e svantaggi per ogni metodo:"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:267
 msgid ""
 "You can define all of your libraries in the global table which means they "
 "will always be available when you need them."
-msgstr ""
+msgstr "Si possono definire tutte le proprie librerie in una tabella globale, e questo significa che saranno sempre disponibili quando servono."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:270
@@ -10554,11 +10567,13 @@ msgid ""
 "** The disadvantage of this is that you may have to search through a lot\n"
 "   of libraries to find the footprint you are looking for.\n"
 msgstr ""
+"** Lo svantaggio di questa scelta è che sarà necessario attraversare molte\n"
+"   librerie per trovare l'impronta che si sta cercando.\n"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:272
 msgid "You can define all your libraries on a project specific basis."
-msgstr ""
+msgstr "Si può definire tutte le proprie librerie sulla base di uno specifico progetto."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:277
@@ -10569,13 +10584,17 @@ msgid ""
 "** The disadvantage is that you always have to remember to add each\n"
 "   footprint library that you need for every project.\n"
 msgstr ""
+"** Il vantaggio di questa scelta è che è necessario definire solo le librerie\n"
+"   che servono per il progetto corrente e questo semplifica la ricerca.\n"
+"** Lo svantaggio è che bisogna ricordarsi sempre di aggiungere ogni\n"
+"   libreria di impronte che potrebbe servire ad ogni progetto.\n"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:280
 msgid ""
 "You can also define footprint libraries both globally and project "
 "specifically."
-msgstr ""
+msgstr "È possibile anche definire librerie di impronte sia globali che specifiche del progetto."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:284
@@ -10584,4 +10603,4 @@ msgid ""
 "globally and the library only required for the project in the project "
 "specific library table.  There is no restriction on how you define your "
 "libraries."
-msgstr ""
+msgstr "Un modello d'uso pratico potrebbe essere anche quello di definire le librerie più comunemente utilizzate a livello globale, mentre inserire le librerie necessarie solo per il progetto corrente nella tabella librerie specifiche del progetto. Non ci sono restrizioni sul modo in cui si possono impostare le proprie librerie."
