@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2017-12-14 18:17+0100\n"
-"PO-Revision-Date: 2017-12-14 18:32+0100\n"
+"POT-Creation-Date: 2017-12-17 00:24+0100\n"
+"PO-Revision-Date: 2017-12-18 11:25+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@libero.it>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -4792,6 +4792,10 @@ msgid ""
 "new scheme for finding 3D models, there are two distinct methods for "
 "specifying base search paths for 3D models."
 msgstr ""
+"A causa della richiesta di supporto ai formati di schema precedenti, "
+"contemporaneamente all'offrire un nuovo e maggiormente flessibile schema per "
+"la ricerca di modelli 3D, ci sono due metodi distinti per specificare i "
+"percorsi di ricerca di base per i modelli 3D."
 
 #. type: Plain text
 #: pcbnew_creating_editing_footprints.adoc:493
@@ -4813,6 +4817,24 @@ msgid ""
 "variable defined via the _Path Configuration_ dialog or an actual "
 "environment variable."
 msgstr ""
+"Per mantenere la leggibilità dei file dati _kicad_pcb_ e _pretty_, KiCad "
+"preferisce usare nomi di file accorciati tramite l'uso delle variabili "
+"ambiente (vecchio metodo) o alias (nuovo metodo). Dato che l'impostazione di "
+"variabili ambiente può essere scomoda specialmente su sistemi operativi "
+"basati su interfacce grafiche, lo schema a variabili ambiente per il "
+"supporto dei percorsi di ricerca dei modelli è stato esteso per fare uso "
+"della finestra di dialogo di _configurazione dei percorsi_ esistenti "
+"definiti internamente di KiCad.  Questa finestra di dialogo è disponibile "
+"attraverso il menu _Preferenze->Configura percorsi_ ed è mostrata in basso. "
+"L'impostazione di percorsi aggiuntivi all'interno di questa finestra di "
+"dialogo estenderà i percorsi di ricerca usati per trovare i file dei modelli "
+"3D.  La finestra di dialogo, non imposta realmente le variabili ambiente, ma "
+"il sistema di risoluzione dei nomi di file agisce come se lo facesse; nel "
+"caso che delle vere variabili ambiente con lo stesso nome siano definite, il "
+"valore delle variabili ambiente andrà a sovrapporsi a qualsiasi valore "
+"definito internamente. I nomi di file relativi a queste variabili definite "
+"cominciano con _${MY_ENV_VAR}_ dove _MY_ENV_VAR_ è una variabile definita "
+"tramite la finestra _Configurazione percorsi_ o una vera variabile ambiente."
 
 #. type: Block title
 #: pcbnew_creating_editing_footprints.adoc:495
@@ -4838,12 +4860,22 @@ msgid ""
 "set up by clicking on the *Configure Paths* button within the *3D Settings* "
 "tab shown previously. The alias configuration dialog is shown below."
 msgstr ""
+"Il nuovo schema per supportare i nomi di file accorciati è il sistema basato "
+"su _alias_. In questo sistema un percorso comincia con la stringa _:mio "
+"alias:_ dove _mio alias_ è una stringa di testo che viene scelta "
+"preferibilmente corta ma anche significativa per l'utente; per esempio un "
+"alias ad una cartella contenente i modelli ufficiali di KiCad potrebbe avere "
+"come alias _Modelli ufficiali_ mentre la propria collezione di modelli "
+"personalizzati potrebbe avere come alias _Miei modelli_. Gli alias possono "
+"essere impostati facendo clic sul pulsante *Configura percorsi* presente "
+"nella scheda *Impostazioni 3D* mostrata in precedenza. La finestra di "
+"dialogo della configurazione alias è mostrata in basso."
 
 #. type: Block title
 #: pcbnew_creating_editing_footprints.adoc:510
 #, no-wrap
 msgid "KiCad Alias Configuration dialog"
-msgstr ""
+msgstr "La finestra di configurazione degli alias di KiCad"
 
 #. type: Target for macro image
 #: pcbnew_creating_editing_footprints.adoc:511
@@ -4861,7 +4893,7 @@ msgid ""
 "model size and complexity it may take a few seconds for a model to be "
 "displayed when it is selected. In an extreme case a BGA package model which "
 "was used during testing took around 12 seconds to display."
-msgstr ""
+msgstr "I file dei modelli 3D possono essere selezionati facendo clic su *Aggiungi forma 3D*: ciò aprirà il browser dei modelli 3D mostrato in basso. Il browser dei modelli fornisce un'anteprima 3D, un filtro file, e un menu a cascata di selezione dei percorsi contenente l'elenco corrente dei percorsi di ricerca definiti tramite le variabili locali o gli alias. A seconda della dimensione e della complessità del modello la visualizzazione potrebbe impiegare alcuni secondi dopo la selezione. Per esempio, un caso estremo, un modello di contenitore BGA usato durante le prove, ha impiegato circa 12 secondi per essere visualizzato."
 
 #. type: Block title
 #: pcbnew_creating_editing_footprints.adoc:524
@@ -9856,7 +9888,7 @@ msgstr "Elenco e caricamento librerie"
 #: pcbnew_python_scripting.adoc:68
 #, no-wrap
 msgid "Enumerate library, enumerate modules, enumerate pads"
-msgstr ""
+msgstr "Numerazione librerie, numerazione moduli, numerazione piazzole"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:72
@@ -10094,7 +10126,7 @@ msgstr ""
 #: pcbnew_python_scripting.adoc:149
 #, no-wrap
 msgid "    elif type(item) is TRACK:\n"
-msgstr ""
+msgstr "    elif type(item) is TRACK:\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:153
@@ -10104,6 +10136,9 @@ msgid ""
 "        end = item.GetEnd()\n"
 "        width = item.GetWidth()\n"
 msgstr ""
+"        start = item.GetStart()\n"
+"        end = item.GetEnd()\n"
+"        width = item.GetWidth()\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:155
@@ -10939,7 +10974,7 @@ msgid ""
 "descriptions of some number of individual footprint libraries, along with a "
 "\"nickname\" for each library, which is used to refer to that library when "
 "referencing a footprint."
-msgstr ""
+msgstr "Dalla versione 4.0, Pcbnew gestisce le librerie di impronte usando file chiamati \"tabelle di librerie di impronte\". Una tabella di librerie di impronte contiene le descrizioni di un certo numero di singole librerie di impronte, legandole ad una ``denominazione'' per ogni libreria, che viene usata per fare riferimento alla specifica libreria nell'individuazione di un'impronta."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:38
@@ -10947,41 +10982,43 @@ msgid ""
 "There are several kinds of library supported by Pcbnew, each of which is "
 "supported by a \"plugin\":"
 msgstr ""
-
-#. type: Plain text
-#: pcbnew_installation.adoc:40
-msgid "KiCad - native KiCad footprint libraries stored on a local filesystem"
-msgstr ""
+"Ci sono diversi tipi di librerie supportate da Pcbnew, ognuna delle quali è "
+"supportata da un ``plugin'':"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:41
-msgid "in the _.pretty_ format (folders containing _.kicad_mod_ files)"
+msgid ""
+"KiCad - native KiCad footprint libraries stored on a local filesystem in the "
+"_.pretty_ format (folders containing _.kicad_mod_ files)"
 msgstr ""
-
-#. type: Plain text
-#: pcbnew_installation.adoc:42
-msgid "Github - native KiCad footprint libraries in the _.pretty_ format,"
-msgstr ""
+"KiCad - librerie di impronte native di KiCad memorizzate in un filesystem "
+"localenel formato _.pretty_ (cartelle contenenti file _.kicad_mod_)"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:43
-msgid "stored online as a Github repository"
+msgid ""
+"Github - native KiCad footprint libraries in the _.pretty_ format, stored "
+"online as a Github repository"
 msgstr ""
+"Github - librerie di impronte native di KiCad nel formato _.pretty_, "
+"memorizzate online come un repository Github"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:44
 msgid "Legacy - old-style KiCad footprint libraries (_.mod_ files)"
 msgstr ""
+"Tradizionali - librerie di impronte di KiCad in un vecchio formato (file _."
+"mod_)"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:45
 msgid "Eagle - Eagle footprint libraries (folders containing _.fp_ files)"
-msgstr ""
+msgstr "Eagle - librerie di impront di Eagle (cartelle contenenti file _.fp_)"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:46
 msgid "Geda-PCB - Geda PCB libraries"
-msgstr ""
+msgstr "Geda-PCB - librerie in formato Geda PCB"
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:51
@@ -10989,11 +11026,13 @@ msgid ""
 "You can write only KiCad _.pretty_ footprint library folders on your local "
 "disk (and the .kicad_mod files inside these folders)."
 msgstr ""
+"È possibile scrivere solo cartelle di librerie di impronte KiCad _.pretty_ "
+"sul disco locale (e i file .kicad_mod dentro queste cartelle)."
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:52
 msgid "All other formats are read only."
-msgstr ""
+msgstr "Tutti gli altri formati sono in sola lettura."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:58
@@ -11003,12 +11042,18 @@ msgid ""
 "name, ensuring that the correct footprint is loaded from the appropriate "
 "library."
 msgstr ""
+"È consentito avere impronte con lo stesso nome in librerie differenti. "
+"L'impronta verrà memorizzata come combinazione di libreria _e_ nome di "
+"impronta, assicurando che venga caricata l'impronta corretta dalla libreria "
+"appropriata."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:61
 msgid ""
 "There are two footprint library tables: the global one and the project one."
 msgstr ""
+"Ci sono due tabelle di librerie di impronte: quella globale e quella del "
+"progetto."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:62
@@ -11061,6 +11106,9 @@ msgid ""
 "file `containing the entries will be written into the folder of the "
 "currently open PCB."
 msgstr ""
+"Quando si definiscono le voci nella tabella specifica del progetto, viene "
+"scritto un `file fp-lib-table` contenente queste voci nella cartella del "
+"circuito stampato aperto correntemente."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:84
@@ -11097,6 +11145,8 @@ msgid ""
 "The default footprint library table includes all of the standard footprint "
 "libraries that are installed as part of KiCad."
 msgstr ""
+"La tabella delle librerie di impronte predefinita include tutte le librerie "
+"di impronte standard che vengono installate assieme a KiCad."
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:103
@@ -11105,11 +11155,14 @@ msgid ""
 "com/KiCad/kicad-library[KiCad library repository] that you can use as your "
 "own starting point:"
 msgstr ""
+"Ci sono anche file campioni di `fp-lib-table` nel https://github.com/KiCad/"
+"kicad-library[repository ufficiale delle librerie di KiCad] da usare come "
+"punto di partenza per i propri progetti:"
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:105
 msgid "All KiCad libraries via Github:"
-msgstr ""
+msgstr "Tutte le librerie KiCad tramite Github:"
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:106
@@ -11117,6 +11170,8 @@ msgid ""
 "https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-"
 "github[fp-lib-table.for-github]"
 msgstr ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-"
+"github[fp-lib-table.per-github]"
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:107
@@ -11124,6 +11179,8 @@ msgid ""
 "All KiCad libraries, assuming they are on your disk already (you will need "
 "to download them if you do not already have them):"
 msgstr ""
+"Tutte le librerie KiCad, assumendo che queste siano già su disco (è "
+"necessario scaricarle se non lo si è già fatto):"
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:108
@@ -11131,6 +11188,8 @@ msgid ""
 "https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-"
 "pretty[fp-lib-table.for-pretty]"
 msgstr ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-"
+"pretty[fp-lib-table.per-pretty]"
 
 #. type: delimited block =
 #: pcbnew_installation.adoc:109
@@ -11143,6 +11202,8 @@ msgid ""
 "https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-"
 "eagle-6.4.0[fp-lib-table.for-eagle-6.4.0]"
 msgstr ""
+"https://github.com/KiCad/kicad-library/blob/master/template/fp-lib-table.for-"
+"eagle-6.4.0[fp-lib-table.per-eagle-6.4.0]"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:115
@@ -11151,6 +11212,9 @@ msgid ""
 "remove entries) according to your work and the libraries you need for your "
 "projects."
 msgstr ""
+"La *prima cosa* da fare quando si configura KiCad è di modificare questa "
+"tabella (aggiungere/togliere voci) secondo il proprio lavoro e le librerie "
+"che questo necessita per il progetto."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:119
@@ -11159,6 +11223,9 @@ msgid ""
 "found online (such as the Github libraries). If you find libraries slow to "
 "load, try removing ones you don't need."
 msgstr ""
+"Può rallentare avere tante librerie, specialmente se queste si trovano solo "
+"on-line (come le librerie Github). Se si trova che le librerie siano lente "
+"da caricare, provare a rimuovere quelle di cui non si ha bisogno."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:121
@@ -11246,7 +11313,9 @@ msgstr ""
 msgid ""
 "The appropriate plug in type must be selected in order for the library to be "
 "properly read."
-msgstr "Deve essere selezionato il tipo appropriato di plugin, in modo consentire la corretta lettura della libreria."
+msgstr ""
+"Deve essere selezionato il tipo appropriato di plugin, in modo consentire la "
+"corretta lettura della libreria."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:153
@@ -11254,7 +11323,10 @@ msgid ""
 "There is also a description field to add a description of the library "
 "entry.  The option field contains special options that are plugin-specific "
 "and is generally blank."
-msgstr "C'è anche un campo apposito per aggiungere una descrizione della voce di libreria.  Il campo opzioni contiene opzioni speciali che sono specifiche del plug-in ed è generalmente vuoto."
+msgstr ""
+"C'è anche un campo apposito per aggiungere una descrizione della voce di "
+"libreria.  Il campo opzioni contiene opzioni speciali che sono specifiche "
+"del plug-in ed è generalmente vuoto."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:159
@@ -11263,7 +11335,12 @@ msgid ""
 "can have duplicate library nicknames in both the global and project specific "
 "footprint library table.  The project specific table entry will take "
 "precedence over the global table entry when duplicated names occur."
-msgstr "Malgrado non si possano avere denominatori di librerie duplicati nella stessa tabella, è possibile avere gli stessi denominatori sia nella tabella globale che in quella specifica del progetto. La voce della tabella specifica del progetto ha la precendenza sulla corrispondente voce della tabella globale, in caso di nomi corrispondenti."
+msgstr ""
+"Malgrado non si possano avere denominatori di librerie duplicati nella "
+"stessa tabella, è possibile avere gli stessi denominatori sia nella tabella "
+"globale che in quella specifica del progetto. La voce della tabella "
+"specifica del progetto ha la precendenza sulla corrispondente voce della "
+"tabella globale, in caso di nomi corrispondenti."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:160
@@ -11327,7 +11404,7 @@ msgstr ""
 #: pcbnew_installation.adoc:180
 #, no-wrap
 msgid "Adding Table Entries using the Library Wizard"
-msgstr ""
+msgstr "Aggiunta di vodi di tabella usando l'assistente librerie"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:184
@@ -11335,6 +11412,8 @@ msgid ""
 "There is an interactive wizard that can assist you adding libraries to your "
 "library tables. It is accessible from the menu:"
 msgstr ""
+"È disponibile un assistente interattivo per aiutare ad aggiungere librerie "
+"alle proprie tabelle. È accessibile dal menu:"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:189
@@ -11342,40 +11421,42 @@ msgid ""
 "It can also be launched from the library manager, using the \"Append With "
 "Wizard\" button."
 msgstr ""
+"Esso può essere avviato anche dal gestore delle librerie, usando il pulsante "
+"``Accoda con l'assistente''."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:191
 msgid "Here, the local libraries option is selected."
-msgstr ""
+msgstr "Qui, è selezionata l'opzione delle librerie locali."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: pcbnew_installation.adoc:192
 #, no-wrap
 msgid "Footprint library wizard local libstartpage"
-msgstr ""
+msgstr "Pagina d'inizio assistente di accodamento librerie impronte locali"
 
 #. type: Target for macro image
 #: pcbnew_installation.adoc:192
 #, no-wrap
 msgid "images/en/fplib_wizard_locallibstartpage.png"
-msgstr ""
+msgstr "images/en/fplib_wizard_locallibstartpage.png"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:195
 msgid "Here, the remote libraries option is selected."
-msgstr ""
+msgstr "Qui, viene selezionata l'opzione librerie remote."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: pcbnew_installation.adoc:196
 #, no-wrap
 msgid "Footprint library wizard startpage GitHub"
-msgstr ""
+msgstr "Pagina d'inizio assistente di accodamento librerie impronte GitHub"
 
 #. type: Target for macro image
 #: pcbnew_installation.adoc:196
 #, no-wrap
 msgid "images/en/fplib_wizard_startpage_github.png"
-msgstr ""
+msgstr "images/en/fplib_wizard_startpage_github.png"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:201
@@ -11384,12 +11465,17 @@ msgid ""
 "will depend on the type of library you are adding. The process for each type "
 "will be explained below."
 msgstr ""
+"L'assistente guiderà l'utente attraverso i passi necessari per aggiungere "
+"una libreria, che varieranno a seconda del tipo di libreria si aggiungerà. "
+"Il processo per ogni tipo è spiegato qui sotto."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:203
 msgid ""
 "After a set of libraries is selected, the next page validates the choice:"
 msgstr ""
+"Dopo che un insieme di librerie viene selezionato, la pagina successiva "
+"verifica la scelta:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: pcbnew_installation.adoc:204
@@ -11401,7 +11487,7 @@ msgstr "Validazione assistente tabella librerie"
 #: pcbnew_installation.adoc:204
 #, no-wrap
 msgid "images/en/fplib_wizard_validate.png"
-msgstr ""
+msgstr "images/en/fplib_wizard_validate.png"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:208
@@ -11409,11 +11495,15 @@ msgid ""
 "If some selected libraries are incorrect (not supported, not a footprint "
 "library ...)  they will be flagged as ``INVALID''."
 msgstr ""
+"Se alcune librerie selezionate non sono corrette (non supportate, o non sono "
+"librerie di impronte...) queste verranno spuntate come ``Non valida''."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:210
 msgid "The last choice is the footprint library table to populate either:"
 msgstr ""
+"L'ultima scelta è la tabella librerie di impronte da popolare che può essere "
+"sia:"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:212
@@ -11429,85 +11519,87 @@ msgstr "tabella specifica del progetto"
 #: pcbnew_installation.adoc:214
 #, no-wrap
 msgid "Footprint library wizard choose local folder"
-msgstr ""
+msgstr "Scelta dell'assistente di librerie di impronte della cartella locale"
 
 #. type: Target for macro image
 #: pcbnew_installation.adoc:214
 #, no-wrap
 msgid "images/en/fplib_wizard_chooseflt.png"
-msgstr ""
+msgstr "images/en/fplib_wizard_chooseflt.png"
 
 #. type: Title =====
 #: pcbnew_installation.adoc:216
 #, no-wrap
 msgid "Adding Existing Local Libraries"
-msgstr ""
+msgstr "Aggiunta librerie locali esistenti"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:219
 msgid "You might have local libraries already on your computer. For example:"
 msgstr ""
+"Si potrebbero avere librerie locali già presenti sul proprio computer. Per "
+"esempio:"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:221
 msgid "Previously downloaded KiCad pretty directories"
-msgstr ""
+msgstr "Cartelle pretty di KiCad scaricate in precedenza"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:222
-msgid "Legacy KiCad _.mod_ files from an older installations"
-msgstr ""
+msgid "Legacy KiCad _.mod_ files from older installations"
+msgstr "File KiCad _.mod_ provenienti da vecchie installazioni"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:223
 msgid "Geda or Eagle libraries"
-msgstr ""
+msgstr "Librerie Geda o Eagle"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:226
 msgid ""
 "These can be added with the \"Files on my computer\" option. You will be "
 "asked for the directory of the library to add and the format:"
-msgstr ""
+msgstr "Queste possono essere aggiunte selezionando l'opzione ``File sul proprio computer''. Verrà richiesta la cartella della libreria da aggiungere ed il formato:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: pcbnew_installation.adoc:227
 #, no-wrap
 msgid "Footprint library wizard local lib selection"
-msgstr ""
+msgstr "Selezione tramite assistente di librerie locali di impronte"
 
 #. type: Target for macro image
 #: pcbnew_installation.adoc:227
 #, no-wrap
 msgid "images/en/fplib_wizard_locallibselection.png"
-msgstr ""
+msgstr "images/en/fplib_wizard_locallibselection.png"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:230
 msgid ""
 "If you don't select the format, the wizard will try to guess the right "
 "format."
-msgstr ""
+msgstr "Se non si seleziona il formato, l'assistente proverà a indovinare il giusto formato."
 
 #. type: Title =====
 #: pcbnew_installation.adoc:231
 #, no-wrap
 msgid "Adding Libraries from Github"
-msgstr ""
+msgstr "Aggiunta librerie Github"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:235
 msgid ""
 "The wizard can also add libraries from Github with the \"Github repository\" "
 "option."
-msgstr ""
+msgstr "L'assistente può anche aggiungere librerie da Github selezionando l'opzione ``Repository Github''."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:238
 msgid ""
 "You need to specify the Github account that contains the repositories you "
 "want to add."
-msgstr ""
+msgstr "È necessario specificare l'account Github che contiene i repository che si vuole aggiungere."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:241
@@ -11516,6 +11608,8 @@ msgid ""
 "The offical KiCad library Github account is\n"
 "    https://github.com/KiCad\n"
 msgstr ""
+"L'account ufficiale delle librerie Github di KiCad è\n"
+"    https://github.com/KiCad\n"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:247
@@ -11524,26 +11618,26 @@ msgid ""
 "library will be a _Github_ library, and will resync on every library reload. "
 "If you _do_ save a local copy, the library will be a _KiCad_ (pretty) "
 "library and will not automatically update in future."
-msgstr ""
+msgstr "Si può scegliere di salvare una copia locale. Se _non_ si salva una copia locale, la libreria sarà una libreria _Github_, e si risincronizzerà ad ogni ricarica di libreria. Se _si_ salva una copia locale, la libreria diventerà una libreria _KiCad_ (pretty) e non verrà automaticamente aggiornata in futuro."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:250
 msgid ""
 "The next page will load a list of _.pretty_ repositories found on that "
 "Github account. You can choose any number to add to the library."
-msgstr ""
+msgstr "La prossima pagina caricherà un elenco di repository _.pretty_ trovati sul quell'account Github. Si può scegliere di aggiungerne quanti si desidera alla libreria."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: pcbnew_installation.adoc:251
 #, no-wrap
 msgid "Footprint library wizard GitHub selection"
-msgstr ""
+msgstr "Selezione di Github delle librerie di impronte con l'assistente"
 
 #. type: Target for macro image
 #: pcbnew_installation.adoc:251
 #, no-wrap
 msgid "images/en/fplib_wizard_githubselection.png"
-msgstr ""
+msgstr "images/en/fplib_wizard_githubselection.png"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:257
@@ -11551,20 +11645,20 @@ msgid ""
 "After confirmation,if you opted to save a copy, the footprints will be "
 "downloaded to the specified local location now. If you are using the Github "
 "plugin (no local copy), the footprints are loaded from Github when needed."
-msgstr ""
+msgstr "Dopo la conferma, se si è scelto di salvare una copia, le impronte verranno scaricate subito nella posizione locale specificata. Se si sta usando il plugin Github (no copie locali), le impronte vengono caricate da Github alla bisogna."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:258
 #, no-wrap
 msgid "Using the KiCad plugin"
-msgstr ""
+msgstr "Uso del plugin di KiCad"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:262
 msgid ""
 "The KiCad plugin deals with native KiCad libraries that exist on your "
 "computer (or some accessible filesystem)."
-msgstr ""
+msgstr "Il plugin KiCad si occupa di gestire le librerie native di KiCad che si trovano sul computer (o su altro file system accessibile localmente)."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:267
@@ -11572,13 +11666,13 @@ msgid ""
 "It is used for pre-installed libraries that are installed along with KiCad, "
 "as well as other KiCad libraries, either from the official KiCad library "
 "collection, 3rd party libraries or your own curated libraries."
-msgstr ""
+msgstr "Viene usato per librerie pre-installate che vengono installate assieme a KiCad, ma anche per altre librerie KiCad, provenienti dalla collezione di librerie ufficiale di KiCad come anche da terze parti o curate personalmente."
 
 #. type: Title =====
 #: pcbnew_installation.adoc:268
 #, no-wrap
 msgid "Installing KiCad plugin libraries"
-msgstr ""
+msgstr "Installazione delle librerie del plugin di KiCad"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:273
@@ -11586,21 +11680,21 @@ msgid ""
 "The Footprint Library Wizard can help you install libraries already on disk "
 "or on Github. However, for libraries on disk, you need to put them there "
 "yourself in the first place."
-msgstr ""
+msgstr "L'assistente librerie di impronte serve ad aiutare ad installare librerie già presenti su disco o su Github. Per quelle su disco, è comunque necessario prima installarle manualmente."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:276
 msgid ""
 "A KiCad library is a directory that contains some number of _.kicad_mod_ "
 "files."
-msgstr ""
+msgstr "Una libreria KiCad è una cartella che contiene un certo numero di file _.kicad_mod_."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:279
 msgid ""
 "This is often done by unpacking an archive file, copying a directory from "
 "another location, or cloning a version-controlled repository."
-msgstr ""
+msgstr "Questo viene spesso fatto decomprimendo un archivio, copiando una cartella da un'altra posizione, o clonando un repository versionato."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:283
@@ -11608,7 +11702,7 @@ msgid ""
 "The KiCad plugin does not specify any kind of version control, but Git is "
 "very commonly used to track changes to libraries, which can be critical to "
 "ensuring library data is safely recorded and backed up."
-msgstr ""
+msgstr "Il plugin di KiCad non specifica alcun tipo di controllo di versionamento, ma Git è molto usato per tenere traccia dei cambiamenti a librerie, cambiamenti che possono essere critici, e per assicurare che i dati di libreria vengano registrati in modo sicuro e che soprattutto vengano salvati."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:290
@@ -11619,7 +11713,7 @@ msgid ""
 "pull requests. If you just want to update libraries when needed, you don't "
 "need to do that, you can clone the offical KiCad libraries directly and pull "
 "as needed."
-msgstr ""
+msgstr "È facile tenere traccia dei cambiamenti e contribuire alle librerie Github ufficiali di KiCad. Ciò si fa usando il software di controllo versionamento Git. Se si vuole contribuire, è necessario fare un fork dei repository su Github in modo da poter poi inviare delle richieste di inclusione (pull request). Se si vuole solo aggiornare le librerie quando serve, non è necessario fare tutto ciò, basta solo fare una clonazione diretta delle librerie ufficiali di KiCad e aggiornare (tramite pull) quando serve."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:295
@@ -11628,7 +11722,7 @@ msgid ""
 "checker to verify your proposed changes. See https://github.com/KiCad/kicad-"
 "library/wiki/Kicad-Library-Convention[KiCad Library Conventions] for details "
 "of the library conventions."
-msgstr ""
+msgstr "Inviando dei pull request tramite Github permette al controllore automatico delle librerie standard di verificare i cambiamenti che proponiamo. Vedere https://github.com/KiCad/kicad-library/wiki/Kicad-Library-Convention[Convenzioni delle librerie di KiCad] per i dettagli sulle convenzioni adottate nelle librerie."
 
 #. type: Title ====
 #: pcbnew_installation.adoc:296
@@ -11664,19 +11758,19 @@ msgstr ""
 msgid ""
 "You will not be told if a remote repository changed since your last use of "
 "it. Be cautious when using footprint directly from Github."
-msgstr ""
+msgstr "Non c'è modo di avvertire se un repository remoto è cambiato dal suo ultimo utilizzo. È necessario procedere con cautela quando si usano impronte direttamente da Github."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:313
 msgid ""
 "To add a GitHub entry to the footprint library table the \"Library Path\" in "
 "the footprint library table entry must be set to a valid GitHub URL."
-msgstr ""
+msgstr "Per aggiungere una voce GitHub alla tabella librerie di impronte la voce ``Percorso libreria'' nella tabella delle librerie di impronte deve essere impostata ad un URL Github valido."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:315
 msgid "For example:"
-msgstr "Per esempio"
+msgstr "Per esempio:"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:317
@@ -11849,7 +11943,7 @@ msgstr ""
 #: pcbnew_installation.adoc:390
 #, no-wrap
 msgid "Using Copy-On-Write to share footprints"
-msgstr ""
+msgstr "Uso del Copy-On-Write per condividere impronte"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:402
@@ -11881,20 +11975,20 @@ msgid ""
 "You can also contribute to library developement using local Git clones of "
 "the relevant libraries using the _KiCad_ plugin and submitting pull requests "
 "to the library maintainers."
-msgstr ""
+msgstr "È possibile contribuire anche allo sviluppo delle librerie usando cloni locali Git delle librerie in oggetto usando il plugin _KiCad_ e sottoponendo a pull request le modifiche effettuate ai responsabili delle librerie."
 
 #. type: Title =====
 #: pcbnew_installation.adoc:407
 #, no-wrap
 msgid "Caching Github requests"
-msgstr ""
+msgstr "Usare una cache per Github"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:411
 msgid ""
 "The Github plugin can be slow, as it must download all the libraries from "
 "the Internet before they can be used."
-msgstr ""
+msgstr "Il plugin di Github può essere lento, dato che deve scaricare tutte le librerie da Internet prima di poterle utilizzare."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:419
@@ -12024,7 +12118,7 @@ msgid ""
 "When a footprint is added to a PCB, the entire footprint is copied into the "
 "PCB file (_.kicad_pcb_). This means changes to the footprint in the library "
 "do not automatically affect the PCB."
-msgstr ""
+msgstr "Quando un'impronta viene aggiunta ad un circuito stampato, l'intera impronta viene copiata del file del circuito stampato (_.kicad_pcb_). Ciò significa che i cambiamenti all'impronta nella libreria non influiscono automaticamente sul circuito stampato."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:465
@@ -12032,14 +12126,14 @@ msgid ""
 "This also means that you can individually edit footprints on the PCB without "
 "affecting other instances of the same footprint (either on the same PCB or "
 "on other PCBs)."
-msgstr ""
+msgstr "Questo significa anche che si possono modificare individualmente le impronte sul circuito stampato senza influire su altre istanze della stessa impronta (sia sullo stesso che su altri circuiti stampati)."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:468
 msgid ""
 "However, if you modify the library footprint, the next time you place an "
 "instance, it will not match existing footprints of the same name."
-msgstr ""
+msgstr "Comunque, se si modifica l'impronta della libreria, la prossima volta che se ne inserirà un'istanza, essa non corrisponderà alle impronte esistenti con lo stesso nome."
 
 #. type: Plain text
 #: pcbnew_installation.adoc:473
@@ -12049,4 +12143,4 @@ msgid ""
 "affected by changes to system or user libraries. Also, it ensures all the "
 "footprint resources used for the PCB can be easily distributed with the PCB "
 "file."
-msgstr ""
+msgstr "Una pratica molto diffusa consiste nel copiare tutte le impronte che si usano in una posizione separata e versionata, facendo in modo tale che il progetto non venga inaspettatamente coinvolto da cambiamenti riguardanti librerie utente o di sistema. Inoltre, in questo modo, ci si assicura che tutte le risorse delle impronte usate per il circuito stampato possano essere facilmente distribuite assieme ad i file del circuito stampato."
