@@ -1,35 +1,33 @@
 
 [[automatic-classification-annotation]]
-== Automatic classification Annotation
+== Symbol Annotation Tool
 
 === Introduction
 
-The automatic classification annotation tool allows you to automatically
-assign a designator to components in your schematic. For multi-parts
-components, assign a multi-part suffix to minimize the number of these
-packages. The automatic classification annotation tool is accessible via
-the icon
+The annotation tool allows you to automatically assign a designator to
+symbols in your schematic. Annotation of symbols with multiple units
+will assign a unique suffix to minimize the number of these symbols.
+The annotation tool is accessible via the icon
 image:images/icons/annotate.png[icons_annotate_png].
 Here you find its main window.
 
 image::images/en/annotate-dialog.png[alt="annotate-dialog_img",scaledwidth="50%"]
 
-Various possibilities are available:
+Available annotation schemes:
 
-* Annotate all the components (reset existing annotation option)
-* Annotate all the components, but do not swap any previously annotated
+* Annotate all the symbols (reset existing annotation option)
+* Annotate all the symbols, but do not swap any previously annotated
   multi-unit parts.
-* Annotate new components only (i.e. those whose reference finishes by?
-  like IC? ) (keep existing annotation option).
+* Annotate only symbols that are currently not annotated.  Symbols that are not
+  annotated will have a designator which ends with a '?' character.
 * Annotate the whole hierarchy (use the entire schematic option).
 * Annotate the current sheet only (use current page only option).
 
 The ``Reset, but do not swap any annotated multi-unit parts'' option keeps
-all existing associations between multi-unit parts. That is, if you have
-U2A and U2B, they may be reannotated to U1A and U1B respectively, but they will
+all existing associations between symbols with multilple units. For example,
+U2A and U2B may be reannotated to U1A and U1B respectively but they will
 never be reannotated to U1A and U2A, nor to U2B and U2A. This is useful if
-you want to ensure that pin groupings are maintained, if you have already
-decided by yourself which subunits are best placed where.
+you want to ensure that pin groupings are maintained.
 
 The annotation order choice gives the method used to set the reference
 number inside each sheet of the hierarchy.
@@ -38,11 +36,11 @@ Except for particular cases, an automatic annotation applies to the
 whole project (all sheets) and to the new components, if you don't want
 to modify previous annotations.
 
-The Annotation Choice gives the method used to calculate reference Id:
+The Annotation Choice gives the method used to calculate reference:
 
 * Use first free number in schematic: components are annotated from 1
-  (for each reference prefix). If a previous annotation exists, not yet in
-  use numbers will be used.
+  (for each reference prefix). If a previous annotation exists, only
+  unused numbers will be used.
 * Start to sheet number*100 and use first free number: annotation start
   from 101 for the sheet 1, from 201 for the sheet 2, etc. If there are
   more than 99 items having the same reference prefix (U, R) inside the

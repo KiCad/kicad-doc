@@ -18,6 +18,9 @@ You can reach the various commands by:
   Specifically: The "Escape" key often allows the canceling of a command
   in progress. The "Insert" key allows the duplication of the last element
   created.
+* Pressing hot keys which typically perform a select tool command and begin
+  tool action at the current cursor location.  For a list of hot keys, see
+  the "Help->List Hotkeys" menu entry or press the '?' key.
 
 Here are the various possible command locations:
 
@@ -88,10 +91,10 @@ You can change the grid size via the pop-up menu or via the Preferences/Options 
 The default grid size is 50 mil (0.050") or 1,27 millimeters.
 
 This is the preferred grid to place components and wires in a schematic,
-and to place pins when designing a symbol in the Component Editor.
+and to place pins when designing a symbol in the Symbol Editor.
 
 One can also work with a smaller grid from 25 mil to 10 mil.
-This is only intended for designing the component body
+This is only intended for designing the symbol body
 or placing text and comments, not for placing pins and wires.
 
 === Zoom selection
@@ -106,7 +109,8 @@ To change the zoom level:
 
   ** F2: Zoom out
 
-  ** F4 or simply click on the middle mouse button (without moving the mouse): Center the view around the cursor pointer position
+  ** F4 or simply click on the middle mouse button (without moving the mouse): Center the
+     view around the cursor pointer position
 
 * Window Zoom:
 
@@ -206,13 +210,13 @@ Tools to initialize a project are not available, because these tools are in the 
 |Leave the current sheet and go up in the hierarchy.
 
 |image:images/icons/libedit.png[icons/libedit_png]
-|Call component editor _Libedit_ to view and modify libraries and component symbols.
+|Call symbol editor _Libedit_ to view and modify libraries and component symbols.
 
 |image:images/icons/library_browse.png[icons/library_browse_png]
-|Display libraries (Viewlib).
+|Display symbollibraries (Viewlib).
 
 |image:images/icons/annotate.png[icons_annotate_png]
-|Annotate components.
+|Annotate symbols.
 
 |image:images/icons/erc.png[ERC icon]
 |Electrical rules check (ERC), automatically validate electrical connections.
@@ -227,13 +231,13 @@ Tools to initialize a project are not available, because these tools are in the 
 |Edit footprint.
 
 |image:images/icons/cvpcb.png[run cvpcb icon]
-|Call CvPcb to assign footprints to components.
+|Call CvPcb to assign footprints to symbols.
 
 |image:images/icons/pcbnew.png[icons/pcbnew_png]
 |Call Pcbnew to perform a PCB layout.
 
 |image:images/icons/import_footprint_names.png[Import Footprint Names icon]
-|Back-import component footprints (selected using CvPcb) into the "footprint" fields.
+|Back-import symbol footprints (selected using CvPcb) into the "footprint" fields.
 |=======================================================================
 
 <<<<<
@@ -242,7 +246,7 @@ Tools to initialize a project are not available, because these tools are in the 
 
 This toolbar contains tools to:
 
-* Place components, wires, buses, junctions, labels, text, etc.
+* Place symbols, wires, buses, junctions, labels, text, etc.
 * Create hierarchical sub-sheets and connection symbols
 
 [width="100%",cols="10%,5%,85%",]
@@ -258,7 +262,7 @@ subsheet), or to go back up in the hierarchy (click in a free area of
 the schematic).
 
 |image:images/icons/new_component.png[New Component icon]
-|Display the component selector.
+|Display the symbol selector.
 
 |image:images/icons/add_power.png[Add Power icon]
 |Display the power symbol selector.
@@ -277,7 +281,7 @@ a connection, thus they should not be used to connect wires together.
 |Draw bus-to-bus entry points.
 
 |image:images/icons/noconn.png[icons/noconn_png]
-|Place a "No Connect" flag. These are placed on component pins which
+|Place a "No Connect" flag. These are placed on symbol pins which
 are not to be connected. This is useful in the ERC function to check if
 pins are intentionally left not connected or are missed.
 
@@ -375,7 +379,7 @@ Editing of a label.
 
 image::images/eeschema_popup_edit_label.png[alt="eeschema_popup_edit_label_png",scaledwidth="60%"]
 
-Editing a component.
+Editing a symbol.
 
 image::images/eeschema_popup_edit_component.png[alt="eeschema_popup_edit_component_png",scaledwidth="60%"]
 

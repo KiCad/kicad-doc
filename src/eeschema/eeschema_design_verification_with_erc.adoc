@@ -14,7 +14,7 @@ many oversights and small errors.
 
 In fact all detected errors must be checked and then corrected before
 proceeding as normal. The quality of the ERC is directly related to the
-care taken in declaring electrical pin properties during library
+care taken in declaring electrical pin properties during symbol library
 creation. ERC output is reported as "errors" or "warnings".
 
 image::images/en/dialog_erc.png[alt="ERC dialog",scaledwidth="70%"]
@@ -81,10 +81,10 @@ image::images/eeschema_power_pins_and_flags.png[alt="eeschema_power_pins_and_fla
 
 The error marker will then disappear.
 
-Most of the time, a PWR_FLAG must be connected to GND, because usually
-regulators have outputs declared as power out, but ground pins are never
-power out (the normal attribute is power in), so grounds never appear
-connected to a power source without a pwr_flag.
+Most of the time, a PWR_FLAG must be connected to GND, because regulators
+have outputs declared as power out, but ground pins are never power out
+(the normal attribute is power in), so grounds never appear connected to
+a power source without a power flag symbol.
 
 [[configuration]]
 === Configuration

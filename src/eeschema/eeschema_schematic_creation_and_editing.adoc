@@ -25,7 +25,7 @@ of a development chain that allows for:
 * <<creating-customized-netlists-and-bom-files,Generating a netlist>> for simulation software such as SPICE.
 * <<creating-customized-netlists-and-bom-files,Generating a netlist>> for transferring to PCB layout.
 
-A schematic mainly consists of components, wires, labels, junctions,
+A schematic mainly consists of symbols, wires, labels, junctions,
 buses and power ports. For clarity in the schematic, you can place
 purely graphical elements like bus entries, comments, and polylines.
 
@@ -34,23 +34,23 @@ purely graphical elements like bus entries, comments, and polylines.
 
 image::images/en/dev-chain.png[alt="dev-chain_png",scaledwidth="80%"]
 
-Components are added to the schematic from component libraries. After
+Symbols are added to the schematic from symbol libraries. After
 the schematic is made, a netlist is generated, which is later used to
 import the set of connections and footprints into PcbNew.
 
 [[component-placement-and-editing]]
-=== Component placement and editing
+=== Symbol placement and editing
 
 [[find-and-place-a-component]]
-==== Find and place a component
+==== Find and place a symbol
 
-To load a component into your schematic you can use the icon
-image:images/icons/new_component.png[New Component icon].
-A dialog box allows you to type the name of the component to load.
+To load a symbol into your schematic you can use the icon
+image:images/icons/new_component.png[New Symbol icon].
+A dialog box allows you to type the name of the symbol to load.
 
 image::images/en/dialog_choose_component.png[alt="Choose Component dialog",scaledwidth="60%"]
 
-The Choose Component dialog will filter components by name, keywords,
+The Choose Symbols dialog will filter symbols by name, keywords,
 and description according to what you type into the search field. Advanced
 filters can be used just by typing them:
 
@@ -79,45 +79,45 @@ filters can be used just by typing them:
   Advanced Regular Expression style], which is similar to Perl regular
   expressions.
 
-Before placing the component in the schematic, you can rotate it, mirror
+Before placing the symbol in the schematic, you can rotate it, mirror
 it, and edit its fields, by either using the hotkeys or the right-click
 context menu. This can be done the same way after placement.
 
-Here is a component during placement:
+Here is a symbol during placement:
 
 image::images/en/component_during_placement.png[alt="component during placement",scaledwidth="95%"]
 
 [[power-ports]]
 ==== Power ports
 
-A power port symbol is a component (the symbols are grouped in the
-“power” library), so they can be placed using the component chooser.
+A power port symbol is a symbos (the symbols are grouped in the
+“power” library), so they can be placed using the symbol chooser.
 However, as power placements are frequent, the
 image:images/icons/add_power.png[Add Power icon]
 tool is available. This tool is similar, except
 that the search is done directly in the ``power'' library.
 
 [[component-editing-and-modification-already-placed-component]]
-==== Component Editing and Modification (already placed component)
+==== Symbol Editing and Modification (already placed component)
 
-There are two ways to edit a component:
+There are two ways to edit a symbol:
 
-* Modification of the component itself: position, orientation, unit selection on a multi-unit component.
-* Modification of one of the fields of the component: reference, value, footprint, etc.
+* Modification of the symbol itself: position, orientation, unit selection on a multi-unit symbol.
+* Modification of one of the fields of the symbol: reference, value, footprint, etc.
 
-When a component has just been placed, you may have to modify its value
+When a symbol has just been placed, you may have to modify its value
 (particularly for resistors, capacitors, etc.), but it is useless to
 assign to it a reference number right away, or to select the unit
 (except for components with locked units, which you have to assign
 manually). This can be done automatically by the annotation function.
 
 [[component-modification]]
-===== Component modification
+===== Symbol modification
 
-To modify some feature of a component, position the cursor on the
-component, and then either:
+To modify some feature of a symbol, position the cursor on the
+symbol, and then either:
 
-* Double-click on the component to open the full editing dialog.
+* Double-click on the symbol to open the full editing dialog.
 * Right-click to open the context menu and use one of the
   commands: Move, Orientation, Edit, Delete, etc.
 
@@ -132,17 +132,17 @@ visibility of the fields:
   commands: Move, Rotate, Edit, Delete, etc.
 
 For more options, or in order to create fields,
-double-click on the component to open the Component Properties
+double-click on the symbol to open the Symbol Properties
 dialog.
 
 image::images/en/dialog_component_properties.png[alt="Component Properties dialog",scaledwidth="70%"]
 
 Each field can be visible or hidden, and displayed horizontally or
 vertically. The displayed position is always indicated
-for a normally displayed component (no rotation or mirroring) and is relative
-to the anchor point of the component.
+for a normally displayed symbol (no rotation or mirroring) and is relative
+to the anchor point of the symbol.
 
-The option “Reset to Library Defaults” sets the component to the original
+The option “Reset to Library Defaults” sets the symbol to the original
 orientation, and resets the options, size and position of each field.  However,
 texts fields are not modified because this could break the schematic.
 
@@ -157,7 +157,7 @@ vertical right toolbar.
 
 These elements are:
 
-* *Wires:* most connections between components.
+* *Wires:* most connections between symbols.
 * *Buses:* to graphically join bus labels
 * *Polylines:* for graphic presentation.
 * *Junctions:* to create connections between crossing wires or buses.
@@ -293,10 +293,10 @@ BUS10)
 [[power-ports-connection]]
 ==== Power ports connection
 
-When the power pins of the components are visible, they must be
+When the power pins of the symbols are visible, they must be
 connected, as for any other signal.
 
-Components such as gates and flip-flops may have invisible power pins.
+Symbols such as gates and flip-flops may have invisible power pins.
 Care must be taken with these because:
 
 * You cannot connect wires, because of their invisibility.
@@ -333,7 +333,7 @@ VCC and GND are really connected to a power source.
 Without these two flags, the ERC tool would diagnose: __Warning: power
 port not powered__.
 
-All these symbols are components of the schematic library ``power''.
+All these symbols can be found in the ``power'' symbol library.
 
 [[no-connection-symbols]]
 ==== "No Connect" flag
@@ -378,30 +378,34 @@ image::images/en/title_block.png[alt="Title block",scaledwidth="80%"]
 The sheet number (Sheet X/Y) is automatically updated.
 
 [[rescuing-cached-components]]
-=== Rescuing cached components
+=== Rescuing cached symbols
 
-By default, Eeschema loads component symbols out of the libraries according to the set paths.
-This can cause a problem when loading a very old project: if the symbols in the library have changed
-since they were used in the project, the ones in the project would be automatically replaced with
-the new versions. The new versions might not line up correctly or might be oriented differently,
-leading to a broken schematic.
+By default, Eeschema loads symbols from the project libraries according to the set paths and
+library order. This can cause a problem when loading a very old project: if the symbols in the
+library have changed or have been removed or the library no longer exists since they were used
+in the project, the ones in the project would be automatically replaced with the new versions.
+The new versions might not line up correctly or might be oriented differently leading to a
+ broken schematic.
 
-However, when a project is saved, a cache library is saved along with it. This allows the project
-to be distributed without the full libraries. If you load a project where symbols are present both
-in its cache and in the system libraries, Eeschema will scan the libraries for conflicts. Any
-conflicts found will be listed in the following dialog:
+When a project is saved, a cache library with the contents of the current library symbols is
+saved along with the schematic. This allows the project to be distributed without the full
+libraries. If you load a project where symbols are present both in its cache and in the system
+libraries, Eeschema will scan the libraries for conflicts. Any conflicts found will be listed
+in the following dialog:
 
 image::images/en/rescue-conflicts.png[alt="Rescue conflicts dialog",scaledwidth="60%"]
 
 You can see in this example that the project originally used a diode with the cathode facing up,
-but the library now contains one with the cathode facing down. This change could ruin the project!
-Pressing OK here will cause the old symbol to be saved into a special ``rescue'' library, and all
-the components using that symbol will be renamed to avoid naming conflicts.
+but the library now contains one with the cathode facing down. This change would break the
+schematic! Pressing OK here will cause the symbol cache library to be saved into a special
+``rescue'' library and all the symbols are renamed to avoid naming conflicts.
 
 If you press Cancel, no rescues will be made, so Eeschema will load all the new components by
-default. Because no changes were made, you can still go back and run the rescue function again:
-choose "Rescue Cached Components" in the Tools menu to call up the dialog again.
+default. If you save the schematic at this point, your cache will be overwritten and the old
+symbols will not be recoverable.  If you have saved the schematic, you can still go back and
+run the rescue function again by selecting "Rescue Cached Components" in the "Tools" menu to
+call up the rescue dialog again.
 
 If you would prefer not to see this dialog, you can press "Never Show Again". The default will
 be to do nothing and allow the new components to be loaded. This option can be changed back in
-the Component Libraries preferences.
+the  Libraries preferences.
