@@ -5,153 +5,235 @@
 [[file-menu]]
 === File menu
 
-image::images/en/file_menu.png[alt="File menu",scaledwidth="35%"]
+image::images/en/menu_file.png[alt="File menu",scaledwidth="35%"]
 
 [width="100%",cols="31%,69%",]
 |=======================================================================
-|New Schematic Project |Clear current schematic and initialize a new one
+|New |Close current schematic and start a new one (only in standalone mode).
 
-|Open Schematic Project |Load a schematic hierarchy
+|Open |Load a schematic project (only in standalone mode).
 
-|Open Recent |Open a list of recently opened files
+|Open Recent |Open a schematic project from the list of recently opened files (only in standalone mode).
 
-|Append Schematic Sheet |Insert the contents of another sheet into the current one
+|Append Schematic Sheet |Insert the contents of another sheet into the current one.
 
-|Save Schematic Project |Save current sheet and all its hierarchy.
+|Import Non-Kicad Schematic File |Imports a schematic project saved in another file format.
 
-|Save Current Sheet Only |Save current sheet, but not others in a
-hierarchy.
+|Save |Save current sheet and all its subsheets.
 
-|Save Current Sheet As... |Save current sheet with a new name.
+|Save Current Sheet |Save only the current sheet, but not others in the project.
+
+|Save Current Sheet As... |Save the current sheet under a new name.
 
 |Page Settings |Configure page dimensions and title block.
 
-|Print |Print schematic hierarchy (See also chapter <<plot-and-print,Plot and Print>>).
+|Print |Print schematic project (See also chapter <<plot-and-print,Plot and Print>>).
 
 |Plot |Export to PDF, PostScript, HPGL or SVG format (See chapter <<plot-and-print,Plot and Print>>).
 
-|Close |Quit without saving.
+|Close |Terminate the application.
 |=======================================================================
 
 [[preferences-menu]]
 === Preferences menu
 
-[[preferences]]
-==== Preferences
-
-image::images/en/menu_path_hotkey_editor.png[alt="Preferences menu",scaledwidth="55%"]
+image::images/en/menu_preferences.png[alt="Preferences menu",scaledwidth="55%"]
 
 [width="90%",cols="30%,70%",]
 |================================================
-|Symbol Libraries |Select libraries and library search path.
-|Set Colors Scheme |Select colors for display, print and plot.
-|Schematic Editor Options |General options (units, grid size, field names, etc.).
-|Language |Select interface language.
-|Hotkeys |List, edit, export, and import hotkey settings.
-|Save Preferences |Save the project settings to the .pro file.
-|Load Preferences |Load the project settings from a .pro file.
+|Manage Symbol Library Tables |Add/remove symbol libraries.
+|Configure Paths |Set the default search paths.
+|General Options | Preferences (units, grid size, field names, etc.).
+|Set Language | Select interface language.
+|Icons Options | Icons visibility settings.
+|Import and Export | Transfer preferences to/from file.
 |================================================
 
-[[preferences-menu-libs-and-dir]]
-==== Preferences menu / Component Libraries
+[[manage-sym-lib-table]]
+==== Manage Symbol Library Tables
 
-image::images/en/libsettings.png[alt="Library settings",scaledwidth="50%"]
+image::images/en/options_symbol_lib.png[alt="Symbol Library Tables",scaledwidth="50%"]
 
-This dialog is used to configure symbol libraries and search paths.
-The configuration parameters are saved in the .pro file. Different
-configuration files in different directories are also possible.
+Eeschema uses two library tables to store the list of available symbol libraries,
+which differ by the scope:
 
-Eeschema searches, in order:
+* Global Libraries
 
-1.  The configuration file (projectname.pro) in the current directory.
-2.  The kicad.pro configuration file in the KiCad directory. This file
-can thus be the default configuration.
-3.  Default values if no file is found. It will at least then be
-necessary to fill out the list of libraries to load, and then save the
-configuration.
+Libraries listed in the Global Libraries table are available to every project.
+They are saved in *sym-lib-table* in your home directory (exact path is
+dependent on the operating system; check the path above the table).
 
-The 'Check for cache/library conflicts at schematic load' box is used to configure
-the library conflict rescue behavior. See <<rescuing-cached-components,Rescuing Cached Components>> for more information about that.
+* Project Specific Libraries
 
-[[preferences-menu-and-colors]]
-==== Preferences menu / Set Color Scheme
+Libraries listed in Project Specific Libraries table are available to the
+currently opened project. They are saved in *sym-lib-table* file in the project
+directory (check the path above the table).
 
-image::images/en/color_settings.png[alt="Color settings",scaledwidth="95%"]
+You can view either list by clicking on "Global Libraries" or "Project Specific
+Libraries" tab below the library table.
 
-Color scheme for various graphic elements, and background color selection (either black or
-white).
+===== Add a new library
 
-[[preferences-and-options]]
-==== Preferences menu / Schematic Editor Options
+Add a library either by clicking *Browse Libraries...* button and selecting a
+file or clicking "Append Library" and typing a path to a library file. The
+selected library will be added to the currently opened library table
+(Global/Project Specific).
 
-image::images/en/options.png[alt="Schematic Editor Options",scaledwidth="70%"]
+===== Remove a library
+
+Remove a library by selecting one or more libraries and clicking *Remove
+Library* button.
+
+===== Library properties
+
+Each row in the table stores several fields describing a library:
+
+[cols="30%,70%",]
+|======================
+| Active| Enables/disables the library. It is useful to temporarily reduce the loaded library set.
+| Nickname| Nickname is a short, unique identifier used for assigning symbols to components. Symbols
+are represented by '<Library Nickname>:<Symbol Name>' strings.
+| Library Path| Path points to the library location.
+| Plugin Type| Determines the library file format.
+| Options| Stores library specific options, if used by plugin.
+| Description| Briefly characterizes the library contents.
+|======================
+
+
+[[preferences-general-options]]
+==== General Options
+
+[[preferences-display]]
+===== Display
+
+image::images/en/options_display.png[alt="Display settings",scaledwidth="70%"]
 
 [width="100%",cols="40%,60%",]
 |=======================================================================
-|Measurement units: |Select the display and the cursor coordinate units
-(inches or millimeters).
+|Grid Size| Grid size selection.
 
-|Grid Size: a|
-Grid size selection.
+It is *recommended* to work with normal grid (0.050 inches or 1,27 mm). Smaller
+grids are used for component building.
 
-**It is recommended to work with normal grid (0.050 inches or 1,27 mm)**. __Smaller
-grids are used for component building__.
+|Bus thickness |Pen size used to draw buses.
 
-|Default bus width: |Pen size used to draw buses.
-
-|Default line width: |Pen size used to draw objects that do not have a
+|Line thickness |Pen size used to draw objects that do not have a
 specified pen size.
 
-|Default text size: |Text size used when creating new text items or labels
+|Part ID notation |Style of suffix that is used to denote symbol units (U1A,
+U1.A, U1-1, etc.)
 
-|Repeat draw item horizontal displacement|
-increment on X axis during element duplication (usual value 0)
+|Icon scale| Adjust toolbar icons size.
 
+|Show Grid | Grid visibility setting.
+
+|Restrict buses and wires to H and V orientation| If checked, buses and
+wires are drawn only with vertical or horizontal lines.
+Otherwise buses and wires can be placed at any orientation.
+
+|Show hidden pins: |Display invisible (or __hidden__) pins, typically
+power pins.
+
+|Show page limits |If checked, shows the page boundaries on screen.
+
+|Footprint previews in symbol chooser| Displays a footprint preview frame and
+footprint selector when placing a new symbol.
+
+*Note:* it may cause problems or delays, use at your own risk.
+|=======================================================================
+
+[[preferences-editing]]
+===== Editing
+
+image::images/en/options_editing.png[alt="Editing settings",scaledwidth="70%"]
+
+[width="100%",cols="40%,60%",]
+|=======================================================================
+|Measurement units |Select the display and the cursor coordinate units
+(inches or millimeters).
+
+|Horizontal pitch of repeated items |
+Increment on X axis during element duplication (default: 0)
 (after placing an item like a symbol, label or wire,
 a duplication is made by the _Insert_ key)
 
-|Repeat draw item vertical displacement |increment on Y axis during
-element duplication (usual value is 0.100 inches or 2,54 mm)
+|Vertical pitch of repeated items| Increment on Y axis during
+element duplication (default: 0.100 inches or 2,54 mm).
 
-|Repeat label increment: |Increment of label value during duplication of texts ending
+|Increment of repeated labels |Increment of label value during duplication of texts ending
 in a number, such as bus members (usual value 1 or -1).
 
-|Auto save time interval: |Time in minutes between saving backups.
+|Default text size |Text size used when creating new text items or labels.
 
-|Symbol id notation: |Style of suffix that is used to denote symbol units (U1A, U1.A, U1-1, etc.)
+|Auto-save time interval |Time in minutes between saving backups.
 
-|Show Grid: |If checked: display grid.
+|Automatically place symbol fields | If checked, symbol fields (e.g. value and
+reference) in newly placed symbols might be moved to avoid collisions with
+other items.
 
-|Show hidden pins: |Display invisible (or __hidden__) pins, typically power pins. If checked,
-allows the display of power pins.
+|Allow field autoplace to change justification | Extension of 'Automatically
+place symbol fields' option. Enable text justification adjustment for symbol fields when placing
+a new part.
 
-|Do not center and warp cursor on zoom: |When zooming, keep the position and cursor where they are.
-
-|Use middle mouse button to pan |When enabled, the sheet can be dragged around using the middle mouse button.
-
-|Limit panning to scroll size |When enabled, the middle mouse
-button cannot move the sheet area outside the displayed area.
-
-|Pan while moving object |If checked, automatically shifts the window
-if the cursor leaves the window during drawing or moving.
-
-|Allow buses and wires to be placed in H or V orientation only a|
-If checked, buses and wires can only be vertical or horizontal.
-
-Otherwise, buses and wires can be placed at any orientation.
-
-|Show page limits |If checked, shows the page boundaries on screen.
+|Always align autoplaced fields to the 50 mil grid |Extension of 'Automatically
+place symbol fields' option. If checked, fields are autoplaced using 50 mils
+grid, otherwise they are placed freely.
 |=======================================================================
 
-[[preferences-and-language]]
-==== Preferences and Language
+[[preferences-controls]]
+===== Controls
 
-Use default mode. Other languages are available mainly for development
-purposes.
+Redefine hotkeys and set up the user interface behavior.
+
+image::images/en/options_controls.png[alt="Controls settings",scaledwidth="70%"]
+
+Select a new hotkey by double clicking an
+action or right click on an action to show a popup menu:
+
+[width="100%",cols="40%,60%",]
+|============
+|Edit | Define a new hotkey for the action (same as double click).
+|Undo Changes | Reverts the recent hotkey changes for the action.
+|Restore Default | Sets the action hotkey to its default value.
+|Undo All Changes | Reverts all recent hotkey changes for the action.
+|Restore All to Default | Sets all action hotkeys to their default values.
+|============
+
+Options description:
+
+[width="100%",cols="40%,60%",]
+|============
+|Center and warp cursor on zoom | If checked, the pointed location is warped
+to the screen center when zooming in/out.
+
+|Use touchpad to pan |When enabled, view is panned using scroll wheels (or
+touchpad gestures) and to zoom one needs to hold Ctrl. Otherwise scroll wheels
+zoom in/out and Ctrl/Shift are the panning modifiers.
+
+|Pan while moving object |If checked, automatically pans the window
+if the cursor leaves the window during drawing or moving.
+|============
+
+[[preferences-colors]]
+===== Colors
+
+Color scheme for various graphic elements. Click on any of the color swatches to
+select a new color for a particular element.
+
+image::images/en/options_color.png[alt="Color settings",scaledwidth="95%"]
+
+[[preferences-default-fields]]
+===== Default Fields
+
+Define additional custom fields and corresponding values that will appear in
+newly placed symbols.
+
+image::images/en/options_default_fields.png[alt="Default Fields settings",scaledwidth="70%"]
 
 [[help-menu]]
 === Help menu
 
-Access to on-line help (this document) for an extensive tutorial about
-KiCad. Use ``Copy Version Information'' when submitting bug reports to
-identify your build and system.
+Access to on-line help (this document) for an extensive tutorial about KiCad.
+
+Use ``Copy Version Information'' when submitting bug reports to identify your
+build and system.

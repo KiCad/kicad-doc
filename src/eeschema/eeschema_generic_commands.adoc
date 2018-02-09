@@ -1,9 +1,7 @@
 
 == Generic Eeschema commands
 
-=== Access to Eeschema commands
-
-You can reach the various commands by:
+Commands can be executed by:
 
 * Clicking on the menu bar (top of screen).
 * Clicking on the icons on top of the screen (general commands).
@@ -14,17 +12,14 @@ You can reach the various commands by:
 * Pressing the mouse buttons (important complementary commands). In
   particular a right click opens a contextual menu for the
   element under the cursor (Zoom, grid and editing of the elements).
-* Function keys (F1, F2, F3, F4, Insert and space keys).
-  Specifically: The "Escape" key often allows the canceling of a command
-  in progress. The "Insert" key allows the duplication of the last element
-  created.
+* Function keys (F1, F2, F3, F4, Insert and Space keys).
+  Specifically: Escape key cancels the command in progress.
+  Insert key allows the duplication of the last element created.
 * Pressing hot keys which typically perform a select tool command and begin
   tool action at the current cursor location.  For a list of hot keys, see
-  the "Help->List Hotkeys" menu entry or press the '?' key.
+  the "Help->List Hotkeys" menu entry or press '?' key.
 
-Here are the various possible command locations:
-
-image::images/en/commands_overview.png[alt="commands overview",scaledwidth="95%"]
+image::images/en/commands_overview.png[alt="Commands overview",scaledwidth="60%"]
 
 === Mouse commands
 
@@ -40,15 +35,15 @@ image::images/en/commands_overview.png[alt="commands overview",scaledwidth="95%"
 
 * Opens a pop-up menu.
 
-==== Operations on blocks
+==== Block operations
 
 You can move, drag, copy and delete selected areas in all Eeschema
 menus.
 
-Areas are selected by dragging a box around them using the left mouse button.
+Areas are selected by drawing a box around items using the left mouse button.
 
 Holding "Shift", "Ctrl", or "Shift + Ctrl" during selection respectively
-performs copying, dragging, and deletion:
+performs copying, dragging and deletion:
 
 [width="80%",cols="66%,34%",]
 |======================================================
@@ -61,32 +56,96 @@ performs copying, dragging, and deletion:
 When dragging or copying, you can:
 
 * Click again to place the elements.
-* Click the right button to cancel.
+* Click the right button or press Escape key to cancel.
 
 If a block move command has started, another command can be
-selected via the pop-up menu (mouse, right button):
+selected using the right-click pop-up menu.
 
 image::images/en/main_window_popup.png[alt="main window popup",scaledwidth="45%"]
 
 === Hotkeys
 
 * The "?" key displays the current hotkey list.
-* Hotkeys can be managed by choosing "Edit Hotkeys" in the Preferences menu.
+* Hotkeys might be redefined in Controls tab of Schematic Editor Options dialog (menu Preferences -> General Options).
 
-Here is the default hot key list:
+Here is the default hotkey list:
 
+////
 image::images/en/default_hot_key_list.png[alt="Default hotkey list",scaledwidth="40%"]
+////
 
-All hot keys can be redefined by the user via the hotkey editor:
+|==============================
+|Help (this window) |  ?
+|Zoom In |  F1
+|Zoom Out |  F2
+|Zoom Redraw |  F3
+|Zoom Center |  F4
+|Fit on Screen |  Home
+|Zoom to Selection |  @
+|Reset Local Coordinates |  Space
+|Edit Item |  E
+|Delete Item |  Del
+|Rotate Item |  R
+|Drag Item |  G
+|Undo |  Ctrl+Z
+|Redo |  Ctrl+Y
+|Mouse Left Click |  Return
+|Mouse Left Double Click |  End
+|Save Schematic |  Ctrl+S
+|Load Schematic |  Ctrl+L
+|Find Item |  Ctrl+F
+|Find Next Item |  F5
+|Find Next DRC Marker |  Shift+F5
+|Find and Replace |  Ctrl+Alt+F
+|Repeat Last Item |  Ins
+|Move Block -> Drag Block |  Tab
+|Copy Block |  Ctrl+C
+|Paste Block |  Ctrl+V
+|Cut Block |  Ctrl+X
+|Move Schematic Item |  M
+|Duplicate Symbol or Label |  C
+|Add Symbol |  A
+|Add Power |  P
+|Mirror X |  X
+|Mirror Y |  Y
+|Orient Normal Component |  N
+|Edit Symbol Value |  V
+|Edit Symbol Reference |  U
+|Edit Symbol Footprint |  F
+|Edit with Symbol Editor |  Ctrl+E
+|Begin Wire |  W
+|Begin Bus |  B
+|End Line Wire Bus |  K
+|Add Label |  L
+|Add Hierarchical Label |  H
+|Add Global Label |  Ctrl+L
+|Add Junction |  J
+|Add No Connect Flag |  Q
+|Add Sheet |  S
+|Add Wire Entry |  Z
+|Add Bus Entry |  /
+|Add Graphic PolyLine |  I
+|Add Graphic Text |  T
+|Update PCB from Schematic |  F8
+|Autoplace Fields |  O
+|Leave Sheet |  Alt+BkSp
+|Delete Node |  BkSp
+|Highlight Connection |  Ctrl+X
+|==============================
 
-image::images/en/shortcuts_editor.png[alt="Hotkeys editor window",scaledwidth="55%"]
+All hotkeys can be redefined using the hotkey editor (menu Preferences->General
+Options-><<preferences-controls,Controls>>).
 
-=== Selecting grid size
+It is possible to import/export hotkey settings using menu Preferences->Import
+and Export->Import/Export Hotkeys.
 
-In Eeschema, the cursor moves over a grid, which can be displayed or
-hidden. The grid is always displayed in the library manager.
+=== Grid
 
-You can change the grid size via the pop-up menu or via the Preferences/Options menu.
+In Eeschema the cursor always moves over a grid. The grid can be customized:
+
+- Size might be changed using the pop-up menu or using the Preferences/Options menu.
+- Color might be changed in Colors tab of the Schematic Editor Options dialog (menu Preferences -> General Options).
+- Visibility might be switched using the left-hand toolbar button.
 
 The default grid size is 50 mil (0.050") or 1,27 millimeters.
 
@@ -95,7 +154,7 @@ and to place pins when designing a symbol in the Symbol Editor.
 
 One can also work with a smaller grid from 25 mil to 10 mil.
 This is only intended for designing the symbol body
-or placing text and comments, not for placing pins and wires.
+or placing text and comments and not recommended for placing pins and wires.
 
 === Zoom selection
 
@@ -122,7 +181,7 @@ To change the zoom level:
 === Displaying cursor coordinates
 
 The display units are in inches or millimeters. However, Eeschema always
-works internally in 0.001-inch (mil/thou) units.
+uses 0.001 inch (mil/thou) as its internal unit.
 
 The following information is displayed at the bottom right hand side of
 the window:
@@ -131,18 +190,17 @@ the window:
 * The absolute position of the cursor
 * The relative position of the cursor
 
-The relative coordinates can be reset to zero with the space bar. This is
-useful for making measurements between two points.
+The relative coordinates can be reset to zero by pressing Space. This is
+useful for measuring distance between two points or aligning objects.
 
 image::images/en/status_bar.png[alt="status_bar",scaledwidth="95%"]
 
 === Top menu bar
 
 The top menu bar allows the opening and saving of schematics,
-program configuration, and viewing the documentation.
+program configuration and viewing the documentation.
 
 image::images/en/menu_bar.png[alt="menubar",scaledwidth="70%"]
-
 
 === Upper toolbar
 
@@ -152,55 +210,46 @@ If Eeschema is run in standalone mode, this is the available tool set:
 
 image::images/toolbar_schedit_standalone.png[alt="images/toolbar_schedit_standalone.png",scaledwidth="100%"]
 
-If Eeschema is run from the project manager (KiCad), this is the available tool set:
-
-image::images/toolbar_schedit.png[alt="images/toolbar_schedit.png",scaledwidth="100%"]
-
-Tools to initialize a project are not available, because these tools are in the _Project Manager_.
+Note that when KiCad runs in project mode, the first two icons are not available
+as they work with individual files.
 
 [width="100%",cols="10%,90%",]
 |=======================================================================
-|image:images/icons/new_sch.png[new schematic icon]
+|image:images/icons/new_document.png[New schematic icon]
 |Create a new schematic (only in standalone mode).
 
 |image:images/icons/open_document.png[Open schematic icon]
 |Open a schematic (only in standalone mode).
 
-|image:images/icons/save.png[icons/save_png]
-|Save complete (hierarchical) schematic.
+|image:images/icons/save.png[Save schematic icon]
+|Save complete schematic project.
 
 |image:images/icons/sheetset.png[Page Settings icon]
 |Select the sheet size and edit the title block.
 
-|image:images/icons/print_button.png[icons/print_button_png]
+|image:images/icons/print_button.png[Print icon]
 |Open print dialog.
 
-|image:images/icons/cut_button.png[icons/cut_button_png]
-|Remove the selected elements during a block move.
-
-|image:images/icons/copyblock.png[icons/copyblock_png]
-|Copy selected elements to the clipboard during a block move.
-
 |image:images/icons/paste.png[icons/paste_png]
-|Copy last selected element or block in the current sheet.
+|Paste a copied/cut item or block to the current sheet.
 
 |image:images/icons/undo.png[icons/undo_png]
-|Undo: Cancel the last change (up to 10 levels).
+|Undo: Revert the last change.
 
 |image:images/icons/redo.png[icons/redo_png]
-|Redo (up to 10 levels).
+|Redo: Revert the last undo operation.
 
 |image:images/icons/find.png[search icon]
-|Call the dialog to search components and texts in the schematic.
+|Show the dialog to search components and texts in the schematic.
 
 |image:images/icons/find_replace.png[search replace icon]
-|Call the dialog to search and replace texts in the schematic.
-
-|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]
-|Zoom in and out.
+|Show the dialog to search and replace texts in the schematic.
 
 |image:images/icons/zoom_redraw.png[icons/zoom_redraw] image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]
 |Refresh screen; zoom to fit.
+
+|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]
+|Zoom in and out.
 
 |image:images/icons/hierarchy_nav.png[hierarchy navigator icon]
 |View and navigate the hierarchy tree.
@@ -209,34 +258,34 @@ Tools to initialize a project are not available, because these tools are in the 
 |Leave the current sheet and go up in the hierarchy.
 
 |image:images/icons/libedit.png[icons/libedit_png]
-|Call symbol editor _Libedit_ to view and modify libraries and component symbols.
+|Call the symbol library editor to view and modify libraries and component symbols.
 
 |image:images/icons/library_browse.png[icons/library_browse_png]
-|Display symbollibraries (Viewlib).
+|Browse symbol libraries.
 
 |image:images/icons/annotate.png[icons_annotate_png]
 |Annotate symbols.
 
 |image:images/icons/erc.png[ERC icon]
-|Electrical rules check (ERC), automatically validate electrical connections.
-
-|image:images/icons/netlist.png[Netlist icon]
-|Export a netlist (Pcbnew, SPICE, and other formats).
-
-|image:images/icons/bom.png[BOM icon]
-|Generate the BOM (Bill of Materials).
-
-|image:images/icons/edit_module.png[edit_module icon]
-|Edit footprint.
+|Electrical Rules Checker (ERC), automatically validate electrical connections.
 
 |image:images/icons/cvpcb.png[run cvpcb icon]
 |Call CvPcb to assign footprints to symbols.
+
+|image:images/icons/netlist.png[Netlist icon]
+|Export a netlist (Pcbnew, SPICE and other formats).
+
+|image:images/icons/spreadsheet.png[Symbol fields editor icon]
+|Edit symbol fields.
+
+|image:images/icons/bom.png[BOM icon]
+|Generate the Bill of Materials (BOM).
 
 |image:images/icons/pcbnew.png[icons/pcbnew_png]
 |Call Pcbnew to perform a PCB layout.
 
 |image:images/icons/import_footprint_names.png[Import Footprint Names icon]
-|Back-import symbol footprints (selected using CvPcb) into the "footprint" fields.
+|Back-import footprint assignment (selected using CvPcb or Pcbnew) into the "footprint" fields.
 |=======================================================================
 
 <<<<<
@@ -246,25 +295,23 @@ Tools to initialize a project are not available, because these tools are in the 
 This toolbar contains tools to:
 
 * Place symbols, wires, buses, junctions, labels, text, etc.
-* Create hierarchical sub-sheets and connection symbols
+* Create hierarchical subsheets and connection symbols.
 
-[width="100%",cols="10%,5%,85%",]
+[width="100%",cols="10%,90%",]
 |=======================================================================
-.20+^.^|image:images/toolbar_schedit_rightside.png[alt="images/toolbar_schedit_rightside.png",width="80%"]
-|image:images/icons/cursor.png[icons/cursor_png]
+|image:images/icons/cursor.png[Cancel tool icon]
 |Cancel the active command or tool.
 
-|image:images/icons/hierarchy_cursor.png[icons/hierarchy_cursor_png]
-|Hierarchy navigation: this tool makes it possible to open the
-subsheet of the displayed schematic (click in the symbol of this
-subsheet), or to go back up in the hierarchy (click in a free area of
-the schematic).
+|image:images/icons/net_highlight_schematic.png[Highlight net icon]
+|Highlight a net by marking its wires and net labels with a different color.
+If KiCad runs in project mode then copper corresponding to the selected net will
+be highlighted in Pcbnew as well.
 
 |image:images/icons/new_component.png[New Component icon]
-|Display the symbol selector.
+|Display the symbol selector dialog to select a new symbol to be placed.
 
 |image:images/icons/add_power.png[Add Power icon]
-|Display the power symbol selector.
+|Display the power symbol selector dialog to select a power symbol to be placed.
 
 |image:images/icons/add_line.png[icons/add_line_png]
 |Draw a wire.
@@ -280,57 +327,53 @@ a connection, thus they should not be used to connect wires together.
 |Draw bus-to-bus entry points.
 
 |image:images/icons/noconn.png[icons/noconn_png]
-|Place a "No Connect" flag. These are placed on symbol pins which
-are not to be connected. This is useful in the ERC function to check if
-pins are intentionally left not connected or are missed.
+|Place a "No Connect" flag. These flags should be placed on symbol pins which
+are meant to be left unconnected. It is done to notify the Electrical Rules
+Checker that lack of connection for a particular pin is intentional and should
+not be reported.
 
 |image:images/icons/add_junction.png[icons/add_junction_png]
-|Place a junction. This connects two crossing wires, or a wire and a pin,
-when it can be ambiguous. (i.e. if an end of the wire or pin is not
-connected to one of the ends of the other wire).
+|Place a junction. This connects two crossing wires or a wire and a pin,
+when it can be ambiguous (i.e. if a wire end or a pin is not directly
+connected to another wire end).
 
 |image:images/icons/add_line_label.png[icons/add_line_label_png]
-|Local label placement. Two wires may be connected with identical labels
-**in the same sheet**. For connections between two different sheets, you
-have to use global or hierarchical labels.
+|Place a local label. Local label connects items located **in the same sheet**.
+For connections between two different sheets, you have to use global or
+hierarchical labels.
 
 |image:images/icons/add_glabel.png[Global label icon]
-|Place a global label. All global labels with the same name are connected, even between
-different sheets.
+|Place a global label. All global labels with the same name are connected, even when
+located on different sheets.
 
 |image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]
-|Place a hierarchical label. This makes it possible to place a
-connection between a sheet and the parent sheet that contains it.
+|Place a hierarchical label. Hierarchical labels are used to create a
+connection between a subsheet and the parent sheet that contains it.
 
 |image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsheet_png]
 |Place a hierarchical subsheet. You must specify the file name for this subsheet.
 
 |image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_label_png]
-|Import hierarchical labels from a subsheet. These hierarchical labels must already be
-placed in the subsheet. These are equivalent to pins on a component, and must be connected
-using wires.
+|Import a hierarchical pin from a subsheet. This command can be executed only on
+hierarchical subsheets. It will create hierarchical pins corresponding to hierarchical
+labels placed in the target subsheet.
 
 |image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]
-|Place hierarchical label in a subsheet symbol. This is placed by name and does not require the
-label to already exist in the subsheet itself.
+|Place a hierarchical pin in a subsheet. This command can be executed only on
+hierarchical subsheets. It will create arbitrary hierarchical pins, even if they 
+do not exist in the target subsheet.
 
 |image:images/icons/add_dashed_line.png[icons/add_dashed_line_png]
 |Draw a line. These are only graphical and do not connect anything.
 
-|image:images/icons/add_text.png[icons/add_text_png]
-|Place textual comments. These are only graphical.
+|image:images/icons/text.png[icons/text.png]
+|Place a text comment.
 
 |image:images/icons/image.png[icons/image_png]
 |Place a bitmap image.
 
 |image:images/icons/delete.png[icons/cancel_png]
 |Delete selected element.
-
-If several superimposed elements are selected, the priority is given to
-the smallest (in the decreasing priorities: junction, "No Connect", wire,
-bus, text, component). This also applies to hierarchical sheets. Note:
-the "Undelete" function of the general toolbar allows you to cancel last
-deletions.
 
 |=======================================================================
 
@@ -342,22 +385,22 @@ This toolbar manages the display options:
 |=======================================================================
 
 |image:images/icons/grid.png[icons/grid]
-| Show/Hide the grid.
+|Toggle grid visibility.
 
 |image:images/icons/unit_inch.png[icons/unit_inch]
-|Switch to inches.
+|Switch units to inches.
 
 |image:images/icons/unit_mm.png[icons/unit_mm]
-|Switch to millimeters.
+|Switch units to millimeters.
 
 |image:images/icons/cursor_shape.png[icons/cursor_shape]
-| Choose the cursor shape.
+|Choose the cursor shape (full screen/small).
 
 |image:images/icons/hidden_pin.png[icons/hidden_pin]
-| Visibility of "invisible" pins.
+|Toggle visibility of "invisible" pins.
 
 |image:images/icons/lines90.png[icons/lines90]
-| Allowed orientation of wires and buses.
+|Toggle free angle/90 degrees wires and buses placement.
 
 |=======================================================================
 
@@ -374,7 +417,7 @@ Pop-up without selected element.
 
 image::images/eeschema_popup_without_element.png[alt="eeschema_popup_without_element_png",scaledwidth="50%"]
 
-Editing of a label.
+Editing a label.
 
 image::images/eeschema_popup_edit_label.png[alt="eeschema_popup_edit_label_png",scaledwidth="60%"]
 
