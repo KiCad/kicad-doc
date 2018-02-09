@@ -5,8 +5,8 @@
 [[sheet-management]]
 === Sheet management
 
-The Sheet Settings icon,
-image:images/icons/sheetset.png[Sheet Settings icon],
+The Sheet Settings icon
+(image:images/icons/sheetset.png[Sheet Settings icon])
 allows you to define the sheet size and the contents of the
 title block.
 
@@ -16,129 +16,134 @@ Sheet numbering is automatically updated. You can set the date
 to today by pressing the left arrow button by "Issue Date", but it
 will not be automatically changed.
 
-[[options-of-the-schematic-editor]]
-=== Options of the schematic editor
-
 [[search-tool]]
 === Search tool
 
-The Find icon,
-image:images/icons/find.png[Find icon],
+The Find icon
+(image:images/icons/find.png[Find icon])
 can be used to access the search tool.
 
 image::images/en/find_dialog.png[alt="Find dialog",scaledwidth="50%"]
 
-You can search for a reference, a value, or a text string in the current
+You can search for a reference, a value or a text string in the current
 sheet or in the whole hierarchy. Once found, the cursor will be
 positioned on the found element in the relevant sub-sheet.
 
 [[netlist-tool]]
 === Netlist tool
 
-The Netlist icon,
-image:images/icons/netlist.png[Netlist icon],
+The Netlist icon
+(image:images/icons/netlist.png[Netlist icon])
 opens the netlist generation tool.
 
-The netlist file it creates describes all connections in the entire hierarchy.
+The tool creates a file which describe all connections in the entire hierarchy.
 
 In a multisheet hierarchy, any local label is visible only inside the
 sheet to which it belongs.
-Thus, the label TOTO of sheet 3 is different from the label TOTO of sheet
+For example: the label LABEL1 of sheet 3 is different from the label LABEL1 of sheet
 5 (if no connection has been intentionally introduced to connect them).
 This is due to the fact that the sheet name path is internally associated with
 the local label.
 
-Note 1:
+[NOTE]
+Even though there is no text length limit for labels in Eeschema, please take
+into account that other programs reading the generated netlist may have such
+constraints.
 
-Label lengths have no limitations in Eeschema, but the software
-exploiting the generated netlist can be limited on this point.
-
-Note 2:
-
-Avoid spaces in the labels, because they will appear as separated words.
-It is not a limitation of Eeschema, but of many netlist formats, which
-often assume that a label has no spaces.
+[NOTE]
+Avoid spaces in labels, because they will appear as separated words in the
+generated file. It is not a limitation of Eeschema, but of many netlist
+formats, which often assume that a label has no spaces.
 
 image::images/en/netlist_dialog.png[alt="Netlist dialog",scaledwidth="70%"]
 
 Option:
 
-Default Format:
-
-Check to select Pcbnew as the default format.
+[width="100%",cols="40%,60%",]
+|====================
+|Default Format |Check to select Pcbnew as the default format.
+|====================
 
 Other formats can also be generated:
 
 * Orcad PCB2
 * CadStar
-* Spice, for simulators
+* Spice (simulators)
 
-External plugins can be launched to extend the netlist formats list (a
-PadsPcb Plugin was added here).
+////
+TODO describe how to create new plugins
+////
+External plugins can be added to extend the netlist formats list
+(PadsPcb Plugin was added in the picture above).
+
+There is more information about creating netlists in
+<<create-a-netlist, Create a Netlist>> chapter.
 
 [[annotation-tool]]
 === Annotation tool
 
 The icon
 image:images/icons/annotate.png[icons_annotate_png]
-gives access to the annotation tool. This tool performs an automatic
-naming of all components in the schematic.
+launches the annotation tool. This tool assigns references to components.
 
 For multi-part components (such as 7400 TTL which contains 4 gates), a
 multi-part suffix is also allocated (thus a 7400 TTL designated U3 will
 be divided into U3A, U3B, U3C and U3D).
 
-You can unconditionally annotate all the components, or only the new
+You can unconditionally annotate all the components or only the new
 components, i.e. those which were not previously annotated.
 
 image::images/en/annotate-dialog.png[alt="annotate-dialog_img",scaledwidth="50%"]
 
 *Scope*
+[width="100%",cols="40%,60%",]
+|====================
+|Use the entire schematic| All sheets are re-annotated (default).
 
-1. Use the entire schematic. All the sheets are re-annotated (usual
-Option).
-
-2. Use the current page only. Only the current sheet is re-annotated
+|Use the current page only| Only the current sheet is re-annotated
 (this option is to be used only in special cases, for example to
 evaluate the amount of resistors in the current sheet.).
 
-3. Keep existing annotation. Conditional annotation, only the new
-components will be re-annotated (usual option).
+|Keep existing annotation| Conditional annotation, only the new
+components will be re-annotated (default).
 
-4. Reset existing annotation. Unconditional annotation, all the
+|Reset existing annotation| Unconditional annotation, all the
 components will be re-annotated (this option is to be used when there
 are duplicated references).
 
-5. Reset, but do not swap any annotated multi-unit parts. This keeps
+|Reset, but do not swap any annotated multi-unit parts| Keeps
 all groups of multiple units (e.g. U2A, U2B) together when reannotating.
+|====================
 
 *Annotation Order*
 
-Selects the order in which components will be numbered.
+Selects the order in which components will be numbered (either horizontally
+or vertically).
 
 *Annotation Choice*
 
-Selects the method by which numbers will be selected.
+Selects the assigned reference format.
 
 [[electrical-rules-check-tool]]
 === Electrical Rules Check tool
 
 The icon
 image:images/icons/erc.png[ERC icon]
-gives access to the electrical rules check (ERC) tool.
+launches the electrical rules check (ERC) tool.
 
-This tool performs a design verification and is particularly useful to
+This tool performs a design verification and is able to
 detect forgotten connections, and inconsistencies.
 
 Once you have run the ERC, Eeschema places markers to highlight problems.
-The diagnosis can then be given by left clicking on the marker. An error file can also be generated.
+The error description is displayed after left clicking on the marker. An error
+report file can also be generated.
 
 [[main-erc-dialog]]
 ==== Main ERC dialog
 
 image::images/en/dialog_erc.png[alt="ERC dialog",scaledwidth="70%"]
 
-Errors are displayed in the Electrical Rules Checker dialog box:
+Errors are displayed in the Electrical Rules Checker dialog:
 
 * Total count of errors and warnings.
 * Errors count.
@@ -146,16 +151,21 @@ Errors are displayed in the Electrical Rules Checker dialog box:
 
 Option:
 
-* Create ERC file report: check this option to generate an ERC report file.
+[width="100%",cols="40%,60%",]
+|====================
+|Create ERC file report |Check this option to generate an ERC report file.
+|====================
 
 Commands:
 
-* Delete Markers: to remove all ERC error/warnings markers.
-* Run: to perform an Electrical Rules Check.
-* Close: to exit this dialog box.
+[width="100%",cols="40%,60%",]
+|====================
+|Delete Markers| Remove all ERC error/warnings markers.
+|Run| Start an Electrical Rules Check.
+|Close| Close the dialog.
+|====================
 
-Note:
-
+[NOTE]
 * Clicking on an error message jumps to the corresponding marker in the
   schematic.
 
@@ -164,7 +174,7 @@ Note:
 
 image::images/en/dialog_erc_opts.png[alt="ERC Options dialog",scaledwidth="60%"]
 
-This tab allows you to establish connectivity rules
+This tab allows you to define the connectivity rules
 between pins; you can choose between 3 options for each case:
 
 * No error
@@ -173,19 +183,37 @@ between pins; you can choose between 3 options for each case:
 
 Each square of the matrix can be modified by clicking on it.
 
+Option:
+
+[width="100%",cols="40%,60%",]
+|====================
+|Test similar labels |Report labels that differ only by letter case (e.g. label/Label/LaBeL).
+Net names are case-sensitive therefore such labels are treated as separate nets.
+|Test unique global labels |Report global lables that occur only once for a
+particular net. Normally it is required to have at least two make a connection.
+|====================
+
+Commands:
+
+[width="100%",cols="40%,60%",]
+|====================
+|Initialize to Default| Restores the original settings.
+|====================
+
+// TODO cvpcb toolbar button
+
 [[bill-of-material-tool]]
 === Bill of Material tool
 
 The icon
 image:images/icons/bom.png[BOM icon]
-gives access to the bill of materials (BOM) generator. This menu allows the
-generation of a file listing of the components and/or hierarchical
-connections (global labels).
+launches the bill of materials (BOM) generator. This tool generates a file
+listing the components and/or hierarchical connections (global labels).
 
 image::images/en/dialog_bom.png[alt="BOM dialog",scaledwidth="60%"]
 
-Eeschema's BOM generator makes use of external plugins, generally in XSLT
-or Python form. Some are provided, and will be installed inside the KiCad
+Eeschema's BOM generator makes use of external plugins, either as XSLT
+or Python scripts. There are a few examples installed inside the KiCad
 program files directory.
 
 A useful set of component properties to use for a BOM are:
@@ -200,23 +228,34 @@ For example:
 
 image::images/en/dialog_component_properties.png[alt="Component Properties dialog",scaledwidth="80%"]
 
-On **MS Windows** operating systems, BOM generator dialog has special option
+On **MS Windows**, BOM generator dialog has a special option
 (pointed by red arrow) that controls visibility of external plugin window. +
-By default, command line runs with hidden console window and output is
+By default, BOM generator command is executed console window hidden and output is
 redirected to __Plugin info__ field. Set this option to show the window of the
-running command. It may be necessary if plugin has GUI.
+running command. It may be necessary if plugin has provides a graphical user interface.
 
 image::images/bom_extra_option_windows.png[alt="BOM dialog extra option on MS Windows",scaledwidth="80%"]
 
+[[edit-fields-tool]]
+=== Edit Fields tool
+
+The icon image:images/icons/spreadsheet.png[Edit Fields icon] opens a spreadsheet
+to view and modify field values for all symbols.
+
+image:images/en/dialog_edit_fields.png[alt="Symbol Dialog",scaledwidth="79%"]
+
+Once you modify field values, you need to either accept changes by clicking on
+'Apply' button or undo them by clicking on 'Revert' button.
+
 [[import-tool-for-footprint-assignment]]
-=== Import tool for footprint assignment:
+=== Import tool for footprint assignment
 
 [[access]]
 ==== Access:
 
 The icon
 image:images/icons/import_footprint_names.png[Import Footprint Names icon]
-gives access to the back-annotate tool.
+launches the back-annotate tool.
 
 This tool allows footprint changes made in PcbNew to be imported back
 into the footprint fields in Eeschema.
