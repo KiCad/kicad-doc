@@ -28,9 +28,9 @@ link:https://github.com/KiCad/kicad-doc/fork[submitting a pull-request].
 documentation and the tool used to generate the PDF and HTML outputs.
 
 We will probably switch to http://asciidoctor.org/[asciidoctor] in the future,
-when asciidoctor tools are stable enough, because of their abilility to generate PDF
+when asciidoctor tools are stable enough, because of their ability to generate PDF
 and epub document formats directly without the intervention of any other external
-tool or intemediate format like dblatex or docbook. See the
+tool or intermediate format like dblatex or docbook. See the
 http://asciidoctor.org/docs/convert-asciidoc-to-pdf/[asciidoctor-pdf] project.
 
 * https://po4a.alioth.debian.org/[po4a] >= 0.45 is used to translate the English
@@ -39,19 +39,24 @@ AsciiDoc documentation to other languages before the last compilation steps.
 * dblatex >= 0.3.4
 * gettext >= 0.18
 * source-highlight
-* The _VL Gothic_ font is required when you build the japanese PDFs. Look for a
+* The _VL Gothic_ font is required when you build the Japanese PDFs. Look for a
 package named `fonts-vlgothic`. Otherwise use the SINGLE_LANGUAGE option
 to avoid build errors.
+* For building PDF files with Cyrillic characters (like Russian) the fonts
+package _freefont-ttf_ is required, so you will need to look for similar named
+package.
 
 === Debian / Ubuntu
 
-To install the dependencies on Debian / Ubuntu  run the following (requires about 1.5GiB of space):
+To install the dependencies on Debian / Ubuntu  run the following (requires
+about 1.5GiB of space):
 
-    sudo apt-get install git make cmake asciidoc pandoc gettext po4a dblatex
-    texlive-xetex fonts-vlgothic source-highlight texlive-lang-english
-    texlive-lang-french texlive-lang-italian texlive-lang-japanese
-    texlive-lang-dutch texlive-lang-polish texlive-lang-german texlive-lang-cyrillic
-    texlive-lang-other
+    sudo apt-get install asciidoc cmake dblatex fonts-vlgothic \
+    fonts-freefont-ttf gettext git make pandoc po4a source-highlight \
+    texlive-lang-cyrillic texlive-lang-dutch texlive-lang-english \
+    texlive-lang-french texlive-lang-german texlive-lang-italian \
+    texlive-lang-japanese texlive-lang-other texlive-lang-polish \
+    texlive-xetex
 
 NOTE: in Ubuntu 14:04 there is no texlive-lang-japanese. Install
 texlive-lang-cjk instead.
@@ -61,16 +66,16 @@ package, Install texlive-lang-european instead.
 
 or, if you do not have space problems:
 
-    sudo apt-get install git make cmake asciidoc pandoc gettext po4a dblatex
+    sudo apt-get install git make cmake asciidoc pandoc gettext po4a dblatex \
     texlive-xetex fonts-vlgothic source-highlight texlive-lang-all
 
 === Fedora
 
 To install the dependencies on Fedora run the following:
 
-    sudo dnf install git make cmake asciidoc pandoc gettext po4a dblatex
-    source-highlight texlive vlgothic-fonts perl-Unicode-LineBreak
-    texlive-scheme-full texlive-collection-xetex gnu-free-serif-fonts
+    sudo dnf install git make cmake asciidoc pandoc gettext po4a dblatex \
+    source-highlight texlive vlgothic-fonts perl-Unicode-LineBreak \
+    texlive-scheme-full texlive-collection-xetex gnu-free-serif-fonts \
     gnu-free-mono-fonts gnu-free-sans-fonts
 
 == Building the docs
