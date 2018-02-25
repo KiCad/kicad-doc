@@ -10,7 +10,7 @@ _Reference manual_
 [[copyright]]
 *Copyright*
 
-This document is Copyright (C) 2010-2015 by it's contributors as listed
+This document is Copyright (C) 2010-2018 by it's contributors as listed
 below. You may distribute it and/or modify it under the terms of either
 the GNU General Public License (http://www.gnu.org/licenses/gpl.html),
 version 3 or later, or the Creative Commons Attribution License
@@ -38,7 +38,7 @@ Please direct any bug reports, suggestions or new versions to here:
 [[publication_date_and_software_version]]
 *Publication date and software version*
 
-Published on February 14, 2015.
+Published on February 24, 2018.
 
 //Since docbook "article" is more compact, I have to separate this page
 <<<<
@@ -91,14 +91,26 @@ image::images/gerbview_top_toolbar.png[scaledwidth="95%",alt="gerbview_top_toolb
 |image:images/icons/zoom_fit_in_page.png[zoom_fit_in_page_png]
 |Zoom auto (zoom fit)
 
-|image:images/gerbview_top_layer.png[width="70%",alt="gerbview_top_layer_png"]
+|image:images/icons/zoom_area.png[zoom_area_png]
+|Zoom to selection
+
+|image:images/gerbview_top_layer.png[scaledwidth="70%",alt="gerbview_top_layer_png"]
 |Select active layer
 
-|image:images/gerbview_top_dcode.png[width="70%",alt="gerbview_top_dcode_png"]
+|image:images/gerbview_top_dcode.png[scaledwidth="60%",alt="gerbview_top_dcode_png"]
 |Highlight items of selected D Code on the active layer
 
-|image:images/gerbview_top_info.png[width="70%",alt="gerbview_top_info_png"]
+|image:images/gerbview_top_info.png[scaledwidth="70%",alt="gerbview_top_info_png"]
 |Display info about active layer
+
+|image:images/gerbview_x2_component.png[scaledwidth="70%",alt="gerbview_x2_component_png"]
+|Highlight items belonging to selected component (Gerber X2)
+
+|image:images/gerbview_x2_net.png[scaledwidth="70%",alt="gerbview_x2_net_png"]
+|Highlight items belonging to selected net (Gerber X2)
+
+|image:images/gerbview_x2_attribute.png[scaledwidth="70%",alt="gerbview_x2_attributeo_png"]
+|Highlight items with the selected attribute (Gerber X2)
 |=======================================================================
 
 <<<<<
@@ -107,7 +119,13 @@ image::images/gerbview_top_toolbar.png[scaledwidth="95%",alt="gerbview_top_toolb
 
 [width="100%",cols="10%,5%,85%",]
 |=======================================================================
-.11+^.^|image:images/gerbview_left_toolbar.png[gerbview_left_toolbar_png]
+.13+^.^|image:images/gerbview_left_toolbar.png[gerbview_left_toolbar_png]
+|image:images/icons/cursor.png[cursor_png]
+|Select items
+
+|image:images/icons/measurement.png[measurement_png]
+|Measure between two points
+
 |image:images/icons/grid.png[grid_png]
 |Toggle grid visibility
 
@@ -135,13 +153,13 @@ image::images/gerbview_top_toolbar.png[scaledwidth="95%",alt="gerbview_top_toolb
 |image:images/icons/show_dcodenumber.png[show_dcodenumber_png]
 |Show/hide D Codes
 
+|image:images/icons/contrast_mode.png[contrast_mode_png]
+|Display current layer in high-contrast mode
+
 |image:images/icons/gbr_select_mode0.png[gbr_select_mode0_png]
  image:images/icons/gbr_select_mode1.png[gbr_select_mode1_png]
  image:images/icons/gbr_select_mode2.png[gbr_select_mode2_png]
 |Select raw/stacked/transparency display mode
-
-|image:images/icons/layers_manager.png[layers_manager_png]
-|Show/hide layers manager toolbar
 
 |=======================================================================
 
@@ -159,7 +177,11 @@ Mouse button assignments:
 
 * Left click: select the active layer
 * Right click: show/hide/sort layers options
-* Middle click (on color swatch): select the layer color
+* Middle click or double click (on color swatch): select the layer color
+
+The Layers tab allows you to control the visibility and color of all loaded
+Gerber and drill layers.  The Items tab allows you to control the color and
+display of the grid, D Codes, and negative objects.
 
 == Commands in menu bar
 
@@ -177,6 +199,22 @@ converted to track segments (or graphic lines for non-copper layers).
 
 image::images/gerbview_preferences_menu.png[scaledwidth="33%",alt="gerbview_preferences_menu_png"]
 
+==== Toolsets
+
+GerbView now supports the modern graphics toolset that is available in PcbNew.
+Enabling the modern toolset brings new features and better performance.  You can
+select which toolset to use in the preferences menu.  Using the Modern (Accelerated)
+toolset is recommended if your graphics card supports it (requires OpenGL 2.0).
+If your graphics card does not support the Accelerated toolset, you can still use
+the new features by selecting the Modern (Fallback) toolset.
+
+Using the Legacy toolset is only recommended if you notice that the Modern
+toolset does not support a feature you need or if it does not render a Gerber
+file correctly.  If you notice such a problem, please notify the KiCad developers
+so that it can be fixed in a future release.
+
+The Legacy toolset will be removed in a future version of GerbView.
+
 === Miscellaneous menu
 
 image::images/gerbview_misc_menu.png[scaledwidth="25%",alt="gerbview_misc_menu_png"]
@@ -184,7 +222,8 @@ image::images/gerbview_misc_menu.png[scaledwidth="25%",alt="gerbview_misc_menu_p
 * *List DCodes* shows the D Code information for all layers.
 * *Show Source* displays the Gerber file contents of the active layer in a
   text editor.
-* *Clear Layer* erases the contents of the active layer.
+* *Clear Current Layer* erases the contents of the active layer.
+* *Set Text Editor...* allows you to choose which program to show source with.
 
 == Display modes
 
@@ -242,9 +281,11 @@ image::images/gerbview_layer_select_2.png[scaledwidth="60%",alt="gerbview_layer_
 
 == Moving items
 
-Items may be selected by holding down the left mouse button and drawing a
-rectangle. Releasing the button picks up the items. A click of the left
-mouse button places the items.
+When using the legacy toolset, items may be selected by holding down the left
+mouse button and drawing a rectangle. Releasing the button picks up the items.
+A click of the left mouse button places the items.
+
+This behavior is deprecated and not available in the modern toolsets.
 
 == Printing
 
