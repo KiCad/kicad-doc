@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pcbnew\n"
 "POT-Creation-Date: 2018-03-28 22:24+0900\n"
-"PO-Revision-Date: 2017-09-10 01:15+0900\n"
-"Last-Translator: starfort_jp <starfort@nifty.com>\n"
+"PO-Revision-Date: 2018-04-05 08:37+0900\n"
+"Last-Translator: murakou <murakou@jp3cyc.jp>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.6\n"
 
 # PR1:07102015 proofreading - chapter1, 2
 # PR2:07122015 proofreading - chapter3
@@ -3571,26 +3571,21 @@ msgstr ""
 
 #. type: Plain text
 #: pcbnew_installation.adoc:41
-#, fuzzy
-#| msgid ""
-#| "KiCad - native KiCad footprint libraries stored on a local filesystem"
 msgid ""
 "KiCad - native KiCad footprint libraries stored on a local filesystem in the "
 "_.pretty_ format (folders containing _.kicad_mod_ files)"
 msgstr ""
-"KiCad - ローカルのファイル・システムに保存された KiCad 本来のフットプリント・"
-"ライブラリ、"
+"KiCad - ローカルのファイル・システムに保存された、 _.pretty_ 形式（ _."
+"kicad_mod_  ファイルを含むフォルダ）の KiCad 本来のフットプリント・ライブラリ"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:43
-#, fuzzy
-#| msgid "Github - native KiCad footprint libraries in the _.pretty_ format,"
 msgid ""
 "Github - native KiCad footprint libraries in the _.pretty_ format, stored "
 "online as a Github repository"
 msgstr ""
-"Github - Github リポジトリとしてオンラインに保存された KiCad 本来のフットプリ"
-"ント・ライブラリ、"
+"Github - Github リポジトリとしてオンラインに保存された、 _.pretty_ 形式の "
+"KiCad 本来のフットプリント・ライブラリ"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:44
@@ -4122,8 +4117,6 @@ msgstr "以前にダウンロードした KiCad pretty ディレクトリ"
 
 #. type: Plain text
 #: pcbnew_installation.adoc:222
-#, fuzzy
-#| msgid "Legacy KiCad _.mod_ files from an older installations"
 msgid "Legacy KiCad _.mod_ files from older installations"
 msgstr ""
 "過去にインストールした昔のバージョンから引き継いでいる古い形式の KiCad _."
@@ -8321,6 +8314,9 @@ msgid ""
 "import re\n"
 "import datetime\n"
 msgstr ""
+"import pcbnew\n"
+"import re\n"
+"import datetime\n"
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:420
@@ -8376,16 +8372,7 @@ msgstr ""
 
 #. type: delimited block -
 #: pcbnew_python_scripting.adoc:441
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    def Run(self):\n"
-#| "        pcb = pcbnew.GetBoard()\n"
-#| "        for draw in pcb.m_Drawings:\n"
-#| "            if draw.GetClass() == 'PTEXT':\n"
-#| "                txt = re.sub(\"\\$date\\$ [0-9]{4}-[0-9]{2}-[0-9]{2}\",\n"
-#| "                                 \"$date$\", draw.GetText())\n"
-#| "                if txt == \"$date$\":\n"
-#| "                    draw.SetText(\"$date$ %s\"%datetime.date.today())\n"
+#, no-wrap
 msgid ""
 "    def Run(self):\n"
 "        pcb = pcbnew.GetBoard()\n"
@@ -8398,7 +8385,7 @@ msgid ""
 msgstr ""
 "    def Run(self):\n"
 "        pcb = pcbnew.GetBoard()\n"
-"        for draw in pcb.m_Drawings:\n"
+"        for draw in pcb.GetDrawings():\n"
 "            if draw.GetClass() == 'PTEXT':\n"
 "                txt = re.sub(\"\\$date\\$ [0-9]{4}-[0-9]{2}-[0-9]{2}\",\n"
 "                                 \"$date$\", draw.GetText())\n"
@@ -9427,16 +9414,11 @@ msgstr ""
 
 #. type: Plain text
 #: pcbnew_routing.adoc:241
-#, fuzzy
-#| msgid ""
-#| "When creating a new track, Pcbnew shows links to nearest unconnected "
-#| "pads, link number set in option \"Max. Links\" in General Options."
 msgid ""
 "When creating a new track, Pcbnew shows links to nearest unconnected pads."
 msgstr ""
-"新規配線の作成時、Pcbnew は一般オプションの \"最大リンク数\" オプションで設定"
-"した本数のリンクを表示します。（リンクは、最も近い未接続のパッドへのリンクか"
-"ら順に決定されます。）"
+"新規配線の作成時、Pcbnew は最も近い未接続のパッドへのリンクから順に表示しま"
+"す。"
 
 #. type: Plain text
 #: pcbnew_routing.adoc:244
