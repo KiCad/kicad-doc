@@ -1,26 +1,26 @@
 
-[[component-library-editor]]
-== Component Library Editor
+[[symbol-library-editor]]
+== Symbol Library Editor
 
-[[general-information-about-component-libraries]]
-=== General Information About Component Libraries
+[[general-information-about-symbol-libraries]]
+=== General Information About Symbol Libraries
 
-A component is a schematic element which contains a graphical
+A symbol is a schematic element which contains a graphical
 representation, electrical connections, and fields defining the
-component. Components used in a schematic are stored in component
-libraries. Eeschema provides a component library editing tool that
-allows you to create libraries, add, delete or transfer components
-between libraries, export components to files, and import components
+symbol. Symbols used in a schematic are stored in symbol
+libraries. Eeschema provides a symbol library editing tool that
+allows you to create libraries, add, delete or transfer symbols
+between libraries, export symbols to files, and import symbols
 from files. The library editing tool provides a simple way to manage
-component library files.
+symbol library files.
 
-[[component-library-overview]]
-=== Component Library Overview
+[[symbol-library-overview]]
+=== Symbol Library Overview
 
-A component library is composed of one or more components. Generally the
-components are logically grouped by function, type, and/or manufacturer.
+A symbol library is composed of one or more symbols. Generally the
+symbols are logically grouped by function, type, and/or manufacturer.
 
-A component is composed of:
+A symbol is composed of:
 
 * Graphical items (lines, circles, arcs, text, etc ) that provide the
   symbolic definition.
@@ -29,34 +29,34 @@ A component is composed of:
   bidirectional, etc.) used by the Electrical Rules Check (ERC) tool.
 * Fields such as references, values, corresponding footprint names for
   PCB design, etc.
-* Aliases used to associate a common component such as a 7400 with all
+* Aliases used to associate a common symbol such as a 7400 with all
   of its derivatives such as 74LS00, 74HC00, and 7437. All of these
-  aliases share the same library component.
+  aliases share the same library symbol.
 
-Proper component designing requires:
+Proper symbol designing requires:
 
-* Defining if the component is made up of one or more units.
-* Defining if the component has an alternate body style also known as a
+* Defining if the symbol is made up of one or more units.
+* Defining if the symbol has an alternate body style also known as a
   De Morgan representation.
 * Designing its symbolic representation using lines, rectangles,
   circles, polygons and text.
 * Adding pins by carefully defining each pin's graphical elements,
   name, number, and electrical property (input, output, tri-state, power
   port, etc.).
-* Adding an alias if other components have the same symbol and pin out
-  or removing one if the component has been created from another
-  component.
+* Adding an alias if other symbols have the same design and pin out
+  or removing one if the symbol has been created from another
+  symbol.
 * Adding optional fields such as the name of the footprint used by the PCB
   design software and/or defining their visibility.
-* Documenting the component by adding a description string and links to
+* Documenting the symbol by adding a description string and links to
   data sheets, etc.
 * Saving it in the desired library.
 
-[[component-library-editor-overview]]
-=== Component Library Editor Overview
+[[symbol-library-editor-overview]]
+=== Symbol Library Editor Overview
 
-The component library editor main window is shown below. It consists
-of three tool bars for quick access to common features and a component
+The symbol library editor main window is shown below. It consists
+of three tool bars for quick access to common features and a symbol
 viewing/editing area. Not all commands are available on the tool bars
 but can be accessed using the menus.
 
@@ -67,7 +67,7 @@ image::images/libedit_main_window.png[alt="libedit_main_window_png",scaledwidth=
 
 The main tool bar typically located at the top of the main window shown
 below consists of the library management tools, undo/redo commands, zoom
-commands, and component properties dialogs.
+commands, and symbol properties dialogs.
 
 image::images/toolbar_libedit.png[alt="images/toolbar_libedit.png",scaledwidth="95%"]
 
@@ -82,34 +82,34 @@ library have been made.
 |Select the library to edit.
 
 |image:images/icons/delete.png[icons/delete_png]
-|Delete a component from the currently selected library or any library
+|Delete a symbol from the currently selected library or any library
 defined by the project if no library is currently selected.
 
 |image:images/icons/library_browse.png[icons/library_browse_png]
-|Open the component library browser to select the library and component
+|Open the symbol library browser to select the library and symbol
 to edit.
 
-|image:images/icons/new_component.png[icons/new_component_png]
-|Create a new component.
+|image:images/icons/new_symbol.png[icons/new_symbol_png]
+|Create a new symbol.
 
 |image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]
-|Load component from currently selected library for editing.
+|Load symbol from currently selected library for editing.
 
-|image:images/icons/copycomponent.png[icons/copycomponent_png]
-|Create a new component from the currently loaded component.
+|image:images/icons/copy_symbol.png[icons/copy_symbol_png]
+|Create a new symbol from the currently loaded symbol.
 
 |image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]
-|Save the current component changes in memory. The library file is not
+|Save the current symbol changes in memory. The library file is not
 changed.
 
 |image:images/icons/import.png[icons/import_png]
-|Import one component from a file.
+|Import one symbol from a file.
 
 |image:images/icons/export.png[icons/export_png]
-|Export the current component to a file.
+|Export the current symbol to a file.
 
 |image:images/icons/new_library.png[icons/new_library_png]
-|Create a new library file containing the current component. Note: new
+|Create a new library file containing the current symbol. Note: new
 libraries are not automatically added to the project.
 
 |image:images/icons/undo.png[icons/undo_png]
@@ -119,13 +119,13 @@ libraries are not automatically added to the project.
 |Redo last undo.
 
 |image:images/icons/part_properties.png[icons/part_properties_png]
-|Edit the current component properties.
+|Edit the current symbol properties.
 
 |image:images/icons/text.png[icons/text.png]
-|Edit the fields of current component.
+|Edit the fields of current symbol.
 
 |image:images/icons/erc.png[icons/erc_png]
-|Test the current component for design errors.
+|Test the current symbol for design errors.
 
 |image:images/icons/zoom_in.png[]|Zoom in.
 
@@ -133,31 +133,31 @@ libraries are not automatically added to the project.
 
 |image:images/icons/zoom_redraw.png[]|Refresh display.
 
-|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit component in display.
+|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit symbol in display.
 
 |image:images/icons/morgan1.png[icons/morgan1_png]
 |Select the normal body style. The button is disabled if the current
-component does not have an alternate body style.
+symbol does not have an alternate body style.
 
 |image:images/icons/morgan2.png[icons/morgan2_png]
 |Select the alternate body style. The button is disabled if the current
-component does not have an alternate body style.
+symbol does not have an alternate body style.
 
 |image:images/icons/datasheet.png[icons/datasheet_png]
 |Show the associated documentation. The button will be disabled if no
-documentation is defined for the current component.
+documentation is defined for the current symbol.
 
 |image:images/toolbar_libedit_part.png[alt="images/toolbar_libedit_part.png",width="80%"]
 |Select the unit to display. The drop down control will be disabled if
-the current component is not derived from multiple units.
+the current symbol is not derived from multiple units.
 
 |image:images/toolbar_libedit_alias.png[alt="images/toolbar_libedit_part.png",width="80%"]
 |Select the alias. The drop down control will be disabled if the
-current component does not have any aliases.
+current symbol does not have any aliases.
 
 |image:images/icons/pin2pin.png[icons/pin2pin_png]
 |Pin editing: independent editing for pin shape and position for
-components with multiple units and alternate symbols.
+symbols with multiple units and alternate symbols.
 
 |image:images/icons/pin_table.png[icons/pin_table_png]
 |Show pin table.
@@ -168,7 +168,7 @@ components with multiple units and alternate symbols.
 
 The vertical toolbar typically located on the right hand side of the
 main window allows you to place all of the elements required to design a
-component. The table below defines each toolbar button.
+symbol. The table below defines each toolbar button.
 
 [width="100%",cols="10%,90%",]
 |=======================================================================
@@ -202,20 +202,20 @@ again to define the second arc end point.
 
 |image:images/icons/add_polygon.png[icons/add_polygon_png]
 |Polygon tool. Left-click to begin drawing a new graphical polygon item
-in the current component. Left-click for each addition polygon line.
+in the current symbol. Left-click for each addition polygon line.
 Double-left-click to complete the polygon.
 
 |image:images/icons/anchor.png[icons/anchor_png]
-|Anchor tool. Left-click to set the anchor position of the component.
+|Anchor tool. Left-click to set the anchor position of the symbol.
 
 |image:images/icons/import.png[icons/import_png]
-|Import a component from a file.
+|Import a symbol from a file.
 
 |image:images/icons/export.png[icons/export_png]
-|Export the current component to a file.
+|Export the current symbol to a file.
 
 |image:images/icons/delete.png[icons/delete_png]
-|Delete tool. Left-click to delete an object from the current component.
+|Delete tool. Left-click to delete an object from the current symbol.
 |=======================================================================
 
 [[options-toolbar]]
@@ -246,8 +246,8 @@ table below defines each tool bar button.
 The selection of the current library is possible via the
 image:images/icons/library.png[icons/library_png]
 which shows you all available libraries and allows you to select one.
-When a component is loaded or saved, it will be put in this library. The
-library name of component is the contents of its value field.
+When a symbol is loaded or saved, it will be put in this library. The
+library name of symbol is the contents of its value field.
 
 [NOTE]
 ====
@@ -256,60 +256,60 @@ library name of component is the contents of its value field.
   clicking on the
   image:images/icons/save_library.png[icons/save_library_png]
   on the main tool bar.
-* A component can be removed from any library by clicking on the
+* A symbol can be removed from any library by clicking on the
   image:images/icons/delete.png[icons/delete_png].
 ====
 
-[[select-and-save-a-component]]
-==== Select and Save a Component
+[[select-and-save-a-symbol]]
+==== Select and Save a Symbol
 
-When you edit a component you are not really working on the component in
+When you edit a symbol you are not really working on the symbol in
 its library but on a copy of it in the computer's memory. Any edit
-action can be undone easily. A component may be loaded from a local library
-or from an existing component.
+action can be undone easily. A symbol may be loaded from a local library
+or from an existing symbol.
 
-[[component-selection]]
-===== Component Selection
+[[symbol-selection]]
+===== Symbol Selection
 
 Clicking the 
 image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]
-on the main tool bar displays the list of the available components that
+on the main tool bar displays the list of the available symbols that
 you can select and load from the currently selected library.
 
 [NOTE]
-If a component is selected by its alias, the name of the loaded component
+If a symbol is selected by its alias, the name of the loaded symbol
 is displayed on the window title bar instead of the selected alias. The list
-of component aliases is always loaded with each component and can be
-edited. You can create a new component by selecting an alias of the
-current component from the 
+of symbol aliases is always loaded with each symbol and can be
+edited. You can create a new symbol by selecting an alias of the
+current symbol from the
 image:images/toolbar_libedit_alias.png[images/toolbar_libedit_alias.png].
-The first item in the alias list is the root name of the component.
+The first item in the alias list is the root name of the symbol.
 
 [NOTE]
 Alternatively, clicking the 
 image:images/icons/import.png[icons/import_png]
-allows you to load a component which has been previously saved
+allows you to load a symbol which has been previously saved
 by the 
 image:images/icons/export.png[icons/export_png].
 
-[[save-a-component]]
-===== Save a Component
+[[save-a-symbol]]
+===== Save a Symbol
 
-After modification, a component can be saved in the current library,
+After modification, a symbol can be saved in the current library,
 in a new library, or exported to a backup file.
 
-To save the modified component in the current library, click the
+To save the modified symbol in the current library, click the
 image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png].
-Please note that the update command only saves the component changes in 
+Please note that the update command only saves the symbol changes in
 the local memory. This way, you can make up your mind before you save the
 library.
 
-To permanently save the component changes to the library file, click the
+To permanently save the symbol changes to the library file, click the
 image:images/icons/save_library.png[icons/save_library_png]
-which will overwrite the existing library file with the component
+which will overwrite the existing library file with the symbol
 changes.
 
-If you want to create a new library containing the current component,
+If you want to create a new library containing the current symbol,
 click the 
 image:images/icons/new_library.png[icons/new_library_png].
 You will be asked to enter a new library name.
@@ -324,103 +324,103 @@ of project libraries in Eeschema using the <<manage-sym-lib-table,Symbol Library
 
 Click the 
 image:images/icons/export.png[icons/export_png]
-to create a file containing only the current component. This file 
-will be a standard library file which will contain only one component.
-This file can be used to import the component into another library. In
+to create a file containing only the current symbol. This file
+will be a standard library file which will contain only one symbol.
+This file can be used to import the symbol into another library. In
 fact, the create new library command and the export command are basically
 identical.
 
-[[transfer-components-to-another-library]]
-===== Transfer Components to Another Library
+[[transfer-symbols-to-another-library]]
+===== Transfer Symbols to Another Library
 
-You can very easily copy a component from a source library into a
+You can very easily copy a symbol from a source library into a
 destination library using the following commands:
 
 * Select the source library by clicking the 
   image:images/icons/library.png[icons/library_png].
-* Load the component to be transferred by clicking the
+* Load the symbol to be transferred by clicking the
   image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png].
-  The component will be displayed in the editing area.
+  The symbol will be displayed in the editing area.
 * Select the destination library by clicking the
   image:images/icons/library.png[icons/library_png].
-* Save the current component to the new library in the local memory by
+* Save the current symbol to the new library in the local memory by
   clicking the 
   image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png].
-* Save the component in the current local library file by clicking the
+* Save the symbol in the current local library file by clicking the
   image:images/icons/save_library.png[icons/save_library_png].
 
-[[discarding-component-changes]]
-===== Discarding Component Changes
+[[discarding-symbol-changes]]
+===== Discarding Symbol Changes
 
-When you are working on a component, the edited component is only a
-working copy of the actual component in its library. This means that as
+When you are working on a symbol, the edited symbol is only a
+working copy of the actual symbol in its library. This means that as
 long as you have not saved it, you can just reload it to discard all
 changes made. If you have already updated it in the local memory and
 you have not saved it to the library file, you can always quit and start
 again. Eeschema will undo all the changes.
 
-[[creating-library-components]]
-=== Creating Library Components
+[[creating-library-symbols]]
+=== Creating Library Symbols
 
-[[create-a-new-component]]
-==== Create a New Component
+[[create-a-new-symbol]]
+==== Create a New Symbol
 
-A new component can be created by clicking the 
-image:images/icons/new_component.png[icons/new_component_png]. 
-You will be asked for a component name (this name is used as default
+A new symbol can be created by clicking the
+image:images/icons/new_symbol.png[icons/new_symbol_png].
+You will be asked for a symbol name (this name is used as default
 value for the value field in the schematic editor), the reference designator
 (U, IC, R...), the number of units per package (for example a 7400 is made of
 4 units per package) and if an alternate body style (sometimes referred to
 as DeMorgan) is desired. If the reference designator field is left empty, it
 will default to "U". These properties can be changed later, but it is preferable to
-set them correctly at the creation of the component.
+set them correctly at the creation of the symbol.
 
-image::images/eeschema_component_properties.png[alt="eeschema_component_properties_png",scaledwidth="50%"]
+image::images/eeschema_symbol_properties.png[alt="eeschema_symbol_properties_png",scaledwidth="50%"]
 
-A new component will be created using the properties above and will
+A new symbol will be created using the properties above and will
 appear in the editor as shown below.
 
 image::images/eeschema_libedit_new.png[alt="eeschema_libedit_new_png",scaledwidth="95%"]
 
-[[create-a-component-from-another-component]]
-==== Create a Component from Another Component
+[[create-a-symbol-from-another-symbol]]
+==== Create a Symbol from Another Symbol
 
-Often, the component that you want to make is similar to one already in
-a component library. In this case it is easy to load and modify an
-existing component.
+Often, the symbol that you want to make is similar to one already in
+a symbol library. In this case it is easy to load and modify an
+existing symbol.
 
-* Load the component which will be used as a starting point.
+* Load the symbol which will be used as a starting point.
 * Click on the 
-  image:images/icons/copycomponent.png[icons/copycomponent_png]
+  image:images/icons/copy_symbol.png[icons/copy_symbol_png]
   or modify its name by right-clicking on the value field and editing the text.
-  If you chose to duplicate the current component, you will be prompted
-  for a new component name.
-* If the model component has aliases, you will be prompted to remove
-  aliases from the new component which conflict with the current library.
-  If the answer is no the new component creation will be aborted.
-  Component libraries cannot have any duplicate names or aliases.
-* Edit the new component as required.
-* Update the new component in the current library by clicking the
+  If you chose to duplicate the current symbol, you will be prompted
+  for a new symbol name.
+* If the model symbol has aliases, you will be prompted to remove
+  aliases from the new symbol which conflict with the current library.
+  If the answer is no the new symbol creation will be aborted.
+  Symbol libraries cannot have any duplicate names or aliases.
+* Edit the new symbol as required.
+* Update the new symbol in the current library by clicking the
   image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]
   or save to a new library by clicking the 
   image:images/icons/new_library.png[icons/new_library_png]
-  or if you want to save this new component in an other existing
+  or if you want to save this new symbol in an other existing
   library select the other library by clicking on the
   image:images/icons/library.png[icons/library_png]
-  and save the new component.
+  and save the new symbol.
 * Save the current library file to disk by clicking the
   image:images/icons/save_library.png[icons/save_library_png].
 
-[[component-properties]]
-==== Component Properties
+[[symbol-properties]]
+==== Symbol Properties
 
-Component properties should be carefully set during the component
-creation or alternatively they are inherited from the copied component. To
-change the component properties, click on the
+Symbol properties should be carefully set during the symbol
+creation or alternatively they are inherited from the copied symbol. To
+change the symbol properties, click on the
 image:images/icons/part_properties.png[icons/part_properties_png]
 to show the dialog below.
 
-image::images/eeschema_properties_for_component.png[alt="eeschema_properties_for_component_png",scaledwidth="60%"]
+image::images/eeschema_properties_for_symbol.png[alt="eeschema_properties_for_symbol_png",scaledwidth="60%"]
 
 It is very important to correctly set the number of units per package and
 the alternate symbolic representation, if enabled, because when pins are
@@ -433,25 +433,25 @@ The graphic options "Show pin number" and "Show pin name" define the
 visibility of the pin number and pin name text. This text will be
 visible if the corresponding options are checked. The option "Place pin
 names inside" defines the pin name position relative to the pin body.
-This text will be displayed inside the component outline if the option
+This text will be displayed inside the symbol outline if the option
 is checked. In this case the "Pin Name Position Offset" property defines
 the shift of the text away from the body end of the pin. A value from 30
 to 40 (in 1/1000 inch) is reasonable.
 
-The example below shows a component with the "Place pin name inside"
+The example below shows a symbol with the "Place pin name inside"
 option unchecked. Notice the position of the names and pin numbers.
 
 image::images/eeschema_uncheck_pin_name_inside.png[alt="eeschema_uncheck_pin_name_inside_png",scaledwidth="95%"]
 
-[[components-with-alternate-symbols]]
-==== Components with Alternate Symbols
+[[symbols-with-alternate-symbolic-representation]]
+==== Symbols with Alternate Symbolic Representation
 
-If the component has more than one symbolic repersentation, you will
-have to select the different symbols of the component in order to edit
-them. To edit the normal symbol, click the
+If the symbol has more than one symbolic repersentation,
+you will have to select one representation to edit them.
+To edit the normal representation, click the
 image:images/icons/morgan1.png[icons/morgan1_png].
 
-To edit the alternate symbol click on the
+To edit the alternate representation, click on the
 image:images/icons/morgan2.png[icons/morgan2_png]. 
 Use the
 image:images/toolbar_libedit_alias.png[images/toolbar_libedit_part.png]
@@ -462,7 +462,7 @@ image::images/eeschema_libedit_select_unit.png[alt="eeschema_libedit_select_unit
 [[graphical-elements]]
 === Graphical Elements
 
-Graphical elements create the symbolic representation of a component and
+Graphical elements create the representation of a symbol and
 contain no electrical connection information. Their design is possible
 using the following tools:
 
@@ -473,8 +473,8 @@ using the following tools:
   center. An arc goes from 0° to 180°.
 
 The vertical toolbar on the right hand side of the main window allows
-you to place all of the graphical elements required to design a
-component's symbolic representation.
+you to place all of the graphical elements required to design
+the representation of a symbol.
 
 [[graphical-element-membership]]
 ==== Graphical Element Membership
@@ -496,13 +496,13 @@ The properties of a graphic element are:
 
 * Line width which defines the width of the element's line in the
   current drawing units.
-* The "Common to all units in component" setting defines if the
-  graphical element is drawn for each unit in component with more than one
+* The "Common to all units in symbol" setting defines if the
+  graphical element is drawn for each unit in symbol with more than one
   unit per package or if the graphical element is only drawn for the
   current unit.
 * The "Common by all body styles (DeMorgan)" setting defines if the
   graphical element is drawn for each symbolic representation in
-  components with an alternate body style or if the graphical element is
+  symbols with an alternate body style or if the graphical element is
   only drawn for the current body style.
 * The fill style setting determines if the symbol defined by the
   graphical element is to be drawn unfilled, background filled, or
@@ -514,21 +514,21 @@ The properties of a graphic element are:
 The 
 image:images/icons/text.png[icons/text.png]
 allows for the creation of graphical text. Graphical text is always
-readable, even when the component is mirrored. Please note that
+readable, even when the symbol is mirrored. Please note that
 graphical text items are not fields.
 
-[[multiple-units-per-component-and-alternate-body-styles]]
-=== Multiple Units per Component and Alternate Body Styles
+[[multiple-units-per-symbol-and-alternate-body-styles]]
+=== Multiple Units per Symbol and Alternate Body Styles
 
-Components can have two symbolic representations (a standard symbol and
+Symbols can have two symbolic representations (a standard symbol and
 an alternate symbol often referred to as "DeMorgan") and/or have more
-than one unit per package (logic gates for example). Some components can
+than one unit per package (logic gates for example). Some symbols can
 have more than one unit per package each with different symbols and pin
 configurations.
 
 Consider for instance a relay with two switches which can be designed as
-a component with three different units: a coil, switch 1, and switch 2.
-Designing a component with multiple units per package and/or alternate
+a symbol with three different units: a coil, switch 1, and switch 2.
+Designing a symbol with multiple units per package and/or alternate
 body styles is very flexible. A pin or a body symbol item can be common
 to all units or specific to a given unit or they can be common to both
 symbolic representation so are specific to a given symbol representation.
@@ -542,8 +542,8 @@ for power pins). This is also the case for the body style graphic shapes
 and text, which may be common to each unit (but typically are specific
 to each symbolic representation).
 
-[[example-of-a-component-having-multiple-units-with-different-symbols]]
-==== Example of a Component Having Multiple Units with Different Symbols:
+[[example-of-a-symbol-having-multiple-units-with-different-symbols]]
+==== Example of a Symbol Having Multiple Units with Different Symbols:
 
 This is an example of a relay defined with three units per package,
 switch 1, switch 2, and the coil:
@@ -579,7 +579,7 @@ interchangeable with units 1 and 2.
 Shown below are properties for a graphic body element. From the relay
 example above, the three units have different symbolic representations.
 Therefore, each unit was created separately and the graphical body
-elements must have the "Common to all units in component" disabled.
+elements must have the "Common to all units in symbol" disabled.
 
 image::images/eeschema_libedit_disable_common.png[alt="eeschema_libedit_disable_common_png",scaledwidth="70%"]
 
@@ -615,7 +615,7 @@ Important notes:
 * Pin names starting with `#`, are reserved for power port symbols.
 * A pin "number" consists of 1 to 4 letters and/ or numbers. 1,2,..9999
   are valid numbers. A1, B3, Anod, Gnd, Wire, etc. are also valid.
-* Duplicate pin "numbers" cannot exist in a component.
+* Duplicate pin "numbers" cannot exist in a symbol.
 
 [[pin-properties]]
 ==== Pin Properties
@@ -651,16 +651,16 @@ tool. The electrical types defined are:
 * Bidirectional which indicates bidirectional pins commutable between
   input and output (microprocessor data bus for example).
 * Tri-state is the usual 3 states output.
-* Passive is used for passive component pins, resistors, connectors,
+* Passive is used for passive symbol pins, resistors, connectors,
   etc.
 * Unspecified can be used when the ERC check doesn't matter.
-* Power input is used for the component's power pins. Power pins are
+* Power input is used for the symbol's power pins. Power pins are
   automatically connected to the other power input pins with the same
   name.
 * Power output is used for regulator outputs.
 * Open emitter and open collector types can be used for logic outputs
   defined as such.
-* Not connected is used when a component has a pin that has no internal
+* Not connected is used when a symbol has a pin that has no internal
   connection.
 
 [[pin-global-properties]]
@@ -669,24 +669,24 @@ tool. The electrical types defined are:
 You can modify the length or text size of the name and/or number of all
 the pins using the Global command entry of the pin context menu. Click
 on the parameter you want to modify and type the new value which will
-then be applied to all of the current component's pins.
+then be applied to all of the current symbol's pins.
 
 image::images/eeschema_libedit_pin_context_menu.png[alt="eeschema_libedit_pin_context_menu_png",scaledwidth="60%"]
 
 [[defining-pins-for-multiple-units-and-alternate-symbolic-representations]]
 ==== Defining Pins for Multiple Units and Alternate Symbolic Representations
 
-Components with multiple units and/or graphical representations are
+Symbols with multiple units and/or graphical representations are
 particularly problematic when creating and editing pins. The majority of
 pins are specific to each unit (because their pin number is specific to
 each unit) and to each symbolic representation (because their form and
 position is specific to each symbolic representation). The creation and
-the editing of pins can be problematic for components with multiple
-units per package and alternate symbolic representations. The component
+the editing of pins can be problematic for symbols with multiple
+units per package and alternate symbolic representations. The symbol
 library editor allows the simultaneous creation of pins. By default,
 changes made to a pin are made for all units of a multiple unit
-component and both representations for components with an alternate
-representation.
+symbol and both representations for symbols with an alternate
+symbolic representation.
 
 The only exception to this is the pin's graphical type and name. This
 dependency was established to allow for easier pin creation and editing
@@ -695,14 +695,14 @@ image:images/icons/pin2pin.png[icons/pin2pin_png]
 on the main tool bar. This will allow you to create pins for each unit
 and representation completely independently.
 
-A component can have two symbolic representations (representation known
+A symbol can have two symbolic representations (representation known
 as "DeMorgan") and can be made up of more than one unit as in the case
-of components with logic gates. For certain components, you may want
+of symbols with logic gates. For certain symbols, you may want
 several different graphic elements and pins. Like the relay sample shown
 in section 11.7.1, a relay can be represented by three distinct units: a
 coil, switch contact 1, and switch contact 2.
 
-The management of the components with multiple units and components with
+The management of the symbols with multiple units and symbols with
 alternate symbolic representations is flexible. A pin can be common or
 specific to different units. A pin can also be common to both symbolic
 representations or specific to each symbolic representation.
@@ -714,8 +714,8 @@ units, it only has to drawn once such as in the case of power pins.
 
 An example is the output pin 7400 quad dual input NAND gate. Since there
 are four units and two symbolic representations, there are eight
-separate output pins defined in the component definition. When creating
-a new 7400 component, unit A of the normal symbolic representation will
+separate output pins defined in the symbol definition. When creating
+a new 7400 symbol, unit A of the normal symbolic representation will
 be shown in the library editor. To edit the pin style in alternate
 symbolic representation, it must first be enabled by clicking the
 image:images/icons/morgan2.png[icons/morgan2_png]
@@ -724,24 +724,24 @@ select the appropriate unit using the
 image:images/toolbar_libedit_alias.png[images/toolbar_libedit_alias.png]
 drop down control.
 
-[[component-fields]]
-=== Component Fields
+[[symbol-fields]]
+=== Symbol Fields
 
-All library components are defined with four default fields. The
+All library symbols are defined with four default fields. The
 reference designator, value, footprint assignment, and documentation
-file link fields are created whenever a component is created or copied.
+file link fields are created whenever a symbol is created or copied.
 Only the reference designator and value fields are required. For
 existing fields, you can use the context menu commands by right-clicking
-on the pin. Components defined in libraries are typically defined
+on the pin. Symbols defined in libraries are typically defined
 with these four default fields. Additional fields such as vendor, part
-number, unit cost, etc. can be added to library components but generally
+number, unit cost, etc. can be added to library symbols but generally
 this is done in the schematic editor so the additional fields can be
-applied to all of the components in the schematic.
+applied to all of the symbols in the schematic.
 
-[[editing-component-fields]]
-==== Editing Component Fields
+[[editing-symbol-fields]]
+==== Editing Symbol Fields
 
-To edit an existing component field, right-click on the field text to
+To edit an existing symbol field, right-click on the field text to
 show the field context menu shown below.
 
 image::images/eeschema_libedit_field_context_menu.png[alt="eeschema_libedit_field_context_menu_png",scaledwidth="35%"]
@@ -752,15 +752,15 @@ on the main tool bar to open the field properties dialog shown below.
 
 image::images/eeschema_libedit_field_properties.png[alt="eeschema_libedit_field_properties_png",scaledwidth="65%"]
 
-Fields are text sections associated with the component. Do not confuse
+Fields are text sections associated with the symbol. Do not confuse
 them with the text belonging to the graphic representation of this
-component.
+symbol.
 
 Important notes:
 
-* Modifying value fields effectively creates a new component using
-  the current component as the starting point for the new component. This
-  new component has the name contained in the value field when you save it
+* Modifying value fields effectively creates a new symbol using
+  the current symbol as the starting point for the new symbol. This
+  new symbol has the name contained in the value field when you save it
   to the currently selected library.
 * The field edit dialog above must be used to edit a field that is empty
   or has the invisible attribute enabled.
@@ -773,10 +773,10 @@ Important notes:
 [[power-symbols]]
 === Power Symbols
 
-Power symbols are created the same way as normal components. It may be
+Power symbols are created the same way as normal symbols. It may be
 useful to place them in a dedicated library such as power.lib. Power
 symbols consist of a graphical symbol and a pin of the type "Power
-Invisible". Power port symbols are handled like any other component by
+Invisible". Power port symbols are handled like any other symbol by
 the schematic capture software. Some precautions are essential. Below is
 an example of a power +5V symbol.
 
@@ -790,11 +790,11 @@ To create a power symbol, use the following steps:
 * Place a small circle and a segment from the pin to the circle as
   shown.
 * The anchor of the symbol is on the pin.
-* The component value is `+5V`.
-* The component reference is `\#+5V`. The reference text is not important
+* The symbol value is `+5V`.
+* The symbol reference is `\#+5V`. The reference text is not important
   except the first character which must be `#` to indicate that the
-  component is a power symbol. By convention, every component in which the
-  reference field starts with a `#` will not appear in the component list
+  symbol is a power symbol. By convention, every symbol in which the
+  reference field starts with a `#` will not appear in the symbol list
   or in the netlist and the reference is declared as invisible.
 
 An easier method to create a new power port symbol is to use another
@@ -804,4 +804,4 @@ symbol as a model:
 * Edit the pin name with name of the new power symbol.
 * Edit the value field to the same name as the pin, if you want to
   display the power port value.
-* Save the new component.
+* Save the new symbol.
