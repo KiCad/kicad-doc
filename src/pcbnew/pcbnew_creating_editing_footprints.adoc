@@ -1,8 +1,9 @@
 == Footprint Editor - Creating and Editing Footprints
 
-=== Footprint Editor overview
+=== Footprint Editor Overview
 
-Footprint Editor is used for editing and creating PCB footprints. This includes:
+The footprint editor is used for editing and creating PCB footprints.
+This includes:
 
 * Adding and removing pads.
 
@@ -15,7 +16,7 @@ Footprint Editor is used for editing and creating PCB footprints. This includes:
 
 * Editing the associated documentation (description, keywords).
 
-=== Footprint elements
+=== Footprint Elements
 
 A footprint is the physical representation (footprint) of the part to
 be inserted in the PCB and it must  be linked to the relative
@@ -61,7 +62,7 @@ value is replaced by the value of the corresponding part in the
 schematic (47K, 74LS02, etc.). Other fields can be added and these
 will behave like graphical text.
 
-=== Starting Footprint Editor and selecting a footprint to edit
+=== Starting Footprint Editor and Selecting a Footprint to Edit
 
 Footprint Editor can be started in two ways:
 
@@ -79,7 +80,7 @@ Calling Footprint Editor will launch a new window that looks like this:
 
 image::images/Modedit_main_window.png[scaledwidth="80%"]
 
-==== Edit toolbar (right-hand side)
+==== Edit Toolbar (right-hand side)
 
 This toolbar contains tools for:
 
@@ -115,7 +116,7 @@ and after the grid size can be set to the pad pitch.
 Placing pads is therefore very easy
 |======
 
-==== Display toolbar (left-hand side)
+==== Display Toolbar (left-hand side)
 
 These tools manage the display options in Footprint Editor:
 
@@ -157,7 +158,7 @@ The context menu for editing graphic elements:
 image::images/Modedit_context_menu_graphics.png[scaledwidth="40%"]
 
 
-=== Footprint properties dialog
+=== Footprint Properties Dialog
 
 This dialog can be launched when the cursor is over a footprint by
 clicking on the right mouse button and then selecting 'Edit Footprint'.
@@ -166,7 +167,7 @@ image::images/Modedit_module_properties_dialog.png[scaledwidth="60%"]
 
 The dialog can be used to define the main footprint parameters.
 
-=== Creating a new footprint
+=== Creating a New Footprint
 
 A new footprint can be created via the button
 image:images/icons/new_footprint.png[]. The name of the new footprint
@@ -196,13 +197,13 @@ footprint is as follows:
 * Modify the "Footprint Name in Library" field in order to generate a new identifier (name).
 * Edit and save the new footprint.
 
-=== Adding and editing pads
+=== Adding and Editing Pads
 
 Once a footprint has been created, pads can be added, deleted or
 modified. Modification of pads can be local, affecting only the pad
 under the cursor, or global, affecting all pads of the footprint.
 
-==== Adding pads
+==== Adding Pads
 
 Select the image:images/icons/pad.png[] icon from the right hand
 toolbar. Pads can be added by clicking in the desired position with
@@ -211,7 +212,7 @@ properties menu.
 
 Do not forget to enter the pad number.
 
-==== Setting pad properties
+==== Setting Pad Properties
 
 This can be done in three different ways:
 
@@ -236,7 +237,7 @@ documentation.
 The Pad Type selector triggers an automatic selection of layers that
 is generally sufficient.
 
-===== Rectangular pads
+===== Rectangular Pads
 
 For SMD footprints of the VQFP/PQFP type which have rectangular pads on
 all four sides (both horizontal and vertical) it is recommended to
@@ -245,12 +246,12 @@ place it with different orientations (0 for horizontal and 90
 degrees for vertical). Global resizing of pads can then be done in a
 single operation.
 
-===== Rotate pads
+===== Rotate Pads
 
 Rotations of -90 or -180 are only required for trapezoidal pads used
 in microwave footprints.
 
-===== Non-plated through hole pads
+===== Non-plated Through Hole Pads
 
 Pads can be defined as Non-Plated Through Hole pads (NPTH pads).
 
@@ -266,12 +267,7 @@ oval pad,  this pad is NOT plotted on copper layers in GERBER files.
 These pads are used for mechanical purposes, therefore no pad name
 or net name is allowed. A connection to a net is not possible.
 
-===== Pads not on copper layers
-
-These are unusual pads. This option can be used to create fiducials
-or masks on technical layers.
-
-===== Offset parameter
+===== Offset Parameter
 
 Pad 3 has an offset Y = 15 mils:
 
@@ -283,34 +279,50 @@ Pad 1 has its parameter Delta X  = 10 mils
 
 image::images/Modedit_pad_delta_example.png[scaledwidth="58%"]
 
-==== Setting clearance for solder mask and solder paste mask layers
+==== Setting Clearances for Solder Mask and Solder Paste Layers
 
-Setting a clearance can be made at 3 levels:
+When defining pads containing copper layers, KiCad creates solder mask
+and solder paste layers based on a fixed clearance and/or a ratio of
+the pad geometry.  The non-zero settings used to calculate the final
+pad size is based on the following order of precedence:
 
-* Global level.
-* Footprint level.
-* Pad level.
+* Pad setting
+* Footprint setting
+* Global setting
 
-Pcbnew uses the following to calculate clearances:
-
-* Pad settings. If null,
-* Footprint settings. If null,
-* Global settings.
-
-===== Remarks
-
+[NOTE]
+====
 The solder mask pad shape is usually bigger than the pad itself. So the
 clearance value is positive. The solder paste mask pad shape is usually
 smaller than the pad itself. So the clearance value is negative.
+====
 
-===== Solder paste mask parameters
+===== Solder Paste Settings
 
-For solder paste mask there are two parameters:
+Two settings are used to calculate the solder paste aperture:
 
-* A fixed value.
+* A fixed clearance setting.
 * A percentage of the pad size.
 
-The real value is the sum of these two values.
+The the final value is the product of the ratio setting and the clearance
+setting.
+
+==== Pads Not on Copper Layers
+
+There is second method for creating pads that do not have any copper layers
+defined. These pads are commonly referred to as aperture pads and can be
+use to create custum aperatures not based on the outline of a copper pad
+geometry. This method was introduced in version 5.0.0-rc2. Pads defined
+without any copper layers ignore the global and footprint level settings
+and only use the pad level settings.
+
+[WARNING]
+====
+Pads without copper layers defined prior to version 5.0.0-rc2 were plotted
+using precedence defined above with the global and footprint settings.
+Adjustments will have to be made for any boards designed prior to this
+version in order to achieve the same output plots.
+====
 
 Footprint level settings:
 
@@ -330,7 +342,7 @@ the field, or by the footprint properties dialog box:
 
 image::images/Modedit_footprint_text_properties.png[scaledwidth="50%"]
 
-=== Automatic placement of a footprint
+=== Automatic Placement of a Footprint
 
 If the user wishes to exploit the full capabilities of the
 auto-placement functions, it is necessary to define the allowed
@@ -366,7 +378,7 @@ image::images/Modedit_module_attributes.png[scaledwidth="30%"]
   board. Examples would be edge connectors or inductors created by a
   particular track shape (as sometimes seen in microwave footprints).
 
-=== Documenting footprints in a library
+=== Documenting Footprints in a Library
 
 It is strongly recommended to document newly created footprints, in
 order to facilitate their rapid and accurate retrieval. Who is able
@@ -391,7 +403,7 @@ toolbar in Pcbnew), it is possible to type the text `=TO220` into
 the dialog box to have Pcbnew display a list of the footprints
 possessing the keyword `TO220`
 
-=== 3-dimensional visualisation
+=== 3-Dimensional Visualization
 
 A footprint may be associated with a file containing a three-dimensional
 representation of the component. In order to associate a footprint with
@@ -416,7 +428,7 @@ The _3D Settings_ tab contains a panel with a preview of the
 selected model and the scale, offset, and rotation data
 for the model.
 
-Scale values are useful for visualisation
+Scale values are useful for visualization
 formats such as VRML1, VRML2, and X3D. Since the model may
 have been produced by any number of VRML/X3D editors or
 exporters and VRML does not enforce a unit of length for
@@ -458,7 +470,7 @@ In the past KiCad used a fixed path to a directory of
 variable to specify the location of the model directory.
 Other base directories for models could be specified by
 using additional environment variables. The current
-version of KiCad has a specialised _alias_ system for
+version of KiCad has a specialized _alias_ system for
 handling 3D model names. The aim of the new file name
 management system (filename resolution system)
 is to provide a scheme which is compatible with earlier
@@ -525,16 +537,21 @@ a BGA package model which was used during testing took around
 image::images/Modedit_3D_file_browser.png[scaledwidth="60%"]
 
 
-=== Saving a footprint into the active library
+=== Saving a Footprint into the Active Library
 
-The save command (modification of the file of the active library) is activated by the image:images/icons/save_library.png[] button.
+The save command (modification of the file of the active library) is
+activated by the image:images/icons/save_library.png[] button.
 
-If a footprint of the same name exists (an older version), it will be overwritten. Because it is important to be able to have confidence in the library footprints, it is worth double-checking the footprint for errors before saving.
+If a footprint of the same name exists (an older version), it will
+be overwritten. Because it is important to be able to have confidence
+in the library footprints, it is worth double-checking the footprint
+for errors before saving.
 
-Before saving, it is also recommended to change the reference or value of the footprint to be equal to the library name of the footprint.
+Before saving, it is also recommended to change the reference or value
+of the footprint to be equal to the library name of the footprint.
 
 === Saving a footprint to the board
 
 If the edited footprint comes from the current board, the button
-image:images/icons/update_module_board.png[] will update this footprint on
-the board.
+image:images/icons/update_module_board.png[] will update this
+footprint on the board.
