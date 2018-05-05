@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2018-04-17 12:00+0200\n"
-"PO-Revision-Date: 2018-04-17 12:10+0200\n"
+"POT-Creation-Date: 2018-05-04 17:02+0200\n"
+"PO-Revision-Date: 2018-05-04 20:22+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@posteo.net>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: it\n"
@@ -5174,6 +5174,408 @@ msgstr ""
 "Gerarchie piatte (schemi esplicitamente connessi ad uno schema principale)."
 
 #. type: Title ==
+#: eeschema_symbol_library_table.adoc:1
+#, no-wrap
+msgid "Manage Symbol Libraries"
+msgstr "Gestione librerie di simboli"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:6
+msgid ""
+"Symbol libraries need to be made available in order to create schematics.  "
+"The manner in which this is accomplished varies according to the version of "
+"KiCad being used."
+msgstr ""
+"Le librerie di simboli devono essere rese disponibili per creare gli schemi "
+"elettrici. Il modo in cui quest'operazione viene effettuata varia a seconda "
+"della versione di KiCad in uso."
+
+#. type: Title ===
+#: eeschema_symbol_library_table.adoc:7
+#, no-wrap
+msgid "Symbol Library Table"
+msgstr "Tabella librerie di simboli"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:12
+msgid ""
+"As of November 2017, Eeschema uses a new library management tool based on "
+"*_symbol library tables_* which is identical in design to the footprint "
+"library table used in CvPcb and Pcbnew."
+msgstr ""
+"Dal novembre 2017, Eeschema usa un nuovo strumento di gestione delle "
+"librerie basato su *_tabelle di librerie di simboli_* che è identico nel "
+"funzionamento alle tabelle di librerie di impronte usate in CvPcb e Pcbnew."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:16
+msgid ""
+"The image below shows the symbol library table editing dialog which can be "
+"opened by invoking the ``Manage Symbol Library Tables'' entry in the "
+"``Preferences'' menu."
+msgstr ""
+"L'immagine seguente mostra la finestra di modifica della tabella librerie di "
+"simboli che si apre selezionando la voce ``Gestione librerie di simboli'' "
+"nel menu delle ``Preferenze''."
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_symbol_library_table.adoc:17
+#, no-wrap
+msgid "sym lib table dlg"
+msgstr "finestra tabella librerie di simboli"
+
+#. type: Target for macro image
+#: eeschema_symbol_library_table.adoc:17 eeschema_main_top_menu.adoc:55
+#, no-wrap
+msgid "images/en/options_symbol_lib.png"
+msgstr "images/it/options_symbol_lib.png"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:25
+msgid ""
+"The symbol library table is used to map a symbol library of any supported "
+"library type to a library nickname. *This nickname is used to look up "
+"symbols* instead of the previous method which depended on library search "
+"path ordering. This allows Eeschema to access symbols with the same name in "
+"different libraries by ensuring that the correct symbol is loaded from the "
+"appropriate library."
+msgstr ""
+"La tabella librerie di simboli viene usata per mappare una libreria di "
+"simboli di uno qualsiasi dei tipi di formati supportati ad un denominatore "
+"di libreria. *Questo denominatore viene usato per la ricerca dei simboli* al "
+"posto del vecchio metodo che dipendeva dall'ordine nei percorsi di ricerca "
+"delle librerie. Ciò permette a Eeschema di accedere a simboli con lo stesso "
+"nome in diverse librerie assicurandosi che venga caricato il simbolo "
+"corretto dalla librerie appropriata."
+
+#. type: Title ====
+#: eeschema_symbol_library_table.adoc:26
+#, no-wrap
+msgid "Global Symbol Library Table"
+msgstr "Tabella librerie di simboli globale"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:32
+msgid ""
+"The global symbol library table contains the list of libraries that are "
+"always available regardless of the currently loaded project file. The table "
+"is saved in the file sym-lib-table in the user's home folder. The location "
+"of this folder is dependent upon the operating system being used."
+msgstr ""
+"Le librerie elencate nella tabella librerie globale sono disponibili per "
+"ogni progetto.  Esse vengono salvate nel file sym-lib-table nella cartella "
+"utente. La posizione di questa cartella dipende dal sistema operativo usato."
+
+#. type: Title ====
+#: eeschema_symbol_library_table.adoc:33
+#, no-wrap
+msgid "Project Specific Symbol Library Table"
+msgstr "Tabella librerie di simboli specifiche del progetto"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:42
+msgid ""
+"The project specific symbol library table contains the list of libraries "
+"that are available specifically for the currently loaded project file. The "
+"project specific symbol library table can only be edited when it is loaded "
+"along with the project file. If no project file is loaded or there is no "
+"symbol library table file in the current project path, an empty table is "
+"created which can be edited and later saved along with the project file."
+msgstr ""
+"La tabella librerie di simboli specifica del progetto contiene l'elenco "
+"delle librerie che sono disponibili specificatamente per il file di progetto "
+"caricato in quel momento. La tabella librerie specifiche del progetto può "
+"essere modificata solo quando viene caricata assieme al file del progetto. "
+"Se non viene caricato alcun file di progetto o non c'è nessun file di "
+"tabella librerie di simboli nel percorso del progetto corrente, viene creata "
+"una tabella vuota che può essere modificata, ed in seguito salvata, assieme "
+"al file del progetto."
+
+#. type: Title ====
+#: eeschema_symbol_library_table.adoc:43
+#, no-wrap
+msgid "Initial Configuration"
+msgstr "Configurazione iniziale"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:55
+msgid ""
+"The first time Eeschema is run and the global symbol table file *sym-lib-"
+"table* is not found in the user's home folder, Eeschema will attempt to copy "
+"the default symbol table file sym-lib-table stored in the system's KiCad "
+"template folder to the file sym-lib-table in the user's home folder. If the "
+"default template sym-lib-table file cannot be found, a dialog will prompt "
+"for an alternate location for the sym-lib-table file. If no sym-lib-table is "
+"found or the dialog is dismissed, an empty symbol library table will be "
+"created in the user's home folder. If this happens, the user can either copy "
+"sym-lib-table manually or configure the table by hand."
+msgstr ""
+"La prima volta che Eeschema viene eseguito e il file della tabella dei "
+"simboli globale *sym-lib-table* non viene trovato nella cartella "
+"dell'utente, Eeschema cercherà copiare il file di tabella simboli "
+"predefinito sym-lib-table memorizzato nella cartella di sistema del modelli "
+"di KiCad nel file sym-lib-table (N.d.T. quindi creandolo da zero) nella "
+"cartella dell'utente. Se il modello predefinito di file sym-lib-table non si "
+"trova, una finestra di dialogo richiederà una posizione alternativa da cui "
+"caricare il file sym-lib-table. Se non si trova ancora il file sym-lib-table "
+"o se la finestra viene chiusa, verrà creata una tabella librerie di simboli "
+"vuota nella cartella dell'utente. Se ciò succede, l'utente può copiare il "
+"file sym-lib-table manualmente o configurare la tabella a mano."
+
+#. type: delimited block =
+#: eeschema_symbol_library_table.adoc:65
+msgid ""
+"The default symbol library table includes all of the symbol libraries that "
+"are installed as part of KiCad.  This may or may not be desirable depending "
+"on usages and the speed of the system.  The amount of time required to load "
+"the symbol libraries is proportional to the number of libraries in the "
+"symbol library table.  If symbol library load times are excessive, remove "
+"rarely and/or never used libraries from the global library table and add "
+"them to the project library table as required."
+msgstr ""
+"La tabella librerie di simboli predefinita include tutte le librerie di "
+"simboli installati che fanno parte di KiCad.  Ciò può o meno essere "
+"desiderabile a seconda dell'uso e della velocità del sistema.  Il tempo "
+"richiesto per caricare le librerie di simboli è proporzionale al numero di "
+"librerie presenti nella tabella librerie di simboli.  Se il tempo di "
+"caricamento delle librerie di simboli sembra eccessivo, rimuovere le "
+"librerie usate raramenteo o mai dalla tabella librerie globale e aggiungerle "
+"di volta in volta alla tabella librerie del progetto solo quando necessario."
+
+#. type: Title ====
+#: eeschema_symbol_library_table.adoc:67
+#, no-wrap
+msgid "Adding Table Entries"
+msgstr "Aggiungere voci alla tabella"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:72
+msgid ""
+"In order to use a symbol library, it must first be added to either the "
+"global table or the project specific table. The project specific table is "
+"only applicable when you have a project file open."
+msgstr ""
+"Per usare una librerie di simboli, questa deve essere prima aggiunta alla "
+"tabella globale o a quella specifica del progetto. La tabella specifica del "
+"progetto è utilizzabile solo quando si è aperto un file di progetto."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:74
+#, no-wrap
+msgid "*Each library entry must have a unique nickname.*\n"
+msgstr "*Ogni voce di libreria deve avere un identificativo univoco.*\n"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:80
+msgid ""
+"This does not have to be related in any way to the actual library file name "
+"or path. The colon ':' and '/' characters cannot be used anywhere in the "
+"library nickname. Each library entry must have a valid path and/or file name "
+"depending on the type of library. Paths can be defined as absolute, "
+"relative, or by environment variable substitution (see section below)."
+msgstr ""
+"Questo identificativo non ha nulla a che fare con il nome o il percorso del "
+"file di libreria. Il caratteri ':' e '/' non possono essere usati da nessuna "
+"parte nel denominatore della libreria. Ogni voce di libreria deve avere un "
+"nome / percorso file validi a seconda del tipo di libreria. I percorsi "
+"possono essere definiti come assoluti, relativi, o per sostituzione di "
+"variabile d'ambiente (vedere nella prossima sezione)."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:84
+msgid ""
+"The appropriate plug in type must be selected in order for the library to be "
+"properly read. KiCad currently supports only legacy symbol library files "
+"plug-in."
+msgstr "Il tipo appropriato di plugin deve essere selezionato perché la libreria possa essere letta correttamente. KiCad attualmente supporta solo il plugin per i file di libreria di simboli tradizionali."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:88
+msgid ""
+"There is also a description field to add a description of the library entry. "
+"The option field is not used at this time so adding options will have no "
+"effect when loading libraries."
+msgstr "C'è anche un campo dedicato alla descrizione della voce di libreria. Il campo opzioni non viene usato al momento perciò aggiungere opzioni non ha alcun effetto sul caricamento delle librerie."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:92
+msgid ""
+"Please note that you cannot have duplicate library nicknames in the same "
+"table. However, you can have duplicate library nicknames in both the global "
+"and project specific symbol library table."
+msgstr "Si noti che non si può avere denominatori di librerie duplicati nella stessa tabella. Ma è comunque possibile avere gli stessi denominatori di libreria sia nella tabella di librerie di simboli globale che in quella specifica del progetto."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:94
+msgid ""
+"The project specific table entry will take precedence over the global table "
+"entry when duplicate nicknames occur."
+msgstr "La voce nella tabella specifica del progetto avrà la precedenza sulla corrispondente presente nella tabella globale in caso di identificativi identici."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:97
+msgid ""
+"When entries are defined in the project specific table, a sym-lib-table file "
+"containing the entries will be written into the folder of the currently open "
+"project file."
+msgstr "Quando le voci sono definite nella tabella specifica del progetto, un file sym-lib-table contenente le voci verrà scritto nella cartella del file di progetto aperto in quel momento."
+
+#. type: Title ====
+#: eeschema_symbol_library_table.adoc:98
+#, no-wrap
+msgid "Environment Variable Substitution"
+msgstr "Sostituzione delle variabili ambiente"
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:105
+msgid ""
+"One of the most powerful features of the symbol library table is environment "
+"variable substitution. This allows for definition of custom paths to where "
+"symbol libraries are stored in environment variables. Environment variable "
+"substitution is supported by using the syntax +$\\{ENV_VAR_NAME\\}+ in the "
+"library path."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:107
+msgid "By default, at run time KiCad defines **two environment variables**:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:110
+msgid ""
+"the *+KIPRJMOD+* environment variable that always points to the currently "
+"open project directory.  *+KIPRJMOD+* cannot be modified."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:113
+msgid ""
+"the *+KICAD_SYMBOL_DIR+* environment variable. This points to the path where "
+"the default symbol libraries that were installed with KiCad."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:117
+msgid ""
+"You can override +KICAD_SYMBOL_DIR+ by defining it yourself in preferences/ "
+"Configure Path which allows you to substitute your own libraries in place of "
+"the default KiCad symbol libraries."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:121
+#, no-wrap
+msgid ""
+"*+KIPRJMOD+* allows you to store libraries in the project path without\n"
+"having to define the absolute path (which is not always known) to the\n"
+"library in the project specific symbol library table.\n"
+msgstr ""
+
+#. type: Title ====
+#: eeschema_symbol_library_table.adoc:122
+#, no-wrap
+msgid "Usage Patterns"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:129
+msgid ""
+"Symbol libraries can be defined either globally or specifically to the "
+"currently loaded project. Symbol libraries defined in the user's global "
+"table are always available and are stored in the sym-lib-table file in the "
+"user's home folder. The project specific symbol library table is active only "
+"for the currently open project file."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:133
+msgid ""
+"There are advantages and disadvantages to each method. Defining all "
+"libraries in the global table means they will always be available when "
+"needed. The disadvantage of this is that load time will increase."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:139
+msgid ""
+"Defining all symbol libraries on a project specific basis means that you "
+"only have the libraries required for the project which decreases symbol "
+"library load times. The disadvantage is that you always have to remember to "
+"add each footprint library that you need for every project."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:143
+msgid ""
+"One usage pattern would be to define commonly used libraries globally and "
+"the libraries only require for the project in the project specific library "
+"table. There is no restriction on how to define libraries."
+msgstr ""
+
+#. type: Title ====
+#: eeschema_symbol_library_table.adoc:144
+#, no-wrap
+msgid "Legacy Project Remapping"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:150
+msgid ""
+"When loading a schematic created prior to the symbol library table "
+"implementation, Eeschema will attempt to remap the symbol library links in "
+"the schematic to the appropriate library table symbols.  This success of "
+"this process is dependent on several factors:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:153
+msgid ""
+"the original libraries used in the schematic are still available and "
+"unchanged from when the symbol was added to the schematic."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:156
+msgid ""
+"all rescue operations were performed when detected to create a rescue "
+"library or keep the existing rescue library up to date."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:159
+msgid ""
+"the integrity of the project symbol cache library has not been corrupted."
+msgstr ""
+
+#. type: delimited block =
+#: eeschema_symbol_library_table.adoc:166
+msgid ""
+"The remapping will make a back up of all the files that are changed during "
+"remapping in the rescue-backup folder in the project folder.  Always make a "
+"back up of your project before remapping just in case something goes wrong."
+msgstr ""
+
+#. type: delimited block =
+#: eeschema_symbol_library_table.adoc:175
+msgid ""
+"The rescue operation is performed even if it has been disabled to ensure the "
+"correct symbols are available for remapping.  Do not cancel this operation "
+"or the remapping will fail to correctly remap schematics symbols.  Any "
+"broken symbol links will have to be fixed manually."
+msgstr ""
+
+#. type: delimited block =
+#: eeschema_symbol_library_table.adoc:184
+msgid ""
+"If the original libraries have been removed and the rescue was not "
+"performed, the cache library can be used as a recovery library as a last "
+"resort. Copy the cache library to a new file name and add the new library "
+"file to the top of the library list using a version of Eeschema prior to the "
+"symbol library table implementation."
+msgstr ""
+
+#. type: Title ==
 #: eeschema_create_a_netlist.adoc:3
 #, no-wrap
 msgid "Create a Netlist"
@@ -6571,6 +6973,720 @@ msgid ">> Errors ERC: 4\n"
 msgstr ">> Errors ERC: 4\n"
 
 #. type: Title ==
+#: eeschema_simulator.adoc:3
+#, no-wrap
+msgid "Simulator"
+msgstr "Simulatore"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:7
+msgid ""
+"Eeschema provides an embedded electrical circuit simulator using http://"
+"ngspice.sourceforge.net[ngspice] as the simulation engine."
+msgstr ""
+"Eeschema è fornito di un simulatore di circuiti elettrici che usa http://"
+"ngspice.sourceforge.net[ngspice] come motore di simulazione."
+
+#. type: Plain text
+#: eeschema_simulator.adoc:12
+msgid ""
+"When working with the simulator, you may find the official _pspice_ library "
+"useful. It contains common symbols used for simulation like voltage/current "
+"sources or transistors with pins numbered to match the ngspice node order "
+"specification."
+msgstr ""
+"Quando si lavora con il simulatore, si può trovare utile la libreria "
+"ufficiale _pspice_. Essa contiene simboli comuni usati per la simulazione "
+"come sorgenti di tensione o corrente, o transistor con pin numerati in modo "
+"da corrispondere alle specifiche di ordine del nodo di ngspice."
+
+#. type: Plain text
+#: eeschema_simulator.adoc:15
+msgid ""
+"There are also a few demo projects to illustrate the simulator "
+"capabilities.  You will find them in _demos/simulation_ directory."
+msgstr ""
+
+#. type: Title ===
+#: eeschema_simulator.adoc:16
+#, no-wrap
+msgid "Assigning models"
+msgstr "Assegnazione modelli"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:19
+msgid ""
+"Before a simulation is launched, components need to have Spice model "
+"assigned."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:23
+msgid ""
+"Each component can have only one model assigned, even if component consists "
+"of multiple units. In such case, the first unit should have the model "
+"specified."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:28
+msgid ""
+"[[sim-passive-models]] Passive components with reference matching a device "
+"type in Spice notation (_R*_ for resistors, _C*_ for capacitors, _L*_ for "
+"inductors) will have models assigned implicitly and use the value field to "
+"determine their properties."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:33
+msgid ""
+"Keep in mind that in Spice notation 'M' stands for milli and 'Meg' "
+"corresponds to mega. If you prefer to use 'M' to indicate mega prefix, you "
+"may request doing so in the <<sim-settings, simulation settings dialog>>."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:37
+msgid ""
+"Spice model information is stored as text in symbol fields, therefore you "
+"may either define it in symbol editor or schematics editor. Open symbol "
+"properties dialog and click on _Edit Spice Model_ button to open Spice Model "
+"Editor dialog."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:40
+msgid ""
+"Spice Model Editor dialog has three tabs corresponding to different model "
+"types.  There are two options common to all model types:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:48
+msgid ""
+"|=== |Disable symbol for simulation |When checked the component is excluded "
+"from simulation.  |Alternate node sequence |Allows one to override symbol "
+"pin to model node mapping.  To define a different mapping, specify pin "
+"numbers in order expected by the model."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:50
+msgid "'Example:' +"
+msgstr "'Esempio:' +"
+
+#. type: delimited block _
+#: eeschema_simulator.adoc:58
+msgid ""
+"`* connections:` + `* 1: non-inverting input` + `* 2: inverting input` + `* "
+"3: positive power supply` + `* 4: negative power supply` + `* 5: output` + `."
+"subckt tl071 1 2 3 4 5`"
+msgstr ""
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:60
+#, no-wrap
+msgid "Generic operational amplifier symbol"
+msgstr ""
+
+#. type: Target for macro image
+#: eeschema_simulator.adoc:60
+#, no-wrap
+msgid "images/opamp_symbol.png"
+msgstr "images/opamp_symbol.png"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:66
+msgid ""
+"To match the symbol pins to the Spice model nodes shown above, one needs to "
+"use an alternate node sequence option with value: \"1{nbsp}3{nbsp}5{nbsp}"
+"2{nbsp}4\".  It is a list of pin numbers corresponding to the Spice model "
+"nodes order.  |==="
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:67
+#, no-wrap
+msgid "Passive"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:73
+msgid ""
+"_Passive_ tab allows the user to assign a passive device model (resistor, "
+"capacitor or inductor) to a component. It is a rarely used option, as "
+"normally passive components have models assigned <<sim-passive-models,"
+"implicitly>>, unless component reference does not match the actual device "
+"type."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:80
+msgid ""
+"Explicitly defined passive device models have priority over the ones "
+"assigned implicitly. It means that once a passive device model is assigned, "
+"the reference and value fields are not taken into account during simulation. "
+"It may lead to a confusing situation when assigned model value does not "
+"match the one displayed on a schematic sheet."
+msgstr ""
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:81
+#, no-wrap
+msgid "Passive device model editor tab"
+msgstr ""
+
+#. type: Target for macro image
+#: eeschema_simulator.adoc:81
+#, no-wrap
+msgid "images/sim_model_passive.png"
+msgstr "images/sim_model_passive.png"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:93
+msgid ""
+"|=== |Type |Selects the device type (resistor, capacitor or inductor).  |"
+"Value |Defines the device property (resistance, capacitance or inductance). "
+"The value may use common Spice unit prefixes (as listed below the text input "
+"field) and should use point as the decimal separator. Note that Spice does "
+"not correctly interpret prefixes intertwined in the value (e.g. 1k5).  |==="
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:94
+#, no-wrap
+msgid "Model"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:99
+msgid ""
+"_Model_ tab is used to assign a semiconductor or a complex model defined in "
+"an external library file. Spice model libraries are often offered by device "
+"manufacturers."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:102
+msgid ""
+"The main text widget displays the selected library file contents. It is a "
+"common practice to put models description inside library files, including "
+"the node order."
+msgstr ""
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:103
+#, no-wrap
+msgid "Semiconductor device model editor tab"
+msgstr ""
+
+#. type: Target for macro image
+#: eeschema_simulator.adoc:103
+#, no-wrap
+msgid "images/sim_model_subckt.png"
+msgstr "images/sim_model_subckt.png"
+
+#. type: delimited block |
+#: eeschema_simulator.adoc:116
+#, no-wrap
+msgid ""
+"|File\n"
+"|Path to a Spice library file. This file is going to be used by the simulator,\n"
+"as it is added using _.include_ directive.\n"
+"|Model\n"
+"|Selected device model. When a file is selected, the list is filled with available\n"
+"models to choose from.\n"
+"|Type\n"
+"|Selects model type (subcircuit, BJT, MOSFET or diode). Normally it is set\n"
+"automatically when a model is selected.\n"
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:118
+#, no-wrap
+msgid "Source"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:123
+msgid ""
+"_Source_ tab is used to assign a power or signal source model. There are two "
+"sections: _DC/AC analysis_ and _Transient analysis_. Each defines source "
+"parameters for the corresponding simulation type."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:125
+msgid "_Source type_ option applies to all simulation types."
+msgstr ""
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:126
+#, no-wrap
+msgid "Source model editro tab"
+msgstr ""
+
+#. type: Target for macro image
+#: eeschema_simulator.adoc:126
+#, no-wrap
+msgid "images/sim_model_source.png"
+msgstr "images/sim_model_source.png"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:132
+msgid ""
+"Refer to the http://ngspice.sourceforge.net/docs/ngspice-27-manual."
+"pdf[ngspice documentation], chapter 4 (Voltage and Current Sources) for more "
+"details about sources."
+msgstr ""
+
+#. type: Title ===
+#: eeschema_simulator.adoc:134
+#, no-wrap
+msgid "Spice directives"
+msgstr "Direttive Spice"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:141
+msgid ""
+"It is possible to add Spice directives by placing them in text fields on a "
+"schematic sheet. This approach is convenient for defining the default "
+"simulation type. This functionality is limited to Spice directives starting "
+"with a dot (e.g. \".tran 10n 1m\"), it is not possible to place additional "
+"components using text fields."
+msgstr ""
+
+#. type: Title =====
+#: eeschema_simulator.adoc:142 eeschema_simulator.adoc:173
+#, no-wrap
+msgid "Simulation"
+msgstr "Simulazione"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:146
+msgid ""
+"To launch a simulation, open _Spice Simulator_ dialog by selecting menu "
+"_Tools->Simulator_ in the schematics editor window."
+msgstr ""
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:147
+#, no-wrap
+msgid "Main simulation dialog"
+msgstr "La finestra principale di simulazione"
+
+#. type: Target for macro image
+#: eeschema_simulator.adoc:147
+#, no-wrap
+msgid "images/sim_main_dialog.png"
+msgstr "images/sim_main_dialog.png"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:150
+msgid "The dialog is divided into several sections:"
+msgstr "La finesta è divisa in diverse sezioni:"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:152
+msgid "<<sim-toolbar,Toolbar>>"
+msgstr "<<sim-toolbar,Barra strumenti>>"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:153
+msgid "<<sim-plot-panel,Plot panel>>"
+msgstr "<<sim-plot-panel,Pannello grafici>>"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:154
+msgid "<<sim-output-console,Output console>>"
+msgstr "<<sim-output-console,Console di uscita>>"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:155
+msgid "<<sim-signals-list,Signals list>>"
+msgstr "<<sim-signals-list,Elenco segnali>>"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:156
+msgid "<<sim-cursors-list,Cursors list>>"
+msgstr "<<sim-cursors-list,Elenco cursori>>"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:157
+msgid "<<sim-tune-panel,Tune panel>>"
+msgstr "<<sim-tune-panel,Pannello di regolazione>>"
+
+#. type: Title ====
+#: eeschema_simulator.adoc:158
+#, no-wrap
+msgid "Menu"
+msgstr "Menu"
+
+#. type: Title =====
+#: eeschema_simulator.adoc:161
+#, no-wrap
+msgid "File"
+msgstr "File"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:171
+msgid ""
+"|=== |New Plot | Create a new tab in the plot panel.  |Open Workbook | Open "
+"a list of plotted signals.  |Save Workbook | Save a list of plotted "
+"signals.  |Save as image | Export the active plot to a .png file.  |Save as ."
+"csv file | Export the active plot raw data points to a .csv file.  |Exit "
+"Simulation | Close the dialog.  |==="
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:184
+msgid ""
+"|=== |Run Simulation | Perform a simulation using the current settings.  |"
+"Add signals... | Open a dialog to select signals to be plotted.  |Probe from "
+"schematics | Start the schematics <<sim-probe-tool,Probe>> tool.  |Tune "
+"component value | Start the <<sim-tuner-tool,Tuner>> tool.  |Show SPICE "
+"Netlist... | Open a dialog showing the generated netlist for the simulated "
+"circuit.  |Settings... | Open the <<sim-settings,simulation settings "
+"dialog>>.  |==="
+msgstr ""
+
+#. type: Title =====
+#: eeschema_simulator.adoc:186
+#, no-wrap
+msgid "View"
+msgstr "Vista"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:195
+msgid ""
+"|=== |Zoom In | Zoom in the active plot.  |Zoom Out | Zoom out the active "
+"plot.  |Fit on Screen | Adjust the zoom setting to display all plots.  |Show "
+"grid | Toggle grid visibility.  |Show legend | Toggle plot legend "
+"visibility.  |==="
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:197
+#, no-wrap
+msgid "Toolbar"
+msgstr "Barra strumenti"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:198
+#, no-wrap
+msgid "Simulation dialog top toolbar"
+msgstr "Barra principale della finestra di simulazione"
+
+#. type: Target for macro image
+#: eeschema_simulator.adoc:198
+#, no-wrap
+msgid "images/sim_main_toolbar.png"
+msgstr "images/sim_main_toolbar.png"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:200
+msgid ""
+"The top toolbar provides access to the most frequently performed actions."
+msgstr ""
+"Questa barra strumenti dà accesso alle funzioni utilizzate più "
+"frequentemente."
+
+#. type: Plain text
+#: eeschema_simulator.adoc:209
+msgid ""
+"|=== |Run/Stop Simulation | Start or stop the simulation.  |Add Signals | "
+"Open a dialog to select signals to be plotted.  |Probe | Start the "
+"schematics <<sim-probe-tool,Probe>> tool.  |Tune | Start the <<sim-tuner-"
+"tool,Tuner>> tool.  |Settings | Open the <<sim-settings,simulation settings "
+"dialog>>.  |==="
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:211
+#, no-wrap
+msgid "Plot panel"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:216
+msgid ""
+"Visualizes the simulation results as plots. One can have multiple plots "
+"opened in separate tabs, but only the active one is updated when a "
+"simulation is executed. This way it is possible to compare simulation "
+"results for different runs."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:220
+msgid ""
+"Plots might be customized by toggling grid and legend visibility using <<sim-"
+"menu-view,View>> menu. When a legend is visible, it can be dragged to change "
+"its position."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:222
+msgid "Plot panel interaction:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:224
+msgid "scroll mouse wheel to zoom in/out"
+msgstr "la rotellina del mouse per ingrandire / rimpicciolire"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:225
+msgid "right click to open a context menu to adjust the view"
+msgstr ""
+"clic destro per aprire il menu a scomparsa e regolare la visualizzazione"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:226
+msgid "draw a selection rectangle to zoom in the selected area"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:227
+msgid "drag a cursor to change its coordinates"
+msgstr "trascinare un cursore per cambiarne le coordinate"
+
+#. type: Title ====
+#: eeschema_simulator.adoc:229
+#, no-wrap
+msgid "Output console"
+msgstr "Console d'uscita"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:232
+msgid ""
+"Output console displays messages from the simulator. It is advised to check "
+"the console output to verify there are no errors or warnings."
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:234
+#, no-wrap
+msgid "Signals list"
+msgstr "Elenco segnali"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:236
+msgid "Shows the list of signals displayed in the active plot."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:238
+msgid "Signals list interaction:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:240
+msgid "right click to open a context menu to hide signal or toggle cursor"
+msgstr ""
+"click destro apre un menu contestuale che consente di nascondere il segnale "
+"o commutare il cursore"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:241
+msgid "double click to hide signal"
+msgstr "doppio clic per nascondere il segnale"
+
+#. type: Title ====
+#: eeschema_simulator.adoc:243
+#, no-wrap
+msgid "Cursors list"
+msgstr "Elenco cursori"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:247
+msgid ""
+"Shows the list of cursors and their coordinates. Each signal may have one "
+"cursor displayed. Cursors visibility is set using the <<sim-signals-list,"
+"Signals>> list."
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:249
+#, no-wrap
+msgid "Tune panel"
+msgstr "Pannello di regolazione"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:254
+msgid ""
+"Displays components picked with the <<sim-tuner-tool,Tuner>> tool. Tune "
+"panel allows the user to quickly modify component values and observe their "
+"influence on the simulation results - every time a component value is "
+"changed, the simulation is rerun and plots are updated."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:256
+msgid "For each component there a few controls associated:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:258
+msgid "The top text field sets the maximum component value."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:259
+msgid "The middle text field sets the actual component value."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:260
+msgid "The bottom text field sets the minimum component value."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:261
+msgid "Slider allows the user to modify the component value in a smooth way."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:263
+msgid ""
+"_Save_ button modifies component value on the schematics to the one selected "
+"with the slider."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:265
+msgid ""
+"_X_ button removes component from the Tune panel and restores its original "
+"value."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:267
+msgid "The three text fields recognize Spice unit prefixes."
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:269
+#, no-wrap
+msgid "Tuner tool"
+msgstr "Strumento di regolazione"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:271
+msgid "Tuner tool lets the user pick components for tuning."
+msgstr ""
+"Lo strumento di regolazione permette all'utente di prelevare i componenti "
+"per regolarli."
+
+#. type: Plain text
+#: eeschema_simulator.adoc:275
+msgid ""
+"To select a component for tuning, click on one in the schematics editor when "
+"the tool is active. Selected components will appear in the <<sim-tune-panel,"
+"Tune>> panel. Only passive components might be tuned."
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:277
+#, no-wrap
+msgid "Probe tool"
+msgstr "Strumento sonda"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:279
+msgid ""
+"Probe tool provides an user-friendly way of selecting signals for plotting."
+msgstr ""
+"Lo strumento sonda fornisce un modo semplice per selezionare i segnali da "
+"usare per i grafici."
+
+#. type: Plain text
+#: eeschema_simulator.adoc:282
+msgid ""
+"To add a signal to plot, click on a corresponding wire in the schematics "
+"editor when the tool is active."
+msgstr ""
+
+#. type: Title ====
+#: eeschema_simulator.adoc:284
+#, no-wrap
+msgid "Simulation settings"
+msgstr "Impostazioni di simulazione"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:286
+#, no-wrap
+msgid "Simulation settings dialog"
+msgstr "Finestra di dialogo delle impostazioni di simulazione"
+
+#. type: Target for macro image
+#: eeschema_simulator.adoc:286
+#, no-wrap
+msgid "images/sim_settings.png"
+msgstr "images/sim_settings.png"
+
+#. type: Plain text
+#: eeschema_simulator.adoc:290
+msgid ""
+"Simulation settings dialog lets the user set the simulation type and "
+"parameters. There are four tabs:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:292
+msgid "AC"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:293
+msgid "DC Transfer"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:294
+msgid "Transient"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:295
+msgid "Custom"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:302
+msgid ""
+"The first three tabs provide forms where simulation parameters might be "
+"specified. The last tab allows the user to type in custom Spice directives "
+"to set up a simulation. You can find more information about simulation types "
+"and parameters in the http://ngspice.sourceforge.net/docs/ngspice-27-manual."
+"pdf[ngspice documentation], chapter 1.2."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:308
+msgid ""
+"An alternative way to configure a simulation is to type <<sim-directives,"
+"Spice directives>> into text fields on schematics. Any text field directives "
+"related to simulation type are overridden by the settings selected in the "
+"dialog. It means that once you start using the simulation dialog, the dialog "
+"overriddes the schematics directives until the simulator is reopened."
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:310
+msgid "There are two options common to all simulation types:"
+msgstr ""
+
+#. type: Plain text
+#: eeschema_simulator.adoc:317
+msgid ""
+"|=== |Adjust passive symbol values | Replace passive symbol values to "
+"convert common component values notation to Spice notation.  |Add full path "
+"for .include library directives | Prepend Spice model library file names "
+"with full path. Normally full path is required by ngspice to access a "
+"library file.  |==="
+msgstr ""
+
+#. type: Title ==
 #: eeschema_main_top_menu.adoc:3
 #, no-wrap
 msgid "Main top menu"
@@ -6701,12 +7817,6 @@ msgstr "Gestione tabelle di librerie di simboli"
 #, no-wrap
 msgid "Symbol Library Tables"
 msgstr "Tabelle di librerie di simboli"
-
-#. type: Target for macro image
-#: eeschema_main_top_menu.adoc:55
-#, no-wrap
-msgid "images/en/options_symbol_lib.png"
-msgstr "images/it/options_symbol_lib.png"
 
 #. type: Plain text
 #: eeschema_main_top_menu.adoc:59
@@ -12710,7 +13820,15 @@ msgid ""
 "<<example-of-a-symbol-having-multiple-units-with-different-symbols, previous "
 "section>>, a relay can be represented by three distinct units: a coil, "
 "switch contact 1, and switch contact 2."
-msgstr "Un simbolo può possedere due rappresentazioni simboliche (rappresentazione conosciuta come ``DeMorgan'') e può essere formato da più di un'unità come nel caso dei simboli con porte logiche. Per certi tipi di simboli, può essere desiderabile avere elementi grafici e pin differenti e indipendenti. Come nell'esempio del relè mostrato nella <<example-of-a-symbol-having-multiple-units-with-different-symbols, sezione precedente>>, un relè può essere rappresentato da tre distinte unità: bobina, interruttore 1 e interruttore 2."
+msgstr ""
+"Un simbolo può possedere due rappresentazioni simboliche (rappresentazione "
+"conosciuta come ``DeMorgan'') e può essere formato da più di un'unità come "
+"nel caso dei simboli con porte logiche. Per certi tipi di simboli, può "
+"essere desiderabile avere elementi grafici e pin differenti e indipendenti. "
+"Come nell'esempio del relè mostrato nella <<example-of-a-symbol-having-"
+"multiple-units-with-different-symbols, sezione precedente>>, un relè può "
+"essere rappresentato da tre distinte unità: bobina, interruttore 1 e "
+"interruttore 2."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:710
