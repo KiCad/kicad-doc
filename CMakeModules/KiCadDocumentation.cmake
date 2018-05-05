@@ -5,6 +5,16 @@
 # (c)2015 Brian Sidebotham <brian.sidebotham@gmail.com>
 #
 
+macro( INTERSECTION out_list list1 list2)
+# Store the intersection between the two given lists in var_name.
+    foreach( L ${list1} )
+        if( "${list2}" MATCHES "(^|;)${L}(;|$)" )
+            list( APPEND intersect_tmp ${L} )
+        endif()
+    endforeach()
+    set( ${out_list} ${intersect_tmp})
+endmacro(INTERSECTION)
+
 macro( KiCadDocumentation DOCNAME )
 
     # Add the cvpcb documentation targets
@@ -34,31 +44,24 @@ macro( KiCadDocumentation DOCNAME )
     endforeach()
     separate_arguments( DOCCHAPTERMASTERS )
 
-    # If we're not building a specific language, glob all languages
-    if( "${SINGLE_LANGUAGE}" STREQUAL "" )
-        # Get a list of all po translation files so we know what languages can be built
-        file( GLOB TRANSLATIONS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
+    # Get a list of all po translation files so we know what languages can be built
+    file( GLOB AVAILABLE_PO RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
+    foreach( L ${AVAILABLE_PO} )
+        string( REGEX REPLACE "^(.*).po" "\\1" stem ${L})
+        list( APPEND AVAILABLE "${stem}" )
+    endforeach()
+    list( APPEND AVAILABLE en )
 
-        # Add English to the translations, but we'll have to treat it as a special case
-        # when generating a translation target
-        list( APPEND TRANSLATIONS en )
+    # Backwards compatibility
+    if( NOT "${SINGLE_LANGUAGE}" STREQUAL "" AND "${LANGUAGES}" STREQUAL "")
+       set( LANGUAGES "${SINGLE_LANGUAGE}" )
+    endif()
+
+    # If we're not building a specific language, default to all languages
+    if( "${LANGUAGES}" STREQUAL "" )
+        set( TRANSLATIONS ${AVAILABLE} )
     else()
-        # Get a list of all po translation files so we know what languages can be built
-        file( GLOB AVAILABLE RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po ${CMAKE_CURRENT_SOURCE_DIR}/po/*.po )
-
-        # Only add the language target if it is available. If this document hasn't been
-        # translated into the required language, don't include it as a target. English
-        # doesn't have a .po file and is always producable, so add it without any checks
-        if( ${SINGLE_LANGUAGE} STREQUAL "en" )
-            list( APPEND TRANSLATIONS "${SINGLE_LANGUAGE}" )
-        else()
-            foreach( L ${AVAILABLE} )
-                if( "${L}" STREQUAL "${SINGLE_LANGUAGE}.po" )
-                    # Only build the required language
-                    list( APPEND TRANSLATIONS "${SINGLE_LANGUAGE}" )
-                endif()
-            endforeach()
-        endif()
+        intersection( TRANSLATIONS "${AVAILABLE}" "${LANGUAGES}")
     endif()
 
     foreach( LANGUAGE ${TRANSLATIONS} )
