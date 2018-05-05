@@ -46,12 +46,18 @@ macro( add_adoc_pdf_target TARGET INFILE OUTFILE LANGUAGE )
         #list( APPEND _A2X_OPTIONS -D "${_OUTPUT_DIR}" )
     endif()
 
-    add_custom_target( ${TARGET} ALL ${A2X_COMMAND} ${_A2X_OPTIONS} ${INFILE} )
+    add_custom_target( ${TARGET} DEPENDS ${OUTFILE} )
+    add_custom_command( OUTPUT ${OUTFILE}
+                        COMMAND ${A2X_COMMAND} ${_A2X_OPTIONS} ${INFILE}
+                        DEPENDS ${INFILE} )
 endmacro()
 
 # Add an asciidoc to HTML conversion target
 macro( add_adoc_html_target TARGET INFILE OUTFILE LANGUAGE )
-    add_custom_target( ${TARGET} ALL ${ASCIIDOC_COMMAND} ${ASCIIDOC_OPTIONS} ${LANGUAGE_OPTIONS} -o ${OUTFILE} ${INFILE} )
+    add_custom_target( ${TARGET} DEPENDS ${OUTFILE} )
+    add_custom_command( OUTPUT ${OUTFILE}
+                        COMMAND ${ASCIIDOC_COMMAND} ${ASCIIDOC_OPTIONS} ${LANGUAGE_OPTIONS} -o ${OUTFILE} ${INFILE}
+                        DEPENDS ${INFILE} )
 endmacro()
 
 # Add an asciidoc to EPUB conversion target
@@ -62,7 +68,10 @@ macro( add_adoc_epub_target TARGET INFILE OUTFILE LANGUAGE )
                     ${DOCINFO_OUT} )
     set( _A2X_OPTIONS ${A2X_OPTIONS} )
     list( APPEND _A2X_OPTIONS -f epub -a docinfo -a lang=${LANGUAGE} )
-    add_custom_target( ${TARGET} ALL ${A2X_COMMAND} ${_A2X_OPTIONS} ${INFILE} )
+    add_custom_target( ${TARGET} DEPENDS ${OUTFILE} )
+    add_custom_command( OUTPUT ${OUTFILE}
+                        COMMAND ${A2X_COMMAND} ${_A2X_OPTIONS} ${INFILE}
+                        DEPENDS ${INFILE} )
 endmacro()
 
 # Pass an option to asciidoc
