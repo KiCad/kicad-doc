@@ -297,20 +297,20 @@ image::images/kicad_main_window.png[KiCad Main Window]
     Save the whole schematic: *File* -> **Save**
 
 5.  We will now place our first component. Click on the 'Place
-    component' icon image:images/icons/add_component.png[Add component Icon]
-    in the right toolbar. You may also press the 'Place component' hotkey [a].
+    symbol' icon image:images/icons/add_component.png[Add component Icon]
+    in the right toolbar. You may also press the 'Add Symbol' hotkey [a].
 
-6.  Click on the middle of your schematic sheet. A __Choose Component__
+6.  Click on the middle of your schematic sheet. A __Choose Symbol__
     window will appear on the screen.
     We're going to place a resistor. Search / filter on the 'R' of
     **R**esistor.
-    You may notice the 'device' heading above the Resistor. This
-    'device' heading is the name of the library where the component is
+    You may notice the 'Device' heading above the Resistor. This
+    'Device' heading is the name of the library where the component is
     located, which is quite a generic and useful library.
 +
-image::images/choose_component.png[Choose Component]
+image::images/choose_component.png[Choose Symbol]
 
-7.  Double click on it. This will close the 'Choose Component' window.
+7.  Double click on it. This will close the 'Choose Symbol' window.
     Place the component in the schematic sheet by clicking where you
     want it to be.
 
@@ -325,18 +325,18 @@ image::images/choose_component.png[Choose Component]
 NOTE: If your mouse was also over the _Field Reference_ ('R') or the _Field
 Value_ ('R?'), a menu will appear. You will see the 'Clarify Selection' menu
 often in KiCad; it allows working on objects that are on top of each other. In
-this case, tell KiCad you want to perform the action on the 'Component
+this case, tell KiCad you want to perform the action on the 'Symbol
 ...R...'.
 
-10. Right click in the middle of the component and select *Edit
-    Component* -> **Value**. You can achieve the same result by hovering
+10. Right click in the middle of the component and select *Properties* ->
+    **Edit Value**. You can achieve the same result by hovering
     over the component and pressing [v]. Alternatively, [e] will
-    take you to the more general Edit window. Notice how the right-click
+    take you to the more general Properties window. Notice how the right-click
     menu below shows the hotkeys for all available actions.
 +
 image::images/edit_component_dropdown.png[Edit component menu]
 
-11. The Component value window will appear. Replace the current value
+11. The Edit Value Field window will appear. Replace the current value
     'R' with '1 k'. Click OK.
 +
 NOTE: Do not change the Reference field (R?), this will be done automatically
@@ -345,7 +345,7 @@ later on. The value inside the resistor should now be '1 k'.
 image::images/resistor_value.png[Resistor Value]
 
 12. To place another resistor, simply click where you want the resistor
-    to appear. The Component Selection window will appear again.
+    to appear. The symbol selection window will appear again.
 
 13. The resistor you previously chose is now in your history list,
     appearing as 'R'. Click OK and place the component.
@@ -353,7 +353,7 @@ image::images/resistor_value.png[Resistor Value]
 image::images/component_history.png[Component history]
 
 14. In case you make a mistake and want to delete a component, right
-    click on the component and click 'Delete Component'. This will remove
+    click on the component and click 'Delete'. This will remove
     the component from the schematic. Alternatively, you can hover over the
     component you want to delete and press [Delete].
 
@@ -361,13 +361,13 @@ image::images/component_history.png[Component history]
     by hovering over it and pressing [c]. Click where you want to
     place the new duplicated component.
 
-16. Right click on the second resistor. Select 'Drag Component'.
+16. Right click on the second resistor. Select 'Drag'.
     Reposition the component and left click to drop. The same functionality
     can be achieved by hovering over the component and by pressing [g].
     [r] will rotate the component while [x] and [y] will
     flip it about its x- or y-axis.
 +
-NOTE: *Right-Click* -> *Move component* or [m] is also a valuable option
+NOTE: *Right-Click* -> *Move* or [m] is also a valuable option
 for moving anything around, but it is better to use this only for component
 labels and components yet to be connected. We will see later on why this is the case.
 
