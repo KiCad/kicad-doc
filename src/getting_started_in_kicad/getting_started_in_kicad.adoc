@@ -381,18 +381,27 @@ labels and components yet to be connected. We will see later on why this is the 
     for the schematic sheet__.
 
 19. We are going to add a component from a library that isn't configured in the
-    default project. In the menu, choose *Preferences* -> **Component Libraries**
-    and click the **Add** button for **Component library files**.
+    default project. In the menu, choose *Preferences* -> **Manage Symbol Libraries**.
+    In the Symbol Libraries window you can see two tabs: Global Libraries and
+    Project Specific Libraries. Each one has one sym-lib-table file. For a library
+    (.lib file) to be available it must be in one of those sym-lib-table files.
+    If you have a library file in your file system and it's not yet available,
+    you can add it to either one of the sym-lib-table files with *Browse Libraries*.
+    For practise we will now add a library which already is available.
 
 20. You need to find where the official KiCad libraries are installed on your
     computer. Look for a `library` directory containing a hundred of `.dcm` and
     `.lib` files. Try in `C:\Program Files (x86)\KiCad\share\` (Windows) and
     `/usr/share/kicad/library/` (Linux). When you have found the directory,
-    choose and add the 'microchip_pic12mcu' library and close the window.
+    choose and add the 'MCU_Microchip_PIC12.lib' library and close the window.
+    You will get a warning that the name already exists in the list; add it
+    anyways. It will be added to the end of of the list.
+    Now click its nickname and change it to 'microchip_pic12mcu'.
+    Close the Symbol Libraries window with OK.
 
 21. Repeat the add-component steps, however this time select the
-    'microchip_pic12mcu' library instead of the 'device' library and pick the
-    'PIC12C508A-I/SN' component.
+    'microchip_pic12mcu' library instead of the 'Device' library and pick the
+    'PIC12C508A-ISN' component.
 
 22. Hover the mouse over the microcontroller component. Notice that [x] and [y]
     again flip the component. Return the component to its original orientation.
