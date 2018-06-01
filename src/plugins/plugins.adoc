@@ -972,23 +972,23 @@ once the addresses of each function have been retrieved, a number of checks
 are enforced:
 
 . Plugin `GetKicadPluginClass()` is invoked and the result is compared to
-the Plugin Class string provided by the Plugin Loader implementation; if
-these strings do not match then the opened plugin is not intended for the
-Plugin Loader instance.
+  the Plugin Class string provided by the Plugin Loader implementation; if
+  these strings do not match then the opened plugin is not intended for the
+  Plugin Loader instance.
 . Plugin `GetClassVersion()` is invoked to retrieve the Plugin Class API Version
-implemented by the plugin.
+  implemented by the plugin.
 . Plugin Loader virtual `GetLoaderVersion()` function is invoked to retrieve the
-Plugin Class API Version implemented by the loader.
+  Plugin Class API Version implemented by the loader.
 . The Plugin Class API Version reported by the plugin and the loader are
-required to have the same Major Version number, otherwise they are
-considered incompatible. This is the most basic version test and it is
-enforced by the base plugin loader.
+  required to have the same Major Version number, otherwise they are
+  considered incompatible. This is the most basic version test and it is
+  enforced by the base plugin loader.
 . Plugin `CheckClassVersion()` is invoked with the Plugin Class API Version
-information of the Plugin Loader; if the Plugin supports the given version
-then it returns `true` to indicate success. If successful the loader creates
-a PluginInfo string based on the results of `GetKicadPluginName()` and
-`GetPluginVersion()`, and the plugin loading procedure
-continues within the Plugin Loader's `Open()` implementation.
+  information of the Plugin Loader; if the Plugin supports the given version
+  then it returns `true` to indicate success. If successful the loader creates
+  a PluginInfo string based on the results of `GetKicadPluginName()` and
+  `GetPluginVersion()`, and the plugin loading procedure
+  continues within the Plugin Loader's `Open()` implementation.
 
 
 ==== API: 3D Plugin Class
