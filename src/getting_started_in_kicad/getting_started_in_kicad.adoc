@@ -408,7 +408,7 @@ labels and components yet to be connected. We will see later on why this is the 
 22. Hover the mouse over the microcontroller component. Notice that [x] and [y]
     again flip the component. Return the component to its original orientation.
 
-23. Repeat the add-component steps, this time choosing the 'device'
+23. Repeat the add-component steps, this time choosing the 'Device'
     library and picking the 'LED' component from it.
 
 24. Organise all components on your schematic sheet as shown below.
@@ -433,7 +433,7 @@ image::images/gsik_tutorial1_010.png[gsik_tutorial1_010_png]
 image::images/gsik_myconn3_s.png[gsik_myconn3_s_png]
 
 28. It is time to place the power and ground symbols. Click on the
-    'Place a power port' button image:images/icons/add_power.png[add_power_png] on
+    'Place power port' button image:images/icons/add_power.png[add_power_png] on
     the right toolbar. Alternatively, press [p]. In the component
     selection window, scroll down and select 'VCC' from the 'power' library.
     Click OK.
@@ -455,7 +455,7 @@ image::images/gsik_tutorial1_020.png[gsik_tutorial1_020_png]
     icon image:images/icons/add_line.png[Place wire] on the right
     toolbar.
 +
-NOTE: Be careful not to pick 'Place a bus', which appears directly
+NOTE: Be careful not to pick 'Place bus', which appears directly
 beneath this button but has thicker lines. The section
 <<bus-connections-in-kicad,Bus Connections in KiCad>> will explain how
 to use a bus section.
@@ -480,7 +480,7 @@ image::images/gsik_tutorial1_040.png[gsik_tutorial1_040_png]
 
 34. We will now consider an alternative way of making a connection
     using labels. Pick a net labelling tool by clicking on the 'Place
-    net name' icon image:images/icons/add_line_label.png[add_line_label_png]
+    net label' icon image:images/icons/add_line_label.png[add_line_label_png]
     on the right toolbar. You can also use [l].
 
 35. Click in the middle of the wire connected to pin 6 of the
@@ -514,7 +514,7 @@ image::images/gsik_tutorial1_050.png[gsik_tutorial1_050_png]
     unconnected wires are deliberate or manually flag each unconnected
     wire or pin as unconnected.
 
-41. Click on the 'Place no connect flag' icon
+41. Click on the 'Place no connection flag' icon
     image:images/icons/noconn.png[noconn_png] on the right toolbar. Click on
     pins 2, 3, 4 and 5. An X will appear to signify that the lack of a
     wire connection is intentional.
@@ -540,13 +540,13 @@ NOTE: This will avoid the classic schematic checking warning:
 Warning Pin power_in not driven (Net xx)
 
 44. Sometimes it is good to write comments here and there. To add
-    comments on the schematic use the 'Place graphic text (comment)'
+    comments on the schematic use the 'Place text'
     icon image:images/icons/text.png[text_png] on the right toolbar.
 
 45. All components now need to have unique identifiers. In fact, many
     of our components are still named 'R?' or 'J?'. Identifier
     assignation can be done automatically by clicking on the 'Annotate
-    schematic' icon image:images/icons/annotate.png[annotate_png] on the top
+    schematic symbols' icon image:images/icons/annotate.png[annotate_png] on the top
     toolbar.
 
 46. In the Annotate Schematic window, select 'Use the entire
@@ -554,7 +554,7 @@ Warning Pin power_in not driven (Net xx)
     confirmation message and then click 'Close'. Notice how all the
     '?' have been replaced with numbers. Each identifier is now
     unique. In our example, they have been named 'R1', 'R2', 'U1',
-    'D1' and 'J1'.
+    'LED1' and 'J1'.
 
 47. We will now check our schematic for errors. Click on the 'Perform
     electrical rules check' icon image:images/icons/erc.png[erc_png] on the top
@@ -565,14 +565,15 @@ Warning Pin power_in not driven (Net xx)
     located. Check 'Create ERC file report' and press the 'Run' button again to
     receive more information about the errors.
 +
-NOTE: If you have a warning with "No default editor found you must choose it",
+NOTE: If you have a warning with "No default editor found, you must choose it",
 try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
 (Linux).
 
 48. The schematic is now finished. We can now create a Netlist file to
     which we will add the footprint of each component. Click on the
     'Generate netlist' icon image:images/icons/netlist.png[netlist_png] on
-    the top toolbar. Click on the 'Generate' button and save under the default file name.
+    the top toolbar. Click on the 'Generate Netlist' button and save
+    under the default file name.
 
 49. After generating the Netlist file, click on the 'Run Cvpcb' icon
     image:images/icons/cvpcb.png[cvpcb_png] on the top
@@ -581,9 +582,9 @@ try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
 
 50. _Cvpcb_ allows you to link all the components in your schematic
     with footprints in the KiCad library. The pane on the center shows
-    all the components used in your schematic. Here select 'D1'. In
+    all the components used in your schematic. Here select 'LED1'. In
     the pane on the right you have all the available footprints, here
-    scroll down to 'LEDs:LED-5MM' and double click on it. 
+    scroll down to 'LED_THT:LED-D5.0mm' and double click on it. 
 // missing image here?
 
 51. It is possible that the pane on the right shows only a selected
@@ -594,20 +595,16 @@ try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
     image:images/icons/module_library_list.png[module_library_list_png] to
     enable or disable these filters.
 
-52. For 'IC1' select the 'Housings_DIP:DIP-8_W7.62mm' footprint.
-    For 'J1' select the 'Connectors:Banana_Jack_3Pin' footprint.
-    For 'R1' and 'R2' select the 'Discret:R1' footprint.
+52. For 'U1' select the 'Package_DIP:DIP-8_W7.62mm' footprint.
+    For 'J1' select the 'Connector:Banana_Jack_3Pin' footprint.
+    For 'R1' and 'R2' select the
+    'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' footprint.
 
 53. If you are interested in knowing what the footprint you are
     choosing looks like, you have two options. You can click on the
     'View selected footprint' icon
     image:images/icons/show_footprint.png[show_footprint_png] for a preview
-    of the current footprint. Alternatively, click on the 'Display
-    footprint list documentation' icon
-    image:images/icons/datasheet.png[datasheet_png] and you will get a
-    multi-page PDF document with all available footprints. You can
-    print it out and check your components to make sure that the
-    dimensions match.
+    of the current footprint.
 
 54. You are done. You can now update your netlist file with all the
     associated footprints. Click on *File* -> **Save As**. The default
@@ -619,8 +616,8 @@ try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
     document.
 
 55. You can close _Cvpcb_ and go back to the _Eeschema_ schematic
-    editor. Save the project by clicking on *File* -> **Save Whole
-    Schematic Project**. Close the schematic editor.
+    editor. Save the project by clicking on *File* -> **Save**.
+    Close the schematic editor.
 
 56. Switch to the KiCad project manager.
 
