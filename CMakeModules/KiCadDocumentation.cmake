@@ -124,9 +124,17 @@ macro( KiCadDocumentation DOCNAME )
 
             # Non-ascii languages needs some special treatments
             if( "${LANGUAGE}" MATCHES "ja" )
+                set(DBLATEX_OPTIONS "")
+                set_dblatex_common_options()
                 add_dblatex_option( -b xetex -p ${CMAKE_CURRENT_SOURCE_DIR}/../../xsl/dblatex-pdf-ja.xsl )
             elseif( "${LANGUAGE}" MATCHES "ru" )
+                set(DBLATEX_OPTIONS "")
+                set_dblatex_common_options()
                 add_dblatex_option( -b xetex -p ${CMAKE_CURRENT_SOURCE_DIR}/../../xsl/dblatex-pdf-ru.xsl )
+            elseif( "${LANGUAGE}" MATCHES "zh" )
+                set(DBLATEX_OPTIONS "")
+                set_dblatex_common_options()
+                add_dblatex_option( -b xetex -p ${CMAKE_CURRENT_SOURCE_DIR}/../../xsl/dblatex-pdf-zh.xsl )
             endif()
 
             # Deal with chapters for all languages...

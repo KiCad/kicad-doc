@@ -102,3 +102,12 @@ macro( add_fop_option )
         list( APPEND FOP_OPTIONS ${OPT} )
     endforeach()
 endmacro()
+
+# Set common dblatex options
+macro(set_dblatex_common_options)
+    # When the a2x target macro knows we're using dblatex, it adds in the
+    # --dblatex-opts command and uses the following options for that
+    add_dblatex_option( -P latex.output.revhistory=0 )
+    add_dblatex_option( -P doc.publisher.show=0 )
+    add_dblatex_option( -s ${PROJECT_SOURCE_DIR}/CMakeSupport/pdf-cover-dblatex.sty )
+endmacro()
