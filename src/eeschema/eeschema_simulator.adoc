@@ -39,7 +39,7 @@ Spice Model Editor dialog has three tabs corresponding to different model types.
 There are two options common to all model types:
 
 [width="90%",cols="30%a,70%a",]
-|===
+|====
 |Disable symbol for simulation
 |When checked the component is excluded from simulation.
 |Alternate node sequence
@@ -62,7 +62,7 @@ image::images/opamp_symbol.png[alt="Generic operational amplifier symbol"]
 To match the symbol pins to the Spice model nodes shown above, one needs to use
 an alternate node sequence option with value: "1{nbsp}3{nbsp}5{nbsp}2{nbsp}4".
 It is a list of pin numbers corresponding to the Spice model nodes order.
-|===
+|====
 
 ==== Passive
 
@@ -81,7 +81,7 @@ on a schematic sheet.
 image::images/sim_model_passive.png[alt="Passive device model editor tab"]
 
 [width="90%",cols="30%a,70%a",]
-|===
+|====
 |Type
 |Selects the device type (resistor, capacitor or inductor).
 |Value
@@ -89,7 +89,7 @@ image::images/sim_model_passive.png[alt="Passive device model editor tab"]
 may use common Spice unit prefixes (as listed below the text input field) and
 should use point as the decimal separator. Note that Spice does not correctly
 interpret prefixes intertwined in the value (e.g. 1k5).
-|===
+|====
 
 ==== Model
 
@@ -160,19 +160,19 @@ The dialog is divided into several sections:
 [[sim-menu-file]]
 ===== File
 [width="90%",cols="30%,70%",]
-|===
+|====
 |New Plot | Create a new tab in the plot panel.
 |Open Workbook | Open a list of plotted signals.
 |Save Workbook | Save a list of plotted signals.
 |Save as image | Export the active plot to a .png file.
 |Save as .csv file | Export the active plot raw data points to a .csv file.
 |Exit Simulation | Close the dialog.
-|===
+|====
 
 [[sim-menu-simulation]]
 ===== Simulation
 [width="90%",cols="30%,70%",]
-|===
+|====
 |Run Simulation | Perform a simulation using the current settings.
 |Add signals... | Open a dialog to select signals to be plotted.
 |Probe from schematics | Start the schematics <<sim-probe-tool,Probe>> tool.
@@ -180,18 +180,18 @@ The dialog is divided into several sections:
 |Show SPICE Netlist... | Open a dialog showing the generated netlist for the
 simulated circuit.
 |Settings... | Open the <<sim-settings,simulation settings dialog>>.
-|===
+|====
 
 [[sim-menu-view]]
 ===== View
 [width="90%",cols="30%,70%",]
-|===
+|====
 |Zoom In | Zoom in the active plot.
 |Zoom Out | Zoom out the active plot.
 |Fit on Screen | Adjust the zoom setting to display all plots.
 |Show grid | Toggle grid visibility.
 |Show legend | Toggle plot legend visibility.
-|===
+|====
 
 [[sim-toolbar]]
 ==== Toolbar
@@ -199,13 +199,13 @@ image::images/sim_main_toolbar.png[alt="Simulation dialog top toolbar"]
 The top toolbar provides access to the most frequently performed actions.
 
 [width="90%",cols="30%,70%",]
-|===
+|====
 |Run/Stop Simulation | Start or stop the simulation.
 |Add Signals | Open a dialog to select signals to be plotted.
 |Probe | Start the schematics <<sim-probe-tool,Probe>> tool.
 |Tune | Start the <<sim-tuner-tool,Tuner>> tool.
 |Settings | Open the <<sim-settings,simulation settings dialog>>.
-|===
+|====
 
 [[sim-plot-panel]]
 ==== Plot panel
@@ -308,10 +308,10 @@ dialog overriddes the schematics directives until the simulator is reopened.
 
 There are two options common to all simulation types:
 [width="90%",cols="30%,70%",]
-|===
+|====
 |Adjust passive symbol values | Replace passive symbol values to convert common
 component values notation to Spice notation.
 |Add full path for .include library directives | Prepend Spice model library
 file names with full path. Normally full path is required by ngspice to access
 a library file.
-|===
+|====
