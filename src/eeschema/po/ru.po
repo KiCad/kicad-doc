@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-05-30 08:22+0300\n"
-"PO-Revision-Date: 2018-05-30 08:26+0300\n"
+"POT-Creation-Date: 2018-06-05 15:55+0300\n"
+"PO-Revision-Date: 2018-06-05 16:09+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -1128,7 +1128,7 @@ msgid ""
 "|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |File name converter (a\n"
 "sheet style, xsl format).\n"
 msgstr ""
-"|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |Имя файла конвертера \n"
+"|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |Имя файла конвертера\n"
 "(таблицы стилей в формате xsl).\n"
 
 #. type: delimited block |
@@ -4630,7 +4630,7 @@ msgid ""
 msgstr ""
 "***** Sheet /\n"
 "ErrType(4): Конфликт между выводами. Серьезность: предупреждение\n"
-"    @ (256,54 мм,83,82 мм): Вывод B12 (Двунаправленный) компонента U9 соединен с \n"
+"    @ (256,54 мм,83,82 мм): Вывод B12 (Двунаправленный) компонента U9 соединен с\n"
 "    @ (72,39 мм,237,49 мм): вывод 1 (Выход питания) компонента #PWR07 (цепь 41).\n"
 
 #. type: delimited block -
@@ -6330,7 +6330,7 @@ msgstr ""
 "|image:images/icons/add_line_label.png[icons/add_line_label_png]\n"
 "|Разместить локальную метку (имя цепи). Два проводника с одинаковыми\n"
 "метками и **расположенные на одном листе** электрически соединены между\n"
-"собой. Для соединения проводников при помощи меток на разных листах \n"
+"собой. Для соединения проводников при помощи меток на разных листах\n"
 "нужно использовать глобальные или иерархические метки.\n"
 
 #. type: delimited block |
@@ -12810,65 +12810,66 @@ msgstr ""
 "Редактор Spice моделей имеет три вкладки, которые соответствуют трём разным "
 "типам моделей. Также имеется два параметра, общих для всех типов:"
 
-#. type: Plain text
+#. type: delimited block |
 #: eeschema_simulator.adoc:48
+#, no-wrap
 msgid ""
-"|=== |Disable symbol for simulation |When checked the component is excluded "
-"from simulation.  |Alternate node sequence |Allows one to override symbol "
-"pin to model node mapping.  To define a different mapping, specify pin "
-"numbers in order expected by the model."
+"|Disable symbol for simulation\n"
+"|When checked the component is excluded from simulation.\n"
+"|Alternate node sequence\n"
+"|Allows one to override symbol pin to model node mapping.\n"
+"To define a different mapping, specify pin numbers in order expected by the model.\n"
 msgstr ""
-"|===\n"
-"|Не симулировать компонент |Если отмечен, компонент исключается из "
-"симуляции.|Изменить последовательность выводов |Позволяет переопределить "
-"выводы компонента для соответствия описанию узлов модели. Необходимо указать "
-"номера выводов в той последовательности, в которой их ожидает модель."
+"|Не симулировать компонент\n"
+"|Если отмечен, компонент исключается из симуляции.\n"
+"|Изменить последовательность выводов\n"
+"|Позволяет переопределить выводы компонента для соответствия описанию узлов модели.\n"
+"Необходимо указать номера выводов в той последовательности, в которой их ожидает модель.\n"
 
-#. type: Plain text
-#: eeschema_simulator.adoc:50
-msgid "'Example:' +"
-msgstr "'Пример:' +"
-
-#. type: delimited block _
-#: eeschema_simulator.adoc:58
+#. type: delimited block |
+#: eeschema_simulator.adoc:59
+#, no-wrap
 msgid ""
-"`* connections:` + `* 1: non-inverting input` + `* 2: inverting input` + `* "
-"3: positive power supply` + `* 4: negative power supply` + `* 5: output` + `."
-"subckt tl071 1 2 3 4 5`"
-msgstr ""
+"'Example:' +\n"
+"____\n"
 "`* connections:` +\n"
-" `* 1: non-inverting input` +\n"
-" `* 2: inverting input` +\n"
-" `* 3: positive power supply` +\n"
-" `* 4: negative power supply` +\n"
-" `* 5: output` +\n"
-" `.subckt tl071 1 2 3 4 5`"
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_simulator.adoc:60
-#, no-wrap
-msgid "Generic operational amplifier symbol"
-msgstr "Обозначение обычного операционного усилителя"
-
-#. type: Target for macro image
-#: eeschema_simulator.adoc:60
-#, no-wrap
-msgid "images/opamp_symbol.png"
-msgstr "images/opamp_symbol.png"
-
-#. type: Plain text
-#: eeschema_simulator.adoc:66
-msgid ""
-"To match the symbol pins to the Spice model nodes shown above, one needs to "
-"use an alternate node sequence option with value: \"1{nbsp}3{nbsp}5{nbsp}"
-"2{nbsp}4\".  It is a list of pin numbers corresponding to the Spice model "
-"nodes order.  |==="
+"`* 1: non-inverting input` +\n"
+"`* 2: inverting input` +\n"
+"`* 3: positive power supply` +\n"
+"`* 4: negative power supply` +\n"
+"`* 5: output` +\n"
+"`.subckt tl071 1 2 3 4 5`\n"
+"____\n"
 msgstr ""
-"Чтобы сопоставить выводы компонента с узлами Spice модели, описанными выше, "
-"необходимо задать следующее значение для данного параметра: \"1{nbsp}3{nbsp}"
-"5{nbsp}2{nbsp}4\". Это перечень номеров выводов, который соответствует "
-"порядку узлов Spice модели. \n"
-"|==="
+"'Пример:' +\n"
+"____\n"
+"`* connections:` +\n"
+"`* 1: non-inverting input` +\n"
+"`* 2: inverting input` +\n"
+"`* 3: positive power supply` +\n"
+"`* 4: negative power supply` +\n"
+"`* 5: output` +\n"
+"`.subckt tl071 1 2 3 4 5`\n"
+"____\n"
+
+#. type: delimited block |
+#: eeschema_simulator.adoc:61
+#, no-wrap
+msgid "image::images/opamp_symbol.png[alt=\"Generic operational amplifier symbol\"]\n"
+msgstr "image::images/opamp_symbol.png[alt=\"Обозначение обычного операционного усилителя\"]\n"
+
+#. type: delimited block |
+#: eeschema_simulator.adoc:65
+#, no-wrap
+msgid ""
+"To match the symbol pins to the Spice model nodes shown above, one needs to use\n"
+"an alternate node sequence option with value: \"1{nbsp}3{nbsp}5{nbsp}2{nbsp}4\".\n"
+"It is a list of pin numbers corresponding to the Spice model nodes order.\n"
+msgstr ""
+"Чтобы сопоставить выводы компонента с узлами Spice модели, описанными выше,\n"
+"необходимо задать следующее значение для данного параметра:\n"
+"\"1{nbsp}3{nbsp}5{nbsp}2{nbsp}4\". Это перечень номеров выводов,\n"
+"который соответствует порядку узлов Spice модели.\n"
 
 #. type: Title ====
 #: eeschema_simulator.adoc:67
@@ -12918,24 +12919,27 @@ msgstr "Вкладка Пассивный в редакторе моделей"
 msgid "images/sim_model_passive.png"
 msgstr "images/ru/sim_model_passive.png"
 
-#. type: Plain text
-#: eeschema_simulator.adoc:93
+#. type: delimited block |
+#: eeschema_simulator.adoc:92
+#, no-wrap
 msgid ""
-"|=== |Type |Selects the device type (resistor, capacitor or inductor).  |"
-"Value |Defines the device property (resistance, capacitance or inductance). "
-"The value may use common Spice unit prefixes (as listed below the text input "
-"field) and should use point as the decimal separator. Note that Spice does "
-"not correctly interpret prefixes intertwined in the value (e.g. 1k5).  |==="
+"|Type\n"
+"|Selects the device type (resistor, capacitor or inductor).\n"
+"|Value\n"
+"|Defines the device property (resistance, capacitance or inductance). The value\n"
+"may use common Spice unit prefixes (as listed below the text input field) and\n"
+"should use point as the decimal separator. Note that Spice does not correctly\n"
+"interpret prefixes intertwined in the value (e.g. 1k5).\n"
 msgstr ""
-"|===\n"
-" |Тип |Выбор типа компонента (резистор, конденсатор или индуктор). |Значение "
-"|Определяет свойства компонента (сопротивление, ёмкость или индуктивность). "
-"В значении могут использоваться приставки, которые используются в описании "
-"Spice-моделей (они перечислены под текстовым полем ввода). В качестве "
-"десятичного разделителя необходимо использовать точку. Заметьте, Spice "
-"неверно воспринимает значения, в которых приставка выступает в роли "
-"десятичного разделителя (например: 1k5).\n"
-"|==="
+"|Тип\n"
+"|Выбор типа компонента (резистор, конденсатор или индуктор).\n"
+"|Значение\n"
+"|Определяет свойства компонента (сопротивление, ёмкость или индуктивность).\n"
+"В значении могут использоваться приставки, которые используются в описании\n"
+"Spice-моделей (они перечислены под текстовым полем ввода).\n"
+"В качестве десятичного разделителя необходимо использовать точку.\n"
+"Заметьте, Spice неверно воспринимает значения, в которых приставка\n"
+"выступает в роли десятичного разделителя (например: 1k5).\n"
 
 #. type: Title ====
 #: eeschema_simulator.adoc:94
@@ -13025,7 +13029,7 @@ msgstr "Параметр _Тип источника_ применяется ко
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:126
 #, no-wrap
-msgid "Source model editro tab"
+msgid "Source model editor tab"
 msgstr "Вкладка Источник редактора параметров симуляции"
 
 #. type: Target for macro image
@@ -13140,45 +13144,42 @@ msgstr "Меню"
 msgid "File"
 msgstr "Меню \"Файл\""
 
-#. type: Plain text
-#: eeschema_simulator.adoc:171
+#. type: delimited block |
+#: eeschema_simulator.adoc:170
+#, no-wrap
 msgid ""
-"|=== |New Plot | Create a new tab in the plot panel.  |Open Workbook | Open "
-"a list of plotted signals.  |Save Workbook | Save a list of plotted "
-"signals.  |Save as image | Export the active plot to a .png file.  |Save as ."
-"csv file | Export the active plot raw data points to a .csv file.  |Exit "
-"Simulation | Close the dialog.  |==="
+"|New Plot | Create a new tab in the plot panel.\n"
+"|Open Workbook | Open a list of plotted signals.\n"
+"|Save Workbook | Save a list of plotted signals.\n"
+"|Save as image | Export the active plot to a .png file.\n"
+"|Save as .csv file | Export the active plot raw data points to a .csv file.\n"
+"|Exit Simulation | Close the dialog.\n"
 msgstr ""
-"|===\n"
-" |Новый график |Создать новую вкладку на панели графиков. |Открыть работу |"
-"Открыть перечень сигналов для построения графиков. |Сохранить работу |"
-"Сохранить перечень сигналов, построенных на графике. |Сохранить как "
-"изображение |Экспорт текущего графика в png-файл. |Сохранить как файл .csv |"
-"Экспорт данных текущего графика в csv-файл. |Выйти из симуляции |Закрыть "
-"окно симулятора. \n"
-"|==="
+"|Новый график |Создать новую вкладку на панели графиков.\n"
+"|Открыть работу |Открыть перечень сигналов для построения графиков.\n"
+"|Сохранить работу |Сохранить перечень сигналов, построенных на графике.\n"
+"|Сохранить как изображение |Экспорт текущего графика в png-файл.\n"
+"|Сохранить как файл .csv |Экспорт данных текущего графика в csv-файл.\n"
+"|Выйти из симуляции |Закрыть окно симулятора.\n"
 
-#. type: Plain text
-#: eeschema_simulator.adoc:184
+#. type: delimited block |
+#: eeschema_simulator.adoc:183
+#, no-wrap
 msgid ""
-"|=== |Run Simulation | Perform a simulation using the current settings.  |"
-"Add signals... | Open a dialog to select signals to be plotted.  |Probe from "
-"schematics | Start the schematics <<sim-probe-tool,Probe>> tool.  |Tune "
-"component value | Start the <<sim-tuner-tool,Tuner>> tool.  |Show SPICE "
-"Netlist... | Open a dialog showing the generated netlist for the simulated "
-"circuit.  |Settings... | Open the <<sim-settings,simulation settings "
-"dialog>>.  |==="
+"|Run Simulation | Perform a simulation using the current settings.\n"
+"|Add signals... | Open a dialog to select signals to be plotted.\n"
+"|Probe from schematics | Start the schematics <<sim-probe-tool,Probe>> tool.\n"
+"|Tune component value | Start the <<sim-tuner-tool,Tuner>> tool.\n"
+"|Show SPICE Netlist... | Open a dialog showing the generated netlist for the\n"
+"simulated circuit.\n"
+"|Settings... | Open the <<sim-settings,simulation settings dialog>>.\n"
 msgstr ""
-"|===\n"
-" |Запустить симуляцию |Выполнить симуляцию используя текущие настройки. |"
-"Добавить сигналы... |Открыть диалог для выбора сигналов, графики которых "
-"нужно построить. |Пробник из схемы |Запустить инструмент для работы со "
-"схемой <<sim-probe-tool,Пробник>>. |Подстроить значение компонента |"
-"Запустить инструмент <<sim-tuner-tool,Подстройка>>. |Показать Spice список "
-"цепей... |Открыть окно, в котором будет показан список цепей для исследуемой "
-"схемы. |Настройки... |Открыть <<sim-settings,диалоговое окно настройки "
-"симуляции>>. \n"
-"|==="
+"|Запустить симуляцию |Выполнить симуляцию используя текущие настройки.\n"
+"|Добавить сигналы... |Открыть диалог для выбора сигналов, графики которых нужно построить.\n"
+"|Пробник из схемы |Запустить инструмент для работы со схемой <<sim-probe-tool,Пробник>>.\n"
+"|Подстроить значение компонента |Запустить инструмент <<sim-tuner-tool,Подстройка>>.\n"
+"|Показать Spice список цепей... |Открыть окно, в котором будет показан список цепей для исследуемой схемы.\n"
+"|Настройки... |Открыть <<sim-settings,диалоговое окно настройки симуляции>>.\n"
 
 #. type: Title =====
 #: eeschema_simulator.adoc:186
@@ -13186,20 +13187,21 @@ msgstr ""
 msgid "View"
 msgstr "Меню \"Вид\""
 
-#. type: Plain text
-#: eeschema_simulator.adoc:195
+#. type: delimited block |
+#: eeschema_simulator.adoc:194
+#, no-wrap
 msgid ""
-"|=== |Zoom In | Zoom in the active plot.  |Zoom Out | Zoom out the active "
-"plot.  |Fit on Screen | Adjust the zoom setting to display all plots.  |Show "
-"grid | Toggle grid visibility.  |Show legend | Toggle plot legend "
-"visibility.  |==="
+"|Zoom In | Zoom in the active plot.\n"
+"|Zoom Out | Zoom out the active plot.\n"
+"|Fit on Screen | Adjust the zoom setting to display all plots.\n"
+"|Show grid | Toggle grid visibility.\n"
+"|Show legend | Toggle plot legend visibility.\n"
 msgstr ""
-"|===\n"
-" |Увеличить |Увеличить масштаб текущего графика. |Уменьшить |Уменьшить "
-"масштаб текущего графика. |Вписать в экран |Подстроить масштаб графика так, "
-"чтобы он полностью поместился на экране. |Показать сетку |Показать или "
-"скрыть сетку. |Показать надписи |Показать или скрыть надписи графика. \n"
-"|==="
+"|Увеличить |Увеличить масштаб текущего графика.\n"
+"|Уменьшить |Уменьшить масштаб текущего графика.\n"
+"|Вписать в экран |Подстроить масштаб графика так, чтобы он полностью поместился на экране.\n"
+"|Показать сетку |Показать или скрыть сетку.\n"
+"|Показать надписи |Показать или скрыть надписи графика.\n"
 
 #. type: Title ====
 #: eeschema_simulator.adoc:197
@@ -13225,23 +13227,21 @@ msgid ""
 "The top toolbar provides access to the most frequently performed actions."
 msgstr "Эта панель предоставляет доступ к часто используемым командам."
 
-#. type: Plain text
-#: eeschema_simulator.adoc:209
+#. type: delimited block |
+#: eeschema_simulator.adoc:208
+#, no-wrap
 msgid ""
-"|=== |Run/Stop Simulation | Start or stop the simulation.  |Add Signals | "
-"Open a dialog to select signals to be plotted.  |Probe | Start the "
-"schematics <<sim-probe-tool,Probe>> tool.  |Tune | Start the <<sim-tuner-"
-"tool,Tuner>> tool.  |Settings | Open the <<sim-settings,simulation settings "
-"dialog>>.  |==="
+"|Run/Stop Simulation | Start or stop the simulation.\n"
+"|Add Signals | Open a dialog to select signals to be plotted.\n"
+"|Probe | Start the schematics <<sim-probe-tool,Probe>> tool.\n"
+"|Tune | Start the <<sim-tuner-tool,Tuner>> tool.\n"
+"|Settings | Open the <<sim-settings,simulation settings dialog>>.\n"
 msgstr ""
-"|===\n"
-" |Запустить/остановить симуляцию |Начать или остановить работу симулятора. |"
-"Добавить сигналы |Открыть диалоговое окно для выбора сигналов, графики "
-"которых нужно построить. |Пробник |Активировать инструмент для работы со "
-"схемой <<sim-probe-tool,Пробник>>. |Подстройка |Активировать инструмент "
-"<<sim-tuner-tool,Подстройка>>. |Установки |Открыть <<sim-settings,диалоговое "
-"окно настройки симуляции>>. \n"
-"|==="
+"|Запустить/остановить симуляцию |Начать или остановить работу симулятора.\n"
+"|Добавить сигналы |Открыть диалоговое окно для выбора сигналов, графики которых нужно построить.\n"
+"|Пробник |Активировать инструмент для работы со схемой <<sim-probe-tool,Пробник>>.\n"
+"|Подстройка |Активировать инструмент <<sim-tuner-tool,Подстройка>>.\n"
+"|Установки |Открыть <<sim-settings,диалоговое окно настройки симуляции>>.\n"
 
 #. type: Title ====
 #: eeschema_simulator.adoc:211
@@ -13561,23 +13561,21 @@ msgstr ""
 msgid "There are two options common to all simulation types:"
 msgstr "Имеется два параметра, общих для всех типов симуляции:"
 
-#. type: Plain text
+#. type: delimited block |
 #: eeschema_simulator.adoc:317
+#, no-wrap
 msgid ""
-"|=== |Adjust passive symbol values | Replace passive symbol values to "
-"convert common component values notation to Spice notation.  |Add full path "
-"for .include library directives | Prepend Spice model library file names "
-"with full path. Normally full path is required by ngspice to access a "
-"library file.  |==="
+"|Adjust passive symbol values | Replace passive symbol values to convert common\n"
+"component values notation to Spice notation.\n"
+"|Add full path for .include library directives | Prepend Spice model library\n"
+"file names with full path. Normally full path is required by ngspice to access\n"
+"a library file.\n"
 msgstr ""
-"|===\n"
-" |Подстроить значения пассивных компонентов |Заменяет значения пассивных "
-"компонентов, путём преобразования общего формата записи значений в формат "
-"Spice. |Добавить полный путь для директивы .include библиотека |Параметр "
-"следит за тем, чтобы файл библиотеки Spice-моделей был сохранён в виде "
-"полного пути. Обычно ngspice требует использования полного пути для доступа "
-"к файлам библиотек. \n"
-"|==="
+"|Подстроить значения пассивных компонентов |Заменяет значения пассивных компонентов,\n"
+"путём преобразования общего формата записи значений в формат Spice.\n"
+"|Добавить полный путь для директивы .include библиотека |Параметр следит за тем,\n"
+"чтобы файл библиотеки Spice-моделей был сохранён в виде полного пути.\n"
+"Обычно ngspice требует использования полного пути для доступа к файлам библиотек.\n"
 
 #. type: Title ==
 #: eeschema_symbol_library_table.adoc:1
