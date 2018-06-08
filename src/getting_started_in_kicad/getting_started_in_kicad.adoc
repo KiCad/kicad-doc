@@ -772,7 +772,7 @@ This is done with the _Pcbnew_ tool.
 [[using-pdbnew]]
 === Using Pcbnew
 
-1.  From the KiCad project manager, click on the 'Pcbnew' icon
+1.  From the KiCad project manager, click on the 'Pcb layout editor' icon
     image:images/icons/pcbnew.png[pcbnew_png]. The 'Pcbnew' window will
     open. If you get an error message saying that a _*.kicad_pcb_ file
     does not exist and asks if you want to create it, just click Yes.
@@ -785,7 +785,7 @@ This is done with the _Pcbnew_ tool.
 3.  It is a good idea to start by setting the *clearance* and the
     *minimum track width* to those required by your PCB
     manufacturer. In general you can set the clearance to '0.25' and
-    the minimum track width to '0.25'. Click on the *Design Rules* ->
+    the minimum track width to '0.25'. Click on the *Setup* ->
     *Design Rules* menu. If it does not show already, click on the
     'Net Classes Editor' tab. Change the 'Clearance' field at the top
     of the window to '0.25' and the 'Track Width' field to '0.25' as
@@ -793,22 +793,22 @@ This is done with the _Pcbnew_ tool.
 +
 image::images/design_rules.png[Design Rules Window]
 
-4.  Click on the 'Global Design Rules' tab and set 'Min track width' to
+4.  Click on the 'Global Design Rules' tab and set 'Minimum track width' to
     '0.25'. Click the OK button to commit your changes and close the Design
     Rules Editor window.
 
-5.  Now we will import the netlist file. Click on the 'Read Netlist'
+5.  Now we will import the netlist file. Click on the 'Read netlist'
     icon image:images/icons/netlist.png[netlist_png] on the top
-    toolbar. Click on the 'Browse Netlist Files' button, select
-    'tutorial1.net' in the File selection dialogue, and click on 'Read
-    Current Netlist'. Then click the 'Close' button.
+    toolbar. The netlist file 'tutorial1.net' should be selected
+    in the 'Netlist file' field if it was created from Eeschema.
+    Click on 'Read Current Netlist'. Then click the 'Close' button.
 
-6.  All components should now be visible in the top left hand corner
-    just above the page. Scroll up if you cannot see them.
+6.  All components should now be visible. They are selected and follow
+    the mouse cursor.
 
-7.  Select all components with the mouse and move them to the middle of
+7.  Move the components to the middle of
     the board. If necessary you can zoom in and out while you move the
-    components.
+    components. Click the left mouse button.
 
 8.  All components are connected via a thin group of wires called
     __ratsnest__. Make sure that the 'Show/hide board ratsnest' button
@@ -816,18 +816,16 @@ image::images/design_rules.png[Design Rules Window]
     pressed. In this way you can see the ratsnest linking all
     components.
 
-9.  You can move each component by hovering over it and pressing [g].
-    Click where you want to place them. Move all components around
-    until you minimise the number of wire crossovers.
-+
-NOTE: If instead of grabbing the components (with [g]) you
-move them around using [m] you will later note that you lose the
-track connection (the same occurs in the schematic editor).
+9.  You can move each component by hovering over it and pressing [m].
+    Click where you want to place them. Alternatively you can select
+    a component by clicking on it and then drag it.
+    Press [r] to rotate a component.
+    Move all components around until you minimise the number of
+    wire crossovers.
 +
 image::images/gsik_tutorial1_080.png[gsik_tutorial1_080_png]
 
-10. If the ratsnest disappears or the screen gets messy, right click
-    and click 'Redraw view'. Note how one pin of the 100 ohm resistor
+10. Note how one pin of the 100 ohm resistor
     is connected to pin 6 of the PIC component. This is the result of
     the labelling method used to connect pins. Labels are often
     preferred to actual wires because they make the schematic much
@@ -835,7 +833,7 @@ image::images/gsik_tutorial1_080.png[gsik_tutorial1_080_png]
 
 11. Now we will define the edge of the PCB. Select the 'Edge.Cuts' layer from
     the drop-down menu in the top toolbar. Click on the 'Add graphic
-    line or polygon' icon
+    lines' icon
     image:images/icons/add_dashed_line.png[add_dashed_line_png] on the right
     toolbar. Trace around the edge of the board, clicking at each
     corner, and remember to leave a small gap between the edge of the
@@ -854,12 +852,12 @@ image::images/select_edge_cuts.png[Select the Edge.Cuts layer]
 image::images/select_top_copper.png[Select the Front top copper layer]
 
 14. If you decide, for instance, to do a 4 layer PCB instead, go to
-    *Design Rules* -> *Layers Setup* and change 'Copper Layers' to 4. In
+    *Setup* -> *Layers Setup* and change 'Copper Layers' to 4. In
     the 'Layers' table you can name layers and decide what they can be
     used for.  Notice that there are very useful presets that can be
     selected via the 'Preset Layer Groupings' menu.
 
-15. Click on the 'Add Tracks and vias' icon
+15. Click on the 'Route tracks' icon
     image:images/icons/add_tracks.png[add_tracks_png] on the right
     toolbar. Click on pin 1 of 'J1' and run a track to pad
     'R2'. Double-click to set the point where the track will end. The
@@ -869,7 +867,7 @@ image::images/select_top_copper.png[Select the Front top copper layer]
 +
 image::images/pcbnew_select_track_width.png[pcbnew_select_track_width_png]
 
-16. If you would like to add more track widths go to: *Design Rules* ->
+16. If you would like to add more track widths go to: *Setup* ->
     *Design Rules* -> *Global Design Rules* tab and at the bottom right of
     this window add any other width you would like to have available. You
     can then choose the widths of the track from the drop-down menu while
@@ -878,14 +876,14 @@ image::images/pcbnew_select_track_width.png[pcbnew_select_track_width_png]
 image::images/custom_tracks_width.png[custom_tracks_width_png]
 
 17. Alternatively, you can add a Net Class in which you specify a set of
-    options. Go to *Design Rules* -> *Design Rules* -> *Net Classes Editor*
+    options. Go to *Setup* -> *Design Rules* -> *Net Classes Editor*
     and add a new class called 'power'. Change the track width from 8 mil
     (indicated as 0.0080) to 24 mil (indicated as 0.0240). Next, add
     everything but ground to the 'power' class (select 'default' at left and
     'power' at right and use the arrows).
 
-18. If you want to change the grid size, *Right click* -> **Grid
-    Select**. Be sure to select the appropriate grid size before or after
+18. If you want to change the grid size, *Right click* -> **Grid**.
+    Be sure to select the appropriate grid size before or after
     laying down the components and connecting them together with tracks.
 
 19. Repeat this process until all wires, except pin 3 of J1, are
@@ -894,9 +892,8 @@ image::images/custom_tracks_width.png[custom_tracks_width_png]
 image::images/gsik_tutorial1_090.png[gsik_tutorial1_090_png]
 
 20. Let's now run a track on the other copper side of the PCB. Select
-    'B.Cu' in the drop-down menu on the top toolbar. Click on the 'Add
-    tracks and vias' icon
-    image:images/icons/add_tracks.png[add_tracks_png]. Draw a track between
+    'B.Cu' in the drop-down menu on the top toolbar. Click on the 'Route tracks'
+    icon image:images/icons/add_tracks.png[add_tracks_png]. Draw a track between
     pin 3 of J1 and pin 8 of U1. This is actually not necessary since
     we could do this with the ground plane. Notice how the colour of
     the track has changed.
@@ -910,30 +907,31 @@ image::images/gsik_tutorial1_090.png[gsik_tutorial1_090_png]
 image::images/place_a_via.png[place_a_via_png]
 
 22. When you want to inspect a particular connection you can click on
-    the 'Net highlight' icon
+    the 'Highlight net' icon
     image:images/icons/net_highlight.png[net_highlight_png] on the right
     toolbar.  Click on pin 3 of J1. The track itself and all pads
     connected to it should become highlighted.
 
 23. Now we will make a ground plane that will be connected to all GND
-    pins. Click on the 'Add Zones' icon
+    pins. Click on the 'Add filled zones' icon
     image:images/icons/add_zone.png[add_zone_png] on the right toolbar. We
     are going to trace a rectangle around the board, so click where
     you want one of the corners to be. In the dialogue that appears,
-    set 'Pad in Zone' to 'Thermal relief' and 'Zone edges orient' to
-    'H,V' and click OK.
+    set 'Default pad connection' to 'Thermal relief' and 'Outline slope' to
+    'H,V and 45 deg only' and click OK.
 
 24. Trace around the outline of the board by clicking each corner in
-    rotation. Double-click to finish your rectangle. Right click inside the
-    area you have just traced. Click on 'Fill or Refill All Zones'. The
+    rotation.  Finish your rectangle by clicking the first corner
+    second time. Right click inside the area you have just traced.
+    Click on 'Zones'->'Fill or Refill All Zones'. The
     board should fill in with green and look something like this:
 +
 image::images/gsik_tutorial1_100.png[gsik_tutorial1_100_png]
 
-25. Run the design rules checker by clicking on the 'Perform Design
-    Rules Check' icon image:images/icons/drc.png[drc_png] on the top
+25. Run the design rules checker by clicking on the 'Perform design
+    rules check' icon image:images/icons/drc.png[drc_png] on the top
     toolbar.  Click on 'Start DRC'. There should be no errors. Click
-    on 'List Unconnected'. There should be no unconnected track. Click
+    on 'List Unconnected'. There should be no unconnected items. Click
     OK to close the DRC Control dialogue.
 
 26. Save your file by clicking on *File* -> **Save**. To admire your
