@@ -1001,24 +1001,17 @@ Routing a board by hand is quick and fun, however, for a board with lots
 of components you might want to use an autorouter. Remember that you
 should first route critical traces by hand and then set the autorouter
 to do the boring bits. Its work will only account for the unrouted
-traces. The autorouter we will use here is FreeRouter from
-__freerouting.net__.
+traces. The autorouter we will use here is FreeRouting.
 
-NOTE: Freerouter is an open source java application,
-and it is needed to build by yourself to use with KiCad.
-Source code of Freerouter can be found on this site:
-https://github.com/nikropht/FreeRouting
+NOTE: FreeRouting is an open source java application.
+Currently FreeRouting exists in several more or less identical
+copies which you can find by doing an internet search for "freerouting".
+It may be found in source only form or as a precompiled java package.
 
 1.  From _Pcbnew_ click on *File* -> *Export* -> *Specctra DSN*
-    or click on *Tools* -> *FreeRoute* -> **Export a Specctra
-    Design (*.dsn) file** and save the file locally.
+    and save the file locally.
     Launch FreeRouter and click on the 'Open Your Own Design'
     button, browse for the _dsn_ file and load it.
-+
-NOTE: The *Tools* -> *FreeRoute* dialog has a nice help button
-that opens a file viewer with a little document inside named
-**Freerouter Guidelines**. Please follow these guidelines to
-use FreeRoute effectively.
 
 2.  FreeRouter has some features that KiCad does not currently have,
     both for manual routing and for automatic routing. FreeRouter
@@ -1044,13 +1037,12 @@ use FreeRoute effectively.
     need to save the FreeRouter rules file.
 
 6.  Back to __Pcbnew__. You can import your freshly routed board by
-    clicking on the link *Tools* -> *FreeRoute* and then on the icon
-    'Back Import the Spectra Session (.ses) File' and selecting
+    clicking on *File* -> *Import* -> *Spectra Session* and selecting
     your _.ses_ file.
 
 If there is any routed trace that you do not like, you can delete it and
 re-route it again, using [Delete] and the routing tool, which is the
-'Add tracks' icon image:images/icons/add_tracks.png[Add Track icon] on the
+'Route tracks' icon image:images/icons/add_tracks.png[Add Track icon] on the
 right toolbar.
 
 [[forward-annotation-in-kicad]]
