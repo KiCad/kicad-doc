@@ -1,0 +1,4380 @@
+# Triyan W. Nugroho <triyan.wn@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-06-11 20:48+0700\n"
+"PO-Revision-Date: 2018-06-13 12:43+0700\n"
+"Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>\n"
+"Language-Team: KiCad Indonesia\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. type: Title =
+#: getting_started_in_kicad.adoc:7
+#, no-wrap
+msgid "Getting Started in KiCad"
+msgstr "Mari Mengenal KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:11
+msgid ""
+"_Essential and concise guide to mastering KiCad for the successful "
+"development of sophisticated electronic printed circuit boards._"
+msgstr ""
+"_Panduan dasar yang ringkas untuk membantu Anda menguasai KiCad sebagai "
+"penunjang keberhasilan pengembangan papan PCB elektronik._"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:14
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "*Hak Cipta*\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:20
+#| msgid ""
+#| "This document is Copyright (C) 2010-2015 by its contributors as listed "
+#| "below. You may distribute it and/or modify it under the terms of either "
+#| "the GNU General Public License (http://www.gnu.org/licenses/gpl.html), "
+#| "version 3 or later, or the Creative Commons Attribution License (http://"
+#| "creativecommons.org/licenses/by/3.0/), version 3.0 or later."
+msgid ""
+"This document is Copyright (C) 2010-2018 by its contributors as listed "
+"below. You may distribute it and/or modify it under the terms of either the "
+"GNU General Public License (http://www.gnu.org/licenses/gpl.html), version 3 "
+"or later, or the Creative Commons Attribution License (http://"
+"creativecommons.org/licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"_This document is Copyright (C) 2010-2018 by its contributors as listed "
+"below. You may distribute it and/or modify it under the terms of either the "
+"GNU General Public License (http://www.gnu.org/licenses/gpl.html), version 3 "
+"or later, or the Creative Commons Attribution License "
+"(http://creativecommons.org/licenses/by/3.0/), version 3.0 or later._"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:22
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr "_All trademarks within this guide belong to their legitimate owners._"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:25
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "*Kontributor*\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:27
+msgid ""
+"David Jahshan, Phil Hutchinson, Fabrizio Tappero, Christina Jarron, Melroy "
+"van den Berg."
+msgstr ""
+"David Jahshan, Phil Hutchinson, Fabrizio Tappero, Christina Jarron, Melroy "
+"van den Berg."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:30
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "*Saran dan Komentar*\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:32
+msgid "Please direct any bug reports, suggestions or new versions to here:"
+msgstr ""
+"Silakan mengirimkan laporan kutu, saran atau versi baru ke tautan berikut:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:34
+msgid "About KiCad document: https://github.com/KiCad/kicad-doc/issues"
+msgstr "Tentang dokumentasi KiCad: https://github.com/KiCad/kicad-doc/issues"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:36
+msgid "About KiCad software: https://bugs.launchpad.net/kicad"
+msgstr "Tentang perangkat lunak KiCad: https://bugs.launchpad.net/kicad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:38
+msgid ""
+"About KiCad software internationalization (i18n): https://github.com/KiCad/"
+"kicad-i18n/issues"
+msgstr ""
+"Tentang proyek penerjemahan (_i18n_) KiCad: https://github.com/KiCad/kicad-"
+"i18n/issues"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:41
+#, no-wrap
+msgid "*Publication date*\n"
+msgstr "*Tanggal Publikasi*\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:43
+msgid "2015, May 16."
+msgstr "16 Mei 2015."
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:46
+#, no-wrap
+msgid "Introduction to KiCad"
+msgstr "Mengenal KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:52
+msgid ""
+"KiCad is an open-source software tool for the creation of electronic "
+"schematic diagrams and PCB artwork. Beneath its singular surface, KiCad "
+"incorporates an elegant ensemble of the following stand-alone software tools:"
+msgstr ""
+"KiCad adalah perangkat lunak sumber-terbuka (_open-source_) untuk membuat "
+"diagram skematik elektronika dan desain papan PCB (_Printed Circuit Board_). "
+"KiCad terdiri dari serangkaian perangkat lunak yang masing-masing berdiri "
+"sendiri:"
+
+#. type: delimited block |
+#: getting_started_in_kicad.adoc:63
+#, no-wrap
+msgid ""
+"|Program name|Description|File extension\n"
+"|KiCad |Project manager|+*.pro+\n"
+"|Eeschema |Schematic and component editor|+*.sch, *.lib, *.net+\n"
+"|Pcbnew |Circuit board and footprint editor|+*.kicad_pcb, *.kicad_mod+\n"
+"|GerbView |Gerber and drill file viewer|+\\*.g\\*, *.drl, etc.+\n"
+"|Bitmap2Component |Convert bitmap images to components or footprints|+*.lib, *.kicad_mod, *.kicad_wks+\n"
+"|PCB Calculator |Calculator for components, track width, electrical spacing, color codes, and more...|None\n"
+"|Pl Editor |Page layout editor|+*.kicad_wks+\n"
+msgstr ""
+"|Nama program|Keterangan|Ekstensi berkas\n"
+"|KiCad |Manajer proyek|+*.pro+\n"
+"|Eeschema |Editor skematik dan komponen|+*.sch, *.lib, *.net+\n"
+"|Pcbnew |Editor papan sirkuit dan _footprint_|+*.kicad_pcb, *.kicad_mo+\n"
+"|GerbView |Penampil berkas Gerber dan _drill_|+\\*.g\\*, *.drl, etc.+\n"
+"|Bitmap2Component |Konverter gambar _bitmap_ menjadi komponen atau "
+"_footprint_|+*.lib, *.kicad_mod, *.kicad_wks+\n"
+"|PCB Calculator |Kalkulator untuk komponen, lebar jalur, spasi elektrikal, "
+"kode warna, dan sebagainya|Tidak ada\n"
+"|Pl Editor |Editor tata letak halaman|+*.kicad_wks+\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:68
+msgid ""
+"The file extension list is not complete and only contains a subset of the "
+"files that KiCad supports. It is useful for the basic understanding of which "
+"files are used for each KiCad application."
+msgstr ""
+"Daftar ekstensi berkas di atas bukanlah daftar yang lengkap dan hanya "
+"menampilkan sebagian dari tipe berkas yang didukung oleh KiCad. Daftar di "
+"atas berguna sebagai pemahaman dasar mengenai berkas mana yang digunakan "
+"oleh masing-masing aplikasi KiCad."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:72
+msgid ""
+"KiCad can be considered mature enough to be used for the successful "
+"development and maintenance of complex electronic boards."
+msgstr ""
+"KiCad sudah cukup matang untuk digunakan dalam pengembangan dan perawatan "
+"papan elektronika yang kompleks."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:78
+msgid ""
+"KiCad does not present any board-size limitation and it can easily handle up "
+"to 32 copper layers, up to 14 technical layers and up to 4 auxiliary "
+"layers.  KiCad can create all the files necessary for building printed "
+"boards, Gerber files for photo-plotters, drilling files, component location "
+"files and a lot more."
+msgstr ""
+"KiCad tidak memiliki batas ukuran papan PCB, dan dapat dengan mudah "
+"menangani hingga 32 lapisan (_layer_) tembaga, 14 lapisan teknis, dan 4 "
+"lapisan pelengkap. KiCad mampu menghasilkan semua berkas yang dibutuhkan "
+"untuk membangun papan PCB, berkas Gerber untuk _photo-plotter_, berkas "
+"_drilling_, berkas lokasi komponen, dan berkas-berkas lainnya."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:82
+msgid ""
+"Being open source (GPL licensed), KiCad represents the ideal tool for "
+"projects oriented towards the creation of electronic hardware with an open-"
+"source flavour."
+msgstr ""
+"Sebagai aplikasi sumber-terbuka (berlisensi GPL), KiCad adalah peralatan "
+"yang ideal bagi pengguna yang berorientasi proyek dalam pembuatan perangkat "
+"keras elektronika dengan citarasa _open-source_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:84
+msgid "On the Internet, the homepage of KiCad is:"
+msgstr "Anda bisa menemukan KiCad di Internet melalui tautan berikut:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:86
+msgid "http://www.kicad-pcb.org/"
+msgstr "http://www.kicad-pcb.org/"
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:89
+#, no-wrap
+msgid "Downloading and installing KiCad"
+msgstr "Mengunduh dan Menginstal KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:93
+msgid ""
+"KiCad runs on GNU/Linux, Apple macOS and Windows.  You can find the most up "
+"to date instructions and download links at:"
+msgstr ""
+"KiCad dapat berjalan di sistem operasi GNU/Linux, Apple macOS dan Windows. "
+"Anda bisa mendapatkan petunjuk dan tautan untuk mengunduh KiCad versi "
+"terbaru di:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:95
+msgid "http://www.kicad-pcb.org/download/"
+msgstr "http://www.kicad-pcb.org/download/"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:105
+msgid ""
+"KiCad stable releases occur periodically per the http://ci.kicad-pcb.org/job/"
+"kicad-doxygen/ws/Documentation/doxygen/html/"
+"md_Documentation_development_stable-release-policy.html[KiCad Stable Release "
+"Policy]. New features are continually being added to the development branch. "
+"If you would like to take advantage of these new features and help out by "
+"testing them, please download the latest nightly build package for your "
+"platform. Nightly builds may introduce bugs such as file corruption, "
+"generation of bad Gerbers, etc., but it is the goal of the KiCad Development "
+"Team to keep the development branch as usable as possible during new feature "
+"development."
+msgstr ""
+"KiCad versi stabil dirilis secara periodik berdasarkan http://ci.kicad-"
+"pcb.org/job/kicad-doxygen/ws/Documentation/doxygen/html"
+"/md_Documentation_development_stable-release-policy.html[Kebijakan Rilis "
+"Stabil KiCad]. Fitur-fitur baru akan ditambahkan secara berkesinambungan ke "
+"dalam _development branch_. Jika Anda ingin memanfaatkan fitur-fitur baru, "
+"dan bersedia membantu untuk melakukan pengujian fitur-fitur tersebut, "
+"silakan mengunduh paket _nightly build_ untuk platform Anda. Paket _nightly "
+"build_ mungkin akan membawa kutu, misalnya kerusakan berkas, hasil pembuatan "
+"berkas Gerber yang tidak sesuai, dsb., tetapi Tim Pengembang KiCad akan "
+"selalu berusaha untuk menjaga _development branch_ agar tetap dapat "
+"dipergunakan oleh pengguna KiCad selama pengembangan fitur baru."
+
+#. type: Title ====
+#: getting_started_in_kicad.adoc:107
+#, no-wrap
+msgid "Under GNU/Linux"
+msgstr "GNU/Linux"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:113
+msgid ""
+"Stable releases of KiCad can be found in most distribution's package "
+"managers as kicad and kicad-doc. If your distribution does not provide "
+"latest stable version, please follow the instruction for unstable builds and "
+"select and install the latest stable version."
+msgstr ""
+"Rilis stabil KiCad dapat ditemukan pada sebagian besar manajer paket "
+"distribusi GNU/Linux dengan nama _kicad_ dan _kicad-doc_. Jika distribusi "
+"yang Anda gunakan tidak menyediakan versi stabil yang terbaru, ikuti "
+"petunjuk instalasi versi _unstable_, dan pilih serta instal versi stabil "
+"yang terbaru."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:116
+msgid ""
+"Under Ubuntu, the easiest way to install an unstable nightly build of KiCad "
+"is via _PPA_ and __Aptitude__. Type the following into your Terminal:"
+msgstr ""
+"Di Ubuntu, cara termudah untuk menginstal KiCad versi _unstable nightly "
+"build_ adalah melalui _PPA_ dan __Aptitude__. Ketik perintah berikut di "
+"Terminal:"
+
+#. type: delimited block _
+#: getting_started_in_kicad.adoc:118
+msgid "sudo add-apt-repository ppa:js-reynaud/ppa-kicad"
+msgstr "sudo add-apt-repository ppa:js-reynaud/ppa-kicad"
+
+#. type: delimited block _
+#: getting_started_in_kicad.adoc:120
+msgid "sudo aptitude update && sudo aptitude safe-upgrade"
+msgstr "sudo aptitude update && sudo aptitude safe-upgrade"
+
+#. type: delimited block _
+#: getting_started_in_kicad.adoc:122
+msgid "sudo aptitude install kicad kicad-doc-en"
+msgstr "sudo aptitude install kicad kicad-doc-en"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:126
+msgid ""
+"Under Fedora the easiest way to install an unstable nightly build is via "
+"__copr__.  To install KiCad via copr type the following in to copr:"
+msgstr ""
+"Di Fedora, cara termudah untuk menginstal KiCad versi _unstable nightly "
+"build_ adalah melalui __copr__. Untuk menginstal KiCad melalui __copr__, "
+"ketik perintah berikut:"
+
+#. type: delimited block _
+#: getting_started_in_kicad.adoc:128
+msgid "sudo dnf copr enable mangelajo/kicad"
+msgstr "sudo dnf copr enable mangelajo/kicad"
+
+#. type: delimited block _
+#: getting_started_in_kicad.adoc:130
+msgid "sudo dnf install kicad"
+msgstr "sudo dnf install kicad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:134
+msgid ""
+"Alternatively, you can download and install a pre-compiled version of KiCad, "
+"or directly download the source code, compile and install KiCad."
+msgstr ""
+"Sebagai alternatif, Anda juga bisa mengunduh dan menginstal KiCad versi _pre-"
+"compiled_, atau mengunduh kode sumber secara langsung, kemudian melakukan "
+"kompilasi dan menginstal KiCad."
+
+#. type: Title ====
+#: getting_started_in_kicad.adoc:136
+#, no-wrap
+msgid "Under Apple macOS"
+msgstr "Apple macOS"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:140
+msgid ""
+"Stable builds of KiCad for macOS can be found at: http://downloads.kicad-pcb."
+"org/osx/stable/"
+msgstr ""
+"Versi stabil KiCad untuk macOS dapat diunduh di : http://downloads.kicad-pcb."
+"org/osx/stable/"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:143
+msgid ""
+"Unstable nightly development builds can be found at: http://downloads.kicad-"
+"pcb.org/osx/"
+msgstr ""
+"KiCad versi _unstable nightly development build_ untuk macOS dapat diunduh "
+"di: http://downloads.kicad-pcb.org/osx/"
+
+#. type: Title ====
+#: getting_started_in_kicad.adoc:145
+#, no-wrap
+msgid "Under Windows"
+msgstr "Windows"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:149
+msgid ""
+"Stable builds of KiCad for Windows can be found at: http://downloads.kicad-"
+"pcb.org/windows/stable/"
+msgstr ""
+"Versi stabil KiCad untuk Windows dapat diunduh di: http://downloads.kicad-"
+"pcb.org/windows/stable/"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:152
+msgid ""
+"For Windows you can find nightly development builds at: http://downloads."
+"kicad-pcb.org/windows/"
+msgstr ""
+"KiCad versi _nightly development build_ untuk Windows dapat diunduh di: "
+"http://downloads.kicad-pcb.org/windows/"
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:154
+#, no-wrap
+msgid "Support"
+msgstr "Dukungan"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:156
+msgid "If you have ideas, remarks or questions, or if you just need help:"
+msgstr ""
+"Jika Anda memiliki ide, komentar atau pertanyaan, atau jika Anda memerlukan "
+"bantuan:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:158
+msgid "https://forum.kicad.info/[Visit the forum]"
+msgstr "https://forum.kicad.info/[Kunjungi forum KiCad]"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:159
+msgid ""
+"Join the http://webchat.freenode.net/?channels=kicad[#kicad IRC channel] on "
+"Freenode"
+msgstr ""
+"Bergabunglah dengan http://webchat.freenode.net/?channels=kicad[kanal IRC "
+"#kicad] di Freenode"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:160
+msgid "http://www.kicad-pcb.org/help/tutorials/[Watch tutorials]"
+msgstr "http://www.kicad-pcb.org/help/tutorials/[Lihat tutorial KiCad]"
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:162
+#, no-wrap
+msgid "KiCad Workflow"
+msgstr "Alur Kerja KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:168
+msgid ""
+"Despite its similarities with other PCB design software, KiCad is "
+"characterised by a unique workflow in which schematic components and "
+"footprints are separate. Only after creating a schematic are footprints "
+"assigned to the components."
+msgstr ""
+"KiCad memiliki beberapa kemiripan dengan perangkat lunak desain PCB lainnya, "
+"namun KiCad memiliki karakteristik tersendiri dengan alur kerja yang unik, "
+"dimana komponen skematik dan _footprint_ adalah dua hal yang terpisah. Kita "
+"dapat menentukan _footprint_ untuk komponen-komponen yang kita gunakan hanya "
+"jika kita sudah membuat sebuah skematik."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:170
+#, no-wrap
+msgid "Overview"
+msgstr "Gambaran Umum"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:176
+msgid ""
+"The KiCad workflow is comprised of two main tasks: drawing the schematic and "
+"laying out the board. Both a schematic component library and a PCB footprint "
+"library are necessary for these two tasks. KiCad includes many components "
+"and footprints, and also has the tools to create new ones."
+msgstr ""
+"Alur kerja KiCad terdiri dari dua langkah utama: menggambar skematik, "
+"kemudian mendesain tata letak papan PCB. Kedua tugas tersebut memerlukan "
+"pustaka komponen skematik dan _footprint_ PCB. KiCad menyediakan berbagai "
+"komponen dan _footprint_, dan juga menyediakan peralatan untuk membuat "
+"sendiri komponen dan _footprint_ yang baru."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:180
+msgid ""
+"In the picture below, you see a flowchart representing the KiCad workflow.  "
+"The flowchart explains which steps you need to take, and in which order.  "
+"When applicable, the icon is added for convenience."
+msgstr ""
+"Pada gambar di bawah ini, Anda melihat sebuah diagram alir yang "
+"menggambarkan alur kerja KiCad. Diagram ini menjelaskan langkah apa yang "
+"perlu diambil, dan bagaimana urutan langkahnya. Untuk memudahkan, disertakan "
+"pula gambar ikon yang sesuai. "
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:181
+#, no-wrap
+msgid "images/kicad_flowchart.png"
+msgstr "images/id/kicad_flowchart.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:187
+msgid ""
+"For more information about creating a component, read <<make-schematic-"
+"components-in-kicad,Making schematic components>>.  And for information "
+"about how to create a new footprint, see <<make-component-footprints,Making "
+"component footprints>>."
+msgstr ""
+"Untuk informasi lebih lanjut mengenai cara pembuatan komponen, silakan baca "
+"<<make-schematic-components-in-kicad,Membuat Komponen Skematik di KiCad>>. "
+"Dan untuk informasi mengenai bagaimana cara membuat _footprint_, lihat "
+"<<make-component-footprints,Membuat Footprint Komponen>>."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:193
+msgid ""
+"http://kicad.rohrbacher.net/quicklib.php[Quicklib] is a tool that allows you "
+"to quickly create KiCad library components with a web-based interface. For "
+"more information about Quicklib, refer to <<make-schematic-components-with-"
+"quicklib,Making Schematic Components With Quicklib>>."
+msgstr ""
+"http://kicad.rohrbacher.net/quicklib.php[Quicklib] dapat Anda gunakan untuk "
+"membuat berbagai komponen untuk pustaka KiCad secara cepat, dengan "
+"menggunakan antarmuka berbasis web. Untuk informasi lebih lanjut mengenai "
+"Quicklib, lihat <<make-schematic-components-with-quicklib,Membuat Komponen "
+"Skematik dengan Quicklib>>."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:195
+#, no-wrap
+msgid "Forward and backward annotation"
+msgstr ""
+"Anotasi Maju (_Forward Annotation_) dan Anotasi Mundur (_Backward "
+"Annotation_)"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:201
+msgid ""
+"Once an electronic schematic has been fully drawn, the next step is to "
+"transfer it to a PCB. Often, additional components might need to be added, "
+"parts changed to a different size, net renamed, etc. This can be done in two "
+"ways: Forward Annotation or Backward Annotation."
+msgstr ""
+"Jika skematik telah selesai digambar, langkah berikutnya adalah mentransfer "
+"gambar tersebut menjadi PCB. Terkadang, kita perlu menambahkan komponen "
+"baru, suatu komponen perlu diubah ke ukuran yang berbeda, _net_ perlu "
+"diganti nama, dan sebagainya. Hal ini dapat dilakukan dengan dua cara: "
+"_Forward Annotation_ dan _Backward Annotation_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:208
+msgid ""
+"Forward Annotation is the process of sending schematic information to a "
+"corresponding PCB layout. This is a fundamental feature because you must do "
+"it at least once to initially import the schematic into the PCB.  "
+"Afterwards, forward annotation allows sending incremental schematic changes "
+"to the PCB. Details about Forward Annotation are discussed in the section "
+"<<forward-annotation-in-kicad,Forward Annotation>>."
+msgstr ""
+"_Forward Annotation_ adalah sebuah proses untuk mengirimkan informasi "
+"skematik ke layout PCB yang sesuai. Ini adalah sebuah fitur dasar yang "
+"sangat penting, karena Anda harus melakukannya setidaknya satu kali untuk "
+"mulai mengimpor skematik menjadi PCB. Setelah itu, _forward annotation_ akan "
+"mengirimkan perubahan skematik secara bertahap ke PCB. Penjelasan detail "
+"mengenai _Forward Annotation_ akan kita diskusikan pada bagian <<forward-"
+"annotation-in-kicad,Forward Annotation>>."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:215
+msgid ""
+"Backward Annotation is the process of sending a PCB layout change back to "
+"its corresponding schematic. Two common causes for Backward Annotation are "
+"gate swaps and pin swaps. In these situations, there are gates or pins which "
+"are functionally equivalent, but it may only be during layout that there is "
+"a strong case for choosing the exact gate or pin. Once the choice is made in "
+"the PCB, this change is then pushed back to the schematic."
+msgstr ""
+"_Backward Annotation_ adalah proses mengirimkan perubahan layout PCB kembali "
+"ke gambar skematik yang sesuai. Dua penyebab umum sehingga kita perlu "
+"melakukan _Backward Annotation_ adalah adanya pertukaran _gate_ dan "
+"pertukaran pin. Pada situasi tersebut, ada _gate_ atau pin yang secara "
+"fungsi sama, namun pada saat mendesain layout PCB, ada alasan tertentu yang "
+"mengharuskan kita memilih _gate_ atau pin yang benar-benar tepat. Ketika "
+"pilihan sudah ditetapkan pada layout PCB, perubahan ini akan dikembalikan ke "
+"gambar skematik."
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:218
+#, no-wrap
+msgid "Using KiCad"
+msgstr "Menggunakan KiCad"
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:220
+#, no-wrap
+msgid "Shortcut keys"
+msgstr "Tombol Pintas"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:225
+msgid ""
+"KiCad has two kinds of related but different shortcut keys: accelerator keys "
+"and hotkeys. Both are used to speed up working in KiCad by using the "
+"keyboard instead of the mouse to change commands."
+msgstr ""
+"KiCad mempunyai dua jenis tombol pintas yang saling berhubungan tetapi "
+"berbeda satu sama lain: tombol akselerator dan tombol cepat (_hotkey_). "
+"Keduanya digunakan untuk mempercepat pekerjaan kita di KiCad dengan "
+"menggunakan papan ketik untuk mengubah perintah, alih-alih menggunakan "
+"tetikus."
+
+#. type: Title ====
+#: getting_started_in_kicad.adoc:226
+#, no-wrap
+msgid "Accelerator keys"
+msgstr "Tombol Akselerator"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:231
+msgid ""
+"Accelerator keys have the same effect as clicking on a menu or toolbar icon: "
+"the command will be entered but nothing will happen until the left mouse "
+"button is clicked. Use an accelerator key when you want to enter a command "
+"mode but do not want any immediate action."
+msgstr ""
+"Tombol akselerator memiliki efek yang sama seperti saat kita melakukan klik "
+"pada sebuah menu atau ikon di bilah alat: Anda akan masuk ke sebuah mode "
+"perintah, tetapi perintah tersebut tidak akan dijalankan hingga Anda "
+"melakukan klik-kiri tetikus. Gunakan tombol akselerator jika Anda ingin "
+"masuk ke dalam sebuah mode perintah namun tidak ingin perintah tersebut "
+"segera dijalankan."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:233
+msgid "Accelerator keys are shown on the right side of all menu panes:"
+msgstr "Tombol akselerator ditampilkan pada sisi kanan semua daftar menu:"
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:234
+#, no-wrap
+msgid "images/gsik_accelerator_keys.png"
+msgstr "images/gsik_accelerator_keys.png"
+
+#. type: Title ====
+#: getting_started_in_kicad.adoc:236
+#, no-wrap
+msgid "Hotkeys"
+msgstr "Tombol Cepat (_Hotkey_)"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:240
+msgid ""
+"A hotkey is equal to an accelerator key plus a left mouse click. Using a "
+"hotkey starts the command immediately at the current cursor location. Use a "
+"hotkey to quickly change commands without interrupting your workflow."
+msgstr ""
+"Tombol cepat (_hotkey_) sama dengan tombol akselerator ditambah dengan klik-"
+"kiri tetikus. Tombol cepat akan menjalankan suatu perintah secara langsung "
+"pada lokasi kursor Anda saat ini. Gunakan tombol cepat untuk mengubah "
+"perintah secara cepat tanpa menginterupsi alur kerja Anda."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:243
+#| msgid ""
+#| "To view hotkeys within any KiCad tool go to *_Preferences -> Hotkeys -> "
+#| "List Current Keys_* or press the question mark (\"?\"):"
+msgid ""
+"To view hotkeys within any KiCad tool go to *_Help -> List Hotkeys_* or "
+"press Ctrl+F1:"
+msgstr ""
+"Untuk melihat daftar tombol cepat yang tersedia di KiCad, silakan buka menu *"
+"_Help ->  List Hotkeys_* atau tekan tombol _Ctrl+F1_:"
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:244
+#, no-wrap
+msgid "images/gsik_hotkeys.png"
+msgstr "images/gsik_hotkeys.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:248
+#| msgid ""
+#| "You can edit the assignment of hotkeys, and import or export them, from "
+#| "the *_Preferences -> Hotkeys_* menu."
+msgid ""
+"You can edit the assignment of hotkeys, and import or export them, from the "
+"*_Preferences -> Hotkeys Options_* menu."
+msgstr ""
+"Anda bisa mengedit tombol yang digunakan sebagai tombol cepat, serta "
+"melakukan impor atau ekspor, melalui menu *_Preferences -> Hotkey Options_*."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:251
+msgid ""
+"In this document, hotkeys are expressed with brackets like this: [a].  If "
+"you see [a], just type the \"a\" key on the keyboard."
+msgstr ""
+"Pada dokumen ini, tombol cepat ditampilkan dengan tanda kurung seperti ini: "
+"[a]. Jika Anda melihat [a], tekan tombol \"a\" pada papan ketik Anda."
+
+#. type: Title ====
+#: getting_started_in_kicad.adoc:252
+#, no-wrap
+msgid "Example"
+msgstr "Contoh"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:254
+msgid "Consider the simple example of adding a wire in a schematic."
+msgstr ""
+"Perhatikan contoh sederhana untuk menambahkan sebuah _wire_ (kawat) pada "
+"skematik."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:258
+msgid ""
+"To use an accelerator key, press \"Shift + W\" to invoke the \"Add wire\" "
+"command (note the cursor will change). Next, left click on the desired wire "
+"start location to begin drawing the wire."
+msgstr ""
+"Untuk menggunakan tombol akselerator, tekan \"_Shift + W_\" untuk "
+"menjalankan perintah \"_Add wire_\" (perhatikan bahwa kursor akan berubah). "
+"Lalu, klik-kiri pada lokasi awal _wire_ yang diinginkan untuk memulai "
+"menggambar _wire_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:261
+msgid ""
+"With a hotkey, simply press [w] and the wire will immediately start from the "
+"current cursor location."
+msgstr ""
+"Dengan tombol cepat, tekan [w] dan _wire_ akan langsung muncul dari lokasi "
+"kursor saat ini."
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:263
+#, no-wrap
+msgid "Draw electronic schematics"
+msgstr "Menggambar Skematik Elektronika"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:267
+msgid ""
+"In this section we are going to learn how to draw an electronic schematic "
+"using KiCad."
+msgstr ""
+"Pada bagian ini, kita akan belajar bagaimana cara menggambar sebuah skematik "
+"elektronika dengan menggunakan KiCad."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:269
+#, no-wrap
+msgid "Using Eeschema"
+msgstr "Menggunakan Eeschema"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:278
+msgid ""
+"Under Windows run kicad.exe. Under Linux type 'kicad' in your Terminal. You "
+"are now in the main window of the KiCad project manager.  From here you have "
+"access to eight stand-alone software tools: __Eeschema__, __Schematic "
+"Library Editor__, __Pcbnew__, __PCB Footprint Editor__, __GerbView__, "
+"__Bitmap2Component__, __PCB Calculator__ and __Pl Editor__. Refer to the "
+"work-flow chart to give you an idea how the main tools are used."
+msgstr ""
+"Pada sistem operasi Windows, jalankan 'kicad.exe'. Pada sistem operasi "
+"Linux, ketik 'kicad' pada Terminal. Anda sekarang berada di tampilan utama "
+"manajer proyek KiCad. Dari sini Anda memiliki akses ke delapan buah "
+"peralatan: __Eeschema__, __Schematic Library Editor__, __Pcbnew__, __PCB "
+"Footprint Editor__, __GerbView__, __Bitmap2Component__, __PCB Calculator__ "
+"dan __Pl Editor__. Perhatikan diagram alur kerja untuk mengetahui bagaimana "
+"kedelapan peralatan utama tersebut digunakan."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:279
+#, no-wrap
+msgid "images/kicad_main_window.png"
+msgstr "images/kicad_main_window.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:287
+#| msgid ""
+#| "Create a new project: *File* -> **New Project** -> **New Project**.  Name "
+#| "the project file 'tutorial1'. The project file will automatically take "
+#| "the extension \".pro\". KiCad prompts to create a dedicated directory, "
+#| "click \"Yes\" to confirm. All your project files will be saved here."
+msgid ""
+"Create a new project: *File* -> **New** -> **Project**.  Name the project "
+"file 'tutorial1'. The project file will automatically take the extension \"."
+"pro\". The exact appearance of the dialog depends on the used platform, but "
+"there should be a checkbox for creating a new directory. Let it stay checked "
+"unless you already have a dedicated directory.  All your project files will "
+"be saved there."
+msgstr ""
+"Buatlah sebuah proyek baru. Buka menu *File* -> **New Project** -> **New "
+"Project**.  Berilah nama berkas proyek Anda 'tutorial1'. Berkas proyek akan "
+"secara otomatis mendapatkan ekstensi  \".pro\". Tampilan kotak dialog "
+"pembuatan proyek baru ini berbeda-beda tergantung sistem operasi yang "
+"digunakan, namun Anda akan menemukan sebuah pilihan untuk membuat direktori "
+"baru. Berikan tanda centang pada pilihan tersebut, kecuali Anda sudah "
+"memiliki direktori yang akan digunakan untuk menyimpan semua berkas proyek."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:291
+msgid ""
+"Let's begin by creating a schematic. Start the schematic editor "
+"__Eeschema__, image:images/icons/eeschema.png[Eeschema]. It is the first "
+"button from the left."
+msgstr ""
+"Mari kita mulai dengan membuat sebuah skematik. Bukalah editor skematik "
+"__Eeschema__, image:images/icons/eeschema.png[Eeschema]. Eeschema berada di "
+"tombol pertama dari kiri."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:300
+#| msgid ""
+#| "Click on the 'Page Settings' icon image:images/icons/sheetset.png[Sheet "
+#| "settings icon] on the top toolbar. Set the appropriate 'paper "
+#| "size' ('A4','8.5x11' etc.)  and enter the Title as 'Tutorial1'.  You will "
+#| "see that more information can be entered here if necessary. Click OK. "
+#| "This information will populate the schematic sheet at the bottom right "
+#| "corner. Use the mouse wheel to zoom in.  Save the whole schematic "
+#| "project: *File* -> **Save Schematic Project**"
+msgid ""
+"Click on the 'Page Settings' icon image:images/icons/sheetset.png[Sheet "
+"settings icon] on the top toolbar. Set the appropriate 'paper "
+"size' ('A4','8.5x11' etc.)  and enter the Title as 'Tutorial1'.  You will "
+"see that more information can be entered here if necessary. Click OK. This "
+"information will populate the schematic sheet at the bottom right corner. "
+"Use the mouse wheel to zoom in.  Save the whole schematic: *File* -> **Save**"
+msgstr ""
+"Klik pada ikon 'Page Settings' image:images/icons/sheetset.png[Sheet "
+"settings icon] pada bilah alat bagian atas. Aturlah ukuran kertas pada "
+"'Paper Size'  ('A4','8.5x11' dsb.) dan masukkan judul 'Tutorial1' pada kotak "
+"'Title'. Anda juga bisa menambahkan informasi yang lebih lengkap jika "
+"diperlukan. Klik OK. Informasi ini akan mengisi sudut kanan bawah lembar "
+"skematik. Gunakan roda tetikus untuk melakukan perbesaran tampilan. Simpan "
+"keseluruhan skematik Anda melalui menu *File* -> **Save**."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:304
+#| msgid ""
+#| "We will now place our first component. Click on the 'Place component' "
+#| "icon image:images/icons/add_component.png[Add component Icon] in the "
+#| "right toolbar. You may also press the 'Place component' hotkey [a]."
+msgid ""
+"We will now place our first component. Click on the 'Place symbol' icon "
+"image:images/icons/add_component.png[Add component Icon] in the right "
+"toolbar. You may also press the 'Add Symbol' hotkey [a]."
+msgstr ""
+"Sekarang kita akan meletakkan komponen pertama kita. Klik pada ikon 'Place "
+"Symbol' image:images/icons/add_component.png[Add component Icon] pada bilah "
+"alat sebelah kanan. Anda juga bisa menekan tombol cepat 'Add Symbol' [a]."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:312
+#| msgid ""
+#| "Click on the middle of your schematic sheet. A __Choose Component__ "
+#| "window will appear on the screen.  We're going to place a resistor. "
+#| "Search / filter on the 'R' of **R**esistor.  You may notice the 'device' "
+#| "heading above the Resistor. This 'device' heading is the name of the "
+#| "library where the component is located, which is quite a generic and "
+#| "useful library."
+msgid ""
+"Click on the middle of your schematic sheet. A __Choose Symbol__ window will "
+"appear on the screen.  We're going to place a resistor. Search / filter on "
+"the 'R' of **R**esistor.  You may notice the 'Device' heading above the "
+"Resistor. This 'Device' heading is the name of the library where the "
+"component is located, which is quite a generic and useful library."
+msgstr ""
+"Klik lembar skematik Anda. Sebuah jendela __Choose Symbol__ akan muncul di "
+"layar. Kita akan meletakkan sebuah resistor. Carilah komponen ini dengan "
+"mengetikkan 'R' (dari **R**esistor) pada kotak 'Filter'. Anda akan menemukan "
+"Resistor yang berada di dalam grup 'device'. 'device' adalah nama pustaka di "
+"mana komponen tersebut berada, yang merupakan pustaka yang cukup umum dan "
+"berguna. "
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:313
+#, no-wrap
+msgid "images/choose_component.png"
+msgstr "images/choose_component.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:318
+#| msgid ""
+#| "Double click on it. This will close the 'Choose Component' window.  Place "
+#| "the component in the schematic sheet by clicking where you want it to be."
+msgid ""
+"Double click on it. This will close the 'Choose Symbol' window.  Place the "
+"component in the schematic sheet by clicking where you want it to be."
+msgstr ""
+"Lakukan klik-ganda pada 'R'. Jendela 'Choose Symbol' akan tertutup. Letakkan "
+"komponen pada lembar skematik dengan melakukan klik di lokasi yang Anda "
+"inginkan."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:322
+msgid ""
+"Click on the magnifier icon to zoom in on the component.  Alternatively, use "
+"the mouse wheel to zoom in and zoom out. Press the wheel (central)  mouse "
+"button to pan horizontally and vertically."
+msgstr ""
+"Klik pada ikon kaca pembesar untuk melakukan perbesaran tampilan komponen. "
+"Sebagai alternatif, gunakan roda tetikus untuk melakukan perbesaran atau "
+"perkecilan tampilan. Tekan roda tetikus (atau tombol tengah tetikus) untuk "
+"menggeser lembar skematik secara horisontal maupun vertikal."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:326
+msgid ""
+"Try to hover the mouse over the component 'R' and press [r]. The component "
+"should rotate. You do not need to actually click on the component to rotate "
+"it."
+msgstr ""
+"Cobalah untuk meletakkan kursor di atas komponen 'R' dan tekan [r]. Perintah "
+"tersebut akan memutar komponen. Anda tidak perlu melakukan klik pada "
+"komponen yang akan diputar."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:332
+#| msgid ""
+#| "If your mouse was also over the _Field Reference_ ('R') or the _Field "
+#| "Value_ ('R?'), a menu will appear. You will see the 'Clarify Selection' "
+#| "menu often in KiCad; it allows working on objects that are on top of each "
+#| "other. In this case, tell KiCad you want to perform the action on the "
+#| "'Component ...R...'."
+msgid ""
+"If your mouse was also over the _Field Reference_ ('R') or the _Field Value_ "
+"('R?'), a menu will appear. You will see the 'Clarify Selection' menu often "
+"in KiCad; it allows working on objects that are on top of each other. In "
+"this case, tell KiCad you want to perform the action on the 'Symbol ...R...'."
+msgstr ""
+"Jika kursor Anda berada di atas _Field Reference_ ('R') atau _Field Value_ "
+"('R?'), akan muncul sebuah menu. Anda akan sering menemukan menu 'Clarify "
+"Selection' ini di KiCad; menu tersebut memungkinkan kita bekerja pada obyek "
+"yang berada di atas obyek lain. Sekarang, beritahu KiCad bahwa Anda ingin "
+"melakukan suatu perintah pada 'Symbol ...R...'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:338
+#| msgid ""
+#| "Right click in the middle of the component and select *Edit Component* -> "
+#| "**Value**. You can achieve the same result by hovering over the component "
+#| "and pressing [v]. Alternatively, [e] will take you to the more general "
+#| "Edit window. Notice how the right-click menu below shows the hotkeys for "
+#| "all available actions."
+msgid ""
+"Right click in the middle of the component and select *Properties* -> **Edit "
+"Value**. You can achieve the same result by hovering over the component and "
+"pressing [v]. Alternatively, [e] will take you to the more general "
+"Properties window. Notice how the right-click menu below shows the hotkeys "
+"for all available actions."
+msgstr ""
+"Klik-kanan pada bagian tengah komponen dan pilih *Properties* -> **Edit "
+"Value**. Anda bisa mendapatkan hasil yang sama dengan meletakkan kursor di "
+"atas komponen dan menekan [v]. Alternatif lainnya, gunakan [e] untuk "
+"menampilkan jendela _Properties_ yang lebih bersifat umum. Perhatikan "
+"bagaimana menu klik-kanan berikut ini menampilkan tombol cepat untuk semua "
+"perintah yang tersedia."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:339
+#, no-wrap
+msgid "images/edit_component_dropdown.png"
+msgstr "images/edit_component_dropdown.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:343
+#| msgid ""
+#| "The Component value window will appear. Replace the current value 'R' "
+#| "with '1 k'. Click OK."
+msgid ""
+"The Edit Value Field window will appear. Replace the current value 'R' with "
+"'1 k'. Click OK."
+msgstr ""
+"Jendela 'Edit Value Field' akan muncul. Ganti nilai saat ini 'R' dengan '1 "
+"k'. Klik OK."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:346
+msgid ""
+"Do not change the Reference field (R?), this will be done automatically "
+"later on. The value inside the resistor should now be '1 k'."
+msgstr ""
+"Jangan mengubah nilai _Field Reference_ (R?) karena nilai ini nanti akan "
+"berubah secara otomatis. Nilai di dalam resistor sekarang akan berubah "
+"menjadi '1 k'."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:347
+#, no-wrap
+msgid "images/resistor_value.png"
+msgstr "images/resistor_value.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:351
+#| msgid ""
+#| "To place another resistor, simply click where you want the resistor to "
+#| "appear. The Component Selection window will appear again."
+msgid ""
+"To place another resistor, simply click where you want the resistor to "
+"appear. The symbol selection window will appear again."
+msgstr ""
+"Untuk meletakkan resistor berikutnya, klik di mana Anda ingin meletakkannya. "
+"Jendela pemilihan simbol akan muncul kembali."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:354
+msgid ""
+"The resistor you previously chose is now in your history list, appearing as "
+"'R'. Click OK and place the component."
+msgstr ""
+"Resistor yang tadi Anda pilih sekarang ada di dalam daftar _History_, dan "
+"ditampilkan sebagai 'R'. Klik OK dan letakkan komponen tersebut."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:355
+#, no-wrap
+msgid "images/component_history.png"
+msgstr "images/component_history.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:361
+#| msgid ""
+#| "In case you make a mistake and want to delete a component, right click on "
+#| "the component and click 'Delete Component'. This will remove the "
+#| "component from the schematic. Alternatively, you can hover over the "
+#| "component you want to delete and press [Delete]."
+msgid ""
+"In case you make a mistake and want to delete a component, right click on "
+"the component and click 'Delete'. This will remove the component from the "
+"schematic. Alternatively, you can hover over the component you want to "
+"delete and press [Delete]."
+msgstr ""
+"Jika Anda melakukan kesalahan dan ingin menghapus sebuah komponen, klik-"
+"kanan pada komponen tersebut dan klik 'Delete'. Perintah ini akan menghapus "
+"komponen dari skematik. Alternatif lainnya, Anda bisa meletakkan kursor di "
+"atas komponen yang ingin dihapus, dan tekan [Delete]."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:365
+msgid ""
+"You can also duplicate a component already on your schematic sheet by "
+"hovering over it and pressing [c]. Click where you want to place the new "
+"duplicated component."
+msgstr ""
+"Anda juga bisa menyalin sebuah komponen yang sudah ada di lembar skematik "
+"Anda, dengan cara meletakkan kursor di atas komponen dan menekan [c]. Klik "
+"di mana Anda ingin meletakkan salinan komponen tersebut."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:371
+#| msgid ""
+#| "Right click on the second resistor. Select 'Drag Component'.  Reposition "
+#| "the component and left click to drop. The same functionality can be "
+#| "achieved by hovering over the component and by pressing [g].  [r] will "
+#| "rotate the component while [x] and [y] will flip it about its x- or y-"
+#| "axis."
+msgid ""
+"Right click on the second resistor. Select 'Drag'.  Reposition the component "
+"and left click to drop. The same functionality can be achieved by hovering "
+"over the component and by pressing [g].  [r] will rotate the component while "
+"[x] and [y] will flip it about its x- or y-axis."
+msgstr ""
+"Klik kanan pada resistor kedua. Pilih 'Drag'. Atur ulang posisi komponen dan "
+"klik-kiri untuk meletakkannya. Fungsi yang sama dapat dilakukan dengan "
+"meletakkan kursor di atas komponen dan menekan [g]. Tombol [r] akan memutar "
+"komponen, serta [x] dan [y] akan membalik komponen berdasarkan sumbu x atau "
+"y."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:375
+#, no-wrap
+#| msgid ""
+#| "*Right-Click* -> *Move component* or [m] is also a valuable option\n"
+#| "for moving anything around, but it is better to use this only for component\n"
+#| "labels and components yet to be connected. We will see later on why this is the case.\n"
+msgid ""
+"*Right-Click* -> *Move* or [m] is also a valuable option\n"
+"for moving anything around, but it is better to use this only for component\n"
+"labels and components yet to be connected. We will see later on why this is the case.\n"
+msgstr ""
+"*Klik-kanan* -> *Move* atau [m] juga dapat Anda gunakan\n"
+"untuk memindahkan apapun, tetapi akan lebih baik untuk digunakan hanya pada "
+"label komponen\n"
+"dan komponen yang belum terhubung. Kita akan akan membahasnya nanti.\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:378
+msgid ""
+"Edit the second resistor by hovering over it and pressing [v]. Replace 'R' "
+"with '100'. You can undo any of your editing actions with Ctrl+Z."
+msgstr ""
+"Edit resistor kedua dengan meletakkan kursor di atasnya dan menekan [v]. "
+"Ganti nilai 'R' dengan '100'. Anda bisa membatalkannya dengan menekan "
+"'Ctrl+Z'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:384
+#| msgid ""
+#| "Change the grid size. You have probably noticed that on the schematic "
+#| "sheet all components are snapped onto a large pitch grid. You can easily "
+#| "change the size of the grid by *Right-Click* -> **Grid select**. __In "
+#| "general, it is recommended to use a grid of 50.0 mils for the schematic "
+#| "sheet__."
+msgid ""
+"Change the grid size. You have probably noticed that on the schematic sheet "
+"all components are snapped onto a large pitch grid. You can easily change "
+"the size of the grid by *Right-Click* -> **Grid**.  __In general, it is "
+"recommended to use a grid of 50.0 mils for the schematic sheet__."
+msgstr ""
+"Ubah ukuran _grid_. Anda mungkin sudah memperhatikan bahwa pada lembar "
+"skematik, semua komponen akan menempel pada _grid_ yang berukuran besar. "
+"Anda bisa dengan mudah mengubah ukuran _grid_ dengan *Klik-kanan* -> **Grid**"
+". __Secara umum, direkomendasikan untuk menggunaka _grid_ dengan ukuran 50.0 "
+"mils pada lembar skematik__."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:393
+msgid ""
+"We are going to add a component from a library that isn't configured in the "
+"default project. In the menu, choose *Preferences* -> **Manage Symbol "
+"Libraries**.  In the Symbol Libraries window you can see two tabs: Global "
+"Libraries and Project Specific Libraries. Each one has one sym-lib-table "
+"file. For a library (.lib file) to be available it must be in one of those "
+"sym-lib-table files.  If you have a library file in your file system and "
+"it's not yet available, you can add it to either one of the sym-lib-table "
+"files with *Browse Libraries*.  For practise we will now add a library which "
+"already is available."
+msgstr ""
+"Kita akan menambahkan sebuah komponen dari pustaka yang belum dikonfigurasi "
+"pada proyek _default_. Pilih menu *Preferences* -> **Manage Symbol "
+"Libraries**. Pada jendela 'Symbol Libraries' Anda akan menemukan dua buah "
+"tab: 'Global Libraries' dan 'Project Specific Libraries'. Setiap tab "
+"memiliki sebuah berkas 'sym-lib-table'. Agar sebuah pustaka (berkas .lib) "
+"tersedia untuk digunakan, pustaka tersebut harus ada di salah satu berkas "
+"'sym-lib-table'. Jika Anda memiliki sebuah berkas pustaka tetapi belum "
+"tersedia, Anda bisa menambahkan pustaka tersebut ke salah satu berkas 'sym-"
+"lib-table' melalui tombol *Browse Libraries*. Untuk latihan, kita akan "
+"menambahkan sebuah pustaka yang sebenarnya telah tersedia."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:403
+#| msgid ""
+#| "You need to find where the official KiCad libraries are installed on your "
+#| "computer. Look for a `library` directory containing a hundred of `.dcm` "
+#| "and `.lib` files. Try in `C:\\Program Files (x86)\\KiCad\\share\\` "
+#| "(Windows) and `/usr/share/kicad/library/` (Linux). When you have found "
+#| "the directory, choose and add the 'microchip_pic12mcu' library and close "
+#| "the window."
+msgid ""
+"You need to find where the official KiCad libraries are installed on your "
+"computer. Look for a `library` directory containing a hundred of `.dcm` and "
+"`.lib` files. Try in `C:\\Program Files (x86)\\KiCad\\share\\` (Windows) and "
+"`/usr/share/kicad/library/` (Linux). When you have found the directory, "
+"choose and add the 'MCU_Microchip_PIC12.lib' library and close the window.  "
+"You will get a warning that the name already exists in the list; add it "
+"anyways. It will be added to the end of of the list.  Now click its nickname "
+"and change it to 'microchip_pic12mcu'.  Close the Symbol Libraries window "
+"with OK."
+msgstr ""
+"Anda harus mencari lokasi pustaka resmi KiCad yang terinstal di komputer "
+"Anda. Carilah direktori `library` yang berisi ratusan berkas `.dcm` dan "
+"`.lib`. Lihat direktori  `C:\\Program Files (x86)\\KiCad\\share\\` (Windows) "
+"dan `/usr/share/kicad/library/` (Linux). Jika Anda sudah menemukan direktori "
+"tersebut, pilih dan tambahkan pustaka 'MCU_Microchip_PIC12.lib'. Anda akan "
+"mendapatkan pesan peringatan bahwa nama tersebut sudah ada di daftar; "
+"abaikan peringatan tersebut. Pustaka kita akan ditambahkan di bagian paling "
+"bawah dari daftar pustaka. Klik pada nama panggilan pustaka, dan ubah "
+"menjadi 'microchip_pic12mcu'. Tutup jendela 'Symbol Libraries' dengan klik "
+"OK."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:407
+#| msgid ""
+#| "Repeat the add-component steps, however this time select the "
+#| "'microchip_pic12mcu' library instead of the 'device' library and pick the "
+#| "'PIC12C508A-I/SN' component."
+msgid ""
+"Repeat the add-component steps, however this time select the "
+"'microchip_pic12mcu' library instead of the 'Device' library and pick the "
+"'PIC12C508A-ISN' component."
+msgstr ""
+"Ulangi langkah penambahan komponen, namun kali ini kita tidak memilih "
+"pustaka 'Device'. Pilihlah pustaka 'microchip_pic12mcu' dan ambil komponen "
+"'PIC12C508A-ISN'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:410
+msgid ""
+"Hover the mouse over the microcontroller component. Notice that [x] and [y] "
+"again flip the component. Return the component to its original orientation."
+msgstr ""
+"Letakkan kursor di atas komponen mikrokontroler. Perhatikan bahwa [x] dan [y]"
+" akan membalik komponen tersebut. Kembalikan komponen tersebut ke orientasi "
+"awal."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:413
+#| msgid ""
+#| "Repeat the add-component steps, this time choosing the 'device' library "
+#| "and picking the 'LED' component from it."
+msgid ""
+"Repeat the add-component steps, this time choosing the 'Device' library and "
+"picking the 'LED' component from it."
+msgstr ""
+"Ulangi langkah penambahan komponen, kali ini pilih pustaka 'Device' dan "
+"ambil komponen 'LED'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:415
+msgid "Organise all components on your schematic sheet as shown below."
+msgstr "Atur semua komponen pada lembar skematik Anda seperti di bawah ini."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:416
+#, no-wrap
+msgid "images/gsik_tutorial1_010.png"
+msgstr "images/gsik_tutorial1_010.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:423
+msgid ""
+"We now need to create the schematic component 'MYCONN3' for our 3-pin "
+"connector. You can jump to the section titled <<make-schematic-components-in-"
+"kicad,Make Schematic Components in KiCad>> to learn how to make this "
+"component from scratch and then return to this section to continue with the "
+"board."
+msgstr ""
+"Sekarang kita akan membuat komponen skematik 'MYCONN3' untuk konektor 3-pin. "
+"Anda bisa langsung melompat ke bagian yang berjudul <<make-schematic-"
+"components-in-kicad,Membuat Komponen Skematik di KiCad>> untuk belajar "
+"membuat komponen ini dari awal, kemudian kembali ke bagian ini untuk "
+"melanjutkan latihan kita."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:426
+msgid ""
+"You can now place the freshly made component. Press [a] and pick the "
+"'MYCONN3' component in the 'myLib' library."
+msgstr ""
+"Sekarang Anda bisa meletakkan komponen yang baru saja Anda buat. Tekan [a] "
+"dan ambil komponen 'MYCONN3' dari pustaka 'myLib'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:432
+msgid ""
+"The component identifier 'J?' will appear under the 'MYCONN3' label.  If you "
+"want to change its position, right click on 'J?' and click on 'Move "
+"Field' (equivalent to [m]). It might be helpful to zoom in before/while "
+"doing this. Reposition 'J?' under the component as shown below. Labels can "
+"be moved around as many times as you please."
+msgstr ""
+"Penunjuk nama komponen 'J?' akan muncul di bawah label 'MYCONN3'. Jika Anda "
+"ingin mengubah posisinya, klik kanan pada 'J?' dan klik 'Move Field' (atau "
+"tekan [m]). Anda mungkin perlu melakukan perbesaran tampilan sebelum/sambil "
+"menjalankan perintah ini. Gambar di bawah menunjukkan pemindahan posisi "
+"'J?'. Label dapat dipindahkan posisinya sesuai keinginan Anda. "
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:433
+#, no-wrap
+msgid "images/gsik_myconn3_s.png"
+msgstr "images/gsik_myconn3_s.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:440
+#| msgid ""
+#| "It is time to place the power and ground symbols. Click on the 'Place a "
+#| "power port' button image:images/icons/add_power.png[add_power_png] on the "
+#| "right toolbar. Alternatively, press [p]. In the component selection "
+#| "window, scroll down and select 'VCC' from the 'power' library.  Click OK."
+msgid ""
+"It is time to place the power and ground symbols. Click on the 'Place power "
+"port' button image:images/icons/add_power.png[add_power_png] on the right "
+"toolbar. Alternatively, press [p]. In the component selection window, scroll "
+"down and select 'VCC' from the 'power' library.  Click OK."
+msgstr ""
+"Sekarang waktunya meletakkan simbol _power_ dan _ground_. Klik pada tombol "
+"'Place power port' image:images/icons/add_power.png[add_power_png] pada "
+"bilah alat sebelah kanan. Anda juga bisa menekan [p]. Pada jendela pemilihan "
+"komponen, lakukan _scroll_ ke bawah dan pilih 'VCC' dari pustaka 'power'. "
+"Klik OK."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:446
+msgid ""
+"Click above the pin of the 1 k resistor to place the VCC part. Click on the "
+"area above the microcontroller 'VDD'. In the 'Component Selection history' "
+"section select 'VCC' and place it next to the VDD pin. Repeat the add "
+"process again and place a VCC part above the VCC pin of 'MYCONN3'."
+msgstr ""
+"Klik di atas pin resistor 1 k untuk meletakkan part VCC. Klik pada area di "
+"atas 'VDD' pada mikrokontroler. Pada grup 'History' pada jendela 'Component "
+"Selection', pilih 'VCC' dan letakkan di sebelah pin VDD. Ulangi langkah "
+"penambahan komponen sekali lagi dan letakkan part VCC di atas pin VCC pada "
+"'MYCONN3'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:451
+msgid ""
+"Repeat the add-pin steps but this time select the GND part. Place a GND part "
+"under the GND pin of 'MYCONN3'. Place another GND symbol on the left of the "
+"VSS pin of the microcontroller. Your schematic should now look something "
+"like this:"
+msgstr ""
+"Ulangi langkah penambahan pin, namun kali ini pilih GND. Letakkan GND di "
+"bawah pin GND 'MYCONN3'. Tambahkan juga simbol GND di sebelah kiri pin VSS "
+"mikrokontroler. Lembar skematik Anda akan menjadi seperti berikut ini:"
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:452
+#, no-wrap
+msgid "images/gsik_tutorial1_020.png"
+msgstr "images/gsik_tutorial1_020.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:457
+msgid ""
+"Next, we will wire all our components. Click on the 'Place wire' icon image:"
+"images/icons/add_line.png[Place wire] on the right toolbar."
+msgstr ""
+"Selanjutnya, kita akan menghubungkan semua komponen dengan _wire_. Klik pada "
+"ikon 'Place wire' image:images/icons/add_line.png[Place wire] pada bilah "
+"alat sebelah kanan."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:462
+#| msgid ""
+#| "Be careful not to pick 'Place a bus', which appears directly beneath this "
+#| "button but has thicker lines. The section <<bus-connections-in-kicad,Bus "
+#| "Connections in KiCad>> will explain how to use a bus section."
+msgid ""
+"Be careful not to pick 'Place bus', which appears directly beneath this "
+"button but has thicker lines. The section <<bus-connections-in-kicad,Bus "
+"Connections in KiCad>> will explain how to use a bus section."
+msgstr ""
+"Pastikan Anda tidak memilih 'Place bus', yang tombolnya berada tepat di "
+"bawah tombol 'Place wire', namun memiliki garis yang lebih tebal. Bagian "
+"<<bus-connections-in-kicad,Koneksi Bus di KiCad>> akan membahas mengenai "
+"penggunaan _bus_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:466
+msgid ""
+"Click on the little circle at the end of pin 7 of the microcontroller and "
+"then click on the little circle on pin 1 of the LED.  You can zoom in while "
+"you are placing the connection."
+msgstr ""
+"Klik pada lingkaran kecil di ujung pin 7 mikrokontroler, dan klik pada "
+"lingkaran kecil di ujung pin 1 LED. Anda juga bisa melakukan perbesaran/"
+"perkecilan tampilan saat melakukan penyambungan koneksi antar komponen."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:470
+msgid ""
+"If you want to reposition wired components, it is important to use [g] (to "
+"grab) and not [m] (to move). Using grab will keep the wires connected. "
+"Review step 24 in case you have forgotten how to move a component."
+msgstr ""
+"Jika Anda ingin mengubah posisi komponen yang sudah tersambung, gunakan [g] "
+"(geser/_grab_) dan jangan menggunakan [m] (pindah/_move_). Menggeser akan "
+"menjaga komponen tetap tersambung dengan _wire_. Ulangi langkah 24 jika Anda "
+"lupa bagaimana cara memindahkan komponen."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:471
+#, no-wrap
+msgid "images/gsik_tutorial1_030.png"
+msgstr "images/gsik_tutorial1_030.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:478
+msgid ""
+"Repeat this process and wire up all the other components as shown below. To "
+"terminate a wire just double-click. When wiring up the VCC and GND symbols, "
+"the wire should touch the bottom of the VCC symbol and the middle top of the "
+"GND symbol. See the screenshot below."
+msgstr ""
+"Ulangi proses ini dan hubungkan semua komponen lainnya dengan _wire_ seperti "
+"gambar di bawah ini. Untuk mengakhiri _wire_, lakukan klik-ganda. Saat "
+"menghubungkan simbol VCC dan GND, _wire_ harus menyentuh bagian bawah simbol "
+"VCC dan bagian atas simbol GND. Lihat gambar berikut."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:479
+#, no-wrap
+msgid "images/gsik_tutorial1_040.png"
+msgstr "images/gsik_tutorial1_040.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:485
+#| msgid ""
+#| "We will now consider an alternative way of making a connection using "
+#| "labels. Pick a net labelling tool by clicking on the 'Place net name' "
+#| "icon image:images/icons/add_line_label.png[add_line_label_png] on the "
+#| "right toolbar. You can also use [l]."
+msgid ""
+"We will now consider an alternative way of making a connection using labels. "
+"Pick a net labelling tool by clicking on the 'Place net label' icon image:"
+"images/icons/add_line_label.png[add_line_label_png] on the right toolbar. "
+"You can also use [l]."
+msgstr ""
+"Sekarang kita mencoba cara lain untuk membuat sambungan dengan menggunakan "
+"label. Pilih alat pemberi label dengan klik ikon 'Place net label' "
+"image:images/icons/add_line_label.png[add_line_label_png] pada bilah alat "
+"sebelah kanan. Anda juga bisa menekan [l]."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:488
+msgid ""
+"Click in the middle of the wire connected to pin 6 of the microcontroller. "
+"Name this label 'INPUT'."
+msgstr ""
+"Klik _wire_ yang terhubung ke pin 6 mikrokontroler. Berikan nama label "
+"'INPUT'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:497
+msgid ""
+"Follow the same procedure and place another label on line on the right of "
+"the 100 ohm resistor. Also name it 'INPUT'. The two labels, having the same "
+"name, create an invisible connection between pin 6 of the PIC and the 100 "
+"ohm resistor. This is a useful technique when connecting wires in a complex "
+"design where drawing the lines would make the whole schematic messier. To "
+"place a label you do not necessarily need a wire, you can simply attach the "
+"label to a pin."
+msgstr ""
+"Lakukan langkah yang sama pada _wire_ di sebelah kanan resistor 100 ohm. "
+"Berikan nama label 'INPUT' pada _wire_ tersebut. Kedua label tersebut, "
+"karena memiliki nama yang sama, akan membuat sambungan yang tidak terlihat "
+"antara pin 6 PIC dan resistor 100 ohm. Teknik ini akan berguna untuk "
+"menghubungkan _wire_ pada desain yang kompleks, dimana penambahan garis "
+"_wire_ akan membuat skematik menjadi terlihat berantakan. Untuk meletakkan "
+"sebuah label, Anda tidak harus menggambar _wire_, Anda juga bisa memberikan "
+"label pada sebuah pin."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:503
+msgid ""
+"Labels can also be used to simply label wires for informative purposes. "
+"Place a label on pin 7 of the PIC. Enter the name 'uCtoLED'.  Name the wire "
+"between the resistor and the LED as 'LEDtoR'. Name the wire between "
+"'MYCONN3' and the resistor as 'INPUTtoR'."
+msgstr ""
+"Label juga bisa digunakan untuk sekadar memberi nama pada _wire_ sebagai "
+"keterangan untuk _wire_ tersebut. Letakkan sebuah label pada pin 7 PIC. "
+"Masukkan nama 'uCtoLED'. Berikan nama 'LEDtoR' untuk _wire_ yang "
+"menghubungkan resistor dan LED, dan berikan nama 'INPUTtoR' untuk _wire_ "
+"yang menghubungkan 'MYCONN3' dan resistor."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:506
+msgid ""
+"You do not have to label the VCC and GND lines because the labels are "
+"implied from the power objects they are connected to."
+msgstr ""
+"Anda tidak perlu memberikan label pada jalur VCC dan GND karena label pada "
+"jalur tersebut sudah terwakili oleh obyek dimana jalur tersebut terhubung."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:508
+msgid "Below you can see what the final result should look like."
+msgstr ""
+"Di bawah ini, Anda bisa melihat bagaimana seharusnya hasil akhir proyek kita."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:509
+#, no-wrap
+msgid "images/gsik_tutorial1_050.png"
+msgstr "images/gsik_tutorial1_050.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:516
+msgid ""
+"Let's now deal with unconnected wires. Any pin or wire that is not connected "
+"will generate a warning when checked by KiCad. To avoid these warnings you "
+"can either instruct the program that the unconnected wires are deliberate or "
+"manually flag each unconnected wire or pin as unconnected."
+msgstr ""
+"Mari kita lanjutkan dengan _wire_ yang belum terhubung. Setiap pin atau "
+"_wire_ yang tidak terhubung akan menghasilkan peringatan ketika dilakukan "
+"pemeriksaan oleh KiCad. Untuk menghindari peringatan tersebut, Anda bisa "
+"memberi informasi kepada program bahwa Anda sengaja membiarkan _wire_ tidak "
+"terhubung, atau menandai  secara manual setiap pin atau _wire_ yang belum "
+"terhubung."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:521
+#| msgid ""
+#| "Click on the 'Place no connect flag' icon image:images/icons/noconn."
+#| "png[noconn_png] on the right toolbar. Click on pins 2, 3, 4 and 5. An X "
+#| "will appear to signify that the lack of a wire connection is intentional."
+msgid ""
+"Click on the 'Place no connection flag' icon image:images/icons/noconn."
+"png[noconn_png] on the right toolbar. Click on pins 2, 3, 4 and 5. An X will "
+"appear to signify that the lack of a wire connection is intentional."
+msgstr ""
+"Klik pada ikon 'Place no connection flag' "
+"image:images/icons/noconn.png[noconn_png] pada bilah alat sebelah kanan. "
+"Klik pada pin 2, 3, 4, dan 5. Akan muncul tanda X yang menunjukkan bahwa "
+"tidak adanya koneksi _wire_ adalah disengaja."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:522
+#, no-wrap
+msgid "images/gsik_tutorial1_060.png"
+msgstr "images/gsik_tutorial1_060.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:530
+msgid ""
+"Some components have power pins that are invisible. You can make them "
+"visible by clicking on the 'Show hidden pins' icon image:images/icons/"
+"hidden_pin.png[hidden_pin_png] on the left toolbar. Hidden power pins get "
+"automatically connected if VCC and GND naming is respected. Generally "
+"speaking, you should try not to make hidden power pins."
+msgstr ""
+"Beberapa komponen memiliki pin _power_ yang tidak terlihat. Anda dapat "
+"memunculkan pin tersebut dengan klik ikon 'Show hidden pins' "
+"image:images/icons/hidden_pin.png[hidden_pin_png] pada bilah alat sebelah "
+"kiri. Pin _power_ yang tersembunyi akan terhubung secara otomatis jika Anda "
+"menggunakan penamaan VCC dan GND. Secara umum, Anda sebaiknya tidak membuat "
+"pin _power_ yang tersembunyi."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:535
+#| msgid ""
+#| "It is now necessary to add a 'Power Flag' to indicate to KiCad that power "
+#| "comes in from somewhere. Press [a], select 'List All', double click on "
+#| "the 'power' library and search for 'PWR_FLAG'. Place two of them. Connect "
+#| "them to a GND pin and to VCC as shown below."
+msgid ""
+"It is now necessary to add a 'Power Flag' to indicate to KiCad that power "
+"comes in from somewhere. Press [a] and search for 'PWR_FLAG' which is in "
+"'power' library. Place two of them.  Connect them to a GND pin and to VCC as "
+"shown below."
+msgstr ""
+"Sekarang kita perlu menambahkan sebuah 'Power Flag' yang akan memberitahu "
+"KiCad bahwa ada suatu catu daya ke rangkaian yang kita buat. Tekan [a] dan "
+"cari 'PWR_FLAG' yang berada di pustaka 'power'. Letakkan dua buah 'PWR_FLAG' "
+"pada skematik. Hubungkan ke pin GND dan VCC seperti ditunjukkan pada gambar "
+"di bawah ini."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:536
+#, no-wrap
+msgid "images/gsik_tutorial1_070.png"
+msgstr "images/gsik_tutorial1_070.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:540
+msgid ""
+"This will avoid the classic schematic checking warning: Warning Pin power_in "
+"not driven (Net xx)"
+msgstr ""
+"Langkah di atas akan menghindarkan kita dari pesan peringatan pada saat "
+"pemeriksaan skematik: 'Warning Pin power_in not driven (Net xx)'"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:544
+#| msgid ""
+#| "Sometimes it is good to write comments here and there. To add comments on "
+#| "the schematic use the 'Place graphic text (comment)' icon image:images/"
+#| "icons/text.png[text_png] on the right toolbar."
+msgid ""
+"Sometimes it is good to write comments here and there. To add comments on "
+"the schematic use the 'Place text' icon image:images/icons/text."
+"png[text_png] on the right toolbar."
+msgstr ""
+"Terkadang kita perlu menambahkan komentar di sana-sini. Untuk menambahkan "
+"komentar pada skematik, gunakan ikon 'Place text'  "
+"image:images/icons/text.png[text_png] pada bilah alat sebelah kanan."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:550
+#| msgid ""
+#| "All components now need to have unique identifiers. In fact, many of our "
+#| "components are still named 'R?' or 'J?'. Identifier assignation can be "
+#| "done automatically by clicking on the 'Annotate schematic' icon image:"
+#| "images/icons/annotate.png[annotate_png] on the top toolbar."
+msgid ""
+"All components now need to have unique identifiers. In fact, many of our "
+"components are still named 'R?' or 'J?'. Identifier assignation can be done "
+"automatically by clicking on the 'Annotate schematic symbols' icon image:"
+"images/icons/annotate.png[annotate_png] on the top toolbar."
+msgstr ""
+"Semua komponen perlu memiliki penamaan yang unik. Saat ini beberapa komponen "
+"kita masih memiliki nama 'R?' atau 'J?'. Pemberian nama dapat dilakukan "
+"secara otomatis dengan klik ikon 'Annotate schematic symbols' "
+"image:images/icons/annotate.png[annotate_png] pada bilah alat bagian atas."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:557
+msgid ""
+"In the Annotate Schematic window, select 'Use the entire schematic' and "
+"click on the 'Annotate' button. Click OK in the confirmation message and "
+"then click 'Close'. Notice how all the '?' have been replaced with numbers. "
+"Each identifier is now unique. In our example, they have been named 'R1', "
+"'R2', 'U1', 'D1' and 'J1'."
+msgstr ""
+"Pada jendela Annotate Schematic, pilih 'Use the entire schematic' dan klik "
+"pada tombol 'Annotate'. Klik OK pada pesan konfirmasi, dan klik 'Close'. "
+"Perhatikan bahwa semua tanda '?' telah berganti menjadi angka-angka. "
+"Sekarang setiap komponen telah memiliki penamaan yang unik. Pada contoh "
+"kita, setiap komponen telah memiliki nama 'R1', 'R2', 'U1', 'D1' dan 'J1'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:566
+msgid ""
+"We will now check our schematic for errors. Click on the 'Perform electrical "
+"rules check' icon image:images/icons/erc.png[erc_png] on the top toolbar. "
+"Click on the 'Run' button. A report informing you of any errors or warnings "
+"such as disconnected wires is generated. You should have 0 Errors and 0 "
+"Warnings. In case of errors or warnings, a small green arrow will appear on "
+"the schematic in the position where the error or the warning is located. "
+"Check 'Create ERC file report' and press the 'Run' button again to receive "
+"more information about the errors."
+msgstr ""
+"Sekarang kita akan memeriksa apakah ada kesalahan pada skematik kita. Klik "
+"pada ikon 'Perform electrical rules check'  "
+"image:images/icons/erc.png[erc_png] pada bilah alat bagian atas. Klik tombol "
+"'Run'. Akan tampil sebuah laporan yang akan menginformasikan setiap "
+"kesalahan atau peringatan seperti _wire_ yang belum terhubung. Anda harus "
+"memiliki 0 _Error_ dan 0 _Warning_. Jika terdapat pesan kesalahan atau "
+"peringatan, sebuah tanda panah kecil berwarna hijau akan tampil di skematik "
+"pada posisi di mana kesalahan atau peringatan tersebut berada. Berilah tanda "
+"centang pada 'Create ERC file report' dan tekan tombol 'Run' sekali lagi "
+"untuk mendapatkan informasi yang lebih lengkap mengenai kesalahan tersebut."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:570
+#| msgid ""
+#| "If you have a warning with \"No default editor found you must choose it"
+#| "\", try setting the path to `c:\\windows\\notepad.exe` (windows) or `/usr/"
+#| "bin/gedit` (Linux)."
+msgid ""
+"If you have a warning with \"No default editor found, you must choose it\", "
+"try setting the path to `c:\\windows\\notepad.exe` (windows) or `/usr/bin/"
+"gedit` (Linux)."
+msgstr ""
+"Jika Anda menemukan peringatan \"No default editor found, you must choose "
+"it\", cobalah mengubah pengaturan _path_ ke  `c:\\windows\\n"
+"otepad.exe` (Windows) atau `/usr/bin/gedit` (Linux)."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:576
+#| msgid ""
+#| "The schematic is now finished. We can now create a Netlist file to which "
+#| "we will add the footprint of each component. Click on the 'Generate "
+#| "netlist' icon image:images/icons/netlist.png[netlist_png] on the top "
+#| "toolbar. Click on the 'Generate' button and save under the default file "
+#| "name."
+msgid ""
+"The schematic is now finished. We can now create a Netlist file to which we "
+"will add the footprint of each component. Click on the 'Generate netlist' "
+"icon image:images/icons/netlist.png[netlist_png] on the top toolbar. Click "
+"on the 'Generate Netlist' button and save under the default file name."
+msgstr ""
+"Kita sudah menyelesaikan pembuatan skematik. Sekarang kita bisa membuat "
+"berkas Netlist dimana kita akan menambahkan _footprint_ untuk tiap-tiap "
+"komponen. Klik pada ikon 'Generate netlist'  "
+"image:images/icons/netlist.png[netlist_png] pada bilah alat bagian atas. "
+"Klik pada tombol 'Generate Netlist' dan simpan dengan nama berkas _default_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:581
+msgid ""
+"After generating the Netlist file, click on the 'Run Cvpcb' icon image:"
+"images/icons/cvpcb.png[cvpcb_png] on the top toolbar. If a missing file "
+"error window pops up, just ignore it and click OK."
+msgstr ""
+"Setelah membuat berkas Netlist, klik ikon 'Run Cvpcb' "
+"image:images/icons/cvpcb.png[cvpcb_png] pada bilah alat bagian atas. Abaikan "
+"dan klik OK jika muncul pesan kesalahan mengenai adanya berkas yang tidak "
+"tersedia."
+
+#.  missing image here?
+#. type: Plain text
+#: getting_started_in_kicad.adoc:588
+#| msgid ""
+#| "_Cvpcb_ allows you to link all the components in your schematic with "
+#| "footprints in the KiCad library. The pane on the center shows all the "
+#| "components used in your schematic. Here select 'D1'. In the pane on the "
+#| "right you have all the available footprints, here scroll down to 'LEDs:"
+#| "LED-5MM' and double click on it."
+msgid ""
+"_Cvpcb_ allows you to link all the components in your schematic with "
+"footprints in the KiCad library. The pane on the center shows all the "
+"components used in your schematic. Here select 'D1'. In the pane on the "
+"right you have all the available footprints, here scroll down to 'LED_THT:"
+"LED-D5.0mm' and double click on it."
+msgstr ""
+"_Cvpcb_ akan menghubungkan semua komponen yang ada di skematik Anda dengan "
+"_footprint_ pada pustaka KiCad. Kolom di bagian tengah menunjukkan semua "
+"komponen yang digunakan di skematik. Pilih 'D1'. Pada kolom di sebelah "
+"kanan, terdapat semua _footprint_ yang tersedia. Lakukan _scroll_ ke bawah "
+"dan klik-ganda 'LED_THT:LED-D5.0mm'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:596
+msgid ""
+"It is possible that the pane on the right shows only a selected subgroup of "
+"available footprints. This is because KiCad is trying to suggest to you a "
+"subset of suitable footprints. Click on the icons image:images/icons/"
+"module_filtered_list.png[module_filtered_list_png], image:images/icons/"
+"module_pin_filtered_list.png[module_pin_filtered_list_png] and image:images/"
+"icons/module_library_list.png[module_library_list_png] to enable or disable "
+"these filters."
+msgstr ""
+"Bisa jadi kolom di sebelah kanan hanya menampilkan beberapa pilihan "
+"_footprint_ saja. Hal ini karena KiCad mencoba untuk memberikan saran "
+"pemilihan _footprint_ yang sesuai dengan komponen yang Anda gunakan. Klik "
+"pada ikon "
+"image:images/icons/module_filtered_list.png[module_filtered_list_png], "
+"image:images/icons/module_pin_filtered_list.png[module_pin_filtered_list_png]"
+" dan image:images/icons/module_library_list.png[module_library_list_png] "
+"untuk mengaktifkan dan menonaktifkan filter tersebut."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:601
+#| msgid ""
+#| "For 'IC1' select the 'Housings_DIP:DIP-8_W7.62mm' footprint.  For 'J1' "
+#| "select the 'Connectors:Banana_Jack_3Pin' footprint.  For 'R1' and 'R2' "
+#| "select the 'Discret:R1' footprint."
+msgid ""
+"For 'U1' select the 'Package_DIP:DIP-8_W7.62mm' footprint.  For 'J1' select "
+"the 'Connector:Banana_Jack_3Pin' footprint.  For 'R1' and 'R2' select the "
+"'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical' footprint."
+msgstr ""
+"Untuk 'U1' pilih _footprint_ 'Package_DIP:DIP-8_W7.62mm'.  Untuk 'J1' pilih "
+"_footprint_ 'Connectors:Banana_Jack_3Pin'.  Untuk 'R1' dan 'R2' pilih "
+"_footprint_ 'Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:606
+#| msgid ""
+#| "If you are interested in knowing what the footprint you are choosing "
+#| "looks like, you have two options. You can click on the 'View selected "
+#| "footprint' icon image:images/icons/show_footprint.png[show_footprint_png] "
+#| "for a preview of the current footprint. Alternatively, click on the "
+#| "'Display footprint list documentation' icon image:images/icons/datasheet."
+#| "png[datasheet_png] and you will get a multi-page PDF document with all "
+#| "available footprints. You can print it out and check your components to "
+#| "make sure that the dimensions match."
+msgid ""
+"If you are interested in knowing what the footprint you are choosing looks "
+"like, you can click on the 'View selected footprint' icon image:images/icons/"
+"show_footprint.png[show_footprint_png] for a preview of the current "
+"footprint."
+msgstr ""
+"Jika Anda ingin mengetahui bentuk dari _footprint_ yang Anda pilih, Anda "
+"bisa klik ikon 'View selected footprint'  "
+"image:images/icons/show_footprint.png[show_footprint_png] untuk melihat "
+"tampilan _footprint_ yang dipilih."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:610
+msgid ""
+"You are done. You can save the schematic now by clicking *File* -> **Save "
+"Schematic** or with the button 'Apply, Save Schematic & Continue'."
+msgstr ""
+"Anda telah selesai. Anda bisa menyimpan skematik dengan klik *File* -> **"
+"Save Schematic** atau melalui tombol 'Apply, Save Schematic & Continue'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:618
+#| msgid ""
+#| "You are done. You can now update your netlist file with all the "
+#| "associated footprints. Click on *File* -> **Save As**. The default name "
+#| "'tutorial1.net' is fine, click save. Otherwise you can use the icon image:"
+#| "images/icons/save.png[Save icon].  Your netlist file has now been updated "
+#| "with all the footprints. Note that if you are missing the footprint of "
+#| "any device, you will need to make your own footprints. This will be "
+#| "explained in a later section of this document."
+msgid ""
+"You can close _Cvpcb_ and go back to the _Eeschema_ schematic editor. If you "
+"didn't save it in Cvpcb save it now by clicking on *File* -> **Save**. "
+"Create the netlist again. Your netlist file has now been updated with all "
+"the footprints. Note that if you are missing the footprint of any device, "
+"you will need to make your own footprints. This will be explained in a later "
+"section of this document."
+msgstr ""
+"Anda bisa menutup _Cvpcb_ dan kembali ke editor skematik _Eeschema_. Jika "
+"Anda tidak menyimpannya di Cvpcb, simpanlah sekarang dengan klik *File* -> "
+"**Save**. Buatlah _netlist_ sekali lagi. Berkas _netlist_ Anda sekarang "
+"telah diperbarui dengan semua _footprint_. Ingat bahwa jika Anda tidak "
+"menemukan _footprint_ yang Anda perlukan untuk komponen yang digunakan, Anda "
+"harus membuat _footprint_ Anda sendiri. Hal ini akan dijelaskan pada bagian "
+"lain dokumen ini."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:620
+msgid "Switch to the KiCad project manager."
+msgstr "Berpindahlah ke manajer proyek KiCad."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:624
+msgid ""
+"The netlist file describes all components and their respective pin "
+"connections. The netlist file is actually a text file that you can easily "
+"inspect, edit or script."
+msgstr ""
+"Berkas _netlist_ menjelaskan semua komponen dan koneksi pinnya. Berkas "
+"_netlist_ sebenarnya adalah berkas teks yang dapat dengan mudah dilihat, "
+"diedit, atau dimanipulasi dengan bantuan skrip."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:627
+msgid ""
+"Library files (__*.lib__) are text files too and they are also easily "
+"editable or scriptable."
+msgstr ""
+"Berkas pustaka (__*.lib__) juga sebenarnya merupakan berkas teks yang mudah "
+"untuk diedit dan dimanipulasi dengan bantuan skrip."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:634
+#| msgid ""
+#| "To create a Bill Of Materials (BOM), go to the _Eeschema_ schematic "
+#| "editor and click on the 'Bill of materials' icon image:images/icons/bom."
+#| "png[bom_png] on the top toolbar.  By default there is no plugin active. "
+#| "You add one, by clicking on *Add Plugin* button. Select the *.xsl file "
+#| "you want to use, in this case, we select __bom2csv.xsl__."
+msgid ""
+"To create a Bill Of Materials (BOM), go to the _Eeschema_ schematic editor "
+"and click on the 'Generate bill of materials' icon image:images/icons/bom."
+"png[bom_png] on the top toolbar.  By default there is no plugin active. You "
+"add one, by clicking on *Add Plugin* button. Select the *.xsl file you want "
+"to use, in this case, we select __bom2csv.xsl__."
+msgstr ""
+"Untuk membuat daftar komponen ('Bill Of Materials / BOM'), bukalah editor "
+"skematik _Eeschema_ dan klik pada ikon 'Generate bill of materials'  "
+"image:images/icons/bom.png[bom_png] pada bilah alat bagian atas. Secara "
+"_default_, tidak ada _plugin_ yang aktif. Tambahkan _plugin_ dengan klik "
+"tombol *Add Plugin*. Pilih berkas *.xsl yang akan Anda gunakan. Pada latihan "
+"ini, kita pilih __bom2csv.xsl__."
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:638
+#, no-wrap
+msgid "*Linux:*\n"
+msgstr "*Linux:*\n"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:640
+msgid "If xsltproc is missing, you can download and install it with:"
+msgstr ""
+"Jika di sistem Anda tidak tersedia 'xsltproc', Anda bisa mengunduh dan "
+"menginstalnya dengan perintah:"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:642
+#, no-wrap
+msgid " sudo apt-get install xsltproc\n"
+msgstr " sudo apt-get install xsltproc\n"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:644
+msgid "for a Debian derived distro like Ubuntu, or"
+msgstr "untuk distro turunan Debian seperti Ubuntu, atau"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:646
+#, no-wrap
+msgid " sudo yum install xsltproc\n"
+msgstr " sudo yum install xsltproc\n"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:649
+msgid ""
+"for a RedHat derived distro. If you use neither of the two kind of distro, "
+"use your distro package manager command to install the xsltproc package."
+msgstr ""
+"untuk distro turunan RedHat. Jika Anda menggunakan distro Linux lain, "
+"gunakan manajer paket distro Anda untuk menginstal paket 'xsltproc'."
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:651
+msgid "xsl files are located at: _/usr/lib/kicad/plugins/_."
+msgstr "Berkas-berkas xsl berada di : _/usr/lib/kicad/plugins/_."
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:653
+#, no-wrap
+msgid "*Apple OS X:*\n"
+msgstr "*Apple OS X:*\n"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:656
+msgid ""
+"If xsltproc is missing, you can either install the Apple Xcode tool from the "
+"Apple site that should contain it, or download and install it with:"
+msgstr ""
+"Jika di sistem Anda tidak tersedia 'xsltproc', Anda bisa menginstal "
+"peralatan 'Apple Xcode' dari situs Apple yang menyertakan 'xsltproc', atau "
+"unduh dan instal dengan perintah:"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:658
+#, no-wrap
+msgid " brew install libxslt\n"
+msgstr " brew install libxslt\n"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:660
+msgid ""
+"xsl files are located at: _/Library/Application Support/kicad/plugins/_."
+msgstr ""
+"Berkas-berkas xsl berada di: _/Library/Application Support/kicad/plugins/_."
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:662
+#, no-wrap
+msgid "*Windows:*\n"
+msgstr "*Windows:*\n"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:666
+msgid ""
+"xsltproc.exe and the included xsl files will be located at _＜KiCad install "
+"directory＞\\bin_ and _＜KiCad install directory＞\\bin\\scripting"
+"\\plugins_, respectively."
+msgstr ""
+"'xsltproc.exe' dan berkas-berkas xsl terdapat pada _<KiCad install directory>"
+"\\bin_ dan _<KiCad install directory>\\bin\\scripting\\plugins_."
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:668
+#, no-wrap
+msgid "*All platforms:*\n"
+msgstr "*Semua platform:*\n"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:670
+msgid "You can get the latest bom2csv.xsl via:"
+msgstr "Anda bisa mendapatkan bom2csv.xsl versi terbaru melalui:"
+
+#. type: delimited block =
+#: getting_started_in_kicad.adoc:672
+#| msgid ""
+#| "https://raw.githubusercontent.com/KiCad/kicad-source-mirror/master/"
+#| "eeschema/plugins/bom2csv.xsl"
+msgid ""
+"https://raw.githubusercontent.com/KiCad/kicad-source-mirror/master/eeschema/"
+"plugins/xsl_scripts/bom2csv.xsl"
+msgstr ""
+"https://raw.githubusercontent.com/KiCad/kicad-source-"
+"mirror/master/eeschema/plugins/xsl_scripts/bom2csv.xsl"
+
+#. type: Block title
+#: getting_started_in_kicad.adoc:674
+#, no-wrap
+msgid "KiCad automatically generates the command, for example:"
+msgstr "KiCad akan membuat perintah secara otomatis, sebagai contoh:"
+
+#. type: delimited block -
+#: getting_started_in_kicad.adoc:677
+#, no-wrap
+msgid "xsltproc -o \"%O\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
+msgstr "xsltproc -o \"%O\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
+
+#. type: Block title
+#: getting_started_in_kicad.adoc:679
+#, no-wrap
+msgid "You may want to add the extension, so change this command line to:"
+msgstr "Anda mungkin ingin menambahkan ekstensi, maka ubahlah perintah ini menjadi:"
+
+#. type: delimited block -
+#: getting_started_in_kicad.adoc:682
+#, no-wrap
+msgid "xsltproc -o \"%O.csv\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
+msgstr "xsltproc -o \"%O.csv\" \"/home/<user>/kicad/eeschema/plugins/bom2csv.xsl\" \"%I\"\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:685
+msgid "Press Help button for more info."
+msgstr "Tekan tombol 'Help' untuk informasi lebih lanjut."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:689
+msgid ""
+"Now press 'Generate'. The file (same name as your project) is located in "
+"your project folder.  Open the **.csv* file with LibreOffice Calc or Excel. "
+"An import window will appear, press OK."
+msgstr ""
+"Sekarang tekan 'Generate'. Hasilnya berupa berkas (dengan nama yang sama "
+"dengan proyek Anda) yang disimpan di dalam folder proyek Anda. Buka berkas "
+"**.csv* dengan LibreOffice Calc atau Excel. Akan tampil sebuah jendela "
+"impor, tekan OK."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:693
+msgid ""
+"You are now ready to move to the PCB layout part, which is presented in the "
+"next section. However, before moving on let's take a quick look at how to "
+"connect component pins using a bus line."
+msgstr ""
+"Anda sekarang siap untuk melanjutkan langkah ke pembuatan tata letak PCB, "
+"yang akan kita bahas pada bagian berikutnya. Namun sebelum kita lanjutkan, "
+"marilah kita lihat bagaimana cara menghubungkan pin-pin komponen menggunakan "
+"jalur _bus_."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:695
+#, no-wrap
+msgid "Bus connections in KiCad"
+msgstr "Koneksi _Bus_ di KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:701
+msgid ""
+"Sometimes you might need to connect several sequential pins of component A "
+"with some other sequential pins of component B. In this case you have two "
+"options: the labelling method we already saw or the use of a bus connection. "
+"Let's see how to do it."
+msgstr ""
+"Kadang kala Anda mungkin ingin menghubungkan pin-pin sekuensial pada "
+"komponen A dengan pin-pin sekuensial pada komponen B. Pada kasus ini, Anda "
+"memiliki dua opsi: menggunakan metode pelabelan seperti yang sudah kita "
+"praktekkan sebelumnya, atau menggunakan koneksi _bus_. Mari kita lihat "
+"bagaimana cara melakukannya."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:708
+msgid ""
+"Let us suppose that you have three 4-pin connectors that you want to connect "
+"together pin to pin. Use the label option (press [l])  to label pin 4 of the "
+"P4 part. Name this label 'a1'. Now press [Insert] to have the same item "
+"automatically added on the pin below pin 4 (PIN 3). Notice how the label is "
+"automatically renamed 'a2'."
+msgstr ""
+"Misalkan Anda memiliki tiga buah konektor 4-pin yang ingin Anda hubungkan "
+"secara bersama-sama dari pin ke pin. Gunakan pelabelan (tekan [l]) untuk "
+"memberi label pin 4 dari part P4. Beri nama label 'a1'. Sekarang tekan "
+"[Insert] agar label ini ditambahkan secara otomatis ke pin di bawah pin 4 "
+"(PIN 3). Perhatikan bahwa label akan secara otomatis diberi nama 'a2'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:712
+msgid ""
+"Press [Insert] two more times. This key corresponds to the action 'Repeat "
+"last item' and it is an infinitely useful command that can make your life a "
+"lot easier."
+msgstr ""
+"Tekan [Insert] dua kali lagi. Tombol ini digunakan untuk perintah 'Repeat "
+"last item' (ulangi langkah terakhir), dan ini adalah perintah yang sangat "
+"berguna yang akan memudahkan pekerjaan Anda."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:723
+msgid ""
+"Repeat the same labelling action on the two other connectors CONN_2 and "
+"CONN_3 and you are done. If you proceed and make a PCB you will see that the "
+"three connectors are connected to each other. Figure 2 shows the result of "
+"what we described. For aesthetic purposes it is also possible to add a "
+"series of 'Place wire to bus entry' using the icon image:images/icons/"
+"add_line2bus.png[Place wire to bus entry] and bus line using the icon image:"
+"images/icons/add_bus2bus.png[Place bus to bus entry], as shown in Figure 3. "
+"Mind, however, that there will be no effect on the PCB."
+msgstr ""
+"Ulangi langkah pelabelan yang sama pada dua konektor yang lain, yaitu CONN_2 "
+"dan CONN_3, dan Anda telah selesai. Jika Anda melanjutkan dan membuat PCB, "
+"Anda akan melihat bahwa ketiga konektor saling terhubung satu sama lain. "
+"Gambar 2 menampilkan hasil dari apa yang kita bahas ini. Agar tampak lebih "
+"menarik, kita juga bisa menambahkan serangkaian 'Place wire to bus entry' "
+"menggunakan ikon image:images/icons/add_line2bus.png[Place wire to bus entry]"
+" dan jalur _bus_ menggunakan ikon image:images/icons/add_bus2bus.png[Place "
+"bus to bus entry], seperti ditunjukkan pada Gambar 3. Namun perlu diingat "
+"bahwa hal ini tidak akan memberi efek apapun pada PCB."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:727
+msgid ""
+"It should be pointed out that the short wire attached to the pins in Figure "
+"2 is not strictly necessary. In fact, the labels could have been applied "
+"directly to the pins."
+msgstr ""
+"Anda juga perlu tahu bahwa _wire_ pendek yang terhubung ke pin-pin pada "
+"Gambar 2 bukanlah suatu keharusan. Pada kenyataannya, kita juga bisa "
+"melabeli pin-pin tersebut secara langsung, tanpa harus menggunakan _wire_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:734
+msgid ""
+"Let's take it one step further and suppose that you have a fourth connector "
+"named CONN_4 and, for whatever reason, its labelling happens to be a little "
+"different (b1, b2, b3, b4). Now we want to connect _Bus a_ with _Bus b_ in a "
+"pin to pin manner. We want to do that without using pin labelling (which is "
+"also possible) but by instead using labelling on the bus line, with one "
+"label per bus."
+msgstr ""
+"Mari kita menuju langkah selanjutnya. Misalkan Anda memiliki konektor "
+"keempat dengan nama CONN_4, dan entah mengapa, pelabelannya sedikit berbeda "
+"dengan konektor lainnya (b1, b2, b3, b4). Sekarang kita ingin menghubungkan "
+"dari pin ke pin antara _Bus a_ dengan _Bus b_. Kita ingin melakukannya tanpa "
+"menggunakan pelabelan pin (walaupun hal itu dimungkinkan untuk dilakukan), "
+"namun kita akan menggunakan pelabelan pada jalur _bus_, dengan satu label "
+"per _bus_. "
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:741
+msgid ""
+"Connect and label CONN_4 using the labelling method explained before. Name "
+"the pins b1, b2, b3 and b4. Connect the pin to a series of 'Wire to bus "
+"entry' using the icon image:images/icons/add_line2bus.png[add_line2bus_png] "
+"and to a bus line using the icon image:images/icons/add_bus."
+"png[add_bus_png]. See Figure 4."
+msgstr ""
+"Hubungkan dan beri label CONN_4 menggunakan metode pelabelan seperti yang "
+"dijelaskan sebelumnya. Beri nama pin b1, b2, b3, dan b4. Hubungkan pin ke "
+"serangkaian 'Wire to bus entry' menggunakan ikon "
+"image:images/icons/add_line2bus.png[add_line2bus_png] dan ke jalur _bus_ "
+"menggunakan ikon image:images/icons/add_bus.png[add_bus_png]. Lihat Gambar 4."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:744
+msgid "Put a label (press [l]) on the bus of CONN_4 and name it 'b[1..4]'."
+msgstr "Berikan label (tekan [l]) pada _bus_ CONN_4 dan namai dengan 'b[1..4]'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:747
+#| msgid "Put a label (press [l]) on the previous a bus and name it 'a[1..4]'."
+msgid "Put a label (press [l]) on the previous bus and name it 'a[1..4]'."
+msgstr ""
+"Berikan label (tekan [l]) pada _bus_ sebelumnya dan namai dengan 'a[1..4]'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:750
+msgid ""
+"What we can now do is connect bus a[1..4] with bus b[1..4] using a bus line "
+"with the button image:images/icons/add_bus.png[add_bus_png]."
+msgstr ""
+"Apa yang bisa kita lakukan sekarang adalah menghubungkan _bus_ a[1..4] "
+"dengan _bus_ b[1..4] menggunakan jalur _bus_ dengan tombol "
+"image:images/icons/add_bus.png[add_bus_png]."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:754
+msgid ""
+"By connecting the two buses together, pin a1 will be automatically connected "
+"to pin b1, a2 will be connected to b2 and so on. Figure 4 shows what the "
+"final result looks like."
+msgstr ""
+"Dengan menghubungkan kedua _bus_ tersebut, pin a1 akan secara otomatis "
+"terhubung ke pin b1, a2 akan terhubung ke b2 dan seterusnya. Gambar 4 "
+"menunjukkan tampilan hasil akhirnya."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:759
+msgid ""
+"The 'Repeat last item' option accessible via [Insert] can be successfully "
+"used to repeat period item insertions. For instance, the short wires "
+"connected to all pins in Figure 2, Figure 3 and Figure 4 have been placed "
+"with this option."
+msgstr ""
+"Opsi 'Repeat last item' yang dapat diakses melalui [Insert] dapat digunakan "
+"untuk mengulangi penambahan item. Sebagai contoh, wire pendek yang terhubung "
+"pada semua pin di Gambar 2, Gambar 3 dan Gambar 4, ditambahkan dengan "
+"menggunakan opsi ini."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:763
+msgid ""
+"The 'Repeat last item' option accessible via [Insert] has also been "
+"extensively used to place the many series of 'Wire to bus entry' using the "
+"icon image:images/icons/add_line2bus.png[add_line2bus_png]."
+msgstr ""
+"Opsi 'Repeat last item' yang dapat diakses melalui [Insert] juga dapat "
+"digunakan untuk meletakkan beberapa rangkaian 'Wire to bus entry' dengan "
+"menggunakan ikon  image:images/icons/add_line2bus.png[add_line2bus_png]."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:764
+#, no-wrap
+msgid "images/gsik_bus_connection.png"
+msgstr "images/gsik_bus_connection.png"
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:767
+#, no-wrap
+msgid "Layout printed circuit boards"
+msgstr "Menggambar PCB"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:771
+msgid ""
+"It is now time to use the netlist file you generated to lay out the PCB.  "
+"This is done with the _Pcbnew_ tool."
+msgstr ""
+"Sekarang tiba waktunya kita gunakan berkas Netlist untuk membuat tata letak "
+"PCB. Alat yang kita gunakan adalah _Pcbnew_."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:773
+#, no-wrap
+msgid "Using Pcbnew"
+msgstr "Menggunakan Pcbnew"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:779
+#| msgid ""
+#| "From the KiCad project manager, click on the 'Pcbnew' icon image:images/"
+#| "icons/pcbnew.png[pcbnew_png]. The 'Pcbnew' window will open. If you get "
+#| "an error message saying that a _*.kicad_pcb_ file does not exist and asks "
+#| "if you want to create it, just click Yes."
+msgid ""
+"From the KiCad project manager, click on the 'Pcb layout editor' icon image:"
+"images/icons/pcbnew.png[pcbnew_png]. The 'Pcbnew' window will open. If you "
+"get an error message saying that a _*.kicad_pcb_ file does not exist and "
+"asks if you want to create it, just click Yes."
+msgstr ""
+"Dari halaman manajer proyek KiCad, klik pada ikon 'Pcb layout editor' "
+"image:images/icons/pcbnew.png[pcbnew_png]. Jendela 'Pcbnew' akan terbuka. "
+"Jika Anda mendapatkan pesan kesalahan bahwa berkas _*.kicad_pcb_ tidak "
+"ditemukan dan meminta Anda untuk membuatnya, klik 'Yes'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:784
+msgid ""
+"Begin by entering some schematic information. Click on the 'Page settings' "
+"icon image:images/icons/sheetset.png[sheetset_png] on the top toolbar. Set "
+"the appropriate 'paper size' ('A4','8.5x11' etc.)  and 'title' as "
+"'Tutorial1'."
+msgstr ""
+"Mulailah dengan memasukkan beberapa informasi skematik. Klik pada ikon 'Page "
+"settings' image:images/icons/sheetset.png[sheetset_png] pada bilah alat "
+"bagian atas. Atur ukuran kertas pada pilihan 'Paper size' ('A4','8.5x11' "
+"dsb.) dan pada kotak 'Title', masukkan judul 'Tutorial1'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:793
+#| msgid ""
+#| "It is a good idea to start by setting the *clearance* and the *minimum "
+#| "track width* to those required by your PCB manufacturer. In general you "
+#| "can set the clearance to '0.25' and the minimum track width to '0.25'. "
+#| "Click on the *Design Rules* -> *Design Rules* menu. If it does not show "
+#| "already, click on the 'Net Classes Editor' tab. Change the 'Clearance' "
+#| "field at the top of the window to '0.25' and the 'Track Width' field to "
+#| "'0.25' as shown below. Measurements here are in mm."
+msgid ""
+"It is a good idea to start by setting the *clearance* and the *minimum track "
+"width* to those required by your PCB manufacturer. In general you can set "
+"the clearance to '0.25' and the minimum track width to '0.25'. Click on the "
+"*Setup* -> *Design Rules* menu. If it does not show already, click on the "
+"'Net Classes Editor' tab. Change the 'Clearance' field at the top of the "
+"window to '0.25' and the 'Track Width' field to '0.25' as shown below. "
+"Measurements here are in mm."
+msgstr ""
+"Sebaiknya kita mulai dengan mengatur *clearance* (jarak minimum antar item) "
+"dan *minimum track width* (lebar jalur minimum) sesuai dengan yang "
+"dibutuhkan oleh manufaktur PCB yang akan Anda gunakan. Secara umum Anda "
+"dapat mengatur jarak minimum '0.25' dan lebar jalur minimum '0.25'. Klik "
+"menu *Setup* -> *Design Rules*. Klik tab 'Net Classes Editor' jika tab "
+"tersebut belum tampil. Ubah nilai 'Clearance' pada bagian atas jendela "
+"menjadi '0.25' dan nilai 'Track Width' menjadi '0.25' seperti ditunjukkan "
+"pada gambar di bawah ini. Satuan untuk ukuran di sini adalah mm."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:794
+#, no-wrap
+msgid "images/design_rules.png"
+msgstr "images/design_rules.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:799
+#| msgid ""
+#| "Click on the 'Global Design Rules' tab and set 'Min track width' to "
+#| "'0.25'. Click the OK button to commit your changes and close the Design "
+#| "Rules Editor window."
+msgid ""
+"Click on the 'Global Design Rules' tab and set 'Minimum track width' to "
+"'0.25'. Click the OK button to commit your changes and close the Design "
+"Rules Editor window."
+msgstr ""
+"Klik pada tab 'Global Design Rules' dan atur 'Minimum track width' menjadi "
+"'0.25'. Klik tombol OK untuk menyimpan perubahan Anda, dan tutup jendela "
+"'Design Rules Editor'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:805
+#| msgid ""
+#| "Now we will import the netlist file. Click on the 'Read Netlist' icon "
+#| "image:images/icons/netlist.png[netlist_png] on the top toolbar. Click on "
+#| "the 'Browse Netlist Files' button, select 'tutorial1.net' in the File "
+#| "selection dialogue, and click on 'Read Current Netlist'. Then click the "
+#| "'Close' button."
+msgid ""
+"Now we will import the netlist file. Click on the 'Read netlist' icon image:"
+"images/icons/netlist.png[netlist_png] on the top toolbar. The netlist file "
+"'tutorial1.net' should be selected in the 'Netlist file' field if it was "
+"created from Eeschema.  Click on 'Read Current Netlist'. Then click the "
+"'Close' button."
+msgstr ""
+"Sekarang kita akan mengimpor berkas Netlist. Klik pada ikon 'Read netlist' "
+"image:images/icons/netlist.png[netlist_png] pada bilah alat bagian atas. "
+"Berkas Netlist 'tutorial1.net' harus dipilih pada kotak 'Netlist file' jika "
+"berkas tersebut dibuat dari Eeschema. Klik pada 'Read Current Netlist', lalu "
+"klik tombol 'Close'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:808
+#| msgid ""
+#| "All components should now be visible in the top left hand corner just "
+#| "above the page. Scroll up if you cannot see them."
+msgid ""
+"All components should now be visible. They are selected and follow the mouse "
+"cursor."
+msgstr ""
+"Sekarang semua komponen akan tampak. Komponen-komponen tersebut akan "
+"mengikuti kursor."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:812
+#| msgid ""
+#| "Select all components with the mouse and move them to the middle of the "
+#| "board. If necessary you can zoom in and out while you move the components."
+msgid ""
+"Move the components to the middle of the board. If necessary you can zoom in "
+"and out while you move the components. Click the left mouse button."
+msgstr ""
+"Pindahkan semua komponen ke tengah lembar kerja. Jika diperlukan, Anda bisa "
+"melakukan perbesaran atau perkecilan tampilan sembari memindahkan komponen. "
+"Klik tombol kiri tetikus."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:818
+msgid ""
+"All components are connected via a thin group of wires called __ratsnest__. "
+"Make sure that the 'Show/hide board ratsnest' button image:images/icons/"
+"general_ratsnest.png[general_ratsnest_png] is pressed. In this way you can "
+"see the ratsnest linking all components."
+msgstr ""
+"Semua komponen terhubung melalui sekelompok _wire_ tipis yang disebut "
+"__ratsnest__. Pastikan bahwa tombol 'Show/hide board ratsnest' "
+"image:images/icons/general_ratsnest.png[general_ratsnest_png] ditekan. "
+"Dengan cara ini, Anda bisa melihat _ratsnest_ menghubungkan semua komponen."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:825
+#| msgid ""
+#| "You can move each component by hovering over it and pressing [g].  Click "
+#| "where you want to place them. Move all components around until you "
+#| "minimise the number of wire crossovers."
+msgid ""
+"You can move each component by hovering over it and pressing [m].  Click "
+"where you want to place them. Alternatively you can select a component by "
+"clicking on it and then drag it.  Press [r] to rotate a component.  Move all "
+"components around until you minimise the number of wire crossovers."
+msgstr ""
+"Anda bisa memindahkan setiap komponen dengan meletakkan kursor di atas "
+"komponen tersebut dan tekan [g]. Klik di mana Anda ingin meletakkannya. Anda "
+"juga bisa memilih sebuah komponen dengan klik dan kemudian menggesernya. "
+"Tekan [r] untuk memutar komponen. Pindahkan semua komponen sehingga hanya "
+"ada sedikit _wire_ yang bersilangan. "
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:826
+#, no-wrap
+msgid "images/gsik_tutorial1_080.png"
+msgstr "images/gsik_tutorial1_080.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:833
+#| msgid ""
+#| "If the ratsnest disappears or the screen gets messy, right click and "
+#| "click 'Redraw view'. Note how one pin of the 100 ohm resistor is "
+#| "connected to pin 6 of the PIC component. This is the result of the "
+#| "labelling method used to connect pins. Labels are often preferred to "
+#| "actual wires because they make the schematic much less messy."
+msgid ""
+"Note how one pin of the 100 ohm resistor is connected to pin 6 of the PIC "
+"component. This is the result of the labelling method used to connect pins. "
+"Labels are often preferred to actual wires because they make the schematic "
+"much less messy."
+msgstr ""
+"Perhatikan bahwa pin pada resistor 100 ohm terhubung dengan pin 6 pada "
+"komponen PIC. Ini adalah hasil dari metode pelabelan yang digunakan untuk "
+"menghubungkan pin. Terkadang penggunaan label lebih disukai daripada _wire_ "
+"karena pelabelan akan membuat skematik menjadi lebih rapi."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:841
+#| msgid ""
+#| "Now we will define the edge of the PCB. Select the 'Edge.Cuts' layer from "
+#| "the drop-down menu in the top toolbar. Click on the 'Add graphic line or "
+#| "polygon' icon image:images/icons/add_dashed_line.png[add_dashed_line_png] "
+#| "on the right toolbar. Trace around the edge of the board, clicking at "
+#| "each corner, and remember to leave a small gap between the edge of the "
+#| "green and the edge of the PCB."
+msgid ""
+"Now we will define the edge of the PCB. Select the 'Edge.Cuts' layer from "
+"the drop-down menu in the top toolbar. Click on the 'Add graphic lines' icon "
+"image:images/icons/add_dashed_line.png[add_dashed_line_png] on the right "
+"toolbar. Trace around the edge of the board, clicking at each corner, and "
+"remember to leave a small gap between the edge of the green and the edge of "
+"the PCB."
+msgstr ""
+"Sekarang kita akan mendefinisikan sisi tepi dari PCB. Pilih lapisan "
+"'Edge.Cuts' dari menu _drop-down_ pada bilah alat bagian atas. Klik pada "
+"ikon 'Add graphic lines' "
+"image:images/icons/add_dashed_line.png[add_dashed_line_png] pada bilah alat "
+"sebelah kanan. Tandai dengan mengitari sisi-sisi tepi papan PCB, klik pada "
+"setiap sudutnya, dan ingat untuk menambahkan sedikit celah antara sisi tepi "
+"hijau dengan sisi tepi PCB."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:842
+#, no-wrap
+msgid "images/select_edge_cuts.png"
+msgstr "images/select_edge_cuts.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:847
+msgid ""
+"Next, connect up all the wires except GND. In fact, we will connect all GND "
+"connections in one go using a ground plane placed on the bottom copper "
+"(called __B.Cu__) of the board."
+msgstr ""
+"Selanjutnya, hubungkan semua _wire_ kecuali GND, karena kita akan "
+"menghubungkan semua koneksi GND secara bersamaan dengan menggunaan _ground "
+"plane_ pada pada lapisan tembaga bagian bawah (disebut __B.Cu__) pada papan "
+"PCB."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:851
+msgid ""
+"Now we must choose which copper layer we want to work on. Select 'F.Cu "
+"(PgUp)' in the drop-down menu on the top toolbar. This is the front top "
+"copper layer."
+msgstr ""
+"Sekarang kita harus memilih lapisan tembaga yang akan kita kerjakan. Pilih "
+"'F.Cu (PgUp)' pada menu _drop-down_ pada bilah alat bagian atas. Lapisan ini "
+"adalah lapisan tembaga bagian atas."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:852
+#, no-wrap
+msgid "images/select_top_copper.png"
+msgstr "images/select_top_copper.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:859
+#| msgid ""
+#| "If you decide, for instance, to do a 4 layer PCB instead, go to *Design "
+#| "Rules* -> *Layers Setup* and change 'Copper Layers' to 4. In the 'Layers' "
+#| "table you can name layers and decide what they can be used for.  Notice "
+#| "that there are very useful presets that can be selected via the 'Preset "
+#| "Layer Groupings' menu."
+msgid ""
+"If you decide, for instance, to do a 4 layer PCB instead, go to *Setup* -> "
+"*Layers Setup* and change 'Copper Layers' to 4. In the 'Layers' table you "
+"can name layers and decide what they can be used for.  Notice that there are "
+"very useful presets that can be selected via the 'Preset Layer Groupings' "
+"menu."
+msgstr ""
+"Jika Anda memutuskan, misalnya, untuk menggunakan PCB 4 lapis, buka *Design "
+"Rules* -> *Layers Setup* dan ubah nilai 'Copper Layers' menjadi 4. Pada "
+"tabel 'Layers' Anda bisa menamai setiap lapisan dan menentukan apa kegunaan "
+"dari lapisan tersebut. Ingat bahwa sudah disediakan beberapa _preset_ yang "
+"berguna, yang dapat dipilih melalui menu 'Preset Layer Groupings'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:867
+#| msgid ""
+#| "Click on the 'Add Tracks and vias' icon image:images/icons/add_tracks."
+#| "png[add_tracks_png] on the right toolbar. Click on pin 1 of 'J1' and run "
+#| "a track to pad 'R2'. Double-click to set the point where the track will "
+#| "end. The width of this track will be the default 0.250 mm. You can change "
+#| "the track width from the drop-down menu in the top toolbar. Mind that by "
+#| "default you have only one track width available."
+msgid ""
+"Click on the 'Route tracks' icon image:images/icons/add_tracks."
+"png[add_tracks_png] on the right toolbar. Click on pin 1 of 'J1' and run a "
+"track to pad 'R2'. Double-click to set the point where the track will end. "
+"The width of this track will be the default 0.250 mm. You can change the "
+"track width from the drop-down menu in the top toolbar. Mind that by default "
+"you have only one track width available."
+msgstr ""
+"Klik pada ikon 'Route tracks' "
+"image:images/icons/add_tracks.png[add_tracks_png] pada bilah alat sebelah "
+"kanan. Klik pada pin 1 komponen 'J1' dan tarik sebuah jalur ke _pad_ 'R2'. "
+"Klik-ganda untuk mengakhiri jalur tersebut. Lebar jalur ini secara _default_ "
+"adalah 0.250 mm. Anda bisa mengubah lebar jalur melalui menu _drop-down_ "
+"pada bilah alat bagian atas. Secara _default_, Anda hanya memiliki satu "
+"pilihan ukuran lebar jalur yang disediakan."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:868
+#, no-wrap
+msgid "images/pcbnew_select_track_width.png"
+msgstr "images/pcbnew_select_track_width.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:875
+#| msgid ""
+#| "If you would like to add more track widths go to: *Design Rules* -> "
+#| "*Design Rules* -> *Global Design Rules* tab and at the bottom right of "
+#| "this window add any other width you would like to have available. You can "
+#| "then choose the widths of the track from the drop-down menu while you lay "
+#| "out your board. See the example below (inches)."
+msgid ""
+"If you would like to add more track widths go to: *Setup* -> *Design Rules* -"
+"> *Global Design Rules* tab and at the bottom right of this window add any "
+"other width you would like to have available. You can then choose the widths "
+"of the track from the drop-down menu while you lay out your board. See the "
+"example below (inches)."
+msgstr ""
+"Jika Anda ingin menambahkan pilihan ukuran lebar jalur, buka: *Setup* -> *"
+"Design Rules* -> tab *Global Design Rules* dan pada bagian bawah kanan "
+"jendela ini, tambahkan pilihan ukuran lebar jalur yang Anda inginkan. Anda "
+"kemudian bisa memilih ukuran lebar jalur ini dari menu _drop-down_ saat "
+"membuat layout PCB. Lihat contoh di bawah ini (dalam satuan inci)."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:876
+#, no-wrap
+msgid "images/custom_tracks_width.png"
+msgstr "images/custom_tracks_width.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:884
+#| msgid ""
+#| "Alternatively, you can add a Net Class in which you specify a set of "
+#| "options. Go to *Design Rules* -> *Design Rules* -> *Net Classes Editor* "
+#| "and add a new class called 'power'. Change the track width from 8 mil "
+#| "(indicated as 0.0080) to 24 mil (indicated as 0.0240). Next, add "
+#| "everything but ground to the 'power' class (select 'default' at left and "
+#| "'power' at right and use the arrows)."
+msgid ""
+"Alternatively, you can add a Net Class in which you specify a set of "
+"options. Go to *Setup* -> *Design Rules* -> *Net Classes Editor* and add a "
+"new class called 'power'. Change the track width from 8 mil (indicated as "
+"0.0080) to 24 mil (indicated as 0.0240). Next, add everything but ground to "
+"the 'power' class (select 'default' at left and 'power' at right and use the "
+"arrows)."
+msgstr ""
+"Sebagai alternatif, Anda bisa menambahkan 'Net Class' dimana Anda bisa "
+"menentukan sejumlah opsi. Buka *Setup* -> *Design Rules* -> *Net Classes "
+"Editor* dan tambahkan sebuah _class_ baru dengan nama 'power'. Ubah lebar "
+"jalur dari 8 mil (0.0080) ke 24 mil (0.0240). Lalu, tambahkan semuanya "
+"kecuali 'ground' ke _class_ 'power' (pilih 'default' di sebelah kiri dan "
+"'power' di sebelah kanan, dan klik tombol panah)."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:888
+#| msgid ""
+#| "If you want to change the grid size, *Right click* -> **Grid Select**. Be "
+#| "sure to select the appropriate grid size before or after laying down the "
+#| "components and connecting them together with tracks."
+msgid ""
+"If you want to change the grid size, *Right click* -> **Grid**.  Be sure to "
+"select the appropriate grid size before or after laying down the components "
+"and connecting them together with tracks."
+msgstr ""
+"Jika Anda ingin mengubah ukuran _grid_, lakukan *Klik-kanan* -> **Grid**. "
+"Pastikan memilih ukuran _grid_ yang sesuai sebelum atau sesudah mengatur "
+"tata letak komponen dan menghubungkannya satu sama lain dengan menggunakan "
+"jalur."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:891
+msgid ""
+"Repeat this process until all wires, except pin 3 of J1, are connected. Your "
+"board should look like the example below."
+msgstr ""
+"Ulangi proses ini sampai semua _wire_ tersambung, kecuali pin 3 komponen J1. "
+"Papan PCB Anda akan terlihat seperti contoh di bawah ini."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:892
+#, no-wrap
+msgid "images/gsik_tutorial1_090.png"
+msgstr "images/gsik_tutorial1_090.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:900
+#| msgid ""
+#| "Let's now run a track on the other copper side of the PCB. Select 'B.Cu' "
+#| "in the drop-down menu on the top toolbar. Click on the 'Add tracks and "
+#| "vias' icon image:images/icons/add_tracks.png[add_tracks_png]. Draw a "
+#| "track between pin 3 of J1 and pin 8 of U1. This is actually not necessary "
+#| "since we could do this with the ground plane. Notice how the colour of "
+#| "the track has changed."
+msgid ""
+"Let's now run a track on the other copper side of the PCB. Select 'B.Cu' in "
+"the drop-down menu on the top toolbar. Click on the 'Route tracks' icon "
+"image:images/icons/add_tracks.png[add_tracks_png]. Draw a track between pin "
+"3 of J1 and pin 8 of U1. This is actually not necessary since we could do "
+"this with the ground plane. Notice how the colour of the track has changed."
+msgstr ""
+"Sekarang mari kita buat jalur pada lapisan tembaga sisi yang lain dari PCB. "
+"Pilih 'B.Cu' pada menu _drop-down_ di bilah alat bagian atas. Klik pada ikon "
+"'Route tracks' image:images/icons/add_tracks.png[add_tracks_png]. Gambarlah "
+"sebuah jalur antara pin 3 komponen J1 dan pin 8 komponen U1. Hal ini "
+"sebenarnya tidak diperlukan karena kita bisa melakukannya dengan 'ground "
+"plane'. Perhatikan bagaimana warna jalur yang akan kita gambar telah berubah."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:906
+#, no-wrap
+msgid ""
+"**Go from pin A to pin B by changing layer**. It is possible to\n"
+"change the copper plane while you are running a track by placing a\n"
+"via.  While you are running a track on the upper copper plane,\n"
+"right click and select 'Place Via' or simply press [v]. This will\n"
+"take you to the bottom layer where you can complete your track.\n"
+msgstr ""
+"**Membuat jalur dari pin A ke pin B dengan berpindah lapisan**. Dimungkinkan "
+"untuk berpindah ke lapisan tembaga yang lain saat Anda membuat jalur, "
+"melalui perantaraan _via_. Saat membuat jalur pada lapisan tembaga bagian "
+"atas, klik kanan dan pilih 'Place Via' atau tekan [v]. Anda akan berpindah "
+"ke lapisan tembaga bagian bawah di mana Anda bisa menyelesaikan jalur yang "
+"sedang dibuat.\n"
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:907
+#, no-wrap
+msgid "images/place_a_via.png"
+msgstr "images/place_a_via.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:914
+#| msgid ""
+#| "When you want to inspect a particular connection you can click on the "
+#| "'Net highlight' icon image:images/icons/net_highlight."
+#| "png[net_highlight_png] on the right toolbar.  Click on pin 3 of J1. The "
+#| "track itself and all pads connected to it should become highlighted."
+msgid ""
+"When you want to inspect a particular connection you can click on the "
+"'Highlight net' icon image:images/icons/net_highlight.png[net_highlight_png] "
+"on the right toolbar.  Click on pin 3 of J1. The track itself and all pads "
+"connected to it should become highlighted."
+msgstr ""
+"Apabila Anda ingin memeriksa suatu jalur atau sambungan, klik pada ikon "
+"'Highlight net' icon image:images/icons/net_highlight.png[net_highlight_png] "
+"pada bilah alat sebelah kanan. Klik pada pin 3 komponen J1. Jalur dan semua "
+"_pad_ yang terhubung ke pin tersebut akan disorot."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:922
+#| msgid ""
+#| "Now we will make a ground plane that will be connected to all GND pins. "
+#| "Click on the 'Add Zones' icon image:images/icons/add_zone."
+#| "png[add_zone_png] on the right toolbar. We are going to trace a rectangle "
+#| "around the board, so click where you want one of the corners to be. In "
+#| "the dialogue that appears, set 'Pad in Zone' to 'Thermal relief' and "
+#| "'Zone edges orient' to 'H,V' and click OK."
+msgid ""
+"Now we will make a ground plane that will be connected to all GND pins. "
+"Click on the 'Add filled zones' icon image:images/icons/add_zone."
+"png[add_zone_png] on the right toolbar. We are going to trace a rectangle "
+"around the board, so click where you want one of the corners to be. In the "
+"dialogue that appears, set 'Default pad connection' to 'Thermal relief' and "
+"'Outline slope' to 'H,V and 45 deg only' and click OK."
+msgstr ""
+"Sekarang kita akan membuat sebuah 'ground plane; yang akan terhubung ke "
+"semua pin GND. Klik pada ikon 'Add filled zones' "
+"image:images/icons/add_zone.png[add_zone_png] pada bilah alat sebelah kanan. "
+"Kita akan membuat sebuah persegi yang melingkupi keseluruhan papan PCB kita, "
+"maka klik di lokasi salah satu sudut yang Anda inginkan. Pada kotak dialog "
+"yang muncul, atur 'Default pad connection' ke 'Thermal relief' dan 'Outline "
+"slope' ke 'H,V and 45 deg only' dan klik OK."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:928
+#| msgid ""
+#| "Trace around the outline of the board by clicking each corner in "
+#| "rotation. Double-click to finish your rectangle. Right click inside the "
+#| "area you have just traced. Click on 'Fill or Refill All Zones'. The board "
+#| "should fill in with green and look something like this:"
+msgid ""
+"Trace around the outline of the board by clicking each corner in rotation.  "
+"Finish your rectangle by clicking the first corner second time. Right click "
+"inside the area you have just traced.  Click on 'Zones'->'Fill or Refill All "
+"Zones'. The board should fill in with green and look something like this:"
+msgstr ""
+"Tandai dengan mengitari garis luar papan PCB dengan klik pada setiap sudut "
+"secara melingkar. Selesaian persegi yang dibuat dengan klik lagi pada sudut "
+"yang pertama kali dibuat. Klik-kanan di dalam area persegi yang telah Anda "
+"buat, dan klik 'Zones' -> 'Fill or Refill All Zones'. Papan PCB kita akan "
+"terisi dengan warna hijau seperti gambar berikut:"
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:929
+#, no-wrap
+msgid "images/gsik_tutorial1_100.png"
+msgstr "images/gsik_tutorial1_100.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:936
+#| msgid ""
+#| "Run the design rules checker by clicking on the 'Perform Design Rules "
+#| "Check' icon image:images/icons/drc.png[drc_png] on the top toolbar.  "
+#| "Click on 'Start DRC'. There should be no errors. Click on 'List "
+#| "Unconnected'. There should be no unconnected track. Click OK to close the "
+#| "DRC Control dialogue."
+msgid ""
+"Run the design rules checker by clicking on the 'Perform design rules check' "
+"icon image:images/icons/drc.png[drc_png] on the top toolbar.  Click on "
+"'Start DRC'. There should be no errors. Click on 'List Unconnected'. There "
+"should be no unconnected items. Click OK to close the DRC Control dialogue."
+msgstr ""
+"Jalankan 'Design Rule Check' dengan klik ikon 'Perform design rules check' "
+"image:images/icons/drc.png[drc_png] pada bilah alat bagian atas. Klik 'Start "
+"DRC'. Pastikan tidak ada pesan kesalahan yang muncul. Klik pada 'List "
+"Unconnected'. Pastikan tidak ada jalur yang belum terhubung. Klik OK untuk "
+"menutup kotak dialog DRC."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:939
+msgid ""
+"Save your file by clicking on *File* -> **Save**. To admire your board in "
+"3D, click on *View* -> **3D Viewer**."
+msgstr ""
+"Simpan berkas Anda dengan klik  *File* -> **Save**. Untuk melihat hasil "
+"akhir PCB Anda dalam bentuk 3 dimensi, klik *View* -> **3D Viewer**."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:940
+#, no-wrap
+msgid "images/pcbnew_3d_viewer.png"
+msgstr "images/pcbnew_3d_viewer.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:943
+msgid "You can drag your mouse around to rotate the PCB."
+msgstr "Seret kursor untuk memutar PCB."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:946
+msgid ""
+"Your board is complete. To send it off to a manufacturer you will need to "
+"generate all Gerber files."
+msgstr ""
+"Desain papan PCB Anda telah selesai. Untuk mengirimkannya ke manufaktur, "
+"Anda perlu membuat berkas Gerber."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:948
+#, no-wrap
+msgid "Generate Gerber files"
+msgstr "Membuat Berkas Gerber"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:953
+msgid ""
+"Once your PCB is complete, you can generate Gerber files for each layer and "
+"send them to your favourite PCB manufacturer, who will make the board for "
+"you."
+msgstr ""
+"Setelah PCB Anda selesai, Anda bisa membuat berkas Gerber untuk tiap lapisan "
+"dan mengirimkannya ke manufaktur PCB yang akan memproduksi papan PCB Anda."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:955
+msgid "From KiCad, open the _Pcbnew_ board editor."
+msgstr "Dari KiCad, buka _Pcbnew_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:959
+#| msgid ""
+#| "Click on *File* -> **Plot**. Select 'Gerber' as the 'Plot Format' and "
+#| "select the folder in which to put all Gerber files.  Proceed by clicking "
+#| "on the 'Plot' button."
+msgid ""
+"Click on *File* -> **Plot**. Select 'Gerber' as the 'Plot format' and select "
+"the folder in which to put all Gerber files.  Proceed by clicking on the "
+"'Plot' button."
+msgstr ""
+"Klik pada *File* -> **Plot**. Pilih 'Gerber' pada 'Plot format' dan pilih "
+"folder di mana Anda akan menyimpan seluruh berkas Gerber tersebut. Lanjutkan "
+"dengan klik pada tombol 'Plot'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:962
+msgid ""
+"To generate the drill file, from _Pcbnew_ go again to the *File* -> *Plot* "
+"option. Default settings should be fine."
+msgstr ""
+"Untuk membuat berkas _drill_, dari _Pcbnew_ bukalah *File* -> *Plot*. "
+"Gunakan pengaturan _default_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:965
+msgid ""
+"These are the layers you need to select for making a typical 2-layer PCB:"
+msgstr ""
+"Berikut adalah lapisan yang harus Anda pilih untuk membuat PCB 2-lapis "
+"secara umum:"
+
+#. type: delimited block |
+#: getting_started_in_kicad.adoc:976
+#, no-wrap
+#| msgid ""
+#| "|Layer |KiCad Layer Name |Old KiCad Layer Name |Default Gerber Extension\n"
+#| "    |\"Use Protel filename extensions\" is enabled\n"
+#| "|Bottom Layer |B.Cu |Copper |.GBR |.GBL\n"
+#| "|Top Layer |F.Cu |Component |.GBR |.GTL\n"
+#| "|Top Overlay |F.SilkS |SilkS_Cmp |.GBR |.GTO\n"
+#| "|Bottom Solder Resist |B.Mask |Mask_Cop |.GBR |.GBS\n"
+#| "|Top Solder Resist |F.Mask |Mask_Cmp |.GBR |.GTS\n"
+#| "|Edges |Edge.Cuts |Edges_Pcb |.GBR |.GM1\n"
+msgid ""
+"|Layer |KiCad Layer Name |Default Gerber Extension\n"
+"    |\"Use Protel filename extensions\" is enabled\n"
+"|Bottom Layer |B.Cu |.GBR |.GBL\n"
+"|Top Layer |F.Cu |.GBR |.GTL\n"
+"|Top Overlay |F.SilkS |.GBR |.GTO\n"
+"|Bottom Solder Resist |B.Mask |.GBR |.GBS\n"
+"|Top Solder Resist |F.Mask |.GBR |.GTS\n"
+"|Edges |Edge.Cuts |.GBR |.GM1\n"
+msgstr ""
+"|Layer |Nama Layer KiCad |Eksetensi _Default_ Gerber\n"
+"    |_\"Use Protel filename extensions\"_ aktif\n"
+"|Lapisan Bawah |B.Cu |.GBR |.GBL\n"
+"|Lapisan Atas |F.Cu |.GBR |.GTL\n"
+"|_Overlay_ Atas |F.SilkS |.GBR |.GTO\n"
+"|Solder Resist Bawah |B.Mask |.GBR |.GBS\n"
+"|Solder Resist Atas |F.Mask |.GBR |.GTS\n"
+"|Sudut-sudut PCB |Edge.Cuts |.GBR |.GM1\n"
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:979
+#, no-wrap
+msgid "Using GerbView"
+msgstr "Menggunakan GerbView"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:988
+#| msgid ""
+#| "To view all your Gerber files go to the KiCad project manager and click "
+#| "on the 'GerbView' icon.  On the drop-down menu select 'Layer 1'. Click on "
+#| "*File* -> *Load Gerber file* or click on the icon image:images/icons/"
+#| "gerber_file.png[gerber_file_png]. Load all generated Gerber files one at "
+#| "a time. Note how they all get displayed one on top of the other."
+msgid ""
+"To view all your Gerber files go to the KiCad project manager and click on "
+"the 'GerbView' icon.  On the drop-down menu or in the Layers manager select "
+"'Graphic layer 1'.  Click on *File* -> *Open Gerber file(s)* or click on the "
+"icon image:images/icons/gerber_file.png[gerber_file_png]. Select and open "
+"all generated Gerber files. Note how they all get displayed one on top of "
+"the other."
+msgstr ""
+"Untuk melihat semua berkas Gerber Anda, buka manajer proyek KiCad dan klik "
+"pada ikon 'GerbView'. Pada menu 'drop-down' atau pada 'Layers Manager', "
+"pilih 'Graphic layer 1'. Klik *File* -> *Load Gerber file(s)* atau klik pada "
+"ikon image:images/icons/gerber_file.png[gerber_file_png]. Buka semua berkas "
+"Gerber Anda. Perhatikan bagaimana masing-masing berkas ditampilkan di atas "
+"berkas lainnya."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:990
+msgid "Open the drill files with *File* -> *Open Excellon Drill File(s)*."
+msgstr ""
+"Buka berkas _drill_ melalui menu *File* -> *Open Excellon Drill File(s)*."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:993
+#| msgid ""
+#| "Use the menu on the right to select/deselect which layer to show.  "
+#| "Carefully inspect each layer before sending them for production."
+msgid ""
+"Use the Layers manager on the right to select/deselect which layer to show.  "
+"Carefully inspect each layer before sending them for production."
+msgstr ""
+"Gunakan 'Layers Manager' di sebelah kanan untuk memilih lapisan yang ingin "
+"ditampilkan. Periksa dengan teliti setiap lapisan sebelum mengirimkannya ke "
+"manufaktur untuk diproduksi."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:996
+msgid ""
+"The view works similarly to Pcbnew. Right click inside the view and click "
+"'Grid' to change the grid."
+msgstr ""
+"Tampilannya bekerja mirip seperti Pcbnew. Klik-kanan pada tampilan, dan klik "
+"'Grid' untuk mengubah _grid_."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:998
+#, no-wrap
+msgid "Automatically route with FreeRouter"
+msgstr "Melakukan _Routing_ Otomatis dengan FreeRouter"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1005
+#| msgid ""
+#| "Routing a board by hand is quick and fun, however, for a board with lots "
+#| "of components you might want to use an autorouter. Remember that you "
+#| "should first route critical traces by hand and then set the autorouter to "
+#| "do the boring bits. Its work will only account for the unrouted traces. "
+#| "The autorouter we will use here is FreeRouter from __freerouting.net__."
+msgid ""
+"Routing a board by hand is quick and fun, however, for a board with lots of "
+"components you might want to use an autorouter. Remember that you should "
+"first route critical traces by hand and then set the autorouter to do the "
+"boring bits. Its work will only account for the unrouted traces. The "
+"autorouter we will use here is FreeRouting."
+msgstr ""
+"Melakukan _routing_ sebuah PCB secara manual bisa Anda lakukan dengan cepat "
+"dan menyenangkan, namun untuk PCB yang memiliki banyak komponen, Anda "
+"mungkin ingin menggunakan 'autorouter'. Ingat bahwa Anda harus terlebih "
+"dahulu melakukan 'routing' jalur-jalur yang penting secara manual, baru "
+"kemudian melanjutkan sisanya dengan 'autorouter'. 'Autorouter' hanya akan "
+"mengerjakan jalur-jalur yang belum di-_routing_. 'Autorouter' yang akan kita "
+"gunakan di sini adalah FreeRouting."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1010
+msgid ""
+"FreeRouting is an open source java application.  Currently FreeRouting "
+"exists in several more or less identical copies which you can find by doing "
+"an internet search for \"freerouting\".  It may be found in source only form "
+"or as a precompiled java package."
+msgstr ""
+"FreeRouting adalah aplikasi java sumber-terbuka. Saat ini, FreeRouter "
+"memiliki beberapa salinan yang kurang lebih identik yang dapat Anda temukan "
+"di Internet dengan melakukan pencarian \"freerouting\". FreeRouting bisa "
+"ditemukan dalam bentuk kode sumber saja, atau dalam bentuk paket java."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1015
+#| msgid ""
+#| "From _Pcbnew_ click on *File* -> *Export* -> *Specctra DSN* or click on "
+#| "*Tools* -> *FreeRoute* -> **Export a Specctra Design (*.dsn) file** and "
+#| "save the file locally.  Launch FreeRouter and click on the 'Open Your Own "
+#| "Design' button, browse for the _dsn_ file and load it."
+msgid ""
+"From _Pcbnew_ click on *File* -> *Export* -> *Specctra DSN* and save the "
+"file locally.  Launch FreeRouter and click on the 'Open Your Own Design' "
+"button, browse for the _dsn_ file and load it."
+msgstr ""
+"Dari _Pcbnew_, klik *File* -> *Export* -> *Specctra DSN* dan simpan berkas "
+"secara lokal. Jalankan FreeRouter dan klik pada tombol 'Open Your Own "
+"Design', buka berkas _dsn_ Anda."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1021
+msgid ""
+"FreeRouter has some features that KiCad does not currently have, both for "
+"manual routing and for automatic routing. FreeRouter operates in two main "
+"steps: first, routing the board and then optimising it. Full optimisation "
+"can take a long time, however you can stop it at any time need be."
+msgstr ""
+"FreeRouter memiliki beberapa fitur yang tidak dimiliki oleh KiCad, baik "
+"untuk _routing_ secara manual maupun otomatis. FreeRouter bekerja dengan dua "
+"langkah utama: pertama, melakukan _routing_ PCB, dan kemudian melakukan "
+"optimasi. Optimasi penuh bisa membutuhkan waktu yang lama, namun Anda bisa "
+"menghentikan prosesnya jika diperlukan."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1029
+msgid ""
+"You can start the automatic routing by clicking on the 'Autorouter' button "
+"on the top bar. The bottom bar gives you information about the on-going "
+"routing process. If the 'Pass' count gets above 30, your board probably can "
+"not be autorouted with this router. Spread your components out more or "
+"rotate them better and try again. The goal in rotation and position of parts "
+"is to lower the number of crossed airlines in the ratsnest."
+msgstr ""
+"Anda bisa memulai proses 'autorouting' dengan klik pada tombol 'Autorouter' "
+"pada bilah alat bagian atas. Bilah alat bagian bawah menampilkan informasi "
+"mengenai proses _routing_ yang sedang berjalan. Jika jumlah 'Pass' sudah di "
+"atas 30, papan PCB Anda mungkin tidak bisa di-_autorouting_ dengan 'router' "
+"ini. Sebarlah komponen Anda dan atur jaraknya, atau putarlah beberapa "
+"komponen dan cobalah kembali melakukan 'autorouting'. Tujuan dari memutar "
+"dan memindahkan komponen adalah untuk mengurangi jumlah jalur yang saling "
+"bersilang pada _ratsnest_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1034
+msgid ""
+"Making a left-click on the mouse can stop the automatic routing and "
+"automatically start the optimisation process. Another left-click will stop "
+"the optimisation process. Unless you really need to stop, it is better to "
+"let FreeRouter finish its job."
+msgstr ""
+"Untu menghentikan 'autorouting', lakukan klik-kiri, dan secara otomatis "
+"proses optimasi akan dimulai. Klik-kiri berikutnya akan menghentikan proses "
+"optimasi. Anda sebaiknya menunggu agar FreeRouter menyelesaikan tugasnya, "
+"kecuali Anda benar-benar perlu untuk menghentikan prosesnya."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1038
+msgid ""
+"Click on the *File* -> *Export Specctra Session File* menu and save the "
+"board file with the _.ses_ extension. You do not really need to save the "
+"FreeRouter rules file."
+msgstr ""
+"Klik menu  *File* -> *Export Specctra Session File* dan simpan berkas PCB "
+"dengan ekstensi _.ses_. Anda tidak perlu menyimpan berkas 'rule' FreeRouter."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1042
+#| msgid ""
+#| "Back to __Pcbnew__. You can import your freshly routed board by clicking "
+#| "on the link *Tools* -> *FreeRoute* and then on the icon 'Back Import the "
+#| "Spectra Session (.ses) File' and selecting your _.ses_ file."
+msgid ""
+"Back to __Pcbnew__. You can import your freshly routed board by clicking on "
+"*File* -> *Import* -> *Spectra Session* and selecting your _.ses_ file."
+msgstr ""
+"Kembali ke __Pcbnew__. Anda bisa mengimpor papan PCB yang telah di-_routing_ "
+"dengan klik pada  *File* -> *Import* -> *Spectra Session*, kemudian pilih "
+"berkas _.ses_ Anda."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1047
+#| msgid ""
+#| "If there is any routed trace that you do not like, you can delete it and "
+#| "re-route it again, using [Delete] and the routing tool, which is the 'Add "
+#| "tracks' icon image:images/icons/add_tracks.png[Add Track icon] on the "
+#| "right toolbar."
+msgid ""
+"If there is any routed trace that you do not like, you can delete it and re-"
+"route it again, using [Delete] and the routing tool, which is the 'Route "
+"tracks' icon image:images/icons/add_tracks.png[Add Track icon] on the right "
+"toolbar."
+msgstr ""
+"Jika ada jalur 'routing' yang tidak Anda sukai, Anda bisa menghapusnya dan "
+"melakukan 'routing' ulang. Gunakan [Delete] untuk menghapus, dan lakukan "
+"'routing' ulang menggunakan ikon 'Route tracks' "
+"image:images/icons/add_tracks.png[Add Track icon] pada bilah alat sebelah "
+"kanan."
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:1049
+#, no-wrap
+msgid "Forward annotation in KiCad"
+msgstr "Anotasi Maju (_Forward Annotation_) pada KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1055
+msgid ""
+"Once you have completed your electronic schematic, the footprint assignment, "
+"the board layout and generated the Gerber files, you are ready to send "
+"everything to a PCB manufacturer so that your board can become reality."
+msgstr ""
+"Jika Anda telah menyelesaikan pembuatan skematik, footprint, tata letak "
+"papan PCB, dan berkas Gerber, maka Anda telah siap untuk mengirimkan semua "
+"berkas ke manufaktur PCB untuk mewujudkan papan PCB Anda."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1063
+msgid ""
+"Often, this linear work-flow turns out to be not so uni-directional. For "
+"instance, when you have to modify/extend a board for which you or others "
+"have already completed this work-flow, it is possible that you need to move "
+"components around, replace them with others, change footprints and much "
+"more. During this modification process, what you do not want to do is to re-"
+"route the whole board again from scratch. Instead, this is how you do it:"
+msgstr ""
+"Alur kerja yang linier ini terkadang tidak selalu bisa searah. Sebagai "
+"contoh, ketika Anda harus memodifikasi atau mengubah ukuran papan PCB "
+"setelah Anda atau orang lain menyelesaikan alur kerja ini, mungkin Anda "
+"perlu memindahkan beberapa komponen, menggantinya dengan komponen yang lain, "
+"mengubah _footprint_, dan sebagainya. Selama proses modifikasi ini, apa yang "
+"tidak Anda inginkan adalah melakukan 'routing' ulang dari awal untuk "
+"keseluruhan papan PCB. Yang perlu Anda lakukan adalah:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1066
+msgid ""
+"Let's suppose that you want to replace a hypothetical connector CON1 with "
+"CON2."
+msgstr ""
+"Kita asumsikan bahwa Anda ingin mengubah suatu konektor CON1 menjadi CON2."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1068
+msgid "You already have a completed schematic and a fully routed PCB."
+msgstr ""
+"Anda telah memiliki sebuah skematik yang lengkap dan PCB yang telah di-"
+"_routing_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1074
+msgid ""
+"From KiCad, start __Eeschema__, make your modifications by deleting CON1 and "
+"adding CON2. Save your schematic project with the icon image:images/icons/"
+"save.png[Save icon] and c lick on the 'Netlist generation' icon image:images/"
+"icons/netlist.png[netlist_png] on the top toolbar."
+msgstr ""
+"Dari KiCad, buka __Eeschema__, lakukan modifikasi dengan menghapus komponen "
+"CON1 dan menambahkan CON2. Simpan proyek skematik Anda dengan ikon "
+"image:images/icons/save.png[Save icon] dan klik pada ikon 'Netlist "
+"generation' image:images/icons/netlist.png[netlist_png] pada bilah alat "
+"bagian atas."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1077
+msgid ""
+"Click on 'Netlist' then on 'save'. Save to the default file name.  You have "
+"to rewrite the old one."
+msgstr ""
+"Klik pada 'Netlist' dan kemudian simpan dengan nama berkas _default_. Anda "
+"akan menimpa berkas yang lama."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1083
+msgid ""
+"Now assign a footprint to CON2. Click on the 'Run Cvpcb' icon image:images/"
+"icons/cvpcb.png[cvpcb] on the top toolbar. Assign the footprint to the new "
+"device CON2. The rest of the components still have the previous footprints "
+"assigned to them. Close __Cvpcb__."
+msgstr ""
+"Sekarang pilih _footprint_ untuk komponen CON2. Klik pada ikon 'Run Cvpcb'  "
+"image:images/icons/cvpcb.png[cvpcb] pada bilah alat bagian atas. Pilih "
+"_footprint_ untuk komponen CON2. Komponen yang lain masih menggunakan "
+"_footprint_ yang lama. Tutup __Cvpcb__."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1086
+msgid ""
+"Back in the schematic editor, save the project by clicking on 'File' -> "
+"'Save Whole Schematic Project'. Close the schematic editor."
+msgstr ""
+"Kembali ke editor skematik, simpan proyek Anda dengan klik  'File' -> 'Save "
+"Whole Schematic Project'. Tutup editor skematik."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1089
+msgid ""
+"From the KiCad project manager, click on the 'Pcbnew' icon. The 'Pcbnew' "
+"window will open."
+msgstr ""
+"Dari manajer proyek KiCad klik pada ikon 'Pcbnew'. Jendela 'Pcbnew' akan "
+"terbuka."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1093
+msgid ""
+"The old, already routed, board should automatically open. Let's import the "
+"new netlist file. Click on the 'Read Netlist' icon image:images/icons/"
+"netlist.png[netlist_png] on the top toolbar."
+msgstr ""
+"Papan PCB yang lama, yang sudah di-_routing_, akan terbuka. Sekarang kita "
+"lakukan impor berkas Netlist yang baru. Klik pada ikon 'Read Netlist' "
+"image:images/icons/netlist.png[netlist_png]  pada bilah alat bagian atas."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1097
+msgid ""
+"Click on the 'Browse Netlist Files' button, select the netlist file in the "
+"file selection dialogue, and click on 'Read Current Netlist'.  Then click "
+"the 'Close' button."
+msgstr ""
+"Klik pada tombol 'Browse Netlist Files', pilih berkas Netlist pada kotak "
+"dialog pemilihan berkas, dan klik 'Read Current Netlist'. Kemudian klik "
+"tombol 'Close'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1102
+msgid ""
+"At this point you should be able to see a layout with all previous "
+"components already routed. On the top left corner you should see all "
+"unrouted components, in our case the CON2. Select CON2 with the mouse.  Move "
+"the component to the middle of the board."
+msgstr ""
+"Anda bisa melihat tata letak PCB dengan semua komponen sebelumnya yang telah "
+"di-_routing_. Pada sudut kiri atas, Anda bisa melihat semua komponen yang "
+"belum di-_routing_, yang dalam latihan kita adalah komponen CON2. Pilih CON2 "
+"dengan klik komponen tersebut. Pindahkan komponen ke tengah papan PCB."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1105
+msgid ""
+"Place CON2 and route it. Once done, save and proceed with the Gerber file "
+"generation as usual."
+msgstr ""
+"Letakkan CON2 dan lakukan _routing_. Jika sudah selesai, simpan dan "
+"lanjutkan dengan pembuatan berkas Gerber seperti biasa."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1113
+msgid ""
+"The process described here can easily be repeated as many times as you need. "
+"Beside the Forward Annotation method described above, there is another "
+"method known as Backward Annotation. This method allows you to make "
+"modifications to your already routed PCB from Pcbnew and updates those "
+"modifications in your schematic and netlist file. The Backward Annotation "
+"method, however, is not that useful and is therefore not described here."
+msgstr ""
+"Proses yang dijelaskan di sini dapat dengan mudah diulang sebanyak yang Anda "
+"butuhkan. Di samping metode Anotasi Maju (_Forward Annotation_) seperti yang "
+"dijelaskan di atas, ada juga metode yang disebut dengan Anotasi Mundur ("
+"_Backward Annotation_). Dengan metode ini, Anda bisa membuat modifikasi pada "
+"papan PCB yang telah di-'routing' melalui Pcbnew, dan melakukan update hasil "
+"modifikasi tersebut pada berkas skematik dan Netlist. Akan tetapi metode "
+"_Backward Annotation_ ini agak sukar digunakan, sehingga tidak dijelaskan di "
+"sini."
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:1115
+#, no-wrap
+#| msgid "Make schematic components in KiCad"
+msgid "Make schematic symbols in KiCad"
+msgstr "Membuat Simbol Skematik di KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1122
+#| msgid ""
+#| "Sometimes a component that you want to place on your schematic is not in "
+#| "a KiCad library. This is quite normal and there is no reason to worry. In "
+#| "this section we will see how a new schematic component can be quickly "
+#| "created with KiCad. Nevertheless, remember that you can always find KiCad "
+#| "components on the Internet. For instance from here:"
+msgid ""
+"Sometimes a symbol that you want to place on your schematic is not in a "
+"KiCad library. This is quite normal and there is no reason to worry. In this "
+"section we will see how a new schematic symbol can be quickly created with "
+"KiCad. Nevertheless, remember that you can always find KiCad components on "
+"the Internet."
+msgstr ""
+"Terkadang sebuah simbol skematik yang Anda inginkan tidak tersedia di "
+"pustaka KiCad. Ini adalah hal yang biasa terjadi, sehingga Anda tidak perlu "
+"khawatir. Pada bagian ini, kita akan melihat bagaimana simbol skematik dapat "
+"dibuat dengan cepat di KiCad. Meskipun demikian, perlu diingat bahwa Anda "
+"juga bisa mencari komponen KiCad di Internet, misalnya di alamat berikut:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1128
+#| msgid ""
+#| "In KiCad, a component is a piece of text that starts with a 'DEF' and "
+#| "ends with 'ENDDEF'. One or more components are normally placed in a "
+#| "library file with the extension __.lib__. If you want to add components "
+#| "to a library file you can just use the cut and paste commands."
+msgid ""
+"In KiCad, a symbol is a piece of text that starts with 'DEF' and ends with "
+"'ENDDEF'. One or more symbols are normally placed in a library file with the "
+"extension __.lib__. If you want to add symbols to a library file you can "
+"just use the cut and paste commands of a text editor."
+msgstr ""
+"Di KiCad, sebuah simbol tersusun dari teks yang dimulai dengan 'DEF' dan "
+"diakhiri dengan 'ENDDEF'. Satu atau lebih simbol umumnya disimpan di dalam "
+"sebuah berkas pustaka dengan ekstensi __.lib__. Jika Anda ingin menambahkan "
+"simbol ke sebuah berkas pustaka, Anda bisa dengan mudah menggunakan perintah "
+"_cut_ dan _paste_ pada editor teks."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:1130
+#, no-wrap
+msgid "Using Component Library Editor"
+msgstr "Menggunakan _Component Library Editor_"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1136
+msgid ""
+"We can use the _Component Library Editor_ (part of __Eeschema__)  to make "
+"new components. In our project folder 'tutorial1' let's create a folder "
+"named 'library'. Inside we will put our new library file _myLib.lib_ as soon "
+"as we have created our new component."
+msgstr ""
+"Kita bisa menggunakan _Component Library Editor_ (bagian dari __Eeschema__) "
+"untuk membuat komponen baru. Di dalam folder proyek kita, yakni 'tutorial1', "
+"kita akan membuat sebuah folder bernama 'library'. Di dalamnya kita akan "
+"menyimpan berkas pustaka kita, yaitu _myLib.lib_, setelah kita selesai "
+"membuat komponen yang baru."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1151
+msgid ""
+"Now we can start creating our new component. From KiCad, start __Eeschema__, "
+"click on the 'Library Editor' icon image:images/icons/libedit."
+"png[libedit_png] and then click on the 'New component' icon image:images/"
+"icons/new_component.png[new_component_png]. The Component Properties window "
+"will appear. Name the new component 'MYCONN3', set the 'Default reference "
+"designator' as 'J', and the 'Number of units per package' as '1'. Click OK. "
+"If the warning appears just click yes.  At this point the component is only "
+"made of its labels. Let's add some pins. Click on the 'Add Pins' icon image:"
+"images/icons/pin.png[pin_png] on the right toolbar. To place the pin, left "
+"click in the centre of the part editor sheet just below the 'MYCONN3' label."
+msgstr ""
+"Sekarang kita bisa mulai membuat komponen baru. Dari KiCad, buka "
+"__Eeschema__, klik pada ikon 'Library Editor' "
+"image:images/icons/libedit.png[libedit_png] dan klik pada ikon 'New "
+"component' image:images/icons/new_component.png[new_component_png]. Jendela "
+"_Component Properties_ akan muncul. Beri nama komponen yang baru 'MYCONN3', "
+"ketik 'J' pada 'Default reference designator', dan ketik '1' pada 'Number of "
+"units per package'. Klik 'OK'. Jika muncul pesan peringatan, klik 'Yes'. "
+"Saat ini komponen yang kita buat hanya terdiri dari label saja. Mari kita "
+"tambahkan beberapa pin. Klik pada ikon 'Add Pins' "
+"image:images/icons/pin.png[pin_png] pada bilah alat sebelah kanan. Untuk "
+"meletakkan pin, klik kiri di tengah halaman, tepat di bawah label 'MYCONN3'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1155
+msgid ""
+"In the Pin Properties window that appears, set the pin name to 'VCC', set "
+"the pin number to '1', and the 'Electrical type' to 'Power input' then click "
+"OK."
+msgstr ""
+"Pada jendela 'Pin Properties', berikan nama pin 'VCC', ubah nomor pin "
+"menjadi '1', dan 'Electrical type' menjadi 'Power input', kemudian klik OK."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:1156
+#, no-wrap
+msgid "images/pin_properties.png"
+msgstr "images/pin_properties.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1160
+msgid ""
+"Place the pin by clicking on the location you would like it to go, right "
+"below the 'MYCONN3' label."
+msgstr ""
+"Letakkan pin dengan klik pada lokasi yang Anda inginkan, tepat di bawah "
+"label 'MYCONN3'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1164
+msgid ""
+"Repeat the place-pin steps, this time 'Pin name' should be 'INPUT', 'Pin "
+"number' should be '2', and 'Electrical Type' should be 'Passive'."
+msgstr ""
+"Ulangi langkah peletakan pin, namun kali ini ubah 'Pin name' menjadi "
+"'INPUT', 'Pin number' menjadi '2', dan 'Electrical Type' dipilih 'Passive'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1170
+msgid ""
+"Repeat the place-pin steps, this time 'Pin name' should be 'GND', 'Pin "
+"number' should be '3', and 'Electrical Type' should be 'Passive'.  Arrange "
+"the pins one on top of the other. The component label 'MYCONN3' should be in "
+"the centre of the page (where the blue lines cross)."
+msgstr ""
+"Ulangi langkah peletakan pin, namun kali ini 'Pin name' diisi 'GND', 'Pin "
+"number' diisi '3', dan 'Electrical Type' dipilih 'Passive'. Atur peletakan "
+"pin sehingga berurutan dari atas ke bawah. Label komponen 'MYCONN3' harus "
+"berada di tengah halaman (pada pertemuan garis biru)."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1178
+msgid ""
+"Next, draw the contour of the component. Click on the 'Add rectangle' icon "
+"image:images/icons/add_rectangle.png[add_rectangle_png]. We want to draw a "
+"rectangle next to the pins, as shown below. To do this, click where you want "
+"the top left corner of the rectangle to be (do not hold the mouse button "
+"down). Click again where you want the bottom right corner of the rectangle "
+"to be."
+msgstr ""
+"Sekarang, gambarlah garis luar komponen. Klik pada ikon 'Add rectangle' "
+"image:images/icons/add_rectangle.png[add_rectangle_png]. Kita ingin "
+"menggambar sebuah persegi tepat di samping pin-pin kita, seperti ditunjukkan "
+"pada gambar di bawah ini. Klik di mana Anda ingin meletakkan sudut kiri atas "
+"persegi (jangan menahan tombol tetikus). Klik lagi di mana Anda ingin "
+"meletakkan sudut kanan bawah persegi."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:1179
+#, no-wrap
+msgid "images/gsik_myconn3_l.png"
+msgstr "images/gsik_myconn3_l.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1185
+msgid ""
+"If you want to fill the rectangle with yellow, set the fill colour to "
+"'yellow 4' in *Preferences* -> *Select color scheme*, then select the "
+"rectangle in the editing screen with [e], selecting 'Fill background'."
+msgstr ""
+"Jika Anda ingin mengisi persegi dengan warna kuning, atur nilai 'Fill "
+"colour' menjadi 'yellow 4' pada  *Preferences* -> *Select color scheme*, "
+"lalu pilih persegi pada layar editor dengan [e], pilih 'Fill background'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1190
+msgid ""
+"Save the component in your library __myLib.lib__. Click on the 'New Library' "
+"icon image:images/icons/new_library.png[new_library_png], navigate into "
+"_tutorial1/library/_ folder and save the new library file with the name "
+"__myLib.lib__."
+msgstr ""
+"Simpan komponen ke dalam pustaka Anda, __myLib.lib__. Klik pada ikon 'New "
+"Libray' image:images/icons/new_library.png[new_library_png], buka folder "
+"_tutorial1/library/_ dan simpan berkas pustaka yang baru dengan nama berkas "
+"__myLib.lib__."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1193
+msgid ""
+"Go to *Preferences* -> *Component Libraries* and add both _tutorial1/library/"
+"_ in 'User defined search path' and _myLib.lib in_ 'Component library files'."
+msgstr ""
+"Buka *Preferences* -> *Component Libraries* dan tambahkan _tutorial1/library/"
+"_ ke dalam 'User defined search path' dan _myLib.lib_ ke dalam 'Component "
+"library files'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1199
+msgid ""
+"Click on the 'Select working library' icon image:images/icons/library."
+"png[library_png]. In the Select Library window click on _myLib_ and click "
+"OK. Notice how the heading of the window indicates the library currently in "
+"use, which now should be __myLib__."
+msgstr ""
+"Klik pada ikon 'Select working library' "
+"image:images/icons/library.png[library_png]. Pada jendela 'Select Library', "
+"klik _myLib_ dan klik OK. Perhatikan pada judul jendela yang mengindikasikan "
+"pustaka yang sedang digunakan, yaitu __myLib__."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1208
+msgid ""
+"Click on the 'Update current component in current library' icon image:images/"
+"icons/save_part_in_mem.png[save_part_in_mem_png] in the top toolbar. Save "
+"all changes by clicking on the 'Save current loaded library on disk' icon "
+"image:images/icons/save_library.png[save_library_png] in the top toolbar. "
+"Click 'Yes' in any confirmation messages that appear.  The new schematic "
+"component is now done and available in the library indicated in the window "
+"title bar."
+msgstr ""
+"Klik pada ikon 'Update current component in current library'  "
+"image:images/icons/save_part_in_mem.png[save_part_in_mem_png] pada bilah "
+"alat bagian atas. Simpan semua perubahan dengan klik pada ikon 'Save current "
+"loaded library on disk'  "
+"image:images/icons/save_library.png[save_library_png] pada bilah alat bagian "
+"atas. Klik 'Yes' jika ada pesan konfirmasi yang muncul. Komponen skematik "
+"kita yang baru telah selesai dan telah tersedia pada pustaka yang "
+"diindikasikan di bilah judul jendela."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1212
+msgid ""
+"You can now close the Component library editor window. You will return to "
+"the schematic editor window. Your new component will now be available to you "
+"from the library __myLib__."
+msgstr ""
+"Sekarang Anda bisa menutup jendela 'Component Library Editor'. Anda akan "
+"kembali ke jendela editor skematik. Komponen yang baru akan dapat diakses "
+"dari pustaka __myLib__."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1217
+msgid ""
+"You can make any library _file.lib_ file available to you by adding it to "
+"the library path. From __Eeschema__, go to *Preferences* -> *Library* and "
+"add both the path to it in 'User defined search path' and _file.lib_ in "
+"'Component library files'."
+msgstr ""
+"File pustaka apapun _file.lib_ akan dapat Anda gunakan dengan menambahkannya "
+"ke _path_. Dari __Eeschema__, buka  *Preferences* -> *Library* dan tambahkan "
+"_path_ ke dalam  'User defined search path' serta _file.lib_ ke dalam "
+"'Component library files'."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:1219
+#, no-wrap
+msgid "Export, import and modify library components"
+msgstr "Ekspor, Impor, dan Modifikasi Komponen pada Pustaka"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1225
+msgid ""
+"Instead of creating a library component from scratch it is sometimes easier "
+"to start from one already made and modify it. In this section we will see "
+"how to export a component from the KiCad standard library 'device' to your "
+"own library _myOwnLib.lib_ and then modify it."
+msgstr ""
+"Terkadang kita tidak perlu membuat komponen dari awal, akan tetapi lebih "
+"mudah untuk memulai dari komponen yang sudah ada dan memodifikasinya. Pada "
+"bagian ini, kita akan melihat bagaimana mengekspor sebuah komponen dari "
+"pustaka standar KiCad ('device') ke pustaka yang telah Anda buat "
+"(_myOwnLib.lib_) dan kemudian melakukan modifikasi."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1233
+msgid ""
+"From KiCad, start __Eeschema__, click on the 'Library Editor' icon image:"
+"images/icons/libedit.png[libedit_png], click on the 'Select working library' "
+"icon image:images/icons/library.png[library_png] and choose the library "
+"'device'. Click on 'Load component to edit from the current lib' icon image:"
+"images/icons/import_cmp_from_lib.png[import_cmp_from_lib_png] and import the "
+"'RELAY_2RT'."
+msgstr ""
+"Dari KiCad, buka __Eeschema__, klik pada ikon 'Library Editor' "
+"image:images/icons/libedit.png[libedit_png], klik pada ikon 'Select working "
+"library'  image:images/icons/library.png[library_png] dan pilih pustaka "
+"'device'. Klik pada ikon 'Load component to edit from the current lib' "
+"image:images/icons/import_cmp_from_lib.png[import_cmp_from_lib_png] dan "
+"lakukan impor komponen 'RELAY_2RT'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1237
+msgid ""
+"Click on the 'Export component' icon image:images/icons/export."
+"png[export_png], navigate into the _library/_ folder and save the new "
+"library file with the name _myOwnLib.lib._"
+msgstr ""
+"Klik pada ikon 'Export component'  image:images/icons/export.png[export_png]"
+", buka folder _library/_ dan simpan berkas pustaka yang baru dengan nama "
+"_myOwnLib.lib_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1243
+msgid ""
+"You can make this component and the whole library _myOwnLib.lib_ available "
+"to you by adding it to the library path. From __Eeschema__, go to "
+"*Preferences* -> *Component Libraries* and add both _library/_ in 'User "
+"defined search path' and _myOwnLib.lib_ in the 'Component library files'. "
+"Close the window."
+msgstr ""
+"Anda bisa mengaktifkan pustaka _myOwnLib.lib_ agar bisa Anda gunakan, dengan "
+"menambahkannya ke _path_. Dari __Eeschema__, buka *Preferences* -> *"
+"Component Libraries* dan tambahkan _library/_ ke dalam 'User defined search "
+"path' dan _myOwnLib.lib_ ke dalam 'Component library files'. Tutup jendela."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1249
+msgid ""
+"Click on the 'Select working library' icon image:images/icons/library."
+"png[library_png]. In the Select Library window click on _myOwnLib_ and click "
+"OK. Notice how the heading of the window indicates the library currently in "
+"use, it should be __myOwnLib__."
+msgstr ""
+"Klik pada ikon 'Select working library'  "
+"image:images/icons/library.png[library_png]. Pada jendela 'Select Library', "
+"klik _myOwnLib_ dan klik OK. Perhatikan bahwa judul jendela mengindikasikan "
+"pustaka yang sedang kita gunakan, yaitu __myOwnLib__."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1253
+msgid ""
+"Click on the 'Load component to edit from the current lib' icon image:images/"
+"icons/import_cmp_from_lib.png[import_cmp_from_lib_png] and import the "
+"'RELAY_2RT'."
+msgstr ""
+"Klik pada ikon  'Load component to edit from the current lib' image:images/"
+"icons/import_cmp_from_lib.png[import_cmp_from_lib_png] dan lakukan impor "
+"komponen  'RELAY_2RT'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1256
+msgid ""
+"You can now modify the component as you like. Hover over the label "
+"'RELAY_2RT', press [e] and rename it 'MY_RELAY_2RT'."
+msgstr ""
+"Sekarang Anda bisa melakukan modifikasi komponen sesuai keinginan Anda. "
+"Arahkan kursor ke atas label 'RELAY_2RT', tekan [e] dan beri nama "
+"'MY_RELAY_2RT'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1263
+msgid ""
+"Click on 'Update current component in current library' icon image:images/"
+"icons/save_part_in_mem.png[save_part_in_mem_png] in the top toolbar. Save "
+"all changes by clicking on the 'Save current loaded library on disk' icon "
+"image:images/icons/save_library.png[save_library_png] in the top toolbar."
+msgstr ""
+"Klik pada ikon  'Update current component in current library' "
+"image:images/icons/save_part_in_mem.png[save_part_in_mem_png] pada bilah "
+"alat bagian atas. Simpan perubahan yang Anda lakukan dengan klik ikon 'Save "
+"current loaded library on disk' "
+"image:images/icons/save_library.png[save_library_png] pada bilah alat bagian "
+"atas."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:1265
+#, no-wrap
+msgid "Make schematic components with quicklib"
+msgstr "Membuat Komponen Skematik dengan QuickLib"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1270
+msgid ""
+"This section presents an alternative way of creating the schematic component "
+"for MYCONN3 (see <<myconn3,MYCONN3>> above) using the Internet tool "
+"__quicklib__."
+msgstr ""
+"Bagian ini akan menjelaskan cara alternatif untuk membuat komponen skematik "
+"MYCONN3 (lihat <<myconn3,MYCONN3>> di atas) dengan menggunakan peralatan "
+"__quicklib__ yang berbasis Internet."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1273
+msgid ""
+"Head to the _quicklib_ web page: http://kicad.rohrbacher.net/quicklib.php"
+msgstr ""
+"Bukalah halaman web __quicklib__: http://kicad.rohrbacher.net/quicklib.php"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1276
+msgid ""
+"Fill out the page with the following information: Component name: MYCONN3 "
+"Reference Prefix: J Pin Layout Style: SIL Pin Count, N: 3"
+msgstr ""
+"Isilah halaman tersebut dengan informasi berikut: 'Component name': MYCONN3 "
+"'Reference Prefix': J 'Pin Layout Style': 'SIL Pin Count, N': 3"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1280
+msgid ""
+"Click on the 'Assign Pins' icon. Fill out the page with the following "
+"information: Pin 1: VCC Pin 2: input Pin 3: GND.  Type : Passive for all 3 "
+"pins."
+msgstr ""
+"Klik pada ikon 'Assign Pins'. Isilah halaman dengan informasi berikut ini: "
+"'Pin 1': VCC 'Pin 2': input 'Pin 3': GND.  'Type': 'Passive for all3 pins'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1284
+msgid ""
+"Click on the icon 'Preview it' and, if you are satisfied, click on the "
+"'Build Library Component'. Download the file and rename it __tutorial1/"
+"library/myQuickLib.lib.__. You are done!"
+msgstr ""
+"Klik pada ikon 'Preview it', dan jika telah sesuai dengan keinginan Anda, "
+"klik 'Build Library Component'. Unduh berkas hasilnya, dan ubah namanya "
+"menjadi __tutorial1/library/myQuickLib.lib__. Anda telah selesai!"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1290
+msgid ""
+"Have a look at it using KiCad. From the KiCad project manager, start "
+"__Eeschema__, click on the 'Library Editor' icon image:images/icons/libedit."
+"png[libedit_png], click on the 'Import Component' icon image:images/icons/"
+"import.png[import_png], navigate to _tutorial1/library/_ and select "
+"_myQuickLib.lib._"
+msgstr ""
+"Lihat hasilnya dengan menggunakan KiCad. Dari manajer proyek KiCad, buka "
+"__Eeschema__, klik pada ikon  'Library Editor' "
+"image:images/icons/libedit.png[libedit_png], klik pada ikon 'Import "
+"Component' image:images/icons/import.png[import_png], buka "
+"_tutorial1/library/_ dan pilih _myQuickLib.lib._"
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:1291
+#, no-wrap
+msgid "images/gsik_myconn3_quicklib.png"
+msgstr "images/gsik_myconn3_quicklib.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1298
+msgid ""
+"You can make this component and the whole library _myQuickLib.lib_ available "
+"to you by adding it to the KiCad library path. From __Eeschema__, go to "
+"*Preferences* -> *Component Libraries* and add _library_ in 'User defined "
+"search path' and _myQuickLib.lib_ in 'Component library files'."
+msgstr ""
+"Anda bisa menggunakan komponen dan keseluruhan pustaka _myQuickLib.lib_ "
+"dengan menambahkannya ke _path_ pustaka KiCad. Dari __Eeschema__, buka  "
+"*Preferences* -> *Component Libraries* dan tambahkan _library_ ke dalam "
+"'User defined search path', serta _myQuickLib.lib_ ke dalam 'Component "
+"library files'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1302
+msgid ""
+"As you might guess, this method of creating library components can be quite "
+"effective when you want to create components with a large pin count."
+msgstr ""
+"Metode pembuatan komponen pustaka ini akan sangat efektif jika Anda ingin "
+"membuat komponen dengan jumlah pin yang banyak."
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:1304
+#, no-wrap
+msgid "Make a high pin count schematic component"
+msgstr "Membuat Komponen Skematik dengan Jumlah Pin yang Banyak"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1311
+msgid ""
+"In the section titled _Make Schematic Components in quicklib_ we saw how to "
+"make a schematic component using the _quicklib_ web-based tool.  However, "
+"you will occasionally find that you need to create a schematic component "
+"with a high number of pins (some hundreds of pins). In KiCad, this is not a "
+"very complicated task."
+msgstr ""
+"Pada bagian yang berjudul _Membuat Komponen Skematik dengan QuickLib_, kita "
+"melihat bagaimana membuat sebuah komponen skematik dengan menggunakan "
+"peralatan berbasis web _quicklib_. Bagaimanapun, terkadang Anda perlu "
+"membuat komponen skematik dengan jumlah pin yang banyak (hingga ratusan pin)"
+". Di KiCad, hal ini bukanlah hal yang rumit."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1317
+msgid ""
+"Suppose that you want to create a schematic component for a device with 50 "
+"pins. It is common practise to draw it using multiple low pin-count "
+"drawings, for example two drawings with 25 pins each. This component "
+"representation allows for easy pin connection."
+msgstr ""
+"Misalkan Anda membutuhkan komponen skematik dengan pin berjumlah 50 buah. "
+"Praktik yang umum dilakukan adalah membuat beberapa gambar dengan jumlah pin "
+"yang tidak terlalu banyak, sebagai contoh dua gambar yang masing-masing "
+"memiliki 25 pin. Penggambaran komponen seperti ini akan memudahkan saat "
+"membuat koneksi pin."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1322
+msgid ""
+"The best way to create our component is to use _quicklib_ to generate two 25-"
+"pin components separately, re-number their pins using a Python script and "
+"finally merge the two by using copy and paste to make them into one single "
+"DEF and ENDDEF component."
+msgstr ""
+"Cara yang paling baik untuk membuat komponen kita adalah dengan menggunakan "
+"_quicklib_ untuk membuat dua buah komponen dengan jumlah pin sebanyak 25 "
+"buah, secara terpisah. Kemudian melakukan penomoran ulang pin-pin tersebut "
+"dengan skrip Python, dan terakhir menggabungkan kedua komponen tersebut "
+"dengan menggunakan _copy-paste_ untuk menjadikan keduanya menyatu ke dalam "
+"satu komponen DEF dan ENDDEF."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1328
+msgid ""
+"You will find an example of a simple Python script below that can be used in "
+"conjunction with an _in.txt_ file and an _out.txt_ file to re-number the "
+"line: +X PIN1 1 -750 600 300 R 50 50 1 1 I+ into +X PIN26 26 -750 600 300 R "
+"50 50 1 1 I+ this is done for all lines in the file __in.txt__."
+msgstr ""
+"Contoh skrip Python sederhana di bawah ini bisa digunakan dengan berkas "
+"_in.txt_ dan _out.txt_ untuk melakukan penomoran ulang baris: +X PIN1 1 -750 "
+"600 300 R 50 50 1 1 I+ menjadi +X PIN26 26 -750 600 300 R 50 50 1 1 I+ hal "
+"ini dilakukan untuk semua baris pada berkas __in.txt__."
+
+#. type: Block title
+#: getting_started_in_kicad.adoc:1329
+#, no-wrap
+msgid "Simple script"
+msgstr "Skrip sederhana"
+
+#. type: delimited block -
+#: getting_started_in_kicad.adoc:1352
+#, no-wrap
+msgid ""
+"#!/usr/bin/env python\n"
+"''' simple script to manipulate KiCad component pins numbering'''\n"
+"import sys, re\n"
+"try:\n"
+"    fin=open(sys.argv[1],'r')\n"
+"    fout=open(sys.argv[2],'w')\n"
+"except:\n"
+"    print \"oh, wrong use of this app, try:\", sys.argv[0], \"in.txt out.txt\"\n"
+"    sys.exit()\n"
+"for ln in fin.readlines():\n"
+"    obj=re.search(\"(X PIN)(\\d*)(\\s)(\\d*)(\\s.*)\",ln)\n"
+"if obj:\n"
+"    num = int(obj.group(2))+25\n"
+"    ln=obj.group(1) + str(num) + obj.group(3) + str(num) + obj.group(5) +'\\n'\n"
+"    fout.write(ln)\n"
+"fin.close(); fout.close()\n"
+"#\n"
+"# for more info about regular expression syntax and KiCad component generation:\n"
+"# http://gskinner.com/RegExr/\n"
+"# http://kicad.rohrbacher.net/quicklib.php\n"
+msgstr ""
+"#!/usr/bin/env python\n"
+"''' skrip sederhana untuk memanipulasi penomoran pin-pin komponen KiCad'''\n"
+"import sys, re\n"
+"try:\n"
+"    fin=open(sys.argv[1],'r')\n"
+"    fout=open(sys.argv[2],'w')\n"
+"except:\n"
+"    print \"oh, wrong use of this app, try:\", sys.argv[0], \"in.txt out.txt\"\n"
+"    sys.exit()\n"
+"for ln in fin.readlines():\n"
+"    obj=re.search(\"(X PIN)(\\d*)(\\s)(\\d*)(\\s.*)\",ln)\n"
+"if obj:\n"
+"    num = int(obj.group(2))+25\n"
+"    ln=obj.group(1) + str(num) + obj.group(3) + str(num) + obj.group(5) +'\\n'\n"
+"    fout.write(ln)\n"
+"fin.close(); fout.close()\n"
+"#\n"
+"# untuk informasi lebih lanjut mengenai sintaks regular expression dan pembuatan komponen KiCad:\n"
+"# http://gskinner.com/RegExr/\n"
+"# http://kicad.rohrbacher.net/quicklib.php\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1358
+msgid ""
+"While merging the two components into one, it is necessary to use the "
+"Library Editor from Eeschema to move the first component so that the second "
+"does not end up on top of it. Below you will find the final .lib file and "
+"its representation in __Eeschema__."
+msgstr ""
+"Saat menggabungkan dua komponen menjadi satu, sangat penting untuk "
+"menggunakan 'Library Editor' dari Eeschema untuk memindahkan komponen yang "
+"pertama sehingga komponen yang kedua tidak berada di atas komponen pertama. "
+"Di bawah ini, Anda akan menemukan berkas final.lib dan tampilannya di "
+"__Eeschema__."
+
+#. type: Block title
+#: getting_started_in_kicad.adoc:1359
+#, no-wrap
+msgid "Contents of a *.lib file"
+msgstr "Isi berkas *.lib"
+
+#. type: delimited block -
+#: getting_started_in_kicad.adoc:1371
+#, no-wrap
+msgid ""
+"EESchema-LIBRARY Version 2.3\n"
+"#encoding utf-8\n"
+"# COMP\n"
+"DEF COMP U 0 40 Y Y 1 F N\n"
+"F0 \"U\" -1800 -100 50 H V C CNN\n"
+"F1 \"COMP\" -1800 100 50 H V C CNN\n"
+"DRAW\n"
+"S -2250 -800 -1350 800 0 0 0 N\n"
+"S -450 -800 450 800 0 0 0 N\n"
+"X PIN1 1 -2550 600 300 R 50 50 1 1 I\n"
+msgstr ""
+"EESchema-LIBRARY Version 2.3\n"
+"#encoding utf-8\n"
+"# COMP\n"
+"DEF COMP U 0 40 Y Y 1 F N\n"
+"F0 \"U\" -1800 -100 50 H V C CNN\n"
+"F1 \"COMP\" -1800 100 50 H V C CNN\n"
+"DRAW\n"
+"S -2250 -800 -1350 800 0 0 0 N\n"
+"S -450 -800 450 800 0 0 0 N\n"
+"X PIN1 1 -2550 600 300 R 50 50 1 1 I\n"
+
+#. type: delimited block -
+#: getting_started_in_kicad.adoc:1373
+#, no-wrap
+msgid "...\n"
+msgstr "...\n"
+
+#. type: delimited block -
+#: getting_started_in_kicad.adoc:1378
+#, no-wrap
+msgid ""
+"X PIN49 49 750 -500 300 L 50 50 1 1 I\n"
+"ENDDRAW\n"
+"ENDDEF\n"
+"#End Library\n"
+msgstr ""
+"X PIN49 49 750 -500 300 L 50 50 1 1 I\n"
+"ENDDRAW\n"
+"ENDDEF\n"
+"#Akhir Library\n"
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:1380
+#, no-wrap
+msgid "images/gsik_high_number_pins.png"
+msgstr "images/gsik_high_number_pins.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1386
+msgid ""
+"The Python script presented here is a very powerful tool for manipulating "
+"both pin numbers and pin labels. Mind, however, that all its power comes for "
+"the arcane and yet amazingly useful Regular Expression syntax: _http://"
+"gskinner.com/RegExr/._"
+msgstr ""
+"Skrip Python yang ditampilkan di sini adalah sebuah alat yang sangat berguna "
+"untuk memanipulasi baik nomor pin maupun label pin. Namun perlu diperhatikan "
+"bahwa kemampuan skrip ini didapatkan dari sintaks 'Regular Expression' yang "
+"rumit namun sangat berguna: _http://gskinner.com/RegExr/._"
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:1388
+#, no-wrap
+msgid "Make component footprints"
+msgstr "Membuat _Footprint_ Komponen"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1394
+msgid ""
+"Unlike other EDA software tools, which have one type of library that "
+"contains both the schematic symbol and the footprint variations, KiCad _."
+"lib_ files contain schematic symbols and _.kicad_mod_ files contain "
+"footprints. _Cvpcb_ is used to map footprints to symbols."
+msgstr ""
+"Tidak seperti perangkat lunak EDA lainnya, yang memiliki satu tipe pustaka "
+"yang berisi simbol skematik dan variasi _footprint_, berkas _.lib_ pada "
+"KiCad hanya berisi simbol skematik, sedangkan _footprint_ disimpan pada "
+"berkas _.kicad_mod_. _Cvpcb_ digunakan untuk melakukan pemetaan _footprint_ "
+"ke simbol."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1397
+msgid ""
+"As for _.lib_ files, _.kicad_mod_ library files are text files that can "
+"contain anything from one to several parts."
+msgstr ""
+"Seperti halnya berkas _.lib_, berkas pustaka _.kicad_mod_ adalah berkas teks "
+"yang bisa berisi satu atau beberapa bagian."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1401
+msgid ""
+"There is an extensive footprint library with KiCad, however on occasion you "
+"might find that the footprint you need is not in the KiCad library.  Here "
+"are the steps for creating a new PCB footprint in KiCad:"
+msgstr ""
+"KiCad telah menyediakan sejumlah pustaka _footprint_, namun kadang kala Anda "
+"mungkin membutuhkan _footprint_ yang tidak tersedia di pustaka KiCad. "
+"Berikut adalah langkah untuk membuat sebuah _footprint_ PCB yang baru di "
+"KiCad:"
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:1403
+#, no-wrap
+msgid "Using Footprint Editor"
+msgstr "Menggunakan 'Footprint Editor'"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1409
+msgid ""
+"From the KiCad project manager start the _Pcbnew_ tool. Click on the 'Open "
+"Footprint Editor' icon image:images/icons/edit_module.png[edit_module_png] "
+"on the top toolbar. This will open the 'Footprint Editor'."
+msgstr ""
+"Dari manajer proyek KiCad, buka _Pcbnew_. Klik pada ikon  'Open Footprint "
+"Editor'  image:images/icons/edit_module.png[edit_module_png] pada bilah alat "
+"bagian atas. 'Footprint Editor' akan terbuka."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1421
+msgid ""
+"We are going to save the new footprint 'MYCONN3' in the new footprint "
+"library 'myfootprint'.  Create a new folder _myfootprint.pretty_ in the "
+"_tutorial1/_ project folder.  Click on the *Preferences* -> **Footprint "
+"Libraries Manager** and press 'Append Library' button. In the table, enter "
+"\"myfootprint\" as Nickname, enter \"$\\{KIPRJMOD\\}/myfootprint.pretty\" as "
+"Library Path and enter \"KiCad\" as Plugin Type.  Press OK to close the PCB "
+"Library Tables window.  Click on the 'Select active library' icon image:"
+"images/icons/open_library.png[open_library_png] on the top toolbar.  Select "
+"the 'myfootprint' library."
+msgstr ""
+"Kita akan menyimpan _footprint_ yang baru 'MYCONN3' ke dalam pustaka "
+"_footprint_ 'myfootprint'. Buat sebuah folder _myfootprint.pretty_ di dalam "
+"folder proyek _tutorial1/_. Klik *Preferences* -> **Footprint Libraries "
+"Manager** dan tekan tombol 'Append Library'. Pada tabel, masukkan \""
+"myfootprint\" pada 'Nickname', masukkan \"$\\{KIPRJMOD\\}/myfootprint."
+"pretty\" pada 'Library Path' dan masukkan \"KiCad\" pada 'Plugin Type'.  "
+"Tekan OK untuk menutup jendela 'PCB Library Tables'. Klik pada ikon 'Select "
+"active library' image:images/icons/open_library.png[open_library_png] pada "
+"bilah alat bagian atas. Pilih pustaka 'myfootprint'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1429
+msgid ""
+"Click on the 'New Footprint' icon image:images/icons/new_footprint."
+"png[new_footprint_png] on the top toolbar.  Type 'MYCONN3' as the 'footprint "
+"name'. In the middle of the screen the 'MYCONN3' label will appear. Under "
+"the label you can see the 'REF*__' label. Right click on 'MYCONN3' and move "
+"it above 'REF*__'. Right click on 'REF__*', select 'Edit Text' and rename it "
+"to 'SMD'. Set the 'Display' value to 'Invisible'."
+msgstr ""
+"Klik pada ikon 'New Footprint' "
+"image:images/icons/new_footprint.png[new_footprint_png] pada bilah alat "
+"bagian atas.  Ketik 'MYCONN3' pada 'footprint name'. Di tengah layar, akan "
+"muncul label 'MYCONN3'. Di bawah label, Anda akan menemukan label 'REF*__'. "
+"Klik kanan pada 'MYCONN3' dan pindahkan ke atas 'REF*__'. Klik kanan pada "
+"'REF*__', pilih 'Edit Text' dan ganti namanya dengan 'SMD'. Ubahlah pilihan "
+"'Display' menjadi 'Invisible'."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1433
+msgid ""
+"Select the 'Add Pads' icon image:images/icons/pad.png[pad_png] on the right "
+"toolbar. Click on the working sheet to place the pad. Right click on the new "
+"pad and click 'Edit Pad'. You can also use [e]."
+msgstr ""
+"Pilih ikon 'Add Pads' image:images/icons/pad.png[pad_png] pada bilah alat "
+"sebelah kanan. Klik pada lembar kerja untuk meletakkan pad. Klik kanan pada "
+"pad yang baru dibuat, dan klik 'Edit Pad'. Anda juga bisa menekan [e]."
+
+#. type: Target for macro image
+#: getting_started_in_kicad.adoc:1434
+#, no-wrap
+msgid "images/pad_properties.png"
+msgstr "images/pad_properties.png"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1439
+msgid ""
+"Set the 'Pad Num' to '1', 'Pad Shape' to 'Rect', 'Pad Type' to 'SMD', 'Shape "
+"Size X' to '0.4', and 'Shape Size Y' to '0.8'. Click OK.  Click on 'Add "
+"Pads' again and place two more pads."
+msgstr ""
+"Ubah nilai 'Pad Num' menjadi '1', 'Pad Shape' bernilai 'Rect', 'Pad Type' "
+"bernilai 'SMD', 'Shape Size X' bernilai '0.4', dan 'Shape Size Y' bernilai "
+"'0.8'. Klik OK. Klik lagi ikon 'Add Pads' dan letakkan dua buah _pad_."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1443
+msgid ""
+"If you want to change the grid size, *Right click* -> **Grid Select**. Be "
+"sure to select the appropriate grid size before laying down the components."
+msgstr ""
+"Jika Anda ingin mengubah ukuran _grid_, lakukan *Klik kanan* -> **Grid "
+"Select**. Pastikan untuk memilih ukuran _grid_ yang tepat sebelum meletakkan "
+"komponen."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1446
+msgid ""
+"Move the 'MYCONN3' label and the 'SMD' label out of the way so that it looks "
+"like the image shown above."
+msgstr ""
+"Pindahkan label 'MYCONN3' dan label 'SMD' ke luar sehingga tampak seperti "
+"gambar."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1453
+msgid ""
+"When placing pads it is often necessary to measure relative distances. Place "
+"the cursor where you want the relative coordinate point _(0,0)_ to be and "
+"press the space bar. While moving the cursor around, you will see a relative "
+"indication of the position of the cursor at the bottom of the page. Press "
+"the space bar at any time to set the new origin."
+msgstr ""
+"Saat meletakkan _pad_, terkadang kita perlu mengukur jarak relatif. Letakkan "
+"kursor di mana Anda ingin meletakkan titik koordinat relatif _(0,0)_, dan "
+"tekan tombol spasi. Saat menggeser kursor, Anda akan melihat indikasi "
+"relatif dari posisi kursor pada bagian bawah halaman. Tekan tombol spasi "
+"untuk mengatur titik koordinat awal relatif yang baru."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1458
+msgid ""
+"Now add a footprint contour. Click on the 'Add graphic line or polygon' "
+"button image:images/icons/add_polygon.png[add_polygon_png] in the right "
+"toolbar. Draw an outline of the connector around the component."
+msgstr ""
+"Sekarang tambahkan kontur _footprint_. Klik pada tombol 'Add graphic line or "
+"polygon' image:images/icons/add_polygon.png[add_polygon_png] pada bilah alat "
+"sebelah kanan. Gambarlah garis luar konektor yang mengelilingi komponen."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1462
+msgid ""
+"Click on the 'Save Footprint in Active Library' icon image:images/icons/"
+"save_library.png[save_library_png] on the top toolbar, using the default "
+"name MYCONN3."
+msgstr ""
+"Klik pada ikon 'Save Footprint in Active Library'  "
+"image:images/icons/save_library.png[save_library_png] pada bilah alat bagian "
+"atas, dan gunakan nama _default_ MYCONN3."
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:1464
+#, no-wrap
+msgid "Note about portability of KiCad project files"
+msgstr "Catatan Tentang Portabilitas Berkas Proyek KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1468
+msgid ""
+"What files do you need to send to someone so that they can fully load and "
+"use your KiCad project?"
+msgstr ""
+"Berkas apa saja yang perlu Anda kirimkan ke orang lain agar ia bisa membuka "
+"dan menggunakan proyek KiCad Anda?"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1475
+msgid ""
+"When you have a KiCad project to share with somebody, it is important that "
+"the schematic file __.sch__, the board file __.kicad_pcb__, the project file "
+"_.pro_ and the netlist file __.net__, are sent together with both the "
+"schematic parts file _.lib_ and the footprints file __.kicad_mod__. Only "
+"this way will people have total freedom to modify the schematic and the "
+"board."
+msgstr ""
+"Saat Anda memiliki sebuah proyek KiCad yang akan Anda bagikan ke orang lain, "
+"Anda perlu memastikan bahwa berkas skematik __.sch__, berkas papan PCB "
+"__.kicad_pcb__, berkas proyek _.pro_ dan berkas Netlist __.net__, dikirimkan "
+"bersama dengan berkas komponen skematik _.lib_ dan berkas _footprint_ "
+"__.kicad_mod__. Hanya dengan cara ini, orang yang menerima berkas Anda akan "
+"bebas untuk memodifikasi skematik dan papan PCB yang Anda buat."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1487
+msgid ""
+"With KiCad schematics, people need the _.lib_ files that contain the "
+"symbols. Those library files need to be loaded in the _Eeschema_ "
+"preferences. On the other hand, with boards (__.kicad_pcb__ files), "
+"footprints can be stored inside the _.kicad_pcb_ file. You can send someone "
+"a _.kicad_pcb_ file and nothing else, and they would still be able to look "
+"at and edit the board. However, when they want to load components from a "
+"netlist, the footprint libraries (__.kicad_mod__ files) need to be present "
+"and loaded in the _Pcbnew_ preferences just as for schematics. Also, it is "
+"necessary to load the _.kicad_mod_ files in the preferences of _Pcbnew_ in "
+"order for those footprints to show up in __Cvpcb__."
+msgstr ""
+"Untuk berkas skematik KiCad, diperlukan adanya berkas _.lib_ yang berisi "
+"simbol-simbol. Berkas pustaka tersebut harus dimuat pada preferensi "
+"_Eeschema_. Sedangkan untuk berkas papan PCB (berkas __.kicad_pcb__), "
+"_footprint_ dapat disimpan di dalam berkas _.kicad_pcb_. Anda bisa "
+"mengirimkan kepada orang lain sebuah berkas _.kicad_pcb_ saja, dan ia akan "
+"bisa melihat dan mengedit papan PCB Anda. Bagaimanapun, saat mereka ingin "
+"memuat komponen dari Netlist, berkas _footprint_ (berkas __.kicad_mod__) "
+"harus tersedia dan dimuat di preferensi _Pcbnew_, seperti halnya skematik. "
+"Penting juga untuk memuat berkas _.kicad_mod_ di preferensi _Pcbnew_  agar "
+"_footprint_ dapat ditampilkan di __Cvpcb__."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1495
+msgid ""
+"If someone sends you a _.kicad_pcb_ file with footprints you would like to "
+"use in another board, you can open the Footprint Editor, load a footprint "
+"from the current board, and save or export it into another footprint "
+"library. You can also export all the footprints from a _.kicad_pcb_ file at "
+"once via *Pcbnew* -> *File* -> *Archive* -> *Footprints* -> **Create "
+"footprint archive**, which will create a new _.kicad_mod_ file with all the "
+"board's footprints."
+msgstr ""
+"Jika seseorang mengirimi Anda berkas _.kicad_pcb_, dan ada _footprint_ pada "
+"berkas itu yang ingin Anda gunakan pada papan PCB yang lain, Anda bisa "
+"membuka 'Footprint Editor', memuat _footprint_ dari papan PCB yang sedang "
+"dibuka, dan menyimpan atau mengekspor ke pustaka _footprint_ yang lain. Anda "
+"juga bisa mengekspor semua _footprint_ dari berkas _.kicad_pcb_ melalui "
+"*Pcbnew* -> *File* -> *Archive* -> *Footprints* -> **Create footprint "
+"archive**, yang akan membuat berkas _.kicad_mod_ yang baru dengan semua "
+"_footprint_ yang digunakan pada papan PCB."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1501
+msgid ""
+"Bottom line, if the PCB is the only thing you want to distribute, then the "
+"board file _.kicad_pcb_ is enough. However, if you want to give people the "
+"full ability to use and modify your schematic, its components and the PCB, "
+"it is highly recommended that you zip and send the following project "
+"directory:"
+msgstr ""
+"Pada intinya, jika PCB adalah satu-satunya hal yang ingin Anda "
+"distribusikan, maka berkas _.kicad_pcb_ saja sudah cukup. Namun, jika Anda "
+"ingin memberikan kemampuan penuh kepada orang lain untuk menggunakan dan "
+"memodifikasi skematik, komponen dan PCB Anda, sangat direkomendasikan untuk "
+"membuat berkas 'zip' dan mengirimkan direktori proyek berikut ini:"
+
+#. type: delimited block -
+#: getting_started_in_kicad.adoc:1519
+#, no-wrap
+msgid ""
+"tutorial1/\n"
+"|-- tutorial1.pro\n"
+"|-- tutorial1.sch\n"
+"|-- tutorial1.kicad_pcb\n"
+"|-- tutorial1.net\n"
+"|-- library/\n"
+"|   |-- myLib.lib\n"
+"|   |-- myOwnLib.lib\n"
+"|   \\-- myQuickLib.lib\n"
+"|\n"
+"|-- myfootprint.pretty/\n"
+"|   \\-- MYCONN3.kicad_mod\n"
+"|\n"
+"\\-- gerber/\n"
+"    |-- ...\n"
+"    \\-- ...\n"
+msgstr ""
+"tutorial1/\n"
+"|-- tutorial1.pro\n"
+"|-- tutorial1.sch\n"
+"|-- tutorial1.kicad_pcb\n"
+"|-- tutorial1.net\n"
+"|-- library/\n"
+"|   |-- myLib.lib\n"
+"|   |-- myOwnLib.lib\n"
+"|   \\-- myQuickLib.lib\n"
+"|\n"
+"|-- myfootprint.pretty/\n"
+"|   \\-- MYCONN3.kicad_mod\n"
+"|\n"
+"\\-- gerber/\n"
+"    |-- ...\n"
+"    \\-- ...\n"
+
+#. type: Title ==
+#: getting_started_in_kicad.adoc:1522
+#, no-wrap
+msgid "More about KiCad documentation"
+msgstr "Lebih Lanjut Tentang Dokumentasi KiCad"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1527
+msgid ""
+"This has been a quick guide on most of the features in KiCad. For more "
+"detailed instructions consult the help files which you can access through "
+"each KiCad module. Click on *Help* -> **Manual**."
+msgstr ""
+"Dokumen ini adalah panduan ringkas untuk sebagian besar fitur di KiCad. "
+"Untuk instruksi yang lebih detail, bacalah berkas bantuan yang bisa diakses "
+"melalui tiap-tiap modul KiCad. Klik *Help* -> **Manual**."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1530
+msgid ""
+"KiCad comes with a pretty good set of multi-language manuals for all its "
+"four software components."
+msgstr ""
+"KiCad telah menyertakan sejumlah manual dalam berbagai bahasa untuk keempat "
+"komponen perangkat lunak yang ada di KiCad."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1532
+msgid "The English version of all KiCad manuals are distributed with KiCad."
+msgstr ""
+"Versi Bahasa Inggris dari buku manual KiCad didistribusikan bersama dengan "
+"perangkat lunak KiCad."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1538
+msgid ""
+"In addition to its manuals, KiCad is distributed with this tutorial, which "
+"has been translated into other languages. All the different versions of this "
+"tutorial are distributed free of charge with all recent versions of KiCad. "
+"This tutorial as well as the manuals should be packaged with your version of "
+"KiCad on your given platform."
+msgstr ""
+"Sebagai tambahan bagi buku manual, KiCad didistribusikan dengan tutorial "
+"ini, yang telah diterjemahkan ke dalam berbagai bahasa. Semua versi yang "
+"berbeda dari tutorial ini didistribusikan secara cuma-cuma dengan semua "
+"versi terbaru KiCad. Tutorial ini, bersama dengan buku manual, telah "
+"disertakan bersama versi KiCad yang Anda gunakan."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1541
+msgid ""
+"For example, on Linux the typical locations are in the following "
+"directories, depending on your exact distribution:"
+msgstr ""
+"Sebagai contoh, pada sistem operasi Linux, lokasi yang umum untuk menemukan "
+"dokumentasi KiCad adalah pada direktori berikut, bergantung pada distribusi "
+"yang Anda gunakan:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1544
+#, no-wrap
+msgid ""
+" /usr/share/doc/kicad/help/en/\n"
+" /usr/local/share/doc/kicad/help/en\n"
+msgstr ""
+" /usr/share/doc/kicad/help/en/\n"
+" /usr/local/share/doc/kicad/help/en\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1546
+msgid "On Windows it is in:"
+msgstr "Pada sistem operasi Windows, Anda bisa menemukannya di:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1548
+#, no-wrap
+msgid " <installation directory>/share/doc/kicad/help/en\n"
+msgstr " <direktori instalasi>/share/doc/kicad/help/en\n"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1550
+msgid "On OS X:"
+msgstr "Pada OS X:"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1552
+#, no-wrap
+msgid " /Library/Application Support/kicad/help/en\n"
+msgstr " /Library/Application Support/kicad/help/en\n"
+
+#. type: Title ===
+#: getting_started_in_kicad.adoc:1554
+#, no-wrap
+msgid "KiCad documentation on the Web"
+msgstr "Dokumentasi KiCad di Internet"
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1557
+msgid ""
+"Latest KiCad documentations are available in multiple languages on the Web."
+msgstr ""
+"Dokumentasi KiCad yang terbaru tersedia dalam berbagai bahasa di Internet."
+
+#. type: Plain text
+#: getting_started_in_kicad.adoc:1559
+msgid "http://kicad-pcb.org/help/documentation/"
+msgstr "http://kicad-pcb.org/help/documentation/"
+
+#~ msgid ""
+#~ "We are going to add a component from a library that isn't configured in "
+#~ "the default project. In the menu, choose *Preferences* -> **Component "
+#~ "Libraries** and click the **Add** button for **Component library files**."
+#~ msgstr ""
+#~ "Kita akan menambahkan sebuah komponen dari library yang belum dimasukkan "
+#~ "pada proyek default. Pada menu, pilih *Preferences* -> **Component "
+#~ "Libraries** dan klik tombol **Add** untuk menambahkan library ke kotak "
+#~ "**Component library files**."
+
+#~ msgid ""
+#~ "You can close _Cvpcb_ and go back to the _Eeschema_ schematic editor. "
+#~ "Save the project by clicking on *File* -> **Save Whole Schematic "
+#~ "Project**. Close the schematic editor."
+#~ msgstr ""
+#~ "Anda bisa menutup _Cvpcb_ dan kembali ke editor skematik _Eeschema_. "
+#~ "Simpan proyek Anda dengan klik *File* -> **Save Whole Schematic "
+#~ "Project**. Tutuplah window editor skematik."
+
+#~| msgid ""
+#~| "If instead of grabbing the components (with the g key ) you move them "
+#~| "around using the m key you will later note that you lose the track "
+#~| "connection (the same occurs in the schematic editor). Bottom line, "
+#~| "always use the g key option."
+#~ msgid ""
+#~ "If instead of grabbing the components (with [g]) you move them around "
+#~ "using [m] you will later note that you lose the track connection (the "
+#~ "same occurs in the schematic editor)."
+#~ msgstr ""
+#~ "Jika Anda tidak mengambil komponen dengan menggunakan [g], tetapi "
+#~ "menggunakan [m] untuk memindahkan komponen, Anda akan menemukan bahwa "
+#~ "sambungan antar komponen akan terputus (hal tersebut juga akan terjadi "
+#~ "pada editor skematik)."
+
+#~ msgid ""
+#~ "From KiCad, open the _Pcbnew_ software tool and load your board file by "
+#~ "clicking on the icon image:images/icons/open_document."
+#~ "png[open_document_png]."
+#~ msgstr ""
+#~ "Dari KiCad, buka _Pcbnew_ dan buka file PCB Anda dengan klik pada ikon "
+#~ "image:images/icons/open_document.png[open_document_png]."
+
+#~ msgid ""
+#~ "Freerouter is an open source java application, and it is needed to build "
+#~ "by yourself to use with KiCad.  Source code of Freerouter can be found on "
+#~ "this site: https://github.com/nikropht/FreeRouting"
+#~ msgstr ""
+#~ "Freerouter adalah aplikasi java sumber-terbuka, dan harus Anda bangun "
+#~ "sendiri agar bisa digunakan dengan KiCad. Kode sumber Freerouter bisa "
+#~ "didapatkan di: https://github.com/nikropht/FreeRouting"
+
+#~ msgid ""
+#~ "The *Tools* -> *FreeRoute* dialog has a nice help button that opens a "
+#~ "file viewer with a little document inside named **Freerouter "
+#~ "Guidelines**. Please follow these guidelines to use FreeRoute effectively."
+#~ msgstr ""
+#~ "Kotak dialog  *Tools* -> *FreeRoute* menyediakan tombol help yang akan "
+#~ "membuka dokumen berjudul **Freerouter Guidelines**. Ikutilah petunjuknya "
+#~ "untuk menggunakan FreeRoute secara efektif."
+
+#~ msgid "http://per.launay.free.fr/kicad/kicad_php/composant.php"
+#~ msgstr "http://per.launay.free.fr/kicad/kicad_php/composant.php"
+
+#~ msgid "Stable builds"
+#~ msgstr "Rilis stabil"
+
+#~ msgid "Unstable (nightly development) builds"
+#~ msgstr "Rilis 'unstable (nightly development)'"
+
+#~ msgid ""
+#~ "Unstable builds are built from the most recent source code. They can "
+#~ "sometimes have bugs that cause file corruption, generate bad gerbers, "
+#~ "etc, but are generally stable and have the latest features."
+#~ msgstr ""
+#~ "Rilis unstable dibangun dari kode sumber yang terbaru. Terkadang rilis "
+#~ "ini akan membawa bug yang menyebabkan kerusakan file, menghasilkan file "
+#~ "gerber yang salah, dan sebagainya, namun secara umum rilis ini cukup "
+#~ "stabil dan memiliki fitur-fitur terbaru."
+
+#~ msgid "KiCad Workflow overview"
+#~ msgstr "Alur Kerja KiCad"
+
+#~ msgid "On the following site:"
+#~ msgstr "Pada situs berikut:"
+
+#~ msgid ""
+#~ "Backward Annotation is the process of sending a PCB layout change back to "
+#~ "its corresponding schematic. Some do not consider this particular feature "
+#~ "especially useful."
+#~ msgstr ""
+#~ "_Backward Annotation_ adalah suatu proses untuk mengirimkan kembali "
+#~ "adanya perubahan layout PCB ke skematik yang sesuai. Namun fitur ini "
+#~ "dianggap tidak terlalu berguna."
+
+#~ msgid ""
+#~ "You can see a list of all available shortcut keys by pressing the '?' key."
+#~ msgstr ""
+#~ "Anda bisa melihat daftar tombol shortcut yang tersedia dengan menekan "
+#~ "tombol '?'."
+
+#~ msgid ""
+#~ "You can edit any default shortcut key by going to *Preferences* -> "
+#~ "*Hotkeys* -> **Edit hotkeys**. Any modification will be saved immediately."
+#~ msgstr ""
+#~ "Anda bisa mengubah tombol shortcut default dengan membuka  *Preferences* -"
+#~ "> *Hotkeys* -> **Edit hotkeys**. Setiap perubahan akan segera disimpan "
+#~ "secara otomatis."
+
+#~ msgid ""
+#~ "The *.xsl file is located in __plugins__ directory of the KiCad "
+#~ "installation, which is located at: /usr/lib/kicad/plugins/."
+#~ msgstr ""
+#~ "File *.xsl berada di direktori __plugins__ pada instalasi KiCad, yaitu: /"
+#~ "usr/lib/kicad/plugins/."
+
+#~ msgid "Or get the file via:"
+#~ msgstr "Atau dapatkan file tersebut melalui:"
+
+#~ msgid ""
+#~ "The tool-tip is backwards; pressing this button actually displays the "
+#~ "ratsnest."
+#~ msgstr ""
+#~ "Keterangan pada tool-tip terbalik; menekan tombol ini akan menampilkan "
+#~ "rastnest."
