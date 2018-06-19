@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-25 22:58+0700\n"
-"PO-Revision-Date: 2018-06-18 21:07+0700\n"
+"PO-Revision-Date: 2018-06-19 09:48+0700\n"
 "Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>\n"
 "Language-Team: KiCad Indonesia\n"
 "Language: id\n"
@@ -3802,14 +3802,14 @@ msgid ""
 "Here are some comments on various ways to provide connections, other than "
 "wire connections."
 msgstr ""
-"Berikut beberapa komentar mengenai berbagai cara untuk membuat koneksi, "
-"selain koneksi _wire_."
+"Berikut beberapa komentar mengenai berbagai cara untuk membuat suatu "
+"koneksi, selain koneksi _wire_."
 
 #. type: Title =====
 #: eeschema_hierarchical_schematics.adoc:221
 #, no-wrap
 msgid "Simple labels"
-msgstr "Label sederhana"
+msgstr "Label Sederhana"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:225
@@ -3848,7 +3848,7 @@ msgstr ""
 #: eeschema_hierarchical_schematics.adoc:235
 #, no-wrap
 msgid "Hierarchical labels"
-msgstr "Label hirarkis"
+msgstr "Label Hirarkis"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:238
@@ -3873,12 +3873,14 @@ msgid ""
 "A hierarchical label is considered to be connected to the corresponding "
 "sheet pin symbol in the hierarchical symbol placed in the parent sheet."
 msgstr ""
+"Label hirarkis akan terhubung ke simbol pin lembar kerja yang sesuai pada "
+"simbol hirarkis yang diletakkan di lembar kerja utama."
 
 #. type: Title =====
 #: eeschema_hierarchical_schematics.adoc:247
 #, no-wrap
 msgid "Invisible power pins"
-msgstr ""
+msgstr "_Pin Power_ Tersembunyi"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:253
@@ -3888,6 +3890,10 @@ msgid ""
 "named VCC are connected all symbol invisible power pins named VCC only "
 "within the sheet they are placed."
 msgstr ""
+"_Pin power_ yang tersembunyi akan saling terhubung jika memiliki nama yang "
+"sama. Maka _pin power_ tersembunyi dengan nama VCC akan terhubung dengan "
+"semua _pin power_ tersembunyi lainnya yang juga bernama VCC, namun hanya di "
+"dalam satu lembar kerja saja."
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:257
@@ -3896,6 +3902,9 @@ msgid ""
 "connected to VCC pins, because this label is actually VCC_n, where n is the "
 "sheet number."
 msgstr ""
+"Artinya, jika Anda meletakkan label VCC pada suatu anak lembar kerja, label "
+"tersebut tidak akan terhubung ke pin VCC, karena nama sebenarnya dari label "
+"ini adalah VCC_n, di mana n adalah nomor lembar kerja."
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:261
@@ -3904,12 +3913,15 @@ msgid ""
 "schematic, it will have to be explicitly connected to an invisible power pin "
 "via a VCC power symbol."
 msgstr ""
+"Jika Anda ingin supaya label VCC tersebut terhubung dengan label VCC di "
+"keseluruhan skematik, Anda harus menghubungkannya secara eksplisit ke _pin "
+"power_ tersembunyi melalui simbol _power_ VCC."
 
 #. type: Title ====
 #: eeschema_hierarchical_schematics.adoc:263
 #, no-wrap
 msgid "Global labels"
-msgstr ""
+msgstr "Label Global"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:267
@@ -3917,17 +3929,19 @@ msgid ""
 "Global labels that have an identical name are connected across the whole "
 "hierarchy."
 msgstr ""
+"Label global yang memiliki nama yang sama akan terhubung di keseluruhan "
+"hirarki."
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:269
 msgid "(power labels like vcc ... are global labels)"
-msgstr ""
+msgstr "(label _power_ seperti vcc ... adalah label global)"
 
 #. type: Title ===
 #: eeschema_hierarchical_schematics.adoc:271
 #, no-wrap
 msgid "Complex Hierarchy"
-msgstr ""
+msgstr "Hirarki Kompleks"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:277
@@ -3936,24 +3950,28 @@ msgid ""
 "two sheets share the same schematic because the file name is the same for "
 "the two sheets (``other_sheet.sch'').  The sheet names must be unique."
 msgstr ""
+"Berikut adalah suatu contoh. Skematik yang sama digunakan sebanyak dua kali ("
+"dua kemunculan). Dua buah lembar kerja berbagi skematik yang sama karena "
+"kedua lembar kerja tersebut menggunakan nama berkas yang sama (\"other_sheet."
+"sch\"). Sedangkan nama lembar kerja harus unik. "
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_hierarchical_schematics.adoc:278
 #, no-wrap
 msgid "eeschema_complex_hierarchy_png"
-msgstr ""
+msgstr "eeschema_complex_hierarchy_png"
 
 #. type: Target for macro image
 #: eeschema_hierarchical_schematics.adoc:278
 #, no-wrap
 msgid "images/eeschema_complex_hierarchy.png"
-msgstr ""
+msgstr "images/eeschema_complex_hierarchy.png"
 
 #. type: Title ===
 #: eeschema_hierarchical_schematics.adoc:281
 #, no-wrap
 msgid "Flat hierarchy"
-msgstr ""
+msgstr "Hirarki Datar"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:285
@@ -3961,6 +3979,9 @@ msgid ""
 "You can create a project using many sheets without creating connections "
 "between these sheets (flat hierarchy) if the following rules are observed:"
 msgstr ""
+"Anda bisa membuat sebuah proyek menggunakan banyak lembar kerja tanpa harus "
+"membuat koneksi antar lembar kerja tersebut (hirarki datar) jika Anda "
+"mengikuti aturan berikut:"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:288
@@ -3968,89 +3989,93 @@ msgid ""
 "Create a root sheet containing the other sheets which acts as a link between "
 "others sheets."
 msgstr ""
+"Buat sebuah lembar kerja utama berisi lembar kerja yang lain, yang berfungsi "
+"sebagai tautan antara lembar kerja."
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:289
 msgid "No explicit connections are needed."
-msgstr ""
+msgstr "Tidak diperlukan koneksi eksplisit."
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:290
 msgid "Use global labels instead of hierarchical labels in all sheets."
 msgstr ""
+"Gunakan label global pada semua lembar kerja, dan jangan menggunakan label "
+"hirarkis."
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:292
 msgid "Here is an example of a root sheet."
-msgstr ""
+msgstr "Berikut adalah contoh lembar kerja utama."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_hierarchical_schematics.adoc:293
 #, no-wrap
 msgid "eeschema_flat_hierarchy_png"
-msgstr ""
+msgstr "eeschema_flat_hierarchy_png"
 
 #. type: Target for macro image
 #: eeschema_hierarchical_schematics.adoc:293
 #, no-wrap
 msgid "images/eeschema_flat_hierarchy.png"
-msgstr ""
+msgstr "images/eeschema_flat_hierarchy.png"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:296
 msgid "Here is the two pages, connected by global labels."
-msgstr ""
+msgstr "Berikut ini dua halaman yang terhubung oleh label global."
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:298
 msgid "Here is the pic_programmer.sch."
-msgstr ""
+msgstr "Berikut adalah `pic_programmer.sch`."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_hierarchical_schematics.adoc:299
 #, no-wrap
 msgid "eeschema_flat_hierarchy_1_png"
-msgstr ""
+msgstr "eeschema_flat_hierarchy_1_png"
 
 #. type: Target for macro image
 #: eeschema_hierarchical_schematics.adoc:299
 #, no-wrap
 msgid "images/eeschema_flat_hierarchy_1.png"
-msgstr ""
+msgstr "images/eeschema_flat_hierarchy_1.png"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:302
 msgid "Here is the pic_sockets.sch."
-msgstr ""
+msgstr "Berikut adalah `pic_sockets.sch`."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_hierarchical_schematics.adoc:303
 #, no-wrap
 msgid "eeschema_flat_hierarchy_2_png"
-msgstr ""
+msgstr "eeschema_flat_hierarchy_2_png"
 
 #. type: Target for macro image
 #: eeschema_hierarchical_schematics.adoc:303
 #, no-wrap
 msgid "images/eeschema_flat_hierarchy_2.png"
-msgstr ""
+msgstr "images/eeschema_flat_hierarchy_2.png"
 
 #. type: Plain text
 #: eeschema_hierarchical_schematics.adoc:306
 msgid "Look at global labels."
-msgstr ""
+msgstr "Perhatikan label global yang digunakan."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_hierarchical_schematics.adoc:307
 #, no-wrap
 msgid "eeschema_flat_hierarchy_3_png"
-msgstr ""
+msgstr "eeschema_flat_hierarchy_3_png"
 
 #. type: Target for macro image
 #: eeschema_hierarchical_schematics.adoc:307
 #, no-wrap
 msgid "images/eeschema_flat_hierarchy_3.png"
-msgstr ""
+msgstr "images/eeschema_flat_hierarchy_3.png"
 
 #. type: Title ==
 #: eeschema_schematic_creation_and_editing.adoc:3
@@ -4203,13 +4228,13 @@ msgstr ""
 #: eeschema_schematic_creation_and_editing.adoc:51
 #, no-wrap
 msgid "Choose Component dialog"
-msgstr ""
+msgstr "Choose Component dialog"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:51
 #, no-wrap
 msgid "images/en/dialog_choose_component.png"
-msgstr ""
+msgstr "images/en/dialog_choose_component.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:56
@@ -6262,7 +6287,7 @@ msgstr ""
 #: eeschema_automatic_classification_annotation.adoc:3
 #, no-wrap
 msgid "Symbol Annotation Tool"
-msgstr ""
+msgstr "Alat Anotasi Simbol"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:13
@@ -6273,30 +6298,37 @@ msgid ""
 "annotation tool is accessible via the icon image:images/icons/annotate."
 "png[icons_annotate_png].  Here you find its main window."
 msgstr ""
+"Alat anotasi digunakan untuk memberikan sebuah penunjuk secara otomatis ke "
+"simbol-simbol yang ada pada skematik. Memberikan anotasi pada simbol-simbol "
+"yang terdiri dari beberapa bagian akan menghasilkan sufiks yang unik untuk "
+"meminimalkan jumlah simbol tersebut. Alat anotasi dapat diakses melalui ikon "
+"image:images/icons/annotate.png[icons_annotate_png]. Gambar berikut "
+"menunjukkan tampilan jendela utamanya."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:14
 #: eeschema_general_top_toolbar.adoc:96
 #, no-wrap
 msgid "annotate-dialog_img"
-msgstr ""
+msgstr "annotate-dialog_img"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:14
 #: eeschema_general_top_toolbar.adoc:96
 #, no-wrap
 msgid "images/en/annotate-dialog.png"
-msgstr ""
+msgstr "images/en/annotate-dialog.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:17
 msgid "Available annotation schemes:"
-msgstr ""
+msgstr "Berikut skema anotasi yang tersedia:"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:19
 msgid "Annotate all the symbols (reset existing annotation option)"
 msgstr ""
+"Memberikan anotasi pada semua simbol (mereset pilihan anotasi sebelumnya)"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:21
@@ -6304,6 +6336,9 @@ msgid ""
 "Annotate all the symbols, but do not swap any previously annotated multi-"
 "unit parts."
 msgstr ""
+"Memberikan anotasi pada semua simbol, namun jangan melakukan anotasi ulang "
+"pada simbol yang terdiri dari beberapa bagian, yang telah mendapatkan "
+"anotasi sebelumnya."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:23
@@ -6311,16 +6346,23 @@ msgid ""
 "Annotate only symbols that are currently not annotated.  Symbols that are "
 "not annotated will have a designator which ends with a '?' character."
 msgstr ""
+"Memberikan anotasi hanya pada simbol yang belum mendapatkan anotasi "
+"sebelumnya. Simbol yang belum mendapatkan anotasi akan memiliki penunjuk "
+"yang berakhiran dengan tanda \"'?'\"."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:24
 msgid "Annotate the whole hierarchy (use the entire schematic option)."
 msgstr ""
+"Memberikan anotasi pada keseluruhan hirarki (gunakan opsi 'Use the entire "
+"schematic')."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:25
 msgid "Annotate the current sheet only (use current page only option)."
 msgstr ""
+"Memberikan anotasi hanya pada lembar kerja yang sedang dibuka (gunakan opsi "
+"'Use the current page only')."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:31
@@ -6331,6 +6373,12 @@ msgid ""
 "never be reannotated to U1A and U2A, nor to U2B and U2A. This is useful if "
 "you want to ensure that pin groupings are maintained."
 msgstr ""
+"Opsi 'Reset, but do not swap any annotated multi-unit parts' akan "
+"mempertahankan semua asosiasi yang telah ada pada simbol yang terdiri dari "
+"beberapa bagian. Sebagai contoh, U2A dan U2B bisa mendapatkan anotasi ulang "
+"ke U1A dan U1B, namun mereka tidak akan mendapatkan anotasi ulang meenjadi "
+"U1A dan U2A, ataupun ke U2B dan U2A. Hal ini berguna jika Anda ingin "
+"memastikan agar pengelompokan pin tetap terjaga."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:34
@@ -6338,6 +6386,8 @@ msgid ""
 "The annotation order choice gives the method used to set the reference "
 "number inside each sheet of the hierarchy."
 msgstr ""
+"Kita bisa memilih urutan anotasi untuk mengatur nomor referensi di dalam "
+"setiap lembar kerja pada hirarki."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:38
@@ -6346,11 +6396,15 @@ msgid ""
 "project (all sheets) and to the new components, if you don't want to modify "
 "previous annotations."
 msgstr ""
+"Kecuali untuk kasus-kasus tertentu, anotasi otomatis dapat diterapkan ke "
+"keseluruhan proyek (semua lembar kerja) dan ke komponen baru, jika Anda "
+"tidak ingin mengubah hasil anotasi sebelumnya."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:40
 msgid "The Annotation Choice gives the method used to calculate reference:"
 msgstr ""
+"Kita bisa memilih metode yang digunakan untuk melakukan kalkulasi referensi:"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:44
@@ -6359,6 +6413,9 @@ msgid ""
 "each reference prefix). If a previous annotation exists, only unused numbers "
 "will be used."
 msgstr ""
+"'Use first free number in schematic': komponen akan diberikan anotasi mulai "
+"dari angka 1 (untuk tiap prefiks referensi). Jika sudah ada anotasi "
+"sebelumnya, maka nomor yang akan diberikan hanya nomor yang belum digunakan."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:49
@@ -6369,6 +6426,12 @@ msgid ""
 "annotation tool uses the number 200 and more, and annotation for sheet 2 "
 "will start from the next free number."
 msgstr ""
+"'Start to sheet number*100 and use first free number': anotasi akan dimulai "
+"dari 101 untuk lembar kerja 1, dari 201 untuk lembar kerja 2, dst. Jika "
+"terdapat lebih dari 99 item yang memiliki prefiks referensi yang sama (U, R) "
+"di dalam lembar kerja 1, maka alat anotasi akan menggunakan nomor 200 dan "
+"seterusnya, dan anotasi untuk lembar kerja 2 akan dimulai dari nomor bebas "
+"berikutnya."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:51
@@ -6376,75 +6439,79 @@ msgid ""
 "Start to sheet number*1000 and use first free number. Annotation start from "
 "1001 for the sheet 1, from 2001 for the sheet 2."
 msgstr ""
+"'Start to sheet number*1000 and use first free number': anotasi dimulai dari "
+"1001 untuk lembar kerja 1, dari 2001 untuk lembar kerja 2."
 
 #. type: Title ===
 #: eeschema_automatic_classification_annotation.adoc:53
 #, no-wrap
 msgid "Some examples"
-msgstr ""
+msgstr "Contoh Penggunaan"
 
 #. type: Title ====
 #: eeschema_automatic_classification_annotation.adoc:56
 #, no-wrap
 msgid "Annotation order"
-msgstr ""
+msgstr "Urutan Anotasi"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:59
 msgid "This example shows 5 elements placed, but not annotated."
 msgstr ""
+"Contoh berikut menunjukkan 5 buah elemen yang telah diletakkan, namun belum "
+"dilakukan anotasi."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:60
 #, no-wrap
 msgid "eeschema_annotation_order_none_png"
-msgstr ""
+msgstr "eeschema_annotation_order_none_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:60
 #, no-wrap
 msgid "images/eeschema_annotation_order_none.png"
-msgstr ""
+msgstr "images/eeschema_annotation_order_none.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:63
 msgid ""
 "After the annotation tool Is executed, the following result is obtained."
-msgstr ""
+msgstr "Setelah alat anotasi dijalankan, didapatkan hasil berikut."
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:65
 msgid "Sort by X position."
-msgstr ""
+msgstr "Diurutkan berdasarkan sumbu X."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:66
 #, no-wrap
 msgid "eeschema_annotation_order_x_png"
-msgstr ""
+msgstr "eeschema_annotation_order_x_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:66
 #, no-wrap
 msgid "images/eeschema_annotation_order_x.png"
-msgstr ""
+msgstr "images/eeschema_annotation_order_x.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:69
 msgid "Sort by Y position."
-msgstr ""
+msgstr "Diurutkan berdasarkan sumbu Y."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:70
 #, no-wrap
 msgid "eeschema_annotation_order_y_png"
-msgstr ""
+msgstr "eeschema_annotation_order_y_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:70
 #, no-wrap
 msgid "images/eeschema_annotation_order_y.png"
-msgstr ""
+msgstr "images/eeschema_annotation_order_y.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:74
@@ -6452,12 +6519,14 @@ msgid ""
 "You can see that four 74LS00 gates were distributed in U1 package, and that "
 "the fifth 74LS00 has been assigned to the next, U2."
 msgstr ""
+"Amati bahwa keempat _gate_ 74LS00 didistribusikan sebagai paket U1, "
+"sedangkan 74LS00 yang kelima mendapatkan penomoran berikutnya, yaitu U2."
 
 #. type: Title ====
 #: eeschema_automatic_classification_annotation.adoc:76
 #, no-wrap
 msgid "Annotation Choice"
-msgstr ""
+msgstr "Pilihan Anotasi"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:80
@@ -6465,18 +6534,20 @@ msgid ""
 "Here is an annotation in sheet 2 where the option use first free number in "
 "schematic was set."
 msgstr ""
+"Berikut adalah anotasi pada lembar kerja 2 di mana digunakan opsi 'Use first "
+"free number in schematic'."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:81
 #, no-wrap
 msgid "eeschema_annotation_choice_free_png"
-msgstr ""
+msgstr "eeschema_annotation_choice_free_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:81
 #, no-wrap
 msgid "images/eeschema_annotation_choice_free.png"
-msgstr ""
+msgstr "images/eeschema_annotation_choice_free.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:85
@@ -6484,18 +6555,20 @@ msgid ""
 "Option start to sheet number*100 and use first free number give the "
 "following result."
 msgstr ""
+"Opsi 'start to sheet number*100 and use first free number' memberikan hasil "
+"berikut."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:86
 #, no-wrap
 msgid "eeschema_annotation_choice_x100_png"
-msgstr ""
+msgstr "eeschema_annotation_choice_x100_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:86
 #, no-wrap
 msgid "images/eeschema_annotation_choice_x100.png"
-msgstr ""
+msgstr "images/eeschema_annotation_choice_x100.png"
 
 #. type: Plain text
 #: eeschema_automatic_classification_annotation.adoc:90
@@ -6503,18 +6576,20 @@ msgid ""
 "The option start to sheet number*1000 and use first free number gives the "
 "following result."
 msgstr ""
+"Opsi 'Start to sheet number*1000 and use first free number' memberikan hasil "
+"berikut."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_automatic_classification_annotation.adoc:91
 #, no-wrap
 msgid "eeschema_annotation_choice_x1000_png"
-msgstr ""
+msgstr "eeschema_annotation_choice_x1000_png"
 
 #. type: Target for macro image
 #: eeschema_automatic_classification_annotation.adoc:91
 #, no-wrap
 msgid "images/eeschema_annotation_choice_x1000.png"
-msgstr ""
+msgstr "images/eeschema_annotation_choice_x1000.png"
 
 #. type: Title ==
 #: eeschema_plot_and_print.adoc:3
