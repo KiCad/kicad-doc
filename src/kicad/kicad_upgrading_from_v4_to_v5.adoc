@@ -1,0 +1,131 @@
+:icons: fonts
+:iconsdir: /img/icons/
+
+= Upgrading from Version 4 to Version 5
+
+Changes were made to the behavior to KiCad during the version 5
+development that can impact projects created with older versions
+of KiCad.  This section serves as a guide to ensure the smoothest
+possible path when upgrading to version 5 of KiCad.
+
+== Schematic Symbol Libraries
+
+Schematic symbol libraries are no longer accessed using the symbol
+(referred to as components in version 4) look up list.  The symbol
+libraries are now managed using a symbol library table which is
+is almost identical in behavior to the footprint library table.
+This represents a significant change in the way symbol libraries
+are defined and accessed and will resolve the long standing issue
+with symbol library ordering in Eeschema along with some new
+features such as platform independence and lazy library loading.
+KiCad users should be familiar with the design and concept so this
+is not a tutorial on how to configure your symbol library table.
+It is important information that you need to understand in order
+to properly convert your existing schematics to use the symbol
+library table.
+
+=== Global Symbol Library Table.
+The first time you start version 5 of Eeschema and there is no
+global symbol library defined in the KiCad configuration, Eeschema
+will prompt you to create a new global symbol library.  If you
+do not understand why you would want to use a custom global symbol
+library table, choose the default global symbol library option.
+
+[NOTE]
+If you track the
+https://github.com/KiCad/kicad-symbols:[symbol library repository],
+changes made to the default global symbol library table are not
+tracked by KiCad.  You will have to manually keep the global symbol
+library table up to date.
+
+=== Symbol Library Table Mapping
+
+Much like the conversion over to the footprint library table, there
+will be issues and a learning curve.  Hopefully, familiarity with
+the footprint library table will minimize the learning curve.  The
+biggest issues will be with existing projects and users with custom
+symbol library configurations.  Some of these issues will be mitigated
+by a new symbol library table remapping feature.  This feature will
+be executed whenever a schematic is opened that has not yet been
+remapped.  There are a few steps you should take ahead of time in
+order for the remapping to be the most effective.
+
+[NOTE]
+If you have been using a development build of KiCad, copy the full
+default global symbol library table file (sym-lib-table) from the
+template folder installed with the KiCad libraries or from the
+https://github.com/KiCad/kicad-library/blob/master/template/sym-lib-table[KiCad library repo]
+to your KiCad user configuration folder.  This will replace the
+empty one (most likely) created by Eeschema.  If you do not do
+this, you will most likely end up with a bunch of broken symbol
+links.
+
+[WARNING]
+Remapped schematics will not be compatible with older versions of
+KiCad.  Make sure to back up project schematic and project files
+before remapping a schematic in case things go wrong. +
+
+1. If possible, keep version 4 of KiCad installed on your system unless
+   you have never used any of the symbol libraries distributed with KiCad.
+
+2. If you get warning about missing libraries when you start version 4
+   of Eeschema, make sure to fix the missing libraries if they contain
+   symbols that are in the schematic before you attempt to remap your
+   schematic.  Otherwise, the correct symbol will not be found and you
+   will end up with broken symbol links in your schematic.  You can test
+   this by left clicking on a symbol in the schematic and verifying
+   that the symbol is not being loaded from the cache library.  If a
+   symbol is being loaded from the cache library, you are already skating
+   on thin ice.
+
+3. If symbol recovery is required during the remapping process, do not
+   dismiss it.  Failure to recover symbols will result in broken symbol
+   links or the wrong symbol being linked in the schematic.
+
+4. During the remapping process, symbol libraries not found in the global
+   symbol library table will be used to create a project specific symbol
+   library table.  You will have to move them manually to the global symbol
+   library table if that is your preference.
+
+5. For the most accurate remapping you should create a project library
+   by copying the project cache file (project-name-cache.lib) to a different
+   file and add it to the top of the symbol library list.  You must use a
+   version of KiCad prior to the symbol library table implementation in
+   order to do this.
+
+=== Symbol Names and Symbol Library Nickname Limitations
+
+Symbol naming now follows the same convention as footprint naming with
+one exception, spaces are not allowed in library nicknames or symbol
+names.  The colon ':' character cannot be used in symbol library nicknames
+or symbol names and forward slash '/' character is not allowed in symbol
+names.  Existing symbols containing these characters will cause issues
+with broken symbol links in schematics.  Fix any symbol names that contain
+these characters symbols that violate these naming restrictions.
+
+== Symbol Cache Library Availability
+
+The cache library is no longer shown in either the symbol library viewer or
+the symbol library editor.  The cache should have never be editable because
+any edits would get overwritten by the next schematic save.
+
+== Board File Format Changes
+
+Several new features have been added to Pcbnew which impact the board file
+format.  Using these new features in board designs will prevent them from
+being opened with previous versions of Pcbnew.
+
+- Rounded rectangle footprint pads.
+- Custom shape footprint pads.
+- Footprint pad names longer than four characters.
+- Keep out zones on more than a single layer.
+- 3D models offset saved as millimeters instead of inches.
+- Footprint text locking.
+
+=== Global Footprint Library Table.
+
+If you track the
+https://github.com/KiCad/kicad-footprints:[footprint library repository],
+changes made to the default global footprint library table are not tracked
+by KiCad.  You will have to manually keep the global symbol library table
+up to date.
