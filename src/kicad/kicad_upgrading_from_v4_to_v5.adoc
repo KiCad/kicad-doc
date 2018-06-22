@@ -20,20 +20,21 @@ with symbol library ordering in Eeschema along with some new
 features such as platform independence and lazy library loading.
 KiCad users should be familiar with the design and concept so this
 is not a tutorial on how to configure your symbol library table.
-It is important information that you need to understand in order
-to properly convert your existing schematics to use the symbol
-library table.
+It is important information that you need to fully understand the
+in order to properly convert your existing schematics to use the
+symbol library table.
 
 === Global Symbol Library Table.
 The first time you start version 5 of Eeschema and there is no
-global symbol library defined in the KiCad configuration, Eeschema
-will prompt you to create a new global symbol library.  If you
-do not understand why you would want to use a custom global symbol
-library table, choose the default global symbol library option.
+global symbol library defined in the KiCad user configuration,
+Eeschema will prompt you to create a new global symbol library.
+If you do not understand why you would want to use a custom global
+symbol library table, choose the default global symbol library
+option.
 
 [NOTE]
 If you track the
-https://github.com/KiCad/kicad-symbols:[symbol library repository],
+https://github.com/KiCad/kicad-symbols[symbol library repository],
 changes made to the default global symbol library table are not
 tracked by KiCad.  You will have to manually keep the global symbol
 library table up to date.
@@ -46,9 +47,9 @@ the footprint library table will minimize the learning curve.  The
 biggest issues will be with existing projects and users with custom
 symbol library configurations.  Some of these issues will be mitigated
 by a new symbol library table remapping feature.  This feature will
-be executed whenever a schematic is opened that has not yet been
-remapped.  There are a few steps you should take ahead of time in
-order for the remapping to be the most effective.
+be executed whenever a schematic is opened that has not been remapped.
+There are a few steps you should take ahead of time in order for the
+remapping to be the most effective.
 
 [NOTE]
 If you have been using a development build of KiCad, copy the full
@@ -87,11 +88,17 @@ before remapping a schematic in case things go wrong. +
    library table.  You will have to move them manually to the global symbol
    library table if that is your preference.
 
-5. For the most accurate remapping you should create a project library
-   by copying the project cache file (project-name-cache.lib) to a different
-   file and add it to the top of the symbol library list.  You must use a
+5. For the most accurate remapping, create a project library by copying
+   the project cache file (project-name-cache.lib) to a different file
+   and add it to the top of the symbol library list.  You must use a
    version of KiCad prior to the symbol library table implementation in
    order to do this.
+
+[NOTE]
+A tool has been provided to attempt to fix remapping issues.  If there
+are missing symbol library links in a schematic, they can be fixed by
+using opening the "Tools->Edit Symbol Library References..." and click
+the "Map Orphans" button.
 
 === Symbol Names and Symbol Library Nickname Limitations
 
@@ -125,7 +132,7 @@ being opened with previous versions of Pcbnew.
 === Global Footprint Library Table.
 
 If you track the
-https://github.com/KiCad/kicad-footprints:[footprint library repository],
+https://github.com/KiCad/kicad-footprints[footprint library repository],
 changes made to the default global footprint library table are not tracked
 by KiCad.  You will have to manually keep the global symbol library table
 up to date.
