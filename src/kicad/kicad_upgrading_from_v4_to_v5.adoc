@@ -1,5 +1,18 @@
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:!toc-title:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+ifndef::env-github[]
 :icons: fonts
 :iconsdir: /img/icons/
+endif::[]
 
 = Upgrading from Version 4 to Version 5
 
@@ -10,19 +23,20 @@ possible path when upgrading to version 5 of KiCad.
 
 == Schematic Symbol Libraries
 
-Schematic symbol libraries are no longer accessed using the symbol
-(referred to as components in version 4) look up list.  The symbol
-libraries are now managed using a symbol library table which is
-is almost identical in behavior to the footprint library table.
+Schematic symbol libraries are no longer accessed using a symbol
+(referred to as components in version 4) look up list.  Symbol
+libraries are now managed by a symbol library table that behaves 
+similarly to the footprint library table.
 This represents a significant change in the way symbol libraries
-are defined and accessed and will resolve the long standing issue
-with symbol library ordering in Eeschema along with some new
+are defined and accessed.  
+
+This change resolves the problems created by
+symbol library ordering in Eeschema.  It also provides some new
 features such as platform independence and lazy library loading.
 KiCad users should be familiar with the design and concept so this
 is not a tutorial on how to configure your symbol library table.
-It is important information that you need to fully understand the
-in order to properly convert your existing schematics to use the
-symbol library table.
+It is important information that you need to properly convert
+your existing schematics to use the symbol library table.
 
 === Global Symbol Library Table.
 The first time you start version 5 of Eeschema and there is no
@@ -85,7 +99,7 @@ before remapping a schematic in case things go wrong. +
 
 4. During the remapping process, symbol libraries not found in the global
    symbol library table will be used to create a project specific symbol
-   library table.  You will have to move them manually to the global symbol
+   library table.  You can move them manually to the global symbol
    library table if that is your preference.
 
 5. For the most accurate remapping, create a project library by copying
@@ -95,10 +109,26 @@ before remapping a schematic in case things go wrong. +
    order to do this.
 
 [NOTE]
+.** Fixing broken remapping: **
 A tool has been provided to attempt to fix remapping issues.  If there
 are missing symbol library links in a schematic, they can be fixed by
 using opening the "Tools->Edit Symbol Library References..." and click
 the "Map Orphans" button.
+
+=== Remapping Search Order
+
+When remapping symbols, KiCad proceeds in the following order to assign
+the library to a symbol:
+
+1. Global Symbol Library Table: Symbols are preferentially mapped to the global symbol
+library table, if one exists.
+
+2. Project specific libraries: Libraries listed in the project library list that are not
+in the global symbol library table are searched next.
+
+3. Project cache file:  If a symbol doesn't exist in the listed libraries above,
+it is first rescued -- a copy is made from the cache and placed in the __proj__-rescue.lib --
+before the symbol is mapped to this new, rescue library.
 
 === Symbol Names and Symbol Library Nickname Limitations
 
@@ -113,8 +143,8 @@ these characters symbols that violate these naming restrictions.
 == Symbol Cache Library Availability
 
 The cache library is no longer shown in either the symbol library viewer or
-the symbol library editor.  The cache should have never be editable because
-any edits would get overwritten by the next schematic save.
+the symbol library editor.  The cache should never be edited because
+any changes are overwritten by the next schematic save.
 
 == Board File Format Changes
 
