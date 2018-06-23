@@ -26,25 +26,32 @@ possible path when upgrading to version 5 of KiCad.
 Schematic symbol libraries are no longer accessed using a symbol
 (referred to as components in version 4) look up list.  Symbol
 libraries are now managed by a symbol library table that behaves
-similarly to the footprint library table.
-This represents a significant change in the way symbol libraries
-are defined and accessed.
+similarly to the footprint library table.  This change is a significant
+improvement, but some schematics may need manual intervention when being
+converted to version 5.
 
-This change resolves the problems created by
-symbol library ordering in Eeschema.  It also provides some new
-features such as platform independence and lazy library loading.
-KiCad users should be familiar with the design and concept so this
-is not a tutorial on how to configure your symbol library table.
-It is important information that you need to properly convert
-your existing schematics to use the symbol library table.
+In previous versions, KiCad used a list of library files to search when
+locating symbols in the eeschema file. When locating a symbol, each path
+would be searched and the first library that held the symbol name
+would be used.
+
+From v5, KiCad symbol names are prefixed with a nickname, and a
+link:../eeschema/eeschema_symbol_library_table.adoc[lookup table matching
+nicknames to library paths] is used to locate the library which holds the
+symbol. The table is called the 'symbol library table' and built from config
+files stored in the system configuration directory and the project directory.
+
+To ugrade a KiCad project from v4 to v5, nicknames for all of the library
+files need to be created and then schematic symbol names need to be prefixed
+with the correct nickname.
+
 
 === Global Symbol Library Table.
-The first time you start version 5 of Eeschema and there is no
-global symbol library defined in the KiCad user configuration,
-Eeschema will prompt you to create a new global symbol library.
-If you do not understand why you would want to use a custom global
-symbol library table, choose the default global symbol library
-option.
+Eeschema v5 will automatically create a global symbol table when
+first started. You will be given a chance to skip this and create
+your own global symbol table by hand. You only need to do this if
+don't use KiCad symbol libraries at all. Otherwise it is easier to
+modify the automatically generated global symbol table.
 
 [NOTE]
 If you track the
@@ -55,13 +62,8 @@ library table up to date.
 
 === Symbol Library Table Mapping
 
-Much like the conversion over to the footprint library table, there
-will be issues and a learning curve.  Hopefully, familiarity with
-the footprint library table will minimize the learning curve.  The
-biggest issues will be with existing projects and users with custom
-symbol library configurations.  Some of these issues will be mitigated
-by a new symbol library table remapping feature.  This feature will
-be executed whenever a schematic is opened that has not been remapped.
+Automatic remapping of symbols will be executed whenever a
+schematic is opened that has not been remapped.
 There are a few steps you should take ahead of time in order for the
 remapping to be the most effective.
 
@@ -77,8 +79,8 @@ links.
 
 [WARNING]
 Remapped schematics will not be compatible with older versions of
-KiCad.  Make sure to back up project schematic and project files
-before remapping a schematic in case things go wrong. +
+KiCad.  The Remap Symbols dialog will make a backup of your schematic
+files and you should do the same if you remap manually. +
 
 1. If possible, keep version 4 of KiCad installed on your system unless
    you have never used any of the symbol libraries distributed with KiCad.
@@ -90,8 +92,10 @@ before remapping a schematic in case things go wrong. +
    will end up with broken symbol links in your schematic.  You can test
    this by left clicking on a symbol in the schematic and verifying
    that the symbol is not being loaded from the cache library.  If a
-   symbol is being loaded from the cache library, you are already skating
-   on thin ice.
+   symbol is being loaded from the cache library, Eeschema cannot find
+   your part in the system or project symbol libraries. If you need a
+   cached part to be available to other projects on your system, you will
+   need to integrate it into a system or project library manually.
 
 3. If symbol recovery is required during the remapping process, do not
    dismiss it.  Failure to recover symbols will result in broken symbol
@@ -132,13 +136,12 @@ before the symbol is mapped to this new, rescue library.
 
 === Symbol Names and Symbol Library Nickname Limitations
 
-Symbol naming now follows the same convention as footprint naming with
-one exception, spaces are not allowed in library nicknames or symbol
-names.  The colon ':' character cannot be used in symbol library nicknames
-or symbol names and forward slash '/' character is not allowed in symbol
-names.  Existing symbols containing these characters will cause issues
-with broken symbol links in schematics.  Fix any symbol names that contain
-these characters symbols that violate these naming restrictions.
+Symbol names may not contain `<SPACE>, ':', '/'`.
+
+Library nicknames may not contain `<SPACE>, ':'`.
+
+Existing symbol names with these characters must be renamed by manually editing the
+relevant schematic and library files.
 
 == Symbol Cache Library Availability
 

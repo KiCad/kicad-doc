@@ -1,27 +1,23 @@
 == Manage Symbol Libraries
 
-Symbol libraries need to be made available in order to create schematics.
-The manner in which this is accomplished varies according to the version
-of KiCad being used.
+Symbol libraries hold collections of symbols used when creating schematics. Each symbol
+in a schematic is uniquely identified by a full name that is composed of a library nickname
+and a symbol name. An example is `Audio:AD1853`.
 
 === Symbol Library Table
 
-As of November 2017, Eeschema uses a new library management tool based on
-*_symbol library tables_* which is identical in design to the footprint
-library table used in CvPcb and Pcbnew.
+The symbol library table holds a list of all library files KiCad knows about.
+The symbol library table is constructed from the global symbol library table
+file and the project specific symbol library table file.
+
+When a symbol is loaded, Eeschema uses the library nickname, `Audio` in our example, to lookup
+the library location in the symbol library table.
 
 The image below shows the symbol library table editing dialog which
 can be opened by invoking the ``Manage Symbol Library Tables'' entry
 in the ``Preferences'' menu.
 
 image::images/en/options_symbol_lib.png[scaledwidth="80%",alt="sym lib table dlg"]
-
-The symbol library table is used to map a symbol library of any supported
-library type to a library nickname. *This nickname is used to look up
-symbols* instead of the previous method which depended on library search
-path ordering. This allows Eeschema to access symbols with the same name in
-different libraries by ensuring that the correct symbol is loaded from the
-appropriate library.
 
 ==== Global Symbol Library Table
 
