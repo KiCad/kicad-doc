@@ -31,17 +31,18 @@ improvement, but some schematics may need manual intervention when being
 converted to version 5.
 
 In previous versions, KiCad used a list of library files to search when
-locating symbols in the eeschema file. When locating a symbol, each path
+locating symbols in the Eeschema file. When locating a symbol, each path
 would be searched and the first library that held the symbol name
 would be used.
 
 From v5, KiCad symbol names are prefixed with a nickname, and a
 link:../eeschema/eeschema_symbol_library_table.adoc[lookup table matching
 nicknames to library paths] is used to locate the library which holds the
-symbol. The table is called the 'symbol library table' and built from config
-files stored in the system configuration directory and the project directory.
+symbol. The table is called the 'symbol library table' and built from
+configuration files stored in the user's KiCad configuration directory
+and the currently loaded project directory.
 
-To ugrade a KiCad project from v4 to v5, nicknames for all of the library
+To upgrade a KiCad project from v4 to v5, nicknames for all of the library
 files need to be created and then schematic symbol names need to be prefixed
 with the correct nickname.
 
@@ -167,5 +168,5 @@ being opened with previous versions of Pcbnew.
 If you track the
 https://github.com/KiCad/kicad-footprints[footprint library repository],
 changes made to the default global footprint library table are not tracked
-by KiCad.  You will have to manually keep the global symbol library table
+by KiCad.  You will have to manually keep the global footprint library table
 up to date.
