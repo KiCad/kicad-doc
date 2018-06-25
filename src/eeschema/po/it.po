@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2018-06-04 18:23+0200\n"
-"PO-Revision-Date: 2018-06-07 10:08+0200\n"
+"POT-Creation-Date: 2018-06-25 10:55+0200\n"
+"PO-Revision-Date: 2018-06-25 11:05+0200\n"
 "Last-Translator: Marco Ciampa <ciampix@posteo.net>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: it\n"
@@ -10745,7 +10745,7 @@ msgid "Symbol Library Tables"
 msgstr "Tabelle di librerie di simboli"
 
 #. type: Target for macro image
-#: eeschema_main_top_menu.adoc:55 eeschema_symbol_library_table.adoc:17
+#: eeschema_main_top_menu.adoc:55 eeschema_symbol_library_table.adoc:20
 #, no-wrap
 msgid "images/en/options_symbol_lib.png"
 msgstr "images/it/options_symbol_lib.png"
@@ -13724,13 +13724,11 @@ msgstr "Gestione librerie di simboli"
 #. type: Plain text
 #: eeschema_symbol_library_table.adoc:6
 msgid ""
-"Symbol libraries need to be made available in order to create schematics.  "
-"The manner in which this is accomplished varies according to the version of "
-"KiCad being used."
-msgstr ""
-"Le librerie di simboli devono essere rese disponibili per creare gli schemi "
-"elettrici. Il modo in cui quest'operazione viene effettuata varia a seconda "
-"della versione di KiCad in uso."
+"Symbol libraries hold collections of symbols used when creating schematics. "
+"Each symbol in a schematic is uniquely identified by a full name that is "
+"composed of a library nickname and a symbol name. An example is `Audio:"
+"AD1853`."
+msgstr "Le librerie di simboli contengono raccolte di simboli utilizzati durante la creazione degli schemi elettrici. Ogni simbolo in uno schema è identificato in modo univoco da un nome completo composto da un nickname di libreria e da un nome di simbolo. Un esempio è `Audio: AD1853`."
 
 #. type: Title ===
 #: eeschema_symbol_library_table.adoc:7
@@ -13741,16 +13739,20 @@ msgstr "Tabella librerie di simboli"
 #. type: Plain text
 #: eeschema_symbol_library_table.adoc:12
 msgid ""
-"As of November 2017, Eeschema uses a new library management tool based on "
-"*_symbol library tables_* which is identical in design to the footprint "
-"library table used in CvPcb and Pcbnew."
-msgstr ""
-"Dal novembre 2017, Eeschema usa un nuovo strumento di gestione delle "
-"librerie basato su *_tabelle di librerie di simboli_* che è identico nel "
-"funzionamento alle tabelle di librerie di impronte usate in CvPcb e Pcbnew."
+"The symbol library table holds a list of all library files KiCad knows "
+"about.  The symbol library table is constructed from the global symbol "
+"library table file and the project specific symbol library table file."
+msgstr "La tabella della libreria dei simboli contiene un elenco di tutti i file della libreria che KiCad conosce. La tabella della libreria dei simboli è composta dal file della tabella delle librerie di simboli globali e dal file della tabella delle librerie di simboli specifici del progetto."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:16
+#: eeschema_symbol_library_table.adoc:15
+msgid ""
+"When a symbol is loaded, Eeschema uses the library nickname, `Audio` in our "
+"example, to lookup the library location in the symbol library table."
+msgstr "Quando viene caricato un simbolo, Eeschema usa il denominatore della libreria, `Audio` nel nostro esempio, per cercare la posizione della libreria nella tabella della libreria dei simboli."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:19
 msgid ""
 "The image below shows the symbol library table editing dialog which can be "
 "opened by invoking the ``Manage Symbol Library Tables'' entry in the "
@@ -13761,37 +13763,19 @@ msgstr ""
 "nel menu delle ``Preferenze''."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_symbol_library_table.adoc:17
+#: eeschema_symbol_library_table.adoc:20
 #, no-wrap
 msgid "sym lib table dlg"
 msgstr "finestra tabella librerie di simboli"
 
-#. type: Plain text
-#: eeschema_symbol_library_table.adoc:25
-msgid ""
-"The symbol library table is used to map a symbol library of any supported "
-"library type to a library nickname. *This nickname is used to look up "
-"symbols* instead of the previous method which depended on library search "
-"path ordering. This allows Eeschema to access symbols with the same name in "
-"different libraries by ensuring that the correct symbol is loaded from the "
-"appropriate library."
-msgstr ""
-"La tabella librerie di simboli viene usata per mappare una libreria di "
-"simboli di uno qualsiasi dei tipi di formati supportati ad un denominatore "
-"di libreria. *Questo denominatore viene usato per la ricerca dei simboli* al "
-"posto del vecchio metodo che dipendeva dall'ordine nei percorsi di ricerca "
-"delle librerie. Ciò permette a Eeschema di accedere a simboli con lo stesso "
-"nome in diverse librerie assicurandosi che venga caricato il simbolo "
-"corretto dalla librerie appropriata."
-
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:26
+#: eeschema_symbol_library_table.adoc:22
 #, no-wrap
 msgid "Global Symbol Library Table"
 msgstr "Tabella librerie di simboli globale"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:32
+#: eeschema_symbol_library_table.adoc:28
 msgid ""
 "The global symbol library table contains the list of libraries that are "
 "always available regardless of the currently loaded project file. The table "
@@ -13803,13 +13787,13 @@ msgstr ""
 "utente. La posizione di questa cartella dipende dal sistema operativo usato."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:33
+#: eeschema_symbol_library_table.adoc:29
 #, no-wrap
 msgid "Project Specific Symbol Library Table"
 msgstr "Tabella librerie di simboli specifiche del progetto"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:42
+#: eeschema_symbol_library_table.adoc:38
 msgid ""
 "The project specific symbol library table contains the list of libraries "
 "that are available specifically for the currently loaded project file. The "
@@ -13828,13 +13812,13 @@ msgstr ""
 "al file del progetto."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:43
+#: eeschema_symbol_library_table.adoc:39
 #, no-wrap
 msgid "Initial Configuration"
 msgstr "Configurazione iniziale"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:55
+#: eeschema_symbol_library_table.adoc:51
 msgid ""
 "The first time Eeschema is run and the global symbol table file *sym-lib-"
 "table* is not found in the user's home folder, Eeschema will attempt to copy "
@@ -13859,7 +13843,7 @@ msgstr ""
 "file sym-lib-table manualmente o configurare la tabella a mano."
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:65
+#: eeschema_symbol_library_table.adoc:61
 msgid ""
 "The default symbol library table includes all of the symbol libraries that "
 "are installed as part of KiCad.  This may or may not be desirable depending "
@@ -13879,13 +13863,13 @@ msgstr ""
 "di volta in volta alla tabella librerie del progetto solo quando necessario."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:67
+#: eeschema_symbol_library_table.adoc:63
 #, no-wrap
 msgid "Adding Table Entries"
 msgstr "Aggiungere voci alla tabella"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:72
+#: eeschema_symbol_library_table.adoc:68
 msgid ""
 "In order to use a symbol library, it must first be added to either the "
 "global table or the project specific table. The project specific table is "
@@ -13896,13 +13880,13 @@ msgstr ""
 "progetto è utilizzabile solo quando si è aperto un file di progetto."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:74
+#: eeschema_symbol_library_table.adoc:70
 #, no-wrap
 msgid "*Each library entry must have a unique nickname.*\n"
 msgstr "*Ogni voce di libreria deve avere un identificativo univoco.*\n"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:80
+#: eeschema_symbol_library_table.adoc:76
 msgid ""
 "This does not have to be related in any way to the actual library file name "
 "or path. The colon ':' and '/' characters cannot be used anywhere in the "
@@ -13918,7 +13902,7 @@ msgstr ""
 "variabile d'ambiente (vedere nella prossima sezione)."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:84
+#: eeschema_symbol_library_table.adoc:80
 msgid ""
 "The appropriate plug in type must be selected in order for the library to be "
 "properly read. KiCad currently supports only legacy symbol library files "
@@ -13929,7 +13913,7 @@ msgstr ""
 "per i file di libreria di simboli tradizionali."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:88
+#: eeschema_symbol_library_table.adoc:84
 msgid ""
 "There is also a description field to add a description of the library entry. "
 "The option field is not used at this time so adding options will have no "
@@ -13940,7 +13924,7 @@ msgstr ""
 "alcun effetto sul caricamento delle librerie."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:92
+#: eeschema_symbol_library_table.adoc:88
 msgid ""
 "Please note that you cannot have duplicate library nicknames in the same "
 "table. However, you can have duplicate library nicknames in both the global "
@@ -13952,7 +13936,7 @@ msgstr ""
 "progetto."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:94
+#: eeschema_symbol_library_table.adoc:90
 msgid ""
 "The project specific table entry will take precedence over the global table "
 "entry when duplicate nicknames occur."
@@ -13962,7 +13946,7 @@ msgstr ""
 "identici."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:97
+#: eeschema_symbol_library_table.adoc:93
 msgid ""
 "When entries are defined in the project specific table, a sym-lib-table file "
 "containing the entries will be written into the folder of the currently open "
@@ -13973,13 +13957,13 @@ msgstr ""
 "progetto aperto in quel momento."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:98
+#: eeschema_symbol_library_table.adoc:94
 #, no-wrap
 msgid "Environment Variable Substitution"
 msgstr "Sostituzione delle variabili ambiente"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:105
+#: eeschema_symbol_library_table.adoc:101
 msgid ""
 "One of the most powerful features of the symbol library table is environment "
 "variable substitution. This allows for definition of custom paths to where "
@@ -13995,14 +13979,14 @@ msgstr ""
 "libreria."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:107
+#: eeschema_symbol_library_table.adoc:103
 msgid "By default, at run time KiCad defines **two environment variables**:"
 msgstr ""
 "Per impostazione prefefinita, durante l'esecuzione KiCad difinisce **due "
 "variabili ambiente**:"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:110
+#: eeschema_symbol_library_table.adoc:106
 msgid ""
 "the *+KIPRJMOD+* environment variable that always points to the currently "
 "open project directory.  *+KIPRJMOD+* cannot be modified."
@@ -14011,7 +13995,7 @@ msgstr ""
 "progetto aperto correntemente.  *+KIPRJMOD+* non può essere modificata."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:113
+#: eeschema_symbol_library_table.adoc:109
 msgid ""
 "the *+KICAD_SYMBOL_DIR+* environment variable. This points to the path where "
 "the default symbol libraries that were installed with KiCad."
@@ -14020,7 +14004,7 @@ msgstr ""
 "sono memorizzate le librerie di simboli predefinite preinstallate con KiCad."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:117
+#: eeschema_symbol_library_table.adoc:113
 msgid ""
 "You can override +KICAD_SYMBOL_DIR+ by defining it yourself in preferences/ "
 "Configure Path which allows you to substitute your own libraries in place of "
@@ -14031,7 +14015,7 @@ msgstr ""
 "alle librerie di simboli predefinite di KiCad."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:121
+#: eeschema_symbol_library_table.adoc:117
 #, no-wrap
 msgid ""
 "*+KIPRJMOD+* allows you to store libraries in the project path without\n"
@@ -14043,13 +14027,13 @@ msgstr ""
 "per la libreria nella tabella librerie simboli specifica del progetto.\n"
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:122
+#: eeschema_symbol_library_table.adoc:118
 #, no-wrap
 msgid "Usage Patterns"
 msgstr "Modelli di utilizzo"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:129
+#: eeschema_symbol_library_table.adoc:125
 msgid ""
 "Symbol libraries can be defined either globally or specifically to the "
 "currently loaded project. Symbol libraries defined in the user's global "
@@ -14065,7 +14049,7 @@ msgstr ""
 "progetto aperto al momento."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:133
+#: eeschema_symbol_library_table.adoc:129
 msgid ""
 "There are advantages and disadvantages to each method. Defining all "
 "libraries in the global table means they will always be available when "
@@ -14076,7 +14060,7 @@ msgstr ""
 "bisogna. Lo svantaggio di ciò è aumenterà che il tempo di caricamento."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:139
+#: eeschema_symbol_library_table.adoc:135
 msgid ""
 "Defining all symbol libraries on a project specific basis means that you "
 "only have the libraries required for the project which decreases symbol "
@@ -14090,7 +14074,7 @@ msgstr ""
 "necessaria per ogni progetto."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:143
+#: eeschema_symbol_library_table.adoc:139
 msgid ""
 "One usage pattern would be to define commonly used libraries globally and "
 "the libraries only required for the project in the project specific library "
@@ -14101,13 +14085,13 @@ msgstr ""
 "tabella della libreria specifica del progetto."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:144
+#: eeschema_symbol_library_table.adoc:140
 #, no-wrap
 msgid "Legacy Project Remapping"
 msgstr "Rimappatura dei vecchi progetti"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:150
+#: eeschema_symbol_library_table.adoc:146
 msgid ""
 "When loading a schematic created prior to the symbol library table "
 "implementation, Eeschema will attempt to remap the symbol library links in "
@@ -14121,7 +14105,7 @@ msgstr ""
 "fattori:"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:153
+#: eeschema_symbol_library_table.adoc:149
 msgid ""
 "the original libraries used in the schematic are still available and "
 "unchanged from when the symbol was added to the schematic."
@@ -14130,7 +14114,7 @@ msgstr ""
 "da quando il simbolo è stato aggiunto allo schema."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:156
+#: eeschema_symbol_library_table.adoc:152
 msgid ""
 "all rescue operations were performed when detected to create a rescue "
 "library or keep the existing rescue library up to date."
@@ -14140,7 +14124,7 @@ msgstr ""
 "libreria di salvataggio esistente."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:159
+#: eeschema_symbol_library_table.adoc:155
 msgid ""
 "the integrity of the project symbol cache library has not been corrupted."
 msgstr ""
@@ -14148,7 +14132,7 @@ msgstr ""
 "danneggiata."
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:166
+#: eeschema_symbol_library_table.adoc:162
 msgid ""
 "The remapping will make a back up of all the files that are changed during "
 "remapping in the rescue-backup folder in the project folder.  Always make a "
@@ -14161,7 +14145,7 @@ msgstr ""
 "qualcosa vada storto."
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:175
+#: eeschema_symbol_library_table.adoc:171
 msgid ""
 "The rescue operation is performed even if it has been disabled to ensure the "
 "correct symbols are available for remapping.  Do not cancel this operation "
@@ -14175,7 +14159,7 @@ msgstr ""
 "spezzati dovranno essere corretti manualmente."
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:184
+#: eeschema_symbol_library_table.adoc:180
 msgid ""
 "If the original libraries have been removed and the rescue was not "
 "performed, the cache library can be used as a recovery library as a last "
