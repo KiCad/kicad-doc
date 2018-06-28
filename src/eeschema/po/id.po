@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-25 22:58+0700\n"
-"PO-Revision-Date: 2018-06-23 12:35+0700\n"
+"PO-Revision-Date: 2018-06-28 06:51+0700\n"
 "Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>\n"
 "Language-Team: KiCad Indonesia\n"
 "Language: id\n"
@@ -40,16 +40,16 @@ msgid ""
 "or later, or the Creative Commons Attribution License (http://"
 "creativecommons.org/licenses/by/3.0/), version 3.0 or later."
 msgstr ""
-"This document is Copyright (C) 2010-2018 by its contributors as listed "
+"_This document is Copyright (C) 2010-2018 by its contributors as listed "
 "below. You may distribute it and/or modify it under the terms of either the "
 "GNU General Public License (http://www.gnu.org/licenses/gpl.html), version 3 "
-"or later, or the Creative Commons Attribution License (http://"
-"creativecommons.org/licenses/by/3.0/), version 3.0 or later."
+"or later, or the Creative Commons Attribution License "
+"(http://creativecommons.org/licenses/by/3.0/), version 3.0 or later._"
 
 #. type: Plain text
 #: eeschema.adoc:20
 msgid "All trademarks within this guide belong to their legitimate owners."
-msgstr "All trademarks within this guide belong to their legitimate owners."
+msgstr "_All trademarks within this guide belong to their legitimate owners._"
 
 #. type: Plain text
 #: eeschema.adoc:23
@@ -267,8 +267,8 @@ msgid ""
 "Eeschema provides an embedded electrical circuit simulator using http://"
 "ngspice.sourceforge.net[ngspice] as the simulation engine."
 msgstr ""
-"Eeschema memiliki simulator sirkuit elektrikal yang menggunakan http://"
-"ngspice.sourceforge.net[ngspice] sebagai mesin simulasi. "
+"Eeschema menyediakan simulator sirkuit elektrikal dengan menggunakan "
+"http://ngspice.sourceforge.net[ngspice] sebagai mesin simulasi. "
 
 #. type: Plain text
 #: eeschema_simulator.adoc:12
@@ -278,10 +278,10 @@ msgid ""
 "sources or transistors with pins numbered to match the ngspice node order "
 "specification."
 msgstr ""
-"Ketika bekerja dengan simulator, Anda mungkin akan menemukan manfaat dari "
-"penggunaan library resmi _pspice_. Library ini memiliki simbol-simbol umum "
-"yang digunakan untuk simulasi seperti sumber tegangan/arus atau transistor "
-"dengan pin yang penomorannya sesuai dengan spesifikasi urutan _node_ ngspice."
+"Ketika bekerja dengan simulator, Anda akan membutuhkan pustaka resmi "
+"_pspice_. Pustaka ini memiliki simbol-simbol umum yang digunakan untuk "
+"simulasi seperti sumber tegangan/arus atau transistor dengan pin yang "
+"penomorannya sesuai dengan spesifikasi urutan _node_ ngspice."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:15
@@ -296,7 +296,7 @@ msgstr ""
 #: eeschema_simulator.adoc:16
 #, no-wrap
 msgid "Assigning models"
-msgstr ""
+msgstr "Menerapkan Model"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:19
@@ -304,8 +304,8 @@ msgid ""
 "Before a simulation is launched, components need to have Spice model "
 "assigned."
 msgstr ""
-"Sebelum melakukan simulasi, kita harus menentukan model Spice untuk tiap "
-"komponen."
+"Sebelum melakukan simulasi, kita harus menentukan model Spice untuk masing-"
+"masing komponen."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:23
@@ -315,8 +315,8 @@ msgid ""
 "specified."
 msgstr ""
 "Setiap komponen hanya bisa mendapatkan satu model, meskipun komponen "
-"tersebut terdiri dari beberapa unit. Dalam hal ini, model Spice diterapkan "
-"pada unit yang pertama."
+"tersebut terdiri dari beberapa bagian. Dalam hal ini, model Spice diterapkan "
+"pada bagian yang pertama."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:28
@@ -326,6 +326,10 @@ msgid ""
 "inductors) will have models assigned implicitly and use the value field to "
 "determine their properties."
 msgstr ""
+"[[sim-passive-models]] Komponen-komponen pasif dengan referensi yang cocok "
+"dengan suatu tipe divais dalam notasi Spice (_R*_ untuk resistor, _C*_ untuk "
+"kapasitor, _L*_ untuk induktor) akan memiliki model yang diterapkan secara "
+"implisit dan menggunakan atribut nilai untuk menentukan propertinya."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:33
@@ -346,10 +350,10 @@ msgid ""
 "properties dialog and click on _Edit Spice Model_ button to open Spice Model "
 "Editor dialog."
 msgstr ""
-"Informasi model Spice disimpan sebagai teks pada atribut-atribut simbol, "
-"maka Anda bisa mendefinisikannya di _Symbol Editor_ atau di _Schematics "
-"Editor_. Buka kotak dialog _Symbol Properties_ dan klik pada tombol _Edit "
-"Spice Model_ untuk membuka dialog _Spice Model Editor_."
+"Informasi model Spice disimpan sebagai teks pada atribut-atribut simbol. "
+"Anda bisa mendefinisikannya di _Symbol Editor_ atau di _Schematics Editor_. "
+"Buka kotak dialog _Symbol Properties_ dan klik pada tombol _Edit Spice "
+"Model_ untuk membuka dialog _Spice Model Editor_."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:40
@@ -357,8 +361,8 @@ msgid ""
 "Spice Model Editor dialog has three tabs corresponding to different model "
 "types.  There are two options common to all model types:"
 msgstr ""
-"Kotak dialog Spice Model Editor mempunyai tiga tab sesuai dengan tipe model "
-"yang berbeda. Ada dua pilihan yang umum untuk semua tipe model:"
+"Kotak dialog 'Spice Model Editor' mempunyai tiga tab sesuai dengan tipe "
+"modelnya. Ada dua opsi umum untuk semua tipe model:"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:48
@@ -368,6 +372,11 @@ msgid ""
 "pin to model node mapping.  To define a different mapping, specify pin "
 "numbers in order expected by the model."
 msgstr ""
+"|=== |Disable symbol for simulation |Jika dicentang, komponen akan "
+"dikecualikan dari simulasi.  |Alternate node sequence |Kita bisa "
+"mengesampingkan pin simbol untuk pemetaan _node_ model. Untuk menetapkan "
+"pemetaan yang berbeda, tentukan nomor pin dalam urutan yang diinginkan oleh "
+"model."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:50
@@ -381,6 +390,9 @@ msgid ""
 "3: positive power supply` + `* 4: negative power supply` + `* 5: output` + `."
 "subckt tl071 1 2 3 4 5`"
 msgstr ""
+"`* connections:` + `* 1: non-inverting input` + `* 2: inverting input` + `* "
+"3: positive power supply` + `* 4: negative power supply` + `* 5: output` + `"
+".subckt tl071 1 2 3 4 5`"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:60
@@ -402,16 +414,19 @@ msgid ""
 "2{nbsp}4\".  It is a list of pin numbers corresponding to the Spice model "
 "nodes order.  |==="
 msgstr ""
+"Untuk mencocokkan pin-pin simbol ke _node_ model Spice di atas, kita perlu "
+"menggunakan opsi sekuens _node_ alternatif dengan nilai: \""
+"1{nbsp}3{nbsp}5{nbsp}2{nbsp}4\". Ini adalah daftar nomor pin sesuai dengan "
+"urutan model _node_ Spice.  |==="
 
 #. type: Title ====
 #: eeschema_simulator.adoc:67
 #, no-wrap
 msgid "Passive"
-msgstr ""
+msgstr "Tab _Passive_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:73
-#, fuzzy
 msgid ""
 "_Passive_ tab allows the user to assign a passive device model (resistor, "
 "capacitor or inductor) to a component. It is a rarely used option, as "
@@ -419,11 +434,11 @@ msgid ""
 "implicitly>>, unless component reference does not match the actual device "
 "type."
 msgstr ""
-"Di tab _Passive_, kita bisa menerapkan sebuah model device pasif (resistor, "
+"Di tab _Passive_, kita bisa menerapkan sebuah model divais pasif (resistor, "
 "kapasitor, atau induktor) ke suatu komponen. Namun hal ini jarang digunakan, "
-"karena umumnya komponen pasif telah memiliki model <<sim-passive-"
-"models,secara implisit>>,  kecuali jika referensi komponen tidak sesuai "
-"dengan tipe device aktual."
+"karena umumnya komponen pasif telah memiliki model yang diterapkan <<sim-"
+"passive-models,secara implisit>>, kecuali jika referensi komponen tidak "
+"cocok dengan tipe divais aktual."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:80
@@ -434,18 +449,24 @@ msgid ""
 "It may lead to a confusing situation when assigned model value does not "
 "match the one displayed on a schematic sheet."
 msgstr ""
+"Model divais pasif yang ditetapkan secara eksplisit memiliki prioritas lebih "
+"tinggi daripada model divais yang ditetapkan secara implisit. Artinya, "
+"setelah model divais pasif telah ditetapkan, atribut referensi dan nilai "
+"akan diabaikan selama simulasi. Hal ini mungkin akan membingungkan ketika "
+"nilai model yang ditetapkan tidak sesuai dengan nilai yang ditampilkan pada "
+"lembar kerja skematik."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:81
 #, no-wrap
 msgid "Passive device model editor tab"
-msgstr ""
+msgstr "Passive device model editor tab"
 
 #. type: Target for macro image
 #: eeschema_simulator.adoc:81
 #, no-wrap
 msgid "images/sim_model_passive.png"
-msgstr ""
+msgstr "images/sim_model_passive.png"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:93
@@ -456,12 +477,18 @@ msgid ""
 "field) and should use point as the decimal separator. Note that Spice does "
 "not correctly interpret prefixes intertwined in the value (e.g. 1k5).  |==="
 msgstr ""
+"|=== |Type |Memilih tipe divais (resistor, kapasitor, atau induktor).  |"
+"Value |Menentukan properti divais (resistansi, kapasitansi, atau induktansi)"
+". Nilainya bisa menggunakan prefiks satuan Spice (seperti ditampilkan di "
+"bawah kotak masukan teks) dan harus menggunakan titik sebagai pemisah "
+"desimal. Ingat bahwa Spice tidak bisa menginterpretasikan secara tepat "
+"prefiks yang disilangkan dengan nilai (misalnya 1k5).  |==="
 
 #. type: Title ====
 #: eeschema_simulator.adoc:94
 #, no-wrap
 msgid "Model"
-msgstr ""
+msgstr "Tab _Model_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:99
@@ -470,6 +497,9 @@ msgid ""
 "an external library file. Spice model libraries are often offered by device "
 "manufacturers."
 msgstr ""
+"Tab _Model_ digunakan untuk menetapkan suatu semikonduktor atau model "
+"kompleks yang didefinisikan pada sebuah berkas pustaka eksternal. Pustaka "
+"model Spice terkadang disediakan oleh manufaktur."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:102
@@ -478,18 +508,21 @@ msgid ""
 "common practice to put models description inside library files, including "
 "the node order."
 msgstr ""
+"Kotak teks utama menampilkan isi berkas pustaka yang dipilih. Sudah menjadi "
+"praktik yang umum untuk memasukkan penjelasan model ke dalam berkas pustaka, "
+"termasuk urutan _node_."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:103
 #, no-wrap
 msgid "Semiconductor device model editor tab"
-msgstr ""
+msgstr "Semiconductor device model editor tab"
 
 #. type: Target for macro image
 #: eeschema_simulator.adoc:103
 #, no-wrap
 msgid "images/sim_model_subckt.png"
-msgstr ""
+msgstr "images/sim_model_subckt.png"
 
 #. type: delimited block |
 #: eeschema_simulator.adoc:116
@@ -505,12 +538,22 @@ msgid ""
 "|Selects model type (subcircuit, BJT, MOSFET or diode). Normally it is set\n"
 "automatically when a model is selected.\n"
 msgstr ""
+"|File\n"
+"|_Path_ menuju ke berkas pustaka Spice. Berkas ini akan digunakan oleh\n"
+"simulator, dan ditambahkan dengan direktif _.include_.\n"
+"|Model\n"
+"|Model divais yang dipilih. Ketika ada sebuah berkas yang dipilih, daftar "
+"ini akan diisi dengan model yang tersedia untuk dipilih.\n"
+"|Type\n"
+"|Pilihan tipe model (subsirkuit, BJT, MOSFET atau dioda). \n"
+"Normalnya, pilihan ini ditentukan secara otomatis ketika sebuah model "
+"dipilih.\n"
 
 #. type: Title ====
 #: eeschema_simulator.adoc:118
 #, no-wrap
 msgid "Source"
-msgstr ""
+msgstr "Tab _Source_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:123
@@ -519,23 +562,26 @@ msgid ""
 "sections: _DC/AC analysis_ and _Transient analysis_. Each defines source "
 "parameters for the corresponding simulation type."
 msgstr ""
+"Tab _Source_ digunakan untuk menetapkan model sumber sinyal atau _power_. "
+"Ada dua bagian: _DC/AC analysis_ dan _Transient analysis_. Masing-masing "
+"mendefinisikan parameter sumber untuk tipe simulasi yang terkait."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:125
 msgid "_Source type_ option applies to all simulation types."
-msgstr ""
+msgstr "Opsi _Source type_ diaplikasikan untuk semua tipe simulasi."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:126
 #, no-wrap
 msgid "Source model editro tab"
-msgstr ""
+msgstr "Source model editro tab"
 
 #. type: Target for macro image
 #: eeschema_simulator.adoc:126
 #, no-wrap
 msgid "images/sim_model_source.png"
-msgstr ""
+msgstr "images/sim_model_source.png"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:132
@@ -544,12 +590,15 @@ msgid ""
 "pdf[ngspice documentation], chapter 4 (Voltage and Current Sources) for more "
 "details about sources."
 msgstr ""
+"Silakan mengacu ke http://ngspice.sourceforge.net/docs/ngspice-27-manual.pdf["
+"dokumentasi ngspice], Bab 4 (_Voltage and Current Sources_) untuk informasi "
+"lebih lanjut."
 
 #. type: Title ===
 #: eeschema_simulator.adoc:134
 #, no-wrap
 msgid "Spice directives"
-msgstr ""
+msgstr "Direktif Spice"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:141
@@ -560,12 +609,18 @@ msgid ""
 "with a dot (e.g. \".tran 10n 1m\"), it is not possible to place additional "
 "components using text fields."
 msgstr ""
+"Dimungkinkan untuk menambahkan direktif-direktif Spice dengan meletakkannya "
+"pada atribut teks di lembar kerja skematik. Pendekatan ini mudah dilakukan "
+"untuk mendefinisikan tipe simulasi _default_. Fungsi ini terbatas pada "
+"direktif Spice yang dimulai dengan tanda titik (misalnya \".tran 10n 1m\"). "
+"Tidak dimungkinkan untuk meletakkan komponen tambahan menggunakan atribut "
+"teks."
 
 #. type: Title =====
 #: eeschema_simulator.adoc:142 eeschema_simulator.adoc:173
 #, no-wrap
 msgid "Simulation"
-msgstr ""
+msgstr "Simulasi"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:146
@@ -573,65 +628,67 @@ msgid ""
 "To launch a simulation, open _Spice Simulator_ dialog by selecting menu "
 "_Tools->Simulator_ in the schematics editor window."
 msgstr ""
+"Untuk menjalankan simulasi, buka kotak dialog _Spice Simulator_ dengan "
+"memilih menu _Tools -> Simulator_ pada jendela editor skematik."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:147
 #, no-wrap
 msgid "Main simulation dialog"
-msgstr ""
+msgstr "Main simulation dialog"
 
 #. type: Target for macro image
 #: eeschema_simulator.adoc:147
 #, no-wrap
 msgid "images/sim_main_dialog.png"
-msgstr ""
+msgstr "images/sim_main_dialog.png"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:150
 msgid "The dialog is divided into several sections:"
-msgstr ""
+msgstr "Kotak dialog ini dibagi menjadi beberapa bagian:"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:152
 msgid "<<sim-toolbar,Toolbar>>"
-msgstr ""
+msgstr "<<sim-toolbar,Bilah alat>>"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:153
 msgid "<<sim-plot-panel,Plot panel>>"
-msgstr ""
+msgstr "<<sim-plot-panel,Panel _Plot_>>"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:154
 msgid "<<sim-output-console,Output console>>"
-msgstr ""
+msgstr "<<sim-output-console,Konsol keluaran>>"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:155
 msgid "<<sim-signals-list,Signals list>>"
-msgstr ""
+msgstr "<<sim-signals-list,Daftar sinyal>>"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:156
 msgid "<<sim-cursors-list,Cursors list>>"
-msgstr ""
+msgstr "<<sim-cursors-list,Daftar kursor>>"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:157
 msgid "<<sim-tune-panel,Tune panel>>"
-msgstr ""
+msgstr "<<sim-tune-panel,Panel _Tune_>>"
 
 #. type: Title ====
 #: eeschema_simulator.adoc:158
 #, no-wrap
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #. type: Title =====
 #: eeschema_simulator.adoc:161
 #, no-wrap
 msgid "File"
-msgstr ""
+msgstr "Menu _File_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:171
@@ -642,6 +699,11 @@ msgid ""
 "csv file | Export the active plot raw data points to a .csv file.  |Exit "
 "Simulation | Close the dialog.  |==="
 msgstr ""
+"|=== |New Plot | Membuat tab baru pada panel _plot_.  |Open Workbook | "
+"Membuka daftar sinyal yang di-plot.|Save Workbook | Menyimpan daftar sinyal "
+"yang di-plot.  |Save as image | Mengekspor _plot_ yang aktif ke berkas `.png`"
+".  |Save as .csv file | Mengekspor data mentah titik-titik _plot_ ke berkas "
+"`.csv`.  |Exit Simulation | Menutup kotak dialog.  |==="
 
 #. type: Plain text
 #: eeschema_simulator.adoc:184
@@ -654,12 +716,19 @@ msgid ""
 "circuit.  |Settings... | Open the <<sim-settings,simulation settings "
 "dialog>>.  |==="
 msgstr ""
+"|=== |Run Simulation | Menjalankan simulasi menggunakan pengaturan saat "
+"ini.  |Add signals... | Membuka kotak dialog untuk memilih sinyal yang akan "
+"diplot.  |Probe from schematics | Menjalankan alat <<sim-probe-tool,Probe>> "
+"skematik.  |Tune component value | Menjalankan alat <<sim-tuner-tool,Tuner>>"
+".  |Show SPICE Netlist... | Membuka kotak dialog yang menampilkan Netlist "
+"yang telah dibuat untuk sirkuit yang disimulasikan.  |Settings... | Membuka "
+"<<sim-settings,kotak dialog pengaturan simulasi>>.  |==="
 
 #. type: Title =====
 #: eeschema_simulator.adoc:186
 #, no-wrap
 msgid "View"
-msgstr ""
+msgstr "Menu _View_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:195
@@ -669,30 +738,36 @@ msgid ""
 "grid | Toggle grid visibility.  |Show legend | Toggle plot legend "
 "visibility.  |==="
 msgstr ""
+"|=== |Zoom In | Perbesar tampilan pada _plot_ yang aktif.  |Zoom Out | "
+"Perkecil tampilan pada plot yang aktif.  |Fit on Screen | Mengatur tampilan "
+"untuk menampilkan semua _plot_.|Show grid | Tampilkan/sembunyikan grid.  |"
+"Show legend | Tampilkan/sembunyikan legenda _plot_.  |==="
 
 #. type: Title ====
 #: eeschema_simulator.adoc:197
 #, no-wrap
 msgid "Toolbar"
-msgstr ""
+msgstr "Bilah Alat"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:198
 #, no-wrap
 msgid "Simulation dialog top toolbar"
-msgstr ""
+msgstr "Simulation dialog top toolbar"
 
 #. type: Target for macro image
 #: eeschema_simulator.adoc:198
 #, no-wrap
 msgid "images/sim_main_toolbar.png"
-msgstr ""
+msgstr "images/sim_main_toolbar.png"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:200
 msgid ""
 "The top toolbar provides access to the most frequently performed actions."
 msgstr ""
+"Bilah alat bagian atas digunakan untuk mengakses perintah-perintah yang "
+"sering dijalankan."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:209
@@ -703,12 +778,17 @@ msgid ""
 "tool,Tuner>> tool.  |Settings | Open the <<sim-settings,simulation settings "
 "dialog>>.  |==="
 msgstr ""
+"|=== |Run/Stop Simulation | Jalankan atau hentikan simulasi.  |Add Signals | "
+"Membuka kotak dialog untuk memilih sinyal yang akan diplot.  |Probe | "
+"Menjalankan alat <<sim-probe-tool,Probe>> skematik.  |Tune | Menjalankan "
+"alat <<sim-tuner-tool,Tuner>>.  |Settings | Membuka <<sim-settings,kotak "
+"dialog pengaturan simulasi>>.  |==="
 
 #. type: Title ====
 #: eeschema_simulator.adoc:211
 #, no-wrap
 msgid "Plot panel"
-msgstr ""
+msgstr "Panel _Plot_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:216
@@ -718,6 +798,10 @@ msgid ""
 "simulation is executed. This way it is possible to compare simulation "
 "results for different runs."
 msgstr ""
+"Memvisualisasikan hasil simulasi dalam bentuk _plot_. Kita bisa membuka "
+"beberapa _plot_ pada tab yang berbeda, namun ketika simulasi dijalankan, "
+"hanya tab yang aktif saja yang akan diperbarui. Dengan demikian dimungkinkan "
+"untuk membandingkan hasil simulasi dengan parameter yang berbeda."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:220
@@ -726,37 +810,40 @@ msgid ""
 "menu-view,View>> menu. When a legend is visible, it can be dragged to change "
 "its position."
 msgstr ""
+"_Plot_ dapat diatur dengan menampilkan/menyembunyikan grid dan legenda "
+"menggunakan menu <<sim-menu-view,View>>. Ketika legenda ditampilkan, kita "
+"bisa menggeser untuk mengubah posisinya."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:222
 msgid "Plot panel interaction:"
-msgstr ""
+msgstr "Interaksi panel _plot_:"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:224
 msgid "scroll mouse wheel to zoom in/out"
-msgstr ""
+msgstr "Putar roda tetikus untuk memperbesar/memperkecil tampilan."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:225
 msgid "right click to open a context menu to adjust the view"
-msgstr ""
+msgstr "Klik-kanan untuk membuka menu konteks untuk mengatur tampilan."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:226
 msgid "draw a selection rectangle to zoom in the selected area"
-msgstr ""
+msgstr "Gambar sebuah kotak pemilih untuk memperbesar area yang dipilih."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:227
 msgid "drag a cursor to change its coordinates"
-msgstr ""
+msgstr "Geser kursor untuk mengubah koordinatnya."
 
 #. type: Title ====
 #: eeschema_simulator.adoc:229
 #, no-wrap
 msgid "Output console"
-msgstr ""
+msgstr "Konsol Keluaran"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:232
@@ -764,38 +851,42 @@ msgid ""
 "Output console displays messages from the simulator. It is advised to check "
 "the console output to verify there are no errors or warnings."
 msgstr ""
+"Konsol keluaran menampilkan pesan-pesan dari simulator. Kita perlu memeriksa "
+"konsol untuk memastikan tidak ada pesan kesalahan dan peringatan."
 
 #. type: Title ====
 #: eeschema_simulator.adoc:234
 #, no-wrap
 msgid "Signals list"
-msgstr ""
+msgstr "Daftar Sinyal"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:236
 msgid "Shows the list of signals displayed in the active plot."
-msgstr ""
+msgstr "Menampilkan daftar sinyal yang ditampilkan pada _plot_ yang aktif."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:238
 msgid "Signals list interaction:"
-msgstr ""
+msgstr "Interaksi daftar sinyal:"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:240
 msgid "right click to open a context menu to hide signal or toggle cursor"
 msgstr ""
+"Klik-kanan untuk membuka menu konteks untuk menyembunyikan sinyal atau "
+"mengubah kursor."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:241
 msgid "double click to hide signal"
-msgstr ""
+msgstr "Klik-ganda untuk menyembunyikan sinyal."
 
 #. type: Title ====
 #: eeschema_simulator.adoc:243
 #, no-wrap
 msgid "Cursors list"
-msgstr ""
+msgstr "Daftar Kursor"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:247
@@ -804,12 +895,15 @@ msgid ""
 "cursor displayed. Cursors visibility is set using the <<sim-signals-list,"
 "Signals>> list."
 msgstr ""
+"Menampilkan daftar kursor dan koordinatnya. Setiap sinyal bisa memiliki satu "
+"kursor yang ditampilkan. Konfigurasi visibilitas kursor diatur menggunakan "
+"daftar <<sim-signals-list,Signals>>."
 
 #. type: Title ====
 #: eeschema_simulator.adoc:249
 #, no-wrap
 msgid "Tune panel"
-msgstr ""
+msgstr "Panel _Tune_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:254
@@ -819,31 +913,36 @@ msgid ""
 "influence on the simulation results - every time a component value is "
 "changed, the simulation is rerun and plots are updated."
 msgstr ""
+"Menampilkan komponen-komponen yang diambil menggunakan alat <<sim-tuner-"
+"tool,Tuner>>. Panel ini digunakan untuk memodifikasi nilai komponen secara "
+"cepat dan mengamati pengaruhnya pada hasil simulasi - setiap kali nilai "
+"sebuah komponen diubah, simulasi akan dijalankan ulang dan _plot_ akan "
+"diperbarui."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:256
 msgid "For each component there a few controls associated:"
-msgstr ""
+msgstr "Untuk setiap komponen, ada beberapa kendali yang terkait:"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:258
 msgid "The top text field sets the maximum component value."
-msgstr ""
+msgstr "Atribut teks _top_ mengatur nilai maksimum komponen."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:259
 msgid "The middle text field sets the actual component value."
-msgstr ""
+msgstr "Atribut teks _middle_ mengatur nilai aktual komponen."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:260
 msgid "The bottom text field sets the minimum component value."
-msgstr ""
+msgstr "Atribut teks _bottom_ mengatur nilai minimum komponen."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:261
 msgid "Slider allows the user to modify the component value in a smooth way."
-msgstr ""
+msgstr "_Slider_ digunakan untuk mengubah nilai komponen secara halus."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:263
@@ -851,6 +950,8 @@ msgid ""
 "_Save_ button modifies component value on the schematics to the one selected "
 "with the slider."
 msgstr ""
+"Tombol _Save_ memodifikasi nilai komponen pada skematik ke nilai yang "
+"dipilih dengan menggunakan _slider_."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:265
@@ -858,22 +959,24 @@ msgid ""
 "_X_ button removes component from the Tune panel and restores its original "
 "value."
 msgstr ""
+"Tombol _X_ menghapus komponen dari panel _Tune_ dan mengembalikan ke nilai "
+"aslinya."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:267
 msgid "The three text fields recognize Spice unit prefixes."
-msgstr ""
+msgstr "Ketiga atribut teks di atas mengenali prefiks satuan Spice."
 
 #. type: Title ====
 #: eeschema_simulator.adoc:269
 #, no-wrap
 msgid "Tuner tool"
-msgstr ""
+msgstr "Alat _Tuner_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:271
 msgid "Tuner tool lets the user pick components for tuning."
-msgstr ""
+msgstr "Alat _Tuner_ digunakan untuk memilih komponen untuk keperluan _tuning_."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:275
@@ -882,18 +985,21 @@ msgid ""
 "the tool is active. Selected components will appear in the <<sim-tune-panel,"
 "Tune>> panel. Only passive components might be tuned."
 msgstr ""
+"Untuk memilih komponen untuk _tuning_, klik pada satu komponen di editor "
+"skematik ketika alat ini aktif. Komponen yang dipilih akan muncul di panel "
+"<<sim-tune-panel,Tune>>. Kita hanya bisa melakukan _tuning_ komponen pasif."
 
 #. type: Title ====
 #: eeschema_simulator.adoc:277
 #, no-wrap
 msgid "Probe tool"
-msgstr ""
+msgstr "Alat _Probe_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:279
 msgid ""
 "Probe tool provides an user-friendly way of selecting signals for plotting."
-msgstr ""
+msgstr "Alat _Probe_ digunakan untuk memilih sinyal untuk dilakukan _plotting_."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:282
@@ -901,24 +1007,26 @@ msgid ""
 "To add a signal to plot, click on a corresponding wire in the schematics "
 "editor when the tool is active."
 msgstr ""
+"Untuk menambahkan sinyal yang akan diplot, klik pada _wire_ yang diinginkan "
+"di editor skematik ketika alat ini aktif."
 
 #. type: Title ====
 #: eeschema_simulator.adoc:284
 #, no-wrap
 msgid "Simulation settings"
-msgstr ""
+msgstr "Pengaturan Simulasi"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:286
 #, no-wrap
 msgid "Simulation settings dialog"
-msgstr ""
+msgstr "Simulation settings dialog"
 
 #. type: Target for macro image
 #: eeschema_simulator.adoc:286
 #, no-wrap
 msgid "images/sim_settings.png"
-msgstr ""
+msgstr "images/sim_settings.png"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:290
@@ -926,26 +1034,28 @@ msgid ""
 "Simulation settings dialog lets the user set the simulation type and "
 "parameters. There are four tabs:"
 msgstr ""
+"Kotak dialog pengaturan simulasi digunakan untuk mengatur tipe dan parameter-"
+"parameter simulasi. Ada empat tab pada kotak dialog ini:"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:292
 msgid "AC"
-msgstr ""
+msgstr "Tab _AC_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:293
 msgid "DC Transfer"
-msgstr ""
+msgstr "Tab _DC Transfer_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:294
 msgid "Transient"
-msgstr ""
+msgstr "Tab _Transient_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:295
 msgid "Custom"
-msgstr ""
+msgstr "Tab _Custom_"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:302
@@ -956,6 +1066,12 @@ msgid ""
 "and parameters in the http://ngspice.sourceforge.net/docs/ngspice-27-manual."
 "pdf[ngspice documentation], chapter 1.2."
 msgstr ""
+"Tiga tab pertama digunakan untuk memasukan parameter-parameter simulasi. Tab "
+"yang terakhir digunakan untuk menuliskan direktif kustom Spice untuk membuat "
+"sebuah simulasi. Untuk informasi lebih lanjut mengenai tipe dan parameter-"
+"parameter simulasi, lihat "
+"http://ngspice.sourceforge.net/docs/ngspice-27-manual.pdf[dokumentasi "
+"ngspice], Bab 1.2."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:308
@@ -966,11 +1082,17 @@ msgid ""
 "dialog. It means that once you start using the simulation dialog, the dialog "
 "overriddes the schematics directives until the simulator is reopened."
 msgstr ""
+"Cara lain untuk mengkonfigurasi sebuah simulasi adalah dengan menuliskan "
+"<<sim-directives,direktif Spice>> ke atribut teks pada skematik. Setiap "
+"direktif atribut teks yang berhubungan dengan tipe simulasi akan ditimpa "
+"dengan pengaturan yang dipilih pada kotak dialog. Hal ini berarti bahwa "
+"setelah Anda menggunakan kotak dialog simulasi, kotak dialog akan menimpa "
+"direktif-direktif skematik hingga simulator dibuka kembali."
 
 #. type: Plain text
 #: eeschema_simulator.adoc:310
 msgid "There are two options common to all simulation types:"
-msgstr ""
+msgstr "Ada dua opsi yang umum untuk semua tipe simulasi:"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:317
@@ -981,18 +1103,23 @@ msgid ""
 "with full path. Normally full path is required by ngspice to access a "
 "library file.  |==="
 msgstr ""
+"|=== |Adjust passive symbol values | Mengganti nilai simbol pasif untuk "
+"mengkonversi notasi nilai komponen umum ke notasi Spice.  |Add full path for "
+".include library directives | Menambahkan nama berkas pustaka model Spice "
+"dengan _path_ lengkap. Normalnya, ngspice memerlukan _path_ lengkap untuk "
+"mengakses sebuah berkas pustaka.  |==="
 
 #. type: Title ==
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:3
 #, no-wrap
 msgid "Creating Customized Netlists and BOM Files"
-msgstr ""
+msgstr "Membuat Netlist dan Berkas BOM Kustom"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:6
 #, no-wrap
 msgid "Intermediate Netlist File"
-msgstr ""
+msgstr "Berkas Netlist Antara"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:10
@@ -1000,6 +1127,8 @@ msgid ""
 "BOM files and netlist files can be converted from an Intermediate netlist "
 "file created by Eeschema."
 msgstr ""
+"Berkas BOM dan Netlist bisa didapatkan dengan mengkonversi berkas Netlist "
+"antara yang dibuat oleh Eeschema."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:15
@@ -1009,6 +1138,10 @@ msgid ""
 "because of this, it can be used with post-processing to create a BOM or "
 "other reports."
 msgstr ""
+"Berkas ini menggunakan sintaks XML dan disebut sebagai Netlist antara. "
+"Netlist antara berisi sejumlah besar data mengenai papan sirkuit Anda. Maka "
+"dari itu, berkas ini bisa digunakan pasca-pemrosesan untuk membuat BOM atau "
+"berkas laporan lainnya."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:18
@@ -1016,25 +1149,27 @@ msgid ""
 "Depending on the output (BOM or netlist), different subsets of the complete "
 "Intermediate Netlist file will be used in the post-processing."
 msgstr ""
+"Tergantung dari keluarannya (BOM atau Netlist), sejumlah berkas turunan dari "
+"Netlist antara akan digunakan pasca-pemrosesan."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:20
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:22
 #, no-wrap
 msgid "Schematic sample"
-msgstr ""
+msgstr "Contoh Skematik"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:22
 #, no-wrap
 msgid "images/schematic-sample.png"
-msgstr ""
+msgstr "images/schematic-sample.png"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:25
 #, no-wrap
 msgid "The Intermediate Netlist file sample"
-msgstr ""
+msgstr "Contoh Berkas Netlist Antara"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:29
@@ -1042,6 +1177,8 @@ msgid ""
 "The corresponding intermediate netlist (using XML syntax) of the circuit "
 "above is shown below."
 msgstr ""
+"Netlist antara (menggunakan sintaks XML) yang terkait dengan sirkuit di atas "
+"ditunjukkan seperti di bawah ini. "
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:212
@@ -1229,12 +1366,195 @@ msgid ""
 "  </nets>\n"
 "</export>\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
+"<export version=\"D\">\n"
+"  <design>\n"
+"    <source>F:\\kicad_aux\\n"
+"etlist_test\\n"
+"etlist_test.sch</source>\n"
+"    <date>29/08/2010 20:35:21</date>\n"
+"    <tool>eeschema (2010-08-28 BZR 2458)-unstable</tool>\n"
+"  </design>\n"
+"  <components>\n"
+"    <comp ref=\"P1\">\n"
+"      <value>CONN_4</value>\n"
+"      <libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2141</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U2\">\n"
+"      <value>74LS74</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS74\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20BA</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U1\">\n"
+"      <value>74LS04</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS04\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20A6</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"C1\">\n"
+"      <value>CP</value>\n"
+"      <libsource lib=\"device\" part=\"CP\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2094</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"R1\">\n"
+"      <value>R</value>\n"
+"      <libsource lib=\"device\" part=\"R\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E208A</tstamp>\n"
+"    </comp>\n"
+"  </components>\n"
+"  <libparts>\n"
+"    <libpart lib=\"device\" part=\"C\">\n"
+"      <description>Condensateur non polarise</description>\n"
+"      <footprints>\n"
+"        <fp>SM*</fp>\n"
+"        <fp>C?</fp>\n"
+"        <fp>C1-1</fp>\n"
+"      </footprints>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">C</field>\n"
+"        <field name=\"Value\">C</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"device\" part=\"R\">\n"
+"      <description>Resistance</description>\n"
+"      <footprints>\n"
+"        <fp>R?</fp>\n"
+"        <fp>SM0603</fp>\n"
+"        <fp>SM0805</fp>\n"
+"        <fp>R?-*</fp>\n"
+"        <fp>SM1206</fp>\n"
+"      </footprints>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">R</field>\n"
+"        <field name=\"Value\">R</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"conn\" part=\"CONN_4\">\n"
+"      <description>Symbole general de connecteur</description>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">P</field>\n"
+"        <field name=\"Value\">CONN_4</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"P1\" type=\"passive\"/>\n"
+"        <pin num=\"2\" name=\"P2\" type=\"passive\"/>\n"
+"        <pin num=\"3\" name=\"P3\" type=\"passive\"/>\n"
+"        <pin num=\"4\" name=\"P4\" type=\"passive\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"74xx\" part=\"74LS04\">\n"
+"      <description>Hex Inverseur</description>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">U</field>\n"
+"        <field name=\"Value\">74LS04</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"2\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"3\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"4\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"5\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"6\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"7\" name=\"GND\" type=\"power_in\"/>\n"
+"        <pin num=\"8\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"9\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"10\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"11\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"12\" name=\"~\" type=\"output\"/>\n"
+"        <pin num=\"13\" name=\"~\" type=\"input\"/>\n"
+"        <pin num=\"14\" name=\"VCC\" type=\"power_in\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"    <libpart lib=\"74xx\" part=\"74LS74\">\n"
+"      <description>Dual D FlipFlop, Set &amp; Reset</description>\n"
+"      <docs>74xx/74hc_hct74.pdf</docs>\n"
+"      <fields>\n"
+"        <field name=\"Reference\">U</field>\n"
+"        <field name=\"Value\">74LS74</field>\n"
+"      </fields>\n"
+"      <pins>\n"
+"        <pin num=\"1\" name=\"Cd\" type=\"input\"/>\n"
+"        <pin num=\"2\" name=\"D\" type=\"input\"/>\n"
+"        <pin num=\"3\" name=\"Cp\" type=\"input\"/>\n"
+"        <pin num=\"4\" name=\"Sd\" type=\"input\"/>\n"
+"        <pin num=\"5\" name=\"Q\" type=\"output\"/>\n"
+"        <pin num=\"6\" name=\"~Q\" type=\"output\"/>\n"
+"        <pin num=\"7\" name=\"GND\" type=\"power_in\"/>\n"
+"        <pin num=\"8\" name=\"~Q\" type=\"output\"/>\n"
+"        <pin num=\"9\" name=\"Q\" type=\"output\"/>\n"
+"        <pin num=\"10\" name=\"Sd\" type=\"input\"/>\n"
+"        <pin num=\"11\" name=\"Cp\" type=\"input\"/>\n"
+"        <pin num=\"12\" name=\"D\" type=\"input\"/>\n"
+"        <pin num=\"13\" name=\"Cd\" type=\"input\"/>\n"
+"        <pin num=\"14\" name=\"VCC\" type=\"power_in\"/>\n"
+"      </pins>\n"
+"    </libpart>\n"
+"  </libparts>\n"
+"  <libraries>\n"
+"    <library logical=\"device\">\n"
+"      <uri>F:\\kicad\\share\\library\\device.lib</uri>\n"
+"    </library>\n"
+"    <library logical=\"conn\">\n"
+"      <uri>F:\\kicad\\share\\library\\conn.lib</uri>\n"
+"    </library>\n"
+"    <library logical=\"74xx\">\n"
+"      <uri>F:\\kicad\\share\\library\\74xx.lib</uri>\n"
+"    </library>\n"
+"  </libraries>\n"
+"  <nets>\n"
+"    <net code=\"1\" name=\"GND\">\n"
+"      <node ref=\"U1\" pin=\"7\"/>\n"
+"      <node ref=\"C1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"7\"/>\n"
+"      <node ref=\"P1\" pin=\"4\"/>\n"
+"    </net>\n"
+"    <net code=\"2\" name=\"VCC\">\n"
+"      <node ref=\"R1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"14\"/>\n"
+"      <node ref=\"U2\" pin=\"4\"/>\n"
+"      <node ref=\"U2\" pin=\"1\"/>\n"
+"      <node ref=\"U2\" pin=\"14\"/>\n"
+"      <node ref=\"P1\" pin=\"1\"/>\n"
+"    </net>\n"
+"    <net code=\"3\" name=\"\">\n"
+"      <node ref=\"U2\" pin=\"6\"/>\n"
+"    </net>\n"
+"    <net code=\"4\" name=\"\">\n"
+"      <node ref=\"U1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"3\"/>\n"
+"    </net>\n"
+"    <net code=\"5\" name=\"/SIG_OUT\">\n"
+"      <node ref=\"P1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"5\"/>\n"
+"      <node ref=\"U2\" pin=\"2\"/>\n"
+"    </net>\n"
+"    <net code=\"6\" name=\"/CLOCK_IN\">\n"
+"      <node ref=\"R1\" pin=\"2\"/>\n"
+"      <node ref=\"C1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"1\"/>\n"
+"      <node ref=\"P1\" pin=\"3\"/>\n"
+"    </net>\n"
+"  </nets>\n"
+"</export>\n"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:215
 #, no-wrap
 msgid "Conversion to a new netlist format"
-msgstr ""
+msgstr "Konversi ke Format Netlist yang Baru"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:222
@@ -1245,6 +1565,11 @@ msgid ""
 "be written using Python, XSLT, or any other tool capable of taking XML as "
 "input."
 msgstr ""
+"Dengan menerapkan sebuah penyaring pasca-pemrosesan ke berkas Netlist "
+"antara, Anda bisa membuat berkas-berkas Netlist asing, demikian pula berkas-"
+"berkas BOM. Karena proses konversi ini adalah transformasi dari teks ke "
+"teks, penyaring pasca-pemrosesan dapat dibuat menggunakan Python, XSLT, atau "
+"peralatan lainnya yang mampu mengolah masukan XML."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:230
@@ -1257,47 +1582,56 @@ msgid ""
 "conventions. The full conversion process is handled by Eeschema, after it is "
 "configured once to run xsltproc in a specific way."
 msgstr ""
+"XSLT adalah bahasa XML yang sangat sesuai untuk transformasi XML. Ada sebuah "
+"program yang disebut _xsltproc_ yang bisa diunduh dan diinstal secara bebas. "
+"Program xsltproc dapat digunakan untuk membaca berkas masukan Netlist antara "
+"dalam format XML, menerapkan sebuah _stylesheet_ pada berkas masukan "
+"tersebut, dan menyimpan hasil transformasinya ke sebuah berkas keluaran. "
+"Penggunaan xsltproc memerlukan sebuah berkas _stylesheet_ yang menggunakan "
+"konvensi XSLT. Proses konversi yang lengkap ditangani oleh Eeschema, setelah "
+"dikonfigurasi untuk menjalankan xsltproc dengan cara yang spesifik."
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:232
 #, no-wrap
 msgid "XSLT approach"
-msgstr ""
+msgstr "Pendekatan XSLT"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:236
 msgid ""
 "The document that describes XSL Transformations (XSLT) is available here:"
 msgstr ""
+"Dokumen yang menjelaskan Transformasi XSL (XSLT) tersedia di alamat berikut:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:238
 #, no-wrap
 msgid "*http://www.w3.org/TR/xslt*\n"
-msgstr ""
+msgstr "*http://www.w3.org/TR/xslt*\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:240
 #, no-wrap
 msgid "Create a Pads-Pcb netlist file"
-msgstr ""
+msgstr "Membuat Berkas Netlist Pads-Pcb"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:243
 msgid "The pads-pcb format is comprised of two sections."
-msgstr ""
+msgstr "Format pads-pcb terdiri dari dua bagian."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:245
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:374
 msgid "The footprint list."
-msgstr ""
+msgstr "Daftar _footprint_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:247
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:376
 msgid "The Nets list: grouping pads references by nets."
-msgstr ""
+msgstr "Daftar _net_ : pengelompokan referensi _pad_ berdasarkan _net_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:250
@@ -1305,6 +1639,8 @@ msgid ""
 "Immediately below is a style-sheet which converts the Intermediate Netlist "
 "file to a pads-pcb netlist format:"
 msgstr ""
+"Berikut adalah sebuah _stylesheet_ untuk mengkonversi berkas Netlist antara "
+"ke format Netlist pads-pcb:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:256
@@ -1315,6 +1651,11 @@ msgid ""
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to PADS netlist "
+"format\n"
+"    Copyright (C) 2010, SoftPLC Corporation.\n"
+"    GPL v2.\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:260
@@ -1325,6 +1666,9 @@ msgid ""
 "        https://lists.launchpad.net/kicad-developers/msg05157.html\n"
 "-->\n"
 msgstr ""
+"    How to use:\n"
+"        https://lists.launchpad.net/kicad-developers/msg05157.html\n"
+"-->\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:264
@@ -1336,6 +1680,9 @@ msgid ""
 "  <!ENTITY nl  \"&#xd;&#xa;\"> <!--new line CR, LF -->\n"
 "]>\n"
 msgstr ""
+"<!DOCTYPE xsl:stylesheet [\n"
+"  <!ENTITY nl  \"&#xd;&#xa;\"> <!--new line CR, LF -->\n"
+"]>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:267
@@ -1346,6 +1693,9 @@ msgid ""
 "<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\">\n"
 "<xsl:output method=\"text\" omit-xml-declaration=\"yes\" indent=\"no\"/>\n"
 msgstr ""
+"<xsl:stylesheet version=\"1.0\" xmlns:xsl=\"http://www.w3.org/1999/XSL/"
+"Transform\">\n"
+"<xsl:output method=\"text\" omit-xml-declaration=\"yes\" indent=\"no\"/>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:275
@@ -1359,6 +1709,13 @@ msgid ""
 "    <xsl:text>*END*&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<xsl:template match=\"/export\">\n"
+"    <xsl:text>*PADS-PCB*&nl;*PART*&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"components/comp\"/>\n"
+"    <xsl:text>&nl;*NET*&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"nets/net\"/>\n"
+"    <xsl:text>*END*&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:291
@@ -1380,6 +1737,21 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each component -->\n"
+"<xsl:template match=\"comp\">\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"footprint != '' \">\n"
+"            <xsl:apply-templates select=\"footprint\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>unknown</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:310
@@ -1404,6 +1776,24 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each net -->\n"
+"<xsl:template match=\"net\">\n"
+"    <!-- nets are output only if there is more than one pin in net -->\n"
+"    <xsl:if test=\"count(node)>1\">\n"
+"        <xsl:text>*SIGNAL* </xsl:text>\n"
+"        <xsl:choose>\n"
+"            <xsl:when test = \"@name != '' \">\n"
+"                <xsl:value-of select=\"@name\"/>\n"
+"            </xsl:when>\n"
+"            <xsl:otherwise>\n"
+"                <xsl:text>N-</xsl:text>\n"
+"                <xsl:value-of select=\"@code\"/>\n"
+"            </xsl:otherwise>\n"
+"        </xsl:choose>\n"
+"        <xsl:text>&nl;</xsl:text>\n"
+"        <xsl:apply-templates select=\"node\"/>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:319
@@ -1418,6 +1808,14 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each node -->\n"
+"<xsl:template match=\"node\">\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text>.</xsl:text>\n"
+"    <xsl:value-of select=\"@pin\"/>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:321
@@ -1425,12 +1823,13 @@ msgstr ""
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:745
 #, no-wrap
 msgid "</xsl:stylesheet>\n"
-msgstr ""
+msgstr "</xsl:stylesheet>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:324
 msgid "And here is the pads-pcb output file after running xsltproc:"
 msgstr ""
+"Dan berikut adalah berkas keluaran pads-pcb setelah menjalankan xsltproc:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:358
@@ -1469,39 +1868,73 @@ msgid ""
 "U1.1\n"
 "P1.3\n"
 msgstr ""
+"*PADS-PCB*\n"
+"*PART*\n"
+"P1 unknown\n"
+"U2 unknown\n"
+"U1 unknown\n"
+"C1 unknown\n"
+"R1 unknown\n"
+"*NET*\n"
+"*SIGNAL* GND\n"
+"U1.7\n"
+"C1.2\n"
+"U2.7\n"
+"P1.4\n"
+"*SIGNAL* VCC\n"
+"R1.1\n"
+"U1.14\n"
+"U2.4\n"
+"U2.1\n"
+"U2.14\n"
+"P1.1\n"
+"*SIGNAL* N-4\n"
+"U1.2\n"
+"U2.3\n"
+"*SIGNAL* /SIG_OUT\n"
+"P1.2\n"
+"U2.5\n"
+"U2.2\n"
+"*SIGNAL* /CLOCK_IN\n"
+"R1.2\n"
+"C1.1\n"
+"U1.1\n"
+"P1.3\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:360
 #, no-wrap
 msgid "*END*\n"
-msgstr ""
+msgstr "*END*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:363
 msgid "The command line to make this conversion is:"
-msgstr ""
+msgstr "Perintah untuk menjalankan konversi ini adalah:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:366
 #, no-wrap
 msgid "kicad\\\\bin\\\\xsltproc.exe -o test.net kicad\\\\bin\\\\plugins\\\\netlist_form_pads-pcb.xsl test.tmp\n"
 msgstr ""
+"kicad\\\\bin\\\\xsltproc.exe -o test.net kicad\\\\bin\\\\plugins\\\\n"
+"etlist_form_pads-pcb.xsl test.tmp\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:369
 #, no-wrap
 msgid "Create a Cadstar netlist file"
-msgstr ""
+msgstr "Membuat Berkas Netlist Cadstar"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:372
 msgid "The Cadstar format is comprised of two sections."
-msgstr ""
+msgstr "Format Cadstar terdiri dari dua bagian."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:378
 msgid "Here is the style-sheet file to make this specific conversion:"
-msgstr ""
+msgstr "Berikut adalah berkas _stylesheet_ untuk menjalankan konversi ini:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:385
@@ -1513,6 +1946,12 @@ msgid ""
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist "
+"format\n"
+"    Copyright (C) 2010, Jean-Pierre Charras.\n"
+"    Copyright (C) 2010, SoftPLC Corporation.\n"
+"    GPL v2.\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:403
@@ -1529,6 +1968,20 @@ msgid ""
 "    <xsl:text>&nl;.END&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- Netlist header -->\n"
+"<xsl:template match=\"/export\">\n"
+"    <xsl:text>.HEA&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"design/date\"/>  <!-- Generate line .TIM "
+"<time> -->\n"
+"    <xsl:apply-templates select=\"design/tool\"/>  <!-- Generate line .APP <"
+"eeschema version> -->\n"
+"    <xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of "
+"components -->\n"
+"    <xsl:text>&nl;&nl;</xsl:text>\n"
+"    <xsl:apply-templates select=\"nets/net\"/>          <!-- Generate list "
+"of nets and connections -->\n"
+"    <xsl:text>&nl;.END&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:410
@@ -1541,6 +1994,12 @@ msgid ""
 "    <xsl:text>\"&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+" <!-- Generate line .TIM 20/08/2010 10:45:33 -->\n"
+"<xsl:template match=\"tool\">\n"
+"    <xsl:text>.APP \"</xsl:text>\n"
+"    <xsl:apply-templates/>\n"
+"    <xsl:text>\"&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:417
@@ -1553,6 +2012,12 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+" <!-- Generate line .APP \"eeschema (2010-08-17 BZR 2450)-unstable\" -->\n"
+"<xsl:template match=\"date\">\n"
+"    <xsl:text>.TIM </xsl:text>\n"
+"    <xsl:apply-templates/>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:433
@@ -1574,6 +2039,22 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each component -->\n"
+"<xsl:template match=\"comp\">\n"
+"    <xsl:text>.ADD_COM </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"value != '' \">\n"
+"            <xsl:text>\"</xsl:text> <xsl:apply-templates select=\"value\"/> "
+"<xsl:text>\"</xsl:text>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>\"\"</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:456
@@ -1602,6 +2083,28 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each net -->\n"
+"<xsl:template match=\"net\">\n"
+"    <!-- nets are output only if there is more than one pin in net -->\n"
+"    <xsl:if test=\"count(node)>1\">\n"
+"    <xsl:variable name=\"netname\">\n"
+"        <xsl:text>\"</xsl:text>\n"
+"        <xsl:choose>\n"
+"            <xsl:when test = \"@name != '' \">\n"
+"                <xsl:value-of select=\"@name\"/>\n"
+"            </xsl:when>\n"
+"            <xsl:otherwise>\n"
+"                <xsl:text>N-</xsl:text>\n"
+"                <xsl:value-of select=\"@code\"/>\n"
+"        </xsl:otherwise>\n"
+"        </xsl:choose>\n"
+"        <xsl:text>\"&nl;</xsl:text>\n"
+"        </xsl:variable>\n"
+"        <xsl:apply-templates select=\"node\" mode=\"first\"/>\n"
+"        <xsl:value-of select=\"$netname\"/>\n"
+"        <xsl:apply-templates select=\"node\" mode=\"others\"/>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:467
@@ -1618,6 +2121,16 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- for each node -->\n"
+"<xsl:template match=\"node\" mode=\"first\">\n"
+"    <xsl:if test=\"position()=1\">\n"
+"       <xsl:text>.ADD_TER </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text>.</xsl:text>\n"
+"    <xsl:value-of select=\"@pin\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:486
@@ -1642,11 +2155,29 @@ msgid ""
 "    </xsl:if>\n"
 "</xsl:template>\n"
 msgstr ""
+"<xsl:template match=\"node\" mode=\"others\">\n"
+"    <xsl:choose>\n"
+"        <xsl:when test='position()=1'>\n"
+"        </xsl:when>\n"
+"        <xsl:when test='position()=2'>\n"
+"           <xsl:text>.TER     </xsl:text>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"           <xsl:text>         </xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:if test=\"position()>1\">\n"
+"        <xsl:value-of select=\"@ref\"/>\n"
+"        <xsl:text>.</xsl:text>\n"
+"        <xsl:value-of select=\"@pin\"/>\n"
+"        <xsl:text>&nl;</xsl:text>\n"
+"    </xsl:if>\n"
+"</xsl:template>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:491
 msgid "Here is the Cadstar output file."
-msgstr ""
+msgstr "Berikut adalah berkas keluaran Cadstar."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:501
@@ -1661,6 +2192,14 @@ msgid ""
 ".ADD_COM C1 \"CP\"\n"
 ".ADD_COM R1 \"R\"\n"
 msgstr ""
+".HEA\n"
+".TIM 21/08/2010 08:12:08\n"
+".APP \"eeschema (2010-08-09 BZR 2439)-unstable\"\n"
+".ADD_COM P1 \"CONN_4\"\n"
+".ADD_COM U2 \"74LS74\"\n"
+".ADD_COM U1 \"74LS04\"\n"
+".ADD_COM C1 \"CP\"\n"
+".ADD_COM R1 \"R\"\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:522
@@ -1686,18 +2225,37 @@ msgid ""
 "         U1.1\n"
 "         P1.3\n"
 msgstr ""
+".ADD_TER U1.7 \"GND\"\n"
+".TER     C1.2\n"
+"         U2.7\n"
+"         P1.4\n"
+".ADD_TER R1.1 \"VCC\"\n"
+".TER     U1.14\n"
+"         U2.4\n"
+"         U2.1\n"
+"         U2.14\n"
+"         P1.1\n"
+".ADD_TER U1.2 \"N-4\"\n"
+".TER     U2.3\n"
+".ADD_TER P1.2 \"/SIG_OUT\"\n"
+".TER     U2.5\n"
+"         U2.2\n"
+".ADD_TER R1.2 \"/CLOCK_IN\"\n"
+".TER     C1.1\n"
+"         U1.1\n"
+"         P1.3\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:524
 #, no-wrap
 msgid ".END\n"
-msgstr ""
+msgstr ".END\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:527
 #, no-wrap
 msgid "Create an OrcadPCB2 netlist file"
-msgstr ""
+msgstr "Membuat Berkas Netlist OrcadPCB2"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:531
@@ -1705,11 +2263,13 @@ msgid ""
 "This format has only one section which is the footprint list. Each footprint "
 "includes its list of pads with reference to a net."
 msgstr ""
+"Format ini hanya memiliki satu bagian saja, yaitu daftar _footprint_. Setiap "
+"_footprint_ berisi daftar _pad_ dengan referensi ke sebuah _net_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:533
 msgid "Here is the style-sheet for this specific conversion:"
-msgstr ""
+msgstr "Berikut adalah _stylesheet_ untuk konversi ini:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:539
@@ -1720,6 +2280,11 @@ msgid ""
 "    Copyright (C) 2010, SoftPLC Corporation.\n"
 "    GPL v2.\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n"
+"<!--XSL style sheet to Eeschema Generic Netlist Format to CADSTAR netlist "
+"format\n"
+"    Copyright (C) 2010, SoftPLC Corporation.\n"
+"    GPL v2.\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:563
@@ -1738,6 +2303,18 @@ msgid ""
 "<xsl:apply-templates select=\"design/tool\"/>\n"
 "<xsl:text>}&nl;</xsl:text>\n"
 msgstr ""
+"<!--\n"
+"    Netlist header\n"
+"    Creates the entire netlist\n"
+"    (can be seen as equivalent to main function in C\n"
+"-->\n"
+"<xsl:template match=\"/export\">\n"
+"    <xsl:text>( { Eeschema Netlist Version 1.1  </xsl:text>\n"
+"    <!-- Generate line .TIM <time> -->\n"
+"<xsl:apply-templates select=\"design/date\"/>\n"
+"<!-- Generate line eeschema version ... -->\n"
+"<xsl:apply-templates select=\"design/tool\"/>\n"
+"<xsl:text>}&nl;</xsl:text>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:566
@@ -1746,6 +2323,9 @@ msgid ""
 "<!-- Generate the list of components -->\n"
 "<xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of components -->\n"
 msgstr ""
+"<!-- Generate the list of components -->\n"
+"<xsl:apply-templates select=\"components/comp\"/>  <!-- Generate list of "
+"components -->\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:570
@@ -1755,6 +2335,9 @@ msgid ""
 "<xsl:text>)&nl;*&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!-- end of file -->\n"
+"<xsl:text>)&nl;*&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:577
@@ -1767,6 +2350,12 @@ msgid ""
 "    <xsl:apply-templates/>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    Generate id in header like \"eeschema (2010-08-17 BZR 2450)-unstable\"\n"
+"-->\n"
+"<xsl:template match=\"tool\">\n"
+"    <xsl:apply-templates/>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:585
@@ -1780,6 +2369,13 @@ msgid ""
 "    <xsl:text>&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    Generate date in header like \"20/08/2010 10:45:33\"\n"
+"-->\n"
+"<xsl:template match=\"date\">\n"
+"    <xsl:apply-templates/>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:632
@@ -1832,6 +2428,52 @@ msgid ""
 "    <xsl:text> )&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    This template read each component\n"
+"    (path = /export/components/comp)\n"
+"    creates lines:\n"
+"     ( 3EBF7DBD $noname U1 74LS125\n"
+"      ... pin list ...\n"
+"      )\n"
+"    and calls \"create_pin_list\" template to build the pin list\n"
+"-->\n"
+"<xsl:template match=\"comp\">\n"
+"    <xsl:text> ( </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"tstamp != '' \">\n"
+"            <xsl:apply-templates select=\"tstamp\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>00000000</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"footprint != '' \">\n"
+"            <xsl:apply-templates select=\"footprint\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>$noname</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:value-of select=\"@ref\"/>\n"
+"    <xsl:text> </xsl:text>\n"
+"    <xsl:choose>\n"
+"        <xsl:when test = \"value != '' \">\n"
+"            <xsl:apply-templates select=\"value\"/>\n"
+"        </xsl:when>\n"
+"        <xsl:otherwise>\n"
+"            <xsl:text>\"~\"</xsl:text>\n"
+"        </xsl:otherwise>\n"
+"    </xsl:choose>\n"
+"    <xsl:text>&nl;</xsl:text>\n"
+"    <xsl:call-template name=\"Search_pin_list\" >\n"
+"        <xsl:with-param name=\"cmplib_id\" select=\"libsource/@part\"/>\n"
+"        <xsl:with-param name=\"cmp_ref\" select=\"@ref\"/>\n"
+"    </xsl:call-template>\n"
+"    <xsl:text> )&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:653
@@ -1858,6 +2500,27 @@ msgid ""
 "        </xsl:for-each>\n"
 "</xsl:template>\n"
 msgstr ""
+"<!--\n"
+"    This template search for a given lib component description in list\n"
+"    lib component descriptions are in /export/libparts,\n"
+"    and each description start at ./libpart\n"
+"    We search here for the list of pins of the given component\n"
+"    This template has 2 parameters:\n"
+"        \"cmplib_id\" (reference in libparts)\n"
+"        \"cmp_ref\"   (schematic reference of the given component)\n"
+"-->\n"
+"<xsl:template name=\"Search_pin_list\" >\n"
+"    <xsl:param name=\"cmplib_id\" select=\"0\" />\n"
+"    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
+"        <xsl:for-each select=\"/export/libparts/libpart\">\n"
+"            <xsl:if test = \"@part = $cmplib_id \">\n"
+"                <xsl:apply-templates name=\"build_pin_list\" select=\"pins/"
+"pin\">\n"
+"                    <xsl:with-param name=\"cmp_ref\" select=\"$cmp_ref\"/>\n"
+"                </xsl:apply-templates>\n"
+"            </xsl:if>\n"
+"        </xsl:for-each>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:670
@@ -1879,6 +2542,21 @@ msgid ""
 "<xsl:template name=\"build_pin_list\" match=\"pin\">\n"
 "    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
 msgstr ""
+"<!--\n"
+"    This template writes the pin list of a component\n"
+"    from the pin list of the library description\n"
+"    The pin list from library description is something like\n"
+"          <pins>\n"
+"            <pin num=\"1\" type=\"passive\"/>\n"
+"            <pin num=\"2\" type=\"passive\"/>\n"
+"          </pins>\n"
+"    Output pin list is ( <pin num> <net name> )\n"
+"    something like\n"
+"            ( 1 VCC )\n"
+"            ( 2 GND )\n"
+"-->\n"
+"<xsl:template name=\"build_pin_list\" match=\"pin\">\n"
+"    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:675
@@ -1889,6 +2567,10 @@ msgid ""
 "    <xsl:value-of select=\"@num\"/>\n"
 "    <xsl:text> </xsl:text>\n"
 msgstr ""
+"    <!-- write pin numner and separator -->\n"
+"    <xsl:text>  ( </xsl:text>\n"
+"    <xsl:value-of select=\"@num\"/>\n"
+"    <xsl:text> </xsl:text>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:690
@@ -1909,6 +2591,21 @@ msgid ""
 "        </xsl:apply-templates>\n"
 "    </xsl:for-each>\n"
 msgstr ""
+"    <!-- search net name in nets section and write it: -->\n"
+"    <xsl:variable name=\"pinNum\" select=\"@num\" />\n"
+"    <xsl:for-each select=\"/export/nets/net\">\n"
+"        <!-- net name is output only if there is more than one pin in net\n"
+"             else use \"?\" as net name, so count items in this net\n"
+"        -->\n"
+"        <xsl:variable name=\"pinCnt\" select=\"count(node)\" />\n"
+"        <xsl:apply-templates name=\"Search_pin_netname\" select=\"node\">\n"
+"            <xsl:with-param name=\"cmp_ref\" select=\"$cmp_ref\"/>\n"
+"            <xsl:with-param name=\"pin_cnt_in_net\" select=\"$pinCnt\"/>\n"
+"            <xsl:with-param name=\"pin_num\"> <xsl:value-of select=\"$"
+"pinNum\"/>\n"
+"            </xsl:with-param>\n"
+"        </xsl:apply-templates>\n"
+"    </xsl:for-each>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:694
@@ -1918,6 +2615,9 @@ msgid ""
 "    <xsl:text> )&nl;</xsl:text>\n"
 "</xsl:template>\n"
 msgstr ""
+"    <!-- close line -->\n"
+"    <xsl:text> )&nl;</xsl:text>\n"
+"</xsl:template>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:712
@@ -1941,6 +2641,24 @@ msgid ""
 "        \"pin_num\"   (pin number)\n"
 "-->\n"
 msgstr ""
+"<!--\n"
+"    This template writes the pin netname of a given pin of a given "
+"component\n"
+"    from the nets list\n"
+"    The nets list description is something like\n"
+"      <nets>\n"
+"        <net code=\"1\" name=\"GND\">\n"
+"          <node ref=\"J1\" pin=\"20\"/>\n"
+"              <node ref=\"C2\" pin=\"2\"/>\n"
+"        </net>\n"
+"        <net code=\"2\" name=\"\">\n"
+"          <node ref=\"U2\" pin=\"11\"/>\n"
+"        </net>\n"
+"    </nets>\n"
+"    This template has 2 parameters:\n"
+"        \"cmp_ref\"   (schematic reference of the given component)\n"
+"        \"pin_num\"   (pin number)\n"
+"-->\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:717
@@ -1951,6 +2669,10 @@ msgid ""
 "    <xsl:param name=\"pin_num\" select=\"0\" />\n"
 "    <xsl:param name=\"pin_cnt_in_net\" select=\"0\" />\n"
 msgstr ""
+"<xsl:template name=\"Search_pin_netname\" match=\"node\">\n"
+"    <xsl:param name=\"cmp_ref\" select=\"0\" />\n"
+"    <xsl:param name=\"pin_num\" select=\"0\" />\n"
+"    <xsl:param name=\"pin_cnt_in_net\" select=\"0\" />\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:741
@@ -1980,17 +2702,41 @@ msgid ""
 "        </xsl:if>\n"
 "    </xsl:if>\n"
 msgstr ""
+"    <xsl:if test = \"@ref = $cmp_ref \">\n"
+"        <xsl:if test = \"@pin = $pin_num\">\n"
+"        <!-- net name is output only if there is more than one pin in net\n"
+"             else use \"?\" as net name\n"
+"        -->\n"
+"            <xsl:if test = \"$pin_cnt_in_net>1\">\n"
+"                <xsl:choose>\n"
+"                    <!-- if a net has a name, use it,\n"
+"                        else build a name from its net code\n"
+"                    -->\n"
+"                    <xsl:when test = \"../@name != '' \">\n"
+"                        <xsl:value-of select=\"../@name\"/>\n"
+"                    </xsl:when>\n"
+"                    <xsl:otherwise>\n"
+"                        <xsl:text>$N-0</xsl:text><xsl:value-of select=\"../@"
+"code\"/>\n"
+"                    </xsl:otherwise>\n"
+"                </xsl:choose>\n"
+"            </xsl:if>\n"
+"            <xsl:if test = \"$pin_cnt_in_net &lt;2\">\n"
+"                <xsl:text>?</xsl:text>\n"
+"            </xsl:if>\n"
+"        </xsl:if>\n"
+"    </xsl:if>\n"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:743
 #, no-wrap
 msgid "</xsl:template>\n"
-msgstr ""
+msgstr "</xsl:template>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:748
 msgid "Here is the OrcadPCB2 output file."
-msgstr ""
+msgstr "Berikut adalah berkas keluaran OrcadPCB2."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:784
@@ -2031,25 +2777,59 @@ msgid ""
 ")\n"
 "*\n"
 msgstr ""
+"( { Eeschema Netlist Version 1.1  29/08/2010 21:07:51\n"
+"eeschema (2010-08-28 BZR 2458)-unstable}\n"
+" ( 4C6E2141 $noname P1 CONN_4\n"
+"  (  1 VCC )\n"
+"  (  2 /SIG_OUT )\n"
+"  (  3 /CLOCK_IN )\n"
+"  (  4 GND )\n"
+" )\n"
+" ( 4C6E20BA $noname U2 74LS74\n"
+"  (  1 VCC )\n"
+"  (  2 /SIG_OUT )\n"
+"  (  3 N-04 )\n"
+"  (  4 VCC )\n"
+"  (  5 /SIG_OUT )\n"
+"  (  6 ? )\n"
+"  (  7 GND )\n"
+"  (  14 VCC )\n"
+" )\n"
+" ( 4C6E20A6 $noname U1 74LS04\n"
+"  (  1 /CLOCK_IN )\n"
+"  (  2 N-04 )\n"
+"  (  7 GND )\n"
+"  (  14 VCC )\n"
+" )\n"
+" ( 4C6E2094 $noname C1 CP\n"
+"  (  1 /CLOCK_IN )\n"
+"  (  2 GND )\n"
+" )\n"
+" ( 4C6E208A $noname R1 R\n"
+"  (  1 VCC )\n"
+"  (  2 /CLOCK_IN )\n"
+" )\n"
+")\n"
+"*\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:787
 #, no-wrap
 msgid "Eeschema plugins interface"
-msgstr ""
+msgstr "Antarmuka _Plugin_ Eeschema"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:791
 msgid ""
 "Intermediate Netlist converters can be automatically launched within "
 "Eeschema."
-msgstr ""
+msgstr "Konverter Netlist antara bisa dijalankan secara otomatis di Eeschema."
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:793
 #, no-wrap
 msgid "Init the Dialog window"
-msgstr ""
+msgstr "Membuka Kotak Dialog _Plugin_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:797
@@ -2057,79 +2837,86 @@ msgid ""
 "One can add a new netlist plug-in user interface tab by clicking on the Add "
 "Plugin button."
 msgstr ""
+"Kita bisa menambahkan sebuah tab antarmuka _plugin_ Netlist yang baru dengan "
+"klik pada tombol 'Add Plugin' "
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:798
 #, no-wrap
 msgid "eeschema_plugin_add_plugin_png"
-msgstr ""
+msgstr "eeschema_plugin_add_plugin_png"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:798
 #, no-wrap
 msgid "images/eeschema_plugin_add_plugin.png"
-msgstr ""
+msgstr "images/eeschema_plugin_add_plugin.png"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:801
 msgid "Here is what the configuration data for the PadsPcb tab looks like:"
-msgstr ""
+msgstr "Berikut adalah bentuk data konfigurasi untuk tab PadsPcb:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:802
 #, no-wrap
 msgid "eeschema_plugin_padspcb_png"
-msgstr ""
+msgstr "eeschema_plugin_padspcb_png"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:802
 #, no-wrap
 msgid "images/eeschema_plugin_padspcb.png"
-msgstr ""
+msgstr "images/eeschema_plugin_padspcb.png"
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:805
 #, no-wrap
 msgid "Plugin Configuration Parameters"
-msgstr ""
+msgstr "Parameter Konfigurasi _Plugin_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:809
 msgid ""
 "The Eeschema plug-in configuration dialog requires the following information:"
 msgstr ""
+"Kotak dialog konfigurasi _plugin_ Eeschema memerlukan informasi berikut:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:811
 msgid "The title: for instance, the name of the netlist format."
-msgstr ""
+msgstr "Judul: misalnya nama dari format Netlist."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:813
 msgid "The command line to launch the converter."
-msgstr ""
+msgstr "Perintah untuk menjalankan konverter."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:815
 msgid "Once you click on the netlist button the following will happen:"
-msgstr ""
+msgstr "Setelah Anda menekan tombol Netlist, akan terjadi hal berikut ini:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:817
 msgid ""
 "Eeschema creates an intermediate netlist file *.xml, for instance test.xml."
 msgstr ""
+"Eeschema membuat sebuah berkas Netlist antara dengan ekstensi `*.xml`, "
+"misalnya `test.xml`."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:819
 msgid "Eeschema runs the plug-in by reading test.xml and creates test.net."
 msgstr ""
+"Eeschema menjalankan _plugin_ dengan membaca `test.xml` dan membuat "
+"`test.net`."
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:821
 #, no-wrap
 msgid "Generate netlist files with the command line"
-msgstr ""
+msgstr "Membuat Berkas Netlist dengan Baris Perintah"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:826
@@ -2137,6 +2924,9 @@ msgid ""
 "Assuming we are using the program _xsltproc.exe_ to apply the sheet style to "
 "the intermediate file, _xsltproc.exe_ is executed with the following command:"
 msgstr ""
+"Diasumsikan kita menggunakan program _xsltproc.exe_ untuk menerapkan "
+"_stylesheet_ ke berkas antara, maka _xsltproc.exe_ dieksekusi dengan "
+"perintah berikut:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:828
@@ -2144,11 +2934,13 @@ msgid ""
 "_xsltproc.exe -o <output filename> < style-sheet filename> <input XML file "
 "to convert>_"
 msgstr ""
+"_xsltproc.exe -o <nama berkas keluaran> <nama berkas style-sheet> <berkas "
+"XML yang akan dikonversi>_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:830
 msgid "In KiCad under Windows the command line is the following:"
-msgstr ""
+msgstr "Berikut baris perintah yang digunakan KiCad di sistem operasi Windows:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:832
@@ -2156,11 +2948,13 @@ msgid ""
 "_f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-"
 "pcb.xsl \"%I\"_"
 msgstr ""
+"_f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-"
+"pcb.xsl \"%I\"_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:834
 msgid "Under Linux the command becomes as follows:"
-msgstr ""
+msgstr "Di sistem operasi Linux, baris perintahnya adalah:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:836
@@ -2168,6 +2962,8 @@ msgid ""
 "_xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl "
 "\"%I\"_"
 msgstr ""
+"_xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \""
+"%I\"_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:840
@@ -2176,16 +2972,19 @@ msgid ""
 "Do not forget the double quotes around the file names, this allows them to "
 "have spaces after the substitution by Eeschema."
 msgstr ""
+"Di mana _netlist_form_pads-pcb.xsl_ adalah _stylesheet_ yang digunakan. "
+"Jangan lupa untuk menggunakan tanda petik ganda pada nama berkas, supaya "
+"Anda bisa menggunakan spasi setelah dilakukan konversi oleh Eeschema."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:842
 msgid "The command line format accepts parameters for filenames:"
-msgstr ""
+msgstr "Baris perintah menerima parameter berikut untuk nama berkas:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:844
 msgid "The supported formatting parameters are."
-msgstr ""
+msgstr "Parameter yang didukung adalah:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:847
@@ -2193,6 +2992,8 @@ msgid ""
 "%B => base filename and path of selected output file, minus path and "
 "extension."
 msgstr ""
+"%B => nama berkas dan _path_ untuk berkas keluaran yang dipilih, tanpa "
+"_path_ dan ekstensi."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:850
@@ -2200,61 +3001,68 @@ msgid ""
 "%I => complete filename and path of the temporary input file (the "
 "intermediate net file)."
 msgstr ""
+"%I => nama berkas lengkap dan _path_ dari berkas masukan sementara (berkas "
+"Netlist antara)."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:852
 msgid "%O => complete filename and path of the user chosen output file."
 msgstr ""
+"%O => nama berkas lengkap dan _path_ untuk berkas keluaran yang dipilih."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:854
 msgid "_%I_ will be replaced by the actual intermediate file name"
-msgstr ""
+msgstr "_%I_ akan diganti dengan nama berkas antara yang sesungguhnya."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:856
 msgid "_%O_ will be replaced by the actual output file name."
-msgstr ""
+msgstr "_%O_ akan diganti dengan nama berkas keluaran yang sesungguhnya."
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:858
 #, no-wrap
 msgid "Command line format: example for xsltproc"
-msgstr ""
+msgstr "Format Baris Perintah: Contoh xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:861
 msgid "The command line format for xsltproc is the following:"
-msgstr ""
+msgstr "Format baris perintah untuk xsltproc adalah sebagai berikut:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:863
 msgid "<path of xsltproc> xsltproc <xsltproc parameters>"
-msgstr ""
+msgstr "<path ke xsltproc> xsltproc <parameter xsltproc>"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:865
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:899
 msgid "under Windows:"
-msgstr ""
+msgstr "Penggunaan di Windows:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:867
 #, no-wrap
 msgid "*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
 msgstr ""
+"*f:/kicad/bin/xsltproc.exe -o \"%O\" f:/kicad/bin/plugins/netlist_form_pads-"
+"pcb.xsl \"%I\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:869
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:903
 msgid "under Linux:"
-msgstr ""
+msgstr "Penggunaan di Linux:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:871
 #, no-wrap
 msgid "*xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \"%I\"*\n"
 msgstr ""
+"*xsltproc -o \"%O\" /usr/local/kicad/bin/plugins/netlist_form_pads-pcb.xsl \""
+"%I\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:874
@@ -2262,12 +3070,14 @@ msgid ""
 "The above examples assume xsltproc is installed on your PC under Windows and "
 "all files located in kicad/bin."
 msgstr ""
+"Contoh di atas mengasumsikan xsltproc terinstal pada komputer Windows dan "
+"semua berkas berada di direktori `kicad/bin`."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:876
 #, no-wrap
 msgid "Bill of Materials Generation"
-msgstr ""
+msgstr "Pembuatan _Bill of Materials_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:882
@@ -2276,18 +3086,22 @@ msgid ""
 "components, a BOM can be extracted from it. Here is the plug-in setup window "
 "(on Linux) to create a customized Bill Of Materials (BOM)  file:"
 msgstr ""
+"Karena berkas Netlist antara berisi semua informasi mengenai komponen-"
+"komponen yang digunakan, maka kita bisa membuat BOM berdasarkan berkas "
+"tersebut. Berikut adalah tampilan jendela pengaturan _plugin_ (di Linux) "
+"untuk membuat berkas _Bill of Materials_ (BOM) kustom:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:883
 #, no-wrap
 msgid "bom-netlist-tab_png"
-msgstr ""
+msgstr "bom-netlist-tab_png"
 
 #. type: Target for macro image
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:883
 #, no-wrap
 msgid "images/en/bom-netlist-tab.png"
-msgstr ""
+msgstr "images/en/bom-netlist-tab.png"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:890
@@ -2297,50 +3111,56 @@ msgid ""
 "xsl__. You are free to modify it according to your needs, and if you develop "
 "something generally useful, ask that it become part of the KiCad project."
 msgstr ""
+"_Path_ menuju berkas _stylesheet_ `bom2csv.xsl` tergantung pada sistem yang "
+"kita gunakan. _Stylesheet_ XSLT terbaik yang ada saat ini untuk pembuatan "
+"BOM adalah __bom2csv.xsl__. Anda bebas melakukan modifikasi sesuai "
+"kebutuhan, dan jika Anda merasa hasil modifikasi tersebut akan bermanfaat "
+"untuk orang lain, Anda bisa memasukkan hasil modifikasi tersebut sebagai "
+"bagian dari proyek KiCad. "
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:892
 #, no-wrap
 msgid "Command line format: example for python scripts"
-msgstr ""
+msgstr "Format Baris Perintah: Contoh Skrip Python"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:895
 msgid "The command line format for python is something like:"
-msgstr ""
+msgstr "Format baris perintah untuk Python adalah sebagai berikut:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:897
 msgid "python <script file name> <input filename> <output filename>"
-msgstr ""
+msgstr "python <nama berkas skrip> <nama berkas masukan> <nama berkas keluaran>"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:901
 #, no-wrap
 msgid "*python *.exe f:/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
-msgstr ""
+msgstr "*python *.exe f:/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:905
 #, no-wrap
 msgid "*python /usr/local/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
-msgstr ""
+msgstr "*python /usr/local/kicad/python/my_python_script.py \"%I\" \"%O\"*\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:907
 msgid "Assuming python is installed on your PC."
-msgstr ""
+msgstr "Dengan asumsi Python telah terinstal di komputer Anda."
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:909
 #, no-wrap
 msgid "Intermediate Netlist structure"
-msgstr ""
+msgstr "Struktur Netlist Antara"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:912
 msgid "This sample gives an idea of the netlist file format."
-msgstr ""
+msgstr "Contoh berikut ini menunjukkan format berkas Netlist."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:989
@@ -2422,47 +3242,124 @@ msgid ""
 "  </nets>\n"
 "</export>\n"
 msgstr ""
+"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
+"<export version=\"D\">\n"
+"  <design>\n"
+"    <source>F:\\kicad_aux\\n"
+"etlist_test\\n"
+"etlist_test.sch</source>\n"
+"    <date>29/08/2010 21:07:51</date>\n"
+"    <tool>eeschema (2010-08-28 BZR 2458)-unstable</tool>\n"
+"  </design>\n"
+"  <components>\n"
+"    <comp ref=\"P1\">\n"
+"      <value>CONN_4</value>\n"
+"      <libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2141</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U2\">\n"
+"      <value>74LS74</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS74\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20BA</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"U1\">\n"
+"      <value>74LS04</value>\n"
+"      <libsource lib=\"74xx\" part=\"74LS04\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E20A6</tstamp>\n"
+"    </comp>\n"
+"    <comp ref=\"C1\">\n"
+"      <value>CP</value>\n"
+"      <libsource lib=\"device\" part=\"CP\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E2094</tstamp>\n"
+"    <comp ref=\"R1\">\n"
+"      <value>R</value>\n"
+"      <libsource lib=\"device\" part=\"R\"/>\n"
+"      <sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"      <tstamp>4C6E208A</tstamp>\n"
+"    </comp>\n"
+"  </components>\n"
+"  <libparts/>\n"
+"  <libraries/>\n"
+"  <nets>\n"
+"    <net code=\"1\" name=\"GND\">\n"
+"      <node ref=\"U1\" pin=\"7\"/>\n"
+"      <node ref=\"C1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"7\"/>\n"
+"      <node ref=\"P1\" pin=\"4\"/>\n"
+"    </net>\n"
+"    <net code=\"2\" name=\"VCC\">\n"
+"      <node ref=\"R1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"14\"/>\n"
+"      <node ref=\"U2\" pin=\"4\"/>\n"
+"      <node ref=\"U2\" pin=\"1\"/>\n"
+"      <node ref=\"U2\" pin=\"14\"/>\n"
+"      <node ref=\"P1\" pin=\"1\"/>\n"
+"    </net>\n"
+"    <net code=\"3\" name=\"\">\n"
+"      <node ref=\"U2\" pin=\"6\"/>\n"
+"    </net>\n"
+"    <net code=\"4\" name=\"\">\n"
+"      <node ref=\"U1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"3\"/>\n"
+"    </net>\n"
+"    <net code=\"5\" name=\"/SIG_OUT\">\n"
+"      <node ref=\"P1\" pin=\"2\"/>\n"
+"      <node ref=\"U2\" pin=\"5\"/>\n"
+"      <node ref=\"U2\" pin=\"2\"/>\n"
+"    </net>\n"
+"    <net code=\"6\" name=\"/CLOCK_IN\">\n"
+"      <node ref=\"R1\" pin=\"2\"/>\n"
+"      <node ref=\"C1\" pin=\"1\"/>\n"
+"      <node ref=\"U1\" pin=\"1\"/>\n"
+"      <node ref=\"P1\" pin=\"3\"/>\n"
+"    </net>\n"
+"  </nets>\n"
+"</export>\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:992
 #, no-wrap
 msgid "General netlist file structure"
-msgstr ""
+msgstr "Struktur Berkas Netlist Umum"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:995
 msgid "The intermediate Netlist accounts for five sections."
-msgstr ""
+msgstr "Berkas Netlist antara terdiri dari lima bagian."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:997
 msgid "The header section."
-msgstr ""
+msgstr "Bagian _header_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:998
 msgid "The components section."
-msgstr ""
+msgstr "Bagian komponen."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:999
 msgid "The lib parts section."
-msgstr ""
+msgstr "Bagian _lib parts_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1000
 msgid "The libraries section."
-msgstr ""
+msgstr "Bagian pustaka."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1001
 msgid "The nets section."
-msgstr ""
+msgstr "Bagian _net_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1003
 msgid "The file content has the delimiter <export>"
-msgstr ""
+msgstr "Isi berkas ini memiliki pembatas <export>"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1008
@@ -2472,17 +3369,20 @@ msgid ""
 "...\n"
 "</export>\n"
 msgstr ""
+"<export version=\"D\">\n"
+"...\n"
+"</export>\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1011
 #, no-wrap
 msgid "The header section"
-msgstr ""
+msgstr "Bagian _Header_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1014
 msgid "The header has the delimiter <design>"
-msgstr ""
+msgstr "Bagian _header_ memiliki pembatas <design>"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1021
@@ -2494,22 +3394,29 @@ msgid ""
 "<tool>eeschema (2010-08-09 BZR 2439)-unstable</tool>\n"
 "</design>\n"
 msgstr ""
+"<design>\n"
+"<source>F:\\kicad_aux\\n"
+"etlist_test\\n"
+"etlist_test.sch</source>\n"
+"<date>21/08/2010 08:12:08</date>\n"
+"<tool>eeschema (2010-08-09 BZR 2439)-unstable</tool>\n"
+"</design>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1024
 msgid "This section can be considered a comment section."
-msgstr ""
+msgstr "Bagian ini bisa dianggap sebagai bagian komentar."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1026
 #, no-wrap
 msgid "The components section"
-msgstr ""
+msgstr "Bagian Komponen"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1029
 msgid "The component section has the delimiter <components>"
-msgstr ""
+msgstr "Bagian komponen memiliki pembatas <components>"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1039
@@ -2524,6 +3431,14 @@ msgid ""
 "</comp>\n"
 "</components>\n"
 msgstr ""
+"<components>\n"
+"<comp ref=\"P1\">\n"
+"<value>CONN_4</value>\n"
+"<libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"<sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"<tstamp>4C6E2141</tstamp>\n"
+"</comp>\n"
+"</components>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1043
@@ -2531,6 +3446,8 @@ msgid ""
 "This section contains the list of components in your schematic. Each "
 "component is described like this:"
 msgstr ""
+"Bagian ini berisi daftar komponen yang ada pada skematik Anda. Setiap "
+"komponen dijelaskan seperti ini:"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1051
@@ -2543,18 +3460,24 @@ msgid ""
 "<tstamp>4C6E2141</tstamp>\n"
 "</comp>\n"
 msgstr ""
+"<comp ref=\"P1\">\n"
+"<value>CONN_4</value>\n"
+"<libsource lib=\"conn\" part=\"CONN_4\"/>\n"
+"<sheetpath names=\"/\" tstamps=\"/\"/>\n"
+"<tstamp>4C6E2141</tstamp>\n"
+"</comp>\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1056
 #, no-wrap
 msgid "|*libsource* |name of the lib where this component was found.\n"
-msgstr ""
+msgstr "|*libsource* |nama pustaka di mana komponen ini berada.\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1058
 #, no-wrap
 msgid "|*part* |component name inside this library.\n"
-msgstr ""
+msgstr "|*part* |nama komponen di dalam pustaka.\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1061
@@ -2563,24 +3486,27 @@ msgid ""
 "|*sheetpath* |path of the sheet inside the hierarchy: identify the sheet\n"
 "within the full schematic hierarchy.\n"
 msgstr ""
+"|*sheetpath* |_Path_ lembar kerja di dalam hirarki: mengidentifikasi lembar "
+"kerja\n"
+"di dalam keseluruhan hirarki skematik.\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1063
 #, no-wrap
 msgid "|*tstamps (time stamps)* |time stamp of the schematic file.\n"
-msgstr ""
+msgstr "|*tstamps (time stamps)* |tanda waktu berkas skematik.\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1065
 #, no-wrap
 msgid "|*tstamp (time stamp)* |time stamp of the component.\n"
-msgstr ""
+msgstr "|*tstamp (time stamp)* |tanda waktu komponen.\n"
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1068
 #, no-wrap
 msgid "Note about time stamps for components"
-msgstr ""
+msgstr "Catatan Mengenai Tanda Waktu Komponen"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1076
@@ -2591,6 +3517,12 @@ msgid ""
 "on the board. This allows the re-annotation of components in a schematic "
 "project and does not loose the link between the component and its footprint."
 msgstr ""
+"Untuk mengidentifikasi sebuah komponen di dalam Netlist dan kemudian di "
+"papan sirkuit, digunakan referensi tanda waktu yang bersifat unik untuk "
+"setiap komponen. KiCad juga menyediakan cara lain untuk mengidentifikasi "
+"sebuah komponen dengan _footprint_ yang terkait di papan sirkuit. Dengan "
+"demikian, bisa dilakukan anotasi ulang komponen-komponen pada proyek "
+"skematik, dan tautan antara komponen dan _footprint_ akan tetap terjaga."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1081
@@ -2599,6 +3531,11 @@ msgid ""
 "schematic project. However, in complex hierarchies, the same sheet is used "
 "more than once, so this sheet contains components having the same time stamp."
 msgstr ""
+"Tanda waktu menjadi pengidentifikasi yang bersifat unik untuk setiap "
+"komponen atau lembar kerja pada suatu proyek skematik. Namun di hirarki "
+"kompleks, satu lembar kerja yang sama bisa digunakan lebih dari satu kali, "
+"sehingga lembar kerja ini akan berisi komponen-komponen dengan tanda waktu "
+"yang sama."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1085
@@ -2607,12 +3544,15 @@ msgid ""
 "sheetpath. A given component (inside a complex hierarchy) has an unique "
 "identifier: the sheetpath + its tstamp"
 msgstr ""
+"Lembar kerja tersebut memiliki sebuah pengidentifikasi unik di hirarki "
+"kompleks: _path_ lembar kerja. Maka, komponen (di dalam hirarki kompleks) "
+"memiliki pengidentifikasi unik berupa: _path_ lembar kerja + tanda waktu."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1087
 #, no-wrap
 msgid "The libparts section"
-msgstr ""
+msgstr "Bagian _Libparts_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1092
@@ -2620,21 +3560,23 @@ msgid ""
 "The libparts section has the delimiter <libparts>, and the content of this "
 "section is defined in the schematic libraries. The libparts section contains"
 msgstr ""
+"Bagian _libparts_ memiliki pembatas <libparts>, dan isi dari bagian ini "
+"didefinisikan di pustaka skematik. Bagian ini berisi:"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1094
 msgid "The allowed footprints names (names use jokers) delimiter <fp>."
-msgstr ""
+msgstr "Pembatas <fp>, nama _footprint_ yang diperbolehkan. "
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1095
 msgid "The fields defined in the library delimiter <fields>."
-msgstr ""
+msgstr "Pembatas <fields>, atribut-atribut yang didefinisikan di dalam pustaka."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1096
 msgid "The list of pins delimiter <pins>."
-msgstr ""
+msgstr "Pembatas <pins>, daftar pin."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1115
@@ -2658,6 +3600,23 @@ msgid ""
 "</libpart>\n"
 "</libparts>\n"
 msgstr ""
+"<libparts>\n"
+"<libpart lib=\"device\" part=\"CP\">\n"
+"  <description>Condensateur polarise</description>\n"
+"  <footprints>\n"
+"    <fp>CP*</fp>\n"
+"    <fp>SM*</fp>\n"
+"  </footprints>\n"
+"  <fields>\n"
+"    <field name=\"Reference\">C</field>\n"
+"    <field name=\"Valeur\">CP</field>\n"
+"  </fields>\n"
+"  <pins>\n"
+"    <pin num=\"1\" name=\"1\" type=\"passive\"/>\n"
+"    <pin num=\"2\" name=\"2\" type=\"passive\"/>\n"
+"  </pins>\n"
+"</libpart>\n"
+"</libparts>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1119
@@ -2665,6 +3624,8 @@ msgid ""
 "Lines like <pin num=\"1\" type=\"passive\"/> give also the electrical pin "
 "type. Possible electrical pin types are"
 msgstr ""
+"Baris seperti <pin num=\"1\" type=\"passive\"/> juga menampilkan tipe pin "
+"elektrikal. Tipe pin elektrikal yang bisa digunakan antara lain:"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1133
@@ -2682,12 +3643,23 @@ msgid ""
 "|Open emitter |Open emitter sometimes found in logic\n"
 "|Not connected |Must be left open in schematic\n"
 msgstr ""
+"|Input |Pin masukan biasa\n"
+"|Output |Pin keluaran biasa\n"
+"|Bidirectional |Masukan atau keluaran\n"
+"|Tri-state |_Bus_ masukan/keluaran\n"
+"|Passive |Komponen pasif biasa\n"
+"|Unspecified |Tipe elektrikal yang tidak diketahui\n"
+"|Power input |Masukan _power_ suatu komponen\n"
+"|Power output |Keluaran _power_, seperti keluaran regulator\n"
+"|Open collector |_Open collector_ yang biasanya ada di komparator analog\n"
+"|Open emitter |_Open emitter_ yang terkadang ada di logika\n"
+"|Not connected |Harus dibiarkan terbuka di skematik\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1136
 #, no-wrap
 msgid "The libraries section"
-msgstr ""
+msgstr "Bagian Pustaka"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1140
@@ -2695,6 +3667,8 @@ msgid ""
 "The libraries section has the delimiter <libraries>. This section contains "
 "the list of schematic libraries used in the project."
 msgstr ""
+"Bagian pustaka memiliki pembatas <libraries>. Bagian ini berisi daftar "
+"pustaka skematik yang digunakan pada proyek."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1150
@@ -2709,12 +3683,20 @@ msgid ""
 "  </library>\n"
 "</libraries>\n"
 msgstr ""
+"<libraries>\n"
+"  <library logical=\"device\">\n"
+"    <uri>F:\\kicad\\share\\library\\device.lib</uri>\n"
+"  </library>\n"
+"  <library logical=\"conn\">\n"
+"    <uri>F:\\kicad\\share\\library\\conn.lib</uri>\n"
+"  </library>\n"
+"</libraries>\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1153
 #, no-wrap
 msgid "The nets section"
-msgstr ""
+msgstr "Bagian _Net_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1157
@@ -2722,6 +3704,8 @@ msgid ""
 "The nets section has the delimiter <nets>. This section contains the "
 "\"connectivity\" of the schematic."
 msgstr ""
+"Bagian _net_ memiliki pembatas <nets>. Bagian ini berisi \"konektivitas\" "
+"skematik."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1175
@@ -2744,16 +3728,32 @@ msgid ""
 "  </net>\n"
 "</nets>\n"
 msgstr ""
+"<nets>\n"
+"  <net code=\"1\" name=\"GND\">\n"
+"    <node ref=\"U1\" pin=\"7\"/>\n"
+"    <node ref=\"C1\" pin=\"2\"/>\n"
+"    <node ref=\"U2\" pin=\"7\"/>\n"
+"    <node ref=\"P1\" pin=\"4\"/>\n"
+"  </net>\n"
+"  <net code=\"2\" name=\"VCC\">\n"
+"    <node ref=\"R1\" pin=\"1\"/>\n"
+"    <node ref=\"U1\" pin=\"14\"/>\n"
+"    <node ref=\"U2\" pin=\"4\"/>\n"
+"    <node ref=\"U2\" pin=\"1\"/>\n"
+"    <node ref=\"U2\" pin=\"14\"/>\n"
+"    <node ref=\"P1\" pin=\"1\"/>\n"
+"  </net>\n"
+"</nets>\n"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1178
 msgid "This section lists all nets in the schematic."
-msgstr ""
+msgstr "Bagian ini menampilkan daftar semua _net_ pada skematik."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1180
 msgid "A possible net contains the following."
-msgstr ""
+msgstr "Sebuah _net_ bisa memiliki daftar seperti berikut ini."
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1188
@@ -2766,6 +3766,12 @@ msgid ""
 "  <node ref=\"P1\" pin=\"4\"/>\n"
 "</net>\n"
 msgstr ""
+"<net code=\"1\" name=\"GND\">\n"
+"  <node ref=\"U1\" pin=\"7\"/>\n"
+"  <node ref=\"C1\" pin=\"2\"/>\n"
+"  <node ref=\"U2\" pin=\"7\"/>\n"
+"  <node ref=\"P1\" pin=\"4\"/>\n"
+"</net>\n"
 
 #. type: delimited block |
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1195
@@ -2775,17 +3781,20 @@ msgid ""
 "|name |is a name for this net\n"
 "|node |give a pin reference connected to this net\n"
 msgstr ""
+"|net code |Pengidentifikasi internal untuk _net_ ini\n"
+"|name |Nama _net_\n"
+"|node |Referensi pin yang terhubung ke _net_ ini\n"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1198
 #, no-wrap
 msgid "More about xsltproc"
-msgstr ""
+msgstr "Lebih Lanjut Tentang xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1201
 msgid "Refer to the page: _http://xmlsoft.org/XSLT/xsltproc.html_"
-msgstr ""
+msgstr "Silakan mengacu pada halaman: _http://xmlsoft.org/XSLT/xsltproc.html_"
 
 #. type: Title ===
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1203
@@ -2806,6 +3815,9 @@ msgid ""
 "documents. While it was developed as part of the GNOME project, it can "
 "operate independently of the GNOME desktop."
 msgstr ""
+"xsltproc adalah sebuah alat baris perintah untuk menerapkan _stylesheet_ "
+"XSLT ke dokumen XML. Alat ini dkembangkan sebagai bagian dari proyek GNOME, "
+"namun dapat digunakan secara independen di luar desktop GNOME."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1213
@@ -2815,6 +3827,10 @@ msgid ""
 "sheet is to be applied. It will use the standard input if a filename "
 "provided is - ."
 msgstr ""
+"xsltproc dijalankan melalui baris perintah dengan nama _stylesheet_ yang "
+"akan digunakan diikuti dengan nama berkas yang mana _stylesheet_ akan "
+"diterapkan. Alat ini akan menggunakan masukan standar jika nama berkas yang "
+"diberikan berupa -."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1219
@@ -2825,12 +3841,18 @@ msgid ""
 "it. By default, the output is to __stdout__. You can specify a file for "
 "output using the -o option."
 msgstr ""
+"Jika tersedia sebuah _stylesheet_ di dalam dokumen XML dengan 'Style-sheet "
+"Processing Instruction', kita tidak perlu lagi menyebutkan sebuah "
+"_stylesheet_ pada baris perintah. xsltproc akan secara otomatis mendeteksi "
+"_stylesheet_ yang tersedia dan menggunakannya. Secara _default_, keluaran "
+"dari perintah ini adalah ke __stdout__. Keluaran bisa disimpan ke sebuah "
+"berkas dengan menggunakan opsi -o."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1221
 #, no-wrap
 msgid "Synopsis"
-msgstr ""
+msgstr "Sinopsis"
 
 #. type: delimited block -
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1231
@@ -2844,27 +3866,34 @@ msgid ""
 "[--writesubtree] | [--nodtdattr]] [ *stylesheet* ] [ *file1* ] [ *file2* ] \n"
 "[ *....* ]\n"
 msgstr ""
+"xsltproc [[-V] | [-v] | [-o *file* ] | [--timing] | [--repeat] |\n"
+"[--debug] | [--novalid] | [--noout] | [--maxdepth *val* ] | [--html] |\n"
+"[--param *name* *value* ] | [--stringparam *name* *value* ] | [--nonet] |\n"
+"[--path *paths* ] | [--load-trace] | [--catalogs] | [--xinclude] |\n"
+"[--profile] | [--dumpextensions] | [--nowrite] | [--nomkdir] |\n"
+"[--writesubtree] | [--nodtdattr]] [ *stylesheet* ] [ *file1* ] [ *file2* ] \n"
+"[ *....* ]\n"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1234
 #, no-wrap
 msgid "Command line options"
-msgstr ""
+msgstr "Opsi-opsi Baris Perintah"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1237
 msgid "_-V_ or _--version_"
-msgstr ""
+msgstr "_-V_ atau _--version_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1239
 msgid "Show the version of libxml and libxslt used."
-msgstr ""
+msgstr "Menampilkan versi libxml dan libxslt yang digunakan."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1241
 msgid "_-v_ or _--verbose_"
-msgstr ""
+msgstr "_-v_ atau _--verbose_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1244
@@ -2872,11 +3901,13 @@ msgid ""
 "Output each step taken by xsltproc in processing the stylesheet and the "
 "document."
 msgstr ""
+"Menampilkan setiap langkah yang diambil oleh xsltproc dalam memproses "
+"_stylesheet_ dan dokumen."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1246
 msgid "_-o_ or _--output file_"
-msgstr ""
+msgstr "_-o_ atau _--output file_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1250
@@ -2885,11 +3916,15 @@ msgid ""
 "as ``chunking'', -o directory/ directs the output files to a specified "
 "directory. The directory must already exist."
 msgstr ""
+"Mengarahkan keluaran ke berkas dengan nama __file__. Untuk keluaran lebih "
+"dari satu, juga dikenal sebagai \"'chunking'\", -o direktori/ akan "
+"mengarahkan berkas keluaran ke direktori yang ditentukan. Direktori tersebut "
+"harus sudah ada sebelumnya."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1252
 msgid "_--timing_"
-msgstr ""
+msgstr "_--timing_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1256
@@ -2897,51 +3932,58 @@ msgid ""
 "Display the time used for parsing the stylesheet, parsing the document and "
 "applying the stylesheet and saving the result. Displayed in milliseconds."
 msgstr ""
+"Menampilkan waktu yang digunakan untuk menguraikan _stylesheet_, menguraikan "
+"dokumen, dan menerapkan _stylesheet_ dan menyimpan hasilnya. Ditampilkan "
+"dalam satuan milidetik."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1258
 msgid "_--repeat_"
-msgstr ""
+msgstr "_--repeat_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1260
 msgid "Run the transformation 20 times. Used for timing tests."
 msgstr ""
+"Menjalankan transformasi sebanyak 20 kali. Digunakan untuk pengujian "
+"pewaktuan."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1262
 msgid "_--debug_"
-msgstr ""
+msgstr "_--debug_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1264
 msgid "Output an XML tree of the transformed document for debugging purposes."
 msgstr ""
+"Menghasilkan sebuah pohon XML dari dokumen yang ditransformasikan, untuk "
+"keperluan _debugging_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1266
 msgid "_--novalid_"
-msgstr ""
+msgstr "_--novalid_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1268
 msgid "Skip loading the document's DTD."
-msgstr ""
+msgstr "Lewati memuat DTD dokumen."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1270
 msgid "_--noout_"
-msgstr ""
+msgstr "_--noout_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1272
 msgid "Do not output the result."
-msgstr ""
+msgstr "Jangan mengeluarkan hasilnya."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1274
 msgid "_--maxdepth value_"
-msgstr ""
+msgstr "_--maxdepth value_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1277
@@ -2949,21 +3991,23 @@ msgid ""
 "Adjust the maximum depth of the template stack before libxslt concludes it "
 "is in an infinite loop. The default is 500."
 msgstr ""
+"Atur kedalaman maksimum dari tumpukan templat sebelum libxslt menyimpulkan "
+"bahwa ini adalah putaran tak terbatas. Nilai _default_ adalah 500."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1279
 msgid "_--html_"
-msgstr ""
+msgstr "_--html_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1281
 msgid "The input document is an HTML file."
-msgstr ""
+msgstr "Dokumen masukan berupa berkas HTML."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1283
 msgid "_--param name value_"
-msgstr ""
+msgstr "_--param name value_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1288
@@ -2972,11 +4016,15 @@ msgid ""
 "pass multiple name/value pairs up to a maximum of 32. If the value being "
 "passed is a string rather than a node identifier, use --stringparam instead."
 msgstr ""
+"Memberikan parameter nama _name_ dan nilai _value_ ke _stylesheet_. Anda "
+"bisa memberikan beberapa pasang nama/nilai hingga jumlah maksimum 32. Jika "
+"nilai yang diberikan berupa 'string' dan bukan 'node identifier', gunakan "
+"--stringparam."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1290
 msgid "_--stringparam name value_"
-msgstr ""
+msgstr "_--stringparam name value_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1293
@@ -2984,21 +4032,23 @@ msgid ""
 "Pass a paramenter of name _name_ and value _value_ where _value_ is a string "
 "rather than a node identifier. (Note: The string must be utf-8.)"
 msgstr ""
+"Memberikan parameter berupa nama _name_ dan nilai _value_ di mana _value_ "
+"adalah 'string' dan bukan 'node identifier'. (Catatan: 'string' harus utf-8.)"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1295
 msgid "_--nonet_"
-msgstr ""
+msgstr "_--nonet_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1297
 msgid "Do not use the Internet to fetch DTD's, entities or documents."
-msgstr ""
+msgstr "Jangan menggunakan Internet untuk mengambil DTD, entitas atau dokumen."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1299
 msgid "_--path paths_"
-msgstr ""
+msgstr "_--path paths_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1302
@@ -3006,21 +4056,23 @@ msgid ""
 "Use the list (separated by space or column) of filesystem paths specified by "
 "_paths_ to load DTDs, entities or documents."
 msgstr ""
+"Menggunakan daftar (dipisahkan oleh spasi atau kolom) _path_ sistem berkas "
+"untuk memuat DTD entitas atau dokumen."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1304
 msgid "_--load-trace_"
-msgstr ""
+msgstr "_--load-trace_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1306
 msgid "Display to stderr all the documents loaded during the processing."
-msgstr ""
+msgstr "Menampilkan ke stderr semua dokumen yang dimuat selama pemrosesan."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1308
 msgid "_--catalogs_"
-msgstr ""
+msgstr "_--catalogs_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1313
@@ -3029,11 +4081,15 @@ msgid ""
 "of external entities. By default, xsltproc looks for the catalog specified "
 "in XML_CATALOG_FILES. If that is not specified, it uses /etc/xml/catalog."
 msgstr ""
+"Gunakan katalog SGML yang disebutkan di SGML_CATALOG_FILES untuk "
+"menyelesaikan lokasi entitas eksternal. Secara _default_, xsltproc akan "
+"melihat katalog yang disebutkan di XML_CATALOG_FILES. Jika tidak disebutkan "
+"di situ, maka digunakan /etc/xml/catalog."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1315
 msgid "_--xinclude_"
-msgstr ""
+msgstr "_--xinclude_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1319
@@ -3042,11 +4098,14 @@ msgid ""
 "this can be found in the Xinclude specification: http://www.w3.org/TR/"
 "xinclude/[http://www.w3.org/TR/xinclude/]"
 msgstr ""
+"Memproses dokumen masukan menggunakan spesifikasi Xinclude. Lebih lanjut "
+"mengenai hal ini bisa ditemukan pada spesifikasi Xinclude: "
+"http://www.w3.org/TR/xinclude/[http://www.w3.org/TR/xinclude/]"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1321
 msgid "_--profile --norman_"
-msgstr ""
+msgstr "_--profile --norman_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1325
@@ -3054,62 +4113,65 @@ msgid ""
 "Output profiling information detailing the amount of time spent in each part "
 "of the stylesheet. This is useful in optimizing stylesheet performance."
 msgstr ""
+"Menghasilkan keluaran berupa informasi _profiling_ yang menjelaskan jumlah "
+"waktu yang dihabiskan dalam setiap bagian _stylesheet_. Hal ini berguna "
+"untuk mengoptimasi performa _stylesheet_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1327
 msgid "_--dumpextensions_"
-msgstr ""
+msgstr "_--dumpextensions_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1329
 msgid "Dumps the list of all registered extensions to stdout."
-msgstr ""
+msgstr "Mengeluarkan daftar semua ekstensi terdaftar ke stdout."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1331
 msgid "_--nowrite_"
-msgstr ""
+msgstr "_--nowrite_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1333
 msgid "Refuses to write to any file or resource."
-msgstr ""
+msgstr "Jangan menulis ke berkas atau sumber apapun."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1335
 msgid "_--nomkdir_"
-msgstr ""
+msgstr "_--nomkdir_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1337
 msgid "Refuses to create directories."
-msgstr ""
+msgstr "Jangan membuat direktori."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1339
 msgid "_--writesubtree path_"
-msgstr ""
+msgstr "_--writesubtree path_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1341
 msgid "Allow file write only within the _path_ subtree."
-msgstr ""
+msgstr "Diperbolehkan menulis berkas hanya di dalam _path_."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1343
 msgid "_--nodtdattr_"
-msgstr ""
+msgstr "_--nodtdattr_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1345
 msgid "Do not apply default attributes from the document's DTD."
-msgstr ""
+msgstr "Jangan menerapkan atribut _default_ dari DTD dokumen."
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1347
 #, no-wrap
 msgid "Xsltproc return values"
-msgstr ""
+msgstr "Nilai Kembali Xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1351
@@ -3117,82 +4179,84 @@ msgid ""
 "xsltproc returns a status number that can be quite useful when calling it "
 "within a script."
 msgstr ""
+"xsltproc akan mengembalikan sebuah nomor status yang akan berguna saat kita "
+"menjalankannya di dalam sebuah skrip."
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1353
 msgid "0: normal"
-msgstr ""
+msgstr "0: normal"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1355
 msgid "1: no argument"
-msgstr ""
+msgstr "1: tidak ada argumen"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1357
 msgid "2: too many parameters"
-msgstr ""
+msgstr "2: terlalu banyak parameter"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1359
 msgid "3: unknown option"
-msgstr ""
+msgstr "3: opsi tidak diketahui"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1361
 msgid "4: failed to parse the stylesheet"
-msgstr ""
+msgstr "4: gagal mengurai _stylesheet_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1363
 msgid "5: error in the stylesheet"
-msgstr ""
+msgstr "5: terdapat kesalahan pada _stylesheet_"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1365
 msgid "6: error in one of the documents"
-msgstr ""
+msgstr "6: terdapat kesalahan pada salah satu dokumen"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1367
 msgid "7: unsupported xsl:output method"
-msgstr ""
+msgstr "7: metode xsl:output tidak didukung"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1369
 msgid "8: string parameter contains both quote and double-quotes"
-msgstr ""
+msgstr "8: parameter 'string' berisi tanda petik dan tanda petik ganda"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1371
 msgid "9: internal processing error"
-msgstr ""
+msgstr "9: kesalahan pemrosesan internal"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1373
 msgid "10: processing was stopped by a terminating message"
-msgstr ""
+msgstr "10: pemrosesan terhenti oleh suatu pesan penghentian"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1375
 msgid "11: could not write the result to the output file"
-msgstr ""
+msgstr "13: tidak dapat menulis hasil ke berkas keluaran"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1377
 #, no-wrap
 msgid "More Information about xsltproc"
-msgstr ""
+msgstr "Informasi Lebih Lanjut Tentang xsltproc"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1380
 msgid "libxml web page: http://www.xmlsoft.org/[http://www.xmlsoft.org/]"
-msgstr ""
+msgstr "Halaman web libxml: http://www.xmlsoft.org/[http://www.xmlsoft.org/]"
 
 #. type: Plain text
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1381
 msgid "W3C XSLT page: http://www.w3.org/TR/xslt[http://www.w3.org/TR/xslt]"
-msgstr ""
+msgstr "Halaman XSLT W3C: http://www.w3.org/TR/xslt[http://www.w3.org/TR/xslt]"
 
 #. type: Title ==
 #: eeschema_hierarchical_schematics.adoc:3
@@ -4121,7 +5185,7 @@ msgid ""
 "development chain that allows for:"
 msgstr ""
 "Sebuah skematik yang didesain dengan Eeschema adalah lebih dari sekedar "
-"representasi grafis sederhana suatu peralatan elektronika. Skematik menjadi "
+"representasi grafis sederhana suatu divais elektronika. Skematik menjadi "
 "titik mulai dari rantai pengembangan yang mengijinkan kita:"
 
 #. type: Plain text
@@ -4182,13 +5246,13 @@ msgstr "Rantai Pengembangan"
 #: eeschema_schematic_creation_and_editing.adoc:35
 #, no-wrap
 msgid "dev-chain_png"
-msgstr ""
+msgstr "dev-chain_png"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:35
 #, no-wrap
 msgid "images/en/dev-chain.png"
-msgstr ""
+msgstr "images/en/dev-chain.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:40
@@ -4326,13 +5390,13 @@ msgstr "Berikut ini contoh peletakan simbol:"
 #: eeschema_schematic_creation_and_editing.adoc:88
 #, no-wrap
 msgid "component during placement"
-msgstr ""
+msgstr "component during placement"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:88
 #, no-wrap
 msgid "images/en/component_during_placement.png"
-msgstr ""
+msgstr "images/en/component_during_placement.png"
 
 #. type: Title ====
 #: eeschema_schematic_creation_and_editing.adoc:91
@@ -4471,14 +5535,14 @@ msgstr ""
 #: eeschema_general_top_toolbar.adoc:229
 #, no-wrap
 msgid "Component Properties dialog"
-msgstr ""
+msgstr "Component Properties dialog"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:138
 #: eeschema_general_top_toolbar.adoc:229
 #, no-wrap
 msgid "images/en/dialog_component_properties.png"
-msgstr ""
+msgstr "images/en/dialog_component_properties.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:144
@@ -4621,13 +5685,13 @@ msgstr "Gambar berikut menunjukkan dua metode tersebut:"
 #: eeschema_schematic_creation_and_editing.adoc:181
 #, no-wrap
 msgid "Wires labels"
-msgstr ""
+msgstr "Wires labels"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:181
 #, no-wrap
 msgid "images/wires_labels.png"
-msgstr ""
+msgstr "images/wires_labels.png"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:184
@@ -4735,13 +5799,13 @@ msgstr "Pada skematik berikut, ada beberapa pin yang terhubung ke _bus_."
 #: eeschema_schematic_creation_and_editing.adoc:219
 #, no-wrap
 msgid "Example schematic with buses"
-msgstr ""
+msgstr "Example schematic with buses"
 
 #. type: Target for macro image
 #: eeschema_schematic_creation_and_editing.adoc:219
 #, no-wrap
 msgid "images/sch_with_buses.png"
-msgstr ""
+msgstr "images/sch_with_buses.png"
 
 #. type: Title =====
 #: eeschema_schematic_creation_and_editing.adoc:222
@@ -5631,7 +6695,7 @@ msgstr ">> Errors ERC: 4\n"
 #: eeschema_libedit.adoc:3
 #, no-wrap
 msgid "LibEdit - Symbols"
-msgstr ""
+msgstr "LibEdit - Simbol"
 
 #. type: Title ===
 #: eeschema_libedit.adoc:5 eeschema_create_a_netlist.adoc:5
@@ -5642,23 +6706,25 @@ msgstr "Gambaran Umum"
 #. type: Plain text
 #: eeschema_libedit.adoc:8
 msgid "A symbol consist of the following elements"
-msgstr ""
+msgstr "Sebuah simbol terdiri dari elemen-elemen berikut ini:"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:10
 msgid "A graphical representation (geometrical shapes, texts)."
-msgstr ""
+msgstr "Representasi grafis (bentuk geometris, teks)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:11
 msgid "Pins."
-msgstr ""
+msgstr "Pin."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:13
 msgid ""
 "Fields or associated text used by the post processors: netlist, symbols list."
 msgstr ""
+"Atribut atau teks yang digunakan oleh _post processor_: Netlist, daftar "
+"simbol."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:18
@@ -5668,6 +6734,10 @@ msgid ""
 "the other fields are the free fields, they can generally remain empty, and "
 "could be filled during schematic capture."
 msgstr ""
+"Ada dua atribut yang akan diinisialisasi: referensi dan nilai. Nama desain "
+"terkait dengan simbol, dan nama _footprint_ yang terkait, atribut yang lain "
+"adalah atribut bebas, atribut tersebut bisa dibiarkan kosong, dan bisa diisi "
+"pada saat pembuatan skematik."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:22
@@ -5676,61 +6746,64 @@ msgid ""
 "the research, use and maintenance of libraries. The associated documentation "
 "consists of"
 msgstr ""
+"Bagaimanapun, manajemen dokumentasi yang terkait dengan simbol akan "
+"memudahkan riset, penggunaan, dan pemeliharaan pustaka. Dokumentasi terdiri "
+"dari:"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:24
 msgid "A line of comment."
-msgstr ""
+msgstr "Sebaris komentar."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:25
 msgid "A line of key words such as TTL CMOS NAND2, separated by spaces."
-msgstr ""
+msgstr "Sebaris kata kunci seperti TTL CMOS NAND2, dipisahkan oleh spasi."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:26
 msgid "An attached file name (for example an application note or a pdf file)."
-msgstr ""
+msgstr "Nama berkas terlampir (contohnya catatan aplikasi atau berkas PDF)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:28
 msgid "The default directory for attached files:"
-msgstr ""
+msgstr "Direktori _default_ untuk berkas terlampir:"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:30
 msgid "kicad/share/library/doc"
-msgstr ""
+msgstr "`kicad/share/library/doc`"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:32
 msgid "If not found:"
-msgstr ""
+msgstr "Jika idak ditemukan:"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:34
 msgid "kicad/library/doc"
-msgstr ""
+msgstr "`kicad/library/doc`"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:36
 msgid "Under linux:"
-msgstr ""
+msgstr "Di Linux:"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:38
 msgid "/usr/local/kicad/share/library/doc"
-msgstr ""
+msgstr "`/usr/local/kicad/share/library/doc`"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:40
 msgid "/usr/share/kicad/library/doc"
-msgstr ""
+msgstr "`/usr/share/kicad/library/doc`"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:42
 msgid "/usr/local/share/kicad/library/doc"
-msgstr ""
+msgstr "`/usr/local/share/kicad/library/doc`"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:47
@@ -5739,6 +6812,10 @@ msgid ""
 "selection criteria. Comments and key words are displayed in various menus, "
 "and particularly when you select a symbol from the library."
 msgstr ""
+"Penggunaan kata kunci akan memudahkan kita dalam melakukan pencarian secara "
+"selektif untuk suatu simbol berdasarkan berbagai kriteria seleksi. Komentar "
+"dan kata kunci ditampilkan di berbagai menu, dan terutama ketika Anda "
+"memilih sebuah simbol dari pustaka."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:52
@@ -5747,6 +6824,10 @@ msgid ""
 "relative to this anchor point and during a placement this point is used as a "
 "reference position. It is thus useful to position this anchor accurately."
 msgstr ""
+"Simbol juga memiliki sebuah titik jangkar. Rotasi atau pencerminan dilakukan "
+"relatif terhadap titik jangkar, dan pada saat peletakan, titik ini digunakan "
+"sebagai posisi referensi. Oleh karena itu, kita perlu memposisikan titik "
+"jangkar secara akurat."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:57
@@ -5755,6 +6836,9 @@ msgid ""
 "considerably reduce the number of symbols that need to be created (for "
 "example, a 74LS00 can have aliases such as 74000, 74HC00, 74HCT00...)."
 msgstr ""
+"Sebuah simbol bisa memiliki alias, yaitu suatu nama ekuivalen. Dengan "
+"demikian, Anda bisa banyak mengurangi jumlah simbol yang harus dibuat ("
+"sebagai contoh, 74LS00 bisa memiliki alias seperti 7400, 74HC00, 74HCT00...)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:60
@@ -5762,12 +6846,14 @@ msgid ""
 "Finally, the symbols are distributed in libraries (classified by topics, or "
 "manufacturer) in order to facilitate their management."
 msgstr ""
+"Simbol didistribusikan dalam bentuk pustaka (diklasifikasikan berdasarkan "
+"topik, atau manufaktur) untuk memfasilitasi manajemen simbol."
 
 #. type: Title ===
 #: eeschema_libedit.adoc:62
 #, no-wrap
 msgid "Position a symbol anchor"
-msgstr ""
+msgstr "Memposisikan Jangkar Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:66
@@ -5775,18 +6861,20 @@ msgid ""
 "The anchor is at the coordinates (0,0) and it is shown by the blue axes "
 "displayed on your screen."
 msgstr ""
+"Jangkar berada pada koordinat (0,0) dan ditampilkan sebagai sumbu berwarna "
+"biru pada layar Anda."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit.adoc:67
 #, no-wrap
 msgid "eeschema_libedit_anchor_png"
-msgstr ""
+msgstr "eeschema_libedit_anchor_png"
 
 #. type: Target for macro image
 #: eeschema_libedit.adoc:67
 #, no-wrap
 msgid "images/eeschema_libedit_anchor.png"
-msgstr ""
+msgstr "images/eeschema_libedit_anchor.png"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:73
@@ -5796,12 +6884,16 @@ msgid ""
 "position. The drawing will be automatically re-centered on the new anchor "
 "point."
 msgstr ""
+"Jangkar dapat diposisikan ulang dengan menggunakan ikon "
+"image:images/icons/anchor.png[icons/anchor_png] dan klik pada posisi jangkar "
+"yang diinginkan. Gambar akan secara otomatis ditengahkan pada titik jangkar "
+"yang baru."
 
 #. type: Title ===
 #: eeschema_libedit.adoc:75
 #, no-wrap
 msgid "Symbol aliases"
-msgstr ""
+msgstr "Alias Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:81
@@ -5811,6 +6903,10 @@ msgid ""
 "only one symbol, having several aliases (e.g. 7400 with alias 74LS00, "
 "74HC00, 74LS37 )."
 msgstr ""
+"Alias adalah nama lain yang terkait dengan simbol yang sama pada pustaka. "
+"Simbol dengan susunan pin dan representasi yang sama dapat diwakili oleh "
+"hanya satu simbol, dengan beberapa alias (misalnya 7400 dengan alias 74LS00, "
+"74HC00, 74LS37)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:85
@@ -5819,6 +6915,9 @@ msgid ""
 "addition these libraries, being much more compact, are easily loaded by "
 "KiCad."
 msgstr ""
+"Dengan menggunakan alias, kita bisa membangun pustaka yang lengkap dengan "
+"cepat. Selain itu, karena pustaka menjadi lebih ringkas, maka akan lebih "
+"cepat dimuat oleh KiCad."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:90
@@ -5827,18 +6926,21 @@ msgid ""
 "via the icon image:images/icons/part_properties.png[icons/"
 "part_properties_png] and select the alias folder."
 msgstr ""
+"Untuk mengubah daftar alias, Anda harus memilih jendela editor utama melalui "
+"ikon image:images/icons/part_properties.png[icons/part_properties_png] dan "
+"pilih tab 'Alias'. "
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit.adoc:91
 #, no-wrap
 msgid "eeschema_libedit_alias_png"
-msgstr ""
+msgstr "eeschema_libedit_alias_png"
 
 #. type: Target for macro image
 #: eeschema_libedit.adoc:91
 #, no-wrap
 msgid "images/eeschema_libedit_alias.png"
-msgstr ""
+msgstr "images/eeschema_libedit_alias.png"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:95
@@ -5846,6 +6948,8 @@ msgid ""
 "You can thus add or remove the desired alias. The current alias cannot "
 "obviously be removed since it is edited."
 msgstr ""
+"Anda dapat menambahkan atau menghapus alias. Alias saat ini tidak dapat "
+"dihapus karena sudah diedit."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:99
@@ -5854,12 +6958,14 @@ msgid ""
 "first symbol in the alias list in the window of selection of the main "
 "toolbar."
 msgstr ""
+"Untuk menghapus semua alias, Anda harus memilih simbol utama. Simbol pertama "
+"dalam daftar alias di jendela pemilihan bilah alat utama."
 
 #. type: Title ===
 #: eeschema_libedit.adoc:101
 #, no-wrap
 msgid "Symbol fields"
-msgstr ""
+msgstr "Atribut-atribut Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:105
@@ -5867,6 +6973,8 @@ msgid ""
 "The field editor is called via the icon image:images/icons/text.png[icons/"
 "text.png]."
 msgstr ""
+"Editor atribut dapat diakses melalui "
+"image:images/icons/text.png[icons/text.png]."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:108
@@ -5874,28 +6982,30 @@ msgid ""
 "There are four special fields (texts attached to the symbol), and "
 "configurable user fields"
 msgstr ""
+"Ada empat atribut khusus (teks yang terlampir pada simbol), dan beberapa "
+"atribut pengguna yang dapat dikonfigurasi."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit.adoc:109 eeschema_library_editor.adoc:754
 #, no-wrap
 msgid "eeschema_libedit_field_properties_png"
-msgstr ""
+msgstr "eeschema_libedit_field_properties_png"
 
 #. type: Target for macro image
 #: eeschema_libedit.adoc:109 eeschema_library_editor.adoc:754
 #, no-wrap
 msgid "images/eeschema_libedit_field_properties.png"
-msgstr ""
+msgstr "images/eeschema_libedit_field_properties.png"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:112
 msgid "Special fields"
-msgstr ""
+msgstr "Atribut khusus:"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:114
 msgid "Reference."
-msgstr ""
+msgstr "Referensi (_reference_)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:116
@@ -5903,6 +7013,8 @@ msgid ""
 "Value. It is the symbol name in the library and the default value field in "
 "schematic."
 msgstr ""
+"Nilai (_value_). Yaitu nama simbol di pustaka dan atribut nilai _default_ di "
+"skematik."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:119
@@ -5910,17 +7022,22 @@ msgid ""
 "Footprint. It is the footprint name used for the board. Not very useful when "
 "using CvPcb to setup the footprint list, but mandatory if CvPcb is not used."
 msgstr ""
+"_Footprint_. Yaitu nama _footprint_ yang digunakan untuk pembuatan PCB. "
+"Atribut ini tidak begitu berguna jika kita menggunakan CvPcb untuk membuat "
+"daftar _footprint_, namun bersifat wajib jika kita tidak menggunakan CvPcb."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:120
 msgid "Sheet. It is a reserved field, not used at the time of writing."
 msgstr ""
+"Lembar kerja (_sheet_). Ini adalah atribut cadangan, namun pada saat tulisan "
+"ini dibuat, atribut ini belum digunakan."
 
 #. type: Title ===
 #: eeschema_libedit.adoc:122
 #, no-wrap
 msgid "Symbol documentation"
-msgstr ""
+msgstr "Dokumentasi Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:128
@@ -5929,18 +7046,22 @@ msgid ""
 "window of the symbol via the icon image:images/icons/part_properties."
 "png[icons/part_properties_png] and to select the document folder."
 msgstr ""
+"Untuk mengedit informasi dokumentasi, kita harus membuka jendela editor "
+"utama melalui ikon  icon "
+"image:images/icons/part_properties.png[icons/part_properties_png], kemudian "
+"pilih tab 'Description'."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit.adoc:129
 #, no-wrap
 msgid "eeschema_libedit_description_png"
-msgstr ""
+msgstr "eeschema_libedit_description_png"
 
 #. type: Target for macro image
 #: eeschema_libedit.adoc:129
 #, no-wrap
 msgid "images/eeschema_libedit_description.png"
-msgstr ""
+msgstr "images/eeschema_libedit_description.png"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:135
@@ -5950,12 +7071,16 @@ msgid ""
 "\"Copy Doc\" button allows you to copy the documentation information from "
 "the root symbol towards the currently edited alias."
 msgstr ""
+"Pastikan untuk memilih alias yang benar, atau simbol utama, karena "
+"dokumentasi inilah yang akan membedakan antar alias. Tombol 'Copy Doc' "
+"berguna untuk menyalin informasi dokumentasi dari simbol utama ke alias yang "
+"saat ini sedang diedit."
 
 #. type: Title ====
 #: eeschema_libedit.adoc:137
 #, no-wrap
 msgid "Symbol keywords"
-msgstr ""
+msgstr "Kata Kunci Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:142
@@ -5963,6 +7088,9 @@ msgid ""
 "Keywords allow you to search in a selective way for a symbol according to "
 "specific selection criteria (function, technological family, etc.)"
 msgstr ""
+"Kata kunci berguna bagi kita untuk melakukan pencarian secara selektif untuk "
+"suatu simbol berdasarkan kriteria pemilihan yang spesifik (fungsi, "
+"teknologi, dsb.)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:145
@@ -5970,11 +7098,13 @@ msgid ""
 "The Eeschema research tool is not case sensitive. The most current key words "
 "used in the libraries are"
 msgstr ""
+"Peralatan pencari pada Eeschema tidak membedakan huruf besar dan kecil. Kata "
+"kunci yang sering digunakan pada pustaka antara lain:"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:147
 msgid "CMOS TTL for the logic families"
-msgstr ""
+msgstr "CMOS TTL untuk keluarga logika"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:149
@@ -5982,16 +7112,18 @@ msgid ""
 "AND2 NOR3 XOR2 INV... for the gates (AND2 = 2 inputs AND gate, NOR3 = 3 "
 "inputs NOR gate)."
 msgstr ""
+"AND2 NOR3 XOR2 INV... untuk gerbang (AND2 = 2 masukan gerbang AND, NOR3 = 3 "
+"masukan gerbang NOR)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:150
 msgid "JKFF DFF... for JK or D flip-flop."
-msgstr ""
+msgstr "JKFF DFF... untuk fli-flop JK atau D."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:151
 msgid "ADC, DAC, MUX..."
-msgstr ""
+msgstr "ADC, DAC, MUX..."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:155
@@ -6000,12 +7132,15 @@ msgid ""
 "capture software, you search the symbol: by keywords NAND2 OpenCol Eeschema "
 "will display the list of symbols having these 2 key words."
 msgstr ""
+"OpenCol untuk gerbang dengan keluaran _open-collector_. Jika Anda melakukan "
+"pencarian dengan kata kunci _NAND2 OpenCol_, Eeschema akan menampilkan "
+"daftar simbol yang memiliki kedua kata kunci tersebut."
 
 #. type: Title ====
 #: eeschema_libedit.adoc:157
 #, no-wrap
 msgid "Symbol documentation (Doc)"
-msgstr ""
+msgstr "Dokumentasi Simbol (Doc)"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:162
@@ -6014,6 +7149,9 @@ msgid ""
 "particularly when you select a symbol in the displayed symbols list of a "
 "library and in the ViewLib menu."
 msgstr ""
+"Baris komentar (dan kata kunci) ditampilkan di berbagai menu, terutama "
+"ketika Anda memilih sebuah simbol pada daftar simbol di pustaka dan di menu "
+"ViewLib."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:166
@@ -6021,12 +7159,15 @@ msgid ""
 "If this Doc. file exists, it is also accessible in the schematic capture "
 "software, in the pop-up menu displayed by right-clicking on the symbol."
 msgstr ""
+"jika berkas Doc. ini tersedia, kita bisa mengaksesnya pada perangkat lunak "
+"pembuat skematik, melalui menu _pop-up_ yang akan tampil jika kita melakukan "
+"klik-kanan pada simbol."
 
 #. type: Title ====
 #: eeschema_libedit.adoc:168
 #, no-wrap
 msgid "Associated documentation file (DocFileName)"
-msgstr ""
+msgstr "Berkas Dokumen Terkait (DocFileName)"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:172
@@ -6034,12 +7175,14 @@ msgid ""
 "Indicates an attached file (documentation, application schematic)  available "
 "( pdf file, schematic diagram, etc.)."
 msgstr ""
+"Bagian ini adalah berkas terlampir yang tersedia (dokumentasi, skematik "
+"aplikasi), dalam bentuk berkas PDF, diagram skematik, dsb."
 
 #. type: Title ====
 #: eeschema_libedit.adoc:174
 #, no-wrap
 msgid "Footprint filtering for CvPcb"
-msgstr ""
+msgstr "Penyaring _Footprint_ untuk CvPcb"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:179
@@ -6048,29 +7191,35 @@ msgid ""
 "a filter used by CvPcb to display only the allowed footprints. A void list "
 "does not filter anything."
 msgstr ""
+"Anda bisa memasukkan sebuah daftar yang berisi _footprint_ yang "
+"diperbolehkan untuk simbol. Daftar ini berfungsi sebagai penyaring yang akan "
+"digunakan oleh CvPcb untuk menampilkan hanya _footprint_ yang diperbolehkan. "
+"Daftar yang kosong akan diabaikan."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit.adoc:180
 #, no-wrap
 msgid "eeschema_libedit_footprint_png"
-msgstr ""
+msgstr "eeschema_libedit_footprint_png"
 
 #. type: Target for macro image
 #: eeschema_libedit.adoc:180
 #, no-wrap
 msgid "images/eeschema_libedit_footprint.png"
-msgstr ""
+msgstr "images/eeschema_libedit_footprint.png"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:183
 msgid "Wild-card characters are allowed."
-msgstr ""
+msgstr "Karakter _wild-card_ boleh digunakan."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:186
 msgid ""
 "S014* allows CvPcb to show all the footprints with a name starting by SO14."
 msgstr ""
+"Kode SO14* artinya CvPcb akan menampilkan semua _footprint_ dengan nama yang "
+"dimulai dengan SO14."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:189
@@ -6078,51 +7227,53 @@ msgid ""
 "For a resistor, R? shows all the footprints with a 2 letters name starting "
 "by R."
 msgstr ""
+"Untuk resistor, R? akan menampilkan semua _footprint_ dengan nama 2 huruf "
+"yang dimulai dengan huruf R."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:191
 msgid "Here are samples: with and without filtering"
-msgstr ""
+msgstr "Gambar di bawah ini menampilkan contoh penggunaan penyaring."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:193
 msgid "With filtering"
-msgstr ""
+msgstr "Menggunakan penyaring"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit.adoc:194
 #, no-wrap
 msgid "eeschema_cvpcb_with_filtering_png"
-msgstr ""
+msgstr "eeschema_cvpcb_with_filtering_png"
 
 #. type: Target for macro image
 #: eeschema_libedit.adoc:194
 #, no-wrap
 msgid "images/eeschema_cvpcb_with_filtering.png"
-msgstr ""
+msgstr "images/eeschema_cvpcb_with_filtering.png"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:197
 msgid "Without filtering"
-msgstr ""
+msgstr "Tanpa penyaring"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_libedit.adoc:198
 #, no-wrap
 msgid "eeschema_cvpcb_without_filtering_png"
-msgstr ""
+msgstr "eeschema_cvpcb_without_filtering_png"
 
 #. type: Target for macro image
 #: eeschema_libedit.adoc:198
 #, no-wrap
 msgid "images/eeschema_cvpcb_without_filtering.png"
-msgstr ""
+msgstr "images/eeschema_cvpcb_without_filtering.png"
 
 #. type: Title ===
 #: eeschema_libedit.adoc:202
 #, no-wrap
 msgid "Symbol library"
-msgstr ""
+msgstr "Pustaka Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:208
@@ -6131,6 +7282,9 @@ msgid ""
 "used symbols. This can be used for the creation of symbols (triangles, the "
 "shape of AND, OR, Exclusive OR gates, etc.) for saving and subsequent re-use."
 msgstr ""
+"Anda bisa dengan mudah membuat sebuah berkas pustaka simbol grafis yang "
+"berisi simbol-simbol yang sering digunakan. Berkas ini bisa digunakan untuk "
+"pembuatan simbol (segitiga, bentuk gerbang AND, OR, Exclusive OR, dsb.)."
 
 #. type: Plain text
 #: eeschema_libedit.adoc:212
@@ -6139,12 +7293,16 @@ msgid ""
 "extension. These symbols are not gathered in libraries like the normal "
 "symbols because they are generally not so many."
 msgstr ""
+"Berkas tersebut disimpan secara _default_ di direktori pustaka dan memiliki "
+"ekstensi `.sym`. Simbol-simbol tersebut tidak dikumpulkan di pustaka seperti "
+"simbol pada umumnya, karena simbol-simbol tersebut jumlahnya tidak terlalu "
+"banyak."
 
 #. type: Title ====
 #: eeschema_libedit.adoc:214
 #, no-wrap
 msgid "Export or create a symbol"
-msgstr ""
+msgstr "Mengekspor atau Membuat Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:220
@@ -6153,12 +7311,16 @@ msgid ""
 "export_png].  You can generally create only one graphic, also it will be a "
 "good idea to delete all pins, if they exist."
 msgstr ""
+"Suatu simbol bisa diekspor menggunakan tombol "
+"image:images/icons/export.png[icons/export_png]. Secara umum, Anda bisa "
+"membuat hanya satu gambar saja, dan sebaiknya Anda menghapus semua pin, jika "
+"ada."
 
 #. type: Title ====
 #: eeschema_libedit.adoc:222
 #, no-wrap
 msgid "Import a symbol"
-msgstr ""
+msgstr "Mengimpor Simbol"
 
 #. type: Plain text
 #: eeschema_libedit.adoc:228
@@ -6168,12 +7330,16 @@ msgid ""
 "icon].  Imported graphics are added as they were created in existing "
 "graphics."
 msgstr ""
+"Mengimpor berarti menambahkan gambar ke simbol yang sedang diedit. Kita bisa "
+"mengimpor simbol menggunakan tombol image:images/icons/import.png[Import "
+"graphic icon].  Gambar yang berhasil diimpor akan ditambahkan ke gambar yang "
+"sedang dibuka."
 
 #. type: Title ==
 #: eeschema_viewlib.adoc:3
 #, no-wrap
 msgid "Symbol Library Browser"
-msgstr ""
+msgstr "Peramban Pustaka Simbol"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:12
@@ -6184,36 +7350,41 @@ msgid ""
 "main toolbar, selecting \"Library Browser\" entry in the \"View\" menu or "
 "double clicking symbol image on \"Choose Symbol\" window."
 msgstr ""
+"Peramban pustaka simbol (_Symbol Library Browser_) berguna untuk memeriksa "
+"isi pustaka simbol secara cepat. Alat ini bisa diakses melalui ikon "
+"image:images/icons/library_browse.png[icons/library_browse_png] pada bilah "
+"alat utama, dan memilih \"'Library Browser'\" pada menu \"'View'\" atau klik-"
+"ganda gambar simbol pada jendela \"'Choose Symbol'\"."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_viewlib.adoc:13
 #, no-wrap
 msgid "eeschema_viewlib_choose_png"
-msgstr ""
+msgstr "eeschema_viewlib_choose_png"
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:13
 #, no-wrap
 msgid "images/eeschema_viewlib_choose.png"
-msgstr ""
+msgstr "images/eeschema_viewlib_choose.png"
 
 #. type: Title ===
 #: eeschema_viewlib.adoc:16
 #, no-wrap
 msgid "Viewlib - main screen"
-msgstr ""
+msgstr "Viewlib - Tampilan Utama"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_viewlib.adoc:18
 #, no-wrap
 msgid "eeschema_viewlib_select_library_png"
-msgstr ""
+msgstr "eeschema_viewlib_select_library_png"
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:18
 #, no-wrap
 msgid "images/eeschema_viewlib_select_library.png"
-msgstr ""
+msgstr "images/eeschema_viewlib_select_library.png"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:23
@@ -6222,40 +7393,45 @@ msgid ""
 "left hand pane.  All symbols in the selected library will appear in the "
 "second pane.  Select a symbol name to view the symbol."
 msgstr ""
+"Untuk memeriksa isi pustaka, pilih satu pustaka dari daftar pada panel "
+"sebelah kiri. Semua simbol pada pustaka yang dipilih akan ditampilkan pada "
+"panel kedua. Pilh nama simbol untuk melihat simbol tersebut."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_viewlib.adoc:24
 #, no-wrap
 msgid "eeschema_viewlib_select_component_png"
-msgstr ""
+msgstr "eeschema_viewlib_select_component_png"
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:24
 #, no-wrap
 msgid "images/eeschema_viewlib_select_component.png"
-msgstr ""
+msgstr "images/eeschema_viewlib_select_component.png"
 
 #. type: Title ===
 #: eeschema_viewlib.adoc:27
 #, no-wrap
 msgid "Symbol Library Browser Top Toolbar"
-msgstr ""
+msgstr "Bilah Alat Atas pada Peramban Pustaka Simbol"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:30
 msgid "The top tool bar in Symbol Library Brower is shown below."
 msgstr ""
+"Bilah alat atas pada Peramban Pustaka Simbol ditampilkan pada gambar di "
+"bawah."
 
 #. type: Target for macro image
 #: eeschema_viewlib.adoc:31
 #, no-wrap
 msgid "images/toolbar_viewlib.png"
-msgstr ""
+msgstr "images/toolbar_viewlib.png"
 
 #. type: Plain text
 #: eeschema_viewlib.adoc:34
 msgid "The available commands are:"
-msgstr ""
+msgstr "The available commands are:"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:40
@@ -6265,6 +7441,9 @@ msgid ""
 "|Selection of the desired library which can be also selected in the\n"
 "displayed list.\n"
 msgstr ""
+"|image:images/icons/library.png[icons/library_png]\n"
+"|Pemilihan pustaka yang juga bisa \n"
+"dipilih pada daftar yang ditampilkan.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:44
@@ -6274,6 +7453,9 @@ msgid ""
 "|Selection of the symbol which can be also selected in the displayed\n"
 "list.\n"
 msgstr ""
+"|image:images/icons/add_component.png[icons/add_component_png]\n"
+"|Pemilihan simbol yang juga bisa dipilih\n"
+"pada daftar yang ditampilkan.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:47
@@ -6282,6 +7464,8 @@ msgid ""
 "|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
 "|Display previous symbol.\n"
 msgstr ""
+"|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
+"|Menampilkan simbol sebelumnya.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:50
@@ -6290,6 +7474,8 @@ msgid ""
 "|image:images/icons/lib_next.png[icons/lib_next_png]\n"
 "|Display next symbol.\n"
 msgstr ""
+"|image:images/icons/lib_next.png[icons/lib_next_png]\n"
+"|Menampilkan simbol berikutnya.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:54
@@ -6299,6 +7485,10 @@ msgid ""
 "image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
 "|Zoom tools.\n"
 msgstr ""
+"|image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
+"image:images/icons/zoom_redraw.png[] "
+"image:images/icons/zoom_fit_in_page.png[]\n"
+"|Peralatan perbesar/perkecil tampilan.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:57
@@ -6307,6 +7497,8 @@ msgid ""
 "|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
 "|Selection of the representation (normal or converted) if exist.\n"
 msgstr ""
+"|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
+"|Pemilihan representasi (normal atau terkonversi) jika tersedia.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:60
@@ -6315,6 +7507,9 @@ msgid ""
 "|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
 "|Selection of the unit for symbols that contain multiple units.\n"
 msgstr ""
+"|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part."
+"png\",width=\"70%\"]\n"
+"|Pemilihan bagian untuk simbol yang terdiri dari beberapa bagian.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:64
@@ -6324,6 +7519,10 @@ msgid ""
 "|If it exist, display the associated documents. Exists only when called\n"
 "by the place symbol dialog frame from Eeschema.\n"
 msgstr ""
+"|image:images/icons/datasheet.png[icons/datasheet_png]\n"
+"|Jika tersedia, tampilkan dokumen yang terkait. Tombol akan tersedia hanya "
+"ketika dibuka\n"
+"melalui kotak dialog peletakan simbol dari Eeschema.\n"
 
 #. type: delimited block |
 #: eeschema_viewlib.adoc:69
@@ -6334,6 +7533,10 @@ msgid ""
 "This icon is only displayed when browser has been called from Eeschema (double click\n"
 "on a symbol in the component chooser).\n"
 msgstr ""
+"|image:images/icons/export.png[icons/export_png]\n"
+"|Menutup peramban dan meletakkan simbol yang terpilih ke Eeschema.\n"
+"Ikon ini tersedia hanya jika peramban dibuka melalui Eeschema (klik-ganda\n"
+"pada simbol di pemilih komponen).\n"
 
 #. type: Title ==
 #: eeschema_automatic_classification_annotation.adoc:3
@@ -7602,7 +8805,7 @@ msgid ""
 msgstr ""
 "Sebuah konverter adalah berupa berkas teks (format xsl), namun kita juga "
 "bisa menggunakan bahasa lain seperti Python. Ketika menggunakan format xsl, "
-"sebuah alat (`xsltproc.exe` atau `xsltproc`) membaca berkas perantara yang "
+"sebuah alat (`xsltproc.exe` atau `xsltproc`) membaca berkas antara yang "
 "dibuat oleh Eeschema, dan berkas konverter untuk menghasilkan berkas "
 "keluaran. Pada kasus ini, berkas konverter (dalam gaya lembar kerja) "
 "berukuran sangat kecil dan sangat mudah ditulis. "
@@ -7672,7 +8875,7 @@ msgstr "Ketika Netlist telah berhasil dibuat:"
 #: eeschema_create_a_netlist.adoc:254
 msgid "Eeschema creates an intermediate file *.tmp, for example test.tmp."
 msgstr ""
-"Eeschema membuat sebuah berkas perantara `*.tmp`, sebagai contoh `test.tmp`."
+"Eeschema membuat sebuah berkas antara `*.tmp`, sebagai contoh `test.tmp`."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:255
@@ -7742,7 +8945,7 @@ msgid ""
 "|%I |Will be replaced by the intermediate file created by Eeschema\n"
 "(*.tmp).\n"
 msgstr ""
-"|%I |Akan digantikan oleh berkas perantara yang dibuat oleh Eeschema\n"
+"|%I |Akan digantikan oleh berkas antara yang dibuat oleh Eeschema\n"
 "(*.tmp).\n"
 
 #. type: Plain text
@@ -7773,9 +8976,9 @@ msgid ""
 "file. Moreover, from the intermediate text file, you can create a BOM list."
 msgstr ""
 "Ini adalah perangkat lunak yang sangat sederhana, karena tugasnya hanya "
-"untuk mengkonversi sebuah berkas teks masukan (berkas teks perantara) "
-"menjadi berkas teks yang lain. Lebih lanjut lagi, dari berkas teks "
-"perantara, Anda dapat membuat sebuah daftar BOM."
+"untuk mengkonversi sebuah berkas teks masukan (berkas teks antara) menjadi "
+"berkas teks yang lain. Lebih lanjut lagi, dari berkas teks antara, Anda "
+"dapat membuat sebuah daftar BOM."
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:295
@@ -7790,7 +8993,7 @@ msgstr ""
 #: eeschema_create_a_netlist.adoc:297
 #, no-wrap
 msgid "Intermediate netlist file format"
-msgstr "Format Berkas Netlist Perantara"
+msgstr "Format Berkas Netlist Antara"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:301
@@ -7799,7 +9002,7 @@ msgid ""
 "intermediate file format, and some examples of sheet style for converters."
 msgstr ""
 "Lihat Bab 14 untuk mendapatkan penjelasan lebih mengenai `xsltproc`, "
-"penjelasan mengenai format berkas perantara, dan beberapa contoh dari gaya "
+"penjelasan mengenai format berkas antara, dan beberapa contoh dari gaya "
 "lembar kerja untuk konverter."
 
 #. type: Title ==
@@ -7850,13 +9053,13 @@ msgstr ""
 #: eeschema_symbol_library_table.adoc:17
 #, no-wrap
 msgid "sym lib table dlg"
-msgstr ""
+msgstr "sym lib table dlg"
 
 #. type: Target for macro image
 #: eeschema_symbol_library_table.adoc:17 eeschema_main_top_menu.adoc:55
 #, no-wrap
 msgid "images/en/options_symbol_lib.png"
-msgstr ""
+msgstr "images/en/options_symbol_lib.png"
 
 #. type: Plain text
 #: eeschema_symbol_library_table.adoc:25
@@ -10343,7 +11546,7 @@ msgstr ""
 #: eeschema_library_editor.adoc:729
 #, no-wrap
 msgid "Symbol Fields"
-msgstr ""
+msgstr "Atribut-atribut Simbol"
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:741
@@ -10358,12 +11561,22 @@ msgid ""
 "symbols but generally this is done in the schematic editor so the additional "
 "fields can be applied to all of the symbols in the schematic."
 msgstr ""
+"Semua simbol pustaka didefinisikan oleh empat atribut _default_. Atribut "
+"penunjuk referensi, nilai, _footprint_, dan tautan berkas dokumentasi akan "
+"dibuat setiap kali sebuah simbol dibuat atau disalin. Atribut yang "
+"dibutuhkan hanya penunjuk referensi dan nilai. Untuk atribut yang sudah ada, "
+"Anda bisa menggunakan perintah menu konteks dengan klik-kanan pada pin. "
+"Simbol yang yang ada di pustaka umumnya didefinisikan dengan empat atribut "
+"_default_ tersebut. Atribut tambahan seperti vendor, nomor _part_, harga dsb "
+"dapat ditambahkan ke simbol namun umumnya hal ini dilakukan di editor "
+"skematik sehingga atribut-atribut tambahan tersebut dapat diaplikasikan ke "
+"semua simbol pada skematik."
 
 #. type: Title ====
 #: eeschema_library_editor.adoc:743
 #, no-wrap
 msgid "Editing Symbol Fields"
-msgstr ""
+msgstr "Mengedit Atribut Simbol"
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:747
@@ -10371,18 +11584,21 @@ msgid ""
 "To edit an existing symbol field, right-click on the field text to show the "
 "field context menu shown below."
 msgstr ""
+"Untuk mengedit atribut simbol yang sudah ada, klik-kanan pada teks atribut "
+"untuk menampilkan menu konteks atribut seperti ditunjukkan pada gambar di "
+"bawah ini."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_library_editor.adoc:748
 #, no-wrap
 msgid "eeschema_libedit_field_context_menu_png"
-msgstr ""
+msgstr "eeschema_libedit_field_context_menu_png"
 
 #. type: Target for macro image
 #: eeschema_library_editor.adoc:748
 #, no-wrap
 msgid "images/eeschema_libedit_field_context_menu.png"
-msgstr ""
+msgstr "images/eeschema_libedit_field_context_menu.png"
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:753
@@ -10391,6 +11607,11 @@ msgid ""
 "images/icons/text.png[icons/text.png] on the main tool bar to open the field "
 "properties dialog shown below."
 msgstr ""
+"Untuk mengedit atribut yang masih kosong, menambahkan atribut baru, atau "
+"menghapus atribut opsional, gunakan  "
+"image:images/icons/text.png[icons/text.png] pada bilah alat utama untuk "
+"membuka kotak dialog properti atribut seperti ditunjukkan pada gambar di "
+"bawah ini."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:759
@@ -10398,6 +11619,8 @@ msgid ""
 "Fields are text sections associated with the symbol. Do not confuse them "
 "with the text belonging to the graphic representation of this symbol."
 msgstr ""
+"Atribut merupakan seksi teks yang berasosiasi dengan simbol. Hal ini berbeda "
+"dengan teks yang ada pada representasi grafis suatu simbol."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:766
@@ -10407,6 +11630,10 @@ msgid ""
 "name contained in the value field when you save it to the currently selected "
 "library."
 msgstr ""
+"Memodifikasi atribut nilai, secara efektif akan membuat sebuah simbol baru "
+"menggunakan simbol yang sedang dibuka sebagai titik awal untuk simbol yang "
+"baru. Simbol baru ini akan menggunakan nama dari atribut nilai saat Anda "
+"menyimpannya ke pustaka yang sedang dipilih."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:768
@@ -10414,6 +11641,8 @@ msgid ""
 "The field edit dialog above must be used to edit a field that is empty or "
 "has the invisible attribute enabled."
 msgstr ""
+"Kotak dialog editor atribut di atas harus digunakan untuk mengedit atribut "
+"yang masih kosong atau jika memiliki atribut yang tak-tampak."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:773
@@ -10424,12 +11653,17 @@ msgid ""
 "Pcbnew \"Reference Manual\") and FPNAME is the name of the footprint in the "
 "library LIBNAME."
 msgstr ""
+"_Footprint_ didefinisikan sebagai _footprint_ absolut menggunakan format "
+"LIBNAME:FPNAME di mana LIBNAME adalah nama dari pustaka _footprint_ yang "
+"didefinisikan pada tabel pustaka _footprint_ (lihat bagian \"'Footprint "
+"Library Table'\" pada dokumen \"'Pcbnew Reference Manual'\"), dan FPNAME "
+"adalah nama _footprint_ di pustaka LIBNAME."
 
 #. type: Title ===
 #: eeschema_library_editor.adoc:775
 #, no-wrap
 msgid "Power Symbols"
-msgstr ""
+msgstr "Simbol _Power_"
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:783
@@ -10441,23 +11675,30 @@ msgid ""
 "capture software. Some precautions are essential. Below is an example of a "
 "power +5V symbol."
 msgstr ""
+"Simbol _power_ dibuat dengan cara yang sama seperti simbol biasa. Mungkin "
+"akan lebih baik jika simbol ini diletakkan pada pustaka khusus seperti "
+"`power.lib`. Simbol _power_ terdiri dari sebuah simbol grafis dan sebuah pin "
+"dengan tipe \"'Power Invisible'\". Simbol _port power_ diperlakukan sama "
+"seperti simbol lainnya oleh perangkat lunak pembuat skematik. Ada beberapa "
+"hal penting yang perlu diperhatikan. Berikut adalah contoh dari simbol "
+"_power_ +5V."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_library_editor.adoc:784
 #, no-wrap
 msgid "eeschema_libedit_power_symbol_png"
-msgstr ""
+msgstr "eeschema_libedit_power_symbol_png"
 
 #. type: Target for macro image
 #: eeschema_library_editor.adoc:784
 #, no-wrap
 msgid "images/eeschema_libedit_power_symbol.png"
-msgstr ""
+msgstr "images/eeschema_libedit_power_symbol.png"
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:787
 msgid "To create a power symbol, use the following steps:"
-msgstr ""
+msgstr "Untuk membuat sebuah simbol _power_, lakukan langkah-langkah berikut:"
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:791
@@ -10466,21 +11707,26 @@ msgid ""
 "will establish connection to the net +5V), with a pin number of 1 (number of "
 "no importance), a length of 0, and a \"Line\" \"Graphic Style\"."
 msgstr ""
+"Tambahkan sebuah pin dengan tipe \"'Power input'\" dengan nama +5V (penting "
+"karena nama ini akan membuat hubungan dengan _net_ +5V), dengan nomor pin 1, "
+"panjang 0, dan gaya grafis \"'Line'\"."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:793
 msgid "Place a small circle and a segment from the pin to the circle as shown."
 msgstr ""
+"Letakkan sebuah lingkaran kecil dan sebuah segmen dari pin untuk membuat "
+"lingkaran seperti gambar. "
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:794
 msgid "The anchor of the symbol is on the pin."
-msgstr ""
+msgstr "Titik jangkar simbol ini berada di pin."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:795
 msgid "The symbol value is `+5V`."
-msgstr ""
+msgstr "Nilai simbol adalah `+5V`."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:800
@@ -10491,6 +11737,11 @@ msgid ""
 "a `#` will not appear in the symbol list or in the netlist and the reference "
 "is declared as invisible."
 msgstr ""
+"Referensi simbol adalah `\\#+5V`. Teks referensi tidak penting, kecuali "
+"bahwa karakter pertama harus dimulai dengan `#` untuk mengindikasikan bahwa "
+"simbol ini adalah simbol _power_. Sesuai kesepakatan, setiap simbol yang "
+"atribut referensinya dimulai dengan `#` tidak akan muncul di daftar simbol "
+"atau di Netlist dan referensi dideklarasikan sebagai tak-tampak."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:803
@@ -10498,16 +11749,18 @@ msgid ""
 "An easier method to create a new power port symbol is to use another symbol "
 "as a model:"
 msgstr ""
+"Metode yang lebih mudah untuk membuat simbol _port power_ baru adalah dengan "
+"menggunakan simbol lain sebagai model:"
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:805
 msgid "Load an existing power symbol."
-msgstr ""
+msgstr "Muat simbol _power_ yang sudah ada."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:806
 msgid "Edit the pin name with name of the new power symbol."
-msgstr ""
+msgstr "Edit nama pin dengan nama simbol _power_ yang baru."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:808
@@ -10515,11 +11768,13 @@ msgid ""
 "Edit the value field to the same name as the pin, if you want to display the "
 "power port value."
 msgstr ""
+"Edit atribut nilai ke nama yang sama dengan nama pin, jika Anda ingin "
+"menampilkan nilai _port power_."
 
 #. type: Plain text
 #: eeschema_library_editor.adoc:808
 msgid "Save the new symbol."
-msgstr ""
+msgstr "Simpan simbol yang baru."
 
 #. type: Title ==
 #: eeschema_main_top_menu.adoc:3
@@ -10537,7 +11792,7 @@ msgstr "Menu _File_"
 #: eeschema_main_top_menu.adoc:8
 #, no-wrap
 msgid "images/en/menu_file.png"
-msgstr ""
+msgstr "images/en/menu_file.png"
 
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:13
@@ -10629,7 +11884,7 @@ msgstr "Menu _Preferences_"
 #: eeschema_main_top_menu.adoc:40
 #, no-wrap
 msgid "images/en/menu_preferences.png"
-msgstr ""
+msgstr "images/en/menu_preferences.png"
 
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:50
@@ -10659,7 +11914,7 @@ msgstr "Mengelola Tabel Pustaka Simbol"
 #: eeschema_main_top_menu.adoc:55
 #, no-wrap
 msgid "Symbol Library Tables"
-msgstr ""
+msgstr "Tabel Pustaka Simbol"
 
 #. type: Plain text
 #: eeschema_main_top_menu.adoc:59
@@ -10773,12 +12028,15 @@ msgid ""
 "| Options| Stores library specific options, if used by plugin.\n"
 "| Description| Briefly characterizes the library contents.\n"
 msgstr ""
-"| Active| Mengaktifkan atau menonaktifkan pustaka. Berguna untuk secara sementara mengurangi jumlah set pustaka yang dimuat.\n"
-"| Nickname| Tanda pengenal yang singkat dan unik untuk menetapkan simbol ke komponen. Simbol\n"
+"| Active| Mengaktifkan atau menonaktifkan pustaka. Berguna untuk secara "
+"sementara mengurangi jumlah set pustaka yang dimuat.\n"
+"| Nickname| Tanda pengenal yang singkat dan unik untuk menetapkan simbol ke "
+"komponen. Simbol\n"
 "direpresentasikan oleh _string_ '<Library Nickname>:<Symbol Name>'.\n"
 "| Library Path| _Path_ menuju lokasi pustaka.\n"
 "| Plugin Type| Menunjukkan format berkas pustaka.\n"
-"| Options| Menyimpan opsi-opsi spesifik suatu pustaka, jika digunakan oleh _plugin_.\n"
+"| Options| Menyimpan opsi-opsi spesifik suatu pustaka, jika digunakan oleh "
+"_plugin_.\n"
 "| Description| Secara singkat menjelaskan isi pustaka.\n"
 
 #. type: Title ====
@@ -10803,7 +12061,7 @@ msgstr "Pengaturan tampilan"
 #: eeschema_main_top_menu.adoc:109
 #, no-wrap
 msgid "images/en/options_display.png"
-msgstr ""
+msgstr "images/en/options_display.png"
 
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:114
@@ -10910,7 +12168,7 @@ msgstr "Pengaturan tab _editing_"
 #: eeschema_main_top_menu.adoc:148
 #, no-wrap
 msgid "images/en/options_editing.png"
-msgstr ""
+msgstr "images/en/options_editing.png"
 
 #. type: delimited block |
 #: eeschema_main_top_menu.adoc:154
@@ -11030,13 +12288,13 @@ msgstr "Mengatur _hotkey_ dan perilaku antarmuka pengguna."
 #: eeschema_main_top_menu.adoc:188
 #, no-wrap
 msgid "Controls settings"
-msgstr ""
+msgstr "Controls settings"
 
 #. type: Target for macro image
 #: eeschema_main_top_menu.adoc:188
 #, no-wrap
 msgid "images/en/options_controls.png"
-msgstr ""
+msgstr "images/en/options_controls.png"
 
 #. type: Plain text
 #: eeschema_main_top_menu.adoc:192
@@ -11130,13 +12388,13 @@ msgstr ""
 #: eeschema_main_top_menu.adoc:223
 #, no-wrap
 msgid "Color settings"
-msgstr ""
+msgstr "Color settings"
 
 #. type: Target for macro image
 #: eeschema_main_top_menu.adoc:223
 #, no-wrap
 msgid "images/en/options_color.png"
-msgstr ""
+msgstr "images/en/options_color.png"
 
 #. type: Title =====
 #: eeschema_main_top_menu.adoc:226
@@ -11157,13 +12415,13 @@ msgstr ""
 #: eeschema_main_top_menu.adoc:231
 #, no-wrap
 msgid "Default Fields settings"
-msgstr ""
+msgstr "Default Fields settings"
 
 #. type: Target for macro image
 #: eeschema_main_top_menu.adoc:231
 #, no-wrap
 msgid "images/en/options_default_fields.png"
-msgstr ""
+msgstr "images/en/options_default_fields.png"
 
 #. type: Title ===
 #: eeschema_main_top_menu.adoc:234
@@ -11212,7 +12470,7 @@ msgstr ""
 #: eeschema_general_top_toolbar.adoc:13
 #, no-wrap
 msgid "Page Settings"
-msgstr ""
+msgstr "Page Settings"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:18
@@ -11245,13 +12503,13 @@ msgstr ""
 #: eeschema_general_top_toolbar.adoc:26
 #, no-wrap
 msgid "Find dialog"
-msgstr ""
+msgstr "Find dialog"
 
 #. type: Target for macro image
 #: eeschema_general_top_toolbar.adoc:26
 #, no-wrap
 msgid "images/en/find_dialog.png"
-msgstr ""
+msgstr "images/en/find_dialog.png"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:31
@@ -11331,13 +12589,13 @@ msgstr ""
 #: eeschema_general_top_toolbar.adoc:58
 #, no-wrap
 msgid "Netlist dialog"
-msgstr ""
+msgstr "Netlist dialog"
 
 #. type: Target for macro image
 #: eeschema_general_top_toolbar.adoc:58
 #, no-wrap
 msgid "images/en/netlist_dialog.png"
-msgstr ""
+msgstr "images/en/netlist_dialog.png"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:61 eeschema_general_top_toolbar.adoc:153
@@ -11618,13 +12876,13 @@ msgstr "Kotak Dialog Opsi ERC"
 #: eeschema_general_top_toolbar.adoc:175
 #, no-wrap
 msgid "ERC Options dialog"
-msgstr ""
+msgstr "ERC Options dialog"
 
 #. type: Target for macro image
 #: eeschema_general_top_toolbar.adoc:175
 #, no-wrap
 msgid "images/en/dialog_erc_opts.png"
-msgstr ""
+msgstr "images/en/dialog_erc_opts.png"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:179
@@ -11703,13 +12961,13 @@ msgstr ""
 #: eeschema_general_top_toolbar.adoc:213
 #, no-wrap
 msgid "BOM dialog"
-msgstr ""
+msgstr "BOM dialog"
 
 #. type: Target for macro image
 #: eeschema_general_top_toolbar.adoc:213
 #, no-wrap
 msgid "images/en/dialog_bom.png"
-msgstr ""
+msgstr "images/en/dialog_bom.png"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:218
@@ -11781,13 +13039,13 @@ msgstr ""
 #: eeschema_general_top_toolbar.adoc:237
 #, no-wrap
 msgid "BOM dialog extra option on MS Windows"
-msgstr ""
+msgstr "BOM dialog extra option on MS Windows"
 
 #. type: Target for macro image
 #: eeschema_general_top_toolbar.adoc:237
 #, no-wrap
 msgid "images/bom_extra_option_windows.png"
-msgstr ""
+msgstr "images/bom_extra_option_windows.png"
 
 #. type: Title ===
 #: eeschema_general_top_toolbar.adoc:240
@@ -11810,6 +13068,8 @@ msgid ""
 "image:images/en/dialog_edit_fields.png[alt=\"Symbol Dialog\",scaledwidth="
 "\"79%\"]"
 msgstr ""
+"image:images/en/dialog_edit_fields.png[alt=\"Symbol Dialog\",scaledwidth=\""
+"79%\"]"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:249
@@ -11931,7 +13191,7 @@ msgstr "Gambaran umum perintah-perintah Eeschema"
 #: eeschema_generic_commands.adoc:22
 #, no-wrap
 msgid "images/en/commands_overview.png"
-msgstr ""
+msgstr "images/en/commands_overview.png"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:24
@@ -12059,7 +13319,7 @@ msgstr "jendela _pop-up_ utama"
 #: eeschema_generic_commands.adoc:64
 #, no-wrap
 msgid "images/en/main_window_popup.png"
-msgstr ""
+msgstr "images/en/main_window_popup.png"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:66
@@ -12407,13 +13667,13 @@ msgstr ""
 #: eeschema_generic_commands.adoc:196
 #, no-wrap
 msgid "status_bar"
-msgstr ""
+msgstr "status_bar"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:196
 #, no-wrap
 msgid "images/en/status_bar.png"
-msgstr ""
+msgstr "images/en/status_bar.png"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:198
@@ -12434,13 +13694,13 @@ msgstr ""
 #: eeschema_generic_commands.adoc:203
 #, no-wrap
 msgid "menubar"
-msgstr ""
+msgstr "menubar"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:203
 #, no-wrap
 msgid "images/en/menu_bar.png"
-msgstr ""
+msgstr "images/en/menu_bar.png"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:205
@@ -12464,7 +13724,7 @@ msgstr ""
 #: eeschema_generic_commands.adoc:211
 #, no-wrap
 msgid "images/toolbar_schedit_standalone.png"
-msgstr ""
+msgstr "images/toolbar_schedit_standalone.png"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:215
@@ -12718,7 +13978,7 @@ msgstr ""
 #. type: Plain text
 #: eeschema_generic_commands.adoc:292
 msgid "<<<<<"
-msgstr ""
+msgstr "<<<<<"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:293
@@ -13078,13 +14338,13 @@ msgstr "Menu _pop-up_ tanpa ada elemen yang dipilih."
 #: eeschema_generic_commands.adoc:418
 #, no-wrap
 msgid "eeschema_popup_without_element_png"
-msgstr ""
+msgstr "eeschema_popup_without_element_png"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:418
 #, no-wrap
 msgid "images/eeschema_popup_without_element.png"
-msgstr ""
+msgstr "images/eeschema_popup_without_element.png"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:421
@@ -13095,13 +14355,13 @@ msgstr "Mengedit label."
 #: eeschema_generic_commands.adoc:422
 #, no-wrap
 msgid "eeschema_popup_edit_label_png"
-msgstr ""
+msgstr "eeschema_popup_edit_label_png"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:422
 #, no-wrap
 msgid "images/eeschema_popup_edit_label.png"
-msgstr ""
+msgstr "images/eeschema_popup_edit_label.png"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:425
@@ -13112,10 +14372,10 @@ msgstr "Mengedit simbol."
 #: eeschema_generic_commands.adoc:426
 #, no-wrap
 msgid "eeschema_popup_edit_component_png"
-msgstr ""
+msgstr "eeschema_popup_edit_component_png"
 
 #. type: Target for macro image
 #: eeschema_generic_commands.adoc:426
 #, no-wrap
 msgid "images/eeschema_popup_edit_component.png"
-msgstr ""
+msgstr "images/eeschema_popup_edit_component.png"
