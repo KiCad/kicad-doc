@@ -131,8 +131,8 @@ else()
     set( PACKAGE_BUILD_FORMAT "-${BUILD_FORMATS}" )
 endif()
 
-# Generate both .tar.gz and .zip package targets
-set( CPACK_GENERATOR "TGZ;ZIP" )
+# Generate both .tar.gz package target
+set( CPACK_GENERATOR "TGZ" )
 set( CPACK_PACKAGE_FILE_NAME "kicad-doc${PACKAGE_BUILD_FORMAT}${PACKAGE_LANGUAGE}-${CPACK_PACKAGE_VERSION}" )
 include( CPack )
 
