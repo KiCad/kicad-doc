@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-02-18 13:17+0200\n"
-"PO-Revision-Date: 2018-02-19 14:11+0200\n"
+"POT-Creation-Date: 2018-07-08 08:32+0300\n"
+"PO-Revision-Date: 2018-07-08 08:32+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -208,7 +208,7 @@ msgstr ""
 #. type: Plain text
 #: kicad.adoc:73
 msgid "Gerber files for photo-plotters"
-msgstr "Файлы Gerber для фото-плоттеров"
+msgstr "файлы Gerber для фото-плоттеров"
 
 #. type: Plain text
 #: kicad.adoc:74
@@ -1376,7 +1376,7 @@ msgstr ""
 "используется как кнопка в окне выбора шаблона.\n"
 
 #. type: Plain text
-#: kicad.adoc:526
+#: kicad.adoc:527
 msgid ""
 "Any other image files used by *meta/info.html*, such as the image of the "
 "board file in the dialog above, are placed in this folder as well."
@@ -1384,31 +1384,421 @@ msgstr ""
 "Любые другие файлы изображений, используемые в *meta/info.html*, такие как, "
 "например, иконка файла печатной платы, также располагается в этом каталоге."
 
-#~ msgid ""
-#~ "At the time of writing, KiCad is considered mature and can be used for "
-#~ "the successful development and maintenance of complex electronic boards."
-#~ msgstr ""
-#~ "В настоящее время KiCad считается сложившимся комплексом программ, чтобы "
-#~ "использовать его для успешной разработки и сопровождения сложных печатных "
-#~ "плат."
+#. type: Title =
+#: kicad_upgrading_from_v4_to_v5.adoc:2
+#, no-wrap
+msgid "Upgrading from Version 4 to Version 5"
+msgstr "Обновление с версии 4 до версии 5"
 
-#~ msgid "Pcbnew needs the support of OpenGL v2.1 or higher."
-#~ msgstr "Для работы Pcbnew требуется поддержка OpenGL v2.1 или новее."
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:8
+msgid ""
+"Changes were made to the behavior to KiCad during the version 5 development "
+"that can impact projects created with older versions of KiCad.  This section "
+"serves as a guide to ensure the smoothest possible path when upgrading to "
+"version 5 of KiCad."
+msgstr ""
+"Изменения, внесённые в работу KiCad при разработке 5-ой версии, могут "
+"повлиять на проекты, созданные в более ранних версиях KiCad. Данный раздел "
+"служит в качестве руководства для обеспечения наиболее гладкого пути при "
+"обновлении до 5-ой версии KiCad."
 
-#~ msgid "When using KiCad, choosing a text editor and a PDF viewer is useful."
-#~ msgstr ""
-#~ "При работе с KiCad, нужно выбрать предпочтительный текстовый редактор и "
-#~ "программу просмотра PDF."
+#. type: Title ==
+#: kicad_upgrading_from_v4_to_v5.adoc:9
+#, no-wrap
+msgid "Schematic Symbol Libraries"
+msgstr "Библиотеки компонентов схемы"
 
-#~ msgid "Configuration of paths"
-#~ msgstr "Настройка путей"
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:17
+msgid ""
+"Schematic symbol libraries are no longer accessed using a symbol (referred "
+"to as components in version 4) look up list.  Symbol libraries are now "
+"managed by a symbol library table that behaves similarly to the footprint "
+"library table.  This change is a significant improvement, but some "
+"schematics may need manual intervention when being converted to version 5."
+msgstr ""
+"Библиотеки компонентов схемы больше не доступны в виде списка для поиска. "
+"Теперь, для управления библиотеками компонентов используются таблицы, такие "
+"же, как и для управления библиотеками посадочных мест. Данное изменение "
+"является значительным улучшением, но некоторые схемы, возможно, потребуется "
+"поправить вручную при переходе на новую 5-ую версию."
 
-#~ msgid "KiCad principles of use"
-#~ msgstr "Принципы использования KiCad"
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:22
+msgid ""
+"In previous versions, KiCad used a list of library files to search when "
+"locating symbols in the Eeschema file. When locating a symbol, each path "
+"would be searched and the first library that held the symbol name would be "
+"used."
+msgstr ""
+"В предыдущих версиях KiCad использовал список файлов библиотек, в которых "
+"выполнялся поиск компонентов из файла Eeschema. Для обнаружения компонента "
+"проверялась каждая библиотека из списка в порядке очереди и использовался "
+"первый найденный результат."
 
-#~ msgid "Main window"
-#~ msgstr "Главное окно"
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:29
+msgid ""
+"From v5, KiCad symbol names are prefixed with a nickname, and a link:../"
+"eeschema/eeschema_symbol_library_table.adoc[lookup table matching nicknames "
+"to library paths] is used to locate the library which holds the symbol. The "
+"table is called the 'symbol library table' and built from configuration "
+"files stored in the user's KiCad configuration directory and the currently "
+"loaded project directory."
+msgstr ""
+"Начиная с 5-ой версии KiCad, имена компонентов имеют префикс в виде "
+"уникального имени библиотеки, по которому link:../eeschema/"
+"eeschema_symbol_library_table.adoc[из таблицы определяется расположение "
+"библиотеки], содержащей данный компонент. Эта таблица называется 'таблицей "
+"библиотек компонентов' и строится на основе конфигурационных файлов, которые "
+"хранятся в каталоге с файлами параметров KiCad и в каталоге загруженного в "
+"данный момент проекта."
 
-#~ msgid ""
-#~ "The list of available templates are gathered from the following sources:"
-#~ msgstr "Список доступных шаблонов формируется из следующих источников:"
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:33
+msgid ""
+"To upgrade a KiCad project from v4 to v5, nicknames for all of the library "
+"files need to be created and then schematic symbol names need to be prefixed "
+"with the correct nickname."
+msgstr ""
+"При обновлении проекта KiCad 4-ой версии до 5-ой, каждой библиотеке "
+"необходимо создать уникальное имя и указать его в виде префикса для "
+"соответствующих компонентов схемы, которые необходимо правильно определить."
+
+#. type: Title ===
+#: kicad_upgrading_from_v4_to_v5.adoc:35
+#, no-wrap
+msgid "Global Symbol Library Table."
+msgstr "Глобальная таблица библиотек компонентов"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:41
+msgid ""
+"Eeschema v5 will automatically create a global symbol table when first "
+"started. You will be given a chance to skip this and create your own global "
+"symbol table by hand. You only need to do this if don't use KiCad symbol "
+"libraries at all. Otherwise it is easier to modify the automatically "
+"generated global symbol table."
+msgstr ""
+"Eeschema 5-ой версии автоматически создаёт глобальную таблицу библиотек при "
+"первом запуске. Пользователь может пропустить этот шаг и создать собственную "
+"глобальную таблицу библиотек вручную. Это может потребоваться лишь в том "
+"случае, если стандартные библиотеки компонентов KiCad не планируется "
+"использовать. В любом другом случае, легче поправить автоматически созданную "
+"глобальную таблицу."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:48
+msgid ""
+"If you track the https://github.com/KiCad/kicad-symbols[symbol library "
+"repository], changes made to the default global symbol library table are not "
+"tracked by KiCad.  You will have to manually keep the global symbol library "
+"table up to date."
+msgstr ""
+"Если используются последние версии библиотек из https://github.com/KiCad/"
+"kicad-symbols[репозитория стандартных библиотек компонентов], то KiCad не "
+"сможет автоматически обновлять глобальную таблицу библиотек. Пользователю "
+"придётся самостоятельно следить за изменениями библиотек и вносить поправки "
+"в таблицу вручную."
+
+#. type: Title ===
+#: kicad_upgrading_from_v4_to_v5.adoc:49
+#, no-wrap
+msgid "Symbol Library Table Mapping"
+msgstr "Переопределение библиотек компонентов"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:55
+msgid ""
+"Automatic remapping of symbols will be executed whenever a schematic is "
+"opened that has not been remapped.  There are a few steps you should take "
+"ahead of time in order for the remapping to be the most effective."
+msgstr ""
+"Если в схеме используется устаревший механизм подключения библиотек, то "
+"будет выполнено автоматическое переопределение библиотек. Нужно будет пройти "
+"через несколько шагов, в порядке, который обеспечит наилучший результат."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:65
+msgid ""
+"If you have been using a development build of KiCad, copy the full default "
+"global symbol library table file (sym-lib-table) from the template folder "
+"installed with the KiCad libraries or from the https://github.com/KiCad/"
+"kicad-library/blob/master/template/sym-lib-table[KiCad library repo] to your "
+"KiCad user configuration folder.  This will replace the empty one (most "
+"likely) created by Eeschema.  If you do not do this, you will most likely "
+"end up with a bunch of broken symbol links."
+msgstr ""
+"Если ранее использовалась тестовая сборка KiCad, нужно файл глобальной "
+"таблицы библиотек компонентов со значениями по умолчанию (sym-lib-table) из "
+"каталога с шаблонами, которые устанавливаются вместе с библиотеками KiCad "
+"или загруженный из https://github.com/KiCad/kicad-library/blob/master/"
+"template/sym-lib-table[репозитория библиотек KiCad], скопировать в каталог с "
+"конфигурационными файлами KiCad текущего пользователя. Таким образом будет "
+"заменена пустая глобальная таблица библиотек, которую обычно создавала "
+"Eeschema. Если этого не сделать, то процесс переопределения библиотек, "
+"вероятнее всего, закончится кучей сломанных ссылок на библиотеки."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:70
+msgid ""
+"Remapped schematics will not be compatible with older versions of KiCad.  "
+"The Remap Symbols dialog will make a backup of your schematic files and you "
+"should do the same if you remap manually. +"
+msgstr ""
+"Схемы с переопределёнными компонентами станут несовместимыми со старыми "
+"версиями KiCad. В процессе переопределения компонентов, KiCad создаст "
+"резервные копии файлов схем, так же следует поступать пользователю при "
+"выполнения переопределения вручную. +"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:73
+msgid ""
+"If possible, keep version 4 of KiCad installed on your system unless you "
+"have never used any of the symbol libraries distributed with KiCad."
+msgstr ""
+"Если возможно, сохраняйте KiCad версии 4 установленным до тех пор, пока "
+"используется хотя бы одна из его библиотек."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:85
+msgid ""
+"If you get warning about missing libraries when you start version 4 of "
+"Eeschema, make sure to fix the missing libraries if they contain symbols "
+"that are in the schematic before you attempt to remap your schematic.  "
+"Otherwise, the correct symbol will not be found and you will end up with "
+"broken symbol links in your schematic.  You can test this by left clicking "
+"on a symbol in the schematic and verifying that the symbol is not being "
+"loaded from the cache library.  If a symbol is being loaded from the cache "
+"library, Eeschema cannot find your part in the system or project symbol "
+"libraries. If you need a cached part to be available to other projects on "
+"your system, you will need to integrate it into a system or project library "
+"manually."
+msgstr ""
+"Если при запуске Eeschemа 4-ой версии будет показано предупреждение об "
+"отсутствии библиотек, нужно исправить те из них, в которых содержаться "
+"компоненты схемы, прежде чем выполнить попытку переопределения компонентов. "
+"Иначе, не удастся определить правильные библиотеки для компонентов и в итоге "
+"компоненты будут иметь сломанные ссылки на библиотеки. Это можно проверить "
+"нажав левой кнопкой мыши на компоненте схемы и убедиться, что компонент не "
+"был загружен из библиотеки кэша. Если компонент загружен из кэшированной "
+"библиотеки, это значит, что Eeschema не смогла найти компонент в глобальных "
+"библиотеках или в библиотеках проекта. Если потребуется использовать "
+"кэшированный компонент в других проектах в той же системе, то придётся "
+"внедрить его в глобальную библиотеку или в библиотеку проекта вручную."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:89
+msgid ""
+"If symbol recovery is required during the remapping process, do not dismiss "
+"it.  Failure to recover symbols will result in broken symbol links or the "
+"wrong symbol being linked in the schematic."
+msgstr ""
+"Если в процессе переопределения потребуется спасти компоненты, не отклоняйте "
+"эту операцию. Неудачное спасение компонентов может вылиться в виде сломанных "
+"ссылок на библиотеки или к неправильному определению компонентов схемы."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:94
+msgid ""
+"During the remapping process, symbol libraries not found in the global "
+"symbol library table will be used to create a project specific symbol "
+"library table.  You can move them manually to the global symbol library "
+"table if that is your preference."
+msgstr ""
+"В процессе переопределения компонентов, библиотеки, не указанные в "
+"глобальной таблице библиотек, будут помещаться в таблицу проекта. Позже, "
+"если потребуется, их можно будет самостоятельно переместить в глобальную "
+"таблицу библиотек."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:100
+msgid ""
+"For the most accurate remapping, create a project library by copying the "
+"project cache file (project-name-cache.lib) to a different file and add it "
+"to the top of the symbol library list.  You must use a version of KiCad "
+"prior to the symbol library table implementation in order to do this."
+msgstr ""
+"Для достижения наиболее точного переопределения, создайте библиотеку "
+"проекта, путём копирования кэшированной библиотеки (имяпроекта-cache.lib) "
+"под другим именем и добавьте её в самый верх списка используемых библиотек. "
+"Для этого нужно использовать версию KiCad, в которой библиотеки ещё не "
+"управляются с помощью таблиц."
+
+#. type: Block title
+#: kicad_upgrading_from_v4_to_v5.adoc:102
+#, no-wrap
+msgid "** Fixing broken remapping: **"
+msgstr "** Исправление сломанных ссылок: **"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:107
+msgid ""
+"A tool has been provided to attempt to fix remapping issues.  If there are "
+"missing symbol library links in a schematic, they can be fixed by opening "
+"the \"Tools->Edit Symbol Library References...\" menu entry and clicking on "
+"the \"Map Orphans\" button."
+msgstr ""
+"Имеется специальных инструмент, предназначенный для исправления проблем "
+"переопределения компонентов. Если в схеме имеются компоненты без ссылок на "
+"библиотеку, их можно исправить выбрав пункт меню \"Инструменты-"
+">Редактировать ссылки библиотек символов...\" и нажав кнопку \"Компоненты "
+"без библиотеки\"."
+
+#. type: Title ===
+#: kicad_upgrading_from_v4_to_v5.adoc:108
+#, no-wrap
+msgid "Remapping Search Order"
+msgstr "Порядок подбора компонентов"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:112
+msgid ""
+"When remapping symbols, KiCad proceeds in the following order to assign the "
+"library to a symbol:"
+msgstr ""
+"Для назначения библиотеки компоненту при переопределении, KiCad выполняет "
+"обработку в следующем порядке:"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:115
+msgid ""
+"Global Symbol Library Table: Symbols are preferentially mapped to the global "
+"symbol library table, if one exists."
+msgstr ""
+"Глобальная таблица библиотек компонентов: компоненты связываются с "
+"библиотеками из глобальной таблицы в первую очередь, если это возможно."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:118
+msgid ""
+"Project specific libraries: Libraries listed in the project library list "
+"that are not in the global symbol library table are searched next."
+msgstr ""
+"Таблица библиотек компонентов проекта: далее ведётся поиск компонентов в "
+"библиотеках из таблицы проекта."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:122
+msgid ""
+"Project cache file: If a symbol doesn't exist in the listed libraries above, "
+"it is first rescued -- a copy is made from the cache and placed in the "
+"__proj__-rescue.lib -- before the symbol is mapped to this new, rescue "
+"library."
+msgstr ""
+"Файл с кэшем проекта: если компонент не удаётся найти в библиотеках, "
+"перечисленных выше, сначала выполняется процедура его \"спасения"
+"\" (создаётся копия файла кэша под новым именем __имяпроекта__-rescue.lib), "
+"затем компонент связывается с этой новой, \"спасённой\", библиотекой."
+
+#. type: Title ===
+#: kicad_upgrading_from_v4_to_v5.adoc:123
+#, no-wrap
+msgid "Symbol Names and Symbol Library Nickname Limitations"
+msgstr "Ограничения наименований компонентов и уникальных имён библиотек"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:126
+msgid "Symbol names may not contain `<SPACE>, ':', '/'`."
+msgstr "Имена компонентов не могут содержать `<ПРОБЕЛ>, ':', '/'`."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:128
+msgid "Library nicknames may not contain `<SPACE>, ':'`."
+msgstr "Уникальные имена не могут содержать `<ПРОБЕЛ>, ':'`."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:131
+msgid ""
+"Existing symbol names with these characters must be renamed by manually "
+"editing the relevant schematic and library files."
+msgstr ""
+"Существующие наименования компонентов с этими символами необходимо "
+"переименовать, путём самостоятельного исправления соответствующих файлов "
+"схем и библиотек."
+
+#. type: Title ==
+#: kicad_upgrading_from_v4_to_v5.adoc:132
+#, no-wrap
+msgid "Symbol Cache Library Availability"
+msgstr "Применение кэшированной библиотеки компонентов"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:137
+msgid ""
+"The cache library is no longer shown in either the symbol library viewer or "
+"the symbol library editor.  The cache should never be edited because any "
+"changes are overwritten by the next schematic save."
+msgstr ""
+"Кэшированная библиотека больше не отображается ни в просмотрщике библиотек, "
+"ни в редакторе библиотек. Она не должна редактироваться вручную, так как её "
+"содержимое будет перезаписано при следующем сохранении схемы."
+
+#. type: Title ==
+#: kicad_upgrading_from_v4_to_v5.adoc:138
+#, no-wrap
+msgid "Board File Format Changes"
+msgstr "Изменения в формате файла печатной платы"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:143
+msgid ""
+"Several new features have been added to Pcbnew which impact the board file "
+"format.  Using these new features in board designs will prevent them from "
+"being opened with previous versions of Pcbnew."
+msgstr ""
+"В Pcbnew было добавлено несколько новых свойств, которые влияют на формат "
+"файла печатной платы. Использование этих свойств при разработке печатной "
+"платы, сделает невозможным открытие файла печатной платы в Pcbnew предыдущих "
+"версий."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:145
+msgid "Rounded rectangle footprint pads."
+msgstr "Прямоугольные контактные площадки с закруглением."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:146
+msgid "Custom shape footprint pads."
+msgstr "Контактные площадки сложной формы."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:147
+msgid "Footprint pad names longer than four characters."
+msgstr "Имена выводов посадочных мест длиной более четырёх символов."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:148
+msgid "Keep out zones on more than a single layer."
+msgstr "Области запрета на нескольких слоях."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:149
+msgid "3D models offset saved as millimeters instead of inches."
+msgstr "Сохранение смещения 3D-форм в миллиметрах, а не в дюймах."
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:150
+msgid "Footprint text locking."
+msgstr "Фиксация текста посадочных мест."
+
+#. type: Title ===
+#: kicad_upgrading_from_v4_to_v5.adoc:151
+#, no-wrap
+msgid "Global Footprint Library Table."
+msgstr "Глобальная таблица библиотек посадочных мест"
+
+#. type: Plain text
+#: kicad_upgrading_from_v4_to_v5.adoc:157
+msgid ""
+"If you track the https://github.com/KiCad/kicad-footprints[footprint library "
+"repository], changes made to the default global footprint library table are "
+"not tracked by KiCad.  You will have to manually keep the global footprint "
+"library table up to date."
+msgstr ""
+"Если используются последние версии библиотек из https://github.com/KiCad/"
+"kicad-footprints[репозитория стандартных библиотек посадочных мест], то "
+"KiCad не сможет автоматически обновлять глобальную таблицу библиотек. "
+"Пользователю придётся самостоятельно следить за изменениями библиотек и "
+"вносить поправки в таблицу вручную."

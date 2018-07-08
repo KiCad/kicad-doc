@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-06-05 15:55+0300\n"
-"PO-Revision-Date: 2018-06-07 10:14+0200\n"
+"POT-Creation-Date: 2018-07-01 10:57+0300\n"
+"PO-Revision-Date: 2018-07-08 08:26+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -10641,7 +10641,7 @@ msgid "Symbol Library Tables"
 msgstr "Таблицы библиотек компонентов"
 
 #. type: Target for macro image
-#: eeschema_main_top_menu.adoc:55 eeschema_symbol_library_table.adoc:17
+#: eeschema_main_top_menu.adoc:55 eeschema_symbol_library_table.adoc:20
 #, no-wrap
 msgid "images/en/options_symbol_lib.png"
 msgstr "images/ru/options_symbol_lib.png"
@@ -10658,7 +10658,7 @@ msgstr ""
 #. type: Plain text
 #: eeschema_main_top_menu.adoc:61
 msgid "Global Libraries"
-msgstr "Общие библиотеки"
+msgstr "Глобальные библиотеки"
 
 #. type: Plain text
 #: eeschema_main_top_menu.adoc:65
@@ -10694,8 +10694,8 @@ msgid ""
 "You can view either list by clicking on \"Global Libraries\" or \"Project "
 "Specific Libraries\" tab below the library table."
 msgstr ""
-"Увидеть любую из таблиц можно переходя по вкладкам \"Общие библиотеки\" или "
-"\"Библиотеки проекта\" под таблицей библиотек."
+"Увидеть любую из таблиц можно переходя по вкладкам \"Глобальные библиотеки\" "
+"или \"Библиотеки проекта\" под таблицей библиотек."
 
 #. type: Title =====
 #: eeschema_main_top_menu.adoc:75
@@ -13587,13 +13587,15 @@ msgstr "Менеджер библиотек компонентов"
 #. type: Plain text
 #: eeschema_symbol_library_table.adoc:6
 msgid ""
-"Symbol libraries need to be made available in order to create schematics.  "
-"The manner in which this is accomplished varies according to the version of "
-"KiCad being used."
+"Symbol libraries hold collections of symbols used when creating schematics. "
+"Each symbol in a schematic is uniquely identified by a full name that is "
+"composed of a library nickname and a symbol name. An example is `Audio:"
+"AD1853`."
 msgstr ""
-"Для создания схем необходимо определить библиотеки компонентов. Способ, с "
-"помощью которого библиотеки будут определены, зависит от используемой версии "
-"KiCad."
+"Библиотеки компонентов содержат наборы компонентов, используемые при "
+"создании схем. Каждый компонент схемы однозначно обозначен полным "
+"наименованием, которое состоит из уникального имени библиотеки и названия "
+"компонента. Например `Audio:AD1853`."
 
 #. type: Title ===
 #: eeschema_symbol_library_table.adoc:7
@@ -13604,17 +13606,26 @@ msgstr "Таблица библиотек компонентов"
 #. type: Plain text
 #: eeschema_symbol_library_table.adoc:12
 msgid ""
-"As of November 2017, Eeschema uses a new library management tool based on "
-"*_symbol library tables_* which is identical in design to the footprint "
-"library table used in CvPcb and Pcbnew."
+"The symbol library table holds a list of all library files KiCad knows "
+"about.  The symbol library table is constructed from the global symbol "
+"library table file and the project specific symbol library table file."
 msgstr ""
-"С ноября 2017 года в Eeschema используется новый механизм управления "
-"библиотеками, основанный на *_таблицах библиотек компонентов_*, подобных в "
-"работе с таблицами библиотек посадочных мест, которые используется в CvPcb и "
-"Pcbnew."
+"Таблица библиотек компонентов содержит перечень всех файлов библиотек, о "
+"которых должен знать KiCad. Таблица библиотек компонентов строится на основе "
+"файла глобальной (общей) таблицы библиотек и файла таблицы библиотек проекта."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:16
+#: eeschema_symbol_library_table.adoc:15
+msgid ""
+"When a symbol is loaded, Eeschema uses the library nickname, `Audio` in our "
+"example, to lookup the library location in the symbol library table."
+msgstr ""
+"После загрузки компонента, Eeschema использует уникальное имя библиотеки "
+"(`Audio` в нашем случае) для определения расположения библиотеки, указанного "
+"в таблице библиотек."
+
+#. type: Plain text
+#: eeschema_symbol_library_table.adoc:19
 msgid ""
 "The image below shows the symbol library table editing dialog which can be "
 "opened by invoking the ``Manage Symbol Library Tables'' entry in the "
@@ -13625,56 +13636,38 @@ msgstr ""
 "компонентов...'' в меню ``Настройки''."
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_symbol_library_table.adoc:17
+#: eeschema_symbol_library_table.adoc:20
 #, no-wrap
 msgid "sym lib table dlg"
 msgstr "Диалоговое окно менеджера библиотек"
 
-#. type: Plain text
-#: eeschema_symbol_library_table.adoc:25
-msgid ""
-"The symbol library table is used to map a symbol library of any supported "
-"library type to a library nickname. *This nickname is used to look up "
-"symbols* instead of the previous method which depended on library search "
-"path ordering. This allows Eeschema to access symbols with the same name in "
-"different libraries by ensuring that the correct symbol is loaded from the "
-"appropriate library."
-msgstr ""
-"Таблицы библиотек компонентов используются для связывания библиотеки, в "
-"любом поддерживаемом формате, с уникальным именем. *Это уникальное имя будет "
-"использоваться для поиска компонентов* вместо предыдущего метода, при "
-"котором поиск компонентов производился по очереди в списке используемых "
-"библиотек. Новый способ позволяет в Eeschema использовать компоненты с "
-"одинаковыми именами из разных библиотек и при этом быть уверенным, что "
-"загрузится правильный компонент из нужной библиотеки."
-
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:26
+#: eeschema_symbol_library_table.adoc:22
 #, no-wrap
 msgid "Global Symbol Library Table"
-msgstr "Общая таблица библиотек компонентов"
+msgstr "Глобальная таблица библиотек компонентов"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:32
+#: eeschema_symbol_library_table.adoc:28
 msgid ""
 "The global symbol library table contains the list of libraries that are "
 "always available regardless of the currently loaded project file. The table "
 "is saved in the file sym-lib-table in the user's home folder. The location "
 "of this folder is dependent upon the operating system being used."
 msgstr ""
-"Общая таблица библиотек компонентов содержит перечень библиотек, которые "
-"доступны всегда, независимо от загруженного в данный момент проекта. Эта "
-"таблица хранится в файле sym-lib-table в домашнем каталоге пользователя. "
+"Глобальная таблица библиотек компонентов содержит перечень библиотек, "
+"которые доступны всегда, независимо от загруженного в данный момент проекта. "
+"Эта таблица хранится в файле sym-lib-table в домашнем каталоге пользователя. "
 "Расположение данного каталога зависит от используемой операционной системы."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:33
+#: eeschema_symbol_library_table.adoc:29
 #, no-wrap
 msgid "Project Specific Symbol Library Table"
 msgstr "Таблицы библиотек компонентов проекта"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:42
+#: eeschema_symbol_library_table.adoc:38
 msgid ""
 "The project specific symbol library table contains the list of libraries "
 "that are available specifically for the currently loaded project file. The "
@@ -13691,13 +13684,13 @@ msgstr ""
 "файлом проекта."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:43
+#: eeschema_symbol_library_table.adoc:39
 #, no-wrap
 msgid "Initial Configuration"
 msgstr "Начальная настройка"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:55
+#: eeschema_symbol_library_table.adoc:51
 msgid ""
 "The first time Eeschema is run and the global symbol table file *sym-lib-"
 "table* is not found in the user's home folder, Eeschema will attempt to copy "
@@ -13722,7 +13715,7 @@ msgstr ""
 "вручную."
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:65
+#: eeschema_symbol_library_table.adoc:61
 msgid ""
 "The default symbol library table includes all of the symbol libraries that "
 "are installed as part of KiCad.  This may or may not be desirable depending "
@@ -13741,13 +13734,13 @@ msgstr ""
 "необходимости в таблицу проекта."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:67
+#: eeschema_symbol_library_table.adoc:63
 #, no-wrap
 msgid "Adding Table Entries"
 msgstr "Добавление элементов таблицы"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:72
+#: eeschema_symbol_library_table.adoc:68
 msgid ""
 "In order to use a symbol library, it must first be added to either the "
 "global table or the project specific table. The project specific table is "
@@ -13758,13 +13751,13 @@ msgstr ""
 "загруженном файле проекта."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:74
+#: eeschema_symbol_library_table.adoc:70
 #, no-wrap
 msgid "*Each library entry must have a unique nickname.*\n"
 msgstr "*Каждая библиотека должна иметь уникальное имя.*\n"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:80
+#: eeschema_symbol_library_table.adoc:76
 msgid ""
 "This does not have to be related in any way to the actual library file name "
 "or path. The colon ':' and '/' characters cannot be used anywhere in the "
@@ -13780,7 +13773,7 @@ msgstr ""
 "раздел)."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:84
+#: eeschema_symbol_library_table.adoc:80
 msgid ""
 "The appropriate plug in type must be selected in order for the library to be "
 "properly read. KiCad currently supports only legacy symbol library files "
@@ -13791,7 +13784,7 @@ msgstr ""
 "библиотек компонентов."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:88
+#: eeschema_symbol_library_table.adoc:84
 msgid ""
 "There is also a description field to add a description of the library entry. "
 "The option field is not used at this time so adding options will have no "
@@ -13803,7 +13796,7 @@ msgstr ""
 "библиотек."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:92
+#: eeschema_symbol_library_table.adoc:88
 msgid ""
 "Please note that you cannot have duplicate library nicknames in the same "
 "table. However, you can have duplicate library nicknames in both the global "
@@ -13814,7 +13807,7 @@ msgstr ""
 "одновременно использовано в общей таблице и в таблице проекта."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:94
+#: eeschema_symbol_library_table.adoc:90
 msgid ""
 "The project specific table entry will take precedence over the global table "
 "entry when duplicate nicknames occur."
@@ -13823,7 +13816,7 @@ msgstr ""
 "уникальным именем в общей таблице."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:97
+#: eeschema_symbol_library_table.adoc:93
 msgid ""
 "When entries are defined in the project specific table, a sym-lib-table file "
 "containing the entries will be written into the folder of the currently open "
@@ -13834,13 +13827,13 @@ msgstr ""
 "файл проекта."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:98
+#: eeschema_symbol_library_table.adoc:94
 #, no-wrap
 msgid "Environment Variable Substitution"
 msgstr "Подстановка переменных окружения"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:105
+#: eeschema_symbol_library_table.adoc:101
 msgid ""
 "One of the most powerful features of the symbol library table is environment "
 "variable substitution. This allows for definition of custom paths to where "
@@ -13855,13 +13848,13 @@ msgstr ""
 "\\}+."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:107
+#: eeschema_symbol_library_table.adoc:103
 msgid "By default, at run time KiCad defines **two environment variables**:"
 msgstr ""
 "По умолчанию, при запуске KiCad создаются **две переменные окружения**:"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:110
+#: eeschema_symbol_library_table.adoc:106
 msgid ""
 "the *+KIPRJMOD+* environment variable that always points to the currently "
 "open project directory.  *+KIPRJMOD+* cannot be modified."
@@ -13870,7 +13863,7 @@ msgstr ""
 "нельзя изменить."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:113
+#: eeschema_symbol_library_table.adoc:109
 msgid ""
 "the *+KICAD_SYMBOL_DIR+* environment variable. This points to the path where "
 "the default symbol libraries that were installed with KiCad."
@@ -13879,7 +13872,7 @@ msgstr ""
 "которые устанавливались вместе с KiCad."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:117
+#: eeschema_symbol_library_table.adoc:113
 msgid ""
 "You can override +KICAD_SYMBOL_DIR+ by defining it yourself in preferences/ "
 "Configure Path which allows you to substitute your own libraries in place of "
@@ -13891,7 +13884,7 @@ msgstr ""
 "установленных вместе с KiCad."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:121
+#: eeschema_symbol_library_table.adoc:117
 #, no-wrap
 msgid ""
 "*+KIPRJMOD+* allows you to store libraries in the project path without\n"
@@ -13903,13 +13896,13 @@ msgstr ""
 "(которые при перемещении проекта могут меняться).\n"
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:122
+#: eeschema_symbol_library_table.adoc:118
 #, no-wrap
 msgid "Usage Patterns"
 msgstr "Варианты использования"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:129
+#: eeschema_symbol_library_table.adoc:125
 msgid ""
 "Symbol libraries can be defined either globally or specifically to the "
 "currently loaded project. Symbol libraries defined in the user's global "
@@ -13923,7 +13916,7 @@ msgstr ""
 "пользователя. Таблица проекта доступна только для загруженного проекта."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:133
+#: eeschema_symbol_library_table.adoc:129
 msgid ""
 "There are advantages and disadvantages to each method. Defining all "
 "libraries in the global table means they will always be available when "
@@ -13935,7 +13928,7 @@ msgstr ""
 "загрузки."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:139
+#: eeschema_symbol_library_table.adoc:135
 msgid ""
 "Defining all symbol libraries on a project specific basis means that you "
 "only have the libraries required for the project which decreases symbol "
@@ -13948,7 +13941,7 @@ msgstr ""
 "новому проекту."
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:143
+#: eeschema_symbol_library_table.adoc:139
 msgid ""
 "One usage pattern would be to define commonly used libraries globally and "
 "the libraries only required for the project in the project specific library "
@@ -13962,13 +13955,13 @@ msgstr ""
 "своих предпочтений."
 
 #. type: Title ====
-#: eeschema_symbol_library_table.adoc:144
+#: eeschema_symbol_library_table.adoc:140
 #, no-wrap
 msgid "Legacy Project Remapping"
 msgstr "Загрузка устаревших проектов"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:150
+#: eeschema_symbol_library_table.adoc:146
 msgid ""
 "When loading a schematic created prior to the symbol library table "
 "implementation, Eeschema will attempt to remap the symbol library links in "
@@ -13981,7 +13974,7 @@ msgstr ""
 "процедуры зависит от нескольких факторов:"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:153
+#: eeschema_symbol_library_table.adoc:149
 msgid ""
 "the original libraries used in the schematic are still available and "
 "unchanged from when the symbol was added to the schematic."
@@ -13990,7 +13983,7 @@ msgstr ""
 "иметь изменений с тех пор, как их компоненты были добавлены в схему;"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:156
+#: eeschema_symbol_library_table.adoc:152
 msgid ""
 "all rescue operations were performed when detected to create a rescue "
 "library or keep the existing rescue library up to date."
@@ -14000,14 +13993,14 @@ msgstr ""
 "чтобы её содержимое было обновлено;"
 
 #. type: Plain text
-#: eeschema_symbol_library_table.adoc:159
+#: eeschema_symbol_library_table.adoc:155
 msgid ""
 "the integrity of the project symbol cache library has not been corrupted."
 msgstr ""
 "содержимое кешированной библиотеки компонентов проекта не будет повреждено;"
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:166
+#: eeschema_symbol_library_table.adoc:162
 msgid ""
 "The remapping will make a back up of all the files that are changed during "
 "remapping in the rescue-backup folder in the project folder.  Always make a "
@@ -14019,7 +14012,7 @@ msgstr ""
 "пойдёт не так."
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:175
+#: eeschema_symbol_library_table.adoc:171
 msgid ""
 "The rescue operation is performed even if it has been disabled to ensure the "
 "correct symbols are available for remapping.  Do not cancel this operation "
@@ -14033,7 +14026,7 @@ msgstr ""
 "поправить вручную."
 
 #. type: delimited block =
-#: eeschema_symbol_library_table.adoc:184
+#: eeschema_symbol_library_table.adoc:180
 msgid ""
 "If the original libraries have been removed and the rescue was not "
 "performed, the cache library can be used as a recovery library as a last "
