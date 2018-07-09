@@ -74,6 +74,19 @@ add_subdirectory( src )
 # Start with the package version being unknown, then prove otherwise
 set( CPACK_PACKAGE_VERSION "unknown" )
 
+set( VERSION_INFO_FILE "${PROJECT_BINARY_DIR}/src/version_info.txt")
+set_property( DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES "${VERSION_INFO_FILE}")
+add_custom_target(
+    version_info ALL
+    COMMAND ${CMAKE_COMMAND}
+        -DPROJECT_SOURCE_DIR=${PROJECT_SOURCE_DIR}
+        -DPROJECT_BINARY_DIR=${PROJECT_BINARY_DIR}
+        -DOUTPUT_FILE=${VERSION_INFO_FILE}
+        -P ${CMAKE_MODULE_PATH}/CreateGitVersionInfo.cmake
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    COMMENT "Generating version info"
+)
+
 # Use Git to determine parts of the package name
 find_package( Git )
 
