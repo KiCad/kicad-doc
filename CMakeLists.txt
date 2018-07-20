@@ -40,24 +40,28 @@ add_a2x_option( --no-xmllint )
 add_a2x_option( -f pdf )
 #add_a2x_option( --verbose )
 
-# Add a2x options depending on which PDF generator we're using
-if( ${PDF_GENERATOR} MATCHES DBLATEX )
-    set_dblatex_common_options()
-    find_package( DBLATEX REQUIRED )
-endif()
+if( "${BUILD_FORMATS}" MATCHES "(p|P)(d|D)(f|F)" )
 
-if( ${PDF_GENERATOR} MATCHES FOP )
-    add_a2x_option( --fop )
-    add_a2x_option( --xsl-file ${PROJECT_SOURCE_DIR}/xsl/kicad.xsl )
-    find_package( FOP REQUIRED )
-endif()
+    # Add a2x options depending on which PDF generator we're using
+    if( ${PDF_GENERATOR} MATCHES DBLATEX )
+        set_dblatex_common_options()
+        find_package( DBLATEX REQUIRED )
+    endif()
 
-if( ${PDF_GENERATOR} MATCHES ASCIIDOCTORPDF )
-    message( FATAL_ERROR "AsciiDoctor-pdf is not currently supported!" )
+    if( ${PDF_GENERATOR} MATCHES FOP )
+        add_a2x_option( --fop )
+        add_a2x_option( --xsl-file ${PROJECT_SOURCE_DIR}/xsl/kicad.xsl )
+        find_package( FOP REQUIRED )
+    endif()
 
-    # Discover if the AsciiDoctor toolchain is available
-    # find_package( ASCIIDOCTOR )
-    # find_package( ASCIIDOCTORPDF )
+    if( ${PDF_GENERATOR} MATCHES ASCIIDOCTORPDF )
+        message( FATAL_ERROR "AsciiDoctor-pdf is not currently supported!" )
+
+        # Discover if the AsciiDoctor toolchain is available
+        # find_package( ASCIIDOCTOR )
+        # find_package( ASCIIDOCTORPDF )
+
+    endif()
 
 endif()
 
@@ -135,5 +139,3 @@ endif()
 set( CPACK_GENERATOR "TGZ" )
 set( CPACK_PACKAGE_FILE_NAME "kicad-doc${PACKAGE_BUILD_FORMAT}${PACKAGE_LANGUAGE}-${CPACK_PACKAGE_VERSION}" )
 include( CPack )
-
-
