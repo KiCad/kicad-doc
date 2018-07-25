@@ -40,7 +40,7 @@ AsciiDoc documentation to other languages before the last compilation steps.
 * gettext >= 0.18
 * source-highlight
 * The _VL Gothic_ font is required when you build the Japanese PDFs. Look for a
-package named `fonts-vlgothic`. Otherwise use the SINGLE_LANGUAGE option
+package named `fonts-vlgothic`. Otherwise use the **LANGUAGES** option
 to avoid build errors.
 * For building PDF files with Cyrillic characters (like Russian) the fonts
 package _freefont-ttf_ is required, so you will need to look for similar named
@@ -115,16 +115,21 @@ e.g. `-DBUILD_FORMATS=html`
 When only one build format is enabled the package name is transformed to include
 the format.
 
-==== SINGLE_LANGUAGE
+==== LANGUAGES
 
 By default CMake will configure to build all languages available for each document.
 
-You can build just a single language by using the **SINGLE_LANGUAGE** option when
-configuring a build with CMake, e.g. `-DSINGLE_LANGUAGE=it`, etc.
+You can build just one or some of the languages by using the **LANGUAGES** option
+when configuring a build with CMake, e.g. `-DLANGUAGES=it;en;de`, etc.
 
-Currently, the available languages are : `en`, `fr`, `it`, `ja`, `nl`, and `pl` however, any
+Currently, the available languages are : `ca`, `de`, `en`, `es`, `fr`, `id`, `it`,
+`ja`, `nl`, `pl`, `ru`  and `zh`, however, any
 language code can be selected. Only translated documents will be built, so for
 some languages there may only be a partial documentation output.
+
+==== SINGLE_LANGUAGE
+
+This option is deprecated, use **LANGUAGES** instead
 
 When the **SINGLE_LANGUAGE** option is set, the package name is transformed to
 include the language.
