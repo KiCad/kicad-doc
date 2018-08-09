@@ -118,14 +118,6 @@ endif()
 set( KICAD_DOC_INSTALL_PATH share/doc/kicad
      CACHE PATH "Install path of KiCad documentation files relative to CMAKE_INSTALL_PREFIX." )
 
-# Set the language in the package name if the package only contains a single
-# language
-if( "${SINGLE_LANGUAGE}" STREQUAL "" )
-    set( PACKAGE_LANGUAGE "" )
-else()
-    set( PACKAGE_LANGUAGE "-${SINGLE_LANGUAGE}" )
-endif()
-
 # If there is more than one build format, do not bother transforming the
 # package name, otherwise if there's only one, add it to the package name
 list( LENGTH BUILD_FORMATS BUILD_FORMATS_LENGTH )
@@ -137,5 +129,5 @@ endif()
 
 # Generate both .tar.gz package target
 set( CPACK_GENERATOR "TGZ" )
-set( CPACK_PACKAGE_FILE_NAME "kicad-doc${PACKAGE_BUILD_FORMAT}${PACKAGE_LANGUAGE}-${CPACK_PACKAGE_VERSION}" )
+set( CPACK_PACKAGE_FILE_NAME "kicad-doc${PACKAGE_BUILD_FORMAT}-${CPACK_PACKAGE_VERSION}" )
 include( CPack )
