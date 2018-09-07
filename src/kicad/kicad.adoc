@@ -217,7 +217,8 @@ and add your own environment variables to define personal paths, if needed.
 *KiCad environment variables:*
 [width="100%",cols="20%,80%",]
 |=================================================================
-|KICAD_PTEMPLATES |Templates used during project creation.
+|KICAD_PTEMPLATES |Templates used during project creation (DEPRECATED as of
+version 5.0.0-rc2, use KICAD_TEMPLATE_DIR instead).
 If you are using this variable, it must be defined.
 |KICAD_SYMBOL_DIR |Base path of symbol library files.
 |KIGITHUB |Frequently used in example footprint lib tables.
@@ -226,6 +227,8 @@ If you are using this variable, it must be defined.
 and must be defined because an absolute path is not usually used.
 |KISYSMOD |Base path of footprint library folders,
 and must be defined if an absolute path is not used in footprint library names.
+|KICAD_TEMPLATE_DIR |Location of templates installed with KiCad.
+|KICAD_USER_TEMPLATE_DIR |Location of personal templates.
 |=================================================================
 
 image::images/configure_path_dlg.png[scaledwidth="80%"]
@@ -425,6 +428,10 @@ image::images/template_selected.png[scaledwidth="80%"]
 
 KiCad looks for template files in the following paths:
 
+- path defined in the environment variable KICAD_USER_TEMPLATE_DIR
+
+- path defined in the environment variable KICAD_TEMPLATE_DIR
+
 - System templates:
   <kicad bin dir>/../share/kicad/template/
 
@@ -441,7 +448,7 @@ KiCad looks for template files in the following paths:
 
 - When the environment variable KICAD_PTEMPLATES is defined there is a
   third tab, Portable Templates, which lists templates found at the
-  KICAD_PTEMPLATES path.
+  KICAD_PTEMPLATES path (DEPRECATED).
 
 === Creating templates
 
