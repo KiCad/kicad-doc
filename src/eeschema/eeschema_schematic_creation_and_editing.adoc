@@ -161,7 +161,7 @@ These elements are:
 * *Buses:* to graphically join bus labels
 * *Polylines:* for graphic presentation.
 * *Junctions:* to create connections between crossing wires or buses.
-* *Bus entries:* to show connections between wires and buses. Graphical only!
+* *Bus entries:* to show connections between wires and buses.
 * *Labels:* for labeling or creating connections.
 * *Global labels:* for connections between sheets.
 * *Texts:* for comments and annotations.
@@ -221,14 +221,45 @@ image::images/sch_with_buses.png[alt="Example schematic with buses",scaledwidth=
 [[bus-members]]
 ===== Bus members
 
-From the schematic point of view, a bus is a collection of signals,
-starting with a common prefix, and ending with a number. For example,
-PCA0, PCA1, and PCA2 are members of the PCA bus.
+Buses are a way to group related signals in the schematic in order to
+simplify complicated designs.  Buses can be drawn like wires using the
+bus tool, and are named using labels the same way signal wires are.
+There are two types of bus in KiCad 6.0 and later: vector buses and
+group buses.
 
-The complete bus is named PCA[N..m], where N and m are the first and
-the last wire number of this bus. Thus if PCA has 20 members from 0 to
-19, the complete bus is noted PCA[0..19]. A collection of signals
-like PCA0, PCA1, PCA2, WRITE, READ cannot be contained in a bus.
+A *vector bus* is a collection of signals that start with a common prefix
+and end with a number.  Vector buses are named `<PREFIX>[M..N]` where
+`PREFIX` is any valid signal name, `M` is the first suffix number, and `N`
+is the last suffix number.  For example, the bus `DATA[0..7]` contains the
+signals `DATA0`, `DATA1`, and so on up to `DATA7`.  It doesn't matter which
+order `M` and `N` are specified in, but both must be non-negative.
+
+A *group bus* is a collection of one or more signals and/or vector buses.
+Group buses can be used to bundle together related signals even when they
+have different names.  Group buses use a special label syntax:
+
+`<OPTIONAL_NAME>{SIGNAL1 SIGNAL2 SIGNAL3}`
+
+The members of the group are listed inside curly braces (`{}`) separated
+by space characters.  An optional name for the group goes before the opening
+curly brace.  If the group bus is unnamed, the resulting nets on the PCB
+will just be the signal names inside the group.  If the group bus has a
+name, the resulting nets will have the name as a prefix, with a period (`.`)
+separating the prefix from the signal name.
+
+For example, the bus `{SCL SDA}` has two signal members, and in the netlist
+these signals will be `SCL` and `SDA`.  The bus `USB1{DP DM}` will generate
+nets called `USB1.DP` and `USB1.DM`.  For designs with larger buses that are
+repeated across several similar circuits, using this technique can save time.
+
+Group buses can also contain vector buses.  For example, the bus
+`MEMORY{A[7..0] D[7..0] OE WE}` contains both vector buses and plain signals,
+and will result in nets such as `MEMORY.A7` and `MEMORY.OE` on the PCB.
+
+Bus wires can be drawn and connected in the same manner as signal wires,
+including using junctions to create connections between crossing wires.
+Like signals, buses cannot have more than one name -- if two conflicting
+labels are attached to the same bus, an ERC error will be generated.
 
 [[connections-between-bus-members]]
 ===== Connections between bus members
@@ -266,28 +297,56 @@ In the Preferences/Options menu, you can set the repetition parameters:
   decremented).
 ====
 
-[[global-connections-between-buses]]
-===== Global connections between buses
+[[bus-unfolding]]
+===== Bus unfolding
 
-You may need connections between buses, in order to link two buses
-having different names, or in the case of a hierarchy, to create
-connections between different sheets. You can make these connections in
-the following way.
+The unfold tool allows you to quickly break out signals from a bus.
+To unfold a signal, right-click on a bus object (a bus wire, etc) and
+choose `Unfold Bus`.  Alternatively, use the `Unfold Bus` hotkey (default: `D`)
+when the cursor is over a bus object.  The menu allows you to select which
+bus member to unfold.
 
-image::images/bus_junction.png[alt="Bus junction example",scaledwidth="80%"]
+After selecting the bus member, the next click will place the bus member
+label at the desired location.  The tool automatically generates a bus entry
+and wire leading up to the label location.  After placing the label, you
+can continue placing additional wire segments (for example, to connect to a
+component pin) and complete the wire in any of the normal ways.
 
-Buses PCA [0..15], ADR [0..7] and BUS [5..10] are connected together
-(note the junction here because the vertical bus wire joins the middle
-of the horizontal bus segment).
+[[bus-aliases]]
+===== Bus aliases
 
-More precisely, the corresponding members are connected together : PCA0,
-ADR0 are connected, (as same as PCA1 and ADR1 ... PCA7 and ADR7).
+New concept: Bus Aliases
+You can use aliases to define shortcuts for bus groups.
+For example, you could create an alias called "USB" that refers to the nets "DP" and "DM"
+Then, you can define a bus group as "{USB}" which will contain both of those nets.
+You can also add a label, like "USB1{USB}" which will result in nets "USB1.DP" and "USB1.DM"
+Bus Aliases are editable through a new dialog, and saved with the schematic file.
 
-Furthermore, PCA5, BUS5 and ADR5 are connected (just as PCA6, BUS6 and
-ADR6 like PCA7, BUS7 and ADR7).
+Bus aliases are shortcuts that allow you to work with large group buses
+more efficiently.  They allow you to define a group bus and give it a short
+name that can then be used instead of the full group name across the schematic.
 
-PCA8 and BUS8 are also connected (just as PCA9 and BUS9, PCA10 and
-BUS10)
+To create bus aliases, open the `Bus Definitions` dialog in the `Tools` menu.
+
+image::images/en/dialog_bus_definitions.png[alt="Bus Definitions Dialog",scaledwidth="90%"]
+
+An alias may be named any valid signal name.  Using the dialog, you can add
+signals or vector buses to the alias.  As a shortcut, you can type or paste
+in a list of signals and/or buses separated by spaces, and they will all be
+added to the alias definition.  In this example, we define an alias called
+`USB` with members `DP`, `DM`, and `VBUS`.
+
+After defining an alias, it can be used in a group bus label by putting the
+alias name inside the curly braces of the group bus: `{USB}`.  This has the
+same effect as labeling the bus `{DP DM VBUS}`.  You can also add a prefix
+name to the group, such as `USB1{USB}`, which results in nets such as
+`USB1.DP` as described above.  For complicated buses, using aliases can
+make the labels on your schematic much shorter.  Keep in mind that the aliases
+are just a shortcut, and the name of the alias is not included in the netlist.
+
+Bus aliases are saved in the schematic file.  Any aliases created in a given
+schematic sheet are available to use in any other schematic sheet that is in
+the same hierarchical design.
 
 
 [[power-ports-connection]]
@@ -339,7 +398,7 @@ All these symbols can be found in the ``power'' symbol library.
 ==== ``No Connect'' flag
 
 These symbols are very useful to avoid undesired ERC warnings.
-The electric rules check ensures that no connection has been
+The electrical rules check ensures that no connection has been
 accidentally left unconnected.
 
 If pins must really remain unconnected, it is necessary to place
