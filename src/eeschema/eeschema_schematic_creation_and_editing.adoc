@@ -340,6 +340,25 @@ Bus aliases are saved in the schematic file.  Any aliases created in a given
 schematic sheet are available to use in any other schematic sheet that is in
 the same hierarchical design.
 
+[[bus-migration]]
+===== Buses with more than one label
+
+KiCad 5.0 and earlier allowed the connection of bus wires with different labels
+together, and would join the members of these buses during netlisting. This
+behavior has been removed in KiCad 6.0 because it is incompatible with group
+buses, and also leads to confusing netlists because the name that a given signal
+will receive is not easily predicted.
+
+If you open a design that made use of this feature in a modern version of KiCad,
+you will see the Migrate Buses dialog which guides you through updating the
+schematic so that only one label exists on any given set of bus wires.
+
+image::images/en/dialog_migrate_buses.png[alt="Bus Migration Dialog",scaledwidth="90%"]
+
+For each set of bus wires that has more than one label, you must choose the
+label to keep.  The drop-down name box lets you choose between the labels that
+exist in the design, or you can choose a different name by manually entering it
+into the new name field.
 
 [[power-ports-connection]]
 ==== Power ports connection
