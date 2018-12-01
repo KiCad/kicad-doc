@@ -70,7 +70,7 @@ segment from the end point to the start point.
 
 [NOTE]
 ====
-* The DRC control is active when creating zone outlines.
+* The DRC is active when creating zone outlines.
 * A corner which creates a DRC error will not be accepted by Pcbnew.
 ====
 
@@ -142,7 +142,7 @@ you should use segments.
 
 A good choice for clearance is a grid that is a bit bigger than the
 routing grid. Minimum copper thickness value ensures that there are
-no too small copper ares.
+no too small copper areas.
 
 WARNING: if this value is too large, small shapes like thermal stubs
 in thermal reliefs cannot be drawn.
@@ -259,7 +259,7 @@ WARNING: Calculation can take some time if the filling grid is small.
 After editing a schematic, you can change the name of any net. For
 instance VCC can be changed to +5V.
 
-When a global DRC control is made Pcbnew checks if the zone net name
+When a global DRC is made Pcbnew checks if the zone net name
 exists, and displays an error if not.
 
 Manually editing the zone parameters will be necessary to change the old
@@ -306,5 +306,5 @@ When a track or a via is inside a keepout which does not allow it, a
 DRC error will be raised.
 
 For copper zones, the area inside a keepout with no copper pour will
-be not filled. A keep-out area is a like a zone, so editing its
+not be filled. A keep-out area is a like a zone, so editing its
 outline is analogous to copper zone editing.
