@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-07-08 08:32+0300\n"
+"POT-Creation-Date: 2018-12-11 14:23+0100\n"
 "PO-Revision-Date: 2018-07-08 08:32+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -578,10 +578,21 @@ msgid "*KiCad environment variables:*\n"
 msgstr "*Переменные окружения в KiCad:*\n"
 
 #. type: delimited block |
-#: kicad.adoc:229
-#, no-wrap
+#: kicad.adoc:232
+#, fuzzy, no-wrap
+#| msgid ""
+#| "|KICAD_PTEMPLATES |Templates used during project creation.\n"
+#| "If you are using this variable, it must be defined.\n"
+#| "|KICAD_SYMBOL_DIR |Base path of symbol library files.\n"
+#| "|KIGITHUB |Frequently used in example footprint lib tables.\n"
+#| "If you are using this variable, it must be defined.\n"
+#| "|KISYS3DMOD |Base path of 3D shapes files,\n"
+#| "and must be defined because an absolute path is not usually used.\n"
+#| "|KISYSMOD |Base path of footprint library folders,\n"
+#| "and must be defined if an absolute path is not used in footprint library names.\n"
 msgid ""
-"|KICAD_PTEMPLATES |Templates used during project creation.\n"
+"|KICAD_PTEMPLATES |Templates used during project creation (DEPRECATED as of\n"
+"version 5.0.0-rc2, use KICAD_TEMPLATE_DIR instead).\n"
 "If you are using this variable, it must be defined.\n"
 "|KICAD_SYMBOL_DIR |Base path of symbol library files.\n"
 "|KIGITHUB |Frequently used in example footprint lib tables.\n"
@@ -590,6 +601,8 @@ msgid ""
 "and must be defined because an absolute path is not usually used.\n"
 "|KISYSMOD |Base path of footprint library folders,\n"
 "and must be defined if an absolute path is not used in footprint library names.\n"
+"|KICAD_TEMPLATE_DIR |Location of templates installed with KiCad.\n"
+"|KICAD_USER_TEMPLATE_DIR |Location of personal templates.\n"
 msgstr ""
 "|KICAD_PTEMPLATES |Шаблоны, которые используются при создании проекта.\n"
 "|KICAD_SYMBOL_DIR |Базовый путь по умолчанию для библиотек компонентов.\n"
@@ -601,13 +614,13 @@ msgstr ""
 "должна быть определена, если абсолютный путь не используется в именах библиотек посадочных мест.\n"
 
 #. type: Target for macro image
-#: kicad.adoc:231
+#: kicad.adoc:234
 #, no-wrap
 msgid "images/configure_path_dlg.png"
 msgstr "images/ru/configure_path_dlg.png"
 
 #. type: Plain text
-#: kicad.adoc:235
+#: kicad.adoc:238
 msgid ""
 "Note also the environment variable *KIPRJMOD* is *always* internally defined "
 "by KiCad, and is the **current project absolute path**."
@@ -616,7 +629,7 @@ msgstr ""
 "внутри KiCad и указывает на **абсолютный путь текущего проекта**."
 
 #. type: Plain text
-#: kicad.adoc:238
+#: kicad.adoc:241
 msgid ""
 "For instance, *_$\\{KIPRJMOD\\}/connect.pretty_* is always the *_connect."
 "pretty_* folder (the pretty footprint library) found inside **the current "
@@ -627,7 +640,7 @@ msgstr ""
 "проекта_**."
 
 #. type: Plain text
-#: kicad.adoc:241
+#: kicad.adoc:244
 #, no-wrap
 msgid ""
 "*If you modify the configuration of paths, please quit and restart KiCad\n"
@@ -637,13 +650,13 @@ msgstr ""
 "с их обработкой.*\n"
 
 #. type: Title ===
-#: kicad.adoc:242
+#: kicad.adoc:245
 #, no-wrap
 msgid "Initialization of external utilities"
 msgstr "Инициализация внешних приложений"
 
 #. type: Plain text
-#: kicad.adoc:246
+#: kicad.adoc:249
 msgid ""
 "You may define your favorite text editor and PDF viewer. These settings are "
 "used whenever you want to open a text or PDF file."
@@ -653,24 +666,24 @@ msgstr ""
 "PDF-файлов."
 
 #. type: Plain text
-#: kicad.adoc:248
+#: kicad.adoc:251
 msgid "These settings are accessible from the Preference menu:"
 msgstr "Эти параметры доступны из меню 'Настройки':"
 
 #. type: Target for macro image
-#: kicad.adoc:249
+#: kicad.adoc:252
 #, no-wrap
 msgid "images/preferences_menu.png"
 msgstr "images/ru/preferences_menu.png"
 
 #. type: Title ====
-#: kicad.adoc:251
+#: kicad.adoc:254
 #, no-wrap
 msgid "Selection of text editor"
 msgstr "Выбор текстового редактора"
 
 #. type: Plain text
-#: kicad.adoc:255
+#: kicad.adoc:258
 msgid ""
 "Before using a text editor to browse/edit files in the current project, you "
 "must choose the text editor you want to use."
@@ -679,7 +692,7 @@ msgstr ""
 "текущем проекте, его необходимо выбрать."
 
 #. type: Plain text
-#: kicad.adoc:257
+#: kicad.adoc:260
 msgid ""
 "Select *_Preferences -> Set Text Editor_* to set the text editor you want to "
 "use."
@@ -688,20 +701,20 @@ msgstr ""
 "желаемый редактор текстовых файлов."
 
 #. type: Title ====
-#: kicad.adoc:258
+#: kicad.adoc:261
 #, no-wrap
 msgid "Selection of PDF viewer"
 msgstr "Выбор программы просмотра PDF"
 
 #. type: Plain text
-#: kicad.adoc:261
+#: kicad.adoc:264
 msgid "You may use the default PDF viewer or choose your own."
 msgstr ""
 "Из KiCad можно вызывать программу просмотра PDF по умолчанию или указать "
 "другой просмотрщик PDF."
 
 #. type: Plain text
-#: kicad.adoc:265
+#: kicad.adoc:268
 msgid ""
 "To change from the default PDF viewer use *_Preferences -> PDF Viewer -> Set "
 "PDF Viewer_* to choose the PDF viewer program, then select *_Preferences -> "
@@ -714,7 +727,7 @@ msgstr ""
 "просмотрщик_*."
 
 #. type: Plain text
-#: kicad.adoc:268
+#: kicad.adoc:271
 msgid ""
 "On Linux the default PDF viewer is known to be fragile, so selecting your "
 "own PDF viewer is recommended."
@@ -723,13 +736,13 @@ msgstr ""
 "проблематичен, поэтому, рекомендуется выбрать своё приложения просмотра PDF."
 
 #. type: Title ===
-#: kicad.adoc:269
+#: kicad.adoc:272
 #, no-wrap
 msgid "Creating a new project"
 msgstr "Создание нового проекта"
 
 #. type: Plain text
-#: kicad.adoc:275
+#: kicad.adoc:278
 msgid ""
 "In order to manage a KiCad project consisting of schematic files, printed "
 "circuit board files, supplementary libraries, manufacturing files for photo-"
@@ -742,7 +755,7 @@ msgstr ""
 "проект следующим образом:"
 
 #. type: Plain text
-#: kicad.adoc:278
+#: kicad.adoc:281
 #, no-wrap
 msgid ""
 "*Create a working directory for the project* (using KiCad or by other\n"
@@ -750,7 +763,7 @@ msgid ""
 msgstr "*Создать рабочий каталог для проекта* (с помощью KiCad или вручную).\n"
 
 #. type: Plain text
-#: kicad.adoc:281
+#: kicad.adoc:284
 #, no-wrap
 msgid ""
 "*In this directory, use KiCad to create a project file* (file with\n"
@@ -762,7 +775,7 @@ msgstr ""
 "или \"Создать новый проект из шаблона\".\n"
 
 #. type: Plain text
-#: kicad.adoc:284
+#: kicad.adoc:287
 msgid ""
 "Use a unique directory for each KiCad project.  Do not combine multiple "
 "projects into a single directory."
@@ -771,7 +784,7 @@ msgstr ""
 "несколько проектов в одном каталоге."
 
 #. type: Plain text
-#: kicad.adoc:292
+#: kicad.adoc:295
 msgid ""
 "KiCad creates a file with a .pro extension that maintains a number of "
 "parameters for project management (such as the list of libraries used in the "
@@ -787,7 +800,7 @@ msgstr ""
 "именем *example*, то по умолчанию создаются следующие файлы:"
 
 #. type: delimited block |
-#: kicad.adoc:302
+#: kicad.adoc:305
 #, no-wrap
 msgid ""
 "|example.pro |Project management file.\n"
@@ -808,13 +821,13 @@ msgstr ""
 "(это резервная копия компонентов, используемых в схеме).\n"
 
 #. type: Title ===
-#: kicad.adoc:304
+#: kicad.adoc:307
 #, no-wrap
 msgid "Importing a foreign project"
 msgstr "Импорт проекта из другой САПР"
 
 #. type: Plain text
-#: kicad.adoc:308
+#: kicad.adoc:311
 msgid ""
 "KiCad is able to import files created using other software packages. "
 "Currently only Eagle 6.x or newer (XML format) is supported."
@@ -824,7 +837,7 @@ msgstr ""
 "или более поздние версии (в формате XML)."
 
 #. type: Plain text
-#: kicad.adoc:312
+#: kicad.adoc:315
 msgid ""
 "To import a foreign project, you need to select either a schematic or a "
 "board file in the import file browser dialog.  Imported schematic and board "
@@ -840,13 +853,13 @@ msgstr ""
 "конечных файлов, в виде проекта KiCad."
 
 #. type: Title ==
-#: kicad.adoc:313
+#: kicad.adoc:316
 #, no-wrap
 msgid "Using KiCad project manager"
 msgstr "Работа с менеджером проектов KiCad"
 
 #. type: Plain text
-#: kicad.adoc:317
+#: kicad.adoc:320
 msgid ""
 "KiCad project manager (kicad or kicad.exe) is a tool which can easily run "
 "the other tools (schematic and PCB editors, Gerber viewer and utility tools) "
@@ -857,24 +870,24 @@ msgstr ""
 "вспомогательные инструменты) проектирования."
 
 #. type: Plain text
-#: kicad.adoc:319
+#: kicad.adoc:322
 msgid "Running the other tools from KiCad manager has some advantages:"
 msgstr "Запуск инструментов из менеджера KiCad имеет несколько преимуществ:"
 
 #. type: Plain text
-#: kicad.adoc:321
+#: kicad.adoc:324
 msgid "cross probing between schematic editor and board editor."
 msgstr "Выполняется обмен данными между редактором электрических схем и платы."
 
 #. type: Plain text
-#: kicad.adoc:323
+#: kicad.adoc:326
 msgid "cross probing between schematic editor and footprint selector (CvPcb)."
 msgstr ""
 "Выполняется обмен данными между редактором электрических схем и программой "
 "выбора посадочных мест (CvPcb)."
 
 #. type: Plain text
-#: kicad.adoc:327
+#: kicad.adoc:330
 msgid ""
 "However, you can only edit the current project files. When these tools are "
 "run in _stand alone_ mode, you can open any file in any project but cross "
@@ -886,19 +899,19 @@ msgstr ""
 "результатам."
 
 #. type: Title ===
-#: kicad.adoc:328
+#: kicad.adoc:331
 #, no-wrap
 msgid "Project manager window"
 msgstr "Окно менеджера проектов"
 
 #. type: Target for macro image
-#: kicad.adoc:330
+#: kicad.adoc:333
 #, no-wrap
 msgid "images/main_window.png"
 msgstr "images/ru/main_window.png"
 
 #. type: Plain text
-#: kicad.adoc:336
+#: kicad.adoc:339
 msgid ""
 "The main KiCad window is composed of a project tree view, a launch pane "
 "containing buttons used to run the various software tools, and a message "
@@ -910,20 +923,20 @@ msgstr ""
 "можно создавать, читать и сохранять файлы проекта."
 
 #. type: Title ===
-#: kicad.adoc:337
+#: kicad.adoc:340
 #, no-wrap
 msgid "Utility launch pane"
 msgstr "Панель запуска инструментов"
 
 #. type: Plain text
-#: kicad.adoc:341
+#: kicad.adoc:344
 msgid ""
 "KiCad allows you to run all standalone software tools that come with it."
 msgstr ""
 "KiCad позволяет автономно запускать любую из программ, имеющиеся в комплекте."
 
 #. type: Plain text
-#: kicad.adoc:344
+#: kicad.adoc:347
 msgid ""
 "The launch pane is made of the 8 buttons below that correspond to the "
 "following commands (1 to 8, from left to right):"
@@ -932,13 +945,13 @@ msgstr ""
 "командам (с 1 по 8, слева направо):"
 
 #. type: Target for macro image
-#: kicad.adoc:345
+#: kicad.adoc:348
 #, no-wrap
 msgid "images/launch_pane.png"
 msgstr "images/launch_pane.png"
 
 #. type: delimited block |
-#: kicad.adoc:361
+#: kicad.adoc:364
 #, no-wrap
 msgid ""
 "|1 |*Eeschema* |Schematic editor.\n"
@@ -964,19 +977,19 @@ msgstr ""
 "|8 |*Pl Editor* |Редактор формата рабочего листа и создания/изменения рамочных данных.\n"
 
 #. type: Title ===
-#: kicad.adoc:363
+#: kicad.adoc:366
 #, no-wrap
 msgid "Project tree view"
 msgstr "Дерево проекта"
 
 #. type: Target for macro image
-#: kicad.adoc:365
+#: kicad.adoc:368
 #, no-wrap
 msgid "images/project_tree.png"
 msgstr "images/project_tree.png"
 
 #. type: Plain text
-#: kicad.adoc:369
+#: kicad.adoc:372
 msgid ""
 "Double-clicking on the schematic file runs the schematic editor, in this "
 "case opening the file *pic_programmer.sch*."
@@ -985,7 +998,7 @@ msgstr ""
 "который, в данном случае, открывает файл *pic_programmer.sch*."
 
 #. type: Plain text
-#: kicad.adoc:372
+#: kicad.adoc:375
 msgid ""
 "Double-clicking on the board file runs the layout editor, in this case "
 "opening the file *pic_programmer.kicad_pcb*."
@@ -994,7 +1007,7 @@ msgstr ""
 "который, в данном случае, открывает файл *pic_programmer.kicad_pcb*."
 
 #. type: Plain text
-#: kicad.adoc:375
+#: kicad.adoc:378
 msgid ""
 "Right clicking on any of the files in the project tree allows generic file "
 "manipulation."
@@ -1003,26 +1016,26 @@ msgstr ""
 "действий с файлом."
 
 #. type: Title ===
-#: kicad.adoc:377
+#: kicad.adoc:380
 #, no-wrap
 msgid "Top toolbar"
 msgstr "Верхняя панель инструментов"
 
 #. type: Target for macro image
-#: kicad.adoc:379
+#: kicad.adoc:382
 #, no-wrap
 msgid "images/main_toolbar.png"
 msgstr "images/main_toolbar.png"
 
 #. type: Plain text
-#: kicad.adoc:382
+#: kicad.adoc:385
 msgid "KiCad top toolbar allows for some basic file operations:"
 msgstr ""
 "Верхняя панель инструментов KiCad позволяет выполнять некоторые простые "
 "файловые операции."
 
 #. type: delimited block |
-#: kicad.adoc:399
+#: kicad.adoc:402
 #, no-wrap
 msgid ""
 "|image:images/icons/new_project.png[]\n"
@@ -1057,13 +1070,13 @@ msgstr ""
 "|Обновить и перерисовать дерево проекта, иногда требуется после изменений в дереве.\n"
 
 #. type: Title ==
-#: kicad.adoc:401
+#: kicad.adoc:404
 #, no-wrap
 msgid "Project templates"
 msgstr "Шаблоны проектов"
 
 #. type: Plain text
-#: kicad.adoc:407
+#: kicad.adoc:410
 msgid ""
 "Using a project template facilitates setting up a new project with "
 "predefined settings. Templates may contain pre-defined board outlines, "
@@ -1078,13 +1091,13 @@ msgstr ""
 "использоваться завершенные файлы схемы и/или печатной платы."
 
 #. type: Title ===
-#: kicad.adoc:408
+#: kicad.adoc:411
 #, no-wrap
 msgid "Using templates"
 msgstr "Использование шаблонов"
 
 #. type: Plain text
-#: kicad.adoc:412
+#: kicad.adoc:415
 msgid ""
 "The *_File -> New Project -> New Project from Template_* menu will open the "
 "Project Template Selector dialog:"
@@ -1093,13 +1106,13 @@ msgstr ""
 "диалоговое окно выбора шаблона для нового проекта:"
 
 #. type: Target for macro image
-#: kicad.adoc:413
+#: kicad.adoc:416
 #, no-wrap
 msgid "images/template_selector.png"
 msgstr "images/ru/template_selector.png"
 
 #. type: Plain text
-#: kicad.adoc:419
+#: kicad.adoc:422
 msgid ""
 "A single click on a template's icon will display the template information, "
 "and a further click on the OK button creates the new project. The template "
@@ -1112,92 +1125,107 @@ msgstr ""
 "соответствии с новым именем."
 
 #. type: Plain text
-#: kicad.adoc:421
+#: kicad.adoc:424
 msgid "After selection of a template:"
 msgstr "После выбора шаблона:"
 
 #. type: Target for macro image
-#: kicad.adoc:422
+#: kicad.adoc:425
 #, no-wrap
 msgid "images/template_selected.png"
 msgstr "images/ru/template_selected.png"
 
 #. type: Title ===
-#: kicad.adoc:424
+#: kicad.adoc:427
 #, no-wrap
 msgid "Template Locations:"
 msgstr "Местонахождение шаблонов"
 
 #. type: Plain text
-#: kicad.adoc:427
+#: kicad.adoc:430
 msgid "KiCad looks for template files in the following paths:"
 msgstr "KiCad ищет файлы шаблонов в следующих местах:"
 
 #. type: Plain text
-#: kicad.adoc:430
+#: kicad.adoc:432
+msgid "path defined in the environment variable KICAD_USER_TEMPLATE_DIR"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:434
+msgid "path defined in the environment variable KICAD_TEMPLATE_DIR"
+msgstr ""
+
+#. type: Plain text
+#: kicad.adoc:437
 msgid "System templates: <kicad bin dir>/../share/kicad/template/"
 msgstr "Системные шаблоны: <kicad bin dir>/../share/kicad/template/"
 
 #. type: Plain text
-#: kicad.adoc:432
+#: kicad.adoc:439
 msgid "User templates:"
 msgstr "Пользовательские шаблоны:"
 
 #. type: Plain text
-#: kicad.adoc:434
+#: kicad.adoc:441
 #, no-wrap
 msgid "** Unix:\n"
 msgstr "** Unix:\n"
 
 #. type: Plain text
-#: kicad.adoc:435
+#: kicad.adoc:442
 #, no-wrap
 msgid "~/kicad/templates/\n"
 msgstr "~/kicad/templates/\n"
 
 #. type: Plain text
-#: kicad.adoc:437
+#: kicad.adoc:444
 #, no-wrap
 msgid "** Windows:\n"
 msgstr "** Windows:\n"
 
 #. type: Plain text
-#: kicad.adoc:438
+#: kicad.adoc:445
 #, no-wrap
 msgid "C:\\Documents and Settings\\username\\My Documents\\kicad\\templates\n"
 msgstr "C:\\Documents and Settings\\username\\My Documents\\kicad\\templates\n"
 
 #. type: Plain text
-#: kicad.adoc:440
+#: kicad.adoc:447
 #, no-wrap
 msgid "** Mac:\n"
 msgstr "** Mac:\n"
 
 #. type: Plain text
-#: kicad.adoc:441
+#: kicad.adoc:448
 #, no-wrap
 msgid "~/Documents/kicad/templates/\n"
 msgstr "~/Documents/kicad/templates/\n"
 
 #. type: Plain text
-#: kicad.adoc:445
+#: kicad.adoc:452
+#, fuzzy
+#| msgid ""
+#| "When the environment variable KICAD_PTEMPLATES is defined there is a "
+#| "third tab, Portable Templates, which lists templates found at the "
+#| "KICAD_PTEMPLATES path."
 msgid ""
 "When the environment variable KICAD_PTEMPLATES is defined there is a third "
 "tab, Portable Templates, which lists templates found at the KICAD_PTEMPLATES "
-"path."
+"path (DEPRECATED)."
 msgstr ""
 "Если установлена переменная окружения KICAD_PTEMPLATES, то появляется третья "
 "вкладка — 'Переносимые шаблоны', которая содержит список шаблонов, найденных "
 "по пути KICAD_PTEMPLATES."
 
 #. type: Title ===
-#: kicad.adoc:446
+#: kicad.adoc:453
 #, no-wrap
 msgid "Creating templates"
 msgstr "Создание шаблонов"
 
 #. type: Plain text
-#: kicad.adoc:451
+#: kicad.adoc:458
 msgid ""
 "The template name is the directory name where the template files are stored. "
 "The metadata directory is a subdirectory named *meta* containing files "
@@ -1208,7 +1236,7 @@ msgstr ""
 "информацией о шаблоне."
 
 #. type: Plain text
-#: kicad.adoc:454
+#: kicad.adoc:461
 msgid ""
 "All files and directories in a template are copied to the new project path "
 "when a project is created using a template, except *meta*."
@@ -1217,7 +1245,7 @@ msgstr ""
 "путь нового проекта, за исключением *meta*."
 
 #. type: Plain text
-#: kicad.adoc:458
+#: kicad.adoc:465
 msgid ""
 "When a new project is created from a template, all files and directories "
 "starting with the template name will be renamed with the new project file "
@@ -1228,7 +1256,7 @@ msgstr ""
 "нового проекта, без учёта расширения файлов."
 
 #. type: Plain text
-#: kicad.adoc:462
+#: kicad.adoc:469
 msgid ""
 "The metadata consists of one required file, and may contain optional files.  "
 "All files must be created by the user using a text editor or previous KiCad "
@@ -1240,7 +1268,7 @@ msgstr ""
 "помещаться в нужных каталогах структуры проекта."
 
 #. type: Plain text
-#: kicad.adoc:464
+#: kicad.adoc:471
 msgid ""
 "Here is an example showing project files for *raspberrypi-gpio* template:"
 msgstr ""
@@ -1248,36 +1276,36 @@ msgstr ""
 "gpio*:"
 
 #. type: Target for macro image
-#: kicad.adoc:465
+#: kicad.adoc:472
 #, no-wrap
 msgid "images/template_tree.png"
 msgstr "images/template_tree.png"
 
 #. type: Plain text
-#: kicad.adoc:468
+#: kicad.adoc:475
 msgid "And the metadata files:"
 msgstr "И файл метаданных:"
 
 #. type: Target for macro image
-#: kicad.adoc:469
+#: kicad.adoc:476
 #, no-wrap
 msgid "images/template_tree_meta.png"
 msgstr "images/template_tree_meta.png"
 
 #. type: Title ====
-#: kicad.adoc:471
+#: kicad.adoc:478
 #, no-wrap
 msgid "Required File:"
 msgstr "Обязательный файл"
 
 #. type: delimited block |
-#: kicad.adoc:476
+#: kicad.adoc:483
 #, no-wrap
 msgid "|meta/info.html |HTML-formatted information describing the template.\n"
 msgstr "|meta/info.html |Информация о шаблоне в формате HTML.\n"
 
 #. type: Plain text
-#: kicad.adoc:482
+#: kicad.adoc:489
 msgid ""
 "The <title> tag determines the actual name of the template that is exposed "
 "to the user for template selection. Note that the project template name will "
@@ -1290,7 +1318,7 @@ msgstr ""
 "параметров шрифта, обычно, 7 или 8 символов может быть показано."
 
 #. type: Plain text
-#: kicad.adoc:485
+#: kicad.adoc:492
 msgid ""
 "Using HTML means that images can be easily in-lined without having to invent "
 "a new scheme. Only basic HTML tags can be used in this document."
@@ -1299,12 +1327,12 @@ msgstr ""
 "добавления новых схем. Достаточно использовать обычные HTML-теги."
 
 #. type: Plain text
-#: kicad.adoc:487
+#: kicad.adoc:494
 msgid "Here is a sample *info.html* file:"
 msgstr "Вот пример файла *info.html*:"
 
 #. type: delimited block -
-#: kicad.adoc:515
+#: kicad.adoc:522
 #, no-wrap
 msgid ""
 "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">\n"
@@ -1360,13 +1388,13 @@ msgstr ""
 "</HTML>\n"
 
 #. type: Title ====
-#: kicad.adoc:517
+#: kicad.adoc:524
 #, no-wrap
 msgid "Optional Files:"
 msgstr "Необязательные файлы"
 
 #. type: delimited block |
-#: kicad.adoc:523
+#: kicad.adoc:530
 #, no-wrap
 msgid ""
 "|meta/icon.png |A 64 x 64 pixel PNG icon file which is used as a\n"
@@ -1376,7 +1404,7 @@ msgstr ""
 "используется как кнопка в окне выбора шаблона.\n"
 
 #. type: Plain text
-#: kicad.adoc:527
+#: kicad.adoc:534
 msgid ""
 "Any other image files used by *meta/info.html*, such as the image of the "
 "board file in the dialog above, are placed in this folder as well."
@@ -1439,10 +1467,19 @@ msgstr ""
 
 #. type: Plain text
 #: kicad_upgrading_from_v4_to_v5.adoc:29
+#, fuzzy
+#| msgid ""
+#| "From v5, KiCad symbol names are prefixed with a nickname, and a link:../"
+#| "eeschema/eeschema_symbol_library_table.adoc[lookup table matching "
+#| "nicknames to library paths] is used to locate the library which holds the "
+#| "symbol. The table is called the 'symbol library table' and built from "
+#| "configuration files stored in the user's KiCad configuration directory "
+#| "and the currently loaded project directory."
 msgid ""
-"From v5, KiCad symbol names are prefixed with a nickname, and a link:../"
-"eeschema/eeschema_symbol_library_table.adoc[lookup table matching nicknames "
-"to library paths] is used to locate the library which holds the symbol. The "
+"From v5, KiCad symbol names are prefixed with a nickname, and a https://"
+"github.com/KiCad/kicad-doc/blob/master/src/kicad/"
+"kicad_upgrading_from_v4_to_v5.adoc[lookup table matching nicknames to "
+"library paths] is used to locate the library which holds the symbol. The "
 "table is called the 'symbol library table' and built from configuration "
 "files stored in the user's KiCad configuration directory and the currently "
 "loaded project directory."
