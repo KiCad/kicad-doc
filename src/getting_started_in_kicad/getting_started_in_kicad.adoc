@@ -324,11 +324,10 @@ image::images/choose_component.png[Choose Symbol]
     component should rotate. You do not need to actually click on the component
     to rotate it.
 +
-NOTE: If your mouse was also over the _Field Reference_ ('R') or the _Field
-Value_ ('R?'), a menu will appear. You will see the 'Clarify Selection' menu
-often in KiCad; it allows working on objects that are on top of each other. In
-this case, tell KiCad you want to perform the action on the 'Symbol
-...R...'.
+NOTE: Sometimes, if your mouse is also over something else, a menu will appear.
+You will see the Clarify Selection menu often in KiCad; it allows working
+on objects that are on top of each other. In this case, tell KiCad
+you want to perform the action on the 'Symbol ...R...' if the menu appears.
 
 10. Right click in the middle of the component and select *Properties* ->
     **Edit Value**. You can achieve the same result by hovering
@@ -342,7 +341,7 @@ image::images/edit_component_dropdown.png[Edit component menu]
     'R' with '1 k'. Click OK.
 +
 NOTE: Do not change the Reference field (R?), this will be done automatically
-later on. The value inside the resistor should now be '1 k'.
+later on. The value above the resistor should now be '1 k'.
 +
 image::images/resistor_value.png[Resistor Value]
 
@@ -382,22 +381,23 @@ labels and components yet to be connected. We will see later on why this is the 
     __In general, it is recommended to use a grid of 50.0 mils
     for the schematic sheet__.
 
-19. We are going to add a component from a library that isn't configured in the
+19. We are going to add a component from a library that may not be configured in the
     default project. In the menu, choose *Preferences* -> **Manage Symbol Libraries**.
     In the Symbol Libraries window you can see two tabs: Global Libraries and
     Project Specific Libraries. Each one has one sym-lib-table file. For a library
     (.lib file) to be available it must be in one of those sym-lib-table files.
     If you have a library file in your file system and it's not yet available,
-    you can add it to either one of the sym-lib-table files with *Browse Libraries*.
-    For practise we will now add a library which already is available.
+    you can add it to either one of the sym-lib-table files.
+    For practice we will now add a library which already is available.
 
-20. You need to find where the official KiCad libraries are installed on your
+20. Select the Project Specific table.
+    Click the file browser button below the table.
+    You need to find where the official KiCad libraries are installed on your
     computer. Look for a `library` directory containing a hundred of `.dcm` and
     `.lib` files. Try in `C:\Program Files (x86)\KiCad\share\` (Windows) and
     `/usr/share/kicad/library/` (Linux). When you have found the directory,
     choose and add the 'MCU_Microchip_PIC12.lib' library and close the window.
-    You will get a warning that the name already exists in the list; add it
-    anyways. It will be added to the end of of the list.
+    It will be added to the end of of the list.
     Now click its nickname and change it to 'microchip_pic12mcu'.
     Close the Symbol Libraries window with OK.
 
@@ -406,7 +406,8 @@ labels and components yet to be connected. We will see later on why this is the 
     'PIC12C508A-ISN' component.
 
 22. Hover the mouse over the microcontroller component. Notice that [x] and [y]
-    again flip the component. Return the component to its original orientation.
+    again flip the component. Keep the symbol mirrored around the Y axis
+    so that the pins G0 and G1 point to right.
 
 23. Repeat the add-component steps, this time choosing the 'Device'
     library and picking the 'LED' component from it.
@@ -442,7 +443,7 @@ image::images/gsik_myconn3_s.png[gsik_myconn3_s_png]
     on the area above the microcontroller 'VDD'. In the 'Component Selection
     history' section select 'VCC' and place it next to the VDD pin. Repeat
     the add process again and place a VCC part above the VCC pin of
-    'MYCONN3'.
+    'MYCONN3'. Move references and values out of the way if needed.
 
 30. Repeat the add-pin steps but this time select the GND part. Place a
     GND part under the GND pin of 'MYCONN3'. Place another GND symbol on the
@@ -462,7 +463,9 @@ to use a bus section.
 
 32. Click on the little circle at the end of pin 7 of the
     microcontroller and then click on the little circle on pin 1 of
-    the LED.  You can zoom in while you are placing the connection.
+    the LED.
+    Click once when you are drawing the wire to create a corner.
+    You can zoom in while you are placing the connection.
 +
 NOTE: If you want to reposition wired components, it is important to
 use [g] (to grab) and not [m] (to move). Using grab will keep the wires
@@ -536,7 +539,7 @@ image::images/gsik_tutorial1_060.png[gsik_tutorial1_060_png]
 image::images/gsik_tutorial1_070.png[gsik_tutorial1_070_png]
 +
 NOTE: This will avoid the classic schematic checking warning:
-Warning Pin power_in not driven (Net xx)
+_Pin connected to some other pins but no pin to drive it_.
 
 44. Sometimes it is good to write comments here and there. To add
     comments on the schematic use the 'Place text'
@@ -549,8 +552,8 @@ Warning Pin power_in not driven (Net xx)
     toolbar.
 
 46. In the Annotate Schematic window, select 'Use the entire
-    schematic' and click on the 'Annotate' button. Click OK in the
-    confirmation message and then click 'Close'. Notice how all the
+    schematic' and click on the 'Annotate' button. Click 'Close'.
+    Notice how all the
     '?' have been replaced with numbers. Each identifier is now
     unique. In our example, they have been named 'R1', 'R2', 'U1',
     'D1' and 'J1'.
