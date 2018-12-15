@@ -576,12 +576,28 @@ try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
     'Generate netlist' icon image:images/icons/netlist.png[netlist_png] on
     the top toolbar. Click on the 'Generate Netlist' button and save
     under the default file name.
++
+NOTE: Netlist was necessary in previous versions of KiCad.
+In the recent versions you can ignore it and instead use
+*Tools* -> *Update PCB from Schematic*. If you do that you
+have to assign footprints to symbols first.
 
 49. After generating the Netlist file, click on the 'Run Cvpcb' icon
     image:images/icons/cvpcb.png[cvpcb_png] on the top
     toolbar. If a missing file error window pops up, just ignore it
     and click OK.
++
+[NOTE]
+====
+There are many more ways to add footprints to symbols.
 
+    - Right click on a symbol -> *Properties* -> *Edit Footprint*
+    - Double click on a symbol, or right click on a symbol
+-> *Properties* -> *Edit Properties* -> Footprint
+    - *Tools* -> *Edit Symbol Fields*
+    - Check _Show footprint previews in symbol chooser_ in Eeschema's preferences
+and select the footprint when you select a new symbol to place
+====
 50. _Cvpcb_ allows you to link all the components in your schematic
     with footprints in the KiCad library. The pane on the center shows
     all the components used in your schematic. Here select 'D1'. In
@@ -618,8 +634,15 @@ try setting the path to `c:\windows\notepad.exe` (windows) or `/usr/bin/gedit`
     the footprint of any device, you will need to make your own
     footprints. This will be explained in a later section of this
     document.
++
+NOTE: Now every symbol has a footprint. Instead of the net list and
+the next two steps you can use *Tools* -> *Update PCB from Schematic*.
+If you do that, Pcbnew is opened with _Update PCB from Schematic_ dialog.
+Click _Update PCB_.
+Then You can follow the instructions in the Pcbnew section of this tutorial.
 
 56. Switch to the KiCad project manager.
+    You can see the net list file in the file list.
 
 57. The netlist file describes all components and their respective pin
     connections. The netlist file is actually a text file that you can
@@ -772,12 +795,19 @@ image::images/gsik_bus_connection.png[gsik_bus_connection_png]
 It is now time to use the netlist file you generated to lay out the PCB.
 This is done with the _Pcbnew_ tool.
 
+NOTE: If you used _Update PCB from Schematic_ from _Eeschema_
+you don't need the netlist and step 5.
+You can now drop the footprints into the board as in steps 6 and 7, then
+enter sheet information and design rules with steps 2...4.
+
 [[using-pdbnew]]
 === Using Pcbnew
 
 1.  From the KiCad project manager, click on the 'Pcb layout editor' icon
-    image:images/icons/pcbnew.png[pcbnew_png]. The 'Pcbnew' window will
-    open. If you get an error message saying that a _*.kicad_pcb_ file
+    image:images/icons/pcbnew.png[pcbnew_png]. You can also use the
+    corresponding toolbar button from _Eeshcema_.
+    The 'Pcbnew' window will
+    open. If you get a message saying that a _*.kicad_pcb_ file
     does not exist and asks if you want to create it, just click Yes.
 
 2.  Begin by entering some schematic information. Click on the 'Page
@@ -800,7 +830,8 @@ image::images/design_rules.png[Design Rules Window]
     '0.25'. Click the OK button to commit your changes and close the Design
     Rules Editor window.
 
-5.  Now we will import the netlist file. Click on the 'Read netlist'
+5.  Now we will import the netlist file if you created one.
+    Click on the 'Read netlist'
     icon image:images/icons/netlist.png[netlist_png] on the top
     toolbar. The netlist file 'tutorial1.net' should be selected
     in the 'Netlist file' field if it was created from Eeschema.
