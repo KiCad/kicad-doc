@@ -113,21 +113,35 @@ and select and install the latest stable version.
 
 Under Ubuntu, the easiest way to install an unstable nightly build of KiCad is
 via _PPA_ and __Aptitude__. Type the following into your Terminal:
-__________________________________________________
+
+-------------------------------------------------
 sudo add-apt-repository ppa:js-reynaud/ppa-kicad
-
 sudo aptitude update && sudo aptitude safe-upgrade
-
 sudo aptitude install kicad kicad-doc-en
-__________________________________________________
+-------------------------------------------------
+
+Under Debian, the easiest way to install backports build of KiCad is:
+
+-------------------------------------------------
+# Set up Debian Backports
+echo -e "
+# stretch-backports
+deb http://ftp.us.debian.org/debian/ stretch-backports main contrib non-free 
+deb-src http://ftp.us.debian.org/debian/ stretch-backports main contrib non-free
+" | sudo tee -a /etc/apt/sources.list > /dev/null
+
+# Run an Update & Install KiCad
+sudo apt-get update
+sudo apt-get install -t stretch-backports kicad
+-------------------------------------------------
 
 Under Fedora the easiest way to install an unstable nightly build is via __copr__.
 To install KiCad via copr type the following in to copr:
-__________________________________________________
-sudo dnf copr enable mangelajo/kicad
 
+----
+sudo dnf copr enable mangelajo/kicad
 sudo dnf install kicad
-__________________________________________________
+----
 
 Alternatively, you can download and install a pre-compiled version of
 KiCad, or directly download the source code, compile and install KiCad.
