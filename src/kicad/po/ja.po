@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KiCad-ja\n"
 "POT-Creation-Date: 2018-12-11 14:23+0100\n"
-"PO-Revision-Date: 2018-08-14 01:31+0900\n"
+"PO-Revision-Date: 2019-01-10 21:14+0900\n"
 "Last-Translator: starfort_jp <starfort@nifty.com>\n"
 "Language-Team: kicad.jp <kicad@kicad.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
 #. type: Title ===
 #: kicad.adoc:6 kicad.adoc:44
@@ -566,17 +566,7 @@ msgstr "*KiCad 環境変数:*\n"
 
 #. type: delimited block |
 #: kicad.adoc:232
-#, fuzzy, no-wrap
-#| msgid ""
-#| "|KICAD_PTEMPLATES |Templates used during project creation.\n"
-#| "If you are using this variable, it must be defined.\n"
-#| "|KICAD_SYMBOL_DIR |Base path of symbol library files.\n"
-#| "|KIGITHUB |Frequently used in example footprint lib tables.\n"
-#| "If you are using this variable, it must be defined.\n"
-#| "|KISYS3DMOD |Base path of 3D shapes files,\n"
-#| "and must be defined because an absolute path is not usually used.\n"
-#| "|KISYSMOD |Base path of footprint library folders,\n"
-#| "and must be defined if an absolute path is not used in footprint library names.\n"
+#, no-wrap
 msgid ""
 "|KICAD_PTEMPLATES |Templates used during project creation (DEPRECATED as of\n"
 "version 5.0.0-rc2, use KICAD_TEMPLATE_DIR instead).\n"
@@ -591,15 +581,19 @@ msgid ""
 "|KICAD_TEMPLATE_DIR |Location of templates installed with KiCad.\n"
 "|KICAD_USER_TEMPLATE_DIR |Location of personal templates.\n"
 msgstr ""
-"|KICAD_PTEMPLATES |プロジェクトの作成で使用されるテンプレート。\n"
-"この変数を使用する場合には、ユーザーによる定義が必要です。\n"
+"|KICAD_PTEMPLATES |プロジェクトの作成で使用されるテンプレート。（バージョン 5.0.0-rc2 以降は非推奨、\n"
+"代わりに KICAD_TEMPLATE_DIR を使用のこと）\n"
+"この変数を使用する場合は、ユーザー定義が必要です。\n"
 "|KICAD_SYMBOL_DIR |シンボル・ライブラリーのベース・パス。\n"
 "|KIGITHUB |フットプリント・ライブラリー・テーブルでよく使用されます。\n"
-"この変数を使用する場合には、ユーザーによる定義が必要です。\n"
+"この変数を使用する場合は、ユーザー定義が必要です。\n"
 "|KISYS3DMOD |3D シェイプ・ファイルのベース・パス。\n"
 "通常は絶対パスを使用しないので定義する必要があります。\n"
 "|KISYSMOD |フットプリント・ライブラリー・フォルダのベース・パス。\n"
 "フットプリント・ライブラリーの名前に絶対パスを使用しない場合は定義する必要があります。\n"
+"|KICAD_TEMPLATE_DIR |KiCad によってインストールされたテンプレートの位置。\n"
+"|KICAD_USER_TEMPLATE_DIR |ユーザー テンプレートの位置。\n"
+"\n"
 
 #. type: Target for macro image
 #: kicad.adoc:234
@@ -1126,14 +1120,12 @@ msgstr "KiCad はこれらパスのテンプレートを読み込みます:"
 #. type: Plain text
 #: kicad.adoc:432
 msgid "path defined in the environment variable KICAD_USER_TEMPLATE_DIR"
-msgstr ""
+msgstr "環境変数 KICAD_USER_TEMPLATE_DIR に定義されたパス"
 
 #. type: Plain text
 #: kicad.adoc:434
-#, fuzzy
-#| msgid "_Note also the environment variable_"
 msgid "path defined in the environment variable KICAD_TEMPLATE_DIR"
-msgstr "_環境変数に関する注意_"
+msgstr "環境変数 KICAD_TEMPLATE_DIR に定義されたパス"
 
 #. type: Plain text
 #: kicad.adoc:437
@@ -1183,19 +1175,14 @@ msgstr "~/Documents/kicad/templates/\n"
 
 #. type: Plain text
 #: kicad.adoc:452
-#, fuzzy
-#| msgid ""
-#| "When the environment variable KICAD_PTEMPLATES is defined there is a "
-#| "third tab, Portable Templates, which lists templates found at the "
-#| "KICAD_PTEMPLATES path."
 msgid ""
 "When the environment variable KICAD_PTEMPLATES is defined there is a third "
 "tab, Portable Templates, which lists templates found at the KICAD_PTEMPLATES "
 "path (DEPRECATED)."
 msgstr ""
-"環境変数 KICAD_PTEMPLATES が定義されている場合は、移動可能テンプレートのタブ"
-"もあります。この移動可能テンプレート・タブには、KICAD_PTEMPLATES パスで見つ"
-"かったテンプレートのリストが表示されます。"
+"環境変数 KICAD_PTEMPLATES が定義されている場合は、第3のタブ、ポータブル テン"
+"プレートがあります。このタブには、KICAD_PTEMPLATES パスで見つかったテンプレー"
+"トのリストが表示されます。(廃止予定)"
 
 #. type: Title ===
 #: kicad.adoc:453
@@ -1446,14 +1433,6 @@ msgstr ""
 
 #. type: Plain text
 #: kicad_upgrading_from_v4_to_v5.adoc:29
-#, fuzzy
-#| msgid ""
-#| "From v5, KiCad symbol names are prefixed with a nickname, and a link:../"
-#| "eeschema/eeschema_symbol_library_table.adoc[lookup table matching "
-#| "nicknames to library paths] is used to locate the library which holds the "
-#| "symbol. The table is called the 'symbol library table' and built from "
-#| "configuration files stored in the user's KiCad configuration directory "
-#| "and the currently loaded project directory."
 msgid ""
 "From v5, KiCad symbol names are prefixed with a nickname, and a https://"
 "github.com/KiCad/kicad-doc/blob/master/src/kicad/"
@@ -1463,7 +1442,7 @@ msgid ""
 "files stored in the user's KiCad configuration directory and the currently "
 "loaded project directory."
 msgstr ""
-"バージョン５から、KiCad はシンボル名にニックネームの接頭辞を持っており、ニッ"
+"バージョン５から、KiCad はシンボル名にニックネームの接頭辞を持っており、 ニッ"
 "クネームとライブラリー・パスを一致させる検索テーブルがシンボルを保持している"
 "ライブラリーを配置するために使われます。このテーブルは\"シンボル・ライブラ"
 "リー・テーブル\"と呼ばれ、ユーザーの KiCad 設定ディレクトリーと現在ロードされ"
