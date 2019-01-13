@@ -106,7 +106,7 @@ Read link:utils/docker/README.adoc[] if you want to build the documentation in a
 
 ==== BUILD_FORMATS
 
-By default **BUILD_FORMATS** is set to `html;pdf;epub` to enable building all supported
+By default **BUILD_FORMATS** is set to `"html;pdf;epub"` to enable building all supported
 document formats.
 
 It's possible to set **BUILD_FORMATS** in order to build only a subset of formats,
@@ -120,7 +120,7 @@ the format.
 By default CMake will configure to build all languages available for each document.
 
 You can build just one or some of the languages by using the **LANGUAGES** option
-when configuring a build with CMake, e.g. `-DLANGUAGES=it;en;de`, etc.
+when configuring a build with CMake, e.g. `-DLANGUAGES="it;en;de"`, etc.
 
 Currently, the available languages are : `ca`, `de`, `en`, `es`, `fr`, `id`, `it`,
 `ja`, `nl`, `pl`, `ru`  and `zh`, however, any
