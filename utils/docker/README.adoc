@@ -1,13 +1,4 @@
-This is a Docker image builder that produces an environment capable of building
-the KiCad documentation.
+# Readme
+## kicad-doc-builder-base
 
-.Method
-* Install Docker. On Ubuntu: `sudo apt-get install docker.io`
-* Clone the docs
-** `git clone https://github.com/ciampix/kicad-doc`
-* Build the Docker image (you only need to do this once, or if you change the Dockerfile
-  or files that go into the image:
-** `sudo docker build -t kicad-img kicad-doc/utils/docker`
-* Run the build script within docker:
-** `sudo docker run -v $(pwd)/kicad-doc:/mnt/kicad-doc kicad-img`
-
+This creates a base container image with the tools required to build the docs repo without going through the process of installing over a gigabyte of tools each time.
