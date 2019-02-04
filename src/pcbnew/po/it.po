@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1\n"
-"POT-Creation-Date: 2018-12-15 17:01+0100\n"
-"PO-Revision-Date: 2018-06-07 09:09+0200\n"
+"POT-Creation-Date: 2019-02-04 23:25+0100\n"
+"PO-Revision-Date: 2019-02-04 23:36+0100\n"
 "Last-Translator: Marco Ciampa <ciampix@posteo.net>\n"
 "Language-Team: Italian <it@li.org>\n"
 "Language: Italian\n"
@@ -7150,13 +7150,8 @@ msgid ""
 "Pressing *V* or selecting _Place Through Via_ from the context menu while "
 "routing a track attaches a via at the end of the trace being routed. "
 "Pressing *V* again disables via placement. Clicking in any spot establishes "
-"the via and continues routing."
-msgstr ""
-"Premendo *V* o selezionando _Piazza via passante_ dal menu contestuale "
-"durante lo sbroglio di una pista, si collega un via in cima alla pista che "
-"si sta sbrogliando. Premendo *V* ulteriormente si disabilita l'inserimento "
-"del via. Facendo clic in qualsiasi punto del circuito stampato, si piazza il "
-"via e lo sbroglio continua."
+"the via and continues routing (unless 'Shift' is held)."
+msgstr "Premendo *V* o selezionando _Piazza via passante_ dal menu contestuale durante lo sbroglio di una pista, si collega un via in cima alla pista che si sta sbrogliando. Premendo *V* ulteriormente si disabilita l'inserimento del via. Facendo clic in qualsiasi punto del circuito stampato, si piazza il via e lo sbroglio continua (a meno che non si tenga premuto il tasto ``Maiusc'')."
 
 #. type: Plain text
 #: pcbnew_interactive_router.adoc:68
@@ -7893,8 +7888,10 @@ msgstr "*Fabbricazione* (F.Fab e B.Fab)"
 
 #. type: Plain text
 #: pcbnew_layers.adoc:74
-msgid "Footprint assembly (?)."
-msgstr "Assemblaggio impronte (?)."
+msgid ""
+"The fabrication layers are primarily used for documentation purposes to "
+"convey information to, for example, the PCB maker or the assembly house."
+msgstr "Gli strati per la fabbricazione vengono usati principalmente a scopo di documentazione per passare informazioni, per esempio, all'azienda manufatturiera di circuiti stampati o a quella responsabile dell'assemblaggio."
 
 #. type: Title ====
 #: pcbnew_layers.adoc:75
@@ -8107,17 +8104,15 @@ msgid "images/Pcbnew_via_layer_pair_dialog.png"
 msgstr "images/Pcbnew_via_layer_pair_dialog.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:142
+#: pcbnew_layers.adoc:143
 msgid ""
 "When a via is placed the working (active) layer is automatically switched to "
-"the alternate layer of the layer pair used for the vias."
-msgstr ""
-"Quando un via viene piazzato lo strato di lavoro (attivo) viene "
-"automaticamente commutato sullo strato alternativo della coppia di strati "
-"usati per i via."
+"the alternate layer of the layer pair used for the vias (unless 'Shift' is "
+"held when adding the via)."
+msgstr "Quando un via viene piazzato lo strato di lavoro (attivo) viene automaticamente commutato sullo strato alternativo della coppia di strati usati per i via (a meno che non si tenga premuto il tasto ``Maiusc'' mentre si aggiunge il via)."
 
 #. type: Plain text
-#: pcbnew_layers.adoc:145
+#: pcbnew_layers.adoc:146
 msgid ""
 "One can also switch to another active layer by hot keys, and if a track is "
 "in progress, a via will be inserted."
@@ -8126,13 +8121,13 @@ msgstr ""
 "tastiera, e se si sta collegando una pista, verrà inserito un via."
 
 #. type: Title ===
-#: pcbnew_layers.adoc:146
+#: pcbnew_layers.adoc:147
 #, no-wrap
 msgid "Using the high-contrast mode"
 msgstr "Uso della modalità ad alto contrasto"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:150
+#: pcbnew_layers.adoc:151
 msgid ""
 "This mode is entered when the tool (in the left toolbar) is activated: image:"
 "images/icons/contrast_mode.png[]"
@@ -8141,7 +8136,7 @@ msgstr ""
 "sinstra) viene attivato: image:images/icons/contrast_mode.png[]"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:153
+#: pcbnew_layers.adoc:154
 msgid ""
 "When using this mode, the active layer is displayed like in the normal mode, "
 "but all others layers are displayed in gray color."
@@ -8150,18 +8145,18 @@ msgstr ""
 "modalità normale ma tutti gli altri strati vengono mostrati di colore grigio."
 
 #. type: Plain text
-#: pcbnew_layers.adoc:155
+#: pcbnew_layers.adoc:156
 msgid "There are two useful cases:"
 msgstr "Ci sono due casi in cui è utile:"
 
 #. type: Title ====
-#: pcbnew_layers.adoc:156
+#: pcbnew_layers.adoc:157
 #, no-wrap
 msgid "Copper layers in high-contrast mode"
 msgstr "Strati rame in modalità alto contrasto"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:160
+#: pcbnew_layers.adoc:161
 msgid ""
 "When a board uses more than four layers, this option allows the active "
 "copper layer to be seen more easily:"
@@ -8170,37 +8165,37 @@ msgstr ""
 "strato rame attivo di essere visto più facilmente:"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:162
+#: pcbnew_layers.adoc:163
 #, no-wrap
 msgid "*Normal mode* (back side copper layer active):\n"
 msgstr "*Modalità normale* (strato rame lato retro attivo):\n"
 
 #. type: Target for macro image
-#: pcbnew_layers.adoc:163
+#: pcbnew_layers.adoc:164
 #, no-wrap
 msgid "images/Pcbnew_copper_layers_contrast_normal.png"
 msgstr "images/Pcbnew_copper_layers_contrast_normal.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:166
+#: pcbnew_layers.adoc:167
 #, no-wrap
 msgid "*High-contrast mode* (back side copper layer active):\n"
 msgstr "*Modalità alto contrasto* (strato rame lato retro attivo):\n"
 
 #. type: Target for macro image
-#: pcbnew_layers.adoc:167
+#: pcbnew_layers.adoc:168
 #, no-wrap
 msgid "images/Pcbnew_copper_layers_contrast_high.png"
 msgstr "images/Pcbnew_copper_layers_contrast_high.png"
 
 #. type: Title ====
-#: pcbnew_layers.adoc:169
+#: pcbnew_layers.adoc:170
 #, no-wrap
 msgid "Technical layers"
 msgstr "Strati tecnici"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:173
+#: pcbnew_layers.adoc:174
 msgid ""
 "The other case is when it is necessary to examine solder paste layers and "
 "solder mask layers which are usually not displayed."
@@ -8209,31 +8204,31 @@ msgstr ""
 "maschera di saldatura che normalmente non sono visualizzati."
 
 #. type: Plain text
-#: pcbnew_layers.adoc:175
+#: pcbnew_layers.adoc:176
 msgid "Masks on pads are displayed if this mode is active."
 msgstr ""
 "Le maschere sulle piazzole vengono mostrate se questa modalità è attiva."
 
 #. type: Plain text
-#: pcbnew_layers.adoc:177
+#: pcbnew_layers.adoc:178
 #, no-wrap
 msgid "*Normal mode* (front side solder mask layer active):\n"
 msgstr "*Modalità normale* (strato maschera di saldatura lato fronte attivo):\n"
 
 #. type: Target for macro image
-#: pcbnew_layers.adoc:178
+#: pcbnew_layers.adoc:179
 #, no-wrap
 msgid "images/Pcbnew_technical_layers_contrast_normal.png"
 msgstr "images/Pcbnew_technical_layers_contrast_normal.png"
 
 #. type: Plain text
-#: pcbnew_layers.adoc:181
+#: pcbnew_layers.adoc:182
 #, no-wrap
 msgid "*High-contrast mode* (front side solder mask layer active):\n"
 msgstr "*Modalità alto contrasto* (strato maschera di saldatura lato fronte attivo):\n"
 
 #. type: Target for macro image
-#: pcbnew_layers.adoc:182
+#: pcbnew_layers.adoc:183
 #, no-wrap
 msgid "images/Pcbnew_technical_layers_contrast_high.png"
 msgstr "images/Pcbnew_technical_layers_contrast_high.png"
@@ -10744,18 +10739,16 @@ msgid "image:images/Pcbnew_routing_posture.png[]"
 msgstr "image:images/Pcbnew_routing_posture.png[]"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:238
+#: pcbnew_routing.adoc:239
 msgid ""
 "Holding 'Ctrl' while routing in the non-legacy canvases constrains the "
 "routing to a single horizontal or vertical segment. Switching posture "
-"changes to a single diagonal segment."
-msgstr ""
-"Mantenendo premuto 'Ctrl' durante lo sbroglio in modalità di visualizzazione "
-"classica, blocca lo sbroglio a singoli segmenti orizzontali o verticali. "
-"Commutando postura questo cambia in un singolo segmento diagonale."
+"changes to a single diagonal segment. Holding 'Shift' while routing removes "
+"the 'snap to object' gravity."
+msgstr "Mantenendo premuto 'Ctrl' durante lo sbroglio in modalità di visualizzazione classica, blocca lo sbroglio a singoli segmenti orizzontali o verticali. Cambiando postura cambia in un singolo segmento diagonale. Mantenendo premuto il tasto ``Maiusc'' mentre si fa lo sbroglio si toglie il ``magnetismo all'oggetto''."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:241
+#: pcbnew_routing.adoc:242
 msgid ""
 "When creating a new track, Pcbnew shows links to nearest unconnected pads."
 msgstr ""
@@ -10763,7 +10756,7 @@ msgstr ""
 "più vicine non connesse."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:244
+#: pcbnew_routing.adoc:245
 msgid ""
 "End the track by double-clicking, by the pop-up menu or by the hotkey 'End'."
 msgstr ""
@@ -10771,19 +10764,19 @@ msgstr ""
 "il corrispondente comando da tastiera."
 
 #. type: Target for macro image
-#: pcbnew_routing.adoc:245
+#: pcbnew_routing.adoc:246
 #, no-wrap
 msgid "images/Pcbnew_track_in_progres_context.png"
 msgstr "images/Pcbnew_track_in_progres_context.png"
 
 #. type: Title ====
-#: pcbnew_routing.adoc:247
+#: pcbnew_routing.adoc:248
 #, no-wrap
 msgid "Moving and dragging tracks"
 msgstr "Spostamento e trascinamento piste"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:252
+#: pcbnew_routing.adoc:253
 msgid ""
 "When the button image:images/icons/add_tracks.png[] is active, the track "
 "where the cursor is positioned can be moved with the hotkey 'M'.  If you "
@@ -10794,39 +10787,47 @@ msgstr ""
 "si vuole trascinare la pista si può usare il tasto ``G''."
 
 #. type: Title ====
-#: pcbnew_routing.adoc:253
+#: pcbnew_routing.adoc:254
 #, no-wrap
 msgid "Via Insertion"
 msgstr "Inserimento via"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:256
+#: pcbnew_routing.adoc:257
 msgid "A via can be inserted only when a track is in progress:"
 msgstr "Si può inserire un via solo durante la fase di creazione di una pista:"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:258
+#: pcbnew_routing.adoc:259
 msgid "By the pop-up menu."
 msgstr "Tramite il menu a scomparsa."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:260
+#: pcbnew_routing.adoc:261
 msgid "By the hotkey 'V'."
 msgstr "Tramite il tasto ``V''."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:262
+#: pcbnew_routing.adoc:263
 msgid "By switching to a new copper layer using the appropriate hotkey."
 msgstr "Passando ad un nuovo strato rame usando il tasto appropriato."
 
+#. type: Plain text
+#: pcbnew_routing.adoc:268
+msgid ""
+"Holding 'Shift' while adding a via ends routing as soon as the via is "
+"placed. This is useful when adding a connection to a plane, so the active "
+"layer doesn't change and no extra key need be pressed to exit routing."
+msgstr "Mantenendo premuto il tasto ``Maiusc'' mentre si aggiunge un via termina lo sbroglio appena il via viene piazzato. Ciò torna utile durante l'aggiunta di una connessione ad un piano, in modo che lo strato attivo non cambia e non è necessario premere alcun tasto aggiuntivo per uscire dallo sbroglio."
+
 #. type: Title ===
-#: pcbnew_routing.adoc:263
+#: pcbnew_routing.adoc:269
 #, no-wrap
 msgid "Select/edit the track width and via size"
 msgstr "Selezione/modifica della larghezza pista e della dimensione via"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:268
+#: pcbnew_routing.adoc:274
 msgid ""
 "When clicking on a track or a pad, Pcbnew automatically selects the "
 "corresponding Netclass, and the track size and via dimensions are derived "
@@ -10837,7 +10838,7 @@ msgstr ""
 "vengono ricavate da questa netclass."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:271
+#: pcbnew_routing.adoc:277
 msgid ""
 "As previously seen, the Global Design Rules editor has a tool to insert "
 "extra tracks and via sizes."
@@ -10846,14 +10847,14 @@ msgstr ""
 "possiede uno strumento per inserire dimensioni piste e via extra."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:273
+#: pcbnew_routing.adoc:279
 msgid "The horizontal toolbar can be used to select a size."
 msgstr ""
 "La barra strumenti orizzontale può essere usata per selezionare una "
 "dimensione."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:277
+#: pcbnew_routing.adoc:283
 msgid ""
 "When the button image:images/icons/add_tracks.png[] is active, the current "
 "track width can be selected from the pop-up menu (accessible as well when "
@@ -10864,7 +10865,7 @@ msgstr ""
 "(accessibile anche quando si crea una pista)."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:279
+#: pcbnew_routing.adoc:285
 msgid ""
 "The user can utilize the default Netclasses values or a specified value."
 msgstr ""
@@ -10872,19 +10873,19 @@ msgstr ""
 "specificato."
 
 #. type: Title ====
-#: pcbnew_routing.adoc:280
+#: pcbnew_routing.adoc:286
 #, no-wrap
 msgid "Using the horizontal toolbar"
 msgstr "Uso della barra orizzontale"
 
 #. type: Target for macro image
-#: pcbnew_routing.adoc:282
+#: pcbnew_routing.adoc:288
 #, no-wrap
 msgid "images/Pcbnew_track_toolbar.png"
 msgstr "images/Pcbnew_track_toolbar.png"
 
 #. type: delimited block |
-#: pcbnew_routing.adoc:307
+#: pcbnew_routing.adoc:313
 #, no-wrap
 msgid ""
 "| image:images/Pcbnew_track_toolbar_track_width_selection.png[width=\"70%\"]\n"
@@ -10932,13 +10933,13 @@ msgstr ""
 "| Selezione zoom.\n"
 
 #. type: Title ====
-#: pcbnew_routing.adoc:309
+#: pcbnew_routing.adoc:315
 #, no-wrap
 msgid "Using the pop-up menu"
 msgstr "Uso del menu a discesa"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:313
+#: pcbnew_routing.adoc:319
 msgid ""
 "One can select a new size for routing, or change to a previously created via "
 "or track segment:"
@@ -10947,14 +10948,14 @@ msgstr ""
 "via o un segmento di pista creati in precedenza:"
 
 #. type: Target for macro image
-#: pcbnew_routing.adoc:314
+#: pcbnew_routing.adoc:320
 #, no-wrap
 msgid "images/Pcbnew_track_context_menu.png"
 msgstr "images/Pcbnew_track_context_menu.png"
 
 #. TODO: add a link to Global changes section
 #. type: Plain text
-#: pcbnew_routing.adoc:319
+#: pcbnew_routing.adoc:325
 msgid ""
 "If you want to change many via (or track) sizes, the best way is to use a "
 "specific Netclass for the net(s) that must be edited (see global changes)."
@@ -10964,57 +10965,57 @@ msgstr ""
 "essere modificati (vedere Cambiamenti globali)."
 
 #. type: Title ===
-#: pcbnew_routing.adoc:320
+#: pcbnew_routing.adoc:326
 #, no-wrap
 msgid "Editing and changing tracks"
 msgstr "Modifica e cambiamento piste"
 
 #. type: Title ====
-#: pcbnew_routing.adoc:322
+#: pcbnew_routing.adoc:328
 #, no-wrap
 msgid "Change a track"
 msgstr "Cambiare una pista"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:325
+#: pcbnew_routing.adoc:331
 msgid "In many cases redrawing a track is required."
 msgstr "In molti casi è richiesto il ridisegno della pista."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:327
+#: pcbnew_routing.adoc:333
 msgid "New track (in progress):"
 msgstr "Nuova pista (in corso):"
 
 #. type: Target for macro image
-#: pcbnew_routing.adoc:328
+#: pcbnew_routing.adoc:334
 #, no-wrap
 msgid "images/Pcbnew_new_track_in_progress.png"
 msgstr "images/Pcbnew_new_track_in_progress.png"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:331
+#: pcbnew_routing.adoc:337
 msgid "When finished:"
 msgstr "Quando finita:"
 
 #. type: Target for macro image
-#: pcbnew_routing.adoc:332
+#: pcbnew_routing.adoc:338
 #, no-wrap
 msgid "images/Pcbnew_new_track_completed.png"
 msgstr "images/Pcbnew_new_track_completed.png"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:335
+#: pcbnew_routing.adoc:341
 msgid "Pcbnew will automatically remove the old track if it is redundant."
 msgstr "Pcbnew rimuoverà automaticamente la vecchia pista se ridondante."
 
 #. type: Title ====
-#: pcbnew_routing.adoc:336
+#: pcbnew_routing.adoc:342
 #, no-wrap
 msgid "Global changes"
 msgstr "Cambiamenti globali"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:340
+#: pcbnew_routing.adoc:346
 msgid ""
 "Global tracks and via sizes dialog editor is accessible via the pop-up "
 "window by right clicking on a track:"
@@ -11023,29 +11024,29 @@ msgstr ""
 "tramite la finestra a scomparsa che appare facendo clic destro su una pista:"
 
 #. type: Target for macro image
-#: pcbnew_routing.adoc:341
+#: pcbnew_routing.adoc:347
 #, no-wrap
 msgid "images/Pcbnew_track_global_edit_context_menu.png"
 msgstr "images/Pcbnew_track_global_edit_context_menu.png"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:344
+#: pcbnew_routing.adoc:350
 msgid "The dialog editor allows global changes of tracks and/or vias for:"
 msgstr ""
 "La finestra di dialogo consente il cambiamento globale di piste e/o via per:"
 
 #. type: Plain text
-#: pcbnew_routing.adoc:346
+#: pcbnew_routing.adoc:352
 msgid "The current net."
 msgstr "Il collegamento corrente."
 
 #. type: Plain text
-#: pcbnew_routing.adoc:348
+#: pcbnew_routing.adoc:354
 msgid "The whole board."
 msgstr "L'intera scheda."
 
 #. type: Target for macro image
-#: pcbnew_routing.adoc:349
+#: pcbnew_routing.adoc:355
 #, no-wrap
 msgid "images/Pcbnew_track_global_edit_dialog.png"
 msgstr "images/Pcbnew_track_global_edit_dialog.png"
@@ -12272,3 +12273,6 @@ msgstr ""
 "Per le zone in rame, l'area dentro un'area proibita senza diffusione di rame "
 "non verrà riempita. Un'area proibita è come una zona, perciò la modifica dei "
 "suoi bordi è analoga alla modifica di una zone in rame."
+
+#~ msgid "Footprint assembly (?)."
+#~ msgstr "Assemblaggio impronte (?)."
