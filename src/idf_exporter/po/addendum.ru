@@ -4,4 +4,5 @@ PO4A-HEADER: mode=after; position=^\[\[contributors\]\]; beginboundary=\[\[
 *Перевод*
 
 //Translators put your names below here in the addendum file
-KiCad Russian Team + alex9
+KiCad Russian Team +
+alex9
