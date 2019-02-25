@@ -162,6 +162,11 @@ DBLATEXOPTS-RU=" -b xetex -p ../../xsl/dblatex-pdf-ru.xsl -P latex.output.revhis
 $(DOCNAME)-ru.pdf: $(DOCNAME)-ru.adoc
 	a2x -L -f pdf $(ASCIIDOCVAR) -a lang=ru --dblatex-opts $(DBLATEXOPTS-RU) $(DOCNAME)-ru.adoc
 
+#Chinese pdf
+DBLATEXOPTS-ZH=" -b xetex -p ../../xsl/dblatex-pdf-zh.xsl -P latex.output.revhistory=0 -P doc.publisher.show=0 -s $(SCRIPTSBASEDIR)/pdf-cover-dblatex.sty $(DEBUGPDFLTX)"
+$(DOCNAME)-zh.pdf: $(DOCNAME)-zh.adoc
+	a2x -L -f pdf $(ASCIIDOCVAR) -a lang=zh --dblatex-opts $(DBLATEXOPTS-ZH) $(DOCNAME)-zh.adoc
+	
 #all other I18n pdf
 $(DOCNAME)-%.pdf: $(DOCNAME)-%.adoc
 	a2x -f pdf $(ASCIIDOCVAR) -a lang=$* --dblatex-opts $(DBLATEXOPTS) $(DOCNAME)-$*.adoc
