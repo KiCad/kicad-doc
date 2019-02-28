@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kicad_Plugins_zh_CN_v0.1\n"
 "POT-Creation-Date: 2019-02-28 06:48+0000\n"
-"PO-Revision-Date: 2019-02-28 15:14+0800\n"
+"PO-Revision-Date: 2019-02-28 21:04+0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,12 +21,12 @@ msgstr ""
 #: plugins.adoc:6
 #, no-wrap
 msgid "Kicad Plugins"
-msgstr ""
+msgstr "Kicad 插件"
 
 #. type: Plain text
 #: plugins.adoc:9
 msgid "_KiCad Plugin System_"
-msgstr ""
+msgstr "_ KiCad 插件系统 _"
 
 #. type: Plain text
 #: plugins.adoc:12
@@ -43,6 +43,10 @@ msgid ""
 "later, or the Creative Commons Attribution License (http://creativecommons."
 "org/licenses/by/3.0/), version 3.0 or later."
 msgstr ""
+"本文档由以下列出的贡献者版权所有（C）2016。 您可以根据GNU通用公共许可证"
+"（http://www.gnu.org/licenses/gpl.html），版本3或更高版本或Creative Commons "
+"Attribution License（http）的条款进行分发和/或修改。 ：//creativecommons.org/"
+"licenses/by/3.0/），3.0或更高版本。"
 
 #. type: Plain text
 #: plugins.adoc:20
@@ -95,18 +99,18 @@ msgstr "* 出版日期和软件版本 *\n"
 #. type: Plain text
 #: plugins.adoc:42
 msgid "Published on January 29, 2016."
-msgstr ""
+msgstr "2014年1月26日发布。"
 
 #. type: Plain text
 #: plugins.adoc:44
 msgid "<<<<"
-msgstr ""
+msgstr "<<<<"
 
 #. type: Title ==
 #: plugins.adoc:45
 #, no-wrap
 msgid "Introduction to the KiCad plugin system"
-msgstr ""
+msgstr "KiCad 插件系统简介"
 
 #. type: Plain text
 #: plugins.adoc:56
@@ -121,6 +125,11 @@ msgid ""
 "being developed and thus reducing the time required for each build and test "
 "cycle."
 msgstr ""
+"KiCad 插件系统是一个使用共享库扩展 KiCad 功能的框架。 使用插件的一个主要优点"
+"是在开发插件时没有必要重建 KiCad 套件; 事实上，可以借助 KiCad 源代码树中的一"
+"小组标题构建插件。 通过确保开发人员仅编译与正在开发的插件直接相关的代码，从而"
+"减少每个构建和测试周期所需的时间，在插件开发期间删除构建 KiCad 的要求极大地提"
+"高了工作效率。"
 
 #. type: Plain text
 #: plugins.adoc:65
@@ -133,12 +142,16 @@ msgid ""
 "but it is envisioned that a PCB plugin will eventually be developed to make "
 "it possible for users to implement data Importers and Exporters."
 msgstr ""
+"插件最初是为 3D 模型查看器开发的，因此可以支持更多类型的 3D 模型，而无需对支"
+"持的每种新模型类型的 KiCad 源进行重大更改。 插件框架后来被推广，以便将来开发"
+"人员可以创建不同类型的插件。 目前，只有 3D 插件在 KiCad 中实现，但可以想象最"
+"终将开发 PCB 插件，以使用户能够实现数据导入器和导出器。"
 
 #. type: Title ===
 #: plugins.adoc:68
 #, no-wrap
 msgid "Plugin Classes"
-msgstr ""
+msgstr "插件类"
 
 #. type: Plain text
 #: plugins.adoc:79
@@ -152,6 +165,10 @@ msgid ""
 "At the moment only the 3D Plugin Class has been developed and it will be the "
 "focus of this document."
 msgstr ""
+"插件分为插件类，因为每个插件都解决了特定域中的问题，因此需要该域独有的接口。 "
+"例如，3D 模型插件从文件加载 3D 模型数据并将该数据转换为可由 3D 查看器显示的格"
+"式。 PCB 导入/导出插件将获取 PCB 数据并导出为其他电气或机械数据格式，或将外部"
+"格式转换为 KiCad PCB。 目前只开发了 3D 插件类，它将成为本文档的重点。"
 
 #. type: Plain text
 #: plugins.adoc:97
@@ -172,6 +189,15 @@ msgid ""
 "via the plugin loader.  In the case of the 3D plugins the discovery and "
 "invocation functions are all contained within the S3D_CACHE class."
 msgstr ""
+"实现插件类需要在 KiCad 源代码树中创建代码来管理插件代码的加载。在 KiCad 源代"
+"码树中，文件‘plugins/ldr/pluginldr.h’声明了所有插件加载器的基类。这个类声明了"
+"我们期望在任何 KiCad 插件（样板代码）中找到的最基本的函数，它的实现提供了对插"
+"件加载器和可用插件之间的版本兼容性的基本检查。标题‘plugins/ldr/3d/"
+"pluginldr3D.h’声明了 3D 插件类的加载器。加载器负责加载给定的插件并使其功能可"
+"用于 KiCad。插件加载器的每个实例代表一个实际的插件实现，并充当 KiCad 和插件功"
+"能之间的透明桥梁。加载器不是 KiCad 中支持插件所需的唯一代码：我们还需要代码来"
+"发现插件和代码，以通过插件加载器调用插件的功能。在 3D 插件的情况下，发现和调"
+"用功能都包含在 S3D_CACHE 类中。"
 
 #. type: Plain text
 #: plugins.adoc:102
@@ -181,6 +207,8 @@ msgid ""
 "developed; a plugin only needs to define the functions declared by their "
 "specific plugin class."
 msgstr ""
+"除非正在开发新的插件类，否则插件开发人员不需要关心 KiCad 管理插件的内部代码的"
+"细节; 插件只需要定义其特定插件类声明的函数。"
 
 #. type: Plain text
 #: plugins.adoc:110
@@ -192,6 +220,9 @@ msgid ""
 "provide a basic version compatibility check on the Plugin Class API. In "
 "brief, these functions are:"
 msgstr ""
+"标题‘include/plugins/kicad_plugin.h’声明了所有 KiCad 插件所需的泛型函数; 这些"
+"函数标识插件类，提供特定插件的名称，提供插件类 API 的版本信息，提供特定插件的"
+"版本信息，并提供插件类 API 的基本版本兼容性检查。 简而言之，这些功能是："
 
 #. type: delimited block -
 #: plugins.adoc:115
@@ -200,6 +231,8 @@ msgid ""
 "/* Return a UTF-8 string naming the Plugin Class */\n"
 "char const* GetKicadPluginClass( void );\n"
 msgstr ""
+"/* Return a UTF-8 string naming the Plugin Class */\n"
+"char const* GetKicadPluginClass( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:119
@@ -209,6 +242,9 @@ msgid ""
 "void GetClassVersion( unsigned char* Major, unsigned char* Minor,\n"
 "     unsigned char* Patch, unsigned char* Revision );\n"
 msgstr ""
+"/* Return version information for the Plugin Class API */\n"
+"void GetClassVersion( unsigned char* Major, unsigned char* Minor,\n"
+"     unsigned char* Patch, unsigned char* Revision );\n"
 
 #. type: delimited block -
 #: plugins.adoc:126
@@ -221,6 +257,12 @@ msgid ""
 "bool CheckClassVersion( unsigned char Major,\n"
 "    unsigned char Minor, unsigned char Patch, unsigned char Revision );\n"
 msgstr ""
+"/*\n"
+"   Return true if the version check implemented in the plugin\n"
+"   determines that the given Plugin Class API is compatible.\n"
+" */\n"
+"bool CheckClassVersion( unsigned char Major,\n"
+"    unsigned char Minor, unsigned char Patch, unsigned char Revision );\n"
 
 #. type: delimited block -
 #: plugins.adoc:129
@@ -229,6 +271,8 @@ msgid ""
 "/* Return the name of the specific plugin, for example \"PLUGIN_3D_VRML\" */\n"
 "const char* GetKicadPluginName( void );\n"
 msgstr ""
+"/* Return the name of the specific plugin, for example \"PLUGIN_3D_VRML\" */\n"
+"const char* GetKicadPluginName( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:133
@@ -238,12 +282,15 @@ msgid ""
 "void GetPluginVersion( unsigned char* Major, unsigned char* Minor,\n"
 "     unsigned char* Patch, unsigned char* Revision );\n"
 msgstr ""
+"/* Return version information for the specific plugin */\n"
+"void GetPluginVersion( unsigned char* Major, unsigned char* Minor,\n"
+"     unsigned char* Patch, unsigned char* Revision );\n"
 
 #. type: Title ====
 #: plugins.adoc:137
 #, no-wrap
 msgid "Plugin Class: PLUGIN_3D"
-msgstr ""
+msgstr "插件类：PLUGIN_3D"
 
 #. type: Plain text
 #: plugins.adoc:144
@@ -253,6 +300,9 @@ msgid ""
 "which are required by the plugin and which the user must not reimplement. "
 "The defined functions which the user must not reimplement are:"
 msgstr ""
+"标题‘include/plugins/3d/3d_plugin.h’声明了必须由所有 3D 插件实现的函数，并定"
+"义了插件所需的许多函数以及用户不得重新实现的函数。 用户不得重新实现的已定义函"
+"数是："
 
 #. type: delimited block -
 #: plugins.adoc:149
@@ -261,6 +311,8 @@ msgid ""
 "/* Returns the Plugin Class name \"PLUGIN_3D\" */\n"
 "char const* GetKicadPluginClass( void );\n"
 msgstr ""
+"/* Returns the Plugin Class name \"PLUGIN_3D\" */\n"
+"char const* GetKicadPluginClass( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:153
@@ -270,6 +322,9 @@ msgid ""
 "void GetClassVersion( unsigned char* Major, unsigned char* Minor,\n"
 "     unsigned char* Patch, unsigned char* Revision );\n"
 msgstr ""
+"/* Return version information for the PLUGIN_3D API */\n"
+"void GetClassVersion( unsigned char* Major, unsigned char* Minor,\n"
+"     unsigned char* Patch, unsigned char* Revision );\n"
 
 #. type: delimited block -
 #: plugins.adoc:161
@@ -283,11 +338,18 @@ msgid ""
 "bool CheckClassVersion( unsigned char Major, unsigned char Minor,\n"
 "     unsigned char Patch, unsigned char Revision );\n"
 msgstr ""
+"/*\n"
+"   Performs basic version checks enforced by the developers of\n"
+"   the loader for the PLUGIN_3D class and returns true if the\n"
+"   checks pass\n"
+" */\n"
+"bool CheckClassVersion( unsigned char Major, unsigned char Minor,\n"
+"     unsigned char Patch, unsigned char Revision );\n"
 
 #. type: Plain text
 #: plugins.adoc:164
 msgid "The functions which the user must implement are as follows:"
-msgstr ""
+msgstr "用户必须实现的功能如下："
 
 #. type: delimited block -
 #: plugins.adoc:168
@@ -296,6 +358,8 @@ msgid ""
 "/* Return the number of extension strings supported by the plugin */\n"
 "int GetNExtensions( void );\n"
 msgstr ""
+"/* Return the number of extension strings supported by the plugin */\n"
+"int GetNExtensions( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:174
@@ -307,6 +371,11 @@ msgid ""
 " */\n"
 "char const* GetModelExtension( int aIndex );\n"
 msgstr ""
+"/*\n"
+"   Return the requested extension string; valid values are 0 to\n"
+"   GetNExtensions() - 1\n"
+" */\n"
+"char const* GetModelExtension( int aIndex );\n"
 
 #. type: delimited block -
 #: plugins.adoc:177
@@ -315,6 +384,8 @@ msgid ""
 "/* Return the total number of file filters supported by the plugin */\n"
 "int GetNFilters( void );\n"
 msgstr ""
+"/* Return the total number of file filters supported by the plugin */\n"
+"int GetNFilters( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:183
@@ -326,6 +397,11 @@ msgid ""
 " */\n"
 "char const* GetFileFilter( int aIndex );\n"
 msgstr ""
+"/*\n"
+"   Return the file filter requested; valid values are 0 to\n"
+"   GetNFilters() - 1\n"
+" */\n"
+"char const* GetFileFilter( int aIndex );\n"
 
 #. type: delimited block -
 #: plugins.adoc:190
@@ -338,6 +414,12 @@ msgid ""
 " */\n"
 "bool CanRender( void );\n"
 msgstr ""
+"/*\n"
+"    Return true if the plugin can render this type of 3D model.\n"
+"    In some cases a plugin may not yet provide a visual model\n"
+"    and must return false.\n"
+" */\n"
+"bool CanRender( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:193
@@ -346,12 +428,14 @@ msgid ""
 "/* Load the specified model and return a pointer to its visual model data */\n"
 "SCENEGRAPH* Load( char const* aFileName );\n"
 msgstr ""
+"/* Load the specified model and return a pointer to its visual model data */\n"
+"SCENEGRAPH* Load( char const* aFileName );\n"
 
 #. type: Title ==
 #: plugins.adoc:197
 #, no-wrap
 msgid "Tutorials: 3D Plugin Class"
-msgstr ""
+msgstr "教程：3D插件类"
 
 #. type: Plain text
 #: plugins.adoc:202
@@ -360,12 +444,14 @@ msgid ""
 "PLUGIN_3D class and walks the user through the setup and building of the "
 "code."
 msgstr ""
+"本节包含对 PLUGIN_3D 类的两个非常简单的插件的描述，并引导用户完成代码的设置和"
+"构建。"
 
 #. type: Title ===
 #: plugins.adoc:205
 #, no-wrap
 msgid "Basic 3D Plugin"
-msgstr ""
+msgstr "基本的 3D 插件"
 
 #. type: Plain text
 #: plugins.adoc:214
@@ -378,26 +464,30 @@ msgid ""
 "is the absolute minimum requirement for any 3D plugin and can be used as a "
 "template for creating more advanced plugins."
 msgstr ""
+"本教程将引导用户开发一个名为“PLUGIN_3D_DEMO1”的非常基本的 3D 插件。 本教程的"
+"目的只是为了演示一个非常基本的 3D 插件的构造，除了提供一些允许 KiCad 用户在浏"
+"览 3D 模型时过滤文件名的过滤字符串之外什么都不做。 这里演示的代码是任何 3D 插"
+"件的绝对最低要求，可以用作创建更高级插件的模板。"
 
 #. type: Plain text
 #: plugins.adoc:216
 msgid "In order to build the demo project we require the following:"
-msgstr ""
+msgstr "为了构建演示项目，我们需要以下内容："
 
 #. type: Plain text
 #: plugins.adoc:218
 msgid "https://cmake.org/[CMake]"
-msgstr ""
+msgstr "https://cmake.org/[CMake]"
 
 #. type: Plain text
 #: plugins.adoc:219
 msgid "KiCad plugin headers"
-msgstr ""
+msgstr "KiCad 插件标头"
 
 #. type: Plain text
 #: plugins.adoc:220
 msgid "KiCad Scene Graph library `kicad_3dsg`"
-msgstr ""
+msgstr "KiCad 场景图库‘kicad_3dsg’"
 
 #. type: Plain text
 #: plugins.adoc:226
@@ -408,11 +498,15 @@ msgid ""
 "${KICAD_ROOT_DIR}/kicad` and the KiCad Scene Graph library is installed in `"
 "${KICAD_ROOT_DIR}/lib`."
 msgstr ""
+"要自动检测 KiCad 标头和库，我们将使用 CMake FindPackage 脚本; 如果相关的头文"
+"件安装到‘${KICAD_ROOT_DIR}/kicad’并且 KiCad Scene Graph 库安装"
+"在‘${KICAD_ROOT_DIR}/lib’中，则本教程中提供的脚本应该适用于 Linux 和 "
+"Windows。"
 
 #. type: Plain text
 #: plugins.adoc:228
 msgid "To start let's create a project directory and the FindPackage script:"
-msgstr ""
+msgstr "要开始，让我们创建一个项目目录和 FindPackage 脚本："
 
 #. type: delimited block -
 #: plugins.adoc:239
@@ -427,12 +521,20 @@ msgid ""
 "    DOC \"Kicad plugins header path.\"\n"
 "    )\n"
 msgstr ""
+"mkdir demo && cd demo\n"
+"export DEMO_ROOT=${PWD}\n"
+"mkdir CMakeModules && cd CMakeModules\n"
+"cat > FindKICAD.cmake << _EOF\n"
+"find_path( KICAD_INCLUDE_DIR kicad/plugins/kicad_plugin.h\n"
+"    PATHS ${KICAD_ROOT_DIR}/include $ENV{KICAD_ROOT_DIR}/include\n"
+"    DOC \"Kicad plugins header path.\"\n"
+"    )\n"
 
 #. type: delimited block -
 #: plugins.adoc:241
 #, no-wrap
 msgid "if( NOT ${KICAD_INCLUDE_DIR} STREQUAL \"KICAD_INCLUDE_DIR-NOTFOUND\" )\n"
-msgstr ""
+msgstr "if( NOT ${KICAD_INCLUDE_DIR} STREQUAL \"KICAD_INCLUDE_DIR-NOTFOUND\" )\n"
 
 #. type: delimited block -
 #: plugins.adoc:247
@@ -444,12 +546,17 @@ msgid ""
 "        PATH_SUFFIXES kicad/plugins/3dapi\n"
 "        NO_DEFAULT_PATH )\n"
 msgstr ""
+"    # attempt to extract the version information from sg_version.h\n"
+"    find_file( KICAD_SGVERSION sg_version.h\n"
+"        PATHS ${KICAD_INCLUDE_DIR}\n"
+"        PATH_SUFFIXES kicad/plugins/3dapi\n"
+"        NO_DEFAULT_PATH )\n"
 
 #. type: delimited block -
 #: plugins.adoc:249
 #, no-wrap
 msgid "    if( NOT ${KICAD_SGVERSION} STREQUAL \"KICAD_SGVERSION-NOTFOUND\" )\n"
-msgstr ""
+msgstr "    if( NOT ${KICAD_SGVERSION} STREQUAL \"KICAD_SGVERSION-NOTFOUND\" )\n"
 
 #. type: delimited block -
 #: plugins.adoc:252
@@ -458,6 +565,8 @@ msgid ""
 "        # extract the \"#define KICADSG_VERSION*\" lines\n"
 "        file( STRINGS ${KICAD_SGVERSION} _version REGEX \"^#define.*KICADSG_VERSION.*\" )\n"
 msgstr ""
+"        # extract the \"#define KICADSG_VERSION*\" lines\n"
+"        file( STRINGS ${KICAD_SGVERSION} _version REGEX \"^#define.*KICADSG_VERSION.*\" )\n"
 
 #. type: delimited block -
 #: plugins.adoc:256
@@ -467,6 +576,9 @@ msgid ""
 "            string( REGEX MATCH KICADSG_VERSION_[M,A,J,O,R,I,N,P,T,C,H,E,V,I,S]* _VARNAME ${SVAR} )\n"
 "            string( REGEX MATCH [0-9]+ _VALUE ${SVAR} )\n"
 msgstr ""
+"        foreach( SVAR ${_version} )\n"
+"            string( REGEX MATCH KICADSG_VERSION_[M,A,J,O,R,I,N,P,T,C,H,E,V,I,S]* _VARNAME ${SVAR} )\n"
+"            string( REGEX MATCH [0-9]+ _VALUE ${SVAR} )\n"
 
 #. type: delimited block -
 #: plugins.adoc:260
@@ -476,12 +588,15 @@ msgid ""
 "                set( _${_VARNAME} ${_VALUE} )\n"
 "            endif()\n"
 msgstr ""
+"            if( NOT ${_VARNAME} STREQUAL \"\" AND NOT ${_VALUE} STREQUAL \"\" )\n"
+"                set( _${_VARNAME} ${_VALUE} )\n"
+"            endif()\n"
 
 #. type: delimited block -
 #: plugins.adoc:262
 #, no-wrap
 msgid "        endforeach()\n"
-msgstr ""
+msgstr "        endforeach()\n"
 
 #. type: delimited block -
 #: plugins.adoc:267
@@ -492,6 +607,10 @@ msgid ""
 "            set( _KICADSG_VERSION_MAJOR 0 )\n"
 "        endif()\n"
 msgstr ""
+"        #ensure that NOT SG3D_VERSION* will evaluate to '0'\n"
+"        if( NOT _KICADSG_VERSION_MAJOR )\n"
+"            set( _KICADSG_VERSION_MAJOR 0 )\n"
+"        endif()\n"
 
 #. type: delimited block -
 #: plugins.adoc:271
@@ -501,6 +620,9 @@ msgid ""
 "            set( _KICADSG_VERSION_MINOR 0 )\n"
 "        endif()\n"
 msgstr ""
+"        if( NOT _KICADSG_VERSION_MINOR )\n"
+"            set( _KICADSG_VERSION_MINOR 0 )\n"
+"        endif()\n"
 
 #. type: delimited block -
 #: plugins.adoc:275
@@ -510,6 +632,9 @@ msgid ""
 "            set( _KICADSG_VERSION_PATCH 0 )\n"
 "        endif()\n"
 msgstr ""
+"        if( NOT _KICADSG_VERSION_PATCH )\n"
+"            set( _KICADSG_VERSION_PATCH 0 )\n"
+"        endif()\n"
 
 #. type: delimited block -
 #: plugins.adoc:279
@@ -519,6 +644,9 @@ msgid ""
 "            set( _KICADSG_VERSION_REVISION 0 )\n"
 "        endif()\n"
 msgstr ""
+"        if( NOT _KICADSG_VERSION_REVISION )\n"
+"            set( _KICADSG_VERSION_REVISION 0 )\n"
+"        endif()\n"
 
 #. type: delimited block -
 #: plugins.adoc:282
@@ -527,6 +655,8 @@ msgid ""
 "        set( KICAD_VERSION ${_KICADSG_VERSION_MAJOR}.${_KICADSG_VERSION_MINOR}.${_KICADSG_VERSION_PATCH}.${_KICADSG_VERSION_REVISION} )\n"
 "        unset( KICAD_SGVERSION CACHE )\n"
 msgstr ""
+"        set( KICAD_VERSION ${_KICADSG_VERSION_MAJOR}.${_KICADSG_VERSION_MINOR}.${_KICADSG_VERSION_PATCH}.${_KICADSG_VERSION_REVISION} )\n"
+"        unset( KICAD_SGVERSION CACHE )\n"
 
 #. type: delimited block -
 #: plugins.adoc:285
@@ -535,6 +665,8 @@ msgid ""
 "    endif()\n"
 "endif()\n"
 msgstr ""
+"    endif()\n"
+"endif()\n"
 
 #. type: delimited block -
 #: plugins.adoc:294
@@ -548,6 +680,13 @@ msgid ""
 "    DOC \"Kicad scenegraph library path.\"\n"
 "    )\n"
 msgstr ""
+"find_library( KICAD_LIBRARY\n"
+"    NAMES kicad_3dsg\n"
+"    PATHS\n"
+"        ${KICAD_ROOT_DIR}/lib $ENV{KICAD_ROOT_DIR}/lib\n"
+"        ${KICAD_ROOT_DIR}/bin $ENV{KICAD_ROOT_DIR}/bin\n"
+"    DOC \"Kicad scenegraph library path.\"\n"
+"    )\n"
 
 #. type: delimited block -
 #: plugins.adoc:302
@@ -561,6 +700,13 @@ msgid ""
 "        KICAD_VERSION\n"
 "    VERSION_VAR KICAD_VERSION )\n"
 msgstr ""
+"include( FindPackageHandleStandardArgs )\n"
+"FIND_PACKAGE_HANDLE_STANDARD_ARGS( KICAD\n"
+"    REQUIRED_VARS\n"
+"        KICAD_INCLUDE_DIR\n"
+"        KICAD_LIBRARY\n"
+"        KICAD_VERSION\n"
+"    VERSION_VAR KICAD_VERSION )\n"
 
 #. type: delimited block -
 #: plugins.adoc:310
@@ -573,6 +719,12 @@ msgid ""
 "set( KICAD_VERSION_TWEAK ${_KICADSG_VERSION_REVISION} CACHE INTERNAL \"\" )\n"
 "_EOF\n"
 msgstr ""
+"mark_as_advanced( KICAD_INCLUDE_DIR )\n"
+"set( KICAD_VERSION_MAJOR ${_KICADSG_VERSION_MAJOR} CACHE INTERNAL \"\" )\n"
+"set( KICAD_VERSION_MINOR ${_KICADSG_VERSION_MINOR} CACHE INTERNAL \"\" )\n"
+"set( KICAD_VERSION_PATCH ${_KICADSG_VERSION_PATCH} CACHE INTERNAL \"\" )\n"
+"set( KICAD_VERSION_TWEAK ${_KICADSG_VERSION_REVISION} CACHE INTERNAL \"\" )\n"
+"_EOF\n"
 
 #. type: Plain text
 #: plugins.adoc:319
@@ -583,6 +735,10 @@ msgid ""
 "directory containing the KiCad `include` and `lib` directories. For OS X the "
 "FindPackage script presented here may require some adjustments."
 msgstr ""
+"必须安装 Kicad 及其插件标头; 如果将它们安装到用户目录或 Linux 上的‘/opt’下，"
+"或者您使用的是 Windows，则需要将‘KICAD_ROOT_DIR’环境变量设置为指向包含 "
+"KiCad‘include’和‘lib’目录的目录。 对于 OS X，此处显示的 FindPackage 脚本可能"
+"需要进行一些调整。"
 
 #. type: Plain text
 #: plugins.adoc:322
@@ -590,6 +746,7 @@ msgid ""
 "To configure and build the tutorial code we will use CMake and create a "
 "`CMakeLists.txt` script file:"
 msgstr ""
+"要配置和构建教程代码，我们将使用 CMake 并创建一个‘CMakeLists.txt’脚本文件："
 
 #. type: delimited block -
 #: plugins.adoc:329
@@ -600,6 +757,10 @@ msgid ""
 "# declare the name of the project\n"
 "project( PLUGIN_DEMO )\n"
 msgstr ""
+"cd ${DEMO_ROOT}\n"
+"cat > CMakeLists.txt << _EOF\n"
+"# declare the name of the project\n"
+"project( PLUGIN_DEMO )\n"
 
 #. type: delimited block -
 #: plugins.adoc:332
@@ -608,6 +769,8 @@ msgid ""
 "# check that we have a version of CMake with all required features\n"
 "cmake_minimum_required( VERSION 2.8.12 FATAL_ERROR )\n"
 msgstr ""
+"# check that we have a version of CMake with all required features\n"
+"cmake_minimum_required( VERSION 2.8.12 FATAL_ERROR )\n"
 
 #. type: delimited block -
 #: plugins.adoc:335
@@ -616,6 +779,8 @@ msgid ""
 "# inform CMake of where to find the FindKICAD script\n"
 "set( CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules )\n"
 msgstr ""
+"# inform CMake of where to find the FindKICAD script\n"
+"set( CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/CMakeModules )\n"
 
 #. type: delimited block -
 #: plugins.adoc:341
@@ -627,6 +792,11 @@ msgid ""
 "#     KICAD_LIBRARY\n"
 "find_package( KICAD 1.0 REQUIRED )\n"
 msgstr ""
+"# attempt to discover the installed kicad headers and library\n"
+"# and set the variables:\n"
+"#     KICAD_INCLUDE_DIR\n"
+"#     KICAD_LIBRARY\n"
+"find_package( KICAD 1.0 REQUIRED )\n"
 
 #. type: delimited block -
 #: plugins.adoc:344
@@ -635,6 +805,8 @@ msgid ""
 "# add the kicad include directory to the compiler's search path\n"
 "include_directories( ${KICAD_INCLUDE_DIR}/kicad )\n"
 msgstr ""
+"# add the kicad include directory to the compiler's search path\n"
+"include_directories( ${KICAD_INCLUDE_DIR}/kicad )\n"
 
 #. type: delimited block -
 #: plugins.adoc:349
@@ -645,12 +817,16 @@ msgid ""
 "    src/s3d_plugin_demo1.cpp\n"
 "    )\n"
 msgstr ""
+"# create a plugin named s3d_plugin_demo1\n"
+"add_library( s3d_plugin_demo1 MODULE\n"
+"    src/s3d_plugin_demo1.cpp\n"
+"    )\n"
 
 #. type: delimited block -
 #: plugins.adoc:351
 #, no-wrap
 msgid "_EOF\n"
-msgstr ""
+msgstr "_EOF\n"
 
 #. type: Plain text
 #: plugins.adoc:356
@@ -659,6 +835,8 @@ msgid ""
 "external link dependencies other than the compiler defaults.  We start by "
 "creating a source directory:"
 msgstr ""
+"第一个演示项目非常基础; 它由一个文件组成，除了编译器默认值之外没有外部链接依"
+"赖项。 我们首先创建一个源目录："
 
 #. type: delimited block -
 #: plugins.adoc:362
@@ -668,23 +846,26 @@ msgid ""
 "mkdir src && cd src\n"
 "export DEMO_SRC=${PWD}\n"
 msgstr ""
+"cd ${DEMO_ROOT}\n"
+"mkdir src && cd src\n"
+"export DEMO_SRC=${PWD}\n"
 
 #. type: Plain text
 #: plugins.adoc:365
 msgid "Now we create the plugin source itself:"
-msgstr ""
+msgstr "现在我们自己创建插件源："
 
 #. type: Block title
 #: plugins.adoc:366
 #, no-wrap
 msgid "s3d_plugin_demo1.cpp"
-msgstr ""
+msgstr "s3d_plugin_demo1.cpp"
 
 #. type: delimited block -
 #: plugins.adoc:370
 #, no-wrap
 msgid "#include <iostream>\n"
-msgstr ""
+msgstr "#include <iostream>\n"
 
 #. type: delimited block -
 #: plugins.adoc:373
@@ -693,6 +874,8 @@ msgid ""
 "// the 3d_plugin.h header defines the functions required of 3D plugins\n"
 "#include \"plugins/3d/3d_plugin.h\"\n"
 msgstr ""
+"// the 3d_plugin.h header defines the functions required of 3D plugins\n"
+"#include \"plugins/3d/3d_plugin.h\"\n"
 
 #. type: delimited block -
 #: plugins.adoc:380
@@ -705,6 +888,12 @@ msgid ""
 "#define PLUGIN_3D_DEMO1_PATCH 0\n"
 "#define PLUGIN_3D_DEMO1_REVNO 0\n"
 msgstr ""
+"// define the version information of this plugin; do not confuse this\n"
+"// with the Plugin Class version which is defined in 3d_plugin.h\n"
+"#define PLUGIN_3D_DEMO1_MAJOR 1\n"
+"#define PLUGIN_3D_DEMO1_MINOR 0\n"
+"#define PLUGIN_3D_DEMO1_PATCH 0\n"
+"#define PLUGIN_3D_DEMO1_REVNO 0\n"
 
 #. type: delimited block -
 #: plugins.adoc:386
@@ -716,6 +905,11 @@ msgid ""
 "    return \"PLUGIN_3D_DEMO1\";\n"
 "}\n"
 msgstr ""
+"// implement the function which provides users with this plugin's name\n"
+"const char* GetKicadPluginName( void )\n"
+"{\n"
+"    return \"PLUGIN_3D_DEMO1\";\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:393
@@ -728,6 +922,12 @@ msgid ""
 "    if( Major )\n"
 "        *Major = PLUGIN_3D_DEMO1_MAJOR;\n"
 msgstr ""
+"// implement the function which provides users with this plugin's version\n"
+"void GetPluginVersion( unsigned char* Major, unsigned char* Minor,\n"
+"    unsigned char* Patch, unsigned char* Revision )\n"
+"{\n"
+"    if( Major )\n"
+"        *Major = PLUGIN_3D_DEMO1_MAJOR;\n"
 
 #. type: delimited block -
 #: plugins.adoc:396
@@ -736,6 +936,8 @@ msgid ""
 "    if( Minor )\n"
 "        *Minor = PLUGIN_3D_DEMO1_MINOR;\n"
 msgstr ""
+"    if( Minor )\n"
+"        *Minor = PLUGIN_3D_DEMO1_MINOR;\n"
 
 #. type: delimited block -
 #: plugins.adoc:399
@@ -744,6 +946,8 @@ msgid ""
 "    if( Patch )\n"
 "        *Patch = PLUGIN_3D_DEMO1_PATCH;\n"
 msgstr ""
+"    if( Patch )\n"
+"        *Patch = PLUGIN_3D_DEMO1_PATCH;\n"
 
 #. type: delimited block -
 #: plugins.adoc:402
@@ -752,6 +956,8 @@ msgid ""
 "    if( Revision )\n"
 "        *Revision = PLUGIN_3D_DEMO1_REVNO;\n"
 msgstr ""
+"    if( Revision )\n"
+"        *Revision = PLUGIN_3D_DEMO1_REVNO;\n"
 
 #. type: delimited block -
 #: plugins.adoc:405 plugins.adoc:641
@@ -760,6 +966,8 @@ msgid ""
 "    return;\n"
 "}\n"
 msgstr ""
+"    return;\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:413
@@ -773,6 +981,13 @@ msgid ""
 "    #define NEXTS 14\n"
 "#endif\n"
 msgstr ""
+"// number of extensions supported; on *NIX systems the extensions are\n"
+"// provided twice - once in lower case and once in upper case letters\n"
+"#ifdef _WIN32\n"
+"    #define NEXTS 7\n"
+"#else\n"
+"    #define NEXTS 14\n"
+"#endif\n"
 
 #. type: delimited block -
 #: plugins.adoc:416
@@ -781,6 +996,8 @@ msgid ""
 "// number of filter sets supported\n"
 "#define NFILS 5\n"
 msgstr ""
+"// number of filter sets supported\n"
+"#define NFILS 5\n"
 
 #. type: delimited block -
 #: plugins.adoc:426
@@ -796,6 +1013,15 @@ msgid ""
 "static char ext5[] = \"stp\";\n"
 "static char ext6[] = \"step\";\n"
 msgstr ""
+"// define the extension strings and filter strings which this\n"
+"// plugin will supply to the user\n"
+"static char ext0[] = \"wrl\";\n"
+"static char ext1[] = \"x3d\";\n"
+"static char ext2[] = \"emn\";\n"
+"static char ext3[] = \"iges\";\n"
+"static char ext4[] = \"igs\";\n"
+"static char ext5[] = \"stp\";\n"
+"static char ext6[] = \"step\";\n"
 
 #. type: delimited block -
 #: plugins.adoc:441
@@ -816,6 +1042,20 @@ msgid ""
 "static char ext12[] = \"STP\";\n"
 "static char ext13[] = \"STEP\";\n"
 msgstr ""
+"#ifdef _WIN32\n"
+"static char fil0[] = \"VRML 1.0/2.0 (*.wrl)|*.wrl\";\n"
+"static char fil1[] = \"X3D (*.x3d)|*.x3d\";\n"
+"static char fil2[] = \"IDF 2.0/3.0 (*.emn)|*.emn\";\n"
+"static char fil3[] = \"IGESv5.3 (*.igs;*.iges)|*.igs;*.iges\";\n"
+"static char fil4[] = \"STEP (*.stp;*.step)|*.stp;*.step\";\n"
+"#else\n"
+"static char ext7[] = \"WRL\";\n"
+"static char ext8[] = \"X3D\";\n"
+"static char ext9[] = \"EMN\";\n"
+"static char ext10[] = \"IGES\";\n"
+"static char ext11[] = \"IGS\";\n"
+"static char ext12[] = \"STP\";\n"
+"static char ext13[] = \"STEP\";\n"
 
 #. type: delimited block -
 #: plugins.adoc:448
@@ -828,6 +1068,12 @@ msgid ""
 "static char fil4[] = \"STEP (*.stp;*.step;*.STP;*.STEP)|*.stp;*.step;*.STP;*.STEP\";\n"
 "#endif\n"
 msgstr ""
+"static char fil0[] = \"VRML 1.0/2.0 (*.wrl;*.WRL)|*.wrl;*.WRL\";\n"
+"static char fil1[] = \"X3D (*.x3d;*.X3D)|*.x3d;*.X3D\";\n"
+"static char fil2[] = \"IDF 2.0/3.0 (*.emn;*.EMN)|*.emn;*.EMN\";\n"
+"static char fil3[] = \"IGESv5.3 (*.igs;*.iges;*.IGS;*.IGES)|*.igs;*.iges;*.IGS;*.IGES\";\n"
+"static char fil4[] = \"STEP (*.stp;*.step;*.STP;*.STEP)|*.stp;*.step;*.STP;*.STEP\";\n"
+"#endif\n"
 
 #. type: delimited block -
 #: plugins.adoc:455
@@ -840,6 +1086,12 @@ msgid ""
 "    char const* extensions[NEXTS];\n"
 "    char const* filters[NFILS];\n"
 msgstr ""
+"// instantiate a convenient data structure for accessing the\n"
+"// lists of extension and filter strings\n"
+"static struct FILE_DATA\n"
+"{\n"
+"    char const* extensions[NEXTS];\n"
+"    char const* filters[NFILS];\n"
 
 #. type: delimited block -
 #: plugins.adoc:470
@@ -860,6 +1112,20 @@ msgid ""
 "        filters[3] = fil3;\n"
 "        filters[4] = fil4;\n"
 msgstr ""
+"    FILE_DATA()\n"
+"    {\n"
+"        extensions[0] = ext0;\n"
+"        extensions[1] = ext1;\n"
+"        extensions[2] = ext2;\n"
+"        extensions[3] = ext3;\n"
+"        extensions[4] = ext4;\n"
+"        extensions[5] = ext5;\n"
+"        extensions[6] = ext6;\n"
+"        filters[0] = fil0;\n"
+"        filters[1] = fil1;\n"
+"        filters[2] = fil2;\n"
+"        filters[3] = fil3;\n"
+"        filters[4] = fil4;\n"
 
 #. type: delimited block -
 #: plugins.adoc:482
@@ -877,12 +1143,23 @@ msgid ""
 "        return;\n"
 "    }\n"
 msgstr ""
+"#ifndef _WIN32\n"
+"        extensions[7] = ext7;\n"
+"        extensions[8] = ext8;\n"
+"        extensions[9] = ext9;\n"
+"        extensions[10] = ext10;\n"
+"        extensions[11] = ext11;\n"
+"        extensions[12] = ext12;\n"
+"        extensions[13] = ext13;\n"
+"#endif\n"
+"        return;\n"
+"    }\n"
 
 #. type: delimited block -
 #: plugins.adoc:484 plugins.adoc:681
 #, no-wrap
 msgid "} file_data;\n"
-msgstr ""
+msgstr "} file_data;\n"
 
 #. type: delimited block -
 #: plugins.adoc:491
@@ -894,6 +1171,11 @@ msgid ""
 "    return NEXTS;\n"
 "}\n"
 msgstr ""
+"// return the number of extensions supported by this plugin\n"
+"int GetNExtensions( void )\n"
+"{\n"
+"    return NEXTS;\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:497
@@ -905,6 +1187,11 @@ msgid ""
 "    if( aIndex < 0 || aIndex >= NEXTS )\n"
 "        return NULL;\n"
 msgstr ""
+"// return the indexed extension string\n"
+"char const* GetModelExtension( int aIndex )\n"
+"{\n"
+"    if( aIndex < 0 || aIndex >= NEXTS )\n"
+"        return NULL;\n"
 
 #. type: delimited block -
 #: plugins.adoc:500 plugins.adoc:696
@@ -913,6 +1200,8 @@ msgid ""
 "    return file_data.extensions[aIndex];\n"
 "}\n"
 msgstr ""
+"    return file_data.extensions[aIndex];\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:506
@@ -924,6 +1213,11 @@ msgid ""
 "    return NFILS;\n"
 "}\n"
 msgstr ""
+"// return the number of filter strings provided by this plugin\n"
+"int GetNFilters( void )\n"
+"{\n"
+"    return NFILS;\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:512
@@ -935,6 +1229,11 @@ msgid ""
 "    if( aIndex < 0 || aIndex >= NFILS )\n"
 "        return NULL;\n"
 msgstr ""
+"// return the indexed filter string\n"
+"char const* GetFileFilter( int aIndex )\n"
+"{\n"
+"    if( aIndex < 0 || aIndex >= NFILS )\n"
+"        return NULL;\n"
 
 #. type: delimited block -
 #: plugins.adoc:515 plugins.adoc:711
@@ -943,6 +1242,8 @@ msgid ""
 "    return file_data.filters[aIndex];\n"
 "}\n"
 msgstr ""
+"    return file_data.filters[aIndex];\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:521
@@ -954,6 +1255,11 @@ msgid ""
 "    return false;\n"
 "}\n"
 msgstr ""
+"// return false since this plugin does not provide visualization data\n"
+"bool CanRender( void )\n"
+"{\n"
+"    return false;\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:528
@@ -966,6 +1272,12 @@ msgid ""
 "    return NULL;\n"
 "}\n"
 msgstr ""
+"// return NULL since this plugin does not provide visualization data\n"
+"SCENEGRAPH* Load( char const* aFileName )\n"
+"{\n"
+"    // this dummy plugin does not support rendering of any models\n"
+"    return NULL;\n"
+"}\n"
 
 #. type: Plain text
 #: plugins.adoc:541
@@ -980,11 +1292,17 @@ msgid ""
 "plugin returns visualization data. The file filters provided by each plugin "
 "are passed to the 3D file selector dialog to improve the browsing UI."
 msgstr ""
+"此源文件满足实现 3D 插件的所有最低要求。 该插件不会为渲染模型生成任何数据，但"
+"它可以为 KiCad 提供支持的模型文件扩展名和文件扩展名过滤器列表，以增强 3D 模型"
+"文件选择对话框。 在 KiCad 中，扩展字符串用于选择可用于加载指定模型的插件; 例"
+"如，如果插件是‘wrl’，那么 KiCad 将调用声称支持扩展‘wrl’的每个插件，直到插件返"
+"回可视化数据。 每个插件提供的文件过滤器将传递到 3D 文件选择器对话框，以改善浏"
+"览 UI。"
 
 #. type: Plain text
 #: plugins.adoc:543
 msgid "To build the plugin:"
-msgstr ""
+msgstr "要构建插件："
 
 #. type: delimited block -
 #: plugins.adoc:550
@@ -995,6 +1313,10 @@ msgid ""
 "mkdir build && cd build\n"
 "cmake .. && make\n"
 msgstr ""
+"cd ${DEMO_ROOT}\n"
+"# export KICAD_ROOT_DIR if necessary\n"
+"mkdir build && cd build\n"
+"cmake .. && make\n"
 
 #. type: Plain text
 #: plugins.adoc:554
@@ -1002,12 +1324,14 @@ msgid ""
 "The plugin will be built but not installed; you must copy the plugin file to "
 "KiCad's plugin directory if you wish to load the plugin."
 msgstr ""
+"该插件将被构建但未安装; 如果要加载插件，必须将插件文件复制到 KiCad 的插件目"
+"录。"
 
 #. type: Title ===
 #: plugins.adoc:557
 #, no-wrap
 msgid "Advanced 3D Plugin"
-msgstr ""
+msgstr "高级 3D 插件"
 
 #. type: Plain text
 #: plugins.adoc:569
@@ -1022,6 +1346,11 @@ msgid ""
 "assumes that the first tutorial had been completed and that the CMakeLists."
 "txt and FindKICAD.cmake script files have been created."
 msgstr ""
+"本教程将引导用户开发名为“PLUGIN_3D_DEMO2”的 3D 插件。 本教程的目的是演示 "
+"KiCad 预览器可以渲染的非常基本的场景图的构造。 该插件声称处理‘txt’类型的文"
+"件。 虽然文件必须存在，以便缓存管理器调用插件，但此插件不处理文件内容; 相反，"
+"插件只是创建一个包含一对四面体的场景图。 本教程假定第一个教程已完成，并且已创"
+"建 CMakeLists.txt 和 FindKICAD.cmake 脚本文件。"
 
 #. type: Plain text
 #: plugins.adoc:580
@@ -1036,12 +1365,17 @@ msgid ""
 "model visualization must translate the model data into a scene graph via "
 "this library."
 msgstr ""
+"将新的源文件放在与上一个教程的源文件相同的目录中，我们将扩展上一个教程的 "
+"CMakeLists.txt 文件来构建本教程。 由于这个插件会为 KiCad 创建一个场景图，我们"
+"需要链接到 KiCad 的场景图库‘kicad_3dsg’。 KiCad 的场景图库提供了一组可用于构"
+"建场景图对象的类; 场景图对象是 3D 缓存管理器使用的中间数据可视化格式。 所有支"
+"持模型可视化的插件都必须通过此库将模型数据转换为场景图。"
 
 #. type: Plain text
 #: plugins.adoc:582
 msgid ""
 "The first step is to extend `CMakeLists.txt` to build this tutorial project:"
-msgstr ""
+msgstr "第一步是扩展‘CMakeLists.txt’来构建这个教程项目："
 
 #. type: delimited block -
 #: plugins.adoc:590
@@ -1053,6 +1387,11 @@ msgid ""
 "    src/s3d_plugin_demo2.cpp\n"
 "    )\n"
 msgstr ""
+"cd ${DEMO_ROOT}\n"
+"cat >> CMakeLists.txt << _EOF\n"
+"add_library( s3d_plugin_demo2 MODULE\n"
+"    src/s3d_plugin_demo2.cpp\n"
+"    )\n"
 
 #. type: delimited block -
 #: plugins.adoc:593
@@ -1061,23 +1400,25 @@ msgid ""
 "target_link_libraries( s3d_plugin_demo2 ${KICAD_LIBRARY} )\n"
 "_EOF\n"
 msgstr ""
+"target_link_libraries( s3d_plugin_demo2 ${KICAD_LIBRARY} )\n"
+"_EOF\n"
 
 #. type: Plain text
 #: plugins.adoc:596
 msgid "Now we change to the source directory and create the source file:"
-msgstr ""
+msgstr "现在我们切换到源目录并创建源文件："
 
 #. type: delimited block -
 #: plugins.adoc:600
 #, no-wrap
 msgid "cd ${DEMO_SRC}\n"
-msgstr ""
+msgstr "cd ${DEMO_SRC}\n"
 
 #. type: Block title
 #: plugins.adoc:602
 #, no-wrap
 msgid "s3d_plugin_demo2.cpp"
-msgstr ""
+msgstr "s3d_plugin_demo2.cpp"
 
 #. type: delimited block -
 #: plugins.adoc:610
@@ -1089,6 +1430,11 @@ msgid ""
 "// interface to KiCad Scene Graph Library\n"
 "#include \"plugins/3dapi/ifsg_all.h\"\n"
 msgstr ""
+"#include <cmath>\n"
+"// 3D Plugin Class declarations\n"
+"#include \"plugins/3d/3d_plugin.h\"\n"
+"// interface to KiCad Scene Graph Library\n"
+"#include \"plugins/3dapi/ifsg_all.h\"\n"
 
 #. type: delimited block -
 #: plugins.adoc:616
@@ -1100,6 +1446,11 @@ msgid ""
 "#define PLUGIN_3D_DEMO2_PATCH 0\n"
 "#define PLUGIN_3D_DEMO2_REVNO 0\n"
 msgstr ""
+"// version information for this plugin\n"
+"#define PLUGIN_3D_DEMO2_MAJOR 1\n"
+"#define PLUGIN_3D_DEMO2_MINOR 0\n"
+"#define PLUGIN_3D_DEMO2_PATCH 0\n"
+"#define PLUGIN_3D_DEMO2_REVNO 0\n"
 
 #. type: delimited block -
 #: plugins.adoc:622
@@ -1111,6 +1462,11 @@ msgid ""
 "    return \"PLUGIN_3D_DEMO2\";\n"
 "}\n"
 msgstr ""
+"// provide the name of this plugin\n"
+"const char* GetKicadPluginName( void )\n"
+"{\n"
+"    return \"PLUGIN_3D_DEMO2\";\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:629
@@ -1123,6 +1479,12 @@ msgid ""
 "    if( Major )\n"
 "        *Major = PLUGIN_3D_DEMO2_MAJOR;\n"
 msgstr ""
+"// provide the version of this plugin\n"
+"void GetPluginVersion( unsigned char* Major, unsigned char* Minor,\n"
+"    unsigned char* Patch, unsigned char* Revision )\n"
+"{\n"
+"    if( Major )\n"
+"        *Major = PLUGIN_3D_DEMO2_MAJOR;\n"
 
 #. type: delimited block -
 #: plugins.adoc:632
@@ -1131,6 +1493,8 @@ msgid ""
 "    if( Minor )\n"
 "        *Minor = PLUGIN_3D_DEMO2_MINOR;\n"
 msgstr ""
+"    if( Minor )\n"
+"        *Minor = PLUGIN_3D_DEMO2_MINOR;\n"
 
 #. type: delimited block -
 #: plugins.adoc:635
@@ -1139,6 +1503,8 @@ msgid ""
 "    if( Patch )\n"
 "        *Patch = PLUGIN_3D_DEMO2_PATCH;\n"
 msgstr ""
+"    if( Patch )\n"
+"        *Patch = PLUGIN_3D_DEMO2_PATCH;\n"
 
 #. type: delimited block -
 #: plugins.adoc:638
@@ -1147,6 +1513,8 @@ msgid ""
 "    if( Revision )\n"
 "        *Revision = PLUGIN_3D_DEMO2_REVNO;\n"
 msgstr ""
+"    if( Revision )\n"
+"        *Revision = PLUGIN_3D_DEMO2_REVNO;\n"
 
 #. type: delimited block -
 #: plugins.adoc:649
@@ -1159,6 +1527,12 @@ msgid ""
 "#define NEXTS 2\n"
 "#endif\n"
 msgstr ""
+"// number of extensions supported\n"
+"#ifdef _WIN32\n"
+"#define NEXTS 1\n"
+"#else\n"
+"#define NEXTS 2\n"
+"#endif\n"
 
 #. type: delimited block -
 #: plugins.adoc:652
@@ -1167,12 +1541,14 @@ msgid ""
 "// number of filter sets supported\n"
 "#define NFILS 1\n"
 msgstr ""
+"// number of filter sets supported\n"
+"#define NFILS 1\n"
 
 #. type: delimited block -
 #: plugins.adoc:654
 #, no-wrap
 msgid "static char ext0[] = \"txt\";\n"
-msgstr ""
+msgstr "static char ext0[] = \"txt\";\n"
 
 #. type: delimited block -
 #: plugins.adoc:659
@@ -1183,6 +1559,10 @@ msgid ""
 "#else\n"
 "static char ext1[] = \"TXT\";\n"
 msgstr ""
+"#ifdef _WIN32\n"
+"static char fil0[] = \"demo (*.txt)|*.txt\";\n"
+"#else\n"
+"static char ext1[] = \"TXT\";\n"
 
 #. type: delimited block -
 #: plugins.adoc:662
@@ -1191,6 +1571,8 @@ msgid ""
 "static char fil0[] = \"demo (*.txt;*.TXT)|*.txt;*.TXT\";\n"
 "#endif\n"
 msgstr ""
+"static char fil0[] = \"demo (*.txt;*.TXT)|*.txt;*.TXT\";\n"
+"#endif\n"
 
 #. type: delimited block -
 #: plugins.adoc:668
@@ -1201,6 +1583,10 @@ msgid ""
 "    char const* extensions[NEXTS];\n"
 "    char const* filters[NFILS];\n"
 msgstr ""
+"static struct FILE_DATA\n"
+"{\n"
+"    char const* extensions[NEXTS];\n"
+"    char const* filters[NFILS];\n"
 
 #. type: delimited block -
 #: plugins.adoc:673
@@ -1211,6 +1597,10 @@ msgid ""
 "        extensions[0] = ext0;\n"
 "        filters[0] = fil0;\n"
 msgstr ""
+"    FILE_DATA()\n"
+"    {\n"
+"        extensions[0] = ext0;\n"
+"        filters[0] = fil0;\n"
 
 #. type: delimited block -
 #: plugins.adoc:679
@@ -1222,6 +1612,11 @@ msgid ""
 "        return;\n"
 "    }\n"
 msgstr ""
+"#ifndef _WIN32\n"
+"        extensions[1] = ext1;\n"
+"#endif\n"
+"        return;\n"
+"    }\n"
 
 #. type: delimited block -
 #: plugins.adoc:687
@@ -1232,6 +1627,10 @@ msgid ""
 "    return NEXTS;\n"
 "}\n"
 msgstr ""
+"int GetNExtensions( void )\n"
+"{\n"
+"    return NEXTS;\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:693
@@ -1242,6 +1641,10 @@ msgid ""
 "    if( aIndex < 0 || aIndex >= NEXTS )\n"
 "        return NULL;\n"
 msgstr ""
+"char const* GetModelExtension( int aIndex )\n"
+"{\n"
+"    if( aIndex < 0 || aIndex >= NEXTS )\n"
+"        return NULL;\n"
 
 #. type: delimited block -
 #: plugins.adoc:702
@@ -1252,6 +1655,10 @@ msgid ""
 "    return NFILS;\n"
 "}\n"
 msgstr ""
+"int GetNFilters( void )\n"
+"{\n"
+"    return NFILS;\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:708
@@ -1262,6 +1669,10 @@ msgid ""
 "    if( aIndex < 0 || aIndex >= NFILS )\n"
 "        return NULL;\n"
 msgstr ""
+"char const* GetFileFilter( int aIndex )\n"
+"{\n"
+"    if( aIndex < 0 || aIndex >= NFILS )\n"
+"        return NULL;\n"
 
 #. type: delimited block -
 #: plugins.adoc:718
@@ -1273,6 +1684,11 @@ msgid ""
 "    return true;\n"
 "}\n"
 msgstr ""
+"// return true since this plugin can provide visualization data\n"
+"bool CanRender( void )\n"
+"{\n"
+"    return true;\n"
+"}\n"
 
 #. type: delimited block -
 #: plugins.adoc:737
@@ -1296,6 +1712,23 @@ msgid ""
 "    // of the tetrahedron tx1 (rotation + translation). This demonstrates\n"
 "    // the reuse of components within the scene graph hierarchy.\n"
 msgstr ""
+"// create the visualization data\n"
+"SCENEGRAPH* Load( char const* aFileName )\n"
+"{\n"
+"    // For this demonstration we create a tetrahedron (tx1) consisting\n"
+"    // of a SCENEGRAPH (VRML Transform) which in turn contains 4\n"
+"    // SGSHAPE (VRML Shape) objects representing each of the sides of\n"
+"    // the tetrahedron. Each Shape is associated with a color (SGAPPEARANCE)\n"
+"    // and a SGFACESET (VRML Geometry->indexedFaceSet). Each SGFACESET is\n"
+"    // associated with a vertex list (SGCOORDS), a per-vertex normals\n"
+"    // list (SGNORMALS), and a coordinate index (SGCOORDINDEX). One shape\n"
+"    // is used to represent each face so that we may use per-vertex-per-face\n"
+"    // normals.\n"
+"    //\n"
+"    // The tetrahedron in turn is a child of a top level SCENEGRAPH (tx0)\n"
+"    // which has a second SCENEGRAPH child (tx2) which is a transformation\n"
+"    // of the tetrahedron tx1 (rotation + translation). This demonstrates\n"
+"    // the reuse of components within the scene graph hierarchy.\n"
 
 #. type: delimited block -
 #: plugins.adoc:749
@@ -1313,6 +1746,17 @@ msgid ""
 "    vert[2] = SGPOINT( 0.0, 1.0, SQ2 );\n"
 "    vert[3] = SGPOINT( 0.0, -1.0, SQ2 );\n"
 msgstr ""
+"    // define the vertices of the tetrahedron\n"
+"    // face 1: 0, 3, 1\n"
+"    // face 2: 0, 2, 3\n"
+"    // face 3: 1, 3, 2\n"
+"    // face 4: 0, 1, 2\n"
+"    double SQ2 = sqrt( 0.5 );\n"
+"    SGPOINT vert[4];\n"
+"    vert[0] = SGPOINT( 1.0, 0.0, -SQ2 );\n"
+"    vert[1] = SGPOINT( -1.0, 0.0, -SQ2 );\n"
+"    vert[2] = SGPOINT( 0.0, 1.0, SQ2 );\n"
+"    vert[3] = SGPOINT( 0.0, -1.0, SQ2 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:755
@@ -1323,6 +1767,10 @@ msgid ""
 "    // shapes\n"
 "    IFSG_TRANSFORM* tx0 = new IFSG_TRANSFORM( true );\n"
 msgstr ""
+"    // create the top level transform; this will hold all other\n"
+"    // scenegraph objects; a transform may hold other transforms and\n"
+"    // shapes\n"
+"    IFSG_TRANSFORM* tx0 = new IFSG_TRANSFORM( true );\n"
 
 #. type: delimited block -
 #: plugins.adoc:758
@@ -1331,6 +1779,8 @@ msgid ""
 "    // create the transform which will house the shapes\n"
 "    IFSG_TRANSFORM* tx1 = new IFSG_TRANSFORM( tx0->GetRawPtr() );\n"
 msgstr ""
+"    // create the transform which will house the shapes\n"
+"    IFSG_TRANSFORM* tx1 = new IFSG_TRANSFORM( tx0->GetRawPtr() );\n"
 
 #. type: delimited block -
 #: plugins.adoc:762
@@ -1340,6 +1790,9 @@ msgid ""
 "    // shapes hold facesets and appearances\n"
 "    IFSG_SHAPE* shape = new IFSG_SHAPE( *tx1 );\n"
 msgstr ""
+"    // add a shape which we will use to define one face of the tetrahedron;\n"
+"    // shapes hold facesets and appearances\n"
+"    IFSG_SHAPE* shape = new IFSG_SHAPE( *tx1 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:766
@@ -1349,12 +1802,15 @@ msgid ""
 "    // vertex lists, vertex indices, and may also contain color lists and\n"
 "    // their indices.\n"
 msgstr ""
+"    // add a faceset; these contain coordinate lists, coordinate indices,\n"
+"    // vertex lists, vertex indices, and may also contain color lists and\n"
+"    // their indices.\n"
 
 #. type: delimited block -
 #: plugins.adoc:768
 #, no-wrap
 msgid "    IFSG_FACESET* face = new IFSG_FACESET( *shape );\n"
-msgstr ""
+msgstr "    IFSG_FACESET* face = new IFSG_FACESET( *shape );\n"
 
 #. type: delimited block -
 #: plugins.adoc:773
@@ -1365,6 +1821,10 @@ msgid ""
 "    cp->AddCoord( vert[3] );\n"
 "    cp->AddCoord( vert[1] );\n"
 msgstr ""
+"    IFSG_COORDS* cp = new IFSG_COORDS( *face );\n"
+"    cp->AddCoord( vert[0] );\n"
+"    cp->AddCoord( vert[3] );\n"
+"    cp->AddCoord( vert[1] );\n"
 
 #. type: delimited block -
 #: plugins.adoc:782
@@ -1379,12 +1839,20 @@ msgid ""
 "    coordIdx->AddIndex( 1 );\n"
 "    coordIdx->AddIndex( 2 );\n"
 msgstr ""
+"    // coordinate indices - note: enforce triangles;\n"
+"    // in real plugins where it is not necessarily possible\n"
+"    // to determine which side a triangle is visible from,\n"
+"    // 2 point orders must be specified for each triangle\n"
+"    IFSG_COORDINDEX* coordIdx = new IFSG_COORDINDEX( *face );\n"
+"    coordIdx->AddIndex( 0 );\n"
+"    coordIdx->AddIndex( 1 );\n"
+"    coordIdx->AddIndex( 2 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:784
 #, no-wrap
 msgid "    // create an appearance; appearances are owned by shapes\n"
-msgstr ""
+msgstr "    // create an appearance; appearances are owned by shapes\n"
 
 #. type: delimited block -
 #: plugins.adoc:791
@@ -1397,6 +1865,12 @@ msgid ""
 "    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
 "    material->SetShininess( 0.2 );\n"
 msgstr ""
+"    // magenta\n"
+"    IFSG_APPEARANCE* material = new IFSG_APPEARANCE( *shape);\n"
+"    material->SetSpecular( 0.1, 0.0, 0.1 );\n"
+"    material->SetDiffuse( 0.8, 0.0, 0.8 );\n"
+"    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
+"    material->SetShininess( 0.2 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:798
@@ -1409,6 +1883,12 @@ msgid ""
 "    np->AddNormal( nval );\n"
 "    np->AddNormal( nval );\n"
 msgstr ""
+"    // normals\n"
+"    IFSG_NORMALS* np = new IFSG_NORMALS( *face );\n"
+"    SGVECTOR nval = S3D::CalcTriNorm( vert[0], vert[3], vert[1] );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
 
 #. type: delimited block -
 #: plugins.adoc:809
@@ -1425,6 +1905,16 @@ msgid ""
 "    cp->NewNode( *face );\n"
 "    np->NewNode( *face );\n"
 msgstr ""
+"    //\n"
+"    // Shape2\n"
+"    // Note: we reuse the IFSG* wrappers to create and manipulate new\n"
+"    // data structures.\n"
+"    //\n"
+"    shape->NewNode( *tx1 );\n"
+"    face->NewNode( *shape );\n"
+"    coordIdx->NewNode( *face );\n"
+"    cp->NewNode( *face );\n"
+"    np->NewNode( *face );\n"
 
 #. type: delimited block -
 #: plugins.adoc:814
@@ -1435,6 +1925,10 @@ msgid ""
 "    cp->AddCoord( vert[2] );\n"
 "    cp->AddCoord( vert[3] );\n"
 msgstr ""
+"    // vertices\n"
+"    cp->AddCoord( vert[0] );\n"
+"    cp->AddCoord( vert[2] );\n"
+"    cp->AddCoord( vert[3] );\n"
 
 #. type: delimited block -
 #: plugins.adoc:819 plugins.adoc:850 plugins.adoc:882
@@ -1445,6 +1939,10 @@ msgid ""
 "    coordIdx->AddIndex( 1 );\n"
 "    coordIdx->AddIndex( 2 );\n"
 msgstr ""
+"    // indices\n"
+"    coordIdx->AddIndex( 0 );\n"
+"    coordIdx->AddIndex( 1 );\n"
+"    coordIdx->AddIndex( 2 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:831
@@ -1462,6 +1960,17 @@ msgid ""
 "    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
 "    material->SetShininess( 0.1 );\n"
 msgstr ""
+"    // normals\n"
+"    nval = S3D::CalcTriNorm( vert[0], vert[2], vert[3] );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
+"    // color (red)\n"
+"    material->NewNode( *shape );\n"
+"    material->SetSpecular( 0.2, 0.0, 0.0 );\n"
+"    material->SetDiffuse( 0.9, 0.0, 0.0 );\n"
+"    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
+"    material->SetShininess( 0.1 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:840
@@ -1476,6 +1985,14 @@ msgid ""
 "    cp->NewNode( *face );\n"
 "    np->NewNode( *face );\n"
 msgstr ""
+"    //\n"
+"    // Shape3\n"
+"    //\n"
+"    shape->NewNode( *tx1 );\n"
+"    face->NewNode( *shape );\n"
+"    coordIdx->NewNode( *face );\n"
+"    cp->NewNode( *face );\n"
+"    np->NewNode( *face );\n"
 
 #. type: delimited block -
 #: plugins.adoc:845
@@ -1486,6 +2003,10 @@ msgid ""
 "    cp->AddCoord( vert[3] );\n"
 "    cp->AddCoord( vert[2] );\n"
 msgstr ""
+"    // vertices\n"
+"    cp->AddCoord( vert[1] );\n"
+"    cp->AddCoord( vert[3] );\n"
+"    cp->AddCoord( vert[2] );\n"
 
 #. type: delimited block -
 #: plugins.adoc:856
@@ -1497,6 +2018,11 @@ msgid ""
 "    np->AddNormal( nval );\n"
 "    np->AddNormal( nval );\n"
 msgstr ""
+"    // normals\n"
+"    nval = S3D::CalcTriNorm( vert[1], vert[3], vert[2] );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
 
 #. type: delimited block -
 #: plugins.adoc:863
@@ -1509,6 +2035,12 @@ msgid ""
 "    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
 "    material->SetShininess( 0.1 );\n"
 msgstr ""
+"    // color (green)\n"
+"    material->NewNode( *shape );\n"
+"    material->SetSpecular( 0.0, 0.1, 0.0 );\n"
+"    material->SetDiffuse( 0.0, 0.9, 0.0 );\n"
+"    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
+"    material->SetShininess( 0.1 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:872
@@ -1523,6 +2055,14 @@ msgid ""
 "    cp->NewNode( *face );\n"
 "    np->NewNode( *face );\n"
 msgstr ""
+"    //\n"
+"    // Shape4\n"
+"    //\n"
+"    shape->NewNode( *tx1 );\n"
+"    face->NewNode( *shape );\n"
+"    coordIdx->NewNode( *face );\n"
+"    cp->NewNode( *face );\n"
+"    np->NewNode( *face );\n"
 
 #. type: delimited block -
 #: plugins.adoc:877
@@ -1533,6 +2073,10 @@ msgid ""
 "    cp->AddCoord( vert[1] );\n"
 "    cp->AddCoord( vert[2] );\n"
 msgstr ""
+"    // vertices\n"
+"    cp->AddCoord( vert[0] );\n"
+"    cp->AddCoord( vert[1] );\n"
+"    cp->AddCoord( vert[2] );\n"
 
 #. type: delimited block -
 #: plugins.adoc:888
@@ -1544,6 +2088,11 @@ msgid ""
 "    np->AddNormal( nval );\n"
 "    np->AddNormal( nval );\n"
 msgstr ""
+"    // normals\n"
+"    nval = S3D::CalcTriNorm( vert[0], vert[1], vert[2] );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
+"    np->AddNormal( nval );\n"
 
 #. type: delimited block -
 #: plugins.adoc:895
@@ -1556,6 +2105,12 @@ msgid ""
 "    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
 "    material->SetShininess( 0.1 );\n"
 msgstr ""
+"    // color (blue)\n"
+"    material->NewNode( *shape );\n"
+"    material->SetSpecular( 0.0, 0.0, 0.1 );\n"
+"    material->SetDiffuse( 0.0, 0.0, 0.9 );\n"
+"    material->SetAmbient( 0.2, 0.2, 0.2 );\n"
+"    material->SetShininess( 0.1 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:901
@@ -1567,12 +2122,17 @@ msgid ""
 "    tx2->SetTranslation( SGPOINT( 0, 0, 2 ) );\n"
 "    tx2->SetRotation( SGVECTOR( 0, 0, 1 ), M_PI*2.0/3.0 );\n"
 msgstr ""
+"    // create a copy of the entire tetrahedron shifted Z+2 and rotated 2/3PI\n"
+"    IFSG_TRANSFORM* tx2 = new IFSG_TRANSFORM( tx0->GetRawPtr() );\n"
+"    tx2->AddRefNode( *tx1 );\n"
+"    tx2->SetTranslation( SGPOINT( 0, 0, 2 ) );\n"
+"    tx2->SetRotation( SGVECTOR( 0, 0, 1 ), M_PI*2.0/3.0 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:903
 #, no-wrap
 msgid "    SGNODE* data = tx0->GetRawPtr();\n"
-msgstr ""
+msgstr "    SGNODE* data = tx0->GetRawPtr();\n"
 
 #. type: delimited block -
 #: plugins.adoc:914
@@ -1589,6 +2149,16 @@ msgid ""
 "    delete tx1;\n"
 "    delete tx2;\n"
 msgstr ""
+"    // delete the wrappers\n"
+"    delete shape;\n"
+"    delete face;\n"
+"    delete coordIdx;\n"
+"    delete material;\n"
+"    delete cp;\n"
+"    delete np;\n"
+"    delete tx0;\n"
+"    delete tx1;\n"
+"    delete tx2;\n"
 
 #. type: delimited block -
 #: plugins.adoc:917
@@ -1597,12 +2167,14 @@ msgid ""
 "    return (SCENEGRAPH*)data;\n"
 "}\n"
 msgstr ""
+"    return (SCENEGRAPH*)data;\n"
+"}\n"
 
 #. type: Title ==
 #: plugins.adoc:919
 #, no-wrap
 msgid "Application Programming Interface (API)"
-msgstr ""
+msgstr "应用程序编程接口（API）"
 
 #. type: Plain text
 #: plugins.adoc:929
@@ -1615,19 +2187,24 @@ msgid ""
 "which support visualization of models must interact with the Scene Graph API "
 "as declared in the header `ifsg_all.h` and its included headers."
 msgstr ""
+"插件通过应用程序编程接口（API）实现实现。 每个插件类都有其特定的 API，在 3D "
+"插件教程中，我们已经看到了由标题“3d_plugin.h” 声明的 3D 插件 API 实现的示"
+"例。 插件也可能依赖于 KiCad 源代码树中定义的其他 API; 在 3D 插件的情况下，支"
+"持模型可视化的所有插件必须与标题‘ifsg_all.h’ 及其包含的标题中声明的 Scene "
+"Graph API 交互。"
 
 #. type: Plain text
 #: plugins.adoc:933
 msgid ""
 "This section describes the details of available Plugin Class APIs and other "
 "KiCad APIs which may be required for implementations of plugin classes."
-msgstr ""
+msgstr "本节描述了插件类实现可能需要的插件类 API 和其他 KiCad API 的详细信息。"
 
 #. type: Title ===
 #: plugins.adoc:934
 #, no-wrap
 msgid "Plugin Class APIs"
-msgstr ""
+msgstr "插件类 API"
 
 #. type: Plain text
 #: plugins.adoc:943
@@ -1640,6 +2217,10 @@ msgid ""
 "plugin developers implement these defined functions in each plugin "
 "implementation."
 msgstr ""
+"目前只有一个为 KiCad 声明的插件类：3D 插件类。 所有 KiCad 插件类都必须实现头"
+"文件‘kicad_plugin.h’中声明的一组基本函数; 这些声明称为 Base Kicad 插件类。 不"
+"存在 Base Kicad 插件类的实现; 头文件的存在纯粹是为了确保插件开发人员在每个插"
+"件实现中实现这些定义的函数。"
 
 #. type: Plain text
 #: plugins.adoc:953
@@ -1653,12 +2234,17 @@ msgid ""
 "is loaded. Internally the Plugin Loader uses a stored pointer to each API "
 "function to invoke each function on behalf of the user."
 msgstr ""
+"在 KiCad 中，插件加载器的每个实例都实现了插件提供的 API，就像插件加载器是提供"
+"插件服务的类一样。 这是通过 Plugin Loader 类实现的，该类提供包含与插件实现的"
+"类似的函数名的公共接口; 如果例如没有加载插件，则参数列表可以变化以适应向用户"
+"通知可能遇到的任何问题的需要。 在内部，插件加载器使用存储的指针指向每个 API "
+"函数，以代表用户调用每个函数。"
 
 #. type: Title ====
 #: plugins.adoc:955
 #, no-wrap
 msgid "API: Base Kicad Plugin Class"
-msgstr ""
+msgstr "API：Base Kicad 插件类"
 
 #. type: Plain text
 #: plugins.adoc:963
@@ -1670,6 +2256,10 @@ msgid ""
 "<<plugin-classes,Plugin Classes>>. The API is implemented by the base plugin "
 "loader as defined in `pluginldr.cpp`."
 msgstr ""
+"Base Kicad 插件类由头文件‘kicad_plugin.h’ 定义。 此标头必须包含在所有其他插件"
+"类的声明中; 例如，请参阅头文件‘3d_plugin.h’ 中的 3D 插件类声明。 这些函数的原"
+"型在 《 plugin-classes，Plugin Classes 》 中简要描述。 API 由“pluginldr.cpp” "
+"中定义的基本插件加载器实现。"
 
 #. type: Plain text
 #: plugins.adoc:973
@@ -1684,6 +2274,11 @@ msgid ""
 "once the addresses of each function have been retrieved, a number of checks "
 "are enforced:"
 msgstr ""
+"为了帮助理解基本 KiCad 插件头所需的功能，我们必须查看基本插件 Loader 类中发生"
+"的情况。 Plugin Loader 类声明了一个虚函数‘Open()’，它接受要加载的插件的完整路"
+"径。 在特定的插件类加载器中实现 ‘Open()’ 函数最初将调用基本插件加载器的受保护"
+"的‘open()’ 函数; 这个基础‘open()’ 函数试图找到每个必需的基本插件函数的地址; "
+"一旦检索到每个函数的地址，就会强制执行一些检查："
 
 #. type: Plain text
 #: plugins.adoc:978
@@ -1693,13 +2288,15 @@ msgid ""
 "strings do not match then the opened plugin is not intended for the Plugin "
 "Loader instance."
 msgstr ""
+"调用插件‘GetKicadPluginClass()’，并将结果与插件加载器实现提供的插件类字符串进"
+"行比较; 如果这些字符串不匹配，则打开的插件不适用于 Plugin Loader 实例。"
 
 #. type: Plain text
 #: plugins.adoc:980
 msgid ""
 "Plugin `GetClassVersion()` is invoked to retrieve the Plugin Class API "
 "Version implemented by the plugin."
-msgstr ""
+msgstr "调用插件‘GetClassVersion()’来检索插件实现的插件类 API 版本。"
 
 #. type: Plain text
 #: plugins.adoc:982
@@ -1707,6 +2304,8 @@ msgid ""
 "Plugin Loader virtual `GetLoaderVersion()` function is invoked to retrieve "
 "the Plugin Class API Version implemented by the loader."
 msgstr ""
+"插件加载器虚拟‘GetLoaderVersion()’函数被调用以检索由加载器实现的插件类 API 版"
+"本。"
 
 #. type: Plain text
 #: plugins.adoc:986
@@ -1716,6 +2315,8 @@ msgid ""
 "considered incompatible. This is the most basic version test and it is "
 "enforced by the base plugin loader."
 msgstr ""
+"插件和加载器报告的插件类 API 版本必须具有相同的主版本号，否则它们被认为是不兼"
+"容的。 这是最基本的版本测试，它由基本插件加载器强制执行。"
 
 #. type: Plain text
 #: plugins.adoc:992
@@ -1727,12 +2328,16 @@ msgid ""
 "`GetPluginVersion()`, and the plugin loading procedure continues within the "
 "Plugin Loader's `Open()` implementation."
 msgstr ""
+"使用插件加载器的插件类 API 版本信息调用插件‘CheckClassVersion()’; 如果插件支"
+"持给定版本，则返回“true” 表示成功。 如果成功，加载器根"
+"据‘GetKicadPluginName()’和‘GetPluginVersion()’的结果创建一个 PluginInfo 字符"
+"串，插件加载过程在 Plugin Loader 的‘Open()’实现中继续。"
 
 #. type: Title ====
 #: plugins.adoc:994
 #, no-wrap
 msgid "API: 3D Plugin Class"
-msgstr ""
+msgstr "API：3D 插件类"
 
 #. type: Plain text
 #: plugins.adoc:1001
@@ -1743,6 +2348,9 @@ msgid ""
 "`pluginldr3D.cpp` and the loader implements the following public functions "
 "in addition to the required API functions:"
 msgstr ""
+"3D 插件类由头文件‘3d_plugin.h’声明，它扩展了所需的插件函数，如《class-"
+"plugin-3d，Plugin Class：PLUGIN_3D 》中所述。 相应的插件加载器在‘pluginldr3D."
+"cpp’中定义，除了所需的API函数之外，加载器还实现了以下公共函数："
 
 #. type: delimited block -
 #: plugins.adoc:1006
@@ -1751,6 +2359,8 @@ msgid ""
 "/* Open the plugin specified by the full path \"aFullFileName\" */\n"
 "bool Open( const wxString& aFullFileName );\n"
 msgstr ""
+"/* Open the plugin specified by the full path \"aFullFileName\" */\n"
+"bool Open( const wxString& aFullFileName );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1009
@@ -1759,6 +2369,8 @@ msgid ""
 "/* Close the currently opened plugin */\n"
 "void Close( void );\n"
 msgstr ""
+"/* Close the currently opened plugin */\n"
+"void Close( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1013
@@ -1768,13 +2380,16 @@ msgid ""
 "void GetLoaderVersion( unsigned char* Major, unsigned char* Minor,\n"
 "    unsigned char* Revision, unsigned char* Patch ) const;\n"
 msgstr ""
+"/* Retrieve the Plugin Class API Version implemented by this Plugin Loader */\n"
+"void GetLoaderVersion( unsigned char* Major, unsigned char* Minor,\n"
+"    unsigned char* Revision, unsigned char* Patch ) const;\n"
 
 #. type: Plain text
 #: plugins.adoc:1017
 msgid ""
 "The required 3D Plugin Class functions are exposed via the following "
 "functions:"
-msgstr ""
+msgstr "所需的 3D 插件类功能通过以下功能公开："
 
 #. type: delimited block -
 #: plugins.adoc:1022
@@ -1783,6 +2398,8 @@ msgid ""
 "/* returns the Plugin Class or NULL if no plugin loaded */\n"
 "char const* GetKicadPluginClass( void );\n"
 msgstr ""
+"/* returns the Plugin Class or NULL if no plugin loaded */\n"
+"char const* GetKicadPluginClass( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1026
@@ -1792,6 +2409,9 @@ msgid ""
 "bool GetClassVersion( unsigned char* Major, unsigned char* Minor,\n"
 "    unsigned char* Patch, unsigned char* Revision );\n"
 msgstr ""
+"/* returns false if no plugin loaded */\n"
+"bool GetClassVersion( unsigned char* Major, unsigned char* Minor,\n"
+"    unsigned char* Patch, unsigned char* Revision );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1030
@@ -1801,6 +2421,9 @@ msgid ""
 "bool CheckClassVersion( unsigned char Major, unsigned char Minor,\n"
 "    unsigned char Patch, unsigned char Revision );\n"
 msgstr ""
+"/* returns false if the class version check fails or no plugin is loaded */\n"
+"bool CheckClassVersion( unsigned char Major, unsigned char Minor,\n"
+"    unsigned char Patch, unsigned char Revision );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1033
@@ -1809,6 +2432,8 @@ msgid ""
 "/* returns the Plugin Name or NULL if no plugin loaded */\n"
 "const char* GetKicadPluginName( void );\n"
 msgstr ""
+"/* returns the Plugin Name or NULL if no plugin loaded */\n"
+"const char* GetKicadPluginName( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1040
@@ -1821,6 +2446,12 @@ msgid ""
 "bool GetVersion( unsigned char* Major, unsigned char* Minor,\n"
 "    unsigned char* Patch, unsigned char* Revision );\n"
 msgstr ""
+"/*\n"
+"   returns false if no plugin is loaded, otherwise the arguments\n"
+"   contain the result of GetPluginVersion()\n"
+" */\n"
+"bool GetVersion( unsigned char* Major, unsigned char* Minor,\n"
+"    unsigned char* Patch, unsigned char* Revision );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1050
@@ -1836,16 +2467,25 @@ msgid ""
 " */\n"
 "void GetPluginInfo( std::string& aPluginInfo );\n"
 msgstr ""
+"/*\n"
+"   sets aPluginInfo to an empty string if no plugin is loaded,\n"
+"   otherwise aPluginInfo is set to a string of the form:\n"
+"   [NAME]:[MAJOR].[MINOR].[PATCH].[REVISION] where\n"
+"   NAME = name provided by GetKicadPluginClass()\n"
+"   MAJOR, MINOR, PATCH, REVISION = version information from \n"
+"   GetPluginVersion()\n"
+" */\n"
+"void GetPluginInfo( std::string& aPluginInfo );\n"
 
 #. type: Plain text
 #: plugins.adoc:1053
 msgid "In typical situations, the user would do the following:"
-msgstr ""
+msgstr "在典型情况下，用户将执行以下操作："
 
 #. type: Plain text
 #: plugins.adoc:1055
 msgid "Create an instance of `KICAD_PLUGIN_LDR_3D`."
-msgstr ""
+msgstr "创建‘KICAD_PLUGIN_LDR_3D’的实例。"
 
 #. type: Plain text
 #: plugins.adoc:1058
@@ -1853,28 +2493,30 @@ msgid ""
 "Invoke `Open( \"/path/to/myplugin.so\" )` to open a specific plugin.  The "
 "return value must be checked to ensure that the plugin loaded as desired."
 msgstr ""
+"调用‘Open(“/path/to/myplugin.so”)’来打开一个特定的插件。 必须检查返回值以确保"
+"根据需要加载插件。"
 
 #. type: Plain text
 #: plugins.adoc:1059
 msgid ""
 "Invoke any of the 3D Plugin Class calls as exposed by `KICAD_PLUGIN_LDR_3D`."
-msgstr ""
+msgstr "调用由‘KICAD_PLUGIN_LDR_3D’公开的任何 3D 插件类调用。"
 
 #. type: Plain text
 #: plugins.adoc:1060
 msgid "Invoke `Close()` to close (unlink) the plugin."
-msgstr ""
+msgstr "调用‘Close（）’来关闭（取消链接）插件。"
 
 #. type: Plain text
 #: plugins.adoc:1061
 msgid "Destroy the `KICAD_PLUGIN_LDR_3D` instance."
-msgstr ""
+msgstr "销毁‘KICAD_PLUGIN_LDR_3D’实例。"
 
 #. type: Title ===
 #: plugins.adoc:1062
 #, no-wrap
 msgid "Scenegraph Class APIs"
-msgstr ""
+msgstr "场景图类 API"
 
 #. type: Plain text
 #: plugins.adoc:1071
@@ -1887,12 +2529,16 @@ msgid ""
 "compatible with VRML2.0 static scene graphs. The headers, structures, "
 "classes and their public functions are as follows:"
 msgstr ""
+"Scenegraph 类 API 由标题‘ifsg_all.h’及其包含的标题定义。 API 由许多辅助例程组"
+"成，命名空间为‘S3D’，在‘ifsg_api.h’中定义，包装类由各种‘ifsg_*.h’标题定义; 包"
+"装器支持底层的场景图类，它们一起形成一个与 VRML2.0 静态场景图兼容的场景图结"
+"构。 标题，结构，类及其公共函数如下："
 
 #. type: Block title
 #: plugins.adoc:1072
 #, no-wrap
 msgid "sg_version.h"
-msgstr ""
+msgstr "sg_version.h"
 
 #. type: delimited block -
 #: plugins.adoc:1081
@@ -1905,6 +2551,12 @@ msgid ""
 "   S3D::GetLibVersion() to ensure compatibility\n"
 " */\n"
 msgstr ""
+"/*\n"
+"   Defines version information of the SceneGraph Classes.\n"
+"   All plugins which use the scenegraph class should include this header\n"
+"   and check the version information against the version reported by\n"
+"   S3D::GetLibVersion() to ensure compatibility\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1086
@@ -1915,12 +2567,16 @@ msgid ""
 "#define KICADSG_VERSION_PATCH         0\n"
 "#define KICADSG_VERSION_REVISION      0\n"
 msgstr ""
+"#define KICADSG_VERSION_MAJOR         2\n"
+"#define KICADSG_VERSION_MINOR         0\n"
+"#define KICADSG_VERSION_PATCH         0\n"
+"#define KICADSG_VERSION_REVISION      0\n"
 
 #. type: Block title
 #: plugins.adoc:1089
 #, no-wrap
 msgid "sg_types.h"
-msgstr ""
+msgstr "sg_types.h"
 
 #. type: delimited block -
 #: plugins.adoc:1096
@@ -1931,6 +2587,10 @@ msgid ""
 "   are closely related to VRML2.0 node types.\n"
 " */\n"
 msgstr ""
+"/*\n"
+"   Defines the SceneGraph Class Types; these types\n"
+"   are closely related to VRML2.0 node types.\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1113
@@ -1953,19 +2613,35 @@ msgid ""
 "    };\n"
 "};\n"
 msgstr ""
+"namespace S3D\n"
+"{\n"
+"    enum SGTYPES\n"
+"    {\n"
+"        SGTYPE_TRANSFORM = 0,\n"
+"        SGTYPE_APPEARANCE,\n"
+"        SGTYPE_COLORS,\n"
+"        SGTYPE_COLORINDEX,\n"
+"        SGTYPE_FACESET,\n"
+"        SGTYPE_COORDS,\n"
+"        SGTYPE_COORDINDEX,\n"
+"        SGTYPE_NORMALS,\n"
+"        SGTYPE_SHAPE,\n"
+"        SGTYPE_END\n"
+"    };\n"
+"};\n"
 
 #. type: Plain text
 #: plugins.adoc:1117
 msgid ""
 "The `sg_base.h` header contains declarations of basic data types used by the "
 "scenegraph classes."
-msgstr ""
+msgstr "‘sg_base.h’头包含 scenegraph 类使用的基本数据类型的声明。"
 
 #. type: Block title
 #: plugins.adoc:1118
 #, no-wrap
 msgid "sg_base.h"
-msgstr ""
+msgstr "sg_base.h"
 
 #. type: delimited block -
 #: plugins.adoc:1126
@@ -1977,6 +2653,11 @@ msgid ""
 "    range [0..1].\n"
 " */\n"
 msgstr ""
+"/*\n"
+"    This is an RGB color model equivalent to the VRML2.0\n"
+"    RGB model where each color may have a value within the\n"
+"    range [0..1].\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1132
@@ -1988,6 +2669,11 @@ msgid ""
 "    SGCOLOR();\n"
 "    SGCOLOR( float aRVal, float aGVal, float aBVal );\n"
 msgstr ""
+"class SGCOLOR\n"
+"{\n"
+"public:\n"
+"    SGCOLOR();\n"
+"    SGCOLOR( float aRVal, float aGVal, float aBVal );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1136
@@ -1997,6 +2683,9 @@ msgid ""
 "    void GetColor( SGCOLOR& aColor ) const;\n"
 "    void GetColor( SGCOLOR* aColor ) const;\n"
 msgstr ""
+"    void GetColor( float& aRedVal, float& aGreenVal, float& aBlueVal ) const;\n"
+"    void GetColor( SGCOLOR& aColor ) const;\n"
+"    void GetColor( SGCOLOR* aColor ) const;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1141
@@ -2007,6 +2696,10 @@ msgid ""
 "    bool SetColor( const SGCOLOR* aColor );\n"
 "};\n"
 msgstr ""
+"    bool SetColor( float aRedVal, float aGreenVal, float aBlueVal );\n"
+"    bool SetColor( const SGCOLOR& aColor );\n"
+"    bool SetColor( const SGCOLOR* aColor );\n"
+"};\n"
 
 #. type: delimited block -
 #: plugins.adoc:1149
@@ -2019,6 +2712,12 @@ msgid ""
 "    double y;\n"
 "    double z;\n"
 msgstr ""
+"class SGPOINT\n"
+"{\n"
+"public:\n"
+"    double x;\n"
+"    double y;\n"
+"    double z;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1153
@@ -2028,6 +2727,9 @@ msgid ""
 "    SGPOINT();\n"
 "    SGPOINT( double aXVal, double aYVal, double aZVal );\n"
 msgstr ""
+"public:\n"
+"    SGPOINT();\n"
+"    SGPOINT( double aXVal, double aYVal, double aZVal );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1157
@@ -2037,6 +2739,9 @@ msgid ""
 "    void GetPoint( SGPOINT& aPoint );\n"
 "    void GetPoint( SGPOINT* aPoint );\n"
 msgstr ""
+"    void GetPoint( double& aXVal, double& aYVal, double& aZVal );\n"
+"    void GetPoint( SGPOINT& aPoint );\n"
+"    void GetPoint( SGPOINT* aPoint );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1161
@@ -2046,6 +2751,9 @@ msgid ""
 "    void SetPoint( const SGPOINT& aPoint );\n"
 "};\n"
 msgstr ""
+"    void SetPoint( double aXVal, double aYVal, double aZVal );\n"
+"    void SetPoint( const SGPOINT& aPoint );\n"
+"};\n"
 
 #. type: delimited block -
 #: plugins.adoc:1173
@@ -2062,12 +2770,22 @@ msgid ""
 "    SGVECTOR();\n"
 "    SGVECTOR( double aXVal, double aYVal, double aZVal );\n"
 msgstr ""
+"/*\n"
+"    A SGVECTOR has 3 components (x,y,z) similar to a point; however\n"
+"    a vector ensures that the stored values are normalized and\n"
+"    prevents direct manipulation of the component variables.\n"
+" */\n"
+"class SGVECTOR\n"
+"{\n"
+"public:\n"
+"    SGVECTOR();\n"
+"    SGVECTOR( double aXVal, double aYVal, double aZVal );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1175
 #, no-wrap
 msgid "    void GetVector( double& aXVal, double& aYVal, double& aZVal ) const;\n"
-msgstr ""
+msgstr "    void GetVector( double& aXVal, double& aYVal, double& aZVal ) const;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1178
@@ -2076,6 +2794,8 @@ msgid ""
 "    void SetVector( double aXVal, double aYVal, double aZVal );\n"
 "    void SetVector( const SGVECTOR& aVector );\n"
 msgstr ""
+"    void SetVector( double aXVal, double aYVal, double aZVal );\n"
+"    void SetVector( const SGVECTOR& aVector );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1181
@@ -2084,6 +2804,8 @@ msgid ""
 "    SGVECTOR& operator=( const SGVECTOR& source );\n"
 "};\n"
 msgstr ""
+"    SGVECTOR& operator=( const SGVECTOR& source );\n"
+"};\n"
 
 #. type: Plain text
 #: plugins.adoc:1188
@@ -2092,12 +2814,14 @@ msgid ""
 "scenegraph objects implement the public functions of this class but in some "
 "cases a particular function may have no meaning for a specific class."
 msgstr ""
+"‘IFSG_NODE’类是所有场景图节点的基类。 所有 scenegraph 对象都实现此类的公共函"
+"数，但在某些情况下，特定函数可能对特定类没有意义。"
 
 #. type: Block title
 #: plugins.adoc:1189
 #, no-wrap
 msgid "ifsg_node.h"
-msgstr ""
+msgstr "ifsg_node.h"
 
 #. type: delimited block -
 #: plugins.adoc:1197
@@ -2109,6 +2833,11 @@ msgid ""
 "    IFSG_NODE();\n"
 "    virtual ~IFSG_NODE();\n"
 msgstr ""
+"class IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_NODE();\n"
+"    virtual ~IFSG_NODE();\n"
 
 #. type: delimited block -
 #: plugins.adoc:1203
@@ -2120,6 +2849,11 @@ msgid ""
 "     */\n"
 "    void Destroy( void );\n"
 msgstr ""
+"    /**\n"
+"     * Function Destroy\n"
+"     * deletes the scenegraph object held by this wrapper\n"
+"     */\n"
+"    void Destroy( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1209
@@ -2131,6 +2865,11 @@ msgid ""
 "     */\n"
 "    virtual bool Attach( SGNODE* aNode ) = 0;\n"
 msgstr ""
+"    /**\n"
+"     * Function Attach\n"
+"     * associates a given SGNODE* with this wrapper\n"
+"     */\n"
+"    virtual bool Attach( SGNODE* aNode ) = 0;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1216
@@ -2143,6 +2882,12 @@ msgid ""
 "    virtual bool NewNode( SGNODE* aParent ) = 0;\n"
 "    virtual bool NewNode( IFSG_NODE& aParent ) = 0;\n"
 msgstr ""
+"    /**\n"
+"     * Function NewNode\n"
+"     * creates a new node to associate with this wrapper\n"
+"     */\n"
+"    virtual bool NewNode( SGNODE* aParent ) = 0;\n"
+"    virtual bool NewNode( IFSG_NODE& aParent ) = 0;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1222
@@ -2154,6 +2899,11 @@ msgid ""
 "     */\n"
 "    SGNODE* GetRawPtr( void );\n"
 msgstr ""
+"    /**\n"
+"     * Function GetRawPtr()\n"
+"     * returns the raw internal SGNODE pointer\n"
+"     */\n"
+"    SGNODE* GetRawPtr( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1228
@@ -2165,6 +2915,11 @@ msgid ""
 "     */\n"
 "    S3D::SGTYPES GetNodeType( void ) const;\n"
 msgstr ""
+"    /**\n"
+"     * Function GetNodeType\n"
+"     * returns the type of this node instance\n"
+"     */\n"
+"    S3D::SGTYPES GetNodeType( void ) const;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1236
@@ -2178,6 +2933,13 @@ msgid ""
 "     */\n"
 "    SGNODE* GetParent( void ) const;\n"
 msgstr ""
+"    /**\n"
+"     * Function GetParent\n"
+"     * returns a pointer to the parent SGNODE of this object\n"
+"     * or NULL if the object has no parent (ie. top level transform)\n"
+"     * or if the wrapper is not currently associated with an SGNODE.\n"
+"     */\n"
+"    SGNODE* GetParent( void ) const;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1247
@@ -2194,6 +2956,16 @@ msgid ""
 "     */\n"
 "    bool SetParent( SGNODE* aParent );\n"
 msgstr ""
+"    /**\n"
+"     * Function SetParent\n"
+"     * sets the parent SGNODE of this object.\n"
+"     *\n"
+"     * @param aParent [in] is the desired parent node\n"
+"     * @return true if the operation succeeds; false if\n"
+"     * the given node is not allowed to be a parent to\n"
+"     * the derived object.\n"
+"     */\n"
+"    bool SetParent( SGNODE* aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1254
@@ -2206,6 +2978,12 @@ msgid ""
 "     */\n"
 "    const char * GetNodeTypeName( S3D::SGTYPES aNodeType ) const;\n"
 msgstr ""
+"    /**\n"
+"     * Function GetNodeTypeName\n"
+"     * returns the text representation of the node type\n"
+"     * or NULL if the node somehow has an invalid type\n"
+"     */\n"
+"    const char * GetNodeTypeName( S3D::SGTYPES aNodeType ) const;\n"
 
 #. type: delimited block -
 #: plugins.adoc:1264
@@ -2221,6 +2999,15 @@ msgid ""
 "    bool AddRefNode( SGNODE* aNode );\n"
 "    bool AddRefNode( IFSG_NODE& aNode );\n"
 msgstr ""
+"    /**\n"
+"     * Function AddRefNode\n"
+"     * adds a reference to an existing node which is not owned by\n"
+"     * (not a child of) this node.\n"
+"     *\n"
+"     * @return true on success\n"
+"     */\n"
+"    bool AddRefNode( SGNODE* aNode );\n"
+"    bool AddRefNode( IFSG_NODE& aNode );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1274
@@ -2236,6 +3023,15 @@ msgid ""
 "    bool AddChildNode( IFSG_NODE& aNode );\n"
 "};\n"
 msgstr ""
+"    /**\n"
+"     * Function AddChildNode\n"
+"     * adds a node as a child owned by this node.\n"
+"     *\n"
+"     * @return true on success\n"
+"     */\n"
+"    bool AddChildNode( SGNODE* aNode );\n"
+"    bool AddChildNode( IFSG_NODE& aNode );\n"
+"};\n"
 
 #. type: Plain text
 #: plugins.adoc:1282
@@ -2245,12 +3041,15 @@ msgid ""
 "referenced IFSG_SHAPE and IFSG_TRANSFORM nodes.  A valid scenegraph must "
 "have a single `IFSG_TRANSFORM` object as a root."
 msgstr ""
+"‘IFSG_TRANSFORM’类似于 VRML2.0 Transform 节点; 它可以包含任意数量的子 "
+"IFSG_SHAPE 和 IFSG_TRANSFORM 节点以及任意数量的引用的 IFSG_SHAPE 和 "
+"IFSG_TRANSFORM 节点。 有效的场景图必须有一个“IFSG_TRANSFORM” 对象作为根。"
 
 #. type: Block title
 #: plugins.adoc:1283
 #, no-wrap
 msgid "ifsg_transform.h"
-msgstr ""
+msgstr "ifsg_transform.h"
 
 #. type: delimited block -
 #: plugins.adoc:1290
@@ -2261,6 +3060,10 @@ msgid ""
 " * is the wrapper for the VRML compatible TRANSFORM block class SCENEGRAPH\n"
 " */\n"
 msgstr ""
+"/**\n"
+" * Class IFSG_TRANSFORM\n"
+" * is the wrapper for the VRML compatible TRANSFORM block class SCENEGRAPH\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1296
@@ -2272,6 +3075,11 @@ msgid ""
 "    IFSG_TRANSFORM( bool create );\n"
 "    IFSG_TRANSFORM( SGNODE* aParent );\n"
 msgstr ""
+"class IFSG_TRANSFORM : public IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_TRANSFORM( bool create );\n"
+"    IFSG_TRANSFORM( SGNODE* aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1303
@@ -2284,6 +3092,12 @@ msgid ""
 "    bool SetCenter( const SGPOINT& aCenter );\n"
 "    bool SetTranslation( const SGPOINT& aTranslation );\n"
 msgstr ""
+"    bool SetScaleOrientation( const SGVECTOR& aScaleAxis, double aAngle );\n"
+"    bool SetRotation( const SGVECTOR& aRotationAxis, double aAngle );\n"
+"    bool SetScale( const SGPOINT& aScale );\n"
+"    bool SetScale( double aScale );\n"
+"    bool SetCenter( const SGPOINT& aCenter );\n"
+"    bool SetTranslation( const SGPOINT& aTranslation );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1306 plugins.adoc:1330 plugins.adoc:1412
@@ -2292,6 +3106,8 @@ msgid ""
 "    /* various base class functions not shown here */\n"
 "};\n"
 msgstr ""
+"    /* various base class functions not shown here */\n"
+"};\n"
 
 #. type: Plain text
 #: plugins.adoc:1312
@@ -2300,12 +3116,14 @@ msgid ""
 "child or reference FACESET node and may contain a single child or reference "
 "APPEARANCE node."
 msgstr ""
+"‘IFSG_SHAPE’类似于 VRML2.0 Shape 节点; 它必须包含单个子节点或引用 FACESET 节"
+"点，并且可以包含单个子节点或引用 APPEARANCE 节点。"
 
 #. type: Block title
 #: plugins.adoc:1313
 #, no-wrap
 msgid "ifsg_shape.h"
-msgstr ""
+msgstr "ifsg_shape.h"
 
 #. type: delimited block -
 #: plugins.adoc:1320
@@ -2316,6 +3134,10 @@ msgid ""
 " * is the wrapper for the SGSHAPE class\n"
 " */\n"
 msgstr ""
+"/**\n"
+" * Class IFSG_SHAPE\n"
+" * is the wrapper for the SGSHAPE class\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1327
@@ -2328,6 +3150,12 @@ msgid ""
 "    IFSG_SHAPE( SGNODE* aParent );\n"
 "    IFSG_SHAPE( IFSG_NODE& aParent );\n"
 msgstr ""
+"class IFSG_SHAPE : public IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_SHAPE( bool create );\n"
+"    IFSG_SHAPE( SGNODE* aParent );\n"
+"    IFSG_SHAPE( IFSG_NODE& aParent );\n"
 
 #. type: Plain text
 #: plugins.adoc:1336
@@ -2336,12 +3164,14 @@ msgid ""
 "moment it only represents the equivalent of an Appearance node containing a "
 "Material node."
 msgstr ""
+"‘IFSG_APPEARANCE’类似于 VRML2.0 Appearance 节点，但目前它只代表包含 Material "
+"节点的 Appearance 节点的等价物。"
 
 #. type: Block title
 #: plugins.adoc:1337
 #, no-wrap
 msgid "ifsg_appearance.h"
-msgstr ""
+msgstr "ifsg_appearance.h"
 
 #. type: delimited block -
 #: plugins.adoc:1346
@@ -2354,6 +3184,12 @@ msgid ""
 "    IFSG_APPEARANCE( SGNODE* aParent );\n"
 "    IFSG_APPEARANCE( IFSG_NODE& aParent );\n"
 msgstr ""
+"class IFSG_APPEARANCE : public IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_APPEARANCE( bool create );\n"
+"    IFSG_APPEARANCE( SGNODE* aParent );\n"
+"    IFSG_APPEARANCE( IFSG_NODE& aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1350
@@ -2363,6 +3199,9 @@ msgid ""
 "    bool SetEmissive( const SGCOLOR* aRGBColor );\n"
 "    bool SetEmissive( const SGCOLOR& aRGBColor );\n"
 msgstr ""
+"    bool SetEmissive( float aRVal, float aGVal, float aBVal );\n"
+"    bool SetEmissive( const SGCOLOR* aRGBColor );\n"
+"    bool SetEmissive( const SGCOLOR& aRGBColor );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1354
@@ -2372,6 +3211,9 @@ msgid ""
 "    bool SetDiffuse( const SGCOLOR* aRGBColor );\n"
 "    bool SetDiffuse( const SGCOLOR& aRGBColor );\n"
 msgstr ""
+"    bool SetDiffuse( float aRVal, float aGVal, float aBVal );\n"
+"    bool SetDiffuse( const SGCOLOR* aRGBColor );\n"
+"    bool SetDiffuse( const SGCOLOR& aRGBColor );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1358
@@ -2381,6 +3223,9 @@ msgid ""
 "    bool SetSpecular( const SGCOLOR* aRGBColor );\n"
 "    bool SetSpecular( const SGCOLOR& aRGBColor );\n"
 msgstr ""
+"    bool SetSpecular( float aRVal, float aGVal, float aBVal );\n"
+"    bool SetSpecular( const SGCOLOR* aRGBColor );\n"
+"    bool SetSpecular( const SGCOLOR& aRGBColor );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1362
@@ -2390,6 +3235,9 @@ msgid ""
 "    bool SetAmbient( const SGCOLOR* aRGBColor );\n"
 "    bool SetAmbient( const SGCOLOR& aRGBColor );\n"
 msgstr ""
+"    bool SetAmbient( float aRVal, float aGVal, float aBVal );\n"
+"    bool SetAmbient( const SGCOLOR* aRGBColor );\n"
+"    bool SetAmbient( const SGCOLOR& aRGBColor );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1365
@@ -2398,13 +3246,15 @@ msgid ""
 "    bool SetShininess( float aShininess );\n"
 "    bool SetTransparency( float aTransparency );\n"
 msgstr ""
+"    bool SetShininess( float aShininess );\n"
+"    bool SetTransparency( float aTransparency );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1367 plugins.adoc:1436 plugins.adoc:1474 plugins.adoc:1510
 #: plugins.adoc:1545
 #, no-wrap
 msgid "    /* various base class functions not shown here */\n"
-msgstr ""
+msgstr "    /* various base class functions not shown here */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1370
@@ -2413,6 +3263,8 @@ msgid ""
 "    /* the following functions make no sense within an\n"
 "       appearance node and always return a failure code\n"
 msgstr ""
+"    /* the following functions make no sense within an\n"
+"       appearance node and always return a failure code\n"
 
 #. type: delimited block -
 #: plugins.adoc:1377 plugins.adoc:1446 plugins.adoc:1484 plugins.adoc:1520
@@ -2426,6 +3278,12 @@ msgid ""
 "     */\n"
 "};\n"
 msgstr ""
+"        bool AddRefNode( SGNODE* aNode );\n"
+"        bool AddRefNode( IFSG_NODE& aNode );\n"
+"        bool AddChildNode( SGNODE* aNode );\n"
+"        bool AddChildNode( IFSG_NODE& aNode );\n"
+"     */\n"
+"};\n"
 
 #. type: Plain text
 #: plugins.adoc:1388
@@ -2438,27 +3296,31 @@ msgid ""
 "in assigning normal values to surfaces. The deviations from the VRML2.0 "
 "analogue are as follows:"
 msgstr ""
+"‘IFSG_FACESET’类似于包含 IndexedFaceSet 节点的 VRML2.0 Geometry 节点。 它必须"
+"包含单个子节点或引用 COORDS 节点，单个子 COORDINDEX 节点以及单个子节点或引用 "
+"NORMALS 节点; 另外可能有一个子节点或引用 COLORS 节点。 提供简化的法线计算功能"
+"以帮助用户将正常值分配给表面。 与 VRML2.0 模拟的偏差如下："
 
 #. type: Plain text
 #: plugins.adoc:1390
 msgid "Normals are always per-vertex."
-msgstr ""
+msgstr "法线始终是每个顶点。"
 
 #. type: Plain text
 #: plugins.adoc:1391
 msgid "Colors are always per vertex."
-msgstr ""
+msgstr "颜色总是每个顶点。"
 
 #. type: Plain text
 #: plugins.adoc:1392
 msgid "The coordinate index set must describe triangular faces only."
-msgstr ""
+msgstr "坐标索引集必须仅描述三角形面。"
 
 #. type: Block title
 #: plugins.adoc:1393
 #, no-wrap
 msgid "ifsg_faceset.h"
-msgstr ""
+msgstr "ifsg_faceset.h"
 
 #. type: delimited block -
 #: plugins.adoc:1400
@@ -2469,6 +3331,10 @@ msgid ""
 " * is the wrapper for the SGFACESET class\n"
 " */\n"
 msgstr ""
+"/**\n"
+" * Class IFSG_FACESET\n"
+" * is the wrapper for the SGFACESET class\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1407
@@ -2481,18 +3347,24 @@ msgid ""
 "    IFSG_FACESET( SGNODE* aParent );\n"
 "    IFSG_FACESET( IFSG_NODE& aParent );\n"
 msgstr ""
+"class IFSG_FACESET : public IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_FACESET( bool create );\n"
+"    IFSG_FACESET( SGNODE* aParent );\n"
+"    IFSG_FACESET( IFSG_NODE& aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1409
 #, no-wrap
 msgid "    bool CalcNormals( SGNODE** aPtr );\n"
-msgstr ""
+msgstr "    bool CalcNormals( SGNODE** aPtr );\n"
 
 #. type: Block title
 #: plugins.adoc:1415
 #, no-wrap
 msgid "ifsg_coords.h"
-msgstr ""
+msgstr "ifsg_coords.h"
 
 #. type: delimited block -
 #: plugins.adoc:1422
@@ -2503,6 +3375,10 @@ msgid ""
 " * is the wrapper for SGCOORDS\n"
 " */\n"
 msgstr ""
+"/**\n"
+" * Class IFSG_COORDS\n"
+" * is the wrapper for SGCOORDS\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1429
@@ -2515,6 +3391,12 @@ msgid ""
 "    IFSG_COORDS( SGNODE* aParent );\n"
 "    IFSG_COORDS( IFSG_NODE& aParent );\n"
 msgstr ""
+"class IFSG_COORDS : public IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_COORDS( bool create );\n"
+"    IFSG_COORDS( SGNODE* aParent );\n"
+"    IFSG_COORDS( IFSG_NODE& aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1434
@@ -2525,6 +3407,10 @@ msgid ""
 "    bool AddCoord( double aXValue, double aYValue, double aZValue );\n"
 "    bool AddCoord( const SGPOINT& aPoint );\n"
 msgstr ""
+"    bool GetCoordsList( size_t& aListSize, SGPOINT*& aCoordsList );\n"
+"    bool SetCoordsList( size_t aListSize, const SGPOINT* aCoordsList );\n"
+"    bool AddCoord( double aXValue, double aYValue, double aZValue );\n"
+"    bool AddCoord( const SGPOINT& aPoint );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1439
@@ -2533,6 +3419,8 @@ msgid ""
 "    /* the following functions make no sense within a\n"
 "       coords node and always return a failure code\n"
 msgstr ""
+"    /* the following functions make no sense within a\n"
+"       coords node and always return a failure code\n"
 
 #. type: Plain text
 #: plugins.adoc:1453
@@ -2541,12 +3429,14 @@ msgid ""
 "exclusively describe triangular faces, which implies that the total number "
 "of indices is divisible by 3."
 msgstr ""
+"‘IFSG_COORDINDEX’类似于 VRML2.0 coordIdx[] 集，除了它必须专门描述三角形面，这"
+"意味着索引的总数可以被3整除。"
 
 #. type: Block title
 #: plugins.adoc:1454
 #, no-wrap
 msgid "ifsg_coordindex.h"
-msgstr ""
+msgstr "ifsg_coordindex.h"
 
 #. type: delimited block -
 #: plugins.adoc:1461
@@ -2557,6 +3447,10 @@ msgid ""
 " * is the wrapper for SGCOORDINDEX\n"
 " */\n"
 msgstr ""
+"/**\n"
+" * Class IFSG_COORDINDEX\n"
+" * is the wrapper for SGCOORDINDEX\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1468
@@ -2569,6 +3463,12 @@ msgid ""
 "    IFSG_COORDINDEX( SGNODE* aParent );\n"
 "    IFSG_COORDINDEX( IFSG_NODE& aParent );\n"
 msgstr ""
+"class IFSG_COORDINDEX : public IFSG_INDEX\n"
+"{\n"
+"public:\n"
+"    IFSG_COORDINDEX( bool create );\n"
+"    IFSG_COORDINDEX( SGNODE* aParent );\n"
+"    IFSG_COORDINDEX( IFSG_NODE& aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1472
@@ -2578,6 +3478,9 @@ msgid ""
 "    bool SetIndices( size_t nIndices, int* aIndexList );\n"
 "    bool AddIndex( int aIndex );\n"
 msgstr ""
+"    bool GetIndices( size_t& nIndices, int*& aIndexList );\n"
+"    bool SetIndices( size_t nIndices, int* aIndexList );\n"
+"    bool AddIndex( int aIndex );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1477
@@ -2586,17 +3489,19 @@ msgid ""
 "    /* the following functions make no sense within a\n"
 "       coordindex node and always return a failure code\n"
 msgstr ""
+"    /* the following functions make no sense within a\n"
+"       coordindex node and always return a failure code\n"
 
 #. type: Plain text
 #: plugins.adoc:1488
 msgid "`IFSG_NORMALS` is equivalent to a VRML2.0 Normals node."
-msgstr ""
+msgstr "‘IFSG_NORMALS’相当于 VRML2.0 Normals 节点。"
 
 #. type: Block title
 #: plugins.adoc:1489
 #, no-wrap
 msgid "ifsg_normals.h"
-msgstr ""
+msgstr "ifsg_normals.h"
 
 #. type: delimited block -
 #: plugins.adoc:1496
@@ -2607,6 +3512,10 @@ msgid ""
 " * is the wrapper for the SGNORMALS class\n"
 " */\n"
 msgstr ""
+"/**\n"
+" * Class IFSG_NORMALS\n"
+" * is the wrapper for the SGNORMALS class\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1503
@@ -2619,6 +3528,12 @@ msgid ""
 "    IFSG_NORMALS( SGNODE* aParent );\n"
 "    IFSG_NORMALS( IFSG_NODE& aParent );\n"
 msgstr ""
+"class IFSG_NORMALS : public IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_NORMALS( bool create );\n"
+"    IFSG_NORMALS( SGNODE* aParent );\n"
+"    IFSG_NORMALS( IFSG_NODE& aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1508
@@ -2629,6 +3544,10 @@ msgid ""
 "    bool AddNormal( double aXValue, double aYValue, double aZValue );\n"
 "    bool AddNormal( const SGVECTOR& aNormal );\n"
 msgstr ""
+"    bool GetNormalList( size_t& aListSize, SGVECTOR*& aNormalList );\n"
+"    bool SetNormalList( size_t aListSize, const SGVECTOR* aNormalList );\n"
+"    bool AddNormal( double aXValue, double aYValue, double aZValue );\n"
+"    bool AddNormal( const SGVECTOR& aNormal );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1513 plugins.adoc:1548
@@ -2637,17 +3556,19 @@ msgid ""
 "    /* the following functions make no sense within a\n"
 "       normals node and always return a failure code\n"
 msgstr ""
+"    /* the following functions make no sense within a\n"
+"       normals node and always return a failure code\n"
 
 #. type: Plain text
 #: plugins.adoc:1523
 msgid "`IFSG_COLORS` is similar to a VRML2.0 colors[] set."
-msgstr ""
+msgstr "‘IFSG_COLORS’类似于 VRML2.0 colors[] 集。"
 
 #. type: Block title
 #: plugins.adoc:1524
 #, no-wrap
 msgid "ifsg_colors.h"
-msgstr ""
+msgstr "ifsg_colors.h"
 
 #. type: delimited block -
 #: plugins.adoc:1531
@@ -2658,6 +3579,10 @@ msgid ""
 " * is the wrapper for SGCOLORS\n"
 " */\n"
 msgstr ""
+"/**\n"
+" * Class IFSG_COLORS\n"
+" * is the wrapper for SGCOLORS\n"
+" */\n"
 
 #. type: delimited block -
 #: plugins.adoc:1538
@@ -2670,6 +3595,12 @@ msgid ""
 "    IFSG_COLORS( SGNODE* aParent );\n"
 "    IFSG_COLORS( IFSG_NODE& aParent );\n"
 msgstr ""
+"class IFSG_COLORS : public IFSG_NODE\n"
+"{\n"
+"public:\n"
+"    IFSG_COLORS( bool create );\n"
+"    IFSG_COLORS( SGNODE* aParent );\n"
+"    IFSG_COLORS( IFSG_NODE& aParent );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1543
@@ -2680,17 +3611,21 @@ msgid ""
 "    bool AddColor( double aRedValue, double aGreenValue, double aBlueValue );\n"
 "    bool AddColor( const SGCOLOR& aColor );\n"
 msgstr ""
+"    bool GetColorList( size_t& aListSize, SGCOLOR*& aColorList );\n"
+"    bool SetColorList( size_t aListSize, const SGCOLOR* aColorList );\n"
+"    bool AddColor( double aRedValue, double aGreenValue, double aBlueValue );\n"
+"    bool AddColor( const SGCOLOR& aColor );\n"
 
 #. type: Plain text
 #: plugins.adoc:1559
 msgid "The remaining API functions are defined in `ifsg_api.h` as follows:"
-msgstr ""
+msgstr "其余的 API 函数在‘ifsg_api.h’中定义如下："
 
 #. type: Block title
 #: plugins.adoc:1560
 #, no-wrap
 msgid "ifsg_api.h"
-msgstr ""
+msgstr "ifsg_api.h"
 
 #. type: delimited block -
 #: plugins.adoc:1571
@@ -2705,6 +3640,14 @@ msgid ""
 "    SGLIB_API void GetLibVersion( unsigned char* Major, unsigned char* Minor,\n"
 "                                  unsigned char* Patch, unsigned char* Revision );\n"
 msgstr ""
+"namespace S3D\n"
+"{\n"
+"    /**\n"
+"     * Function GetLibVersion retrieves version information of the\n"
+"     * kicad_3dsg library\n"
+"     */\n"
+"    SGLIB_API void GetLibVersion( unsigned char* Major, unsigned char* Minor,\n"
+"                                  unsigned char* Patch, unsigned char* Revision );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1578
@@ -2717,6 +3660,12 @@ msgid ""
 "    SGLIB_API bool AddSGNodeChild( SGNODE* aParent, SGNODE* aChild );\n"
 "    SGLIB_API void AssociateSGNodeWrapper( SGNODE* aObject, SGNODE** aRefPtr );\n"
 msgstr ""
+"    // functions to extract information from SGNODE pointers\n"
+"    SGLIB_API S3D::SGTYPES GetSGNodeType( SGNODE* aNode );\n"
+"    SGLIB_API SGNODE* GetSGNodeParent( SGNODE* aNode );\n"
+"    SGLIB_API bool AddSGNodeRef( SGNODE* aParent, SGNODE* aChild );\n"
+"    SGLIB_API bool AddSGNodeChild( SGNODE* aParent, SGNODE* aChild );\n"
+"    SGLIB_API void AssociateSGNodeWrapper( SGNODE* aObject, SGNODE** aRefPtr );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1584
@@ -2728,6 +3677,11 @@ msgid ""
 "     */\n"
 "    SGLIB_API SGVECTOR CalcTriNorm( const SGPOINT& p1, const SGPOINT& p2, const SGPOINT& p3 );\n"
 msgstr ""
+"    /**\n"
+"     * Function CalcTriNorm\n"
+"     * returns the normal vector of a triangle described by vertices p1, p2, p3\n"
+"     */\n"
+"    SGLIB_API SGVECTOR CalcTriNorm( const SGPOINT& p1, const SGPOINT& p2, const SGPOINT& p3 );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1596
@@ -2745,6 +3699,17 @@ msgid ""
 "    SGLIB_API bool WriteCache( const char* aFileName, bool overwrite, SGNODE* aNode,\n"
 "        const char* aPluginInfo );\n"
 msgstr ""
+"    /**\n"
+"     * Function WriteCache\n"
+"     * writes the SGNODE tree to a binary cache file\n"
+"     *\n"
+"     * @param aFileName is the name of the file to write\n"
+"     * @param overwrite must be set to true to overwrite an existing file\n"
+"     * @param aNode is any node within the node tree which is to be written\n"
+"     * @return true on success\n"
+"     */\n"
+"    SGLIB_API bool WriteCache( const char* aFileName, bool overwrite, SGNODE* aNode,\n"
+"        const char* aPluginInfo );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1608
@@ -2762,6 +3727,17 @@ msgid ""
 "    SGLIB_API SGNODE* ReadCache( const char* aFileName, void* aPluginMgr,\n"
 "        bool (*aTagCheck)( const char*, void* ) );\n"
 msgstr ""
+"    /**\n"
+"     * Function ReadCache\n"
+"     * reads a binary cache file and creates an SGNODE tree\n"
+"     *\n"
+"     * @param aFileName is the name of the binary cache file to be read\n"
+"     * @return NULL on failure, on success a pointer to the top level SCENEGRAPH node;\n"
+"     * if desired this node can be associated with an IFSG_TRANSFORM wrapper via\n"
+"     * the IFSG_TRANSFORM::Attach() function.\n"
+"     */\n"
+"    SGLIB_API SGNODE* ReadCache( const char* aFileName, void* aPluginMgr,\n"
+"        bool (*aTagCheck)( const char*, void* ) );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1621
@@ -2780,6 +3756,18 @@ msgid ""
 "    SGLIB_API bool WriteVRML( const char* filename, bool overwrite, SGNODE* aTopNode,\n"
 "                    bool reuse, bool renameNodes );\n"
 msgstr ""
+"    /**\n"
+"     * Function WriteVRML\n"
+"     * writes out the given node and its subnodes to a VRML2 file\n"
+"     *\n"
+"     * @param filename is the name of the output file\n"
+"     * @param overwrite should be set to true to overwrite an existing VRML file\n"
+"     * @param aTopNode is a pointer to a SCENEGRAPH object representing the VRML scene\n"
+"     * @param reuse should be set to true to make use of VRML DEF/USE features\n"
+"     * @return true on success\n"
+"     */\n"
+"    SGLIB_API bool WriteVRML( const char* filename, bool overwrite, SGNODE* aTopNode,\n"
+"                    bool reuse, bool renameNodes );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1645
@@ -2809,6 +3797,29 @@ msgid ""
 "    // 8. Clean up by deleting any extra IFSG_TRANSFORM wrappers and their underlying SG*\n"
 "    //    classes which have been created solely for the assembly output\n"
 msgstr ""
+"    // NOTE: The following functions are used in combination to create a VRML\n"
+"    // assembly which may use various instances of each SG* representation of a module.\n"
+"    // A typical use case would be:\n"
+"    // 1. invoke 'ResetNodeIndex()' to reset the global node name indices\n"
+"    // 2. for each model pointer provided by 'S3DCACHE->Load()', invoke 'RenameNodes()' once;\n"
+"    //    this ensures that all nodes have a unique name to present to the final output file.\n"
+"    //    Internally, RenameNodes() will only rename the given node and all Child subnodes;\n"
+"    //    nodes which are only referenced will not be renamed. Using the pointer supplied\n"
+"    //    by 'S3DCACHE->Load()' ensures that all nodes but the returned node (top node) are\n"
+"    //    children of at least one node, so all nodes are given unique names.\n"
+"    // 3. if SG* trees are created independently of S3DCACHE->Load() the user must invoke\n"
+"    //    RenameNodes() as appropriate to ensure that all nodes have a unique name\n"
+"    // 4. create an assembly structure by creating new IFSG_TRANSFORM nodes as appropriate\n"
+"    //    for each instance of a component; the component base model as returned by\n"
+"    //    S3DCACHE->Load() may be added to these IFSG_TRANSFORM nodes via 'AddRefNode()';\n"
+"    //    set the offset, rotation, etc of the IFSG_TRANSFORM node to ensure correct\n"
+"    // 5. Ensure that all new IFSG_TRANSFORM nodes are placed as child nodes within a\n"
+"    //    top level IFSG_TRANSFORM node in preparation for final node naming and output\n"
+"    // 6. Invoke RenameNodes() on the top level assembly node\n"
+"    // 7. Invoke WriteVRML() as normal, with renameNodes = false, to write the entire assembly\n"
+"    //    structure to a single VRML file\n"
+"    // 8. Clean up by deleting any extra IFSG_TRANSFORM wrappers and their underlying SG*\n"
+"    //    classes which have been created solely for the assembly output\n"
 
 #. type: delimited block -
 #: plugins.adoc:1653
@@ -2822,6 +3833,13 @@ msgid ""
 "     */\n"
 "    SGLIB_API void ResetNodeIndex( SGNODE* aNode );\n"
 msgstr ""
+"    /**\n"
+"     * Function ResetNodeIndex\n"
+"     * resets the global SG* class indices\n"
+"     *\n"
+"     * @param aNode may be any valid SGNODE\n"
+"     */\n"
+"    SGLIB_API void ResetNodeIndex( SGNODE* aNode );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1662
@@ -2836,6 +3854,14 @@ msgid ""
 "     */\n"
 "    SGLIB_API void RenameNodes( SGNODE* aNode );\n"
 msgstr ""
+"    /**\n"
+"     * Function RenameNodes\n"
+"     * renames a node and all children nodes based on the current\n"
+"     * values of the global SG* class indices\n"
+"     *\n"
+"     * @param aNode is a top level node\n"
+"     */\n"
+"    SGLIB_API void RenameNodes( SGNODE* aNode );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1670
@@ -2849,6 +3875,13 @@ msgid ""
 "     */\n"
 "    SGLIB_API void DestroyNode( SGNODE* aNode );\n"
 msgstr ""
+"    /**\n"
+"     * Function DestroyNode\n"
+"     * deletes the given SG* class node. This function makes it possible\n"
+"     * to safely delete an SG* node without associating the node with\n"
+"     * its corresponding IFSG* wrapper.\n"
+"     */\n"
+"    SGLIB_API void DestroyNode( SGNODE* aNode );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1673
@@ -2857,6 +3890,8 @@ msgid ""
 "    // NOTE: The following functions facilitate the creation and destruction\n"
 "    // of data structures for rendering\n"
 msgstr ""
+"    // NOTE: The following functions facilitate the creation and destruction\n"
+"    // of data structures for rendering\n"
 
 #. type: delimited block -
 #: plugins.adoc:1682
@@ -2871,6 +3906,14 @@ msgid ""
 "     */\n"
 "    SGLIB_API S3DMODEL* GetModel( SCENEGRAPH* aNode );\n"
 msgstr ""
+"    /**\n"
+"     * Function GetModel\n"
+"     * creates an S3DMODEL representation of aNode (raw data, no transforms)\n"
+"     *\n"
+"     * @param aNode is the node to be transcribed into an S3DMODEL representation\n"
+"     * @return an S3DMODEL representation of aNode on success, otherwise NULL\n"
+"     */\n"
+"    SGLIB_API S3DMODEL* GetModel( SCENEGRAPH* aNode );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1689
@@ -2883,6 +3926,12 @@ msgid ""
 "     */\n"
 "    SGLIB_API void Destroy3DModel( S3DMODEL** aModel );\n"
 msgstr ""
+"    /**\n"
+"     * Function Destroy3DModel\n"
+"     * frees memory used by an S3DMODEL structure and sets the pointer to\n"
+"     * the structure to NULL\n"
+"     */\n"
+"    SGLIB_API void Destroy3DModel( S3DMODEL** aModel );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1695
@@ -2894,6 +3943,11 @@ msgid ""
 "     */\n"
 "    SGLIB_API void Free3DModel( S3DMODEL& aModel );\n"
 msgstr ""
+"    /**\n"
+"     * Function Free3DModel\n"
+"     * frees memory used internally by an S3DMODEL structure\n"
+"     */\n"
+"    SGLIB_API void Free3DModel( S3DMODEL& aModel );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1701
@@ -2905,6 +3959,11 @@ msgid ""
 "     */\n"
 "    SGLIB_API void Free3DMesh( SMESH& aMesh );\n"
 msgstr ""
+"    /**\n"
+"     * Function Free3DMesh\n"
+"     * frees memory used internally by an SMESH structure\n"
+"     */\n"
+"    SGLIB_API void Free3DMesh( SMESH& aMesh );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1707
@@ -2916,6 +3975,11 @@ msgid ""
 "     */\n"
 "    SGLIB_API S3DMODEL* New3DModel( void );\n"
 msgstr ""
+"    /**\n"
+"     * Function New3DModel\n"
+"     * creates and initializes an S3DMODEL struct\n"
+"     */\n"
+"    SGLIB_API S3DMODEL* New3DModel( void );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1713
@@ -2927,6 +3991,11 @@ msgid ""
 "     */\n"
 "    SGLIB_API void Init3DMaterial( SMATERIAL& aMat );\n"
 msgstr ""
+"    /**\n"
+"     * Function Init3DMaterial\n"
+"     * initializes an SMATERIAL struct\n"
+"     */\n"
+"    SGLIB_API void Init3DMaterial( SMATERIAL& aMat );\n"
 
 #. type: delimited block -
 #: plugins.adoc:1720
@@ -2939,6 +4008,12 @@ msgid ""
 "    SGLIB_API void Init3DMesh( SMESH& aMesh );\n"
 "};\n"
 msgstr ""
+"    /**\n"
+"     * Function Init3DMesh\n"
+"     * creates and initializes an SMESH struct\n"
+"     */\n"
+"    SGLIB_API void Init3DMesh( SMESH& aMesh );\n"
+"};\n"
 
 #. type: Plain text
 #: plugins.adoc:1724
@@ -2947,3 +4022,5 @@ msgid ""
 "Advanced 3D Plugin tutorial>> above and the KiCad VRML1, VRML2, and X3D "
 "parsers."
 msgstr ""
+"有关 Scenegraph API 的实际使用示例，请参阅上面的《advanced-3d-plugin,"
+"Advanced 3D Plugin tutorial》，以及KiCad VRML1，VRML2 和 X3D 解析器。"
