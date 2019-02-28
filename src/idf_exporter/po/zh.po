@@ -1,0 +1,1096 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: idf_exporter_zh_CN_v0.1\n"
+"POT-Creation-Date: 2019-02-28 06:27+0000\n"
+"PO-Revision-Date: 2019-02-28 14:39+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: taotieren <admin@taotieren.com>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh\n"
+
+#. type: Title =
+#: idf_exporter.adoc:6
+#, no-wrap
+msgid "IDF Exporter"
+msgstr "IDF 导出器"
+
+#. type: Plain text
+#: idf_exporter.adoc:9
+msgid "_Reference manual_"
+msgstr "_ 参考手册 _"
+
+#. type: Plain text
+#: idf_exporter.adoc:12
+#, no-wrap
+msgid "*Copyright*\n"
+msgstr "* 版权 *\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:18
+msgid ""
+"This document is Copyright (C) 2014-2015 by it's contributors as listed below.  You may "
+"distribute it and/or modify it under the terms of either the GNU General Public License "
+"(http://www.gnu.org/licenses/gpl.html), version 3 or later, or the Creative Commons "
+"Attribution License (http://creativecommons.org/licenses/by/3.0/), version 3.0 or later."
+msgstr ""
+"本文档是版权 (c) 2014-2015年由其贡献者列出的如下。 您可以根据 GNU 通用公共许可证 (http://www."
+"gnu.org/licenses/gpl.html) 版本3或更高版本或知识共享归因许可证 (http://creativecommons.org/"
+"licenses/by/3.0/) 版本的条款分发和/修改它3.0 或更高版本。"
+
+#. type: Plain text
+#: idf_exporter.adoc:20
+msgid "All trademarks within this guide belong to their legitimate owners."
+msgstr "本指南中的所有商标均属于其合法所有者。"
+
+#. type: Plain text
+#: idf_exporter.adoc:23
+#, no-wrap
+msgid "*Contributors*\n"
+msgstr "* 贡献者 *\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:25
+msgid "Cirilo Bernardo"
+msgstr "Cirilo Bernardo"
+
+#. type: Plain text
+#: idf_exporter.adoc:28
+#, no-wrap
+msgid "*Feedback*\n"
+msgstr "* 反馈 *\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:30
+msgid "Please direct any bug reports, suggestions or new versions to here:"
+msgstr "请将任何错误报告、建议或新版本引导到此处:"
+
+#. type: Plain text
+#: idf_exporter.adoc:32
+msgid "About KiCad document: https://github.com/KiCad/kicad-doc/issues"
+msgstr "关于 KiCad 文档: https://github.com/KiCad/kicad-doc/issues"
+
+#. type: Plain text
+#: idf_exporter.adoc:34
+msgid "About KiCad software: https://bugs.launchpad.net/kicad"
+msgstr "关于 KiCad 软件: https://bugs.launchpad.net/kicad"
+
+#. type: Plain text
+#: idf_exporter.adoc:36
+msgid "About KiCad software i18n: https://github.com/KiCad/kicad-i18n/issues"
+msgstr "关于 KiCad 软件 i18n：https://github.com/KiCad/kicad-i18n/issues"
+
+#. type: Plain text
+#: idf_exporter.adoc:40
+#, no-wrap
+msgid "*Publication date and software version*\n"
+msgstr "* 出版日期和软件版本 *\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:42
+msgid "Published on January 26, 2014."
+msgstr "2014年1月26日发布。"
+
+#. Since docbook "article" is more compact, I have to separate this page
+#. type: Plain text
+#: idf_exporter.adoc:45
+msgid "<<<<"
+msgstr "<<<<<"
+
+#. type: Title ==
+#: idf_exporter.adoc:46
+#, no-wrap
+msgid "Introduction to the IDFv3 exporter"
+msgstr "IDFv3 导出器简介"
+
+#. type: Plain text
+#: idf_exporter.adoc:57
+msgid ""
+"The IDF exporter exports an IDFv3 footnote:[http://www.simplifiedsolutionsinc.com/images/"
+"idf_v30_spec.pdf] compliant board (.emn) and library (.emp) file for communicating mechanical "
+"dimensions to a mechanical CAD package. The exporter currently exports the board outline and "
+"cutouts, all pad and mounting thru-holes including slotted holes, and component outlines; "
+"this is the most basic set of mechanical data required for interaction with mechanical "
+"designers. All other entities described in the IDFv3 specification are currently not exported."
+msgstr ""
+"IDF 导出器导出 IDFv3 脚注：[http://www.simplifiedsolutionsinc.com/images/idf_v30_spec.pdf] 兼"
+"容板（.emn）和库（.emp）文件，用于将机械尺寸传达给机械 CAD 包。 导出器目前出口板的边框和切口，"
+"所有垫和安装通孔，包括槽孔和元件边框; 这是与机械设计师互动所需的最基本的机械数据集。 目前未导"
+"出 IDFv3 规范中描述的所有其他实体。"
+
+#. type: Title ==
+#: idf_exporter.adoc:58
+#, no-wrap
+msgid "Specifying component models for use by the exporter"
+msgstr "指定供导出程序使用的元件模型"
+
+#. type: Plain text
+#: idf_exporter.adoc:65
+msgid ""
+"The IDF exporter makes use of the 3D model file attribute which was originally used by the 3D "
+"viewer. Since the 3D viewer, IDF, and possible future mechanical CAD exporters are generally "
+"interested in different types of file format, it is possible to use the 3D model file "
+"attribute to specify models for multiple exporters."
+msgstr ""
+"IDF 导出器使用最初由 3D 查看器使用的 3D 模型文件属性。 由于 3D 查看器，IDF 以及可能的未来机械 "
+"CAD 导出器通常对不同类型的文件格式感兴趣，因此可以使用 3D 模型文件属性为多个导出器指定模型。"
+
+#. type: Plain text
+#: idf_exporter.adoc:84
+msgid ""
+"From within the Footprint Editor or Pcbnew, edit the footprint parameters and click on the 3D "
+"settings tab (see link:#figure-1[figure 1]), click on Add 3D Shape, and select the filter "
+"\"IDFv3 component files (*.idf)\" (see link:#figure-2[figure 2]). Select the desired outline "
+"file and enter any necessary values for the offset and rotation. Note that only the offset "
+"values and the Z rotation value are used by the IDF exporter; all other values are ignored. "
+"The offsets must be specified using the IDF board output units (mm or thou) and in the IDF "
+"coordinate system, that is a right-hand coordinate system with +Z moving towards the viewer, "
+"+X is to the viewer's right, and +Y is up. The rotation must be in degrees and a positive "
+"rotation is a counter-clockwise rotation as described in the IDFv3 specification. Multiple "
+"outlines may be combined with appropriate offsets to represent simple assemblies such as a "
+"DIP package in a socket. [**BUG:** in discussions it has been decided that the unit of the Z "
+"offset should be inches, which is consistent with the units of the VRML model offset. It may "
+"also be useful not to ignore the (X,Y) offset values. The behavior mentioned here will change "
+"at some point in the future.]"
+msgstr ""
+"在封装编辑器或 Pcbnew 中，编辑封装参数并单击 3D 设置选项卡（参见链接：#figure-1[图1]），单击 _"
+"添加 3D 形状_，然后选择过滤器 IDFv3元件文件（*.idf）（见链接：#figure-2[图2]）。选择所需的边框"
+"文件，然后输入偏移和旋转所需的任何值。请注意，IDF 导出器仅使用偏移值和 Z 旋转值;所有其他值都将"
+"被忽略。必须使用 IDF 板输出单位（mm 或 thou）和 IDF 坐标系指定偏移量，这是一个右手坐标系，+Z "
+"向观察者移动，+X 向观察者右侧，+Y 向观察者上侧。旋转必须以度为单位，正旋转为逆时针旋转，如 "
+"IDFv3 规范中所述。多个边框可以与适当的偏移组合以表示简单的元件，例如插座中的 DIP 包。 [** "
+"BUG：**] 在讨论中已经确定 Z 偏移的单位应该是英寸，这与 VRML 模型偏移的单位一致。忽略（X，Y）偏"
+"移值也可能有用。这里提到的行为将在未来的某个时候发生变化。"
+
+#. type: Plain text
+#: idf_exporter.adoc:92
+msgid ""
+"Once models have been specified for all desired components, from within pcbnew select the "
+"*File* menu then *Export* and finally **IDFv3 Export**. A dialog box will pop up (see link:"
+"#figure-3[figure 3]) which allows the output filename and IDF output units (mm or mils) to be "
+"set.  The exported IDF files can be viewed in the free mechanical CAD software http://www."
+"freecadweb.org/[FreeCAD] or converted to VRML using the idf2vrml tool and viewed with any "
+"suitable VRML viewer."
+msgstr ""
+"一旦为所有需要的元件指定了模型，从 pcbnew 中选择 *文件* 菜单，然后选择 * 导出*，最后 **IDFv3 "
+"导出**。 将弹出一个对话框（参见链接：#figure-3[图3]），该对话框允许设置输出文件名和 IDF 输出单"
+"位（mm 或 mils）。 导出的 IDF 文件可以在免费的机械 CAD 软件 http://www.freecadweb.org/"
+"[FreeCAD] 中查看，或使用 idf2vrml 工具转换为 VRML，并可以使用任何合适的 VRML 查看器查看。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:95 idf_exporter.adoc:96
+#, no-wrap
+msgid "Footprint properties, 3D settings"
+msgstr "封装属性，3D 设置"
+
+#. type: Target for macro image
+#: idf_exporter.adoc:96
+#, no-wrap
+msgid "images/module_params.png"
+msgstr "images/zh/module_params.png"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:100 idf_exporter.adoc:101
+#, no-wrap
+msgid "IDF component outline selection"
+msgstr "IDF 元件边框选择"
+
+#. type: Target for macro image
+#: idf_exporter.adoc:101
+#, no-wrap
+msgid "images/idf_select.png"
+msgstr "images/zh/idf_select.png"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:105 idf_exporter.adoc:106
+#, no-wrap
+msgid "IDF output settings"
+msgstr "IDF 输出设置"
+
+#. type: Target for macro image
+#: idf_exporter.adoc:106
+#, no-wrap
+msgid "images/idf_export.png"
+msgstr "images/zh/idf_export.png"
+
+#. type: Title ==
+#: idf_exporter.adoc:109
+#, no-wrap
+msgid "Creating a component outline file"
+msgstr "创建元件边框文件"
+
+#. type: Plain text
+#: idf_exporter.adoc:117
+msgid ""
+"The component outline file (*.idf) consists of a single .ELECTRICAL or .MECHANICAL section as "
+"described in the specification document. The section may be preceded by any number of comment "
+"lines; the comment lines are copied by the exporter into the library file and can be used to "
+"track metadata such as references to the documents used to determine the component's outline "
+"and dimensions."
+msgstr ""
+"元件边框文件（*.idf）由规范文档中描述的单个 .ELECTRICAL 或 .MECHANICAL 部分组成。 该部分之前可"
+"以有任意数量的注释行; 导出器将注释行复制到库文件中，并可用于跟踪元数据，例如对用于确定元件边框"
+"和尺寸的文档的引用。"
+
+#. type: Plain text
+#: idf_exporter.adoc:127
+msgid ""
+"The component outline section contains fields which are strings, integers, or floating point "
+"numbers. A string is a combination of characters which may include spaces; if a string "
+"contains spaces then it must be quoted. Quotation marks must not appear within a string.  "
+"Floating point numbers may be represented using decimal or exponential notations but decimal "
+"notation is preferred for human readability. The decimal point must be a dot and not a comma. "
+"The IDF file must consist only of 7-bit ASCII characters; use of 8-bit characters will result "
+"in undefined behavior."
+msgstr ""
+"元件边框部分包含字符串，整数或浮点数字段。 字符串是可包含空格的字符组合; 如果字符串包含空格，"
+"则必须引用它。 引号不得出现在字符串中。 浮点数可以使用十进制或指数表示法表示，但十进制表示法是"
+"人类可读性的首选。 小数点必须是点而不是逗号。 IDF 文件必须只包含7位 ASCII 字符; 使用8位字符将"
+"导致未定义的行为。"
+
+#. type: Plain text
+#: idf_exporter.adoc:135
+msgid ""
+"An IDF file consists of SECTIONS which consist of RECORDS which consist of FIELDS. For the "
+"IDF outline files only one type of section may exist and must be one of .ELECTRICAL or ."
+"MECHANICAL. A record is a single line of text and may contain one or more fields. Fields are "
+"sequences of characters separated by one or more spaces which do not appear between quotation "
+"marks. All fields of a record must appear on a single line; records may not span lines."
+msgstr ""
+"IDF 文件由 SECTIONS 组成，其中包括由 FIELDS 组成的 RECORDS。 对于 IDF 边框文件，可能只存在一种"
+"类型的部分，必须是 .ELECTRICAL 或 .MECHANICAL 之一。 记录是单行文本，可能包含一个或多个字段。 "
+"字段是由一个或多个空格分隔的字符序列，这些空格不出现在引号之间。 记录的所有字段必须出现在一行"
+"中; 记录可能不会跨越行。"
+
+#. type: Plain text
+#: idf_exporter.adoc:139
+msgid ""
+"The section heading (.ELECTRICAL or .MECHANICAL) is considered the first record (Record 1) of "
+"the section. Record 1 must be followed by Record 2 which has four fields:"
+msgstr ""
+"标题部分（.ELECTRICAL 或 .MECHANICAL）被认为是该部分的第一个记录（记录1）。 记录1必须跟随记录"
+"2，记录2有四个字段："
+
+#. type: Plain text
+#: idf_exporter.adoc:145
+msgid ""
+"Geometry Name: a string which in combination with the Part Number must form a unique "
+"identifier for the component outline. For standardized packages, the package name is a good "
+"value for the geometry name, for example \"SOT-23\". For unique packages the manufacturer's "
+"part number is a good choice for the geometry name."
+msgstr ""
+"几何名称：与零件号组合的字符串必须形成元件边框的唯一标识符。 对于标准化包，包名称是几何名称的"
+"良好值，例如 _SOT-23_。 对于独特的包装，制造商的部件号是几何名称的不错选择。"
+
+#. type: Plain text
+#: idf_exporter.adoc:151
+msgid ""
+"Part Number: although obviously intended for the part number, for example BS107, it is better "
+"to use this string to help describe the package. For example if the geometry name is "
+"\"TO-92\", the part number entry may be used to describe the layout of the pads or the "
+"orientation of this particular TO-92 outline file."
+msgstr ""
+"部件号：虽然显然是用于部件号，例如 BS107，但最好使用此字符串来帮助描述包。 例如，如果几何名称"
+"是 _TO-92_，则部件号条目可用于描述焊盘的布局或该特定 TO-92 边框文件的方向。"
+
+#. type: Plain text
+#: idf_exporter.adoc:154
+msgid ""
+"IDF Unit: this must be one of MM or THOU and it applies only to the units describing this "
+"single component outline."
+msgstr "IDF 单位：这必须是 MM 或 THOU 之一，它仅适用于描述此单一元件边框的单位。"
+
+#. type: Plain text
+#: idf_exporter.adoc:157
+msgid ""
+"Height: this is a floating point number representing the nominal height of the component "
+"using units specified in Field 3."
+msgstr "高度：这是一个浮点数，表示使用字段3中指定的单位的元件的标称高度。"
+
+#. type: Plain text
+#: idf_exporter.adoc:160
+msgid ""
+"Record 2 must be followed by a number of Record 3 entries which specify the outline of the "
+"component. Record 3 consists of four fields:"
+msgstr "记录2后面必须跟有许多记录3条目，这些条目指定了元件的边框。 记录3包含四个字段："
+
+#. type: Plain text
+#: idf_exporter.adoc:163
+msgid ""
+"Loop Index: 0 (outline points are specified in counter-clockwise order) or 1 (outline points "
+"are specified in clockwise order)"
+msgstr "循环索引：0（边框点以逆时针顺序指定）或1（边框点以顺时针顺序指定）"
+
+#. type: Plain text
+#: idf_exporter.adoc:165
+msgid "X coordinate: a floating point number"
+msgstr "X 坐标：浮点数"
+
+#. type: Plain text
+#: idf_exporter.adoc:167
+msgid "Y coordinate: a floating point number"
+msgstr "Y 坐标：浮点数"
+
+#. type: Plain text
+#: idf_exporter.adoc:177
+msgid ""
+"Included Angle: a floating point number. If the value is 0 then a straight line segment is "
+"drawn from the previous point to this point.  If the value is 360 then the previous point "
+"specifies the center of a circle and this point specifies a point on the circle; never "
+"specify a circle using a value of -360 as at least one major mechanical CAD package does not "
+"behave well in that situation. If the value is negative then a clockwise arc is drawn from "
+"the previous point to this point and if the value is positive then a counter-clockwise arc is "
+"drawn."
+msgstr ""
+"包含的角度：浮点数。 如果该值为 0，则从前一点到此点绘制直线段。 如果值为 360，则前一个点指定圆"
+"的中心，此点指定圆上的点; 从不使用 -360 的值指定圆，因为至少有一个主要的机械 CAD 软件包在这种"
+"情况下表现不佳。 如果该值为负，则从前一点到此点绘制顺时针弧，如果该值为正，则绘制逆时针弧。"
+
+#. type: Plain text
+#: idf_exporter.adoc:181
+msgid ""
+"Only one closed loop is permitted and it is not possible to specify a cutout. The last point "
+"specified must be the same as the first point unless the outline is a circle."
+msgstr "只允许一个闭环，并且无法指定切口。 指定的最后一个点必须与第一个点相同，除非边框是圆形。"
+
+#. type: Plain text
+#: idf_exporter.adoc:183
+msgid "Example IDF File 1:"
+msgstr "示例 IDF 文件1："
+
+#. type: delimited block -
+#: idf_exporter.adoc:191
+#, no-wrap
+msgid ""
+"# a simple cylinder - this could represent an electrolytic capacitor\n"
+".ELECTRICAL\n"
+"    \"cylinder\" \"5mm OD, 5mm height\" MM 5\n"
+"    0 0 0 0\n"
+"    0 2.5 0 360\n"
+".END_ELECTRICAL\n"
+msgstr ""
+"# a simple cylinder - this could represent an electrolytic capacitor\n"
+".ELECTRICAL\n"
+"    \"cylinder\" \"5mm OD, 5mm height\" MM 5\n"
+"    0 0 0 0\n"
+"    0 2.5 0 360\n"
+".END_ELECTRICAL\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:194
+msgid "Example IDF File 2:"
+msgstr "示例 IDF 文件2："
+
+#. type: delimited block -
+#: idf_exporter.adoc:210
+#, no-wrap
+msgid ""
+"# an upside-down T\n"
+"# a comment added for the sake of adding comments\n"
+".ELECTRICAL\n"
+"    \"Capital T\" \"5x8x10mm, upside down\" MM 10\n"
+"    0 -0.5 8 0\n"
+"    0 -0.5 0.5 0\n"
+"    0 -2.5 0.5 0\n"
+"    0 -2.5 -0.5 180\n"
+"    0 2.5 -0.5 0\n"
+"    0 2.5 0.5 180\n"
+"    0 0.5 0.5 0\n"
+"    0 0.5 8 0\n"
+"    0 -0.5 8 180\n"
+".END_ELECTRICAL\n"
+msgstr ""
+"# an upside-down T\n"
+"# a comment added for the sake of adding comments\n"
+".ELECTRICAL\n"
+"    \"Capital T\" \"5x8x10mm, upside down\" MM 10\n"
+"    0 -0.5 8 0\n"
+"    0 -0.5 0.5 0\n"
+"    0 -2.5 0.5 0\n"
+"    0 -2.5 -0.5 180\n"
+"    0 2.5 -0.5 0\n"
+"    0 2.5 0.5 180\n"
+"    0 0.5 0.5 0\n"
+"    0 0.5 8 0\n"
+"    0 -0.5 8 180\n"
+".END_ELECTRICAL\n"
+
+#. type: Title ==
+#: idf_exporter.adoc:212
+#, no-wrap
+msgid "Guidelines for creating outlines"
+msgstr "创建边框的准则"
+
+#. type: Plain text
+#: idf_exporter.adoc:217
+msgid ""
+"When creating outlines, and especially when sharing the work with others, consistency in the "
+"design and naming of files helps people locate files quicker and place the components with "
+"minimal hassles."
+msgstr ""
+"在创建边框时，特别是在与他人共享工作时，文件的设计和命名的一致性可以帮助人们更快地找到文件并以"
+"最小的麻烦放置元件。"
+
+#. type: Title ===
+#: idf_exporter.adoc:218
+#, no-wrap
+msgid "Package naming"
+msgstr "包命名"
+
+#. type: Plain text
+#: idf_exporter.adoc:229
+msgid ""
+"Try to make some information about the outline available in the filename to give the user a "
+"general idea of what the outline is. For example axial leaded cylindrical packages may "
+"represent some types of capacitors as well as some types of resistors, so it makes sense to "
+"identify an outline as a horizontal or vertical axial leaded device and to add some extra "
+"information on the relevant dimensions: diameter, length, and pitch are the most important. "
+"If a device has a unique outline, the manufacturer's part number and a prefix to indicate the "
+"class of device are adequate."
+msgstr ""
+"尝试提供有关文件名中可用边框的一些信息，以便用户大致了解边框是什么。 例如，轴向引线圆柱形封装"
+"可能代表某些类型的电容器以及某些类型的电阻，因此将边框识别为水平或垂直轴向引线装置并在相关尺寸"
+"上添加一些额外信息是有意义的：直径，长度 和音高是最重要的。 如果设备具有唯一的边框，则制造商的"
+"部件号和用于指示设备类别的前缀就足够了。"
+
+#. type: Title ===
+#: idf_exporter.adoc:230
+#, no-wrap
+msgid "Comments"
+msgstr "注释"
+
+#. type: Plain text
+#: idf_exporter.adoc:235
+msgid ""
+"Use comments in the IDF file to give users more information about the outline, for example a "
+"reference to the source used for dimensional information."
+msgstr "使用 IDF 文件中的注释为用户提供有关边框的更多信息，例如对用于尺寸信息的源的引用。"
+
+#. type: Title ===
+#: idf_exporter.adoc:236
+#, no-wrap
+msgid "Geometry and Part Number entries"
+msgstr "几何和部件编号条目"
+
+#. type: Plain text
+#: idf_exporter.adoc:245
+msgid ""
+"Think carefully about the values to give to the Geometry and Part Number entries. Taken "
+"together, these strings act as a unique identifier for the MCAD system. The values of the "
+"strings will ideally have some meaning to a user, but this is not necessary: the values are "
+"primarily intended for the MCAD system to use as a unique ID. Ideally the values chosen will "
+"be unique within any large collection of outlines; choosing values well will result in fewer "
+"clashes especially in complex boards."
+msgstr ""
+"仔细考虑要赋予几何和部件编号条目的值。 总之，这些字符串充当 MCAD 系统的唯一标识符。 理想情况"
+"下，字符串的值对用户有一定的意义，但这不是必需的：这些值主要用于 MCAD 系统用作唯一 ID。 理想情"
+"况下，所选择的值在任何大型边框集中都是唯一的; 选择好的价值将导致更少的冲突，特别是在复杂的板"
+"上。"
+
+#. type: Title ===
+#: idf_exporter.adoc:246
+#, no-wrap
+msgid "Pin orientation and positioning"
+msgstr "引脚方向和定位"
+
+#. type: Plain text
+#: idf_exporter.adoc:258
+msgid ""
+"For through-hole components there are no widely accepted schemes for determining the pin "
+"orientation and component center in 3D models. For consistency, if there are only 2 pins they "
+"must be in a horizontal arrangement (see link:#figure-4[figure 4]) along the X axis and for 3 "
+"pins try to keep 2 in a horizontal arrangement on the X axis. Polarized devices such as "
+"electrolytic or tantalum capacitors must have the positive lead on Pin 1 and diodes must have "
+"the cathode on Pin 1; this is to maintain compatibility of the schematic symbols with the "
+"orientation defined for SMT devices; however, note that many existing KiCad schematics and "
+"footprints place the anode at Pin 1."
+msgstr ""
+"对于通孔元件，没有广泛接受的方案来确定 3D 模型中的引脚方向和元件中心。 为了保持一致性，如果只"
+"有2个引脚，它们必须沿X轴水平排列（见链接：#figure-4[图4]），对于3个引脚，试图在X轴上保持水平排"
+"列2。 电解电容或钽电容等极化器件必须在引脚1上具有正极引线，二极管必须在引脚1上具有正极; 这是为"
+"了保持原理图符号与 SMT 器件定义的方向的兼容性; 但请注意，许多现有的 KiCad 原理图和封装都将阳极"
+"置于引脚1。"
+
+#. type: Plain text
+#: idf_exporter.adoc:262
+msgid ""
+"In the latest revision of the KiCad footprints on github the anode is now Pin 2 for THT as "
+"well as SMT components."
+msgstr "在 GitHub上最新版本的 KiCad 封装中，阳极现在是针对 THT 的引脚2以及 SMT 元件。"
+
+#. type: Plain text
+#: idf_exporter.adoc:275
+msgid ""
+"For DIP devices the center of the outline must be at the center of the rectangle described by "
+"the pin locations and Pin 1 is preferably at the top left corner; this will maintain some "
+"consistency with the standardized orientation of SMT components; however, such a model will "
+"be rotated -90 degrees relative to most existing KiCad component footprints and VRML models. "
+"For items such as a horizontal radial leaded capacitor or a horizontal TO-220 package, prefer "
+"to place the leads in a row on the X axis and with the body of the device extending upwards "
+"(see link:#figure-4[figure 4]). Non-polarized vertical axial leaded components must have the "
+"wire on the right hand side; polarized vertical axial leaded components may have the wire on "
+"either side, depending on whether Pin 1 is on the lower end (wire on right) or on the upper "
+"end (wire on left)."
+msgstr ""
+"对于 DIP 设备，边框的中心必须位于由销位置描述的矩形的中心，而引脚1最好位于左上角; 这将与 SMT "
+"元件的标准化方向保持一致; 然而，相对于大多数现有的 KiCad 元件封装和 VRML 模型，这样的模型将旋"
+"转 -90度。 对于诸如水平径向引线电容器或水平 TO-220 封装的器件，更喜欢将引线排成X行的一排，并且"
+"器件的主体向上延伸（参见链接：#figure-4[图4]）。 非极化垂直轴向引线元件必须在右侧有导线; 极化"
+"垂直轴向引线元件可以在两侧都有导线，这取决于引脚1是在下端（导线在右侧）还是在上端（导线在左"
+"侧）。"
+
+#. type: Plain text
+#: idf_exporter.adoc:285
+msgid ""
+"In the current revision of the KiCad footprint modules the THT components are being organized "
+"with pins along the Y axis rather than the X axis and Pin 1 of the device is at the origin "
+"rather than at the center of the package. Orient and position the component outline to suit "
+"your specific footprints; this will avoid the need to specify a non-zero rotation for the IDF "
+"component outlines. Since the IDF exporter currently ignores the (X,Y) offset values it is "
+"vital that you use the correct origin in the IDF component outline."
+msgstr ""
+"在当前版本的 KiCad 封装模块中，THT 元件的引脚沿Y轴而非X轴进行组织，器件的引脚1位于封装的原点而"
+"不是封装的中心。 定位和定位元件边框以适合您的特定尺寸; 这将避免为 IDF 元件边框指定非零旋转的需"
+"要。 由于 IDF 导出器当前忽略（X，Y）偏移值，因此在 IDF 元件边框中使用正确的原点至关重要。"
+
+#. type: Plain text
+#: idf_exporter.adoc:295
+msgid ""
+"For SMT components the orientation, package center, and outline are defined by various "
+"standards. Use the standard appropriate to your work.  Also keep in mind that many devices do "
+"not conform to any standard; in such cases the offending device is probably best identified "
+"by using the manufacturer's part number in the outline file name. In general, an SMT outline "
+"is a rectangle encompassing the component package and including the leads; the package is "
+"oriented such that Pin 1 is as close as possible to the top left corner and the top left "
+"corner is usually chamfered for visual reference."
+msgstr ""
+"对于 SMT 元件，方向，封装中心和边框由各种标准定义。 使用适合您工作的标准。 还要记住，许多设备"
+"不符合任何标准; 在这种情况下，可能最好通过在大纲文件名中使用制造商的部件号来识别违规设备。 通"
+"常，SMT 边框是包含元件封装并包括引线的矩形; 封装的方向使得引脚1尽可能靠近左上角，左上角通常被"
+"倒角以供视觉参考。"
+
+#. type: Block title
+#: idf_exporter.adoc:298
+#, no-wrap
+msgid "Sample outlines generated by the programs idfcyl and idfrect and rendered by SolidWorks."
+msgstr "程序生成的示例边框 idfcyl 和 idfrect 由 SolidWorks 生成并呈现。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: idf_exporter.adoc:299
+#, no-wrap
+msgid "Sample outlines"
+msgstr "示例边框"
+
+#. type: Target for macro image
+#: idf_exporter.adoc:299
+#, no-wrap
+msgid "images/test_idf_blobs.png"
+msgstr "images/test_idf_blobs.png"
+
+#. type: Plain text
+#: idf_exporter.adoc:308
+msgid ""
+"From left to right are (a) vertical radial leaded cylinder, (b) vertical axial leaded "
+"cylinder with wire on left, (c) vertical axial leaded cylinder with wire on right, (d) "
+"horizontal axial leaded cylinder, (e)  horizontal radial leaded cylinder, (f) square outline, "
+"plain, (g) square outline with chamfer, (h) square outline with axial lead on right. The top "
+"outlines were specified in units of millimeters while the bottom outlines were specified in "
+"units of inches."
+msgstr ""
+"从左到右分别是（a）垂直径向引线圆柱体，（b）左边带有导线的垂直轴向引线圆柱体，（c）带有导线的"
+"垂直轴向引线圆柱体，（d）水平轴向引线圆柱体，（e）水平径向 引线圆柱，（f）方形边框，平面，"
+"（g）带倒角的方形边框，（h）右侧轴向引线的方形边框。 顶部边框以毫米为单位指定，而底部边框以英"
+"寸为单位指定。"
+
+#. type: Title ===
+#: idf_exporter.adoc:311
+#, no-wrap
+msgid "Tips on dimensions"
+msgstr "尺寸提示"
+
+#. type: Plain text
+#: idf_exporter.adoc:330
+msgid ""
+"The purpose served by the extruded outlines is to give the mechanical designer some idea of "
+"the location and physical space occupied by each component. In a typical scenario the "
+"mechanical designer will replace some of the crude outlines with more detailed mechanical "
+"models, for example when checking to ensure that a right-angle mounted LED will fit into a "
+"hole on a panel. In most situations the accuracy of an outline doesn't matter, but it is good "
+"practice to create outlines which convey the best mechanical information possible. In a few "
+"instances a user may wish to fit the component into a case with very little excess space, for "
+"example in a portable music player. In such a situation, if most extruded outlines are a good "
+"enough representation of components then the mechanical designer may only have to replace "
+"very few models while designing the case. If the outlines are not a reliable reflection of "
+"reality then the mechanical designer will waste a lot of time replacing models to ensure a "
+"good fit. After all, if you put garbage in you can expect garbage to come out. If you put in "
+"good information, you can be confident of good results."
+msgstr ""
+"推挤边框的目的是让机械设计者了解每个部件占据的位置和物理空间。在典型情况下，机械设计师将使用更"
+"详细的机械模型替换一些原始边框，例如在检查时确保直角安装的 LED 适合面板上的孔。在大多数情况"
+"下，边框的准确性无关紧要，但优良作法是创建可传达最佳机械信息的边框。在少数情况下，用户可能希望"
+"将元件装配到具有非常小的多余空间的壳体中，例如在便携式音乐播放器中。在这种情况下，如果大多数推"
+"挤边框是元件的足够好的表示，那么机械设计师可能只需要在设计壳体时替换很少的模型。如果边框不是现"
+"实的可靠反映，那么机械设计师将浪费大量时间来更换模型以确保良好的贴合性。毕竟，如果你把垃圾放进"
+"去，你可以期待垃圾出来。如果您提供了良好的信息，您可以对良好的结果充满信心。"
+
+#. type: Title ==
+#: idf_exporter.adoc:331
+#, no-wrap
+msgid "IDF Component Outline Tools"
+msgstr "IDF 元件边框工具"
+
+#. type: Plain text
+#: idf_exporter.adoc:335
+msgid ""
+"A number of command-line tools are available to help generate IDF component outlines. The "
+"tools are:"
+msgstr "许多命令行工具可用于帮助生成 IDF 元件边框。 工具是："
+
+#. type: Plain text
+#: idf_exporter.adoc:338
+#, no-wrap
+msgid ""
+"*idfcyl:* creates an outline of a cylinder in vertical or horizontal\n"
+"orientation and with axial or radial leads\n"
+msgstr ""
+"*idfcyl：* 创建垂直或水平圆柱的边框定向和轴向\n"
+"或径向引线\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:341
+#, no-wrap
+msgid ""
+"*idfrect:* creates an outline of a rectangle which may have either\n"
+"an axial lead or a chamfer in the top left corner\n"
+msgstr ""
+"*idfrect：* 创建一个矩形的边框，可能有任何一个\n"
+"左上角的轴向引线或倒角\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:344
+#, no-wrap
+msgid ""
+"*dxf2idf:* converts a drawing in DXF format into an IDF component\n"
+"outline\n"
+msgstr ""
+"*dxf2idf：* 将 DXF 格式的图形转换为 IDF\n"
+"元件\n"
+"边框\n"
+
+#. type: Title ===
+#: idf_exporter.adoc:345
+#, no-wrap
+msgid "idfcyl"
+msgstr "idfcyl"
+
+#. type: Plain text
+#: idf_exporter.adoc:349
+msgid ""
+"When *idfcyl* is invoked with no arguments it prints out a usage note and a summary of its "
+"inputs:"
+msgstr "当 * idfcyl * 在没有参数的情况下被调用时，它会打印出一个使用说明及其输入的摘要："
+
+#. type: delimited block -
+#: idf_exporter.adoc:356
+#, no-wrap
+msgid ""
+"idfcyl: This program generates an outline for a cylindrical component.\n"
+"    The cylinder may be horizontal or vertical.\n"
+"    A horizontal cylinder may have wires at one or both ends.\n"
+"    A vertical cylinder may have at most one wire which may be\n"
+"    placed on the left or right side.\n"
+msgstr ""
+"idfcyl：该程序生成圆柱形元件的边框。\n"
+"     圆筒可以是水平的或垂直的。\n"
+"     水平圆柱体可以在一端或两端具有线。\n"
+"     垂直圆柱体可以具有至多一根可以是的线\n"
+"     放在左侧或右侧。\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:369
+#, no-wrap
+msgid ""
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Orientation: V (vertical)\n"
+"    Lead type: X, R (axial, radial)\n"
+"    Diameter of body\n"
+"    Length of body\n"
+"    Board offset\n"
+"    *   Wire diameter\n"
+"    *   Pitch\n"
+"    **  Wire side: L, R (left, right)\n"
+"    *** Lead length\n"
+"    File name (must end in *.idf)\n"
+msgstr ""
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Orientation: V (vertical)\n"
+"    Lead type: X, R (axial, radial)\n"
+"    Diameter of body\n"
+"    Length of body\n"
+"    Board offset\n"
+"    *   Wire diameter\n"
+"    *   Pitch\n"
+"    **  Wire side: L, R (left, right)\n"
+"    *** Lead length\n"
+"    File name (must end in *.idf)\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:373
+#, no-wrap
+msgid ""
+"    NOTES:\n"
+"        *   only required for horizontal orientation or\n"
+"            vertical orientation with axial leads\n"
+msgstr ""
+"    注意：\n"
+"         *   仅用于水平方向或\n"
+"             带轴向引线的垂直方向\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:375
+#, no-wrap
+msgid "        **  only required for vertical orientation with axial leads\n"
+msgstr "        **  只有轴向引线的垂直方向才需要\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:377
+#, no-wrap
+msgid "        *** only required for horizontal orientation with radial leads\n"
+msgstr "        ***  仅对于带有径向引线的水平方向需要\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:383
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the command line. A user "
+"can manually enter information at the command line or create scripts to generate outlines. "
+"The following script creates a single cylinder axial leaded outline with the lead on the "
+"right hand side:"
+msgstr ""
+"可以通过在命令行上输入任意参数来抑制注释。 用户可以在命令行手动输入信息或创建脚本以生成边框。 "
+"以下脚本创建一个单个圆柱轴向引线边框，右侧为引线："
+
+#. type: delimited block -
+#: idf_exporter.adoc:402
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Generate a cylindrical IDF outline for test purposes\n"
+"# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
+"# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
+"idfcyl - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"v\n"
+"x\n"
+"5\n"
+"8\n"
+"3\n"
+"0.8\n"
+"3.5\n"
+"r\n"
+"cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
+"_EOF\n"
+msgstr ""
+"#!/bin/bash\n"
+"# Generate a cylindrical IDF outline for test purposes\n"
+"# vertical 5mm cylinder,  nominal length 8mm + 3mm board offset,\n"
+"# axial wire on right,  0.8mm wire dia., 3.5mm pitch\n"
+"idfcyl - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"v\n"
+"x\n"
+"5\n"
+"8\n"
+"3\n"
+"0.8\n"
+"3.5\n"
+"r\n"
+"cylvmm_1R_D5_L8_Z3_WD0.8_P3.5.idf\n"
+"_EOF\n"
+
+#. type: Title ===
+#: idf_exporter.adoc:404
+#, no-wrap
+msgid "idfrect"
+msgstr "idfrect"
+
+#. type: Plain text
+#: idf_exporter.adoc:408
+msgid ""
+"When *idfrect* is invoked with no arguments it prints out a usage note and a summary of its "
+"inputs:"
+msgstr "如果在没有参数的情况下调用 * idfrect *，则会打印出使用说明及其输入摘要："
+
+#. type: delimited block -
+#: idf_exporter.adoc:423
+#, no-wrap
+msgid ""
+"idfrect: This program generates an outline for a rectangular component.\n"
+"    The component may have a single lead (axial) or a chamfer on the\n"
+"    upper left corner.\n"
+"Input:\n"
+"    Unit: mm, in (millimeters or inches)\n"
+"    Width:\n"
+"    Length:\n"
+"    Height:\n"
+"    Chamfer: length of the 45 deg. chamfer\n"
+"    *  Leaded: Y,N (lead is always to the right)\n"
+"    ** Wire diameter\n"
+"    ** Pitch\n"
+"    File name (must end in *.idf)\n"
+msgstr ""
+"idfrect：该程序生成矩形元件的边框。\n"
+"     该部件可以具有单个引线（轴向）或倒角\n"
+"     左上角。\n"
+"输入：\n"
+"     单位：毫米，英寸（毫米或英寸）\n"
+"     宽度：\n"
+"     长度：\n"
+"     高度：\n"
+"     倒角：长度为45度。倒棱\n"
+"     * 倾斜的角度：Y，N（引线始终向右边）\n"
+"     ** 线径\n"
+"     ** 球场\n"
+"     文件名（必须以 *.idf 结尾）\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:426
+#, no-wrap
+msgid ""
+"    NOTES:\n"
+"        *   only required if chamfer = 0\n"
+msgstr ""
+"    注意：\n"
+"        *   仅在 倒角 = 0 时才需要\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:428
+#, no-wrap
+msgid "        **  only required for leaded components\n"
+msgstr "        **  仅对倾斜的角度元件有要求\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:434
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the command line. A user "
+"can manually enter information at the command line or create scripts to generate outlines. "
+"The following script creates a chamfered rectangle and an axial leaded outline:"
+msgstr ""
+"可以通过在命令行上输入任意参数来抑制注释。 用户可以在命令行手动输入信息或创建脚本以生成边框。 "
+"以下脚本创建倒角矩形和轴向引线边框："
+
+#. type: delimited block -
+#: idf_exporter.adoc:460
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Generate various rectangular IDF outlines for test purposes\n"
+"# 10x10, 1mm chamfer, 2mm height\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"2\n"
+"1\n"
+"rectMM_10x10x2_C0.5.idf\n"
+"_EOF\n"
+"# 10x10x12,  0.8mm lead on 6mm pitch\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"12\n"
+"0\n"
+"Y\n"
+"0.8\n"
+"6\n"
+"rectLMM_10x10x12_D0.8_P6.0.idf\n"
+"_EOF\n"
+msgstr ""
+"#!/bin/bash\n"
+"# Generate various rectangular IDF outlines for test purposes\n"
+"# 10x10, 1mm chamfer, 2mm height\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"2\n"
+"1\n"
+"rectMM_10x10x2_C0.5.idf\n"
+"_EOF\n"
+"# 10x10x12,  0.8mm lead on 6mm pitch\n"
+"idfrect - 1 > /dev/null <<  _EOF\n"
+"mm\n"
+"10\n"
+"10\n"
+"12\n"
+"0\n"
+"Y\n"
+"0.8\n"
+"6\n"
+"rectLMM_10x10x12_D0.8_P6.0.idf\n"
+"_EOF\n"
+
+#. type: Title ===
+#: idf_exporter.adoc:462
+#, no-wrap
+msgid "dxf2idf"
+msgstr "dxf2idf"
+
+#. type: Plain text
+#: idf_exporter.adoc:468
+msgid ""
+"The DXF file used to specify the component outline can be prepared with the free software "
+"http://librecad.org/[LibreCAD] for best compatibility.  When *dxf2idf* is invoked with no "
+"arguments it prints out a usage note and a summary of its inputs:"
+msgstr ""
+"用于指定元件概要的 DXF 文件可以使用免费软件 http://librecad.org/[LibreCAD] 进行准备，以获得最"
+"佳兼容性。 如果在没有参数的情况下调用 *dxf2idf*，则会打印出使用说明及其输入摘要："
+
+#. type: delimited block -
+#: idf_exporter.adoc:472
+#, no-wrap
+msgid ""
+"dxf2idf: this program takes line, arc, and circle segments\n"
+"    from a DXF file and creates an IDF component outline file.\n"
+msgstr ""
+"dxf2idf：此程序采用线段，圆弧和圆弧段\n"
+"    从 DXF 文件中创建 IDF 元件边框文件。\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:483
+#, no-wrap
+msgid ""
+"Input:\n"
+"    DXF filename: the input file, must end in '.dxf'\n"
+"    Units: mm, in (millimeters or inches)\n"
+"    Geometry Name: string, as per IDF version 3.0 specification\n"
+"    Part Name: as per IDF version 3.0 specification of Part Number\n"
+"    Height: extruded height of the outline\n"
+"    Comments: all non-empty lines are comments to be added to\n"
+"        the IDF file. An empty line signifies the end of\n"
+"        the comment block.\n"
+"    File name: output filename, must end in '.idf'\n"
+msgstr ""
+"输入：\n"
+"     DXF 文件名：输入文件，必须以 _.dxf_ 结尾\n"
+"     单位：毫米，英寸（毫米或英寸）\n"
+"     几何名称：字符串，根据 IDF 3.0版规范\n"
+"     部件名称：根据部件号的 IDF 3.0版规范\n"
+"     高度：边框的挤压高度\n"
+"     注释：所有非空行都是要添加的注释\n"
+"         IDF 文件。 空行表示结束\n"
+"         注释块。\n"
+"     文件名：输出文件名，必须以 _.idf_ 结尾\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:489
+msgid ""
+"The notes can be suppressed by entering any arbitrary argument on the command line. A user "
+"can manually enter information at the command line or create scripts to generate outlines. "
+"The following script creates a 5mm high outline from a DXF file 'test.dxf':"
+msgstr ""
+"可以通过在命令行上输入任意参数来抑制注释。 用户可以在命令行手动输入信息或创建脚本以生成边框。 "
+"以下脚本从 DXF 文件 _test.dxf_ 创建 5mm 高边框："
+
+#. type: delimited block -
+#: idf_exporter.adoc:502
+#, no-wrap
+msgid ""
+"#!/bin/bash\n"
+"# Generate an IDF outlines from a DXF file\n"
+"dxf2idf - 1 > /dev/null << _EOF\n"
+"test.dxf\n"
+"mm\n"
+"DXF TEST GEOMETRY\n"
+"DXF TEST PART\n"
+"5\n"
+"This is an IDF test file produced from the outline 'test.dxf'\n"
+"This is a second IDF comment to demonstrate multiple comments\n"
+msgstr ""
+"#!/bin/bash\n"
+"# Generate an IDF outlines from a DXF file\n"
+"dxf2idf - 1 > /dev/null << _EOF\n"
+"test.dxf\n"
+"mm\n"
+"DXF TEST GEOMETRY\n"
+"DXF TEST PART\n"
+"5\n"
+"This is an IDF test file produced from the outline 'test.dxf'\n"
+"This is a second IDF comment to demonstrate multiple comments\n"
+
+#. type: delimited block -
+#: idf_exporter.adoc:505
+#, no-wrap
+msgid ""
+"test_dxf2idf.idf\n"
+"_EOF\n"
+msgstr ""
+"test_dxf2idf.idf\n"
+"_EOF\n"
+
+#. type: Title ==
+#: idf_exporter.adoc:507
+#, no-wrap
+msgid "idf2vrml"
+msgstr "idf2vrml"
+
+#. type: Plain text
+#: idf_exporter.adoc:515
+msgid ""
+"The idf2vrml tool reads a set of one IDF Board (.emn) and one IDF Component file (.emp) and "
+"produces a VRML file which can be viewed with a VRML viewer. This feature is useful for "
+"visualization of the board assembly in cases where the user does not have access to MCAD "
+"software. Invoking idf2vrml without any arguments will result in the display of a usage "
+"message:"
+msgstr ""
+"idf2vrml 工具读取一组 IDF 板（.emn）和一个 IDF 元件文件（.emp）并生成 VRML 文件；可以使用VRML"
+"查看器查看该文件；在用户无法访问 MCAD 软件的情况下此功能对于电路板装配的可视化非常有用；调用不"
+"带任何参数的 idf2vrml 将导致显示用法消息："
+
+#. type: delimited block -
+#: idf_exporter.adoc:526
+#, no-wrap
+msgid ""
+">./idf2vrml\n"
+"Usage: idf2vrml -f input_file.emn -s scale_factor {-k} {-d} {-z} {-m}\n"
+"flags:\n"
+"   -k: produce KiCad-friendly VRML output; default is compact VRML\n"
+"   -d: suppress substitution of default outlines\n"
+"   -z: suppress rendering of zero-height outlines\n"
+"   -m: print object mapping to stdout for debugging purposes\n"
+"example to produce a model for use by KiCad: idf2vrml -f input.emn -s 0.3937008 -k\n"
+">\n"
+msgstr ""
+">./ idf2vrml\n"
+"用法：idf2vrml -f input_file.emn -s scale_factor {-k} {-d} {-z} {-m}\n"
+"标志：\n"
+"    -k：生成 KiCad 友好的 VRML 输出; 默认是紧凑的 VRML\n"
+"    -d：禁止替换默认边框\n"
+"    -z：禁止渲染零高度边框\n"
+"    -m：打印对象映射到 stdout 以进行调试\n"
+"生成 KiCad 使用的模型的示例：idf2vrml -f input.emn -s 0.3937008 -k\n"
+">\n"
+
+#. type: Plain text
+#: idf_exporter.adoc:534
+msgid ""
+"[**BUG:** The idf2vrml tool currently does not correctly render *OTHER_OUTLINE* entities in "
+"an emn file if that entity is specifies on the back layer of the PCB; however you will not "
+"notice this bug using files exported by KiCad since there is no mechanism to specify such an "
+"entity.  Essentially this bug is only an issue in rare instances where you might render a "
+"third party emn file which does employ the entity on the back side of a board.]"
+msgstr ""
+"[** BUG：**] 如果在 PCB 的背面指定了该实体，则 idf2vrml 工具当前无法在 emn 文件中正确呈现 * "
+"OTHER_OUTLINE * 实体; 但是你不会使用 KiCad 导出的文件注意到这个错误，因为没有机制来指定这样的"
+"实体。 基本上这个错误只是一个问题，在极少数情况下，您可能会渲染第三方的 emn 文件，该文件确实使"
+"用了电路板背面的实体。"
