@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IDF_Exporter_zh_CN_v0.1\n"
 "POT-Creation-Date: 2019-02-28 06:27+0000\n"
-"PO-Revision-Date: 2019-02-28 14:39+0800\n"
+"PO-Revision-Date: 2019-03-09 01:39+0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,9 @@ msgstr "_参考手册_"
 #: idf_exporter.adoc:12
 #, no-wrap
 msgid "*Copyright*\n"
-msgstr "*版权*\n"
+msgstr ""
+"*Copyright*\n"
+"\n"
 
 #. type: Plain text
 #: idf_exporter.adoc:18
@@ -166,9 +168,9 @@ msgstr ""
 "文件，然后输入偏移和旋转所需的任何值。请注意，IDF 导出器仅使用偏移值和 Z 旋转值;所有其他值都将"
 "被忽略。必须使用 IDF 板输出单位（mm 或 thou）和 IDF 坐标系指定偏移量，这是一个右手坐标系，+Z "
 "向观察者移动，+X 向观察者右侧，+Y 向观察者上侧。旋转必须以度为单位，正旋转为逆时针旋转，如 "
-"IDFv3 规范中所述。多个边框可以与适当的偏移组合以表示简单的元件，例如插座中的 DIP 包。 [**"
-"BUG：**] 在讨论中已经确定 Z 偏移的单位应该是英寸，这与 VRML 模型偏移的单位一致。忽略（X，Y）偏"
-"移值也可能有用。这里提到的行为将在未来的某个时候发生变化。"
+"IDFv3 规范中所述。多个边框可以与适当的偏移组合以表示简单的元件，例如插座中的 DIP 包。 [**BUG："
+"**] 在讨论中已经确定 Z 偏移的单位应该是英寸，这与 VRML 模型偏移的单位一致。忽略（X，Y）偏移值"
+"也可能有用。这里提到的行为将在未来的某个时候发生变化。"
 
 #. type: Plain text
 #: idf_exporter.adoc:92
@@ -180,10 +182,10 @@ msgid ""
 "freecadweb.org/[FreeCAD] or converted to VRML using the idf2vrml tool and viewed with any "
 "suitable VRML viewer."
 msgstr ""
-"一旦为所有需要的元件指定了模型，从 pcbnew 中选择 *文件* 菜单，然后选择 *导出*，最后 **IDFv3"
-"导出**。 将弹出一个对话框（参见链接：#figure-3[图3]），该对话框允许设置输出文件名和 IDF 输出单"
-"位（mm 或 mils）。 导出的 IDF 文件可以在免费的机械 CAD 软件 http://www.freecadweb.org/"
-"[FreeCAD] 中查看，或使用 idf2vrml 工具转换为 VRML，并可以使用任何合适的 VRML 查看器查看。"
+"一旦为所有需要的元件指定了模型，从 pcbnew 中选择 *文件* 菜单，然后选择 *导出*，最后 **IDFv3导"
+"出**。 将弹出一个对话框（参见链接：#figure-3[图3]），该对话框允许设置输出文件名和 IDF 输出单位"
+"（mm 或 mils）。 导出的 IDF 文件可以在免费的机械 CAD 软件 http://www.freecadweb.org/[FreeCAD] "
+"中查看，或使用 idf2vrml 工具转换为 VRML，并可以使用任何合适的 VRML 查看器查看。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: idf_exporter.adoc:95 idf_exporter.adoc:96
@@ -1090,7 +1092,7 @@ msgid ""
 "entity.  Essentially this bug is only an issue in rare instances where you might render a "
 "third party emn file which does employ the entity on the back side of a board.]"
 msgstr ""
-"[** BUG：**] 如果在 PCB 的背面指定了该实体，则 idf2vrml 工具当前无法在 emn 文件中正确呈现 *"
-"OTHER_OUTLINE* 实体; 但是你不会使用 KiCad 导出的文件注意到这个错误，因为没有机制来指定这样的"
+"[** BUG：**] 如果在 PCB 的背面指定了该实体，则 idf2vrml 工具当前无法在 emn 文件中正确呈现 "
+"*OTHER_OUTLINE* 实体; 但是你不会使用 KiCad 导出的文件注意到这个错误，因为没有机制来指定这样的"
 "实体。 基本上这个错误只是一个问题，在极少数情况下，您可能会渲染第三方的 emn 文件，该文件确实使"
 "用了电路板背面的实体。"
