@@ -5,6 +5,15 @@
 # (c)2015 Brian Sidebotham <brian.sidebotham@gmail.com>
 #
 
+# Everything without leading / is relative to CMAKE_INSTALL_PREFIX.
+if( APPLE )
+     set( _KICAD_DOC_PATH help)
+else()
+     set( _KICAD_DOC_PATH share/doc/kicad/help)
+endif()
+set( KICAD_DOC_PATH ${_KICAD_DOC_PATH}
+     CACHE PATH "Install path of KiCad documentation files (absolute, or relative to CMAKE_INSTALL_PREFIX)." )
+
 macro( INTERSECTION out_list list1 list2)
 # Store the intersection between the two given lists in var_name.
     foreach( L ${list1} )
@@ -20,15 +29,6 @@ macro( KiCadDocumentation DOCNAME )
     # Add the cvpcb documentation targets
     add_custom_target( ${DOCNAME} ALL )
     add_custom_target( ${DOCNAME}_updatepo_all )
-
-    # Define the install path
-    if( APPLE )
-        set( KICAD_DOC_PATH ./help
-            CACHE PATH "Location of KiCad doc files." )
-    else()
-        set( KICAD_DOC_PATH ./share/doc/kicad/help
-            CACHE PATH "Location of KiCad doc files." )
-    endif()
 
     # Get a list of all the doc chapters
     file( GLOB DOCCHAPTERFILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/${DOCNAME}_*.adoc )

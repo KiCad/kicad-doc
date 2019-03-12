@@ -114,10 +114,6 @@ if( GIT_FOUND )
     message (STATUS "Setting package version to ${CPACK_PACKAGE_VERSION}")
 endif()
 
-# Everything without leading / is relative to CMAKE_INSTALL_PREFIX.
-set( KICAD_DOC_INSTALL_PATH share/doc/kicad
-     CACHE PATH "Install path of KiCad documentation files relative to CMAKE_INSTALL_PREFIX." )
-
 # If there is more than one build format, do not bother transforming the
 # package name, otherwise if there's only one, add it to the package name
 list( LENGTH BUILD_FORMATS BUILD_FORMATS_LENGTH )
