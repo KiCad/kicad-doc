@@ -5,8 +5,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Eeschema_zh_CN_v0.2\n"
-"POT-Creation-Date: 2019-04-04 15:14+0200\n"
+"Project-Id-Version: Eeschema_zh_CN_v0.3\n"
+"POT-Creation-Date: 2019-03-09 23:19+0800\n"
 "PO-Revision-Date: 2019-03-09 22:52+0800\n"
 "Last-Translator: taotieren <admin@taotieren.com>\n"
 "Language-Team: \n"
@@ -591,6 +591,283 @@ msgid ""
 msgstr ""
 " “黑白打印” 选项设置单色打印。 如果使用黑白激光打印机，通常需要此选项，因为颜"
 "色打印成半色调，通常不太可读。"
+
+#. type: Title ==
+#: eeschema_automatic_classification_annotation.adoc:3
+#, no-wrap
+msgid "Symbol Annotation Tool"
+msgstr "符号注释工具"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:13
+msgid ""
+"The annotation tool allows you to automatically assign a designator to "
+"symbols in your schematic. Annotation of symbols with multiple units will "
+"assign a unique suffix to minimize the number of these symbols.  The "
+"annotation tool is accessible via the icon image:images/icons/annotate."
+"png[icons_annotate_png].  Here you find its main window."
+msgstr ""
+"注释工具允许您自动为原理图中的符号指定一个指示符。具有多个单位的符号的注释将"
+"分配一个唯一的后缀, 以最大限度地减少这些符号的数量。 注释工具可通过图标图像访"
+"问: image:images/icons/annotate.png [icons_annotate_png]。 在这里, 你可以找到"
+"它的主窗口。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_automatic_classification_annotation.adoc:14
+#: eeschema_general_top_toolbar.adoc:96
+#, no-wrap
+msgid "annotate-dialog_img"
+msgstr "annotate-dialog_img"
+
+#. type: Target for macro image
+#: eeschema_automatic_classification_annotation.adoc:14
+#: eeschema_general_top_toolbar.adoc:96
+#, no-wrap
+msgid "images/en/annotate-dialog.png"
+msgstr "images/zh/annotate-dialog.png"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:17
+msgid "Available annotation schemes:"
+msgstr "可用的注释方案:"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:19
+msgid "Annotate all the symbols (reset existing annotation option)"
+msgstr "注释所有符号 (重置现有注释选项)"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:21
+msgid ""
+"Annotate all the symbols, but do not swap any previously annotated multi-"
+"unit parts."
+msgstr "注释所有符号, 但不要交换任何以前批注的多单位部件。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:23
+msgid ""
+"Annotate only symbols that are currently not annotated.  Symbols that are "
+"not annotated will have a designator which ends with a '?' character."
+msgstr ""
+"仅注释当前未注释的符号。 未批注的符号将具有以 \"？\" 字符结尾的指示符。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:24
+msgid "Annotate the whole hierarchy (use the entire schematic option)."
+msgstr "注释整个层次结构 (使用整个原理图选项)。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:25
+msgid "Annotate the current sheet only (use current page only option)."
+msgstr "仅注释当前工作表 (仅使用当前页选项)。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:31
+msgid ""
+"The ``Reset, but do not swap any annotated multi-unit parts'' option keeps "
+"all existing associations between symbols with multilple units. For example, "
+"U2A and U2B may be reannotated to U1A and U1B respectively but they will "
+"never be reannotated to U1A and U2A, nor to U2B and U2A. This is useful if "
+"you want to ensure that pin groupings are maintained."
+msgstr ""
+"“重置, 但不交换任何带注释的多单元部件” 选项保留具有多单元的符号之间的所有现有"
+"关联。例如, U22 和 U2A 可能分别重新注释为 U1B 和 U1B, 但它们永远不会重新注释"
+"到 U1B 和 U2A, 也不会重新注释为 U2B 和 U2A。如果要确保保持引脚分组, 这很有"
+"用。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:34
+msgid ""
+"The annotation order choice gives the method used to set the reference "
+"number inside each sheet of the hierarchy."
+msgstr "注释顺序选择提供了用于在层次结构的每个工作表内设置参考编号的方法。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:38
+msgid ""
+"Except for particular cases, an automatic annotation applies to the whole "
+"project (all sheets) and to the new components, if you don't want to modify "
+"previous annotations."
+msgstr ""
+"除特定情况外, 如果您不想修改以前的批注, 则自动批注将应用于整个项目 (所有工作"
+"表) 和新元件。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:40
+msgid "The Annotation Choice gives the method used to calculate reference:"
+msgstr "“注释选择” 给出了用于计算参考的方法:"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:44
+msgid ""
+"Use first free number in schematic: components are annotated from 1 (for "
+"each reference prefix). If a previous annotation exists, only unused numbers "
+"will be used."
+msgstr ""
+"在原理图中使用第一个空闲编号：元件从1开始注释（对于每个引用前缀）。 如果存在"
+"先前的注释，则仅使用未使用的数字。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:49
+msgid ""
+"Start to sheet number*100 and use first free number: annotation start from "
+"101 for the sheet 1, from 201 for the sheet 2, etc. If there are more than "
+"99 items having the same reference prefix (U, R) inside the sheet 1, the "
+"annotation tool uses the number 200 and more, and annotation for sheet 2 "
+"will start from the next free number."
+msgstr ""
+"从纸张编号 *100开始并使用第一个空闲编号：从纸张1的101开始注释，从纸张2的201开"
+"始，等等。如果在工作表内有超过99个具有相同参考前缀（U，R）的项目 在图1中，注"
+"释工具使用数字200和更多，并且工作表2的注释将从下一个空闲编号开始。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:51
+msgid ""
+"Start to sheet number*1000 and use first free number. Annotation start from "
+"1001 for the sheet 1, from 2001 for the sheet 2."
+msgstr ""
+"从表格编号 *1000开始并使用第一个空闲编号。 对于纸张1，注释从1001开始，从纸张2"
+"的2001开始。"
+
+#. type: Title ===
+#: eeschema_automatic_classification_annotation.adoc:53
+#, no-wrap
+msgid "Some examples"
+msgstr "一些例子"
+
+#. type: Title ====
+#: eeschema_automatic_classification_annotation.adoc:56
+#, no-wrap
+msgid "Annotation order"
+msgstr "注释顺序"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:59
+msgid "This example shows 5 elements placed, but not annotated."
+msgstr "此示例显示放置了5个元素，但未注释。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_automatic_classification_annotation.adoc:60
+#, no-wrap
+msgid "eeschema_annotation_order_none_png"
+msgstr "eeschema_annotation_order_none_png"
+
+#. type: Target for macro image
+#: eeschema_automatic_classification_annotation.adoc:60
+#, no-wrap
+msgid "images/eeschema_annotation_order_none.png"
+msgstr "images/eeschema_annotation_order_none.png"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:63
+msgid ""
+"After the annotation tool Is executed, the following result is obtained."
+msgstr "执行注释工具后，获得以下结果。"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:65
+msgid "Sort by X position."
+msgstr "按 X 位置排序。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_automatic_classification_annotation.adoc:66
+#, no-wrap
+msgid "eeschema_annotation_order_x_png"
+msgstr "eeschema_annotation_order_x_png"
+
+#. type: Target for macro image
+#: eeschema_automatic_classification_annotation.adoc:66
+#, no-wrap
+msgid "images/eeschema_annotation_order_x.png"
+msgstr "images/eeschema_annotation_order_x.png"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:69
+msgid "Sort by Y position."
+msgstr "按 Y 位置排序。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_automatic_classification_annotation.adoc:70
+#, no-wrap
+msgid "eeschema_annotation_order_y_png"
+msgstr "eeschema_annotation_order_y_png"
+
+#. type: Target for macro image
+#: eeschema_automatic_classification_annotation.adoc:70
+#, no-wrap
+msgid "images/eeschema_annotation_order_y.png"
+msgstr "images/eeschema_annotation_order_y.png"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:74
+msgid ""
+"You can see that four 74LS00 gates were distributed in U1 package, and that "
+"the fifth 74LS00 has been assigned to the next, U2."
+msgstr ""
+"您可以看到四个 74LS00 门分布在 U1 包中，第五个 74LS00 已分配给下一个 U2。"
+
+#. type: Title ====
+#: eeschema_automatic_classification_annotation.adoc:76
+#, no-wrap
+msgid "Annotation Choice"
+msgstr "注释选择"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:80
+msgid ""
+"Here is an annotation in sheet 2 where the option use first free number in "
+"schematic was set."
+msgstr "这是表2中的注释，其中选项使用原理图中的第一个空闲编号。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_automatic_classification_annotation.adoc:81
+#, no-wrap
+msgid "eeschema_annotation_choice_free_png"
+msgstr "eeschema_annotation_choice_free_png"
+
+#. type: Target for macro image
+#: eeschema_automatic_classification_annotation.adoc:81
+#, no-wrap
+msgid "images/eeschema_annotation_choice_free.png"
+msgstr "images/eeschema_annotation_choice_free.png"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:85
+msgid ""
+"Option start to sheet number*100 and use first free number give the "
+"following result."
+msgstr "选项开始到工作表编号 *100并使用第一个空闲编号给出以下结果。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_automatic_classification_annotation.adoc:86
+#, no-wrap
+msgid "eeschema_annotation_choice_x100_png"
+msgstr "eeschema_annotation_choice_x100_png"
+
+#. type: Target for macro image
+#: eeschema_automatic_classification_annotation.adoc:86
+#, no-wrap
+msgid "images/eeschema_annotation_choice_x100.png"
+msgstr "images/eeschema_annotation_choice_x100.png"
+
+#. type: Plain text
+#: eeschema_automatic_classification_annotation.adoc:90
+msgid ""
+"The option start to sheet number*1000 and use first free number gives the "
+"following result."
+msgstr "选项开始到工作表编号 *1000并使用第一个空闲编号给出以下结果。"
+
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_automatic_classification_annotation.adoc:91
+#, no-wrap
+msgid "eeschema_annotation_choice_x1000_png"
+msgstr "eeschema_annotation_choice_x1000_png"
+
+#. type: Target for macro image
+#: eeschema_automatic_classification_annotation.adoc:91
+#, no-wrap
+msgid "images/eeschema_annotation_choice_x1000.png"
+msgstr "images/eeschema_annotation_choice_x1000.png"
 
 #. type: Title ==
 #: eeschema_create_a_netlist.adoc:3
@@ -1260,34 +1537,29 @@ msgstr ""
 msgid "With:"
 msgstr "附："
 
-#. type: delimited block |
-#: eeschema_create_a_netlist.adoc:270
-#, no-wrap
-msgid "|f:/kicad/bin/xsltproc.exe |A tool to read and convert xsl file\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_create_a_netlist.adoc:272
-#, no-wrap
-msgid "|-o %O.net |Output file: %O will define the output file.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_create_a_netlist.adoc:275
+#. type: Table
+#: eeschema_create_a_netlist.adoc:278
 #, no-wrap
 msgid ""
+"|f:/kicad/bin/xsltproc.exe |A tool to read and convert xsl file\n"
+"\n"
+"|-o %O.net |Output file: %O will define the output file.\n"
+"\n"
 "|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |File name converter (a\n"
 "sheet style, xsl format).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_create_a_netlist.adoc:278
-#, fuzzy, no-wrap
-#| msgid "_%I_ will be replaced by the actual intermediate file name"
-msgid ""
+"\n"
 "|%I |Will be replaced by the intermediate file created by Eeschema\n"
 "(*.tmp).\n"
-msgstr "_%I_ 将被实际的中间文件名替换"
+msgstr ""
+"|f:/kicad/bin/xsltproc.exe |A tool to read and convert xsl file\n"
+"\n"
+"|-o %O.net |Output file: %O will define the output file.\n"
+"\n"
+"|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |File name converter (a\n"
+"sheet style, xsl format).\n"
+"\n"
+"|%I |Will be replaced by the intermediate file created by Eeschema\n"
+"(*.tmp).\n"
 
 #. type: Plain text
 #: eeschema_create_a_netlist.adoc:281
@@ -1371,7 +1643,7 @@ msgstr "页面设置"
 
 #. type: Target for macro image
 #: eeschema_general_top_toolbar.adoc:13
-#: eeschema_schematic_creation_and_editing.adoc:444
+#: eeschema_schematic_creation_and_editing.adoc:374
 #, no-wrap
 msgid "images/en/page_settings.png"
 msgstr "images/zh/page_settings.png"
@@ -1494,7 +1766,7 @@ msgstr "images/zh/netlist_dialog.png"
 msgid "Option:"
 msgstr "选项："
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_general_top_toolbar.adoc:65
 #, no-wrap
 msgid "|Default Format |Check to select Pcbnew as the default format.\n"
@@ -1558,7 +1830,7 @@ msgid ""
 "into U3A, U3B, U3C and U3D)."
 msgstr ""
 "对于多部件元件（例如包含4个门的 7400 TTL），还分配了多部件后缀（因此，指定为 "
-"U3 的 7400 TTL将分为 U3A，U3B，U3C和U3D）。"
+"U3 的 7400 TTL将分为 U3A，U3B，U3C 和 U3D）。"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:95
@@ -1567,65 +1839,47 @@ msgid ""
 "components, i.e. those which were not previously annotated."
 msgstr "您可以无条件地注释所有元件或仅注释新元件，即之前未注释的元件。"
 
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_general_top_toolbar.adoc:96
-#: eeschema_automatic_classification_annotation.adoc:14
-#, no-wrap
-msgid "annotate-dialog_img"
-msgstr "annotate-dialog_img"
-
-#. type: Target for macro image
-#: eeschema_general_top_toolbar.adoc:96
-#: eeschema_automatic_classification_annotation.adoc:14
-#, no-wrap
-msgid "images/en/annotate-dialog.png"
-msgstr "images/zh/annotate-dialog.png"
-
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:99
 #, no-wrap
 msgid "*Scope*\n"
 msgstr "*范围*\n"
 
-#. type: delimited block |
-#: eeschema_general_top_toolbar.adoc:102
-#, no-wrap
-msgid "|Use the entire schematic| All sheets are re-annotated (default).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_general_top_toolbar.adoc:106
-#, no-wrap
-msgid ""
-"|Use the current page only| Only the current sheet is re-annotated\n"
-"(this option is to be used only in special cases, for example to\n"
-"evaluate the amount of resistors in the current sheet.).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_general_top_toolbar.adoc:109
-#, no-wrap
-msgid ""
-"|Keep existing annotation| Conditional annotation, only the new\n"
-"components will be re-annotated (default).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_general_top_toolbar.adoc:113
-#, no-wrap
-msgid ""
-"|Reset existing annotation| Unconditional annotation, all the\n"
-"components will be re-annotated (this option is to be used when there\n"
-"are duplicated references).\n"
-msgstr ""
-
-#. type: delimited block |
+#. type: Table
 #: eeschema_general_top_toolbar.adoc:116
 #, no-wrap
 msgid ""
+"|Use the entire schematic| All sheets are re-annotated (default).\n"
+"\n"
+"|Use the current page only| Only the current sheet is re-annotated\n"
+"(this option is to be used only in special cases, for example to\n"
+"evaluate the amount of resistors in the current sheet.).\n"
+"\n"
+"|Keep existing annotation| Conditional annotation, only the new\n"
+"components will be re-annotated (default).\n"
+"\n"
+"|Reset existing annotation| Unconditional annotation, all the\n"
+"components will be re-annotated (this option is to be used when there\n"
+"are duplicated references).\n"
+"\n"
 "|Reset, but do not swap any annotated multi-unit parts| Keeps\n"
 "all groups of multiple units (e.g. U2A, U2B) together when reannotating.\n"
 msgstr ""
+"|使用整个原理图| 所有工作表都重新注释（默认）。\n"
+"\n"
+"|仅使用当前页面| 仅重新注释当前工作表\n"
+"（此选项仅在特殊情况下使用，例如\n"
+"评估当前表中的电阻数量。\n"
+"\n"
+"|保留现有注释| 条件注释，只有新的\n"
+"元件将被重新注释（默认）。\n"
+"\n"
+"|重置现有注释| 所有的无条件注释\n"
+"元件将被重新注释（此选项将在那里使用\n"
+"是重复的参考）。\n"
+"\n"
+"|重置，但不要交换任何带注释的多单元部件|保持\n"
+"当重新注释时，所有多个单元组（例如U2A，U2B）在一起。\n"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:119
@@ -1722,7 +1976,7 @@ msgstr "错误计数。"
 msgid "Warnings count."
 msgstr "警告计数。"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_general_top_toolbar.adoc:157
 #, no-wrap
 msgid "|Create ERC file report |Check this option to generate an ERC report file.\n"
@@ -1733,7 +1987,7 @@ msgstr "|创建 ERC 文件报告 |选中此选项可生成 ERC 报告文件。\n
 msgid "Commands:"
 msgstr "命令："
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_general_top_toolbar.adoc:166
 #, no-wrap
 msgid ""
@@ -1797,7 +2051,7 @@ msgstr "错误"
 msgid "Each square of the matrix can be modified by clicking on it."
 msgstr "可以通过单击修改单元格的每个方格。"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_general_top_toolbar.adoc:194
 #, no-wrap
 msgid ""
@@ -1811,13 +2065,13 @@ msgstr ""
 "|测试独特的全局标签 |报告仅出现一次的全局标签\n"
 "特别网。 通常需要至少有两个连接。\n"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_general_top_toolbar.adoc:201
 #, no-wrap
 msgid "|Initialize to Default| Restores the original settings.\n"
 msgstr "|初始化为默认值| 恢复原始设置。\n"
 
-#.  TODO cvpcb toolbar button
+#. TODO cvpcb toolbar button
 #. type: Title ===
 #: eeschema_general_top_toolbar.adoc:206
 #, no-wrap
@@ -1962,7 +2216,7 @@ msgid ""
 "Once you modify field values, you need to either accept changes by clicking "
 "on 'Apply' button or undo them by clicking on 'Revert' button."
 msgstr ""
-"修改字段值后，您需要通过单击 “应用” 按钮接受更改，或通过单击 _恢复_按钮撤消更"
+"修改字段值后，您需要通过单击 “应用” 按钮接受更改，或通过单击 _恢复_ 按钮撤消更"
 "改。"
 
 #. type: Title ====
@@ -1985,45 +2239,53 @@ msgstr ""
 msgid "This methods are illustrated below."
 msgstr "该方法如下所示。"
 
-#. type: Plain text
-#: eeschema_general_top_toolbar.adoc:262
-msgid "|=== |Copy (Ctrl+C) |Selection |Paste (Ctrl+V)"
-msgstr ""
-
-#. type: Plain text
-#: eeschema_general_top_toolbar.adoc:266
+#. type: Table
+#: eeschema_general_top_toolbar.adoc:282
+#, no-wrap
 msgid ""
-"a|image:images/copypaste11.png[\"1copy\"] a|image:images/copypaste12."
-"png[\"1selection\"] a|image:images/copypaste13.png[\"1paste\"]"
+"|Copy (Ctrl+C) |Selection |Paste (Ctrl+V)\n"
+"\n"
+"a|image:images/copypaste11.png[\"1copy\"]\n"
+"a|image:images/copypaste12.png[\"1selection\"]\n"
+"a|image:images/copypaste13.png[\"1paste\"]\n"
+"\n"
+"a|image:images/copypaste21.png[\"2copy\"]\n"
+"a|image:images/copypaste22.png[\"2selection\"]\n"
+"a|image:images/copypaste23.png[\"2paste\"]\n"
+"\n"
+"a|image:images/copypaste31.png[\"3copy\"]\n"
+"a|image:images/copypaste32.png[\"3selection\"]\n"
+"a|image:images/copypaste33.png[\"3paste\"]\n"
+"\n"
+"a|image:images/copypaste41.png[\"4copy\"]\n"
+"a|image:images/copypaste42.png[\"4selection\"]\n"
+"a|image:images/copypaste43.png[\"4paste\"]\n"
+"\n"
+"a|image:images/copypaste51.png[\"5copy\"]\n"
+"a|image:images/copypaste52.png[\"5selection\"]\n"
+"a|image:images/copypaste53.png[\"5paste\"]\n"
 msgstr ""
-
-#. type: Plain text
-#: eeschema_general_top_toolbar.adoc:270
-msgid ""
-"a|image:images/copypaste21.png[\"2copy\"] a|image:images/copypaste22."
-"png[\"2selection\"] a|image:images/copypaste23.png[\"2paste\"]"
-msgstr ""
-
-#. type: Plain text
-#: eeschema_general_top_toolbar.adoc:274
-msgid ""
-"a|image:images/copypaste31.png[\"3copy\"] a|image:images/copypaste32."
-"png[\"3selection\"] a|image:images/copypaste33.png[\"3paste\"]"
-msgstr ""
-
-#. type: Plain text
-#: eeschema_general_top_toolbar.adoc:278
-msgid ""
-"a|image:images/copypaste41.png[\"4copy\"] a|image:images/copypaste42."
-"png[\"4selection\"] a|image:images/copypaste43.png[\"4paste\"]"
-msgstr ""
-
-#. type: Plain text
-#: eeschema_general_top_toolbar.adoc:283
-msgid ""
-"a|image:images/copypaste51.png[\"5copy\"] a|image:images/copypaste52."
-"png[\"5selection\"] a|image:images/copypaste53.png[\"5paste\"] |==="
-msgstr ""
+"|复制 (Ctrl+C) |选择 |黏贴 (Ctrl+V)\n"
+"\n"
+"a|image:images/copypaste11.png[\"1copy\"]\n"
+"a|image:images/copypaste12.png[\"1selection\"]\n"
+"a|image:images/copypaste13.png[\"1paste\"]\n"
+"\n"
+"a|image:images/copypaste21.png[\"2copy\"]\n"
+"a|image:images/copypaste22.png[\"2selection\"]\n"
+"a|image:images/copypaste23.png[\"2paste\"]\n"
+"\n"
+"a|image:images/copypaste31.png[\"3copy\"]\n"
+"a|image:images/copypaste32.png[\"3selection\"]\n"
+"a|image:images/copypaste33.png[\"3paste\"]\n"
+"\n"
+"a|image:images/copypaste41.png[\"4copy\"]\n"
+"a|image:images/copypaste42.png[\"4selection\"]\n"
+"a|image:images/copypaste43.png[\"4paste\"]\n"
+"\n"
+"a|image:images/copypaste51.png[\"5copy\"]\n"
+"a|image:images/copypaste52.png[\"5selection\"]\n"
+"a|image:images/copypaste53.png[\"5paste\"]\n"
 
 #. type: Plain text
 #: eeschema_general_top_toolbar.adoc:286
@@ -2059,269 +2321,6 @@ msgid ""
 "This tool allows footprint changes made in PcbNew to be imported back into "
 "the footprint fields in Eeschema."
 msgstr "此工具允许将 PcbNew 中创建的封装更改导入 Eeschema 中的封装字段。"
-
-#. type: Title ==
-#: eeschema_automatic_classification_annotation.adoc:3
-#, no-wrap
-msgid "Symbol Annotation Tool"
-msgstr "符号注释工具"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:13
-msgid ""
-"The annotation tool allows you to automatically assign a designator to "
-"symbols in your schematic. Annotation of symbols with multiple units will "
-"assign a unique suffix to minimize the number of these symbols.  The "
-"annotation tool is accessible via the icon image:images/icons/annotate."
-"png[icons_annotate_png].  Here you find its main window."
-msgstr ""
-"注释工具允许您自动为原理图中的符号指定一个指示符。具有多个单位的符号的注释将"
-"分配一个唯一的后缀, 以最大限度地减少这些符号的数量。 注释工具可通过图标图像访"
-"问: image:images/icons/annotate.png [icons_annotate_png]。 在这里, 你可以找到"
-"它的主窗口。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:17
-msgid "Available annotation schemes:"
-msgstr "可用的注释方案:"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:19
-msgid "Annotate all the symbols (reset existing annotation option)"
-msgstr "注释所有符号 (重置现有注释选项)"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:21
-msgid ""
-"Annotate all the symbols, but do not swap any previously annotated multi-"
-"unit parts."
-msgstr "注释所有符号, 但不要交换任何以前批注的多单位部件。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:23
-msgid ""
-"Annotate only symbols that are currently not annotated.  Symbols that are "
-"not annotated will have a designator which ends with a '?' character."
-msgstr ""
-"仅注释当前未注释的符号。 未批注的符号将具有以 \"？\" 字符结尾的指示符。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:24
-msgid "Annotate the whole hierarchy (use the entire schematic option)."
-msgstr "注释整个层次结构 (使用整个原理图选项)。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:25
-msgid "Annotate the current sheet only (use current page only option)."
-msgstr "仅注释当前工作表 (仅使用当前页选项)。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:31
-msgid ""
-"The ``Reset, but do not swap any annotated multi-unit parts'' option keeps "
-"all existing associations between symbols with multilple units. For example, "
-"U2A and U2B may be reannotated to U1A and U1B respectively but they will "
-"never be reannotated to U1A and U2A, nor to U2B and U2A. This is useful if "
-"you want to ensure that pin groupings are maintained."
-msgstr ""
-"“重置, 但不交换任何带注释的多单元部件” 选项保留具有多单元的符号之间的所有现有"
-"关联。例如, U22 和 U2A 可能分别重新注释为 U1B 和 U1B, 但它们永远不会重新注释"
-"到 U1B 和 U2A, 也不会重新注释为 U2B 和 U2A。如果要确保保持引脚分组, 这很有"
-"用。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:34
-msgid ""
-"The annotation order choice gives the method used to set the reference "
-"number inside each sheet of the hierarchy."
-msgstr "注释顺序选择提供了用于在层次结构的每个工作表内设置参考编号的方法。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:38
-msgid ""
-"Except for particular cases, an automatic annotation applies to the whole "
-"project (all sheets) and to the new components, if you don't want to modify "
-"previous annotations."
-msgstr ""
-"除特定情况外, 如果您不想修改以前的批注, 则自动批注将应用于整个项目 (所有工作"
-"表) 和新元件。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:40
-msgid "The Annotation Choice gives the method used to calculate reference:"
-msgstr "“注释选择” 给出了用于计算参考的方法:"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:44
-msgid ""
-"Use first free number in schematic: components are annotated from 1 (for "
-"each reference prefix). If a previous annotation exists, only unused numbers "
-"will be used."
-msgstr ""
-"在原理图中使用第一个空闲编号：元件从1开始注释（对于每个引用前缀）。 如果存在"
-"先前的注释，则仅使用未使用的数字。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:49
-msgid ""
-"Start to sheet number*100 and use first free number: annotation start from "
-"101 for the sheet 1, from 201 for the sheet 2, etc. If there are more than "
-"99 items having the same reference prefix (U, R) inside the sheet 1, the "
-"annotation tool uses the number 200 and more, and annotation for sheet 2 "
-"will start from the next free number."
-msgstr ""
-"从纸张编号 *100开始并使用第一个空闲编号：从纸张1的101开始注释，从纸张2的201开"
-"始，等等。如果在工作表内有超过99个具有相同参考前缀（U，R）的项目 在图1中，注"
-"释工具使用数字200和更多，并且工作表2的注释将从下一个空闲编号开始。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:51
-msgid ""
-"Start to sheet number*1000 and use first free number. Annotation start from "
-"1001 for the sheet 1, from 2001 for the sheet 2."
-msgstr ""
-"从表格编号 *1000开始并使用第一个空闲编号。 对于纸张1，注释从1001开始，从纸张2"
-"的2001开始。"
-
-#. type: Title ===
-#: eeschema_automatic_classification_annotation.adoc:53
-#, no-wrap
-msgid "Some examples"
-msgstr "一些例子"
-
-#. type: Title ====
-#: eeschema_automatic_classification_annotation.adoc:56
-#, no-wrap
-msgid "Annotation order"
-msgstr "注释顺序"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:59
-msgid "This example shows 5 elements placed, but not annotated."
-msgstr "此示例显示放置了5个元素，但未注释。"
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_automatic_classification_annotation.adoc:60
-#, no-wrap
-msgid "eeschema_annotation_order_none_png"
-msgstr "eeschema_annotation_order_none_png"
-
-#. type: Target for macro image
-#: eeschema_automatic_classification_annotation.adoc:60
-#, no-wrap
-msgid "images/eeschema_annotation_order_none.png"
-msgstr "images/eeschema_annotation_order_none.png"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:63
-msgid ""
-"After the annotation tool Is executed, the following result is obtained."
-msgstr "执行注释工具后，获得以下结果。"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:65
-msgid "Sort by X position."
-msgstr "按 X 位置排序。"
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_automatic_classification_annotation.adoc:66
-#, no-wrap
-msgid "eeschema_annotation_order_x_png"
-msgstr "eeschema_annotation_order_x_png"
-
-#. type: Target for macro image
-#: eeschema_automatic_classification_annotation.adoc:66
-#, no-wrap
-msgid "images/eeschema_annotation_order_x.png"
-msgstr "images/eeschema_annotation_order_x.png"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:69
-msgid "Sort by Y position."
-msgstr "按 Y 位置排序。"
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_automatic_classification_annotation.adoc:70
-#, no-wrap
-msgid "eeschema_annotation_order_y_png"
-msgstr "eeschema_annotation_order_y_png"
-
-#. type: Target for macro image
-#: eeschema_automatic_classification_annotation.adoc:70
-#, no-wrap
-msgid "images/eeschema_annotation_order_y.png"
-msgstr "images/eeschema_annotation_order_y.png"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:74
-msgid ""
-"You can see that four 74LS00 gates were distributed in U1 package, and that "
-"the fifth 74LS00 has been assigned to the next, U2."
-msgstr ""
-"您可以看到四个 74LS00 门分布在 U1 包中，第五个 74LS00 已分配给下一个 U2。"
-
-#. type: Title ====
-#: eeschema_automatic_classification_annotation.adoc:76
-#, no-wrap
-msgid "Annotation Choice"
-msgstr "注释选择"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:80
-msgid ""
-"Here is an annotation in sheet 2 where the option use first free number in "
-"schematic was set."
-msgstr "这是表2中的注释，其中选项使用原理图中的第一个空闲编号。"
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_automatic_classification_annotation.adoc:81
-#, no-wrap
-msgid "eeschema_annotation_choice_free_png"
-msgstr "eeschema_annotation_choice_free_png"
-
-#. type: Target for macro image
-#: eeschema_automatic_classification_annotation.adoc:81
-#, no-wrap
-msgid "images/eeschema_annotation_choice_free.png"
-msgstr "images/eeschema_annotation_choice_free.png"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:85
-msgid ""
-"Option start to sheet number*100 and use first free number give the "
-"following result."
-msgstr "选项开始到工作表编号 *100并使用第一个空闲编号给出以下结果。"
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_automatic_classification_annotation.adoc:86
-#, no-wrap
-msgid "eeschema_annotation_choice_x100_png"
-msgstr "eeschema_annotation_choice_x100_png"
-
-#. type: Target for macro image
-#: eeschema_automatic_classification_annotation.adoc:86
-#, no-wrap
-msgid "images/eeschema_annotation_choice_x100.png"
-msgstr "images/eeschema_annotation_choice_x100.png"
-
-#. type: Plain text
-#: eeschema_automatic_classification_annotation.adoc:90
-msgid ""
-"The option start to sheet number*1000 and use first free number gives the "
-"following result."
-msgstr "选项开始到工作表编号 *1000并使用第一个空闲编号给出以下结果。"
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_automatic_classification_annotation.adoc:91
-#, no-wrap
-msgid "eeschema_annotation_choice_x1000_png"
-msgstr "eeschema_annotation_choice_x1000_png"
-
-#. type: Target for macro image
-#: eeschema_automatic_classification_annotation.adoc:91
-#, no-wrap
-msgid "images/eeschema_annotation_choice_x1000.png"
-msgstr "images/eeschema_annotation_choice_x1000.png"
 
 #. type: Title ==
 #: eeschema_generic_commands.adoc:2
@@ -2465,7 +2464,7 @@ msgid ""
 msgstr ""
 "在选择期间按住 “Shift” ，“Ctrl” 或 “Shift + Ctrl” 分别执行复制，拖动和删除："
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_generic_commands.adoc:54
 #, no-wrap
 msgid ""
@@ -2539,7 +2538,7 @@ msgid "Here is the default hotkey list:"
 msgstr "这是默认的热键列表："
 
 #. image::images/en/default_hot_key_list.png[alt="Default hotkey list",scaledwidth="40%"]
-#. type: delimited block |
+#. type: Table
 #: eeschema_generic_commands.adoc:134
 #, no-wrap
 msgid ""
@@ -2753,23 +2752,19 @@ msgstr "或使用功能键:"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:168
-#, fuzzy, no-wrap
-#| msgid "F1: Zoom in"
-msgid "** F1: Zoom in\n"
+msgid "F1: Zoom in"
 msgstr "F1：放大"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:170
-#, fuzzy, no-wrap
-#| msgid "F2: Zoom out"
-msgid "** F2: Zoom out\n"
+msgid "F2: Zoom out"
 msgstr "F2：缩小"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:172
-#, fuzzy, no-wrap
-#| msgid "F4 or simply click on the middle mouse button (without moving the mouse): Center the view around the cursor pointer position"
-msgid "** F4 or simply click on the middle mouse button (without moving the mouse): Center the view around the cursor pointer position\n"
+msgid ""
+"F4 or simply click on the middle mouse button (without moving the mouse): "
+"Center the view around the cursor pointer position"
 msgstr "F4 或只需单击鼠标中键（不移动鼠标）：围绕光标指针位置居中"
 
 #. type: Plain text
@@ -2779,23 +2774,17 @@ msgstr "窗口缩放:"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:176
-#, fuzzy, no-wrap
-#| msgid "Mouse wheel: Zoom in/out"
-msgid "** Mouse wheel: Zoom in/out\n"
+msgid "Mouse wheel: Zoom in/out"
 msgstr "鼠标滚轮：放大/缩小"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:178
-#, fuzzy, no-wrap
-#| msgid "Shift+Mouse wheel: Pan up/down"
-msgid "** Shift+Mouse wheel: Pan up/down\n"
+msgid "Shift+Mouse wheel: Pan up/down"
 msgstr "Shift +鼠标滚轮：向上/向下平移"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:180
-#, fuzzy, no-wrap
-#| msgid "Ctrl+Mouse wheel: Pan left/right"
-msgid "** Ctrl+Mouse wheel: Pan left/right\n"
+msgid "Ctrl+Mouse wheel: Pan left/right"
 msgstr "Ctrl +鼠标滚轮：向左/向右平移"
 
 #. type: Title ===
@@ -2911,204 +2900,153 @@ msgstr ""
 "请注意，当 KiCad 在项目模式下运行时，前两个图标不可用，因为它们可以处理单个文"
 "件。"
 
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:220
+#. type: Table
+#: eeschema_generic_commands.adoc:289
 #, no-wrap
 msgid ""
 "|image:images/icons/new_document.png[New schematic icon]\n"
 "|Create a new schematic (only in standalone mode).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:223
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/open_document.png[Open schematic icon]\n"
 "|Open a schematic (only in standalone mode).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:226
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/save.png[Save schematic icon]\n"
 "|Save complete schematic project.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:229
-#, fuzzy, no-wrap
-#| msgid "The Sheet Settings icon (image:images/icons/sheetset.png[Sheet Settings icon])  allows you to define the sheet size and the contents of the title block."
-msgid ""
+"\n"
 "|image:images/icons/sheetset.png[Page Settings icon]\n"
 "|Select the sheet size and edit the title block.\n"
-msgstr "“图纸设置” 图标（ image:images/icons/sheetset.png[Sheet Settings icon]）允许您定义图纸尺寸和标题栏的内容。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:232
-#, fuzzy, no-wrap
-#| msgid "Select the tool image:images/icons/netlist.png[Netlist icon] to open the netlist creation dialog."
-msgid ""
+"\n"
 "|image:images/icons/print_button.png[Print icon]\n"
 "|Open print dialog.\n"
-msgstr "选择工具 image:images/icons/netlist.png[Netlist icon] 以打开网表创建对话框。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:235
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/paste.png[icons/paste_png]\n"
 "|Paste a copied/cut item or block to the current sheet.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:238
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/undo.png[icons/undo_png]\n"
 "|Undo: Revert the last change.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:241
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/redo.png[icons/redo_png]\n"
 "|Redo: Revert the last undo operation.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:244
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/find.png[search icon]\n"
 "|Show the dialog to search symbols and texts in the schematic.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:247
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/find_replace.png[search replace icon]\n"
 "|Show the dialog to search and replace texts in the schematic.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:250
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/zoom_redraw.png[icons/zoom_redraw] image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]\n"
 "|Refresh screen; zoom to fit.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:253
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]\n"
 "|Zoom in and out.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:256
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/hierarchy_nav.png[hierarchy navigator icon]\n"
 "|View and navigate the hierarchy tree.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:259
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/leave_sheet.png[icons/leave_sheet]\n"
 "|Leave the current sheet and go up in the hierarchy.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:262
-#, fuzzy, no-wrap
-#| msgid "The icon image:images/icons/spreadsheet.png[Edit Fields icon] opens a spreadsheet to view and modify field values for all symbols."
-msgid ""
+"\n"
 "|image:images/icons/libedit.png[icons/libedit_png]\n"
 "|Call the symbol library editor to view and modify libraries and symbols.\n"
-msgstr "图标 image:images/icons/spreadsheet.png[编辑字段图标] 打开电子表格以查看和修改所有符号的字段值。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:265
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/library_browse.png[icons/library_browse_png]\n"
 "|Browse symbol libraries.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:268
-#, fuzzy, no-wrap
-#| msgid "The icon image:images/icons/annotate.png[icons_annotate_png] launches the annotation tool. This tool assigns references to components."
-msgid ""
+"\n"
 "|image:images/icons/annotate.png[icons_annotate_png]\n"
 "|Annotate symbols.\n"
-msgstr "图标 image:images/icons/annotate.png[icons_annotate_png] 启动注释工具。 此工具分配对元件的引用。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:271
-#, fuzzy, no-wrap
-#| msgid "The icon image:images/icons/erc.png[ERC icon] launches the electrical rules check (ERC) tool."
-msgid ""
+"\n"
 "|image:images/icons/erc.png[ERC icon]\n"
 "|Electrical Rules Checker (ERC), automatically validate electrical connections.\n"
-msgstr "图标 image:images/icons/erc.png[ERC 图标] 启动电子规则检查（ERC）工具。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:274
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/cvpcb.png[run cvpcb icon]\n"
 "|Call CvPcb to assign footprints to symbols.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:277
-#, fuzzy, no-wrap
-#| msgid "The Netlist icon (image:images/icons/netlist.png[Netlist icon])  opens the netlist generation tool."
-msgid ""
+"\n"
 "|image:images/icons/netlist.png[Netlist icon]\n"
 "|Export a netlist (Pcbnew, SPICE and other formats).\n"
-msgstr "网表图标（ image:images/icons/netlist.png[Netlist icon]）打开网表生成工具。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:280
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/spreadsheet.png[Symbol fields editor icon]\n"
 "|Edit symbol fields.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:283
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/bom.png[BOM icon]\n"
 "|Generate the Bill of Materials (BOM).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:286
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/pcbnew.png[icons/pcbnew_png]\n"
 "|Call Pcbnew to perform a PCB layout.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:289
-#, fuzzy, no-wrap
-#| msgid "The icon image:images/icons/import_footprint_names.png[Import Footprint Names icon] launches the back-annotate tool."
-msgid ""
+"\n"
 "|image:images/icons/import_footprint_names.png[Import Footprint Names icon]\n"
 "|Back-import footprint assignment (selected using CvPcb or Pcbnew) into the \"footprint\" fields.\n"
-msgstr "图标 image:images/icons/import_footprint_names.png[导入封装名称图标] 启动反标注工具。"
+msgstr ""
+"|image:images/icons/new_document.png[New schematic icon]\n"
+"|创建新原理图（仅在独立模式下）。\n"
+"\n"
+"|image:images/icons/open_document.png[Open schematic icon]\n"
+"|打开原理图（仅在独立模式下）。\n"
+"\n"
+"|image:images/icons/save.png[Save schematic icon]\n"
+"|保存完整的原理图项目。\n"
+"\n"
+"|image:images/icons/sheetset.png[Page Settings icon]\n"
+"|选择图纸尺寸并编辑标题栏。\n"
+"\n"
+"|image:images/icons/print_button.png[Print icon]\n"
+"|打开打印对话框。\n"
+"\n"
+"|image:images/icons/paste.png[icons/paste_png]\n"
+"|将复制/剪切的项目或块粘贴到当前工作表。\n"
+"\n"
+"|image:images/icons/undo.png[icons/undo_png]\n"
+"|撤消：还原最后一次更改。\n"
+"\n"
+"|image:images/icons/redo.png[icons/redo_png]\n"
+"|重做：还原最后一次撤消操作。\n"
+"\n"
+"|image:images/icons/find.png[search icon]\n"
+"|显示在原理图中搜索符号和文本的对话框。\n"
+"\n"
+"|image:images/icons/find_replace.png[search replace icon]\n"
+"|显示用于搜索和替换原理图中文本的对话框。\n"
+"\n"
+"|image:images/icons/zoom_redraw.png[icons/zoom_redraw] image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]\n"
+"|刷新屏幕;缩放以适应。\n"
+"\n"
+"|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]\n"
+"|放大和缩小。\n"
+"\n"
+"|image:images/icons/hierarchy_nav.png[hierarchy navigator icon]\n"
+"|查看和导航层次结构树。\n"
+"\n"
+"|image:images/icons/leave_sheet.png[icons/leave_sheet]\n"
+"|保留当前工作表并进入层次结构中。\n"
+"\n"
+"|image:images/icons/libedit.png[icons/libedit_png]\n"
+"|调用符号库编辑器以查看和修改库和符号。\n"
+"\n"
+"|image:images/icons/library_browse.png[icons/library_browse_png]\n"
+"|浏览符号库。\n"
+"\n"
+"|image:images/icons/annotate.png[icons_annotate_png]\n"
+"|注释符号。\n"
+"\n"
+"|image:images/icons/erc.png[ERC icon]\n"
+"|电气规则检查器（ERC），自动验证电气连接。\n"
+"\n"
+"|image:images/icons/cvpcb.png[run cvpcb icon]\n"
+"|调用CvPcb为符号分配封装。\n"
+"\n"
+"|image:images/icons/netlist.png[Netlist icon]\n"
+"|导出网表（Pcbnew，SPICE和其他格式）。\n"
+"\n"
+"|image:images/icons/spreadsheet.png[Symbol fields editor icon]\n"
+"|编辑符号字段。\n"
+"\n"
+"|image:images/icons/bom.png[BOM icon]\n"
+"|生成物料清单（BOM）。\n"
+"\n"
+"|image:images/icons/pcbnew.png[icons/pcbnew_png]\n"
+"|调用 Pcbnew 执行 PCB 布局。\n"
+"\n"
+"|image:images/icons/import_footprint_names.png[Import Footprint Names icon]\n"
+"|返回导入封装分配（使用 CvPcb 或 Pcbnew 选择）到“封装”字段中。\n"
 
 #. type: Plain text
 #: eeschema_generic_commands.adoc:292
@@ -3136,184 +3074,163 @@ msgstr "放置符号，电线，总线，交叉点，标签，文本等。"
 msgid "Create hierarchical subsheets and connection symbols."
 msgstr "创建分层子表和连接符号。"
 
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:304
-#, fuzzy, no-wrap
-#| msgid "The icon image:images/icons/erc.png[ERC icon] launches the electrical rules check (ERC) tool."
+#. type: Table
+#: eeschema_generic_commands.adoc:378
+#, no-wrap
 msgid ""
 "|image:images/icons/cursor.png[Cancel tool icon]\n"
 "|Cancel the active command or tool.\n"
-msgstr "图标 image:images/icons/erc.png[ERC 图标] 启动电子规则检查（ERC）工具。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:309
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/net_highlight_schematic.png[Highlight net icon]\n"
 "|Highlight a net by marking its wires and net labels with a different color.\n"
 "If KiCad runs in project mode then copper corresponding to the selected net will\n"
 "be highlighted in Pcbnew as well.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:312
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/new_symbol.png[New Symbol icon]\n"
 "|Display the symbol selector dialog to select a new symbol to be placed.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:315
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_power.png[Add Power icon]\n"
 "|Display the power symbol selector dialog to select a power symbol to be placed.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:318
-#, fuzzy, no-wrap
-#| msgid "Select the tool image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]."
-msgid ""
+"\n"
 "|image:images/icons/add_line.png[icons/add_line_png]\n"
 "|Draw a wire.\n"
-msgstr "选择工具 image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png] 。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:321
-#, fuzzy, no-wrap
-#| msgid "Select the tool image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]."
-msgid ""
+"\n"
 "|image:images/icons/add_bus.png[icons/add_bus_png]\n"
 "|Draw a bus.\n"
-msgstr "选择工具 image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png] 。"
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:325
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_line2bus.png[icons/add_line2bus_png]\n"
 "|Draw wire-to-bus entry points. These elements are only graphical and do not create\n"
 "a connection, thus they should not be used to connect wires together.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:328
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_bus2bus.png[icons/add_bus2bus_png]\n"
 "|Draw bus-to-bus entry points.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:334
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/noconn.png[icons/noconn_png]\n"
 "|Place a \"No Connect\" flag. These flags should be placed on symbol pins which\n"
 "are meant to be left unconnected. It is done to notify the Electrical Rules\n"
 "Checker that lack of connection for a particular pin is intentional and should\n"
 "not be reported.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:339
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_junction.png[icons/add_junction_png]\n"
 "|Place a junction. This connects two crossing wires or a wire and a pin,\n"
 "when it can be ambiguous (i.e. if a wire end or a pin is not directly\n"
 "connected to another wire end).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:344
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_line_label.png[icons/add_line_label_png]\n"
 "|Place a local label. Local label connects items located **in the same sheet**.\n"
 "For connections between two different sheets, you have to use global or\n"
 "hierarchical labels.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:348
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_glabel.png[Global label icon]\n"
 "|Place a global label. All global labels with the same name are connected, even when\n"
 "located on different sheets.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:352
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]\n"
 "|Place a hierarchical label. Hierarchical labels are used to create a\n"
 "connection between a subsheet and the parent sheet that contains it.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:355
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsheet_png]\n"
 "|Place a hierarchical subsheet. You must specify the file name for this subsheet.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:360
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_label_png]\n"
 "|Import a hierarchical pin from a subsheet. This command can be executed only on\n"
 "hierarchical subsheets. It will create hierarchical pins corresponding to hierarchical\n"
 "labels placed in the target subsheet.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:365
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]\n"
 "|Place a hierarchical pin in a subsheet. This command can be executed only on\n"
 "hierarchical subsheets. It will create arbitrary hierarchical pins, even if they \n"
 "do not exist in the target subsheet.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:368
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_dashed_line.png[icons/add_dashed_line_png]\n"
 "|Draw a line. These are only graphical and do not connect anything.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:371
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/text.png[icons/text.png]\n"
 "|Place a text comment.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:374
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/image.png[icons/image_png]\n"
 "|Place a bitmap image.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:377
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/delete.png[icons/cancel_png]\n"
 "|Delete selected element.\n"
+"\n"
 msgstr ""
+"|image:images/icons/cursor.png[Cancel tool icon]\n"
+"|取消激活的命令或工具。\n"
+"\n"
+"|image:images/icons/net_highlight_schematic.png[Highlight net icon]\n"
+"|通过使用不同颜色标记其电线和网络标签来突出显示网络。\n"
+"如果 KiCad 以项目模式运行，那么对应于所选网络的铜将\n"
+"在Pcbnew中也会突出显示。\n"
+"\n"
+"|image:images/icons/new_symbol.png[New Symbol icon]\n"
+"|显示符号选择器对话框以选择要放置的新符号。\n"
+"\n"
+"|image:images/icons/add_power.png[Add Power icon]\n"
+"|显示电源符号选择器对话框以选择要放置的电源符号。\n"
+"\n"
+"|image:images/icons/add_line.png[icons/add_line_png]\n"
+"|画一根电线。\n"
+"\n"
+"|image:images/icons/add_bus.png[icons/add_bus_png]\n"
+"|画一根总线\n"
+"\n"
+"|image:images/icons/add_line2bus.png[icons/add_line2bus_png]\n"
+"|绘制线对总入口点。这些元素仅是图形化的，不会创建\n"
+"连接，因此它们不应用于将电线连接在一起。\n"
+"\n"
+"|image:images/icons/add_bus2bus.png[icons/add_bus2bus_png]\n"
+"|绘制总线到总线的入口点。\n"
+"\n"
+"|image:images/icons/noconn.png[icons/noconn_png]\n"
+"|放置“无连接”标志。这些标志应放在符号引脚上\n"
+"意味着没有连接。这样做是为了通知电气规则\n"
+"检查器特定引脚缺少连接是故意的，应该\n"
+"不报道。\n"
+"\n"
+"|image:images/icons/add_junction.png[icons/add_junction_png]\n"
+"|放置一个交叉点。这连接两根交叉线或一根线和一个引脚，\n"
+"当它可能是模糊的（即，如果线端或引脚不是直接的\n"
+"连接到另一个线端）。\n"
+"\n"
+"|image:images/icons/add_line_label.png[icons/add_line_label_png]\n"
+"|放置一个本地标签。本地标签连接 **位于同一张纸** 中的物品。\n"
+"对于两个不同工作表之间的连接，您必须使用全局或\n"
+"分层标签。\n"
+"\n"
+"|image:images/icons/add_glabel.png[Global label icon]\n"
+"|放置一个全局标签。即使具有相同名称的所有全局标签也已连接\n"
+"位于不同的纸张上。\n"
+"\n"
+"|image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]\n"
+"|放置分层标签。分层标签用于创建\n"
+"子表与包含它的父表之间的连接。\n"
+"\n"
+"|image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsheet_png]\n"
+"|放置分层子表。您必须指定此子表的文件名。\n"
+"\n"
+"|image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_label_png]\n"
+"|从子表单导入分层引脚。该命令只能在执行时执行\n"
+"分层子表。它将创建对应于分层的分层引脚\n"
+"放置在目标子表中的标签。\n"
+"\n"
+"|image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]\n"
+"|在子表中放置分层引脚。该命令只能在执行时执行\n"
+"分层子表。它会创建任意分层引脚，即使它们也是如此\n"
+"目标子表中不存在。\n"
+"\n"
+"|image:images/icons/add_dashed_line.png[icons/add_dashed_line_png]\n"
+"|划一条线。这些只是图形化的，不能连接任何东西。\n"
+"\n"
+"|image:images/icons/text.png[icons/text.png]\n"
+"|放置文本注释。\n"
+"\n"
+"|image:images/icons/image.png[icons/image_png]\n"
+"|放置位图图像。\n"
+"\n"
+"|image:images/icons/delete.png[icons/cancel_png]\n"
+"|删除所选元素。\n"
+"\n"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:380
@@ -3326,53 +3243,49 @@ msgstr "左工具栏图标"
 msgid "This toolbar manages the display options:"
 msgstr "此工具栏管理显示选项："
 
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:389
+#. type: Table
+#: eeschema_generic_commands.adoc:405
 #, no-wrap
 msgid ""
+"\n"
 "|image:images/icons/grid.png[icons/grid]\n"
 "|Toggle grid visibility.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:392
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/unit_inch.png[icons/unit_inch]\n"
 "|Switch units to inches.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:395
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/unit_mm.png[icons/unit_mm]\n"
 "|Switch units to millimeters.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:398
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/cursor_shape.png[icons/cursor_shape]\n"
 "|Choose the cursor shape (full screen/small).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:401
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/hidden_pin.png[icons/hidden_pin]\n"
 "|Toggle visibility of \"invisible\" pins.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_generic_commands.adoc:404
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/lines90.png[icons/lines90]\n"
 "|Toggle free angle/90 degrees wires and buses placement.\n"
+"\n"
 msgstr ""
+"\n"
+"|image:images/icons/grid.png[icons/grid]\n"
+"|切换网格可见性。\n"
+"\n"
+"|image:images/icons/unit_inch.png[icons/unit_inch]\n"
+"|将单位切换为英寸。\n"
+"\n"
+"|image:images/icons/unit_mm.png[icons/unit_mm]\n"
+"|将单位切换为毫米。\n"
+"\n"
+"|image:images/icons/cursor_shape.png[icons/cursor_shape]\n"
+"|选择光标形状（全屏/小）。\n"
+"\n"
+"|image:images/icons/hidden_pin.png[icons/hidden_pin]\n"
+"|切换“隐形”引脚的可见性。\n"
+"\n"
+"|image:images/icons/lines90.png[icons/lines90]\n"
+"|切换 自由角度/90度 电线和总线放置。\n"
+"\n"
 
 #. type: Title ===
 #: eeschema_generic_commands.adoc:408
@@ -4209,26 +4122,22 @@ msgstr ""
 "“Key> 123” （大于），“Key <123” （小于）等。数字可能包括\n"
 "以下不区分大小写的后缀之一：\n"
 
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:69
-#, fuzzy
-#| msgid ""
-#| "| p | n | u | m | k | meg | g | t\n"
-#| "| 10^-12^ | 10^-9^ | 10^-6^ | 10^-3^ | 10^3^ | 10^6^ | 10^9^ | 10^12^\n"
+#. type: Table
+#: eeschema_schematic_creation_and_editing.adoc:68
+#, no-wrap
 msgid ""
-"|=== | p | n | u | m | k | meg | g | t | 10^-12^ | 10^-9^ | 10^-6^ | 10^-3^ "
-"| 10^3^ | 10^6^ | 10^9^ | 10^12^ |==="
+"| p | n | u | m | k | meg | g | t\n"
+"| 10^-12^ | 10^-9^ | 10^-6^ | 10^-3^ | 10^3^ | 10^6^ | 10^9^ | 10^12^\n"
 msgstr ""
 "| p | n | u | m | k | meg | g | t\n"
 "| 10^-12^ | 10^-9^ | 10^-6^ | 10^-3^ | 10^3^ | 10^6^ | 10^9^ | 10^12^\n"
 
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:75
-#, fuzzy
-#| msgid ""
-#| "| ki | mi | gi | ti\n"
-#| "| 2^10^ | 2^20^ | 2^30^ | 2^40^\n"
-msgid "|=== | ki | mi | gi | ti | 2^10^ | 2^20^ | 2^30^ | 2^40^ |==="
+#. type: Table
+#: eeschema_schematic_creation_and_editing.adoc:74
+#, no-wrap
+msgid ""
+"| ki | mi | gi | ti\n"
+"| 2^10^ | 2^20^ | 2^30^ | 2^40^\n"
 msgstr ""
 "| ki | mi | gi | ti\n"
 "| 2^10^ | 2^20^ | 2^30^ | 2^40^\n"
@@ -4456,9 +4365,8 @@ msgstr "*连接点：* 用于在交叉线或总线之间建立连接。\n"
 
 #. type: Plain text
 #: eeschema_schematic_creation_and_editing.adoc:165
-#, fuzzy, no-wrap
-#| msgid "*Bus entries:* to show connections between wires and buses. Graphical only!\n"
-msgid "*Bus entries:* to show connections between wires and buses.\n"
+#, no-wrap
+msgid "*Bus entries:* to show connections between wires and buses. Graphical only!\n"
 msgstr "*总线入口：* 显示电线和总线之间的连接。 仅限图形！\n"
 
 #. type: Plain text
@@ -4600,120 +4508,74 @@ msgid "*Note 4:*\n"
 msgstr "*注4：*\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:212
+#: eeschema_schematic_creation_and_editing.adoc:213
 msgid ""
-"A signal can only have one name.  If two different labels are placed on the "
-"same wire (or connected wires), an ERC error will be generated."
+"If two different labels are placed on the same wire, they are connected "
+"together and become equivalent: all the other elements connected to one or "
+"the other labels are then connected to all of them."
 msgstr ""
+"如果两个不同的标签放在同一根电线上，它们会连接在一起并变得相同：连接到一个或"
+"另一个标签的所有其他元件然后连接到所有标签。"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:214
+#: eeschema_schematic_creation_and_editing.adoc:215
 #, no-wrap
 msgid "Connections (Buses)"
 msgstr "连接（总线）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:217
+#: eeschema_schematic_creation_and_editing.adoc:218
 msgid "In the following schematic, many pins are connected to buses."
 msgstr "在下面的原理图中，许多引脚连接到总线。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:218
+#: eeschema_schematic_creation_and_editing.adoc:219
 #, no-wrap
 msgid "Example schematic with buses"
 msgstr "总线示例示意图"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:218
+#: eeschema_schematic_creation_and_editing.adoc:219
 #, no-wrap
 msgid "images/sch_with_buses.png"
 msgstr "images/sch_with_buses.png"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:221
+#: eeschema_schematic_creation_and_editing.adoc:222
 #, no-wrap
 msgid "Bus members"
 msgstr "总线编号"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:228
+#: eeschema_schematic_creation_and_editing.adoc:227
 msgid ""
-"Buses are a way to group related signals in the schematic in order to "
-"simplify complicated designs.  Buses can be drawn like wires using the bus "
-"tool, and are named using labels the same way signal wires are.  There are "
-"two types of bus in KiCad 6.0 and later: vector buses and group buses."
+"From the schematic point of view, a bus is a collection of signals, starting "
+"with a common prefix, and ending with a number. For example, PCA0, PCA1, and "
+"PCA2 are members of the PCA bus."
 msgstr ""
+"从示意图的角度来看，总线是一组信号，以公共前缀开头，以数字结尾。 例如，PCA0，"
+"PCA1 和 PCA2 是 PCA 总线的成员。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:235
+#: eeschema_schematic_creation_and_editing.adoc:232
 msgid ""
-"A *vector bus* is a collection of signals that start with a common prefix "
-"and end with a number.  Vector buses are named `<PREFIX>[M..N]` where "
-"`PREFIX` is any valid signal name, `M` is the first suffix number, and `N` "
-"is the last suffix number.  For example, the bus `DATA[0..7]` contains the "
-"signals `DATA0`, `DATA1`, and so on up to `DATA7`.  It doesn't matter which "
-"order `M` and `N` are specified in, but both must be non-negative."
+"The complete bus is named PCA[N..m], where N and m are the first and the "
+"last wire number of this bus. Thus if PCA has 20 members from 0 to 19, the "
+"complete bus is noted PCA[0..19]. A collection of signals like PCA0, PCA1, "
+"PCA2, WRITE, READ cannot be contained in a bus."
 msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:239
-msgid ""
-"A *group bus* is a collection of one or more signals and/or vector buses.  "
-"Group buses can be used to bundle together related signals even when they "
-"have different names.  Group buses use a special label syntax:"
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:241
-msgid "`<OPTIONAL_NAME>{SIGNAL1 SIGNAL2 SIGNAL3}`"
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:248
-msgid ""
-"The members of the group are listed inside curly braces (`{}`) separated by "
-"space characters.  An optional name for the group goes before the opening "
-"curly brace.  If the group bus is unnamed, the resulting nets on the PCB "
-"will just be the signal names inside the group.  If the group bus has a "
-"name, the resulting nets will have the name as a prefix, with a period (`."
-"`)  separating the prefix from the signal name."
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:253
-msgid ""
-"For example, the bus `{SCL SDA}` has two signal members, and in the netlist "
-"these signals will be `SCL` and `SDA`.  The bus `USB1{DP DM}` will generate "
-"nets called `USB1.DP` and `USB1.DM`.  For designs with larger buses that are "
-"repeated across several similar circuits, using this technique can save time."
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:257
-msgid ""
-"Group buses can also contain vector buses.  For example, the bus "
-"`MEMORY{A[7..0] D[7..0] OE WE}` contains both vector buses and plain "
-"signals, and will result in nets such as `MEMORY.A7` and `MEMORY.OE` on the "
-"PCB."
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:262
-msgid ""
-"Bus wires can be drawn and connected in the same manner as signal wires, "
-"including using junctions to create connections between crossing wires.  "
-"Like signals, buses cannot have more than one name -- if two conflicting "
-"labels are attached to the same bus, an ERC error will be generated."
-msgstr ""
+"完整的总线名为 PCA[N..m]，其中 N 和 m 是该总线的第一个和最后一个线号。 因此，"
+"如果 PCA 有20个成员，从0到19，整个总线记为 PCA[0..19]。 总线中不能包含PCA0，"
+"PCA1，PCA2，WRITE，READ 等信号的集合。"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:264
+#: eeschema_schematic_creation_and_editing.adoc:234
 #, no-wrap
 msgid "Connections between bus members"
 msgstr "总线成员之间的连接"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:269
+#: eeschema_schematic_creation_and_editing.adoc:239
 msgid ""
 "Pins connected between the same members of a bus must be connected by "
 "labels. It is not possible to connect a pin directly to a bus; this type of "
@@ -4723,7 +4585,7 @@ msgstr ""
 "直接连接到总线; Eeschema 将忽略这种类型的连接。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:274
+#: eeschema_schematic_creation_and_editing.adoc:244
 msgid ""
 "In the example above, connections are made by the labels placed on wires "
 "connected to the pins. Bus entries (wire segments at 45 degrees) to buses "
@@ -4733,7 +4595,7 @@ msgstr ""
 "入口（45度线段）仅是图形化的，并不是形成逻辑连接所必需的。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:279
+#: eeschema_schematic_creation_and_editing.adoc:249
 msgid ""
 "In fact, using the repetition command (__Insert__ key), connections can be "
 "very quickly made in the following way, if component pins are aligned in "
@@ -4744,12 +4606,12 @@ msgstr ""
 "过以下方式快速建立连接（实际上在存储器，微处理器等元件上的常见情况）："
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:281
+#: eeschema_schematic_creation_and_editing.adoc:251
 msgid "Place the first label (for example PCA0)"
 msgstr "放置第一个标签（例如 PCA0）"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:284
+#: eeschema_schematic_creation_and_editing.adoc:254
 msgid ""
 "Use the repetition command as much as needed to place members.  Eeschema "
 "will automatically create the next labels (PCA1, PCA2...)  vertically "
@@ -4759,14 +4621,14 @@ msgstr ""
 "（PCA1，PCA2 ......），理论上是在其他引脚的位置上。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:286
+#: eeschema_schematic_creation_and_editing.adoc:256
 msgid ""
 "Draw the wire under the first label. Then use the repetition command to "
 "place the other wires under the labels."
 msgstr "在第一个标签下画线。 然后使用重复命令将其他导线放在标签下。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:288
+#: eeschema_schematic_creation_and_editing.adoc:258
 msgid ""
 "If needed, place the bus entries by the same way (Place the first entry, "
 "then use the repetition command)."
@@ -4774,197 +4636,121 @@ msgstr ""
 "如果需要，以相同的方式放置总线条目（放置第一个条目，然后使用重复命令）。"
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:292
+#: eeschema_schematic_creation_and_editing.adoc:262
 msgid "In the Preferences/Options menu, you can set the repetition parameters:"
 msgstr "在 “首选项/选项” 菜单中，您可以设置重复参数："
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:294
+#: eeschema_schematic_creation_and_editing.adoc:264
 msgid "Vertical step."
 msgstr "垂直步骤。"
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:295
+#: eeschema_schematic_creation_and_editing.adoc:265
 msgid "Horizontal step."
 msgstr "水平步骤。"
 
 #. type: delimited block =
-#: eeschema_schematic_creation_and_editing.adoc:297
+#: eeschema_schematic_creation_and_editing.adoc:267
 msgid ""
 "Label increment (which can thus be incremented by 2, 3. or decremented)."
 msgstr "标签增量（因此可以递增2,3或递减）。"
 
 #. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:300
+#: eeschema_schematic_creation_and_editing.adoc:270
 #, no-wrap
-msgid "Bus unfolding"
-msgstr ""
+msgid "Global connections between buses"
+msgstr "总线之间的全局连接"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:307
+#: eeschema_schematic_creation_and_editing.adoc:276
 msgid ""
-"The unfold tool allows you to quickly break out signals from a bus.  To "
-"unfold a signal, right-click on a bus object (a bus wire, etc) and choose "
-"`Unfold Bus`.  Alternatively, use the `Unfold Bus` hotkey (default: `D`)  "
-"when the cursor is over a bus object.  The menu allows you to select which "
-"bus member to unfold."
+"You may need connections between buses, in order to link two buses having "
+"different names, or in the case of a hierarchy, to create connections "
+"between different sheets. You can make these connections in the following "
+"way."
 msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:313
-msgid ""
-"After selecting the bus member, the next click will place the bus member "
-"label at the desired location.  The tool automatically generates a bus entry "
-"and wire leading up to the label location.  After placing the label, you can "
-"continue placing additional wire segments (for example, to connect to a "
-"component pin) and complete the wire in any of the normal ways."
-msgstr ""
-
-#. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:315
-#, fuzzy, no-wrap
-#| msgid "Symbol aliases"
-msgid "Bus aliases"
-msgstr "符号别名"
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:320
-msgid ""
-"Bus aliases are shortcuts that allow you to work with large group buses more "
-"efficiently.  They allow you to define a group bus and give it a short name "
-"that can then be used instead of the full group name across the schematic."
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:322
-msgid ""
-"To create bus aliases, open the `Bus Definitions` dialog in the `Tools` menu."
-msgstr ""
+"您可能需要总线之间的连接，以便链接具有不同名称的两个总线，或者在层次结构的情"
+"况下，以在不同的表之间创建连接。 您可以通过以下方式建立这些连接。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:323
-#, fuzzy, no-wrap
-#| msgid "ERC options dialog"
-msgid "Bus Definitions Dialog"
-msgstr "ERC 选项对话框"
-
-#. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:323
-#, fuzzy, no-wrap
-#| msgid "images/en/dialog_bom.png"
-msgid "images/en/dialog_bus_definitions.png"
-msgstr "images/zh/dialog_bom.png"
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:330
-msgid ""
-"An alias may be named any valid signal name.  Using the dialog, you can add "
-"signals or vector buses to the alias.  As a shortcut, you can type or paste "
-"in a list of signals and/or buses separated by spaces, and they will all be "
-"added to the alias definition.  In this example, we define an alias called "
-"`USB` with members `DP`, `DM`, and `VBUS`."
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:338
-msgid ""
-"After defining an alias, it can be used in a group bus label by putting the "
-"alias name inside the curly braces of the group bus: `{USB}`.  This has the "
-"same effect as labeling the bus `{DP DM VBUS}`.  You can also add a prefix "
-"name to the group, such as `USB1{USB}`, which results in nets such as `USB1."
-"DP` as described above.  For complicated buses, using aliases can make the "
-"labels on your schematic much shorter.  Keep in mind that the aliases are "
-"just a shortcut, and the name of the alias is not included in the netlist."
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:342
-msgid ""
-"Bus aliases are saved in the schematic file.  Any aliases created in a given "
-"schematic sheet are available to use in any other schematic sheet that is in "
-"the same hierarchical design."
-msgstr ""
-
-#. type: Title =====
-#: eeschema_schematic_creation_and_editing.adoc:344
+#: eeschema_schematic_creation_and_editing.adoc:277
 #, no-wrap
-msgid "Buses with more than one label"
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:351
-msgid ""
-"KiCad 5.0 and earlier allowed the connection of bus wires with different "
-"labels together, and would join the members of these buses during "
-"netlisting. This behavior has been removed in KiCad 6.0 because it is "
-"incompatible with group buses, and also leads to confusing netlists because "
-"the name that a given signal will receive is not easily predicted."
-msgstr ""
-
-#. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:355
-msgid ""
-"If you open a design that made use of this feature in a modern version of "
-"KiCad, you will see the Migrate Buses dialog which guides you through "
-"updating the schematic so that only one label exists on any given set of bus "
-"wires."
-msgstr ""
-
-#. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:356
-#, fuzzy, no-wrap
-#| msgid "Main simulation dialog"
-msgid "Bus Migration Dialog"
-msgstr "主仿真对话框"
+msgid "Bus junction example"
+msgstr "总线连接示例"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:356
-#, fuzzy, no-wrap
-#| msgid "images/en/dialog_erc_opts.png"
-msgid "images/en/dialog_migrate_buses.png"
-msgstr "images/zh/dialog_erc_opts.png"
+#: eeschema_schematic_creation_and_editing.adoc:277
+#, no-wrap
+msgid "images/bus_junction.png"
+msgstr "images/bus_junction.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:362
+#: eeschema_schematic_creation_and_editing.adoc:282
 msgid ""
-"For each set of bus wires that has more than one label, you must choose the "
-"label to keep.  The drop-down name box lets you choose between the labels "
-"that exist in the design, or you can choose a different name by manually "
-"entering it into the new name field."
+"Buses PCA [0..15], ADR [0..7] and BUS [5..10] are connected together (note "
+"the junction here because the vertical bus wire joins the middle of the "
+"horizontal bus segment)."
 msgstr ""
+"总线 PCA[0..15]，ADR[0..7] 和 BUS[5..10] 连接在一起（注意这里的连接点，因为垂"
+"直总线连接到水平总线段的中间）。"
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:285
+msgid ""
+"More precisely, the corresponding members are connected together : PCA0, "
+"ADR0 are connected, (as same as PCA1 and ADR1 ... PCA7 and ADR7)."
+msgstr ""
+"更确切地说，相应的成员连接在一起：连接 PCA0，ADR0（与 PCA1 和 ADR1 ... PCA7 "
+"和 ADR7 相同）。"
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:288
+msgid ""
+"Furthermore, PCA5, BUS5 and ADR5 are connected (just as PCA6, BUS6 and ADR6 "
+"like PCA7, BUS7 and ADR7)."
+msgstr ""
+"此外，PCA5，BUS5 和 ADR5 连接（就像PCA6，BUS6 和 ADR6 一样，如 PCA7，BUS7 和 "
+"ADR7）。"
+
+#. type: Plain text
+#: eeschema_schematic_creation_and_editing.adoc:291
+msgid ""
+"PCA8 and BUS8 are also connected (just as PCA9 and BUS9, PCA10 and BUS10)"
+msgstr "PCA8 和 BUS8 也连接（就像 PCA9 和 BUS9，PCA10 和 BUS10 一样）"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:364
+#: eeschema_schematic_creation_and_editing.adoc:294
 #, no-wrap
 msgid "Power ports connection"
 msgstr "电源端口连接"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:368
+#: eeschema_schematic_creation_and_editing.adoc:298
 msgid ""
 "When the power pins of the symbols are visible, they must be connected, as "
 "for any other signal."
 msgstr "当符号的电源引脚可见时，它们必须连接，就像任何其他信号一样。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:371
+#: eeschema_schematic_creation_and_editing.adoc:301
 msgid ""
 "Symbols such as gates and flip-flops may have invisible power pins.  Care "
 "must be taken with these because:"
 msgstr "门和触发器等符号可能有不可见的电源引脚。必须小心这些因为："
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:373
+#: eeschema_schematic_creation_and_editing.adoc:303
 msgid "You cannot connect wires, because of their invisibility."
 msgstr "由于它们不可见，你无法连接电线。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:374
+#: eeschema_schematic_creation_and_editing.adoc:304
 msgid "You do not know their names."
 msgstr "你不知道他们的名字。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:378
+#: eeschema_schematic_creation_and_editing.adoc:308
 msgid ""
 "And moreover, it would be a bad idea to make them visible and to connect "
 "them like the other pins, because the schematic would become unreadable and "
@@ -4974,7 +4760,7 @@ msgstr ""
 "得不可读并且不符合通常的惯例。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:385
+#: eeschema_schematic_creation_and_editing.adoc:315
 msgid ""
 "If you want to enforce the display of these invisible power pins, you must "
 "check the option ``Show invisible power pins'' in the Preferences/Options "
@@ -4986,7 +4772,7 @@ msgstr ""
 "左侧（选项）工具栏上的。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:390
+#: eeschema_schematic_creation_and_editing.adoc:320
 msgid ""
 "Eeschema automatically connects invisible power pins of the same name to the "
 "power net of that name. It may be necessary to join power nets of different "
@@ -4998,7 +4784,7 @@ msgstr ""
 "口。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:393
+#: eeschema_schematic_creation_and_editing.adoc:323
 msgid ""
 "It is not recommended to use labels for power connection. These only have a "
 "“local” connection scope, and would not connect the invisible power pins."
@@ -5007,31 +4793,31 @@ msgstr ""
 "电源引脚。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:395
+#: eeschema_schematic_creation_and_editing.adoc:325
 msgid "The figure below shows an example of power port connections."
 msgstr "下图显示了电源端口连接的示例。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:396
+#: eeschema_schematic_creation_and_editing.adoc:326
 #, no-wrap
 msgid "Power ports example"
 msgstr "电源端口示例"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:396
+#: eeschema_schematic_creation_and_editing.adoc:326
 #, no-wrap
 msgid "images/en/power_ports_example.png"
 msgstr "images/zh/power_ports_example.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:400
+#: eeschema_schematic_creation_and_editing.adoc:330
 msgid ""
 "In this example, ground (GND) is connected to power port VSS, and power port "
 "VCC is connected to VDD."
 msgstr "在该示例中，地（GND）连接到电源端口 VSS，电源端口 VCC 连接到 VDD。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:405
+#: eeschema_schematic_creation_and_editing.adoc:335
 msgid ""
 "Two PWR_FLAG symbols are visible. They indicate that the two power ports VCC "
 "and GND are really connected to a power source.  Without these two flags, "
@@ -5041,33 +4827,28 @@ msgstr ""
 "源。 如果没有这两个标志，ERC 工具将诊断出：__警告：电源端口未通电___。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:407
+#: eeschema_schematic_creation_and_editing.adoc:337
 msgid "All these symbols can be found in the ``power'' symbol library."
 msgstr "所有这些符号都可以在 “电源” 符号库中找到。"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:409
+#: eeschema_schematic_creation_and_editing.adoc:339
 #, no-wrap
 msgid "``No Connect'' flag"
 msgstr "“无连接” 标志"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:414
-#, fuzzy
-#| msgid ""
-#| "These symbols are very useful to avoid undesired ERC warnings.  The "
-#| "electric rules check ensures that no connection has been accidentally "
-#| "left unconnected."
+#: eeschema_schematic_creation_and_editing.adoc:344
 msgid ""
-"These symbols are very useful to avoid undesired ERC warnings.  The "
-"electrical rules check ensures that no connection has been accidentally left "
+"These symbols are very useful to avoid undesired ERC warnings.  The electric "
+"rules check ensures that no connection has been accidentally left "
 "unconnected."
 msgstr ""
 "这些符号对于避免意外的 ERC 警告非常有用。 电气规则检查确保没有连接意外地保持"
 "未连接状态。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:419
+#: eeschema_schematic_creation_and_editing.adoc:349
 msgid ""
 "If pins must really remain unconnected, it is necessary to place a \"No "
 "Connect\" flag (tool image:images/icons/noconn.png[No connection icon])  on "
@@ -5078,19 +4859,19 @@ msgstr ""
 "images/icons/noconn.png[无连接图标] ）。 这些符号对生成的网表没有任何影响。"
 
 #. type: Title ===
-#: eeschema_schematic_creation_and_editing.adoc:421
+#: eeschema_schematic_creation_and_editing.adoc:351
 #, no-wrap
 msgid "Drawing Complements"
 msgstr "绘图补充"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:424
+#: eeschema_schematic_creation_and_editing.adoc:354
 #, no-wrap
 msgid "Text Comments"
 msgstr "文本注释"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:433
+#: eeschema_schematic_creation_and_editing.adoc:363
 msgid ""
 "It can be useful (to aid in understanding the schematic) to place "
 "annotations such as text fields and frames. Text fields (tool image:images/"
@@ -5103,30 +4884,30 @@ msgstr ""
 "途，与作为连接元素的标签和电线相反。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:435
+#: eeschema_schematic_creation_and_editing.adoc:365
 msgid "Here you can find an example of a frame with a textual comment."
 msgstr "在这里，您可以找到带有文本注释的框架示例。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:436
+#: eeschema_schematic_creation_and_editing.adoc:366
 #, no-wrap
 msgid "Frame with comment example"
 msgstr "框架与评论示例"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:436
+#: eeschema_schematic_creation_and_editing.adoc:366
 #, no-wrap
 msgid "images/en/frame_example.png"
 msgstr "images/zh/frame_example.png"
 
 #. type: Title ====
-#: eeschema_schematic_creation_and_editing.adoc:439
+#: eeschema_schematic_creation_and_editing.adoc:369
 #, no-wrap
 msgid "Sheet title block"
 msgstr "表格标题栏"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:443
+#: eeschema_schematic_creation_and_editing.adoc:373
 msgid ""
 "The title block is edited with the tool image:images/icons/sheetset.png[Page "
 "Settings tool]."
@@ -5134,36 +4915,36 @@ msgstr ""
 "使用工具图像编辑标题栏：image:images/icons/sheetset.png[页面设置工具] 。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:444
+#: eeschema_schematic_creation_and_editing.adoc:374
 #, no-wrap
 msgid "Page settings dialog"
 msgstr "页面设置对话框"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:446
+#: eeschema_schematic_creation_and_editing.adoc:376
 #, no-wrap
 msgid "Title block"
 msgstr "标题栏"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:446
+#: eeschema_schematic_creation_and_editing.adoc:376
 #, no-wrap
 msgid "images/en/title_block.png"
 msgstr "images/zh/title_block.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:449
+#: eeschema_schematic_creation_and_editing.adoc:379
 msgid "The sheet number (Sheet X/Y) is automatically updated."
 msgstr "工作表编号（工作表X / Y）会自动更新。"
 
 #. type: Title ===
-#: eeschema_schematic_creation_and_editing.adoc:451
+#: eeschema_schematic_creation_and_editing.adoc:381
 #, no-wrap
 msgid "Rescuing cached symbols"
 msgstr "抢救缓存的符号"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:459
+#: eeschema_schematic_creation_and_editing.adoc:389
 #, no-wrap
 msgid ""
 "By default, Eeschema loads symbols from the project libraries according to the set paths and\n"
@@ -5181,7 +4962,7 @@ msgstr ""
 " 原理图破碎。\n"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:465
+#: eeschema_schematic_creation_and_editing.adoc:395
 msgid ""
 "When a project is saved, a cache library with the contents of the current "
 "library symbols is saved along with the schematic. This allows the project "
@@ -5195,19 +4976,19 @@ msgstr ""
 "查找冲突。 找到的任何冲突都将在以下对话框中列出："
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: eeschema_schematic_creation_and_editing.adoc:466
+#: eeschema_schematic_creation_and_editing.adoc:396
 #, no-wrap
 msgid "Rescue conflicts dialog"
 msgstr "救援冲突对话框"
 
 #. type: Target for macro image
-#: eeschema_schematic_creation_and_editing.adoc:466
+#: eeschema_schematic_creation_and_editing.adoc:396
 #, no-wrap
 msgid "images/en/rescue-conflicts.png"
 msgstr "images/zh/rescue-conflicts.png"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:472
+#: eeschema_schematic_creation_and_editing.adoc:402
 msgid ""
 "You can see in this example that the project originally used a diode with "
 "the cathode facing up, but the library now contains one with the cathode "
@@ -5220,7 +5001,7 @@ msgstr ""
 "救援_ 库中，并重命名所有符号以避免命名冲突。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:478
+#: eeschema_schematic_creation_and_editing.adoc:408
 msgid ""
 "If you press Cancel, no rescues will be made, so Eeschema will load all the "
 "new components by default. If you save the schematic at this point, your "
@@ -5229,19 +5010,19 @@ msgid ""
 "function again by selecting \"Rescue Cached Components\" in the \"Tools\" "
 "menu to call up the rescue dialog again."
 msgstr ""
-"如果按 _取消_，则不会进行任何救援，因此 Eeschema 默认会加载所有新元件。 如果"
+"如果按 _取消_ ，则不会进行任何救援，因此 Eeschema 默认会加载所有新元件。 如果"
 "此时保存原理图，则将覆盖缓存并且旧符号将无法恢复。 如果已保存原理图，则仍可以"
 "通过选择 “工具” 菜单中的 “救援缓存元件” 再次调用救援对话框，再次运行救援功"
 "能。"
 
 #. type: Plain text
-#: eeschema_schematic_creation_and_editing.adoc:481
+#: eeschema_schematic_creation_and_editing.adoc:411
 msgid ""
 "If you would prefer not to see this dialog, you can press \"Never Show Again"
 "\". The default will be to do nothing and allow the new components to be "
 "loaded. This option can be changed back in the Libraries preferences."
 msgstr ""
-"如果您不想看到此对话框，可以按 _从不再显示_。 默认设置是不执行任何操作并允许"
+"如果您不想看到此对话框，可以按 _从不再显示_ 。 默认设置是不执行任何操作并允许"
 "加载新元件。 可以在 _库_ 首选项中更改此选项。"
 
 #. type: Title ==
@@ -5332,8 +5113,8 @@ msgid ""
 "Editor dialog."
 msgstr ""
 "Spice 模型信息作为文本存储在符号字段中，因此您可以在符号编辑器或原理图编辑器"
-"中定义它。 打开符号属性对话框，然后单击 _编辑 Spice 模型_ 按钮以打开 Spice 模"
-"型编辑器 对话框。"
+"中定义它。 打开符号属性对话框，然后单击 _编辑 Spice 模型_ 按钮以打开 Spice "
+"模型编辑器 对话框。"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:40
@@ -5344,24 +5125,18 @@ msgstr ""
 "Spice 模型编辑器 对话框有三个对应于不同模型类型的选项卡。 所有模型类型共有两"
 "个选项："
 
-#. type: delimited block |
-#: eeschema_simulator.adoc:48
-#, fuzzy, no-wrap
-#| msgid ""
-#| "|Disable symbol for simulation\n"
-#| "|When checked the component is excluded from simulation.\n"
-#| "|Alternate node sequence\n"
-#| "|Allows one to override symbol pin to model node mapping.\n"
-#| "To define a different mapping, specify pin numbers in order expected by the model.\n"
-#| "\n"
-#| "'Example:' +\n"
-#| "____\n"
+#. type: Table
+#: eeschema_simulator.adoc:50
+#, no-wrap
 msgid ""
 "|Disable symbol for simulation\n"
 "|When checked the component is excluded from simulation.\n"
 "|Alternate node sequence\n"
 "|Allows one to override symbol pin to model node mapping.\n"
 "To define a different mapping, specify pin numbers in order expected by the model.\n"
+"\n"
+"'Example:' +\n"
+"____\n"
 msgstr ""
 "|禁用模拟的符号\n"
 "|选中时，元件将从模拟中排除。\n"
@@ -5372,21 +5147,10 @@ msgstr ""
 "'例子：'+\n"
 "____\n"
 
-#. type: delimited block |
-#: eeschema_simulator.adoc:59
-#, fuzzy, no-wrap
-#| msgid ""
-#| "`* connections:` +\n"
-#| "`* 1: non-inverting input` +\n"
-#| "`* 2: inverting input` +\n"
-#| "`* 3: positive power supply` +\n"
-#| "`* 4: negative power supply` +\n"
-#| "`* 5: output` +\n"
-#| "`.subckt tl071 1 2 3 4 5`\n"
-#| "____\n"
+#. type: Table
+#: eeschema_simulator.adoc:58
+#, no-wrap
 msgid ""
-"'Example:' +\n"
-"____\n"
 "`* connections:` +\n"
 "`* 1: non-inverting input` +\n"
 "`* 2: inverting input` +\n"
@@ -5405,22 +5169,29 @@ msgstr ""
 "“.子电路 tl071 1 2 3 4 5”\n"
 "____\n"
 
-#. type: delimited block |
-#: eeschema_simulator.adoc:61
-#, fuzzy, no-wrap
-#| msgid "Generic operational amplifier symbol"
-msgid "image::images/opamp_symbol.png[alt=\"Generic operational amplifier symbol\"]\n"
+#. type: Named 'alt' AttributeList argument for macro 'image'
+#: eeschema_simulator.adoc:60
+#, no-wrap
+msgid "Generic operational amplifier symbol"
 msgstr "通用运算放大器符号"
 
-#. type: delimited block |
+#. type: Target for macro image
+#: eeschema_simulator.adoc:60
+#, no-wrap
+msgid "images/opamp_symbol.png"
+msgstr "images/opamp_symbol.png"
+
+#. type: Table
 #: eeschema_simulator.adoc:65
-#, fuzzy, no-wrap
-#| msgid "To match the symbol pins to the Spice model nodes shown above, one needs to use an alternate node sequence option with value: \"1{nbsp}3{nbsp}5{nbsp}2{nbsp}4\".  It is a list of pin numbers corresponding to the Spice model nodes order."
 msgid ""
-"To match the symbol pins to the Spice model nodes shown above, one needs to use\n"
-"an alternate node sequence option with value: \"1{nbsp}3{nbsp}5{nbsp}2{nbsp}4\".\n"
-"It is a list of pin numbers corresponding to the Spice model nodes order.\n"
-msgstr "要将符号引脚与上面显示的 Spice 模型节点相匹配，需要使用具有值的备用节点序列选项：“1{nbsp}3{nbsp}5{nbsp}2{nbsp} 4”。  它是与 Spice 模型节点顺序对应的引脚编号列表。"
+"To match the symbol pins to the Spice model nodes shown above, one needs "
+"to use an alternate node sequence option with value: \"1{nbsp}3{nbsp}5{nbsp}"
+"2{nbsp}4\".  It is a list of pin numbers corresponding to the Spice model "
+"nodes order."
+msgstr ""
+"要将符号引脚与上面显示的 Spice 模型节点相匹配，需要使用具有值的备用节点序列"
+"选项：“1{nbsp}3{nbsp}5{nbsp}2{nbsp} 4”。  它是与 Spice 模型节点顺序对应的引脚"
+"编号列表。"
 
 #. type: Title ====
 #: eeschema_simulator.adoc:67
@@ -5466,7 +5237,7 @@ msgstr "无源设备模型编辑器选项卡"
 msgid "images/sim_model_passive.png"
 msgstr "images/sim_model_passive.png"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_simulator.adoc:92
 #, no-wrap
 msgid ""
@@ -5524,7 +5295,7 @@ msgstr "半导体器件型号编辑器选项卡"
 msgid "images/sim_model_subckt.png"
 msgstr "images/sim_model_subckt.png"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_simulator.adoc:116
 #, no-wrap
 msgid ""
@@ -5561,8 +5332,8 @@ msgid ""
 "sections: _DC/AC analysis_ and _Transient analysis_. Each defines source "
 "parameters for the corresponding simulation type."
 msgstr ""
-"_Source_ 选项卡用于分配电源或信号源模型。 有两个部分：“DC/AC 分析” 和“转换分"
-"析”。 每个都定义了相应模拟类型的源参数。"
+"_Source_ 选项卡用于分配电源或信号源模型。 有两个部分：“DC/AC 分析” 和"
+"“转换分析”。 每个都定义了相应模拟类型的源参数。"
 
 #. type: Plain text
 #: eeschema_simulator.adoc:125
@@ -5622,8 +5393,8 @@ msgid ""
 "To launch a simulation, open _Spice Simulator_ dialog by selecting menu "
 "_Tools->Simulator_ in the schematics editor window."
 msgstr ""
-"要启动模拟，请在原理图编辑器窗口中选择菜单 _工具->仿真_ 打开 _Spice仿真_ 对话"
-"框。"
+"要启动模拟，请在原理图编辑器窗口中选择菜单 _工具->仿真_ 打开 _Spice仿真_ "
+"对话框。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_simulator.adoc:147
@@ -5684,7 +5455,7 @@ msgstr "菜单"
 msgid "File"
 msgstr "文件"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_simulator.adoc:170
 #, no-wrap
 msgid ""
@@ -5702,7 +5473,7 @@ msgstr ""
 "|另存为 .csv 文件 | 将活动绘图原始数据点导出到 .csv 文件。\n"
 "|退出模拟 | 关闭对话框。\n"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_simulator.adoc:183
 #, no-wrap
 msgid ""
@@ -5728,7 +5499,7 @@ msgstr ""
 msgid "View"
 msgstr "视图"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_simulator.adoc:194
 #, no-wrap
 msgid ""
@@ -5767,7 +5538,7 @@ msgid ""
 "The top toolbar provides access to the most frequently performed actions."
 msgstr "顶部工具栏提供对最常执行的操作的访问。"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_simulator.adoc:208
 #, no-wrap
 msgid ""
@@ -6068,7 +5839,7 @@ msgstr ""
 msgid "There are two options common to all simulation types:"
 msgstr "所有模拟类型共有两个选项："
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_simulator.adoc:317
 #, no-wrap
 msgid ""
@@ -6115,7 +5886,7 @@ msgid ""
 msgstr ""
 "实际上，必须检查所有检测到的错误，然后在正常进行之前进行纠正。 ERC 的质量与在"
 "符号库创建期间声明电引脚属性时所采取的谨慎直接相关。 ERC 输出报告为 _错误_ "
-"或 _警告_。"
+"或 _警告_ 。"
 
 #. type: Title ===
 #: eeschema_design_verification_with_erc.adoc:23
@@ -6807,77 +6578,57 @@ msgstr "文件菜单"
 msgid "images/en/menu_file.png"
 msgstr "images/zh/menu_bar.png"
 
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:13
-#, no-wrap
-msgid "|New |Close current schematic and start a new one (only in standalone mode).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:15
-#, no-wrap
-msgid "|Open |Load a schematic project (only in standalone mode).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:17
-#, no-wrap
-msgid "|Open Recent |Open a schematic project from the list of recently opened files (only in standalone mode).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:19
-#, no-wrap
-msgid "|Append Schematic Sheet |Insert the contents of another sheet into the current one.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:21
-#, no-wrap
-msgid "|Import Non-Kicad Schematic File |Imports a schematic project saved in another file format.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:23
-#, no-wrap
-msgid "|Save |Save current sheet and all its subsheets.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:25
-#, no-wrap
-msgid "|Save Current Sheet |Save only the current sheet, but not others in the project.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:27
-#, no-wrap
-msgid "|Save Current Sheet As... |Save the current sheet under a new name.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:29
-#, no-wrap
-msgid "|Page Settings |Configure page dimensions and title block.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:31
-#, no-wrap
-msgid "|Print |Print schematic project (See also chapter <<plot-and-print,Plot and Print>>).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:33
-#, no-wrap
-msgid "|Plot |Export to PDF, PostScript, HPGL or SVG format (See chapter <<plot-and-print,Plot and Print>>).\n"
-msgstr ""
-
-#. type: delimited block |
+#. type: Table
 #: eeschema_main_top_menu.adoc:35
 #, no-wrap
-msgid "|Close |Terminate the application.\n"
+msgid ""
+"|New |Close current schematic and start a new one (only in standalone mode).\n"
+"\n"
+"|Open |Load a schematic project (only in standalone mode).\n"
+"\n"
+"|Open Recent |Open a schematic project from the list of recently opened files (only in standalone mode).\n"
+"\n"
+"|Append Schematic Sheet |Insert the contents of another sheet into the current one.\n"
+"\n"
+"|Import Non-Kicad Schematic File |Imports a schematic project saved in another file format.\n"
+"\n"
+"|Save |Save current sheet and all its subsheets.\n"
+"\n"
+"|Save Current Sheet |Save only the current sheet, but not others in the project.\n"
+"\n"
+"|Save Current Sheet As... |Save the current sheet under a new name.\n"
+"\n"
+"|Page Settings |Configure page dimensions and title block.\n"
+"\n"
+"|Print |Print schematic project (See also chapter <<plot-and-print,Plot and Print>>).\n"
+"\n"
+"|Plot |Export to PDF, PostScript, HPGL or SVG format (See chapter <<plot-and-print,Plot and Print>>).\n"
+"\n"
+"|Close |Terminate the application.\n"
 msgstr ""
+"|新建 |关闭当前原理图并启动一个新原理图（仅在独立模式下）。\n"
+"\n"
+"|打开 |加载原理图项目（仅在独立模式下）。\n"
+"\n"
+"|打开最近 |从最近打开的文件列表中打开原理图项目（仅在独立模式下）。\n"
+"\n"
+"|附加示意图 |将另一个工作表的内容插入当前工作表。\n"
+"\n"
+"|导入非 Kicad 原理图文件 |导入以其他文件格式保存的原理图项目。\n"
+"\n"
+"|保存 |保存当前工作表及其所有子工作表。\n"
+"\n"
+"|保存当前工作表 |仅保存当前工作表，而不保存项目中的其他工作表。\n"
+"\n"
+"|将当前工作表另存为... |以新名称保存当前工作表。\n"
+"\n"
+"|页面设置 |配置页面尺寸和标题栏。\n"
+"\n"
+"|打印 |打印原理图项目（另见“打印和打印，打印和打印”一章）。\n"
+"\n"
+"|绘图 |导出为 PDF，PostScript，HPGL 或 SVG 格式（请参见“绘图和打印，绘图和打印”一章）。\n"
+"\n"
+"|关闭 |终止应用程序。\n"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_main_top_menu.adoc:38 eeschema_main_top_menu.adoc:40
@@ -6891,7 +6642,7 @@ msgstr "首选项菜单"
 msgid "images/en/menu_preferences.png"
 msgstr "images/zh/menu_preferences.png"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_main_top_menu.adoc:50
 #, no-wrap
 msgid ""
@@ -7007,7 +6758,7 @@ msgstr "库属性"
 msgid "Each row in the table stores several fields describing a library:"
 msgstr "表中的每一行都存储了几个描述库的字段："
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_main_top_menu.adoc:100
 #, no-wrap
 msgid ""
@@ -7051,91 +6802,71 @@ msgstr "显示设置"
 msgid "images/en/options_display.png"
 msgstr "images/zh/options_display.png"
 
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:114
-#, fuzzy, no-wrap
-#| msgid "Sheet size selection"
-msgid "|Grid Size| Grid size selection.\n"
-msgstr "纸张尺寸选择"
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:117
+#. type: Table
+#: eeschema_main_top_menu.adoc:143
 #, no-wrap
 msgid ""
+"|Grid Size| Grid size selection.\n"
+"\n"
 "It is *recommended* to work with normal grid (0.050 inches or 1,27 mm). Smaller\n"
 "grids are used for component building.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:119
-#, no-wrap
-msgid "|Bus thickness |Pen size used to draw buses.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:122
-#, no-wrap
-msgid ""
+"\n"
+"|Bus thickness |Pen size used to draw buses.\n"
+"\n"
 "|Line thickness |Pen size used to draw objects that do not have a\n"
 "specified pen size.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:125
-#, no-wrap
-msgid ""
+"\n"
 "|Part ID notation |Style of suffix that is used to denote symbol units (U1A,\n"
 "U1.A, U1-1, etc.)\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:127
-#, no-wrap
-msgid "|Icon scale| Adjust toolbar icons size.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:129
-#, no-wrap
-msgid "|Show Grid | Grid visibility setting.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:133
-#, no-wrap
-msgid ""
+"\n"
+"|Icon scale| Adjust toolbar icons size.\n"
+"\n"
+"|Show Grid | Grid visibility setting.\n"
+"\n"
 "|Restrict buses and wires to H and V orientation| If checked, buses and\n"
 "wires are drawn only with vertical or horizontal lines.\n"
 "Otherwise buses and wires can be placed at any orientation.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:136
-#, no-wrap
-msgid ""
+"\n"
 "|Show hidden pins: |Display invisible (or __hidden__) pins, typically\n"
 "power pins.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:138
-#, no-wrap
-msgid "|Show page limits |If checked, shows the page boundaries on screen.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:141
-#, no-wrap
-msgid ""
+"\n"
+"|Show page limits |If checked, shows the page boundaries on screen.\n"
+"\n"
 "|Footprint previews in symbol chooser| Displays a footprint preview frame and\n"
 "footprint selector when placing a new symbol.\n"
+"\n"
+"*Note:* it may cause problems or delays, use at your own risk.\n"
 msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:143
-#, no-wrap
-msgid "*Note:* it may cause problems or delays, use at your own risk.\n"
-msgstr ""
+"|网格尺寸 | 网格大小选择。\n"
+"\n"
+" *建议* 使用普通网格（0.050英寸或1,27毫米）。较小\n"
+"网格用于元件构建。\n"
+"\n"
+"|总线厚度 | 用于绘制总线的笔大小。\n"
+"\n"
+"|线条粗细 | 用于绘制没有对象的对象的笔大小\n"
+"指定的笔大小。\n"
+"\n"
+"|元件 ID 表示法 | 用于表示符号单元的后缀样式（U1A，\n"
+"U1.A，U1-1等）\n"
+"\n"
+"|图标比例 | 调整工具栏图标大小。\n"
+"\n"
+"|显示网格 | 网格可见性设置。\n"
+"\n"
+"|将总线和电线限制为 H 和 V 方向 | 如果检查，总线和\n"
+"电线仅用垂直或水平线绘制。\n"
+"否则，可以在任何方向放置总线和电线。\n"
+"\n"
+"|显示隐藏的引脚：| 通常显示不可见（或 __隐藏__ ）引脚\n"
+"电源引脚。\n"
+"\n"
+"|显示页面限制 | 如果选中，则在屏幕上显示页面边界。\n"
+"\n"
+"|符号选择器中的封装预览 | 显示封装预览框和\n"
+"放置新符号时的封装选择器。\n"
+"\n"
+"*注意：* 可能会导致问题或延迟，使用风险自负。\n"
 
 #. type: Title =====
 #: eeschema_main_top_menu.adoc:146
@@ -7155,78 +6886,69 @@ msgstr "编辑设置"
 msgid "images/en/options_editing.png"
 msgstr "images/zh/options_editing.png"
 
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:154
+#. type: Table
+#: eeschema_main_top_menu.adoc:181
 #, no-wrap
 msgid ""
 "|Measurement units |Select the display and the cursor coordinate units\n"
 "(inches or millimeters).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:159
-#, no-wrap
-msgid ""
+"\n"
 "|Horizontal pitch of repeated items |\n"
 "Increment on X axis during element duplication (default: 0)\n"
 "(after placing an item like a symbol, label or wire,\n"
 "a duplication is made by the _Insert_ key)\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:162
-#, no-wrap
-msgid ""
+"\n"
 "|Vertical pitch of repeated items| Increment on Y axis during\n"
 "element duplication (default: 0.100 inches or 2,54 mm).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:165
-#, no-wrap
-msgid ""
+"\n"
 "|Increment of repeated labels |Increment of label value during duplication of texts ending\n"
 "in a number, such as bus members (usual value 1 or -1).\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:167
-#, no-wrap
-msgid "|Default text size |Text size used when creating new text items or labels.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:169
-#, no-wrap
-msgid "|Auto-save time interval |Time in minutes between saving backups.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:173
-#, no-wrap
-msgid ""
+"\n"
+"|Default text size |Text size used when creating new text items or labels.\n"
+"\n"
+"|Auto-save time interval |Time in minutes between saving backups.\n"
+"\n"
 "|Automatically place symbol fields | If checked, symbol fields (e.g. value and\n"
 "reference) in newly placed symbols might be moved to avoid collisions with\n"
 "other items.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:177
-#, no-wrap
-msgid ""
+"\n"
 "|Allow field autoplace to change justification | Extension of 'Automatically\n"
 "place symbol fields' option. Enable text justification adjustment for symbol fields when placing\n"
 "a new part.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:181
-#, no-wrap
-msgid ""
+"\n"
 "|Always align autoplaced fields to the 50 mil grid |Extension of 'Automatically\n"
 "place symbol fields' option. If checked, fields are autoplaced using 50 mils\n"
 "grid, otherwise they are placed freely.\n"
 msgstr ""
+"|测量单位 | 选择显示和光标坐标单位\n"
+"（英寸或毫米）。\n"
+"\n"
+"|重复项目的水平间距 |\n"
+"元素复制期间 X 轴上的增量（默认值：0）\n"
+"（在放置符号，标签或电线等物品后，\n"
+" _Insert_ 键复制）\n"
+"\n"
+"|重复项目的垂直间距 | 在 Y 轴期间增量\n"
+"元素复制（默认值：0.100英寸或2,54毫米）。\n"
+"\n"
+"|重复标签的增量 |在复制文本结束期间标签值的增量\n"
+"在一个数字中，例如总线成员（通常值1或-1）。\n"
+"\n"
+"|默认文本大小 |创建新文本项或标签时使用的文本大小。\n"
+"\n"
+"|自动保存时间间隔 |保存备份之间的时间（分钟）。\n"
+"\n"
+"|自动放置符号字段 |如果选中，则为符号字段（例如，值和\n"
+"可能会移动新放置的符号以避免与其发生冲突\n"
+"其他项目。\n"
+"\n"
+"|允许字段自动放置更改对齐 |扩展“自动\n"
+"放置符号字段”的选项。放置时启用符号字段的文本对齐调整\n"
+"一个新的部分。\n"
+"\n"
+"|始终将自动播放的字段与 50mil 网格对齐 |自动扩展\n"
+"放置符号字段的选项。如果选中，则使用 50mil 自动放置字段\n"
+"网格，否则它们是自由放置的。\n"
 
 #. type: Title =====
 #: eeschema_main_top_menu.adoc:184
@@ -7258,7 +6980,7 @@ msgid ""
 "to show a popup menu:"
 msgstr "通过双击操作选择新的热键，或右键单击操作以显示弹出菜单："
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_main_top_menu.adoc:200
 #, no-wrap
 msgid ""
@@ -7279,31 +7001,19 @@ msgstr ""
 msgid "Options description:"
 msgstr "选项说明:"
 
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:208
+#. type: Table
+#: eeschema_main_top_menu.adoc:215
 #, no-wrap
 msgid ""
 "|Center and warp cursor on zoom | If checked, the pointed location is warped\n"
 "to the screen center when zooming in/out.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:212
-#, fuzzy, no-wrap
-#| msgid ""
-#| "|Center and warp cursor on zoom | If checked, the pointed location is warped\n"
-#| "to the screen center when zooming in/out.\n"
-#| "\n"
-#| "|Use touchpad to pan |When enabled, view is panned using scroll wheels (or\n"
-#| "touchpad gestures) and to zoom one needs to hold Ctrl. Otherwise scroll wheels\n"
-#| "zoom in/out and Ctrl/Shift are the panning modifiers.\n"
-#| "\n"
-#| "|Pan while moving object |If checked, automatically pans the window\n"
-#| "if the cursor leaves the window during drawing or moving.\n"
-msgid ""
+"\n"
 "|Use touchpad to pan |When enabled, view is panned using scroll wheels (or\n"
 "touchpad gestures) and to zoom one needs to hold Ctrl. Otherwise scroll wheels\n"
 "zoom in/out and Ctrl/Shift are the panning modifiers.\n"
+"\n"
+"|Pan while moving object |If checked, automatically pans the window\n"
+"if the cursor leaves the window during drawing or moving.\n"
 msgstr ""
 "|中心和变形光标变焦 | 如果选中，则指向的位置会变形\n"
 "放大/缩小时到屏幕中心。\n"
@@ -7314,14 +7024,6 @@ msgstr ""
 "\n"
 "|移动对象时平移 | 如果选中，则自动平移窗口\n"
 "如果光标在绘图或移动过程中离开窗口。\n"
-
-#. type: delimited block |
-#: eeschema_main_top_menu.adoc:215
-#, no-wrap
-msgid ""
-"|Pan while moving object |If checked, automatically pans the window\n"
-"if the cursor leaves the window during drawing or moving.\n"
-msgstr ""
 
 #. type: Title =====
 #: eeschema_main_top_menu.adoc:218
@@ -7874,7 +7576,7 @@ msgid ""
 "icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]."
 msgstr ""
 "刚刚创建的工作表符号的每个引脚必须对应于子工作表中名为分层标签的标签。 分层标"
-"签与标签类似，但它们提供子表和根表之间的连接。 两个互补标签（pin和HLabel）的"
+"签与标签类似，但它们提供子表和根表之间的连接。 两个互补标签（pin 和 HLabel）的"
 "图形表示是类似的。 使用工具图像创建分层标签：image:images/icons/"
 "add_hierarchical_label.png[icons/add_hierarchical_label_png]。"
 
@@ -8393,226 +8095,187 @@ msgstr ""
 msgid "images/toolbar_libedit.png"
 msgstr "images/toolbar_libedit.png"
 
-#. type: delimited block |
-#: eeschema_library_editor.adoc:80
+#. type: Table
+#: eeschema_library_editor.adoc:164
 #, no-wrap
 msgid ""
 "|image:images/icons/save_library.png[icons/save_library_png]\n"
 "|Save the currently selected library. The button will be disabled if no\n"
 "library is currently selected or no changes to the currently selected\n"
 "library have been made.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:83
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/library.png[icons/library_png]\n"
 "|Select the library to edit.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:87
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/delete.png[icons/delete_png]\n"
 "|Delete a symbol from the currently selected library or any library\n"
 "defined by the project if no library is currently selected.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:91
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/library_browse.png[icons/library_browse_png]\n"
 "|Open the symbol library browser to select the library and symbol\n"
 "to edit.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:94
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/new_symbol.png[icons/new_symbol_png]\n"
 "|Create a new symbol.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:97
-#, fuzzy, no-wrap
-#| msgid "Clicking the image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png] on the main tool bar displays the list of the available symbols that you can select and load from the currently selected library."
-msgid ""
+"\n"
 "|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
 "|Load symbol from currently selected library for editing.\n"
-msgstr "单击主工具栏上的 image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png] 将显示可从当前所选库中选择和加载的可用符号列表。"
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:100
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/copy_symbol.png[icons/copy_symbol_png]\n"
 "|Create a new symbol from the currently loaded symbol.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:104
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]\n"
 "|Save the current symbol changes in memory. The library file is not\n"
 "changed.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:107
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/import.png[icons/import_png]\n"
 "|Import one symbol from a file.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:110 eeschema_library_editor.adoc:216
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/export.png[icons/export_png]\n"
 "|Export the current symbol to a file.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:114
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/new_library.png[icons/new_library_png]\n"
 "|Create a new library file containing the current symbol. Note: new\n"
 "libraries are not automatically added to the project.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:117
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/undo.png[icons/undo_png]\n"
 "|Undo last edit.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:120
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/redo.png[icons/redo_png]\n"
 "|Redo last undo.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:123
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/part_properties.png[icons/part_properties_png]\n"
 "|Edit the current symbol properties.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:126
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/text.png[icons/text.png]\n"
 "|Edit the fields of current symbol.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:129
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/erc.png[icons/erc_png]\n"
 "|Test the current symbol for design errors.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:131
-#, no-wrap
-msgid "|image:images/icons/zoom_in.png[]|Zoom in.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:133
-#, no-wrap
-msgid "|image:images/icons/zoom_out.png[]|Zoom out.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:135
-#, no-wrap
-msgid "|image:images/icons/zoom_redraw.png[]|Refresh display.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:137
-#, no-wrap
-msgid "|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit symbol in display.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:141
-#, no-wrap
-msgid ""
+"\n"
+"|image:images/icons/zoom_in.png[]|Zoom in.\n"
+"\n"
+"|image:images/icons/zoom_out.png[]|Zoom out.\n"
+"\n"
+"|image:images/icons/zoom_redraw.png[]|Refresh display.\n"
+"\n"
+"|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit symbol in display.\n"
+"\n"
 "|image:images/icons/morgan1.png[icons/morgan1_png]\n"
 "|Select the normal body style. The button is disabled if the current\n"
 "symbol does not have an alternate body style.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:145
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/morgan2.png[icons/morgan2_png]\n"
 "|Select the alternate body style. The button is disabled if the current\n"
 "symbol does not have an alternate body style.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:149
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/datasheet.png[icons/datasheet_png]\n"
 "|Show the associated documentation. The button will be disabled if no\n"
 "documentation is defined for the current symbol.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:153
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
 "|Select the unit to display. The drop down control will be disabled if\n"
 "the current symbol is not derived from multiple units.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:157
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/toolbar_libedit_alias.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
 "|Select the alias. The drop down control will be disabled if the\n"
 "current symbol does not have any aliases.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:161
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/pin2pin.png[icons/pin2pin_png]\n"
 "|Pin editing: independent editing for pin shape and position for\n"
 "symbols with multiple units and alternate symbols.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:164
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/pin_table.png[icons/pin_table_png]\n"
 "|Show pin table.\n"
 msgstr ""
+"|image:images/icons/save_library.png[icons/save_library_png]\n"
+"|保存当前选定的库。如果没有，该按钮将被禁用\n"
+"库当前已选中或当前未选择更改\n"
+"库已经制作完成。\n"
+"\n"
+"|image:images/icons/library.png[icons/library_png]\n"
+"|选择要编辑的库。\n"
+"\n"
+"|image:images/icons/delete.png[icons/delete_png]\n"
+"|从当前选定的库或任何库中删除符号\n"
+"如果当前没有选择库，则由项目定义。\n"
+"\n"
+"|image:images/icons/library_browse.png[icons/library_browse_png]\n"
+"|打开符号库浏览器以选择库和符号\n"
+"编辑。\n"
+"\n"
+"|image:images/icons/new_symbol.png[icons/new_symbol_png]\n"
+"|创建一个新符号。\n"
+"\n"
+"|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
+"|从当前选定的库中加载符号以进行编辑。\n"
+"\n"
+"|image:images/icons/copy_symbol.png[icons/copy_symbol_png]\n"
+"|从当前加载的符号创建新符号。\n"
+"\n"
+"|image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]\n"
+"|将当前符号更改保存在内存中。库文件不是\n"
+"改变。\n"
+"\n"
+"|image:images/icons/import.png[icons/import_png]\n"
+"|从文件中导入一个符号。\n"
+"\n"
+"|image:images/icons/export.png[icons/export_png]\n"
+"|将当前符号导出到文件。\n"
+"\n"
+"|image:images/icons/new_library.png[icons/new_library_png]\n"
+"|创建包含当前符号的新库文件。注意：新的\n"
+"库不会自动添加到项目中。\n"
+"\n"
+"|image:images/icons/undo.png[icons/undo_png]\n"
+"|撤消上次编辑。\n"
+"\n"
+"|image:images/icons/redo.png[icons/redo_png]\n"
+"|重做最后一次撤消。\n"
+"\n"
+"|image:images/icons/part_properties.png[icons/part_properties_png]\n"
+"|编辑当前符号属性。\n"
+"\n"
+"|image:images/icons/text.png[icons/text.png]\n"
+"|编辑当前符号的字段。\n"
+"\n"
+"|image:images/icons/erc.png[icons/erc_png]\n"
+"|测试当前符号是否存在设计错误。\n"
+"\n"
+"|image:images/icons/zoom_in.png[]|放大。\n"
+"\n"
+"|image:images/icons/zoom_out.png[]|缩小。\n"
+"\n"
+"|image:images/icons/zoom_redraw.png[]|刷新显示。\n"
+"\n"
+"|image:images/icons/zoom_fit_in_page.png[]|缩放以适合显示中的符号。\n"
+"\n"
+"|image:images/icons/morgan1.png[icons/morgan1_png]\n"
+"|选择正常的体型。如果当前，该按钮被禁用\n"
+"符号没有替代的体型风格。\n"
+"\n"
+"|image:images/icons/morgan2.png[icons/morgan2_png]\n"
+"|选择备用体型。如果当前，该按钮被禁用\n"
+"符号没有替代的体型风格。\n"
+"\n"
+"|image:images/icons/datasheet.png[icons/datasheet_png]\n"
+"|显示相关文档。如果没有，该按钮将被禁用\n"
+"文档是为当前符号定义的。\n"
+"\n"
+"|image:images/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
+"|选择要显示的单位。如果，则将禁用下拉控件\n"
+"当前符号不是从多个单元派生的。\n"
+"\n"
+"|image:images/toolbar_libedit_alias.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
+"|选择别名。如果是，则下拉控件将​​被禁用\n"
+"当前符号没有任何别名。\n"
+"\n"
+"|image:images/icons/pin2pin.png[icons/pin2pin_png]\n"
+"|引脚编辑：针对引脚形状和位置的独立编辑\n"
+"具有多个单位和替代符号的符号。\n"
+"\n"
+"|image:images/icons/pin_table.png[icons/pin_table_png]\n"
+"|显示引脚表。\n"
 
 #. type: Title ====
 #: eeschema_library_editor.adoc:167
@@ -8630,8 +8293,8 @@ msgstr ""
 "垂直工具栏通常位于主窗口的右侧，允许您放置设计符号所需的所有元素。 下表定义了"
 "每个工具栏按钮。"
 
-#. type: delimited block |
-#: eeschema_library_editor.adoc:182
+#. type: Table
+#: eeschema_library_editor.adoc:219
 #, no-wrap
 msgid ""
 "|image:images/icons/cursor.png[icons/cursor_png]\n"
@@ -8641,86 +8304,88 @@ msgid ""
 "panel at the bottom of the main window. Double-left-clicking with the\n"
 "select tool will open the properties dialog for the object under the\n"
 "cursor.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:185
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/pin.png[icons/pin_png]\n"
 "|Pin tool. Left-click to add a new pin.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:188
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/text.png[icons/text.png]\n"
 "|Graphical text tool. Left-click to add a new graphical text item.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:193
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_rectangle.png[icons/add_rectangle_png]\n"
 "|Rectangle tool. Left-click to begin drawing the first corner of a\n"
 "graphical rectangle. Left-click again to place the opposite corner of\n"
 "the rectangle.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:197
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_circle.png[icons/add_circle_png]\n"
 "|Circle tool. Left-click to begin drawing a new graphical circle from\n"
 "the center. Left-click again to define the radius of the circle.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:202
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_arc.png[icons/add_arc_png]\n"
 "|Arc tool. Left-click to begin drawing a new graphical arc item from the\n"
 "center. Left-click again to define the first arc end point. Left-click\n"
 "again to define the second arc end point.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:207
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_polygon.png[icons/add_polygon_png]\n"
 "|Polygon tool. Left-click to begin drawing a new graphical polygon item\n"
 "in the current symbol. Left-click for each addition polygon line.\n"
 "Double-left-click to complete the polygon.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:210
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/anchor.png[icons/anchor_png]\n"
 "|Anchor tool. Left-click to set the anchor position of the symbol.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:213
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/import.png[icons/import_png]\n"
 "|Import a symbol from a file.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:219
-#, no-wrap
-msgid ""
+"\n"
+"|image:images/icons/export.png[icons/export_png]\n"
+"|Export the current symbol to a file.\n"
+"\n"
 "|image:images/icons/delete.png[icons/delete_png]\n"
 "|Delete tool. Left-click to delete an object from the current symbol.\n"
 msgstr ""
+"|image:images/icons/cursor.png[icons/cursor_png]\n"
+"|选择工具。使用选择工具右键单击可打开上下文菜单\n"
+"对于光标下的对象。使用选择工具单击鼠标左键\n"
+"在消息中显示光标下对象的属性\n"
+"主窗口底部的面板。双击左键\n"
+"选择工具将打开该对象下的属性对话框\n"
+"光标。\n"
+"\n"
+"|image:images/icons/pin.png[icons/pin_png]\n"
+"|引脚工具。单击鼠标左键以添加新引脚。\n"
+"\n"
+"|image:images/icons/text.png[icons/text.png]\n"
+"|图形文本工具。单击鼠标左键以添加新的图形文本项。\n"
+"\n"
+"|image:images/icons/add_rectangle.png[icons/add_rectangle_png]\n"
+"|矩形工具。单击鼠标左键以开始绘制a的第一个角\n"
+"图形矩形。再次单击鼠标左键以放置对角\n"
+"矩形。\n"
+"\n"
+"|image:images/icons/add_circle.png[icons/add_circle_png]\n"
+"|圆形工具。单击鼠标左键以开始绘制新的图形圆圈\n"
+"中心。再次单击鼠标左键以定义圆的半径。\n"
+"\n"
+"|image:images/icons/add_arc.png[icons/add_arc_png]\n"
+"|弧工具。单击鼠标左键以开始从中绘制新的图形弧项\n"
+"中央。再次单击鼠标左键以定义第一个圆弧终点。左键点击\n"
+"再次定义第二个弧终点。\n"
+"\n"
+"|image:images/icons/add_polygon.png[icons/add_polygon_png]\n"
+"|多边形工具。单击鼠标左键以开始绘制新的图形多边形项\n"
+"在当前的符号。左键单击每个加法多边形线。\n"
+"双击左键以完成多边形。\n"
+"\n"
+"|image:images/icons/anchor.png[icons/anchor_png]\n"
+"|锚点工具。单击鼠标左键以设置符号的锚点位置。\n"
+"\n"
+"|image:images/icons/import.png[icons/import_png]\n"
+"|从文件导入符号。\n"
+"\n"
+"|image:images/icons/export.png[icons/export_png]\n"
+"|将当前符号导出到文件。\n"
+"\n"
+"|image:images/icons/delete.png[icons/delete_png]\n"
+"|删除工具。单击鼠标左键以从当前符号中删除对象。\n"
 
 #. type: Title ====
 #: eeschema_library_editor.adoc:222
@@ -8738,37 +8403,33 @@ msgstr ""
 "垂直工具栏通常位于主窗口的左侧，允许您设置一些编辑器绘图选项。 下表定义了每个"
 "工具栏按钮。"
 
-#. type: delimited block |
-#: eeschema_library_editor.adoc:232
+#. type: Table
+#: eeschema_library_editor.adoc:241
 #, no-wrap
 msgid ""
 "|image:images/icons/grid.png[icons/grid_png]\n"
 "|Toggle grid visibility on and off.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:235
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/unit_inch.png[icons/unit_inch_png]\n"
 "|Set units to inches.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:238
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/unit_mm.png[icons/unit_mm_png]\n"
 "|Set units to millimeters.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_library_editor.adoc:241
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/cursor_shape.png[icons/cursor_shape_png]\n"
 "|Toggle full screen cursor on and off.\n"
 msgstr ""
+"|image:images/icons/grid.png[icons/grid_png]\n"
+"|打开和关闭网格可见性。\n"
+"\n"
+"|image:images/icons/unit_inch.png[icons/unit_inch_png]\n"
+"|将单位设置为英寸。\n"
+"\n"
+"|image:images/icons/unit_mm.png[icons/unit_mm_png]\n"
+"|将单位设置为毫米。\n"
+"\n"
+"|image:images/icons/cursor_shape.png[icons/cursor_shape_png]\n"
+"|打开和关闭全屏光标。\n"
 
 #. type: Title ===
 #: eeschema_library_editor.adoc:244
@@ -9051,7 +8712,7 @@ msgstr ""
 "new_symbol_png] 。 系统将要求您输入符号名称（此名称用作原理图编辑器中值字段的"
 "默认值），参考编号（U，IC，R ...），每个包装的单位数（例如一个 7400 由每个包"
 "装4个单元组成）并且如果需要替代的体型（有时称为 DeMorgan）。 如果参考指示符字"
-"段为空，则默认为 _U_。 稍后可以更改这些属性，但最好在创建符号时正确设置它们。"
+"段为空，则默认为 _U_ 。 稍后可以更改这些属性，但最好在创建符号时正确设置它们。"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: eeschema_library_editor.adoc:378
@@ -9447,7 +9108,7 @@ msgid ""
 "one unit per package (logic gates for example). Some symbols can have more "
 "than one unit per package each with different symbols and pin configurations."
 msgstr ""
-"符号可以具有两个符号表示（标准符号和备用符号，通常称为 _DeMorgan_）和/或每个"
+"符号可以具有两个符号表示（标准符号和备用符号，通常称为 _DeMorgan_ ）和/或每个"
 "包具有多于一个单元（例如逻辑门）。 某些符号每个封装可以有多个单元，每个单元具"
 "有不同的符号和引脚配置。"
 
@@ -12492,38 +12153,31 @@ msgstr ""
 "<tstamp>4C6E2141</tstamp>\n"
 "</comp>\n"
 
-#. type: delimited block |
-#: eeschema_creating_customized_netlists_and_bom_files.adoc:1056
-#, no-wrap
-msgid "|*libsource* |name of the lib where this component was found.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_creating_customized_netlists_and_bom_files.adoc:1058
-#, no-wrap
-msgid "|*part* |component name inside this library.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_creating_customized_netlists_and_bom_files.adoc:1061
+#. type: Table
+#: eeschema_creating_customized_netlists_and_bom_files.adoc:1065
 #, no-wrap
 msgid ""
+"|*libsource* |name of the lib where this component was found.\n"
+"\n"
+"|*part* |component name inside this library.\n"
+"\n"
 "|*sheetpath* |path of the sheet inside the hierarchy: identify the sheet\n"
 "within the full schematic hierarchy.\n"
+"\n"
+"|*tstamps (time stamps)* |time stamp of the schematic file.\n"
+"\n"
+"|*tstamp (time stamp)* |time stamp of the component.\n"
 msgstr ""
-
-#. type: delimited block |
-#: eeschema_creating_customized_netlists_and_bom_files.adoc:1063
-#, no-wrap
-msgid "|*tstamps (time stamps)* |time stamp of the schematic file.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_creating_customized_netlists_and_bom_files.adoc:1065
-#, fuzzy, no-wrap
-#| msgid "Note about time stamps for components"
-msgid "|*tstamp (time stamp)* |time stamp of the component.\n"
-msgstr "关于元件的时间戳的注意事项"
+"|*libsource* |找到此元件的库的名称。\n"
+"\n"
+"|*part* |此库中的组件名称。\n"
+"\n"
+"|*sheetpath* |层次结构中工作表的路径：标识工作表\n"
+"在完整的原理图层次结构中。\n"
+"\n"
+"|*tstamps (time stamps)* |原理图文件的时间戳。\n"
+"\n"
+"|*tstamp (time stamp)* |元件的时间戳。\n"
 
 #. type: Title =====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1068
@@ -12562,7 +12216,7 @@ msgid ""
 "identifier: the sheetpath + its tstamp"
 msgstr ""
 "复杂层次结构中的给定工作表具有唯一标识符：其 sheetpath。 给定元件（在复杂层次"
-"结构内）具有唯一标识符：sheetpath + 其tstamp"
+"结构内）具有唯一标识符：sheetpath + 其 tstamp"
 
 #. type: Title ====
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1087
@@ -12643,7 +12297,7 @@ msgstr ""
 "类似 <pin num=\"1\" type=\"passive\"/> 的线路也给出了电气引脚类型。可能的电气"
 "引脚类型有"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1133
 #, no-wrap
 msgid ""
@@ -12785,7 +12439,7 @@ msgstr ""
 "  <node ref=\"P1\" pin=\"4\"/>\n"
 "</net>\n"
 
-#. type: delimited block |
+#. type: Table
 #: eeschema_creating_customized_netlists_and_bom_files.adoc:1195
 #, no-wrap
 msgid ""
@@ -13326,1152 +12980,73 @@ msgstr "images/toolbar_viewlib.png"
 msgid "The available commands are:"
 msgstr "可用的命令是："
 
-#. type: delimited block |
-#: eeschema_viewlib.adoc:40
+#. type: Table
+#: eeschema_viewlib.adoc:69
 #, no-wrap
 msgid ""
 "|image:images/icons/library.png[icons/library_png]\n"
 "|Selection of the desired library which can be also selected in the\n"
 "displayed list.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:44
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/add_component.png[icons/add_component_png]\n"
 "|Selection of the symbol which can be also selected in the displayed\n"
 "list.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:47
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
 "|Display previous symbol.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:50
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/lib_next.png[icons/lib_next_png]\n"
 "|Display next symbol.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:54
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
 "image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
 "|Zoom tools.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:57
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
 "|Selection of the representation (normal or converted) if exist.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:60
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
 "|Selection of the unit for symbols that contain multiple units.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:64
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/datasheet.png[icons/datasheet_png]\n"
 "|If it exist, display the associated documents. Exists only when called\n"
 "by the place symbol dialog frame from Eeschema.\n"
-msgstr ""
-
-#. type: delimited block |
-#: eeschema_viewlib.adoc:69
-#, no-wrap
-msgid ""
+"\n"
 "|image:images/icons/export.png[icons/export_png]\n"
 "|Close the browser and place the selected symbol in Eeschema.\n"
 "This icon is only displayed when browser has been called from Eeschema (double click\n"
 "on a symbol in the component chooser).\n"
 msgstr ""
-
-#~ msgid ""
-#~ "|f:/kicad/bin/xsltproc.exe |A tool to read and convert xsl file\n"
-#~ "\n"
-#~ "|-o %O.net |Output file: %O will define the output file.\n"
-#~ "\n"
-#~ "|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |File name converter (a\n"
-#~ "sheet style, xsl format).\n"
-#~ "\n"
-#~ "|%I |Will be replaced by the intermediate file created by Eeschema\n"
-#~ "(*.tmp).\n"
-#~ msgstr ""
-#~ "|f:/kicad/bin/xsltproc.exe |A tool to read and convert xsl file\n"
-#~ "\n"
-#~ "|-o %O.net |Output file: %O will define the output file.\n"
-#~ "\n"
-#~ "|f:/kicad/bin/plugins/netlist_form_pads-pcb.xsl |File name converter (a\n"
-#~ "sheet style, xsl format).\n"
-#~ "\n"
-#~ "|%I |Will be replaced by the intermediate file created by Eeschema\n"
-#~ "(*.tmp).\n"
-
-#~ msgid ""
-#~ "|Use the entire schematic| All sheets are re-annotated (default).\n"
-#~ "\n"
-#~ "|Use the current page only| Only the current sheet is re-annotated\n"
-#~ "(this option is to be used only in special cases, for example to\n"
-#~ "evaluate the amount of resistors in the current sheet.).\n"
-#~ "\n"
-#~ "|Keep existing annotation| Conditional annotation, only the new\n"
-#~ "components will be re-annotated (default).\n"
-#~ "\n"
-#~ "|Reset existing annotation| Unconditional annotation, all the\n"
-#~ "components will be re-annotated (this option is to be used when there\n"
-#~ "are duplicated references).\n"
-#~ "\n"
-#~ "|Reset, but do not swap any annotated multi-unit parts| Keeps\n"
-#~ "all groups of multiple units (e.g. U2A, U2B) together when reannotating.\n"
-#~ msgstr ""
-#~ "|使用整个原理图| 所有工作表都重新注释（默认）。\n"
-#~ "\n"
-#~ "|仅使用当前页面| 仅重新注释当前工作表\n"
-#~ "（此选项仅在特殊情况下使用，例如\n"
-#~ "评估当前表中的电阻数量。\n"
-#~ "\n"
-#~ "|保留现有注释| 条件注释，只有新的\n"
-#~ "元件将被重新注释（默认）。\n"
-#~ "\n"
-#~ "|重置现有注释| 所有的无条件注释\n"
-#~ "元件将被重新注释（此选项将在那里使用\n"
-#~ "是重复的参考）。\n"
-#~ "\n"
-#~ "|重置，但不要交换任何带注释的多单元部件|保持\n"
-#~ "当重新注释时，所有多个单元组（例如U2A，U2B）在一起。\n"
-
-#~ msgid ""
-#~ "|Copy (Ctrl+C) |Selection |Paste (Ctrl+V)\n"
-#~ "\n"
-#~ "a|image:images/copypaste11.png[\"1copy\"]\n"
-#~ "a|image:images/copypaste12.png[\"1selection\"]\n"
-#~ "a|image:images/copypaste13.png[\"1paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste21.png[\"2copy\"]\n"
-#~ "a|image:images/copypaste22.png[\"2selection\"]\n"
-#~ "a|image:images/copypaste23.png[\"2paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste31.png[\"3copy\"]\n"
-#~ "a|image:images/copypaste32.png[\"3selection\"]\n"
-#~ "a|image:images/copypaste33.png[\"3paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste41.png[\"4copy\"]\n"
-#~ "a|image:images/copypaste42.png[\"4selection\"]\n"
-#~ "a|image:images/copypaste43.png[\"4paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste51.png[\"5copy\"]\n"
-#~ "a|image:images/copypaste52.png[\"5selection\"]\n"
-#~ "a|image:images/copypaste53.png[\"5paste\"]\n"
-#~ msgstr ""
-#~ "|复制 (Ctrl+C) |选择 |黏贴 (Ctrl+V)\n"
-#~ "\n"
-#~ "a|image:images/copypaste11.png[\"1copy\"]\n"
-#~ "a|image:images/copypaste12.png[\"1selection\"]\n"
-#~ "a|image:images/copypaste13.png[\"1paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste21.png[\"2copy\"]\n"
-#~ "a|image:images/copypaste22.png[\"2selection\"]\n"
-#~ "a|image:images/copypaste23.png[\"2paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste31.png[\"3copy\"]\n"
-#~ "a|image:images/copypaste32.png[\"3selection\"]\n"
-#~ "a|image:images/copypaste33.png[\"3paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste41.png[\"4copy\"]\n"
-#~ "a|image:images/copypaste42.png[\"4selection\"]\n"
-#~ "a|image:images/copypaste43.png[\"4paste\"]\n"
-#~ "\n"
-#~ "a|image:images/copypaste51.png[\"5copy\"]\n"
-#~ "a|image:images/copypaste52.png[\"5selection\"]\n"
-#~ "a|image:images/copypaste53.png[\"5paste\"]\n"
-
-#~ msgid ""
-#~ "|image:images/icons/new_document.png[New schematic icon]\n"
-#~ "|Create a new schematic (only in standalone mode).\n"
-#~ "\n"
-#~ "|image:images/icons/open_document.png[Open schematic icon]\n"
-#~ "|Open a schematic (only in standalone mode).\n"
-#~ "\n"
-#~ "|image:images/icons/save.png[Save schematic icon]\n"
-#~ "|Save complete schematic project.\n"
-#~ "\n"
-#~ "|image:images/icons/sheetset.png[Page Settings icon]\n"
-#~ "|Select the sheet size and edit the title block.\n"
-#~ "\n"
-#~ "|image:images/icons/print_button.png[Print icon]\n"
-#~ "|Open print dialog.\n"
-#~ "\n"
-#~ "|image:images/icons/paste.png[icons/paste_png]\n"
-#~ "|Paste a copied/cut item or block to the current sheet.\n"
-#~ "\n"
-#~ "|image:images/icons/undo.png[icons/undo_png]\n"
-#~ "|Undo: Revert the last change.\n"
-#~ "\n"
-#~ "|image:images/icons/redo.png[icons/redo_png]\n"
-#~ "|Redo: Revert the last undo operation.\n"
-#~ "\n"
-#~ "|image:images/icons/find.png[search icon]\n"
-#~ "|Show the dialog to search symbols and texts in the schematic.\n"
-#~ "\n"
-#~ "|image:images/icons/find_replace.png[search replace icon]\n"
-#~ "|Show the dialog to search and replace texts in the schematic.\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_redraw.png[icons/zoom_redraw] image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]\n"
-#~ "|Refresh screen; zoom to fit.\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]\n"
-#~ "|Zoom in and out.\n"
-#~ "\n"
-#~ "|image:images/icons/hierarchy_nav.png[hierarchy navigator icon]\n"
-#~ "|View and navigate the hierarchy tree.\n"
-#~ "\n"
-#~ "|image:images/icons/leave_sheet.png[icons/leave_sheet]\n"
-#~ "|Leave the current sheet and go up in the hierarchy.\n"
-#~ "\n"
-#~ "|image:images/icons/libedit.png[icons/libedit_png]\n"
-#~ "|Call the symbol library editor to view and modify libraries and symbols.\n"
-#~ "\n"
-#~ "|image:images/icons/library_browse.png[icons/library_browse_png]\n"
-#~ "|Browse symbol libraries.\n"
-#~ "\n"
-#~ "|image:images/icons/annotate.png[icons_annotate_png]\n"
-#~ "|Annotate symbols.\n"
-#~ "\n"
-#~ "|image:images/icons/erc.png[ERC icon]\n"
-#~ "|Electrical Rules Checker (ERC), automatically validate electrical connections.\n"
-#~ "\n"
-#~ "|image:images/icons/cvpcb.png[run cvpcb icon]\n"
-#~ "|Call CvPcb to assign footprints to symbols.\n"
-#~ "\n"
-#~ "|image:images/icons/netlist.png[Netlist icon]\n"
-#~ "|Export a netlist (Pcbnew, SPICE and other formats).\n"
-#~ "\n"
-#~ "|image:images/icons/spreadsheet.png[Symbol fields editor icon]\n"
-#~ "|Edit symbol fields.\n"
-#~ "\n"
-#~ "|image:images/icons/bom.png[BOM icon]\n"
-#~ "|Generate the Bill of Materials (BOM).\n"
-#~ "\n"
-#~ "|image:images/icons/pcbnew.png[icons/pcbnew_png]\n"
-#~ "|Call Pcbnew to perform a PCB layout.\n"
-#~ "\n"
-#~ "|image:images/icons/import_footprint_names.png[Import Footprint Names icon]\n"
-#~ "|Back-import footprint assignment (selected using CvPcb or Pcbnew) into the \"footprint\" fields.\n"
-#~ msgstr ""
-#~ "|image:images/icons/new_document.png[New schematic icon]\n"
-#~ "|创建新原理图（仅在独立模式下）。\n"
-#~ "\n"
-#~ "|image:images/icons/open_document.png[Open schematic icon]\n"
-#~ "|打开原理图（仅在独立模式下）。\n"
-#~ "\n"
-#~ "|image:images/icons/save.png[Save schematic icon]\n"
-#~ "|保存完整的原理图项目。\n"
-#~ "\n"
-#~ "|image:images/icons/sheetset.png[Page Settings icon]\n"
-#~ "|选择图纸尺寸并编辑标题栏。\n"
-#~ "\n"
-#~ "|image:images/icons/print_button.png[Print icon]\n"
-#~ "|打开打印对话框。\n"
-#~ "\n"
-#~ "|image:images/icons/paste.png[icons/paste_png]\n"
-#~ "|将复制/剪切的项目或块粘贴到当前工作表。\n"
-#~ "\n"
-#~ "|image:images/icons/undo.png[icons/undo_png]\n"
-#~ "|撤消：还原最后一次更改。\n"
-#~ "\n"
-#~ "|image:images/icons/redo.png[icons/redo_png]\n"
-#~ "|重做：还原最后一次撤消操作。\n"
-#~ "\n"
-#~ "|image:images/icons/find.png[search icon]\n"
-#~ "|显示在原理图中搜索符号和文本的对话框。\n"
-#~ "\n"
-#~ "|image:images/icons/find_replace.png[search replace icon]\n"
-#~ "|显示用于搜索和替换原理图中文本的对话框。\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_redraw.png[icons/zoom_redraw] image:images/icons/zoom_fit_in_page.png[icons/zoom_fit_in_page_png]\n"
-#~ "|刷新屏幕;缩放以适应。\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_in.png[icons/zoom_in] image:images/icons/zoom_out.png[icons/zoom_out]\n"
-#~ "|放大和缩小。\n"
-#~ "\n"
-#~ "|image:images/icons/hierarchy_nav.png[hierarchy navigator icon]\n"
-#~ "|查看和导航层次结构树。\n"
-#~ "\n"
-#~ "|image:images/icons/leave_sheet.png[icons/leave_sheet]\n"
-#~ "|保留当前工作表并进入层次结构中。\n"
-#~ "\n"
-#~ "|image:images/icons/libedit.png[icons/libedit_png]\n"
-#~ "|调用符号库编辑器以查看和修改库和符号。\n"
-#~ "\n"
-#~ "|image:images/icons/library_browse.png[icons/library_browse_png]\n"
-#~ "|浏览符号库。\n"
-#~ "\n"
-#~ "|image:images/icons/annotate.png[icons_annotate_png]\n"
-#~ "|注释符号。\n"
-#~ "\n"
-#~ "|image:images/icons/erc.png[ERC icon]\n"
-#~ "|电气规则检查器（ERC），自动验证电气连接。\n"
-#~ "\n"
-#~ "|image:images/icons/cvpcb.png[run cvpcb icon]\n"
-#~ "|调用CvPcb为符号分配封装。\n"
-#~ "\n"
-#~ "|image:images/icons/netlist.png[Netlist icon]\n"
-#~ "|导出网表（Pcbnew，SPICE和其他格式）。\n"
-#~ "\n"
-#~ "|image:images/icons/spreadsheet.png[Symbol fields editor icon]\n"
-#~ "|编辑符号字段。\n"
-#~ "\n"
-#~ "|image:images/icons/bom.png[BOM icon]\n"
-#~ "|生成物料清单（BOM）。\n"
-#~ "\n"
-#~ "|image:images/icons/pcbnew.png[icons/pcbnew_png]\n"
-#~ "|调用 Pcbnew 执行 PCB 布局。\n"
-#~ "\n"
-#~ "|image:images/icons/import_footprint_names.png[Import Footprint Names icon]\n"
-#~ "|返回导入封装分配（使用 CvPcb 或 Pcbnew 选择）到“封装”字段中。\n"
-
-#~ msgid ""
-#~ "|image:images/icons/cursor.png[Cancel tool icon]\n"
-#~ "|Cancel the active command or tool.\n"
-#~ "\n"
-#~ "|image:images/icons/net_highlight_schematic.png[Highlight net icon]\n"
-#~ "|Highlight a net by marking its wires and net labels with a different color.\n"
-#~ "If KiCad runs in project mode then copper corresponding to the selected net will\n"
-#~ "be highlighted in Pcbnew as well.\n"
-#~ "\n"
-#~ "|image:images/icons/new_symbol.png[New Symbol icon]\n"
-#~ "|Display the symbol selector dialog to select a new symbol to be placed.\n"
-#~ "\n"
-#~ "|image:images/icons/add_power.png[Add Power icon]\n"
-#~ "|Display the power symbol selector dialog to select a power symbol to be placed.\n"
-#~ "\n"
-#~ "|image:images/icons/add_line.png[icons/add_line_png]\n"
-#~ "|Draw a wire.\n"
-#~ "\n"
-#~ "|image:images/icons/add_bus.png[icons/add_bus_png]\n"
-#~ "|Draw a bus.\n"
-#~ "\n"
-#~ "|image:images/icons/add_line2bus.png[icons/add_line2bus_png]\n"
-#~ "|Draw wire-to-bus entry points. These elements are only graphical and do not create\n"
-#~ "a connection, thus they should not be used to connect wires together.\n"
-#~ "\n"
-#~ "|image:images/icons/add_bus2bus.png[icons/add_bus2bus_png]\n"
-#~ "|Draw bus-to-bus entry points.\n"
-#~ "\n"
-#~ "|image:images/icons/noconn.png[icons/noconn_png]\n"
-#~ "|Place a \"No Connect\" flag. These flags should be placed on symbol pins which\n"
-#~ "are meant to be left unconnected. It is done to notify the Electrical Rules\n"
-#~ "Checker that lack of connection for a particular pin is intentional and should\n"
-#~ "not be reported.\n"
-#~ "\n"
-#~ "|image:images/icons/add_junction.png[icons/add_junction_png]\n"
-#~ "|Place a junction. This connects two crossing wires or a wire and a pin,\n"
-#~ "when it can be ambiguous (i.e. if a wire end or a pin is not directly\n"
-#~ "connected to another wire end).\n"
-#~ "\n"
-#~ "|image:images/icons/add_line_label.png[icons/add_line_label_png]\n"
-#~ "|Place a local label. Local label connects items located **in the same sheet**.\n"
-#~ "For connections between two different sheets, you have to use global or\n"
-#~ "hierarchical labels.\n"
-#~ "\n"
-#~ "|image:images/icons/add_glabel.png[Global label icon]\n"
-#~ "|Place a global label. All global labels with the same name are connected, even when\n"
-#~ "located on different sheets.\n"
-#~ "\n"
-#~ "|image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]\n"
-#~ "|Place a hierarchical label. Hierarchical labels are used to create a\n"
-#~ "connection between a subsheet and the parent sheet that contains it.\n"
-#~ "\n"
-#~ "|image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsheet_png]\n"
-#~ "|Place a hierarchical subsheet. You must specify the file name for this subsheet.\n"
-#~ "\n"
-#~ "|image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_label_png]\n"
-#~ "|Import a hierarchical pin from a subsheet. This command can be executed only on\n"
-#~ "hierarchical subsheets. It will create hierarchical pins corresponding to hierarchical\n"
-#~ "labels placed in the target subsheet.\n"
-#~ "\n"
-#~ "|image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]\n"
-#~ "|Place a hierarchical pin in a subsheet. This command can be executed only on\n"
-#~ "hierarchical subsheets. It will create arbitrary hierarchical pins, even if they \n"
-#~ "do not exist in the target subsheet.\n"
-#~ "\n"
-#~ "|image:images/icons/add_dashed_line.png[icons/add_dashed_line_png]\n"
-#~ "|Draw a line. These are only graphical and do not connect anything.\n"
-#~ "\n"
-#~ "|image:images/icons/text.png[icons/text.png]\n"
-#~ "|Place a text comment.\n"
-#~ "\n"
-#~ "|image:images/icons/image.png[icons/image_png]\n"
-#~ "|Place a bitmap image.\n"
-#~ "\n"
-#~ "|image:images/icons/delete.png[icons/cancel_png]\n"
-#~ "|Delete selected element.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "|image:images/icons/cursor.png[Cancel tool icon]\n"
-#~ "|取消激活的命令或工具。\n"
-#~ "\n"
-#~ "|image:images/icons/net_highlight_schematic.png[Highlight net icon]\n"
-#~ "|通过使用不同颜色标记其电线和网络标签来突出显示网络。\n"
-#~ "如果 KiCad 以项目模式运行，那么对应于所选网络的铜将\n"
-#~ "在Pcbnew中也会突出显示。\n"
-#~ "\n"
-#~ "|image:images/icons/new_symbol.png[New Symbol icon]\n"
-#~ "|显示符号选择器对话框以选择要放置的新符号。\n"
-#~ "\n"
-#~ "|image:images/icons/add_power.png[Add Power icon]\n"
-#~ "|显示电源符号选择器对话框以选择要放置的电源符号。\n"
-#~ "\n"
-#~ "|image:images/icons/add_line.png[icons/add_line_png]\n"
-#~ "|画一根电线。\n"
-#~ "\n"
-#~ "|image:images/icons/add_bus.png[icons/add_bus_png]\n"
-#~ "|画一根总线\n"
-#~ "\n"
-#~ "|image:images/icons/add_line2bus.png[icons/add_line2bus_png]\n"
-#~ "|绘制线对总入口点。这些元素仅是图形化的，不会创建\n"
-#~ "连接，因此它们不应用于将电线连接在一起。\n"
-#~ "\n"
-#~ "|image:images/icons/add_bus2bus.png[icons/add_bus2bus_png]\n"
-#~ "|绘制总线到总线的入口点。\n"
-#~ "\n"
-#~ "|image:images/icons/noconn.png[icons/noconn_png]\n"
-#~ "|放置“无连接”标志。这些标志应放在符号引脚上\n"
-#~ "意味着没有连接。这样做是为了通知电气规则\n"
-#~ "检查器特定引脚缺少连接是故意的，应该\n"
-#~ "不报道。\n"
-#~ "\n"
-#~ "|image:images/icons/add_junction.png[icons/add_junction_png]\n"
-#~ "|放置一个交叉点。这连接两根交叉线或一根线和一个引脚，\n"
-#~ "当它可能是模糊的（即，如果线端或引脚不是直接的\n"
-#~ "连接到另一个线端）。\n"
-#~ "\n"
-#~ "|image:images/icons/add_line_label.png[icons/add_line_label_png]\n"
-#~ "|放置一个本地标签。本地标签连接 **位于同一张纸** 中的物品。\n"
-#~ "对于两个不同工作表之间的连接，您必须使用全局或\n"
-#~ "分层标签。\n"
-#~ "\n"
-#~ "|image:images/icons/add_glabel.png[Global label icon]\n"
-#~ "|放置一个全局标签。即使具有相同名称的所有全局标签也已连接\n"
-#~ "位于不同的纸张上。\n"
-#~ "\n"
-#~ "|image:images/icons/add_hierarchical_label.png[icons/add_hierarchical_label_png]\n"
-#~ "|放置分层标签。分层标签用于创建\n"
-#~ "子表与包含它的父表之间的连接。\n"
-#~ "\n"
-#~ "|image:images/icons/add_hierarchical_subsheet.png[icons/add_hierarchical_subsheet_png]\n"
-#~ "|放置分层子表。您必须指定此子表的文件名。\n"
-#~ "\n"
-#~ "|image:images/icons/import_hierarchical_label.png[icons/import_hierarchical_label_png]\n"
-#~ "|从子表单导入分层引脚。该命令只能在执行时执行\n"
-#~ "分层子表。它将创建对应于分层的分层引脚\n"
-#~ "放置在目标子表中的标签。\n"
-#~ "\n"
-#~ "|image:images/icons/add_hierar_pin.png[icons/add_hierar_pin_png]\n"
-#~ "|在子表中放置分层引脚。该命令只能在执行时执行\n"
-#~ "分层子表。它会创建任意分层引脚，即使它们也是如此\n"
-#~ "目标子表中不存在。\n"
-#~ "\n"
-#~ "|image:images/icons/add_dashed_line.png[icons/add_dashed_line_png]\n"
-#~ "|划一条线。这些只是图形化的，不能连接任何东西。\n"
-#~ "\n"
-#~ "|image:images/icons/text.png[icons/text.png]\n"
-#~ "|放置文本注释。\n"
-#~ "\n"
-#~ "|image:images/icons/image.png[icons/image_png]\n"
-#~ "|放置位图图像。\n"
-#~ "\n"
-#~ "|image:images/icons/delete.png[icons/cancel_png]\n"
-#~ "|删除所选元素。\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "\n"
-#~ "|image:images/icons/grid.png[icons/grid]\n"
-#~ "|Toggle grid visibility.\n"
-#~ "\n"
-#~ "|image:images/icons/unit_inch.png[icons/unit_inch]\n"
-#~ "|Switch units to inches.\n"
-#~ "\n"
-#~ "|image:images/icons/unit_mm.png[icons/unit_mm]\n"
-#~ "|Switch units to millimeters.\n"
-#~ "\n"
-#~ "|image:images/icons/cursor_shape.png[icons/cursor_shape]\n"
-#~ "|Choose the cursor shape (full screen/small).\n"
-#~ "\n"
-#~ "|image:images/icons/hidden_pin.png[icons/hidden_pin]\n"
-#~ "|Toggle visibility of \"invisible\" pins.\n"
-#~ "\n"
-#~ "|image:images/icons/lines90.png[icons/lines90]\n"
-#~ "|Toggle free angle/90 degrees wires and buses placement.\n"
-#~ "\n"
-#~ msgstr ""
-#~ "\n"
-#~ "|image:images/icons/grid.png[icons/grid]\n"
-#~ "|切换网格可见性。\n"
-#~ "\n"
-#~ "|image:images/icons/unit_inch.png[icons/unit_inch]\n"
-#~ "|将单位切换为英寸。\n"
-#~ "\n"
-#~ "|image:images/icons/unit_mm.png[icons/unit_mm]\n"
-#~ "|将单位切换为毫米。\n"
-#~ "\n"
-#~ "|image:images/icons/cursor_shape.png[icons/cursor_shape]\n"
-#~ "|选择光标形状（全屏/小）。\n"
-#~ "\n"
-#~ "|image:images/icons/hidden_pin.png[icons/hidden_pin]\n"
-#~ "|切换“隐形”引脚的可见性。\n"
-#~ "\n"
-#~ "|image:images/icons/lines90.png[icons/lines90]\n"
-#~ "|切换 自由角度/90度 电线和总线放置。\n"
-#~ "\n"
-
-#~ msgid ""
-#~ "If two different labels are placed on the same wire, they are connected "
-#~ "together and become equivalent: all the other elements connected to one "
-#~ "or the other labels are then connected to all of them."
-#~ msgstr ""
-#~ "如果两个不同的标签放在同一根电线上，它们会连接在一起并变得相同：连接到一个"
-#~ "或另一个标签的所有其他元件然后连接到所有标签。"
-
-#~ msgid ""
-#~ "From the schematic point of view, a bus is a collection of signals, "
-#~ "starting with a common prefix, and ending with a number. For example, "
-#~ "PCA0, PCA1, and PCA2 are members of the PCA bus."
-#~ msgstr ""
-#~ "从示意图的角度来看，总线是一组信号，以公共前缀开头，以数字结尾。 例如，"
-#~ "PCA0，PCA1 和 PCA2 是 PCA 总线的成员。"
-
-#~ msgid ""
-#~ "The complete bus is named PCA[N..m], where N and m are the first and the "
-#~ "last wire number of this bus. Thus if PCA has 20 members from 0 to 19, "
-#~ "the complete bus is noted PCA[0..19]. A collection of signals like PCA0, "
-#~ "PCA1, PCA2, WRITE, READ cannot be contained in a bus."
-#~ msgstr ""
-#~ "完整的总线名为 PCA[N..m]，其中 N 和 m 是该总线的第一个和最后一个线号。 因"
-#~ "此，如果 PCA 有20个成员，从0到19，整个总线记为 PCA[0..19]。 总线中不能包含"
-#~ "PCA0，PCA1，PCA2，WRITE，READ 等信号的集合。"
-
-#~ msgid "Global connections between buses"
-#~ msgstr "总线之间的全局连接"
-
-#~ msgid ""
-#~ "You may need connections between buses, in order to link two buses having "
-#~ "different names, or in the case of a hierarchy, to create connections "
-#~ "between different sheets. You can make these connections in the following "
-#~ "way."
-#~ msgstr ""
-#~ "您可能需要总线之间的连接，以便链接具有不同名称的两个总线，或者在层次结构的"
-#~ "情况下，以在不同的表之间创建连接。 您可以通过以下方式建立这些连接。"
-
-#~ msgid "Bus junction example"
-#~ msgstr "总线连接示例"
-
-#~ msgid "images/bus_junction.png"
-#~ msgstr "images/bus_junction.png"
-
-#~ msgid ""
-#~ "Buses PCA [0..15], ADR [0..7] and BUS [5..10] are connected together "
-#~ "(note the junction here because the vertical bus wire joins the middle of "
-#~ "the horizontal bus segment)."
-#~ msgstr ""
-#~ "总线 PCA[0..15]，ADR[0..7] 和 BUS[5..10] 连接在一起（注意这里的连接点，因"
-#~ "为垂直总线连接到水平总线段的中间）。"
-
-#~ msgid ""
-#~ "More precisely, the corresponding members are connected together : PCA0, "
-#~ "ADR0 are connected, (as same as PCA1 and ADR1 ... PCA7 and ADR7)."
-#~ msgstr ""
-#~ "更确切地说，相应的成员连接在一起：连接 PCA0，ADR0（与 PCA1 和 ADR1 ... "
-#~ "PCA7 和 ADR7 相同）。"
-
-#~ msgid ""
-#~ "Furthermore, PCA5, BUS5 and ADR5 are connected (just as PCA6, BUS6 and "
-#~ "ADR6 like PCA7, BUS7 and ADR7)."
-#~ msgstr ""
-#~ "此外，PCA5，BUS5 和 ADR5 连接（就像PCA6，BUS6 和 ADR6 一样，如 PCA7，BUS7 "
-#~ "和 ADR7）。"
-
-#~ msgid ""
-#~ "PCA8 and BUS8 are also connected (just as PCA9 and BUS9, PCA10 and BUS10)"
-#~ msgstr "PCA8 和 BUS8 也连接（就像 PCA9 和 BUS9，PCA10 和 BUS10 一样）"
-
-#~ msgid "images/opamp_symbol.png"
-#~ msgstr "images/opamp_symbol.png"
-
-#~ msgid ""
-#~ "|New |Close current schematic and start a new one (only in standalone mode).\n"
-#~ "\n"
-#~ "|Open |Load a schematic project (only in standalone mode).\n"
-#~ "\n"
-#~ "|Open Recent |Open a schematic project from the list of recently opened files (only in standalone mode).\n"
-#~ "\n"
-#~ "|Append Schematic Sheet |Insert the contents of another sheet into the current one.\n"
-#~ "\n"
-#~ "|Import Non-Kicad Schematic File |Imports a schematic project saved in another file format.\n"
-#~ "\n"
-#~ "|Save |Save current sheet and all its subsheets.\n"
-#~ "\n"
-#~ "|Save Current Sheet |Save only the current sheet, but not others in the project.\n"
-#~ "\n"
-#~ "|Save Current Sheet As... |Save the current sheet under a new name.\n"
-#~ "\n"
-#~ "|Page Settings |Configure page dimensions and title block.\n"
-#~ "\n"
-#~ "|Print |Print schematic project (See also chapter <<plot-and-print,Plot and Print>>).\n"
-#~ "\n"
-#~ "|Plot |Export to PDF, PostScript, HPGL or SVG format (See chapter <<plot-and-print,Plot and Print>>).\n"
-#~ "\n"
-#~ "|Close |Terminate the application.\n"
-#~ msgstr ""
-#~ "|新建 |关闭当前原理图并启动一个新原理图（仅在独立模式下）。\n"
-#~ "\n"
-#~ "|打开 |加载原理图项目（仅在独立模式下）。\n"
-#~ "\n"
-#~ "|打开最近 |从最近打开的文件列表中打开原理图项目（仅在独立模式下）。\n"
-#~ "\n"
-#~ "|附加示意图 |将另一个工作表的内容插入当前工作表。\n"
-#~ "\n"
-#~ "|导入非 Kicad 原理图文件 |导入以其他文件格式保存的原理图项目。\n"
-#~ "\n"
-#~ "|保存 |保存当前工作表及其所有子工作表。\n"
-#~ "\n"
-#~ "|保存当前工作表 |仅保存当前工作表，而不保存项目中的其他工作表。\n"
-#~ "\n"
-#~ "|将当前工作表另存为... |以新名称保存当前工作表。\n"
-#~ "\n"
-#~ "|页面设置 |配置页面尺寸和标题栏。\n"
-#~ "\n"
-#~ "|打印 |打印原理图项目（另见“打印和打印，打印和打印”一章）。\n"
-#~ "\n"
-#~ "|绘图 |导出为 PDF，PostScript，HPGL 或 SVG 格式（请参见“绘图和打印，绘图和打印”一章）。\n"
-#~ "\n"
-#~ "|关闭 |终止应用程序。\n"
-
-#~ msgid ""
-#~ "|Grid Size| Grid size selection.\n"
-#~ "\n"
-#~ "It is *recommended* to work with normal grid (0.050 inches or 1,27 mm). Smaller\n"
-#~ "grids are used for component building.\n"
-#~ "\n"
-#~ "|Bus thickness |Pen size used to draw buses.\n"
-#~ "\n"
-#~ "|Line thickness |Pen size used to draw objects that do not have a\n"
-#~ "specified pen size.\n"
-#~ "\n"
-#~ "|Part ID notation |Style of suffix that is used to denote symbol units (U1A,\n"
-#~ "U1.A, U1-1, etc.)\n"
-#~ "\n"
-#~ "|Icon scale| Adjust toolbar icons size.\n"
-#~ "\n"
-#~ "|Show Grid | Grid visibility setting.\n"
-#~ "\n"
-#~ "|Restrict buses and wires to H and V orientation| If checked, buses and\n"
-#~ "wires are drawn only with vertical or horizontal lines.\n"
-#~ "Otherwise buses and wires can be placed at any orientation.\n"
-#~ "\n"
-#~ "|Show hidden pins: |Display invisible (or __hidden__) pins, typically\n"
-#~ "power pins.\n"
-#~ "\n"
-#~ "|Show page limits |If checked, shows the page boundaries on screen.\n"
-#~ "\n"
-#~ "|Footprint previews in symbol chooser| Displays a footprint preview frame and\n"
-#~ "footprint selector when placing a new symbol.\n"
-#~ "\n"
-#~ "*Note:* it may cause problems or delays, use at your own risk.\n"
-#~ msgstr ""
-#~ "|网格尺寸 | 网格大小选择。\n"
-#~ "\n"
-#~ " *建议* 使用普通网格（0.050英寸或1,27毫米）。较小\n"
-#~ "网格用于元件构建。\n"
-#~ "\n"
-#~ "|总线厚度 | 用于绘制总线的笔大小。\n"
-#~ "\n"
-#~ "|线条粗细 | 用于绘制没有对象的对象的笔大小\n"
-#~ "指定的笔大小。\n"
-#~ "\n"
-#~ "|元件 ID 表示法 | 用于表示符号单元的后缀样式（U1A，\n"
-#~ "U1.A，U1-1等）\n"
-#~ "\n"
-#~ "|图标比例 | 调整工具栏图标大小。\n"
-#~ "\n"
-#~ "|显示网格 | 网格可见性设置。\n"
-#~ "\n"
-#~ "|将总线和电线限制为 H 和 V 方向 | 如果检查，总线和\n"
-#~ "电线仅用垂直或水平线绘制。\n"
-#~ "否则，可以在任何方向放置总线和电线。\n"
-#~ "\n"
-#~ "|显示隐藏的引脚：| 通常显示不可见（或 __隐藏__ ）引脚\n"
-#~ "电源引脚。\n"
-#~ "\n"
-#~ "|显示页面限制 | 如果选中，则在屏幕上显示页面边界。\n"
-#~ "\n"
-#~ "|符号选择器中的封装预览 | 显示封装预览框和\n"
-#~ "放置新符号时的封装选择器。\n"
-#~ "\n"
-#~ "*注意：* 可能会导致问题或延迟，使用风险自负。\n"
-
-#~ msgid ""
-#~ "|Measurement units |Select the display and the cursor coordinate units\n"
-#~ "(inches or millimeters).\n"
-#~ "\n"
-#~ "|Horizontal pitch of repeated items |\n"
-#~ "Increment on X axis during element duplication (default: 0)\n"
-#~ "(after placing an item like a symbol, label or wire,\n"
-#~ "a duplication is made by the _Insert_ key)\n"
-#~ "\n"
-#~ "|Vertical pitch of repeated items| Increment on Y axis during\n"
-#~ "element duplication (default: 0.100 inches or 2,54 mm).\n"
-#~ "\n"
-#~ "|Increment of repeated labels |Increment of label value during duplication of texts ending\n"
-#~ "in a number, such as bus members (usual value 1 or -1).\n"
-#~ "\n"
-#~ "|Default text size |Text size used when creating new text items or labels.\n"
-#~ "\n"
-#~ "|Auto-save time interval |Time in minutes between saving backups.\n"
-#~ "\n"
-#~ "|Automatically place symbol fields | If checked, symbol fields (e.g. value and\n"
-#~ "reference) in newly placed symbols might be moved to avoid collisions with\n"
-#~ "other items.\n"
-#~ "\n"
-#~ "|Allow field autoplace to change justification | Extension of 'Automatically\n"
-#~ "place symbol fields' option. Enable text justification adjustment for symbol fields when placing\n"
-#~ "a new part.\n"
-#~ "\n"
-#~ "|Always align autoplaced fields to the 50 mil grid |Extension of 'Automatically\n"
-#~ "place symbol fields' option. If checked, fields are autoplaced using 50 mils\n"
-#~ "grid, otherwise they are placed freely.\n"
-#~ msgstr ""
-#~ "|测量单位 | 选择显示和光标坐标单位\n"
-#~ "（英寸或毫米）。\n"
-#~ "\n"
-#~ "|重复项目的水平间距 |\n"
-#~ "元素复制期间 X 轴上的增量（默认值：0）\n"
-#~ "（在放置符号，标签或电线等物品后，\n"
-#~ " _Insert_ 键复制）\n"
-#~ "\n"
-#~ "|重复项目的垂直间距 | 在 Y 轴期间增量\n"
-#~ "元素复制（默认值：0.100英寸或2,54毫米）。\n"
-#~ "\n"
-#~ "|重复标签的增量 |在复制文本结束期间标签值的增量\n"
-#~ "在一个数字中，例如总线成员（通常值1或-1）。\n"
-#~ "\n"
-#~ "|默认文本大小 |创建新文本项或标签时使用的文本大小。\n"
-#~ "\n"
-#~ "|自动保存时间间隔 |保存备份之间的时间（分钟）。\n"
-#~ "\n"
-#~ "|自动放置符号字段 |如果选中，则为符号字段（例如，值和\n"
-#~ "可能会移动新放置的符号以避免与其发生冲突\n"
-#~ "其他项目。\n"
-#~ "\n"
-#~ "|允许字段自动放置更改对齐 |扩展“自动\n"
-#~ "放置符号字段”的选项。放置时启用符号字段的文本对齐调整\n"
-#~ "一个新的部分。\n"
-#~ "\n"
-#~ "|始终将自动播放的字段与 50mil 网格对齐 |自动扩展\n"
-#~ "放置符号字段的选项。如果选中，则使用 50mil 自动放置字段\n"
-#~ "网格，否则它们是自由放置的。\n"
-
-#~ msgid ""
-#~ "|image:images/icons/save_library.png[icons/save_library_png]\n"
-#~ "|Save the currently selected library. The button will be disabled if no\n"
-#~ "library is currently selected or no changes to the currently selected\n"
-#~ "library have been made.\n"
-#~ "\n"
-#~ "|image:images/icons/library.png[icons/library_png]\n"
-#~ "|Select the library to edit.\n"
-#~ "\n"
-#~ "|image:images/icons/delete.png[icons/delete_png]\n"
-#~ "|Delete a symbol from the currently selected library or any library\n"
-#~ "defined by the project if no library is currently selected.\n"
-#~ "\n"
-#~ "|image:images/icons/library_browse.png[icons/library_browse_png]\n"
-#~ "|Open the symbol library browser to select the library and symbol\n"
-#~ "to edit.\n"
-#~ "\n"
-#~ "|image:images/icons/new_symbol.png[icons/new_symbol_png]\n"
-#~ "|Create a new symbol.\n"
-#~ "\n"
-#~ "|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
-#~ "|Load symbol from currently selected library for editing.\n"
-#~ "\n"
-#~ "|image:images/icons/copy_symbol.png[icons/copy_symbol_png]\n"
-#~ "|Create a new symbol from the currently loaded symbol.\n"
-#~ "\n"
-#~ "|image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]\n"
-#~ "|Save the current symbol changes in memory. The library file is not\n"
-#~ "changed.\n"
-#~ "\n"
-#~ "|image:images/icons/import.png[icons/import_png]\n"
-#~ "|Import one symbol from a file.\n"
-#~ "\n"
-#~ "|image:images/icons/export.png[icons/export_png]\n"
-#~ "|Export the current symbol to a file.\n"
-#~ "\n"
-#~ "|image:images/icons/new_library.png[icons/new_library_png]\n"
-#~ "|Create a new library file containing the current symbol. Note: new\n"
-#~ "libraries are not automatically added to the project.\n"
-#~ "\n"
-#~ "|image:images/icons/undo.png[icons/undo_png]\n"
-#~ "|Undo last edit.\n"
-#~ "\n"
-#~ "|image:images/icons/redo.png[icons/redo_png]\n"
-#~ "|Redo last undo.\n"
-#~ "\n"
-#~ "|image:images/icons/part_properties.png[icons/part_properties_png]\n"
-#~ "|Edit the current symbol properties.\n"
-#~ "\n"
-#~ "|image:images/icons/text.png[icons/text.png]\n"
-#~ "|Edit the fields of current symbol.\n"
-#~ "\n"
-#~ "|image:images/icons/erc.png[icons/erc_png]\n"
-#~ "|Test the current symbol for design errors.\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_in.png[]|Zoom in.\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_out.png[]|Zoom out.\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_redraw.png[]|Refresh display.\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_fit_in_page.png[]|Zoom to fit symbol in display.\n"
-#~ "\n"
-#~ "|image:images/icons/morgan1.png[icons/morgan1_png]\n"
-#~ "|Select the normal body style. The button is disabled if the current\n"
-#~ "symbol does not have an alternate body style.\n"
-#~ "\n"
-#~ "|image:images/icons/morgan2.png[icons/morgan2_png]\n"
-#~ "|Select the alternate body style. The button is disabled if the current\n"
-#~ "symbol does not have an alternate body style.\n"
-#~ "\n"
-#~ "|image:images/icons/datasheet.png[icons/datasheet_png]\n"
-#~ "|Show the associated documentation. The button will be disabled if no\n"
-#~ "documentation is defined for the current symbol.\n"
-#~ "\n"
-#~ "|image:images/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
-#~ "|Select the unit to display. The drop down control will be disabled if\n"
-#~ "the current symbol is not derived from multiple units.\n"
-#~ "\n"
-#~ "|image:images/toolbar_libedit_alias.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
-#~ "|Select the alias. The drop down control will be disabled if the\n"
-#~ "current symbol does not have any aliases.\n"
-#~ "\n"
-#~ "|image:images/icons/pin2pin.png[icons/pin2pin_png]\n"
-#~ "|Pin editing: independent editing for pin shape and position for\n"
-#~ "symbols with multiple units and alternate symbols.\n"
-#~ "\n"
-#~ "|image:images/icons/pin_table.png[icons/pin_table_png]\n"
-#~ "|Show pin table.\n"
-#~ msgstr ""
-#~ "|image:images/icons/save_library.png[icons/save_library_png]\n"
-#~ "|保存当前选定的库。如果没有，该按钮将被禁用\n"
-#~ "库当前已选中或当前未选择更改\n"
-#~ "库已经制作完成。\n"
-#~ "\n"
-#~ "|image:images/icons/library.png[icons/library_png]\n"
-#~ "|选择要编辑的库。\n"
-#~ "\n"
-#~ "|image:images/icons/delete.png[icons/delete_png]\n"
-#~ "|从当前选定的库或任何库中删除符号\n"
-#~ "如果当前没有选择库，则由项目定义。\n"
-#~ "\n"
-#~ "|image:images/icons/library_browse.png[icons/library_browse_png]\n"
-#~ "|打开符号库浏览器以选择库和符号\n"
-#~ "编辑。\n"
-#~ "\n"
-#~ "|image:images/icons/new_symbol.png[icons/new_symbol_png]\n"
-#~ "|创建一个新符号。\n"
-#~ "\n"
-#~ "|image:images/icons/import_cmp_from_lib.png[icons/import_cmp_from_lib_png]\n"
-#~ "|从当前选定的库中加载符号以进行编辑。\n"
-#~ "\n"
-#~ "|image:images/icons/copy_symbol.png[icons/copy_symbol_png]\n"
-#~ "|从当前加载的符号创建新符号。\n"
-#~ "\n"
-#~ "|image:images/icons/save_part_in_mem.png[icons/save_part_in_mem_png]\n"
-#~ "|将当前符号更改保存在内存中。库文件不是\n"
-#~ "改变。\n"
-#~ "\n"
-#~ "|image:images/icons/import.png[icons/import_png]\n"
-#~ "|从文件中导入一个符号。\n"
-#~ "\n"
-#~ "|image:images/icons/export.png[icons/export_png]\n"
-#~ "|将当前符号导出到文件。\n"
-#~ "\n"
-#~ "|image:images/icons/new_library.png[icons/new_library_png]\n"
-#~ "|创建包含当前符号的新库文件。注意：新的\n"
-#~ "库不会自动添加到项目中。\n"
-#~ "\n"
-#~ "|image:images/icons/undo.png[icons/undo_png]\n"
-#~ "|撤消上次编辑。\n"
-#~ "\n"
-#~ "|image:images/icons/redo.png[icons/redo_png]\n"
-#~ "|重做最后一次撤消。\n"
-#~ "\n"
-#~ "|image:images/icons/part_properties.png[icons/part_properties_png]\n"
-#~ "|编辑当前符号属性。\n"
-#~ "\n"
-#~ "|image:images/icons/text.png[icons/text.png]\n"
-#~ "|编辑当前符号的字段。\n"
-#~ "\n"
-#~ "|image:images/icons/erc.png[icons/erc_png]\n"
-#~ "|测试当前符号是否存在设计错误。\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_in.png[]|放大。\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_out.png[]|缩小。\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_redraw.png[]|刷新显示。\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_fit_in_page.png[]|缩放以适合显示中的符号。\n"
-#~ "\n"
-#~ "|image:images/icons/morgan1.png[icons/morgan1_png]\n"
-#~ "|选择正常的体型。如果当前，该按钮被禁用\n"
-#~ "符号没有替代的体型风格。\n"
-#~ "\n"
-#~ "|image:images/icons/morgan2.png[icons/morgan2_png]\n"
-#~ "|选择备用体型。如果当前，该按钮被禁用\n"
-#~ "符号没有替代的体型风格。\n"
-#~ "\n"
-#~ "|image:images/icons/datasheet.png[icons/datasheet_png]\n"
-#~ "|显示相关文档。如果没有，该按钮将被禁用\n"
-#~ "文档是为当前符号定义的。\n"
-#~ "\n"
-#~ "|image:images/toolbar_libedit_part.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
-#~ "|选择要显示的单位。如果，则将禁用下拉控件\n"
-#~ "当前符号不是从多个单元派生的。\n"
-#~ "\n"
-#~ "|image:images/toolbar_libedit_alias.png[alt=\"images/toolbar_libedit_part.png\",width=\"80%\"]\n"
-#~ "|选择别名。如果是，则下拉控件将​​被禁用\n"
-#~ "当前符号没有任何别名。\n"
-#~ "\n"
-#~ "|image:images/icons/pin2pin.png[icons/pin2pin_png]\n"
-#~ "|引脚编辑：针对引脚形状和位置的独立编辑\n"
-#~ "具有多个单位和替代符号的符号。\n"
-#~ "\n"
-#~ "|image:images/icons/pin_table.png[icons/pin_table_png]\n"
-#~ "|显示引脚表。\n"
-
-#~ msgid ""
-#~ "|image:images/icons/cursor.png[icons/cursor_png]\n"
-#~ "|Select tool. Right-clicking with the select tool opens the context menu\n"
-#~ "for the object under the cursor. Left-clicking with the select tool\n"
-#~ "displays the attributes of the object under the cursor in the message\n"
-#~ "panel at the bottom of the main window. Double-left-clicking with the\n"
-#~ "select tool will open the properties dialog for the object under the\n"
-#~ "cursor.\n"
-#~ "\n"
-#~ "|image:images/icons/pin.png[icons/pin_png]\n"
-#~ "|Pin tool. Left-click to add a new pin.\n"
-#~ "\n"
-#~ "|image:images/icons/text.png[icons/text.png]\n"
-#~ "|Graphical text tool. Left-click to add a new graphical text item.\n"
-#~ "\n"
-#~ "|image:images/icons/add_rectangle.png[icons/add_rectangle_png]\n"
-#~ "|Rectangle tool. Left-click to begin drawing the first corner of a\n"
-#~ "graphical rectangle. Left-click again to place the opposite corner of\n"
-#~ "the rectangle.\n"
-#~ "\n"
-#~ "|image:images/icons/add_circle.png[icons/add_circle_png]\n"
-#~ "|Circle tool. Left-click to begin drawing a new graphical circle from\n"
-#~ "the center. Left-click again to define the radius of the circle.\n"
-#~ "\n"
-#~ "|image:images/icons/add_arc.png[icons/add_arc_png]\n"
-#~ "|Arc tool. Left-click to begin drawing a new graphical arc item from the\n"
-#~ "center. Left-click again to define the first arc end point. Left-click\n"
-#~ "again to define the second arc end point.\n"
-#~ "\n"
-#~ "|image:images/icons/add_polygon.png[icons/add_polygon_png]\n"
-#~ "|Polygon tool. Left-click to begin drawing a new graphical polygon item\n"
-#~ "in the current symbol. Left-click for each addition polygon line.\n"
-#~ "Double-left-click to complete the polygon.\n"
-#~ "\n"
-#~ "|image:images/icons/anchor.png[icons/anchor_png]\n"
-#~ "|Anchor tool. Left-click to set the anchor position of the symbol.\n"
-#~ "\n"
-#~ "|image:images/icons/import.png[icons/import_png]\n"
-#~ "|Import a symbol from a file.\n"
-#~ "\n"
-#~ "|image:images/icons/export.png[icons/export_png]\n"
-#~ "|Export the current symbol to a file.\n"
-#~ "\n"
-#~ "|image:images/icons/delete.png[icons/delete_png]\n"
-#~ "|Delete tool. Left-click to delete an object from the current symbol.\n"
-#~ msgstr ""
-#~ "|image:images/icons/cursor.png[icons/cursor_png]\n"
-#~ "|选择工具。使用选择工具右键单击可打开上下文菜单\n"
-#~ "对于光标下的对象。使用选择工具单击鼠标左键\n"
-#~ "在消息中显示光标下对象的属性\n"
-#~ "主窗口底部的面板。双击左键\n"
-#~ "选择工具将打开该对象下的属性对话框\n"
-#~ "光标。\n"
-#~ "\n"
-#~ "|image:images/icons/pin.png[icons/pin_png]\n"
-#~ "|引脚工具。单击鼠标左键以添加新引脚。\n"
-#~ "\n"
-#~ "|image:images/icons/text.png[icons/text.png]\n"
-#~ "|图形文本工具。单击鼠标左键以添加新的图形文本项。\n"
-#~ "\n"
-#~ "|image:images/icons/add_rectangle.png[icons/add_rectangle_png]\n"
-#~ "|矩形工具。单击鼠标左键以开始绘制a的第一个角\n"
-#~ "图形矩形。再次单击鼠标左键以放置对角\n"
-#~ "矩形。\n"
-#~ "\n"
-#~ "|image:images/icons/add_circle.png[icons/add_circle_png]\n"
-#~ "|圆形工具。单击鼠标左键以开始绘制新的图形圆圈\n"
-#~ "中心。再次单击鼠标左键以定义圆的半径。\n"
-#~ "\n"
-#~ "|image:images/icons/add_arc.png[icons/add_arc_png]\n"
-#~ "|弧工具。单击鼠标左键以开始从中绘制新的图形弧项\n"
-#~ "中央。再次单击鼠标左键以定义第一个圆弧终点。左键点击\n"
-#~ "再次定义第二个弧终点。\n"
-#~ "\n"
-#~ "|image:images/icons/add_polygon.png[icons/add_polygon_png]\n"
-#~ "|多边形工具。单击鼠标左键以开始绘制新的图形多边形项\n"
-#~ "在当前的符号。左键单击每个加法多边形线。\n"
-#~ "双击左键以完成多边形。\n"
-#~ "\n"
-#~ "|image:images/icons/anchor.png[icons/anchor_png]\n"
-#~ "|锚点工具。单击鼠标左键以设置符号的锚点位置。\n"
-#~ "\n"
-#~ "|image:images/icons/import.png[icons/import_png]\n"
-#~ "|从文件导入符号。\n"
-#~ "\n"
-#~ "|image:images/icons/export.png[icons/export_png]\n"
-#~ "|将当前符号导出到文件。\n"
-#~ "\n"
-#~ "|image:images/icons/delete.png[icons/delete_png]\n"
-#~ "|删除工具。单击鼠标左键以从当前符号中删除对象。\n"
-
-#~ msgid ""
-#~ "|image:images/icons/grid.png[icons/grid_png]\n"
-#~ "|Toggle grid visibility on and off.\n"
-#~ "\n"
-#~ "|image:images/icons/unit_inch.png[icons/unit_inch_png]\n"
-#~ "|Set units to inches.\n"
-#~ "\n"
-#~ "|image:images/icons/unit_mm.png[icons/unit_mm_png]\n"
-#~ "|Set units to millimeters.\n"
-#~ "\n"
-#~ "|image:images/icons/cursor_shape.png[icons/cursor_shape_png]\n"
-#~ "|Toggle full screen cursor on and off.\n"
-#~ msgstr ""
-#~ "|image:images/icons/grid.png[icons/grid_png]\n"
-#~ "|打开和关闭网格可见性。\n"
-#~ "\n"
-#~ "|image:images/icons/unit_inch.png[icons/unit_inch_png]\n"
-#~ "|将单位设置为英寸。\n"
-#~ "\n"
-#~ "|image:images/icons/unit_mm.png[icons/unit_mm_png]\n"
-#~ "|将单位设置为毫米。\n"
-#~ "\n"
-#~ "|image:images/icons/cursor_shape.png[icons/cursor_shape_png]\n"
-#~ "|打开和关闭全屏光标。\n"
-
-#~ msgid ""
-#~ "|*libsource* |name of the lib where this component was found.\n"
-#~ "\n"
-#~ "|*part* |component name inside this library.\n"
-#~ "\n"
-#~ "|*sheetpath* |path of the sheet inside the hierarchy: identify the sheet\n"
-#~ "within the full schematic hierarchy.\n"
-#~ "\n"
-#~ "|*tstamps (time stamps)* |time stamp of the schematic file.\n"
-#~ "\n"
-#~ "|*tstamp (time stamp)* |time stamp of the component.\n"
-#~ msgstr ""
-#~ "|*libsource* |找到此元件的库的名称。\n"
-#~ "\n"
-#~ "|*part* |此库中的组件名称。\n"
-#~ "\n"
-#~ "|*sheetpath* |层次结构中工作表的路径：标识工作表\n"
-#~ "在完整的原理图层次结构中。\n"
-#~ "\n"
-#~ "|*tstamps (time stamps)* |原理图文件的时间戳。\n"
-#~ "\n"
-#~ "|*tstamp (time stamp)* |元件的时间戳。\n"
-
-#~ msgid ""
-#~ "|image:images/icons/library.png[icons/library_png]\n"
-#~ "|Selection of the desired library which can be also selected in the\n"
-#~ "displayed list.\n"
-#~ "\n"
-#~ "|image:images/icons/add_component.png[icons/add_component_png]\n"
-#~ "|Selection of the symbol which can be also selected in the displayed\n"
-#~ "list.\n"
-#~ "\n"
-#~ "|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
-#~ "|Display previous symbol.\n"
-#~ "\n"
-#~ "|image:images/icons/lib_next.png[icons/lib_next_png]\n"
-#~ "|Display next symbol.\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
-#~ "image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
-#~ "|Zoom tools.\n"
-#~ "\n"
-#~ "|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
-#~ "|Selection of the representation (normal or converted) if exist.\n"
-#~ "\n"
-#~ "|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
-#~ "|Selection of the unit for symbols that contain multiple units.\n"
-#~ "\n"
-#~ "|image:images/icons/datasheet.png[icons/datasheet_png]\n"
-#~ "|If it exist, display the associated documents. Exists only when called\n"
-#~ "by the place symbol dialog frame from Eeschema.\n"
-#~ "\n"
-#~ "|image:images/icons/export.png[icons/export_png]\n"
-#~ "|Close the browser and place the selected symbol in Eeschema.\n"
-#~ "This icon is only displayed when browser has been called from Eeschema (double click\n"
-#~ "on a symbol in the component chooser).\n"
-#~ msgstr ""
-#~ "|image:images/icons/library.png[icons/library_png]\n"
-#~ "|选择所需的库，也可以在中选择\n"
-#~ "显示列表。\n"
-#~ "\n"
-#~ "|image:images/icons/add_component.png[icons/add_component_png]\n"
-#~ "|选择可在显示中选择的符号\n"
-#~ "名单。\n"
-#~ "\n"
-#~ "|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
-#~ "|显示上一个符号。\n"
-#~ "\n"
-#~ "\n"
-#~ "|image:images/icons/lib_next.png[icons/lib_next_png]\n"
-#~ "|显示下一个符号。\n"
-#~ "\n"
-#~ "|image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
-#~ "image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
-#~ "|缩放工具。\n"
-#~ "\n"
-#~ "|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
-#~ "|如果存在，则选择表示（正常或转换）。\n"
-#~ "\n"
-#~ "|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
-#~ "|选择包含多个单位的符号的单位。\n"
-#~ "\n"
-#~ "|image:images/icons/datasheet.png[icons/datasheet_png]\n"
-#~ "|如果存在，则显示关联的文档。仅在被叫时存在\n"
-#~ "来自 Eeschema 的地方符号对话框。\n"
-#~ "\n"
-#~ "|image:images/icons/export.png[icons/export_png]\n"
-#~ "|关闭浏览器并将所选符号放在 Eeschema 中。\n"
-#~ "只有在从 Eeschema 调用浏览器时才会显示此图标（双击\n"
-#~ "在元件选择器中的符号上）。\n"
+"|image:images/icons/library.png[icons/library_png]\n"
+"|选择所需的库，也可以在中选择\n"
+"显示列表。\n"
+"\n"
+"|image:images/icons/add_component.png[icons/add_component_png]\n"
+"|选择可在显示中选择的符号\n"
+"名单。\n"
+"\n"
+"|image:images/icons/lib_previous.png[icons/lib_previous_png]\n"
+"|显示上一个符号。\n"
+"\n"
+"\n"
+"|image:images/icons/lib_next.png[icons/lib_next_png]\n"
+"|显示下一个符号。\n"
+"\n"
+"|image:images/icons/zoom_in.png[] image:images/icons/zoom_out.png[]\n"
+"image:images/icons/zoom_redraw.png[] image:images/icons/zoom_fit_in_page.png[]\n"
+"|缩放工具。\n"
+"\n"
+"|image:images/icons/morgan1.png[] image:images/icons/morgan2.png[]\n"
+"|如果存在，则选择表示（正常或转换）。\n"
+"\n"
+"|image:images/toolbar_viewlib_part.png[alt=\"images/toolbar_viewlib_part.png\",width=\"70%\"]\n"
+"|选择包含多个单位的符号的单位。\n"
+"\n"
+"|image:images/icons/datasheet.png[icons/datasheet_png]\n"
+"|如果存在，则显示关联的文档。仅在被叫时存在\n"
+"来自 Eeschema 的地方符号对话框。\n"
+"\n"
+"|image:images/icons/export.png[icons/export_png]\n"
+"|关闭浏览器并将所选符号放在 Eeschema 中。\n"
+"只有在从 Eeschema 调用浏览器时才会显示此图标（双击\n"
+"在元件选择器中的符号上）。\n"

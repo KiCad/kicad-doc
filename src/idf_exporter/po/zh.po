@@ -1,11 +1,11 @@
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# taotieren <admin@taotieren.com>, 2019.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: IDF_Exporter_zh_CN_v0.1\n"
+"Project-Id-Version: IDF_Exporter_zh_CN_v0.3\n"
 "POT-Creation-Date: 2019-02-28 06:27+0000\n"
 "PO-Revision-Date: 2019-03-09 01:39+0800\n"
 "Language-Team: \n"
@@ -163,8 +163,8 @@ msgid ""
 "also be useful not to ignore the (X,Y) offset values. The behavior mentioned here will change "
 "at some point in the future.]"
 msgstr ""
-"在封装编辑器或 Pcbnew 中，编辑封装参数并单击 3D 设置选项卡（参见链接：#figure-1[图1]），单击 _"
-"添加 3D 形状_，然后选择过滤器 IDFv3元件文件（*.idf）（见链接：#figure-2[图2]）。选择所需的边框"
+"在封装编辑器或 Pcbnew 中，编辑封装参数并单击 3D 设置选项卡（参见链接：#图-1[图-1]），单击 _"
+"添加 3D 形状_ ，然后选择过滤器 IDFv3元件文件（*.idf）（见链接：#图-2[图-2]）。选择所需的边框"
 "文件，然后输入偏移和旋转所需的任何值。请注意，IDF 导出器仅使用偏移值和 Z 旋转值;所有其他值都将"
 "被忽略。必须使用 IDF 板输出单位（mm 或 thou）和 IDF 坐标系指定偏移量，这是一个右手坐标系，+Z "
 "向观察者移动，+X 向观察者右侧，+Y 向观察者上侧。旋转必须以度为单位，正旋转为逆时针旋转，如 "
@@ -182,8 +182,8 @@ msgid ""
 "freecadweb.org/[FreeCAD] or converted to VRML using the idf2vrml tool and viewed with any "
 "suitable VRML viewer."
 msgstr ""
-"一旦为所有需要的元件指定了模型，从 pcbnew 中选择 *文件* 菜单，然后选择 *导出*，最后 **IDFv3导"
-"出**。 将弹出一个对话框（参见链接：#figure-3[图3]），该对话框允许设置输出文件名和 IDF 输出单位"
+"一旦为所有需要的元件指定了模型，从 pcbnew 中选择 *文件* 菜单，然后选择 *导出* ，最后 **IDFv3导"
+"出**。 将弹出一个对话框（参见链接：#图-3[图-3]），该对话框允许设置输出文件名和 IDF 输出单位"
 "（mm 或 mils）。 导出的 IDF 文件可以在免费的机械 CAD 软件 http://www.freecadweb.org/[FreeCAD] "
 "中查看，或使用 idf2vrml 工具转换为 VRML，并可以使用任何合适的 VRML 查看器查看。"
 
@@ -290,7 +290,7 @@ msgid ""
 "part number is a good choice for the geometry name."
 msgstr ""
 "几何名称：与零件号组合的字符串必须形成元件边框的唯一标识符。 对于标准化包，包名称是几何名称的"
-"良好值，例如 _SOT-23_。 对于独特的包装，制造商的部件号是几何名称的不错选择。"
+"良好值，例如 _SOT-23_ 。 对于独特的包装，制造商的部件号是几何名称的不错选择。"
 
 #. type: Plain text
 #: idf_exporter.adoc:151
@@ -301,7 +301,7 @@ msgid ""
 "orientation of this particular TO-92 outline file."
 msgstr ""
 "部件号：虽然显然是用于部件号，例如 BS107，但最好使用此字符串来帮助描述包。 例如，如果几何名称"
-"是 _TO-92_，则部件号条目可用于描述焊盘的布局或该特定 TO-92 边框文件的方向。"
+"是 _TO-92_ ，则部件号条目可用于描述焊盘的布局或该特定 TO-92 边框文件的方向。"
 
 #. type: Plain text
 #: idf_exporter.adoc:154
@@ -516,7 +516,7 @@ msgid ""
 "footprints place the anode at Pin 1."
 msgstr ""
 "对于通孔元件，没有广泛接受的方案来确定 3D 模型中的引脚方向和元件中心。 为了保持一致性，如果只"
-"有2个引脚，它们必须沿X轴水平排列（见链接：#figure-4[图4]），对于3个引脚，试图在X轴上保持水平排"
+"有2个引脚，它们必须沿X轴水平排列（见链接：#图-4[图-4]），对于3个引脚，试图在X轴上保持水平排"
 "列2。 电解电容或钽电容等极化器件必须在引脚1上具有正极引线，二极管必须在引脚1上具有正极; 这是为"
 "了保持原理图符号与 SMT 器件定义的方向的兼容性; 但请注意，许多现有的 KiCad 原理图和封装都将阳极"
 "置于引脚1。"
@@ -545,7 +545,7 @@ msgstr ""
 "对于 DIP 设备，边框的中心必须位于由销位置描述的矩形的中心，而引脚1最好位于左上角; 这将与 SMT "
 "元件的标准化方向保持一致; 然而，相对于大多数现有的 KiCad 元件封装和 VRML 模型，这样的模型将旋"
 "转 -90度。 对于诸如水平径向引线电容器或水平 TO-220 封装的器件，更喜欢将引线排成X行的一排，并且"
-"器件的主体向上延伸（参见链接：#figure-4[图4]）。 非极化垂直轴向引线元件必须在右侧有导线; 极化"
+"器件的主体向上延伸（参见链接：#图4[图4]）。 非极化垂直轴向引线元件必须在右侧有导线; 极化"
 "垂直轴向引线元件可以在两侧都有导线，这取决于引脚1是在下端（导线在右侧）还是在上端（导线在左"
 "侧）。"
 
@@ -830,7 +830,7 @@ msgstr "idfrect"
 msgid ""
 "When *idfrect* is invoked with no arguments it prints out a usage note and a summary of its "
 "inputs:"
-msgstr "如果在没有参数的情况下调用 *idfrect*，则会打印出使用说明及其输入摘要："
+msgstr "如果在没有参数的情况下调用 *idfrect* ，则会打印出使用说明及其输入摘要："
 
 #. type: delimited block -
 #: idf_exporter.adoc:423
@@ -956,7 +956,7 @@ msgid ""
 "arguments it prints out a usage note and a summary of its inputs:"
 msgstr ""
 "用于指定元件概要的 DXF 文件可以使用免费软件 http://librecad.org/[LibreCAD] 进行准备，以获得最"
-"佳兼容性。 如果在没有参数的情况下调用 *dxf2idf*，则会打印出使用说明及其输入摘要："
+"佳兼容性。 如果在没有参数的情况下调用 *dxf2idf* ，则会打印出使用说明及其输入摘要："
 
 #. type: delimited block -
 #: idf_exporter.adoc:472
