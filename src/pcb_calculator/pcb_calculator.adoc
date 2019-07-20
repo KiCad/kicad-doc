@@ -38,15 +38,15 @@ Please direct any bug reports, suggestions or new versions to here:
 [[publication_date_and_software_version]]
 *Publication date and software version*
 
-march 04, 2019
+july 17, 2019
 
 
 [[introduction]]
 == Introduction
 
-The Kicad Calculator gives you the Chance to calculate the most important Things without leaving Kicad.
-
-The Calculator consists the following Options:
+The KiCad PCB Calculator is a set of utilities to help you find the values of
+components or other paremeters of a layout. The Calculator has the following
+tools:
 
 * Regulators
 * Track Width
@@ -69,25 +69,25 @@ needed for linear and low-dropout voltage regulators.
 image::images/en/regulators.png[alt="Regulators",scaledwidth="80%"]
 
 
-For the _Standard Type_, the output voltage V_out as a function of the reference voltage V_ref and resistors R_1 and R_2 is given by:
+For the _Standard Type_, the output voltage Vout as a function of the reference voltage Vref and resistors R1 and R2 is given by:
 
 image::images/Calculation1.png[alt="Regulators",scaledwidth="20%"]
 
 
-For the _3 terminal type_, there is a correction factor due to the quiescent current I_adj flowing from the adjust pin:
+For the _3 terminal type_, there is a correction factor due to the quiescent current Iadj flowing from the adjust pin:
 
 image::images/Calculation2.png[alt="Regulators",scaledwidth="20%"]
 
 
 This current is typically below 100 uA and can be neglected with caution.
 
-To use this calculator, enter the parameters of the regulator _Type_, _V_ref_ and, if needed, _I_adj_, select the field you want to calculate (one of the resistors or the output voltage) and enter the other two values.
+To use this calculator, enter the parameters of the regulator _Type_, _Vref_ and, if needed, _Iadj_, select the field you want to calculate (one of the resistors or the output voltage) and enter the other two values.
 
 
 [[track-width]]
 === Track-Width
 
-The Track Width calculator calculates the trace width for printed circuit board conductors for a given current.
+The Track Width tool calculates the trace width for printed circuit board conductors for a given current and temperature rise.
 It uses formulas from IPC-2221 (formerly IPC-D-275).
 
 
@@ -97,10 +97,12 @@ image::images/en/trackwidth.png[alt="Track-Width",scaledwidth="80%"]
 [[electrical-spacing]]
 === Electrical-Spacing
 
-In the Picture you can see that you can edit the Voltage and the Calculator gives you the correct Values.
+This table helps finding the minimum clearance between conductors.
 
-The minimal Values which orientatd at the IPC-2221 too.
-
+Each line of the table has a minimum recomended distance between conductors
+for a given voltage (DC or AC peaks) range. If you need the values for voltages
+higher than 500V, enter the value in the box in the left corner and press
+_Update Values_.
 
 image::images/en/electricalspacing.png[alt="Electrical-Spacing",scaledwidth="80%"]
 
@@ -138,14 +140,16 @@ image::images/en/transline.png[alt="TransLine",scaledwidth="80%"]
 [[rf-attenuators]]
 === RF-Attenuators
 
-With the RF Attenuator you can calculate different things by choosing:
+With the RF Attenuator utility you can calculate the values of the resistors
+needed for different types of attenuators:
 
 * PI
 * Tee
 * Bridged Tee
 * Resistive Splitter
 
-and change all their Parameters.
+To use this tool, first select the type of attenuator you need, then enter the
+desired attenuation (in dB) and input/output impedances (in Ohms).
 
 image::images/en/rfattenuators.png[alt="RF Attenuators",scaledwidth="80%"]
 
