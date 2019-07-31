@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-03-08 15:19+0200\n"
-"PO-Revision-Date: 2019-03-08 15:21+0200\n"
+"POT-Creation-Date: 2019-07-31 13:58+0300\n"
+"PO-Revision-Date: 2019-07-31 19:08+0300\n"
 "Last-Translator: Baranovskiy Konstantin <baranovskiykonstantin@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -99,8 +99,8 @@ msgstr "*Дата публикации и версия ПО*\n"
 
 #. type: Plain text
 #: pcb_calculator.adoc:42
-msgid "march 04, 2019"
-msgstr "04 марта 2019 года"
+msgid "july 17, 2019"
+msgstr "17 июля 2019 года"
 
 #. type: Title ==
 #: pcb_calculator.adoc:45
@@ -109,18 +109,15 @@ msgid "Introduction"
 msgstr "Введение"
 
 #. type: Plain text
-#: pcb_calculator.adoc:48
-msgid ""
-"The Kicad Calculator gives you the Chance to calculate the most important "
-"Things without leaving Kicad."
-msgstr ""
-"Калькулятор предоставляет возможность вычислить наиболее важные параметры не "
-"покидая KiCad."
-
-#. type: Plain text
 #: pcb_calculator.adoc:50
-msgid "The Calculator consists the following Options:"
-msgstr "Калькулятор содержит следующие инструменты:"
+msgid ""
+"The KiCad PCB Calculator is a set of utilities to help you find the values "
+"of components or other paremeters of a layout. The Calculator has the "
+"following tools:"
+msgstr ""
+"KiCad PCB Calculator -- это набор инструментов, помогающих определить "
+"параметры компонентов или прочих параметров печатной платы. Калькулятор "
+"имеет следующие инструменты:"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
 #: pcb_calculator.adoc:52 pcb_calculator.adoc:64 pcb_calculator.adoc:69
@@ -145,7 +142,7 @@ msgid "Trans Line"
 msgstr "Линия передачи"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: pcb_calculator.adoc:56 pcb_calculator.adoc:131
+#: pcb_calculator.adoc:56 pcb_calculator.adoc:154
 #, no-wrap
 msgid "RF Attenuators"
 msgstr "СВЧ аттенюатор"
@@ -185,8 +182,8 @@ msgstr "images/ru/regulators.png"
 #. type: Plain text
 #: pcb_calculator.adoc:73
 msgid ""
-"For the _Standard Type_, the output voltage V_out as a function of the "
-"reference voltage V_ref and resistors R_1 and R_2 is given by:"
+"For the _Standard Type_, the output voltage Vout as a function of the "
+"reference voltage Vref and resistors R1 and R2 is given by:"
 msgstr ""
 "Для стандартного типа регуляторов, выходное напряжение Vout является "
 "функцией от опорного напряжения Vref и сопротивления резисторов R1 и R2, и "
@@ -202,7 +199,7 @@ msgstr "images/Calculation1.png"
 #: pcb_calculator.adoc:78
 msgid ""
 "For the _3 terminal type_, there is a correction factor due to the quiescent "
-"current I_adj flowing from the adjust pin:"
+"current Iadj flowing from the adjust pin:"
 msgstr ""
 "В случае с 3-х выводным типом регуляторов, коэффициент понижения напряжения "
 "основывается на величине стабильного тока Iadj, выходящего из вывода Adj:"
@@ -224,9 +221,9 @@ msgstr ""
 #. type: Plain text
 #: pcb_calculator.adoc:85
 msgid ""
-"To use this calculator, enter the parameters of the regulator _Type_, "
-"_V_ref_ and, if needed, _I_adj_, select the field you want to calculate (one "
-"of the resistors or the output voltage) and enter the other two values."
+"To use this calculator, enter the parameters of the regulator _Type_, _Vref_ "
+"and, if needed, _Iadj_, select the field you want to calculate (one of the "
+"resistors or the output voltage) and enter the other two values."
 msgstr ""
 "Чтобы выполнить расчёт, введите параметры регулятора _Тип_, _Vref_ и, если "
 "потребуется, _Iadj_. Выберите поле, которое требуется рассчитать (один из "
@@ -241,12 +238,13 @@ msgstr "Ширина дорожки"
 #. type: Plain text
 #: pcb_calculator.adoc:92
 msgid ""
-"The Track Width calculator calculates the trace width for printed circuit "
-"board conductors for a given current.  It uses formulas from IPC-2221 "
-"(formerly IPC-D-275)."
+"The Track Width tool calculates the trace width for printed circuit board "
+"conductors for a given current and temperature rise.  It uses formulas from "
+"IPC-2221 (formerly IPC-D-275)."
 msgstr ""
 "Калькулятор ширины дорожки вычисляет ширину проводника на печатной плате для "
-"заданного тока. Используются формулы из стандарта IPC-2221 (ранее IPC-D-275)."
+"заданного тока и прироста температуры. Используются формулы из стандарта "
+"IPC-2221 (ранее IPC-D-275)."
 
 #. type: Target for macro image
 #: pcb_calculator.adoc:94
@@ -255,39 +253,44 @@ msgid "images/en/trackwidth.png"
 msgstr "images/ru/trackwidth.png"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: pcb_calculator.adoc:98 pcb_calculator.adoc:105
+#: pcb_calculator.adoc:98 pcb_calculator.adoc:107
 #, no-wrap
 msgid "Electrical-Spacing"
 msgstr "Электрический зазор"
 
 #. type: Plain text
 #: pcb_calculator.adoc:101
-msgid ""
-"In the Picture you can see that you can edit the Voltage and the Calculator "
-"gives you the correct Values."
-msgstr ""
-"На изображении можно видеть, что при изменении величины напряжения, "
-"калькулятор выводит рассчитанные значения."
+msgid "This table helps finding the minimum clearance between conductors."
+msgstr "Эта таблица помогает определить минимальный зазор между проводниками."
 
 #. type: Plain text
-#: pcb_calculator.adoc:103
-msgid "The minimal Values which orientatd at the IPC-2221 too."
-msgstr "Значения минимальных зазоров также определяются по стандарту IPC-2221."
+#: pcb_calculator.adoc:106
+msgid ""
+"Each line of the table has a minimum recomended distance between conductors "
+"for a given voltage (DC or AC peaks) range. If you need the values for "
+"voltages higher than 500V, enter the value in the box in the left corner and "
+"press _Update Values_."
+msgstr ""
+"В каждой строке таблицы указано рекомендуемое минимальное расстояние между "
+"проводниками для указанного диапазона напряжений (как для постоянного тока, "
+"так и для амплитуды переменного тока). Если нужно определить значения для "
+"напряжения больше 500В, введите значение в поле слева и нажмите кнопку "
+"_Обновить значения_."
 
 #. type: Target for macro image
-#: pcb_calculator.adoc:105
+#: pcb_calculator.adoc:107
 #, no-wrap
 msgid "images/en/electricalspacing.png"
 msgstr "images/ru/electricalspacing.png"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: pcb_calculator.adoc:109 pcb_calculator.adoc:116
+#: pcb_calculator.adoc:111 pcb_calculator.adoc:137
 #, no-wrap
 msgid "TransLine"
 msgstr "Линия передачи"
 
 #. type: Plain text
-#: pcb_calculator.adoc:112
+#: pcb_calculator.adoc:114
 msgid ""
 "Transmission line theory is a cornerstone in the teaching of RF and "
 "microwave engineering."
@@ -296,71 +299,191 @@ msgstr ""
 "микроволновых устройств."
 
 #. type: Plain text
-#: pcb_calculator.adoc:114
+#: pcb_calculator.adoc:116
 msgid ""
-"In the Calculator you can choose different sorts of Line Types and their "
-"special Parameters."
+"In the calculator you can choose different sorts of Line Types and their "
+"special parameters. The models implemented are frequency-dependent, so they "
+"disagree with simpler models at high _enough_ frequencies."
 msgstr ""
-"В этом калькуляторе можно выбрать один из различных типов линий и задать "
-"желаемые параметры."
+"В этом калькуляторе можно выбрать один из различных типов линий передач и "
+"задать желаемые параметры. Реализованные модели частотно-зависимы, поэтому "
+"их результаты расходятся с результатами более простых моделей на _очень_ "
+"высоких частотах."
+
+#. type: Plain text
+#: pcb_calculator.adoc:118
+msgid ""
+"This calculator is heavilly based on http://transcalc.sourceforge.net/"
+"[Transcalc]."
+msgstr ""
+"Этот калькулятор в большей степени основан на http://transcalc.sourceforge."
+"net/[Transcalc]."
+
+#. type: Plain text
+#: pcb_calculator.adoc:120
+msgid ""
+"The transmission line types and the reference of their mathematical models "
+"are listed below:"
+msgstr ""
+"Ниже указаны типы линий передач и источники, в которых описываются их "
+"математические модели:"
+
+#. type: Plain text
+#: pcb_calculator.adoc:122
+msgid "Microstrip line:"
+msgstr "Микрополосковые линии:"
+
+#. type: Plain text
+#: pcb_calculator.adoc:123 pcb_calculator.adoc:130
+msgid ""
+"H. A. Atwater, “Simplified Design Equations for Microstrip Line Parameters”, "
+"Microwave Journal, pp. 109-115, November 1989."
+msgstr ""
+"H. A. Atwater, “Simplified Design Equations for Microstrip Line Parameters”, "
+"Microwave Journal, pp. 109-115, November 1989."
+
+#. type: Plain text
+#: pcb_calculator.adoc:124
+msgid "Coplanar wave guide."
+msgstr "Копланарный волновод."
+
+#. type: Plain text
+#: pcb_calculator.adoc:125
+msgid "Coplanar wave guide with ground plane."
+msgstr "Копланарный волновод с земляной плоскостью."
+
+#. type: Plain text
+#: pcb_calculator.adoc:126
+msgid "Rectangular waveguide:"
+msgstr "Прямоугольный волновод:"
+
+#. type: Plain text
+#: pcb_calculator.adoc:127
+msgid ""
+"S. Ramo, J. R. Whinnery and T. van Duzer, \"Fields and Waves in "
+"Communication Electronics\", Wiley-India, 2008, ISBN: 9788126515257."
+msgstr ""
+"S. Ramo, J. R. Whinnery and T. van Duzer, \"Fields and Waves in "
+"Communication Electronics\", Wiley-India, 2008, ISBN: 9788126515257."
+
+#. type: Plain text
+#: pcb_calculator.adoc:128
+msgid "Coaxial line."
+msgstr "Коаксиальная линия."
+
+#. type: Plain text
+#: pcb_calculator.adoc:129
+msgid "Coupled microstrip line:"
+msgstr "Связанная микрополосковая линия:"
+
+#. type: Plain text
+#: pcb_calculator.adoc:131
+msgid ""
+"M. Kirschning and R. H. Jansen, \"Accurate Wide-Range Design Equations for "
+"the Frequency-Dependent Characteristic of Parallel Coupled Microstrip Lines,"
+"\" in IEEE Transactions on Microwave Theory and Techniques, vol. 32, no. 1, "
+"pp. 83-90, Jan. 1984. doi: 10.1109/TMTT.1984.1132616."
+msgstr ""
+"M. Kirschning and R. H. Jansen, \"Accurate Wide-Range Design Equations for "
+"the Frequency-Dependent Characteristic of Parallel Coupled Microstrip Lines,"
+"\" in IEEE Transactions on Microwave Theory and Techniques, vol. 32, no. 1, "
+"pp. 83-90, Jan. 1984. doi: 10.1109/TMTT.1984.1132616."
+
+#. type: Plain text
+#: pcb_calculator.adoc:132
+msgid ""
+"Rolf Jansen, \"High-Speed Computation of Single and Coupled Microstrip "
+"Parameters Including Dispersion, High-Order Modes, Loss and Finite Strip "
+"Thickness\", IEEE Trans. MTT, vol. 26, no. 2, pp. 75-82, Feb. 1978."
+msgstr ""
+"Rolf Jansen, \"High-Speed Computation of Single and Coupled Microstrip "
+"Parameters Including Dispersion, High-Order Modes, Loss and Finite Strip "
+"Thickness\", IEEE Trans. MTT, vol. 26, no. 2, pp. 75-82, Feb. 1978."
+
+#. type: Plain text
+#: pcb_calculator.adoc:133
+msgid ""
+"S. March, \"Microstrip Packaging: Watch the Last Step\", Microwaves, vol. "
+"20, no. 13, pp. 83.94, Dec. 1981."
+msgstr ""
+"S. March, \"Microstrip Packaging: Watch the Last Step\", Microwaves, vol. "
+"20, no. 13, pp. 83.94, Dec. 1981."
+
+#. type: Plain text
+#: pcb_calculator.adoc:134
+msgid "Stripline."
+msgstr "Полосковая линия."
+
+#. type: Plain text
+#: pcb_calculator.adoc:135
+msgid "Twisted pair."
+msgstr "Витая пара."
 
 #. type: Target for macro image
-#: pcb_calculator.adoc:116
+#: pcb_calculator.adoc:137
 #, no-wrap
 msgid "images/en/transline.png"
 msgstr "images/ru/transline.png"
 
 #. type: Title ===
-#: pcb_calculator.adoc:120
+#: pcb_calculator.adoc:141
 #, no-wrap
 msgid "RF-Attenuators"
 msgstr "СВЧ аттенюатор"
 
 #. type: Plain text
-#: pcb_calculator.adoc:123
-msgid "With the RF Attenuator you can calculate different things by choosing:"
+#: pcb_calculator.adoc:145
+msgid ""
+"With the RF Attenuator utility you can calculate the values of the resistors "
+"needed for different types of attenuators:"
 msgstr ""
-"С помощью СВЧ калькулятора можно вычислить параметры различных аттенюаторов:"
+"С помощью СВЧ калькулятора можно вычислить необходимое сопротивление "
+"резисторов для различных типов аттенюаторов:"
 
 #. type: Plain text
-#: pcb_calculator.adoc:125
+#: pcb_calculator.adoc:147
 msgid "PI"
 msgstr "П-образный"
 
 #. type: Plain text
-#: pcb_calculator.adoc:126
+#: pcb_calculator.adoc:148
 msgid "Tee"
 msgstr "Т-образный"
 
 #. type: Plain text
-#: pcb_calculator.adoc:127
+#: pcb_calculator.adoc:149
 msgid "Bridged Tee"
 msgstr "Т-образный мост"
 
 #. type: Plain text
-#: pcb_calculator.adoc:128
+#: pcb_calculator.adoc:150
 msgid "Resistive Splitter"
 msgstr "Резистивный разветвитель"
 
 #. type: Plain text
-#: pcb_calculator.adoc:130
-msgid "and change all their Parameters."
-msgstr "если указать все их параметры."
+#: pcb_calculator.adoc:153
+msgid ""
+"To use this tool, first select the type of attenuator you need, then enter "
+"the desired attenuation (in dB) and input/output impedances (in Ohms)."
+msgstr ""
+"Чтобы воспользоваться этим инструментом, сначала выберите тип аттенюатора, а "
+"затем введите желаемое ослабление (в дБ) и входной/выходной импеданс (в "
+"омах)."
 
 #. type: Target for macro image
-#: pcb_calculator.adoc:131
+#: pcb_calculator.adoc:154
 #, no-wrap
 msgid "images/en/rfattenuators.png"
 msgstr "images/ru/rfattenuators.png"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: pcb_calculator.adoc:135 pcb_calculator.adoc:143
+#: pcb_calculator.adoc:158 pcb_calculator.adoc:166
 #, no-wrap
 msgid "Color-Code"
 msgstr "Цветовой код"
 
 #. type: Plain text
-#: pcb_calculator.adoc:138
+#: pcb_calculator.adoc:161
 msgid ""
 "This calculator helps translating the color bars from the resistor to its "
 "value. To use it, first select the _tolerance_ of the resistor: 10%, 5% or "
@@ -371,29 +494,56 @@ msgstr ""
 "5%, равно или меньше 2%. Например:"
 
 #. type: Plain text
-#: pcb_calculator.adoc:140
+#: pcb_calculator.adoc:163
 msgid "Yellow Violet Red Gold: 4 7 x100 ±5% = 4700 Ohm, 5% tolerance"
 msgstr "Жёлтый Фиолетовый Красный Золотой: 4 7 х100 5% = 4700 Ом ±5%"
 
 #. type: Plain text
-#: pcb_calculator.adoc:141
+#: pcb_calculator.adoc:164
 msgid "1kOhm, 1% tolerance: Brown Black Black Brown Brown"
 msgstr "1кОм, точность 1%: Коричневый Чёрный Чёрный Коричневый Коричневый"
 
 #. type: Target for macro image
-#: pcb_calculator.adoc:143
+#: pcb_calculator.adoc:166
 #, no-wrap
 msgid "images/en/colorcode.png"
 msgstr "images/ru/colorcode.png"
 
 #. type: Named 'alt' AttributeList argument for macro 'image'
-#: pcb_calculator.adoc:147 pcb_calculator.adoc:149
+#: pcb_calculator.adoc:170 pcb_calculator.adoc:172
 #, no-wrap
 msgid "Board-Classes"
 msgstr "Классы плат"
 
 #. type: Target for macro image
-#: pcb_calculator.adoc:149
+#: pcb_calculator.adoc:172
 #, no-wrap
 msgid "images/en/boardclasses.png"
 msgstr "images/ru/boardclasses.png"
+
+#~ msgid "march 04, 2019"
+#~ msgstr "04 марта 2019 года"
+
+#~ msgid ""
+#~ "The Kicad Calculator gives you the Chance to calculate the most important "
+#~ "Things without leaving Kicad."
+#~ msgstr ""
+#~ "Калькулятор предоставляет возможность вычислить наиболее важные параметры "
+#~ "не покидая KiCad."
+
+#~ msgid "The Calculator consists the following Options:"
+#~ msgstr "Калькулятор содержит следующие инструменты:"
+
+#~ msgid ""
+#~ "In the Picture you can see that you can edit the Voltage and the "
+#~ "Calculator gives you the correct Values."
+#~ msgstr ""
+#~ "На изображении можно видеть, что при изменении величины напряжения, "
+#~ "калькулятор выводит рассчитанные значения."
+
+#~ msgid "The minimal Values which orientatd at the IPC-2221 too."
+#~ msgstr ""
+#~ "Значения минимальных зазоров также определяются по стандарту IPC-2221."
+
+#~ msgid "and change all their Parameters."
+#~ msgstr "если указать все их параметры."
